@@ -213,6 +213,19 @@ Two mechanisms, both currently by design:
 
 ### 8. Taking damage cancels movement orders
 
+> **FIXED (2026-09-09):** one guard in `MobAi.seekRevenge`: pets (`isPet()`,
+> HEROES fraction) ignore damage whose source is not a Char — DoT ticks pass the
+> buff instance (`target.damage(dmg, this)` in Burning/Poison/Bleeding/Ooze/Hunger),
+> gas and traps likewise — so orders and follow survive them. All eight AI states'
+> `gotDamage` funnel into `seekRevenge`, and it is the only seekRevenge definition,
+> so no per-state edits were needed. Damage from a real attacker (Char source)
+> still drops the order into revenge, as before. Wild mobs untouched (guard is
+> pet-only). Verified on the desktop debug server via the new `/debug/order_pet`
+> + `/debug/test_damage` endpoints (they drive the real `Interact.act` →
+> `CellSelector` flow and real `Char.damage` calls): pet in MoveOrder + Burning
+> tick → stays MoveOrder, enemy clear; hit by a hostile Rat (Char src) → order
+> dropped, revenge state; DoT while Wandering-follow → unchanged.
+
 - Order = AI state `MoveOrder` + target cell (`ml/actions/OrderCellSelector.java:36-40`; `ai/MoveOrder.java:15-17` steps toward `me.getTarget()`).
 - Every damage tick calls `gotDamage` (`Char.damage` → `Char.java:817`); `MoveOrder.gotDamage → seekRevenge` (`MoveOrder.java:23-26`; `MobAi.seekRevenge`, `ai/MobAi.java:47-66`) **unconditionally replaces state and target** — Hunting if any enemy visible, else Wandering to a respawn cell. Burning/gas ticks have no Char source, so they hit the `chooseEnemy` branch and still discard the order. Same shape in `Wandering`, `Passive`, `Hunting`, `KillOrder`.
 
@@ -238,6 +251,27 @@ Plain tap is overloaded in `CharUtils.actionForCell` (`actors/CharUtils.java:231
 **Suggested direction** (matches tester's ask): make plain tap on a visible owned pet always open the orders window (or walk to it — pick one); check heap precedence only in info mode. Cheap first step: move the heap/object check after the friendly-pet check.
 
 ### E2. Selecting the player as order target → minion attacks the player
+
+> **FIXED (2026-09-09):** `OrderCellSelector.onSelect` now intercepts the case
+> "ordered cell is occupied by the selector" *before* `CharUtils.actionForCell`
+> runs: pet → `Wandering` (follow owner), enemy cleared, target = player cell,
+> says `Mob_FollowMe` ("Following you!"/"Следую за тобой!", new string in en+ru
+> `strings_all.xml`). Necessary at this level because the doc's original theory
+> (the `Interact`→`Attack` conversion) is only the *secondary* path: the primary
+> one is `Hero.friendly(Mob)` → `heroClass.friendlyTo(kind)` — a class-list
+> lookup (`initHeroes.json` `friendlyMobs`, e.g. Gnoll/Shaman for some classes)
+> that ignores ownership entirely, so for a warrior a Statue pet is "not
+> friendly" and `actionForCell` returns `Attack(hero)` directly, without any
+> `Interact` ever being built. The early occupancy check covers both mechanisms.
+> Verified live via `/debug/order_pet` onto the hero's cell: Wandering,
+> enemySet=false, "Следую за тобой!", hero HP untouched (before: KillOrder on
+> the player, "Считай этого тебя мёртвым!").
+>
+> **Observation, open:** because `Hero.friendly` ignores ownership, other
+> hero-perspective checks (targeting, AoE, interact prompts) may misbehave
+> around owned pets whose kind is not in the class's `friendlyMobs` list.
+> Making owned (`isPet()`) mobs always hero-friendly in `Hero.friendly` would be
+> the deeper fix — needs its own pass, touches balance.
 
 Confirmed, explicit code: `OrderCellSelector.onSelect` converts any `Interact` into `Attack` (`ml/actions/OrderCellSelector.java:44-46`); ordering to the hero's cell yields `Interact(hero)` → `KillOrder` on the player.
 

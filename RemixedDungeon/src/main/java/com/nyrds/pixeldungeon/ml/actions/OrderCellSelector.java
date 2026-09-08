@@ -3,8 +3,11 @@ package com.nyrds.pixeldungeon.ml.actions;
 import com.nyrds.pixeldungeon.ai.KillOrder;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.MoveOrder;
+import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.noosa.Image;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.scenes.CellSelector;
@@ -27,6 +30,14 @@ class OrderCellSelector implements CellSelector.Listener {
         CharUtils.clearMarkers();
 
         if (cell == null) {
+            return;
+        }
+
+        if (Actor.findChar(cell) == selector) { // ordered onto the player's own cell: follow me, not attack the player
+            target.setState(MobAi.getStateByClass(Wandering.class));
+            target.setEnemy(CharsList.DUMMY);
+            target.setTarget(cell);
+            target.say(Utils.format(R.string.Mob_FollowMe));
             return;
         }
 

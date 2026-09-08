@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -3415,6 +3416,101 @@ public class DebugEndpoints {
 
     private static boolean isRemote(Mob mob) {
         return mob.isRemoteControlled();
+    }
+
+    // test endpoint: /debug/order_pet?id=<pet>&cell=<cell> - drives the real order
+    // flow for a hero-owned pet (Interact enters order mode, handleCell issues it),
+    // returns the resulting AI state, enemy validity and move target
+    public static NanoHTTPD.Response handleDebugOrderPet(NanoHTTPD.IHTTPSession session) {
+        try {
+            int id = -1, cell = -1;
+            String query = session.getQueryParameterString();
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = Integer.parseInt(param.substring(3));
+                    } else if (param.startsWith("cell=")) {
+                        cell = Integer.parseInt(param.substring(5));
+                    }
+                }
+            }
+
+            Mob pet = findMobById(id);
+            if (pet == null || cell < 0 || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need id & cell, game running").toString());
+            }
+
+            final Mob finalPet = pet;
+            final int finalCell = cell;
+            GameLoop.pushUiTaskAndWait(() -> {
+                // the real production flow: tap on owned pet enters order mode, tap on target cell issues it
+                new Interact(finalPet).act(Dungeon.hero);
+                GameScene.handleCell(finalCell);
+            });
+
+            String state = finalPet.getState() != null ? finalPet.getState().getTag() : "none";
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"state\":\"%s\",\"enemySet\":%b,\"target\":%d}",
+                    state, finalPet.getEnemy().valid(), finalPet.getTarget()));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
+    // test endpoint: /debug/test_damage?id=<mob>&dmg=<n>&src=buff|srcid=<mobId> -
+    // damages a mob with a non-Char source (Burning buff, like a DoT tick) or with
+    // another mob as the source, returns the resulting AI state - used to check
+    // whether AI states (pet orders) survive damage
+    public static NanoHTTPD.Response handleDebugTestDamage(NanoHTTPD.IHTTPSession session) {
+        try {
+            int id = -1, dmg = 1, srcId = -1;
+            boolean buffSrc = false;
+            String query = session.getQueryParameterString();
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = Integer.parseInt(param.substring(3));
+                    } else if (param.startsWith("dmg=")) {
+                        dmg = Integer.parseInt(param.substring(4));
+                    } else if (param.startsWith("srcid=")) {
+                        srcId = Integer.parseInt(param.substring(6));
+                    } else if (param.startsWith("src=buff")) {
+                        buffSrc = true;
+                    }
+                }
+            }
+
+            Mob victim = findMobById(id);
+            if (victim == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need id").toString());
+            }
+
+            final Mob finalVictim = victim;
+            final int finalDmg = dmg;
+            final int finalSrcId = srcId;
+            final boolean finalBuffSrc = buffSrc;
+            GameLoop.pushUiTaskAndWait(() -> {
+                if (finalBuffSrc) {
+                    finalVictim.damage(finalDmg, new Burning());
+                } else {
+                    Mob attacker = findMobById(finalSrcId);
+                    if (attacker != null) {
+                        finalVictim.damage(finalDmg, attacker);
+                    }
+                }
+            });
+
+            String state = finalVictim.getState() != null ? finalVictim.getState().getTag() : "none";
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"state\":\"%s\",\"enemySet\":%b,\"target\":%d}",
+                    state, finalVictim.getEnemy().valid(), finalVictim.getTarget()));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
     }
 
     private static Mob findMobById(int id) {

@@ -1421,6 +1421,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_CantDoIt">I can\'t do it. I have little paws.</string>
     <string name="Mob_Desc">Real description is coming soon!</string>
     <string name="Mob_Died">You hear something died in the distance</string>
+    <string name="Mob_FollowMe">Following you!</string>
     <string name="Mob_GoingTo">Already going!</string>
     <string name="Mob_ItemUse">%1$s uses %2$s</string>
     <string name="Mob_ReadyForOrder">%s ready for your order.</string>

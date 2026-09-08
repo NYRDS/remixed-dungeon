@@ -48,6 +48,10 @@ public abstract class MobAi implements AiState {
             return;
         }
 
+        if (me.isPet() && !(src instanceof Char)) { // pets keep their orders and follow through sourceless damage (DoT ticks, gas, traps)
+            return;
+        }
+
         if (src instanceof Char && !me.friendly((Char)src)) {
             me.setEnemy((Char) src);
         } else {
