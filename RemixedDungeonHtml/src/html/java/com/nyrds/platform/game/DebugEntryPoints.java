@@ -6,10 +6,15 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.utils.Position;
+import com.nyrds.platform.audio.MusicManager;
+import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.storage.SaveUtils;
 import com.nyrds.platform.util.PUtil;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 
@@ -46,6 +51,10 @@ final class DebugEntryPoints {
 			scheduleContinue();
 			return;
 		}
+
+		final boolean fFight = "1".equals(param(search, "fight"));
+		// &nosound=1: disable audio entirely (GC-vs-media stall attribution)
+		final boolean fNoSound = "1".equals(param(search, "nosound"));
 
 		if (!"newgame".equals(param(search, "ep"))) {
 			return;
@@ -132,7 +141,7 @@ final class DebugEntryPoints {
 					GameControl.startNewGame(fHero, fDifficulty, false);
 					PUtil.slog("EP2", "startNewGame returned");
 					fired = true;
-					if (!place && !fSave) {
+					if (!place && !fSave && !fFight) {
 						return;
 					}
 					Gdx.app.postRunnable(this);
@@ -175,6 +184,15 @@ final class DebugEntryPoints {
 						return;
 					}
 				}
+				if (fFight) {
+					if (fNoSound) {
+						Sample.INSTANCE.enable(false);
+						MusicManager.INSTANCE.mute();
+						PUtil.slog("EP2", "fight: sound disabled");
+					}
+					startFight();
+					return;
+				}
 				placeHero(fLevel, fX, fY, fCell);
 			}
 		});
@@ -214,6 +232,61 @@ final class DebugEntryPoints {
 					}
 				}
 				PUtil.slog("EP2", "continue: no autosave found");
+			}
+		});
+	}
+
+	// &fight=1: teleport the hero next to the first hostile mob and strike it
+	// directly (then again after ~1.5s and ~3s) - deterministic combat for
+	// performance probing, independent of mob AI
+	private static void startFight() {
+		Level level = Dungeon.level;
+		Mob target = null;
+		for (Mob m : level.mobs) {
+			if (m.isAlive() && !(m instanceof NPC)) {
+				target = m;
+				break;
+			}
+		}
+		if (target == null) {
+			PUtil.slog("EP2", "fight: no hostile mob on level");
+			return;
+		}
+		int cell = level.getEmptyCellNextTo(target.getPos());
+		if (!level.cellValid(cell)) {
+			PUtil.slog("EP2", "fight: no empty cell next to mob");
+			return;
+		}
+		Dungeon.hero.teleportTo(new Position(level.levelId, cell));
+		target.setState("HUNTING");
+
+		PUtil.slog("EP2", "fight: hero teleported to " + cell + " vs " + target.getEntityKind());
+
+		final Mob fTarget = target;
+		GameLoop.pushUiTask(new Runnable() {
+
+			private int polls;
+			private int strikes;
+
+			@Override
+			public void run() {
+				bumpPollCount();
+				if (strikes >= 12 || !fTarget.isAlive()) {
+					PUtil.slog("EP2", "fight: finished after " + strikes + " strikes");
+					return;
+				}
+				if (++polls % 45 != 1) {
+					Gdx.app.postRunnable(this);
+					return;
+				}
+				strikes++;
+				try {
+					PUtil.slog("EP2", "fight: strike " + strikes);
+					Dungeon.hero.attack(fTarget);
+				} catch (Exception e) {
+					PUtil.slog("EP2", "fight: strike failed: " + e.getMessage());
+				}
+				Gdx.app.postRunnable(this);
 			}
 		});
 	}

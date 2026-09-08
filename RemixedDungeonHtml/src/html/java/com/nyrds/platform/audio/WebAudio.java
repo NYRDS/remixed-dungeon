@@ -6,71 +6,72 @@ import com.badlogic.gdx.audio.AudioRecorder;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.files.FileHandle;
-import com.nyrds.platform.EventCollector;
-import java.util.HashMap;
-import java.util.Map;
 import org.teavm.jso.JSBody;
-import org.teavm.jso.typedarrays.Int8Array;
-import org.teavm.jso.webaudio.AudioBuffer;
-import org.teavm.jso.webaudio.AudioContext;
+import org.teavm.jso.dom.html.HTMLAudioElement;
 
 /**
  * Gdx.audio for the web: the TeaVM backend leaves Gdx.audio null, so the
- * platform audio managers were silent no-ops. Implements the Audio factory
- * on top of Web Audio and owns the shared AudioContext + decoded-buffer
- * cache. Browsers start a context suspended until a user gesture - a
- * one-time pointerdown/keydown hook resumes it.
+ * platform audio managers were silent no-ops. Playback is HTMLAudioElement
+ * based - the browser fetches and decodes off the main thread. (Web Audio's
+ * decodeAudioData was measured blocking the game thread for hundreds of ms
+ * per file, which made the first attack on every level feel laggy; it is
+ * deliberately not used here.)
+ * <p>
+ * Autoplay policy: play() before any user gesture is rejected by the
+ * browser. Elements whose play was blocked are retried by the one-time
+ * pointerdown/keydown hook.
  */
 public class WebAudio implements Audio {
 
-	private static AudioContext context;
-	private static final Map<String, AudioBuffer> decodeCache = new HashMap<>();
+	@JSBody(params = {}, script = "return document.createElement('audio');")
+	static native HTMLAudioElement createElement();
 
-	static AudioContext context() {
-		if (context == null) {
-			try {
-				context = new AudioContext();
-				installResumeHook(context);
-			} catch (Exception e) {
-				EventCollector.logException(e, "AudioContext");
-			}
-		}
-		return context;
-	}
+	@JSBody(params = "e", script = "e.load();")
+	static native void load(HTMLAudioElement e);
 
-	static void decode(String path, byte[] bytes, DecodeReady ready) {
-		AudioBuffer cached = decodeCache.get(path);
-		if (cached != null) {
-			ready.ready(cached);
-			return;
-		}
-		AudioContext ctx = context();
-		if (ctx == null) {
-			return;
-		}
-		try {
-			Int8Array array = Int8Array.fromJavaArray(bytes);
-			ctx.decodeAudioData(array.getBuffer(), buffer -> {
-				decodeCache.put(path, buffer);
-				ready.ready(buffer);
-			}, error -> EventCollector.logEvent("audio_decode_failed " + path));
-		} catch (Exception e) {
-			EventCollector.logException(e, "decode " + path);
-		}
-	}
+	@JSBody(params = "e", script =
+			"try { var p = e.play(); if (p && p['catch']) { p['catch'](function() {"
+			+ " var a = window.__blockedAudio || (window.__blockedAudio = []);"
+			+ " a.push(e); }); } } catch (ignored) {}")
+	static native void play(HTMLAudioElement e);
 
-	interface DecodeReady {
-		void ready(AudioBuffer buffer);
-	}
+	@JSBody(params = "e", script =
+			"if (e.paused && !e.ended) {"
+			+ " var a = window.__blockedAudio || (window.__blockedAudio = []);"
+			+ " a.push(e); }")
+	static native void requeueIfBlocked(HTMLAudioElement e);
+
+	@JSBody(params = {}, script =
+			"var a = window.__blockedAudio;"
+			+ "if (a && a.length) {"
+			+ " for (var i = 0; i < a.length; i++) { try { a[i].play(); } catch (ignored) {} }"
+			+ " a.length = 0; }")
+	static native void retryBlocked();
+
+	@JSBody(params = {}, script =
+			"if (window.__rdAudioHook) { return; }"
+			+ "window.__rdAudioHook = true;"
+			+ "var h = function() {"
+			+ " var a = window.__blockedAudio;"
+			+ " if (a && a.length) {"
+			+ "  for (var i = 0; i < a.length; i++) { try { a[i].play(); } catch (ignored) {} }"
+			+ "  a.length = 0; }"
+			+ " window.removeEventListener('pointerdown', h);"
+			+ " window.removeEventListener('keydown', h); };"
+			+ "window.addEventListener('pointerdown', h);"
+			+ "window.addEventListener('keydown', h);")
+	private static native void installGestureHook();
 
 	@Override
 	public Sound newSound(FileHandle fileHandle) {
-		return new WebSound(fileHandle.path(), fileHandle.readBytes());
+		installGestureHook();
+		return new WebSound(fileHandle.path());
 	}
 
 	@Override
 	public Music newMusic(FileHandle fileHandle) {
-		return new WebMusic(fileHandle.path(), fileHandle.readBytes());
+		installGestureHook();
+		return new WebMusic(fileHandle.path());
 	}
 
 	@Override
@@ -127,15 +128,4 @@ public class WebAudio implements Audio {
 	public String[] getAvailableOutputDevices() {
 		return new String[0];
 	}
-
-	@JSBody(params = "ctx", script =
-			"window.__audioCtx = ctx;"
-			+ "if (window.__rdAudioResume) { return; }"
-			+ "window.__rdAudioResume = true;"
-			+ "var h = function() { ctx.resume(); };"
-			+ "window.addEventListener('pointerdown', h);"
-			+ "window.addEventListener('keydown', h);"
-			+ "document.addEventListener('visibilitychange', function() {"
-			+ "  if (document.visibilityState === 'visible') { ctx.resume(); } });")
-	private static native void installResumeHook(AudioContext ctx);
 }

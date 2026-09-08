@@ -72,4 +72,10 @@ public class PUtil {
         EventCollector.setSessionData("FreeInternalMemorySize", Long.toString(ret));
         return ret;
     }
+
+    /**
+     * Web builds force a GC pass here (end of level build); android no-op.
+     */
+    public static void gcHint() {
+    }
 }

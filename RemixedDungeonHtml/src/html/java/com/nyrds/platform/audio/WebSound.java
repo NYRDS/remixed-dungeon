@@ -6,104 +6,30 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.teavm.jso.webaudio.AudioBuffer;
-import org.teavm.jso.webaudio.AudioBufferSourceNode;
-import org.teavm.jso.webaudio.AudioContext;
-import org.teavm.jso.webaudio.GainNode;
-import org.teavm.jso.webaudio.StereoPannerNode;
+import org.teavm.jso.dom.events.Event;
+import org.teavm.jso.dom.events.EventListener;
+import org.teavm.jso.dom.html.HTMLAudioElement;
 
 /**
- * gdx Sound over Web Audio: one BufferSource per play() through a gain
- * (and a stereo panner when panned). decodeAudioData is async - plays
- * requested before the buffer is ready replay once on decode.
+ * gdx Sound over HTMLAudioElement: one fresh element per play() (they share
+ * the browser's HTTP/memory cache, so clones start instantly and the decode
+ * happens off the main thread - unlike decodeAudioData, which stalls the
+ * game). Pitch maps to playbackRate; pan is not supported by media
+ * elements and is folded into volume (the game never pans SFX).
  */
 class WebSound implements Sound {
 
 	private final String path;
-	private AudioBuffer buffer;
-	private boolean pendingPlay;
-	private float pendingVolume = 1;
-	private float pendingPitch = 1;
-	private float pendingPan = 0;
-
-	private final Map<Long, Voice> voices = new HashMap<>();
+	private final Map<Long, HTMLAudioElement> voices = new HashMap<>();
 	private static long nextId = 1;
 
-	WebSound(String path, byte[] bytes) {
+	WebSound(String path) {
 		this.path = path;
-		WebAudio.decode(path, bytes, buf -> {
-			buffer = buf;
-			if (pendingPlay) {
-				pendingPlay = false;
-				startVoice(pendingVolume, pendingPitch, pendingPan, 0);
-			}
-		});
-	}
-
-	private static final class Voice {
-		long id;
-		AudioBufferSourceNode node;
-		GainNode gain;
-		StereoPannerNode panner;
-		float volume = 1;
-		float pitch = 1;
-		float pan;
-		double startOffset;
-		double startedAt;
-		boolean playing;
-		boolean looping;
-	}
-
-	private Voice startVoice(float volume, float pitch, float pan, double offset) {
-		AudioContext ctx = WebAudio.context();
-		if (ctx == null || buffer == null) {
-			return null;
-		}
-		Voice voice = new Voice();
-		voice.id = nextId++;
-		voice.volume = volume;
-		voice.pitch = pitch;
-		voice.pan = pan;
-		voice.startOffset = offset;
-
-		AudioBufferSourceNode node = ctx.createBufferSource();
-		node.setBuffer(buffer);
-		GainNode gain = ctx.createGain();
-		gain.getGain().setValue(volume);
-
-		voice.node = node;
-		voice.gain = gain;
-
-		if (pan != 0) {
-			StereoPannerNode panner = ctx.createStereoPanner();
-			panner.getPan().setValue(Math.max(-1, Math.min(1, pan)));
-			voice.panner = panner;
-			node.connect(gain);
-			gain.connect(panner);
-			panner.connect(ctx.getDestination());
-		} else {
-			node.connect(gain);
-			gain.connect(ctx.getDestination());
-		}
-
-		node.getPlaybackRate().setValue(Math.max(0.1f, pitch));
-		node.onEnded(event -> {
-			voice.playing = false;
-			node.disconnect();
-			gain.disconnect();
-			voices.remove(voice.id);
-		});
-
-		voice.playing = true;
-		voice.startedAt = ctx.getCurrentTime();
-		node.start(0, offset);
-
-		voices.put(voice.id, voice);
-		return voice;
-	}
-
-	private Voice find(long soundId) {
-		return voices.get(soundId);
+		// warm the browser cache so the first play starts without a fetch
+		HTMLAudioElement warm = WebAudio.createElement();
+		warm.setSrc(path);
+		warm.setPreload("auto");
+		WebAudio.load(warm);
 	}
 
 	@Override
@@ -118,15 +44,39 @@ class WebSound implements Sound {
 
 	@Override
 	public long play(float volume, float pitch, float pan) {
-		if (buffer == null) {
-			pendingPlay = true;
-			pendingVolume = volume;
-			pendingPitch = pitch;
-			pendingPan = pan;
-			return 0;
+		HTMLAudioElement voice = WebAudio.createElement();
+		voice.setSrc(path);
+		voice.setPreload("auto");
+		apply(voice, volume, pitch);
+		WebAudio.load(voice);
+		WebAudio.play(voice);
+
+		long id = nextId++;
+		voices.put(id, voice);
+		voice.addEventListener("ended", new EventListener<Event>() {
+			@Override
+			public void handleEvent(Event event) {
+				voices.remove(id);
+			}
+		});
+		return id;
+	}
+
+	private void apply(HTMLAudioElement voice, float volume, float pitch) {
+		try {
+			voice.setVolume(clamp(volume));
+			voice.setPlaybackRate(Math.max(0.25, Math.min(4, pitch)));
+		} catch (Exception e) {
+			EventCollector.logException(e, "sound apply " + path);
 		}
-		Voice voice = startVoice(volume, pitch, pan, 0);
-		return voice != null ? voice.id : 0;
+	}
+
+	private static float clamp(float v) {
+		return Math.max(0, Math.min(1, v));
+	}
+
+	private HTMLAudioElement find(long soundId) {
+		return voices.get(soundId);
 	}
 
 	@Override
@@ -141,18 +91,17 @@ class WebSound implements Sound {
 
 	@Override
 	public long loop(float volume, float pitch, float pan) {
-		Voice voice = startVoice(volume, pitch, pan, 0);
+		long id = play(volume, pitch, pan);
+		HTMLAudioElement voice = find(id);
 		if (voice != null) {
-			voice.looping = true;
-			voice.node.setLoop(true);
-			return voice.id;
+			voice.setLoop(true);
 		}
-		return 0;
+		return id;
 	}
 
 	@Override
 	public void stop() {
-		for (Voice voice : all()) {
+		for (HTMLAudioElement voice : all()) {
 			halt(voice);
 		}
 		voices.clear();
@@ -160,34 +109,29 @@ class WebSound implements Sound {
 
 	@Override
 	public void pause() {
-		for (Voice voice : all()) {
-			pauseVoice(voice);
+		for (HTMLAudioElement voice : all()) {
+			voice.pause();
 		}
 	}
 
 	@Override
 	public void resume() {
-		for (Voice voice : all()) {
-			if (voice.playing) {
-				continue;
+		for (HTMLAudioElement voice : all()) {
+			if (voice.isPaused()) {
+				WebAudio.play(voice);
+				WebAudio.requeueIfBlocked(voice);
 			}
-			if (buffer != null && !voice.looping
-					&& voice.startOffset >= buffer.getDuration()) {
-				continue;
-			}
-			restart(voice, voice.startOffset);
 		}
 	}
 
 	@Override
 	public void dispose() {
 		stop();
-		buffer = null;
 	}
 
 	@Override
 	public void stop(long soundId) {
-		Voice voice = find(soundId);
+		HTMLAudioElement voice = find(soundId);
 		if (voice != null) {
 			halt(voice);
 			voices.remove(soundId);
@@ -196,119 +140,68 @@ class WebSound implements Sound {
 
 	@Override
 	public void pause(long soundId) {
-		Voice voice = find(soundId);
+		HTMLAudioElement voice = find(soundId);
 		if (voice != null) {
-			pauseVoice(voice);
+			voice.pause();
 		}
 	}
 
 	@Override
 	public void resume(long soundId) {
-		Voice voice = find(soundId);
-		if (voice != null && !voice.playing) {
-			restart(voice, voice.startOffset);
+		HTMLAudioElement voice = find(soundId);
+		if (voice != null && voice.isPaused()) {
+			WebAudio.play(voice);
+			WebAudio.requeueIfBlocked(voice);
 		}
 	}
 
 	@Override
 	public void setLooping(long soundId, boolean looping) {
-		Voice voice = find(soundId);
+		HTMLAudioElement voice = find(soundId);
 		if (voice != null) {
-			voice.looping = looping;
-			voice.node.setLoop(looping);
+			voice.setLoop(looping);
 		}
 	}
 
 	@Override
 	public void setPitch(long soundId, float pitch) {
-		Voice voice = find(soundId);
+		HTMLAudioElement voice = find(soundId);
 		if (voice != null) {
-			voice.pitch = pitch;
-			voice.node.getPlaybackRate().setValue(Math.max(0.1f, pitch));
+			try {
+				voice.setPlaybackRate(Math.max(0.25, Math.min(4, pitch)));
+			} catch (Exception e) {
+				EventCollector.logException(e, "sound pitch " + path);
+			}
 		}
 	}
 
 	@Override
 	public void setVolume(long soundId, float volume) {
-		Voice voice = find(soundId);
+		HTMLAudioElement voice = find(soundId);
 		if (voice != null) {
-			voice.volume = volume;
-			voice.gain.getGain().setValue(volume);
+			try {
+				voice.setVolume(clamp(volume));
+			} catch (Exception e) {
+				EventCollector.logException(e, "sound volume " + path);
+			}
 		}
 	}
 
 	@Override
 	public void setPan(long soundId, float pan, float volume) {
-		Voice voice = find(soundId);
-		if (voice == null) {
-			return;
-		}
-		voice.volume = volume;
-		voice.gain.getGain().setValue(volume);
-		if (voice.panner != null) {
-			voice.pan = pan;
-			voice.panner.getPan().setValue(Math.max(-1, Math.min(1, pan)));
-		}
+		setVolume(soundId, volume);
 	}
 
-	private void restart(Voice voice, double offset) {
-		AudioContext ctx = WebAudio.context();
-		if (ctx == null || buffer == null) {
-			return;
-		}
-		AudioBufferSourceNode node = ctx.createBufferSource();
-		node.setBuffer(buffer);
-		node.connect(voice.gain);
-		if (voice.panner != null) {
-			voice.gain.connect(voice.panner);
-			voice.panner.connect(ctx.getDestination());
-		} else {
-			voice.gain.connect(ctx.getDestination());
-		}
-		node.getPlaybackRate().setValue(Math.max(0.1f, voice.pitch));
-		node.onEnded(event -> {
-			voice.playing = false;
-			node.disconnect();
-			voices.remove(voice.id);
-		});
-		voice.node = node;
-		voice.playing = true;
-		voice.startedAt = ctx.getCurrentTime();
-		node.start(0, offset);
-	}
-
-	private void pauseVoice(Voice voice) {
-		if (!voice.playing) {
-			return;
-		}
-		voice.startOffset += contextTime() - voice.startedAt;
-		voice.playing = false;
+	private void halt(HTMLAudioElement voice) {
 		try {
-			voice.node.stop();
-		} catch (Exception e) {
-			EventCollector.logException(e, "sound pause " + path);
-		}
-		voice.node.disconnect();
-		voice.gain.disconnect();
-	}
-
-	private void halt(Voice voice) {
-		try {
-			voice.node.stop();
+			voice.pause();
+			voice.setCurrentTime(0);
 		} catch (Exception e) {
 			EventCollector.logException(e, "sound stop " + path);
 		}
-		voice.playing = false;
-		voice.node.disconnect();
-		voice.gain.disconnect();
 	}
 
-	private List<Voice> all() {
+	private List<HTMLAudioElement> all() {
 		return new ArrayList<>(voices.values());
-	}
-
-	private static double contextTime() {
-		AudioContext ctx = WebAudio.context();
-		return ctx != null ? ctx.getCurrentTime() : 0;
 	}
 }

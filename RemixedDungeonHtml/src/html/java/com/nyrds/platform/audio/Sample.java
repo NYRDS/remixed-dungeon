@@ -5,6 +5,7 @@ import com.badlogic.gdx.audio.Sound;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.util.ModdingMode;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -48,6 +49,7 @@ public enum Sample {
 	private void load(String asset) {
 		if (!sounds.containsKey(asset) && !missingAssets.contains(asset)) {
 			try {
+				long loadT0 = System.currentTimeMillis();
 				String assetFile = ModdingMode.getSoundById("sound/" + asset);
 				if (assetFile.isEmpty()) {
 					missingAssets.add(asset);
@@ -55,6 +57,8 @@ public enum Sample {
 				}
 				Sound sound = Gdx.audio.newSound(Gdx.files.internal(assetFile));
 				sounds.put(asset, sound);
+				PUtil.slog("EP2", "snd load " + asset + " took "
+						+ (System.currentTimeMillis() - loadT0) + "ms");
 			} catch (Exception e) {
 				missingAssets.add(asset);
 				EventCollector.logException(e, asset);
