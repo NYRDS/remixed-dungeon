@@ -30,7 +30,7 @@ public class Moongrace extends Plant {
 
 	public void effect(int pos, Presser ch, Char activator) {
 		if (ch instanceof Char) {
-			Buff.affect((Char)(ch), BuffFactory.MOONGRACE_BUFF);
+			Buff.affect((Char)(ch), BuffFactory.MOONGRACE);
 		}
 
 		if(ch instanceof Mob) {

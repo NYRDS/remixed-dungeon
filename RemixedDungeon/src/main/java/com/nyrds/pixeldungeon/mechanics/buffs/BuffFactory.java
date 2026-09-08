@@ -93,8 +93,8 @@ public class BuffFactory {
     public static final String TERROR = Terror.class.getSimpleName();
     public static final String RAGE = new RageBuff().getEntityKind();
 
-    // class handle for callers that share the buff's simple name (the Moongrace plant)
-    public static final Class<Moongrace> MOONGRACE_BUFF = Moongrace.class;
+    // the Moongrace plant shares this buff's simple name and cannot import it
+    public static final String MOONGRACE = Moongrace.class.getSimpleName();
 
     public static final String RING_OF_DETECTION = new RingOfDetection().buff().getEntityKind();
     public static final String RING_OF_EVASION = new RingOfEvasion().buff().getEntityKind();
@@ -167,6 +167,9 @@ public class BuffFactory {
         registerBuffClass(RatSkull.RatterAura.class);
         registerBuffClass(RageBuff.class);
         registerBuffClass(DriedRose.OneWayCursedLoveBuff.class);
+        // registered for the Moongrace plant, which shares the buff's simple name
+        // and cannot import it directly
+        registerBuffClass(Moongrace.class);
         //registerBuffClass(RingOfHaggler.Haggling.class);
         //registerBuffClass(RingOfPower.Power.class);
         //registerBuffClass(RingOfSatiety.Satiety.class);
