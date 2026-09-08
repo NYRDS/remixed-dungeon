@@ -65,7 +65,7 @@ public class Plant extends LevelObject {
 		}
 
 		wither();
-		effect(getPos(),presser);
+		effect(getPos(), presser, presser instanceof Char ? (Char) presser : null);
 	}
 
 	private void wither() {
@@ -90,9 +90,9 @@ public class Plant extends LevelObject {
 
 	}
 
-	// plants triggered by sources that turn split copies feral (exploding spiders)
-	// route through here; plants that can't split ignore the flag
-	public void effect(int pos, Presser ch, boolean feralClones) {
+	// activator - who triggered the plant on the target: the same char when the
+	// plant is stepped on, the attacking mob when a plant effect is applied by hit
+	public void effect(int pos, Presser ch, Char activator) {
 		effect(pos, ch);
 	}
 

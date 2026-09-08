@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.plants;
 
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
@@ -24,14 +25,12 @@ public class Moongrace extends Plant {
 	}
 
 	public void effect(int pos, Presser ch) {
-		effect(pos, ch, false);
+		effect(pos, ch, ch instanceof Char ? (Char) ch : null);
 	}
 
-	// planted Moongrace keeps friendly clones - players split their pets on purpose;
-	// only the exploding spider's involuntary trigger turns the copy feral
-	public void effect(int pos, Presser ch, boolean feralClones) {
+	public void effect(int pos, Presser ch, Char activator) {
 		if (ch instanceof Char) {
-			Buff.affect((Char)(ch), com.nyrds.pixeldungeon.mechanics.buffs.Moongrace.class);
+			Buff.affect((Char)(ch), BuffFactory.MOONGRACE_BUFF);
 		}
 
 		if(ch instanceof Mob) {
@@ -39,7 +38,9 @@ public class Moongrace extends Plant {
 
 			int cell = level().getEmptyCellNextTo(pos);
 			if (level().cellValid(cell)) {
-				if (feralClones) {
+				// stepping on the plant (own activation) clones the pet as usual;
+				// moonlight forced by a hostile activation leaves a feral copy
+				if (activator != null && !activator.friendly(mob)) {
 					mob.splitHostile(cell, 0);
 				} else {
 					mob.split(cell, 0);

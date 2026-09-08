@@ -93,6 +93,9 @@ public class BuffFactory {
     public static final String TERROR = Terror.class.getSimpleName();
     public static final String RAGE = new RageBuff().getEntityKind();
 
+    // class handle for callers that share the buff's simple name (the Moongrace plant)
+    public static final Class<Moongrace> MOONGRACE_BUFF = Moongrace.class;
+
     public static final String RING_OF_DETECTION = new RingOfDetection().buff().getEntityKind();
     public static final String RING_OF_EVASION = new RingOfEvasion().buff().getEntityKind();
     public static final String RING_OF_ACCURACY = new RingOfAccuracy().buff().getEntityKind();

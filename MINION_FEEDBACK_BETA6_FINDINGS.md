@@ -93,16 +93,18 @@ Narrow timing window between the two saves — consistent with "happened once".
 ### 4. Spider-nest minion duplication — root cause found (Moongrace)
 
 > **FIXED (2026-09-08, scoped to the exploding spider):** `SpiderExploding` now
-> triggers its plant via `Plant.effect(pos, ch, feralClones=true)`; `Moongrace`
-> honors the flag with `Mob.splitHostile` — the copy is self-owned and a
-> hero-fraction (pet) source is flipped to `Fraction.DUNGEON`, so a pet hit by a
-> Moongrace-kind spider leaves a *hostile* copy, not a free extra minion.
-> **Planted Moongrace keeps friendly clones on purpose** — players split their
-> pets with it deliberately; that's a feature, not the bug. `Mob.split` and
-> `Mob.makeClone` keep their generic semantics (split = clone with damage, clone =
-> faithful copy; call sites re-purpose the result). Verified on the desktop debug
-> server: a Moongrace-kind exploding spider killing an owned rat produced a
-> self-owned DUNGEON-fraction rat clone (HP 1, split signature) — no pet duplicate.
+> triggers its plant with itself as the *activator* (`Plant.effect(pos, ch,
+> activator)` — activator is the victim itself when a plant is stepped on, the
+> attacking mob when the effect is forced by a hit). `Moongrace` splits via
+> `Mob.splitHostile` only when the activator is hostile to the pressed mob, so a
+> pet hit by a Moongrace-kind spider leaves a *hostile* copy (self-owned,
+> `Fraction.DUNGEON`), not a free extra minion. **Planted Moongrace keeps
+> friendly clones on purpose** — players split their pets with it deliberately;
+> that's a feature, not the bug. `Mob.split` and `Mob.makeClone` keep their
+> generic semantics (split = clone with damage, clone = faithful copy; call
+> sites re-purpose the result). Verified on the desktop debug server: a
+> Moongrace-kind exploding spider killing an owned rat produced a self-owned
+> DUNGEON-fraction rat clone (HP 1, split signature) — no pet duplicate.
 >
 > **Still open by design decision (2026-09-08):** the other two pet-clone
 > delivery paths keep old behavior — `ChaosShieldLeft.lua` `cloneEnemy` (splitting
