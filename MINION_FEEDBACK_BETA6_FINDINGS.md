@@ -92,15 +92,17 @@ Narrow timing window between the two saves — consistent with "happened once".
 
 ### 4. Spider-nest minion duplication — root cause found (Moongrace)
 
-> **FIXED (2026-09-08):** `Mob.makeClone` no longer copies ownership — a clone is
-> always self-owned, and a clone of a hero-fraction (pet) source is flipped to
-> `Fraction.DUNGEON`, so splitting a pet (Moongrace plant, exploding Moongrace
-> spider hit, ChaosShieldLeft script) yields a *hostile* copy that turns on its
-> former master instead of a free extra minion. Verified on the desktop debug
-> server: a Moongrace-kind exploding spider killing an owned rat produced a
-> self-owned DUNGEON-fraction rat clone (HP 1, split signature) — no pet duplicate.
-> `Carcass` reanimation is unaffected (it re-applies `makePet` after `makeClone`),
-> and `ScrollOfMirrorImage` uses `Hero.makeClone`, also unaffected.
+> **FIXED (2026-09-08):** `Mob.split` no longer produces owned copies — the clone
+> it spawns is always self-owned, and a clone of a hero-fraction (pet) source is
+> flipped to `Fraction.DUNGEON`, so splitting a pet (Moongrace plant, exploding
+> Moongrace spider hit, ChaosShieldLeft script, Multiplicity glyph on pet armor)
+> yields a *hostile* copy that turns on its former master instead of a free extra
+> minion. `makeClone` itself keeps faithful-copy semantics (a clone is a copy;
+> call sites decide what to do with it — e.g. `Carcass.reanimate` clones then
+> re-applies `makePet`). Verified on the desktop debug server: a Moongrace-kind
+> exploding spider killing an owned rat produced a self-owned DUNGEON-fraction
+> rat clone (HP 1, split signature) — no pet duplicate. `ScrollOfMirrorImage`
+> uses `Hero.makeClone` and is unaffected.
 
 `Moongrace.effect` **splits any mob that presses the plant** (`plants/Moongrace.java:32-41` → `Mob.split(cell, 0)`), and `Mob.makeClone` (`actors/mobs/Mob.java:577-594`) **copies `ownerId` for pets (lines 587-591), so the clone is also a hero-owned pet**. `Level.spawnMob` has no dedup (`levels/Level.java:903-938`).
 
