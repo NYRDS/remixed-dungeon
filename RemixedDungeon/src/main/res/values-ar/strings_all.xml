@@ -633,6 +633,7 @@
     <string name="MeleeWeapon_Info3e">لكن</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MeleeWeapon_Info6b">بسبب قوتك الزائدة، تم زيادة ضرر هجومك بهذا %s.</string>
+    <string name="MeleeWeapon_Info7a">تمسك %1 جاهزاً %2.</string>
     <string name="MeleeWeapon_Info7c">يمكنك الشعور بسحر شرير يكمن داخل %s.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">مرتزق</string>
@@ -905,6 +906,7 @@
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Name">شامان غنول</string>
     <string name="Shaman_Name_Objective">شامان جنول</string>
+    <string name="Shaman_ZapMiss">*يلعن باللغة الغنولية</string>
     <string name="Sheep_Desc">هذه خروف سحري. ما الذي يجعله سحرياً؟ لا يمكنك قتله. سيبقى في مكانه حتى يختفي سحرياً، بينما يمضغ الطعام بنظرة خالية.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="ShieldBuffReady_Info">درعك جاهز لمنع الهجوم القادم.</string>
@@ -1316,6 +1318,8 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
 
 
 

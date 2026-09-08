@@ -192,6 +192,7 @@
     <string name="Challenges_Names_4">אינטליגנציית הלהקה</string>
     <string name="Challenges_Names_5">אל האפלה</string>
     <string name="Challenges_Names_6">רונות אסורות</string>
+    <string name="Challenges_Names_7">פציפיזם</string>
     <string name="Challenges_Names_8">ללא עיר</string>
     <string name="Challenges_Names_9">אמנזיה</string>
     <string name="ChampionOfAirBuff_Info">תכונה זו מקנה ליצור את תמצית הרוחות, משפרת את זריזותו וכישוריו בקרב. אלוף האוויר הופך ליריב אדיר, המסוגל לשחרר מתקפות מהירות והרסניות שיכולות לשנות במהירות את מהלך הקרב.</string>
@@ -576,6 +577,7 @@
     <string name="Level_TileExit">יציאה מהעומק</string>
     <string name="Level_TileHighGrass">דשא גבוה</string>
     <string name="Level_TileLockedDoor">דלת נעולה</string>
+    <string name="Level_TileOpenDoor">דלת פתוחה</string>
     <string name="Level_TileParalyticTrap">מלכודת גז משתקת</string>
     <string name="Level_TilePoisonTrap">מלכודת חץ מורעל</string>
     <string name="Level_TileSummoningTrap">מלכודת זימון</string>
@@ -750,6 +752,7 @@
     <string name="Potion_Colors_3">ירקן</string>
     <string name="Potion_Colors_6">פחם</string>
     <string name="Potion_Colors_8">ענבר</string>
+    <string name="Potion_FoodRefreshed">%s עכשיו נראה אכיל</string>
     <string name="Potion_Info">בקבוקון זה מכיל נוזל %s מסתחרר. מי יודע מה יקרה כשתשתה או תזרוק אותו?</string>
     <string name="Potion_ItemFliesAway">%s פשוט עף מהידיים שלך.</string>
     <string name="Potion_MoistenUseless">נראה שבזבזת את השיקוי הזה.</string>
@@ -1639,6 +1642,9 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
 
 
 

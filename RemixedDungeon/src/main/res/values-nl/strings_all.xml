@@ -52,6 +52,7 @@
     <string name="Armor_Glyph">glyph</string>
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
+    <string name="Armor_Info8">\n\nJe kunt een kwaadaardige magie voelen die in de %s grijpt.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">levende standbeeld</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
@@ -97,6 +98,7 @@
     <string name="Badges_ItemLvl4">Item van niveau 12 verkregen</string>
     <string name="Badges_ItemLvl5">Item van niveau 15 verkregen</string>
     <string name="Badges_LevelReached5">Niveau 30 bereikt</string>
+    <string name="Badges_Lich_Slain">Lich gedood</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Badges_MonsterSlain5">1000 vijanden verslagen</string>
@@ -111,6 +113,7 @@
     <string name="Badges_StrengthAttained3">17 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained4">19 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
+    <string name="Badges_Supporter">Bedankt voor je steun!</string>
     <string name="Badges_VictoryAll">Amulet van Yendor verkregen door alle klassen</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa verslagen</string>
     <string name="Bag_ACOpen">OPENEN</string>
@@ -368,6 +371,7 @@
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DoctorArmor_Info">Deze pantser van de pestdokter maakt gebruik mogelijk van de \&quot;Miasma Wolk\&quot; vaardigheid, die een giftige gas vrijlaat dat vijanden vergiftigt, verzwakt en desorienteert. De dokter, beschermd door hun masker, is immuun voor deze effecten.</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
+    <string name="DoctorSpecial">Miasma Wolk</string>
     <string name="DonateButton_thanks">Bedankt voor je steun!</string>
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">angstridder</string>
@@ -419,6 +423,7 @@
     <string name="Eye_Kill">De doodskijk van %s heeft je gedood...</string>
     <string name="Facilitations_Names_0">Geen honger</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
+    <string name="Fadeleaf_Name">Verdwaand Blad</string>
     <string name="FetidRat_Gender">feminine</string>
     <string name="Fez_Name">Fez</string>
     <string name="FireArrow_Gender">feminine</string>
@@ -487,6 +492,7 @@
     <string name="Heal_Name">Genezing</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Gratis behandeling voor elke avonturier!</string>
+    <string name="HealerNPC_Message3">Ik vraag me af waarom de kerk ons verbodt petten te dragen... het is echt koud hier buiten.</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">De punt van deze pijl is bedekt met een genezende drank.</string>
     <string name="HealthDart_Gender">masculine</string>
@@ -762,6 +768,7 @@
     <string name="NecromancerRobe_Info">Dit gewaad stelt de Nekromant in staat om een Doodsling op te roepen ten koste van 5 zielen. De Doodsling is een ondode dienaar die sterker wordt samen met zijn meester.</string>
     <string name="NecromancerRobe_Info2">Deze robes is bedekt met donkere magie en zal de Nekromant in staat stellen de zielen van gevallen monsters te consumeren.</string>
     <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
+    <string name="Necromancy_BecameALich">Je bent een Lich geworden! Je krachten groeien en je zielcapaciteit is verdubbeld! Maar je hebt %1 krachtspunten verloren.</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_SoulsCountLabel">Zielen</string>
     <string name="Necromancy_Title">Necromantie</string>
@@ -834,6 +841,7 @@
     <string name="Plant_Info">Worp deze zaad naar de plaats waar je %1$s wilt laten groeien.\n\n%2$s</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Name_1">Giftig %s</string>
+    <string name="Poison_Name_2">Vergiftigde %s</string>
     <string name="PortalExit_Desc">Deze portal brengt je naar het eerste niveau van de %s.</string>
     <string name="PortalGate_Activated">De oude portaal is ontwaakt!</string>
     <string name="PortalGate_Desc">De gravures op het oppervlak van deze portal vormen een eigenaardig patroon. Het lijkt alsof het een gigantische tunnel is die in de verte leidt. Maar vanaf de zijkant bekeken wordt duidelijk dat het oppervlak bijna vlak is.</string>
@@ -1574,6 +1582,14 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
 
 
 

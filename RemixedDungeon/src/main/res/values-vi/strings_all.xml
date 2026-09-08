@@ -84,6 +84,7 @@
     <string name="Badges_GoldColleted4">Đã thu thập 7500 vàng</string>
     <string name="Badges_GrimWepon">Quái vật bị giết bởi vũ khí Grim</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
+    <string name="Badges_ItemLvl1">Đã thu được vật phẩm cấp 3</string>
     <string name="Badges_ItemLvl2">Đã có vật phẩm cấp 6</string>
     <string name="Badges_ItemLvl3">Đã nhận vật phẩm cấp 9</string>
     <string name="Badges_ItemLvl4">Đã đạt được vật phẩm cấp 12</string>
@@ -104,6 +105,7 @@
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
     <string name="Badges_ShadowLord_Slain">Chúa Tể Bóng Tối đã bị tiêu diệt</string>
     <string name="Badges_StrengthAttained1">Đạt 13 điểm Sức mạnh</string>
+    <string name="Badges_Supporter">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="Badges_ThisIsSparta">Đây là Sparta!!!</string>
     <string name="Badges_VictoryAll">Bùa Yendor thu được bởi tất cả các lớp nhân vật</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa đã bị tiêu diệt</string>
@@ -231,6 +233,7 @@
     <string name="ChaosBow_Name">cung hỗn loạn</string>
     <string name="ChaosCrystal_BladeFused">Vien ngoc hap thu vu khi cua ban va bien thanh hinh dang mot thanh kiem</string>
     <string name="ChaosCrystal_Fuse">DUNG HỢP</string>
+    <string name="ChaosCrystal_Info_1">Sức mạnh hỗn loạn chảy qua viên tinh thể này. Có lẽ nó có ích.</string>
     <string name="ChaosCrystal_Name">Huyền Tinh Kỳ Lạ</string>
     <string name="ChaosCrystal_Name_2">Viên Ngọc Hỗn Mang</string>
     <string name="ChaosCrystal_StaffFused">Viên ngọc hấp thụ cây đũa phép của bạn và biến thành hình dạng một Cây Gậy</string>
@@ -358,6 +361,7 @@
     <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
     <string name="Displacement_Txt">%s الخدمة</string>
     <string name="DoctorArmor_Name">Trang phục bác sĩ</string>
+    <string name="DoctorSpecial">Đám Mây Miasma</string>
     <string name="DogeMask_Info">Bạn có từng muốn cải trang thành Doge nổi tiếng? Bây giờ là cơ hội của bạn!\nCái Mặt nạ Đấy! Nhiều Cải Trang! Wow!</string>
     <string name="DonateButton_pleaseDonate">vui lòng cân nhắc ủng hộ</string>
     <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
@@ -411,6 +415,7 @@
     <string name="Facilitations_Names_0">Không đói</string>
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
     <string name="Facilitations_Names_2">Linh hồn thần đèn</string>
+    <string name="Fadeleaf_Name">Lá Mờ</string>
     <string name="FetidRat_Desc">Loài chuột túi này lớn hơn nhiều so với chuột thường. Nó bị bao quanh bởi một đám mây hôi thối.</string>
     <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">chuột hôi</string>
@@ -467,6 +472,7 @@
     <string name="GoldenStatue_Name_Objective">bức tượng vàng</string>
     <string name="GoldenSword_Gender">masculine</string>
     <string name="Golem_Defense">đã chặn</string>
+    <string name="Golem_Desc">Người lùn đã cố gắng kết hợp kiến thức cơ khí của họ với sức mạnh mới tìm thấy được của việc ràng buộc nguyên tố. Họ sử dụng linh hồn của đất làm \&quot;linh hồn\&quot; cho thân thể cơ khí của golem, được cho là dễ kiểm soát nhất trong tất cả. Mặc dù vậy, sai sót nhỏ nhất trong nghi thức cũng có thể gây ra bùng nổ.</string>
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">golem</string>
     <string name="Goo_Gender">feminine</string>
@@ -664,6 +670,7 @@
     <string name="Level_TileEntrance">Lối vào sâu</string>
     <string name="Level_TileExit">Lối ra sâu</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
+    <string name="Level_TileOpenDoor">Cửa mở</string>
     <string name="Level_TileParalyticTrap">Bẫy khí gây tê liệt</string>
     <string name="Level_TilePedestal">Bệ đá</string>
     <string name="Level_TilePileOfStones">Đống đá</string>
@@ -914,6 +921,7 @@
     <string name="RingOfDetection_Name">Nhẫn Phát Hiện</string>
     <string name="RingOfElements_Info">Chiếc nhẫn này giúp kháng lại các nguyên tố khác nhau, chẳng hạn như lửa, điện, khí độc, v.v. Nó cũng làm giảm thời gian chịu các hiệu ứng bất lợi.</string>
     <string name="RingOfElements_Name">Nhẫn Nguyên tố</string>
+    <string name="RingOfEvasion_Info">Nhẫn này tăng cơ hội né tránh tấn công của kẻ thù.</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
     <string name="RingOfHaste_Name">Nhẫn Tốc Độ</string>
     <string name="RingOfHerbalism_Info">Nhẫn này tăng cơ hội thu thập sương mai và hạt giống từ cỏ bị giẫm đạp.</string>
@@ -1358,6 +1366,7 @@
     <string name="WndSaveSlotSelect_Delete_No">Không</string>
     <string name="WndSaveSlotSelect_Delete_Title">Bạn có chắc chắn muốn xóa trạng thái lưu này?</string>
     <string name="WndSelectLanguage_ImproveTranslation">Vui lòng giúp cải thiện bản dịch Remixed Dungeon</string>
+    <string name="WndSelectLanguage_LinkToTranslationSite">Nhấn vào đây để tham gia đội dịch Remixed Dungeon</string>
     <string name="WndSettingsInGame_GameLog">Nhật ký trò chơi</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
     <string name="WndSettings_Brightness">Độ sáng</string>
@@ -1524,6 +1533,15 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
 
 
 
