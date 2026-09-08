@@ -39,18 +39,17 @@ Line numbers refer to the working tree at the time of analysis (master, post `c0
 > Covers walk, swap, blink (`WandOfBlink.appear` routes through `placeTo`),
 > `_stepBack`, spawn repositioning and script `setPos`.
 >
-> Door-wedging heaps are avoided at the source: `Mob.die` now drops the carcass
-> and gear via `Door.avoidDoor(getPos())` (new helper — nearest non-door,
-> standable cell; falls back to the door cell if none) and
-> `Belongings.dropAll(cell)` places heaps there. A player-dropped heap on a door
-> still pins it until picked up (classic behavior). An occupied doorway stays
-> open by design; a door whose occupant *died* on it stays open until the next
-> char passes through, then closes.
+> Door-wedging heaps are **intentional** (design decision 2026-09-09): a heap on
+> a door tile keeping it open is an established player tactic, and death drops
+> (carcass, mob gear) wedge the door exactly the same way — `Mob.die` keeps
+> dropping at the death cell. A player who wants the door closed picks the heap
+> clean. An occupied doorway stays open by design; a door whose occupant *died*
+> on it stays open until the next char passes through, then closes — unless a
+> heap wedges it.
 >
 > Verified live on the desktop debug server (SewerLevel): closed 5 → hero steps
-> on, 6 → hero leaves, back to 5 (two doors); rat killed on a doorway dropped
-> carcass+gold onto adjacent grass cells, door tile clean, and closed when the
-> hero next walked through.
+> on, 6 → hero leaves, back to 5 (two doors); a door stays open under a standing
+> pet and closes once the char leaves.
 
 The close path is intact and unchanged since the classic import:
 
