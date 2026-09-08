@@ -87,7 +87,13 @@ public class Plant extends LevelObject {
 	}
 
 	public void effect(int pos, Presser ch) {
-		
+
+	}
+
+	// plants triggered by sources that turn split copies feral (exploding spiders)
+	// route through here; plants that can't split ignore the flag
+	public void effect(int pos, Presser ch, boolean feralClones) {
+		effect(pos, ch);
 	}
 
 	@Override

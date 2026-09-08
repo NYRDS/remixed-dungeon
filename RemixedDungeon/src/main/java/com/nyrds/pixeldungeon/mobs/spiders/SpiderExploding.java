@@ -44,7 +44,9 @@ public class SpiderExploding extends MultiKindMob {
         if (super.attack(enemy)) {
 
             Plant plant = (Plant) LevelObjectsFactory.objectByName(PlantClasses[getKind()]);
-            plant.effect(enemy.getPos(), enemy);
+            // feralClones: a hero pet split by the blast turns hostile -
+            // spider nests must not clone the player's minions for free
+            plant.effect(enemy.getPos(), enemy, true);
 
             die(this);
             return true;

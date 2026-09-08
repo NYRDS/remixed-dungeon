@@ -24,6 +24,12 @@ public class Moongrace extends Plant {
 	}
 
 	public void effect(int pos, Presser ch) {
+		effect(pos, ch, false);
+	}
+
+	// planted Moongrace keeps friendly clones - players split their pets on purpose;
+	// only the exploding spider's involuntary trigger turns the copy feral
+	public void effect(int pos, Presser ch, boolean feralClones) {
 		if (ch instanceof Char) {
 			Buff.affect((Char)(ch), com.nyrds.pixeldungeon.mechanics.buffs.Moongrace.class);
 		}
@@ -33,7 +39,11 @@ public class Moongrace extends Plant {
 
 			int cell = level().getEmptyCellNextTo(pos);
 			if (level().cellValid(cell)) {
-				mob.splitHostile(cell,0);
+				if (feralClones) {
+					mob.splitHostile(cell, 0);
+				} else {
+					mob.split(cell, 0);
+				}
 				if (Dungeon.isCellVisible(cell)) {
 					CellEmitter.get(cell).start(ShaftParticle.FACTORY, 0.2f, 6);
 				}
