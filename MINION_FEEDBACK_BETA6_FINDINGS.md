@@ -221,6 +221,18 @@ Two mechanisms, both currently by design:
 > `hero_status` now also report `speed` and `str`.
 
 - Speed penalty for overload exists **only in `Hero.speed()`** (`actors/hero/Hero.java:271-278`, `1.3^-aEnc`). Generic `Char.speed()` (`Char.java:767-771`) has no encumbrance term; `Mob` doesn't override.
+
+> **Initial mob STR (2026-09-09, follow-up review):** mobs no longer start with
+> the flat default 10. `Mob()` ctor assigns `baseStr` = `mobsDesc/<Kind>.json`
+> `"baseStr"` when present, else derived from the mob's typical depth in
+> `levelsDesc/Bestiary.json` (weighted mean of the depths it spawns at, rounded
+> up), paced after the armor tiers met at that depth: `max(10, 7 + 2·ceil(depth/5))`
+> → 10/11/13/15/17 for the T1..T5 depth bands. Explicit `STR()` calls in mob
+> classes (Brute 14, Statue gear-derived) still win — subclass ctor runs after
+> `super()`. Deliberate (Mike): undead keep their no-exp no-leveling gate, so
+> for undead pets this initial STR is permanent; living pets add `lvl()/5` on
+> top via `ModQuirks.mobLeveling` (1 exp per landed hit, Champion buff at lvl 5+).
+> Verified live: Rat/Gnoll 10, Skeleton 11, Bat 13, Brute 14 (class value).
 - Pets *do* get the Encumbrance buff (attached to any overloaded char, `Char.java:326-330`) → complaints, and `Char.defenseSkill` evasion penalty (`Char.java:607-613`).
 - `Belongings.equip` performs **no STR check** for pets (`Belongings.java:711+`), so over-STR gear is trivially equipped via `WndPetItem`.
 

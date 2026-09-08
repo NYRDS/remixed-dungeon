@@ -106,6 +106,7 @@ public abstract class Mob extends Char {
     public Mob() {
         super();
         setupCharData();
+        baseStr = getClassDef().optInt("baseStr", Bestiary.baseStrFor(getEntityKind()));
         getScript().run("fillStats");
         if (ModQuirks.mobLeveling) {
             lvl(Random.Int(1, (int) RemixedDungeon.getDifficultyFactor() + 1));
