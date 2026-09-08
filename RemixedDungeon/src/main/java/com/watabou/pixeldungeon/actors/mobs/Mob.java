@@ -632,10 +632,11 @@ public abstract class Mob extends Char {
         new_mob.restoreFromBundle(storedMob);
         new_mob.getId(); //Ensure valid id
 
-        if (getOwnerId() == getId()) {
-            new_mob.setOwnerId(new_mob.getId());
-        } else {
-            new_mob.setOwnerId(getOwnerId());
+        // clones are never owned: splitting a pet (Moongrace, exploding spiders)
+        // yields a hostile copy that turns on its former master
+        new_mob.setOwnerId(new_mob.getId());
+        if (new_mob.fraction() == Fraction.HEROES) {
+            new_mob.setFraction(Fraction.DUNGEON);
         }
 
         return new_mob;
