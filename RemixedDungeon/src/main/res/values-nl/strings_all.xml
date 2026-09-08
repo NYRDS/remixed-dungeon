@@ -435,6 +435,7 @@
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="Frost_Shatter">De koude doet %s barsten!</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
+    <string name="FrozenCarpaccio_Info3">Verversend!</string>
     <string name="FrozenCarpaccio_Name">bevroren carpaccio</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
@@ -632,6 +633,7 @@
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
     <string name="LeatherArmor_Name">leren harnas</string>
     <string name="Leech_Name_2">Vampier %s</string>
+    <string name="Level_TileAlarmTrap">alarmprikkel</string>
     <string name="Level_TileAlchemy">Alchemiepot</string>
     <string name="Level_TileBarricade">Barricade</string>
     <string name="Level_TileChasm">Afgrond</string>
@@ -661,6 +663,7 @@
     <string name="LibrarianNPC_Desc">Een heel verlegen persoon, die een ongemakkelijk uitziend vest en een dikke bril draagt.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-hallo. Welkom in de bibliotheek. Hier vind je informatie over allerlei dingen die in de kerker te vinden zijn... eigenlijk kunnen we alleen kennis verstrekken die door avonturiers is ontdekt. Het... het is wat gênant. Dus elke keer dat je ons bezoekt, staat er waarschijnlijk iets nieuws te lezen.</string>
+    <string name="LibrarianNPC_Name_Objective">bibliothecaris</string>
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
@@ -765,6 +768,7 @@
     <string name="Order_Name">Bevelen</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="OverpricedRation_Message">Dat eten smaakte oké.</string>
+    <string name="OverpricedRation_Name">te dure voedselratione</string>
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">Deze zaal is heilig.</string>
     <string name="PalaceServant_Golem_3">*laag gerommel*</string>
@@ -1017,6 +1021,7 @@
     <string name="Shades_Name">Zonnebril</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Bereid je voor!</string>
+    <string name="ShadowLord_Name">schaduwheer</string>
     <string name="ShadowLord_Name_Objective">Schaduwheer</string>
     <string name="Shadow_Desc">Schaduwen dwalen geruisloos door de ruïnes van de oude gevangenis en tonen zich slechts af en toe aan avonturiers, meestal tijdens hun laatste avontuur.</string>
     <string name="Shadow_Gender">feminine</string>
@@ -1176,6 +1181,7 @@
     <string name="Torch_ACLight">AANSTEKEN</string>
     <string name="ToughShield_desc">Dit met riemen versterkte schild oogt robuuster dan een houten exemplaar. Het kan zeker meer schade blokkeren.</string>
     <string name="ToughShield_name">Versterkt Leren Schild</string>
+    <string name="TownGuardNPC_Desc">Een gewone stadswacht</string>
     <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message3">Je denkt dat er te veel bewakers in deze stad zijn? Nou, dat is omdat dit de enige stad is met een gigantische monster-geïnfesteerde dungeon, niet waar?</string>
     <string name="TownGuardNPC_Name">stadswacht</string>
@@ -1396,6 +1402,7 @@
     <string name="WndSettings_UiSettings">Interface-instellingen</string>
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
+    <string name="WndSettings_moveTimeout">Zettijdlimiet: %s</string>
     <string name="WndStory_Guts">Verslagen, verstrooid in stukken, maar niet volledig vernietigd, werd de Oude God verzegeld in de diepste niveaus van de kerker. Maar onlangs werd het zegel gebroken, waardoor de toegang tot de demonenhoeve wijd open stond. De nachtmerrieachtige monsters, geschapen door de Oude God in zijn slummer, waren zo talrijk dat, zonder een manier om te vluchten, ze gedwongen waren om met elkaar te smelten en deze gruwelijke hallen te vormen. En terwijl je over hun levende vlees loopt, kun je de klop van een Ouds Gods hart door hen heen voelen.</string>
     <string name="WndTilesKind_Title">Nog één ding:</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
@@ -1550,6 +1557,13 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
 
 
 

@@ -51,6 +51,7 @@
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
     <string name="Armor_Info6">عليه نقوش</string>
+    <string name="Armor_Info7b">، وبما أنها ملعونة، فأنت عاجز عن إزالتها</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">تمثال متحرك</string>
     <string name="ArmoredStatue_Name_Objective">تمثال متحرك</string>
@@ -306,6 +307,7 @@
     <string name="Darkness_Info">يبدو وكأنه قطع من الظلام الأبدي تطفو في الهواء</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Name">سهم صغير</string>
+    <string name="DashSpell_OnSelf">لا أستطيع التحرك في المكان.</string>
     <string name="DashSpell_TooFar">لا يمكنني الاندفاع إلى هذه المسافة البعيدة.</string>
     <string name="DeathKnight_Desc">للوهلة الأولى، يبدو وكأنه محارب جبار يرتدي درعاً ثقيلاً، ولا تكشفه سوى ابتسامة ميتة. فارس الموت هو تجسيد لروح فارس فشل في الوفاء بنذوره. وفي حالته الملعونة، سيظل يتجول ساعياً للتطهير في المعارك، قاتلاً الأبرياء، غير قادر على تذكر من أقسم على حمايتهم.</string>
     <string name="DeathKnight_Gender">masculine</string>
@@ -331,6 +333,7 @@
     <string name="DriedRoseBuff_Info">الوردة تبدو ساحرة جداً.</string>
     <string name="DriedRose_Info2"> ولم تفقد سحرها. تبدو جميلة جدًا، لدرجة أنك تريد الاحتفاظ بها إلى الأبد.</string>
     <string name="DriedRose_Name">وردة مجففة</string>
+    <string name="Drink_ACDrink">اشرب</string>
     <string name="Drink_Message">هذا المشروب منعش!</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">سكران</string>
@@ -367,6 +370,7 @@
     <string name="Eye_Kill">نظر الموت من %s قتلك...</string>
     <string name="Eye_Name">العين الشريرة</string>
     <string name="Facilitations_Descriptions_0">عومل المتحورون دائماً بازدراء وخوف، لكن انعدام الجوع سيمنحك مرة أخرى التفوق، هذه المرة في غزو أعماق الزنزانة.</string>
+    <string name="Facilitations_Names_0">لا جوع</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="FetidRat_Desc">هذا الجرذ الجرابي أكبر بكثير من الجرذ العادي. تحيط به سحابة كريهة الرائحة.</string>
     <string name="FetidRat_Gender">feminine</string>
@@ -592,6 +596,7 @@
     <string name="Lich_Name_Objective">ليتش</string>
     <string name="LightBuff_Name">مضيء</string>
     <string name="LightningBolt_Info">تعويذة تُتداول بين الشامان القدماء، تصعق أعداءك بفعالية مضاعفة، خاصة إذا كانوا أغبياء بما يكفي ليقفوا فوق الماء.</string>
+    <string name="LightningBolt_Name">صاعقة</string>
     <string name="LightningTrap_Name">فخ البرق</string>
     <string name="LloidsBeacon_ACSet">تعيين</string>
     <string name="LloidsBeacon_Creatures">الهالة النفسية للكائنات المجاورة لا تسمح لك باستخدام منارة لويد في هذه اللحظة.</string>
@@ -663,6 +668,7 @@
     <string name="Ooze_Death">%s يبتلعك...</string>
     <string name="Order_Info">بركّزك المناسب، أوامرك شبه لا تُرفض.</string>
     <string name="Order_Name">أمر</string>
+    <string name="OverpricedRation_Name">حصة طعام باهظة الثمن</string>
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">هذه القاعة مقدسة.</string>
     <string name="PalaceServant_Golem_3">*همهمة منخفضة*</string>
@@ -771,6 +777,7 @@
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">جراب الفأر</string>
     <string name="Rat_Name_Objective">فأر الكيس</string>
+    <string name="Ration_Info">لا شيء مميز هنا: لحم مجفف، بعض البسكويت - أشياء من هذا القبيل.</string>
     <string name="Ration_Name">وجبة طعام</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RegenerationBuff_Info">وظيفة التجدد الطبيعي موجودة في صيغة تأثير مؤقت لتسهيل الأمور.</string>
@@ -874,6 +881,7 @@
     <string name="Shades_Name_Objective">نظارات شمسية</string>
     <string name="ShadowLord_Desc">هذا المخلوق مصنوع من شر خالص وظلام لا يُخترق. يعتقد الكثيرون أنه الإله القديم نفسه، نظراً لمدى قوته. بينما يفترض آخرون أنه مجرد حارس لأروقة الإله القديم.</string>
     <string name="ShadowLord_Gender">masculine</string>
+    <string name="ShadowLord_Name">سيد الظلال</string>
     <string name="ShadowLord_Name_Objective">سيد الظلال</string>
     <string name="Shadow_Desc">تتجول الظلال بصمت عبر أنقاض السجن القديم، ولا تظهر للمغامرين إلا في مناسبات نادرة، عادةً في مغامرتهم الأخيرة.</string>
     <string name="Shadow_Gender">feminine</string>
@@ -1290,6 +1298,14 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
+
 
 
 

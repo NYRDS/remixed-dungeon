@@ -47,6 +47,7 @@
     <string name="ArmorKit_Upgraded">החלת ערכת שריון לשדרוג %s שלך</string>
     <string name="Armor_Info3">\n\nבגלל כוחך הלא מספיק, לבישת שריון זה תפחית את מהירות התנועה ואת יכולת ההגנה שלך.</string>
     <string name="Armor_Info7a">\n\nאתה לובש את ה-%1$s%2$s.</string>
+    <string name="Armor_Info7b">ובמכיוון שהיא מקוללת, אתה חסר אונים להסירה</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">פסל מונפש</string>
     <string name="AzuterronNPC_Gender">masculine</string>
@@ -71,6 +72,7 @@
     <string name="Badges_GamesPlayed4">2000 משחקים שוחקו</string>
     <string name="Badges_GamesPlayed5">5000 משחקים שוחקו</string>
     <string name="Badges_GoldColleted4">7500 זהב נאסף</string>
+    <string name="Badges_GrimWepon">מפלצת נהרגה על ידי נשק אפל</string>
     <string name="Badges_Info2">סופר תג חדש: %s</string>
     <string name="Badges_ItemLvl1">הושג פריט ברמה 3</string>
     <string name="Badges_ItemLvl3">הושג פריט ברמה 9</string>
@@ -297,6 +299,7 @@
     <string name="Dart_Name">חץ קטן</string>
     <string name="DashSpell_Info">מזנק בכיוון שצוין תוך התנגשות באויבים, גורם נזק ומטיל \'קטוע\'.</string>
     <string name="DashSpell_Name">הסתערות</string>
+    <string name="DashSpell_OnSelf">אני לא יכול לזנק במקום.</string>
     <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">אביר המוות</string>
     <string name="Death_Name_1">מוות %s</string>
@@ -381,6 +384,7 @@
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Name">הילת כפור</string>
     <string name="Frost_Shatter">הקור גורם ל-%s להתנפץ!</string>
+    <string name="FrozenCarpaccio_Info3">מרענן!</string>
     <string name="FullFaceMask_Info">מסכת גז היא מסכה המשמשת להגנה על הלובש מפני שאיפת מזהמים באוויר וגזים רעילים. המסכה יוצרת כיסוי אטום על האף, הפה והעיניים.\n\nמסננים חסרים ממסכה זו אבל היא עדיין נראית מגניבה.</string>
     <string name="FuryBuff_Name">זעם</string>
     <string name="GameScene_Chasm">צעדיך מהדהדים ברחבי הצינוק.</string>
@@ -550,6 +554,7 @@
     <string name="LastShopLevel_TileDescExit">מדרון מוביל מטה אל התופת.</string>
     <string name="Leech_Name_2">ערפדי %s</string>
     <string name="Level_HiddenPlate">לוחית לחץ נסתרת נלחצת!</string>
+    <string name="Level_TileAlarmTrap">מלכודת אזעקה</string>
     <string name="Level_TileBookshelf">כוננית ספרים</string>
     <string name="Level_TileChasm">תהום</string>
     <string name="Level_TileDescAlchemy">השלך כמה זרעים כאן כדי לרקוח שיקוי.</string>
@@ -574,6 +579,7 @@
     <string name="Lich_DieInfo">מעולם לא אהבתי את הנקרומנסר הזה. הגיע הזמן לחזור לרמה 7 ולמצוא דרך אחרת להרפתקה החדשה.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name_Objective">ליץ\'</string>
+    <string name="LightningBolt_Name">ברק</string>
     <string name="LightningTrap_Name">מלכודת ברק</string>
     <string name="LloidsBeacon_ACSet">להציב</string>
     <string name="LloidsBeacon_Preventing">אאורה קסומה חזקה הנמצאת כאן מונעת ממך להשתמש במגדלור של לויד!</string>
@@ -656,6 +662,7 @@
     <string name="Order_Name">ציווי</string>
     <string name="Order_Resist">איך אתה מעז?!!</string>
     <string name="OverpricedRation_Info">זה נראה בדיוק כמו מנת מזון סטנדרטית, רק יותר קטנה.</string>
+    <string name="OverpricedRation_Name">מנת מזון במחיר מופקע</string>
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">האולם הזה קדוש.</string>
     <string name="PalaceServant_Golem_3">*רעידה נמוכה*</string>
@@ -849,6 +856,7 @@
     <string name="Scroll_Name">מגילת \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_10">אודל</string>
     <string name="Scroll_Runes_13">איוואז</string>
+    <string name="Scroll_Runes_3">אינגווי</string>
     <string name="Scroll_Runes_4">GYFU</string>
     <string name="SeedPouch_Name">כיס זרעים</string>
     <string name="Senior_Desc">הנזירים הללו הם קנאים, שהקדישו את עצמם להגנה על סודות עירם מפני כל זר. הם אינם משתמשים בשום שריון או כלי נשק, ומסתמכים אך ורק על אומנות הלחימה בידיים חשופות. נזיר זה השתלט על אומנות נטרול יריביו.</string>
@@ -992,6 +1000,7 @@
     <string name="Torch_ACLight">הַדְלֵק</string>
     <string name="Torch_Name">לפיד</string>
     <string name="ToughShield_name">מגן עור מחוזק</string>
+    <string name="TownGuardNPC_Desc">שומר עיר רגיל</string>
     <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message2">תודות להרפתקנים כמוך, המקום הזה הפך לשקט במיוחד</string>
     <string name="TownGuardNPC_Message3">אתה חושב שיש יותר מדי שומרים בעיר הזאת? ובכן, זה בגלל שזאת העיר היחידה עם מבוך ענק מלא מפלצות, לא?</string>
@@ -1612,6 +1621,15 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
+
+
+
+
 
 
 
