@@ -188,6 +188,7 @@
     <string name="Challenges_Names_6">רונות אסורות</string>
     <string name="Challenges_Names_8">ללא עיר</string>
     <string name="Challenges_Names_9">אמנזיה</string>
+    <string name="ChampionOfAirBuff_Info">תכונה זו מקנה ליצור את תמצית הרוחות, משפרת את זריזותו וכישוריו בקרב. אלוף האוויר הופך ליריב אדיר, המסוגל לשחרר מתקפות מהירות והרסניות שיכולות לשנות במהירות את מהלך הקרב.</string>
     <string name="ChampionOfAirBuff_Name">אלוף האוויר</string>
     <string name="ChampionOfEarthBuff_Info">אלוף האדמה מגלם כוח בלתי מתפשר, שכן תכונה זו משפרת את עמידות היצור לנזק ומגדילה את החיוניות המקסימלית שלו. שינוי זה הופך אותו לאויב מאיים במעמקים המסוכנים, המסוגל להדוף התקפות בקלות ולהחזיק מעמד בקרב ממושך עם נחישות בלתי מעורערת.</string>
     <string name="ChampionOfFireBuff_Info">\&quot;שרוי בזעם הלהבות, מאפיין זה מגביר את האכזריות ואת כוח הלחימה של היצור. אלוף האש צץ כיריב מאיים, המשחרר מתקפות הרסניות שיכולות לעטוף את אויביו בלהבות צורבות, מטיל אימה בכל מי שמעז להתנגד לו.</string>
@@ -578,6 +579,7 @@
     <string name="LloidsBeacon_Preventing">אאורה קסומה חזקה הנמצאת כאן מונעת ממך להשתמש במגדלור של לויד!</string>
     <string name="LloidsBeacon_Set">\n\nמאור זה הוגדר אי שם ברמה %d של Remixed Dungeon.</string>
     <string name="Longsword_Gender">masculine</string>
+    <string name="Longsword_Name">חרב ארוכה</string>
     <string name="Luck_Name_0">בן מזל %s</string>
     <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">ראש הברזל של נשק זה גורם נזק משמעותי.</string>
@@ -754,6 +756,7 @@
     <string name="Quiver_Info">אשפת עור המתאימה להחזיק כל כמות של חיצים</string>
     <string name="RaiseDead_Info">ניסיון להחיות את היצור האחרון שנהרג (הטקס דורש חומר טרי למדי). בעת שימוש באמנות האפלה הזו, זכור: כמעט כל יצור יכול לקום לתחייה, אך לא תמיד קל לכופף את רצונו.</string>
     <string name="RankingsScene_NoInfo">אין מידע נוסף</string>
+    <string name="RatArmor_Info">שריון עור העשוי מעור עכברוש. כנראה שזה לא מדבק...</string>
     <string name="RatArmor_Name">שריון חולדות</string>
     <string name="RatHide_Name">עור חולדה</string>
     <string name="RatKing_Gender">masculine</string>
@@ -859,6 +862,7 @@
     <string name="ServiceManNotReadyNPC_Message">מצטער, אבל הבניין הזה עדיין לא מוכן!</string>
     <string name="Sewer_TileDescDeco">טחב צהבהב ולח מכסה את הרצפה.</string>
     <string name="Shades_Info">יש אנשים שאומרים שמבוכים חשוכים מדי בשביל ללבוש את אלה. ואתה אומר שהאנשים האלה פשוט לא מספיק מגניבים.</string>
+    <string name="Shades_Name">משקפי שמש</string>
     <string name="ShadowLord_Death">לאאאא...</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Name">אדון הצללים</string>
@@ -1199,6 +1203,7 @@
     <string name="ZombieGnoll_Info">גנול-זומבי קם מהמתים!</string>
     <string name="ZombieMask_Name">מסיכת זומבי</string>
     <string name="Zombie_Gender">masculine</string>
+    <string name="gdpr_agree">כן, אני מסכים</string>
     <string name="gdpr_choose">אנא בחרו</string>
     <string name="gdpr_title">התאם אישית את חוויית הפרסום שלך</string>
     <string name="town_deco_armoronhanger_name">שריון</string>
@@ -1607,6 +1612,11 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
 
 
 

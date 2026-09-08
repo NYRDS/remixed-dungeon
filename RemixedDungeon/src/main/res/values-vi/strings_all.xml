@@ -800,6 +800,7 @@
     <string name="PlagueDoctorNPC_Quest_End">À, cảm ơn cậu. Tôi hy vọng lần này ít nhất chúng cũng có dấu vết của bệnh tật. Những mẫu trước hoàn toàn vô hại. Vì thế tôi đã có thời gian làm món này cho cậu trong lúc chờ mẫu mới.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
+    <string name="PlagueDoctorQuest_1_1_InProgress">Mang cho ta _năm con chuột chết_! Mỗi con chuột bạn mang đến khiến chúng ta gần hơn với việc hiểu rõ về cơn dịch kinh hoàng này.</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Aaaa… tuyệt vời! Những _con ốc sên_, bí mật của chúng từ từ hé lộ như những cánh hoa dưới ánh trăng. Quả là một món quà thông tin dồi dào! Nhưng bạn nói đúng, _năm mươi đồng vàng_ chẳng phải là phần thưởng xứng đáng. *Cười man rợ*.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">Mười ốc sên, mười thì thầm từ vực thẳm! Chất nhầy của chúng sẽ được phân tích, bản chất của chúng sẽ được thẩm định. Những bí mật chúng chứa đựng đã gần trong tầm tay.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Ho khan dữ dội* Hắt xì!\n Những con ốc... chúng trườn. Chúng tiết nhờn. Và chúng thì thầm bí mật của một thời đại bị lãng quên. Tôi cần chúng, _mười_ con, vỏ vẫn còn nguyên vẹn. Bạn nghĩ _năm mươi đồng vàng_ có đủ cho tri thức quý giá như vậy không?\n Ba! Không quan trọng. Thông tin chúng giữ có thể là chìa khóa để dừng dịch bệnh này. Hoặc... nó có thể dẫn chúng ta đến thứ gì đó còn kinh khủng hơn. Bạn quyết định.</string>
@@ -862,6 +863,7 @@
     <string name="Quiver_Info">Ống đựng tên bằng da phù hợp để chứa bất kỳ số lượng mũi tên nào</string>
     <string name="RabbitEars_Info">Có quan niệm rằng thỏ sinh ra đã mang may mắn, và người sở hữu một phần cơ thể của nó sẽ được thú cưng ấy ban cho vận may. Nghĩ kỹ lại, bị giết chỉ vì đôi tai của bạn – thứ sẽ dùng để làm đồ trang sức – nghe có vẻ không mấy may mắn.</string>
     <string name="RankingsScene_Title">Bảng Xếp Hạng Cao Nhất</string>
+    <string name="RatArmor_Info">Bộ giáp da làm từ da chuột. Nó có lẽ không truyền nhiễm...</string>
     <string name="RatArmor_Name">giáp chuột</string>
     <string name="RatHide_Name">da chuột</string>
     <string name="RatKing_Died">Vua đã chết. Chúc Vua vạn tuế!</string>
@@ -1002,6 +1004,7 @@
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
     <string name="Sewer_TileWater">nước đục</string>
+    <string name="Shades_Name">Kính râm</string>
     <string name="ShadowLord_Desc">Sinh vật này được tạo thành từ sự ác độc thuần khiết và bóng tối không thể thâm nhập. Nhiều người tin rằng chính hắn là Thần Cổ xưa, khi xem xét sức mạnh của hắn. Trong khi những người khác cho rằng hắn chỉ là người gác cửa phòng của Thần Cổ.</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="Shadow_Desc">Bóng ma lặng lẽ phiêu dạt trong đống đổ nát của nhà tù cổ đại, chỉ thỉnh thoảng mới hiện ra trước mắt nhà mạo hiểm giả, thường là trong chuyến phiêu lưu cuối cùng của họ.</string>
@@ -1391,6 +1394,7 @@
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="Zombie_Name_Objective">kẻ sống chết</string>
+    <string name="gdpr_agree">Có, tôi đồng ý</string>
     <string name="gdpr_title">Cá nhân hóa trải nghiệm quảng cáo của bạn</string>
     <string name="town_deco_armoronhanger_desc">Loại giáp nào đó trên móc treo.</string>
     <string name="town_deco_armorstand_plate_desc">Theo người buôn, bộ giáp tấm nặng nề này từng thuộc về một chiến binh vĩ đại.</string>
@@ -1488,8 +1492,14 @@
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
     <string name="town_deco_wooden_bench_desc">Chiếc ghế dài bằng gỗ trông không thoải mái để ngồi.</string>
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
+    <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
 
 
 

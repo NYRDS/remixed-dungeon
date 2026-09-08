@@ -218,12 +218,14 @@
     <string name="Caves_TileHighGrass">Fluorescerende paddenstoelen</string>
     <string name="Caves_TileWater">IJskoud water.</string>
     <string name="Challenges_Descriptions_1">Aanval is de beste verdediging. Volgens deze leerstellingen waag je je in de kerker, met geloof als de sterkste beschermer van je lichaam.</string>
+    <string name="Challenges_Descriptions_2">Als aanhanger van de natuurlijke regeneratie van het normale lichaam, was je altijd voorzichtig met drankjes die genezende eigenschappen hebben. Beter voorzichtig dan spijt!</string>
     <string name="Challenges_Descriptions_3">Het land rond de kerker is al lang besmet met boosaardigheid, waardoor de zaden van allerlei kruiden en planten niet kunnen groeien. Wie weet hoe lang het nog duurt voordat de laatste plant op deze barre gronden ophoudt te bestaan.</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="Challenges_Names_5">In de duisternis</string>
     <string name="Challenges_Names_8">Geen stad</string>
+    <string name="ChampionOfAirBuff_Info">Deze eigenschap schenkt het wezen de essentie van de winden, wat zijn beweeglijkheid en strijdvaardigheid versterkt. De Kampioen van de Lucht wordt een vijandige tegenstander, in staat om snelle en verwoestende aanvallen los te laten die het verloop van de strijd snel kunnen veranderen.</string>
     <string name="ChampionOfEarthBuff_Info">De Kampioen van de Aarde belichaamt onwrikbare kracht: deze eigenschap verbetert de schadeweerstand van het wezen en vergroot zijn maximale vitaliteit. Deze transformatie maakt hem een geduchte tegenstander in de verraderlijke diepten, die aanvallen moeiteloos kan pareren en langdurige gevechten doorstaat met onwrikbaar vastberadenheid.</string>
     <string name="ChampionOfEarthBuff_Name">Kampioen van de Aarde</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Doordrenkt met de woede van de vlammen, versterkt deze eigenschap de felheid en gevechtskracht van het wezen. De Kampioen van het Vuur doemt op als een geduchte tegenstander, die verwoestende aanvallen ontketent die zijn vijanden in verzengende vlammen hullen, en angst inboezemt bij allen die het wagen zich tegen hem te verzetten.</string>
@@ -444,6 +446,7 @@
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
     <string name="Ghost_Defense">ontweek</string>
     <string name="Ghost_Desc">De geest is nauwelijks zichtbaar. Het lijkt op een vormloze vlek van zwak licht met een droevig gezicht.</string>
+    <string name="Ghost_Name_Objective">geest</string>
     <string name="Ghost_Rat1">Hallo avonturier... Ik was ooit als jij - sterk en vol vertrouwen... En nu ben ik dood... Maar ik kan deze plek niet verlaten... Niet voordat ik mijn wraak heb... Dood de _stinkende rat_, die mijn leven heeft genomen...</string>
     <string name="Ghost_Rose1">Hallo avonturier... Eens was ik als jij - sterk en zelfverzekerd... En nu ben ik dood... Maar ik kan deze plek niet verlaten... Niet voordat ik mijn _gedroogde roos_ terugheb... Het is heel belangrijk voor me... Sommige monsters hebben het van mijn lichaam gestolen...</string>
     <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
@@ -1011,6 +1014,7 @@
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
     <string name="Sewer_TileWater">Troebel water</string>
     <string name="Shades_Info">Sommige mensen zeggen dat kerkers te donker zijn om die te dragen. En jij zegt dat die mensen gewoon niet cool genoeg zijn.</string>
+    <string name="Shades_Name">Zonnebril</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Bereid je voor!</string>
     <string name="ShadowLord_Name_Objective">Schaduwheer</string>
@@ -1437,6 +1441,7 @@
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name_Objective">zombie</string>
     <string name="deco_candle_desc">Grote kaars</string>
+    <string name="gdpr_agree">Ja, ik ga akkoord</string>
     <string name="gdpr_title">Personaliseer uw advertentie-ervaring</string>
     <string name="town_deco_armoronhanger_desc">Iets wat lijkt op pantser op een hanger.</string>
     <string name="town_deco_armoronhanger_name">Pantser</string>
@@ -1538,12 +1543,19 @@
     <string name="town_deco_window_name">Raam</string>
     <string name="town_deco_wooden_bench_desc">Houten bank, ziet er ongemakkelijk uit om op te zitten.</string>
     <string name="town_deco_wooden_bench_name">Houten bank</string>
+    <string name="town_deco_wooden_chair_name">Houten stoel</string>
     <string name="town_deco_wooden_drawer_desc">Interessant wat erin bewaard zit.</string>
     <string name="town_deco_wooden_drawer_name">lade</string>
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
 
 
 

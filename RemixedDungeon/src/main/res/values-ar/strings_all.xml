@@ -205,6 +205,7 @@
     <string name="Challenges_Names_5">إلى الظلام</string>
     <string name="Challenges_Names_6">الرموز المحرمة</string>
     <string name="Challenges_Names_8">بلا مدينة</string>
+    <string name="ChampionOfAirBuff_Info">تمنح هذه السمة الكائن جوهر الرياح، مما يعزز رشاقته وبراعته في القتال. يصبح بطل الهواء خصماً هائلاً، قادراً على إطلاق هجمات سريعة ومدمرة يمكن أن تغير بسرعة مسار المعركة.</string>
     <string name="ChampionOfEarthBuff_Info">يجسد بطل الأرض قوة لا تلين، حيث تعزز هذه السمة مقاومة المخلوق للضرر وتزيد من حيويته القصوى. يجعل هذا التحول منه خصمًا مرعبًا في الأعماق الغادرة، قادرًا على صد الهجمات بسهولة وتحمل معارك مطولة بعزيمة لا تلين.</string>
     <string name="ChampionOfFireBuff_Info">\&quot;منقوعًا بغضب اللهب، تضخّم هذه السمة شراسة المخلوق وبراعته القتالية. يبرز بطل النار كخصم مخيف، مطلقًا هجمات مدمرة يمكن أن تبتلع أعداءه في لهيب حارق، وتزرع الرعب في كل من يجرؤ على معارضته.</string>
     <string name="ChampionOfFireBuff_Name">بطل النار</string>
@@ -322,6 +323,7 @@
     <string name="Displacement_Txt">%s الإزاحة</string>
     <string name="DoctorArmor_Info">تسمح هذه الدروع الخاصة بطبيب الطاعون باستخدام قدرة \&quot;سحابة الميزما\&quot;، التي تطلق غازاً ساماً يسمم ويضعف ويشوش الأعداء. الطبيب، المحمي بقناعه، منيع ضد هذه التأثيرات.</string>
     <string name="DoctorArmor_Name">ثوب الطبيب</string>
+    <string name="DogeMask_Name">قناع دوغ</string>
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">فارس الرعب</string>
     <string name="DreadKnight_Name_Objective">فارس الرعب</string>
@@ -399,6 +401,7 @@
     <string name="GasImmuneBuff_Name">مناعة الغاز</string>
     <string name="Ghost_Defense">تهرب</string>
     <string name="Ghost_Desc">الكادح يُرى بصعوبة. يبدو ككتلة غير منتظمة من الضوء الباهت مع وجه حزين.</string>
+    <string name="Ghost_Name_Objective">شبح</string>
     <string name="Ghost_Rose1">مرحباً أيها المغامر... يوماً ما كنت مثلك - قوياً واثقاً... والآن أنا ميت... لكنني لا أستطيع مغادرة هذا المكان... ليس قبل أن أستعيد _الوردة المجففة_ الخاصة بي... إنها مهمة جداً لي... سرقها مني وحش ما من جثتي...</string>
     <string name="Ghost_Rose2">من فضلك... ساعدني... ابحث عن الوردة...</string>
     <string name="Glaive_Gender">feminine</string>
@@ -755,6 +758,7 @@
     <string name="Quiver_Gender">masculine</string>
     <string name="RabbitEars_Name">آذان أرنب</string>
     <string name="RaiseDead_NoSpace">فشل إحياء الموتى لأن لا يوجد مكان حر في الجوار.</string>
+    <string name="RatArmor_Info">درع جلدي مصنوع من جلد الفأر. من المحتمل أنه ليس معدياً...</string>
     <string name="RatArmor_Name">درع جرذان</string>
     <string name="RatHide_Name">جلد الفأر</string>
     <string name="RatKingCrownBuff_Info">عاش سيد الجرذان، سيطيع كل جرذ ويسبح.</string>
@@ -1279,12 +1283,18 @@
     <string name="town_deco_window_name">نافذة</string>
     <string name="town_deco_wooden_bench_desc">مقعد، مصنوع من الخشب، يبدو غير مريح للجلوس.</string>
     <string name="town_deco_wooden_bench_name">مجلس خشبي</string>
+    <string name="town_deco_wooden_chair_name">كرسي خشبي</string>
     <string name="town_deco_wooden_stairs_name">سلالم</string>
     <string name="town_deco_wooden_table_desc">هذه طاولة خشبية جيدة الصنع.</string>
     <string name="town_deco_wooden_table_name">طاولة خشبية</string>
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
 
 
 
