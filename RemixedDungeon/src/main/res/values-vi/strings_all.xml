@@ -642,6 +642,7 @@
     <string name="Kusarigama_Pull">KÉO</string>
     <string name="Larva_Desc">Ấu trùng của Thần Cổ</string>
     <string name="Larva_Gender">feminine</string>
+    <string name="Larva_Name">ấu trùng của thần</string>
     <string name="LastLevel_TileStatue">Cột trụ</string>
     <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
     <string name="LastShopLevel_TileDescExit">Một con dốc dẫn xuống địa ngục.</string>
@@ -741,6 +742,7 @@
     <string name="Monk_Name">tu sĩ lùn</string>
     <string name="Monk_Name_Objective">tu sĩ lùn</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
+    <string name="Moongrace_Name">Ánh Trăng</string>
     <string name="Mushroom_Eat_Message">Cái nấm này có vị kỳ lạ!</string>
     <string name="MysteryMeat_Info2">Ngươi không cảm thấy chân mình nữa!</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
@@ -854,6 +856,7 @@
     <string name="Potion_Colors_1">đỏ tươi</string>
     <string name="Potion_Colors_10">chàm</string>
     <string name="Potion_Colors_15">ngọc trai</string>
+    <string name="Potion_Colors_2">xanh ngọc bích</string>
     <string name="Potion_Colors_4">vàng kim</string>
     <string name="Potion_Colors_6">than chì</string>
     <string name="Potion_Colors_8">hổ phách</string>
@@ -962,6 +965,7 @@
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
     <string name="Scorpio_Desc">Những sinh vật ác quỷ khổng lồ giống nhện này né tránh chiến đấu cận chiến bằng mọi giá, bắn ra những gai răng cưa làm tê liệt từ khoảng cách xa.</string>
     <string name="Scorpio_Gender">masculine</string>
+    <string name="Scorpio_Name_Objective">bọ cạp</string>
     <string name="ScrollHolder_Info">Bạn có thể đặt bất kỳ số lượng cuộn giấy nào vào chiếc hộp hình ống này. Nó tiết kiệm chỗ trong ba lô của bạn và bảo vệ các cuộn giấy khỏi lửa.</string>
     <string name="ScrollOfChallenge_Info1">Cuộn giấy phát ra tiếng gầm thách thức vang dội khắp hầm ngục!</string>
     <string name="ScrollOfChallenge_Name">Cuộn giấy Khiêu chiến</string>
@@ -1520,6 +1524,10 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
 
 
 

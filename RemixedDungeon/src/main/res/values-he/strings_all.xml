@@ -267,6 +267,7 @@
     <string name="Codex_Story_12">נשק בוער - בפגיעה מוצלחת, גורם נזק נוסף למטרה ועלול לשרוף אותה.</string>
     <string name="Codex_Story_16">נשק בר מזל - כמעט מתעלם לחלוטין משריון האויב, וגורם להרבה יותר נזק.</string>
     <string name="Codex_Story_17">נשק מהמם - במכה מוצלחת, עלול לשתק את המטרה.</string>
+    <string name="Codex_Story_20">נשק מקפיא - בפגיעה מוצלחת, עלול להאט את המטרה ולמנוע ממנה להישרף.</string>
     <string name="Codex_Story_21">נשק פראי - בעת פגיעה מוצלחת, עלול לגרום נזק לכל האויבים הסמוכים למטרה.</string>
     <string name="Codex_Story_22">ספר זה כתוב בשפה של שדים</string>
     <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
@@ -920,6 +921,7 @@
     <string name="SnipersMarkBuff_Info">הסימן נוצר על ידי צלף.</string>
     <string name="SociologistNPC_AlreadyTaken">כבר השתתפת בסקר הזה, אנא חזור מאוחר יותר</string>
     <string name="SociologistNPC_Gender">masculine</string>
+    <string name="SociologistNPC_InternetRequired">מצטער, אבל ללא גישה לאינטרנט לא תוכל להשתתף בסקר שלנו</string>
     <string name="SociologistNPC_Name">סוציולוג</string>
     <string name="Sorrowmoss_Desc">סורומוס הוא פרח (לא טחב) עם עלי כותרת חדים כתער, מצופים ברעל קטלני.</string>
     <string name="SoulShard_Gender">masculine</string>
@@ -977,6 +979,7 @@
     <string name="StartScene_Warning">ההתקדמות הנוכחית שלך במשחק תימחק.</string>
     <string name="StartScene_WinGame">כדי לפתוח \&quot;אתגרים\&quot;, נצח את המשחק עם כל סוג דמות.</string>
     <string name="Statue_Gender">feminine</string>
+    <string name="Statue_Name">פסל מונפש</string>
     <string name="Stench_Txt">%s של סירחון</string>
     <string name="StrongShield_desc">המגן המלבני הזה מצופה בלוחות ברזל ומקושט בבד צבעוני. הוא כבד משמעותית, אך מסוגל לחסום נזק רב יותר.</string>
     <string name="Stylus_ACInscribe">חָרֹת</string>
@@ -1234,6 +1237,7 @@
     <string name="town_deco_barrel_wine_desc">משמשת לאחסון משקה יקר ערך כמו יין.</string>
     <string name="town_deco_barrel_wine_name">חבית יין</string>
     <string name="town_deco_blue_carpet_name">שטיח</string>
+    <string name="town_deco_broken_roof_desc">הרעפים על גג זה סדוקים וזקוקים להחלפה.</string>
     <string name="town_deco_broken_roof_name">גג שבור</string>
     <string name="town_deco_cabinet_name">ארון</string>
     <string name="town_deco_canvas_name">קנבס</string>
@@ -1635,6 +1639,10 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
 
 
 

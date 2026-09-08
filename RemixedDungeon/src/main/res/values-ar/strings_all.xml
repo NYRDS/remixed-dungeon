@@ -42,10 +42,12 @@
     <string name="AmuletScene_Stay">لم أنتهِ بعد</string>
     <string name="AmuletScene_Txt">أخيراً تمسكه بين يديك، تميمة يندور. باستخدام قوتها يمكنك السيطرة على العالم أو جلب السلام والازدهار للناس أو أي شيء آخر. في أي حال، ستتغير حياتك للأبد وستنتهي اللعبة هنا. أو يمكنك البقاء مجرد بشري عادي لفترة أطول قليلاً.</string>
     <string name="Amulet_Info">تعويذة ييندور هي أقوى قطعة أثرية معروفة من أصل مجهول. يُقال إنها قادرة على تحقيق أي رغبة إذا كانت إرادة صاحبها قوية بما يكفي لـ \&quot;إقناعها\&quot; بالقيام بذلك.</string>
+    <string name="Amulet_Name">تميمة يندور</string>
     <string name="AnesthesiaBuff_Info">لا يشعر بالألم ولا يستيقظ من الهجمات، لكنه لا يزال يتلقى الضرر.</string>
     <string name="Anesthesia_Cast">%s يسقط في نوم عميق بلا أحلام.</string>
     <string name="Anesthesia_Info">يُسبّب نومًا عميقًا وغير طبيعي لهدفك. حتى أعنف الهجمات لن توقظهم من هذا النوم.</string>
     <string name="Ankh_Name">عنخ</string>
+    <string name="ArmorKit_ACAplly">تطبيق</string>
     <string name="ArmorKit_Name">مجموعة دروع</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
@@ -1043,8 +1045,10 @@
     <string name="Undead_Name_Objective">قزم ميت حي</string>
     <string name="Using_Failed_Because_Magic">سحر قوي يمنعك من استخدام \&quot;%s\&quot;.</string>
     <string name="VertigoBuff_Info">الشعور بالدوار يجعل المشي في خط مستقيم أكثر صعوبة!</string>
+    <string name="VertigoBuff_Name">دوار</string>
     <string name="VileEssence_Info">جوهر مركز من الفساد تم حصاده من عدو مهزوم. ينبض هذا الجوهر المظلم بطاقة خبيثة ويُقدّر كثيرًا في العمليات الكيميائية.</string>
     <string name="Viscosity_Txt">%s من اللزوجة</string>
+    <string name="WandHolster_Info">حامل رفيع هذا مصنوع من جلد حيوان غريب. يسمح بحمل ما يصل إلى %d عصا بشكل مضغوط.</string>
     <string name="WandMaker_Defense">امتص</string>
     <string name="WandMaker_Desc">هذا الشيخ الوقور لكنه قوي البنية يبدو عليه الارتباك الطفيف. إنه محمي بدرع سحري.</string>
     <string name="WandMaker_Dust1">يا لها من مفاجأة سارة أن ألتقي بشخص لائق في مثل هذا المكان! جئت إلى هنا بحثاً عن مكون نادر - _غبار الجثث_. يمكن جمعه من الهياكل العظمية المتوفرة بكثرة في الزنزانة. بصفتي مستخدماً للسحر، أستطيع الدفاع عن نفسي ضد الوحوش المحلية، لكنني أضيع بسهولة بالغة، وهذا محرج جداً. هل يمكن أن تساعدني؟ سأكون سعيداً بدفع أجر خدمتك بإحدى أفضل عصاي السحرية.</string>
@@ -1312,6 +1316,10 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
 
 
 
