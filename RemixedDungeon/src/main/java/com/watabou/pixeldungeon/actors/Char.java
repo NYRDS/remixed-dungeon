@@ -337,6 +337,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     private static final String TAG_HP = "HP";
     private static final String TAG_HT = "HT";
+    private static final String BASE_STR = "baseStr";
     private static final String BUFFS = "buffs";
     private static final String SPELLS_USAGE = "spells_usage";
 
@@ -352,6 +353,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         bundle.put(TAG_HP, hp());
         bundle.put(TAG_HT, ht());
+        bundle.put(BASE_STR, baseStr);
         bundle.put(BUFFS, buffs);
         bundle.put(SPELLS_USAGE, spellsUsage);
         bundle.put(LEVEL, lvl());
@@ -381,6 +383,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         hp(bundle.getInt(TAG_HP));
         ht(bundle.getInt(TAG_HT));
+        baseStr = bundle.optInt(BASE_STR, 10);
         lvl(bundle.getInt(LEVEL));
 
         restoringFromBundle = true;

@@ -392,7 +392,9 @@ public abstract class Level implements Bundlable {
 		Iterator<Mob> it = level.mobs.iterator();
 		while(it.hasNext()) {
 			Mob mob = it.next();
-			if(mob.followOnLevelChanged(changeMode)) {
+			boolean follows = mob.followOnLevelChanged(changeMode);
+			GLog.debug("followCheck: %s id=%d ownerId=%d owner=%s -> %s", mob.getEntityKind(), mob.getId(), mob.getOwnerId(), mob.getOwner().getEntityKind(), follows);
+			if(follows) {
 				mobsToNextLevel.add(mob);
 				it.remove();
 			}
@@ -407,16 +409,18 @@ public abstract class Level implements Bundlable {
 
 		Dungeon.saveCurrentLevel(); //save level
 
-		// caveman: roster into the game bundle right away - a crash before the
-		// next full save must not delete the pets
-		Dungeon.pendingFollowers = mobsToNextLevel;
-		Dungeon.persistPendingFollowers();
+		// pets are persisted in the game bundle (Dungeon.saveGame collects them
+		// from level.mobs), so the roster is already safe on disk here
 		return mobsToNextLevel;
 	}
 
 	public enum Feeling {
 		NONE, CHASM, WATER, GRASS, UNDEFINED
 	}
+
+	// hero-owned pets found in a level save being loaded (old save format);
+	// Dungeon collects them from here after loading the level
+	public static final List<Mob> recoveredFollowers = new ArrayList<>();
 
 	@Getter
     protected int width  = 32;
@@ -699,7 +703,7 @@ public abstract class Level implements Bundlable {
 	public void reset() {
 
 		for (Mob mob : getCopyOfMobsArray()) {
-			if (!mob.reset()) {
+			if (!mob.reset() && !(mob.getOwner() instanceof Hero)) {
 				mobs.remove(mob);
 			}
 		}
@@ -762,7 +766,13 @@ public abstract class Level implements Bundlable {
 			if (mob != null) {
 				if (mob.valid() && cellValid(mob.getPos()) && !CharsList.isDestroyed(mob.getId())) {
 					GLog.debug("load: %s %d", mob.getEntityKind(), mob.getId());
-					mobs.add(mob);
+					if (mob.getOwner() instanceof Hero) {
+						// saves made before pets moved to the game bundle keep them here;
+						// hand them over to Dungeon instead of this level
+						recoveredFollowers.add(mob);
+					} else {
+						mobs.add(mob);
+					}
 				} else {
 					GLog.debug("skip: %s %d", mob.getEntityKind(), mob.getId());
 				}
@@ -804,7 +814,15 @@ public abstract class Level implements Bundlable {
 
 		bundle.put(OBJECTS, getAllLevelObjects());
 
-		bundle.put(MOBS, mobs);
+		// hero-owned pets travel with the hero and are stored in the game save,
+		// persisting them here too would leave stale copies behind
+		List<Mob> mobsToSave = new ArrayList<>();
+		for (Mob mob : mobs) {
+			if (!(mob.getOwner() instanceof Hero)) {
+				mobsToSave.add(mob);
+			}
+		}
+		bundle.put(MOBS, mobsToSave);
 		bundle.put(BLOBS, blobs.values());
 
 		bundle.put(SCRIPTS, scripts);

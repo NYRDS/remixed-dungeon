@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.alchemy.OutputItem;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.ai.RemoteControlled;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.platform.storage.SaveUtils;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
@@ -579,6 +580,63 @@ public class DebugEndpoints {
                     entityValue, x, y, entityType, entityValue, x, y));
         } catch (Exception e) {
             GLog.w("Error in handleDebugSpawnAt: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                String.format("{\"error\":\"Internal error: %s\"}", e.getMessage()));
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugContinueGame(NanoHTTPD.IHTTPSession session) {
+        try {
+            String heroClass = "WARRIOR";
+            String query = session.getQueryParameterString();
+            if (query != null && !query.isEmpty()) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("class=")) {
+                        heroClass = java.net.URLDecoder.decode(param.substring(6), "UTF-8").toUpperCase();
+                    }
+                }
+            }
+
+            HeroClass selectedClass = null;
+            for (HeroClass cls : HeroClass.values()) {
+                if (cls.name().equals(heroClass)) {
+                    selectedClass = cls;
+                    break;
+                }
+            }
+
+            if (selectedClass == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"Unknown hero class: %s\"}", heroClass));
+            }
+
+            if (Dungeon.hero != null && Dungeon.level != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game already in progress\"}");
+            }
+
+            java.io.File saveFile = new java.io.File(
+                    com.nyrds.platform.storage.FileSystem.getUserDataPath(com.nyrds.pixeldungeon.ml.BuildConfig.SAVES_PATH),
+                    SaveUtils.gameFile(selectedClass));
+            if (!saveFile.exists()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"No save found for %s\"}", heroClass));
+            }
+
+            Dungeon.heroClass = selectedClass;
+
+            InterlevelScene.scheduleAndWait(InterlevelScene.Mode.CONTINUE, new Position(), "Continue game: " + heroClass);
+
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Continue failed - level not loaded\"}");
+            }
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"message\":\"Continued game as %s\",\"heroClass\":\"%s\",\"depth\":%d}",
+                    heroClass, heroClass, Dungeon.depth));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugContinueGame: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 String.format("{\"error\":\"Internal error: %s\"}", e.getMessage()));
         }
@@ -2148,25 +2206,13 @@ public class DebugEndpoints {
                     String.format("{\"error\":\"Level '%s' does not exist\"}", levelId));
             }
 
-            // Create position and level
+            // Create position, do NOT create the level here - DungeonGenerator.createLevel
+            // calls Actor.clearActors() and would wipe the live game's actor registry
+            // before the transition collects follower pets. The level is created by
+            // the transition itself; an explicit entrance cell is applied after arrival.
             Position position = new Position();
             position.levelId = levelId;
-
-            Level newLevel = DungeonGenerator.createLevel(position);
-            if (newLevel == null) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                    String.format("{\"error\":\"Failed to create level '%s'\"}", levelId));
-            }
-
-            // Determine entrance position
-            int startPos;
-            if (entranceCell >= 0 && entranceCell < newLevel.getLength()) {
-                startPos = entranceCell;
-            } else {
-                startPos = newLevel.entrance;
-            }
-
-            position.cellId = startPos;
+            position.cellId = entranceCell;
 
             // Schedule InterlevelScene transition on GL thread and wait for level load
             InterlevelScene.scheduleAndWait(InterlevelScene.Mode.RETURN, position, "Switching to level: " + levelId);
@@ -2174,9 +2220,14 @@ public class DebugEndpoints {
             String levelKind = DungeonGenerator.getLevelKind(levelId);
             int depth = DungeonGenerator.getLevelDepth(levelId);
 
+            int arrivedEntrance = entranceCell;
+            if (arrivedEntrance < 0 && Dungeon.level != null) {
+                arrivedEntrance = Dungeon.level.entrance;
+            }
+
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"levelId\":\"%s\",\"kind\":\"%s\",\"depth\":%d,\"entrance\":%d}",
-                    levelId, levelKind, depth, startPos));
+                    levelId, levelKind, depth, arrivedEntrance));
         } catch (Exception e) {
             GLog.w("Error in handleDebugGoToLevel: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
