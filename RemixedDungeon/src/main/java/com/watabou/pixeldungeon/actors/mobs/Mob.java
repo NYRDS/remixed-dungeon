@@ -429,13 +429,6 @@ public abstract class Mob extends Char {
         // clears belongings too)
         clone.getBelongings().clear();
 
-        // a split-off copy is never owned: splitting a pet (Moongrace, exploding
-        // spiders) yields a hostile feral copy, not a free extra minion
-        clone.setOwnerId(clone.getId());
-        if (clone.fraction() == Fraction.HEROES) {
-            clone.setFraction(Fraction.DUNGEON);
-        }
-
         clone.hp(Math.max((hp() - damage) / 2, 1));
         clone.setPos(cell);
         clone.setState(MobAi.getStateByClass(Hunting.class));
@@ -444,6 +437,17 @@ public abstract class Mob extends Char {
 
         level().spawnMob(clone, SPLIT_DELAY, getPos());
 
+        return clone;
+    }
+
+    // split whose copy always turns hostile: a hero pet (Moongrace plant,
+    // exploding Moongrace spider hit) leaves a feral copy, not a free minion
+    public Mob splitHostile(int cell, int damage) {
+        Mob clone = split(cell, damage);
+        clone.setOwnerId(clone.getId());
+        if (clone.fraction() == Fraction.HEROES) {
+            clone.setFraction(Fraction.DUNGEON);
+        }
         return clone;
     }
 

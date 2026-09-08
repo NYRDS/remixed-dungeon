@@ -92,17 +92,22 @@ Narrow timing window between the two saves — consistent with "happened once".
 
 ### 4. Spider-nest minion duplication — root cause found (Moongrace)
 
-> **FIXED (2026-09-08):** `Mob.split` no longer produces owned copies — the clone
-> it spawns is always self-owned, and a clone of a hero-fraction (pet) source is
-> flipped to `Fraction.DUNGEON`, so splitting a pet (Moongrace plant, exploding
-> Moongrace spider hit, ChaosShieldLeft script, Multiplicity glyph on pet armor)
-> yields a *hostile* copy that turns on its former master instead of a free extra
-> minion. `makeClone` itself keeps faithful-copy semantics (a clone is a copy;
-> call sites decide what to do with it — e.g. `Carcass.reanimate` clones then
-> re-applies `makePet`). Verified on the desktop debug server: a Moongrace-kind
-> exploding spider killing an owned rat produced a self-owned DUNGEON-fraction
-> rat clone (HP 1, split signature) — no pet duplicate. `ScrollOfMirrorImage`
-> uses `Hero.makeClone` and is unaffected.
+> **FIXED (2026-09-08, scoped):** the Moongrace path — the plant itself and the
+> exploding Moongrace spider hit — now clones via `Mob.splitHostile` (called from
+> `Moongrace.effect`): the copy is always self-owned, and a hero-fraction (pet)
+> source is flipped to `Fraction.DUNGEON`, so a pet leaving through moonlight
+> leaves a *hostile* copy, not a free extra minion. Plain `Mob.split` and
+> `Mob.makeClone` keep their generic semantics (split = clone with damage, clone =
+> faithful copy; call sites re-purpose the result — e.g. `Carcass.reanimate`
+> clones then re-applies `makePet`). Verified on the desktop debug server: a
+> Moongrace-kind exploding spider killing an owned rat produced a self-owned
+> DUNGEON-fraction rat clone (HP 1, split signature) — no pet duplicate.
+>
+> **Still open by design decision (2026-09-08):** the other two pet-clone
+> delivery paths keep old behavior — `ChaosShieldLeft.lua` `cloneEnemy` (splitting
+> a pet attacking a shield-bearer) and the Multiplicity glyph on pet armor still
+> produce *friendly* clones, i.e. remain pet-duplication vectors. Revisit if the
+> spider-nest style dup resurfaces.
 
 `Moongrace.effect` **splits any mob that presses the plant** (`plants/Moongrace.java:32-41` → `Mob.split(cell, 0)`), and `Mob.makeClone` (`actors/mobs/Mob.java:577-594`) **copies `ownerId` for pets (lines 587-591), so the clone is also a hero-owned pet**. `Level.spawnMob` has no dedup (`levels/Level.java:903-938`).
 
