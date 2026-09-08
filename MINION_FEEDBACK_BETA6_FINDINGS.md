@@ -202,6 +202,24 @@ Two mechanisms, both currently by design:
 
 ### 7. Pet STR doesn't affect carrying
 
+> **FIXED (2026-09-09):** the encumbrance speed term moved from `Hero.speed()`
+> into `Char.speed()` — armor overload (`requiredSTR() - effectiveSTR() > 0`)
+> now slows *any* carrier by `1.3^-aEnc`, pets included; the computation mirrors
+> the pre-existing generic term in `Char.defenseSkill` (armor-only, same shape).
+> `Hero.speed()` keeps only the Freerunner sprint, granted only when not
+> encumbered (same branch semantics as before — numeric results for the hero are
+> identical). Equip gating was deliberately **not** added: pets keep the same
+> freedom the pet equip window gives them (equip over-STR gear), but the penalty
+> is now real — slow movement, `Char.defenseSkill` evasion loss, and the
+> Encumbrance complaint buff that was already attaching. `MobItemAi.autoEquip`
+> keeps using `statsRequirementsSatisfied`, so auto-equip never picks gear the
+> pet can't wear; only manual overload is possible, exactly like for the hero.
+> Verified on the desktop debug server via the new `/debug/test_equip` endpoint
+> (force-equips, bypassing the STR gate, like WndPetItem can): fresh Statue
+> (STR 12) + PlateArmor level -2 (requiredSTR 19) → aEnc 7, speed 1.0 → 0.159
+> (= 1.3⁻⁷, exact); hero with normal gear stays at speed 1.0. `char_status`/
+> `hero_status` now also report `speed` and `str`.
+
 - Speed penalty for overload exists **only in `Hero.speed()`** (`actors/hero/Hero.java:271-278`, `1.3^-aEnc`). Generic `Char.speed()` (`Char.java:767-771`) has no encumbrance term; `Mob` doesn't override.
 - Pets *do* get the Encumbrance buff (attached to any overloaded char, `Char.java:326-330`) → complaints, and `Char.defenseSkill` evasion penalty (`Char.java:607-613`).
 - `Belongings.equip` performs **no STR check** for pets (`Belongings.java:711+`), so over-STR gear is trivially equipped via `WndPetItem`.

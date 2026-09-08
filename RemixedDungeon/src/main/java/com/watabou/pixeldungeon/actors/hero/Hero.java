@@ -268,13 +268,14 @@ public class Hero extends Char {
     @Override
     public float speed() {
 
+        float speed = super.speed();
+
         int aEnc = getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR();
         if (aEnc > 0) {
-            return (float) (super.speed() * Math.pow(1.3, -aEnc));
-        } else {
-            float speed = super.speed();
-            return getHeroSprite().sprint(subClass == HeroSubClass.FREERUNNER && !isStarving()) ? 1.6f * speed : speed;
+            return speed;
         }
+
+        return getHeroSprite().sprint(subClass == HeroSubClass.FREERUNNER && !isStarving()) ? 1.6f * speed : speed;
     }
 
     @Override

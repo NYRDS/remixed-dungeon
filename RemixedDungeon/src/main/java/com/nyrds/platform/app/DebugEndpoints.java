@@ -31,6 +31,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
@@ -3039,14 +3040,16 @@ public class DebugEndpoints {
             String levelId = (Dungeon.level != null) ? DungeonGenerator.getCurrentLevelId() : "";
 
             String jsonString = String.format(
-                "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d,\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d}",
+                "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d,\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d,\"speed\":%f,\"str\":%d}",
                 hero.isAlive(),
                 hero.hp(),
                 hero.ht(),
                 pos, x, y,
                 actionName,
                 levelId,
-                Dungeon.depth
+                Dungeon.depth,
+                hero.speed(),
+                hero.effectiveSTR()
             );
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);
@@ -3513,6 +3516,75 @@ public class DebugEndpoints {
         }
     }
 
+    // test endpoint: /debug/test_equip?id=<mob>&item=<ItemFactory name>&level=<n> -
+    // force-equips an item on any char, bypassing the STR gate (same freedom the
+    // pet equip window has). Negative armor level raises requiredSTR - makes the
+    // wearer overloaded, useful to test encumbrance speed/evasion penalties.
+    public static NanoHTTPD.Response handleDebugTestEquip(NanoHTTPD.IHTTPSession session) {
+        try {
+            int id = -1, level = 0;
+            String itemType = null;
+            String query = session.getQueryParameterString();
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = Integer.parseInt(param.substring(3));
+                    } else if (param.startsWith("item=")) {
+                        itemType = URLDecoder.decode(param.substring(5), "UTF-8");
+                    } else if (param.startsWith("level=")) {
+                        level = Integer.parseInt(param.substring(6));
+                    }
+                }
+            }
+
+            Mob mob = findMobById(id);
+            if (mob == null || itemType == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need id & item").toString());
+            }
+
+            final Mob finalMob = mob;
+            final String finalItemType = itemType;
+            final int finalLevel = level;
+            final String[] error = new String[1];
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    Item item = ItemFactory.itemByName(finalItemType);
+                    item.level(finalLevel);
+                    if (!(item instanceof EquipableItem)) {
+                        error[0] = "not equipable: " + finalItemType;
+                        return;
+                    }
+                    if (!finalMob.getBelongings().collect(item)) {
+                        error[0] = "backpack full";
+                        return;
+                    }
+                    Belongings.Slot slot = ((EquipableItem) item).slot(finalMob.getBelongings());
+                    if (slot == Belongings.Slot.NONE) {
+                        error[0] = "no slot for " + finalItemType;
+                        return;
+                    }
+                    finalMob.getBelongings().equip((EquipableItem) item, slot);
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"item\":\"%s\",\"level\":%d,\"requiredSTR\":%d,\"effectiveSTR\":%d,\"speed\":%f}",
+                    itemType, finalLevel, ((EquipableItem) findMobById(id).getBelongings().getItemFromSlot(Belongings.Slot.ARMOR)).requiredSTR(),
+                    mob.effectiveSTR(), mob.speed()));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
     private static Mob findMobById(int id) {
         if (Dungeon.level == null) {
             return null;
@@ -3849,7 +3921,8 @@ public class DebugEndpoints {
             String jsonString = String.format(
                 "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d," +
                     "\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d," +
-                    "\"type\":\"%s\",\"fraction\":\"%s\",\"remote\":%b,\"reverted\":%b,\"revertAfter\":%d}",
+                    "\"type\":\"%s\",\"fraction\":\"%s\",\"remote\":%b,\"reverted\":%b,\"revertAfter\":%d," +
+                    "\"speed\":%f,\"str\":%d}",
                 mob.isAlive(),
                 mob.hp(),
                 mob.ht(),
@@ -3861,7 +3934,9 @@ public class DebugEndpoints {
                 mob.fraction().name(),
                 isRemote(mob),
                 reverted,
-                mob.remoteRevertAfter
+                mob.remoteRevertAfter,
+                mob.speed(),
+                mob.effectiveSTR()
             );
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);

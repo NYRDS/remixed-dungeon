@@ -775,6 +775,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         final float[] speed = {baseSpeed};
         forEachBuff(b -> speed[0] *= b.speedMultiplier(this));
 
+        // armor overload slows every carrier, pets included (same term as in defenseSkill)
+        int aEnc = getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR();
+        if (aEnc > 0) {
+            speed[0] *= (float) Math.pow(1.3, -aEnc);
+        }
+
         return speed[0];
     }
 
