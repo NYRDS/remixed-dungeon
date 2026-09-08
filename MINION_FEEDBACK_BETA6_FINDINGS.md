@@ -71,6 +71,20 @@ Why doors stay open in practice:
 
 ### 2. One cell near stairs / hero's old position stays lit after descend or reload
 
+> **FIXED (2026-09-09):** the pet pass in `Level.updateFieldOfView` no longer
+> paints unconditionally. The new `updateFovForPetAt` contributes a pet's 3×3
+> only while the hero actually sees the pet — the pet's own cell must already be
+> in the freshly cast `fieldOfView` — and intersects both the pet cell and its
+> 9 cells with `discoverable[]`. A pet parked out of sight (e.g. at the stairs
+> after descend) therefore leaves no lit patch and burns nothing into
+> `level.mapped`; a blind or dead hero (empty FoV) gets no pet vision at all;
+> the `CharsList.DUMMY`-at-`-1` corner case is covered by the `cellValid` guard.
+> Mind-vision / Huntress / Awareness passes keep their unobstructed marking
+> (magical senses, by design). Verified on the desktop debug server (SewerLevel):
+> an owned statue spawned 20 cells from the hero leaves its 3×3 dark
+> (visible 0/9, mapped 0/9) while an adjacent pet's 3×3 stays lit (9/9); after
+> `go_to_level` both pets respawn next to the hero and are fully lit, logs clean.
+
 Not stale FoV — the hero FoV recompute is clean (`mechanics/ShadowCaster.java:44` clears the array; `Dungeon.initSizeDependentStuff` reallocates on level entry/reload).
 
 The real mechanism — **pets contribute wall-blind vision**:

@@ -1523,6 +1523,23 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	// pets extend the hero's sight only while the hero actually sees the pet,
+	// and never into cells the level keeps hidden - otherwise a pet parked
+	// out of sight (e.g. at the stairs after descend) burns a lit 3x3 patch
+	// into the explored map
+	private void updateFovForPetAt(int p) {
+		if (!cellValid(p) || !fieldOfView[p] || !discoverable[p]) {
+			return;
+		}
+
+		for (int a : NEIGHBOURS9) {
+			int cell = p + a;
+			if (cellValid(cell) && discoverable[cell]) {
+				markFovCellSafe(cell);
+			}
+		}
+	}
+
 	public void updateFieldOfView(Char c) {
 
 		//GLog.i("fov: %s",c.toString());
@@ -1566,7 +1583,7 @@ public abstract class Level implements Bundlable {
 
 		if(c instanceof Hero) {
 			for (Integer mobId: c.getPets()) {
-				updateFovForObjectAt(CharsList.getById(mobId).getPos());
+				updateFovForPetAt(CharsList.getById(mobId).getPos());
 			}
 		}
 
