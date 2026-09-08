@@ -106,7 +106,9 @@ public abstract class Mob extends Char {
     public Mob() {
         super();
         setupCharData();
-        baseStr = getClassDef().optInt("baseStr", Bestiary.baseStrFor(getEntityKind()));
+        // explicit stat only: mobsDesc "baseStr" key; STR() in java class or
+        // fillStats lua script overrides later in the ctor chain
+        baseStr = getClassDef().optInt("baseStr", baseStr);
         getScript().run("fillStats");
         if (ModQuirks.mobLeveling) {
             lvl(Random.Int(1, (int) RemixedDungeon.getDifficultyFactor() + 1));

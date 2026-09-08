@@ -9,9 +9,7 @@ import com.nyrds.util.ModError;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -22,10 +20,6 @@ public class Bestiary {
 	private static JSONObject Feelings;
 	private static double feelingChance;
 
-	// mob kind -> sum(depth * weight), sum(weight) over Bestiary entries
-	private static final Map<String, double[]> depthSums = new HashMap<>();
-	private static boolean depthsScanned;
-
 	static {
 		bestiaryData = JsonHelper.readJsonFromAsset("levelsDesc/Bestiary.json");
 
@@ -35,72 +29,6 @@ public class Bestiary {
 		}
 
         selfTest(bestiaryData);
-	}
-
-	// typical dungeon depth of a mob kind: weighted mean of the depths it
-	// spawns at, rounded up. 0 when the kind is absent from the bestiary.
-	public static int typicalDepth(String mobKind) {
-		scanDepths();
-		double[] sums = depthSums.get(mobKind);
-		if (sums == null || sums[1] <= 0) {
-			return 0;
-		}
-		return (int) Math.ceil(sums[0] / sums[1]);
-	}
-
-	// initial baseStr pacing: follows the armor tiers a hero meets at that depth
-	// (typicalSTR 9/11/13/15/17), never below the hero's starting 10
-	public static int baseStrFor(String mobKind) {
-		int depth = typicalDepth(mobKind);
-		return Math.max(10, 7 + 2 * ((depth + 4) / 5));
-	}
-
-	private static synchronized void scanDepths() {
-		if (depthsScanned) {
-			return;
-		}
-		depthsScanned = true;
-
-		Iterator<String> kinds = bestiaryData.keys();
-		while (kinds.hasNext()) {
-			String kind = kinds.next();
-			if (kind.equals(FEELINGS)) {
-				continue;
-			}
-			JSONObject levelDesc = bestiaryData.optJSONObject(kind);
-			if (levelDesc == null) {
-				continue;
-			}
-			Iterator<String> levels = levelDesc.keys();
-			while (levels.hasNext()) {
-				String levelKey = levels.next();
-				int depth;
-				try {
-					depth = Integer.parseInt(levelKey);
-				} catch (NumberFormatException e) {
-					continue; // "any" and named level ids carry no depth info
-				}
-				JSONObject atDepth = levelDesc.optJSONObject(levelKey);
-				if (atDepth == null) {
-					continue;
-				}
-				Iterator<String> mobs = atDepth.keys();
-				while (mobs.hasNext()) {
-					String mobKind = mobs.next();
-					double weight = atDepth.optDouble(mobKind, 0);
-					if (weight <= 0) {
-						continue;
-					}
-					double[] sums = depthSums.get(mobKind);
-					if (sums == null) {
-						sums = new double[2];
-						depthSums.put(mobKind, sums);
-					}
-					sums[0] += depth * weight;
-					sums[1] += weight;
-				}
-			}
-		}
 	}
 
 	private static String currentLevelId;
