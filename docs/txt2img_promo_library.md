@@ -13,7 +13,8 @@ names are used verbatim so promo art matches what players see in game.
 
 1. Paste `STYLE`, `CONSTRAINTS` and the negative prompt verbatim (below).
 2. Pick one `SCENE` block (Locations).
-3. Pick `CAST` lines — one hero, 1–4 mobs or props (Heroes / Mobs / Elements).
+3. Pick `CAST` lines — one hero, 1–4 mobs / NPCs / props (Heroes / Mobs /
+   Dungeon & Town NPCs / Elements).
 4. Pick a `LIGHTING` preset and a `COMPOSITION` preset.
 5. Params are fixed — see Params. For quick iteration use the short-variant
    trick: one sentence per block, comma-separated.
@@ -209,6 +210,29 @@ three faded destination murals on the walls.
 PALETTE: marble white, arcane violet-blue, gold rune accents.
 ```
 
+### Final level (depth 32, true ending)
+
+```
+SCENE: the last hall of the Demon Halls, dark red stone veined with cold
+lava, and on a raised carved pedestal the Amulet of Yendor radiating warm
+golden light into the darkness.
+PALETTE: blood red and cold lava black against one strong amulet-gold glow.
+```
+
+For the troll fake ending (depth 26) keep the same scene but swap in
+`a tarnished fake amulet, paint peeling`.
+
+### Flooded treasury (any region)
+
+```
+SCENE: a small stone vault flooded knee-deep with clear water, treasure
+chests and gold heaps on a raised dry platform, coins glinting under the
+water surface, rings spreading where something big moves beneath.
+PALETTE: cold blue water, gold treasure glints, dark stone.
+```
+
+Populate with the giant piranha from Mobs → Specials.
+
 ## Heroes — CAST blocks
 
 One hero per promo unless showing the lineup. Base form (no subclass) unless
@@ -248,6 +272,11 @@ confident stance.
 ## Mobs — CAST blocks (by region)
 
 In-game names in bold. Compose 1–4 per image; keep bosses alone with a hero.
+
+**Pets:** any mob can become the hero's pet — that mechanic was the 32.4
+round, expect it in promos. Take the mob's CAST line and append
+`loyal, standing at the hero's side, no hostile pose`. Squads of 2–3 pets
+read best (giant rat + stone golem + armored skeleton was the beta.7 banner).
 
 ### Sewers
 
@@ -345,6 +374,33 @@ In-game names in bold. Compose 1–4 per image; keep bosses alone with a hero.
 - **giant piranha** — `a huge carnivorous fish breaking the water surface, teeth first`
 - **magic sheep** — `a fluffy white sheep chewing cud with a blank stare, faint magic sparkle`
 - **air / water / earth elemental** — `a flying being of living wind`, `a figure of bonded walking waves`, `a clod of earth walking on stone limbs`
+- **hedgehog** — `a small round pet hedgehog, spines bristling, snout up`
+
+## Dungeon NPCs — CAST blocks
+
+Friendly faces met inside the dungeon.
+
+- **sad ghost** — `a barely visible shapeless spot of faint light with a sorrowful face, hovering at knee height` — quest giver
+- **old wandmaker** — `a hale old gentleman in mage robes with a slightly confused expression, wands strapped across his back, a magic shield shimmer around him`
+- **troll blacksmith** — `a tall lean troll whose stone-grey cracked skin resembles rock, tinkering at an anvil with comically small tools`
+- **ambitious imp** — `a small imp demon with a merchant's grin, carrying a ledger and a pack of wares`
+- **shopkeeper** — `a stout mustached shopkeeper behind a small counter set right in the dungeon, scales and price tags around`
+- **rat king** — `a marsupial rat slightly bigger than usual, wearing a tiny golden crown, regal pose on a small treasure pile`
+- **mirror image** — `a perfect dithered copy of the hero, edges shimmering like liquid glass`
+
+## Town NPCs — CAST blocks
+
+For town-square and interiors promos.
+
+- **town shopkeeper** — `a rotund merchant in an apron behind a counter of potions, pouches and travel gear`
+- **town guard** — `a town watchman in a kettle helm and mail shirt, spear in hand, lantern at the belt`
+- **townsfolk** — `plainly dressed medieval townsfolk going about their day, hoods and wool`
+- **healer** — `a gentle healer in white robes with a herb pouch, soft glow around the hands`
+- **bishop** — `an old bishop in rich vestments with a golden crozier, candlelit church behind`
+- **librarian** — `a fussy librarian in spectacles among towering bookshelves`
+- **fortune teller** — `a fortune teller in shawls and a headscarf over a round table of cards, a black cat at her side`
+- **plague doctor (town)** — `a town plague doctor in a dark coat and beaked mask, carrying a basket of herbs`
+- **scarecrow** — `a straw scarecrow in a patched coat, unnervingly lifelike`
 
 ## Elements — props and icons
 
@@ -361,6 +417,15 @@ In-game names in bold. Compose 1–4 per image; keep bosses alone with a hero.
 - **Grave** — `a leaning tombstone with fresh dirt`
 - **Ladder down** — `a stone stairwell hatch down into darkness`
 - **Skeleton key** — `an oversized ornate skeleton key, gold and bone`
+- **Tome of Mastery** — `a worn thick leather-bound tome with a rune-embossed cover, faint sense of importance`
+- **Black Skull of Mastery ("The Soulbringer")** — `an ancient black skull artifact wreathed in soul wisps, an arcane formula etched into the cranium`
+- **Rat King's crown** — `a tiny golden crown the size of a thimble`
+- **Ankh** — `a small golden ankh glowing with life-saving light`
+- **Honeypot** — `a clay pot of golden honey, a fresh comb glowing inside`
+- **Keys** — `a ring of iron and golden dungeon keys`
+- **Ration / pasty** — `a paper-wrapped travel ration`, `a golden-brown baked pasty, steam rising`
+- **Armor progression** — for armor-themed promos: `cloth tunic`, `leather cuirass`, `mail shirt`, `plate harness`, `embroidered mage robe`
+- **Arrows / quiver** — `a full quiver of plain wooden arrows, fletching up`
 
 ## Worked composition — boss spotlight (template)
 
@@ -384,4 +449,7 @@ Ideas bank for future announces: all-nine-heroes lineup on the town square
 (square preset); three portals side by side — spider lair, necropolis, ice
 caves — with a hero choosing ("choose your path" round); door wedged open by
 a loot heap with wary pets behind (pets round); amulet pedestal in cold lava
-(final stretch); town festival square with heroes among NPCs (release round).
+(final stretch); town festival square with heroes among NPCs (release round);
+sad ghost and a hero at a grave (quest round); the rat king crowning a pet
+rat (light-hearted round); old wandmaker handing a wand to a young hero
+(subclass round); flooded treasury with a piranha leap (loot round).
