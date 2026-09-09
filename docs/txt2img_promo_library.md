@@ -236,22 +236,19 @@ Populate with the giant piranha from Mobs → Specials.
 ## Heroes — CAST blocks
 
 One hero per promo unless showing the lineup. Base form (no subclass) unless
-stated; append a subclass tag to vary.
+stated; append a subclass tag to vary. Looks verified against the actual
+layered sprites (`assets/hero_modern/`: body + head + hair + armor) — keep
+hair and armor colors exactly as written.
 
-```
-CHARACTERS: a stocky human warrior in a leather cuirass over a chain shirt,
-short brown hair, unique short sword in hand, small round shield on the arm,
-confident stance.
-```
-
-- **Mage** — `a human mage in deep blue robes and a pointed wizard hat, holding a knotted wooden wand tipped with a glowing blue missile of magic`
-- **Rogue** — `a human rogue in a dark hooded cloak, face half lost in shadow, daggers at the belt, a glinting shadowy ring on one hand`
-- **Huntress** — `a wiry human huntress in brown leather armor, short ponytail, a carved wooden boomerang in hand, alert eyes`
-- **Elf** — `a slender elf archer in a green hood and light leather, drawing a long elven wooden bow, a full quiver of arrows at the hip`
-- **Necromancer** — `a pale human necromancer in a black robe with purple trim, an oversized ornate skeleton key hanging at the belt, faint green wisps curling around the raised hand`
-- **Gnoll** — `a hyena-headed gnoll hero with mottled brown fur and a wicked grin, wearing only a leather strap and pouch, gripping a throwing tomahawk, no armor`
-- **Priest** — `a human priest in white and gold vestments, a golden holy symbol on a chain, serene expression, soft light around the hands`
-- **Plague Doctor** — `a plague doctor in a long beige coat, wide-brimmed hat and white beaked mask, a bone saw in one gloved hand, glass vials on the belt`
+- **Warrior** — `a stocky ginger-haired human warrior in a white cloth tunic with blue trim, unique short sword in hand, confident stance`; class-armor look: `dark steel plate with orange pauldrons, mid-heroic-leap`
+- **Mage** — `an old human mage with white hair and a white beard, in bright blue robes, a knotted wooden wand tipped with glowing blue magic`
+- **Rogue** — `a brown-haired human rogue under a dark hooded cloak, face half lost in shadow, daggers at the belt, a glinting shadowy ring on one hand`
+- **Huntress** — `a wiry blonde human huntress, hair falling over one eye, in a teal leather suit, a carved wooden boomerang in hand`
+- **Elf** — `a slender elf archer with brown hair and pointed ears, in a green hood and forest-green tunic, drawing a long elven wooden bow, a full quiver of arrows at the hip`
+- **Necromancer** — `a pale dark-haired human necromancer in a black robe with purple trim, an oversized ornate skeleton key hanging at the belt, faint green wisps curling around the raised hand`
+- **Gnoll** — `a hyena-headed gnoll hero with reddish-brown fur and a wicked grin, wearing only a leather strap and pouch, gripping a throwing tomahawk, no armor`
+- **Priest** — `a balding priest in light grey and white vestments, serene expression, soft light around the hands`
+- **Plague Doctor** — `a plague doctor in a long brown coat, wide-brimmed hat and white beaked mask, a bone saw in one gloved hand, glass vials on the belt`
 
 ### Subclass tags (append to the hero line)
 
