@@ -190,6 +190,24 @@ Delivery paths for pets:
 > fits exactly), options 120×171. New permanent test endpoint
 > `/debug/open_window?wnd=herobag|petbag|petoptions|petselect|optionstest`
 > shows a real window on the game thread and reports its size vs the budget.
+>
+> **Follow-up audit (2026-09-09): rest of the windows — no fix needed, none
+> implemented.** ~30 windows outside the #5 scope don't consult
+> `landscape()`/`stdWidth()`/`WndHelper` (hard-coded 100–120 width). Measured
+> live via new `/debug/open_window` cases: `msgtest` (WndTitledMessage with a
+> 15-line quest text, the worst real-world shape) renders 120×128 vs the 146
+> landscape ceiling — overflow would need ~18 lines of text at width 120,
+> vanilla content maxes ~10–12; `msgplain` (WndMessage) 119×48, real call
+> sites are all one-liners; `infotest` — `GenericInfo` (WndInfoItem/WndInfoCell)
+> already height-clamps at 120 **and scrolls** by design; `settings`
+> (WndSettings menu family) 112×108 with sliders, fits. Everything else
+> (NPC reward dialogs, portals, `WndTradeItem`'s short button vbox,
+> `WndRanking` fixed 112×144, `WndStory` 120×120 with its own ScrollPane)
+> can't overflow by construction. Width unification of this group to
+> `stdWidth()` is pure cosmetics and deliberately skipped. One accepted edge:
+> `Sign.java` feeds level-object text straight into `WndMessage` — a mod with
+> an oversized sign could still push past the ceiling; vanilla can't.
+> Audit cases kept in the endpoint: `msgtest|msgplain|infotest|settings`.
 
 - `windows/WndOptions.java:19-64` — hard-coded width (`Window.STD_WIDTH`), `resize(STD_WIDTH, (int) vbox.height())` — **height never clamped to screen**, no scrolling.
 - `windows/WndPetBag.java:37-55` extends `WndBag` which renders a fixed 23-slot grid (`WndBag.java:131,148,164-166`; 4 cols portrait → 6 rows), also unclamped. `WndPetItem`/`WndPetQuantity` same pattern.
@@ -351,6 +369,10 @@ Follow logic = `Wandering.returnToOwnerIfTooFar` (straight-line `getCloser`); no
 ---
 
 ## Priority order (proposed)
+
+> Historical — the original proposal. Status 2026-09-09: 1–9 all FIXED
+> (see per-section notes); 10 split: windows audit done (nothing needed),
+> E1/E3/E4 + Hero.friendly ownership gap still await design decisions.
 
 1. **#4** pet cloning via `split()` (guard hero pets) — small change, kills two reproducible dup bugs.
 2. **#6a** persist `baseStr` — small save-format change, removes a whole class of post-load weirdness.
