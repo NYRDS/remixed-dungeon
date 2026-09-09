@@ -167,6 +167,7 @@
     <string name="CandleOfMindVision_Info">נראה כמו נר רגיל, לא משהו שהיית מצפה למצוא בצינוק מסוכן. מוזר שזה די חם למגע, למרות שזה עדיין לא הודלק.</string>
     <string name="CandleOfMindVision_Info_Exhausted">הנר דלק וכבה, הוא כבר לא נדלק כשאתה מחזיק בו. נראה שלא תוכל להשתמש בו יותר.</string>
     <string name="CandleOfMindVision_Info_Lighted">הנר נדלק ברגע שהוצאת אותו מתרמילך. הלהבה פולטת אור סגול חלש, וכשאתה מביט דרכו, כל המפלצות הקרובות נראות לעיניך.</string>
+    <string name="CandleOfMindVision_Name">נר החזיונות</string>
     <string name="Candy_Info">הסוכרייה הזאת נראית כל כך יפה ומריחה גם טוב. אתה באמת צריך לתת אותה למישהו אחר?</string>
     <string name="Candy_Name">ממתק</string>
     <string name="Capotain_Name">כובע פוריטני</string>
@@ -380,6 +381,7 @@
     <string name="FireElemental_Name">יסוד האש</string>
     <string name="FireElemental_Name_Objective">יסוד האש</string>
     <string name="Fire_Info">אש בוערת כאן.</string>
+    <string name="Fire_Name_0">לוהט %s</string>
     <string name="Fire_Name_1">בוער %s</string>
     <string name="Firebloom_Desc">כאשר משהו נוגע בפרח אש, הוא פורץ בלהבות.</string>
     <string name="Firebloom_Name">פרח אש</string>
@@ -516,11 +518,13 @@
     <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name_Objective">שומר קרח</string>
+    <string name="IceKey_Name">מפתח קרח</string>
     <string name="Ignite_Info">מדליק את התא הנבחר. ניתן להשתמש כדי לשרוף עשב, דמויות וחפצים.</string>
     <string name="Ignite_Name">הצתה</string>
     <string name="ImpShopkeeper_Name">אימפ שאפתן</string>
     <string name="Imp_Cya">נתראה, %s!</string>
     <string name="IncendiaryDart_Gender">masculine</string>
+    <string name="InnKeeperNPC_Desc">בעל האכסניה גאה בעצמו.</string>
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name_Objective">בעל הפונדק</string>
     <string name="InnServant_Phrase_1">אוף, עדיין יש כל כך הרבה מה לעשות!</string>
@@ -544,6 +548,7 @@
     <string name="Journal_Imp">שד שאפתני</string>
     <string name="Journal_PlagueDoctorNPC">רופא מגפה</string>
     <string name="Journal_WellAwareness">באר המודעות</string>
+    <string name="KindOfBow_SelectArrowKind">אילו חיצים עליי להשתמש?</string>
     <string name="King_Defense">הדף</string>
     <string name="King_Desc">המלך האחרון של הגמדים נודע בזכות הבנתו העמוקה של תהליכי החיים והמוות. הוא שכנע את חברי חצרו להשתתף בטקס, שאמור היה להעניק להם נעורים נצחיים. בסופו של דבר הוא היה היחיד שקיבל זאת - וצבא מתים-חיים כבונוס.</string>
     <string name="King_Gender">masculine</string>
@@ -1651,6 +1656,12 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
+
 
 
 

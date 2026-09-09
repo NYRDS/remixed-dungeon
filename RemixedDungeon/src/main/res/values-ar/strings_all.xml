@@ -190,6 +190,7 @@
     <string name="CandleOfMindVision_Info">يبدو كشمعة عادية، ليس شيئاً تتوقع العثور عليه في زنزنة خطيرة. الغريب أنه دافئ جداً عند لمسه، رغم أنه لم يُشعل بعد.</string>
     <string name="CandleOfMindVision_Info_Exhausted">لقد احترقت الشمعة، ولم تعد تضيء عندما تمسك بها. يبدو أنه لا يمكنك استخدامها بعد الآن.</string>
     <string name="CandleOfMindVision_Info_Lighted">اشتعلت الشمعة في اللحظة التي أخرجتها فيها من حقيبتك. يصدر اللهب ضوءاً أرجوانياً خافتاً، وبينما تنظر من خلاله، تصبح جميع الوحوش القريبة مرئية لك.</string>
+    <string name="CandleOfMindVision_Name">شمعة الرؤى</string>
     <string name="Candy_Info">هذه الحلوى تبدو جميلة جداً ورائحتها طيبة أيضاً. هل تحتاج حقاً لإعطائها لشخص آخر؟</string>
     <string name="Candy_Name">حلوى</string>
     <string name="Candy_Warning_2">لقد أفرطت حقًا هذه المرة. بطنك يؤلمك لأنك أكلت الكثير من الحلوى.</string>
@@ -409,6 +410,7 @@
     <string name="FrozenCarpaccio_Name">كارباتشو مجمد</string>
     <string name="FuryBuff_Name">جنون</string>
     <string name="GameScene_Grass">رائحة النباتات تفوح في الهواء.</string>
+    <string name="GameScene_NightMode">احذر، فالمتاهة أكثر خطورة في الليل!</string>
     <string name="GameScene_Water">تسمع صوت الماء يتطاير حولك.</string>
     <string name="GameScene_WelcomeBack">مرحباً بعودتك إلى المستوى %d من Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Name">مناعة الغاز</string>
@@ -499,7 +501,7 @@
     <string name="Hunger_Hungry_0">أنت جائع.</string>
     <string name="HuntressArmor_Desc">يمكن للصياد في مثل هذا الرداء أن يخلق مروحة من الشفرات الشبحية. سيستهدف كل من هذه الشفرات عدواً واحداً في مجال رؤية الصياد، مسبباً ضرراً يعتمد على سلاحه القريب الحالي.</string>
     <string name="HuntressArmor_Name">رداء الصياد</string>
-    <string name="HuntressArmor_NoEnemies">لا يوجد أعداء مرئيون</string>
+    <string name="HuntressArmor_NoEnemies">لا يوجد أعداء في الأفق</string>
     <string name="HuntressArmor_NotHuntress">يمكن للصيادات فقط استخدام هذا الدرع!</string>
     <string name="IceCaves_TileDescDeco">تم تجميد هذا الغنول وهو حي. على ما يبدو، أنه كان هناك منذ فترة طويلة.</string>
     <string name="IceCaves_TileDescStatue">تمثال آخر بشع... أوه انتظر، هذا غنول متجمد.</string>
@@ -604,6 +606,7 @@
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Not_Ready">أ... أعتذر، ال... المكتبة ليست مفتوحة... بعد\.</string>
     <string name="LibrarianNPC_Name">أمين المكتبة</string>
+    <string name="LibraryBook_Description">هذا الكتاب ضخم حقاً. إنه يحتوي على كل المعرفة التي اكتشفها المغامرون وأحضرها من الزنزانة.</string>
     <string name="LibraryBook_Name">كتاب المكتبة</string>
     <string name="Lich_Desc">النكرومانسر لقي حتفه في أعماق النكروليس، وبتدريج، تحولت القوى الشريرة التي كانت تتدفق إلى جسده إلى ليتش. ساحر موت، دمية بلا إرادة، تسيطر عليها قوى خبيثة...</string>
     <string name="Lich_DieInfo">لم أحب أبدًا هذا الساحر الميت. حان الوقت للعودة إلى المستوى 7 وإيجاد طريق آخر للمغامرة الجديدة.</string>
@@ -914,6 +917,7 @@
     <string name="Sheep_Desc">هذه خروف سحري. ما الذي يجعله سحرياً؟ لا يمكنك قتله. سيبقى في مكانه حتى يختفي سحرياً، بينما يمضغ الطعام بنظرة خالية.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="ShieldBuffReady_Info">درعك جاهز لمنع الهجوم القادم.</string>
+    <string name="ShieldBuffReady_Name">الدرع جاهز</string>
     <string name="ShieldWeaponInfo">عند استخدامه كسلاح، سيُلحق هذا الدرع ضررًا بمعدل %1$d في المتوسط.</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">الغريم المحمي بالدرع</string>
@@ -1328,6 +1332,11 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
 
 
 

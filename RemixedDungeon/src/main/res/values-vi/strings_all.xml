@@ -486,6 +486,7 @@
     <string name="Halls_TileDescWater">Nó trông như dung nham, nhưng nó lạnh và có thể an toàn để chạm.</string>
     <string name="Halls_TileHighGrass">Nấm than hồng</string>
     <string name="Halls_TileStatue">Cột</string>
+    <string name="Haste_Info">Thần Tốc cho phép người thi triển di chuyển với tốc độ cực độ, khiến mọi thứ xung quanh dường như tĩnh止. Việc di chuyển với tốc độ như vậy tiêu tốn rất nhiều năng lượng nên chỉ có thể duy trì trong một thời gian ngắn.\n\nCác bậc thầy thành thạo có thể duy trì trạng thái Thần Tốc lâu hơn.</string>
     <string name="Heal_Cast">%s đã được chữa trị.</string>
     <string name="Heal_Info">Một phép thuật khá hữu ích trong ngục, phải không?</string>
     <string name="Heal_Name">Chữa lành</string>
@@ -571,6 +572,7 @@
     <string name="Hunger_Starving_1">Bạn đang chết đói!</string>
     <string name="Hunger_Starving_2">Bạn đang chết đói!</string>
     <string name="HuntressArmor_Desc">Một thợ săn trong chiếc áo choàng này có thể tạo ra một quạt các lưỡi kiếm linh hồn. Mỗi lưỡi kiếm sẽ nhắm vào một kẻ thù duy nhất trong tầm nhìn của thợ săn, gây sát thương tùy thuộc vào vũ khí cận chiến hiện tại của cô ấy.</string>
+    <string name="HuntressArmor_NoEnemies">Không có kẻ thù nào trong tầm nhìn</string>
     <string name="HuntressArmor_NotHuntress">Chỉ thợ săn mới có thể sử dụng giáp này!</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
     <string name="IceCaves_TileDescStatue">Một bức tượng khủng khiếp nữa... Ồ khoan đã, đó là một con gnoll bị đóng băng.</string>
@@ -730,6 +732,7 @@
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
     <string name="Mimic_Gender">masculine</string>
+    <string name="MirrorImage_Desc">Ảo ảnh này mang sự tương đồng rất lớn với bạn, nhưng nó nhợt nhạt hơn và run rẩy một chút.</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MissileWeapon_Info1">\n\nSát thương trung bình của vũ khí này bằng %d điểm mỗi lần đánh.</string>
     <string name="MissileWeapon_Info2">Vì thể lực không đủ, độ chính xác và tốc độ tấn công của bạn với %1$s này bị giảm.</string>
@@ -779,6 +782,7 @@
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">ác mộng</string>
     <string name="Ooze_Death">%s nuốt chửng bạn...</string>
+    <string name="Order_Info">Với sự tập trung thích hợp, các mệnh lệnh của bạn gần như không thể chối cãi.</string>
     <string name="Order_Name">Mệnh lệnh</string>
     <string name="Order_Resist">Làm sao dám?!!</string>
     <string name="OverpricedRation_Name">phần thực phẩm giá cao bất hợp lý</string>
@@ -1545,6 +1549,10 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
 
 
 
