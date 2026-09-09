@@ -11,6 +11,7 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
+import com.nyrds.platform.util.HeavyLoad;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.SystemTextBase;
@@ -21,10 +22,6 @@ import java.util.List;
 import java.util.Map;
 import lombok.val;
 import org.jetbrains.annotations.NotNull;
-import org.teavm.jso.JSBody;
-import org.teavm.jso.JSFunctor;
-import org.teavm.jso.JSObject;
-import org.teavm.jso.typedarrays.Int8Array;
 
 /**
  * Mirror of the desktop FreeType-based SystemText: glyphs are rendered as
@@ -357,14 +354,15 @@ public class SystemText extends SystemTextBase {
      * glyph the pixel font lacks), installs the bytes into the in-memory FS
      * where invalidate() expects them, then rebuilds caches and the scene so
      * existing texts pick the fallback up. While the fetch is in flight (and
-     * after a failure) texts keep the pixel font, exactly like before.
+     * after a failure) texts keep the pixel font, exactly like before; the
+     * HeavyLoad splash shows progress if the download takes a while.
      */
     private static void requestFallbackFont() {
         if (fallbackFontRequested) {
             return;
         }
         fallbackFontRequested = true;
-        fetchFontBytes(FALLBACK_FONT_URL, data -> Gdx.app.postRunnable(() -> {
+        HeavyLoad.fetchBytes(FALLBACK_FONT_URL, "cjk-font", "Loading font…", data -> Gdx.app.postRunnable(() -> {
             if (data == null) {
                 EventCollector.logEvent("cjk_font_fetch_failed");
                 return;
@@ -381,16 +379,6 @@ public class SystemText extends SystemTextBase {
             }
         }));
     }
-
-    @JSFunctor
-    private interface ByteArrayCallback extends JSObject {
-        void accept(Int8Array data);
-    }
-
-    @JSBody(params = {"url", "cb"}, script =
-            "fetch(url).then(function(r){ if (!r.ok) throw new Error(r.status); return r.arrayBuffer(); })"
-            + ".then(function(b){ cb(new Int8Array(b)); }, function(){ cb(null); })")
-    private static native void fetchFontBytes(String url, ByteArrayCallback cb);
 
     /**
      * Converts an Android-style ARGB integer color to a LibGDX Color object.

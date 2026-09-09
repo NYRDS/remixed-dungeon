@@ -193,10 +193,97 @@ INDEX_HTML = """<!DOCTYPE html>
         #canvas { width: 100%; height: 100%; }
         #loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
                    font-size: 24px; }
+        #heavyload { position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+                     display: none; align-items: center; justify-content: center;
+                     background: rgba(0,0,0,0.72); z-index: 9000; }
+        #heavyload .panel { display: flex; flex-direction: column; align-items: center;
+                            gap: 12px; padding: 20px 34px; border-radius: 6px;
+                            background: rgba(20,20,20,0.9); border: 1px solid #444; }
+        #heavyload img { max-width: 260px; image-rendering: pixelated; }
+        #heavyload .label { font-size: 15px; color: #cfcfcf; }
+        #heavyload .bar { width: 220px; height: 10px; border: 1px solid #666;
+                          background: #111; overflow: hidden; }
+        #heavyload .bar > div { height: 100%; width: 0%; background: #9aab8d; }
+        #heavyload .bar.indeterminate > div {
+            width: 35%; animation: rdslide 1.1s linear infinite; }
+        @keyframes rdslide { from { margin-left: -35%; } to { margin-left: 100%; } }
     </style>
 </head>
 <body>
     <script>
+        // Heavy-resource splash: window.__rdLoad is the registry Java code
+        // (HeavyLoad.java) drives via JSBody. A load only becomes visible
+        // after 400ms in flight, so fast fetches (localhost, browser cache)
+        // never flash the overlay at the player.
+        window.__rdLoad = (function() {
+            var loads = {};
+            var el = null, labelText = null, bar = null, barFill = null, showTimer = null;
+            function ensureEl() {
+                if (el) { return; }
+                el = document.createElement('div');
+                el.id = 'heavyload';
+                var panel = document.createElement('div');
+                panel.className = 'panel';
+                var img = document.createElement('img');
+                img.src = 'assets/rd-icon.png';
+                img.onerror = function() { img.style.display = 'none'; };
+                labelText = document.createElement('div');
+                labelText.className = 'label';
+                bar = document.createElement('div');
+                bar.className = 'bar';
+                barFill = document.createElement('div');
+                bar.appendChild(barFill);
+                panel.appendChild(img);
+                panel.appendChild(labelText);
+                panel.appendChild(bar);
+                el.appendChild(panel);
+                document.body.appendChild(el);
+            }
+            function refresh() {
+                var ids = Object.keys(loads);
+                if (ids.length === 0) {
+                    if (showTimer) { clearTimeout(showTimer); showTimer = null; }
+                    if (el) { el.style.display = 'none'; }
+                    return;
+                }
+                var cur = loads[ids[ids.length - 1]];
+                if (!cur.shown) {
+                    if (Date.now() - cur.at < 400) { return; }
+                    cur.shown = true;
+                }
+                ensureEl();
+                labelText.textContent = cur.label;
+                if (cur.total > 0) {
+                    bar.className = 'bar';
+                    barFill.style.width = Math.min(100, Math.round(100 * cur.loaded / cur.total)) + '%';
+                } else {
+                    bar.className = 'bar indeterminate';
+                }
+                el.style.display = 'flex';
+            }
+            return {
+                start: function(id, label) {
+                    loads[id] = { label: label || 'Loading…', loaded: 0, total: 0,
+                                  at: Date.now(), shown: false };
+                    if (!showTimer) {
+                        showTimer = setInterval(refresh, 200);
+                    }
+                    refresh();
+                },
+                progress: function(id, loaded, total) {
+                    var cur = loads[id];
+                    if (!cur) { return; }
+                    cur.loaded = loaded;
+                    cur.total = total || 0;
+                    refresh();
+                },
+                end: function(id) {
+                    delete loads[id];
+                    refresh();
+                },
+                active: function() { return Object.keys(loads); }
+            };
+        })();
         // rAF never fires in an occluded pane/tab, which stalls the whole game.
         // Occlusion comes in two flavors: visibilityState 'hidden' (real background
         // tab) and 'visible' but throttled (embedded pane in an unfocused window) -
@@ -624,6 +711,13 @@ def main() -> None:
         f.write(INDEX_HTML)
 
     extract_backend_resources(app_dir)
+
+    # game-branded icon for the heavy-load splash (the backend's own
+    # startup-logo.png is the stock libGDX logo)
+    icon_src = os.path.join(HERE, "..", "RemixedDungeon", "src", "main",
+                            "res", "drawable-xxxhdpi", "ic_launcher.png")
+    if os.path.exists(icon_src):
+        shutil.copy2(icon_src, os.path.join(app_dir, "assets", "rd-icon.png"))
 
     # CJK fallback font: shipped as a plain static file (fonts/), NOT in the
     # assets manifest - the game lazy-fetches it on first need and an 18MB

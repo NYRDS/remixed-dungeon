@@ -6,6 +6,21 @@ Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 
 ## Current state (as of 2026-09-09, session 12)
 
+- **Heavy-load splash** (Mike ask: "preloader splash while cjk font or
+  other heavy resource are loading"): reusable `HeavyLoad.java` (html,
+  com.nyrd.platform.util) = XHR with progress events + window.__rdLoad
+  registry in index.html; overlay = dimmed backdrop over the game,
+  game-branded icon (ic_launcher copied to assets/rd-icon.png by
+  make_webapp — the backend startup-logo is the stock libGDX logo), label,
+  determinate bar (indeterminate animation when no content-length), appears
+  only after 400ms in flight so localhost/cache hits never flash it;
+  retires itself when the last load ends. SystemText's CJK fetch uses
+  HeavyLoad.fetchBytes(url, id, label, cb). GOTCHA: don't build the
+  overlay DOM via an innerHTML JS string with attribute quotes — Python
+  escaping ate them and the SyntaxError killed the whole inline script
+  block; build with createElement. Verified (`cjk_check.js` Phase B,
+  CDP-throttled ~1MB/s): splash visible with live %, unthrottle → install
+  + scene rebuild + CJK title; Phase A still zero fetches on plain boot.
 - **CJK fallback font now loads ON DEMAND** (Mike: RU verified ok, levels
   verified via lua auto-test, "let do cjk on demand"): the 18MB
   LXGWWenKaiScreen.ttf ships as a plain static file `webapp/fonts/`
