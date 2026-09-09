@@ -25,58 +25,103 @@ As usual — beta: old saves keep working, but strange pets from old saves may v
 
 ## Announce (RU)
 
-🐾 Питомцы и миньоны — большая серия правок по вашей бете-обратной связи:
+🐾 Питомцы и миньоны — большая серия правок по вашим отзывам с беты:
 
-- 🚪 Двери снова закрываются за вами. Хлам и трупы по-прежнему могут подпирать дверь — это тактика, оставили специально.
-- 🗺️ Карта больше не «подсвечивается» навсегда после спуска — питомцы не прожигают туман войны там, куда вы не видите.
+- 🚪 Двери снова закрываются за вами. Хлам и трупы по-прежнему могут подпирать дверь — это тактика, мы оставили её специально.
+- 🗺️ Карта больше не «подсвечивается» навсегда после спуска — питомцы больше не прожигают туман войны там, где вы не видите.
 - 👥 Питомцы и статуи больше не дублируются при переходах между этажами и перезагрузках.
-- 🕷️ Взрывающиеся пауки и лунная трава больше не клонируют ваших питомцев в бесплатную армию — вражеский удар оставляет одичавшую копию, которая НЕ на вашей стороне.
+- 🕷️ Взрывающиеся пауки и благолунка больше не клонируют ваших питомцев в бесплатную армию — вражеский удар оставляет одичавшую копию, которая НЕ на вашей стороне.
 - 💪 Сила питомцев сохраняется в сейвах, а тяжёлая броня теперь замедляет любого носителя — питомцев в том числе.
-- 📋 Приказы не сбрасываются от горения, газа и ловушек — урон со временем больше их не отменяет.
-- 🛡️ Новый приказ «стой здесь»: прикажите питомцу на его же клетку — он охраняет пост, атакует врагов в пределах досягаемости и возвращается.
+- 📋 Приказы больше не сбрасываются от огня, газа и ловушек — периодический урон их не отменяет.
+- 🛡️ Новый приказ «стой здесь»: прикажите питомцу занять его же клетку — он встанет на пост, будет атаковать врагов в пределах досягаемости и возвращаться на место.
 - 👣 Приказ на вашу клетку теперь означает «за мной», а не «атакуй игрока».
-- 💀 Смерти питомцев объявляются в логе — больше не пропадают бесследно.
-- ⚔️ Питомцы дерутся в полную силу, даже когда вы не видите бой.
-- 🤝 Питомцы всегда дружелюбны к вам — игру больше не предложить «обокрасть собственного питомца».
+- 💀 О гибели питомцев теперь сообщается в журнале — они больше не исчезают бесследно.
+- ⚔️ Питомцы сражаются в полную силу, даже когда вы не видите бой.
+- 🤝 Питомцы всегда дружелюбны к вам — игра больше не предлагает обокрасть собственного питомца.
 
-Плюс: окна питомцев влезают в любой экран и прокручиваются, десктопное окно работает в альбомном режиме, сила мобов переведена на явные значения (лёгкий ребаланс), новые переводы: арабский, иврит, голландский, вьетнамский.
+Плюс: окна питомцев умещаются на любом экране, длинные списки прокручиваются; десктопная версия корректно работает в альбомной ориентации; сила мобов переведена на явные значения (небольшой ребаланс); новые переводы: арабский, иврит, голландский, вьетнамский.
 
-Как обычно — это бета: старые сейвы работают, но странные питомцы из старых сейвов могут пропасть. Сообщайте о странностях.
+Как обычно, это бета: старые сейвы работают, но странные питомцы из старых сейвов могут пропасть. Сообщайте о странностях.
 
-## Promo picture — txt2img
+## Promo picture — txt2img (Qwen 3 / Qwen-Image)
 
 Concept: the release is about the hero commanding a loyal monster squad. Show the
 squad holding a dungeon doorway — torch light, one feral clone silhouette in the
-dark for the "no more free minion clones" fix.
+dark for the "no more free minion clones" fix. Qwen-Image family takes long
+structured natural-language prompts — use the full block below as-is.
 
-### Main prompt (SDXL / generic)
+### Main prompt
 
 ```
-pixel art game promo illustration, 16-bit retro style, a cloaked dungeon hero
-commanding a squad of three loyal pet monsters — a giant rat, a small stone
-golem, an armored skeleton — holding a heavy wooden dungeon door, warm torchlight
-on stone walls, glowing blue magic runes, ominous shapes lurking in the dark
-corridor beyond, dramatic rim lighting, teal shadows and amber highlights,
-crisp pixel clusters, subtle dithering, high detail, centered composition with
-clear empty space at the top for a logo, no text, no watermark
+A 16-bit pixel art promotional banner for a retro dungeon crawler game, wide
+landscape composition.
+
+SCENE: a torchlit medieval dungeon corridor of grey-blue stone brickwork. On the
+left third, a heavy arched wooden door with iron hinges stands ajar, warm amber
+light spilling through the gap into the corridor. The corridor recedes into deep
+teal darkness on the right.
+
+CHARACTERS: in the center-right foreground, a cloaked hero in a hooded cloak
+seen from a back three-quarter view, one hand raised in command. Around the
+hero, a squad of three loyal monster companions facing the doorway: a giant
+brown rat with alert red eyes, a compact moss-covered stone golem, and an
+armored skeleton warrior holding a round wooden shield. Beyond the open door,
+half-hidden in shadow, a feral snarling duplicate of the rat with glowing eyes —
+clearly hostile, clearly not part of the squad.
+
+LIGHTING: dramatic torchlight; warm amber and orange highlights on the
+characters and brick texture, cool teal and dark blue shadows, strong rim light
+along the hero's hood and shoulders, soft bloom around the torch flames, light
+fog near the floor catching the torch glow.
+
+PALETTE: limited saturated retro palette — teal, amber, warm brown, stone grey;
+no pure black, no neon.
+
+STYLE: crisp 16-bit pixel art, visible pixel clusters, deliberate dithering on
+stone and in shadows, clean readable silhouettes, consistent pixel grid, sharp
+edges, inspired by 1990s dungeon crawler key art.
+
+COMPOSITION: squad centered slightly right, door on the left third, strong depth
+from foreground characters to the dark corridor; the top quarter of the image is
+dark uncluttered stone wall kept empty for logo placement.
+
+CONSTRAINTS: no text, no letters, no numbers, no watermark, no signature, no
+photorealism, no 3D render, no anti-aliasing, no smooth gradients.
 ```
 
 ### Negative prompt
 
 ```
-blurry, smooth gradients, 3d render, photorealistic, antialiasing, text,
-letters, numbers, logo, watermark, signature, jpeg artifacts, deformed hands,
-extra limbs, oversaturated
+blurry, lowres, jpeg artifacts, text, watermark, signature, logo, letters,
+numbers, photorealistic, 3d render, smooth gradients, antialiasing, deformed
+hands, extra limbs, oversaturated, neon colors
 ```
 
-### Params / variants
+### Params (Qwen-Image / Qwen3-Image)
 
-- Aspect: 1024×500 landscape (Play feature graphic / channel banner); square
-  1024×1024 crop for posts — keep the squad centered, logo space on top.
-- Steps 30–40, CFG 6–7, pixel-art LoRA if available; upscale 2× then downscale
-  to keep hard pixel edges.
-- Midjourney one-liner: `pixel art, 16-bit, dungeon hero with a squad of pet
-  monsters holding a torchlit door, teal and amber palette, logo space on top
-  --ar 2:1 --style raw`
-- Alt concept: same squad seen from behind marching down a corridor, one pet
-  dragging loot, doors closing behind them.
+- Resolution: 1664×832 landscape (2:1) for the Play feature graphic / channel
+  banner — crop to 1024×500; square 1328×1328 for feed posts (squad centered).
+- Steps 30–40, CFG ~4.0 (Qwen-Image is tuned for low CFG — high values burn the
+  pixel art), sampler euler; pixel-art LoRA optional, weight ≤0.6.
+- Post-process: upscale 2× (nearest neighbor), then downscale — keeps pixel
+  edges hard; do not use AI upscalers, they smooth pixels.
+- Optional in-image text variant — Qwen-Image is best-in-class at text
+  rendering, so this actually works: replace the CONSTRAINTS line with
+  `CONSTRAINTS: no watermark, no signature; above the door, a small weathered
+  stone plaque reads "32.4" in bold pixel font, amber on dark stone.`
+
+### Short variant (quick iterations)
+
+```
+16-bit pixel art banner, dungeon hero in a hooded cloak commanding a squad of
+three pet monsters (giant rat, stone golem, armored skeleton) holding a torchlit
+wooden door, hostile feral rat duplicate lurking in the dark beyond, teal and
+amber palette, dithering, crisp pixels, empty dark wall at the top for a logo,
+no text, no watermark
+```
+
+### Alt concept
+
+Same squad seen from behind marching down a torchlit corridor in single file,
+one pet dragging a loot sack, heavy doors closing behind them; feral eyes
+watching from a side passage.
