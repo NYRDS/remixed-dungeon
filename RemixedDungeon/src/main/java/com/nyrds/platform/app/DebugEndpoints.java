@@ -41,6 +41,13 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.ui.Icons;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.watabou.pixeldungeon.windows.elements.GenericInfo;
+import com.watabou.pixeldungeon.windows.WndMessage;
+import com.watabou.pixeldungeon.windows.WndSettings;
+import com.watabou.pixeldungeon.windows.WndTitledMessage;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.pixeldungeon.windows.WndPetBag;
 import com.nyrds.pixeldungeon.windows.WndPetInventoryOptions;
@@ -2999,6 +3006,55 @@ public class DebugEndpoints {
                             public void onSelect(int index) {
                             }
                         };
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "msgtest": {
+                        // quest-popup shape: WndTitledMessage with long text
+                        Window w = new WndTitledMessage(Icons.get(Icons.WARRIOR),
+                            "Old beardy questgiver",
+                            "Greetings, adventurer! I have a favour to ask of someone with your particular set of skills. " +
+                            "Deep beneath the sewers lies a talisman of great importance, lost there by an ancestor of mine. " +
+                            "The rats have carried it off into the darkness, and I am far too old to go crawling after it myself. " +
+                            "Bring it back to me and I shall reward you handsomely - or at least tell you where the next " +
+                            "dozen pages of tedious lore are hidden. Beware the goo, it bites. And should you descend further, know that the prison levels above the caves are haunted by things worse than rats: gaunt guards in rusted armour who do not sleep, and a warden whose name is spoken only in whispers. Pack antidoes, for the air itself festers down there, and whatever you do, do not drink from the red fountains however thirsty you become.");
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "msgplain": {
+                        Window w = new WndMessage("Something important happened here and the message drags on: " +
+                            "you have found a scroll that explains, at great length, the history of the dungeon, " +
+                            "the lineage of its kings, the dietary habits of its gnolls, and several paragraphs of " +
+                            "foreshadowing that will surely matter later. This line exists to make the window tall.");
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "infotest": {
+                        // WndInfoItem/WndInfoCell shape: GenericInfo with long desc
+                        Window w = new Window() {
+                        };
+                        GenericInfo.makeInfo(w, new ItemSprite(ItemFactory.itemByName("Sword")),
+                            "Sword", 0xFFFFFF, "A rather ordinary sword of the kind that litters every dungeon floor. " +
+                            "This particular specimen has seen better decades, yet it still holds an edge - barely - " +
+                            "and its balance is adequate for slashing through rats, skeletons and the occasional " +
+                            "unlucky mud contractor. Long description on purpose to test the scroll zone.");
+                        GameScene.show(w);
+                        result[0] = "GenericInfoWindow";
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "settings": {
+                        Window w = new WndSettings();
                         GameScene.show(w);
                         result[0] = w.getClass().getSimpleName();
                         result[1] = String.valueOf(w.getWidth());
