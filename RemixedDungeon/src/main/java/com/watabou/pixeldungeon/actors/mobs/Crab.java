@@ -18,6 +18,7 @@ public class Crab extends Mob {
 		maxLvl = 9;
 		dmgMin = 3;
 		dmgMax = 6;
+		STR(10);
 		dr = 4;
 
 		loot(MysteryMeat.class, 0.314f);

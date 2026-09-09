@@ -16,6 +16,7 @@ public class SpiritOfPain extends Mob {
         baseAttackSkill  = 30;
         dmgMin = 5;
         dmgMax = 10;
+        STR(17);
         dr = 20;
 
         expForKill = 0;

@@ -25,6 +25,7 @@ public class ColdSpirit extends Mob {
         maxLvl = 20;
         dmgMin = 12;
         dmgMax = 15;
+        STR(13);
         dr = 22;
 
         addImmunity( Frost.class ); // caveman: ice spirit must not be frozen

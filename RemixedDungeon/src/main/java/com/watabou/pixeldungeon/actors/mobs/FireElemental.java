@@ -25,6 +25,7 @@ public class FireElemental extends Mob {
 		maxLvl = 20;
 		dmgMin = 16;
 		dmgMax = 20;
+		STR(15);
 		dr = 5;
 
 		flying = true;

@@ -26,6 +26,7 @@ public class SuspiciousRat extends Mob {
 		baseAttackSkill  = 25;
 		dmgMin = 10;
 		dmgMax = 15;
+		STR(17);
 		dr = 2;
 
 		expForKill = 1;

@@ -17,6 +17,7 @@ public class ExplodingSkull extends Mob {
 
         dmgMin = 25;
         dmgMax = 45;
+        STR(17);
         dr = 1;
 
         baseSpeed = 1.5f;

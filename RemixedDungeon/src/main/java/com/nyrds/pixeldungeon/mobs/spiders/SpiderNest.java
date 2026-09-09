@@ -15,6 +15,7 @@ public class SpiderNest extends Mob {
 		maxLvl = 9;
 		dmgMin = 0;
 		dmgMax = 0;
+		STR(10);
 		dr = 0;
 
 		baseAttackSkill = 1;

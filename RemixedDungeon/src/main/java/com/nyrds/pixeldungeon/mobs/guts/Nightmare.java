@@ -22,6 +22,7 @@ public class Nightmare extends Mob {
         baseAttackSkill  = 26;
         dmgMin = 20;
         dmgMax = 25;
+        STR(17);
         dr = 10;
 
         flying = true;

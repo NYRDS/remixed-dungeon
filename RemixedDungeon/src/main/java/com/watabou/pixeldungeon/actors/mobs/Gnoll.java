@@ -16,6 +16,7 @@ public class Gnoll extends Mob {
 		dmgMin = 2;
 		dmgMax = 5;
 		dr = 2;
+		STR(10);
 
 		expForKill = 2;
 		maxLvl = 12;

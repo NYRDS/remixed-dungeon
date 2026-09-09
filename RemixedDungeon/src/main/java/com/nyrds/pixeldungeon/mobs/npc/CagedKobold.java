@@ -18,6 +18,7 @@ public class CagedKobold extends ImmortalNPC {
 	private static boolean spawned;
 
 	public CagedKobold() {
+		STR(10);
 	}
 	
 

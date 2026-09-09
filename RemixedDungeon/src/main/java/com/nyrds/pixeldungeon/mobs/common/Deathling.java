@@ -26,6 +26,7 @@ public class Deathling extends Mob {
         expForKill = 0;
         maxLvl = 32;
 
+        STR(17);
         setUndead(true);
         setSkillLevel(3);
     }

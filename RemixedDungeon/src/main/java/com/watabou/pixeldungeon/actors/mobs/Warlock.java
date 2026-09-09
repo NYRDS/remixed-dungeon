@@ -30,6 +30,7 @@ public class Warlock extends Mob implements IZapper {
 		dmgMin = 12;
 		dmgMax = 20;
 		dr = 8;
+		STR(15);
 
 		expForKill = 11;
 		maxLvl = 21;

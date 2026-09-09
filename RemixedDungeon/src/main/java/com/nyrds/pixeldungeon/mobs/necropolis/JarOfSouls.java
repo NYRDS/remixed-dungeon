@@ -15,6 +15,7 @@ public class JarOfSouls extends Mob {
 
 		dmgMin = 0;
 		dmgMax = 0;
+		STR(17);
 		pacified = true;
 		
 		expForKill = 0;

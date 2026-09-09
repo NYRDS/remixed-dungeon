@@ -59,6 +59,8 @@ public class MimicAmulet extends Mob {
 		this.level = level;
 
 		hp(ht((3 + level) * 5));
+
+		STR(15);
 		expForKill = 2 + 2 * (level - 1) / 5;
 		baseAttackSkill = 9 + level;
 		baseDefenseSkill = 2 * attackSkill + 1;

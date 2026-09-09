@@ -38,6 +38,7 @@ public class SpiderMind extends Mob {
 		baseSpeed = 1f;
 		dmgMin = 0;
 		dmgMax = 0;
+		STR(12);
 		dr = 0;
 		
 		expForKill = 6;

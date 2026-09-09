@@ -28,6 +28,7 @@ public class MirrorImage extends Mob {
         addImmunity(Paralysis.class);
         addImmunity(Burning.class);
         hp(ht(1));
+        STR(10);
     }
 
     public MirrorImage(@NotNull Hero hero) {

@@ -29,6 +29,7 @@ public class Goo extends Boss {
 		baseDefenseSkill = 12;
 		baseAttackSkill = 11;
 		dr = 2;
+		STR(12);
 		spriteClass = "spritesDesc/Goo.json";
 
 		loot(Treasury.Category.POTION, 0.8f);

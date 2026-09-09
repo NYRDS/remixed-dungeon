@@ -227,12 +227,17 @@ Two mechanisms, both currently by design:
 > `fillStats` script, or its `mobsDesc/<Kind>.json` (`"baseStr"` key, new) —
 > no implicit derivation from bestiary depth. `Mob()` ctor reads the desc-file
 > value (default stays 10); class/script values applied later in the ctor chain
-> override it. So most classic mobs sit at 10 unless authored otherwise
-> (Skeleton 11, Brute 14, Statue gear-derived). Deliberate (Mike): undead keep
-> their no-exp no-leveling gate; living pets add `lvl()/5` on top via
-> `ModQuirks.mobLeveling` (1 exp per landed hit, Champion buff at lvl 5+).
-> Verified live: Rat 10 (default), Skeleton 11 and Brute 14 (explicit class
-> values).
+> override it. Coverage pass: every combat mob now carries an explicit `STR()`
+> banded by the gear tier of its typical depth — 10 (sewer rats/crabs/swarm,
+> spider nest critters, mirror image), 11 (Skeleton, Thief/Bandit, Shaman,
+> spider servants, Kobold), 12 (Goo, spider guard/mind, KoboldIcemancer), 13
+> (Bat, Mimic, Piranha, ColdSpirit), 14 (Brute/Shielded, ice/water/air
+> elementals, IceGuardian), 15 (Warlock, FireElemental, EarthElemental,
+> MimicAmulet), 16 (DM300, SpiderQueen), 17 (Eye, Scorpio, Acidic, worms/souls/
+> skulls of guts & necropolis, RunicSkull, Deathling), 18 (Yog parts, fists).
+> Statue family stays gear-derived; undead stay non-leveling by design, so for
+> undead pets this initial STR is permanent; living pets add `lvl()/5` via
+> `ModQuirks.mobLeveling`. Verified live across all bands.
 - Pets *do* get the Encumbrance buff (attached to any overloaded char, `Char.java:326-330`) → complaints, and `Char.defenseSkill` evasion penalty (`Char.java:607-613`).
 - `Belongings.equip` performs **no STR check** for pets (`Belongings.java:711+`), so over-STR gear is trivially equipped via `WndPetItem`.
 

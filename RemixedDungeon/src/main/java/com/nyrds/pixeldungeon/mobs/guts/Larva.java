@@ -22,6 +22,7 @@ public class Larva extends Mob {
 
         dmgMin = 25;
         dmgMax = 30;
+        STR(17);
         dr = 8;
         expForKill = 0;
 

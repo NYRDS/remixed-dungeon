@@ -29,6 +29,7 @@ public class SpiderExploding extends MultiKindMob {
         baseSpeed = 2f;
         dmgMin = 3;
         dmgMax = 6;
+        STR(11);
         dr = 0;
 
         expForKill = 3;

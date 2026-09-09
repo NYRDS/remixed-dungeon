@@ -35,6 +35,7 @@ public class RottingFist extends Mob {
 
         dmgMin = 34;
         dmgMax = 46;
+        STR(18);
         dr = 15;
 
         setState(MobAi.getStateByClass(Wandering.class));

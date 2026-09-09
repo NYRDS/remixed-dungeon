@@ -28,6 +28,7 @@ public class SpiderQueen extends Boss {
 		dmgMin = 12;
 		dmgMax = 20;
 		dr = 10;
+		STR(16);
 
 
 		float dice = Random.Float();

@@ -20,6 +20,7 @@ public class TreacherousSpirit extends Mob {
         baseAttackSkill  = 35;
         dmgMin = 30;
         dmgMax = 45;
+        STR(17);
         dr = 25;
 
         expForKill = 45;

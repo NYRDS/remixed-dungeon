@@ -17,6 +17,7 @@ public class SpiderGuard extends MultiKindMob {
 		baseSpeed = 1.2f;
 		dmgMin = 8;
 		dmgMax = 14;
+		STR(12);
 		dr = 7;
 		
 		expForKill = 4;

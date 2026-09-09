@@ -16,6 +16,7 @@ public class PseudoRat extends Mob {
         baseAttackSkill  = 30;
         dmgMin = 40;
         dmgMax = 70;
+        STR(10);
         dr = 25;
 
         expForKill = 20;
