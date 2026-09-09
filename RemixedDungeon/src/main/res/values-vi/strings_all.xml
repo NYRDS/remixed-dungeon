@@ -206,6 +206,7 @@
     <string name="Carcass_DissectResult_Many">Từ %1$s bạn nhận được %2$d vật phẩm.</string>
     <string name="Carcass_DissectResult_One">Từ %1$s bạn nhận được một vật phẩm.</string>
     <string name="Carcass_Info">tàn tích của quái vật hoàn toàn chết %s.</string>
+    <string name="Carcass_Kick">Con %s này đã hoàn toàn chết, không cần phải đá nó.</string>
     <string name="Carcass_Name">tàn dư của %s</string>
     <string name="Carcass_Necromancy">Bạn đã hồi sinh thi thể của %s!</string>
     <string name="Carcass_Necromancy_Failed">Việc hồi sinh thi thể của %s đã thất bại!</string>
@@ -485,6 +486,7 @@
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Guts_TileGrass">Bụi cây khô</string>
     <string name="Halberd_Gender">feminine</string>
+    <string name="Halberd_Info">Một vũ khí cột bao gồm một cái rìu ở cuối một thanh cột.</string>
     <string name="Halls_TileDescWater">Nó trông như dung nham, nhưng nó lạnh và có thể an toàn để chạm.</string>
     <string name="Halls_TileHighGrass">Nấm than hồng</string>
     <string name="Halls_TileStatue">Cột</string>
@@ -1320,6 +1322,7 @@
     <string name="WndFortuneTeller_Instruction">Tôi có thể tiết lộ những bí mật đằng sau các vật phẩm mà bạn sở hữu.\nMột lần nhận diện sẽ tốn %d đồng tiền.</string>
     <string name="WndFortuneTeller_No_Item">Cẩn thận, bạn chắc không muốn tiêu tiền oan, phải không? Trong túi đồ của bạn không có vật phẩm chưa định danh.</string>
     <string name="WndFortuneTeller_Title">Người soi đồn.</string>
+    <string name="WndGame_Customizations">Tùy chỉnh</string>
     <string name="WndGame_Exit">Thoát Remixed Dungeon</string>
     <string name="WndGame_Ranking">Bảng xếp hạng</string>
     <string name="WndGame_Save">Lưu</string>
@@ -1569,6 +1572,9 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

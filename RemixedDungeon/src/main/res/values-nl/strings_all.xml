@@ -1110,6 +1110,7 @@
     <string name="SociologistNPC_Desc">Deze socioloog is op een heilige zoektocht om publieke meningen te verzamelen</string>
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="SociologistNPC_Gender">masculine</string>
+    <string name="SociologistNPC_Name">Socioloog</string>
     <string name="SociologistNPC_Name_Objective">Socioloog</string>
     <string name="Sorrowmoss_Desc">Een Treurmospriem is een bloem (geen mos) met scheermesscherpe blaadjes, bedekt met een dodelijke gif.</string>
     <string name="Sorrowmoss_Name">Treurmos</string>
@@ -1207,6 +1208,7 @@
     <string name="Tengu_Desc">Tengu zijn leden van de oude moordenaarsclan, die ook Tengu heet. Deze moordenaars zijn bekend om hun uitgebreide gebruik van shurikens en vallen.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info2">Gepakt, %s!</string>
+    <string name="Tengu_Info3">Toegesnapt, %s!</string>
     <string name="Tengu_Name">tengu</string>
     <string name="Tengu_Name_Objective">Tengu</string>
     <string name="TerrorBuff_Name">Versterkt</string>
@@ -1409,6 +1411,7 @@
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
     <string name="WndPlayGames_Show_Ok">Gelukt!</string>
     <string name="WndPlayGames_Title">Google Play Games</string>
+    <string name="WndPortal_Info_Return">Deze portal brengt je terug naar de dungeon.\nWil je hem gebruiken?</string>
     <string name="WndPortal_Title">Portaal</string>
     <string name="WndPortal_Warning_Title">Portaal Waarschuwing!</string>
     <string name="WndPremiumSettings_banners">Selecteer het materiaal van de banieren</string>
@@ -1618,6 +1621,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
