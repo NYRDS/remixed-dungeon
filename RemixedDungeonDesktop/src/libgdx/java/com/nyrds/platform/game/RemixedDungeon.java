@@ -28,7 +28,10 @@ public class RemixedDungeon extends Game {
 	}
 
 	public static boolean landscape() {
-		return true;
+		if(GameLoop.width <= 0 || GameLoop.height <= 0) {
+			return true; // no resize yet, desktop windows start landscape
+		}
+		return GameLoop.width > GameLoop.height;
 	}
 
 
