@@ -4,6 +4,36 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
+## Current state (as of 2026-09-09, session 12)
+
+- **"No sound" FIXED — the session-11 element audio 404'd every file**
+  (Mike report: silent + ~1fps). `WebAudio.newSound/newMusic` passed
+  `fileHandle.path()` raw as the `<audio src>` — but path() is
+  storage-relative ("sound/theme.ogg"), so the element resolved it against
+  the page URL and every file 404'd (8/8 elements error code=4
+  SRC_NOT_SUPPORTED; assets live under /assets/). Fix: `mediaUrl()` embeds
+  the bytes as a data URL (they are ALREADY in the in-memory FS — the boot
+  manifest preloads every entry; base64 via java.util.Base64 like
+  PersistedFileStorage; mime by extension), fallback "assets/"+path only
+  for never-preloaded files. Verified headless: 0 audio errors, 0
+  media-404s, theme element dur=89s readyState=4 playing.
+- **Perf watchdog shipped** (make_webapp.py shim): 5s sampler over the
+  render heartbeat → on-page badge (bottom-left, "Nfps raf|timer|worker",
+  green/yellow/red) + `[perf] fps=... src=... heapMB=... raf={...}` lines
+  in __errors when fps<15 while visible. ALSO wraps
+  performance.measureMemory and logs if it costs >200ms.
+- **~1fps NOT reproducible on this machine**: headed real Chrome
+  (/usr/bin/chromium-browser on :1, harness headed_check.js) runs
+  GameScene at **50.9fps**, rAF healthy, heap 145MB. Two
+  measureMemory learnings: headless Chrome LACKS it entirely (all
+  headless gcHint testing was a no-op) AND this deb Chrome 148 doesn't
+  expose it without a flag either (0 gcHint calls at GameScene) — so
+  gcHint is currently a no-op on most browsers, not the 1fps cause.
+  The badge's raf/timer/worker split is the attribution when Mike sees
+  it again: worker/timer = rAF dead (occlusion/embedded-pane throttle —
+  the shim then drives ~1.6fps by design), raf + low fps = real
+  per-frame cost (then profile his machine).
+
 ## Current state (as of 2026-09-08, session 11)
 
 - **"First attack of mob on any level feels laggy" — root cause found and

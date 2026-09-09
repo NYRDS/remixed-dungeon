@@ -318,6 +318,65 @@ INDEX_HTML = """<!DOCTYPE html>
             if (!cb) { return 'no cb'; }
             try { cb(0); return 'kicked'; } catch (e) { return 'kick threw: ' + e; }
         };
+        // Perf watchdog: sample the render heartbeat every 5s. When the game
+        // crawls while the document is visible, dump one line into __errors
+        // with the rAF shim split (viaRaf = frames are slow, viaFallback/
+        // viaWorker = rAF is dead/throttled) - that split is the whole
+        // attribution. Also time measureMemory (gcHint) - real Chrome has it,
+        // headless does not, so its cost can only be seen here.
+        window.__fps = -1;
+        setInterval(function() {
+            var s = window.__gameState || {};
+            var now = Date.now();
+            var w = window.__perfWatch || (window.__perfWatch = { last: now, lastFrames: s.frames || 0,
+                raf: { viaRaf: 0, viaFallback: 0, viaWorker: 0 } });
+            var dt = (now - w.last) / 1000;
+            if (dt < 4.5) { return; }
+            w.last = now;
+            var frames = s.frames || 0;
+            window.__fps = Math.round((frames - w.lastFrames) / dt);
+            w.lastFrames = frames;
+            var st = window.__rafShimStats || {};
+            var dRaf = (st.viaRaf || 0) - w.raf.viaRaf;
+            var dFall = (st.viaFallback || 0) - w.raf.viaFallback;
+            var dWork = (st.viaWorker || 0) - w.raf.viaWorker;
+            w.raf = { viaRaf: st.viaRaf || 0, viaFallback: st.viaFallback || 0, viaWorker: st.viaWorker || 0 };
+            var src = dWork > 0 ? 'worker' : (dFall > 0 ? 'timer' : 'raf');
+            if (dRaf === 0 && dFall === 0 && dWork === 0) { src = 'stalled'; }
+            var badge = document.getElementById('rd-fps-badge');
+            if (!badge) {
+                badge = document.createElement('div');
+                badge.id = 'rd-fps-badge';
+                badge.style.cssText = 'position:fixed;left:4px;bottom:4px;z-index:9999;'
+                    + 'font:10px monospace;padding:1px 5px;border-radius:3px;'
+                    + 'background:rgba(0,0,0,0.55);color:#0f0;opacity:0.75;pointer-events:none;';
+                document.body.appendChild(badge);
+            }
+            badge.textContent = window.__fps + 'fps ' + src;
+            badge.style.color = window.__fps >= 40 ? '#0f0' : (window.__fps >= 15 ? '#ff0' : '#f44');
+            if (window.__fps < 15 && document.visibilityState === 'visible') {
+                var mem = performance.memory ? Math.round(performance.memory.usedJSHeapSize / 1048576) : '?';
+                window.__errors.push('[perf] fps=' + window.__fps + ' src=' + src + ' vis=visible heapMB=' + mem
+                    + ' raf=' + JSON.stringify(st));
+            }
+        }, 5000);
+        if (window.performance && performance.measureMemory) {
+            var origMM = performance.measureMemory.bind(performance);
+            performance.measureMemory = function(opts) {
+                var t0 = Date.now();
+                var p = origMM(opts);
+                try {
+                    p['finally'](function() {
+                        var ms = Date.now() - t0;
+                        window.__lastMeasureMemoryMs = ms;
+                        if (ms > 200) {
+                            window.__errors.push('[perf] measureMemory took ' + ms + 'ms');
+                        }
+                    });
+                } catch (ignored) {}
+                return p;
+            };
+        }
         // boot error capture - must run before teavm-app.js
         window.__errors = [];
         window.__logs = [];

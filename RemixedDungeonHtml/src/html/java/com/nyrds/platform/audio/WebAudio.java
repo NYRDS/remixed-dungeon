@@ -6,6 +6,10 @@ import com.badlogic.gdx.audio.AudioRecorder;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.files.FileHandle;
+import com.nyrds.platform.EventCollector;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.util.Base64;
 import org.teavm.jso.JSBody;
 import org.teavm.jso.dom.html.HTMLAudioElement;
 
@@ -65,13 +69,62 @@ public class WebAudio implements Audio {
 	@Override
 	public Sound newSound(FileHandle fileHandle) {
 		installGestureHook();
-		return new WebSound(fileHandle.path());
+		return new WebSound(mediaUrl(fileHandle));
 	}
 
 	@Override
 	public Music newMusic(FileHandle fileHandle) {
 		installGestureHook();
-		return new WebMusic(fileHandle.path());
+		return new WebMusic(mediaUrl(fileHandle));
+	}
+
+	/**
+	 * fileHandle.path() is storage-relative ("sound/x.ogg"); a media element
+	 * src would resolve it against the page URL and 404 - served files live
+	 * under assets/. The bytes are already in the in-memory FS (the boot
+	 * manifest preloads every manifest entry), so hand the element a data URL
+	 * and never touch the network. Only a file that was never preloaded falls
+	 * back to the served path.
+	 */
+	private static String mediaUrl(FileHandle file) {
+		String path = file.path();
+		try {
+			if (file.exists()) {
+				InputStream in = file.read();
+				ByteArrayOutputStream buf = new ByteArrayOutputStream();
+				byte[] chunk = new byte[8192];
+				int n;
+				while ((n = in.read(chunk)) > 0) {
+					buf.write(chunk, 0, n);
+				}
+				in.close();
+				return "data:" + mimeOf(path) + ";base64,"
+						+ Base64.getEncoder().encodeToString(buf.toByteArray());
+			}
+		} catch (Exception e) {
+			EventCollector.logException(e, "media url " + path);
+		}
+		return "assets/" + path;
+	}
+
+	private static String mimeOf(String path) {
+		String p = path.toLowerCase();
+		if (p.endsWith(".ogg") || p.endsWith(".oga")) {
+			return "audio/ogg";
+		}
+		if (p.endsWith(".mp3")) {
+			return "audio/mpeg";
+		}
+		if (p.endsWith(".wav")) {
+			return "audio/wav";
+		}
+		if (p.endsWith(".m4a")) {
+			return "audio/mp4";
+		}
+		if (p.endsWith(".flac")) {
+			return "audio/flac";
+		}
+		return "application/octet-stream";
 	}
 
 	@Override
