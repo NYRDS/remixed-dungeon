@@ -293,6 +293,7 @@
     <string name="CommonArrow_Gender">feminine</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">يُثبت هذا النصل المعزز أنه أداة أكثر كفاءة من نظيره الخشبي.</string>
+    <string name="CompositeCrossbow_Name">قوس نشاب مركب</string>
     <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Info">السهام المنطلقة من هذا القوس المركب تسبب قدراً كبيراً من الضرر وتتمتع بدقة أفضل من القوس الخشبي على حساب بعض السرعة.</string>
     <string name="CorpseDust_Info2">ربما لأن مجرد حمله يجعلك تشعر بالقلق والغضب.</string>
@@ -331,6 +332,7 @@
     <string name="DewVial_Full">قارورة الندى ممتلئة!</string>
     <string name="DewVial_Name">قارورة ندى</string>
     <string name="DieHardBuff_Name">الموت الصعب</string>
+    <string name="DieHardSpell_Info">سيزيد مؤقتاً من تجديدك مما يجعلك قوياً حقاً.</string>
     <string name="DieHardSpell_Name">موت صعب</string>
     <string name="Displacement_Txt">%s الإزاحة</string>
     <string name="DoctorArmor_Info">تسمح هذه الدروع الخاصة بطبيب الطاعون باستخدام قدرة \&quot;سحابة الميزما\&quot;، التي تطلق غازاً ساماً يسمم ويضعف ويشوش الأعداء. الطبيب، المحمي بقناعه، منيع ضد هذه التأثيرات.</string>
@@ -679,6 +681,7 @@
     <string name="MysteryMeat_Info2">لا تستطيع أن تشعر بساقيك!</string>
     <string name="MysteryMeat_Message">كان طعم ذلك الطعام... غريباً.</string>
     <string name="NatureArmorSpell_Name">درع الطبيعة</string>
+    <string name="NecromancerArmor_Info">هذا الدرع سيسمح للنكرومانسر باستدعاء ما يصل إلى اثنين من الموتى الأحياء بتكلفة 5 أرواح لكل منهما. سيتبع هذان الخادمان الميتان سيدهما ويهاجمان أعداءه. يصبح الموتى الأحياء أقوى مع كل مستوى للبطل.</string>
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">آه! يا له من منظر نادر! زميل مغامر ليس مجرد جثة بلا حياة! لا يكاد يصدق! أوه... أعتذر، أحياناً أشعر بالحماس الشديد. ترى، أنا نِكْرومانسي (ساحر الموتى). وعلى الرغم من أن دراسة الموتى والموت نفسه هو مهنتي، إلا أن رؤية نفس الأشياء مراراً وتكراراً تصبح مرهقة للغاية في النهاية. من ناحية أخرى، هذا هو السبب بالضبط في وجودي هنا. وفقاً لحساباتي، في غضون أسابيع قليلة، في مكان ما في هذا الزنزانة بالذات، سيحدث شيء مذهل. الـ _نِكْرُوبُولِس_ (المقبرة القديمة)، مدينة الموتى القديمة، ستفتح أبوابها. و... لا يمكنني حقاً قول الكثير، لقد أضعت وقتاً كافياً كما هو الحال. أنا بحاجة للاستعداد، _عد لاحقاً_.</string>
     <string name="NecromancerNPC_Message2">يجب أن أكون جاهزاً.</string>
@@ -744,6 +747,7 @@
     <string name="Poison_Death">مِتَّ مِن السم...</string>
     <string name="PortalExit_Desc_IceCaves">كهوف الجليد</string>
     <string name="PortalExit_Desc_Necropolis">مدينة الأموات</string>
+    <string name="PortalExit_Desc_SpiderNest">مأوى العناكب</string>
     <string name="PortalGate_Activated">لقد استيقظت البوابة القديمة!</string>
     <string name="PortalGate_Desc_Activated">البوابة تتسرب منها مادة متوهجة من نوع ما. تبدو ساكنة تماماً، لولا التموجات القادمة من مركزها.</string>
     <string name="PortalGate_Name">بوابة</string>
@@ -805,6 +809,7 @@
     <string name="Rat_Name_Objective">فأر الكيس</string>
     <string name="Ration_Info">لا شيء مميز هنا: لحم مجفف، بعض البسكويت - أشياء من هذا القبيل.</string>
     <string name="Ration_Name">وجبة طعام</string>
+    <string name="RawFish_Info">سمك نيء، تناوله على مسؤوليتك الخاصة</string>
     <string name="RawFish_Name">سمك نيء</string>
     <string name="RegenerationBuff_Info">وظيفة التجدد الطبيعي موجودة في صيغة تأثير مؤقت لتسهيل الأمور.</string>
     <string name="RemixedPixelDungeonApp_sendCrash">لعبةنا تعطلت...\n عذراً.\nيرجى إرسال تقرير العطل لمساعدتنا في إصلاحه.</string>
@@ -870,8 +875,10 @@
     <string name="Scorpio_Desc">تتجنب هذه المخلوقات الشيطانية الشبيهة بالعنكبوت العملاقة القتال القريب بكل وسيلة، مطلقة أشواكًا مسننة مشلولة من مسافات بعيدة.</string>
     <string name="Scorpio_Gender">masculine</string>
     <string name="ScrollHolder_Info">يمكنك وضع أي عدد من اللفائف في هذه الحاوية الأنبوبية. يوفر مساحة في حقيبتك ويحمي اللفائف من النار.</string>
+    <string name="ScrollOfChallenge_Info">عند قراءته بصوت عالٍ، سيطلق هذا اللفظة زئيراً متحدياً يوقظ جميع الوحوش وينبههم لموقع القارئ.</string>
     <string name="ScrollOfChallenge_Info1">يصدر المقطع رنة تحدٍ تتردد صداها في أرجاء الزنزانة!</string>
     <string name="ScrollOfCurse_Name">لفافة اللعنة</string>
+    <string name="ScrollOfDomination_Name">لفافة الهيمنة</string>
     <string name="ScrollOfIdentify_Name">فُرشُ تحديد</string>
     <string name="ScrollOfLullaby_Info1">يتلو اللفافة لحناً هادئاً.</string>
     <string name="ScrollOfLullaby_Info3">القرطاس ينطق بلحن هادئ والوحوش تنام!</string>
@@ -1089,6 +1096,7 @@
     <string name="Wand_Name">عصا %s</string>
     <string name="Wand_Prompt">اختر اتجاهًا للإطلاق</string>
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
+    <string name="Wand_Wood_Types_11">بتولا</string>
     <string name="Wand_Wood_Types_2">أبنوس</string>
     <string name="Wand_Wood_Types_3">كرز</string>
     <string name="Wand_Wood_Types_4">ساج</string>
@@ -1158,6 +1166,7 @@
     <string name="WndLibrary_Catalogue_Instruction">يرجى اختيار واحدة من الفئات أدناه.</string>
     <string name="WndLibrary_Codex_Btn">قصص</string>
     <string name="WndLibrary_Items_Btn">العناصر</string>
+    <string name="WndLibrary_Mobs_Btn">وحوش</string>
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
     <string name="WndLocalModInstall_title">تثبيت التعديل من دليل محلي</string>
     <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
@@ -1292,10 +1301,12 @@
     <string name="town_deco_firewood_name">حطب</string>
     <string name="town_deco_flowerinthepot_desc">زهرة زينة ذات نكهة حلوة</string>
     <string name="town_deco_flowerinthepot_name">زهرة في وعاء</string>
+    <string name="town_deco_glass_stained_name">زجاج ملون</string>
     <string name="town_deco_hay_name">قش</string>
     <string name="town_deco_ladder_desc">سلم قديم، يبدو غير موثوق به.</string>
     <string name="town_deco_library_books_name">مادة للقراءة</string>
     <string name="town_deco_library_sign_name">لافتة المكتبة</string>
+    <string name="town_deco_magenta_carpet_desc">اللون الأرجواني لهذا السجادة يثير أفكار النبيذ المحلي.</string>
     <string name="town_deco_movies_door_name">باب</string>
     <string name="town_deco_mud_desc">تربة ذائبة في هذه المنطقة دائمة التجمد.</string>
     <string name="town_deco_mud_name">طين</string>
@@ -1340,6 +1351,17 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

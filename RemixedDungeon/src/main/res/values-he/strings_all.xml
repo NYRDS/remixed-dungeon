@@ -664,6 +664,7 @@
     <string name="Mushroom_Eat_Message">הפטרייה הזו בטעם מוזר!</string>
     <string name="MysteryMeat_Info2">אתה לא מרגיש את הרגליים שלך!</string>
     <string name="NatureArmorSpell_Info">גם האלפים יכולים להיות קשוחים, במיוחד כשהם מוגנים על ידי האם טבע עצמה.</string>
+    <string name="NecromancerArmor_Info">שריון זה יאפשר לנקרומנסר לזמן עד שני משרתי מוות בעלות של 5 נשמות כל אחד. משרתים מתים אלה ילכו בעקבות אדונם ויתקפו את אויביו. משרתי המוות הופכים חזקים יותר עם כל רמה של הגיבור.</string>
     <string name="NecromancerArmor_Name">שריון עצם</string>
     <string name="NecromancerNPC_Desc">איש בגיל העמידה נראה מעט מעצבן ונרגש בו זמנית. הוא לובש שריון מורכב העשוי משברי עצמות מחוברים יחד.</string>
     <string name="NecromancerNPC_Gender">masculine</string>
@@ -741,8 +742,10 @@
     <string name="PlateArmor_Name">שריון לוחות</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">טיפת רעל קטלני נוצצת על ראש החץ הזה.</string>
+    <string name="PortalExit_Desc_SpiderNest">מאורת עכבישים</string>
     <string name="PortalGate_Activated">השער העתיק התעורר!</string>
     <string name="PortalGate_Desc">החריטות על פני השער יוצרות דפוס מוזר. נראה כאילו זהו מנהרה ענקית המובילה למרחק. אבל כשמסתכלים מהצד, מתברר שהפני כמעט שטוחה.</string>
+    <string name="PortalGate_Name">פורטל</string>
     <string name="PortalGate_Used">נגעת בשער ו... שום דבר לא קרה.</string>
     <string name="Possess_Info">האומנות האפלה של שליטה במוח מאפשרת למטיל הכישוף לכופף את רצונן של רוב היצורים.</string>
     <string name="Potential_Txt">%s של פוטנציאל</string>
@@ -801,6 +804,7 @@
     <string name="Rat_Name">חולדת כיס</string>
     <string name="Rat_Name_Objective">חולדת כיס</string>
     <string name="Ration_Info">אין כאן שום דבר מפואר: בשר מיובש, כמה ביסקוויטים — דברים כאלה.</string>
+    <string name="RawFish_Info">דג נא, אכול על אחריותך</string>
     <string name="RawFish_Taste">דגיגי!</string>
     <string name="RegenerationBuff_Info">הפונקציה לריפוי טבעי ממומשת בצורת באף כדי להקל על הדברים.</string>
     <string name="RemixedPixelDungeonApp_sendCrash">המשחק שלנו קרס...\n סליחה.\nאנא שלחו לנו דוח קריסה כדי לעזור לנו לתקן זאת.</string>
@@ -859,8 +863,10 @@
     <string name="ScarecrowNPC_Quest_Start_Male">למה שלום ילד קטן, איך אתה?\nיש לי משהו מרגש בשבילך!\n\nאה, כמה אסיר תודה אהיה,\nאם תלך ותאסוף קצת ממתקים בשבילי!\n\n</string>
     <string name="Scorpio_Gender">masculine</string>
     <string name="ScrollHolder_Info">במכל הגלילי הזה ניתן לאחסן מספר בלתי מוגבל של מגילות. הוא חוסך מקום בתרמיל שלך ומגן על המגילות מפני אש.</string>
+    <string name="ScrollOfChallenge_Info">כאשר נקרא בקול, מגילה זו תשחרר שאגה מאתגרת שתעיר את כל המפלצות ותתריע אותן למיקום הקורא.</string>
     <string name="ScrollOfChallenge_Info1">הגליל משמיע שאגה מאתגרת המהדהדת בכל המבוך!</string>
     <string name="ScrollOfCurse_Name">מגילת קללה</string>
+    <string name="ScrollOfDomination_Name">מגילת שליטה</string>
     <string name="ScrollOfIdentify_Info">חושף לצמיתות את כל הסודות של פריט בודד.</string>
     <string name="ScrollOfIdentify_Name">מגילת זיהוי</string>
     <string name="ScrollOfLullaby_Info1">המגילה משמיעה מנגינה מרגיעה.</string>
@@ -1094,6 +1100,7 @@
     <string name="Wand_Name">%s שרביט</string>
     <string name="Wand_Prompt">בחר כיוון לירי</string>
     <string name="Wand_SelfTarget">לא ניתן לכוון לעצמך</string>
+    <string name="Wand_Wood_Types_11">לבנה</string>
     <string name="Wand_Wood_Types_3">דובדבן</string>
     <string name="WarHammer_Gender">masculine</string>
     <string name="WarHammer_Info">מעטות היצורים שיכולות לעמוד בפני המכה המוחצת של המסה האדירה הזו של עופרת ופלדה, אבל רק ההרפתקנים החזקים ביותר יכולים להשתמש בה ביעילות.</string>
@@ -1155,6 +1162,7 @@
     <string name="WndLibrary_Catalogue_Title">ספרייה</string>
     <string name="WndLibrary_Codex_Btn">סיפורים</string>
     <string name="WndLibrary_Items_Btn">פריטים</string>
+    <string name="WndLibrary_Mobs_Btn">מפלצות</string>
     <string name="WndLocalModInstall_title">התקן מוד ממחלקה מקומית</string>
     <string name="WndModInstall_Version">גרסה</string>
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
@@ -1286,6 +1294,7 @@
     <string name="town_deco_library_books_name">חומר קריאה</string>
     <string name="town_deco_library_sign_desc">נראה שיש ספרייה בתוך הבניין הזה.</string>
     <string name="town_deco_library_sign_name">שלט ספרייה</string>
+    <string name="town_deco_magenta_carpet_desc">הגוון המגנטה של שטיח זה מעלה מחשבות על יין מקומי.</string>
     <string name="town_deco_magenta_carpet_name">שטיח</string>
     <string name="town_deco_movies_door_desc">דלת זו נראית עשויה היטב במיוחד. סביר להניח שהיא מובילה למשהו מדהים.</string>
     <string name="town_deco_movies_door_name">דלת</string>
@@ -1302,6 +1311,7 @@
     <string name="town_deco_rope_name">חבל</string>
     <string name="town_deco_rug_name">שטיח</string>
     <string name="town_deco_shelf_full_desc">פריטים שונים מונחים על המדף הזה.</string>
+    <string name="town_deco_shelving_name">מדפים</string>
     <string name="town_deco_shieldboard_desc">מגינים שונים תלויים על הלוח. עדיין לא למכירה.</string>
     <string name="town_deco_shieldboard_name">מגנים</string>
     <string name="town_deco_skulls_desc">גולגולות מלוטשות השייכות ליצורים מהצינוק.</string>
@@ -1660,6 +1670,16 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

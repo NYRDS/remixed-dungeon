@@ -853,8 +853,10 @@
     <string name="Poison_Death">Bạn đã chết vì độc...</string>
     <string name="Poison_Name_0">Độc %s</string>
     <string name="PortalExit_Desc">Cổng dịch chuyển này sẽ đưa bạn đến tầng đầu tiên của %s.</string>
+    <string name="PortalExit_Desc_SpiderNest">Hang động nhện</string>
     <string name="PortalGate_Activated">Cổng cổ đại đã thức tỉnh!</string>
     <string name="PortalGate_Desc">Những đường khắc trên bề mặt cổng dịch chuyển này tạo thành một hoa văn kỳ lạ. Nó trông giống như một đường hầm khổng lồ dẫn về phía xa. Nhưng nhìn từ bên cạnh, ta thấy rõ bề mặt của nó gần như phẳng lì.</string>
+    <string name="PortalGate_Name">Cổng truyền tống</string>
     <string name="PortalGate_Used">Ngươi chạm vào cổng và... không có gì xảy ra.</string>
     <string name="Possess_Info">Nghệ thuật đen tối của kiểm soát tâm trí cho phép người thi phép cong vẹo ý chí của hầu hết các sinh vật.</string>
     <string name="PotionBelt_Info">Chiếc đai da chắc chắn này có thể đựng tất cả bình thuốc của bạn, đồng thời bảo vệ chúng không bị vỡ do giá lạnh.</string>
@@ -963,6 +965,8 @@
     <string name="RottenFish_Info">Cá thối, bốc mùi khủng khiếp</string>
     <string name="RottenFood_Message">Ghét quá!</string>
     <string name="RottenMeat_Name">thịt thối</string>
+    <string name="RottenOrgan_Info">Một cơ quan đang phân hủy được thu hoạch từ kẻ thù bị đánh bại. Dù ở trạng thái thối rữa, nó vẫn chứa các hợp chất giá trị cho quá trình luyện kim.</string>
+    <string name="RottenOrgan_Name">Cơ quan thối rữa</string>
     <string name="RottenPasty_Info">Cái pasty này trông khá ghê.</string>
     <string name="RottenPasty_Name">Bánh nướng thối</string>
     <string name="RottenPumpkinPie_Info">Dù bánh bí ngon đến đâu khi còn tươi, giờ thì chắc chắn không thể ăn được.</string>
@@ -988,10 +992,12 @@
     <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name_Objective">bọ cạp</string>
     <string name="ScrollHolder_Info">Bạn có thể đặt bất kỳ số lượng cuộn giấy nào vào chiếc hộp hình ống này. Nó tiết kiệm chỗ trong ba lô của bạn và bảo vệ các cuộn giấy khỏi lửa.</string>
+    <string name="ScrollOfChallenge_Info">Khi đọc to, cuộn sách này sẽ giải phóng một tiếng gầm thách thức đánh thức tất cả quái vật và cảnh báo chúng về vị trí của người đọc.</string>
     <string name="ScrollOfChallenge_Info1">Cuộn giấy phát ra tiếng gầm thách thức vang dội khắp hầm ngục!</string>
     <string name="ScrollOfChallenge_Name">Cuộn giấy Khiêu chiến</string>
     <string name="ScrollOfCurse_Info">Cuộn giấy này được tạo ra đặc biệt để trừng phạt những tên trộm đủ ngu ngốc để cố gắng sử dụng phép thuật mà chúng không thể hiểu. Pháp thuật của cuộn giấy hoàn toàn vô dụng thậm chí có hại cho phiêu lưu gia thông thường, nhưng được các thương nhân trân trọng rất cao.</string>
     <string name="ScrollOfCurse_Name">Cuộn Giấy Nguyền Rủa</string>
+    <string name="ScrollOfDomination_Name">Cuộn sách Chiếm hữu</string>
     <string name="ScrollOfIdentify_InvTitle">Chọn một vật phẩm để nhận diện</string>
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
     <string name="ScrollOfLullaby_Info1">Cuộn giấy phát ra giai điệu dịu dàng.</string>
@@ -1184,6 +1190,7 @@
     <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Chơi</string>
     <string name="TitleScene_PlayOnPC">Chơi trên PC</string>
+    <string name="TomeOfMastery_Info">Cuốn sách da cũ này không quá dày, nhưng bạn cảm thấy có thể học được rất nhiều điều từ nó. Hãy nhớ rằng việc đọc bộ sách này có thể mất một chút thời gian.</string>
     <string name="Toolbar_Info1">Bạn không biết đó có gì.</string>
     <string name="Torch_ACLight">THÁP</string>
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
@@ -1254,6 +1261,7 @@
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
     <string name="Wand_Weapon">Bạn có thể sử dụng cây gậy phép này như một vũ khí cận chiến.</string>
     <string name="Wand_Wood_Types_10">sồi</string>
+    <string name="Wand_Wood_Types_11">bạch dương</string>
     <string name="Wand_Wood_Types_2">gỗ mun</string>
     <string name="Wand_Wood_Types_4">gỗ tếch</string>
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
@@ -1506,6 +1514,7 @@
     <string name="town_deco_library_books_desc">Vẫn còn tốt hơn sách từ ngục.</string>
     <string name="town_deco_library_books_name">Vật liệu đọc</string>
     <string name="town_deco_locked_door_name">Cửa khóa</string>
+    <string name="town_deco_magenta_carpet_desc">Tông màu đỏ tươi của thảm này gợi nhớ đến rượu vang địa phương.</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
     <string name="town_deco_mud_desc">Đất đã tan chảy trong vùng băng vĩnh cửu này.</string>
     <string name="town_deco_mud_name">Bùn</string>
@@ -1560,6 +1569,15 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
 
 
 

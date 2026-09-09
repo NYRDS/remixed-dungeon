@@ -508,6 +508,7 @@
     <string name="HeartOfDarkness_Info">Het zwart pulserende hart van de Bedrieglijke Geest.</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
     <string name="Hedgehog_Info1">Zoek jij ook naar Beer?</string>
+    <string name="Hedgehog_Name">egel</string>
     <string name="HeroClass_Doctor">Pestdokter</string>
     <string name="HeroClass_Elf">elf</string>
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
@@ -855,8 +856,10 @@
     <string name="Poison_Name_1">Giftig %s</string>
     <string name="Poison_Name_2">Vergiftigde %s</string>
     <string name="PortalExit_Desc">Deze portal brengt je naar het eerste niveau van de %s.</string>
+    <string name="PortalExit_Desc_SpiderNest">Spinennest</string>
     <string name="PortalGate_Activated">De oude portaal is ontwaakt!</string>
     <string name="PortalGate_Desc">De gravures op het oppervlak van deze portal vormen een eigenaardig patroon. Het lijkt alsof het een gigantische tunnel is die in de verte leidt. Maar vanaf de zijkant bekeken wordt duidelijk dat het oppervlak bijna vlak is.</string>
+    <string name="PortalGate_Name">Portaal</string>
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="Possess_Info">De donkere kunst van geestelijke controle stelt de spreker in staat de wil van de meeste wezens te buigen.</string>
     <string name="Possess_Name">Bezetting</string>
@@ -932,6 +935,7 @@
     <string name="RatSkull_Info2">Aan de andere kant bewijst het dat de eigenaar in staat is om ratten te doden, zelfs grote en stinkende.</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">buidelrat</string>
+    <string name="RawFish_Info">Rauwe vis, eet op eigen risico</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RawFish_Taste">Visachtig!</string>
     <string name="RegenerationBuff_Info">De functie voor natuurlijke regeneratie is in een buff-vorm om het makkelijker te maken.</string>
@@ -1000,8 +1004,10 @@
     <string name="Scorpio_Name">schorpioen</string>
     <string name="ScrollHolder_Info">In deze buisvormige houder kun je een willekeurig aantal scrollen plaatsen. Het bespaart ruimte in je rugzak en beschermt scrollen tegen vuur.</string>
     <string name="ScrollHolder_Name">koker voor perkamentrollen</string>
+    <string name="ScrollOfChallenge_Info">Wanneer hardop gelezen, zal deze rol een uitdagende brul ontketenen die alle monsters wakker maakt en hen waarschuwt voor de locatie van de lezer.</string>
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
     <string name="ScrollOfCurse_Name">Vloekscrol</string>
+    <string name="ScrollOfDomination_Name">Scroll van Heerschappij</string>
     <string name="ScrollOfIdentify_Info1">Het is %s</string>
     <string name="ScrollOfIdentify_InvTitle">Kies een voorwerp om te identificeren</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
@@ -1211,6 +1217,7 @@
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
+    <string name="TomeOfMastery_Info">Dit versleten leerboek is niet zo dik, maar je hebt het gevoel dat je er veel uit kunt halen. Onthoud er wel dat het lezen van deze tome enige tijd in beslag kan nemen.</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="Toolbar_Info1">Je weet niet wat er is.</string>
     <string name="Torch_ACLight">AANSTEKEN</string>
@@ -1292,6 +1299,7 @@
     <string name="Wand_Wood">Deze dunne %s toverstaf voelt warm aan. Wie weet wat hij doet als je hem gebruikt?</string>
     <string name="Wand_Wood_Types_0">hulst</string>
     <string name="Wand_Wood_Types_1">taxus</string>
+    <string name="Wand_Wood_Types_11">berk</string>
     <string name="Wand_Wood_Types_2">ebbenhout</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="Wand_Wood_Types_7">mahonie</string>
@@ -1339,6 +1347,7 @@
     <string name="WndDonate_donate">doneren: </string>
     <string name="WndDonate_goldDonateText">Dank voor uw hulp</string>
     <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
+    <string name="WndDonate_royalDonateText2">Daarnaast ontvang je elke hoed uit de in-app winkel! Zowel als elke hoed die ooit nog uitgegeven gaat worden.</string>
     <string name="WndDonate_ruby">robijn</string>
     <string name="WndDonate_silverDonate">zilverdonatie</string>
     <string name="WndDonate_silverDonateText">Elke donatie helpt de ontwikkeling van het project</string>
@@ -1383,6 +1392,7 @@
     <string name="WndLibrary_Catalogue_Title">Bibliotheek</string>
     <string name="WndLibrary_Codex_Btn">Verhalen</string>
     <string name="WndLibrary_Items_Btn">Voorwerpen</string>
+    <string name="WndLibrary_Mobs_Btn">Monsters</string>
     <string name="WndLocalModInstall_title">Mod installeren vanuit lokale map</string>
     <string name="WndModInstall_PleaseUpdate">Gelieve Remixed Dungeon te updaten voordat u deze mod installeert</string>
     <string name="WndModInstall_Version">versie</string>
@@ -1608,6 +1618,16 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
