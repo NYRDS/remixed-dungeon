@@ -285,6 +285,7 @@
     <string name="Codex_Story_18">سلاح مثقب - عند الضرب بنجاح، قد يُلحق الضرر بجميع الأعداء في خط مستقيم خلف الهدف.</string>
     <string name="Codex_Story_22">هذا الكتاب مكتوب بلغة الشياطين</string>
     <string name="Codex_Story_23">هذا الكتاب مكتوب بلغة الأقزام</string>
+    <string name="Codex_Story_3">رمز مضاد الإنتروبيا - سيتم إضاءة البطل وإحراقه، وسيتم تجميد العدو.</string>
     <string name="Codex_Story_6">رمز الأيض - سيتم شفاء البطل جزئياً قبل تطبيق ضرر العدو، لكن الجوع سيزداد بشكل كبير. يعمل فقط إذا لم يكن البطل يتضور جوعاً.</string>
     <string name="Codex_Story_9">غليف الإزاحة - كلما تعرض البطل للضرب، هناك فرصة أن يتم نقله إلى بلاطة عشوائية مرئية. لا يعمل هذا الغليف في مستويات الزعماء.</string>
     <string name="ColdSpirit_Gender">masculine</string>
@@ -476,6 +477,7 @@
     <string name="HeroClass_Rog">لص</string>
     <string name="HeroClass_RogPerks_5">تتم معرفة لفائف رسم الخرائط السحرية من البداية.</string>
     <string name="HeroClass_WarPerks_3">أي قطعة طعام تستعيد بعض الصحة عند أكلها.</string>
+    <string name="HeroSubClass_DescWarL">بعد قتل العدو يلتهم _الساحر_ روحه. هذا يشفي جراحه ويسد جوعه.</string>
     <string name="HeroSubClass_DescWard">بفضل ارتباطها القوي بقوى الطبيعة، تتمكن _الحارسة_ من جمع قطرات الندى والبذور من النباتات. كما أن المشي عبر العشب الطويل يمنحها تعزيزاً مؤقتاً للدروع.</string>
     <string name="HeroSubClass_NameAssa">قاتل مأجور</string>
     <string name="HeroSubClass_NameGlad">مصارع</string>
@@ -487,6 +489,7 @@
     <string name="Hero_Name">أنت</string>
     <string name="Hero_Name_Objective">أنت</string>
     <string name="Hero_Search">بحث</string>
+    <string name="Hero_StaBleeding">أنت تنزف!</string>
     <string name="Hero_StaBurning">لقد اشتعلت בך النار!</string>
     <string name="Hero_StaFurious">غاضب</string>
     <string name="Hero_StaFury">لقد أصبحت متوحشًا!</string>
@@ -667,9 +670,11 @@
     <string name="Mob_StaHuntingStatus">هذا %s يصطاد</string>
     <string name="Mob_StaSleepingStatus">هذا %s نائم</string>
     <string name="Mods_AuthorEmail">بريد المؤلف الإلكتروني:</string>
+    <string name="Mods_Disclaimer">يتم إنشاء المودات من قبل اللاعبين للاعبين.\n\nقد تغير المودات طريقة اللعب بطرق غير متوقعة أو غريبة، لقد تم تحذيرك!\n\nفريق NYRDS غير مسؤول بأي شكل من الأشكال عن محتوى المودات أو جودتها أو استقرارها.\n\nقم بتحميلها على مسؤوليتك الخاصة واستمتع!</string>
     <string name="Mods_RestartRequired">مطلوب إعادة تشغيل</string>
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">راهب قزم</string>
+    <string name="Monk_Name_Objective">راهب قزم</string>
     <string name="Mushroom_Eat_Message">هذا الفطر طعمه غريب!</string>
     <string name="MysteryMeat_Info2">لا تستطيع أن تشعر بساقيك!</string>
     <string name="MysteryMeat_Message">كان طعم ذلك الطعام... غريباً.</string>
@@ -746,6 +751,7 @@
     <string name="Possess_Info">الفن المظلم للتحكم العقلي يسمح للمتعويذة بثني إرادة معظم المخلوقات.</string>
     <string name="PotionBelt_Name">حزام جرعات</string>
     <string name="PotionOfExperience_Name">جرعة الخبرة</string>
+    <string name="PotionOfFrost_Info">عند تعرضها للهواء المفتوح، ستتبخر هذه المادة الكيميائية إلى سحابة متجمدة، مما يتسبب في تجمد أي كائن يلامسها في مكانه، غير قادر على التحرك أو التصرف.</string>
     <string name="PotionOfHealing_Apply">تشفى جراحك تماماً.</string>
     <string name="PotionOfLiquidFlame_Name">جرعة اللهب السائل</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
@@ -1065,6 +1071,7 @@
     <string name="WandMaker_RotberryDesc">توت هذا الشجيرة طعمه كالموت الحلو، الحلو.</string>
     <string name="WandMaker_RotberryInfo">تُصدر البذرة زئيراً يتردد صداه في جميع أنحاء الزنزانة!</string>
     <string name="WandOfAvalanche_Info1">سحقت نفسك بعصاك الخاصة من نوع عصا الانهيار الجليدي...</string>
+    <string name="WandOfBlink_Name">عصا الومض</string>
     <string name="WandOfDisintegration_Info">تُصدر هذه العصا شعاعاً من الطاقة المدمرة، يخترق جميع الكائنات في طريقه. كلما أصاب أهدافاً أكثر، زاد الضرر الذي يلحقه بكل منها.</string>
     <string name="WandOfDisintegration_Name">عصا التفكك</string>
     <string name="WandOfFirebolt_Info">هذه العصا تطلق موجات من النار السحرية. ستشعل التضاريس القابلة للاشتعال، وستلحق الضرر وتحرق الكائن الذي تصيبه.</string>
@@ -1188,6 +1195,7 @@
     <string name="WndSettings_InGameUiSettings">إعدادات واجهة المستخدم</string>
     <string name="WndSettings_Music">الموسيقى</string>
     <string name="WndSettings_Quickslots">فتحات الوصول السريع</string>
+    <string name="WndSettings_RecordVideo">تسجيل فيديو</string>
     <string name="WndSettings_SecondQuickslot">الفتحة السريعة الثانية</string>
     <string name="WndSettings_SelectLanguage">اختر اللغة</string>
     <string name="WndSettings_Sound">المؤثرات الصوتية</string>
@@ -1332,6 +1340,14 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
+
 
 
 

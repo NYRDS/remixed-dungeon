@@ -109,6 +109,7 @@
     <string name="Badges_ThisIsSparta">Đây là Sparta!!!</string>
     <string name="Badges_VictoryAll">Bùa Yendor thu được bởi tất cả các lớp nhân vật</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa đã bị tiêu diệt</string>
+    <string name="Bag_ACOpen">MỞ</string>
     <string name="Bandit_Gender">masculine</string>
     <string name="BardNPC_Desc">Nhạc sĩ thị trấn đang chơi đàn luýt của mình.</string>
     <string name="BardNPC_Gender">masculine</string>
@@ -306,6 +307,7 @@
     <string name="Codex_Story_19">Vũ khí đính độc - Khi tấn công trúng mục tiêu, có thể gây độc.</string>
     <string name="Codex_Story_21">Vũ khí hoang dã - Khi đánh trúng, có thể gây sát thương cho tất cả kẻ địch liền kề mục tiêu.</string>
     <string name="Codex_Story_22">Cuốn sách này được viết bằng ngôn ngữ quỷ</string>
+    <string name="Codex_Story_3">Ký tự Chống-entropi - Anh hùng sẽ được chiếu sáng và bốc cháy, và kẻ thù sẽ bị đóng băng.</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
     <string name="Codex_Story_9">Glyph Dịch Chuyển - Mỗi khi Anh Hùng trúng đòn, có khả năng Anh Hùng sẽ được dịch chuyển đến một ô ngẫu nhiên trong tầm nhìn. Glyph này không hoạt động ở các cấp độ Trùm.</string>
     <string name="ColdSpirit_Gender">masculine</string>
@@ -750,6 +752,7 @@
     <string name="Mob_StaTerrorStatus2">%1 này kinh hoàng trước %2</string>
     <string name="Mob_StaWanderingStatus">%s đang lang thang</string>
     <string name="Mods_AuthorSite">Trang tác giả:</string>
+    <string name="Mods_Disclaimer">Mod được tạo ra bởi người chơi cho người chơi.\n\nMod đôi khi thay đổi lối chơi theo cách không thể đoán trước hoặc kỳ lạ, bạn đã được cảnh báo!\n\nĐội ngũ NYRDS không chịu trách nhiệm về nội dung, chất lượng hoặc ổn định của mod.\n\nTải về trên rủi ro của bạn và vui vẻ!</string>
     <string name="Monk_Disarm">%1$s đã đánh rơi %2$s khỏi tay bạn!</string>
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">tu sĩ lùn</string>
@@ -855,6 +858,7 @@
     <string name="PortalGate_Used">Ngươi chạm vào cổng và... không có gì xảy ra.</string>
     <string name="Possess_Info">Nghệ thuật đen tối của kiểm soát tâm trí cho phép người thi phép cong vẹo ý chí của hầu hết các sinh vật.</string>
     <string name="PotionBelt_Info">Chiếc đai da chắc chắn này có thể đựng tất cả bình thuốc của bạn, đồng thời bảo vệ chúng không bị vỡ do giá lạnh.</string>
+    <string name="PotionOfFrost_Info">Khi tiếp xúc với không khí cởi trời, hóa chất này sẽ bay hơi thành một đám mây đóng băng, khiến bất kỳ sinh vật nào chạm vào nó bị đóng băng ngay tại chỗ, không thể hành động hay di chuyển.</string>
     <string name="PotionOfInvisibility_Apply">Bạn thấy đôi tay mình trở nên vô hình!</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
     <string name="PotionOfLiquidFlame_Name">Bình thuốc Ngọn Lửa Lỏng</string>
@@ -1229,6 +1233,7 @@
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
     <string name="WandOfAvalanche_Info">Khi một xung điện của que này trúng vào tường (hoặc bất kỳ chướng ngại vật rắn nào khác), nó gây ra một trận băng tuyết đá, gây sát thương và choáng tất cả sinh vật trong khu vực bị ảnh hưởng.</string>
     <string name="WandOfAvalanche_Info1">Bạn đã nghiền nát chính mình bằng Gậy Bão Tuyết của chính mình...</string>
+    <string name="WandOfBlink_Name">Gậy phép thuật nháy mắt</string>
     <string name="WandOfDisintegration_Info">Cây gậy này phát ra một tia năng lượng hủy diệt, xuyên thủng tất cả sinh vật trên đường đi. Càng nhiều mục tiêu bị trúng, càng nhiều sát thương nó gây ra cho mỗi mục tiêu.</string>
     <string name="WandOfDisintegration_Name">Đũa phép Phân rã</string>
     <string name="WandOfFlock_SheepBaa_2">Bê.</string>
@@ -1306,6 +1311,7 @@
     <string name="WndFortuneTeller_IdentifyAll">Tất cả</string>
     <string name="WndFortuneTeller_Instruction">Tôi có thể tiết lộ những bí mật đằng sau các vật phẩm mà bạn sở hữu.\nMột lần nhận diện sẽ tốn %d đồng tiền.</string>
     <string name="WndFortuneTeller_No_Item">Cẩn thận, bạn chắc không muốn tiêu tiền oan, phải không? Trong túi đồ của bạn không có vật phẩm chưa định danh.</string>
+    <string name="WndFortuneTeller_Title">Người soi đồn.</string>
     <string name="WndGame_Exit">Thoát Remixed Dungeon</string>
     <string name="WndGame_Ranking">Bảng xếp hạng</string>
     <string name="WndGame_Save">Lưu</string>
@@ -1390,6 +1396,7 @@
     <string name="WndSettings_InGameUiSettings">Cài đặt giao diện</string>
     <string name="WndSettings_Music">Nhạc</string>
     <string name="WndSettings_Quickslots">Khe truy cập nhanh</string>
+    <string name="WndSettings_RecordVideo">Quay video</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="WndSettings_SelectLanguage">Chọn ngôn ngữ</string>
     <string name="WndSettings_ThirdQuickslot">Khoản truy cập nhanh thứ ba</string>
@@ -1437,6 +1444,7 @@
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
     <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">mắt của Yog</string>
+    <string name="YogsEye_Name_Objective">Mắt của Yog</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">trái tim của Yog</string>
     <string name="YogsHeart_Name_Objective">trái tim Yog</string>
@@ -1514,6 +1522,7 @@
     <string name="town_deco_projector_name">Máy chiếu phim</string>
     <string name="town_deco_red_carpet_desc">Theo lời đồn, những tấm thảm đỏ tương tự trang trí các sảnh của đô thị lùn.</string>
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
+    <string name="town_deco_roof_desc">Một mái ngói đơn giản.</string>
     <string name="town_deco_roof_name">Mái nhà</string>
     <string name="town_deco_rope_name">dây thừng</string>
     <string name="town_deco_rug_desc">Được thiết kế với phong cách tinh tế.</string>
@@ -1527,6 +1536,7 @@
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_snowdrift_desc">Đó là một đống tuyết khá lớn và rõ ràng không ai định dọn nó.</string>
     <string name="town_deco_statue_blood_desc">Một bức tượng đầy uy nghi của thiên thần đang cầm một bát máu.</string>
+    <string name="town_deco_statue_water_name">Tượng thiên thần</string>
     <string name="town_deco_stock_name">kho</string>
     <string name="town_deco_stone_wall_desc">Không hiểu sao bức tường này lại tỏa ra hơi ấm và có vẻ hơi ẩm.</string>
     <string name="town_deco_stones_desc">Chỉ là một đống đá.</string>
@@ -1538,6 +1548,7 @@
     <string name="town_deco_vat_name">chậu</string>
     <string name="town_deco_wall_beam_desc">Dùng làm một điểm tựa vững chắc cho công trình này.</string>
     <string name="town_deco_wall_brazier_name">Bát lửa</string>
+    <string name="town_deco_wall_candles_desc">Những ngọn nến đã tắt, nhưng hương thơm dễ chịu vẫn còn lan tỏa.</string>
     <string name="town_deco_wall_candles_name">Nến</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
@@ -1549,6 +1560,17 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

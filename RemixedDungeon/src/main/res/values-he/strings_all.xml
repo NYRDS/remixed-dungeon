@@ -275,6 +275,7 @@
     <string name="Codex_Story_21">נשק פראי - בעת פגיעה מוצלחת, עלול לגרום נזק לכל האויבים הסמוכים למטרה.</string>
     <string name="Codex_Story_22">ספר זה כתוב בשפה של שדים</string>
     <string name="Codex_Story_23">הספר הזה כתוב בשפה הגמדית</string>
+    <string name="Codex_Story_3">גליף אנטי-אנטרופיה - הגיבור יואר ויידלק, והאויב יוקפא.</string>
     <string name="Codex_Story_9">גליף תזוזה - בכל פעם שהגיבור נפגע, יש סיכוי שהגיבור יטלפורט לאריח גלוי אקראי. גליף זה לא עובד ברמות בוס.</string>
     <string name="ColdSpirit_Desc">רוח הקור היא התגלמות הכפור, בצורתו הטהורה ביותר. בהיותה גוש חסר מודע של אנרגיה קסומה, היא מצייתת לרצון המכשף שקרא לה או פועלת לפי אינסטינקטים בסיסיים.</string>
     <string name="ColdSpirit_Gender">masculine</string>
@@ -491,6 +492,7 @@
     <string name="Hero_Name">אתה</string>
     <string name="Hero_Name_Objective">אותך</string>
     <string name="Hero_Search">חיפוש</string>
+    <string name="Hero_StaBleeding">אתה מדמם!</string>
     <string name="Hero_StaBurning">אתה נדלקת!</string>
     <string name="Hero_StaCripple">אתה נכה!</string>
     <string name="Hero_StaFury">אתה נעשה זועם!</string>
@@ -745,6 +747,7 @@
     <string name="Possess_Info">האומנות האפלה של שליטה במוח מאפשרת למטיל הכישוף לכופף את רצונן של רוב היצורים.</string>
     <string name="Potential_Txt">%s של פוטנציאל</string>
     <string name="PotionOfExperience_Name">שיקוי ניסיון</string>
+    <string name="PotionOfFrost_Info">בחשיפה לאוויר הפתוח, הכימיקל הזה יתאדה לענן מקפיא, שיגרום לכל יצור שבא איתו במגע לקפוא במקום, בלי יכולת לפעול או לזוז.</string>
     <string name="PotionOfInvisibility_Info">שתיית שיקוי זה תהפוך אותך לבלתי נראה זמנית. בעודך בלתי נראה, אויבים לא יוכלו לראות אותך. תקיפת אויב, כמו גם שימוש במקל או מגילה מול עיניהם, יבטלו את האפקט.</string>
     <string name="PotionOfLiquidFlame_Name">שיקוי להבה נוזלית</string>
     <string name="PotionOfMana_Info">השיקוי הזה ישחזר את האנרגיה הרוחנית שלך.</string>
@@ -1128,6 +1131,7 @@
     <string name="WndDontLikeAds_NotThisTime">לא הפעם</string>
     <string name="WndFortuneTeller_IdentifyAll">הכל</string>
     <string name="WndFortuneTeller_No_Item">היזהר, אתה לא רוצה לבזבז את הכסף שלך לחינם, נכון? אין פריטים לא מזוהים במלאי שלך.</string>
+    <string name="WndFortuneTeller_Title">מגדת עתידות.</string>
     <string name="WndGame_Exit">צא מ-Remixed Dungeon</string>
     <string name="WndGame_Ranking">דירוגים</string>
     <string name="WndGame_Return">חזרה למשחק</string>
@@ -1656,6 +1660,10 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
 
 
 
