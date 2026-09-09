@@ -1346,6 +1346,7 @@
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
     <string name="WndPlayGames_Show_Badges">Hiện huy hiệu</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
+    <string name="WndPlayGames_Show_Ok">Thành công!</string>
     <string name="WndPlayGames_Use">sử dụng Google Play Games</string>
     <string name="WndPortal_Info">Cổng này sẽ cho phép bạn quay lại thị trấn. Nó có vẻ khá không ổn định, và có lẽ sẽ không hoạt động quá lâu.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPortal_Info_Return">Cổng truyền tàng này sẽ đưa bạn trở lại hang động.\nBạn có muốn sử dụng nó không?</string>
@@ -1544,6 +1545,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

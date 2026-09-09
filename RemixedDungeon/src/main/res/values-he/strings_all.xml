@@ -1009,6 +1009,7 @@
     <string name="Thief_Carries">\n\n%1 נושא _%2. גנוב, כמובן.</string>
     <string name="Thief_Desc">המפלסים העמוקים של המבוך תמיד שימשו כמקום מסתור לכל סוגי הפושעים. לא כולם הצליחו לשמור על שפיות במהלך תקופות ארוכות הרחק מאור היום. לפני זמן רב, הגנבים והשודדים המטורפים האלה שכחו מי הם ולמה הם גונבים.</string>
     <string name="Thief_Gender">masculine</string>
+    <string name="Thief_Name">גנב מטורף</string>
     <string name="TitleScene_Badges">תגים</string>
     <string name="TitleScene_Highscores">ציונים גבוהים</string>
     <string name="TitleScene_Play">שחק</string>
@@ -1650,6 +1651,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

@@ -1208,6 +1208,7 @@
     <string name="ToughShield_name">Versterkt Leren Schild</string>
     <string name="TownGuardNPC_Desc">Een gewone stadswacht</string>
     <string name="TownGuardNPC_Gender">masculine</string>
+    <string name="TownGuardNPC_Message1">Ga maar door.</string>
     <string name="TownGuardNPC_Message3">Je denkt dat er te veel bewakers in deze stad zijn? Nou, dat is omdat dit de enige stad is met een gigantische monster-geïnfesteerde dungeon, niet waar?</string>
     <string name="TownGuardNPC_Name">stadswacht</string>
     <string name="TownShopkeeper_Desc">Deze kerel is een typische winkelier. Je ziet meteen dat hij je prijs al kent.</string>
@@ -1594,6 +1595,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 

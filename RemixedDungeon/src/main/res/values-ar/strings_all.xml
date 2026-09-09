@@ -1305,6 +1305,7 @@
     <string name="town_deco_snow_name">ثلج</string>
     <string name="town_deco_snowy_plate_name">لوح ثلجي</string>
     <string name="town_deco_sofa_desc">يبدو أن هذا السينما تحاول حقاً توفير أفضل المقاعد لعملائها.</string>
+    <string name="town_deco_stakes_name">أوتاد</string>
     <string name="town_deco_statue_blood_desc">تمثال مهيب لملاك يمسك وعاءً من الدم.</string>
     <string name="town_deco_statue_blood_name">تمثال ملاك</string>
     <string name="town_deco_stock_name">مخزون</string>
@@ -1327,6 +1328,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 
