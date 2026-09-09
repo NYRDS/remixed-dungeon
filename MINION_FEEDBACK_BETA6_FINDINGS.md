@@ -349,6 +349,23 @@ Plain tap is overloaded in `CharUtils.actionForCell` (`actors/CharUtils.java:231
 > around owned pets whose kind is not in the class's `friendlyMobs` list.
 > Making owned (`isPet()`) mobs always hero-friendly in `Hero.friendly` would be
 > the deeper fix — needs its own pass, touches balance.
+>
+> **RESOLVED (2026-09-10, full `friendly` audit + fix):** the audit showed the
+> fear was bigger than the footprint. `friendly` is directional with two
+> disagreeing sides: the mob side (`Mob.friendly`, 8 steps incl. AMOK, owner
+> id, owner-recursion with r_level breaker, class-list, fraction fallback)
+> always recognizes its owner; the hero side (`Hero.friendly` →
+> `heroClass.friendlyTo(kind)`) ignored ownership. But of 26 call sites only
+> three consult the hero's view — and `friendlyMobs` is not a pet list at
+> all: exactly one class (GNOLL: Gnoll/Shaman/Brute/Shielded/ShamanElder)
+> has it, its real job is the *mob-side* "gnoll-kin spare gnoll heroes"
+> check. AoE/wand targeting never consult `friendly` at all, so no balance
+> exposure. Fix: `Hero.friendly` returns true for `isPet()` mobs before the
+> class list, and the STEAL action (CharUtils.actions) excludes own pets
+> (`getOwnerId() != hero.getId()`) so the fix cannot offer "steal from your
+> own pet". Also documented: `Hero` overrides only the 1-arg `friendly`, so
+> `Mob.friendly`'s owner-recursion (2-arg) dispatches to Char's
+> fraction-only answer — the class list never leaks through the recursion.
 
 Confirmed, explicit code: `OrderCellSelector.onSelect` converts any `Interact` into `Attack` (`ml/actions/OrderCellSelector.java:44-46`); ordering to the hero's cell yields `Interact(hero)` → `KillOrder` on the player.
 
