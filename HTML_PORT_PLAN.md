@@ -22,17 +22,17 @@ Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
   green/yellow/red) + `[perf] fps=... src=... heapMB=... raf={...}` lines
   in __errors when fps<15 while visible. ALSO wraps
   performance.measureMemory and logs if it costs >200ms.
-- **~1fps NOT reproducible on this machine**: headed real Chrome
+- **~1fps report RESOLVED as transient** (Mike: "look ok now, both sound &
+  fps"): not reproducible on this machine — headed real Chrome
   (/usr/bin/chromium-browser on :1, harness headed_check.js) runs
-  GameScene at **50.9fps**, rAF healthy, heap 145MB. Two
-  measureMemory learnings: headless Chrome LACKS it entirely (all
-  headless gcHint testing was a no-op) AND this deb Chrome 148 doesn't
-  expose it without a flag either (0 gcHint calls at GameScene) — so
-  gcHint is currently a no-op on most browsers, not the 1fps cause.
-  The badge's raf/timer/worker split is the attribution when Mike sees
-  it again: worker/timer = rAF dead (occlusion/embedded-pane throttle —
-  the shim then drives ~1.6fps by design), raf + low fps = real
-  per-frame cost (then profile his machine).
+  GameScene at **50.9fps**, rAF healthy, heap 145MB. Likely an
+  rAF-dead episode (occluded/embedded-pane window → shim drives ~1.6fps
+  by design until the window is visible again). measureMemory learnings:
+  headless Chrome LACKS it entirely (all headless gcHint testing was a
+  no-op) AND deb Chrome 148 doesn't expose it without a flag — gcHint is
+  currently a no-op on most browsers. The bottom-left fps badge
+  (raf/timer/worker split) remains if slowness ever recurs: worker/timer
+  = rAF dead (occlusion throttle), raf + low fps = real per-frame cost.
 
 ## Current state (as of 2026-09-08, session 11)
 
