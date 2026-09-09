@@ -20,7 +20,7 @@ Line numbers refer to the working tree at the time of analysis (master, post `c0
 | E1 | Tap on minion = 3 different outcomes | Overloaded gesture in `CharUtils.actionForCell`; heap/object precedence outranks pet | UX |
 | E2 | Ordering to player's cell = minion attacks player | `OrderCellSelector` converts any `Interact` into `Attack` | high (UX) |
 | E3 | "Stay there" minions ignore enemies | FIXED: new `Guard` state — order pet onto its own cell; engages within leash of post, returns to post | fixed |
-| E4 | Army strands in narrow corridors | Pet follow = `Wandering.returnToOwnerIfTooFar`; no path-following / nearest-reachable fallback | design |
+| E4 | Army strands in narrow corridors | CLOSED by decision (2026-09-09): leave as is — proper follow pathfinding needs complicated pet-movement refactoring | closed |
 
 ---
 
@@ -387,6 +387,13 @@ Confirmed, explicit code: `OrderCellSelector.onSelect` converts any `Interact` i
 
 ### E4. Army strands in corridors (>2 minions can't follow)
 
+> **CLOSED (2026-09-09, Mike): leave as is.** Proper follow pathfinding
+> (hero-trail following / nearest-reachable fallback replacing
+> `Wandering.returnToOwnerIfTooFar`'s straight-line `getCloser`) needs a
+> complicated refactoring of pet movement — not worth it. Tester's army in
+> 1-wide corridors stays partially stranded; workaround remains: move the
+> army in smaller groups or re-position pets manually.
+
 Follow logic = `Wandering.returnToOwnerIfTooFar` (straight-line `getCloser`); no path-following behind the hero, so in a long 1-wide corridor only the first couple keep up; the rest stall or try side routes.
 
 **Suggested direction**: for pets with no enemy in sight, pathfind to the hero's *trail* (last cells the hero occupied) or fall back to "nearest reachable cell to the owner" instead of giving up — tester's explicit suggestion.
@@ -398,7 +405,8 @@ Follow logic = `Wandering.returnToOwnerIfTooFar` (straight-line `getCloser`); no
 > Historical — the original proposal. Status 2026-09-09: 1–9 all FIXED
 > (see per-section notes); 10 split: windows audit done (nothing needed),
 > E3 fixed (new `Guard` state); E1 dropped by decision (leave tap behavior
-> as is); E4 + Hero.friendly ownership gap still await design decisions.
+> as is); E4 closed by decision (2026-09-09, leave as is — complicated
+> refactoring); only the Hero.friendly ownership gap remains open.
 
 1. **#4** pet cloning via `split()` (guard hero pets) — small change, kills two reproducible dup bugs.
 2. **#6a** persist `baseStr` — small save-format change, removes a whole class of post-load weirdness.
@@ -409,4 +417,4 @@ Follow logic = `Wandering.returnToOwnerIfTooFar` (straight-line `getCloser`); no
 7. **#5** clamp pet windows to screen — medium (UI).
 8. **#3** follower dedup by kind/owner — rare but prevents dupe.
 9. **#7** encumbrance for pets — medium, touches balance.
-10. **E1/E3/E4** — E1 dropped by decision (2026-09-09, leave as is); E3 FIXED (`Guard` state); E4 design decision first, then implement.
+10. **E1/E3/E4** — E1 dropped by decision (2026-09-09, leave as is); E3 FIXED (`Guard` state); E4 closed by decision (2026-09-09, leave as is — complicated refactoring).
