@@ -4,6 +4,27 @@ Branch: `html-port-runnable` (work in progress, see git log)
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
+## Session 13 (2026-09-10): merged 32.4.beta.7 into the port
+
+- Merge commit 7ef8d8569 = beta.7 (pets/minions round, window sizing,
+  Guard AI state, l10n) + port work. Java auto-merged; only submodules
+  conflicted.
+- **teavm pin KEPT at 80df5d1b** (Mike: master teavm changes ignorable).
+  Master's beta.7 teavm bump was smuggled in by an automated l10n commit
+  (c2805003e) and points at pure upstream 0.14.1+104 WITHOUT our fork
+  fixes (TRandom LCG, web deflate/reflection). Syncing = full fork sync,
+  filed for later. The plan's old "consider upstream TeaVM 2f378217c"
+  note is this same commit.
+- luaj pin = 45d89907c: our teavm-strip-1 fixes merged with master's
+  fiber lib + TFORCALL yield fix (clean merge, only fiber files).
+- wiki-data fast-forwarded to beta.7 pin ca306a28.
+- beta.7 fallout fix 6ff26a029: DebugEndpoints calls
+  FileSystem.getUserDataPath(BuildConfig.SAVES_PATH) which existed only
+  on desktop — **master beta.7 itself fails the android fdroid compile**;
+  fixed on android (filesDir + subPath, BuildConfig SAVES_PATH='./') and
+  html shim (storage-relative). Desktop/html gates + android variant
+  compile green; headed fight-sim boot ~35fps, zero console exceptions.
+
 ## Current state (as of 2026-09-09, session 12)
 
 - **Heavy-load splash** (Mike ask: "preloader splash while cjk font or
