@@ -157,6 +157,11 @@ public class FileSystem {
         return Gdx.files.local(fileName).path();
     }
     
+    public static String getUserDataPath(String subPath) {
+        // html: user data lives in the local storage root, paths stay storage-relative
+        return Gdx.files.local(subPath).path();
+    }
+
     public static void ensureDir(String dir) {
         // In HTML version, directories are created automatically
         try {

@@ -27,6 +27,10 @@ public class FileSystem {
         return new File(storageDir, fileName);
     }
 
+    static public String getUserDataPath(String subPath) {
+        return new File(getContext().getFilesDir(), subPath).getAbsolutePath();
+    }
+
     static public String[] listInternalStorage() {
         File storageDir = getContext().getFilesDir();
         return storageDir.list();
