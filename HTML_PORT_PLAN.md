@@ -6,6 +6,29 @@ Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 
 ## Current state (as of 2026-09-09, session 12)
 
+- **CJK fallback font now loads ON DEMAND** (Mike: RU verified ok, levels
+  verified via lua auto-test, "let do cjk on demand"): the 18MB
+  LXGWWenKaiScreen.ttf ships as a plain static file `webapp/fonts/`
+  (make_webapp.py copies it, NOT in the assets manifest/heap) and
+  `SystemText.requestFallbackFont()` fetches it over HTTP the first time a
+  text really needs it — the classic-font pref opt-in or glyphs the pixel
+  font lacks (CJK text) — then writes the bytes into the INTERNAL memory FS
+  via the two-arg `write(append,bufferSize)` overload (one-arg write()
+  throws for Internal! NEVER `.local` — PersistedFileStorage would mirror
+  18MB into localStorage), `invalidate()`s caches on the game thread
+  (Gdx.app.postRunnable) and setNeedSceneRestart()s. serve.py now sends
+  `max-age=86400` for /fonts/ (only no-store everything else). Trigger
+  subtlety: `classicFont()` DEFAULTS FALSE, so "want fallback" is always
+  true — the fetch trigger must be `classicFont() ||
+  containsMissingChars(text)`, not merely wantFallback, or every Latin
+  boot pulls 18MB. Verified headless (`cjk_check.js`): plain en boot →
+  zero font fetches; zh_CN boot (seed
+  `pref:app:RemixedDungeon:datas={"locale":"zh_CN"}`) → one fetch +
+  cjk_font_ready + title renders 开始游戏/排行榜/成就 via LXGW.
+  TeaVM notes: fetch via JSBody + @JSFunctor callback;
+  Int8Array.copyToJavaArray() for bytes (org.teavm.jso.typedarrays
+  .TypedArrays does NOT exist — the backend's own
+  com.github.xpenatan...dom.typedarray.TypedArrays does).
 - **"No sound" FIXED — the session-11 element audio 404'd every file**
   (Mike report: silent + ~1fps). `WebAudio.newSound/newMusic` passed
   `fileHandle.path()` raw as the `<audio src>` — but path() is
@@ -471,11 +494,8 @@ through Web Audio; committed on html-port-runnable (session 9).
 2. **Level 2+ flow**: verify descend/ascend between levels (stairs,
    InterlevelScene), depth-2+ tilesets, boss levels — with saves now
    persisting, the level-file fallback path is worth a pass.
-3. **RU/other-locale text**: strings_ru.json loads, Cyrillic glyphs come
-   from langNames in getAllCharsAsString — verify a switched locale
-   renders (desktop reference runs RU).
-4. **CJK fallback font** (LXGWWenKaiScreen.ttf, 18MB) — not shipped; CJK
-   falls back to the pixel font. Decide: lazy fetch vs accept missing CJK.
+3. **RU/other-locale text**: VERIFIED by Mike (2026-09-09): RU renders.
+4. **CJK fallback font**: DONE (session 12) — lazy on-demand fetch, see above.
 5. **Title screen layout vs desktop**: camera 800x480 here, 480x320 on
    desktop — re-check proportions (bd snap-5z8).
 6. **Sound polish** (low): music position/pan edges, sound on tab-hide

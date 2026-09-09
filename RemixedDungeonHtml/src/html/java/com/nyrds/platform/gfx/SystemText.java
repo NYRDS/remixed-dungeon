@@ -1,22 +1,30 @@
 package com.nyrds.platform.gfx;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.glwrap.Matrix;
 import com.watabou.noosa.SystemTextBase;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import lombok.val;
 import org.jetbrains.annotations.NotNull;
+import org.teavm.jso.JSBody;
+import org.teavm.jso.JSFunctor;
+import org.teavm.jso.JSObject;
+import org.teavm.jso.typedarrays.Int8Array;
 
 /**
  * Mirror of the desktop FreeType-based SystemText: glyphs are rendered as
@@ -27,9 +35,13 @@ import org.jetbrains.annotations.NotNull;
  */
 public class SystemText extends SystemTextBase {
     private static FreeTypeFontGenerator pixelGenerator;
-    // 18MB CJK fallback font is deliberately not shipped in the webapp preload
-    // bundle - CJK text falls back to the pixel font (missing glyphs) for now.
+    // The 18MB CJK fallback font is NOT in the boot preload (it would sit in
+    // the heap for every player); it is fetched over HTTP the first time a
+    // text actually needs it - see requestFallbackFont().
+    private static final String FALLBACK_FONT_PATH = "fonts/LXGWWenKaiScreen.ttf";
+    private static final String FALLBACK_FONT_URL = "/fonts/LXGWWenKaiScreen.ttf";
     private static FreeTypeFontGenerator fallbackGenerator;
+    private static boolean fallbackFontRequested;
     private static final Map<String, BitmapFont> fontCache = new HashMap<>();
     private static final Map<String, BitmapFont.BitmapFontData> pseudoFontCache = new HashMap<>();
     private static BitmapFont.BitmapFontData pixelFontCheckData;
@@ -282,8 +294,8 @@ public class SystemText extends SystemTextBase {
         if (fallbackGenerator != null) fallbackGenerator.dispose();
 
         pixelGenerator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/pixel_font.ttf"));
-        if (FileSystem.exists("fonts/LXGWWenKaiScreen.ttf")) {
-            fallbackGenerator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle("fonts/LXGWWenKaiScreen.ttf"));
+        if (FileSystem.exists(FALLBACK_FONT_PATH)) {
+            fallbackGenerator = new FreeTypeFontGenerator(FileSystem.getInternalStorageFileHandle(FALLBACK_FONT_PATH));
         } else {
             fallbackGenerator = null;
         }
@@ -323,6 +335,15 @@ public class SystemText extends SystemTextBase {
         String plainText = extractPlainText(str); // Use base class method
         boolean wantFallback = !GamePreferences.classicFont() || containsMissingChars(plainText);
         this.useFallbackFont = wantFallback && fallbackGenerator != null;
+        // Fetch the 18MB font only for real need: the classic-font opt-in
+        // (wants LXGW for everything) or glyphs the pixel font lacks (CJK
+        // text). The default "modern" look is the pixel font on web - it was
+        // the only option before the fallback existed - so plain Latin boots
+        // never download it.
+        if (fallbackGenerator == null
+                && (GamePreferences.classicFont() || containsMissingChars(plainText))) {
+            requestFallbackFont();
+        }
 
         // Invalidate font data if font type changes
         String newFontKey = (useFallbackFont ? "fb_" : "px_") + getFontKey(fontParameters);
@@ -330,6 +351,46 @@ public class SystemText extends SystemTextBase {
             this.fontData = null;
         }
     }
+
+    /**
+     * Fetches the CJK fallback font over HTTP on first need (CJK locale or a
+     * glyph the pixel font lacks), installs the bytes into the in-memory FS
+     * where invalidate() expects them, then rebuilds caches and the scene so
+     * existing texts pick the fallback up. While the fetch is in flight (and
+     * after a failure) texts keep the pixel font, exactly like before.
+     */
+    private static void requestFallbackFont() {
+        if (fallbackFontRequested) {
+            return;
+        }
+        fallbackFontRequested = true;
+        fetchFontBytes(FALLBACK_FONT_URL, data -> Gdx.app.postRunnable(() -> {
+            if (data == null) {
+                EventCollector.logEvent("cjk_font_fetch_failed");
+                return;
+            }
+            try {
+                OutputStream out = Gdx.files.internal(FALLBACK_FONT_PATH).write(false, 1 << 16);
+                out.write(data.copyToJavaArray());
+                out.close();
+                invalidate();
+                GameLoop.setNeedSceneRestart();
+                EventCollector.logEvent("cjk_font_ready");
+            } catch (Exception e) {
+                EventCollector.logException(e, "cjk font install");
+            }
+        }));
+    }
+
+    @JSFunctor
+    private interface ByteArrayCallback extends JSObject {
+        void accept(Int8Array data);
+    }
+
+    @JSBody(params = {"url", "cb"}, script =
+            "fetch(url).then(function(r){ if (!r.ok) throw new Error(r.status); return r.arrayBuffer(); })"
+            + ".then(function(b){ cb(new Int8Array(b)); }, function(){ cb(null); })")
+    private static native void fetchFontBytes(String url, ByteArrayCallback cb);
 
     /**
      * Converts an Android-style ARGB integer color to a LibGDX Color object.

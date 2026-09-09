@@ -625,6 +625,21 @@ def main() -> None:
 
     extract_backend_resources(app_dir)
 
+    # CJK fallback font: shipped as a plain static file (fonts/), NOT in the
+    # assets manifest - the game lazy-fetches it on first need and an 18MB
+    # preload would sit in the JS heap for every player. See SystemText
+    # requestFallbackFont().
+    fonts_src = os.path.join(HERE, "..", "RemixedDungeonDesktop",
+                             "src", "desktop", "d_assets", "fonts")
+    fonts_dir = os.path.join(app_dir, "fonts")
+    os.makedirs(fonts_dir, exist_ok=True)
+    for name in ("LXGWWenKaiScreen.ttf",):
+        src = os.path.join(fonts_src, name)
+        if os.path.exists(src):
+            shutil.copy2(src, os.path.join(fonts_dir, name))
+        else:
+            raise SystemExit("CJK fallback font missing: %s" % src)
+
     lines = []
     count = 0
     # followlinks: assets/scripts is a symlink to the repo-root scripts/ tree
