@@ -110,10 +110,10 @@ shelves, fortune teller tent with a black cat, shop counter with potions.
 ### Sewers (depths 1–5)
 
 ```
-SCENE: a dungeon sewer level of grey-green stone brickwork slick with slime,
-dark still water pools reflecting torchlight, moss in wall joints, a leaking
-wall crack trickling water, an iron-barred drain in the floor, arched wooden
-doors with iron hinges.
+SCENE: a dungeon sewer level of grey-green cobblestone and brick slick with
+slime, dark still water pools reflecting torchlight, moss in wall joints, a
+leaking wall crack trickling water, an iron-barred drain in the floor,
+arched wooden doors with iron hinges.
 PALETTE: stone grey, sewage green, teal water, moss accents; no pure black,
 no neon.
 ```
@@ -149,9 +149,9 @@ PALETTE: marble white, emerald green, royal gold, deep carpet red.
 ### Demon Halls (depths 21–25)
 
 ```
-SCENE: demon-haunted halls of dark red stone with golden trim, pillars built
-of stacked humanoid skulls, slow rivers of cold black lava glowing faintly,
-ember-colored moss and fungi, hostile demonic statues.
+SCENE: demon-haunted halls of dark red stone, hexagonal floor tiles veined
+with glowing golden cracks of cold lava, dark red brick walls with gothic
+windows and golden trim, demonic statues, ember-colored moss and fungi.
 PALETTE: blood red, burnished gold, ember orange, cold lava black.
 ```
 
@@ -168,37 +168,41 @@ PALETTE: flesh pink and deep red, bile green, bruised purple shadows.
 ### Spider Lair (side branch, ~depths 6–10)
 
 ```
-SCENE: dungeon tunnels wrapped in sheets of white spider silk, hanging
-cocoons faintly showing movement inside, sticky web curtains between columns,
-glistening green chitin, eggs clustered in corners.
-PALETTE: silk white, chitin green, sickly yellow glow, dark stone.
+SCENE: dungeon tunnels of packed earth and old brown brick laced with sheets
+of white spider silk, web curtains in corners, hanging cocoons faintly
+showing movement inside, egg clusters, roots breaking through the walls.
+PALETTE: earth brown and rust orange, silk white, pale egg cream.
 ```
 
 ### Necropolis (side branch, ~depths 8–12)
 
 ```
-SCENE: an ancient necropolis crypt of bone-strewn stone, sarcophagi and
-tombs, stacked skulls in wall niches, a faint green necromantic glow from
-deep archways, cold blue mist over the floor.
-PALETTE: crypt grey, bone white, necro green, midnight blue.
+SCENE: an ancient necropolis crypt of near-black stone, skulls glowing in
+niches — green, orange, cyan, purple — a faint necromantic glow from deep
+archways, cold blue mist and teal water over the floor.
+PALETTE: crypt grey-black with necro-glow skull accents of green, orange,
+cyan and purple; midnight blue mist.
 ```
 
 ### Ice Caves (side branch, ~depths 15–19)
 
 ```
-SCENE: caverns of deep blue glacial ice, frozen torches in their brackets,
-statues of gnolls caught mid-run encased in ice, frost-covered wooden
-bridges, kobold machinery half-buried in ice, crisp star-like ice glints.
-PALETTE: glacier blue, white frost, pale steel, warm accent torch points.
+SCENE: caverns of snow-capped deep blue ice bricks, jutting ice spikes and
+stalagmites, frozen torches in their brackets, statues of gnolls caught
+mid-run encased in ice, frost-covered wooden bridges, kobold machinery
+half-buried in ice, crisp star-like glints.
+PALETTE: glacier blue, white frost and snow, pale steel, warm accent torch
+points.
 ```
 
 ### Shadow Lord realm (single arena)
 
 ```
-SCENE: a flat black stone arena ringed by shattered pillars, edges of the
-arena dissolving into absolute darkness, thin purple lightning arcing in the
-void beyond.
-PALETTE: basalt grey-black, purple lightning, one pale character highlight.
+SCENE: a flat arena of vivid purple brickwork with magenta accents, pillars
+and statues around the edge, the floor cracking outward into an absolute
+dark void beyond the walls, thin purple lightning in the blackness.
+PALETTE: royal purple, magenta pink, one pale character highlight, true
+dark only outside the arena.
 ```
 
 ### Portal room (safe, between regions)
@@ -275,93 +279,97 @@ round, expect it in promos. Take the mob's CAST line and append
 `loyal, standing at the hero's side, no hostile pose`. Squads of 2–3 pets
 read best (giant rat + stone golem + armored skeleton was the beta.7 banner).
 
+Colors verified against the actual sprite sheets (`assets/*.png` legacy,
+`assets/mobs/*.png` fork; frame 0 of the idle animation) — keep them as
+written.
+
 ### Sewers
 
 - **marsupial rat** — `a brown marsupial rat with alert red eyes, the size of a cat`
 - **albino rat** — `a white albino rat with abnormally long sharp front teeth`
-- **snail / deep snail** — `a giant grey sewage snail leaving a slime trail` (deep snail: glossy dark shell, near water)
-- **sewer crab** — `a huge orange crab with a thick plated exoskeleton, claws wide`
-- **swarm of flies** — `a buzzing black cloud of flies with a hundred glinting eyes`
-- **gnoll scout** — `a hyena-headed humanoid in ragged leather, carrying a tomahawk`
-- **crazy thief** — `a shabby wild-eyed man with a dagger and a loot sack`
-- **fetid rat** — `an oversized bloated rat wrapped in a green miasma cloud`
-- **Goo (boss)** — `a huge amorphous blob of teal-green sewage goo, dripping, bubbles rising through its simple mocking face`
+- **snail / deep snail** — `a giant snail with a tan-brown shell and a green slime trail` (deep snail: glossy dark shell, near water)
+- **sewer crab** — `a huge coral-pink crab with a thick plated exoskeleton, claws wide`
+- **swarm of flies** — `a buzzing black cloud of flies with glinting red eyes`
+- **gnoll scout** — `a hyena-headed humanoid in a brown loincloth, carrying a spear`
+- **crazy thief** — `a figure in a green hooded cloak, face lost in black shadow, dagger and loot sack`
+- **fetid rat** — `an oversized grey-green rat wrapped in a green miasma cloud`
+- **Goo (boss)** — `a huge amorphous blob of black-green gel, dripping, bubbles rising through its simple mocking face`
 
 ### Prison
 
 - **skeleton** — `an animate skeleton warrior with rusted weapon and shield, joints loose`
-- **gnoll shaman** — `a hyena-headed gnoll in a feathered robe, crackling battle spell in a raised paw`
+- **gnoll shaman** — `a hyena-headed gnoll in red hooded garb, crackling battle spell in a raised paw, staff in hand`
 - **shadow** — `a flitting black silhouette with two pale eyes, edges smoking`
 - **vampire bat** — `a scruffy vampire bat baring fangs mid-flight`
 - **crazy bandit** — `a ragged bandit with a gleaming poisoned dagger`
-- **Tengu (boss)** — `a masked assassin in dark blue garb and a white long-nosed oni mask, shurikens fanned between clawed fingers, traps at his feet`
+- **Tengu (boss)** — `a masked assassin in red-and-black ninja garb and a white long-nosed oni mask, shurikens fanned between clawed fingers, traps at his feet`
 
 ### Caves
 
-- **gnoll brute** — `a huge muscled hyena-headed brute towering over a man, mace in fist`
-- **shielded brute** — `the same brute behind a gigantic full-body shield`
-- **elder shaman** — `an ancient bent gnoll shaman wrapped in a shimmering reflective aura`
+- **gnoll brute** — `a huge muscled hyena-headed brute in a steel helm, mace in fist`
+- **shielded brute** — `the same helm-wearing brute behind a gigantic full-body shield`
+- **elder shaman** — `an ancient bent gnoll shaman with cyan face paint, wrapped in a shimmering reflective aura`
 - **cave spinner** — `a greenish furry spider gnashing poison fangs, web strands at its legs`
 - **fire elemental** — `a wandering figure of living flame, core white-hot, sparks trailing`
-- **DM-300 (boss)** — `a colossal rusty dwarven mining machine, single glowing eye, drill arms and heavy pistons, stones raining from the ceiling around it`
+- **DM-300 (boss)** — `a colossal rounded machine of grey-bronze metal, glowing yellow eye lights, drill arms and heavy pistons, stones raining from the ceiling around it`
 
 ### Dwarven Metropolis
 
-- **dwarf monk** — `a bald robed dwarf monk, bare fists raised, sleeves tied back`
+- **dwarf monk** — `a bald dwarf monk in orange-brown robes, bare fists raised, sleeves tied back`
 - **senior monk** — `an older monk mid-teleport, afterimage of folded space`
 - **dwarf warlock** — `a robed dwarf warlock with a skull-topped staff, eyes glowing`
 - **golem** — `a massive stone golem with runes glowing through its rocky seams, earth-spirit light inside`
-- **King of Dwarves (boss)** — `an ancient dwarf king on a marble throne, golden crown, gaunt undead face with a beard, raising a court of skeleton dwarves in courtly robes`
+- **King of Dwarves (boss)** — `a white-bearded dwarf king in red and gold royal dress, golden crown, arms raised, summoning a court of skeleton dwarves in courtly robes`
 
 ### Demon Halls
 
-- **succubus** — `a seductive gothic demon girl, small horns and bat wings, charming smile, heart-shaped charm glowing`
-- **evil eye** — `a floating fleshy orb with one huge bloodshot eye and trailing tentacles`
-- **scorpio** — `a huge dark arachnid demon firing serrated spikes from its curled tail`
+- **succubus** — `a blue-haired gothic demon girl, small horns and bat wings, charming smile, heart-shaped charm glowing`
+- **evil eye** — `a floating purple orb with one huge bloodshot eye and trailing tentacles`
+- **scorpio** — `a huge orange-amber arachnid demon firing serrated spikes from its curled tail`
 - **acidic scorpio** — `the same demon in sickly green, acid dripping`
-- **Yog-Dzewa (final boss)** — `an eldritch god of churning darkness: a giant central burning eye, an enormous fanged mouth, a huge beating heart, and one burning fist and one rotting fist hovering beside it, reality dithering apart around it`
+- **Yog-Dzewa (final boss)** — `an Old God of floating organs: a colossal bloodshot white-red eye hovering above a pink exposed brain, flanked by a giant fanged mouth and a beating heart, one burning fist and one rotting fist at its sides, reality dithering apart around it`
 
 ### The Guts
 
 - **suspicious rat** — `a rat whose whole body spasms wrongly as it moves, shadow misshapen`
-- **pseudo-rat** — `a horror wearing a rat's place in the world: an enormous fanged mouth making up most of its body`
-- **gnoll-zombie** — `a twisted rotten gnoll-zombie, more meat pile than humanoid`
-- **worm** — `a giant pale worm surging half out of the fleshy floor, mandibles wide`
-- **nightmare** — `a bundle of flesh tentacles twitching toward the viewer`
+- **pseudo-rat** — `a red-fanged horror in a rat's place: an enormous white-toothed mouth making up most of its red body`
+- **gnoll-zombie** — `a hunched rotten gnoll-zombie in tan fur and red rags, more meat pile than humanoid`
+- **worm** — `a giant pale segmented worm surging half out of the fleshy floor, mandibles wide`
+- **nightmare** — `a red flesh mass with one wide white eye, sprouting twitching tentacles`
 - **treacherous spirit** — `a cloud of living darkness with one gigantic pulsing eye`
 - **god's larva** — `a pale translucent grub radiating wrong divinity`
 
 ### Spider Lair
 
-- **spider soldier** — `a green-chitinous soldier spider, venom-dripping fangs, legs raised`
-- **spider worker** — `a round worker spider bloated like a living bomb`
-- **psi-spider** — `a frail spider with an oversized exposed brain-sack, psychic ripple in the air`
-- **amber spider** — `a tough spider whose giant brain-sack glows amber as it strikes`
-- **spider cocoon / egg** — props: `a silk cocoon with something alive wriggling inside`, `a fragile egg with many legs visible within`
-- **Spider Queen (boss)** — `a queen with the torso of a beautiful woman and the body of a hideous giant spider, crowned with silk, court of soldiers below`
+- **spider soldier** — `a tan-brown soldier spider with venom-green fangs, legs raised`
+- **spider worker** — `a worker spider with a swollen orange abdomen, bloated like a living bomb`
+- **psi-spider** — `a frail spider with a swollen purple brain-sac, psychic ripple in the air`
+- **amber spider** — `a tough spider whose giant brain-sac glows amber as it strikes`
+- **spider cocoon / egg** — props: `a white silk cocoon with something alive wriggling inside`, `a fragile white egg sac with many legs visible within`
+- **Spider Queen (boss)** — `a queen with a red-haired woman's torso and the body of a giant brown spider, court of soldiers below`
 
 ### Necropolis
 
-- **zombie** — `a rotting adventurer zombie, grave clothes and rusted gear`
-- **enslaved soul** — `a ghostly floating skull where a pained face flashes in and out`
-- **exploding skull** — `a floating burning skull cracking with trapped fire`
-- **runic skull** — `a skull engraved with faintly glowing runes`
-- **death knight** — `a mighty knight in heavy rusted armor, dead grin under the helm`
-- **dread knight** — `a broken ancient knight, darker armor, aura of torment`
-- **Lich (boss)** — `a skeletal death wizard with green flame eyes and tattered robes, standing over a jar of glowing souls`
+- **zombie** — `a teal-green rotting adventurer zombie, grave clothes and rusted gear`
+- **enslaved soul** — `a small dark-blue ghostly orb where a pained face flashes in and out`
+- **exploding skull** — `a floating skull wrapped in trapped orange flame, cracking apart`
+- **runic skull** — `a skull set in a stone plate, rune-eyes glowing red` (rare variant: blue)
+- **death knight** — `a mighty knight in dark steel armor, cold blue eye-glow under the helm, dead grin`
+- **dread knight** — `a broken ancient knight in rusted brown-black armor, burning red eye-glow, aura of torment`
+- **Lich (boss)** — `a skeletal lich in a green robe, staff crowned with a purple soul orb, standing over a jar of glowing souls`
 
 ### Ice Caves
 
-- **kobold** — `a small dog-like humanoid in furs with clever mechanical gadgets on the belt`
-- **kobold icemancer** — `an elite kobold in engineered frost gear, zapping a bolt of ice`
-- **cold spirit** — `a mindless wisp of pure frost, translucent blue, trailing snow`
+- **kobold** — `a squat brown-furred kobold under a dark engineer hood with round goggles, gadgets on the belt`
+- **kobold icemancer** — `an elite kobold in a pale blue-grey hooded robe, zapping a bolt of ice`
+- **cold spirit** — `a small spiky wisp of pale white-blue frost, trailing snow`
 - **ice elemental** — `a jagged walking figure of clear ice, frost aura cracking the ground`
-- **Ice Guardian (boss)** — `an ancient kobold automaton of ice and metal plates around one exposed glowing energy core, reassembling itself from floating shards`
+- **Ice Guardian (boss)** — `a tall automaton of pale green ice and metal, sword arm, reassembling itself from floating shards around one exposed energy core`
 
 ### Shadow Lord realm
 
-- **shadow lord (boss)** — `a towering silhouette of pure living darkness edged in purple lightning, burning eyes, form bleeding smoke`
-- **maze shadow** — `a lesser shadow mimic with too many joints`
+- **shadow lord (boss)** — `a vast violet-black shadow in the shape of a jagged crystalline star, empty dark core, edges bleeding smoke`
+- **maze shadow** — `a lesser purple shadow mimic with too many joints`
 
 ### Specials (any region)
 
@@ -370,7 +378,7 @@ read best (giant rat + stone golem + armored skeleton was the beta.7 banner).
 - **animated statue** — `a grey stone statue mid-step, red glowing eyes, a very real sword in hand`
 - **giant piranha** — `a huge carnivorous fish breaking the water surface, teeth first`
 - **magic sheep** — `a fluffy white sheep chewing cud with a blank stare, faint magic sparkle`
-- **air / water / earth elemental** — `a flying being of living wind`, `a figure of bonded walking waves`, `a clod of earth walking on stone limbs`
+- **air / water / earth elemental** — `a flying being of living wind`, `a dark teal blob of living water with a faint face`, `a grey clod of earth walking on stone limbs`
 - **hedgehog** — `a small round pet hedgehog, spines bristling, snout up`
 
 ## Dungeon NPCs — CAST blocks
@@ -382,7 +390,7 @@ Friendly faces met inside the dungeon.
 - **troll blacksmith** — `a tall lean troll whose stone-grey cracked skin resembles rock, tinkering at an anvil with comically small tools`
 - **ambitious imp** — `a small imp demon with a merchant's grin, carrying a ledger and a pack of wares`
 - **shopkeeper** — `a stout mustached shopkeeper behind a small counter set right in the dungeon, scales and price tags around`
-- **rat king** — `a marsupial rat slightly bigger than usual, wearing a tiny golden crown, regal pose on a small treasure pile`
+- **rat king** — `a marsupial rat slightly bigger than usual, wearing a tiny green-gold crown, regal pose on a small treasure pile`
 - **mirror image** — `a perfect dithered copy of the hero, edges shimmering like liquid glass`
 
 ## Town NPCs — CAST blocks
@@ -390,10 +398,15 @@ Friendly faces met inside the dungeon.
 For town-square and interiors promos.
 
 - **town shopkeeper** — `a rotund merchant in an apron behind a counter of potions, pouches and travel gear`
-- **town guard** — `a town watchman in a kettle helm and mail shirt, spear in hand, lantern at the belt`
+- **town guard** — `a town watchman in a green tabard and kettle helm, sword in hand`
 - **townsfolk** — `plainly dressed medieval townsfolk going about their day, hoods and wool`
+- **innkeeper** — `an aproned innkeeper polishing a frothy mug`
+- **bard** — `a bard in purple garb strumming a lute`
+- **drunkard** — `a wobbly drunkard in brown clothes clutching a bottle`
+- **mercenary** — `a scarred mercenary in a mail shirt, sword at the belt`
+- **servant** — `a servant girl with orange hair in a red dress`
 - **healer** — `a gentle healer in white robes with a herb pouch, soft glow around the hands`
-- **bishop** — `an old bishop in rich vestments with a golden crozier, candlelit church behind`
+- **bishop** — `an old bishop in a tall golden mitre and purple-and-gold vestments, candlelit church behind`
 - **librarian** — `a fussy librarian in spectacles among towering bookshelves`
 - **fortune teller** — `a fortune teller in shawls and a headscarf over a round table of cards, a black cat at her side`
 - **plague doctor (town)** — `a town plague doctor in a dark coat and beaked mask, carrying a basket of herbs`
@@ -416,7 +429,7 @@ For town-square and interiors promos.
 - **Skeleton key** — `an oversized ornate skeleton key, gold and bone`
 - **Tome of Mastery** — `a worn thick leather-bound tome with a rune-embossed cover, faint sense of importance`
 - **Black Skull of Mastery ("The Soulbringer")** — `an ancient black skull artifact wreathed in soul wisps, an arcane formula etched into the cranium`
-- **Rat King's crown** — `a tiny golden crown the size of a thimble`
+- **Rat King's crown** — `a tiny green-gold crown the size of a thimble`
 - **Ankh** — `a small golden ankh glowing with life-saving light`
 - **Honeypot** — `a clay pot of golden honey, a fresh comb glowing inside`
 - **Keys** — `a ring of iron and golden dungeon keys`
