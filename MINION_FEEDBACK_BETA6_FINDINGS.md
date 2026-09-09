@@ -167,6 +167,30 @@ Delivery paths for pets:
 
 ### 5. Orders panel doesn't fit the screen
 
+> **FIXED (2026-09-09, "unify Wnd sizing" pass):** all bag/pet windows now size
+> through `WndHelper` limits. `WndHelper.getLimitedHeight(limit)` added (width
+> clamp existed, height didn't). `WndOptions` — unified width via `stdWidth()`
+> (was hard-coded 120 in landscape too), height clamped to
+> `getAlmostFullscreenHeight()` in ctor **and** `layout()` (layout previously
+> re-ran the unclamped resize), content wrapped in a `ScrollPane` when it
+> exceeds the screen; fixes all 10 subclasses incl. trap prompts and the
+> Lua-exposed `WndOptionsLua`. `WndBag`/`WndPetBag` — the slot grid moved into
+> a `ScrollPane` (`applyGridViewport()`), viewport clamped to the screen
+> budget, items were previously silently clipped past the grid; `clearItems`/
+> `setItemsActive`/`WndPetBag.addEquippabilityIndicators` now iterate the scroll
+> content, and the ctor calls `resize()` *before* positioning the grid viewport
+> (the content camera derives from the window camera — ordering bug found and
+> fixed via camera diagnostics). `WndPetItem`/`WndPetQuantity`/`WndPetSelect`
+> — width via `getLimitedWidth(stdWidth())`, clamped height + `ScrollPane`
+> overflow. Verified live on the desktop debug server in both orientations
+> (desktop `landscape()` now follows the real window aspect, commit `eb5b39e12`):
+> landscape 800×480 budget 252×146 — hero bag 173×122, pet bag 173×122,
+> pet options 160×71, 8-option test panel clamped to exactly 160×146 with
+> scroll; portrait 480×800 budget 120×180 — hero/pet bag 115×180 (6-row grid
+> fits exactly), options 120×171. New permanent test endpoint
+> `/debug/open_window?wnd=herobag|petbag|petoptions|petselect|optionstest`
+> shows a real window on the game thread and reports its size vs the budget.
+
 - `windows/WndOptions.java:19-64` — hard-coded width (`Window.STD_WIDTH`), `resize(STD_WIDTH, (int) vbox.height())` — **height never clamped to screen**, no scrolling.
 - `windows/WndPetBag.java:37-55` extends `WndBag` which renders a fixed 23-slot grid (`WndBag.java:131,148,164-166`; 4 cols portrait → 6 rows), also unclamped. `WndPetItem`/`WndPetQuantity` same pattern.
 - `WndHelper.getFullscreenHeight()` / `getLimitedWidth()` (`com/nyrds/pixeldungeon/windows/WndHelper.java`) exist and are already used by e.g. `WndTitledMessage` — pet windows just don't use them. No literal X-button found in these windows; the reported overflow is the unclamped panel itself.

@@ -3,10 +3,12 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.UseItem;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;
 import com.watabou.noosa.Text;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -17,6 +19,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.IconTitle;
@@ -37,7 +40,7 @@ public class WndPetItem extends Window {
 
         super();
 
-        int WIDTH = stdWidth();
+        int WIDTH = WndHelper.getLimitedWidth(stdWidth());
 
         this.bag = bag;
         this.hero = hero;
@@ -47,7 +50,6 @@ public class WndPetItem extends Window {
 
         IconTitle titlebar = new IconTitle(new ItemSprite(item), Utils.capitalize(item.toString()));
         titlebar.setRect(0, 0, WIDTH, 0);
-        add(titlebar);
 
         if (item.isLevelKnown()) {
             int level = item.level();
@@ -67,9 +69,6 @@ public class WndPetItem extends Window {
         info.maxWidth(WIDTH);
         info.setX(titlebar.left());
         info.setY(titlebar.bottom() + GAP);
-        add(info);
-
-        float y = info.getY() + info.height() + GAP;
 
         actions = new VHBox(WIDTH);
         actions.setAlign(HBox.Align.Width);
@@ -78,10 +77,26 @@ public class WndPetItem extends Window {
         // Add pet-specific actions
         addPetActions();
 
-        add(actions);
-        actions.setPos(titlebar.left(), y);
+        // caveman: assemble into one content holder so long item info scrolls
+        // instead of pushing the window off screen
+        Component content = new Component();
+        content.add(titlebar);
+        content.add(info);
+        content.add(actions);
+        actions.setPos(titlebar.left(), info.getY() + info.height() + GAP);
+        content.setSize(WIDTH, actions.bottom() + GAP);
 
-        resize(WIDTH, (int) (actions.bottom() + GAP));
+        int availH = WndHelper.getAlmostFullscreenHeight();
+        if (content.height() > availH) {
+            ScrollPane scroll = new ScrollPane(content);
+            scroll.setRect(0, 0, WIDTH, availH);
+            add(scroll);
+            resize(WIDTH, availH);
+        } else {
+            content.setPos(0, 0);
+            add(content);
+            resize(WIDTH, (int) content.height());
+        }
     }
 
     private void addPetActions() {

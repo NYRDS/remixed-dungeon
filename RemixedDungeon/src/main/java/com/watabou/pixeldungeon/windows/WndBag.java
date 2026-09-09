@@ -5,11 +5,14 @@ import android.view.KeyEvent;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.RemixedDungeon;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.nyrds.platform.input.Keys;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Text;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -24,6 +27,7 @@ import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
@@ -38,6 +42,9 @@ public class WndBag extends WndTabbed {
 	private final int panelWidth;
 	private final Text txtTitle;
 	private Text txtSubTitle;
+
+	// item grid lives in here; scrolls when the slot rows exceed the screen
+	private ScrollPane gridScroll;
 
 	public enum Mode { //Can't move it out of class because it used by Remixed RPG directly
 		NONE,
@@ -140,7 +147,7 @@ public class WndBag extends WndTabbed {
 
         lastBag = bag;
 
-        panelWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
+        panelWidth = WndHelper.getLimitedWidth(SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1));
 
         txtTitle = PixelScene.createMultiline( title != null ? title : Utils.capitalize( bag.name() ), GuiProperties.titleFontSize());
         txtTitle.maxWidth(panelWidth);
@@ -154,11 +161,15 @@ public class WndBag extends WndTabbed {
         txtTitle.setY(0);
         add( txtTitle );
 
+        gridScroll = new ScrollPane(new Component());
+        add( gridScroll );
+
         placeItems( bag );
 
         resize(
                 panelWidth,
-                (int) (SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1) + titleBottom + SLOT_MARGIN) );
+                (int) (titleBottom + SLOT_MARGIN + gridViewportHeight()) );
+        applyGridViewport();
 
 		if(stuff.getOwner() instanceof Hero) {
 			Bag[] bags = {
@@ -237,11 +248,34 @@ public class WndBag extends WndTabbed {
 		}
 		clearItems();
 		placeItems(lastBag);
+		applyGridViewport();
 
 		Window activeDialog = getActiveDialog();
 		if(activeDialog != null) {
 			bringToFront(activeDialog);
 		}
+	}
+
+	// height the grid viewport may occupy, given the screen budget and the title
+	private int gridViewportHeight() {
+		int gridContentH = SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1);
+		int availH = WndHelper.getAlmostFullscreenHeight() - (int) titleBottom - SLOT_MARGIN;
+		return Math.min(gridContentH, Math.max(availH, SLOT_SIZE));
+	}
+
+	// sizes the grid viewport to the screen and the scroll content to the full grid.
+	// must run after the window resize - the content camera is derived from the
+	// window camera, which resize() finally positions
+	private void applyGridViewport() {
+		int viewH = gridViewportHeight();
+		gridScroll.setRect(0, titleBottom + SLOT_MARGIN, panelWidth, viewH);
+		gridScroll.content().setSize(panelWidth, SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1));
+		gridScroll.scrollTo(0, 0);
+	}
+
+	// grid slots live in the scroll content, not among the window children
+	protected Component gridContent() {
+		return gridScroll.content();
 	}
 
 	protected void placeEquipped(Item item, Belongings.Slot slot, int image) {
@@ -273,8 +307,9 @@ public class WndBag extends WndTabbed {
 	}
 
 	public void setItemsActive(boolean state) {
-		List<Gizmo> snapshot = new ArrayList<>(members);
-		for (var child: snapshot) {
+		Component grid = gridContent();
+		for(int i = 0; i < grid.getLength(); i++) {
+			Gizmo child = grid.getMember(i);
 			if(child instanceof ItemButton) {
 				child.setActive(state);
 			}
@@ -283,8 +318,10 @@ public class WndBag extends WndTabbed {
 
 	protected void clearItems() {
 		row = col = count = 0;
+		Component grid = gridContent();
 		var childsToRemove = new ArrayList<ItemButton>();
-		for (var child: members) {
+		for(int i = 0; i < grid.getLength(); i++) {
+			Gizmo child = grid.getMember(i);
 			if(child instanceof ItemButton) {
 				childsToRemove.add((ItemButton) child);
 			}
@@ -292,7 +329,7 @@ public class WndBag extends WndTabbed {
 
 		for(var child:childsToRemove) {
 			child.destroy();
-			remove(child);
+			grid.remove(child);
 		}
 	}
 
@@ -355,18 +392,19 @@ public class WndBag extends WndTabbed {
 			return;
 		}
 
+		// grid-relative: the scroll content origin sits right below the title
 		int x = col * (SLOT_SIZE + SLOT_MARGIN);
-		int y = (int) (titleBottom + SLOT_MARGIN + row * (SLOT_SIZE + SLOT_MARGIN));
+		int y = row * (SLOT_SIZE + SLOT_MARGIN);
 
 		ItemButton btnItem = new ItemButton(this, item );
 		btnItem.setPos(x,y);
-		add( btnItem );
-		
+		gridContent().add( btnItem );
+
 		if (++col >= nCols) {
 			col = 0;
 			row++;
 		}
-		
+
 		count++;
 	}
 
@@ -414,6 +452,7 @@ public class WndBag extends WndTabbed {
 
 		clearItems();
 		placeItems(bagTab.bag);
+		applyGridViewport();
 	}
 	
 	@Override

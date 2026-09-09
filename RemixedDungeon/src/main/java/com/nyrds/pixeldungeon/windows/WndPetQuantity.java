@@ -1,9 +1,11 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.EquipableItem;
@@ -12,6 +14,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -21,7 +24,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class WndPetQuantity extends Window {
 
-    private static final int WIDTH = 120;
     private static final int BTN_HEIGHT = 18;
     private static final int[] QUANTITIES = {1, 5, 10, 50, 100, 500, 1000};
 
@@ -34,14 +36,17 @@ public class WndPetQuantity extends Window {
     public WndPetQuantity(@NotNull Item item, @NotNull Hero hero, @NotNull Mob pet) {
         super();
 
+        int WIDTH = WndHelper.getLimitedWidth(stdWidth());
+
         this.item = item;
         this.hero = hero;
         this.pet = pet;
         this.itemInPetInventory = pet.getBelongings().backpack.contains(item) || pet.getBelongings().isEquipped(item);
 
-        add(vbox);
+        Component content = new Component();
+        add(content);
 
-        float pos = createDescription();
+        float pos = createDescription(content, WIDTH);
 
         vbox.clear();
 
@@ -84,9 +89,21 @@ public class WndPetQuantity extends Window {
         btnCancel.setSize(WIDTH, BTN_HEIGHT);
         vbox.add(btnCancel);
 
-        vbox.setPos(0, pos + GAP);
+        vbox.setRect(0, pos + GAP, WIDTH, vbox.childsHeight());
+        content.add(vbox);
+        content.setSize(WIDTH, vbox.bottom() + GAP);
 
-        resize(WIDTH, (int) vbox.bottom());
+        // caveman: many quantity buttons + item info can exceed short screens
+        int availH = WndHelper.getAlmostFullscreenHeight();
+        if (content.height() > availH) {
+            ScrollPane scroll = new ScrollPane(content);
+            scroll.setRect(0, 0, WIDTH, availH);
+            add(scroll);
+            resize(WIDTH, availH);
+        } else {
+            content.setPos(0, 0);
+            resize(WIDTH, (int) content.height());
+        }
     }
 
     private String getButtonText(int qty, int index) {
@@ -164,12 +181,12 @@ public class WndPetQuantity extends Window {
         }
     }
 
-    private float createDescription() {
+    private float createDescription(Component content, int width) {
         IconTitle titlebar = new IconTitle();
         titlebar.icon(new ItemSprite(item));
         titlebar.label(Utils.capitalize(item.toString()));
-        titlebar.setRect(0, 0, WIDTH, 0);
-        add(titlebar);
+        titlebar.setRect(0, 0, width, 0);
+        content.add(titlebar);
 
         if (item.isLevelKnown()) {
             int level = item.level();
@@ -181,10 +198,10 @@ public class WndPetQuantity extends Window {
         }
 
         Text info = PixelScene.createMultiline(item.info(), GuiProperties.regularFontSize());
-        info.maxWidth(WIDTH);
+        info.maxWidth(width);
         info.setX(titlebar.left());
         info.setY(titlebar.bottom() + GAP);
-        add(info);
+        content.add(info);
 
         return info.getY() + info.height();
     }

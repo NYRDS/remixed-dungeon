@@ -12,6 +12,7 @@ import com.nyrds.platform.storage.SaveUtils;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
+import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.ml.actions.Attack;
 import com.nyrds.pixeldungeon.ml.actions.Interact;
 import com.nyrds.pixeldungeon.ml.actions.InteractObject;
@@ -38,7 +39,14 @@ import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
+import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.nyrds.pixeldungeon.windows.WndHelper;
+import com.nyrds.pixeldungeon.windows.WndPetBag;
+import com.nyrds.pixeldungeon.windows.WndPetInventoryOptions;
+import com.nyrds.pixeldungeon.windows.WndPetSelect;
+import com.watabou.pixeldungeon.windows.WndBag;
+import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
 import fi.iki.elonen.NanoHTTPD;
 import java.lang.reflect.Field;
@@ -2912,6 +2920,109 @@ public class DebugEndpoints {
                     uiHidden[0], uiHidden[0] ? "hidden" : "visible"));
         } catch (Exception e) {
             GLog.w("Error in handleDebugToggleUI: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // caveman: UI test aid - shows a real window on the game thread and reports its
+    // geometry against the WndHelper budget, so window layout can be verified
+    // without tapping the actual UI. wnd=petbag|petoptions|petselect|herobag|optionstest
+    public static NanoHTTPD.Response handleDebugOpenWindow(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            String wnd = null;
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("wnd=")) {
+                        wnd = URLDecoder.decode(param.substring(4), "UTF-8");
+                        break;
+                    }
+                }
+            }
+
+            if (wnd == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing wnd parameter (petbag|petoptions|petselect|herobag|optionstest)\"}");
+            }
+
+            if (Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game state not initialized - start a game first\"}");
+            }
+
+            final String wndParam = wnd;
+            final String[] result = new String[3];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                Hero hero = Dungeon.hero;
+                switch (wndParam) {
+                    case "petbag":
+                    case "petoptions":
+                    case "petselect": {
+                        List<Mob> pets = PetInventoryManager.getHeroPets(hero);
+                        if (pets.isEmpty()) {
+                            result[0] = "ERROR: hero has no pets";
+                            return;
+                        }
+                        Mob pet = pets.get(0);
+                        Window w;
+                        if (wndParam.equals("petbag")) {
+                            w = new WndPetBag(hero, pet);
+                        } else if (wndParam.equals("petoptions")) {
+                            w = new WndPetInventoryOptions(hero, pet);
+                        } else {
+                            w = new WndPetSelect(hero);
+                        }
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "herobag": {
+                        Window w = new WndBag(hero.getBelongings(), hero.getBelongings().backpack,
+                            null, WndBag.Mode.ALL, null);
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "optionstest": {
+                        // exercises the WndOptions overflow/scroll path
+                        Window w = new WndOptions("WndOptions scroll test",
+                            "A deliberately long message so the panel grows past the screen height on small displays.",
+                            "Option One", "Option Two", "Option Three", "Option Four",
+                            "Option Five", "Option Six", "Option Seven", "Option Eight") {
+                            @Override
+                            public void onSelect(int index) {
+                            }
+                        };
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    default:
+                        result[0] = "ERROR: unknown wnd " + wndParam;
+                }
+            });
+
+            if (result[0] != null && result[0].startsWith("ERROR")) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"" + result[0] + "\"}");
+            }
+
+            JSONObject resp = new JSONObject();
+            resp.put("success", true);
+            resp.put("window", result[0]);
+            resp.put("size", result[1] + "x" + result[2]);
+            resp.put("budget", WndHelper.getFullscreenWidth() + "x" + WndHelper.getAlmostFullscreenHeight());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", resp.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugOpenWindow: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
