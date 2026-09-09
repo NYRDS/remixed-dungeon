@@ -35,6 +35,7 @@ public abstract class MobAi implements AiState {
         registerAiState(ControlledAi.class);
         registerAiState(MoveOrder.class);
         registerAiState(KillOrder.class);
+        registerAiState(Guard.class);
         registerAiState(RemoteControlled.class);
     }
 

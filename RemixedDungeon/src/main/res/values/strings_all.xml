@@ -1423,12 +1423,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_Died">You hear something died in the distance</string>
     <string name="Mob_FollowMe">Following you!</string>
     <string name="Mob_GoingTo">Already going!</string>
+    <string name="Mob_Guarding">Guarding this place!</string>
     <string name="Mob_ItemUse">%1$s uses %2$s</string>
     <string name="Mob_ReadyForOrder">%s ready for your order.</string>
     <string name="Mob_StaAmokStatus">This %1$s is running amok</string>
     <string name="Mob_StaControlledStatus">This %s is under unholy possession</string>
     <string name="Mob_StaFleeingStatus">This %s is fleeing</string>
     <string name="Mob_StaFleeingStatus2">This %1$s is fleeing from %2$s</string>
+    <string name="Mob_StaGuardStatus">This %s is guarding</string>
     <string name="Mob_StaHuntingStatus">This %s is hunting</string>
     <string name="Mob_StaHuntingStatus2">This %1$s is hunting %2$s</string>
     <string name="Mob_StaPassiveStatus">This %s is passive</string>

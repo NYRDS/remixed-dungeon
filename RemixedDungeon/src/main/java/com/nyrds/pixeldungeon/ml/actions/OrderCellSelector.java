@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.ml.actions;
 
+import com.nyrds.pixeldungeon.ai.Guard;
 import com.nyrds.pixeldungeon.ai.KillOrder;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.MoveOrder;
@@ -38,6 +39,14 @@ class OrderCellSelector implements CellSelector.Listener {
             target.setEnemy(CharsList.DUMMY);
             target.setTarget(cell);
             target.say(Utils.format(R.string.Mob_FollowMe));
+            return;
+        }
+
+        if (Actor.findChar(cell) == target) { // ordered onto its own cell: hold this place
+            target.setState(MobAi.getStateByClass(Guard.class));
+            target.setEnemy(CharsList.DUMMY);
+            target.setTarget(cell);
+            target.say(Utils.format(R.string.Mob_Guarding));
             return;
         }
 

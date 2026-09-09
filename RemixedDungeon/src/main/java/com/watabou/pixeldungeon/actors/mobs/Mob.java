@@ -359,11 +359,11 @@ public abstract class Mob extends Char {
     }
 
 
-    @Override
-    public void destroy() {
-        level().mobs.remove(this);
-        super.destroy();
-    }
+	@Override
+	public void destroy() {
+		level().mobs.remove(this);
+		super.destroy();
+	}
 
     public void remove() {
         super.die(this);

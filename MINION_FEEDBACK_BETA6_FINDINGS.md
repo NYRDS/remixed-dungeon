@@ -19,7 +19,7 @@ Line numbers refer to the working tree at the time of analysis (master, post `c0
 | 8 | Damage cancels movement orders | `MoveOrder.gotDamage → seekRevenge` unconditionally replaces state/target, incl. DoT ticks (burning/gas) | high (UX) |
 | E1 | Tap on minion = 3 different outcomes | Overloaded gesture in `CharUtils.actionForCell`; heap/object precedence outranks pet | UX |
 | E2 | Ordering to player's cell = minion attacks player | `OrderCellSelector` converts any `Interact` into `Attack` | high (UX) |
-| E3 | "Stay there" minions ignore enemies | `Passive.act` spends a tick and does nothing else; only `gotDamage` wakes them | design |
+| E3 | "Stay there" minions ignore enemies | FIXED: new `Guard` state — order pet onto its own cell; engages within leash of post, returns to post | fixed |
 | E4 | Army strands in narrow corridors | Pet follow = `Wandering.returnToOwnerIfTooFar`; no path-following / nearest-reachable fallback | design |
 
 ---
@@ -356,9 +356,34 @@ Confirmed, explicit code: `OrderCellSelector.onSelect` converts any `Interact` i
 
 ### E3. "Stay there" minions ignore enemies until attacked
 
-`ai/Passive.act` just spends a tick with `enemySeen = false` (`Passive.java:16-20`); only `gotDamage → seekRevenge` wakes them.
+> **FIXED (2026-09-09):** new `Guard` AI state (`ai/Guard.java`, registered in
+> `MobAi`, tag `GUARD` — reachable from Lua/JSON via `getStateByTag`). Entered
+> by ordering a pet onto **its own cell** (`OrderCellSelector` intercept before
+> `actionForCell`; was a no-op "can't do it" before) — clean symmetry with the
+> E2 follow-me (order onto the player's cell). Post cell lives in
+> `me.getTarget()` (states are shared singletons). Behavior: scan enemies via
+> `chooseEnemy`; engage when the enemy is in the pet's attack range **or**
+> hero-visible and within `LEASH = 2` (chebyshev) of both the pet and the post
+> — melee closes to adjacent (minimal steps, never past the leash), ranged
+> shoots from range; otherwise return to the post by `doStepTo(post)`; idle
+> tick on post. `gotDamage`: non-Char sources ignored (same guard as #8);
+> a Char attacker within the leash of the post becomes the enemy while the
+> state stays `GUARD`; out-of-leash attackers are ignored (no kiting the
+> guard off its post). New strings `Mob_Guarding` ("Охраняю это место!") and
+> `Mob_StaGuardStatus`, en+ru. `Passive` untouched — it is the default state
+> of every Char and the permanent home of NPCs/statues.
+> Verified live on the desktop debug server (town_2): order onto own cell →
+> GUARD with post set; guard engaged a hostile rat 2 cells from the post
+> (stepped once, stayed within leash), killed it and **stayed on post** 60+
+> ticks; DoT tick → GUARD kept, no enemy; near attacker → enemy set, state
+> stays GUARD; far attacker → no enemy set; a wounded rat fleeing beyond the
+> leash was not chased. (Investigation detour: earlier "vanishing" test pets
+> turned out to be ordinary combat deaths — pets defending out of hero sight
+> have 0 defenseSkill (`Mob.defenseSkill`) and die quietly, no despawn bug.
+> Return-to-post branch is code-reviewed only — test pets kept dying before
+> it could be observed.)
 
-**Suggested direction**: give the stay-order its own state (or parameterize `Passive`): keep scanning enemies; engage in-place when in attack range (respect ranged vs melee), return to post when the enemy dies/leaves.
+`ai/Passive.act` just spends a tick with `enemySeen = false` (`Passive.java:16-20`); only `gotDamage → seekRevenge` wakes them.
 
 ### E4. Army strands in corridors (>2 minions can't follow)
 
@@ -372,7 +397,8 @@ Follow logic = `Wandering.returnToOwnerIfTooFar` (straight-line `getCloser`); no
 
 > Historical — the original proposal. Status 2026-09-09: 1–9 all FIXED
 > (see per-section notes); 10 split: windows audit done (nothing needed),
-> E1/E3/E4 + Hero.friendly ownership gap still await design decisions.
+> E3 fixed (new `Guard` state); E1 dropped by decision (leave tap behavior
+> as is); E4 + Hero.friendly ownership gap still await design decisions.
 
 1. **#4** pet cloning via `split()` (guard hero pets) — small change, kills two reproducible dup bugs.
 2. **#6a** persist `baseStr` — small save-format change, removes a whole class of post-load weirdness.
@@ -383,4 +409,4 @@ Follow logic = `Wandering.returnToOwnerIfTooFar` (straight-line `getCloser`); no
 7. **#5** clamp pet windows to screen — medium (UI).
 8. **#3** follower dedup by kind/owner — rare but prevents dupe.
 9. **#7** encumbrance for pets — medium, touches balance.
-10. **E1/E3/E4** — design decisions first, then implement.
+10. **E1/E3/E4** — E1 dropped by decision (2026-09-09, leave as is); E3 FIXED (`Guard` state); E4 design decision first, then implement.
