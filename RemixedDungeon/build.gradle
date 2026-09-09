@@ -46,6 +46,9 @@ android {
 
         // Enabling multidex support.
         multiDexEnabled true
+
+        // saves live in the app files dir root on android; desktop/html use ./saves/
+        buildConfigField "String", "SAVES_PATH", '"./"'
     }
 
     buildTypes {
