@@ -378,10 +378,29 @@ Confirmed, explicit code: `OrderCellSelector.onSelect` converts any `Interact` i
 > ticks; DoT tick → GUARD kept, no enemy; near attacker → enemy set, state
 > stays GUARD; far attacker → no enemy set; a wounded rat fleeing beyond the
 > leash was not chased. (Investigation detour: earlier "vanishing" test pets
-> turned out to be ordinary combat deaths — pets defending out of hero sight
-> have 0 defenseSkill (`Mob.defenseSkill`) and die quietly, no despawn bug.
+> turned out to be ordinary combat deaths — see the pet-mortality note below.
 > Return-to-post branch is code-reviewed only — test pets kept dying before
 > it could be observed.)
+
+**Pet mortality follow-ups (2026-09-09, both FIXED after E3 testing):**
+
+1. **Pet death announce** (`d0e9d8357`): pets died with no log at all —
+   `Mob.die` now says `Mob_PetDied` ("Your pet died: %s" / "Погиб питомец:
+   %s", GLog.n, en+ru) for any `isPet()` death. Verified live.
+2. **Hero-blind pets defended at 0 evasion** (`defenseSkill` fix): vanilla
+   `Mob.defenseSkill` grants evasion only while `enemySeen` — and
+   `enemySeen` comes from `isEnemyInFov()`, i.e. **the hero's FoV array**
+   (vanilla's "unseen fights are cheap" shortcut). A pet mid-fight whose
+   owner walked around a corner dropped to defenseSkill 0 and melted
+   silently. Fix (Mike approved option B): pets holding a valid, alive enemy
+   keep full `defenseSkill` regardless of hero sight; a visible attacker is
+   still required (`enemy.invisible <= 0`), so unseen attackers keep the
+   sneak hit, and a pet with no enemy is still sneakable for its first hit
+   (which then sets the enemy via gotDamage). Wild mobs untouched.
+   Dice-level live probe was blocked by the headless desktop artifact
+   (attack callbacks ride sprite animations that freeze in an unfocused
+   window — `hero_attack`/`move_hero` timeouts; not a game bug), so the
+   branch ships compile-verified + code-reviewed.
 
 `ai/Passive.act` just spends a tick with `enemySeen = false` (`Passive.java:16-20`); only `gotDamage → seekRevenge` wakes them.
 

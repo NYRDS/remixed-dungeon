@@ -356,6 +356,13 @@ public abstract class Mob extends Char {
 
     @Override
     public int defenseSkill(Char enemy) {
+        // pets fight their own battles: once they hold an enemy they keep full
+        // evasion wherever the hero looks; a visible attacker is required,
+        // unseen (invisible) ones keep the sneak hit
+        if (isPet() && enemy.invisible <= 0
+                && getEnemy().valid() && getEnemy().isAlive()) {
+            return super.defenseSkill(enemy);
+        }
         return enemySeen ? super.defenseSkill(enemy) : 0;
     }
 
