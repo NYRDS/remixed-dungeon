@@ -29,6 +29,7 @@ public class SpiderExploding extends MultiKindMob {
         baseSpeed = 2f;
         dmgMin = 3;
         dmgMax = 6;
+        STR(11);
         dr = 0;
 
         expForKill = 3;
@@ -44,7 +45,9 @@ public class SpiderExploding extends MultiKindMob {
         if (super.attack(enemy)) {
 
             Plant plant = (Plant) LevelObjectsFactory.objectByName(PlantClasses[getKind()]);
-            plant.effect(enemy.getPos(), enemy);
+            // the spider is the activator, not the victim: moonlight forced by a
+            // hostile hit splits a hero pet into a feral copy, not a free minion
+            plant.effect(enemy.getPos(), enemy, this);
 
             die(this);
             return true;

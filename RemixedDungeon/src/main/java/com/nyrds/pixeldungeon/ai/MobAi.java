@@ -37,6 +37,7 @@ public abstract class MobAi implements AiState {
         registerAiState(ControlledAi.class);
         registerAiState(MoveOrder.class);
         registerAiState(KillOrder.class);
+        registerAiState(Guard.class);
         registerAiState(RemoteControlled.class);
     }
 
@@ -47,6 +48,10 @@ public abstract class MobAi implements AiState {
 
     protected void seekRevenge(Char me, NamedEntityKind src) {
         if(src == me) { //no selfharm
+            return;
+        }
+
+        if (me.isPet() && !(src instanceof Char)) { // pets keep their orders and follow through sourceless damage (DoT ticks, gas, traps)
             return;
         }
 

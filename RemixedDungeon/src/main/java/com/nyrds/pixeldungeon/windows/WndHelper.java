@@ -35,4 +35,8 @@ public class WndHelper {
 	public static int getLimitedWidth(int limit) {
 		return Math.min(getFullscreenWidth(),limit);
 	}
+
+	public static int getLimitedHeight(int limit) {
+		return Math.min(getFullscreenHeight(), limit);
+	}
 }

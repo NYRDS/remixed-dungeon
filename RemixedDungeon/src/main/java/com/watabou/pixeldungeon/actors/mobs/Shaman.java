@@ -25,6 +25,7 @@ public class Shaman extends Mob implements IZapper {
 		dmgMin = 2;
 		dmgMax = 6;
 		dr = 4;
+		STR(11);
 
 		expForKill = 6;
 		maxLvl = 14;

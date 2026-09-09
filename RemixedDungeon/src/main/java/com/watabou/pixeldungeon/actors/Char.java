@@ -337,6 +337,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     private static final String TAG_HP = "HP";
     private static final String TAG_HT = "HT";
+    private static final String BASE_STR = "baseStr";
     private static final String BUFFS = "buffs";
     private static final String SPELLS_USAGE = "spells_usage";
 
@@ -352,6 +353,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         bundle.put(TAG_HP, hp());
         bundle.put(TAG_HT, ht());
+        bundle.put(BASE_STR, baseStr);
         bundle.put(BUFFS, buffs);
         bundle.put(SPELLS_USAGE, spellsUsage);
         bundle.put(LEVEL, lvl());
@@ -381,6 +383,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         hp(bundle.getInt(TAG_HP));
         ht(bundle.getInt(TAG_HT));
+        // default: the ctor value (class STR()/mobsDesc/fillStats), not 10 - old
+        // saves must not stomp explicit mob STR
+        baseStr = bundle.optInt(BASE_STR, baseStr);
         lvl(bundle.getInt(LEVEL));
 
         restoringFromBundle = true;
@@ -772,6 +777,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         final float[] speed = {baseSpeed};
         forEachBuff(b -> speed[0] *= b.speedMultiplier(this));
 
+        // armor overload slows every carrier, pets included (same term as in defenseSkill)
+        int aEnc = getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR();
+        if (aEnc > 0) {
+            speed[0] *= (float) Math.pow(1.3, -aEnc);
+        }
+
         return speed[0];
     }
 
@@ -1128,14 +1139,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void placeTo(int cell) {
-
-        final int oldPos = getPos();
-        if (level().cellValid(oldPos)) {
-            if (level().map[oldPos] == Terrain.OPEN_DOOR) {
-                Door.leave(oldPos);
-            }
-        }
-
         setPos(cell);
 
         if (!isFlying()) {
@@ -1442,10 +1445,24 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (pos == Level.INVALID_CELL) { // level may be not yet available here
             throw new TrackedRuntimeException("Trying to set invalid pos " + pos + " for " + getEntityKind());
         }
+        final int oldPos = this.pos;
         prevPos = this.pos;
         freeCell(this);
         this.pos = pos;
         occupyCell(this);
+        closeDoorBehind(oldPos);
+    }
+
+    // every position change (walk, swap, blink, teleport, spawn reposition) closes
+    // the door it left; runs after freeCell so the mover no longer counts as
+    // standing in the doorway
+    private void closeDoorBehind(int oldPos) {
+        if (!GameScene.isSceneReady()) {
+            return;
+        }
+        if (level().cellValid(oldPos) && level().map[oldPos] == Terrain.OPEN_DOOR) {
+            Door.leave(oldPos);
+        }
     }
 
     public boolean collect(@NotNull Item item) {

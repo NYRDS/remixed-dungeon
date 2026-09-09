@@ -34,6 +34,7 @@ public class YogsBrain extends Mob implements IZapper {
         baseAttackSkill  = 31;
         dmgMin = 15;
         dmgMax = 25;
+        STR(18);
         dr = 12;
 
         expForKill = 25;

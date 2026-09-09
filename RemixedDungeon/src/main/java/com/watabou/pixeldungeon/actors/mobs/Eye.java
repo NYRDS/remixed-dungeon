@@ -34,6 +34,7 @@ public class Eye extends Mob {
 
         dmgMin = 14;
         dmgMax = 20;
+        STR(17);
 
         flying = true;
 

@@ -46,6 +46,7 @@ public class DM300 extends Boss {
         baseAttackSkill = 28;
         dmgMin = 18;
         dmgMax = 24;
+        STR(16);
         dr = 10;
 
         float dice = Random.Float();

@@ -39,6 +39,7 @@ public class EnslavedSoul extends Mob {
 
         dmgMin = 5;
         dmgMax = 8;
+        STR(17);
         dr = 10;
 
         expForKill = 5;

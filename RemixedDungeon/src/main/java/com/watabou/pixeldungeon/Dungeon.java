@@ -75,7 +75,9 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.val;
@@ -97,10 +99,6 @@ public class Dungeon {
 
     @NotNull
     public static Hero hero = CharsList.DUMMY_HERO;
-
-    // caveman: pet roster in flight between levels - persisted in the game
-    // bundle so a crash mid-transition cannot delete the pets
-    public static List<Mob> pendingFollowers = null;
 
     public static Level level;
     public static String levelId;
@@ -178,8 +176,6 @@ public class Dungeon {
         ItemsList.reset();
         CharsList.reset();
         QuickSlot.reset();
-
-        pendingFollowers = null;
 
         hero = CharsList.DUMMY_HERO;
     }
@@ -316,6 +312,17 @@ public class Dungeon {
         return level != null && level.isBossLevel();
     }
 
+    // hero-owned pets persisted in the game bundle and waiting to be spawned
+    // by the next switchLevel (CONTINUE, resurrect); live instances, not copies
+    private static final List<Mob> restoredFollowers = new ArrayList<>();
+
+    @NotNull
+    public static List<Mob> takeRestoredFollowers() {
+        List<Mob> followers = new ArrayList<>(restoredFollowers);
+        restoredFollowers.clear();
+        return followers;
+    }
+
     public static void switchLevel(@NotNull final Level level, int pos, Collection<Mob> followers) {
         EventCollector.setSessionData("level", level.levelId);
 
@@ -351,15 +358,35 @@ public class Dungeon {
             hero.setPos(level.getRandomTerrainCell(Terrain.EMPTY));
         }
 
-        for (Mob mob : followers) {
-            var dup = CharsList.getById(mob.getId());
+        // Every hero-owned pet follows its owner on any level change (Mob.followOnLevelChanged),
+        // and followers are removed from the level they leave, so a pet restored together with
+        // the destination level is always a stale copy of a follower. Same goes for any mob
+        // whose id collides with a follower's. Drop them before spawning followers,
+        // otherwise the pet ends up duplicated.
+        if (!followers.isEmpty()) {
+            Set<Integer> followerIds = new HashSet<>();
+            for (Mob mob : followers) {
+                followerIds.add(mob.getId());
+            }
 
-            if (dup.valid()) {
-                GLog.toFile("Removing dup: %s, %d", dup.getEntityKind(), dup.getId());
-                Actor.remove(dup);
-                Actor.freeCell(dup);
-                CharsList.remove(dup.getId());
-                level.mobs.remove(dup);
+            Iterator<Mob> stalePets = level.mobs.iterator();
+            while (stalePets.hasNext()) {
+                Mob stalePet = stalePets.next();
+                if (stalePet.getOwner() instanceof Hero || followerIds.contains(stalePet.getId())) {
+                    GLog.debug("Removing stale pet copy: %s, %d", stalePet.getEntityKind(), stalePet.getId());
+                    Actor.remove(stalePet);
+                    Actor.freeCell(stalePet);
+                    CharsList.remove(stalePet.getId());
+                    stalePets.remove();
+                }
+            }
+        }
+
+        GLog.debug("switchLevel %s: %d followers", level.levelId, followers.size());
+
+        for (Mob mob : followers) {
+            if (CharsList.getById(mob.getId()) != mob && !CharsList.add(mob, mob.getId())) {
+                mob.assignNextId(); // follower's id is taken by someone else
             }
 
             GLog.toFile("follower spawn: %s id=%d at %s",
@@ -369,16 +396,12 @@ public class Dungeon {
 
         // caveman: same dup guard as followers - initialAlies had none (#3)
         for (Mob mob : hero.initialAlies) {
-            var dup = CharsList.getById(mob.getId());
-
-            if (dup.valid()) {
-                GLog.toFile("Removing initialAlies dup: %s, %d", dup.getEntityKind(), dup.getId());
-                Actor.remove(dup);
-                Actor.freeCell(dup);
-                CharsList.remove(dup.getId());
-                level.mobs.remove(dup);
+            if (CharsList.getById(mob.getId()) != mob && !CharsList.add(mob, mob.getId())) {
+                mob.assignNextId(); // ally's id is taken by someone else
             }
 
+            GLog.toFile("follower spawn: %s id=%d at %s",
+                    mob.getEntityKind(), mob.getId(), level.levelId);
             spawnPet(level, mob);
         }
         hero.initialAlies.clear();
@@ -390,6 +413,8 @@ public class Dungeon {
 
     private static void spawnPet(Level level, Mob mob) {
         int pos = level.getNearestTerrain(hero.getPos(), mob::canSpawnAt);
+
+        GLog.debug("spawnPet: %s id=%d -> cell %d", mob.getEntityKind(), mob.getId(), pos);
 
         if (level.cellValid(pos)) {
             mob.setPos(pos);
@@ -446,11 +471,11 @@ public class Dungeon {
     private static final String QUESTS = "quests";
     private static final String BADGES = "badges";
     private static final String SCRIPTS_DATA = "scripts_data";
+    private static final String PETS = "pets";
     private static final String GAME_ID = "game_id";
     private static final String MOVE_TIMEOUT = "move_timeout";
     private static final String LAST_USED_ID = "lastUsedId";
     private static final String MOD = "mod";
-    private static final String FOLLOWERS = "followers";
     private static final String REALTIME = "realtime";
     private static final String CHALLENGES = "challenges";
     private static final String FACILITATIONS = "facilations";
@@ -470,6 +495,23 @@ public class Dungeon {
         bundle.put(VERSION, GameLoop.version);
         bundle.put(HERO, hero);
         bundle.put(DEPTH, depth);
+
+        // hero-owned pets live in level.mobs in memory but are persisted here,
+        // never inside level save files
+        List<Mob> heroPets = new ArrayList<>();
+        if (level != null) {
+            for (Mob mob : level.mobs) {
+                if (mob.getOwner() instanceof Hero) {
+                    heroPets.add(mob);
+                }
+            }
+        }
+        for (Mob mob : restoredFollowers) {
+            if (!heroPets.contains(mob)) {
+                heroPets.add(mob);
+            }
+        }
+        bundle.put(PETS, heroPets);
 
         bundle.put(POS, potionOfStrength);
         bundle.put(SOU, scrollsOfUpgrade);
@@ -522,12 +564,6 @@ public class Dungeon {
 
         bundle.put(LAST_USED_ID, EntityIdSource.getNextId());
         CharsList.storeInBundle(bundle);
-
-        // caveman: pet roster in flight between levels - a crash mid-transition
-        // must not delete the pets
-        if (pendingFollowers != null && !pendingFollowers.isEmpty()) {
-            bundle.put(FOLLOWERS, pendingFollowers);
-        }
         bundle.put(MOD, ModdingBase.activeMod());
 
         OutputStream output = FileSystem.getOutputStream(fileName);
@@ -584,9 +620,6 @@ public class Dungeon {
 
                 saveGame(saveToGame);
                 saveLevel(saveToLevel, thisLevel);
-
-                // caveman: level file now owns the pets - roster can retire
-                pendingFollowers = null;
 
                 Library.saveLibrary();
 
@@ -663,7 +696,13 @@ public class Dungeon {
         Dungeon.gameId = bundle.optString(GAME_ID, Utils.UNKNOWN);
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID, 1));
         CharsList.restoreFromBundle(bundle);
-        pendingFollowers = new ArrayList<>(bundle.getCollection(FOLLOWERS, Mob.class));
+
+        restoredFollowers.clear();
+        for (Mob mob : bundle.getCollection(PETS, Mob.class)) {
+            if (mob != null && mob.valid() && !CharsList.isDestroyed(mob.getId())) {
+                restoredFollowers.add(mob);
+            }
+        }
 
         Scroll.restore(bundle);
         Potion.restore(bundle);
@@ -820,6 +859,32 @@ public class Dungeon {
                     if (level == null) {
                         level = newLevel(next);
                     }
+
+                    // old-format level saves keep hero pets inside the level file;
+                    // move them to the game bundle store, dropping copies of pets
+                    // that already exist - either pending in the game bundle or
+                    // live on the current level (about to follow the hero)
+                    for (Mob pet : Level.recoveredFollowers) {
+                        boolean known = false;
+                        for (Mob restored : restoredFollowers) {
+                            if (restored.getEntityKind().equals(pet.getEntityKind())) {
+                                known = true;
+                                break;
+                            }
+                        }
+                        if (!known && Dungeon.level != null) {
+                            for (Mob live : Dungeon.level.mobs) {
+                                if (live.isPet() && live.getEntityKind().equals(pet.getEntityKind())) {
+                                    known = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (!known) {
+                            restoredFollowers.add(pet);
+                        }
+                    }
+                    Level.recoveredFollowers.clear();
 
                     level.levelId = next.levelId;
                     initSizeDependentStuff(level.getWidth(), level.getHeight());
@@ -1044,19 +1109,6 @@ public class Dungeon {
 
     public static void saveCurrentLevel() {
         saveLevel(getLevelSaveFile(currentPosition()), Dungeon.level);
-    }
-
-    // caveman: called right after the roster is stripped from the old level -
-    // gets the pets on disk before the transition continues
-    public static void persistPendingFollowers() {
-        if (pendingFollowers == null || pendingFollowers.isEmpty()) {
-            return;
-        }
-        try {
-            saveGame(SaveUtils.gameFile(hero.getHeroClass()));
-        } catch (IOException e) {
-            EventCollector.logException(e, "cannot persist follower roster");
-        }
     }
 
 

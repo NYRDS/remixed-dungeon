@@ -22,6 +22,7 @@ public class Worm extends Mob {
         baseAttackSkill  = 20;
         dmgMin = 22;
         dmgMax = 45;
+        STR(17);
         dr = 50;
 
         expForKill = 18;

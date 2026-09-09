@@ -22,6 +22,7 @@ public class IceGuardian extends MultiKindMob {
 		baseAttackSkill  = 31;
 		dmgMin = 10;
 		dmgMax = 15;
+		STR(14);
 		dr = 14;
 
 		kind = 1;

@@ -22,6 +22,7 @@ public class Rat extends Mob {
 		baseAttackSkill  = 8;
 		dmgMin = 1;
 		dmgMax = 5;
+		STR(10);
 		dr = 1;
 
 		maxLvl = 7;

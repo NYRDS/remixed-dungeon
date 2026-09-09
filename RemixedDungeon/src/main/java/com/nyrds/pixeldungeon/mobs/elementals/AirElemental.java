@@ -47,6 +47,7 @@ public class AirElemental extends Mob implements IDepthAdjustable {
 		maxLvl = depth + 2;
 		dr = expForKill / 5;
 		dmgMin = 0;
+		STR(14);
 		dmgMax = ht() / 4;
 	}
 

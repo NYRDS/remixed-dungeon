@@ -17,6 +17,7 @@ public class Swarm extends Mob {
 
 		dmgMin = 1;
 		dmgMax = 4;
+		STR(10);
 
 		maxLvl = 10;
 		

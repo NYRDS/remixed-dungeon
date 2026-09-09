@@ -23,6 +23,7 @@ public class KoboldIcemancer extends Mob implements IZapper {
 		dmgMin = 15;
 		dmgMax = 17;
 		dr = 11;
+		STR(12);
 
 		expForKill = 11;
 		maxLvl = 21;

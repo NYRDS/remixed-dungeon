@@ -17,6 +17,7 @@ public class SpiderServant extends MultiKindMob {
 		baseSpeed = 1.1f;
 		dmgMin = 4;
 		dmgMax = 6;
+		STR(11);
 		dr = 5;
 		
 		expForKill = 2;

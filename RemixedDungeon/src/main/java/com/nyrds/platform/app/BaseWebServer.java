@@ -55,6 +55,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
         debugEndpoints.put("/debug/give_item", DebugEndpoints::handleDebugGiveItem);
         debugEndpoints.put("/debug/spawn_at", DebugEndpoints::handleDebugSpawnAt);
         debugEndpoints.put("/debug/start_game", DebugEndpoints::handleDebugStartGame);
+        debugEndpoints.put("/debug/continue_game", DebugEndpoints::handleDebugContinueGame);
         debugEndpoints.put("/debug/get_game_state", DebugEndpoints::handleDebugGetGameState);
         debugEndpoints.put("/debug/get_hero_info", DebugEndpoints::handleDebugGetHeroInfo);
         debugEndpoints.put("/debug/get_level_info", DebugEndpoints::handleDebugGetLevelInfo);
@@ -88,6 +89,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
         debugEndpoints.put("/debug/alchemy/give_item", DebugEndpoints::handleAlchemyGiveItem);
         debugEndpoints.put("/debug/screenshot", DebugEndpoints::handleDebugScreenshot);
         debugEndpoints.put("/debug/toggle_ui", DebugEndpoints::handleDebugToggleUI);
+        debugEndpoints.put("/debug/open_window", DebugEndpoints::handleDebugOpenWindow);
         debugEndpoints.put("/debug/reveal_map", DebugEndpoints::handleDebugRevealMap);
         debugEndpoints.put("/debug/get_warehouse_rooms", DebugEndpoints::handleDebugGetWarehouseRooms);
         debugEndpoints.put("/debug/observe", DebugEndpoints::handleDebugObserve);
@@ -99,6 +101,10 @@ public abstract class BaseWebServer extends NanoHTTPD {
         debugEndpoints.put("/debug/remote/release", DebugEndpoints::handleRemoteRelease);
         debugEndpoints.put("/debug/remote/list", DebugEndpoints::handleRemoteList);
         debugEndpoints.put("/debug/char_status", DebugEndpoints::handleCharStatus);
+        // test endpoints: drive the pet order flow and probe AI-state survival of damage
+        debugEndpoints.put("/debug/order_pet", DebugEndpoints::handleDebugOrderPet);
+        debugEndpoints.put("/debug/test_damage", DebugEndpoints::handleDebugTestDamage);
+        debugEndpoints.put("/debug/test_equip", DebugEndpoints::handleDebugTestEquip);
     }
 
     public static boolean isRunning() {

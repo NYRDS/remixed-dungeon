@@ -50,6 +50,7 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import java.util.Collections;
@@ -106,6 +107,9 @@ public abstract class Mob extends Char {
     public Mob() {
         super();
         setupCharData();
+        // explicit stat only: mobsDesc "baseStr" key; STR() in java class or
+        // fillStats lua script overrides later in the ctor chain
+        baseStr = getClassDef().optInt("baseStr", baseStr);
         getScript().run("fillStats");
         if (ModQuirks.mobLeveling) {
             lvl(Random.Int(1, (int) RemixedDungeon.getDifficultyFactor() + 1));
@@ -352,6 +356,13 @@ public abstract class Mob extends Char {
 
     @Override
     public int defenseSkill(Char enemy) {
+        // pets fight their own battles: once they hold an enemy they keep full
+        // evasion wherever the hero looks; a visible attacker is required,
+        // unseen (invisible) ones keep the sneak hit
+        if (isPet() && enemy.invisible <= 0
+                && getEnemy().valid() && getEnemy().isAlive()) {
+            return super.defenseSkill(enemy);
+        }
         return enemySeen ? super.defenseSkill(enemy) : 0;
     }
 
@@ -370,6 +381,10 @@ public abstract class Mob extends Char {
         Badges.validateRare(this);
 
         Hero hero = Dungeon.hero;
+
+        if (isPet()) { // pets die quietly otherwise - the hero often can't even see the fight
+            GLog.n(Utils.format(R.string.Mob_PetDied, getName()));
+        }
 
         if (!cause.getEntityKind().equals(Chasm.class.getSimpleName())) {
             hero.getBelongings().forEachEquipped(item -> item.charDied(this, hero));
@@ -437,6 +452,17 @@ public abstract class Mob extends Char {
 
         level().spawnMob(clone, SPLIT_DELAY, getPos());
 
+        return clone;
+    }
+
+    // split whose copy always turns hostile: a hero pet (Moongrace plant,
+    // exploding Moongrace spider hit) leaves a feral copy, not a free minion
+    public Mob splitHostile(int cell, int damage) {
+        Mob clone = split(cell, damage);
+        clone.setOwnerId(clone.getId());
+        if (clone.fraction() == Fraction.HEROES) {
+            clone.setFraction(Fraction.DUNGEON);
+        }
         return clone;
     }
 

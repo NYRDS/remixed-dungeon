@@ -27,6 +27,7 @@ public class YogsTeeth extends Mob {
         baseAttackSkill  = 46;
         dmgMin = 50;
         dmgMax = 80;
+        STR(18);
         dr = 21;
 
         expForKill = 26;

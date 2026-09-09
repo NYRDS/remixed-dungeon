@@ -5,12 +5,14 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.util.List;
@@ -34,7 +36,7 @@ public class WndPetSelect extends Window {
 
         super();
 
-        int WIDTH = stdWidth();
+        int WIDTH = WndHelper.getLimitedWidth(stdWidth());
         this.hero = hero;
         this.itemToGive = itemToGive;
         this.pets = PetInventoryManager.getHeroPets(hero);
@@ -67,10 +69,23 @@ public class WndPetSelect extends Window {
             actions.add(btn);
         }
 
-        add(actions);
         actions.setPos(PixelScene.align((WIDTH - actions.width()) / 2), y);
 
-        resize(WIDTH, (int) (actions.bottom() + GAP));
+        // caveman: many pets -> list may exceed short screens, scroll it then
+        Component actionsHolder = new Component();
+        actionsHolder.add(actions);
+        actionsHolder.setSize(WIDTH, actions.bottom() + GAP);
+
+        int availH = WndHelper.getAlmostFullscreenHeight();
+        if (actionsHolder.bottom() > availH) {
+            ScrollPane scroll = new ScrollPane(actionsHolder);
+            scroll.setRect(0, y, WIDTH, availH - y);
+            add(scroll);
+            resize(WIDTH, availH);
+        } else {
+            add(actionsHolder);
+            resize(WIDTH, (int) actionsHolder.bottom() + GAP);
+        }
     }
 
     // Programmatically select a pet by index. Used by autoTestAi to exercise

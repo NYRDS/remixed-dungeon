@@ -357,7 +357,8 @@ public class CharUtils {
             actions.add(CommonActions.MAC_TAUNT);
         }
 
-        if (target.adjacent(hero) && hero.stealth() > 2 && hero.friendly(target)) {
+        if (target.adjacent(hero) && hero.stealth() > 2 && hero.friendly(target)
+                && target.getOwnerId() != hero.getId()) { // never steal from your own pet
             actions.add(CommonActions.MAC_STEAL);
         }
 

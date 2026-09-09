@@ -52,6 +52,7 @@
     <string name="Armor_Glyph">glyph</string>
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
+    <string name="Armor_Info8">\n\nJe kunt een kwaadaardige magie voelen die in de %s grijpt.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">levende standbeeld</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
@@ -81,6 +82,7 @@
     <string name="Badges_FoodEaten3">30 stukken voedsel gegeten</string>
     <string name="Badges_GamesPlayed1">10 spellen gespeeld</string>
     <string name="Badges_GamesPlayed2">100 spellen gespeeld</string>
+    <string name="Badges_GamesPlayed3">500 spellen gespeeld</string>
     <string name="Badges_GamesPlayed4">2000 spellen gespeeld</string>
     <string name="Badges_GamesPlayed5">5000 spellen gespeeld</string>
     <string name="Badges_GnollUnlocked">Gnoll ontgrendeld</string>
@@ -96,6 +98,7 @@
     <string name="Badges_ItemLvl4">Item van niveau 12 verkregen</string>
     <string name="Badges_ItemLvl5">Item van niveau 15 verkregen</string>
     <string name="Badges_LevelReached5">Niveau 30 bereikt</string>
+    <string name="Badges_Lich_Slain">Lich gedood</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Badges_MonsterSlain5">1000 vijanden verslagen</string>
@@ -110,6 +113,7 @@
     <string name="Badges_StrengthAttained3">17 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained4">19 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
+    <string name="Badges_Supporter">Bedankt voor je steun!</string>
     <string name="Badges_VictoryAll">Amulet van Yendor verkregen door alle klassen</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa verslagen</string>
     <string name="Bag_ACOpen">OPENEN</string>
@@ -118,6 +122,8 @@
     <string name="Bandit_Name">gekke bandiet</string>
     <string name="Bandit_Name_Objective">gekke bandiet</string>
     <string name="BardNPC_Gender">masculine</string>
+    <string name="BardNPC_Name">bard</string>
+    <string name="BardNPC_Name_Objective">bard</string>
     <string name="BarkskinBuff_Info">Het lichaam is bedekt met bast die een deel van de ontvangen schade blokkeert.</string>
     <string name="Barrel_Name">vat</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
@@ -130,14 +136,18 @@
     <string name="BattleAxe_Info">Het enorme staande hoofd van deze strijdbijl geeft een aanzienlijk gewicht achter elke slag.</string>
     <string name="Bee_Desc">Ondanks hun kleine grootte beschermen bijen hun bijenkorst heftig. Ze leven echter niet lang.</string>
     <string name="Bee_Gender">masculine</string>
+    <string name="Bee_Name">bij</string>
+    <string name="Bee_Name_Objective">bij</string>
     <string name="BellaNPC_Amulet_F">Waarom hallo daar schatje, wat heb je daar? Ah, zo\'n uitmuntende amulet! En jij... je schittert zo veel helderder dan iedereen. Wat als we een wandeling maken en ons gezamenlijke toekomst bespreken?</string>
     <string name="BellaNPC_Amulet_M">Waarom hallo daar knapkerel, wat heb je daar? Ah, zo\'n uitmuntende amulet! En jij... je staat hoofd en schouders boven die plebejers. Wat als we een wandeling maken en ons gezamenlijke toekomst bespreken?</string>
     <string name="BellaNPC_Angry">Hoe durf je... je plebejer!</string>
     <string name="BellaNPC_Desc">Een heel posh meisje. Haar hele uiterlijk zegt je: \&quot;Ik ben te goed voor iedereen.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Ik heb geen interesse in plebejers zoals jij!</string>
+    <string name="BellaNPC_No">Nee, niet met jou</string>
     <string name="BellaNPC_Yes_End_Game">Zeker (Beëindig het spel)</string>
     <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
+    <string name="BishopNPC_Desc">Bisschop van de Heilige Kerk van Santa de Heer der Diepten</string>
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="Bishop_no_money">Je kunt er niet voor betalen.</string>
@@ -154,8 +164,10 @@
     <string name="BlackSkull_Activated">De Zwarte Schedel is ontwaakt!</string>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Een kleine schedel van obsidiaan. Het was de bron van de krachten van de Necropolis, maar na de nederlaag van de Lich lijkt het al zijn krachten verloren te hebben. Maar wanneer je het in je handen houdt, gaat er een vreemde gedachte door je heen: \&quot;Het Hongert\&quot;.</string>
+    <string name="BlackSkull_Info_Awakened">De schedel pulseert met kracht, en je kunt zien hoe het uit zijn lege oogkassen stroomt. En terwijl je het in je handen houdt, hoor je een vreselijke stem: \&quot; Zie de mars van de dood \&quot;.</string>
     <string name="BlackSkull_Name">zwarte schedel</string>
     <string name="BlackSkull_Ressurrect">De Zwarte Schedel Heeft Dode Wezens Herrezen Om Je Te Dienen!</string>
+    <string name="Blacksmith_GetLost">Ik heb het druk. Wegwezen!</string>
     <string name="Blacksmith_Gold1">Hey mens! Wil je nuttig zijn, hé? Pak die houweel en ontgin voor me wat _donker gouderts_, _15 stukken_ zou genoeg moeten zijn. Wat bedoel je, hoe ga ik betalen? Je gierige...\nOké, oké, ik heb geen geld om te betalen, maar ik kan wat smeden voor je. Reken je gelukkig, ik ben de enige smid in de buurt.</string>
     <string name="Blacksmith_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="Blacksmith_Verify3">Ik moet weten waarmee ik werk, identificeer ze eerst!</string>
@@ -169,8 +181,10 @@
     <string name="BloodTransfusion_Drained">De levensessentie vloeit van je huisdier naar jou.</string>
     <string name="BloodTransfusion_Name">Bloedtransfusie</string>
     <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
+    <string name="BodyArmorBuff_Info">De pantser wordt verhoogd ten koste van bewegingssnelheid.</string>
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
     <string name="BoneSaw_Info">Een precisie-geengineerde chirurgische zaag ontworpen voor snelle ontleding. De schade en aanvalsnelheid worden dodelijker met de vaardigheid van de Pestdokter. Critische treffers snijden extra oogstbare delen van vijanden, en het slaat met ruthloze efficiëntie tegen gelamde vijanden.</string>
+    <string name="BoneSaw_Name">botenzaag</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Bow_Info1">Dit is een afstandswapen. Het is nutteloos voor iedereen behalve elfen op zeer korte afstand. Met een boog uitgerust kun je pijlen afschieten.\n\n</string>
@@ -179,6 +193,7 @@
     <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">grom</string>
     <string name="Brute_Name_Objective">grom</string>
+    <string name="Brute_StaEnraged">woedend</string>
     <string name="BurningBuff_Info">Het lichaam is verteerd in razende vlammen!</string>
     <string name="BurningBuff_Name">In brand</string>
     <string name="BurningFist_Desc">Brandende Vuist van de Oude God</string>
@@ -195,6 +210,7 @@
     <string name="Calm_Name">Kalmte</string>
     <string name="CandleOfMindVision_Info">Lijkt op een gewone kaars, niet iets wat je zou verwachten in een gevaarlijk duistere kelder. Raar genoeg is hij vrij warm aan de kant, ondanks dat hij nog niet was aangebrand.</string>
     <string name="CandleOfMindVision_Info_Lighted">De kaars lichtte op het moment dat je hem uit je rugzak haalde. De vlam geeft een zwak paars licht, en als je er doorheen kijkt, worden alle nabijgelegen monsters zichtbaar voor je.</string>
+    <string name="CandleOfMindVision_Name">Kaars der Visioenen</string>
     <string name="Candy_Info">Deze snoep ziet er zo mooi uit en ruikt ook lekker. Moet je hem echt aan iemand anders geven?</string>
     <string name="Candy_Name">snoepje</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
@@ -210,12 +226,16 @@
     <string name="Caves_TileHighGrass">Fluorescerende paddenstoelen</string>
     <string name="Caves_TileWater">IJskoud water.</string>
     <string name="Challenges_Descriptions_1">Aanval is de beste verdediging. Volgens deze leerstellingen waag je je in de kerker, met geloof als de sterkste beschermer van je lichaam.</string>
+    <string name="Challenges_Descriptions_2">Als aanhanger van de natuurlijke regeneratie van het normale lichaam, was je altijd voorzichtig met drankjes die genezende eigenschappen hebben. Beter voorzichtig dan spijt!</string>
     <string name="Challenges_Descriptions_3">Het land rond de kerker is al lang besmet met boosaardigheid, waardoor de zaden van allerlei kruiden en planten niet kunnen groeien. Wie weet hoe lang het nog duurt voordat de laatste plant op deze barre gronden ophoudt te bestaan.</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
+    <string name="Challenges_Descriptions_8">Je reis begint in de donkere en gevaarlijke rioleringen van de stad, met de enige weg naar de oppervlakte geblokkeerd. Om het erger te maken, kun je alleen uitrusting gebruiken die je in de kelder vindt. Met beperkte middelen en uitrusting hangt je overleving af van je vaardigheden en strategie.</string>
+    <string name="Challenges_Names_1">Geloof is mijn pantser</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="Challenges_Names_5">In de duisternis</string>
     <string name="Challenges_Names_8">Geen stad</string>
+    <string name="ChampionOfAirBuff_Info">Deze eigenschap schenkt het wezen de essentie van de winden, wat zijn beweeglijkheid en strijdvaardigheid versterkt. De Kampioen van de Lucht wordt een vijandige tegenstander, in staat om snelle en verwoestende aanvallen los te laten die het verloop van de strijd snel kunnen veranderen.</string>
     <string name="ChampionOfEarthBuff_Info">De Kampioen van de Aarde belichaamt onwrikbare kracht: deze eigenschap verbetert de schadeweerstand van het wezen en vergroot zijn maximale vitaliteit. Deze transformatie maakt hem een geduchte tegenstander in de verraderlijke diepten, die aanvallen moeiteloos kan pareren en langdurige gevechten doorstaat met onwrikbaar vastberadenheid.</string>
     <string name="ChampionOfEarthBuff_Name">Kampioen van de Aarde</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Doordrenkt met de woede van de vlammen, versterkt deze eigenschap de felheid en gevechtskracht van het wezen. De Kampioen van het Vuur doemt op als een geduchte tegenstander, die verwoestende aanvallen ontketent die zijn vijanden in verzengende vlammen hullen, en angst inboezemt bij allen die het wagen zich tegen hem te verzetten.</string>
@@ -230,6 +250,7 @@
     <string name="ChaosCrystal_Fuse">SMETEN</string>
     <string name="ChaosCrystal_Name">Vreemde Kristal</string>
     <string name="ChaosCrystal_Name_2">Chaos Kristal</string>
+    <string name="ChaosCrystal_ShieldFused">De kristal smolt met jouw schild en nam de chaosvorm aan.</string>
     <string name="ChaosCrystal_SwordFused">De kristal absorbeert je wapen en neemt de vorm aan van een Zwaard</string>
     <string name="ChaosHelmet_Name">Chaos Helm</string>
     <string name="ChaosShield_desc">Het Chaos Schild ontstaat door het samensmelten van een Chaos Kristal met een gewoon schild, waardoor het bij elke succesvolle blokkade willekeurige chaotische effecten vertoont.</string>
@@ -238,11 +259,13 @@
     <string name="ChaosStaff_Info">Een staf doordrenkt met de Kracht van de Chaos! Waar kan een magiër nog van dromen — of bang voor zijn?</string>
     <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
+    <string name="CharAction_Give">geven</string>
     <string name="CharAction_Hit">slaan</string>
     <string name="CharAction_PetInventory">inventaris</string>
     <string name="CharAction_Push">duwen</string>
     <string name="CharAction_Scare">bang maken</string>
     <string name="CharAction_Steal">stelen</string>
+    <string name="CharAction_Take">pakken</string>
     <string name="CharAction_Taunt">uitdagen</string>
     <string name="CharInfo_Level">Dit is een %2$s op niveau %1$d.</string>
     <string name="Char_Hit_0">%1$s raakte %2$s</string>
@@ -278,6 +301,7 @@
     <string name="CityBossLevel_ChessSign">Leg je wapens neer — de Koning zal je verstand op de proef stellen, niet je kracht.</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
+    <string name="ClassArmor_Desc">Het ding ziet er geweldig uit!</string>
     <string name="ClassArmor_NotEquipped">Je moet dit pantser dragen om zijn speciale kracht te gebruiken!</string>
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
@@ -285,17 +309,20 @@
     <string name="CloakBuff_Name">Verguld</string>
     <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
     <string name="ClothArmor_Name">stoffen pantser</string>
+    <string name="Codex_ACRead">LEZEN</string>
     <string name="Codex_Info">Een van de vele boeken die in elke bibliotheek te vinden zijn</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
     <string name="Codex_Story_14">Onstabiel wapen - Bij een succesvolle treffer kan het effect van willekeurige betovering optreden.</string>
+    <string name="Codex_Story_15">Vampirisch wapen - Bij een succesvolle treffer kan het de Held genezen voor een deel van de schade die aan de vijand is toegebracht.</string>
     <string name="Codex_Story_16">Gelukkig wapen - negeert bijna volledig de pantser van de vijand, en doet veel meer schade.</string>
     <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
     <string name="Codex_Story_20">Vrieswapen - Een succesvolle treffer kan het doel vertragen en voorkomen dat het in brand vliegt.</string>
     <string name="Codex_Story_22">Dit boek is geschreven in de taal der demonen</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_25">Zij stak, bevroren, voor de zware eikenen deur, en keek naar het licht dat uit de deurranden doordrong. Uit een verwaarloosd hoekje van haar geest kwam herkenning.\n\&quot;Zonlicht..\&quot; mompelde ze tegen zichzelf. Hoe lang was het geweest? In de eeuwige duisternis van de Kelder had ze lang geleden opgehouden de dagen te tellen. Het licht verlichtte vergeten herinneringen. Ze herinnerde haar training, lange dagen van zware oefening met boomerang en zwaard, van logboek bijhouden en kaarten maken. Ze herinnerde de mantra\'s en disciplines die bedoeld waren om haar een schijn van gezond verstand te laten behouden terwijl ze de onbekende diepgang verkennde. Wat ze niet herinnerde, niet kon herinneren, waren mensen.\nZe herinnerde hun stemmen, hun bevelen en hun waarschuwingen, maar niet hun gezichten, noch hun aanraking.\nPijn had haar getraind. Onthoud de gevaren, altijd de gevaren. Tollende dieren, onoversterven, onzinnige bendes en slimme ninja\'s waren voor haar gevallen. Ze had gesneden, gebrand, gestoken en vergiftigd haar weg gebaan door afschuwelijke wezens, demonen, klokwerk-afschuwelijkheden en onzinnige necromanten. Zelfs goden waren voor haar gevallen.\nZe had Yog gevolgd door Hemel en Hel, voordat ze zijn corrumpterende fluisteringen voor altijd stilte. Toch was er nog werk te doen. Yog was een dienaar van iemand nog meer occulte en krachtigere dan hijzelf.\nZo dook ze verder, dieper. Het dagboek van de oude tovenaar, nog steeds stralend van kracht, had haar de weg getoond. Met de magie in zijn bladen reisde ze naar een woud nieuw land, een klein dorpje verborgen in een machtig bos. Daar voltooide ze ten slotte het kwaad tot zijn doolhof-achtige bron, en versloeg allen die voor haar stonden.\nNu, in het felle daglicht, onderzocht ze zichzelf in een kuil grotwater. Haar lichaam was door magie bijna onherkenbaar vervormd. Haar huid, bleek tot het punt van doorschijnend, was bedekt met vuil, slijk en roet. Haar ketting met ringen kon een koningsgeld waard zijn, en haar wapenhouder met staven bevatte genoeg magische energie om legers te verwoesten. Ze greep haar wapens, letterlijk fijn genoeg om de goden zelf neer te hakken. Werkelijk, ze was meester geworden van dit donkere rijk, deze woestijn van wanhoop.\nZe had het kwaad gejaagd tot in de verre hoeken van het multiversum, maar nu was ze bevroren van angst. Wat als ze haar verwerpte? Wat als ze dat niet deed? Hoe kon ze nog ooit met deze mensen omgaan? Hel, ze had de keren dat de dood haar had geëist, en weer was weggehaald uit zijn ijzergreep, niet meer geteld.\nNee, er was geen plek voor haar in het licht, niet meer. Ze keerde zich af van het mager licht, en daalde in het donker, misschien voor de laatste keer.\n\n\n\tby drazool from reddit</string>
+    <string name="Codex_Story_3">Anti-entropie Glif - De Held wordt verlicht en vangt brand, en de vijand wordt bevroren.</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
     <string name="ColdSpirit_Desc">De koude geest is de uitvlucht van vorst, in zijn zuiverste vorm. Als een gedachtenloze klomp magische energie gehoorzaamt hij de wil van de magiër die hem oproept, of handelt volgens basisinstincten.</string>
     <string name="ColdSpirit_Gender">masculine</string>
@@ -328,6 +355,7 @@
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">dolk</string>
     <string name="Damage_Reduction">Schadevermindering</string>
+    <string name="DarkSacrifice_Resist">Je hebt geen macht over mij!</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Name">dart</string>
     <string name="DashSpell_Info">Das naar een aangewezen richting terwijl je met vijanden botst, schade toebrengend en verstommeling veroorzakend.</string>
@@ -349,6 +377,7 @@
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DoctorArmor_Info">Deze pantser van de pestdokter maakt gebruik mogelijk van de \&quot;Miasma Wolk\&quot; vaardigheid, die een giftige gas vrijlaat dat vijanden vergiftigt, verzwakt en desorienteert. De dokter, beschermd door hun masker, is immuun voor deze effecten.</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
+    <string name="DoctorSpecial">Miasma Wolk</string>
     <string name="DonateButton_thanks">Bedankt voor je steun!</string>
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">angstridder</string>
@@ -359,6 +388,8 @@
     <string name="DrunkardNPC_Desc">Vaste klant van de herberg in natuurlijke staat.</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">dronkaard</string>
+    <string name="Drunkard_Phrase_1">MEER BIER ALSJEBLIEFT!</string>
+    <string name="Drunkard_Phrase_3">Dit bier smaakt als modder</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">Wat doe je hier?!</string>
     <string name="Dungeon_NoTips">De tekst is onleesbaar...</string>
@@ -399,6 +430,7 @@
     <string name="Eye_Kill">De doodskijk van %s heeft je gedood...</string>
     <string name="Facilitations_Names_0">Geen honger</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
+    <string name="Fadeleaf_Name">Verdwaand Blad</string>
     <string name="FetidRat_Gender">feminine</string>
     <string name="Fez_Name">Fez</string>
     <string name="FireArrow_Gender">feminine</string>
@@ -420,6 +452,7 @@
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="Frost_Shatter">De koude doet %s barsten!</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
+    <string name="FrozenCarpaccio_Info3">Verversend!</string>
     <string name="FrozenCarpaccio_Name">bevroren carpaccio</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
@@ -431,6 +464,8 @@
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
     <string name="Ghost_Defense">ontweek</string>
     <string name="Ghost_Desc">De geest is nauwelijks zichtbaar. Het lijkt op een vormloze vlek van zwak licht met een droevig gezicht.</string>
+    <string name="Ghost_Name_Objective">geest</string>
+    <string name="Ghost_Rat1">Hallo avonturier... Ik was ooit als jij - sterk en vol vertrouwen... En nu ben ik dood... Maar ik kan deze plek niet verlaten... Niet voordat ik mijn wraak heb... Dood de _stinkende rat_, die mijn leven heeft genomen...</string>
     <string name="Ghost_Rose1">Hallo avonturier... Eens was ik als jij - sterk en zelfverzekerd... En nu ben ik dood... Maar ik kan deze plek niet verlaten... Niet voordat ik mijn _gedroogde roos_ terugheb... Het is heel belangrijk voor me... Sommige monsters hebben het van mijn lichaam gestolen...</string>
     <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
     <string name="Glaive_Gender">feminine</string>
@@ -442,6 +477,7 @@
     <string name="Gnoll_Name">gnol verkenner</string>
     <string name="Gnoll_Name_Objective">gnol verkenner</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
+    <string name="Gold_Name">goud</string>
     <string name="GoldenKey_Info">De inkepingen op deze gouden sleutel zijn klein en ingewikkeld. Misschien kan hij een kistslot openen?</string>
     <string name="GoldenKey_Name">Gouden sleutel</string>
     <string name="GoldenStatue_Gender">feminine</string>
@@ -451,6 +487,7 @@
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">De slime blaast zichzelf op!</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
+    <string name="GothicArmor_Info">Een gotische pantser is de hoogtepunt van de kunst van pantser smeden.</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
     <string name="Guts_TileGrass">Droge struik</string>
     <string name="Guts_TileWater">Vreemde slijmerige vloeistof</string>
@@ -459,8 +496,10 @@
     <string name="Halls_TileDescStatue">De paal is gemaakt van echte menselijke schedels. Geweldig.</string>
     <string name="Halls_TileStatue">Pilaar</string>
     <string name="Heal_Cast">%s is genezen.</string>
+    <string name="Heal_Name">Genezing</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Gratis behandeling voor elke avonturier!</string>
+    <string name="HealerNPC_Message3">Ik vraag me af waarom de kerk ons verbodt petten te dragen... het is echt koud hier buiten.</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">De punt van deze pijl is bedekt met een genezende drank.</string>
     <string name="HealthDart_Gender">masculine</string>
@@ -468,10 +507,14 @@
     <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Het zwart pulserende hart van de Bedrieglijke Geest.</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
+    <string name="Hedgehog_Info1">Zoek jij ook naar Beer?</string>
+    <string name="Hedgehog_Name">egel</string>
     <string name="HeroClass_Doctor">Pestdokter</string>
+    <string name="HeroClass_Elf">elf</string>
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
     <string name="HeroClass_ElfPerks_2">Elven beginnen met een verbeterde houten boog en een hoop pijlen.</string>
     <string name="HeroClass_ElfPerks_5">Elfen zijn minder bedreven met naiwapens.</string>
+    <string name="HeroClass_GnollPerks_1">Gnollen starten met 5 levenspunten</string>
     <string name="HeroClass_GnollPerks_2">Gnollen beginnen zonder enige pantser maar met een unieke tomahawk</string>
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
     <string name="HeroClass_GnollPerks_4">Gnollen vallen geen andere Gnollen aan tenzij ze worden uitgedaagd</string>
@@ -481,6 +524,7 @@
     <string name="HeroClass_HunPerks_3">Jachtvrouwjes krijgen meer gezondheid van dauwdruppels.</string>
     <string name="HeroClass_HunPerks_4">Jachtvrouwen voelen buurmonsters zelfs als ze achter obstakels verstopt zitten.</string>
     <string name="HeroClass_Mag">magier</string>
+    <string name="HeroClass_MagPerks_2">Wanneer gegeten, herstelt elk stuk voedsel 1 lading voor alle staven in de inventaris.</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroClass_MagPerks_5">De scrollen van identificatie zijn vanaf het begin geïdentificeerd.</string>
     <string name="HeroClass_NecromancerPerks_1">Necromanten gebruiken mana om Doodsspreuken te spreken.</string>
@@ -493,16 +537,19 @@
     <string name="HeroClass_RogPerks_1">Schurken identificeren het type van een ring bij het uitrusten ervan.</string>
     <string name="HeroClass_RogPerks_2">Schurken zijn bedreven in lichte bepantsering en ontwijken aanvallen er beter in.</string>
     <string name="HeroClass_War">krijger</string>
+    <string name="HeroClass_WarPerks_0">Krijgers beginnen met 11 punten Kracht.</string>
     <string name="HeroClass_WarPerks_4">Krachtpotionen zijn van het begin bekend.</string>
     <string name="HeroSubClass_DescAssa">Bij het uitvoeren van een verrassingsaanval, richt de _Meuchelmoorder_ extra schade aan bij zijn doelwit.</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
     <string name="HeroSubClass_DescSnip">_Sluipschutters_ zijn in staat om zwakke punten in de bepantsering van een vijand te ontdekken, waardoor ze deze effectief negeren bij het gebruik van een afstandswapen.</string>
+    <string name="HeroSubClass_DescWarL">Na het doden van een vijand consumeert de _Heksenaar_ zijn ziel. Het geneest zijn wonden en stilt zijn honger.</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="HeroSubClass_NameAssa">meuchelmoorder</string>
     <string name="HeroSubClass_NameFreR">freerunner</string>
     <string name="HeroSubClass_NameGlad">gladiator</string>
     <string name="HeroSubClass_NameLich">Lich</string>
+    <string name="HeroSubClass_NameNone">geen</string>
     <string name="HeroSubClass_NameSnip">sluipschutter</string>
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
     <string name="Hero_AnotherTry">Je bent gestorven.\n Wil je het opnieuw proberen?</string>
@@ -513,6 +560,7 @@
     <string name="Hero_NewLevel">Welkom op niveau %d! Je bent nu gezonder en scherper. Het is makkelijker geworden om vijanden te raken en hun aanvallen te ontwijken.</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
     <string name="Hero_Search">zoeken</string>
+    <string name="Hero_StaBleeding">Je bent aan het bloeden!</string>
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
     <string name="Hero_StaCharm">Je bent betoverd!</string>
     <string name="Hero_StaFurious">furieus</string>
@@ -520,6 +568,7 @@
     <string name="Hero_StaParalysis">Je bent gelamd!</string>
     <string name="Hero_StaPoison">Je bent vergiftigd!</string>
     <string name="Hero_StaRoots">Je kunt je niet bewegen!</string>
+    <string name="Hero_StaVertigo">Alles draait om je heen!</string>
     <string name="Hero_StaWeakness">Je voelt je verzwakt!</string>
     <string name="Hero_Wait">...</string>
     <string name="Horror_Name_1">Griezelige %s</string>
@@ -547,6 +596,7 @@
     <string name="Imp_Defense">ontweek</string>
     <string name="Imp_Desc">Imps zijn mindere demonen. Ze zijn niet bekend om hun kracht of hun magisch talent, maar ze zijn behoorlijk slim en gezellig. Veel imps wonen liever tussen niet-demonen.</string>
     <string name="Imp_Golems2">Hoe gaat het met je golem-safari?</string>
+    <string name="Imp_Hey">Psst, %1$s!</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
     <string name="Imp_Name">ambitieus duiveltje</string>
     <string name="IncendiaryDart_Gender">masculine</string>
@@ -556,6 +606,7 @@
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
     <string name="InnServant_Phrase_1">Bah, nog zoveel te doen!</string>
     <string name="InnServant_Phrase_2">Deze dronken drijft me in de waanzin!</string>
+    <string name="InnServant_Phrase_4">Oh jee, zoveel gasten vandaag!</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="InterLevelScene_Returning">Terugkeren...</string>
@@ -564,6 +615,8 @@
     <string name="InvisibilityBuff_Info">Volledig onzichtbaar, wat kan helpen gevaren te vermijden of er een te worden.</string>
     <string name="InvisibilityBuff_Name">Onzichtbaar</string>
     <string name="IronKey_FromDepth">ijzeren sleutel van diepte %d</string>
+    <string name="IronKey_Name">ijzeren sleutel</string>
+    <string name="Item_ACDrop">LATEN VALLEN</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Info">iets</string>
     <string name="Item_Info2">iets</string>
@@ -607,6 +660,7 @@
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
     <string name="LeatherArmor_Name">leren harnas</string>
     <string name="Leech_Name_2">Vampier %s</string>
+    <string name="Level_TileAlarmTrap">alarmprikkel</string>
     <string name="Level_TileAlchemy">Alchemiepot</string>
     <string name="Level_TileBarricade">Barricade</string>
     <string name="Level_TileChasm">Afgrond</string>
@@ -636,6 +690,7 @@
     <string name="LibrarianNPC_Desc">Een heel verlegen persoon, die een ongemakkelijk uitziend vest en een dikke bril draagt.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-hallo. Welkom in de bibliotheek. Hier vind je informatie over allerlei dingen die in de kerker te vinden zijn... eigenlijk kunnen we alleen kennis verstrekken die door avonturiers is ontdekt. Het... het is wat gênant. Dus elke keer dat je ons bezoekt, staat er waarschijnlijk iets nieuws te lezen.</string>
+    <string name="LibrarianNPC_Name_Objective">bibliothecaris</string>
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
@@ -643,6 +698,7 @@
     <string name="LightningBolt_Name">Bliksemschicht</string>
     <string name="LightningTrap_Name">Bliksemval</string>
     <string name="LloidsBeacon_ACReturn">TERUGKEER</string>
+    <string name="LloidsBeacon_ACSet">PLAATSEN</string>
     <string name="LloidsBeacon_Info">De baken van Lloyd is een ingewikkeld magisch apparaat waarmee je kunt terugkeren naar een plek waar je al eerder bent geweest.</string>
     <string name="LloidsBeacon_Preventing">Een soort sterke magische aura die hier aanwezig is voorkomt dat je Lloyds boei kunt gebruiken!</string>
     <string name="LloidsBeacon_Return">De baken van Lloyd is succesvol geplaatst op je huidige locatie, nu kun je hier altijd terugkeren.</string>
@@ -652,8 +708,10 @@
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">De ijzeren kop van dit wapen richt aanzienlijke schade aan.</string>
+    <string name="Mace_Name">knots</string>
     <string name="MageArmor_ACSpecial">GESMOLTEN AARDE</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
+    <string name="MageArmor_Name">magiër\'s robe</string>
     <string name="MagicArrow_Name">Magische pijl</string>
     <string name="MailArmor_Name">maliënkolder</string>
     <string name="ManaPotion_Info">Deze drank herstelt je spirituele energie.</string>
@@ -663,8 +721,12 @@
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
     <string name="MeleeWeapon_Info1c">een opgewaardeerd</string>
     <string name="MeleeWeapon_Info2a">De gemiddelde schade is %d punten per slag.</string>
+    <string name="MeleeWeapon_Info2b">De typische gemiddelde schade is %1$d punten per slag en vereist meestal %2$d punten kracht.</string>
     <string name="MeleeWeapon_Info3a">Dit is een nogal %s wapen.</string>
+    <string name="MeleeWeapon_Info3b">snel</string>
+    <string name="MeleeWeapon_Info3c">langzaam</string>
     <string name="MeleeWeapon_Info3d">en</string>
+    <string name="MeleeWeapon_Info3e">maar</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
     <string name="MeleeWeapon_Info6b">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
@@ -698,6 +760,7 @@
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
+    <string name="Mods_RestartRequired">Herstart vereist</string>
     <string name="Monk_Defense">geparreerd</string>
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">dwerg monnik</string>
@@ -718,6 +781,7 @@
     <string name="NecromancerRobe_Info">Dit gewaad stelt de Nekromant in staat om een Doodsling op te roepen ten koste van 5 zielen. De Doodsling is een ondode dienaar die sterker wordt samen met zijn meester.</string>
     <string name="NecromancerRobe_Info2">Deze robes is bedekt met donkere magie en zal de Nekromant in staat stellen de zielen van gevallen monsters te consumeren.</string>
     <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
+    <string name="Necromancy_BecameALich">Je bent een Lich geworden! Je krachten groeien en je zielcapaciteit is verdubbeld! Maar je hebt %1 krachtspunten verloren.</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_SoulsCountLabel">Zielen</string>
     <string name="Necromancy_Title">Necromantie</string>
@@ -732,6 +796,7 @@
     <string name="Order_Name">Bevelen</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="OverpricedRation_Message">Dat eten smaakte oké.</string>
+    <string name="OverpricedRation_Name">te dure voedselratione</string>
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">Deze zaal is heilig.</string>
     <string name="PalaceServant_Golem_3">*laag gerommel*</string>
@@ -750,6 +815,7 @@
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
     <string name="PetInventory_GaveItem">Gaf %1 aan %2</string>
     <string name="PetInventory_HeroBackpackFull">Je rugzak is vol</string>
+    <string name="PetInventory_PetBackpackFull">De rugzak van het huisdier is vol</string>
     <string name="PetInventory_TakeFromPet">Nemen van huisdier</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
     <string name="PetInventory_TookItem">%1$s genomen van %2$s</string>
@@ -759,6 +825,7 @@
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te delven!</string>
     <string name="Pickaxe_Name">houweel</string>
     <string name="Pickaxe_NothingToMine">Hier is niets om te delven!</string>
+    <string name="Piercing_Name_0">Doorborend %s</string>
     <string name="Piercing_Name_2">Doorborende %s</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
@@ -768,6 +835,7 @@
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze gebukte persoon is verborgen onder een leer overall. Van hem komt een bittere geur van medicijnen en... knoflook?</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">pestarts</string>
+    <string name="PlagueDoctorNPC_Name_Objective">pestdokter</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Breng me %d rattenhuiden.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Kun je het geloven?! Die idiooten hebben nog steeds niet door hoe gevaarlijk deze verdomde riool is! Alsof bewakers en avonturiers de stad kunnen beschermen tegen wat dan ook. Hah! Geen wapen kan de ziekte tegenhouden. Maar ik heb bewijzen nodig, misschien kun je me helpen? Breng me %d rattenvellen, zodat ik extra tests kan doen.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, je bent terug! _Vijf dode ratten_, perfect! Hun huiden zullen cruciaal zijn voor mijn onderzoek. En zoals beloofd, voor je dappere inspanning heb ik dit harnas voor je gemaakt van hun eigen vellen. Het is doordrenkt met een vleugje van de pest, maar maak je geen zorgen! Het is gecontroleerd, het beschermt! Ga nu! Bescherm de stad!</string>
@@ -783,17 +851,22 @@
     <string name="PlagueDoctorQuest_AllDone">*Hij laat een droge, hijgende lach horen.* \&quot;Jouw daden hebben geheimen ontsluierd zonder maat! De verkregen kennis… het pulsert in mij, een symfonie van ontdekking. Maar kennis,\&quot; voegt hij eraan toe, zijn zinkend tot een samenzweerderig fluisteren, \&quot;kennis is macht. En macht… ah… dat is de meest bedwelmende elixer.\&quot; Hij kijkt je even intens aan, zijn amethistoogen branden met koortsachtige felheid. \&quot;Misschien,\&quot; mompelt hij, \&quot;kruisen onze paden elkaar weer. Want er zijn nog vele… mysteries… die nog ontrafeld moeten worden.\&quot;</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name_Objective">pestdokter</string>
+    <string name="Plant_Info">Worp deze zaad naar de plaats waar je %1$s wilt laten groeien.\n\n%2$s</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Name_1">Giftig %s</string>
+    <string name="Poison_Name_2">Vergiftigde %s</string>
     <string name="PortalExit_Desc">Deze portal brengt je naar het eerste niveau van de %s.</string>
+    <string name="PortalExit_Desc_SpiderNest">Spinennest</string>
     <string name="PortalGate_Activated">De oude portaal is ontwaakt!</string>
     <string name="PortalGate_Desc">De gravures op het oppervlak van deze portal vormen een eigenaardig patroon. Het lijkt alsof het een gigantische tunnel is die in de verte leidt. Maar vanaf de zijkant bekeken wordt duidelijk dat het oppervlak bijna vlak is.</string>
+    <string name="PortalGate_Name">Portaal</string>
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="Possess_Info">De donkere kunst van geestelijke controle stelt de spreker in staat de wil van de meeste wezens te buigen.</string>
     <string name="Possess_Name">Bezetting</string>
     <string name="Possess_PossessionFailed">Wil van %s is te sterk</string>
     <string name="PotionBelt_Info">Deze sterke leren riem kan al je drankjes bevatten en beschermt ze tegen het breken door vorst.</string>
     <string name="PotionOfExperience_Info">De belevenissen van talloze veldslagen, herleid tot vloeibare vorm; deze drank verhoogt onmiddellijk je ervaringsniveau.</string>
+    <string name="PotionOfFrost_Info">Bij blootstelling aan open lucht zal deze stof verdampen tot een vriezende wolk, waardoor elk wezen dat ermee in contact komt op zijn plek bevriest, onbeweeglijk en onmachtig.</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfInvisibility_Apply">Je ziet je handen onzichtbaar worden!</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
@@ -809,6 +882,7 @@
     <string name="PotionOfParalyticGas_Info">Bij blootstelling aan open lucht verdampt de vloeistof in deze fles tot een benauwende gele nevel. Wie de wolk inademt, wordt onmiddellijk ge paralyseerd, en kan een tijdje niet bewegen nadat de wolk is verdampt. Dit item kan op verafstaande vijanden worden gegooid om hen in het effect van de gas te betrekken.</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="PotionOfPurity_Name">Zuiveringselixer</string>
+    <string name="PotionOfStrength_Info">Deze krachtige vloeistof zal door je spieren stromen en je kracht permanent met één punt verhogen.</string>
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
     <string name="Potion_Colors_0">turkoois</string>
     <string name="Potion_Colors_1">karmozijn</string>
@@ -822,6 +896,7 @@
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SelectForMoisten">Selecteer een item om te bevochtigen</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
+    <string name="Potion_Yes">Ja, ik weet wat ik doe</string>
     <string name="Prison_TileDescBookshelf">Dit is waarschijnlijk een overblijfsel van een gevangenisbibliotheek. Zou het branden?</string>
     <string name="Prison_TileDescDeco">Er zijn oude bloedvlekken op de vloer.</string>
     <string name="PseudoPasty_Info">Dit is een authentiek Cornish pasty met de traditionele vulling van rundvlees en aardappelen.</string>
@@ -842,6 +917,7 @@
     <string name="RabbitEars_Name">Konijnenoren</string>
     <string name="RaiseDead_Info">Poging om het laatst gedode wezen op te wekken (het ritueel vereist vrij vers materiaal). Bij het gebruik van deze duistere kunst, onthoud: bijna elk wezen kan worden opgewekt, maar niet ieders wil is gemakkelijk te buigen.</string>
     <string name="RaiseDead_Name">Dood opwekken</string>
+    <string name="RankingsScene_NoGames">Er zijn nog geen spellen gespeeld.</string>
     <string name="RankingsScene_Total">Totaal gespeelde spellen: </string>
     <string name="RatArmor_Info">Een leren pantser gemaakt van rattenhuid. Het is waarschijnlijk niet besmettelijk...</string>
     <string name="RatArmor_Name">ratten pantser</string>
@@ -859,6 +935,7 @@
     <string name="RatSkull_Info2">Aan de andere kant bewijst het dat de eigenaar in staat is om ratten te doden, zelfs grote en stinkende.</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">buidelrat</string>
+    <string name="RawFish_Info">Rauwe vis, eet op eigen risico</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RawFish_Taste">Visachtig!</string>
     <string name="RegenerationBuff_Info">De functie voor natuurlijke regeneratie is in een buff-vorm om het makkelijker te maken.</string>
@@ -867,6 +944,7 @@
     <string name="ResultDescriptions_Boss">Vermoord door de %1$s op niveau %2$d</string>
     <string name="ResultDescriptions_Burning">Verbrand op niveau %d</string>
     <string name="ResultDescriptions_Fall">Ter dood gevallen op niveau %d</string>
+    <string name="ResultDescriptions_Gas">Gestorven door giftig gas op niveau %d</string>
     <string name="ResultDescriptions_Immured">Ingemureerd in steen op niveau %d</string>
     <string name="ResultDescriptions_Necromancy">Uitgeput van levenskracht tijdens het proberen een lijk te animeren op niveau %d</string>
     <string name="ResultDescriptions_Necrotism">Gestorven door Necrotisme op niveau %d</string>
@@ -886,9 +964,11 @@
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="Ring_BuffKnown">Dit is een %1$s</string>
     <string name="Ring_Gems_0">diamant</string>
+    <string name="Ring_Gems_1">opaal</string>
     <string name="Ring_Gems_11">agaat</string>
     <string name="Ring_Gems_3">robijn</string>
     <string name="Ring_Gems_4">amethist</string>
+    <string name="Ring_Gems_8">smaragd</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
@@ -903,6 +983,7 @@
     <string name="RottenRation_Name">Bedederde ratoen</string>
     <string name="RottingFist_Desc">Verrottende Vuist van de Oude God</string>
     <string name="RottingFist_Gender">masculine</string>
+    <string name="RottingFist_Name">verrotte vuist</string>
     <string name="RottingFist_Name_Objective">vergaande vuist</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Alleen de grootste bogenschutters kunnen deze robijnboog gebruiken. Bijna elke pijl doorboort de vijand, een groot gat in zijn lichaam achterlatend, maar extreme kracht is nodig om de boogteef te spannen.</string>
@@ -923,8 +1004,10 @@
     <string name="Scorpio_Name">schorpioen</string>
     <string name="ScrollHolder_Info">In deze buisvormige houder kun je een willekeurig aantal scrollen plaatsen. Het bespaart ruimte in je rugzak en beschermt scrollen tegen vuur.</string>
     <string name="ScrollHolder_Name">koker voor perkamentrollen</string>
+    <string name="ScrollOfChallenge_Info">Wanneer hardop gelezen, zal deze rol een uitdagende brul ontketenen die alle monsters wakker maakt en hen waarschuwt voor de locatie van de lezer.</string>
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
     <string name="ScrollOfCurse_Name">Vloekscrol</string>
+    <string name="ScrollOfDomination_Name">Scroll van Heerschappij</string>
     <string name="ScrollOfIdentify_Info1">Het is %s</string>
     <string name="ScrollOfIdentify_InvTitle">Kies een voorwerp om te identificeren</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
@@ -940,6 +1023,7 @@
     <string name="ScrollOfSummoning_Info_2">Het monster heeft je oproep beantwoord!</string>
     <string name="ScrollOfSummoning_Name">Oproeprol</string>
     <string name="ScrollOfTeleportation_Teleport">In een oogwenk ben je geteleporteerd naar een andere plek op dit niveau.</string>
+    <string name="ScrollOfTeleportation_Teleport2">In een oogwenk werd %s geteleporteerd naar een andere locatie in het niveau.</string>
     <string name="ScrollOfTerror_Info1">De perkamentrol flitst met een fel rood licht</string>
     <string name="ScrollOfTerror_Info3">De rol zendt een felle flits van rood licht uit en de monsters vluchten!</string>
     <string name="ScrollOfUpgrade_InvTitle">Kies een voorwerp om te upgraden</string>
@@ -958,6 +1042,7 @@
     <string name="Scroll_Runes_5">RAIDO</string>
     <string name="Scroll_Runes_7">MANNAZ</string>
     <string name="Scroll_Runes_9">BERKANAN</string>
+    <string name="SeedPouch_Info">Deze kleine fluweelzakje stelt je in staat om elk aantal zaden in op te slaan. Erg handig.</string>
     <string name="SeedPouch_Name">zaadzakje</string>
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name_Objective">seniore monnik</string>
@@ -973,8 +1058,10 @@
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
     <string name="Sewer_TileWater">Troebel water</string>
     <string name="Shades_Info">Sommige mensen zeggen dat kerkers te donker zijn om die te dragen. En jij zegt dat die mensen gewoon niet cool genoeg zijn.</string>
+    <string name="Shades_Name">Zonnebril</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Bereid je voor!</string>
+    <string name="ShadowLord_Name">schaduwheer</string>
     <string name="ShadowLord_Name_Objective">Schaduwheer</string>
     <string name="Shadow_Desc">Schaduwen dwalen geruisloos door de ruïnes van de oude gevangenis en tonen zich slechts af en toe aan avonturiers, meestal tijdens hun laatste avontuur.</string>
     <string name="Shadow_Gender">feminine</string>
@@ -993,6 +1080,7 @@
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">schildgedrocht</string>
+    <string name="Shopkeeper_Buy">Selecteer item om te kopen</string>
     <string name="Shopkeeper_BuyPrompt">Laat me je inventaris zien</string>
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="Shopkeeper_SellPrompt">Ik heb spullen te verkopen</string>
@@ -1098,6 +1186,7 @@
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SummonBeast_Name">Beestenroep</string>
+    <string name="SummonDeathling_Name">Doodswezen oproepen</string>
     <string name="Sungrass_Desc">Zonnegras staat bekend om de geneeskrachtige werking van zijn sap.</string>
     <string name="Sungrass_Name">zonnegras</string>
     <string name="SuspiciousRat_Desc">Een rat is in de kerkers geen zeldzaamheid, maar dat er zo diep een woont... Je ziet hoe het hele lichaam van de rat spastisch beweegt wanneer hij beweegt.</string>
@@ -1128,14 +1217,18 @@
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
+    <string name="TomeOfMastery_Info">Dit versleten leerboek is niet zo dik, maar je hebt het gevoel dat je er veel uit kunt halen. Onthoud er wel dat het lezen van deze tome enige tijd in beslag kan nemen.</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="Toolbar_Info1">Je weet niet wat er is.</string>
     <string name="Torch_ACLight">AANSTEKEN</string>
     <string name="ToughShield_desc">Dit met riemen versterkte schild oogt robuuster dan een houten exemplaar. Het kan zeker meer schade blokkeren.</string>
     <string name="ToughShield_name">Versterkt Leren Schild</string>
+    <string name="TownGuardNPC_Desc">Een gewone stadswacht</string>
     <string name="TownGuardNPC_Gender">masculine</string>
+    <string name="TownGuardNPC_Message1">Ga maar door.</string>
     <string name="TownGuardNPC_Message3">Je denkt dat er te veel bewakers in deze stad zijn? Nou, dat is omdat dit de enige stad is met een gigantische monster-geïnfesteerde dungeon, niet waar?</string>
     <string name="TownGuardNPC_Name">stadswacht</string>
+    <string name="TownScript_NeedWeapon">Ik ga niet wapenloos de dungeon in!\nMisschien is het de moeite waard om eerst de stads winkel te bezoeken?</string>
     <string name="TownShopkeeper_Desc">Deze kerel is een typische winkelier. Je ziet meteen dat hij je prijs al kent.</string>
     <string name="TownShopkeeper_Name">winkelier</string>
     <string name="TownsfolkMovieNPC_Desc">Een van de plaatselijke bewoners. Hoewel dit duidelijk een gewone burger is, zien die kleren er duur uit.</string>
@@ -1169,7 +1262,10 @@
     <string name="Using_Failed_Because_Magic">Krachtige magie voorkomt dat je \&quot;%s\&quot; gebruikt.</string>
     <string name="VampireSkull_Info">Deze masker is gemaakt van een volledig natuurlijke vampierschedel. Eigenlijk is het een vampierschedel... schedel van een grootkopige vampier. Griezelig.</string>
     <string name="VampireSkull_Name">Vampierschedel</string>
+    <string name="VertigoBuff_Info">Het duizelig gevoel maakt het moeilijker om rechtdoor te lopen!</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
+    <string name="WandMaker_Berry2">Iemand geluk met een Gniestoel zaadje, %s? Nee? Maak je geen zorgen, ik heb het niet eilig.</string>
+    <string name="WandMaker_Defense">geabsorbeerd</string>
     <string name="WandMaker_Desc">Deze oude maar kerngezonde heer draagt een lichtelijk verwarde uitdrukking. Hij wordt beschermd door een magisch schild.</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
@@ -1203,6 +1299,7 @@
     <string name="Wand_Wood">Deze dunne %s toverstaf voelt warm aan. Wie weet wat hij doet als je hem gebruikt?</string>
     <string name="Wand_Wood_Types_0">hulst</string>
     <string name="Wand_Wood_Types_1">taxus</string>
+    <string name="Wand_Wood_Types_11">berk</string>
     <string name="Wand_Wood_Types_2">ebbenhout</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="Wand_Wood_Types_7">mahonie</string>
@@ -1213,6 +1310,7 @@
     <string name="WarHammer_Name">oorlogshamer</string>
     <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">%s\'s schaduwbliksem heeft je gedood...</string>
+    <string name="Warlock_Name_Objective">dwerg heksemeester</string>
     <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
     <string name="WaterElemental_Desc">Water elementalen komen voor bij grote watermassa\'s. Meestal dwalen deze magisch gebonden golven gewoon rond.</string>
     <string name="WaterElemental_Gender">masculine</string>
@@ -1230,6 +1328,7 @@
     <string name="Weightstone_WndCancel">Laat maar</string>
     <string name="Weightstone_WndChoice">Hoe wil je je %s balanceren?</string>
     <string name="Weightstone_WndSpeed">Voor snelheid</string>
+    <string name="Welcome_Ok">Oké!</string>
     <string name="Welcome_Text_32_1">    remix.32.1\n\n    - Gameplay:\n\n    -- Pesten Dokter questlijn\n\n    -- Lichamen van monsters nu enigszins bruikbare items\n\n    -- Betere huisdierenbesturing\n\n    - UX:\n\n    -- Verbeterd beheer van saves\n\n    - Modding:\n\n    -- Lokale mod installatiemethoden\n\n    -- Aangepaste items kunnen nu acties uitvoeren terwijl ze in stapels liggen\n\n    - Bugs opgelost\n\n    </string>
     <string name="Welcome_Title">Welkom!</string>
     <string name="WndBag_BuySubtitle">(Je hebt %dg)</string>
@@ -1248,6 +1347,7 @@
     <string name="WndDonate_donate">doneren: </string>
     <string name="WndDonate_goldDonateText">Dank voor uw hulp</string>
     <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
+    <string name="WndDonate_royalDonateText2">Daarnaast ontvang je elke hoed uit de in-app winkel! Zowel als elke hoed die ooit nog uitgegeven gaat worden.</string>
     <string name="WndDonate_ruby">robijn</string>
     <string name="WndDonate_silverDonate">zilverdonatie</string>
     <string name="WndDonate_silverDonateText">Elke donatie helpt de ontwikkeling van het project</string>
@@ -1255,6 +1355,7 @@
     <string name="WndDontLikeAds_NotThisTime">Niet deze keer</string>
     <string name="WndFortuneTeller_IdentifyAll">Alles</string>
     <string name="WndFortuneTeller_No_Item">Wees voorzichtig, je wilt je geld toch niet voor niets uitgeven, toch? Er zijn geen ongeïdentificeerde items in je inventaris.</string>
+    <string name="WndFortuneTeller_Title">Waarzegger.</string>
     <string name="WndGame_Challenges">Uitdagingen</string>
     <string name="WndGame_Customizations">Aanpassingen</string>
     <string name="WndGame_Exit">Verlaat Remixed Dungeon</string>
@@ -1271,11 +1372,13 @@
     <string name="WndHero_StaJournal">Dagboek</string>
     <string name="WndHero_Str">Kracht</string>
     <string name="WndImp_Message">Oh ja! Je bent mijn held!\nWat je beloning betreft, ik heb geen contant geld bij me, maar ik heb iets beters voor je. Dit is mijn familie-erfstukring: mijn opa haalde het van een dode paladijn af.</string>
+    <string name="WndImp_Reward">Neem de ring</string>
     <string name="WndInfoItem_Chest">Kist</string>
     <string name="WndInfoItem_NeedKey"> Maar om het te openen heb je een gouden sleutel nodig.</string>
     <string name="WndInfoItem_Owner">Deze oude graf kan iets nuttigs bevatten, maar de eigenaar zal zich zeker verzetten tegen het controleren ervan.</string>
     <string name="WndInfoItem_Remains">Dit is alles wat overblijft van een van je voorgangers. Misschien is het de moeite waard om te kijken of er waardevolle items in zitten.</string>
     <string name="WndInfoItem_Skeleton">Skelettenresten</string>
+    <string name="WndInstallingMod_copying_file">Kopiëren van %s naar Remixed Dungeon opslag</string>
     <string name="WndInstallingMod_skipping_file">Overslaan %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Recept uitvoeren</string>
     <string name="WndItemAlchemy_NoRecipes">Geen recepten beschikbaar met dit item en je huidige inventaris.</string>
@@ -1289,6 +1392,7 @@
     <string name="WndLibrary_Catalogue_Title">Bibliotheek</string>
     <string name="WndLibrary_Codex_Btn">Verhalen</string>
     <string name="WndLibrary_Items_Btn">Voorwerpen</string>
+    <string name="WndLibrary_Mobs_Btn">Monsters</string>
     <string name="WndLocalModInstall_title">Mod installeren vanuit lokale map</string>
     <string name="WndModInstall_PleaseUpdate">Gelieve Remixed Dungeon te updaten voordat u deze mod installeert</string>
     <string name="WndModInstall_Version">versie</string>
@@ -1298,6 +1402,8 @@
     <string name="WndMovieTheatre_Instruction">Groetjes en welkom in onze bioscoop! Wij bieden een speciale dienst aan, waarbij je gratis een speciale film kunt kijken genaamd \'reclame\'. En als je die helemaal kijkt, krijg je %d goudmunten als beloning!</string>
     <string name="WndMovieTheatre_Sorry">Er is iets misgegaan en we konden uw beloning niet bezorgen...</string>
     <string name="WndMovieTheatre_Thank_You">Dank u voor uw deelname!</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
+    <string name="WndPetSelect_Title">Selecteer huisdier</string>
     <string name="WndPlayGames_RestoreProgress">Spelvoortgang herstellen</string>
     <string name="WndPlayGames_Show_Badges">Toon insignes</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
@@ -1307,6 +1413,7 @@
     <string name="WndPortal_Warning_Title">Portaal Waarschuwing!</string>
     <string name="WndPremiumSettings_banners">Selecteer het materiaal van de banieren</string>
     <string name="WndPremiumSettings_chrome">Selecteer GUI-materiaal</string>
+    <string name="WndPremiumSettings_gold">goud</string>
     <string name="WndPremiumSettings_marble">marmer</string>
     <string name="WndPremiumSettings_ruby">robijn</string>
     <string name="WndPremiumSettings_status">Selecteer materiaal van de statusbalk</string>
@@ -1341,6 +1448,7 @@
     <string name="WndSettings_InGameUiSettings">Interface-instellingen</string>
     <string name="WndSettings_Music">Muziek</string>
     <string name="WndSettings_Quickslots">Sneltoetsen</string>
+    <string name="WndSettings_RecordVideo">Video-opname</string>
     <string name="WndSettings_SecondQuickslot">Tweede sneltoets</string>
     <string name="WndSettings_SelectLanguage">Selecteer taal</string>
     <string name="WndSettings_SwitchLand">Naar liggend scherm</string>
@@ -1348,6 +1456,9 @@
     <string name="WndSettings_ThirdQuickslot">Derde sneltoets</string>
     <string name="WndSettings_UiScale">Schaal van de interface</string>
     <string name="WndSettings_UiSettings">Interface-instellingen</string>
+    <string name="WndSettings_ZoomIn">+</string>
+    <string name="WndSettings_ZoomOut">-</string>
+    <string name="WndSettings_moveTimeout">Zettijdlimiet: %s</string>
     <string name="WndStory_Guts">Verslagen, verstrooid in stukken, maar niet volledig vernietigd, werd de Oude God verzegeld in de diepste niveaus van de kerker. Maar onlangs werd het zegel gebroken, waardoor de toegang tot de demonenhoeve wijd open stond. De nachtmerrieachtige monsters, geschapen door de Oude God in zijn slummer, waren zo talrijk dat, zonder een manier om te vluchten, ze gedwongen waren om met elkaar te smelten en deze gruwelijke hallen te vormen. En terwijl je over hun levende vlees loopt, kun je de klop van een Ouds Gods hart door hen heen voelen.</string>
     <string name="WndTilesKind_Title">Nog één ding:</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
@@ -1379,6 +1490,7 @@
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
     <string name="YogsBrain_Gender">masculine</string>
+    <string name="YogsBrain_Name">Yog\'s hersenen</string>
     <string name="YogsBrain_Name_Objective">Hersenen van Yog</string>
     <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">oog van Yog</string>
@@ -1393,6 +1505,7 @@
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name_Objective">zombie</string>
     <string name="deco_candle_desc">Grote kaars</string>
+    <string name="gdpr_agree">Ja, ik ga akkoord</string>
     <string name="gdpr_title">Personaliseer uw advertentie-ervaring</string>
     <string name="town_deco_armoronhanger_desc">Iets wat lijkt op pantser op een hanger.</string>
     <string name="town_deco_armoronhanger_name">Pantser</string>
@@ -1427,9 +1540,11 @@
     <string name="town_deco_clock_name">Klok</string>
     <string name="town_deco_common_bed_desc">Gewoon bed.</string>
     <string name="town_deco_common_bed_name">Bed</string>
+    <string name="town_deco_common_door_desc">Een beleefde avonturier zou geen private eigendom binnendringen, zonder uitnodiging natuurlijk.</string>
     <string name="town_deco_counter_name">Toonbank</string>
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
+    <string name="town_deco_cross_name">Kruis</string>
     <string name="town_deco_crossroad_desc">Een ruwe houten paal met pijlvormige bordjes, de tekst waarop vervaagd is door de harde weersomstandigheden.</string>
     <string name="town_deco_curtains_name">Gordijnen</string>
     <string name="town_deco_dungeon_door_desc">De ingang van de kerker.</string>
@@ -1444,8 +1559,10 @@
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
     <string name="town_deco_glass_stained_name">Glas in lood</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
+    <string name="town_deco_hay_name">hooi</string>
     <string name="town_deco_inn_bed_desc">Ziet eruit als een heel comfortabel bed.</string>
     <string name="town_deco_inn_bed_name">Bed</string>
+    <string name="town_deco_ladder_desc">Een oude ladder, onbetrouwbaar van uiterlijk.</string>
     <string name="town_deco_library_books_desc">Nog steeds beter dan de boeken uit de kelder.</string>
     <string name="town_deco_library_books_name">Leesmateriaal</string>
     <string name="town_deco_library_sign_name">Bibliotheekbord</string>
@@ -1453,12 +1570,14 @@
     <string name="town_deco_magenta_carpet_desc">De magenta kleur van dit tapijt doet denken aan lokale wijn.</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_mud_desc">Ontdooide grond in dit permafrostgebied.</string>
+    <string name="town_deco_mud_name">modder</string>
     <string name="town_deco_painting_name">Schilderij</string>
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_pedestal_name">Postament</string>
     <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_rope_name">touw</string>
+    <string name="town_deco_rug_name">kleed</string>
     <string name="town_deco_shelf_name">Planken</string>
     <string name="town_deco_shelving_desc">Een indrukwekkend groot rek, waarvan de planken gevuld zijn met diverse dranken en versnaperingen.</string>
     <string name="town_deco_shelving_name">rekken</string>
@@ -1468,6 +1587,7 @@
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
     <string name="town_deco_skullboard_name">trofeerek</string>
     <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
+    <string name="town_deco_sofa_desc">Lijkt erop dat deze bioscoop echt probeert de beste zitplaatsen voor haar klanten te bieden.</string>
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
     <string name="town_deco_statue_water_desc">Een majestueuze standbeeld van een engel die een kom met water vasthoudt.</string>
     <string name="town_deco_stock_name">voorraad</string>
@@ -1488,14 +1608,31 @@
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_weaponrack_name">Wapenrek</string>
     <string name="town_deco_window_name">Raam</string>
+    <string name="town_deco_wood_wall_desc">Een stevig uitziende stammenmuur.</string>
     <string name="town_deco_wooden_bench_desc">Houten bank, ziet er ongemakkelijk uit om op te zitten.</string>
     <string name="town_deco_wooden_bench_name">Houten bank</string>
+    <string name="town_deco_wooden_chair_name">Houten stoel</string>
     <string name="town_deco_wooden_drawer_desc">Interessant wat erin bewaard zit.</string>
     <string name="town_deco_wooden_drawer_name">lade</string>
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

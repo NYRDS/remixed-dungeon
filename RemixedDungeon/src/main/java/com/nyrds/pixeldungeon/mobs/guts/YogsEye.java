@@ -51,6 +51,7 @@ public class YogsEye extends Boss {
 
         dmgMin = 20;
         dmgMax = 30;
+        STR(18);
 
         setState(MobAi.getStateByClass(Sleeping.class));
 

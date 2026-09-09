@@ -23,6 +23,8 @@ public class Piranha extends Mob {
 		walkingType = WalkingType.WATER;
 
 		hp(ht(10 + Dungeon.depth * 5));
+
+		STR(13);
 		baseDefenseSkill = 10 + Dungeon.depth * 2;
 		baseAttackSkill = 20 + Dungeon.depth * 2;
 

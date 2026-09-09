@@ -32,6 +32,7 @@ public class RunicSkull extends MultiKindMob {
 		expForKill = 5;
 		baseDefenseSkill = 15;
 		baseAttackSkill = 1;
+		STR(17);
 
 		pacified = true;
 		flying = true; // caveman: floating skull - no Roots, no trap press

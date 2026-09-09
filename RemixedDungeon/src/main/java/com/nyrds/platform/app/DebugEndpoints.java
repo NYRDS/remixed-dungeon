@@ -1,14 +1,15 @@
 package com.nyrds.platform.app;
 
 import com.nyrds.pixeldungeon.ai.MobAi;
+import com.nyrds.pixeldungeon.ai.RemoteControlled;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.alchemy.InputItem;
 import com.nyrds.pixeldungeon.alchemy.OutputItem;
-import com.nyrds.pixeldungeon.items.Carcass;
-import com.nyrds.pixeldungeon.ai.RemoteControlled;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.actions.Attack;
@@ -20,14 +21,21 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.utils.Position;
+import com.nyrds.pixeldungeon.windows.WndHelper;
+import com.nyrds.pixeldungeon.windows.WndPetBag;
+import com.nyrds.pixeldungeon.windows.WndPetInventoryOptions;
+import com.nyrds.pixeldungeon.windows.WndPetSelect;
+import com.nyrds.platform.storage.SaveUtils;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
@@ -35,7 +43,16 @@ import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.ui.Icons;
+import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.windows.WndBag;
+import com.watabou.pixeldungeon.windows.WndMessage;
+import com.watabou.pixeldungeon.windows.WndOptions;
+import com.watabou.pixeldungeon.windows.WndSettings;
+import com.watabou.pixeldungeon.windows.WndTitledMessage;
+import com.watabou.pixeldungeon.windows.elements.GenericInfo;
 import com.watabou.utils.Bundle;
 import fi.iki.elonen.NanoHTTPD;
 import java.lang.reflect.Field;
@@ -579,6 +596,63 @@ public class DebugEndpoints {
                     entityValue, x, y, entityType, entityValue, x, y));
         } catch (Exception e) {
             GLog.w("Error in handleDebugSpawnAt: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                String.format("{\"error\":\"Internal error: %s\"}", e.getMessage()));
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugContinueGame(NanoHTTPD.IHTTPSession session) {
+        try {
+            String heroClass = "WARRIOR";
+            String query = session.getQueryParameterString();
+            if (query != null && !query.isEmpty()) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("class=")) {
+                        heroClass = java.net.URLDecoder.decode(param.substring(6), "UTF-8").toUpperCase();
+                    }
+                }
+            }
+
+            HeroClass selectedClass = null;
+            for (HeroClass cls : HeroClass.values()) {
+                if (cls.name().equals(heroClass)) {
+                    selectedClass = cls;
+                    break;
+                }
+            }
+
+            if (selectedClass == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"Unknown hero class: %s\"}", heroClass));
+            }
+
+            if (Dungeon.hero != null && Dungeon.level != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game already in progress\"}");
+            }
+
+            java.io.File saveFile = new java.io.File(
+                    com.nyrds.platform.storage.FileSystem.getUserDataPath(com.nyrds.pixeldungeon.ml.BuildConfig.SAVES_PATH),
+                    SaveUtils.gameFile(selectedClass));
+            if (!saveFile.exists()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"No save found for %s\"}", heroClass));
+            }
+
+            Dungeon.heroClass = selectedClass;
+
+            InterlevelScene.scheduleAndWait(InterlevelScene.Mode.CONTINUE, new Position(), "Continue game: " + heroClass);
+
+            if (Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Continue failed - level not loaded\"}");
+            }
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"message\":\"Continued game as %s\",\"heroClass\":\"%s\",\"depth\":%d}",
+                    heroClass, heroClass, Dungeon.depth));
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugContinueGame: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 String.format("{\"error\":\"Internal error: %s\"}", e.getMessage()));
         }
@@ -2148,25 +2222,13 @@ public class DebugEndpoints {
                     String.format("{\"error\":\"Level '%s' does not exist\"}", levelId));
             }
 
-            // Create position and level
+            // Create position, do NOT create the level here - DungeonGenerator.createLevel
+            // calls Actor.clearActors() and would wipe the live game's actor registry
+            // before the transition collects follower pets. The level is created by
+            // the transition itself; an explicit entrance cell is applied after arrival.
             Position position = new Position();
             position.levelId = levelId;
-
-            Level newLevel = DungeonGenerator.createLevel(position);
-            if (newLevel == null) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                    String.format("{\"error\":\"Failed to create level '%s'\"}", levelId));
-            }
-
-            // Determine entrance position
-            int startPos;
-            if (entranceCell >= 0 && entranceCell < newLevel.getLength()) {
-                startPos = entranceCell;
-            } else {
-                startPos = newLevel.entrance;
-            }
-
-            position.cellId = startPos;
+            position.cellId = entranceCell;
 
             // Schedule InterlevelScene transition on GL thread and wait for level load
             InterlevelScene.scheduleAndWait(InterlevelScene.Mode.RETURN, position, "Switching to level: " + levelId);
@@ -2174,9 +2236,14 @@ public class DebugEndpoints {
             String levelKind = DungeonGenerator.getLevelKind(levelId);
             int depth = DungeonGenerator.getLevelDepth(levelId);
 
+            int arrivedEntrance = entranceCell;
+            if (arrivedEntrance < 0 && Dungeon.level != null) {
+                arrivedEntrance = Dungeon.level.entrance;
+            }
+
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"levelId\":\"%s\",\"kind\":\"%s\",\"depth\":%d,\"entrance\":%d}",
-                    levelId, levelKind, depth, startPos));
+                    levelId, levelKind, depth, arrivedEntrance));
         } catch (Exception e) {
             GLog.w("Error in handleDebugGoToLevel: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
@@ -2864,6 +2931,158 @@ public class DebugEndpoints {
         }
     }
 
+    // caveman: UI test aid - shows a real window on the game thread and reports its
+    // geometry against the WndHelper budget, so window layout can be verified
+    // without tapping the actual UI. wnd=petbag|petoptions|petselect|herobag|optionstest
+    public static NanoHTTPD.Response handleDebugOpenWindow(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            String wnd = null;
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("wnd=")) {
+                        wnd = URLDecoder.decode(param.substring(4), "UTF-8");
+                        break;
+                    }
+                }
+            }
+
+            if (wnd == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing wnd parameter (petbag|petoptions|petselect|herobag|optionstest)\"}");
+            }
+
+            if (Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Game state not initialized - start a game first\"}");
+            }
+
+            final String wndParam = wnd;
+            final String[] result = new String[3];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                Hero hero = Dungeon.hero;
+                switch (wndParam) {
+                    case "petbag":
+                    case "petoptions":
+                    case "petselect": {
+                        List<Mob> pets = PetInventoryManager.getHeroPets(hero);
+                        if (pets.isEmpty()) {
+                            result[0] = "ERROR: hero has no pets";
+                            return;
+                        }
+                        Mob pet = pets.get(0);
+                        Window w;
+                        if (wndParam.equals("petbag")) {
+                            w = new WndPetBag(hero, pet);
+                        } else if (wndParam.equals("petoptions")) {
+                            w = new WndPetInventoryOptions(hero, pet);
+                        } else {
+                            w = new WndPetSelect(hero);
+                        }
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "herobag": {
+                        Window w = new WndBag(hero.getBelongings(), hero.getBelongings().backpack,
+                            null, WndBag.Mode.ALL, null);
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "optionstest": {
+                        // exercises the WndOptions overflow/scroll path
+                        Window w = new WndOptions("WndOptions scroll test",
+                            "A deliberately long message so the panel grows past the screen height on small displays.",
+                            "Option One", "Option Two", "Option Three", "Option Four",
+                            "Option Five", "Option Six", "Option Seven", "Option Eight") {
+                            @Override
+                            public void onSelect(int index) {
+                            }
+                        };
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "msgtest": {
+                        // quest-popup shape: WndTitledMessage with long text
+                        Window w = new WndTitledMessage(Icons.get(Icons.WARRIOR),
+                            "Old beardy questgiver",
+                            "Greetings, adventurer! I have a favour to ask of someone with your particular set of skills. " +
+                            "Deep beneath the sewers lies a talisman of great importance, lost there by an ancestor of mine. " +
+                            "The rats have carried it off into the darkness, and I am far too old to go crawling after it myself. " +
+                            "Bring it back to me and I shall reward you handsomely - or at least tell you where the next " +
+                            "dozen pages of tedious lore are hidden. Beware the goo, it bites. And should you descend further, know that the prison levels above the caves are haunted by things worse than rats: gaunt guards in rusted armour who do not sleep, and a warden whose name is spoken only in whispers. Pack antidoes, for the air itself festers down there, and whatever you do, do not drink from the red fountains however thirsty you become.");
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "msgplain": {
+                        Window w = new WndMessage("Something important happened here and the message drags on: " +
+                            "you have found a scroll that explains, at great length, the history of the dungeon, " +
+                            "the lineage of its kings, the dietary habits of its gnolls, and several paragraphs of " +
+                            "foreshadowing that will surely matter later. This line exists to make the window tall.");
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "infotest": {
+                        // WndInfoItem/WndInfoCell shape: GenericInfo with long desc
+                        Window w = new Window() {
+                        };
+                        GenericInfo.makeInfo(w, new ItemSprite(ItemFactory.itemByName("Sword")),
+                            "Sword", 0xFFFFFF, "A rather ordinary sword of the kind that litters every dungeon floor. " +
+                            "This particular specimen has seen better decades, yet it still holds an edge - barely - " +
+                            "and its balance is adequate for slashing through rats, skeletons and the occasional " +
+                            "unlucky mud contractor. Long description on purpose to test the scroll zone.");
+                        GameScene.show(w);
+                        result[0] = "GenericInfoWindow";
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    case "settings": {
+                        Window w = new WndSettings();
+                        GameScene.show(w);
+                        result[0] = w.getClass().getSimpleName();
+                        result[1] = String.valueOf(w.getWidth());
+                        result[2] = String.valueOf(w.getHeight());
+                        return;
+                    }
+                    default:
+                        result[0] = "ERROR: unknown wnd " + wndParam;
+                }
+            });
+
+            if (result[0] != null && result[0].startsWith("ERROR")) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"" + result[0] + "\"}");
+            }
+
+            JSONObject resp = new JSONObject();
+            resp.put("success", true);
+            resp.put("window", result[0]);
+            resp.put("size", result[1] + "x" + result[2]);
+            resp.put("budget", WndHelper.getFullscreenWidth() + "x" + WndHelper.getAlmostFullscreenHeight());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", resp.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugOpenWindow: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
     public static NanoHTTPD.Response handleDebugRevealMap(NanoHTTPD.IHTTPSession session) {
         try {
             if (Dungeon.level == null) {
@@ -2987,14 +3206,16 @@ public class DebugEndpoints {
             String levelId = (Dungeon.level != null) ? DungeonGenerator.getCurrentLevelId() : "";
 
             String jsonString = String.format(
-                "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d,\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d}",
+                "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d,\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d,\"speed\":%f,\"str\":%d}",
                 hero.isAlive(),
                 hero.hp(),
                 hero.ht(),
                 pos, x, y,
                 actionName,
                 levelId,
-                Dungeon.depth
+                Dungeon.depth,
+                hero.speed(),
+                hero.effectiveSTR()
             );
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);
@@ -3366,6 +3587,170 @@ public class DebugEndpoints {
         return mob.isRemoteControlled();
     }
 
+    // test endpoint: /debug/order_pet?id=<pet>&cell=<cell> - drives the real order
+    // flow for a hero-owned pet (Interact enters order mode, handleCell issues it),
+    // returns the resulting AI state, enemy validity and move target
+    public static NanoHTTPD.Response handleDebugOrderPet(NanoHTTPD.IHTTPSession session) {
+        try {
+            int id = -1, cell = -1;
+            String query = session.getQueryParameterString();
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = Integer.parseInt(param.substring(3));
+                    } else if (param.startsWith("cell=")) {
+                        cell = Integer.parseInt(param.substring(5));
+                    }
+                }
+            }
+
+            Mob pet = findMobById(id);
+            if (pet == null || cell < 0 || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need id & cell, game running").toString());
+            }
+
+            final Mob finalPet = pet;
+            final int finalCell = cell;
+            GameLoop.pushUiTaskAndWait(() -> {
+                // the real production flow: tap on owned pet enters order mode, tap on target cell issues it
+                new Interact(finalPet).act(Dungeon.hero);
+                GameScene.handleCell(finalCell);
+            });
+
+            String state = finalPet.getState() != null ? finalPet.getState().getTag() : "none";
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"state\":\"%s\",\"enemySet\":%b,\"target\":%d}",
+                    state, finalPet.getEnemy().valid(), finalPet.getTarget()));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
+    // test endpoint: /debug/test_damage?id=<mob>&dmg=<n>&src=buff|srcid=<mobId> -
+    // damages a mob with a non-Char source (Burning buff, like a DoT tick) or with
+    // another mob as the source, returns the resulting AI state - used to check
+    // whether AI states (pet orders) survive damage
+    public static NanoHTTPD.Response handleDebugTestDamage(NanoHTTPD.IHTTPSession session) {
+        try {
+            int id = -1, dmg = 1, srcId = -1;
+            boolean buffSrc = false;
+            String query = session.getQueryParameterString();
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = Integer.parseInt(param.substring(3));
+                    } else if (param.startsWith("dmg=")) {
+                        dmg = Integer.parseInt(param.substring(4));
+                    } else if (param.startsWith("srcid=")) {
+                        srcId = Integer.parseInt(param.substring(6));
+                    } else if (param.startsWith("src=buff")) {
+                        buffSrc = true;
+                    }
+                }
+            }
+
+            Mob victim = findMobById(id);
+            if (victim == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need id").toString());
+            }
+
+            final Mob finalVictim = victim;
+            final int finalDmg = dmg;
+            final int finalSrcId = srcId;
+            final boolean finalBuffSrc = buffSrc;
+            GameLoop.pushUiTaskAndWait(() -> {
+                if (finalBuffSrc) {
+                    finalVictim.damage(finalDmg, new Burning());
+                } else {
+                    Mob attacker = findMobById(finalSrcId);
+                    if (attacker != null) {
+                        finalVictim.damage(finalDmg, attacker);
+                    }
+                }
+            });
+
+            String state = finalVictim.getState() != null ? finalVictim.getState().getTag() : "none";
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"state\":\"%s\",\"enemySet\":%b,\"target\":%d}",
+                    state, finalVictim.getEnemy().valid(), finalVictim.getTarget()));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
+    // test endpoint: /debug/test_equip?id=<mob>&item=<ItemFactory name>&level=<n> -
+    // force-equips an item on any char, bypassing the STR gate (same freedom the
+    // pet equip window has). Negative armor level raises requiredSTR - makes the
+    // wearer overloaded, useful to test encumbrance speed/evasion penalties.
+    public static NanoHTTPD.Response handleDebugTestEquip(NanoHTTPD.IHTTPSession session) {
+        try {
+            int id = -1, level = 0;
+            String itemType = null;
+            String query = session.getQueryParameterString();
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = Integer.parseInt(param.substring(3));
+                    } else if (param.startsWith("item=")) {
+                        itemType = URLDecoder.decode(param.substring(5), "UTF-8");
+                    } else if (param.startsWith("level=")) {
+                        level = Integer.parseInt(param.substring(6));
+                    }
+                }
+            }
+
+            Mob mob = findMobById(id);
+            if (mob == null || itemType == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need id & item").toString());
+            }
+
+            final Mob finalMob = mob;
+            final String finalItemType = itemType;
+            final int finalLevel = level;
+            final String[] error = new String[1];
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    Item item = ItemFactory.itemByName(finalItemType);
+                    item.level(finalLevel);
+                    if (!(item instanceof EquipableItem)) {
+                        error[0] = "not equipable: " + finalItemType;
+                        return;
+                    }
+                    if (!finalMob.getBelongings().collect(item)) {
+                        error[0] = "backpack full";
+                        return;
+                    }
+                    Belongings.Slot slot = ((EquipableItem) item).slot(finalMob.getBelongings());
+                    if (slot == Belongings.Slot.NONE) {
+                        error[0] = "no slot for " + finalItemType;
+                        return;
+                    }
+                    finalMob.getBelongings().equip((EquipableItem) item, slot);
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"item\":\"%s\",\"level\":%d,\"requiredSTR\":%d,\"effectiveSTR\":%d,\"speed\":%f}",
+                    itemType, finalLevel, ((EquipableItem) findMobById(id).getBelongings().getItemFromSlot(Belongings.Slot.ARMOR)).requiredSTR(),
+                    mob.effectiveSTR(), mob.speed()));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
     private static Mob findMobById(int id) {
         if (Dungeon.level == null) {
             return null;
@@ -3702,7 +4087,8 @@ public class DebugEndpoints {
             String jsonString = String.format(
                 "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d," +
                     "\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d," +
-                    "\"type\":\"%s\",\"fraction\":\"%s\",\"remote\":%b,\"reverted\":%b,\"revertAfter\":%d}",
+                    "\"type\":\"%s\",\"fraction\":\"%s\",\"remote\":%b,\"reverted\":%b,\"revertAfter\":%d," +
+                    "\"speed\":%f,\"str\":%d}",
                 mob.isAlive(),
                 mob.hp(),
                 mob.ht(),
@@ -3714,7 +4100,9 @@ public class DebugEndpoints {
                 mob.fraction().name(),
                 isRemote(mob),
                 reverted,
-                mob.remoteRevertAfter
+                mob.remoteRevertAfter,
+                mob.speed(),
+                mob.effectiveSTR()
             );
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);

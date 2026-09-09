@@ -11,6 +11,7 @@ public class Albino extends Rat {
 
 	{
 		hp(ht(15));
+		STR(10);
 	}
 
 	@Override

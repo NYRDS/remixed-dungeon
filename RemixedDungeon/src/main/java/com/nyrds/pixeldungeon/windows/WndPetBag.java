@@ -1,6 +1,8 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.utils.ItemsList;
+import com.watabou.noosa.Gizmo;
+import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -150,13 +152,12 @@ public class WndPetBag extends WndBag {
     }
 
     private void addEquippabilityIndicators() {
-        // Iterate through all children to find ItemSlot instances
-        for (com.watabou.noosa.Gizmo child : members) {
+        // Iterate the bag grid slots (they live in the WndBag scroll content)
+        Component grid = gridContent();
+        for (int i = 0; i < grid.getLength(); i++) {
+            Gizmo child = grid.getMember(i);
             if (child instanceof ItemSlot) {
                 ItemSlot slot = (ItemSlot) child;
-                // We can't easily get the item from ItemSlot (no getter)
-                // Instead, check pet's backpack items and match by position
-                // For now, we'll use reflection to access the private item field in ItemButton
                 addEquippabilityIndicatorToSlot(slot);
             }
         }

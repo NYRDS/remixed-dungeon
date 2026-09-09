@@ -33,6 +33,7 @@ public class BurningFist extends Mob implements IZapper {
 
         dmgMin = 40;
         dmgMax = 62;
+        STR(18);
         dr = 15;
 
         setState(MobAi.getStateByClass(Wandering.class));

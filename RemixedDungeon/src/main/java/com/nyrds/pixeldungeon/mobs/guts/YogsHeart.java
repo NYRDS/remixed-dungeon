@@ -24,6 +24,7 @@ public class YogsHeart extends Mob {
         baseAttackSkill  = 26;
         dmgMin = 35;
         dmgMax = 45;
+        STR(18);
         dr = 22;
 
         expForKill = 12;

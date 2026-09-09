@@ -268,13 +268,14 @@ public class Hero extends Char {
     @Override
     public float speed() {
 
+        float speed = super.speed();
+
         int aEnc = getItemFromSlot(Belongings.Slot.ARMOR).requiredSTR() - effectiveSTR();
         if (aEnc > 0) {
-            return (float) (super.speed() * Math.pow(1.3, -aEnc));
-        } else {
-            float speed = super.speed();
-            return getHeroSprite().sprint(subClass == HeroSubClass.FREERUNNER && !isStarving()) ? 1.6f * speed : speed;
+            return speed;
         }
+
+        return getHeroSprite().sprint(subClass == HeroSubClass.FREERUNNER && !isStarving()) ? 1.6f * speed : speed;
     }
 
     @Override
@@ -1121,6 +1122,12 @@ public class Hero extends Char {
     public boolean friendly(@NotNull Char chr) {
         if (chr instanceof Mob) {
             Mob mob = (Mob) chr;
+            // the class list is a "gnoll-kin spare gnoll heroes" feature; pets are
+            // answered by fraction - a heroes-side pet is a comrade regardless of
+            // kind, own or another hero's
+            if (mob.isPet()) {
+                return super.friendly(chr);
+            }
             return heroClass.friendlyTo(mob.getEntityKind());
         }
         return super.friendly(chr);
