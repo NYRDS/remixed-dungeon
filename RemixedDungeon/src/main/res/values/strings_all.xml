@@ -1424,6 +1424,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_FollowMe">Following you!</string>
     <string name="Mob_GoingTo">Already going!</string>
     <string name="Mob_Guarding">Guarding this place!</string>
+    <string name="Mob_PetDied">Your pet died: %s</string>
     <string name="Mob_ItemUse">%1$s uses %2$s</string>
     <string name="Mob_ReadyForOrder">%s ready for your order.</string>
     <string name="Mob_StaAmokStatus">This %1$s is running amok</string>

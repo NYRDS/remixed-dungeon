@@ -1408,6 +1408,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_FollowMe">Следую за тобой!</string>
     <string name="Mob_GoingTo">Уже бегу!</string>
     <string name="Mob_Guarding">Охраняю это место!</string>
+    <string name="Mob_PetDied">Погиб питомец: %s</string>
     <string name="Mob_ItemUse">%1$s использует %2$s</string>
     <string name="Mob_ReadyForOrder">Субъект %s готов к вашим указаниям.</string>
     <string name="Mob_StaAmokStatus">%1$s в безумной ярости</string>

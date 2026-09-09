@@ -50,6 +50,7 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import java.util.Collections;
@@ -373,6 +374,10 @@ public abstract class Mob extends Char {
         Badges.validateRare(this);
 
         Hero hero = Dungeon.hero;
+
+        if (isPet()) { // pets die quietly otherwise - the hero often can't even see the fight
+            GLog.n(Utils.format(R.string.Mob_PetDied, getName()));
+        }
 
         if (!cause.getEntityKind().equals(Chasm.class.getSimpleName())) {
             hero.getBelongings().forEachEquipped(item -> item.charDied(this, hero));
