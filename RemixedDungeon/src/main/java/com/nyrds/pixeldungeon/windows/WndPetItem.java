@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.windows;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.UseItem;
-import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.nyrds.util.Util;

@@ -145,7 +145,7 @@ public class BuffFactory {
         registerBuffClass(Blindness.class);
         registerBuffClass(Vertigo.class);
         registerBuffClass(Stun.class);
-		registerBuffClass(Paralysis.class);
+        registerBuffClass(Paralysis.class);
         registerBuffClass(Terror.class);
         registerBuffClass(Weakness.class);
         registerBuffClass(Light.class);

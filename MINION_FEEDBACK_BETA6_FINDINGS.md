@@ -366,6 +366,17 @@ Plain tap is overloaded in `CharUtils.actionForCell` (`actors/CharUtils.java:231
 > own pet". Also documented: `Hero` overrides only the 1-arg `friendly`, so
 > `Mob.friendly`'s owner-recursion (2-arg) dispatches to Char's
 > fraction-only answer — the class list never leaks through the recursion.
+>
+> **Follow-up (2026-09-10, review pass):** `isPet()` is a fraction check
+> (`fraction == HEROES`), and `Mob.makePet` copies the owner's fraction, so
+> the `isPet` branch was never ownership-blind — it is fraction-correct for
+> any hero's pet. Tightened anyway: the branch now returns
+> `super.friendly(chr)` (the fraction answer) instead of hardcoded `true` —
+> one source of truth if fractions ever change. Same pass:
+> `Char.restoreFromBundle` keeps the ctor's `baseStr` as the `BASE_STR`
+> default — old-format saves no longer stomp explicit mob STR down to 10;
+> tab-indented blocks in space-style files (Char, Mob, BuffFactory)
+> re-indented to spaces.
 
 Confirmed, explicit code: `OrderCellSelector.onSelect` converts any `Interact` into `Attack` (`ml/actions/OrderCellSelector.java:44-46`); ordering to the hero's cell yields `Interact(hero)` → `KillOrder` on the player.
 

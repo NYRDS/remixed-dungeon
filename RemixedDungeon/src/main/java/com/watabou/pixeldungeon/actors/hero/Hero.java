@@ -1122,10 +1122,11 @@ public class Hero extends Char {
     public boolean friendly(@NotNull Char chr) {
         if (chr instanceof Mob) {
             Mob mob = (Mob) chr;
-            // the class list is a "gnoll-kin spare gnoll heroes" feature, not
-            // ownership-aware - own pets must not depend on it
+            // the class list is a "gnoll-kin spare gnoll heroes" feature; pets are
+            // answered by fraction - a heroes-side pet is a comrade regardless of
+            // kind, own or another hero's
             if (mob.isPet()) {
-                return true;
+                return super.friendly(chr);
             }
             return heroClass.friendlyTo(mob.getEntityKind());
         }

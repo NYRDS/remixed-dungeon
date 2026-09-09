@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.platform.game.RemixedDungeon;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.nyrds.platform.input.Keys;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Gizmo;
@@ -32,7 +31,6 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.elements.Tab;
 import java.util.ArrayList;
-import java.util.List;
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 
