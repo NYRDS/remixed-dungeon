@@ -208,6 +208,7 @@
     <string name="Challenges_Descriptions_3">الأراضي المحيطة بالزنزانة ملوثة بالشر منذ زمن بعيد، مما يمنع نمو بذور الأعشاب والنباتات المختلفة. من يدري كم سيمر من الوقت قبل أن تختفي آخر نبتة في هذه الأراضي القاحلة.</string>
     <string name="Challenges_Descriptions_8">ستبدأ رحلتك في مجاري البلدة المظلمة والخطيرة، مع انسداد الطريق الوحيد إلى السطح. والأسوأ من ذلك، أنك لن تتمكن إلا من استخدام المعدات التي تجدها داخل الزنزانة. وبموارد ومعدات محدودة، سيعتمد بقاؤك على مهاراتك واستراتيجيتك.</string>
     <string name="Challenges_Names_0">حمية</string>
+    <string name="Challenges_Names_1">الإيمان هو درعي</string>
     <string name="Challenges_Names_4">ذكاء السرب</string>
     <string name="Challenges_Names_5">إلى الظلام</string>
     <string name="Challenges_Names_6">الرموز المحرمة</string>
@@ -277,6 +278,7 @@
     <string name="Codex_ACRead">قراءة</string>
     <string name="Codex_Story_10">غليف التشابك - قد يحصل البطل على درع عشبي، لكنه في الوقت نفسه قد تُقيّده الجذور.</string>
     <string name="Codex_Story_12">سلاح مشتعل - عند ضربة ناجحة، يلحق ضررًا إضافيًا بالهدف وقد يحرقه.</string>
+    <string name="Codex_Story_15">سلاح مصاص دماء - عند الضربة الناجحة، قد يشفي البطل لجزء من الضرر الموجه للعدو.</string>
     <string name="Codex_Story_16">سلاح محظوظ - يتجاهل درع العدو تقريباً بالكامل، ويسبب ضرراً أكبر بكثير.</string>
     <string name="Codex_Story_17">سلاح مخدر - عند الضرب بنجاح، قد يشل الهدف.</string>
     <string name="Codex_Story_18">سلاح مثقب - عند الضرب بنجاح، قد يُلحق الضرر بجميع الأعداء في خط مستقيم خلف الهدف.</string>
@@ -343,6 +345,7 @@
     <string name="Drink_Message">هذا المشروب منعش!</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">سكران</string>
+    <string name="Drunkard_Phrase_1">مَزِيدُ سُكْرٍ مِنَ الْفَضْلِ!</string>
     <string name="Drunkard_Phrase_3">هذا الجعة طعمها زي التراب</string>
     <string name="Drunkard_Phrase_4">زززززز...</string>
     <string name="Dungeon_Tips_14">خطر! الآلات الثقيلة يمكن أن تسبب الإصابة، بتر الأطراف أو الموت!</string>
@@ -777,6 +780,7 @@
     <string name="Quiver_Gender">masculine</string>
     <string name="RabbitEars_Name">آذان أرنب</string>
     <string name="RaiseDead_NoSpace">فشل إحياء الموتى لأن لا يوجد مكان حر في الجوار.</string>
+    <string name="RankingsScene_NoGames">لم يتم لعب أي ألعاب بعد.</string>
     <string name="RatArmor_Info">درع جلدي مصنوع من جلد الفأر. من المحتمل أنه ليس معدياً...</string>
     <string name="RatArmor_Name">درع جرذان</string>
     <string name="RatHide_Name">جلد الفأر</string>
@@ -1084,6 +1088,7 @@
     <string name="WarHammer_Name">مطرقة حرب</string>
     <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">سهم الظل الخاص بـ %1$s قتلك...</string>
+    <string name="Warlock_Name_Objective">قزم مشعوذ</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name">عنصر مائي</string>
     <string name="WaterOfAwareness_Info">تشع قوة المعرفة من ماء هذه البئر. خذ رشفة منه لكشف جميع أسرار معداتك.</string>
@@ -1130,6 +1135,7 @@
     <string name="WndHero_Awareness">اليقظة</string>
     <string name="WndHero_Depth">أقصى عمق</string>
     <string name="WndHero_StaJournal">اليوميات</string>
+    <string name="WndImp_Reward">خذ الخاتم</string>
     <string name="WndInfoItem_Chest">صندوق</string>
     <string name="WndInfoItem_CrystalChest">صندوق كريستالي</string>
     <string name="WndInfoItem_Owner">قد يحتوي هذا القبر القديم على شيء مفيد، لكن مالكه سيعترض بالتأكيد على التفتيش.</string>
@@ -1144,6 +1150,7 @@
     <string name="WndLocalModInstall_text">اختر الدليل لتثبيت المود منه</string>
     <string name="WndLocalModInstall_title">تثبيت التعديل من دليل محلي</string>
     <string name="WndMovieTheatre_Instruction">مرحباً بك في مسرح الأفلام الخاص بنا! نقدم خدمة مميزة حيث يمكنك مشاهدة فيلم خاص يسمى \&quot;إعلان\&quot; مجاناً. وإذا شاهدته بالكامل، ستحصل على مكافأة قدرها %d عملة ذهبية!</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
     <string name="WndPetSelect_Title">اختر الحيوان الأليف</string>
     <string name="WndPlayGames_BackupProgress">نسخ احتياطي لتقدم اللعبة</string>
     <string name="WndPlayGames_Connecting">جاري الاتصال بـ Google Play Games، يرجى الانتظار قليلاً</string>
@@ -1214,6 +1221,7 @@
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Name_Objective">يوغ-دزيوا</string>
     <string name="YogsBrain_Gender">masculine</string>
+    <string name="YogsBrain_Name">مخ Yog</string>
     <string name="YogsBrain_Name_Objective">عقل يوغ</string>
     <string name="YogsEye_Desc">عين الإله القديم، نظرة شاملة مملوءة بكراهية أبدية. يمكنك أن تشعر بها تنظر مباشرة عبر روحك.</string>
     <string name="YogsEye_Gender">masculine</string>
@@ -1256,6 +1264,7 @@
     <string name="town_deco_clock_name">ساعة</string>
     <string name="town_deco_common_bed_desc">سرير عادي.</string>
     <string name="town_deco_common_bed_name">سرير</string>
+    <string name="town_deco_common_door_desc">المغامر ذو الأخلاق الحميدة لا يجب أن يغزو ممتلكات خاصة، بدون دعوة بالطبع.</string>
     <string name="town_deco_counter_name">كونتر</string>
     <string name="town_deco_crate_bottles_name">صندوق بيرة</string>
     <string name="town_deco_crossroad_desc">عمود خشبي بسيط عليه لوائح على شكل سهم، وقد باهت النص عليها منذ زمن طويل، ربما بسبب قسوة الطقس.</string>
@@ -1318,6 +1327,16 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
+
+
+
+
+
 
 
 

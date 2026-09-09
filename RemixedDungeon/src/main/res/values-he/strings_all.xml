@@ -188,6 +188,7 @@
     <string name="Challenges_Descriptions_7">התרגלת לעובדה שהחזקה ושימוש בנשק אינם נכונים מבחינה מוסרית, אך מה עוד יכול להגן עלייך מפני היצורים המשוטטים למטה?</string>
     <string name="Challenges_Descriptions_8">המסע שלך יתחיל בביוב האפל והמסוכן של העיר, עם הדרך היחידה לפני השטח חסומה. כדי להחמיר את המצב, תוכל להשתמש רק בציוד שאתה מוצא בתוך המבוך. עם משאבים וציוד מוגבלים, ההישרדות שלך תלויה בכישורים ובאסטרטגיה שלך.</string>
     <string name="Challenges_Names_0">דיאטה</string>
+    <string name="Challenges_Names_1">האמונה היא השריון שלי</string>
     <string name="Challenges_Names_3">ארץ עקרה</string>
     <string name="Challenges_Names_4">אינטליגנציית הלהקה</string>
     <string name="Challenges_Names_5">אל האפלה</string>
@@ -266,6 +267,7 @@
     <string name="Codex_ACRead">לקרוא</string>
     <string name="Codex_Info">אחד מהספרים הרבים שניתן למצוא בכל ספרייה</string>
     <string name="Codex_Story_12">נשק בוער - בפגיעה מוצלחת, גורם נזק נוסף למטרה ועלול לשרוף אותה.</string>
+    <string name="Codex_Story_15">נשק ערפדי - במכה מוצלחת, עשוי לרפא את הגיבור בחלק מהנזק שנגרם לאויב.</string>
     <string name="Codex_Story_16">נשק בר מזל - כמעט מתעלם לחלוטין משריון האויב, וגורם להרבה יותר נזק.</string>
     <string name="Codex_Story_17">נשק מהמם - במכה מוצלחת, עלול לשתק את המטרה.</string>
     <string name="Codex_Story_20">נשק מקפיא - בפגיעה מוצלחת, עלול להאט את המטרה ולמנוע ממנה להישרף.</string>
@@ -329,6 +331,7 @@
     <string name="DriedRose_Name">ורד יבש</string>
     <string name="Drink_Message">המשקה הזה היה מרענן!</string>
     <string name="DrunkardNPC_Gender">masculine</string>
+    <string name="Drunkard_Phrase_1">עֹוד שִׁכּוּר בְּבַקָּשָׁה!</string>
     <string name="Drunkard_Phrase_2">מי צריך מים כשיש בירה!</string>
     <string name="Drunkard_Phrase_3">הבירה הזאת טעמה כמו לכלוך</string>
     <string name="Drunkard_Phrase_4">זזזזזז...</string>
@@ -776,6 +779,7 @@
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">אשפת עור המתאימה להחזיק כל כמות של חיצים</string>
     <string name="RaiseDead_Info">ניסיון להחיות את היצור האחרון שנהרג (הטקס דורש חומר טרי למדי). בעת שימוש באמנות האפלה הזו, זכור: כמעט כל יצור יכול לקום לתחייה, אך לא תמיד קל לכופף את רצונו.</string>
+    <string name="RankingsScene_NoGames">עדיין לא שיחקת שום משחק.</string>
     <string name="RankingsScene_NoInfo">אין מידע נוסף</string>
     <string name="RatArmor_Info">שריון עור העשוי מעור עכברוש. כנראה שזה לא מדבק...</string>
     <string name="RatArmor_Name">שריון חולדות</string>
@@ -1053,6 +1057,7 @@
     <string name="VileEssence_Info">جوهر فساد مركّز تم حصاده من عدو مهزوم. هذه المادة الداكنة تنبض بطاقة خبيثة وتُقدَّر كثيراً في العمليات الكيميائية.</string>
     <string name="WandHolster_Info">מחזיק דק זה עשוי מעור של חיה אקזוטית. הוא מאפשר לשאת באופן קומפקטי עד %d שרביטים.</string>
     <string name="WandHolster_Name">נרתיק שרביטים</string>
+    <string name="WandMaker_Defense">נבלע</string>
     <string name="WandMaker_Desc">הזקן החזק הזה נראה מעט מבולבל. הוא מוגן על ידי מגן קסום.</string>
     <string name="WandMaker_Dust2">הצלחת למצוא אבק גופות, %s? ערימות עצמות הן המקומות הכי ברורים לחפש בהם.</string>
     <string name="WandOfAmok_Info1">שום דבר לא קרה</string>
@@ -1128,6 +1133,7 @@
     <string name="WndHero_StaCatalogus">קטלוגים</string>
     <string name="WndHero_StaJournal">יומן</string>
     <string name="WndHero_Str">כוח</string>
+    <string name="WndImp_Reward">קח את הטבעת</string>
     <string name="WndInfoItem_NeedKey">אבל כדי לפתוח אותו תצטרך מפתח זהב.</string>
     <string name="WndInfoItem_Owner">קבר עתיק זה עשוי להכיל משהו שימושי, אבל הבעלים שלו בוודאי יתנגד לבדיקה.</string>
     <string name="WndInfoItem_Remains">זה כל מה שנותר מאחד מקודמיך. אולי כדאי לבדוק אם יש שם חפצים יקרי ערך.</string>
@@ -1142,6 +1148,7 @@
     <string name="WndLocalModInstall_title">התקן מוד ממחלקה מקומית</string>
     <string name="WndModInstall_Version">גרסה</string>
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
+    <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
     <string name="WndPetSelect_Title">בחר חיית מחמד</string>
     <string name="WndPlayGames_Show_Badges">הצג הישגים</string>
     <string name="WndPlayGames_Show_Error">הפעולה נכשלה. משהו השתבש...</string>
@@ -1247,6 +1254,7 @@
     <string name="town_deco_carpet_desc">שטיח אדום מפואר השמור לאורחים מיוחדים.</string>
     <string name="town_deco_chest_name">תיבה</string>
     <string name="town_deco_church_sign_desc">נראה שיש כנסייה בתוך הבניין הזה.</string>
+    <string name="town_deco_common_door_desc">הרפתקן מנומס לא צריך לפלוש לרכוש פרטי, בלי הזמנה כמובן.</string>
     <string name="town_deco_counter_desc">שומר על מרחק טוב בינך לבין האדם שעומד מאחוריו.</string>
     <string name="town_deco_counter_name">דלפק</string>
     <string name="town_deco_crate_bottles_name">ארגז בירה</string>
@@ -1642,6 +1650,14 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
+
+
+
+
+
 
 
 

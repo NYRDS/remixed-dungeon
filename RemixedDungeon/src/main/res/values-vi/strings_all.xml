@@ -300,6 +300,7 @@
     <string name="Codex_Info">Một trong nhiều cuốn sách có thể tìm thấy ở bất kỳ thư viện nào</string>
     <string name="Codex_Story_10">Glyph Entangle - Anh hùng có thể nhận được giáp thảo mộc, nhưng đồng thời cũng có thể bị rễ cây trói chân.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
+    <string name="Codex_Story_15">Vũ khí hút máu - Khi đánh trúng, có thể hồi máu cho Anh Hùng một phần sát thương gây ra cho kẻ địch.</string>
     <string name="Codex_Story_16">Vũ khí may mắn - gần như hoàn toàn bỏ qua giáp địch, và gây nhiều sát thương hơn đáng kể.</string>
     <string name="Codex_Story_17">Vũ khí gây choáng - Khi đánh trúng, có thể khiến mục tiêu bị tê liệt.</string>
     <string name="Codex_Story_19">Vũ khí đính độc - Khi tấn công trúng mục tiêu, có thể gây độc.</string>
@@ -320,6 +321,7 @@
     <string name="CompoundBow_Info">Các mũi tên bắn từ cây cung hợp kim này gây sát thương lớn và có độ chính xác tốt hơn cung gỗ, đổi lại là phần nào chậm hơn.</string>
     <string name="CompoundBow_Name">cung ghép</string>
     <string name="ConcreteBlock_Description">Có vẻ khối này cần %d điểm sức mạnh để đẩy</string>
+    <string name="CorpseDust_Info2">Có lẽ vì chỉ cầm nó trong tay thôi đã khiến bạn cảm thấy lo lắng và giận dữ.</string>
     <string name="CorpseDust_Name">bụi xác</string>
     <string name="CorpseExplosion_Name">Nổ Xác Chết</string>
     <string name="Crab_Gender">masculine</string>
@@ -665,6 +667,7 @@
     <string name="Level_TileDescEmptyWell">Cái giếng đã cạn khô.</string>
     <string name="Level_TileDescExit">Cầu thang dẫn xuống tầng sâu hơn.</string>
     <string name="Level_TileDescHighGrass">Rừng rậm che khuất tầm nhìn.</string>
+    <string name="Level_TileDescLockedDoor">Cái cửa này bị khóa, bạn cần một chìa khóa phù hợp để mở khóa nó.</string>
     <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
     <string name="Level_TileDescSign">Bạn không thể đọc được văn bản từ đây.</string>
     <string name="Level_TileEntrance">Lối vào sâu</string>
@@ -888,10 +891,12 @@
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Ống đựng tên bằng da phù hợp để chứa bất kỳ số lượng mũi tên nào</string>
     <string name="RabbitEars_Info">Có quan niệm rằng thỏ sinh ra đã mang may mắn, và người sở hữu một phần cơ thể của nó sẽ được thú cưng ấy ban cho vận may. Nghĩ kỹ lại, bị giết chỉ vì đôi tai của bạn – thứ sẽ dùng để làm đồ trang sức – nghe có vẻ không mấy may mắn.</string>
+    <string name="RankingsScene_NoGames">Chưa có ván chơi nào được chơi.</string>
     <string name="RankingsScene_Title">Bảng Xếp Hạng Cao Nhất</string>
     <string name="RatArmor_Info">Bộ giáp da làm từ da chuột. Nó có lẽ không truyền nhiễm...</string>
     <string name="RatArmor_Name">giáp chuột</string>
     <string name="RatHide_Name">da chuột</string>
+    <string name="RatKingCrown_Name">Mũ Vua Chuột</string>
     <string name="RatKing_Died">Vua đã chết. Chúc Vua vạn tuế!</string>
     <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Ta không ngủ!</string>
@@ -984,6 +989,7 @@
     <string name="ScrollOfLullaby_Info1">Cuộn giấy phát ra giai điệu dịu dàng.</string>
     <string name="ScrollOfLullaby_Info2">Cuộn giấy vang lên giai điệu dịu dàng và %s đã chìm vào giấc ngủ!</string>
     <string name="ScrollOfLullaby_Info3">Cuộn giấy phát ra giai điệu êm dịu và quái vật ngủ say!</string>
+    <string name="ScrollOfMagicMapping_Name">Cuộn Bản Đồ Phép Thuật</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
     <string name="ScrollOfMirrorImage_Name">Cuộn giấy Bản sao Gương</string>
     <string name="ScrollOfPsionicBlast_Info">Cuộn giấy này chứa năng lượng hủy diệt, có thể được kênh tâm linh để gây sát thương cực lớn cho tất cả sinh vật trong tầm nhìn. Một tia chớp ánh sáng đi kèm sẽ tạm thời làm mù tất cả mọi người trong vùng ảnh hưởng, bao gồm cả người đọc cuộn giấy.</string>
@@ -1213,6 +1219,7 @@
     <string name="Using_Failed_Because_Blind">Bạn không thể sử dụng \\&quot;%s\\&quot; khi đang bị mù.</string>
     <string name="Using_Failed_Because_Magic">Một phép thuật mạnh mẽ ngăn cản bạn sử dụng \&quot;%s\&quot;.</string>
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
+    <string name="WandMaker_Defense">đã hấp thụ</string>
     <string name="WandMaker_Desc">Người đàn ông già nua nhưng vẫn khỏe mạnh này mang vẻ bối rối nhẹ. Anh ta được bảo vệ bởi một khiên phép thuật.</string>
     <string name="WandMaker_Dust1">Ôi, thật bất ngờ dễ chịu khi gặp được một người đàng hoàng ở nơi này! Tôi đến đây để tìm một nguyên liệu hiếm - _bụi xác chết_. Nó có thể thu thập từ những bộ xương, và trong dungeon có rất nhiều. Là một pháp sư, tôi hoàn toàn có thể tự vệ trước quái vật nơi đây, nhưng tôi lạc mất chỉ trong chốc lát — thật xấu hổ. Có lẽ bạn có thể giúp tôi? Tôi sẽ vui lòng trả công cho bạn bằng một trong những cây đũa phép tốt nhất của mình.</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
@@ -1247,6 +1254,7 @@
     <string name="WarHammer_Name">Búa chiến tranh</string>
     <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">Tia bóng tối của %1$s đã giết bạn...</string>
+    <string name="Warlock_Name_Objective">phù thủy lùn</string>
     <string name="WarriorArmor_Prompt">Chọn hướng để nhảy</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
@@ -1307,6 +1315,7 @@
     <string name="WndHero_Exp">Kinh nghiệm</string>
     <string name="WndHero_StaCatalogus">Danh mục</string>
     <string name="WndHero_StaJournal">Nhật ký</string>
+    <string name="WndImp_Reward">Nhận chiếc nhẫn</string>
     <string name="WndInfoItem_Inside">Bạn có thể thấy %s bên trong, nhưng để mở rương bạn cần một chìa khóa vàng.</string>
     <string name="WndInfoItem_NeedKey">Nhưng để mở nó, bạn cần một chìa khóa vàng.</string>
     <string name="WndInfoItem_Owner">Ngòi mộ cổ này có thể chứa vật hữu ích, nhưng chủ sở hữu chắc chắn sẽ phản đối việc kiểm tra.</string>
@@ -1418,6 +1427,7 @@
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">Bộ não của Yog-Dzewa. Nguồn gốc của mọi điều ác từng xuất hiện từ ngục dưới đất.</string>
     <string name="YogsBrain_Gender">masculine</string>
+    <string name="YogsBrain_Name">bộ não của Yog</string>
     <string name="YogsBrain_Name_Objective">não của Yog</string>
     <string name="YogsEye_Desc">Mắt của Thần Cổ, ánh nhìn toàn kiến đầy ắp căm thù vĩnh cửu. Bạn có thể cảm thấy nó nhìn thấu qua linh hồn của mình.</string>
     <string name="YogsEye_Gender">masculine</string>
@@ -1454,6 +1464,7 @@
     <string name="town_deco_church_sign_desc">Có vẻ như bên trong tòa nhà này có một nhà thờ.</string>
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
     <string name="town_deco_common_bed_desc">Giường bình thường.</string>
+    <string name="town_deco_common_door_desc">Một phiêu lưu gia có nhân cách không nên xâm phạm tài sản riêng tư, nếu không được mời.</string>
     <string name="town_deco_counter_desc">Giữ khoảng cách hợp lý giữa bạn và người đứng phía sau nó.</string>
     <string name="town_deco_counter_name">Quầy</string>
     <string name="town_deco_crate_bottles_desc">Chai bia đã trở thành một sở thích rất phổ biến giữa các chủ quán rượu.</string>
@@ -1533,6 +1544,18 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
