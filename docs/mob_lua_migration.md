@@ -4,58 +4,109 @@ How to move a mob from a java class to json data + lua script while keeping
 old saves loadable. Long-term goal: every entity is json/lua; only the core
 engine stays java.
 
+Strategy (revised 2026-09-10, replaces the shell-class/alias design):
+
+1. **One-time engine change**: saves resolve mobs by `entityKind` string
+   through the existing factories (`MobFactory`), instead of
+   `Class.forName` on the stored FQN. The FQN stays in the bundle and
+   remains the fallback for old saves.
+2. **Per-mob migration** then needs no save code at all: add json + lua,
+   delete the java class and its registration — the factory automatically
+   serves old and new saves the data-defined mob, because it is keyed by the
+   entity kind, which is just the class simple name.
+
 Reference examples of fully data-defined mobs (no java class): `BlackRat`,
 `Snail`, `DeepSnail`, `Bee`, `BlackCat` — each is `mobsDesc/<Kind>.json` +
 `scripts/mobs/<Kind>.lua`, instantiated as `CustomMob` by the json scan in
 `MobFactory`.
 
-## Why save compat is non-trivial
+## Save mechanics (why this works)
 
-Facts about persistence (verified in code):
-
-- Each mob is stored in the level bundle as a nested `Bundlable` with
-  `__className` = **fully-qualified java class name**. On load,
-  `Bundle.get()` does `Class.forName(clName)` → `newInstance()` →
-  `restoreFromBundle()` (`com.watabou.utils.Bundle`).
-- The entity kind string is **not persisted** for java mobs — it is derived
-  as `getClass().getSimpleName()` (`Actor.getEntityKind`). `CustomMob`
-  persists its kind as the `@Packable` field `mobClass`, but old java-mob
-  bundles don't have that field.
+- Today each mob is stored in the level bundle as a nested `Bundlable` with
+  `__className` = fully-qualified java class name; `Bundle.get()` does
+  `Class.forName` → `newInstance()` → `restoreFromBundle()`. If the class is
+  missing, the mob is **silently skipped** (logged, save loads, mob gone) —
+  the data-loss risk this procedure eliminates.
+- The entity kind of a java mob is `getClass().getSimpleName()` — never
+  persisted. `MobFactory` registers every java mob under its simple name and
+  every json def under its file name; `mobByName(kind)` returns the java
+  class if registered, else `new CustomMob(kind)` (loads
+  `mobsDesc/<Kind>.json` + `scriptFile`). So `kind` alone is sufficient to
+  construct any mob, java or data.
+- Deriving the kind from a legacy FQN is faithful: strip the package
+  (substring after the last `.`), then after any `$` for nested classes
+  (`...mobs.King$Undead` → `Undead`). The result is exactly the factory key
+  by construction.
 - Restore chain (`Char.restoreFromBundle`): `fillMobStats(true)` re-reads
   `mobsDesc/<Kind>.json` and re-attaches `scriptFile`; then hp/ht/lvl/fraction
   and buffs are applied from the bundle; then lua `loadData` and `fillStats`
-  run. The lua script is bound lazily by kind: `scripts/mobs/<Kind>` with
-  `scripts/mobs/Dummy` fallback (`Char.getScript`).
-- Lua state round-trips through the save: `Char.storeInBundle` saves
-  `script:saveData()`, restore calls `script:loadData(str)`. The `mob` lua
-  library implements this via `self.data` serialized with serpent.
-- **Failure mode:** if `Class.forName` fails (class deleted, renamed, moved
-  package), the mob is silently skipped — exception is logged, the save
-  loads, the mob is gone. This is the data-loss risk of a careless migration.
+  run. The lua script binds lazily by kind (`scripts/mobs/<Kind>`, Dummy
+  fallback). Lua state round-trips via `LUA_DATA` (`saveData`/`loadData`,
+  serpent-serialized `self.data`).
+- Mob restore sites in saves: `Level` `MOBS` collection and `Dungeon` `PETS`
+  collection. Nothing else deserializes `Mob` instances.
 
-Consequences:
+## Step A — kind-based save resolution (one-time engine work)
 
-1. The **kind string is the stable identity** — bestiary, `MobFactory.mobByName(kind)`
-   respawn paths, quest/level string refs all use it. Never rename it.
-2. The **java class FQN must keep resolving** for every save version you
-   support loading. Deleting the class requires a restore shell or alias
-   (Step 4).
+A1. Write the kind: in `Char.storeInBundle`, `bundle.put("entityKind",
+    getEntityKind())`. (Later, when items migrate, generalize the same way
+    for Item; Char covers Level.MOBS and Dungeon.PETS today.)
 
-## Step 0 — Survey the mob
+A2. Resolution with fallback. Add a resolver overload
+    `getCollection(key, type, Function<String,Bundlable> byKind)` in
+    `Bundle`; element resolution order:
 
-- All java construction sites: `new Rat(`, `Rat.class`, inner classes
-  (`King.Undead`, `Ghost.FetidRat`, `WandOfFlock.Sheep` are constructed by
-  engine code — those call sites must switch to `MobFactory.mobByName(kind)`
-  before the class can shrink).
-- Existing json def: many java mobs already have a partial `mobsDesc/<Kind>.json`
-  (java `fillMobStats` reads it). Complete it rather than duplicate.
-- Existing lua: `scripts/mobs/<Kind>.lua` may already exist (it binds by kind
-  even for java mobs).
+    1. `entityKind` field present → `byKind.apply(kind)`; if the resolver
+       recognizes it, use the instance.
+    2. else derive kind from legacy `__className` (strip package, strip
+       `$`-tail) → resolver; if unrecognized, fall through.
+    3. fallback: today's exact `Class.forName(__className)` path — keeps
+       heroes, blobs, buffs, levels and any unregistered class working
+       unchanged.
 
-## Step 1 — Author the json def
+    After construction (either path), run the same
+    `BundleHelper.UnPack` + `restoreFromBundle` sequence as today.
 
-`RemixedDungeon/src/main/assets/mobsDesc/<Kind>.json`. Stats must be explicit
-authored values (see CustomMob/Mob `fillMobStats` for the consumed fields):
+A3. Non-throwing factory entry: `MobFactory.tryByName(kind)` returning null
+    for unknown kinds (`mobByName` throws; the resolver must fall back, not
+    throw). Mind the challenge filters inside `hasMob` — a filtered kind
+    (e.g. `ArmoredStatue` under No armor) returning null is fine, the FQN
+    fallback preserves today's behavior.
+
+A4. Pass the resolver at both sites: `Level.restoreFromBundle` (MOBS) and
+    `Dungeon` (PETS): `bundle.getCollection(MOBS, Mob.class,
+    MobFactory::tryByName)`.
+
+A5. Processor fix — required before any java class is deleted. Generated
+    `BundleHelper.UnPack` restores `@Packable` fields with a hardcoded
+    default: `mobClass = bundle.optString("mobClass", "Unknown")`. A legacy
+    java-mob bundle routed through the factory has no `mobClass` field, so
+    the kind pinned by `new CustomMob(kind)` would be clobbered to
+    `"Unknown"`. Fix in `PdAnnotationProcessor.generateDirectUnpackCode`:
+    when no explicit `defaultValue` is set, generate the **current field
+    value** as the default (`bundle.optString($S, typedArg.$L)`). For a
+    freshly constructed object that is identical to today's behavior; for
+    factory-pinned identity fields it preserves them. Regenerates
+    automatically on compile.
+
+Why old saves need no conversion: a pre-`entityKind` save stores `...mobs.Rat`;
+derived kind `Rat` → factory. If `Rat` is still registered → same java mob
+as before, byte-identical behavior. If `Rat` was already migrated →
+`CustomMob("Rat")` → json stats + lua behavior. If the derivation misses
+(unregistered kind), the FQN fallback keeps the old behavior. Downgrade
+compat: old app versions ignore the extra `entityKind` field and read the
+FQN as before.
+
+## Step B — migrate one mob
+
+B0. **Survey**: all java construction sites (`new Rat(`, `Rat.class`, nested
+    classes like `King.Undead`, `WandOfFlock.Sheep` constructed by engine
+    code — switch them to `MobFactory.mobByName(kind)`). Check for an
+    existing partial `mobsDesc/<Kind>.json` (java `fillMobStats` reads it)
+    and `scripts/mobs/<Kind>.lua` (binds by kind even for java mobs).
+
+B1. **Author the json def** `mobsDesc/<Kind>.json` — explicit authored
+    stats, no derived heuristics:
 
 ```json
 {
@@ -74,16 +125,11 @@ authored values (see CustomMob/Mob `fillMobStats` for the consumed fields):
 }
 ```
 
-Notes:
+    `spriteDesc`/string ids are optional if conventional locations exist.
+    `fraction`, `canBePet`, `friendly`, `immortal`, `movable` are re-read
+    from json on every load, even for old saves — json is authoritative.
 
-- `spriteDesc`/name ids are optional if conventional locations exist
-  (`spritesDesc/<Kind>.json`, `<Kind>_Name` string ids).
-- `fraction`, `canBePet`, `friendly`, `immortal`, `movable` are re-read from
-  json on every load, even for old saves — json is authoritative for them.
-
-## Step 2 — Move behavior to lua
-
-`RemixedDungeon/src/main/assets/scripts/mobs/<Kind>.lua`:
+B2. **Move behavior to lua** `scripts/mobs/<Kind>.lua`:
 
 ```lua
 local RPD = require "scripts/lib/commonClasses"
@@ -108,86 +154,46 @@ return mob.init{
 }
 ```
 
-Mapping: each callback replaces the corresponding java override
-(`attackProc` → `Mob.attackProc`, `defenceProc` → `defenceProc`, `act` →
-state `act` logic, `die` → `die`, etc.). Engine dispatches into the script
-from `Mob`/`Char` hook points; the `mob` library bridges names.
+    Each callback replaces the corresponding java override (`attackProc` →
+    `Mob.attackProc`, etc.); the engine dispatches into the script from
+    `Mob`/`Char` hook points, the `mob` library bridges names.
 
-**State rules — the save-compat core of this step:**
+    **State rules — save compat of this step:**
 
-- Only `self.data` (via `mob.storeData`/`mob.restoreData`, or plain fields in
-  the `mob.init` table's `data`) survives saving — serpent-serialized into
-  `LUA_DATA`. Anything else (upvalues, engine-side java fields you stopped
-  persisting) is lost on load.
-- `stats`/`fillStats` runs on construction **and on every restore**
-  (`Char.restoreFromBundle` ends with `script:fillStats()`). It must be
-  idempotent and deterministic: never roll random stats there without
-  persisting the roll — an elite variant would silently re-roll on every
-  load. Derive variants from `self.data` set at spawn.
+    - Only `self.data` survives saving (serpent-serialized into
+      `LUA_DATA`). Upvalues and non-packed java fields are lost on load.
+    - `stats` runs on construction **and on every restore**. It must be
+      idempotent and deterministic: never roll random stats there without
+      persisting the roll in `self.data` — an elite variant would silently
+      re-roll on every load.
 
-## Step 3 — Slim the java class to a restore shell
-
-Replace the class body with a shell (keep package and name — the FQN is the
-save key):
-
-```java
-/**
- * Restore shell: pre-migration saves reference this class by name.
- * All stats/behavior live in mobsDesc/Rat.json + scripts/mobs/Rat.lua.
- */
-public class Rat extends CustomMob {
-    public Rat() {
-        mobClass = "Rat";
-        fillMobStats(false);
-        getScript().run("fillStats");
-    }
-}
-```
-
-- Keep the `MobFactory.registerMobClass(Rat.class)` entry. New spawns go
-  through the shell, which is just `CustomMob` pinned to the kind.
-- Do this only after Step 0 call sites use kind-based construction.
-- Delete overridden stat getters (`dmgMin`, `attackSkill`, …) and behavior
-  methods — json+lua own them now. Keep only what no json/lua field expresses
-  yet (each leftover is engine work to expose as data, not a reason to keep
-  logic in java).
-
-If a mob still has substantial engine-coupled behavior, an incremental
-variant is fine: keep the java class as-is, add/complete the json def and
-move selected methods to lua (the script binds by kind and the engine calls
-its hooks first). Saves stay compatible at every intermediate point.
-
-## Step 4 — Retiring the shell class (optional, later)
-
-A shell is three lines and permanent — that is acceptable and recommended.
-Removing it entirely requires:
-
-1. `Bundle.addAlias(CustomMob.class, "<old FQN>")` so old `__className`
-   resolves. The mechanism exists (`Bundle.aliases`) but is currently
-   **insufficient for mobs**: old bundles lack the `mobClass` field, so the
-   restored `CustomMob` cannot learn its kind. A small engine change is
-   needed first — pass the aliased (original) name to the instance at
-   `Bundle.get()` so it can set `mobClass`. Until that lands, keep shells.
-2. A save-generation cut-off decision: aliases must live as long as loading
-   saves older than the migration is supported.
-
-Never rename or move the shell class afterwards — that is equivalent to
-deleting it (same silent data loss).
+B3. **Delete the java class and its `registerMobClass` entry.** No shell,
+    no alias, no save-code: Step A routes every save version to
+    `CustomMob(kind)`. Keep the kind string and class simple name stable
+    forever — they are the save and mod identity. Until the class is
+    actually deleted, an incremental variant is fine: keep the class, add
+    json+lua, move methods over one by one (script binds by kind and the
+    engine calls its hooks).
 
 ## Verification checklist
 
-1. Build: `:RemixedDungeonDesktop:compileJava`.
-2. **Old-save fixture:** before starting, create a save containing the mob
-   (debug spawn), copy it out of the rundir. After each step, launch from
-   rundir and `/debug/continue_game`: mob must restore with correct name,
-   sprite, hp/ht, fraction/pet state, loot, and behavior. Debug saves are
-   cleartext — grep them for `__className` to confirm what is stored.
-3. New-game spawn of the kind; kill it (loot/carcass), let it path and attack.
-4. Watch logs on load: `load: <kind> <id>` vs `skip:` (a `skip:` or an
-   EventCollector exception with the class name = restore broken),
+1. Build: `:RemixedDungeonDesktop:compileJava` (after Step A, this also
+   regenerates `BundleHelper`).
+2. **Old-save fixture**: before starting, create a save containing the mob
+   (debug spawn), copy it out of the rundir. After each step,
+   `/debug/continue_game` from rundir: mob restores with correct name,
+   sprite, hp/ht, fraction/pet state, loot, behavior. Debug saves are
+   cleartext — grep them for `entityKind`/`__className` to confirm what is
+   stored.
+3. New-game spawn of the kind; kill it (loot/carcass), let it path, attack.
+4. Logs on load: `load: <kind> <id>` vs `skip:` (a `skip:` or an
+   EventCollector exception naming the class = restore broken),
    `No mob def: <kind>` = json missing.
 5. `MobFactory.allMobs()` smoke (mob viewer) — catches missing sprite/json
-   for every kind at once.
-6. Confirm lua state round-trip: set state at spawn, save, load, verify.
-7. `spotlessApply` (imports only); match the file's dominant indent — repo
+   across all kinds at once.
+6. Lua state round-trip: set state at spawn, save, load, verify.
+7. After Step A: load a pre-change save and diff behavior; then delete one
+   low-risk java mob class and confirm its old-save fixture still restores
+   (now via factory→CustomMob).
+8. `spotlessApply` (imports only); match the file's dominant indent — repo
    has no unified indent style.
