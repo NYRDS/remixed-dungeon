@@ -983,6 +983,7 @@
     <string name="RottenFood_Message">Walging!</string>
     <string name="RottenMeat_Name">bedorven vlees</string>
     <string name="RottenOrgan_Info">Een ontbindend orgaan, geoogst van een verslagen vijand. Ondanks zijn verrotte staat bevat het waardevolle stoffen voor alchemistische processen.</string>
+    <string name="RottenPasty_Info">Deze pasty ziet er vies uit.</string>
     <string name="RottenPumpkinPie_Info">Hoewel het vers wel heerlijk was, is er geen manier dat het nog eetbaar is.</string>
     <string name="RottenPumpkinPie_Name">bedorven pompoentaart</string>
     <string name="RottenRation_Name">Bedederde ratoen</string>
@@ -1628,6 +1629,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 
