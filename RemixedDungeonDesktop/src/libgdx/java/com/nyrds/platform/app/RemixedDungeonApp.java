@@ -3,6 +3,7 @@ package com.nyrds.platform.app;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.nyrds.lua.LuaSandbox;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -53,6 +54,10 @@ public class RemixedDungeonApp {
                 if (arg.startsWith("--windowed")) {
                     windowed = true;
                     System.out.println("Windowed mode enabled via command line flag: " + arg);
+                }
+                if (arg.startsWith("--nosound")) {
+                    GamePreferences.noSound = true;
+                    System.out.println("Sound disabled via command line flag: " + arg);
                 }
                 if (arg.startsWith("--minimized")) {
                     minimized = true;

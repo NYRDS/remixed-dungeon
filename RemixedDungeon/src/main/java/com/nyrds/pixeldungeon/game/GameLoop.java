@@ -216,10 +216,10 @@ public class GameLoop {
         SystemText.invalidate();
         TextureCache.clear();
 
-        MusicManager.INSTANCE.enable(GamePreferences.music());
+        MusicManager.INSTANCE.enable(GamePreferences.music() && !GamePreferences.noSound);
         MusicManager.INSTANCE.resume();
 
-        Sample.INSTANCE.enable(GamePreferences.soundFx());
+        Sample.INSTANCE.enable(GamePreferences.soundFx() && !GamePreferences.noSound);
         Sample.INSTANCE.resume();
 
         if (doOnResume != null) {

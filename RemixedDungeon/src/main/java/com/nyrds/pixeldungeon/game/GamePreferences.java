@@ -22,6 +22,10 @@ import com.watabou.pixeldungeon.windows.elements.Tool;
 import java.util.Locale;
 
 public class GamePreferences {
+
+    // --nosound cli flag: audio stays off regardless of saved prefs
+    public static boolean noSound = false;
+
     public static void zoom(double value) {
         Preferences.INSTANCE.put(CommonPrefs.KEY_ZOOM, value);
     }
@@ -31,7 +35,7 @@ public class GamePreferences {
     }
 
     public static void music(boolean value) {
-        MusicManager.INSTANCE.enable(value);
+        MusicManager.INSTANCE.enable(value && !noSound);
         Preferences.INSTANCE.put(CommonPrefs.KEY_MUSIC, value);
     }
 
@@ -40,7 +44,7 @@ public class GamePreferences {
     }
 
     public static void soundFx(boolean value) {
-        Sample.INSTANCE.enable(value);
+        Sample.INSTANCE.enable(value && !noSound);
         Preferences.INSTANCE.put(CommonPrefs.KEY_SOUND_FX, value);
     }
 
