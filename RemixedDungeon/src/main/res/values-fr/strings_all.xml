@@ -1411,6 +1411,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Mob_Died">Vous entendez quelque chose mourir au loin</string>
     <string name="Mob_FollowMe">Je te suis !</string>
     <string name="Mob_GoingTo">Déjà en mouvement !</string>
+    <string name="Mob_Guarding">Je garde cet endroit !</string>
     <string name="Mob_ItemUse">%1$s utilise %2$s</string>
     <string name="Mob_PetDied">Votre animal est mort : %s</string>
     <string name="Mob_ReadyForOrder">%s attend votre ordre.</string>
@@ -3090,6 +3091,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

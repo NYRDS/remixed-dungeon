@@ -1426,6 +1426,7 @@ Dieses Leuchtfeuer wurde auf irgendwo in der %d . Etage von Remixed Dungeon gese
     <string name="Mob_StaControlledStatus">Diese/r/s %s ist in unheiligem Besitz</string>
     <string name="Mob_StaFleeingStatus">Dieser %s flüchtet</string>
     <string name="Mob_StaFleeingStatus2">Dieser%1$sflieht vor%2$s</string>
+    <string name="Mob_StaGuardStatus">Dieser %s bewacht</string>
     <string name="Mob_StaHuntingStatus">Dieser %s jagd</string>
     <string name="Mob_StaHuntingStatus2">Dieser %1$s jagt nach %2$s</string>
     <string name="Mob_StaPassiveStatus">Dieser %s wartet ab</string>
@@ -3066,6 +3067,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
