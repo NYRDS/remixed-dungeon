@@ -514,6 +514,7 @@
     <string name="HeroClass_Elf">yêu tinh</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
     <string name="HeroClass_ElfPerks_2">Tiên nữ bắt đầu với một cây cung gỗ được nâng cấp và một lứa tên.</string>
+    <string name="HeroClass_ElfPerks_4">Yêu tinh hồi phục nhiều máu hơn từ sương mai.</string>
     <string name="HeroClass_ElfPerks_5">Yếu tinh kém thành thạo hơn với vũ khí cận chiến.</string>
     <string name="HeroClass_GnollPerks_1">Gnoll bắt đầu với 5 điểm sức khỏe</string>
     <string name="HeroClass_GnollPerks_2">Gnoll bắt đầu không có giáp nào nhưng có một cái rìu tomahawk độc nhất</string>
@@ -1575,6 +1576,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

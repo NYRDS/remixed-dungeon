@@ -920,6 +920,7 @@
     <string name="RaiseDead_Info">Poging om het laatst gedode wezen op te wekken (het ritueel vereist vrij vers materiaal). Bij het gebruik van deze duistere kunst, onthoud: bijna elk wezen kan worden opgewekt, maar niet ieders wil is gemakkelijk te buigen.</string>
     <string name="RaiseDead_Name">Dood opwekken</string>
     <string name="RankingsScene_NoGames">Er zijn nog geen spellen gespeeld.</string>
+    <string name="RankingsScene_Title">Topranglijsten</string>
     <string name="RankingsScene_Total">Totaal gespeelde spellen: </string>
     <string name="RatArmor_Info">Een leren pantser gemaakt van rattenhuid. Het is waarschijnlijk niet besmettelijk...</string>
     <string name="RatArmor_Name">ratten pantser</string>
@@ -1624,6 +1625,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 

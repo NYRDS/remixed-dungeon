@@ -1415,6 +1415,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Mob_Died">Oyes algo morir a lo lejos.</string>
     <string name="Mob_FollowMe">¡Te sigo!</string>
     <string name="Mob_GoingTo">¡Ya voy!</string>
+    <string name="Mob_Guarding">¡Guardando este lugar!</string>
     <string name="Mob_ItemUse">%1$s usa %2$s</string>
     <string name="Mob_PetDied">Tu mascota murió: %s</string>
     <string name="Mob_ReadyForOrder">%slisto para usarse.</string>
@@ -3078,6 +3079,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
