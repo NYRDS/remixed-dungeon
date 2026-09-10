@@ -59,7 +59,9 @@ A2. Resolution with fallback. Add a resolver overload
     1. `entityKind` field present → `byKind.apply(kind)`; if the resolver
        recognizes it, use the instance.
     2. else derive kind from legacy `__className` (strip package, strip
-       `$`-tail) → resolver; if unrecognized, fall through.
+       `$`-tail) → resolver — but only accept resolutions backed by a java
+       registration or an existing data def (see A3 gate); otherwise fall
+       through.
     3. fallback: today's exact `Class.forName(__className)` path — keeps
        heroes, blobs, buffs, levels and any unregistered class working
        unchanged.
@@ -67,15 +69,30 @@ A2. Resolution with fallback. Add a resolver overload
     After construction (either path), run the same
     `BundleHelper.UnPack` + `restoreFromBundle` sequence as today.
 
-A3. Non-throwing factory entry: `MobFactory.tryByName(kind)` returning null
-    for unknown kinds (`mobByName` throws; the resolver must fall back, not
-    throw). Mind the challenge filters inside `hasMob` — a filtered kind
-    (e.g. `ArmoredStatue` under No armor) returning null is fine, the FQN
-    fallback preserves today's behavior.
+A3. Non-throwing factory entries with a strict gate. The resolver must
+    return null (→ FQN fallback), never guess:
 
-A4. Pass the resolver at both sites: `Level.restoreFromBundle` (MOBS) and
-    `Dungeon` (PETS): `bundle.getCollection(MOBS, Mob.class,
-    MobFactory::tryByName)`.
+    - `MobFactory.tryByName(kind)`: null unless `hasMob(kind)`
+      (`mobByName` throws on unknown; and a no-def `CustomMob(kind)` must
+      never be constructed from a bare kind). Mind the challenge filters
+      inside `hasMob` — a filtered kind (e.g. `ArmoredStatue` under
+      No armor) returning null is fine, the FQN fallback preserves today's
+      behavior.
+    - `ItemFactory.tryByName(kind)`: same shape. **Do not route the
+      resolver through `itemByName` unguarded** — its tail falls back to
+      `CustomItem(kind)` and, on failure, to Gold, silently replacing any
+      unrecognized item. Gate: java registration, `scripts/items/<kind>.lua`
+      existing, or the `Carcass of <Mob>` prefix. Add `ItemFactory.hasItem`.
+
+    The gate makes legacy (no `entityKind`) bundles safe: a derived kind
+    resolves only into a java class or a real data def — never into a
+    def-less CustomMob or the Gold tail. Explicit `entityKind` (new saves)
+    may use the full factory including composite kinds like
+    `Carcass of Rat`.
+
+A4. Resolver call sites — mobs: `Level.restoreFromBundle` (MOBS) and
+    `Dungeon` (PETS). Items: `Heap` (ITEMS), `Bag` (ITEMS — covers
+    backpack and all bags), `Mob` (LOOT), `Bones` (ITEM).
 
 A5. Processor fix — required before any java class is deleted. Generated
     `BundleHelper.UnPack` restores `@Packable` fields with a hardcoded
@@ -96,6 +113,31 @@ as before, byte-identical behavior. If `Rat` was already migrated →
 (unregistered kind), the FQN fallback keeps the old behavior. Downgrade
 compat: old app versions ignore the extra `entityKind` field and read the
 FQN as before.
+
+## Coverage audit (2026-09-10)
+
+Transitive closure over all `Mob`/`Item` descendants in
+`RemixedDungeon/src/main/java`, checked against factory registrations and
+data-def scans (`mobsDesc/*.json`, `scripts/items/*.lua`):
+
+- Mobs: 108 concrete descendants. All registered or json-defined except
+  `TreacherousSpirit` (spawned by AzuterronNPC, saveable) and
+  `ImpShopkeeper` (LastShopLevel shops) — **both need registration before
+  Step A goes live**. `CustomMob`/`MultiKindMob` are base classes; the
+  nested `WandOfFlock$Sheep` is registered manually as `Sheep`.
+- Items: 185 concrete descendants. All registered or lua-defined except
+  `ChaosBlade` (chaos event → inventory, saveable — **needs
+  registration**); `Carcass` (dropped on mob death, saved in heaps) is fine
+  once resolution reads `entityKind` — its kind is the composite
+  `Carcass of <Mob>` and `itemByName` already handles the prefix. The rest
+  of the unregistered list are base classes never instantiated directly
+  (`Armor`, `Ring`, `Potion`, `Weapon`, `Key`, `Bag`, `Seed`, …), UI-only
+  (`ItemPlaceholder`), reconstructed-not-bundled (`Backpack` — its
+  contents store flat into the Belongings bundle), the data path itself
+  (`CustomItem`), and dead code (`TitanSword`, zero references).
+- No duplicate registrations, no simple-name collisions within mobs or
+  items, no kind shared between the mob and item factories. No entities in
+  other modules.
 
 ## Step B — migrate one mob
 
