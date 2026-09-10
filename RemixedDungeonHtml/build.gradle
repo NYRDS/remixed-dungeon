@@ -3,9 +3,14 @@ plugins {
     id 'org.teavm' version '0.13.1'
 }
 
+// Load version information from shared properties file (same as desktop)
+def versionPropsFile = file("../version.properties")
+def versionProps = new Properties()
+versionPropsFile.withInputStream { versionProps.load(it) }
+
 project.ext {
-    version = '32.3.alpha'
-    version_code = 1236
+    version = versionProps['VERSION_NAME']
+    version_code = versionProps['VERSION_CODE'].toInteger()
     teaVmVersion = '0.13.1'
     // must match the gdx version gdx-teavm 1.3.0 was built against; gradle
     // resolves conflicts to highest anyway, so 1.12.1 here silently became 1.13.5
