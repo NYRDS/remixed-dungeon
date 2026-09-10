@@ -101,6 +101,7 @@
     <string name="Badges_LevelReached5">Niveau 30 bereikt</string>
     <string name="Badges_Lich_Slain">Lich gedood</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
+    <string name="Badges_MonsterSlain2">50 vijanden verslagen</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
     <string name="Badges_MonsterSlain5">1000 vijanden verslagen</string>
     <string name="Badges_NightHunter">5 monsters gedood in de nacht</string>
@@ -1039,6 +1040,7 @@
     <string name="Scroll_Blinded">Je kunt geen scroll lezen terwijl je verblind bent</string>
     <string name="Scroll_Info">Dit perkament is bedekt met onleesbaar schrift en draagt de titel van rune %s. Wie weet wat er gebeurt als het hardop wordt gelezen?</string>
     <string name="Scroll_Name">scrol \&quot;%s\&quot;</string>
+    <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_10">Odal</string>
     <string name="Scroll_Runes_11">TIWAZ</string>
     <string name="Scroll_Runes_14">ALGIZ</string>
@@ -1629,6 +1631,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
