@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
 import com.nyrds.pixeldungeon.items.chaos.ChaosArmor;
+import com.nyrds.pixeldungeon.items.chaos.ChaosBlade;
 import com.nyrds.pixeldungeon.items.chaos.ChaosBow;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
@@ -288,6 +289,7 @@ public class ItemFactory {
         registerItemClass(PotionOfExperience.class);
         registerItemClass(RatSkull.class);
         registerItemClass(ChaosCrystal.class);
+        registerItemClass(ChaosBlade.class);
         registerItemClass(SpiderCharm.class);
         registerItemClass(RingOfDetection.class);
         registerItemClass(RingOfShadows.class);

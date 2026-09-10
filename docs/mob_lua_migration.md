@@ -48,23 +48,32 @@ Reference examples of fully data-defined mobs (no java class): `BlackRat`,
 
 ## Step A — kind-based save resolution (one-time engine work)
 
-A1. Write the kind: in `Char.storeInBundle`, `bundle.put("entityKind",
-    getEntityKind())`. (Later, when items migrate, generalize the same way
-    for Item; Char covers Level.MOBS and Dungeon.PETS today.)
+A1. Write two fields next to `__className`: `entityKind` (= `getEntityKind()`)
+    and `entitySystem` (`"mob"`, `"item"`, `"buff"`, `"levelObject"`, …).
+    The system tag keeps categories from colliding — the same kind string
+    may exist in several systems. Implementation: default methods
+    `getEntityKind()`/`getEntitySystem()` on `Bundlable` (null default),
+    overridden by the base classes; `Bundle.put(Bundlable)` and
+    `put(key, Collection)` write both. Char covers mobs (its `entityKind`
+    already exists via `Actor`); Item, Buff, LevelObject, Blob, Heap
+    already have `getEntityKind()` — they only need the system constant.
 
-A2. Resolution with fallback. Add a resolver overload
-    `getCollection(key, type, Function<String,Bundlable> byKind)` in
-    `Bundle`; element resolution order:
+A2. Resolution with fallback, dispatching on the system tag. Bundle gains a
+    registry `Map<String, Function<String,Bundlable>>` filled at game boot
+    (`"mob" → MobFactory::tryByName`, `"item" → ItemFactory::tryByName`,
+    `"buff" → BuffFactory::tryByName`, `"levelObject" → …`). Element
+    resolution order:
 
-    1. `entityKind` field present → `byKind.apply(kind)`; if the resolver
-       recognizes it, use the instance.
+    1. `entitySystem`+`entityKind` present → look up the system's factory;
+       recognized kind → instance. Direct `bundle.get(key)` sites (Mob
+       loot, Bones) resolve the same way — no per-site resolver threading.
     2. else derive kind from legacy `__className` (strip package, strip
-       `$`-tail) → resolver — but only accept resolutions backed by a java
-       registration or an existing data def (see A3 gate); otherwise fall
-       through.
+       `$`-tail) → same factory — but only accept resolutions backed by a
+       java registration or an existing data def (see A3 gate); otherwise
+       fall through.
     3. fallback: today's exact `Class.forName(__className)` path — keeps
-       heroes, blobs, buffs, levels and any unregistered class working
-       unchanged.
+       heroes, blobs, levels, scripted actors, journal records and any
+       unregistered class working unchanged.
 
     After construction (either path), run the same
     `BundleHelper.UnPack` + `restoreFromBundle` sequence as today.
@@ -83,6 +92,10 @@ A3. Non-throwing factory entries with a strict gate. The resolver must
       `CustomItem(kind)` and, on failure, to Gold, silently replacing any
       unrecognized item. Gate: java registration, `scripts/items/<kind>.lua`
       existing, or the `Carcass of <Mob>` prefix. Add `ItemFactory.hasItem`.
+    - `BuffFactory`: `getBuffByName` exists but its tail yields
+      `CustomBuff`/`DummyBuff` — gate with `hasBuffForName`.
+    - `LevelObjectsFactory.objectByName` — gate with its registration
+      check.
 
     The gate makes legacy (no `entityKind`) bundles safe: a derived kind
     resolves only into a java class or a real data def — never into a
@@ -90,9 +103,11 @@ A3. Non-throwing factory entries with a strict gate. The resolver must
     may use the full factory including composite kinds like
     `Carcass of Rat`.
 
-A4. Resolver call sites — mobs: `Level.restoreFromBundle` (MOBS) and
-    `Dungeon` (PETS). Items: `Heap` (ITEMS), `Bag` (ITEMS — covers
-    backpack and all bags), `Mob` (LOOT), `Bones` (ITEM).
+A4. Call sites. With the system tag dispatching inside `Bundle`, no site
+    changes are required — collections (`Level` MOBS/OBJECTS/BLOBS/HEAPS,
+    `Dungeon` PETS, `Char` BUFFS, `Heap`/`Bag` ITEMS) and direct gets
+    (Mob LOOT, Bones ITEM) all flow through `Bundle.get`. Mobs: `Level`
+    MOBS + `Dungeon` PETS; items: Heap, Bag, Mob LOOT, Bones.
 
 A5. Processor fix — required before any java class is deleted. Generated
     `BundleHelper.UnPack` restores `@Packable` fields with a hardcoded
@@ -111,8 +126,27 @@ derived kind `Rat` → factory. If `Rat` is still registered → same java mob
 as before, byte-identical behavior. If `Rat` was already migrated →
 `CustomMob("Rat")` → json stats + lua behavior. If the derivation misses
 (unregistered kind), the FQN fallback keeps the old behavior. Downgrade
-compat: old app versions ignore the extra `entityKind` field and read the
+compat: old app versions ignore the extra fields and read the
 FQN as before.
+
+## Saved-entity systems inventory
+
+Every Bundlable category that reaches a save, and how it resolves:
+
+| System (tag)     | Factory                      | Restore sites                          | Notes |
+|------------------|------------------------------|----------------------------------------|-------|
+| `mob`            | MobFactory                   | Level MOBS, Dungeon PETS               | target of this doc |
+| `item`           | ItemFactory                  | Heap ITEMS, Bag ITEMS, Mob LOOT, Bones | Gold tail must be gated (A3) |
+| `buff`           | BuffFactory (exists)         | Char BUFFS                             | java + `scripts/buffs/*.lua` customs; tail yields CustomBuff/DummyBuff — gate |
+| `levelObject`    | LevelObjectsFactory (exists) | Level OBJECTS                          | deco, signs, barrels, plants, trap objects |
+| `blob`           | none yet                     | Level BLOBS                            | few classes, engine-ish; FQN fallback until data-fied |
+| `heap`           | none needed                  | Level HEAPS                            | single concrete class |
+| script actors    | none needed                  | Level SCRIPTS                          | ScriptedActor carries its script id in-data already |
+| journal records  | none needed                  | JOURNAL/RECORDS/LOGBOOK                | engine data, not gameplay entities |
+| `level` / hero   | none needed                  | direct gets                            | single classes, stay java |
+
+Traps exist twice: terrain triggers (`ITrigger` classes, not bundled) and
+`LevelObject` trap objects (bundled, covered by the factory above).
 
 ## Coverage audit (2026-09-10)
 
@@ -121,15 +155,16 @@ Transitive closure over all `Mob`/`Item` descendants in
 data-def scans (`mobsDesc/*.json`, `scripts/items/*.lua`):
 
 - Mobs: 108 concrete descendants. All registered or json-defined except
-  `TreacherousSpirit` (spawned by AzuterronNPC, saveable) and
-  `ImpShopkeeper` (LastShopLevel shops) — **both need registration before
-  Step A goes live**. `CustomMob`/`MultiKindMob` are base classes; the
-  nested `WandOfFlock$Sheep` is registered manually as `Sheep`.
+  `TreacherousSpirit` (spawned by AzuterronNPC) and `ImpShopkeeper`
+  (LastShopLevel shops) — **registered 2026-09-10**. `CustomMob`/
+  `MultiKindMob` are base classes; the nested `WandOfFlock$Sheep` is
+  registered manually as `Sheep`.
 - Items: 185 concrete descendants. All registered or lua-defined except
-  `ChaosBlade` (chaos event → inventory, saveable — **needs
-  registration**); `Carcass` (dropped on mob death, saved in heaps) is fine
-  once resolution reads `entityKind` — its kind is the composite
-  `Carcass of <Mob>` and `itemByName` already handles the prefix. The rest
+  `ChaosBlade` (chaos event → inventory) — **was java-side, not lua;
+  registered 2026-09-10**; `Carcass` (dropped on mob death, saved in
+  heaps) is fine once resolution reads `entityKind` — its kind is the
+  composite `Carcass of <Mob>` and `itemByName` already handles the
+  prefix. The rest
   of the unregistered list are base classes never instantiated directly
   (`Armor`, `Ring`, `Potion`, `Weapon`, `Key`, `Bag`, `Seed`, …), UI-only
   (`ItemPlaceholder`), reconstructed-not-bundled (`Backpack` — its

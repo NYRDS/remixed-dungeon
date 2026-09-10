@@ -12,6 +12,7 @@ import com.nyrds.pixeldungeon.mobs.guts.PseudoRat;
 import com.nyrds.pixeldungeon.mobs.guts.RottingFist;
 import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
 import com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat;
+import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
 import com.nyrds.pixeldungeon.mobs.guts.Worm;
 import com.nyrds.pixeldungeon.mobs.guts.YogsBrain;
 import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
@@ -101,6 +102,7 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
+import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
@@ -258,8 +260,10 @@ public class MobFactory {
 		registerMobClass(SociologistNPC.class);
 		registerMobClass(InquirerNPC.class);
 		registerMobClass(Shopkeeper.class);
+		registerMobClass(ImpShopkeeper.class);
 		registerMobClass(TownShopkeeper.class);
 		registerMobClass(SpiritOfPain.class);
+		registerMobClass(TreacherousSpirit.class);
 		registerMobClass(MirrorImage.class);
 
 		mMobsList.put("Sheep", WandOfFlock.Sheep.class);
