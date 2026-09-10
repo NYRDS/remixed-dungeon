@@ -11,6 +11,9 @@ dependencies {
     // TeaVM build-time reflection SPI (org.teavm.classlib.ReflectionSupplier)
     // used by LuaReflectionSupplier for the html/web build
     compileOnly 'org.teavm:teavm-core:0.13.1'
+    // class-name substitution SPI (maps gdx classes onto gdx-teavm's emu
+    // re-implementations); SPI exists only in teavm 0.15+
+    compileOnly 'org.teavm:teavm-extension-spi:0.15.0'
 
     annotationProcessor 'org.projectlombok:lombok:1.18.42'
     compileOnly 'org.projectlombok:lombok:1.18.42'
