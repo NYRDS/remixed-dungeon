@@ -214,6 +214,7 @@
     <string name="CandleOfMindVision_Name">Kaars der Visioenen</string>
     <string name="Candy_Info">Deze snoep ziet er zo mooi uit en ruikt ook lekker. Moet je hem echt aan iemand anders geven?</string>
     <string name="Candy_Name">snoepje</string>
+    <string name="Candy_Warning_1">Je had dat snoepje niet moeten eten. Je had beloofd het aan iemand anders te geven. Het lijkt je op geen enkele manier te hebben beïnvloed, je honger zal niet verdwijnen, het is tenslotte maar snoep.</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
     <string name="Carcass_DissectResult_Many">Uit %1$s krijg je %2$d voorwerpen.</string>
     <string name="Carcass_DissectResult_One">Uit %1$s krijg je één voorwerp.</string>
@@ -633,6 +634,7 @@
     <string name="Journal_Statue">Geanimeerd standbeeld</string>
     <string name="Journal_Wandmaker">Oude toverstafmaker</string>
     <string name="Journal_WellAwareness">Bron van Bewustzijn</string>
+    <string name="KindOfWeapon_EquipCursed">je huivert als je grip onwillekeurig strakker wordt rond je %s</string>
     <string name="King_Defense">geparreerd</string>
     <string name="King_Gender">masculine</string>
     <string name="King_Info3">Hoe durf je!</string>
@@ -1611,6 +1613,7 @@
     <string name="town_deco_wall_beam_name">Balk</string>
     <string name="town_deco_wall_brazier_name">Vuurkorf</string>
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
+    <string name="town_deco_wall_desc">Een eenvoudige muur gemaakt van houten stammen.</string>
     <string name="town_deco_wallpaper_name">behang</string>
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_weaponrack_name">Wapenrek</string>
@@ -1625,6 +1628,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 

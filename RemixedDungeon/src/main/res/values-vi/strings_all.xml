@@ -942,6 +942,7 @@
     <string name="RingOfElements_Name">Nhẫn Nguyên tố</string>
     <string name="RingOfEvasion_Info">Nhẫn này tăng cơ hội né tránh tấn công của kẻ thù.</string>
     <string name="RingOfFrost_Info">Nhẫn này được chạm khắc từ băng ma thuật. Người đeo được bảo vệ bởi aura băng giá, làm chậm và gây sát thương cho kẻ thù tấn công.</string>
+    <string name="RingOfHaggler_Info">Thực ra chiếc nhẫn này không cung cấp bất kỳ hiệu ứng ma thuật nào, nhưng nó cho thấy người đeo là thành viên của Hội Đạo Chích. Thông thường họ sẵn sàng giảm giá để đổi lấy sự miễn trừ tạm thời. Nâng cấp nhẫn này sẽ không mang lại thêm bất kỳ lợi ích nào.</string>
     <string name="RingOfHaste_Name">Nhẫn Tốc Độ</string>
     <string name="RingOfHerbalism_Info">Nhẫn này tăng cơ hội thu thập sương mai và hạt giống từ cỏ bị giẫm đạp.</string>
     <string name="RingOfMending_Info">Nhẫn này tăng cường khả năng tái sinh của cơ thể, cho phép hồi phục sức khỏe đã mất ở tốc độ nhanh hơn. Nhẫn bị suy yếu sẽ giảm hoặc thậm chí dừng lại quá trình tái sinh tự nhiên.</string>
@@ -1576,6 +1577,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
