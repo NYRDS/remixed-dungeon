@@ -53,8 +53,8 @@ hands, extra limbs, oversaturated, neon colors
 
 ### Params (Qwen-Image / Qwen3-Image)
 
-- Resolution: 1664×832 (2:1 banner, crop to 1024×500 for Play) or 1328×1328
-  square for feed posts.
+- Resolution: 1664×832 (2:1 banner, crop to 1024×500 for Play), 1328×1328
+  square for feed posts, 832×1216 portrait for story/reels format.
 - Steps 30–40, CFG ~4.0 (higher burns the pixel art), sampler euler;
   pixel-art LoRA optional at weight ≤0.6.
 - Post-process: upscale 2× nearest neighbor, then downscale — never AI
@@ -106,6 +106,7 @@ blue twilight sky.
 
 Props: inn hearth interior (holy preset), library interior with towering
 shelves, fortune teller tent with a black cat, shop counter with potions.
+Summer variant (tileset exists): swap snow for green grass and flower boxes.
 
 ### Sewers (depths 1–5)
 
@@ -319,6 +320,7 @@ written.
 - **senior monk** — `an older monk mid-teleport, afterimage of folded space`
 - **dwarf warlock** — `a robed dwarf warlock with a skull-topped staff, eyes glowing`
 - **golem** — `a massive stone golem with runes glowing through its rocky seams, earth-spirit light inside`
+- **undead dwarf** — `a skeleton dwarf still in courtly robes, a dignified white beard on the skull` — the King's summon
 - **King of Dwarves (boss)** — `a white-bearded dwarf king in red and gold royal dress, golden crown, arms raised, summoning a court of skeleton dwarves in courtly robes`
 
 ### Demon Halls
@@ -336,8 +338,10 @@ written.
 - **gnoll-zombie** — `a hunched rotten gnoll-zombie in tan fur and red rags, more meat pile than humanoid`
 - **worm** — `a giant pale segmented worm surging half out of the fleshy floor, mandibles wide`
 - **nightmare** — `a red flesh mass with one wide white eye, sprouting twitching tentacles`
+- **spirit of pain** — `a small black wisp of living darkness with angry white eyes`
 - **treacherous spirit** — `a cloud of living darkness with one gigantic pulsing eye`
 - **god's larva** — `a pale translucent grub radiating wrong divinity`
+- **mimic amulet** — `a golden amulet with a grinning face and lolling tongue — the trap dressed as the prize`
 
 ### Spider Lair
 
@@ -345,6 +349,8 @@ written.
 - **spider worker** — `a worker spider with a swollen orange abdomen, bloated like a living bomb`
 - **psi-spider** — `a frail spider with a swollen purple brain-sac, psychic ripple in the air`
 - **amber spider** — `a tough spider whose giant brain-sac glows amber as it strikes`
+- **spider guard** — `a stocky soldier-caste spider with pale markings, paralyzing venom on its fangs`
+- **spider elite guard** — `a reddish elite guard spider with pale white markings, disorienting venom`
 - **spider cocoon / egg** — props: `a white silk cocoon with something alive wriggling inside`, `a fragile white egg sac with many legs visible within`
 - **Spider Queen (boss)** — `a queen with a red-haired woman's torso and the body of a giant brown spider, court of soldiers below`
 
@@ -378,6 +384,10 @@ written.
 - **animated statue** — `a grey stone statue mid-step, red glowing eyes, a very real sword in hand`
 - **giant piranha** — `a huge carnivorous fish breaking the water surface, teeth first`
 - **magic sheep** — `a fluffy white sheep chewing cud with a blank stare, faint magic sparkle`
+- **bee** — `a small furious yellow-and-black bee, stinger first`
+- **floating crystal** — `a big shining crystal hovering in the air, orange or purple, filled with magic light`
+- **golden statue** — `a gilded stone statue mid-step, red glowing eyes, a very real sword in hand` (armored variant: `in rusted plate`)
+- **deathling** — `a dark red spiky soul-orb, a fallen hero's spirit bound to serve its summoner`
 - **air / water / earth elemental** — `a flying being of living wind`, `a dark teal blob of living water with a faint face`, `a grey clod of earth walking on stone limbs`
 - **hedgehog** — `a small round pet hedgehog, spines bristling, snout up`
 
@@ -392,6 +402,7 @@ Friendly faces met inside the dungeon.
 - **shopkeeper** — `a stout mustached shopkeeper behind a small counter set right in the dungeon, scales and price tags around`
 - **rat king** — `a marsupial rat slightly bigger than usual, wearing a tiny green-gold crown, regal pose on a small treasure pile`
 - **mirror image** — `a perfect dithered copy of the hero, edges shimmering like liquid glass`
+- **caged kobold** — `a brown-furred kobold locked in an iron-barred cage, pleading eyes` — quest captive in the ice caves
 
 ## Town NPCs — CAST blocks
 
