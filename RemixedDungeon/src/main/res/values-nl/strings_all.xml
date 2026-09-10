@@ -92,6 +92,7 @@
     <string name="Badges_HappyEnd">Goede afloop</string>
     <string name="Badges_Immured">Dood door inmuring</string>
     <string name="Badges_Info1">Insigne behaald: %s</string>
+    <string name="Badges_Info3">Nieuw insigne: %s</string>
     <string name="Badges_ItemLvl1">Item van niveau 3 verkregen</string>
     <string name="Badges_ItemLvl2">Item van niveau 6 verkregen</string>
     <string name="Badges_ItemLvl3">Item van niveau 9 verkregen</string>
@@ -1621,6 +1622,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 
