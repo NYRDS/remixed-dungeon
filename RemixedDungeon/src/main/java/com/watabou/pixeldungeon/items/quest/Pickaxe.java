@@ -8,7 +8,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.mobs.Bat;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -113,7 +112,7 @@ public class Pickaxe extends Weapon {
 	
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
-		if (!bloodStained && defender instanceof Bat && (defender.hp() <= damage)) {
+		if (!bloodStained && defender.getEntityKind().equals("Bat") && (defender.hp() <= damage)) {
 			bloodStained = true;
             QuickSlot.refresh(attacker);
         }

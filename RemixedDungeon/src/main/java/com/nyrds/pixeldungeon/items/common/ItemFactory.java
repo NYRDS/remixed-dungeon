@@ -211,6 +211,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -452,6 +453,45 @@ public class ItemFactory {
 
     public static boolean isValidItemClass(String itemClass) {
         return mItemsList.containsKey(itemClass);
+    }
+
+    /**
+     * Strict gate for save-restore: java registration, a lua item def, or a
+     * Carcass composite kind. Explicitly excludes the CustomItem/Gold tail of
+     * {@link #itemByName} - an unknown kind must resolve to null, never Gold.
+     */
+    public static boolean hasItem(@NotNull String itemClass) {
+        if (isValidItemClass(itemClass)) {
+            return true;
+        }
+        if (itemClass.startsWith(Carcass.CARCASS_OF)) {
+            return MobFactory.hasMob(itemClass.substring(Carcass.CARCASS_OF.length()));
+        }
+        return ModdingMode.isResourceExists("scripts/items/" + itemClass + ".lua");
+    }
+
+    /**
+     * Gated resolver for save-restore: null unless {@link #hasItem} passes.
+     */
+    @Nullable
+    public static Item tryByName(@NotNull String itemClass) {
+        if (!hasItem(itemClass)) {
+            return null;
+        }
+
+        try {
+            Class<? extends Item> itemJavaClass = mItemsList.get(itemClass);
+            if (itemJavaClass != null && itemJavaClass != CustomItem.class) {
+                return itemJavaClass.newInstance();
+            }
+            if (itemClass.startsWith(Carcass.CARCASS_OF)) {
+                return new Carcass(MobFactory.mobByName(itemClass.substring(Carcass.CARCASS_OF.length())));
+            }
+            return new CustomItem(itemClass);
+        } catch (Exception e) {
+            EventCollector.logException(e, itemClass);
+            return null;
+        }
     }
 
     @NotNull

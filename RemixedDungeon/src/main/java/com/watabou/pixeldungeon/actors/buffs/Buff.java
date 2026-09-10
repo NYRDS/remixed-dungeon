@@ -48,6 +48,11 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
     public int source = -1;
 
     @Override
+    public String getEntitySystem() {
+        return "buff";
+    }
+
+    @Override
     public String name() {
         String id = getEntityKind() + "Buff_Name";
         /*

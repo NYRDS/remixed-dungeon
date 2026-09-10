@@ -1698,6 +1698,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @Override
+    public String getEntitySystem() {
+        return "mob";
+    }
+
+    @Override
     public String name() {
         return getName();
     }

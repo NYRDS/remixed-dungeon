@@ -9,13 +9,16 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.levels.IceCavesLevel;
 import com.nyrds.pixeldungeon.levels.NecroLevel;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
 import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
@@ -128,6 +131,14 @@ public class Dungeon {
     @Getter
     private static boolean isometricMode = false;
     public static boolean isometricModeAllowed = false;
+
+    // register kind-based save resolvers before any bundle IO can happen
+    static {
+        Bundle.registerEntityResolver("mob", MobFactory::tryByName);
+        Bundle.registerEntityResolver("item", ItemFactory::tryByName);
+        Bundle.registerEntityResolver("buff", BuffFactory::tryByName);
+        Bundle.registerEntityResolver("levelObject", LevelObjectsFactory::tryByName);
+    }
 
 
     public static void initSizeDependentStuff(int w, int h) {
@@ -697,18 +708,20 @@ public class Dungeon {
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID, 1));
         CharsList.restoreFromBundle(bundle);
 
+        // item status handlers must exist before pets are constructed:
+        // mob loot defs (json or ctor) may build potions/wands/scrolls/rings
+        Scroll.restore(bundle);
+        Potion.restore(bundle);
+        Wand.restore(bundle);
+        Ring.restore(bundle);
+        QuickSlot.restore(bundle);
+
         restoredFollowers.clear();
         for (Mob mob : bundle.getCollection(PETS, Mob.class)) {
             if (mob != null && mob.valid() && !CharsList.isDestroyed(mob.getId())) {
                 restoredFollowers.add(mob);
             }
         }
-
-        Scroll.restore(bundle);
-        Potion.restore(bundle);
-        Wand.restore(bundle);
-        Ring.restore(bundle);
-        QuickSlot.restore(bundle);
 
         potionOfStrength = bundle.getInt(POS);
         scrollsOfUpgrade = bundle.getInt(SOU);

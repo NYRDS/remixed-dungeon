@@ -13,7 +13,6 @@ import com.nyrds.pixeldungeon.mobs.guts.RottingFist;
 import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
 import com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat;
 import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
-import com.nyrds.pixeldungeon.mobs.guts.Worm;
 import com.nyrds.pixeldungeon.mobs.guts.YogsBrain;
 import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
@@ -22,7 +21,6 @@ import com.nyrds.pixeldungeon.mobs.guts.ZombieGnoll;
 import com.nyrds.pixeldungeon.mobs.icecaves.ColdSpirit;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
-import com.nyrds.pixeldungeon.mobs.icecaves.Kobold;
 import com.nyrds.pixeldungeon.mobs.icecaves.KoboldIcemancer;
 import com.nyrds.pixeldungeon.mobs.necropolis.DeathKnight;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
@@ -66,7 +64,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Albino;
 import com.watabou.pixeldungeon.actors.mobs.Bandit;
-import com.watabou.pixeldungeon.actors.mobs.Bat;
 import com.watabou.pixeldungeon.actors.mobs.Brute;
 import com.watabou.pixeldungeon.actors.mobs.Crab;
 import com.watabou.pixeldungeon.actors.mobs.DM300;
@@ -118,6 +115,7 @@ import java.util.Map;
 import java.util.Set;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 
 
@@ -156,7 +154,6 @@ public class MobFactory {
 
 		registerMobClass(Shaman.class);
 		registerMobClass(Shadow.class);
-		registerMobClass(Bat.class);
 		registerMobClass(Brute.class);
 		registerMobClass(Tengu.class);
 		registerMobClass(Bandit.class);
@@ -202,7 +199,6 @@ public class MobFactory {
 		registerMobClass(Piranha.class);
 
 		registerMobClass(MimicAmulet.class);
-		registerMobClass(Worm.class);
 		registerMobClass(YogsBrain.class);
 		registerMobClass(YogsEye.class);
 		registerMobClass(YogsHeart.class);
@@ -227,7 +223,6 @@ public class MobFactory {
 
 		registerMobClass(Crystal.class);
 
-		registerMobClass(Kobold.class);
 		registerMobClass(KoboldIcemancer.class);
 		registerMobClass(ColdSpirit.class);
 
@@ -298,6 +293,18 @@ public class MobFactory {
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(selectedMobClass,e);
 		}
+	}
+
+	/**
+	 * Gated resolver for save-restore: null unless the kind is registered or
+	 * has a data def. Never constructs a def-less CustomMob from a bare kind.
+	 */
+	@Nullable
+	public static Mob tryByName(String kind) {
+		if (!hasMob(kind)) {
+			return null;
+		}
+		return mobByName(kind);
 	}
 
 	@NotNull

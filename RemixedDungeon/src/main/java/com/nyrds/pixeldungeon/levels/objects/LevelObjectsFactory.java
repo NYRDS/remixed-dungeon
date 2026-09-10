@@ -23,6 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -127,6 +128,22 @@ public class LevelObjectsFactory {
             return objectClassByName(objectClassName).newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
             throw new TrackedRuntimeException(Utils.EMPTY_STRING, e);
+        }
+    }
+
+    /**
+     * Gated resolver for save-restore: null unless the object kind is registered.
+     */
+    @Nullable
+    public static LevelObject tryByName(String objectClassName) {
+        if (!isValidObjectClass(objectClassName)) {
+            return null;
+        }
+        try {
+            return objectByName(objectClassName);
+        } catch (Exception e) {
+            EventCollector.logException(e, objectClassName);
+            return null;
         }
     }
 

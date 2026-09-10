@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 import lombok.SneakyThrows;
@@ -33,9 +34,18 @@ import org.json.JSONTokener;
 
 public class Bundle {
 
-    private static final String CLASS_NAME = "__className";
+    private static final String CLASS_NAME     = "__className";
+    private static final String ENTITY_KIND    = "entityKind";
+    private static final String ENTITY_SYSTEM  = "entitySystem";
 
     private static final Map<String, String> aliases = new HashMap<>();
+
+    // system tag -> kind resolver, filled at game boot by the entity factories
+    private static final Map<String, Function<String, Bundlable>> entityResolvers = new HashMap<>();
+
+    public static void registerEntityResolver(String system, Function<String, Bundlable> resolver) {
+        entityResolvers.put(system, resolver);
+    }
 
     private final JSONObject data;
 
@@ -120,9 +130,14 @@ public class Bundle {
                 clName = aliases.get(clName);
             }
 
-            Class<?> cl = Class.forName(clName);
+            Bundlable object = resolveByEntityKind();
+            if (object == null) {
+                object = resolveByDerivedKind(clName);
+            }
+            if (object == null) {
+                object = (Bundlable) Class.forName(clName).newInstance();
+            }
 
-            Bundlable object = (Bundlable) cl.newInstance();
             BundleHelper.UnPack(object, this);
             object.restoreFromBundle(this);
             return object;
@@ -134,6 +149,57 @@ public class Bundle {
             EventCollector.logException(e, clName);
             return null;
         }
+    }
+
+    @Nullable
+    private Bundlable resolveByEntityKind() {
+        String system = data.optString(ENTITY_SYSTEM, null);
+        if (system == null) {
+            return null;
+        }
+        String kind = data.optString(ENTITY_KIND, null);
+        if (kind == null) {
+            return null;
+        }
+        Function<String, Bundlable> resolver = entityResolvers.get(system);
+        if (resolver == null) {
+            return null;
+        }
+        return resolver.apply(kind);
+    }
+
+    // fixed priority for legacy (untagged) entries; systems with no cross-kind
+    // collisions today, so any deterministic order is correct
+    private static final String[] RESOLVER_PRIORITY = {"mob", "item", "buff", "levelObject"};
+
+    /**
+     * Legacy bundles carry no entityKind: derive the kind from the stored FQN
+     * (strip package, then nested-class tail) and try every system's resolver.
+     * Resolvers are strictly gated - they return null for unknown kinds, never
+     * a guess - so an unresolvable kind falls through to the FQN path.
+     */
+    @Nullable
+    private Bundlable resolveByDerivedKind(String className) {
+        int lastDot = className.lastIndexOf('.');
+        if (lastDot < 0) {
+            return null;
+        }
+        String kind = className.substring(lastDot + 1);
+        int nested = kind.lastIndexOf('$');
+        if (nested >= 0) {
+            kind = kind.substring(nested + 1);
+        }
+        for (String system : RESOLVER_PRIORITY) {
+            Function<String, Bundlable> resolver = entityResolvers.get(system);
+            if (resolver == null) {
+                continue;
+            }
+            Bundlable resolved = resolver.apply(kind);
+            if (resolved != null) {
+                return resolved;
+            }
+        }
+        return null;
     }
 
     @NotNull
@@ -272,11 +338,7 @@ public class Bundle {
     @SneakyThrows
     public void put(String key, Bundlable object) {
         if (object != null && !object.dontPack()) {
-            Bundle bundle = new Bundle();
-            bundle.put(CLASS_NAME, object.getClass().getName());
-            object.storeInBundle(bundle);
-            BundleHelper.Pack(object, bundle);
-            data.put(key, bundle.data);
+            data.put(key, bundleFor(object).data);
         }
     }
 
@@ -334,17 +396,32 @@ public class Bundle {
             JSONArray array = new JSONArray();
             for (Bundlable object : collection) {
                 if (!object.dontPack()) {
-                    Bundle bundle = new Bundle();
-                    bundle.put(CLASS_NAME, object.getClass().getName());
-                    object.storeInBundle(bundle);
-                    BundleHelper.Pack(object, bundle);
-                    array.put(bundle.data);
+                    array.put(bundleFor(object).data);
                 }
             }
             data.put(key, array);
         } catch (Exception e) {
             EventCollector.logException(e);
         }
+    }
+
+    @SneakyThrows
+    private static Bundle bundleFor(Bundlable object) {
+        Bundle bundle = new Bundle();
+        bundle.put(CLASS_NAME, object.getClass().getName());
+
+        String entityKind = object.getEntityKind();
+        if (entityKind != null) {
+            bundle.put(ENTITY_KIND, entityKind);
+        }
+        String entitySystem = object.getEntitySystem();
+        if (entitySystem != null) {
+            bundle.put(ENTITY_SYSTEM, entitySystem);
+        }
+
+        object.storeInBundle(bundle);
+        BundleHelper.Pack(object, bundle);
+        return bundle;
     }
 
     @SneakyThrows

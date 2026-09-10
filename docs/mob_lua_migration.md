@@ -20,6 +20,15 @@ Reference examples of fully data-defined mobs (no java class): `BlackRat`,
 `scripts/mobs/<Kind>.lua`, instantiated as `CustomMob` by the json scan in
 `MobFactory`.
 
+Migrated from java 2026-09-11 as the first Step-B test batch: **`Bat`**
+(json stats + `resistances:["Leech"]` + lua `attackProc` heal),
+**`Worm`** (json stats + `immunities` + lua `attackProc` Roots/Poison procs;
+note `Random.Int(a,b)` is `[a,b)` — lua port is `math.random(a,b-1)`),
+**`Kobold`** (pure json, no lua needed). `Pickaxe`'s bat-blood quest check
+now goes by kind. Verified: legacy pre-migration save (FQN-only) restores
+all three via derived-kind with hp/str/fraction identical, fresh spawns and
+death-loot drops work, lua attackProc round-trips (`/debug` harness).
+
 ## Save mechanics (why this works)
 
 - Today each mob is stored in the level bundle as a nested `Bundlable` with
@@ -47,6 +56,32 @@ Reference examples of fully data-defined mobs (no java class): `BlackRat`,
   collection. Nothing else deserializes `Mob` instances.
 
 ## Step A — kind-based save resolution (one-time engine work)
+
+**Implemented 2026-09-11** (tested with Bat/Worm/Kobold, see Step B examples):
+
+- `Bundlable` gained default `getEntityKind()`/`getEntitySystem()` (null);
+  `Char`→"mob", `Item`→"item", `Buff`→"buff", `LevelObject`→"levelObject".
+  `Bundle.put(Bundlable)`/`put(key, Collection)` write both tags next to
+  `__className` (shared `bundleFor` helper).
+- `Bundle.get()` resolution order: tagged kind → system's resolver;
+  else derived kind (FQN tail) through the resolvers in fixed priority
+  mob→item→buff→levelObject; else the untouched `Class.forName` fallback.
+  Resolvers live in `Bundle.registerEntityResolver`, filled by a `Dungeon`
+  static block (`MobFactory::tryByName` etc.).
+- Strict gates added: `MobFactory.tryByName` (hasMob), `ItemFactory.tryByName`
+  + `hasItem` (java registration | `scripts/items/<kind>.lua` | Carcass prefix
+  — never the CustomItem/Gold tail), `BuffFactory.tryByName`
+  (hasBuffForName), `LevelObjectsFactory.tryByName` (isValidObjectClass).
+- A5: `PdAnnotationProcessor` now emits the current field value as the
+  implicit unpack default (`bundle.optString("mobClass", typedArg.mobClass)`)
+  — factory-pinned identity fields survive legacy bundles.
+- Ordering fix found by the test: `Dungeon.loadGame` restored PETS *before*
+  `Potion/Wand/Scroll/Ring.restore`, so any pet whose loot def builds a
+  potion crashed the restore (java Kobold was unrecoverable this way:
+  `new PotionOfFrost()` in its ctor → `Potion.handler` null NPE). Handlers
+  now restore before pets. Related: `Pickaxe` identified bats by
+  `instanceof Bat` — now `getEntityKind().equals("Bat")` so the quest works
+  with the data-defined mob.
 
 A1. Write two fields next to `__className`: `entityKind` (= `getEntityKind()`)
     and `entitySystem` (`"mob"`, `"item"`, `"buff"`, `"levelObject"`, …).
@@ -191,7 +226,7 @@ B1. **Author the json def** `mobsDesc/<Kind>.json` — explicit authored
   "description": "Rat_Desc", "gender": "Rat_Gender",
   "attackSkill": 8, "defenseSkill": 3,
   "dmgMin": 1, "dmgMax": 3, "dr": 0,
-  "ht": 8, "exp": 2, "maxLvl": 4, "baseStr": 10,
+  "ht": 8, "exp": 2, "maxLvl": 4, "str": 10,
   "baseSpeed": 1, "attackDelay": 1, "attackRange": 1,
   "viewDistance": 3, "walkingType": "NORMAL",
   "spriteDesc": "spritesDesc/Rat.json",

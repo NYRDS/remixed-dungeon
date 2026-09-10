@@ -826,6 +826,11 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         return ItemFactory.itemNameByClass(getClass());
     }
 
+    @Override
+    public String getEntitySystem() {
+        return "item";
+    }
+
     public int overlayIndex() {
         return overlayIndex;
     }

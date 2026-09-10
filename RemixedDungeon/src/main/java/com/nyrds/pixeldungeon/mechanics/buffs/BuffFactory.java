@@ -4,6 +4,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.common.RatKingCrown;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
@@ -60,6 +61,7 @@ import java.util.Map;
 import java.util.Set;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 @LuaInterface
 public class BuffFactory {
@@ -223,5 +225,22 @@ public class BuffFactory {
 
 
         throw new ModError(name, new Exception("Unknown Buff:"+name));
+    }
+
+    /**
+     * Gated resolver for save-restore: null unless the buff is known, never
+     * a CustomBuff/DummyBuff guess.
+     */
+    @Nullable
+    public static Buff tryByName(String name) {
+        if (!hasBuffForName(name)) {
+            return null;
+        }
+        try {
+            return getBuffByName(name);
+        } catch (Exception e) {
+            EventCollector.logException(e, name);
+            return null;
+        }
     }
 }

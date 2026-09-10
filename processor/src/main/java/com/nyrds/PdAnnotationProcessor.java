@@ -191,18 +191,24 @@ public class PdAnnotationProcessor extends AbstractProcessor {
 		CodeBlock.Builder code = CodeBlock.builder();
 		String statementTemplate = "typedArg.$L = ";
 
+		// when no explicit defaultValue is set, fall back to the current field value:
+		// identical for a freshly constructed object, preserves factory-pinned
+		// identity fields when a legacy bundle lacks the key
 		if (processingEnv.getTypeUtils().isSameType(fieldType, intType)) {
-			defaultValue = defaultValue.isEmpty() ? "0" : defaultValue;
+			defaultValue = defaultValue.isEmpty() ? "typedArg." + fieldName : defaultValue;
 			code.addStatement(statementTemplate + "bundle.optInt($S, $L)", fieldName, fieldName, defaultValue);
 		}  else if (processingEnv.getTypeUtils().isSameType(fieldType, booleanType)) {
-			defaultValue = defaultValue.isEmpty() ? "false" : defaultValue;
+			defaultValue = defaultValue.isEmpty() ? "typedArg." + fieldName : defaultValue;
 			code.addStatement(statementTemplate + "bundle.optBoolean($S, $L)", fieldName, fieldName, defaultValue);
 		} else if (processingEnv.getTypeUtils().isSameType(fieldType, floatType)) {
-			defaultValue = defaultValue.isEmpty() ? "0.0f" : defaultValue;
+			defaultValue = defaultValue.isEmpty() ? "typedArg." + fieldName : defaultValue;
 			code.addStatement(statementTemplate + "bundle.optFloat($S, $L)", fieldName, fieldName, defaultValue);
 		} else if (processingEnv.getTypeUtils().isSameType(fieldType, stringType)) {
-			defaultValue = defaultValue.isEmpty() ? "Unknown" : defaultValue;
-			code.addStatement(statementTemplate + "bundle.optString($S, $S)", fieldName, fieldName, defaultValue);
+			if (defaultValue.isEmpty()) {
+				code.addStatement(statementTemplate + "bundle.optString($S, typedArg.$L)", fieldName, fieldName, fieldName);
+			} else {
+				code.addStatement(statementTemplate + "bundle.optString($S, $S)", fieldName, fieldName, defaultValue);
+			}
 		} else if (processingEnv.getTypeUtils().isAssignable(fieldType, bundlableType)) {
 			// MODIFICATION 2: BUG FIX - Add explicit cast for Bundlable subtypes
 			TypeName fieldTypeName = TypeName.get(fieldType);

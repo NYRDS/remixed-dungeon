@@ -232,6 +232,11 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
         return super.getEntityKind();
     }
 
+    @Override
+    public String getEntitySystem() {
+        return "levelObject";
+    }
+
     public boolean losBlocker() {
         return false;
     }
