@@ -697,18 +697,20 @@ public class Dungeon {
         EntityIdSource.setLastUsedId(bundle.optInt(LAST_USED_ID, 1));
         CharsList.restoreFromBundle(bundle);
 
+        // item status handlers must exist before pets are constructed:
+        // mob loot defs (json or ctor) may build potions/wands/scrolls/rings
+        Scroll.restore(bundle);
+        Potion.restore(bundle);
+        Wand.restore(bundle);
+        Ring.restore(bundle);
+        QuickSlot.restore(bundle);
+
         restoredFollowers.clear();
         for (Mob mob : bundle.getCollection(PETS, Mob.class)) {
             if (mob != null && mob.valid() && !CharsList.isDestroyed(mob.getId())) {
                 restoredFollowers.add(mob);
             }
         }
-
-        Scroll.restore(bundle);
-        Potion.restore(bundle);
-        Wand.restore(bundle);
-        Ring.restore(bundle);
-        QuickSlot.restore(bundle);
 
         potionOfStrength = bundle.getInt(POS);
         scrollsOfUpgrade = bundle.getInt(SOU);
