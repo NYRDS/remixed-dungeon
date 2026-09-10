@@ -1422,6 +1422,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Mob_StaControlledStatus">Este %s esta bajo posesión impía.</string>
     <string name="Mob_StaFleeingStatus">%s está huyendo</string>
     <string name="Mob_StaFleeingStatus2">%1$sestá escapando de%2$s</string>
+    <string name="Mob_StaGuardStatus">Este %s está de guardia</string>
     <string name="Mob_StaHuntingStatus">%s está cazando</string>
     <string name="Mob_StaHuntingStatus2">%1$sestá buscando %2$s</string>
     <string name="Mob_StaPassiveStatus">%s es pasivo</string>
@@ -3077,6 +3078,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

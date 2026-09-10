@@ -1334,6 +1334,7 @@
     <string name="WndHats_ListTitle">Danh sách Phụ kiện</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
     <string name="WndHero_Awareness">Nhận thức</string>
+    <string name="WndHero_Buffs">Hiệu ứng</string>
     <string name="WndHero_Exp">Kinh nghiệm</string>
     <string name="WndHero_StaCatalogus">Danh mục</string>
     <string name="WndHero_StaJournal">Nhật ký</string>
@@ -1573,6 +1574,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

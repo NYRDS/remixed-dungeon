@@ -1414,6 +1414,7 @@ Potrebbe bruciare?</string>
     <string name="Mob_FollowMe">Ti seguo!</string>
     <string name="Mob_GoingTo">Ci sto già andando!</string>
     <string name="Mob_ItemUse">%1$s usa %2$s</string>
+    <string name="Mob_PetDied">Il tuo animale è morto: %s</string>
     <string name="Mob_ReadyForOrder">%1$s pronto per il tuo ordine.</string>
     <string name="Mob_StaAmokStatus">Questo %1$s è impazzito</string>
     <string name="Mob_StaControlledStatus">Questo %s è sotto una possessione maledetta</string>
@@ -3069,6 +3070,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
