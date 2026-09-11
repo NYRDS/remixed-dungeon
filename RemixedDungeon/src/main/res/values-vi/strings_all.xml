@@ -1175,6 +1175,7 @@
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SummonBeast_Name">Gọi Thú</string>
+    <string name="SungrassBuff_Name">Chữa lành thảo dược</string>
     <string name="Sungrass_Desc">Cỏ mặt trời nổi tiếng nhờ nhựa cây có tác dụng chữa lành.</string>
     <string name="Sungrass_Name">cỏ mặt trời</string>
     <string name="SuspiciousRat_Gender">feminine</string>
@@ -1515,6 +1516,7 @@
     <string name="town_deco_entrance_name">cổng vào</string>
     <string name="town_deco_fireplace_name">Lò sưởi</string>
     <string name="town_deco_firewood_desc">Vật dụng thiết yếu trong những đợt rét khắc nghiệt như thế này.</string>
+    <string name="town_deco_floor_desc">Sàn này làm từ ván gỗ đơn giản. Bạn đang tìm kiếm điều gì?</string>
     <string name="town_deco_flowerinthepot_name">Hoa trong chậu</string>
     <string name="town_deco_furnace_name">Lò nung</string>
     <string name="town_deco_glass_stained_desc">Người làm chiếc kính màu này có lẽ đã rất chăm chỉ.</string>
@@ -1584,6 +1586,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
