@@ -402,6 +402,7 @@
     <string name="Dungeon_NoTips">De tekst is onleesbaar...</string>
     <string name="Dungeon_Tips_0">Overschat je kracht niet, gebruik wapens en uitrusting die je aankunt.</string>
     <string name="Dungeon_Tips_12">Als je brandt en zweeft, kun je het vuur niet in water uithassen.</string>
+    <string name="Dungeon_Tips_13">Het heeft geen zin om meer dan één Ankh tegelijk te bezitten, omdat je ze bij wederopstanding verliest.</string>
     <string name="Dungeon_Tips_14">GEVAAR! Zware machines kunnen letsel, verlies van ledematen of de dood veroorzaken!</string>
     <string name="Dungeon_Tips_16">Wanneer je een getoverde wapen verbetert, is er een kans dat de toverij vernietigd wordt.</string>
     <string name="Dungeon_Tips_17">Een Bron van Transmutatie kan je een voorwerp geven dat je op geen enkele andere manier kunt verkrijgen.</string>
@@ -976,6 +977,7 @@
     <string name="RingOfMending_Info">Deze ring verhoogt de regeneratieve eigenschappen van het lichaam, waardoor men verloren gezondheid kan herstellen met een versnelde snelheid. Verslechterde ringen zullen de natuurlijke regeneratie verminderen of zelfs stopzetten.</string>
     <string name="RingOfMending_Name">Ring der Genezing</string>
     <string name="RingOfSatiety_Name">Ring van Voldoening</string>
+    <string name="RingOfShadows_Info">Vijanden zullen je minder snel opmerken als je deze ring draagt. Aangetaste ringen van schaduwen zullen vijanden waarschuwen die je anders misschien niet hadden opgemerkt.</string>
     <string name="RingOfStoneWalking_ImmuredInStone">Je bent in steen gemetseld. Voor altijd.</string>
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="Ring_BuffKnown">Dit is een %1$s</string>
@@ -1636,6 +1638,7 @@
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
     <string name="town_deco_wall_desc">Een eenvoudige muur gemaakt van houten stammen.</string>
     <string name="town_deco_wallpaper_name">behang</string>
+    <string name="town_deco_wardrobe_desc">Grote houten kast.</string>
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_weaponrack_name">Wapenrek</string>
     <string name="town_deco_window_name">Raam</string>
@@ -1649,6 +1652,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
