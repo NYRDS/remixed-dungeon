@@ -476,6 +476,7 @@
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Một chiếc Rìu Tomahawk truyền thống được tạo ra bởi các bậc thầy Gnoll, nơi mỗi bộ lạc có thiết kế độc đáo riêng. Chiếc Rìu này nhẹ hơn một chút so với các đối thủ của nó.</string>
     <string name="Gnoll_Gender">masculine</string>
+    <string name="Gold_Collect">Thu thập đồng xu vàng để chi tiêu sau đó tại cửa hàng.</string>
     <string name="Gold_Name">vàng</string>
     <string name="GoldenKey_Info">Những khía trên chiếc chìa khóa vàng này rất nhỏ và tinh xảo. Có lẽ nó có thể mở ổ khóa của một chiếc rương nào đó?</string>
     <string name="GoldenKey_Name">chìa khóa vàng</string>
@@ -923,6 +924,7 @@
     <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Ta không ngủ!</string>
     <string name="RatKing_Info2">Cái gì vậy? Tôi không có thời gian cho những điều vô nghĩa này. Vương quốc của tôi không thể tự cai trị!</string>
+    <string name="RatKing_Name">vua chuột</string>
     <string name="RatSkullBuff_Info">Mùi hôi nồng nặc khiến tất cả các loài gặm nhấm xung quanh khiếp sợ, làm chúng phải bỏ chạy khỏi người mang chiếc sọ này.</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="Rat_Gender">feminine</string>
@@ -1590,6 +1592,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

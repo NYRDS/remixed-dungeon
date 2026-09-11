@@ -1137,6 +1137,7 @@
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpeedBuff_Name">Snelheid</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
+    <string name="SpellBook_Name">Toverboek</string>
     <string name="Spell_SelectACell">Selecteer een doelcel.</string>
     <string name="Spell_SelectAChar">Selecteer een doelwit.</string>
     <string name="Spells_NotEnoughSP">Je hebt niet genoeg mana om de spreuk \&quot;%1$s\&quot; te casten.</string>
@@ -1381,6 +1382,7 @@
     <string name="WndGame_Customizations">Aanpassingen</string>
     <string name="WndGame_Exit">Verlaat Remixed Dungeon</string>
     <string name="WndGame_Load">Laden</string>
+    <string name="WndGame_Return">Terug naar spel</string>
     <string name="WndGame_Save">Opslaan</string>
     <string name="WndHats_BackButton">Terug</string>
     <string name="WndHats_BuyButton">Kopen</string>
@@ -1643,6 +1645,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
