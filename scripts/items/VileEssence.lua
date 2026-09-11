@@ -15,7 +15,7 @@ return itemLib.init{
             imageFile = "items.png",
             name      = "VileEssence_Name",
             info      = "VileEssence_Info",
-            price     = 10,
+            price     = 0, -- Doctor harvest: not sellable
             stackable = true
         }
     end,
