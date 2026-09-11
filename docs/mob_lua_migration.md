@@ -403,6 +403,38 @@ B3. **Delete the java class and its `registerMobClass` entry.** No shell,
   stats parity via get_mobs (HP/HT/baseStr), attack behavior via
   wait_ticks + hero HP/buffs, kamikaze via get_recent_logs + mob removal.
 
+## Lua-side interface (short)
+
+`scripts/lib/mob.lua` bridges `mob.init{...}` callbacks to `Char` dispatch
+points. Only `self.data` survives saving (serpent → `LUA_DATA`);
+`stats` runs on construction AND every restore — keep it idempotent,
+persist randoms into `self.data`.
+
+| Callback | Dispatch / notes |
+|---|---|
+| `stats(mob)` | ctor + every restore (after bundle stats) |
+| `act(mob) → bool` | pre-AI policy: return value discarded, java AI still runs; never spend time here |
+| `attackProc(mob, enemy, dmg) → dmg` | fires only on a hit |
+| `defenceProc(mob, enemy, dmg) → dmg` | |
+| `damage(mob, dmg, src)` | after taking damage |
+| `die(mob, cause) → bool` | then `quest.mobDied` + onDie callbacks run |
+| `move(mob, cell) → bool` | |
+| `spawn(mob, level)` | on level entry |
+| `interact(mob, chr)` | return not false = handled |
+| `zapProc(mob, enemy, dmg) → dmg` / `zapMiss(mob, enemy)` | ranged attacks |
+| `actions(mob, hero)` / `execute(mob, hero, action)` / `selectCell(mob)` | custom actions |
+| `priceForSell/priceForBuy(mob, item)`, `buyMode/sellMode` | shopkeepers |
+
+Engine-script idioms in use (`scripts/mobs/`): `RPD.affectBuff(chr,"Kind",dur)`
+· `RPD.permanentBuff(chr, RPD.Buffs.X)` (permanent buffs in `stats`)
+· `RPD.removeBuff` · `RPD.setAi(me,"Hunting"/"Fleeing"/"Wandering")` —
+the act-policy kite (ShamanElder.lua) · `RPD.item("Gold",n)` +
+`RPD.Dungeon.level:drop(item,pos)` (Mimic) · `self:loot(item)` theft
+(ScriptedThief) · `self:immunities():add(...)` (NatureAura) ·
+`RPD.MobFactory:mobByName(kind)` + `level:spawnMob(mob)` (BeeSpawner) ·
+hero check: `enemy:getEntityKind() == "Hero"`. Item/Level methods are
+callable from engine scripts (the `@LuaInterface` gate binds mod scripts).
+
 ## Verification checklist
 
 1. Build: `:RemixedDungeonDesktop:compileJava` (after Step A, this also
