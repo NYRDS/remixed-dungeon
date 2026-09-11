@@ -58,6 +58,7 @@
     <string name="ArmoredStatue_Name_Objective">tượng hoạt động</string>
     <string name="Artifact_Limit">Bạn chỉ có thể trang bị 2 hiện vật cùng lúc.</string>
     <string name="AttackDelay_Increased">Không thể vung %s theo cách này. Những nhát chém chậm chạp, hơi thở nặng nề…</string>
+    <string name="Attack_Range">Tầm tấn công</string>
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name_Objective">người lạ</string>
     <string name="AzuterronNPC_Quest_End">Tuyệt vời. Đây, uống bình thuốc này đi, chắc chắn nó sẽ có ích cho bạn.</string>
@@ -1581,6 +1582,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

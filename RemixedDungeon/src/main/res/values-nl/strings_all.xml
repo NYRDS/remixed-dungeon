@@ -842,6 +842,7 @@
     <string name="PlagueDoctorNPC_Gender">masculine</string>
     <string name="PlagueDoctorNPC_Name">pestarts</string>
     <string name="PlagueDoctorNPC_Name_Objective">pestdokter</string>
+    <string name="PlagueDoctorNPC_Quest_End">Ah, bedankt, ik hoop dat deze sporen van ziekte bevatten. De vorige monsters waren absoluut onschadelijk. Dus heb ik dit voor je gemaakt terwijl ik wachtte op nieuwe monsters.</string>
     <string name="PlagueDoctorNPC_Quest_Reminder">Breng me %d rattenhuiden.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Kun je het geloven?! Die idiooten hebben nog steeds niet door hoe gevaarlijk deze verdomde riool is! Alsof bewakers en avonturiers de stad kunnen beschermen tegen wat dan ook. Hah! Geen wapen kan de ziekte tegenhouden. Maar ik heb bewijzen nodig, misschien kun je me helpen? Breng me %d rattenvellen, zodat ik extra tests kan doen.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, je bent terug! _Vijf dode ratten_, perfect! Hun huiden zullen cruciaal zijn voor mijn onderzoek. En zoals beloofd, voor je dappere inspanning heb ik dit harnas voor je gemaakt van hun eigen vellen. Het is doordrenkt met een vleugje van de pest, maar maak je geen zorgen! Het is gecontroleerd, het beschermt! Ga nu! Bescherm de stad!</string>
@@ -1000,6 +1001,7 @@
     <string name="Rudolph_Info">Wat is er feestelijker dan een gloeiende rode neus? Samen met een gewei, natuurlijk.</string>
     <string name="RunicSkull_Desc">Voor iets kunstmatig gemaakts lijkt deze schedel te veel op een echte. Je ziet ook een zwakke gloed om het heen.</string>
     <string name="RunicSkull_Gender">masculine</string>
+    <string name="RunicSkull_Name_Objective">runische schedel</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="SantaHat_Info">Niets zet je zo in de \&quot;Dungeoning\&quot; stemming als de rode zijden hoed van Santa, Heer van de Diepten.</string>
     <string name="ScaleArmor_Name">schubpantser</string>
@@ -1632,6 +1634,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
