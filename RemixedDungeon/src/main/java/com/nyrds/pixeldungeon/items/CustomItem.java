@@ -228,6 +228,9 @@ public class CustomItem extends EquipableItem {
 
     @Override
     public int price() {
+        if (price == 0) {
+            return 0; // desc price 0 = authored free/not sellable; adjustPrice would floor it to 1
+        }
         return script.runOptional("price", adjustPrice(price * quantity()));
     }
 

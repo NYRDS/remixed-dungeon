@@ -15,7 +15,7 @@ return item.init{
             imageFile = "items/materials.png",
             name      = "BoneShard_Name",
             info      = "BoneShard_Info",
-            price     = 5,
+            price     = 0, -- Doctor harvest: not sellable
             stackable = true
         }
     end

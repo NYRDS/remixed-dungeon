@@ -15,7 +15,7 @@ return item.init{
             imageFile = "items/materials.png",
             name      = "ToxicGland_Name",
             info      = "ToxicGland_Info",
-            price     = 5,
+            price     = 0, -- Doctor harvest: not sellable
             stackable = true
         }
     end
