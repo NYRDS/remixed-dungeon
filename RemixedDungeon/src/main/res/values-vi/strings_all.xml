@@ -345,6 +345,7 @@
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Một cây khăn sắt đơn giản với tay cầm gỗ mòn.</string>
     <string name="Damage_Reduction">Giảm sát thương</string>
+    <string name="DarkGold_Name">quặng vàng tối</string>
     <string name="DarkSacrifice_Name">Hy Sinh Tối Tăm</string>
     <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
     <string name="DarkVeilBuff_Name">Màn tối</string>
@@ -1119,6 +1120,7 @@
     <string name="SoulShard_Name">mảnh linh hồn</string>
     <string name="Spear_Gender">neuter</string>
     <string name="Spear_Name">thương</string>
+    <string name="SpeedBuff_Info">Sức sống và năng lượng tỏa ra từ cơ thể, và chuyển động cảm thấy nhanh hơn bình thường.</string>
     <string name="SpeedBuff_Name">Tốc độ</string>
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
     <string name="Spell_SelectAChar">Chọn một mục tiêu.</string>
@@ -1222,6 +1224,7 @@
     <string name="TownPortal_Name">Cổng Thần Thoại</string>
     <string name="TownsfolkMovieNPC_Desc">Một người dân địa phương. Dù rõ ràng chỉ là thường dân, bộ quần áo của hắn lại trông rất đắt tiền.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
+    <string name="TownsfolkMovieNPC_Message">Bạn có biết về dịch vụ đặc biệt mà \&quot;rạp chiếu phim\&quot; cung cấp không? Thật tiếc họ yêu cầu một thứ kỳ lạ gọi là \&quot;Internet\&quot;, tôi chưa bao giờ nghe nói về điều đó.</string>
     <string name="TownsfolkMovieNPC_Name_Objective">người dân thành phố</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">À! Một phiêu lưu gia khác, thật tuyệt vời! Hãy chắc chắn lấy càng nhiều đồ giá trị càng tốt!</string>
@@ -1592,6 +1595,9 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
