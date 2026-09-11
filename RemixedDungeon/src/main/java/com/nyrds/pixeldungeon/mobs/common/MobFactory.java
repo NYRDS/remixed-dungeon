@@ -2,11 +2,9 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
-import com.nyrds.pixeldungeon.mobs.elementals.IceElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
 import com.nyrds.pixeldungeon.mobs.guts.BurningFist;
 import com.nyrds.pixeldungeon.mobs.guts.Larva;
-import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.nyrds.pixeldungeon.mobs.guts.Nightmare;
 import com.nyrds.pixeldungeon.mobs.guts.RottingFist;
 import com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat;
@@ -68,8 +66,6 @@ import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Goo;
 import com.watabou.pixeldungeon.actors.mobs.King;
 import com.watabou.pixeldungeon.actors.mobs.King.Undead;
-import com.watabou.pixeldungeon.actors.mobs.Mimic;
-import com.watabou.pixeldungeon.actors.mobs.MimicPie;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Piranha;
@@ -210,12 +206,9 @@ public class MobFactory {
 		registerMobClass(FetidRat.class);
 
 		registerMobClass(Wraith.class);
-		registerMobClass(Mimic.class);
-		registerMobClass(MimicPie.class);
 		registerMobClass(Statue.class);
 		registerMobClass(Piranha.class);
 
-		registerMobClass(MimicAmulet.class);
 		registerMobClass(YogsBrain.class);
 		registerMobClass(YogsEye.class);
 		registerMobClass(YogsHeart.class);
@@ -239,7 +232,6 @@ public class MobFactory {
 
 		registerMobClass(KoboldIcemancer.class);
 
-		registerMobClass(IceElemental.class);
 		registerMobClass(IceGuardian.class);
 		registerMobClass(IceGuardianCore.class);
 

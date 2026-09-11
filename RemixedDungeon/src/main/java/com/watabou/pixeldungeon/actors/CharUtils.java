@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.actors;
 
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
@@ -48,11 +49,11 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Lightning;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Gold;
@@ -72,6 +73,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -211,7 +213,7 @@ public class CharUtils {
 
         for (Heap heap : ch.level().allHeaps()) {
             if (heap.type == Heap.Type.MIMIC) {
-                Mimic m = Mimic.spawnAt(heap.pos, heap.items);
+                Mob m = spawnMimicAt(heap.pos, heap.items);
                 if (m != null) {
                     m.beckon(ch.getPos());
                     heap.destroy();
@@ -538,6 +540,44 @@ public class CharUtils {
             marker.killAndErase();
         }
         markers.clear();
+    }
+
+    /**
+     * Spawns a data-defined Mimic carrying the given items, pushing an
+     * occupant of the cell aside (former Mimic.spawnAt).
+     */
+    public static Mob spawnMimicAt(int pos, List<Item> items) {
+        Level level = Dungeon.level;
+        Char ch = Actor.findChar(pos);
+        if (ch != null) {
+            int newPos = level.getEmptyCellNextTo(pos);
+
+            if (level.cellValid(newPos)) {
+                Actor.addDelayed(new Pushing(ch, ch.getPos(), newPos), -1);
+                ch.setPos(newPos);
+                level.press(newPos, ch);
+            } else {
+                return null;
+            }
+        }
+
+        Mob m = MobFactory.mobByName(MobFactory.MIMIC);
+        for (Item item : items) {
+            m.collect(item);
+        }
+        m.hp(m.ht());
+        m.setPos(pos);
+        m.setState(MobAi.getStateByClass(Hunting.class));
+        level.spawnMob(m, 1);
+
+        m.getSprite().turnTo(pos, Dungeon.hero.getPos());
+
+        if (isVisible(m)) {
+            CellEmitter.get(pos).burst(Speck.factory(Speck.STAR), 10);
+            Sample.INSTANCE.play(Assets.SND_MIMIC);
+        }
+
+        return m;
     }
 
     public static @NotNull Item tryToSpawnMimic(Item item, Char ch, int pos, String mimicKind) {

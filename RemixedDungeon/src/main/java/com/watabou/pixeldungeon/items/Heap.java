@@ -15,10 +15,11 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
-import com.watabou.pixeldungeon.actors.mobs.Mimic;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Effects;
@@ -145,7 +146,7 @@ public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
     public void open(Char chr) {
         switch (type) {
             case MIMIC:
-                if (Mimic.spawnAt(pos, items) != null) {
+                if (CharUtils.spawnMimicAt(pos, items) != null) {
                     GLog.n(StringsManager.getVar(R.string.Heap_Mimic));
                     destroy();
                 } else {
@@ -293,7 +294,7 @@ public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
     public void burn() {
 
         if (type == Type.MIMIC) {
-            Mimic m = Mimic.spawnAt(pos, items);
+            Mob m = CharUtils.spawnMimicAt(pos, items);
             if (m != null) {
                 Buff.affect(m, Burning.class).reignite(m);
                 m.getSprite().emitter().burst(FlameParticle.FACTORY, 5);
@@ -337,7 +338,7 @@ public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
 
     public void freeze() {
         if (type == Type.MIMIC) {
-            Mimic m = Mimic.spawnAt(pos, items);
+            Mob m = CharUtils.spawnMimicAt(pos, items);
             if (m != null) {
                 Buff.prolong(m, Frost.class, Frost.duration(m) * Random.Float(1.0f, 1.5f));
                 destroy();
@@ -358,7 +359,7 @@ public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
 
     public void poison() {
         if (type == Type.MIMIC) {
-            Mimic m = Mimic.spawnAt(pos, items);
+            Mob m = CharUtils.spawnMimicAt(pos, items);
             if (m != null) {
                 destroy();
             }

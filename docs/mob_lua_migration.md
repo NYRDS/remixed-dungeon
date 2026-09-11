@@ -59,6 +59,32 @@ Scorpio's keep-distance kite AI), `MimicPie`+`IceElemental`
 (coupled boss pair with cross-resurrection in `die()`), `Rat`/`Gnoll`/
 `Crab` (quest statics in `die()` — see Step C).
 
+Fourth batch 2026-09-11 (depth-scaled family, per Mike's assumption
+"author stats at the mob's origin depth"): **`IceElemental`** (authored at
+depth 17 — ice1-4 span 15-18; lua attackProc 1/3 Slow on hero),
+**`MimicPie`** (fixed depth-10 stats; CharUtils' `adjustStats(Dungeon.depth)`
+no-ops on CustomMob — `Mob.adjustStats` is an empty default — so json wins),
+**`Mimic`** (fixed depth-10 stats + lua gold-bleed proc:
+`RPD.Dungeon.level:drop(RPD.item("Gold",gp), self:getPos())` — Level.drop
+and Item ops are callable from engine scripts), **`MimicAmulet`** (fixed
+depth-10; note its java defense was literally 1 — `Mob.attackSkill` is a
+vestigial `final int 0` its formula multiplied; permanent Levitation via
+`RPD.permanentBuff` in `stats`, the Assassin.lua pattern; SkeletonKey rides
+the inventory bundle — `Mob.die` drops belongings). Mimic construction:
+`Mimic.spawnAt` became `CharUtils.spawnMimicAt(pos, items)` on the factory.
+Verified live: all four spawn data-defined with exact authored hp/str and
+inventory (RottenPasty / SkeletonKey).
+Existing lua idioms to reuse (scripts/mobs/): `RPD.affectBuff(chr,"Kind",dur)`,
+`RPD.permanentBuff(chr,RPD.Buffs.X)` in `stats`, `RPD.setAi(me,"Fleeing"|"Hunting")`
+— ShamanElder.lua already implements the act-policy kite in production,
+`self:loot(item)` theft (ScriptedThief), `self:immunities():add` (NatureAura).
+Deferred from this batch: `Wraith` (spawned from cursed heaps at any depth
+and by Shadow Lord at depth ~30 — flattening unacceptable),
+`AirElemental` (kite band + no-adjacent-melee gate + WindGust zap),
+`WaterElemental`/`EarthElemental` (terrain-conditional speed + buff
+intercepts), `Crystal` (Shadow-Lord support: random wand arsenal,
+pedestal death logic, hp-based damageRoll).
+
 ## Step C — engine work that unblocks the rest
 
 **Quest statics in `die()` (the only real blocker left).** Rat/Gnoll/Crab
@@ -352,21 +378,23 @@ B3. **Delete the java class and its `registerMobClass` entry.** No shell,
 
 ## Debug harness notes (desktop, 2026-09-11)
 
-- Launch from repo root (res paths `data/mods/Remixed/` and
-  `~/.local/share/remixed-dungeon/mods/Remixed/` are cwd/user relative):
+- Launch from a scratch rundir (saves stay out of the repo; saves land in
+  `./saves` relative to cwd):
 
   ```
-  java --add-opens java.base/java.util=ALL-UNNAMED \
-    -cp "RemixedDungeon/src/main/assets:$(cat /tmp/rpd-desktop-cp.txt)" \
+  cd rundir && java --add-opens java.base/java.util=ALL-UNNAMED \
+    -cp "<repo>/RemixedDungeon/src/main/assets:$(cat /tmp/rpd-desktop-cp.txt)" \
     com.nyrds.pixeldungeon.desktop.DesktopLauncher --webserver --windowed --nosound
   ```
 
   (`/tmp/rpd-desktop-cp.txt` = runtime classpath saved from a gradle run;
   the assets dir goes on the cp so gdx internal lookups find fonts.)
 - `--webserver` flag is REQUIRED for the :8080 debug API.
-- Overlay for mod-file lookups: symlink game assets + desktop `l10ns/`
-  + repo-root `scripts/` into `~/.local/share/remixed-dungeon/mods/Remixed/`
-  (do NOT touch the tracked `data/mods/Remixed` symlink, it is dangling).
+- Overlay for mod-file lookups: symlink game assets + desktop `d_assets/`
+  + `l10ns/` + repo-root `scripts/` into `<rundir>/mods/Remixed/` — dev
+  builds resolve user data relative to the CWD (snap/appimage builds use
+  ~/.local/share). The repo's `data/mods/Remixed` and `mods/Remixed`
+  symlinks are TRACKED and dangling — never repurpose them.
 - `preferences.hjson` `fps_limit` is an INDEX into {30,60,120}, not a value.
 - Useful endpoints: `/debug/start_game`, `/debug/create_mob?type=X&x=&y=`,
   `/debug/wait_ticks?ticks=n` (runs real hero turns), `/debug/get_mobs`,
