@@ -4,6 +4,7 @@ package com.nyrds.pixeldungeon.mobs.guts;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -37,7 +38,7 @@ public class TreacherousSpirit extends Mob {
             int spiritPos = Dungeon.level.getEmptyCellNextTo(getPos());
 
             if (Dungeon.level.cellValid(spiritPos)) {
-                SpiritOfPain spirit = new SpiritOfPain();
+                Mob spirit = MobFactory.mobByName("SpiritOfPain");
                 spirit.setPos(spiritPos);
                 Dungeon.level.spawnMob(spirit, 0,getPos());
             }

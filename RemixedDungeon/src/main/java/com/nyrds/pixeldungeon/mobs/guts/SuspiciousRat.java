@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.mobs.guts;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
@@ -54,7 +55,7 @@ public class SuspiciousRat extends Mob {
 			} else {
 				int wereratPos = this.getPos();
 				if (level().cellValid(wereratPos)) {
-					PseudoRat mob = new PseudoRat();
+					Mob mob = MobFactory.mobByName("PseudoRat");
 					mob.setPos(wereratPos);
 					level().spawnMob(mob);
 					Sample.INSTANCE.play(Assets.SND_CURSED);

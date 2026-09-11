@@ -8,9 +8,7 @@ import com.nyrds.pixeldungeon.mobs.guts.BurningFist;
 import com.nyrds.pixeldungeon.mobs.guts.Larva;
 import com.nyrds.pixeldungeon.mobs.guts.MimicAmulet;
 import com.nyrds.pixeldungeon.mobs.guts.Nightmare;
-import com.nyrds.pixeldungeon.mobs.guts.PseudoRat;
 import com.nyrds.pixeldungeon.mobs.guts.RottingFist;
-import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
 import com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat;
 import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
 import com.nyrds.pixeldungeon.mobs.guts.YogsBrain;
@@ -18,7 +16,6 @@ import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
 import com.nyrds.pixeldungeon.mobs.guts.YogsTeeth;
 import com.nyrds.pixeldungeon.mobs.guts.ZombieGnoll;
-import com.nyrds.pixeldungeon.mobs.icecaves.ColdSpirit;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.icecaves.KoboldIcemancer;
@@ -207,7 +204,6 @@ public class MobFactory {
 		registerMobClass(ShadowLord.class);
 		registerMobClass(Nightmare.class);
 		registerMobClass(SuspiciousRat.class);
-		registerMobClass(PseudoRat.class);
 
 		registerMobClass(ArmoredStatue.class);
 		registerMobClass(GoldenStatue.class);
@@ -224,7 +220,6 @@ public class MobFactory {
 		registerMobClass(Crystal.class);
 
 		registerMobClass(KoboldIcemancer.class);
-		registerMobClass(ColdSpirit.class);
 
 		registerMobClass(IceElemental.class);
 		registerMobClass(IceGuardian.class);
@@ -257,7 +252,6 @@ public class MobFactory {
 		registerMobClass(Shopkeeper.class);
 		registerMobClass(ImpShopkeeper.class);
 		registerMobClass(TownShopkeeper.class);
-		registerMobClass(SpiritOfPain.class);
 		registerMobClass(TreacherousSpirit.class);
 		registerMobClass(MirrorImage.class);
 

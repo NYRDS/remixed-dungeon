@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items.guts;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.guts.SpiritOfPain;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -48,7 +48,7 @@ public class HeartOfDarkness extends Artifact {
 			int spiritPos = defender.level().getEmptyCellNextTo(defenderPos);
 
 			if (defender.level().cellValid(spiritPos)) {
-				SpiritOfPain spirit = new SpiritOfPain();
+				Mob spirit = MobFactory.mobByName("SpiritOfPain");
 				spirit.setPos(spiritPos);
 				Mob.makePet(spirit, defender.getId());
 				defender.level().spawnMob(spirit, 0, defenderPos);

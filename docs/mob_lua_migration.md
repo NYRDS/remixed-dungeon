@@ -29,6 +29,18 @@ now goes by kind. Verified: legacy pre-migration save (FQN-only) restores
 all three via derived-kind with hp/str/fraction identical, fresh spawns and
 death-loot drops work, lua attackProc round-trips (`/debug` harness).
 
+Second batch 2026-09-11: **`ColdSpirit`** (json + Frost immunity + lua
+`attackProc` — java's `Freezing.affect(pos)` also cleared fire/froze heaps
+on the victim's cell; the lua port keeps only the Char-facing Frost proc),
+**`PseudoRat`** (pure json + `aiState:"Hunting"`; sprite-kind int is
+obsolete — `spriteDesc` frames replace it), **`SpiritOfPain`** (json +
+lua `act` self-damage 6/turn; `carcassChance:0` and `exp:0` in json).
+Construction sites switched to factory: `SuspiciousRat` (wererat
+transform), `TreacherousSpirit` + `HeartOfDarkness$Buff` (summon procs).
+Verified live: stats parity (50/320/80 ht), Hunting/SLEEPING default
+states, `act` hook self-destruct timing, level-save round-trip keeping
+hp/state/pos, level `.dat` stores `entityKind` + `CustomMob`.
+
 ## Save mechanics (why this works)
 
 - Today each mob is stored in the level bundle as a nested `Bundlable` with
