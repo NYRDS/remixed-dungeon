@@ -742,6 +742,7 @@
     <string name="MeleeWeapon_Info3e">nhưng</string>
     <string name="MeleeWeapon_Info3g">kém chính xác</string>
     <string name="MeleeWeapon_Info4a">Nó đã được cân bằng để nhanh hơn.</string>
+    <string name="MeleeWeapon_Info5">Nó đã được phù phép.</string>
     <string name="MeleeWeapon_Info6b">Do sức mạnh dư thừa, sát thương tấn công của bạn với %s này được tăng lên.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">lính thuê</string>
@@ -1600,6 +1601,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
