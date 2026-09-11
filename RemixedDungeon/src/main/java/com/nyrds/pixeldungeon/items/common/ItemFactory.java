@@ -218,6 +218,15 @@ import org.json.JSONObject;
 
 public class ItemFactory {
 
+    public static final String GOLD = "Gold";
+    public static final String AMULET = "Amulet";
+    public static final String CANDY_OF_DEATH = "CandyOfDeath";
+    public static final String SPELL_BOOK = "SpellBook";
+    public static final String CHAOS_SHIELD = "ChaosShield";
+    public static final String TENGU_LIVER = "TenguLiver";
+    public static final String RAW_FISH = "RawFish";
+    public static final String REMIXED_PICKAXE = "RemixedPickaxe";
+
     static private final Map<String, Class<? extends Item>> mItemsList = new HashMap<>();
     static private final Map<Class<? extends Item>, String> mNamesList = new HashMap<>();
 
@@ -512,10 +521,10 @@ public class ItemFactory {
                         return new Carcass(MobFactory.mobByName(mobKind));
                     } catch (Exception e) {
                         EventCollector.logException(e, mobKind);
-                        return new Carcass(new CustomMob("Snail"));
+                        return new Carcass(new CustomMob(MobFactory.SNAIL));
                     }
                 }
-                return new Carcass(new CustomMob("Snail"));
+                return new Carcass(new CustomMob(MobFactory.SNAIL));
             }
 
             try {
@@ -523,7 +532,7 @@ public class ItemFactory {
             } catch (Exception e){
                 EventCollector.logException(e,selectedItemClass);
                 Game.toast("Unknown item: [%s], spawning Gold instead", selectedItemClass);
-                return itemByName("Gold");
+                return itemByName(GOLD);
             }
 
         } catch (InstantiationException | IllegalAccessException e) {

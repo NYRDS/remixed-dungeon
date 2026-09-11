@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.items.food;
 
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -17,7 +18,7 @@ public class PseudoPasty extends Food {
 
 	@Override
 	public Item pick(Char ch, int pos) {
-		return CharUtils.tryToSpawnMimic(this,ch, pos, "MimicPie");
+		return CharUtils.tryToSpawnMimic(this,ch, pos, MobFactory.MIMIC_PIE);
 	}
 
 	@Override

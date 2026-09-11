@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
@@ -802,9 +803,9 @@ public class Badges {
 			badge = Badge.RARE_SPIDER_MIND;
 		} else if (mob instanceof DreadKnight) {
 			badge = Badge.RARE_DREAD_KNIGHT;
-		} else if (mob.getEntityKind().equals("DeepSnail")) {
+		} else if (mob.getEntityKind().equals(MobFactory.DEEP_SNAIL)) {
 			badge = Badge.RARE_DEEP_SNAIL;
-		} else if (mob.getEntityKind().equals("ShamanElder")) {
+		} else if (mob.getEntityKind().equals(MobFactory.SHAMAN_ELDER)) {
 			badge = Badge.RARE_SHAMAN_ELDER;
 		}
 		if (!global.contains(badge)) {

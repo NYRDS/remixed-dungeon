@@ -105,7 +105,7 @@ public class ChaosCrystal extends UsableArtifact {
             }
 
             if (item.getEntityKind().contains("Shield")){
-                selector.collect(ItemFactory.itemByName("ChaosShield"));
+                selector.collect(ItemFactory.itemByName(ItemFactory.CHAOS_SHIELD));
                 GLog.p(StringsManager.getVar(R.string.ChaosCrystal_ShieldFused));
                 return;
             }

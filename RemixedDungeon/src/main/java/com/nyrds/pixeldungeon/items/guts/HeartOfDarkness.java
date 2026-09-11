@@ -48,7 +48,7 @@ public class HeartOfDarkness extends Artifact {
 			int spiritPos = defender.level().getEmptyCellNextTo(defenderPos);
 
 			if (defender.level().cellValid(spiritPos)) {
-				Mob spirit = MobFactory.mobByName("SpiritOfPain");
+				Mob spirit = MobFactory.mobByName(MobFactory.SPIRIT_OF_PAIN);
 				spirit.setPos(spiritPos);
 				Mob.makePet(spirit, defender.getId());
 				defender.level().spawnMob(spirit, 0, defenderPos);

@@ -38,7 +38,7 @@ public class TreacherousSpirit extends Mob {
             int spiritPos = Dungeon.level.getEmptyCellNextTo(getPos());
 
             if (Dungeon.level.cellValid(spiritPos)) {
-                Mob spirit = MobFactory.mobByName("SpiritOfPain");
+                Mob spirit = MobFactory.mobByName(MobFactory.SPIRIT_OF_PAIN);
                 spirit.setPos(spiritPos);
                 Dungeon.level.spawnMob(spirit, 0,getPos());
             }

@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.items.guts;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -18,7 +19,7 @@ public class PseudoAmulet extends Item {
 	
 	@Override
 	public Item pick(Char ch, int pos ) {
-		return CharUtils.tryToSpawnMimic(this,ch, pos, "MimicAmulet");
+		return CharUtils.tryToSpawnMimic(this,ch, pos, MobFactory.MIMIC_AMULET);
 	}
 
 }

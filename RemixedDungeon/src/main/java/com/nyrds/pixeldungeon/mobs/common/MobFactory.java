@@ -119,6 +119,31 @@ import org.json.JSONException;
 
 
 public class MobFactory {
+	public static final String RAT = "Rat";
+	public static final String BAT = "Bat";
+	public static final String DEEP_SNAIL = "DeepSnail";
+	public static final String SHAMAN_ELDER = "ShamanElder";
+	public static final String PSEUDO_RAT = "PseudoRat";
+	public static final String SPIRIT_OF_PAIN = "SpiritOfPain";
+	public static final String SNAIL = "Snail";
+	public static final String SHEEP = "Sheep";
+	public static final String ELEMENTAL = "Elemental";
+	public static final String STATUE = "Statue";
+	public static final String ARMORED_STATUE = "ArmoredStatue";
+	public static final String GOLDEN_STATUE = "GoldenStatue";
+	public static final String MIRROR_IMAGE = "MirrorImage";
+	public static final String WRAITH = "Wraith";
+	public static final String SKELETON = "Skeleton";
+	public static final String FETID_RAT = "FetidRat";
+	public static final String SUSPICIOUS_RAT = "SuspiciousRat";
+	public static final String GHOST = "Ghost";
+	public static final String UNDEAD = "Undead";
+	public static final String SHOPKEEPER = "Shopkeeper";
+	public static final String TOWN_SHOPKEEPER = "TownShopkeeper";
+	public static final String MIMIC = "Mimic";
+	public static final String MIMIC_PIE = "MimicPie";
+	public static final String MIMIC_AMULET = "MimicAmulet";
+
 	static private Map<String, Class<? extends Mob>> mMobsList;
 
 	static {
@@ -255,18 +280,18 @@ public class MobFactory {
 		registerMobClass(TreacherousSpirit.class);
 		registerMobClass(MirrorImage.class);
 
-		mMobsList.put("Sheep", WandOfFlock.Sheep.class);
+		mMobsList.put(SHEEP, WandOfFlock.Sheep.class);
 		//old mods compatibility
-		mMobsList.put("Elemental", FireElemental.class);
+		mMobsList.put(ELEMENTAL, FireElemental.class);
 	}
 
 	@Contract(pure = true)
 	public static boolean hasMob(String mobClass) {
-		if(Dungeon.isChallenged(Challenges.NO_ARMOR) && mobClass.equals("ArmoredStatue")) {
+		if(Dungeon.isChallenged(Challenges.NO_ARMOR) && mobClass.equals(ARMORED_STATUE)) {
 			return false;
 		}
 
-		if(Dungeon.isChallenged(Challenges.NO_WEAPON) && mobClass.equals("Statue")) {
+		if(Dungeon.isChallenged(Challenges.NO_WEAPON) && mobClass.equals(STATUE)) {
 			return false;
 		}
 

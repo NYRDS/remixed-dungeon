@@ -37,7 +37,7 @@ public class Piranha extends Mob {
 		
 		expForKill = 0;
 
-		collect(ItemFactory.itemByName("RawFish"));
+		collect(ItemFactory.itemByName(ItemFactory.RAW_FISH));
 
 		addImmunity( Burning.class );
 		addImmunity( Paralysis.class );

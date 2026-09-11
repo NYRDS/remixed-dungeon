@@ -200,14 +200,14 @@ public class Treasury {
     public Item check(@NotNull Item item) {
         if(isForbidden(item.getEntityKind())) {
             GLog.debug("Forbidden item: %s",item.getEntityKind());
-            return ItemFactory.itemByName("Gold").quantity(item.price());
+            return ItemFactory.itemByName(ItemFactory.GOLD).quantity(item.price());
         }
         return item;
     }
 
     public Item random(@NotNull Category category){
         if(!names.contains(category.name())) {
-            return randomItem("Gold");
+            return randomItem(ItemFactory.GOLD);
         }
         return random(category.name());
     }
@@ -221,7 +221,7 @@ public class Treasury {
 
         if(forbidden.contains(categoryOrItem)) {
             GLog.debug("Forbidden category or item: %s",categoryOrItem);
-            return ItemFactory.itemByName("Gold");
+            return ItemFactory.itemByName(ItemFactory.GOLD);
         }
 
         for(int i = 0;i<names.size();++i) {
@@ -230,7 +230,7 @@ public class Treasury {
                 CategoryItems category = items.get(i);
 
                 if(category.probs.isEmpty()) {
-                    return ItemFactory.itemByName("Gold");
+                    return ItemFactory.itemByName(ItemFactory.GOLD);
                 }
 
                 int itemIndex = Random.chances(category.probs);

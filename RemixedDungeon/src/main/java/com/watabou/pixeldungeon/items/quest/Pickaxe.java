@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.items.quest;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
@@ -112,7 +113,7 @@ public class Pickaxe extends Weapon {
 	
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
-		if (!bloodStained && defender.getEntityKind().equals("Bat") && (defender.hp() <= damage)) {
+		if (!bloodStained && defender.getEntityKind().equals(MobFactory.BAT) && (defender.hp() <= damage)) {
 			bloodStained = true;
             QuickSlot.refresh(attacker);
         }

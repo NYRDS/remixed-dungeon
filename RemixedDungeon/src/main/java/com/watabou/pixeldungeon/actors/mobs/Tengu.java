@@ -57,7 +57,7 @@ public class Tengu extends Boss implements IZapper {
 		}
 
 		if( heroClass == HeroClass.GNOLL) {
-			collect(ItemFactory.itemByName("TenguLiver"));
+			collect(ItemFactory.itemByName(ItemFactory.TENGU_LIVER));
 		}
 
 		collect(new SkeletonKey());

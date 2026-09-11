@@ -49,7 +49,7 @@ public class Bestiary {
 
 		} catch (Exception e) {
 			ModError.doReport("No bestiary for "+level.levelId, e);
-			return MobFactory.mobByName("Rat");
+			return MobFactory.mobByName(MobFactory.RAT);
 		}
 	}
 

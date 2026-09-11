@@ -52,7 +52,7 @@ public class Blacksmith extends NPC {
                     Quest.given = true;
                     Quest.completed = false;
 
-                    EquipableItem pick = (EquipableItem) ItemFactory.itemByName("RemixedPickaxe");
+                    EquipableItem pick = (EquipableItem) ItemFactory.itemByName(ItemFactory.REMIXED_PICKAXE);
                     hero.collectAnimated(pick);
                 }
             });

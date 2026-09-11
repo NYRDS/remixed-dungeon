@@ -6,6 +6,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.util.Util;
@@ -267,7 +268,7 @@ public class Lich extends Boss {
         ArrayList<Integer> pedestals = new ArrayList<>();
 
         for(val object: objects) {
-            if(object.getEntityKind().equals("pedestal")) {
+            if(object.getEntityKind().equals(LevelObjectsFactory.PEDESTAL)) {
                 pedestals.add(object.getPos());
             }
         }

@@ -55,7 +55,7 @@ public class SuspiciousRat extends Mob {
 			} else {
 				int wereratPos = this.getPos();
 				if (level().cellValid(wereratPos)) {
-					Mob mob = MobFactory.mobByName("PseudoRat");
+					Mob mob = MobFactory.mobByName(MobFactory.PSEUDO_RAT);
 					mob.setPos(wereratPos);
 					level().spawnMob(mob);
 					Sample.INSTANCE.play(Assets.SND_CURSED);

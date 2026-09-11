@@ -181,15 +181,15 @@ public class TestLevel extends RegularLevel {
 
 	protected void testItemActions(Hero hero, Item item) {
 
-		if(item.getEntityKind().equals("Amulet")) {
+		if(item.getEntityKind().equals(ItemFactory.AMULET)) {
 			return;
 		}
 
-		if(item.getEntityKind().equals("CandyOfDeath")) {
+		if(item.getEntityKind().equals(ItemFactory.CANDY_OF_DEATH)) {
 			return;
 		}
 
-		if(item.getEntityKind().equals("SpellBook")) {
+		if(item.getEntityKind().equals(ItemFactory.SPELL_BOOK)) {
 			return;
 		}
 

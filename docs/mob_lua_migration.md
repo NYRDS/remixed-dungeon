@@ -25,7 +25,7 @@ Migrated from java 2026-09-11 as the first Step-B test batch: **`Bat`**
 **`Worm`** (json stats + `immunities` + lua `attackProc` Roots/Poison procs;
 note `Random.Int(a,b)` is `[a,b)` — lua port is `math.random(a,b-1)`),
 **`Kobold`** (pure json, no lua needed). `Pickaxe`'s bat-blood quest check
-now goes by kind. Verified: legacy pre-migration save (FQN-only) restores
+now goes by kind (`MobFactory.BAT`). Verified: legacy pre-migration save (FQN-only) restores
 all three via derived-kind with hp/str/fraction identical, fresh spawns and
 death-loot drops work, lua attackProc round-trips (`/debug` harness).
 
@@ -222,6 +222,12 @@ data-def scans (`mobsDesc/*.json`, `scripts/items/*.lua`):
   other modules.
 
 ## Step B — migrate one mob
+
+Java rule (2026-09-11): java code referencing an entity kind uses the named
+constant in its factory class (`MobFactory.BAT`, `ItemFactory.GOLD`,
+`LevelObjectsFactory.PEDESTAL`, `BuffFactory.POISON`) — never a magic
+string. Add the constant if it doesn't exist yet; the literal lives only at
+the constant definition.
 
 B0. **Survey**: all java construction sites (`new Rat(`, `Rat.class`, nested
     classes like `King.Undead`, `WandOfFlock.Sheep` constructed by engine

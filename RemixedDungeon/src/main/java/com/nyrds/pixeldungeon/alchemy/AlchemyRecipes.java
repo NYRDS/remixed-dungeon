@@ -154,9 +154,9 @@ public class AlchemyRecipes {
         
         // Skip special mobs that shouldn't be resurrectable
         String[] nonResurrectableMobs = {
-            "MirrorImage", "Wraith", "Skeleton", "FetidRat", "SuspiciousRat", 
-            "PseudoRat", "Ghost", "Undead", "Shopkeeper", "TownShopkeeper",
-            "Sheep", "Mimic", "MimicPie", "MimicAmulet", "Statue", "ArmoredStatue", "GoldenStatue"
+            MobFactory.MIRROR_IMAGE, MobFactory.WRAITH, MobFactory.SKELETON, MobFactory.FETID_RAT, MobFactory.SUSPICIOUS_RAT,
+            MobFactory.PSEUDO_RAT, MobFactory.GHOST, MobFactory.UNDEAD, MobFactory.SHOPKEEPER, MobFactory.TOWN_SHOPKEEPER,
+            MobFactory.SHEEP, MobFactory.MIMIC, MobFactory.MIMIC_PIE, MobFactory.MIMIC_AMULET, MobFactory.STATUE, MobFactory.ARMORED_STATUE, MobFactory.GOLDEN_STATUE
         };
         
         for (String nonResurrectable : nonResurrectableMobs) {
