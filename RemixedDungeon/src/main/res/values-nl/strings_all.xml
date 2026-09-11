@@ -784,6 +784,7 @@
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
     <string name="Mushroom_Eat_Message">Die paddenstoel smaakt raar!</string>
     <string name="MysteryMeat_Info">Eet op eigen risico!</string>
+    <string name="MysteryMeat_Info3">Je voelt je niet goed.</string>
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
     <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
@@ -1242,6 +1243,7 @@
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">gekke dief</string>
     <string name="Thief_Name_Objective">gekke dief</string>
+    <string name="TitleScene_Badges">Badges</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
@@ -1485,6 +1487,7 @@
     <string name="WndSettings_RecordVideo">Video-opname</string>
     <string name="WndSettings_SecondQuickslot">Tweede sneltoets</string>
     <string name="WndSettings_SelectLanguage">Selecteer taal</string>
+    <string name="WndSettings_Sound">Geluidseffecten</string>
     <string name="WndSettings_SwitchLand">Naar liggend scherm</string>
     <string name="WndSettings_TextScaleDefault">Standaardlettertype</string>
     <string name="WndSettings_ThirdQuickslot">Derde sneltoets</string>
@@ -1657,6 +1660,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
