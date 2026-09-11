@@ -109,6 +109,7 @@
     <string name="Badges_Piranhas">6 piranha\'s gedood</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
+    <string name="Badges_RingHaggler">Ring der Handelaar verkregen</string>
     <string name="Badges_ShadowLord_Slain">Schaduwheer verslagen</string>
     <string name="Badges_StrengthAttained1">13 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained2">15 punten Kracht bereikt</string>
@@ -1631,6 +1632,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 
