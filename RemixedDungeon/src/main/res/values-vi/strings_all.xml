@@ -180,6 +180,7 @@
     <string name="Bowknot_Name">Nơ</string>
     <string name="Brute_Desc">Quái nhân là những kẻ to lớn, mạnh mẽ và cứng rắn nhất trong tất cả các gnoll. Khi bị thương nặng, chúng phát cuồng và gây sát thương lớn hơn cho kẻ thù.</string>
     <string name="Brute_Gender">masculine</string>
+    <string name="Brute_Name">gnoll hung bạo</string>
     <string name="Brute_Name_Objective">gnoll brute</string>
     <string name="BurningBuff_Info">Cơ thể bị lửa thiêu đốt!</string>
     <string name="BurningBuff_Name">Đang cháy</string>
@@ -731,6 +732,7 @@
     <string name="MeleeWeapon_Info3d">và</string>
     <string name="MeleeWeapon_Info3e">nhưng</string>
     <string name="MeleeWeapon_Info3g">kém chính xác</string>
+    <string name="MeleeWeapon_Info4a">Nó đã được cân bằng để nhanh hơn.</string>
     <string name="MeleeWeapon_Info6b">Do sức mạnh dư thừa, sát thương tấn công của bạn với %s này được tăng lên.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">lính thuê</string>
@@ -1582,6 +1584,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
