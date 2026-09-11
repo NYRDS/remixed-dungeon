@@ -2739,7 +2739,7 @@ public class DebugEndpoints {
                                 item.quantity(item.quantity() - toConsume);
                                 toRemove -= toConsume * multiplier;
                                 if (item.quantity() <= 0) {
-                                    item.detach(Dungeon.hero.getBelongings().backpack);
+                                    Dungeon.hero.getBelongings().removeItem(item);
                                 }
                             }
                         }
@@ -2759,14 +2759,18 @@ public class DebugEndpoints {
                                 }
                             }
                         } else if (entityType == AlchemyRecipes.EntityType.MOB) {
-                            // Create mob
+                            // Create mob - same flow as WndItemAlchemy: real spawnMob, not a ghost
                             for (int i = 0; i < output.getCount() * finalTimes; i++) {
                                 Mob mob = MobFactory.mobByName(output.getName());
                                 if (mob != null && Dungeon.level != null) {
-                                    int cell = Dungeon.level.randomPassableCell();
-                                    mob.pos = cell;
-                                    mob.makePet(Dungeon.hero);
-                                    Actor.occupyCell(mob);
+                                    int cell = Dungeon.level.getEmptyCellNextTo(Dungeon.hero.getPos());
+                                    if (Dungeon.level.cellValid(cell)) {
+                                        mob.setPos(cell);
+                                        mob.makePet(Dungeon.hero);
+                                        Dungeon.level.spawnMob(mob, -1, Dungeon.hero.getPos());
+                                    } else {
+                                        Dungeon.level.animatedDrop(mob.carcass(), Dungeon.hero.getPos());
+                                    }
                                 }
                             }
                         }
@@ -2905,6 +2909,55 @@ public class DebugEndpoints {
             GLog.w("Error in handleAlchemyGiveItem: " + e.getMessage());
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    // test endpoint: /debug/item_info?type=<ItemFactory name> - inspect factory-fresh item (price drives FOR_SALE gating)
+    public static NanoHTTPD.Response handleDebugItemInfo(NanoHTTPD.IHTTPSession session) {
+        try {
+            String itemType = null;
+            String query = session.getQueryParameterString();
+            if (query != null && !query.isEmpty()) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("type=")) {
+                        itemType = URLDecoder.decode(param.substring(5), "UTF-8");
+                    }
+                }
+            }
+
+            if (itemType == null || itemType.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing item type parameter\"}");
+            }
+
+            final String finalItemType = itemType;
+            final String[] error = new String[1];
+            final String[] json = new String[1];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    Item item = ItemFactory.itemByName(finalItemType);
+                    if (item == null || !item.valid()) {
+                        error[0] = "unknown item: " + finalItemType;
+                        return;
+                    }
+                    json[0] = String.format(
+                        "{\"kind\":\"%s\",\"price\":%d,\"quantity\":%d,\"stackable\":%b,\"upgradable\":%b}",
+                        item.getEntityKind(), item.price(), item.quantity(), item.stackable, item.isUpgradable());
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_FOUND, "application/json",
+                    String.format("{\"error\":\"%s\"}", error[0]));
+            }
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json[0]);
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
         }
     }
 
@@ -3688,13 +3741,13 @@ public class DebugEndpoints {
     // wearer overloaded, useful to test encumbrance speed/evasion penalties.
     public static NanoHTTPD.Response handleDebugTestEquip(NanoHTTPD.IHTTPSession session) {
         try {
-            int id = -1, level = 0;
-            String itemType = null;
+            String idParam = null, itemType = null;
+            int level = 0;
             String query = session.getQueryParameterString();
             if (query != null) {
                 for (String param : query.split("&")) {
                     if (param.startsWith("id=")) {
-                        id = Integer.parseInt(param.substring(3));
+                        idParam = URLDecoder.decode(param.substring(3), "UTF-8");
                     } else if (param.startsWith("item=")) {
                         itemType = URLDecoder.decode(param.substring(5), "UTF-8");
                     } else if (param.startsWith("level=")) {
@@ -3703,16 +3756,25 @@ public class DebugEndpoints {
                 }
             }
 
-            Mob mob = findMobById(id);
-            if (mob == null || itemType == null) {
-                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
-                    createErrorResponse("need id & item").toString());
+            Char chr;
+            if ("hero".equals(idParam)) {
+                chr = Dungeon.hero;
+            } else if (idParam != null) {
+                chr = findMobById(Integer.parseInt(idParam));
+            } else {
+                chr = null;
             }
 
-            final Mob finalMob = mob;
+            if (chr == null || itemType == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need id (\"hero\" or mob id) & item").toString());
+            }
+
+            final Char finalChr = chr;
             final String finalItemType = itemType;
             final int finalLevel = level;
             final String[] error = new String[1];
+            final String[] equippedSlot = new String[1];
             GameLoop.pushUiTaskAndWait(() -> {
                 try {
                     Item item = ItemFactory.itemByName(finalItemType);
@@ -3721,16 +3783,17 @@ public class DebugEndpoints {
                         error[0] = "not equipable: " + finalItemType;
                         return;
                     }
-                    if (!finalMob.getBelongings().collect(item)) {
+                    if (!finalChr.getBelongings().collect(item)) {
                         error[0] = "backpack full";
                         return;
                     }
-                    Belongings.Slot slot = ((EquipableItem) item).slot(finalMob.getBelongings());
+                    Belongings.Slot slot = ((EquipableItem) item).slot(finalChr.getBelongings());
                     if (slot == Belongings.Slot.NONE) {
                         error[0] = "no slot for " + finalItemType;
                         return;
                     }
-                    finalMob.getBelongings().equip((EquipableItem) item, slot);
+                    finalChr.getBelongings().equip((EquipableItem) item, slot);
+                    equippedSlot[0] = slot.name();
                 } catch (Exception e) {
                     error[0] = e.getMessage();
                 }
@@ -3742,9 +3805,8 @@ public class DebugEndpoints {
             }
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"item\":\"%s\",\"level\":%d,\"requiredSTR\":%d,\"effectiveSTR\":%d,\"speed\":%f}",
-                    itemType, finalLevel, ((EquipableItem) findMobById(id).getBelongings().getItemFromSlot(Belongings.Slot.ARMOR)).requiredSTR(),
-                    mob.effectiveSTR(), mob.speed()));
+                String.format("{\"success\":true,\"item\":\"%s\",\"level\":%d,\"slot\":\"%s\",\"effectiveSTR\":%d,\"speed\":%f}",
+                    itemType, finalLevel, equippedSlot[0], chr.effectiveSTR(), chr.speed()));
         } catch (Exception e) {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse(e.getMessage()).toString());

@@ -2427,7 +2427,8 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void detachItemList(List<Item> itemsToRemove) {
         for (Item itemToRemove : itemsToRemove) {
-            itemToRemove.detachAll(getBelongings().backpack);
+            // Belongings.removeItem also handles equipped items (slots), unlike detachAll(backpack)
+            getBelongings().removeItem(itemToRemove);
         }
     }
 
