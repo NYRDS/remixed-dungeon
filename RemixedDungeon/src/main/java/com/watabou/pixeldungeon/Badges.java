@@ -16,11 +16,9 @@ import com.nyrds.util.ModdingBase;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
-import com.watabou.pixeldungeon.actors.mobs.Albino;
 import com.watabou.pixeldungeon.actors.mobs.Bandit;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
-import com.watabou.pixeldungeon.actors.mobs.Shielded;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
@@ -787,11 +785,11 @@ public class Badges {
 	public static void validateRare(Mob mob) {
 
 		Badge badge = null;
-		if (mob instanceof Albino) {
+		if (mob.getEntityKind().equals(MobFactory.ALBINO)) {
 			badge = Badge.RARE_ALBINO;
 		} else if (mob instanceof Bandit) {
 			badge = Badge.RARE_BANDIT;
-		} else if (mob instanceof Shielded) {
+		} else if (mob.getEntityKind().equals(MobFactory.SHIELDED)) {
 			badge = Badge.RARE_SHIELDED;
 		} else if (mob instanceof Senior) {
 			badge = Badge.RARE_SENIOR;

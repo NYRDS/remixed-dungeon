@@ -21,8 +21,6 @@ import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.icecaves.KoboldIcemancer;
 import com.nyrds.pixeldungeon.mobs.necropolis.DeathKnight;
 import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
-import com.nyrds.pixeldungeon.mobs.necropolis.EnslavedSoul;
-import com.nyrds.pixeldungeon.mobs.necropolis.ExplodingSkull;
 import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
@@ -59,7 +57,6 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
-import com.watabou.pixeldungeon.actors.mobs.Albino;
 import com.watabou.pixeldungeon.actors.mobs.Bandit;
 import com.watabou.pixeldungeon.actors.mobs.Brute;
 import com.watabou.pixeldungeon.actors.mobs.Crab;
@@ -81,7 +78,6 @@ import com.watabou.pixeldungeon.actors.mobs.Scorpio;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Shadow;
 import com.watabou.pixeldungeon.actors.mobs.Shaman;
-import com.watabou.pixeldungeon.actors.mobs.Shielded;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.actors.mobs.Spinner;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
@@ -143,6 +139,8 @@ public class MobFactory {
 	public static final String MIMIC = "Mimic";
 	public static final String MIMIC_PIE = "MimicPie";
 	public static final String MIMIC_AMULET = "MimicAmulet";
+	public static final String ALBINO = "Albino";
+	public static final String SHIELDED = "Shielded";
 
 	static private Map<String, Class<? extends Mob>> mMobsList;
 
@@ -165,7 +163,6 @@ public class MobFactory {
 
 		mMobsList = new HashMap<>();
 		registerMobClass(Rat.class);
-		registerMobClass(Albino.class);
 		registerMobClass(Gnoll.class);
 		registerMobClass(Crab.class);
 		registerMobClass(Swarm.class);
@@ -193,8 +190,6 @@ public class MobFactory {
 		registerMobClass(FireElemental.class);
 		registerMobClass(Monk.class);
 		registerMobClass(DM300.class);
-		registerMobClass(Shielded.class);
-
 		registerMobClass(AirElemental.class);
 		registerMobClass(WaterElemental.class);
 		registerMobClass(EarthElemental.class);
@@ -235,8 +230,6 @@ public class MobFactory {
 
 		registerMobClass(DeathKnight.class);
 		registerMobClass(DreadKnight.class);
-		registerMobClass(EnslavedSoul.class);
-		registerMobClass(ExplodingSkull.class);
 		registerMobClass(JarOfSouls.class);
 		registerMobClass(Lich.class);
 		registerMobClass(RunicSkull.class);

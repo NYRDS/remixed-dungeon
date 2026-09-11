@@ -41,6 +41,51 @@ Verified live: stats parity (50/320/80 ht), Hunting/SLEEPING default
 states, `act` hook self-destruct timing, level-save round-trip keeping
 hp/state/pos, level `.dat` stores `entityKind` + `CustomMob`.
 
+Third batch 2026-09-11 (trivial tier): **`Albino`** (json + lua
+`attackProc` → Bleeding at 50%; Badges rare check converted from
+`instanceof` to kind), **`EnslavedSoul`** (json `undead`/`carcassChance`/
+Gold loot + lua attackProc: 1-in-5, hero-only, random one of six 3-turn
+debuffs; hero check via `enemy:getEntityKind() == "Hero"` — the shipped
+idiom, cf. RemixedPickaxe.lua), **`ExplodingSkull`** (json + lua
+attackProc self-`die` — attackProc fires only on a hit, matching the java
+`attack()` override that died on `super.attack()==true`; verified live:
+log "взрывающийся череп ударил тебя", hero killed, skull removed),
+**`Shielded`** (pure json incl. `isHumanoid`, inherited Brute stats
+authored explicitly). Live-verified via the `/debug` web API: exact
+hp/ht/str parity on spawn, hunting/attack/kamikaze behavior, Bleeding
+proc observed on hero. Deferred with reasons: `Acidic` (inherits
+Scorpio's keep-distance kite AI), `MimicPie`+`IceElemental`
+(`IDepthAdjustable` depth-scaled stats), `IceGuardian`+`IceGuardianCore`
+(coupled boss pair with cross-resurrection in `die()`), `Rat`/`Gnoll`/
+`Crab` (quest statics in `die()` — see Step C).
+
+## Step C — engine work that unblocks the rest
+
+**Quest statics in `die()` (the only real blocker left).** Rat/Gnoll/Crab
+call `Ghost/ScarecrowNPC/PlagueDoctorNPC Quest.process(pos)`, Golem/Monk
+call `Imp.Quest.process(mob)`. The lua `quest` library is a separate
+storage-based mod-quest system, not wired to these java processors. Fix:
+hoist the processors out of per-mob `die()` into the central death path,
+kind-gated at the call site (they self-gate on quest state already);
+data-defined mobs then get quest behavior for free through
+`mob.lua onDie → quest.mobDied`.
+
+**`canAttack`/`attack` hooks are NOT needed** (decided 2026-09-11 after
+reading the dispatch): `Char.act()` calls `getScript().runOptional("onAct")`
+and discards the result — lua `act` is a pre-AI policy hook, not a turn
+replacement. Recipes that make explicit hooks unnecessary:
+- plain ranged: `attackRange` json key already drives
+  `CustomMob.canAttack` (distance + ballistica) — covers Warlock, Shaman,
+  Tengu base attack, Eye; extras go into `zapProc`/`defenceProc`.
+- side-effect gates: `act` sets the AI state, java act executes — Rat's
+  ratter-aura flee becomes "enemy has RATTER_AURA → set Fleeing + Terror".
+- kiting (Scorpio): `act` sets Fleeing/Hunting by distance.
+- bosses (Goo pump, King pedestals, Tengu jumps) stay java longest;
+  a state-driven `attackRange` write from lua may or may not work
+  (untested luaj field write) — revisit if/when they migrate.
+Invariant: never spend time inside the lua `act` hook — java act owns the
+clock and the debug double-spend check flags violations.
+
 ## Save mechanics (why this works)
 
 - Today each mob is stored in the level bundle as a nested `Bundlable` with
@@ -304,6 +349,31 @@ B3. **Delete the java class and its `registerMobClass` entry.** No shell,
     actually deleted, an incremental variant is fine: keep the class, add
     json+lua, move methods over one by one (script binds by kind and the
     engine calls its hooks).
+
+## Debug harness notes (desktop, 2026-09-11)
+
+- Launch from repo root (res paths `data/mods/Remixed/` and
+  `~/.local/share/remixed-dungeon/mods/Remixed/` are cwd/user relative):
+
+  ```
+  java --add-opens java.base/java.util=ALL-UNNAMED \
+    -cp "RemixedDungeon/src/main/assets:$(cat /tmp/rpd-desktop-cp.txt)" \
+    com.nyrds.pixeldungeon.desktop.DesktopLauncher --webserver --windowed --nosound
+  ```
+
+  (`/tmp/rpd-desktop-cp.txt` = runtime classpath saved from a gradle run;
+  the assets dir goes on the cp so gdx internal lookups find fonts.)
+- `--webserver` flag is REQUIRED for the :8080 debug API.
+- Overlay for mod-file lookups: symlink game assets + desktop `l10ns/`
+  + repo-root `scripts/` into `~/.local/share/remixed-dungeon/mods/Remixed/`
+  (do NOT touch the tracked `data/mods/Remixed` symlink, it is dangling).
+- `preferences.hjson` `fps_limit` is an INDEX into {30,60,120}, not a value.
+- Useful endpoints: `/debug/start_game`, `/debug/create_mob?type=X&x=&y=`,
+  `/debug/wait_ticks?ticks=n` (runs real hero turns), `/debug/get_mobs`,
+  `/debug/get_hero_info`, `/debug/get_recent_logs`, `/debug/change_level?level=n`,
+  `/debug/char_status?id=`. verify batch:
+  stats parity via get_mobs (HP/HT/baseStr), attack behavior via
+  wait_ticks + hero HP/buffs, kamikaze via get_recent_logs + mob removal.
 
 ## Verification checklist
 
