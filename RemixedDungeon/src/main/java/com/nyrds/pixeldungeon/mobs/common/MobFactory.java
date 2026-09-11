@@ -8,7 +8,6 @@ import com.nyrds.pixeldungeon.mobs.guts.Larva;
 import com.nyrds.pixeldungeon.mobs.guts.Nightmare;
 import com.nyrds.pixeldungeon.mobs.guts.RottingFist;
 import com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat;
-import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
 import com.nyrds.pixeldungeon.mobs.guts.YogsBrain;
 import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
@@ -17,12 +16,9 @@ import com.nyrds.pixeldungeon.mobs.guts.ZombieGnoll;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.icecaves.KoboldIcemancer;
-import com.nyrds.pixeldungeon.mobs.necropolis.DeathKnight;
-import com.nyrds.pixeldungeon.mobs.necropolis.DreadKnight;
 import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
-import com.nyrds.pixeldungeon.mobs.necropolis.Zombie;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
 import com.nyrds.pixeldungeon.mobs.npc.BellaNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
@@ -56,7 +52,6 @@ import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Bandit;
-import com.watabou.pixeldungeon.actors.mobs.Brute;
 import com.watabou.pixeldungeon.actors.mobs.Crab;
 import com.watabou.pixeldungeon.actors.mobs.DM300;
 import com.watabou.pixeldungeon.actors.mobs.Eye;
@@ -72,7 +67,6 @@ import com.watabou.pixeldungeon.actors.mobs.Piranha;
 import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.Scorpio;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
-import com.watabou.pixeldungeon.actors.mobs.Shadow;
 import com.watabou.pixeldungeon.actors.mobs.Shaman;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.actors.mobs.Spinner;
@@ -137,6 +131,9 @@ public class MobFactory {
 	public static final String MIMIC_AMULET = "MimicAmulet";
 	public static final String ALBINO = "Albino";
 	public static final String SHIELDED = "Shielded";
+	public static final String SHADOW = "Shadow";
+	public static final String DREAD_KNIGHT = "DreadKnight";
+	public static final String TREACHEROUS_SPIRIT = "TreacherousSpirit";
 
 	static private Map<String, Class<? extends Mob>> mMobsList;
 
@@ -168,8 +165,6 @@ public class MobFactory {
 		registerMobClass(Goo.class);
 
 		registerMobClass(Shaman.class);
-		registerMobClass(Shadow.class);
-		registerMobClass(Brute.class);
 		registerMobClass(Tengu.class);
 		registerMobClass(Bandit.class);
 
@@ -221,12 +216,9 @@ public class MobFactory {
 		registerMobClass(ArmoredStatue.class);
 		registerMobClass(GoldenStatue.class);
 
-		registerMobClass(DeathKnight.class);
-		registerMobClass(DreadKnight.class);
 		registerMobClass(JarOfSouls.class);
 		registerMobClass(Lich.class);
 		registerMobClass(RunicSkull.class);
-		registerMobClass(Zombie.class);
 
 		registerMobClass(Crystal.class);
 
@@ -262,7 +254,6 @@ public class MobFactory {
 		registerMobClass(Shopkeeper.class);
 		registerMobClass(ImpShopkeeper.class);
 		registerMobClass(TownShopkeeper.class);
-		registerMobClass(TreacherousSpirit.class);
 		registerMobClass(MirrorImage.class);
 
 		mMobsList.put(SHEEP, WandOfFlock.Sheep.class);

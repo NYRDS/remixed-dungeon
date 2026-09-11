@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.effects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
@@ -40,10 +41,12 @@ public class DeathStroke extends Image {
 		}
 	}
 	
+	@LuaInterface
 	public static void hit( Char ch ) {
 		hit( ch, 0 );
 	}
-	
+
+	@LuaInterface
 	public static void hit( Char ch, float angle ) {
 		if (ch.getSprite().hasParent()) {
 			DeathStroke w = (DeathStroke)ch.getSprite().getParent().recycle( DeathStroke.class );

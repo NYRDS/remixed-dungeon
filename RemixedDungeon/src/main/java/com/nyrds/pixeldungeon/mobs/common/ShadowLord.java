@@ -21,7 +21,6 @@ import com.watabou.pixeldungeon.actors.blobs.Darkness;
 import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Shadow;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.MagicMissile;
@@ -67,7 +66,7 @@ public class ShadowLord extends Boss implements IZapper {
 		int cell = level().getSolidCellNextTo(getPos());
 
 		if (level().cellValid(cell)) {
-			Mob mob = new Shadow();
+			Mob mob = MobFactory.mobByName(MobFactory.SHADOW);
 
 			mob.setState(MobAi.getStateByClass(Wandering.class));
 

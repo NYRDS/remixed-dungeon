@@ -2,7 +2,7 @@ package com.nyrds.pixeldungeon.mobs.npc;
 
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.guts.TreacherousSpirit;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -10,6 +10,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -129,7 +130,7 @@ public class AzuterronNPC extends Shopkeeper {
                 int mobPos = level.randomRespawnCell();
 
                 if (level.cellValid(mobPos)) {
-                    TreacherousSpirit enemy = new TreacherousSpirit();
+                    Mob enemy = MobFactory.mobByName(MobFactory.TREACHEROUS_SPIRIT);
                     enemy.setPos(mobPos);
                     level.spawnMob(enemy);
                     processed = true;

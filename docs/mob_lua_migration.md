@@ -75,7 +75,7 @@ the inventory bundle — `Mob.die` drops belongings). Mimic construction:
 Verified live: all four spawn data-defined with exact authored hp/str and
 inventory (RottenPasty / SkeletonKey).
 Existing lua idioms to reuse (scripts/mobs/): `RPD.affectBuff(chr,"Kind",dur)`,
-`RPD.permanentBuff(chr,RPD.Buffs.X)` in `stats`, `RPD.setAi(me,"Fleeing"|"Hunting")`
+`RPD.permanentBuff(chr, RPD.Buffs.X)` in `stats`, `RPD.setAi(me,"Fleeing"|"Hunting")`
 — ShamanElder.lua already implements the act-policy kite in production,
 `self:loot(item)` theft (ScriptedThief), `self:immunities():add` (NatureAura).
 Deferred from this batch: `Wraith` (spawned from cursed heaps at any depth
@@ -84,6 +84,48 @@ and by Shadow Lord at depth ~30 — flattening unacceptable),
 `WaterElemental`/`EarthElemental` (terrain-conditional speed + buff
 intercepts), `Crystal` (Shadow-Lord support: random wand arsenal,
 pedestal death logic, hp-based damageRoll).
+
+Fifth batch 2026-09-11 (necropolis simple tier): **`Zombie`** (json + lua
+attackProc 1/3 Poison × durationFactor), **`DeathKnight`**/`**DreadKnight**`
+(json + attackProc double damage + `RPD.Sfx.DeathStroke.hit(enemy)` visual —
+already bound in commonClasses; `@LuaInterface` added to `DeathStroke.hit`
+so the generated interface map registers it), **`Shadow`** (pure json:
+`walkingType:"WALL"`, speed 2, attackDelay 0.5, `aiState:"Wandering"`),
+**`Brute`** (pure json; its java `getSubClass()` override was dead code —
+only `Dungeon.hero.getSubClass()` is ever read), **`TreacherousSpirit`**
+(json `canBePet:false` + HeartOfDarkness as `loot`/`lootChance:1` + lua
+attackProc 1/4 summon SpiritOfPain — BeeSpawner idiom). Construction sites
+switched: `ShadowLord.spawnShadow` and `AzuterronNPC.Quest.process` to the
+factory (new constants `SHADOW`, `DREAD_KNIGHT`, `TREACHEROUS_SPIRIT`);
+Badges `instanceof DreadKnight` → kind check. Verified live: legacy-save
+fixture restores all six with exact hp/ht/str parity, zombie poison proc in
+the log, both knights melee, TS summon observed (3/8 lives), zero lua errors.
+
+Batch 5 lessons:
+- **`attackProc` can fire with a null `enemy`** — java knights guarded
+  `if (enemy != null)`; dropping the guard in lua produced
+  `DeathStroke.hit(null)` NPEs caught live. All attackProc scripts now guard
+  `enemy ~= nil` (Zombie/DeathKnight/DreadKnight/TreacherousSpirit).
+- DreadKnight's 1/10 Stun proc is a **no-op in java too** (`Buff.affect`
+  2-arg = no duration → FlavourBuff decays immediately); ported as-is.
+- Shadow's java `speed()` override returned a constant 2, ignoring buff
+  multipliers; json `baseSpeed:2` lets Slow actually slow it (minor delta,
+  arguably a fix). Free-roaming Shadows don't exist in java either (only
+  Shadow Lord blinks them in), so no wander behavior to preserve.
+- `Mob.loot(Object,float)` rolls chance AND picks the item at construction
+  (`collect`), not at death — json loot + `lootChance` matches ctor loot
+  semantics for free; only Treasury *category* loot has no json form.
+- Dev-overlay trap: `rundir/mods/Remixed` held per-file symlinks, so new
+  `mobsDesc/*.json` were invisible to the game → legacy saves hit the
+  Class.forName fallback and mobs silently skipped. `mobsDesc` and
+  `scripts/mobs` in the overlay are directory symlinks now.
+
+Deferred from batch 5: `KoboldIcemancer` — its java `zap()` deals **no
+damage** (Slow-only controller); the `zapProc` hook can't suppress the base
+zap damage (returning 0 still runs `defenseProc`/`damage(0)`), so it needs
+the ranged-tier zap story (Warlock/Shaman/Eye batch). `ZombieGnoll` —
+`resurrect()` is not `@LuaInterface` (gate blocks `self:resurrect()`); a
+one-line annotation unblocks it.
 
 ## Step C — engine work that unblocks the rest
 
