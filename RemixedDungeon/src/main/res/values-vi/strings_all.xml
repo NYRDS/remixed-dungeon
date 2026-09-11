@@ -184,6 +184,7 @@
     <string name="Brute_Name_Objective">gnoll brute</string>
     <string name="BurningBuff_Info">Cơ thể bị lửa thiêu đốt!</string>
     <string name="BurningBuff_Name">Đang cháy</string>
+    <string name="BurningFist_Desc">Nắm Đấm Lửa của Thần Cổ Xưa</string>
     <string name="BurningFist_Gender">masculine</string>
     <string name="BurningFist_Name_Objective">cú đấm bùng cháy</string>
     <string name="Burning_Burns">%s bốc cháy!</string>
@@ -313,6 +314,7 @@
     <string name="Codex_Story_22">Cuốn sách này được viết bằng ngôn ngữ quỷ</string>
     <string name="Codex_Story_3">Ký tự Chống-entropi - Anh hùng sẽ được chiếu sáng và bốc cháy, và kẻ thù sẽ bị đóng băng.</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
+    <string name="Codex_Story_8">Glyph Độ Nhớt - Anh hùng sẽ nhận debuff đau bị trì hoãn, khiến Anh hùng nhận 1 sát thương mỗi lượt, thay vì nhận toàn bộ một lần.</string>
     <string name="Codex_Story_9">Glyph Dịch Chuyển - Mỗi khi Anh Hùng trúng đòn, có khả năng Anh Hùng sẽ được dịch chuyển đến một ô ngẫu nhiên trong tầm nhìn. Glyph này không hoạt động ở các cấp độ Trùm.</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ComboBuff_Name">Liên hoàn</string>
@@ -610,6 +612,7 @@
     <string name="InnKeeperNPC_Name">chủ quán</string>
     <string name="InnKeeperNPC_Name_Objective">chủ quán</string>
     <string name="InnServant_Phrase_2">Gã say rượu này khiến tôi phát điên!</string>
+    <string name="InnServant_Phrase_3">Trông sạch sẽ với tôi</string>
     <string name="Instability_Name_0">Bất ổn %s</string>
     <string name="Instability_Name_1">Bất ổn %s</string>
     <string name="Instability_Name_2">Bất ổn %s</string>
@@ -637,6 +640,7 @@
     <string name="Journal_Troll">Thợ rèn Troll</string>
     <string name="Journal_WellAwareness">Giếng Nhận Thức</string>
     <string name="Journal_WellTransmut">Giếng Chuyển Hóa</string>
+    <string name="KindOfBow_ChooseArrows">CHỌN MŨI TÊN</string>
     <string name="King_Defense">chặn</string>
     <string name="King_Desc">Vua cuối cùng của người lùn nổi tiếng với sự thấu hiểu sâu sắc về quá trình sống và chết. Ngài đã thuyết phục các thành viên triều đình tham gia nghi lễ, hứa hẹn ban tặng thanh xuân vĩnh cửu. Kết cục chỉ có Ngài nhận được nó - và một quân đoàn bất tử làm phần thưởng thêm.</string>
     <string name="King_Gender">masculine</string>
@@ -1586,6 +1590,10 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
 
 
 
