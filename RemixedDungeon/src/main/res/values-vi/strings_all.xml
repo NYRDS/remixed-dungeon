@@ -376,6 +376,7 @@
     <string name="DogeMask_Info">Bạn có từng muốn cải trang thành Doge nổi tiếng? Bây giờ là cơ hội của bạn!\nCái Mặt nạ Đấy! Nhiều Cải Trang! Wow!</string>
     <string name="DonateButton_pleaseDonate">vui lòng cân nhắc ủng hộ</string>
     <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
+    <string name="DreadKnight_Desc">Hiệp sĩ kinh hoàng là một chiến binh cổ đại, khi còn sống không biết đến điều thiện hay chính nghĩa. Vì tội lỗi của mình, anh ta bị nguyền rủa phải lang thang vĩnh viễn trong thân thể chết chóc tan nát này. Và mỗi khoảnh khắc tồn tại đau đớn của anh ta đầy đau khổ và thống khổ, tương tự những gì anh ta đã gây ra cho các nạn nhân.</string>
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
     <string name="DriedRose_Info">Bông hồng này đã khô héo từ lâu, nhưng cách nào đó nó vẫn giữ nguyên tất cả cánh hoa.</string>
@@ -1597,6 +1598,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

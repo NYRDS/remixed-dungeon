@@ -328,6 +328,7 @@
     <string name="Deathling_Name">ميت صغير</string>
     <string name="Deathling_Name_Objective">ميت صغير</string>
     <string name="DeepSnail_Gender">masculine</string>
+    <string name="DeepSnail_Name">حلزون عميق</string>
     <string name="DeferedDamageBuff_Info">تم تحويل الألم إلى ألم بطيء، مما يقلل الضرر المتلقى دفعة واحدة.\nالضرر المتبقي لتلقيه %d</string>
     <string name="DewVial_Full">قارورة الندى ممتلئة!</string>
     <string name="DewVial_Name">قارورة ندى</string>
@@ -1351,6 +1352,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

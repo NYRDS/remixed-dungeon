@@ -480,6 +480,7 @@
     <string name="Glaive_Name">gleve</string>
     <string name="GnollArmor_ACSpecial">DOMINEREN</string>
     <string name="GnollArmor_Info">Draagsters van het Gnome-Luitenant-kostuum zijn bekend om hun vermogen om zelfs de woestste monsters te overtuigen tot loyale dienaren van de Kroon.</string>
+    <string name="GnollArmor_NotGnoll">Alleen gnollen kunnen de Gnoll Armor uitrusten!</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnol verkenner</string>
@@ -1652,6 +1653,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 
