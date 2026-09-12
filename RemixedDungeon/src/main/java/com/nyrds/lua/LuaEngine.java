@@ -10,6 +10,8 @@ import com.nyrds.platform.lua.PlatformLuajavaLib;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.utils.GLog;
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.WeakHashMap;
 import lombok.Synchronized;
 import org.apache.commons.io.input.BOMInputStream;
@@ -135,6 +137,34 @@ public class LuaEngine implements ResourceFinder {
 
 		globals.finder = this;
 		globals.set("loadResource", new resLoader());
+
+		// luaj recompiles a chunk on every loadfile, and per-entity module
+		// instances (LuaScript.asInstance) recompile the SAME file for every
+		// new object. On TeaVM that compile runs as JS and costs 300-500ms
+		// in-browser - felt as a hitch on the first attack/first buff proc.
+		// Cache the compiled prototype per file: invoking it again still
+		// produces a fresh module table per instance, minus the recompile.
+		final LuaValue originalLoadfile = globals.get("loadfile");
+		final Map<String, LuaValue> prototypeCache = new HashMap<>();
+		globals.set("loadfile", new VarArgFunction() {
+			@Override
+			public Varargs invoke(Varargs args) {
+				if (args.isstring(1)) {
+					String path = args.tojstring(1);
+					LuaValue prototype = prototypeCache.get(path);
+					if (prototype != null) {
+						return prototype;
+					}
+					Varargs result = originalLoadfile.invoke(args);
+					LuaValue chunk = result.arg1();
+					if (!chunk.isnil()) {
+						prototypeCache.put(path, chunk);
+					}
+					return result;
+				}
+				return originalLoadfile.invoke(args);
+			}
+		});
 
 		stp = call("require", "scripts/lib/StackTracePlus");
 		globals.loadfile("scripts/startup/quirks.lua").call();

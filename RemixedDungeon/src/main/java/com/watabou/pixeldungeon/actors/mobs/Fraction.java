@@ -1,5 +1,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
 public enum Fraction {
 	DUNGEON,
 	NEUTRAL,

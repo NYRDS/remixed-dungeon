@@ -257,6 +257,7 @@ public class GameLoop {
                             return;
                         }
                     } catch (LuaError e) {
+                        EventCollector.logException(e, "GameLoop scene switch lua error: " + e.getMessage());
                         throw ModdingMode.modException(e);
                     } catch (Exception e) {
                         throw new TrackedRuntimeException(e);
@@ -328,15 +329,7 @@ public class GameLoop {
                     } catch (Throwable t) {
                         GLog.toFile("WATCHDOG: histogram failed: %s", t);
                     }
-                    Thread.getAllStackTraces().forEach((thread, st) -> {
-                        if (st.length == 0) {
-                            return;
-                        }
-                        GLog.toFile("WATCHDOG thread %s state=%s", thread.getName(), thread.getState());
-                        for (StackTraceElement el : st) {
-                            GLog.toFile("  at " + el);
-                        }
-                    });
+                    Game.dumpThreadStacks();
                 }
             }
         }, "update-watchdog");

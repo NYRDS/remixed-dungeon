@@ -86,7 +86,8 @@ public class InterlevelScene extends PixelScene {
                         break;
                 }
             } catch (Throwable e) {
-                com.watabou.pixeldungeon.utils.GLog.w("LevelChanger error: " + e.getMessage());
+                GLog.w("LevelChanger error: %s", e.getMessage());
+                EventCollector.logException(e, "LevelChanger/" + mode);
             } finally {
                 if (latchRef != null) {
                     latchRef.countDown();

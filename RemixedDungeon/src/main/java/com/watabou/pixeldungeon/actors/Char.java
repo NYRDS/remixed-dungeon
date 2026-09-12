@@ -1824,6 +1824,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         this.lvl = Scrambler.scramble(lvl);
     }
 
+    @LuaInterface
     public HeroClass getHeroClass() {
         return HeroClass.NONE;
     }

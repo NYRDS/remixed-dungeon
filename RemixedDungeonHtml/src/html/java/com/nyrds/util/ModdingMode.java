@@ -1,15 +1,15 @@
 package com.nyrds.util;
 
+import com.badlogic.gdx.graphics.Pixmap;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.gfx.BitmapData;
+import com.nyrds.platform.storage.Assets;
 import java.io.FilenameFilter;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-
-@LuaInterface
-
 
 // Stub class for LuaError
 class LuaError extends RuntimeException {
@@ -25,6 +25,7 @@ class LuaError extends RuntimeException {
 /**
  * HTML version of ModdingMode
  */
+@LuaInterface
 public class ModdingMode extends ModdingBase {
     public static boolean useRetroHeroSprites = false;
     private static boolean mTextRenderingMode = false;
@@ -42,8 +43,7 @@ public class ModdingMode extends ModdingBase {
     }
     
     public static boolean isAssetExist(String resName) {
-        // In HTML version, we assume all assets exist
-        return true;
+        return Assets.exists(resName);
     }
     
     public static String text(String id, Object... args) {
@@ -57,34 +57,85 @@ public class ModdingMode extends ModdingBase {
     
     // Additional methods needed for HTML version
     public static boolean isResourceExist(String fileName) {
-        // In HTML version, we assume all resources exist
-        return true;
+        // must match getInputStream: callers build fallback chains on this
+        // (e.g. the variative tilemap desc falls back to tiles_x_default.json)
+        return Assets.exists(fileName);
     }
-    
+
     public static boolean isResourceExistInMod(String resName) {
-        // In HTML version, we assume all resources exist
-        return true;
+        // no mod directories on web
+        return false;
     }
     
     public static InputStream getInputStream(String fileName) {
-        // In HTML version, we can't get input streams directly
-        return null;
+        if (!Assets.exists(fileName)) {
+            jsLog("getInputStream: NOT EXISTS " + fileName);
+            return null;
+        }
+        try {
+            return Assets.getFile(fileName).read();
+        } catch (Exception e) {
+            jsLog("getInputStream: READ FAILED " + fileName + " : " + e);
+            EventCollector.logException(e, "getInputStream " + fileName);
+            return null;
+        }
     }
-    
+
     public static String getResource(String fileName) {
-        // In HTML version, we return the file name as resource
-        return fileName;
+        if (!Assets.exists(fileName)) {
+            return null;
+        }
+        try {
+            return Assets.getText(fileName);
+        } catch (Exception e) {
+            EventCollector.logException(e, "getResource " + fileName);
+            return null;
+        }
     }
-    
+
     public static boolean isResourceExists(String fileName) {
-        // In HTML version, we assume all resources exist
-        return true;
+        return isAssetExist(fileName);
     }
     
     public static boolean isSoundExists(String soundName) {
-        // In HTML version, we assume all sounds exist
-        return true;
+        String resourceId = "sound/" + soundName;
+        return !getSoundById(resourceId).isEmpty();
     }
+
+    /**
+     * Desktop parity (minus mod branches): resolves a sound id to an actual
+     * asset file by trying .ogg/.mp3 suffixes, stripping an extension from
+     * the id if it already has one.
+     */
+    public static String getSoundById(String id) {
+        if (id.isEmpty()) {
+            return "";
+        }
+
+        String candidate = id + ".ogg";
+
+        if (isAssetExist(candidate)) {
+            return candidate;
+        }
+
+        candidate = id + ".mp3";
+        if (isAssetExist(candidate)) {
+            return candidate;
+        }
+
+        if (id.contains(".mp3")) {
+            return getSoundById(id.replace(".mp3", ""));
+        }
+
+        if (id.contains(".ogg")) {
+            return getSoundById(id.replace(".ogg", ""));
+        }
+
+        return "";
+    }
+
+    @org.teavm.jso.JSBody(params = "text", script = "console.error('MODDING: ' + text);")
+    private static native void jsLog(String text);
     
     // Methods needed to fix compilation errors
     public static RuntimeException modException(Exception e) {
@@ -112,8 +163,17 @@ public class ModdingMode extends ModdingBase {
     }
     
     public static BitmapData getBitmapData(String src) {
-        // In HTML version, we return a default BitmapData
-        return new BitmapData(1, 1);
+        if (!Assets.exists(src)) {
+            EventCollector.logException(new Exception("missing asset: " + src));
+            return new BitmapData(1, 1);
+        }
+        try {
+            return new BitmapData(new Pixmap(
+                    Assets.getFile(src)));
+        } catch (Exception e) {
+            EventCollector.logException(e, "bad bitmap: " + src);
+            return new BitmapData(1, 1);
+        }
     }
     
     public static List<String> listResources(String path, FilenameFilter filter) {

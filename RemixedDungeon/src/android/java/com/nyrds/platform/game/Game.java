@@ -414,4 +414,17 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     }
 
+    // caveman: watchdog support - dump every live thread's stack to the game log
+    public static void dumpThreadStacks() {
+        Thread.getAllStackTraces().forEach((thread, st) -> {
+            if (st.length == 0) {
+                return;
+            }
+            GLog.toFile("WATCHDOG thread %s state=%s", thread.getName(), thread.getState());
+            for (StackTraceElement el : st) {
+                GLog.toFile("  at " + el);
+            }
+        });
+    }
+
 }

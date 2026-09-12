@@ -27,6 +27,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -297,11 +298,19 @@ public class Game implements ApplicationListener, InputProcessor {
 
         Pixmap pixmap = Pixmap.createFromFrameBuffer(0, 0, width, height);
 
+        // glReadPixels rows run bottom-up; PNG wants top-down
+        int h = pixmap.getHeight();
+        Pixmap flipped = new Pixmap(pixmap.getWidth(), h, pixmap.getFormat());
+        for (int y = 0; y < h; y++) {
+            flipped.drawPixmap(pixmap, 0, y, pixmap.getWidth(), 1, 0, h - 1 - y, pixmap.getWidth(), 1);
+        }
+        pixmap.dispose();
+
         long timestamp = System.currentTimeMillis();
 
-        PixmapIO.writePNG(Gdx.files.absolute("screenshot" + timestamp + ".png"), pixmap, Deflater.DEFAULT_COMPRESSION, true);
+        PixmapIO.writePNG(Gdx.files.absolute("screenshot" + timestamp + ".png"), flipped, Deflater.DEFAULT_COMPRESSION, true);
 
-        pixmap.dispose();
+        flipped.dispose();
     }
 
     public static void updateFpsLimit() {
@@ -312,5 +321,18 @@ public class Game implements ApplicationListener, InputProcessor {
     static public void copyToClipboard(String label, String text) {
         Gdx.app.getClipboard().setContents(text);
         toast("Copied to clipboard", (Object[]) null);
+    }
+
+    // caveman: watchdog support - dump every live thread's stack to the game log
+    public static void dumpThreadStacks() {
+        Thread.getAllStackTraces().forEach((thread, st) -> {
+            if (st.length == 0) {
+                return;
+            }
+            GLog.toFile("WATCHDOG thread %s state=%s", thread.getName(), thread.getState());
+            for (StackTraceElement el : st) {
+                GLog.toFile("  at " + el);
+            }
+        });
     }
 }

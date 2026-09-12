@@ -74,6 +74,7 @@ public class LuaInterfaceProcessor extends AbstractProcessor {
             switch (element.getKind()) {
                 case CLASS:
                 case INTERFACE:
+                case ENUM:
                     data.hasClassAnnotation = true;
                     break;
                 case METHOD: {
@@ -223,13 +224,20 @@ public class LuaInterfaceProcessor extends AbstractProcessor {
         return sb.toString();
     }
 
+    private static boolean isTypeElementKind(ElementKind kind) {
+        return kind == ElementKind.CLASS
+                || kind == ElementKind.INTERFACE
+                || kind == ElementKind.ENUM
+                || kind == ElementKind.ANNOTATION_TYPE;
+    }
+
     private TypeElement getEnclosingClass(Element element) {
         // If the element itself is a class or interface, return it directly
-        if (element.getKind() == ElementKind.CLASS || element.getKind() == ElementKind.INTERFACE) {
+        if (isTypeElementKind(element.getKind())) {
             return (TypeElement) element;
         }
         Element enclosing = element.getEnclosingElement();
-        while (enclosing != null && enclosing.getKind() != ElementKind.CLASS && enclosing.getKind() != ElementKind.INTERFACE) {
+        while (enclosing != null && !isTypeElementKind(enclosing.getKind())) {
             enclosing = enclosing.getEnclosingElement();
         }
         return (TypeElement) enclosing;

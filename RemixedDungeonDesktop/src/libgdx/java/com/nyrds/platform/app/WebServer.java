@@ -53,6 +53,18 @@ public class WebServer extends BaseWebServer {
         return Base64.getEncoder().encodeToString(data);
     }
 
+    // glReadPixels rows run bottom-up; PNG wants top-down
+    private static Pixmap flipVertically(Pixmap pixmap) {
+        int w = pixmap.getWidth();
+        int h = pixmap.getHeight();
+        Pixmap flipped = new Pixmap(w, h, pixmap.getFormat());
+        for (int y = 0; y < h; y++) {
+            flipped.drawPixmap(pixmap, 0, y, w, 1, 0, h - 1 - y, w, 1);
+        }
+        pixmap.dispose();
+        return flipped;
+    }
+
     @Override
     public Response serve(IHTTPSession session) {
         String uri = session.getUri();
@@ -79,6 +91,7 @@ public class WebServer extends BaseWebServer {
                         latch.countDown();
                         return;
                     }
+                    pixmap = flipVertically(pixmap);
 
                     // glReadPixels gives bottom-up rows - flip them, otherwise the png is upside down
                     Pixmap flipped = new Pixmap(width, height, Pixmap.Format.RGBA8888);

@@ -18,10 +18,12 @@ import java.util.List;
 import java.util.Map;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.Nullable;
+import com.nyrds.LuaInterface;
 
 /**
  * Created by DeadDie on 26.05.2016
  */
+@LuaInterface
 public class Accessory {
 
     protected boolean coverHair;

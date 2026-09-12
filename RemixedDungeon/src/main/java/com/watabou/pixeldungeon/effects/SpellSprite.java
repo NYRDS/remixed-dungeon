@@ -9,7 +9,9 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import java.util.HashMap;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class SpellSprite extends Image {
 
 	public static final int FOOD		= 0;

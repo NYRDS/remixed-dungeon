@@ -8,7 +8,9 @@ import com.watabou.noosa.Visual;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class Emitter extends Group {
 
 	protected boolean lightMode = false;

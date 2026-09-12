@@ -9,7 +9,9 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import java.util.ArrayList;
 import org.jetbrains.annotations.NotNull;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class Journal {
 
 	@Deprecated

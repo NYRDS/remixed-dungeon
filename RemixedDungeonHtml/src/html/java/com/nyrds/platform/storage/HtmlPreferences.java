@@ -39,6 +39,13 @@ public class HtmlPreferences {
         }
     }
 
+    private static void onChanged() {
+        isDirty = true;
+        // there is no exit path on web to flush at - persist every change
+        // or it is lost when the tab dies
+        savePreferences();
+    }
+
     public static boolean contains(String key) {
         return prefData.has(key);
     }
@@ -66,37 +73,37 @@ public class HtmlPreferences {
 
     public static void putBoolean(String key, boolean value) {
         prefData.put(key, value);
-        isDirty = true;
+        onChanged();
     }
 
     public static void putInt(String key, int value) {
         prefData.put(key, value);
-        isDirty = true;
+        onChanged();
     }
 
     public static void putLong(String key, long value) {
         prefData.put(key, value);
-        isDirty = true;
+        onChanged();
     }
 
     public static void putFloat(String key, float value) {
         prefData.put(key, value);
-        isDirty = true;
+        onChanged();
     }
 
     public static void putString(String key, String value) {
         prefData.put(key, value);
-        isDirty = true;
+        onChanged();
     }
 
     public static void remove(String key) {
         prefData.remove(key);
-        isDirty = true;
+        onChanged();
     }
 
     public static void clear() {
         prefData = new JSONObject();
-        isDirty = true;
+        onChanged();
     }
 
     public static void flush() {

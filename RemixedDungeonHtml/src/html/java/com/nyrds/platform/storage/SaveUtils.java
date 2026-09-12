@@ -1,7 +1,5 @@
 package com.nyrds.platform.storage;
 
-import static com.nyrds.pixeldungeon.ml.BuildConfig.SAVES_PATH;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -18,15 +16,38 @@ import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
-import java.io.File;
 import java.io.IOException;
 
 public class SaveUtils {
 
     private static final String AUTO_SAVE = "autoSave";
 
+    // The html FileSystem (used by Dungeon/Badges/Library for the actual
+    // save writes) does NOT prefix SAVES_PATH - game files live at the
+    // storage root. Point the slot machinery there too, or it looks under
+    // ./saves// where nothing is ever written. (Desktop FileSystem does
+    // prepend SAVES_PATH, so this divergence is web-only.)
     static FileHandle local(String filename) {
-        return Gdx.files.local(SAVES_PATH + File.separator + filename);
+        return Gdx.files.local(filename);
+    }
+
+    // TeaVM backend canonicalizes paths to /dir/name/ (leading AND trailing
+    // slash) and TeaFileHandle.name() then returns "" - the desktop-style
+    // name/path matching below never matched and the whole save-slot
+    // machinery silently no-oped. Strip the slashes and match on that.
+    static String fileName(FileHandle file) {
+        return plain(file.path()).substring(plain(file.path()).lastIndexOf('/') + 1);
+    }
+
+    static String plain(String path) {
+        String p = path;
+        while (p.startsWith("/") && p.length() > 1) {
+            p = p.substring(1);
+        }
+        while (p.endsWith("/") && p.length() > 1) {
+            p = p.substring(0, p.length() - 1);
+        }
+        return p;
     }
     
     public static boolean saveGame(String fileName) {
@@ -83,16 +104,17 @@ public class SaveUtils {
         }
 
         for (FileHandle file : slotFiles) {
-            if (file.name().endsWith(gameFile(cl))) {
+            if (fileName(file).endsWith(gameFile(cl))) {
                 return true;
             }
         }
 
         return false;
     }
-    
+
     public static boolean isRelatedTo(String path,HeroClass cl) {
-        return ( path.endsWith(".dat") && hasClassTag(cl, path) ) || path.endsWith(gameFile(cl)) || path.endsWith(Bones.getBonesFile());
+        String p = plain(path);
+        return ( p.endsWith(".dat") && hasClassTag(cl, p) ) || p.endsWith(gameFile(cl)) || p.endsWith(Bones.getBonesFile());
     }
     
     public static void copyAllClassesToSlot(String slot) {
@@ -120,17 +142,18 @@ public class SaveUtils {
         if(files == null) {
             return;
         }
-        
-        for (FileHandle file : files) {
-            if (isRelatedTo(file.name(), heroClass)) {
 
-                String from = local(slot + File.separator + file.name()).path();
-                String to = local(file.name()).path();
+        for (FileHandle file : files) {
+            String name = fileName(file);
+            if (isRelatedTo(name, heroClass)) {
+
+                String from = local(slot + '/' + name).path();
+                String to = local(name).path();
                 FileSystem.copyFile(from, to);
             }
         }
     }
-    
+
     public static void deleteSaveFromSlot(String slot, HeroClass cl) {
 
         FileHandle slotDir = local(slot);
@@ -139,16 +162,16 @@ public class SaveUtils {
 
         if (slotFiles != null) {
             for (FileHandle file : slotFiles) {
-                String fileName = file.name();
-                if (isRelatedTo(fileName, cl)) {
+                String name = fileName(file);
+                if (isRelatedTo(name, cl)) {
                     if(!file.delete()) {
-                        GLog.toFile("Failed to delete file: %s !", fileName);
+                        GLog.toFile("Failed to delete file: %s !", name);
                     }
                 }
             }
         }
     }
-    
+
     public static void copySaveToSlot(String slot, HeroClass cl) {
         deleteSaveFromSlot(slot, cl);
 
@@ -156,11 +179,11 @@ public class SaveUtils {
 
         if (files != null) {
             for (FileHandle file : files) {
-                String fileName = file.name();
-                if (isRelatedTo(fileName, cl)) {
-                    
+                String name = fileName(file);
+                if (isRelatedTo(name, cl)) {
+
                     String from = file.path();
-                    String to = local(slot + File.separator + fileName).path();
+                    String to = local(slot + '/' + name).path();
 
                     FileSystem.copyFile(from,to);
                 }
@@ -188,7 +211,7 @@ public class SaveUtils {
 
         if (files != null) {
             for (FileHandle file : files) {
-                String path = file.path();
+                String path = plain(file.path());
                 if (path.endsWith(".dat") && hasClassTag(cl, path)) {
                     file.delete();
                 }

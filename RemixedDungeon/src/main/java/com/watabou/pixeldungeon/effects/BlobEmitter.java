@@ -8,7 +8,9 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class BlobEmitter extends Emitter {
 	
 	private final Blob blob;

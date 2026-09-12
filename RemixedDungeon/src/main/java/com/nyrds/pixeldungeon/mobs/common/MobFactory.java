@@ -100,10 +100,12 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
+import com.nyrds.LuaInterface;
 
 
 
 
+@LuaInterface
 public class MobFactory {
 	public static final String RAT = "Rat";
 	public static final String BAT = "Bat";

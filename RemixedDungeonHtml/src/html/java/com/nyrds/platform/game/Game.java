@@ -1,13 +1,17 @@
 package com.nyrds.platform.game;
 
+import android.view.KeyEvent;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
+import com.github.xpenatan.gdx.backends.teavm.TeaFiles;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
+import com.nyrds.platform.audio.WebAudio;
+import com.nyrds.platform.storage.PersistedFileStorage;
 import com.nyrds.pixeldungeon.support.PlayGames;
 import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
@@ -21,6 +25,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.InterstitialPoint;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.GLog;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -101,11 +106,26 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public void create() {
+        installPlatformBackingStores();
+
         SystemText.invalidate();
         TextureCache.clear();
         Gdx.input.setInputProcessor(this);
 
         resume();
+    }
+
+    // TeaApplication.initGdx() wires Gdx.files to a memory-only local storage
+    // (saves would die with the page) and leaves Gdx.audio null (sound is
+    // silent). Swap in the persisted local storage and the WebAudio factory
+    // before anything reads saves or plays audio.
+    private void installPlatformBackingStores() {
+        if (Gdx.files instanceof TeaFiles) {
+            ((TeaFiles) Gdx.files).localStorage = new PersistedFileStorage();
+        }
+        if (Gdx.audio == null) {
+            Gdx.audio = new WebAudio();
+        }
     }
 
     @Override
@@ -117,21 +137,43 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public void render() {
+        touchJsHeartbeat();
+
         if (instance() == null || GameLoop.width == 0 || GameLoop.height == 0) {
             gameLoop.framesSinceInit = 0;
             return;
         }
 
         if (paused) {
-            gameLoop.framesSinceInit = 0;
-            return;
+            // TeaApplication pauses us on visibilitychange "hidden", but the
+            // matching "visible" resume can be missed (fired while booting,
+            // before initState reaches APP_LOOP, or dropped by the embedded
+            // pane). Self-heal: once the document is visible again, resume.
+            if (isDocumentVisible()) {
+                GLog.debug("paused but document visible - resuming");
+                resume();
+            } else {
+                gameLoop.framesSinceInit = 0;
+                return;
+            }
         }
 
         Gdx.gl20.glEnable(GL20.GL_BLEND);
         Gl.blendSrcAlphaOneMinusAlpha();
         Gdx.gl20.glEnable(GL20.GL_SCISSOR_TEST);
 
-        gameLoop.onFrame();
+        try {
+            gameLoop.onFrame();
+        } catch (Throwable t) {
+            // TeaVM keeps the original JS Error (with a readable stack) on the
+            // throwable - surface it, since getStackTrace() is empty on web
+            Throwable cur = t;
+            while (cur.getCause() != null && cur.getCause() != cur) {
+                cur = cur.getCause();
+            }
+            dumpJsException(cur);
+            throw t;
+        }
 
         // Check for auto-fire events
         long currentTime = System.currentTimeMillis();
@@ -139,7 +181,7 @@ public class Game implements ApplicationListener, InputProcessor {
             int keycode = entry.getKey();
             long lastFireTime = entry.getValue();
             if (currentTime - lastFireTime >= AUTO_FIRE_INTERVAL) {
-                // For HTML, we use Gdx InputEvent instead of Android KeyEvent
+                GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_DOWN));
                 keyDownTimes.put(keycode, currentTime); // Update the last fire time
             }
         }
@@ -147,7 +189,15 @@ public class Game implements ApplicationListener, InputProcessor {
         if (BuildConfig.DEBUG && Gdx.input.isButtonPressed(Input.Buttons.RIGHT)) {
             // Screenshot functionality not supported in HTML
         }
+
+        renderDoneMarker();
     }
+
+    // browser debug: set after render() fully returns; distinguishes "hung
+    // inside onFrame" from "returned but loop not rescheduled"
+    @org.teavm.jso.JSBody(script =
+            "var s = window.__gameState || (window.__gameState = {}); s.renderDone = Date.now();")
+    private static native void renderDoneMarker();
 
     @Override
     public void pause() {
@@ -192,7 +242,7 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public boolean keyDown(int keycode) {
-        // For HTML, we use Gdx InputEvent instead of Android KeyEvent
+        GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_DOWN));
         keyDownTimes.put(keycode, System.currentTimeMillis()); // Record the time when the key was pressed
 
         if (keycode == Input.Keys.F11) {
@@ -204,7 +254,7 @@ public class Game implements ApplicationListener, InputProcessor {
 
     @Override
     public boolean keyUp(int keycode) {
-        // For HTML, we use Gdx InputEvent instead of Android KeyEvent
+        GameLoop.instance().keysEvents.add(new KeyEvent(keycode, KeyEvent.ACTION_UP));
         keyDownTimes.remove(keycode); // Remove the key from the map when it's released
         return true;
     }
@@ -289,4 +339,23 @@ public class Game implements ApplicationListener, InputProcessor {
             returnTo.returnToWork(true);
         }
     }
+
+    // caveman: watchdog support - TeaVM has no Thread.getAllStackTraces()
+    public static void dumpThreadStacks() {
+        GLog.toFile("WATCHDOG: thread stacks not available on web");
+    }
+
+    @org.teavm.jso.JSBody(params = "t", script =
+            "var je = t && t['$jsException'];"
+            + "console.error('CAUSE-JSSTACK: ' + (je && je.stack ? je.stack : (t && t.stack)));")
+    private static native void dumpJsException(Throwable t);
+
+    // browser debug heartbeat: window.__gameState.frame = ms timestamp of the
+    // last TeaApplication render() entry; frames = total render() count
+    @org.teavm.jso.JSBody(script =
+            "var s = window.__gameState || (window.__gameState = {}); s.frames = (s.frames || 0) + 1; s.frame = Date.now();")
+    private static native void touchJsHeartbeat();
+
+    @org.teavm.jso.JSBody(script = "return document.visibilityState === 'visible';")
+    private static native boolean isDocumentVisible();
 }

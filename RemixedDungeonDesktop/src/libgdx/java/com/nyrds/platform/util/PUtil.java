@@ -31,4 +31,11 @@ public class PUtil {
     public static long getAvailableInternalMemorySize() {
         return 1024 * 1024 * 1024;
     }
+
+    /**
+     * Web builds force a GC pass here (end of level build) so the first
+     * combat actions are not interrupted; desktop GC is fine on its own.
+     */
+    public static void gcHint() {
+    }
 }

@@ -20,7 +20,7 @@ public class UserKey {
     }
     
     public static int someValue() {
-        // Return a pseudo-random value based on the userId
+        get(); // lazily create userId like the android variant does
         return userId.hashCode();
     }
 }

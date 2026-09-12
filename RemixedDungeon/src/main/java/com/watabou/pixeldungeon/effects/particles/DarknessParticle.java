@@ -4,7 +4,9 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.Emitter.Factory;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.utils.Random;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class DarknessParticle extends PixelParticle.Shrinking {
 
 	public static final Factory FACTORY = new Factory() {

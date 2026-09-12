@@ -15,11 +15,13 @@ def makeRJava(strings, arrays):
                 ''')
 
     counter = 0
+    names = []
 
     for str in strings:
         rJava.write(f'''
                 public static final int {str} = {counter};''')
         counter += 1
+        names.append(str)
 
     rJava.write('''}
     
@@ -30,10 +32,18 @@ def makeRJava(strings, arrays):
         rJava.write(f'''
                 public static final int {str} = {counter};''')
         counter += 1
+        names.append(str)
 
 
+    # names[i] is the resource name behind generated id i; StringsManager uses
+    # it to map the name keys in strings_<lang>.json onto ids without
+    # reflection (TeaVM has none for R).
     rJava.write('''
         }
+
+        public static final String[] names = {'''
+        + ",".join('"%s"' % n for n in names)
+        + '''};
     }''')
     rJava.close()
 

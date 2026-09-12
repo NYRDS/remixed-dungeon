@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.ui;
 
 import static com.watabou.pixeldungeon.scenes.PixelScene.uiCamera;
+import com.nyrds.LuaInterface;
 
 import android.annotation.SuppressLint;
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -36,6 +37,7 @@ import java.util.Map;
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 
+@LuaInterface
 public class QuickSlot extends Button implements WndBag.Listener, WndHeroSpells.Listener {
 
     private static final String QUICKSLOT       = "quickslot";

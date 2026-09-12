@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class Challenges {
 
 	public static final int NO_FOOD				= (int)Math.pow(2,0);

@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.levels.painters.GardenPainter;
 import com.watabou.pixeldungeon.levels.painters.LaboratoryPainter;
 import com.watabou.pixeldungeon.levels.painters.LibraryPainter;
 import com.watabou.pixeldungeon.levels.painters.MagicWellPainter;
-import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.levels.painters.PassagePainter;
 import com.watabou.pixeldungeon.levels.painters.PitPainter;
 import com.watabou.pixeldungeon.levels.painters.PoolPainter;
@@ -35,14 +34,12 @@ import com.watabou.utils.Graph;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import lombok.SneakyThrows;
 
 public class Room extends Rect implements Graph.Node, Bundlable {
 	
@@ -54,51 +51,52 @@ public class Room extends Rect implements Graph.Node, Bundlable {
 
 	public enum Type {
 		NULL( null ),
-		STANDARD	( StandardPainter.class ),
-		ENTRANCE	( EntrancePainter.class ),
-		EXIT		( ExitPainter.class ),
-		SEWER_BOSS_EXIT	( SewerBossExitPainter.class ),
-		PRISON_BOSS_EXIT( PrisonBossExitPainter.class ),
-		TUNNEL		( TunnelPainter.class ),
-		PASSAGE		( PassagePainter.class ),
-		SHOP		( ShopPainter.class ),
-		BLACKSMITH	( BlacksmithPainter.class ),
-		TREASURY	( TreasuryPainter.class ),
-		ARMORY		( ArmoryPainter.class ),
-		LIBRARY		( LibraryPainter.class ),
-		LABORATORY	( LaboratoryPainter.class ),
-		VAULT		( VaultPainter.class ),
-		TRAPS		( TrapsPainter.class ),
-		STORAGE		( StoragePainter.class ),
-		MAGIC_WELL	( MagicWellPainter.class ),
-		GARDEN		( GardenPainter.class ),
-		CRYPT		( CryptPainter.class ),
-		STATUE		( StatuePainter.class ),
-		POOL		( PoolPainter.class ),
-		RAT_KING	( RatKingPainter.class ),
-		WEAK_FLOOR	( WeakFloorPainter.class ),
-		PIT			( PitPainter.class ),
-		WAREHOUSE	( WarehousePainter.class );
-		
-		private Method paint;
-		
-		@SneakyThrows
-		Type(Class<? extends Painter> painter) {
-			if(painter==null) {
-				return;
-			}
+		STANDARD	( StandardPainter::paint ),
+		ENTRANCE	( EntrancePainter::paint ),
+		EXIT		( ExitPainter::paint ),
+		SEWER_BOSS_EXIT	( SewerBossExitPainter::paint ),
+		PRISON_BOSS_EXIT( PrisonBossExitPainter::paint ),
+		TUNNEL		( TunnelPainter::paint ),
+		PASSAGE		( PassagePainter::paint ),
+		SHOP		( ShopPainter::paint ),
+		BLACKSMITH	( BlacksmithPainter::paint ),
+		TREASURY	( TreasuryPainter::paint ),
+		ARMORY		( ArmoryPainter::paint ),
+		LIBRARY		( LibraryPainter::paint ),
+		LABORATORY	( LaboratoryPainter::paint ),
+		VAULT		( VaultPainter::paint ),
+		TRAPS		( TrapsPainter::paint ),
+		STORAGE		( StoragePainter::paint ),
+		MAGIC_WELL	( MagicWellPainter::paint ),
+		GARDEN		( GardenPainter::paint ),
+		CRYPT		( CryptPainter::paint ),
+		STATUE		( StatuePainter::paint ),
+		POOL		( PoolPainter::paint ),
+		RAT_KING	( RatKingPainter::paint ),
+		WEAK_FLOOR	( WeakFloorPainter::paint ),
+		PIT			( PitPainter::paint ),
+		WAREHOUSE	( WarehousePainter::paint );
 
-			paint = painter.getMethod( "paint", Level.class, Room.class );
+		// direct references instead of Class.getMethod(): TeaVM's JS backend
+		// only exposes reflective methods for classes in its reflection scope,
+		// and painters are not part of it
+		private interface RoomPainter {
+			void paint(Level level, Room room);
 		}
 
-		@SneakyThrows
+		private final RoomPainter painter;
+
+		Type(RoomPainter painter) {
+			this.painter = painter;
+		}
+
 		public void paint( Level level, Room room ) {
-			if(paint==null){
+			if(painter==null){
 				EventCollector.logException("no painter for " + this.name());
 				return;
 			}
 
-			paint.invoke( null, level, room );
+			painter.paint( level, room );
 		}
 	}
 

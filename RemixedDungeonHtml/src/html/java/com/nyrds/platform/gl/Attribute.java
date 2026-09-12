@@ -28,4 +28,10 @@ public class Attribute {
 	public void vertexPointer( int size, int stride, FloatBuffer ptr ) {
 		Gdx.gl20.glVertexAttribPointer( location, size, Gdx.gl20.GL_FLOAT, false, stride * Float.SIZE / 8, ptr );
 	}
+
+	// WebGL has no client-side vertex arrays: offset is a byte offset into the
+	// currently bound GL_ARRAY_BUFFER
+	public void vertexPointer( int size, int stride, int offset ) {
+		Gdx.gl20.glVertexAttribPointer( location, size, Gdx.gl20.GL_FLOAT, false, stride * Float.SIZE / 8, offset );
+	}
 }

@@ -63,31 +63,37 @@ public class JsonHelper {
     public static JSONObject readJsonFromStream(InputStream stream, String tag) {
         StringBuilder jsonDef = new StringBuilder();
 
+        String sourceString;
+        // caveman: BOMInputStream.close() throws on TeaVM even after a
+        // successful read - so a close failure with content in hand is
+        // non-fatal; the parse runs outside the resource block for the
+        // same reason (an exception from the implicit close would
+        // otherwise discard the parsed result)
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new BOMInputStream(stream)))) {
-
             String line = reader.readLine();
-
             while (line != null) {
                 jsonDef.append(line);
                 line = reader.readLine();
             }
-            reader.close();
-
-            String sourceString = jsonDef.toString().strip();
-
-            try {
-                return Util.sanitizeJson(sourceString);
-            } catch (Exception e) {
-                EventCollector.logException(e, Utils.format("bad json, hjson sanitization failed in %s", tag));
-            }
-
-            try {
-                return (JSONObject) new JSONTokener(sourceString).nextValue();
-            } catch (Exception e) {
-                EventCollector.logException(e, Utils.format("gson failed in %s", tag));
-            }
         } catch (Exception e) {
-            EventCollector.logException(e, Utils.format("failed to read json in %s", tag));
+            if (jsonDef.length() == 0) {
+                EventCollector.logException(e, "failed to read json in " + tag);
+                return new JSONObject();
+            }
+        }
+
+        sourceString = jsonDef.toString().strip();
+
+        try {
+            return Util.sanitizeJson(sourceString);
+        } catch (Exception e) {
+            EventCollector.logException(e, "bad json in " + tag);
+        }
+
+        try {
+            return (JSONObject) new JSONTokener(sourceString).nextValue();
+        } catch (Exception e) {
+            EventCollector.logException(e, "gson failed in " + tag);
         }
         return new JSONObject();
     }

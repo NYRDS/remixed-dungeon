@@ -21,6 +21,7 @@ import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.input.Keys;
+import com.nyrds.platform.util.PUtil;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModError;
@@ -440,6 +441,11 @@ public class GameScene extends PixelScene {
                     msg
             ));
         }
+
+        // level build leaves a big allocation burst behind; let the runtime
+        // collect it here (loading screen still up) instead of mid-combat on
+        // the player's first attack
+        PUtil.gcHint();
     }
 
     private void createTerrain(Level level) {

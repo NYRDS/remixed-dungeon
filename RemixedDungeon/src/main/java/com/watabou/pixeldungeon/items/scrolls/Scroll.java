@@ -104,7 +104,9 @@ public abstract class Scroll extends Item implements UnknownItem {
 			return;
 		}
 
-		image = handler.index( this );
+		if (handler != null) {
+			image = handler.index( this );
+		}
 		rune  = StringsManager.getVars(R.array.Scroll_Runes)[ItemStatusHandler.indexByImage(image,images)];
 	}
 

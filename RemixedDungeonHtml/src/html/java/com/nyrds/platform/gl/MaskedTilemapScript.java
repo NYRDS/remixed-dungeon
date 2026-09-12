@@ -21,6 +21,10 @@ public class MaskedTilemapScript extends Script {
 
     private Camera lastCamera;
 
+    private int vertexBuffer;
+    private int maskBuffer;
+    private int indexBuffer;
+
     public MaskedTilemapScript() {
         super();
         compile(shader());
@@ -73,20 +77,29 @@ public class MaskedTilemapScript extends Script {
             throw new AssertionError();
         }
 
+        // WebGL has no client-side arrays - upload and draw with byte offsets
+        vertexBuffer = GlBuffers.upload( vertexBuffer, Gdx.gl20.GL_ARRAY_BUFFER, vertices, 4, true );
+        maskBuffer   = GlBuffers.upload( maskBuffer,   Gdx.gl20.GL_ARRAY_BUFFER, mask,     4, true );
+        indexBuffer  = GlBuffers.upload( indexBuffer,  Gdx.gl20.GL_ELEMENT_ARRAY_BUFFER, Quad.getIndices( size ), 2, false );
+
+        // each attribute pointer captures the ARRAY_BUFFER bound at call time,
+        // so rebind the right buffer before pointing into it
+        Gdx.gl20.glBindBuffer( Gdx.gl20.GL_ARRAY_BUFFER, vertexBuffer );
         vertices.position(0);
-        aXY.vertexPointer(2, 4, vertices);
+        aXY.vertexPointer(2, 4, 0);
 
         vertices.position(2);
-        aUV.vertexPointer(2, 4, vertices);
+        aUV.vertexPointer(2, 4, 8);
 
+        Gdx.gl20.glBindBuffer( Gdx.gl20.GL_ARRAY_BUFFER, maskBuffer );
         mask.position(0);
-        aUV_mask.vertexPointer(2, 2, mask);
+        aUV_mask.vertexPointer(2, 2, 0);
 
         Gdx.gl20.glDrawElements(
                 Gdx.gl20.GL_TRIANGLES,
                 Quad.SIZE * size,
                 Gdx.gl20.GL_UNSIGNED_SHORT,
-                Quad.getIndices(size));
+                0);
     }
 
     public void lighting(float rm, float gm, float bm, float am, float ra, float ga, float ba, float aa) {
@@ -135,7 +148,9 @@ public class MaskedTilemapScript extends Script {
             "  vUV = aUV;" +
             "  vUV_mask = aUV_mask;" +
             "}" +
-            "//" +
+            "//\n" +
+            // WebGL1 requires an explicit float precision in fragment shaders
+            "precision mediump float;\n" +
             "varying vec2 vUV;" +
             "varying vec2 vUV_mask;" +
             "uniform sampler2D uTex;" +

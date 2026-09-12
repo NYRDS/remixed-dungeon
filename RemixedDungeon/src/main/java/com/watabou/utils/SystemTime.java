@@ -2,6 +2,9 @@
 
 package com.watabou.utils;
 
+import com.nyrds.LuaInterface;
+
+@LuaInterface
 public class SystemTime {
 
 	private static long now;

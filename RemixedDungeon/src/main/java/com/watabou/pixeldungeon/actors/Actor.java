@@ -286,7 +286,8 @@ public abstract class Actor implements Bundlable, NamedEntityKind {
     public static Map<String, Integer> classHistogram() {
         Map<String, Integer> hist = new HashMap<>();
         for (Actor a : all) {
-            hist.merge(a.getClass().getSimpleName(), 1, Integer::sum);
+            // TeaVM classlib has no Integer.sum - merge via an explicit lambda
+            hist.merge(a.getClass().getSimpleName(), 1, (count, inc) -> count + inc);
         }
         return hist;
     }

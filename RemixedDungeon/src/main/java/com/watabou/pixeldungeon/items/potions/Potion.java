@@ -97,7 +97,9 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	public Potion() {
-		image = handler.index( this );
+		if (handler != null) {
+			image = handler.index( this );
+		}
 		color = StringsManager.getVars(R.array.Potion_Colors)[ItemStatusHandler.indexByImage(image, images)];
 		if(knownHamful()) {
 			setDefaultAction(AC_THROW);

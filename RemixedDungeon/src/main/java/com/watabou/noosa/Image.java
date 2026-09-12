@@ -82,7 +82,9 @@ public class Image extends Visual implements IPlaceable {
 
         if(frame.top < 0 || frame.top > 1 || frame.left < 0 || frame.left > 1 || frame.bottom < 0 || frame.bottom > 1 || frame.right < 0 || frame.right > 1
             || frame.top > frame.bottom || frame.left > frame.right) {
-            throw new ModError("frame out of bounds");
+            throw new ModError("frame out of bounds: " + frame
+                + " texture " + (texture == null ? "null" : texture.getWidth() + "x" + texture.getHeight())
+                + " key " + (texture == null ? "null" : String.valueOf(TextureCache.getKey(texture))));
         }
 
         setWidth(frame.width() * texture.getWidth());

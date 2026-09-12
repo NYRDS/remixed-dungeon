@@ -92,14 +92,20 @@ public class EventCollector {
     
     // Additional methods needed for HTML version
     public static void setSessionData(String key, String value) {
-        // Session data is not supported in HTML build
-        System.out.println("SessionData: " + key + " = " + value);
+        // No analytics on web, but mirror the session state into the page so the
+        // browser debug loop can see the current scene etc. Deliberately not
+        // printed: LuaScript calls this every tick.
+        setJsState(key, value);
     }
-    
+
     public static void setSessionData(String key, boolean value) {
-        // Session data is not supported in HTML build
-        System.out.println("SessionData: " + key + " = " + value);
+        setJsState(key, Boolean.toString(value));
     }
+
+    // browser debug state, read via window.__gameState
+    @org.teavm.jso.JSBody(params = {"k", "v"}, script =
+            "var s = window.__gameState || (window.__gameState = {}); s[k] = v;")
+    private static native void setJsState(String key, String value);
     
     public static void disable() {
         // Disable analytics is not supported in HTML build

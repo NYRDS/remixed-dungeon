@@ -91,12 +91,16 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         setDefaultAction(AC_ZAP);
         animation_class = WAND_ATTACK;
 
-        try {
-            image = handler.index(this);
-            wood = StringsManager.getVars(R.array.Wand_Wood_Types)[ItemStatusHandler.indexByImage(image, images)];
-
-        } catch (Exception e) {
-            // Wand of Magic Missile or Wand of Icebolt
+        // handler is null until initWoods()/restore() runs; followers'
+        // belongings are bundle-restored before that on web, where the
+        // null-deref is a JS error that escapes catch(Exception)
+        if (handler != null) {
+            try {
+                image = handler.index(this);
+                wood = StringsManager.getVars(R.array.Wand_Wood_Types)[ItemStatusHandler.indexByImage(image, images)];
+            } catch (Exception e) {
+                // Wand of Magic Missile or Wand of Icebolt
+            }
         }
     }
 

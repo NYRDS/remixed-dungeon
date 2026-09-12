@@ -4,7 +4,9 @@ package com.watabou.pixeldungeon.effects.particles;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.Emitter.Factory;
 import com.watabou.noosa.particles.PixelParticle;
+import com.nyrds.LuaInterface;
 
+@LuaInterface
 public class ElmoParticle extends PixelParticle.Shrinking {
 	
 	public static final Emitter.Factory FACTORY = new Factory() {	
