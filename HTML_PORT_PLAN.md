@@ -1,5 +1,10 @@
 # HTML (TeaVM) port — resume plan
 
+**GOAL (Mike, 2026-09-12): the html version must be PLAYABLE ON MOBILE
+DEVICES, INCLUDING APPLE (iOS/iPadOS Safari).** Desktop-browser parity is
+secondary; the mobile layout (status top / toolbar bottom) is the TARGET,
+not a gap. See session 15 for what this changes.
+
 Port lives on **master** since 2026-09-12 (session 14 merge); this file is
 the running state doc.
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
@@ -38,8 +43,51 @@ GAPS (html side unless noted):
 3. **UI anchor layout**: desktop master = quickslot bar TOP, StatusPane
    BOTTOM-left, depth+menu BOTTOM-right. html = StatusPane TOP-left,
    depth/journal/menu TOP-right, toolbar BOTTOM (32.3-alpha-era anchoring,
-   survived the beta.7 merge). Not size-conditional — anchor logic is
-   platform-split somewhere in GameScene/ui.
+   survived the beta.7 merge). **REFRAMED by the mobile goal: html's
+   anchors are the mobile layout — do NOT "fix" toward desktop. Correct
+   reference target = the ANDROID layout; verify parity against an android
+   device/emulator instead.**
+
+### Mobile/Apple implications of the goal (2026-09-12, added post-compare)
+
+Concrete blockers/risks for iOS/iPadOS Safari + Android Chrome, found by
+inspection right after the parity pass:
+
+A. **iOS audio codec gap (BLOCKER for sound on Apple)**: game assets are
+   almost all `.ogg` (Vorbis). iOS Safari cannot decode Vorbis —
+   `HTMLAudioElement` and `decodeAudioData` both fail, so sound is dead on
+   iPhones regardless of the element-based backend. MP3/AAC play
+   everywhere (the mp3 codec problem was headless Chromium only). Options:
+   transcode web assets to mp3/m4a in make_webapp.py, or add a
+   `.ogg→.mp3` fallback chain in Sample/MusicManager resolution, or serve
+   per-UA. (HiFiDLC already ships snd_plant.mp3, so mp3 assets are
+   loadable.)
+B. **localStorage save eviction on iOS (BLOCKER for persistence)**: Safari
+   ITP can purge script-storage after 7 days of no site visits; saves
+   currently live in localStorage (`rdg_file_*`). Needed: IndexedDB
+   backend (durable, bigger quota) and/or PWA installed-from-Home-Screen
+   storage (more durable), plus export/import save UI as a safety net.
+C. **Mobile browser shell**: index.html has only
+   `width=device-width,initial-scale=1`. Missing: `maximum-scale=1,
+   user-scalable=no` + `touch-action: none` on the canvas (pinch/double-
+   tap zoom fights TeaInput), `viewport-fit=cover` + safe-area insets
+   (notches), `apple-mobile-web-app-capable`/`status-bar-style` tags,
+   PWA manifest + icons for Add-to-Home-Screen (fullscreen, own storage
+   partition), address-bar resize handling (dvh / resize events — the
+   rAF/pause self-heal helps but needs a phone QA pass). Phone vs desktop
+   viewport also changes the virtual resolution → UI branch selection
+   (portrait dashboard etc.) untested on real phones.
+D. **Memory ceiling**: iOS Safari per-tab jetsam caps are tighter than
+   desktop V8; current 140–250MB heap + 40MB debug JS + on-demand 18MB
+   CJK font is at risk. The owed heap diet (asset retention audit,
+   obfuscated build for load) doubles as the iOS viability fix.
+E. Touch input itself should be OK (game is touch-first; TeaInput
+   getBoundingClientRect patch fixed coordinate mapping) — but needs a
+   real-device QA pass: multi-touch, long-press, iOS gesture edge cases.
+
+Plan of attack: B (IndexedDB storage) and A (audio transcoding/fallback)
+are the two Apple blockers; C is cheap shell work; D is the known heap
+diet; E is a QA pass on a real iPhone + an android phone.
 4. **No mods on web** (`isResourceExistInMod` = false by design); desktop
    rundir/mods loads them.
 5. **Audio backends**: html = HTMLAudioElement data-URLs (ogg everywhere;
