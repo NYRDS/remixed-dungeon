@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.alchemy.InputItem;
 import com.nyrds.pixeldungeon.alchemy.OutputItem;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.watabou.noosa.Scene;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
@@ -701,6 +702,9 @@ public class DebugEndpoints {
 
             GameLoop.pushUiTaskAndWait(() -> {
                 try {
+                    // debug default: skip the intro story scene (it waits for
+                    // user input forever in headless tests); &intro=1 shows it
+                    GamePreferences.intro(false);
                     // Call the startNewGame method - using the correct method from GameControl
                     GameControl.startNewGame(finalHeroClass, finalDifficulty, false);
                 } catch (Exception e) {
