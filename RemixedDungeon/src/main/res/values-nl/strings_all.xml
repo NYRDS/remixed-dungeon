@@ -25,6 +25,7 @@
     <string name="Acidic_Name_Objective">zure schorpioen</string>
     <string name="AirElemental_Desc">Luchtelementalen zijn vliegende magische wezens gemaakt van levende lucht.</string>
     <string name="AirElemental_Gender">masculine</string>
+    <string name="AirElemental_Name">luchtelementaal</string>
     <string name="AirElemental_Name_Objective">luchtelementaal</string>
     <string name="AlarmTrap_Desc">De val laat een doordringend geluid horen dat door de hele dungeon weergalmt!</string>
     <string name="Albino_Gender">masculine</string>
@@ -1044,6 +1045,7 @@
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
     <string name="ScrollOfMagicMapping_Name">Scroll van Magische Kaartvorming</string>
     <string name="ScrollOfPsionicBlast_Info">Deze scroll bevat vernietigende energie, die psionisch kan worden gekanaliseerd om massale schade toe te brengen aan alle wezens binnen het gezichtsveld. Een begeleidende lichtflits zal tijdelijk iedereen in het effectgebied verblinden, inclusief de lezer van de scroll.</string>
+    <string name="ScrollOfRemoveCurse_Info">De bezwering op deze rol zal onmiddellijk alle kwaadaardige betoveringen van het wapen, pantser, ringen en voorwerpen van de lezer verwijderen die het dragen ervan zouden kunnen verhinderen.</string>
     <string name="ScrollOfRemoveCurse_Name">Schrift van Vervloeking Verwijderen</string>
     <string name="ScrollOfRemoveCurse_Proced">Je zak gloeit met een reinigend licht, en een kwaadaardige energie verdwijnt.</string>
     <string name="ScrollOfSummoning_Info">Bij voorlezen zal deze rol een van de monsters uit het huidige kerker-niveau oproepen. En als de wil van het monster zwak genoeg is, zal het je dienaar worden.</string>
@@ -1664,6 +1666,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
