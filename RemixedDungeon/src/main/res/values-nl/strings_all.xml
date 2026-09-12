@@ -220,6 +220,7 @@
     <string name="Candy_Info">Deze snoep ziet er zo mooi uit en ruikt ook lekker. Moet je hem echt aan iemand anders geven?</string>
     <string name="Candy_Name">snoepje</string>
     <string name="Candy_Warning_1">Je had dat snoepje niet moeten eten. Je had beloofd het aan iemand anders te geven. Het lijkt je op geen enkele manier te hebben beïnvloed, je honger zal niet verdwijnen, het is tenslotte maar snoep.</string>
+    <string name="Candy_Warning_2">Nu heb je echt te veel gegeten. Je buik doet pijn omdat je te veel snoep hebt gegeten.</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
     <string name="Carcass_DissectResult_Many">Uit %1$s krijg je %2$d voorwerpen.</string>
     <string name="Carcass_DissectResult_One">Uit %1$s krijg je één voorwerp.</string>
@@ -904,6 +905,7 @@
     <string name="PotionOfParalyticGas_Info">Bij blootstelling aan open lucht verdampt de vloeistof in deze fles tot een benauwende gele nevel. Wie de wolk inademt, wordt onmiddellijk ge paralyseerd, en kan een tijdje niet bewegen nadat de wolk is verdampt. Dit item kan op verafstaande vijanden worden gegooid om hen in het effect van de gas te betrekken.</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="PotionOfPurity_Name">Zuiveringselixer</string>
+    <string name="PotionOfPurity_NoSmell">Je ruikt niets meer!</string>
     <string name="PotionOfStrength_Info">Deze krachtige vloeistof zal door je spieren stromen en je kracht permanent met één punt verhogen.</string>
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
     <string name="Potion_Colors_0">turkoois</string>
@@ -1666,6 +1668,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
