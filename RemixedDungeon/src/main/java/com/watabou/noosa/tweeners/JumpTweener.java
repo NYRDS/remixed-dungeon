@@ -1,6 +1,7 @@
 package com.watabou.noosa.tweeners;
 
 import com.nyrds.LuaInterface;
+import com.watabou.noosa.Group;
 import com.watabou.noosa.Visual;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.utils.PointF;
@@ -19,8 +20,13 @@ public class JumpTweener extends Tweener {
 
 	@LuaInterface
 	public static void attachTo(CharSprite spr, int targetCell,  float height, float time) {
+		Group parent = spr.getParent();
+		if (parent == null) {
+			// headless or sprite not attached to a scene yet: no tween to run
+			return;
+		}
 		JumpTweener tweener = new JumpTweener(spr, spr.worldToCamera(targetCell), height, time);
-		spr.getParent().add(tweener);
+		parent.add(tweener);
 	}
 
 

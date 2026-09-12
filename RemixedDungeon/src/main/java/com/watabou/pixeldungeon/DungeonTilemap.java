@@ -118,13 +118,17 @@ public abstract class DungeonTilemap extends Tilemap {
 	public abstract Image tile(int pos);
 
 	public static PointF tileToWorld(int pos) {
-		return new PointF(level.cellX(pos), level.cellY(pos)).scale(SIZE);
+		// render-static is null in headless (no tilemap built); fall back
+		// to the logic level so lua-driven effects stay no-op-safe
+		Level lvl = level != null ? level : Dungeon.level;
+		return new PointF(lvl.cellX(pos), lvl.cellY(pos)).scale(SIZE);
 	}
 
 	@Contract("_ -> new")
 	public static @NotNull PointF tileCenterToWorld(int pos) {
-		return new PointF((level.cellX(pos) + 0.5f) * SIZE,
-				(level.cellY(pos) + 0.5f) * SIZE);
+		Level lvl = level != null ? level : Dungeon.level;
+		return new PointF((lvl.cellX(pos) + 0.5f) * SIZE,
+				(lvl.cellY(pos) + 0.5f) * SIZE);
 	}
 
 	@Override

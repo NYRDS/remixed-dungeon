@@ -896,11 +896,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         Level level = level();
 
-        if (level.cellValid(getPos())) {
+        // death visuals only when a sprite exists; headless (and any scene
+        // still building) has none - getSprite() would throw "scene not ready"
+        if (level.cellValid(getPos()) && sprite != null) {
             if (level.pit[getPos()]) {
-                getSprite().fall();
+                sprite.fall();
             } else {
-                getSprite().die();
+                sprite.die();
             }
         }
         destroy();
@@ -1354,7 +1356,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         if (sprite == null) {
             if (!GameScene.mayCreateSprites()) {
-                throw new TrackedRuntimeException("scene not ready for " + getEntityKind());
+                // scene still building (or headless - no sprites at all):
+                // hand out the dummy instead of throwing, game logic keeps
+                // running without visuals
+                return DummySprite.instance;
             }
             if (isAlive()) {
                 sprite = newSprite();
