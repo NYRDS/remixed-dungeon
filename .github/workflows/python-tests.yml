@@ -11,6 +11,12 @@ jobs:
     name: Run Python HTTP API Tests
     runs-on: ubuntu-latest
 
+    env:
+      # tests launch the no-GL headless build (the desktop GUI run needs a
+      # display and freezes under --minimized, so it can never work on CI)
+      RPD_HEADLESS_JAR: ${{ github.workspace }}/RemixedDungeonHeadless/build/libs/RemixedDungeonHeadless-all.jar
+      RPD_GAME_DIR: /tmp/rpd-ci/rundir
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,6 +41,16 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+
+      - name: Build headless jar
+        run: ./gradlew :RemixedDungeonHeadless:shadowJar --console=plain
+
+      - name: Prepare throwaway game dir
+        run: |
+          mkdir -p /tmp/rpd-ci/rundir
+          ln -s "$GITHUB_WORKSPACE/RemixedDungeonDesktop/src/desktop/assets" /tmp/rpd-ci/assets
+          ln -s "$GITHUB_WORKSPACE/RemixedDungeonDesktop/src/desktop/d_assets" /tmp/rpd-ci/d_assets
+          ln -s "$GITHUB_WORKSPACE/RemixedDungeonDesktop/src/desktop/l10ns" /tmp/rpd-ci/l10ns
 
       - name: Run Blood Transfusion Tests
         run: python3 tests/http_api/test_blood_transfusion.py

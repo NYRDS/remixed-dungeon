@@ -22,6 +22,7 @@ from typing import Optional, List
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from game_client import GameClient
 from log_monitor import LogMonitor
+from headless_server import server_command
 
 
 class TestRunner:
@@ -49,20 +50,14 @@ class TestRunner:
         self.log_file = tempfile.mktemp(prefix="game_test_", suffix=".log")
         print(f"Log file: {self.log_file}")
         # Start the server
-        cmd = [
-            "./gradlew",
-            "-p",
-            "RemixedDungeonDesktop",
-            "runDesktopGameWithWebServer",
-            "--args=--webserver=8080 --windowed",
-        ]
+        cmd, workdir = server_command("8080")
         print(f"Running: {' '.join(cmd)}")
-        print(f"Working directory: {project_root}")
+        print(f"Working directory: {workdir}")
         # Open log file for writing
         log_handle = open(self.log_file, "w")
         self.server_process = subprocess.Popen(
             cmd,
-            cwd=project_root,
+            cwd=workdir,
             stdout=log_handle,
             stderr=subprocess.STDOUT,  # Merge stderr into stdout
             preexec_fn=os.setsid,
