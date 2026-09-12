@@ -1266,6 +1266,7 @@
     <string name="WandMaker_Defense">đã hấp thụ</string>
     <string name="WandMaker_Desc">Người đàn ông già nua nhưng vẫn khỏe mạnh này mang vẻ bối rối nhẹ. Anh ta được bảo vệ bởi một khiên phép thuật.</string>
     <string name="WandMaker_Dust1">Ôi, thật bất ngờ dễ chịu khi gặp được một người đàng hoàng ở nơi này! Tôi đến đây để tìm một nguyên liệu hiếm - _bụi xác chết_. Nó có thể thu thập từ những bộ xương, và trong dungeon có rất nhiều. Là một pháp sư, tôi hoàn toàn có thể tự vệ trước quái vật nơi đây, nhưng tôi lạc mất chỉ trong chốc lát — thật xấu hổ. Có lẽ bạn có thể giúp tôi? Tôi sẽ vui lòng trả công cho bạn bằng một trong những cây đũa phép tốt nhất của mình.</string>
+    <string name="WandMaker_Dust2">Có tin gì về bụi xác chết, %s? Những đống xương là nơi dễ tìm nhất.</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
     <string name="WandOfAvalanche_Info">Khi một xung điện của que này trúng vào tường (hoặc bất kỳ chướng ngại vật rắn nào khác), nó gây ra một trận băng tuyết đá, gây sát thương và choáng tất cả sinh vật trong khu vực bị ảnh hưởng.</string>
     <string name="WandOfAvalanche_Info1">Bạn đã nghiền nát chính mình bằng Gậy Bão Tuyết của chính mình...</string>
@@ -1606,6 +1607,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

@@ -78,6 +78,7 @@
     <string name="Badges_Champion">Uitdaging gewonnen</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
     <string name="Badges_DeathGlyph">Dood door een glyph</string>
+    <string name="Badges_DeathNecrotism">Dood door necrotisme</string>
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
     <string name="Badges_FoodEaten3">30 stukken voedsel gegeten</string>
     <string name="Badges_GamesPlayed1">10 spellen gespeeld</string>
@@ -1612,6 +1613,7 @@
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_mud_desc">Ontdooide grond in dit permafrostgebied.</string>
     <string name="town_deco_mud_name">modder</string>
+    <string name="town_deco_painting_desc">Een prachtig stuk kunst.</string>
     <string name="town_deco_painting_name">Schilderij</string>
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_pedestal_name">Postament</string>
@@ -1662,6 +1664,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
