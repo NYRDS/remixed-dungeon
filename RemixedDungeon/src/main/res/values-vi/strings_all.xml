@@ -53,6 +53,7 @@
     <string name="Armor_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
     <string name="Armor_Info7b">và vì nó bị nguyền rủa, bạn không thể cởi nó ra</string>
+    <string name="Armor_ToString">%1 :%2</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">tượng hoạt động</string>
     <string name="ArmoredStatue_Name_Objective">tượng hoạt động</string>
@@ -82,6 +83,7 @@
     <string name="Badges_GamesPlayed3">Đã chơi 500 ván</string>
     <string name="Badges_GamesPlayed4">Đã chơi 2000 ván</string>
     <string name="Badges_GamesPlayed5">Đã chơi 5000 ván</string>
+    <string name="Badges_GnollUnlocked">Gnoll đã được mở khóa</string>
     <string name="Badges_GoldColleted3">Đã thu thập 2500 vàng</string>
     <string name="Badges_GoldColleted4">Đã thu thập 7500 vàng</string>
     <string name="Badges_GrimWepon">Quái vật bị giết bởi vũ khí Grim</string>
@@ -1609,6 +1611,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

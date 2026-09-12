@@ -428,6 +428,7 @@
     <string name="EncumbranceBuff_CharAct_2">Deze %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EncumbranceBuff_CharAct_4">Mij ontbreekt de kracht om %s optimaal te benutten.</string>
     <string name="EncumbranceBuff_Name">Last</string>
+    <string name="EnslavedSoul_Desc">Je kunt bijna door deze spookachtige verschijning heen kijken. En hoewel het op een schedel lijkt, verschijnt er soms voor een fractie van een seconde een gezicht, vol pijn en lijden.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Entanglement_Txt">%s van verstrengeling</string>
@@ -453,6 +454,7 @@
     <string name="Fire_Name_1">Vlamend %s</string>
     <string name="Firebloom_Desc">Als iets een Vuurbloom aanraakt, barst het in vlammen uit.</string>
     <string name="Firebloom_Name">Vuurbloem</string>
+    <string name="Food_ACEat">EET</string>
     <string name="FortuneTellerNPC_Desc">Deze vrouw draagt een lange, felgekleurde pij. Ze ziet er verrassend jong uit voor iemand die de geheime kunsten van de waarzeggerij beheerst. Als je dichterbij komt, hoor je haar zachtjes mompelen terwijl ze in de kristallen bol staart.</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">waarzegster</string>
@@ -1668,6 +1670,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
