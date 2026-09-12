@@ -3,12 +3,13 @@
 Set RPD_HEADLESS_JAR (path to RemixedDungeonHeadless-all.jar) to run the
 no-GL headless build - the only mode that works on CI (no display; the
 desktop GUI run also freezes forever under --minimized, which is what
-the suite was originally written against). --fps=1 keeps that near-
-frozen world pace: at the default 30fps town respawns eat test fixtures
-mid-test (flaky "mob not found" failures). The headless process needs a
-rundir-style cwd whose parent exposes assets/, d_assets/ and l10ns/ -
-point RPD_GAME_DIR at it (a throwaway copy keeps test saves out of the
-developer's rundir).
+the suite was originally written against). --fps=5 keeps the world slow
+enough that town respawns don't eat test fixtures mid-test (flaky at
+30fps) while scene-building frame counts don't stretch wall time past
+the init timeouts on 2-core CI runners (1fps). The headless process
+needs a rundir-style cwd whose parent exposes assets/, d_assets/ and
+l10ns/ - point RPD_GAME_DIR at it (a throwaway copy keeps test saves
+out of the developer's rundir).
 
 Without the env var the tests fall back to the legacy desktop GUI gradle
 run for local interactive debugging.
@@ -25,7 +26,7 @@ def server_command(port: str = "8080"):
         game_dir = os.environ.get(
             "RPD_GAME_DIR", os.path.join(project_root, "RemixedDungeonDesktop/src/desktop/rundir"))
         return (["java", "-jar", os.path.abspath(jar), "--webserver=" + port,
-                 "--fps=1"], os.path.abspath(game_dir))
+                 "--fps=5"], os.path.abspath(game_dir))
     return (["./gradlew", "-p", "RemixedDungeonDesktop", "runDesktopGameWithWebServer",
              "--args=--webserver=" + port + " --minimized"], project_root)
 

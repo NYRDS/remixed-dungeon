@@ -130,6 +130,13 @@ def _wait_for_game(runner: TestRunner, timeout: int = 240) -> bool:
             time.sleep(2)
             return True
         time.sleep(1)
+    # drain the game's own log ring for CI-visible diagnostics
+    try:
+        logs = runner.client.get_recent_logs()
+        for line in logs.get("logs", [])[-10:]:
+            print("::error::game-log: " + str(line)[:250])
+    except Exception as e:
+        print("::error::game-log unavailable: %s" % e)
     return False
 
 
