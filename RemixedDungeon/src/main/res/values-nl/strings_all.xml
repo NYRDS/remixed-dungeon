@@ -335,6 +335,7 @@
     <string name="Codex_Story_25">Zij stak, bevroren, voor de zware eikenen deur, en keek naar het licht dat uit de deurranden doordrong. Uit een verwaarloosd hoekje van haar geest kwam herkenning.\n\&quot;Zonlicht..\&quot; mompelde ze tegen zichzelf. Hoe lang was het geweest? In de eeuwige duisternis van de Kelder had ze lang geleden opgehouden de dagen te tellen. Het licht verlichtte vergeten herinneringen. Ze herinnerde haar training, lange dagen van zware oefening met boomerang en zwaard, van logboek bijhouden en kaarten maken. Ze herinnerde de mantra\'s en disciplines die bedoeld waren om haar een schijn van gezond verstand te laten behouden terwijl ze de onbekende diepgang verkennde. Wat ze niet herinnerde, niet kon herinneren, waren mensen.\nZe herinnerde hun stemmen, hun bevelen en hun waarschuwingen, maar niet hun gezichten, noch hun aanraking.\nPijn had haar getraind. Onthoud de gevaren, altijd de gevaren. Tollende dieren, onoversterven, onzinnige bendes en slimme ninja\'s waren voor haar gevallen. Ze had gesneden, gebrand, gestoken en vergiftigd haar weg gebaan door afschuwelijke wezens, demonen, klokwerk-afschuwelijkheden en onzinnige necromanten. Zelfs goden waren voor haar gevallen.\nZe had Yog gevolgd door Hemel en Hel, voordat ze zijn corrumpterende fluisteringen voor altijd stilte. Toch was er nog werk te doen. Yog was een dienaar van iemand nog meer occulte en krachtigere dan hijzelf.\nZo dook ze verder, dieper. Het dagboek van de oude tovenaar, nog steeds stralend van kracht, had haar de weg getoond. Met de magie in zijn bladen reisde ze naar een woud nieuw land, een klein dorpje verborgen in een machtig bos. Daar voltooide ze ten slotte het kwaad tot zijn doolhof-achtige bron, en versloeg allen die voor haar stonden.\nNu, in het felle daglicht, onderzocht ze zichzelf in een kuil grotwater. Haar lichaam was door magie bijna onherkenbaar vervormd. Haar huid, bleek tot het punt van doorschijnend, was bedekt met vuil, slijk en roet. Haar ketting met ringen kon een koningsgeld waard zijn, en haar wapenhouder met staven bevatte genoeg magische energie om legers te verwoesten. Ze greep haar wapens, letterlijk fijn genoeg om de goden zelf neer te hakken. Werkelijk, ze was meester geworden van dit donkere rijk, deze woestijn van wanhoop.\nZe had het kwaad gejaagd tot in de verre hoeken van het multiversum, maar nu was ze bevroren van angst. Wat als ze haar verwerpte? Wat als ze dat niet deed? Hoe kon ze nog ooit met deze mensen omgaan? Hel, ze had de keren dat de dood haar had geëist, en weer was weggehaald uit zijn ijzergreep, niet meer geteld.\nNee, er was geen plek voor haar in het licht, niet meer. Ze keerde zich af van het mager licht, en daalde in het donker, misschien voor de laatste keer.\n\n\n\tby drazool from reddit</string>
     <string name="Codex_Story_3">Anti-entropie Glif - De Held wordt verlicht en vangt brand, en de vijand wordt bevroren.</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
+    <string name="Codex_Story_9">Verplaatsing Glief - Wanneer de Held wordt geraakt, bestaat de kans dat de Held naar een willekeurige zichtbare tegel wordt geteleporteerd. Deze glief werkt niet op baasniveaus.</string>
     <string name="ColdSpirit_Desc">De koude geest is de uitvlucht van vorst, in zijn zuiverste vorm. Als een gedachtenloze klomp magische energie gehoorzaamt hij de wil van de magiër die hem oproept, of handelt volgens basisinstincten.</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ComboBuff_Info">De volgende aanval zal een combo-aanval zijn.</string>
@@ -445,6 +446,7 @@
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">De doodskijk van %s heeft je gedood...</string>
     <string name="Eye_Name">boos oog</string>
+    <string name="Facilitations_Descriptions_1">Het is nog steeds onbekend wie je ouders waren, maar de natuurlijke troll-achtige regeneratie zal alle komende strijdlittekens helpen helen.</string>
     <string name="Facilitations_Descriptions_3">Door de riem van ogerhuid aan te trekken, die aan elke nieuwe generatie werd doorgegeven, maak je een stap naar het onbekende dat voor je ligt.</string>
     <string name="Facilitations_Names_0">Geen honger</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
@@ -1682,6 +1684,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
