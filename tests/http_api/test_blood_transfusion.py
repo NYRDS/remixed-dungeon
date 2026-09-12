@@ -717,7 +717,9 @@ if __name__ == "__main__":
     _tee_file = open(_tee_path, "w")
     sys.stdout = _Tee(sys.stdout, _tee_file)
     _code = main()
-    _tee_file.close()
+    sys.stdout = sys.__stdout__
+    _tee_file.flush()
     if _code != 0:
         emit_ci_error(_tee_path, 60)
+    _tee_file.close()
     sys.exit(_code)
