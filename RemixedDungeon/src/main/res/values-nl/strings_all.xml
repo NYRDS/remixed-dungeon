@@ -1280,6 +1280,7 @@
     <string name="TownsfolkMovieNPC_Desc">Een van de plaatselijke bewoners. Hoewel dit duidelijk een gewone burger is, zien die kleren er duur uit.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Name_Objective">stadbewoner</string>
+    <string name="TownsfolkNPC_Desc">Een van de lokale bewoners. Hoewel dit duidelijk een gewone burger is, zien die kleren er toch duur uit.</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">Ah! Nog een avonturier, geweldig! Zorg ervoor dat je zoveel mogelijk waardevolle spullen buitmaakt!</string>
     <string name="TownsfolkNPC_Message2">De stad is zo rijk geworden door die kelder, dat iedereen in de stad op vakantie kan gaan wanneer we maar willen! Feitelijk daarom is er zo weinig volk hier nu.</string>
@@ -1643,6 +1644,7 @@
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
     <string name="town_deco_skullboard_name">trofeerek</string>
+    <string name="town_deco_snowman_name">Sneeuwpop</string>
     <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
     <string name="town_deco_sofa_desc">Lijkt erop dat deze bioscoop echt probeert de beste zitplaatsen voor haar klanten te bieden.</string>
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
@@ -1677,6 +1679,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
