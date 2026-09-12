@@ -494,6 +494,7 @@
     <string name="GoldenSword_Gender">masculine</string>
     <string name="Golem_Defense">geblokkeerd</string>
     <string name="Golem_Gender">masculine</string>
+    <string name="Golem_Name_Objective">golem</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">De slime blaast zichzelf op!</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
@@ -1082,6 +1083,7 @@
     <string name="ServiceManNPC_Name_Objective">medewerker</string>
     <string name="ServiceManNPC_NoConnection">Het spijt me, u kunt onze dienst nu niet gebruiken. (Internetverbinding vereist)</string>
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
+    <string name="Sewer_TileDescBookshelf">De boekenkast staat vol met goedkope, nutteloze boeken. Zou het branden?</string>
     <string name="Sewer_TileWater">Troebel water</string>
     <string name="Shades_Info">Sommige mensen zeggen dat kerkers te donker zijn om die te dragen. En jij zegt dat die mensen gewoon niet cool genoeg zijn.</string>
     <string name="Shades_Name">Zonnebril</string>
@@ -1660,6 +1662,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
