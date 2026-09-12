@@ -24,5 +24,6 @@
    "immunities"    : ["Frost"],
    "canBePet"      : true,
    "friendly"      : false,
-   "fraction"      : "DUNGEON"
+   "fraction"      : "DUNGEON",
+   "hasBodyParts" : false
 }

@@ -6,6 +6,10 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import org.jetbrains.annotations.NotNull;
 
 public class JarOfSouls extends Mob {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	public JarOfSouls() {
 		hp(ht(70));

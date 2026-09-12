@@ -79,7 +79,8 @@ return item.init{
         end
 
         -- Handle critical hit effects for Doctor class - drop extra parts
-        if isCriticalHit and isDoctor then
+        -- (constructs and non-corporeal foes have nothing dissectable)
+        if isCriticalHit and isDoctor and defender:hasBodyParts() then
             -- Create random harvestable items to drop
             local harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard"}
             local randomItem = harvestItems[math.random(1, #harvestItems)]

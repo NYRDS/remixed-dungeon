@@ -18,5 +18,6 @@
    "walkingType"   :"WALL",
    "scriptFile"    :"scripts/mobs/MazeShadow",
    "aiState"       :"Wandering",
-   "isHumanoid"    :true
+   "isHumanoid"    :true,
+   "hasBodyParts" : false
 }

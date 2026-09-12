@@ -16,6 +16,10 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 public class WaterElemental extends MultiKindMob implements IDepthAdjustable {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	public WaterElemental() {
 		adjustStats(Dungeon.depth);

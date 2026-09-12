@@ -16,6 +16,10 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 public class RunicSkull extends MultiKindMob {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	private boolean activated = false;
 	private boolean zapping   = false;

@@ -28,6 +28,10 @@ import org.jetbrains.annotations.NotNull;
 
 
 public class Crystal extends MultiKindMob implements IDepthAdjustable, IZapper{
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	static private int ctr = 0;
 

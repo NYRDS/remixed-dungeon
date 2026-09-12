@@ -2117,6 +2117,15 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return getBelongings().getItemFromSlot(Belongings.Slot.valueOf(slot));
     }
 
+    /**
+     * Constructs (golems, statues, elementals) and non-corporeal beings have
+     * nothing dissectable - Doctor harvest and BoneSaw crit drops check this.
+     */
+    @LuaInterface
+    public boolean hasBodyParts() {
+        return true;
+    }
+
     @NotNull
     public EquipableItem getItemFromSlot(Belongings.Slot slot) {
         return getBelongings().getItemFromSlot(slot);

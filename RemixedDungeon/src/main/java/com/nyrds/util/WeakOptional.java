@@ -42,4 +42,12 @@ public class WeakOptional<T> {
         }
     }
 
+    public boolean isPresent() {
+        return reference != null && reference.get() != null;
+    }
+
+    public T get() {
+        return reference == null ? null : reference.get();
+    }
+
 }

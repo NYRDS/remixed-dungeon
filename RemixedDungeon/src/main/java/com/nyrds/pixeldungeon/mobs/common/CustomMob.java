@@ -40,6 +40,8 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		super();
 	}
 
+	private boolean hasBodyParts = true;
+
 	public CustomMob(String mobClass) {
 		super();
 		this.mobClass = mobClass;
@@ -154,6 +156,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 		kind = classDesc.optInt("var", kind);
 		carcassChance = (float) classDesc.optDouble("carcassChance", carcassChance);
+		hasBodyParts = classDesc.optBoolean("hasBodyParts", hasBodyParts);
 
 		JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
 		JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);
@@ -174,5 +177,11 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	public boolean isHumanoid() {
 		return humanoid;
+	}
+
+	@LuaInterface
+	@Override
+	public boolean hasBodyParts() {
+		return hasBodyParts;
 	}
 }

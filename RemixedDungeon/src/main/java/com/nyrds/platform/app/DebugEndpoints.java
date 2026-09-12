@@ -2961,6 +2961,62 @@ public class DebugEndpoints {
         }
     }
 
+    // test endpoint: /debug/use_item?item=<entity kind>&action=<AC_x> - execute a hero item action
+    public static NanoHTTPD.Response handleDebugUseItem(NanoHTTPD.IHTTPSession session) {
+        try {
+            String itemKind = null;
+            String action = null;
+            String query = session.getQueryParameterString();
+            if (query != null && !query.isEmpty()) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("item=")) {
+                        itemKind = URLDecoder.decode(param.substring(5), "UTF-8");
+                    } else if (param.startsWith("action=")) {
+                        action = URLDecoder.decode(param.substring(7), "UTF-8");
+                    }
+                }
+            }
+
+            if (itemKind == null || action == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing item or action parameter\"}");
+            }
+
+            if (Dungeon.hero == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Hero not initialized - start a game first\"}");
+            }
+
+            final String finalItemKind = itemKind;
+            final String finalAction = action;
+            final String[] error = new String[1];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    Item item = Dungeon.hero.getBelongings().getItem(finalItemKind);
+                    if (item == null) {
+                        error[0] = "no item of kind: " + finalItemKind;
+                        return;
+                    }
+                    item.execute(Dungeon.hero, finalAction);
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"%s\"}", error[0]));
+            }
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"item\":\"%s\",\"action\":\"%s\"}", itemKind, action));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
     public static NanoHTTPD.Response handleDebugScreenshot(NanoHTTPD.IHTTPSession session) {
         return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_IMPLEMENTED, "application/json",
             "{\"error\":\"Screenshot not supported on this platform\"}");

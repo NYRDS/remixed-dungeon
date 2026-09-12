@@ -16,6 +16,10 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 
 public class Wraith extends Mob implements IDepthAdjustable {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	private static final float SPAWN_DELAY	= 2f;
 	

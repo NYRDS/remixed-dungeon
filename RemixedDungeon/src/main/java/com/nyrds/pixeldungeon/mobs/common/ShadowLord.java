@@ -39,6 +39,10 @@ import org.jetbrains.annotations.NotNull;
  * Created by DeadDie on 13.02.2016
  */
 public class ShadowLord extends Boss implements IZapper {
+ @Override
+ public boolean hasBodyParts() {
+ 	return false;
+ }
 
 	@Packable
 	public boolean levelCreated         = false;

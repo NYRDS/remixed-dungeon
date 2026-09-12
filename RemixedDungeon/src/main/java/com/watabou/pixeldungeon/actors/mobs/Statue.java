@@ -30,6 +30,10 @@ import lombok.val;
 import org.jetbrains.annotations.NotNull;
 
 public class Statue extends Mob {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	// caveman: one-shot gear generation flag - blocks endless refill after
 	// unequip (enslaved statue was an item farm)

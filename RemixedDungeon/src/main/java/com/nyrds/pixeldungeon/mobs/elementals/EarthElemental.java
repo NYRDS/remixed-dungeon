@@ -20,6 +20,10 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 public class EarthElemental extends MultiKindMob implements IDepthAdjustable {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	public EarthElemental() {
 		adjustStats(Dungeon.depth);

@@ -11,6 +11,10 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import org.jetbrains.annotations.NotNull;
 
 public class Golem extends Mob {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 	
 	public Golem() {
 

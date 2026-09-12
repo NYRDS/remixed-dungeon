@@ -19,6 +19,10 @@ import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 
 public class MirrorImage extends Mob {
+    @Override
+    public boolean hasBodyParts() {
+    	return false;
+    }
 
     public MirrorImage() {
         carcassChance = 0;

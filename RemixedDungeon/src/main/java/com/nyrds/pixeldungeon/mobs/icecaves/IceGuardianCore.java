@@ -17,6 +17,10 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import org.jetbrains.annotations.NotNull;
 
 public class IceGuardianCore extends Boss {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	public IceGuardianCore() {
 		hp(ht(1000));

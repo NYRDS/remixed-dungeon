@@ -24,5 +24,6 @@
    "carcassChance" : 0,
    "canBePet"      : true,
    "friendly"      : false,
-   "fraction"      : "DUNGEON"
+   "fraction"      : "DUNGEON",
+   "hasBodyParts" : false
 }
