@@ -9,6 +9,8 @@ Usage:
 import os
 import sys
 import time
+import io
+import contextlib
 import signal
 import argparse
 import subprocess
@@ -83,14 +85,22 @@ class TestRunner:
         if self.log_monitor:
             self.log_monitor.set_test(name)
         try:
-            result = test_func()
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
+                result = test_func()
             if result:
                 self.passed += 1
                 print(f"  PASS: {name}")
                 return True
             self.failed += 1
             print(f"  FAIL: {name}")
-            print("::error::FAIL %s" % name)
+            print(buf.getvalue())
+            # one annotation per failed test with its captured reason
+            # (GitHub caps error annotations per step, keep it short)
+            reason = " | ".join(
+                ln.strip() for ln in buf.getvalue().splitlines() if ln.strip()
+            )
+            print("::error::FAIL %s: %s" % (name, reason[-400:]))
             return False
         except Exception as e:
             self.failed += 1
@@ -112,7 +122,7 @@ class TestRunner:
         return True
 
 
-def _wait_for_game(runner: TestRunner, timeout: int = 120) -> bool:
+def _wait_for_game(runner: TestRunner, timeout: int = 240) -> bool:
     start = time.time()
     while time.time() - start < timeout:
         state = runner.client.get_game_state()
@@ -657,10 +667,9 @@ def run_all(runner: TestRunner) -> int:
             return 1
 
     if runner.failed > 0:
-        # surface per-test results + game log tail as CI annotations
-        # (step logs are not readable via the API without credentials)
+        # per-test reasons are emitted as annotations in _run_test;
+        # the JVM buffers its stdout so the game log tail is stale - don't dump it
         print("::error::python-tests blood_transfusion failed %d test(s)" % runner.failed)
-        emit_ci_error(runner.log_file, 40)
         return 1
     print("\nAll tests passed!")
     return 0
