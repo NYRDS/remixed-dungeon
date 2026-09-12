@@ -1155,6 +1155,7 @@
     <string name="SpiderMindAmber_Name_Objective">nhện hổ phách</string>
     <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Nhện Tâm Linh</string>
+    <string name="SpiderMind_Name_Objective">Nhện Tâm Linh</string>
     <string name="SpiderNest_Desc">Kén này được làm từ những sợi tơ mỏng nhất và ẩn giấu thứ gì đó đang sống bên trong.</string>
     <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderNest_Name">lòng tử cung nhện</string>
@@ -1612,6 +1613,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

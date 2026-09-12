@@ -1567,6 +1567,7 @@
     <string name="town_deco_barrel_name">vat</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
     <string name="town_deco_beige_carpet_name">tapijt</string>
+    <string name="town_deco_bell_desc">Een typische kerkklok. Het lijkt erop dat niemand hem al lange tijd heeft geluid en zelfs het touw ontbreekt.</string>
     <string name="town_deco_bell_tower_desc">Traditioneel worden kerkklokken in hoge torens geïnstalleerd zodat het gelui over grotere afstand te horen is.</string>
     <string name="town_deco_blue_carpet_desc">Een luxe blauwe tapijt, versierd met paarse ornamenten.</string>
     <string name="town_deco_blue_carpet_name">kleedje</string>
@@ -1672,6 +1673,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 
