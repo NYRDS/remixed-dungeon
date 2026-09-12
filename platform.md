@@ -26,6 +26,16 @@ The platform abstraction is implemented through:
 - Uses LWJGL backend for OpenGL rendering
 - Located in `RemixedDungeonDesktop/src/libgdx/java/com/nyrds/platform/game/Game.java`
 
+**Headless Implementation**:
+- No graphics, no sound, no GL context at all (module has zero libGDX/LWJGL dependencies)
+- A plain thread pumps `GameLoop.onFrame()` with `GameLoop.headless = true` (GL/draw block skipped)
+- GL facade (`com.nyrds.platform.gl.*`) is no-op stubs; `BitmapData` over `java.awt.image.BufferedImage`;
+  `SystemText` measures via AWT FontMetrics on the real game TTFs; audio no-ops; storage pure java.io
+- Launcher `com.nyrds.platform.app.HeadlessLauncher` in `RemixedDungeonHeadless`:
+  `--turns=N` (simulate N turns, save, exit 0), `--quit-on-death` (exit 2), `--class=`, `--difficulty=`,
+  `--webserver[=port]` (full HTTP debug API), `--tui` (stdin REPL: map/move/attack/wait/save/...)
+- Runnable via `gradlew :RemixedDungeonHeadless:runHeadless` or `headlessShadowJar`; runs without any display
+
 **Web Implementation** (Work in Progress):
 - Uses LibGDX backend with TeaVM
 - Intended to transpile Java code to JavaScript using TeaVM

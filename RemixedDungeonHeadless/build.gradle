@@ -1,0 +1,179 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+// Load version information from shared properties file
+def versionPropsFile = file("../version.properties")
+def versionProps = new Properties()
+versionPropsFile.withInputStream { versionProps.load(it) }
+
+project.ext {
+    version = versionProps['VERSION_NAME']
+    version_code = versionProps['VERSION_CODE'].toInteger()
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_10
+    targetCompatibility = JavaVersion.VERSION_1_10
+}
+
+application {
+    applicationName = 'RemixedDungeon-headless'
+    mainClass = 'com.nyrds.platform.app.HeadlessLauncher'
+
+    sourceSets {
+        main {
+            java {
+                srcDirs = [
+                        '../RemixedDungeon/src/main/java',
+                        'src/headless/java',
+                        '../RemixedDungeonDesktop/src/market_none/java',
+                        'src/generated/java'
+                ]
+                // desktop-only vkplay app helper, references the libgdx launcher
+                exclude 'com/nyrds/market/MarketApp.java'
+            }
+        }
+    }
+}
+
+// R.java + BuildConfig.java generation, pure Gradle (no python/lxml)
+def stringXmlFiles = ['../RemixedDungeon/src/main/res/values/strings_not_translate.xml',
+                      '../RemixedDungeon/src/main/res/values/strings_api_signature.xml',
+                      '../RemixedDungeon/src/main/res/values/string_arrays.xml',
+                      '../RemixedDungeon/src/main/res/values/strings_all.xml']
+
+tasks.register('generateR') {
+    def targetDir = file("${projectDir}/src/generated/java/com/nyrds/pixeldungeon/ml")
+    inputs.files(stringXmlFiles.collect { file(it) })
+    outputs.file(new File(targetDir, 'R.java'))
+    doLast {
+        targetDir.mkdirs()
+        def rStrings = [] as Set
+        def rArrays = [] as Set
+        stringXmlFiles.each { f ->
+            if (!file(f).exists()) return
+            def root = new XmlParser().parse(file(f))
+            root.children().each { entry ->
+                if (entry instanceof groovy.util.Node && (entry.name() == 'string' || entry.name() == 'string-array')) {
+                    if (entry.name() == 'string') {
+                        rStrings << entry.attribute('name')
+                    } else {
+                        rArrays << entry.attribute('name')
+                    }
+                }
+            }
+        }
+        def rJava = new File(targetDir, 'R.java')
+        rJava.text = "package com.nyrds.pixeldungeon.ml;\n\npublic class R {\n    public static class string {\n" +
+                rStrings.withIndex().collect { name, i -> "        public static final int ${name} = ${i};" }.join('\n') +
+                "\n    }\n\n    public static class array {\n" +
+                rArrays.withIndex().collect { name, i -> "        public static final int ${name} = ${i};" }.join('\n') +
+                "\n    }\n}\n"
+    }
+}
+
+tasks.register('generateBuildConfig') {
+    def targetDir = file("${projectDir}/src/generated/java/com/nyrds/pixeldungeon/ml")
+    outputs.file(new File(targetDir, 'BuildConfig.java'))
+    doLast {
+        targetDir.mkdirs()
+        def debug = gradle.startParameter.taskNames.any { it.toLowerCase().contains('debug') }
+        def buildConfigFile = new File(targetDir, 'BuildConfig.java')
+        buildConfigFile.text = """
+        package com.nyrds.pixeldungeon.ml;
+
+        public class BuildConfig {
+            public static boolean DEBUG = ${debug};
+            public static final String SAVES_PATH = "./saves/";
+            public static final String FLAVOR_platform = "headless";
+            public static final String FLAVOR_market = "none";
+            public static final String VERSION_NAME = "${project.ext.version}";
+            public static final int VERSION_CODE = ${project.ext.version_code};
+
+            public static void init(String[] args) {
+                if (args != null) {
+                    for (String arg : args) {
+                        if (arg != null && (arg.equalsIgnoreCase("--debug") || arg.equalsIgnoreCase("-debug") ||
+                                           arg.equalsIgnoreCase("--debug=true") || arg.equalsIgnoreCase("-Ddebug=true"))) {
+                            DEBUG = true;
+                            return;
+                        }
+                        if (arg != null && (arg.equalsIgnoreCase("--debug=false") || arg.equalsIgnoreCase("-Ddebug=false"))) {
+                            DEBUG = false;
+                            return;
+                        }
+                    }
+                }
+                String debugProp = System.getProperty("debug");
+                if (debugProp != null) {
+                    DEBUG = Boolean.parseBoolean(debugProp);
+                }
+            }
+        }
+        """
+    }
+}
+
+compileJava.dependsOn generateR
+compileJava.dependsOn generateBuildConfig
+
+dependencies {
+    implementation project(':annotation')
+    implementation project(':json_clone')
+
+    compileOnly project(':processor')
+    annotationProcessor project(':processor')
+
+    implementation project(':luaj')
+    implementation 'org.hjson:hjson:3.1.0'
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'org.jetbrains:annotations:24.1.0'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    implementation 'com.google.guava:guava:32.0.1-jre'
+
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+    implementation 'org.json:json:20210307'
+}
+
+tasks.withType(JavaExec).configureEach {
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+}
+
+tasks.register('runHeadless', JavaExec) {
+    dependsOn classes
+    mainClass = 'com.nyrds.platform.app.HeadlessLauncher'
+    classpath = sourceSets.main.runtimeClasspath
+
+    if (project.hasProperty('args')) {
+        args = project.property('args').toString().split(' ') as List<String>
+    }
+
+    standardInput = System.in
+    workingDir = file('src/headless/rundir')
+    doFirst {
+        workingDir.mkdirs()
+    }
+}
+
+tasks.register('headlessShadowJar', ShadowJar) {
+    archiveBaseName.set('RemixedDungeon-Headless')
+    archiveVersion.set('')
+    archiveClassifier.set('')
+    manifest {
+        attributes 'Main-Class': 'com.nyrds.platform.app.HeadlessLauncher'
+    }
+    from sourceSets.main.output
+    dependsOn configurations.runtimeClasspath
+    configurations = [project.configurations.runtimeClasspath]
+
+    // Include assets from the main RemixedDungeon module
+    from('../RemixedDungeon/src/main/assets') {
+        into 'assets'
+    }
+}

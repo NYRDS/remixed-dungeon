@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 }
 //include ':RemixedDungeon'
 include ':RemixedDungeonDesktop'
+include ':RemixedDungeonHeadless'
 //include ':RemixedDungeonHtml'

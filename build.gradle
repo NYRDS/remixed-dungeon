@@ -40,6 +40,7 @@ spotless {
         target 'RemixedDungeon/src/**/*.java',
                'RemixedDungeonDesktop/src/**/*.java',
                'RemixedDungeonHtml/src/**/*.java',
+               'RemixedDungeonHeadless/src/**/*.java',
                'processor/src/**/*.java'
         targetExclude '**/src/generated/**', '**/ml/BuildConfig.java'
         encoding 'UTF-8'

@@ -84,6 +84,8 @@ public class GameLoop {
 
     public Runnable doOnResume;
 
+    public static boolean headless = false;
+
     public final Queue<PointerEvent> motionEvents;
     public final Queue<KeyEvent> keysEvents;
 
@@ -265,6 +267,10 @@ public class GameLoop {
 
         if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
             stepExecutor.execute(this::update);
+        }
+
+        if (headless) {
+            return;
         }
 
         NoosaScript.get().resetCamera();
