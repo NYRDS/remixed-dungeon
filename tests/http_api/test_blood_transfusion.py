@@ -90,10 +90,12 @@ class TestRunner:
                 return True
             self.failed += 1
             print(f"  FAIL: {name}")
+            print("::error::FAIL %s" % name)
             return False
         except Exception as e:
             self.failed += 1
             print(f"  FAIL: {name} - Exception: {e}")
+            print("::error::FAIL %s - Exception: %s" % (name, str(e)[:200]))
             return False
         finally:
             if self.log_monitor:
