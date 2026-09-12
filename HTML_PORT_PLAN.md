@@ -91,6 +91,61 @@ E. Touch input itself should be OK (game is touch-first; TeaInput
 Plan of attack: B (IndexedDB storage) and A (audio transcoding/fallback)
 are the two Apple blockers; C is cheap shell work; D is the known heap
 diet; E is a QA pass on a real iPhone + an android phone.
+
+### Resolution approaches (planned 2026-09-12, not yet implemented)
+
+**A → audio (bd 0ok), ONE SESSION. Single-format: mp3 becomes the ONLY
+audio payload on web.** Do NOT ship dual ogg+mp3 twins — the boot
+manifest preloads every entry, twins double the preloaded audio heap
+(D memory ceiling). Steps:
+1. make_webapp.py transcodes every shipped `sound/*.ogg` + music to mp3
+   at build time (ffmpeg VBR q4; higher for game.ogg/themes). HiFiDLC
+   mp3s pass through.
+2. KEEP the original `.ogg` filenames — game code, assets manifest and
+   `ModdingMode.isSoundExists` never notice.
+3. `WebAudio.mediaUrl()` (html-only) switches mime detection from
+   extension to magic-byte sniff (`OggS` / `ID3` / mp3 frame sync
+   0xFFEx) when building the data URL. That is the whole game-side
+   change. Desktop Chrome plays mp3, so fully verifiable in the desktop
+   harness; iOS mp3 support is a spec constant (no device needed for the
+   codec question).
+
+**C → mobile shell (bd 7j0), ONE SESSION, cheap.** Viewport meta
+`maximum-scale=1, user-scalable=no`; `touch-action: none` on the canvas
+(pinch/double-tap fights TeaInput); `viewport-fit=cover` + safe-area
+inset padding; `apple-mobile-web-app-capable`/`status-bar-style` tags
+(pairs with B's PWA manifest); then puppeteer device-emulation QA matrix
+(iPhone/Android viewports, DPR 3, touch events, portrait + landscape —
+portrait exercises the 2×2 dashboard UI branch, which is how we test
+phone UI without a phone).
+
+**B → storage (bd 827), the real engineering.**
+1. Swap `PersistedFileStorage`'s mirror backend from localStorage to
+   IndexedDB (one store, key = path, value = bytes). The `putFile`/
+   `removeFile` hook structure already centralizes every mutation, so
+   the swap is contained. Catch: IDB is async, restore-at-construction
+   is sync — gate the restore into the existing async pre-boot phase
+   (the game already awaits asset fetches before title; TeaVM handles
+   the await).
+2. `navigator.storage.persist()` after first gesture (Safari honors it
+   best for installed web apps).
+3. PWA wrapper: manifest + 192/512 icons + apple-touch-icon →
+   Add-to-Home-Screen = standalone fullscreen + iOS's more durable
+   storage container.
+4. Safety net: save export/import (download/upload zip) in settings.
+Verify IDB roundtrip on desktop Chromium (av_check-style harness); the
+7-day ITP purge is iOS-only — accepted on spec, external iPhone spot-
+check later.
+
+**D → memory/jetsam (owed heap diet, ongoing).** Obfuscated build for
+shipping (40MB→10.5MB source), asset-retention audit of the 1337
+preloaded entries; the mp3-only switch in A trims a little. iOS jetsam
+floors need external QA — not testable without hardware.
+
+ORDER: A → C → B → D. Real-device (iPhone) verification is a single
+external spot-check at the END of A+C+B, not a per-step gate — desktop
+browser + emulation is the primary test vehicle (Mike owns no Apple
+device).
 4. **No mods on web** (`isResourceExistInMod` = false by design); desktop
    rundir/mods loads them.
 5. **Audio backends**: html = HTMLAudioElement data-URLs (ogg everywhere;
