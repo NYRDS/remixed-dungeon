@@ -37,7 +37,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install requests
+          python3 -m pip install requests lxml
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
@@ -45,10 +45,14 @@ jobs:
       - name: Build headless jar
         run: ./gradlew :RemixedDungeonHeadless:shadowJar --console=plain
 
+      - name: Generate l10n json
+        run: python3 make_json.py
+        working-directory: RemixedDungeonDesktop
+
       - name: Prepare throwaway game dir
         run: |
           mkdir -p /tmp/rpd-ci/rundir
-          ln -s "$GITHUB_WORKSPACE/RemixedDungeonDesktop/src/desktop/assets" /tmp/rpd-ci/assets
+          ln -s "$GITHUB_WORKSPACE/RemixedDungeon/src/main/assets" /tmp/rpd-ci/assets
           ln -s "$GITHUB_WORKSPACE/RemixedDungeonDesktop/src/desktop/d_assets" /tmp/rpd-ci/d_assets
           ln -s "$GITHUB_WORKSPACE/RemixedDungeonDesktop/src/desktop/l10ns" /tmp/rpd-ci/l10ns
 
