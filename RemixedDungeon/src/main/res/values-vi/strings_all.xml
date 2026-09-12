@@ -78,6 +78,7 @@
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
     <string name="Badges_DeathHunger">Chết vì đói</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
+    <string name="Badges_FoodEaten3">30 phần thức ăn đã ăn</string>
     <string name="Badges_GamesPlayed1">Đã chơi 10 ván</string>
     <string name="Badges_GamesPlayed2">Đã chơi 100 ván</string>
     <string name="Badges_GamesPlayed3">Đã chơi 500 ván</string>
@@ -508,6 +509,7 @@
     <string name="Heal_Cast">%s đã được chữa trị.</string>
     <string name="Heal_Info">Một phép thuật khá hữu ích trong ngục, phải không?</string>
     <string name="Heal_Name">Chữa lành</string>
+    <string name="HealerNPC_Desc">Een oude man, op de een of andere manier lijkt hij op iemand die toverstokken zou maken.</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Chữa trị miễn phí cho mọi phiêu lưu giả!</string>
     <string name="HealerNPC_Message2">Quay lại bất cứ khi nào bạn cảm thấy ốm hoặc đói nhé!</string>
@@ -1613,6 +1615,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

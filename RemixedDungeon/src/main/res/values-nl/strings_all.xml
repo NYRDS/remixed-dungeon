@@ -413,6 +413,7 @@
     <string name="Dungeon_Tips_19">Geen wapens toegestaan in de aanwezigheid van Zijne Majesteit!</string>
     <string name="Dungeon_Tips_20">Pixel-Mart. Speciale prijzen voor demonenjagers!</string>
     <string name="Dungeon_Tips_22">De tekst is geschreven in de taal van demonen.</string>
+    <string name="Dungeon_Tips_23">De tekst is geschreven in een demonische taal.</string>
     <string name="Dungeon_Tips_3">Je kunt je goud uitgeven in winkels in de stad of de dungeon.</string>
     <string name="Dungeon_Tips_4">Pas op voor de Slijm!</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
@@ -693,6 +694,7 @@
     <string name="Level_TileDescLockedDoor">Deze deur is op slot, je hebt een passende sleutel nodig om hem te openen.</string>
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
+    <string name="Level_TileEmptyWell">Lege put</string>
     <string name="Level_TileEntrance">Diepte-ingang</string>
     <string name="Level_TileExit">Diepte-uitgang</string>
     <string name="Level_TileGrippingTrap">Klemval</string>
@@ -1673,6 +1675,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
