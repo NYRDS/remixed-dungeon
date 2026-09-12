@@ -11,7 +11,9 @@
 #     children hang on model calls and the parent loses the whole run)
 #   - A failed run is retried once with --resume latest
 #   - Uncommitted work is never wiped: a failed run's partial edits are
-#     stashed before the next iteration; unexplained dirt skips the iteration
+#     stashed before the next iteration; foreign dirt is first given to a
+#     scoped hermes recovery run that aligns submodules with master state,
+#     and only dirt it cannot resolve skips the iteration
 #   - Every LEARN_EVERY iterations, a learning run lets hermes update its own
 #     skill/memory files from observed maintenance history
 #   - Language list includes recently added locales (nl, vi, ar, he)
@@ -53,6 +55,17 @@ Then bring your learned knowledge up to date:
 Constraints: do NOT modify anything under /home/nyrds/remixed-dungeon, do not commit or push anything, and do not invent problems that the evidence does not support.
 EOF
 
+cat > "$PROMPT_DIR/recovery.txt" <<EOF
+The automated maintenance loop found uncommitted changes in this repo that its own runs did not create. Your job: resolve them by following master state, under this policy and no other.
+
+Policy:
+- Submodule drift: if a submodule's checked-out commit differs from the commit master records for it, align that checkout to the recorded commit with: git submodule update --init <paths>. The recorded pointer is the pushed intent — follow it.
+- Do NOT touch anything else: no file edits, no stash, no commit, no push, no branch changes, no history rewrites, no pulls.
+- If dirt remains that this policy does not cover, or anything is ambiguous (uncommitted changes inside a submodule, unpushed local submodule commits, a submodule update that fails), leave it exactly as it is and explain what a human must decide.
+
+End with a one-line verdict: 'RESOLVED' (worktree clean) or 'NEEDS-HUMAN: <reason>'.
+EOF
+
 run_task() {
     local prompt_file="$1"
     shift
@@ -77,6 +90,16 @@ run_learning() {
         --quiet
 }
 
+run_recovery() {
+    hermes chat \
+        --query-file "$PROMPT_DIR/recovery.txt" \
+        --in "$REPO_ROOT" \
+        --toolsets terminal \
+        --run-budget "$RUN_BUDGET" \
+        --yolo \
+        --quiet
+}
+
 log() {
     echo "[$(date)] $*" | tee -a "$LOG_FILE"
 }
@@ -95,22 +118,39 @@ echo "Press Ctrl+C to stop."
 echo
 
 LEFTOVER_POSSIBLE=0
+FOREIGN_DIRT_TRIES=0
 ITERATION=0
 while true; do
     TASK_CHOICE=$((RANDOM % 2))
 
     # Never wipe uncommitted work. Dirt left by a failed run is stashed
-    # (recoverable) so the loop can proceed; any other dirt belongs to a
-    # human, and the iteration is skipped rather than touching it.
+    # (recoverable) so the loop can proceed. Foreign dirt is first given to
+    # a scoped recovery run (align submodules with master state); only dirt
+    # it cannot resolve skips the iteration, untouched.
     if [ "$LEFTOVER_POSSIBLE" -eq 1 ]; then
         [ -n "$(git -C "$REPO_ROOT/wiki-data" status --porcelain 2>/dev/null)" ] && stash_partial_work "$REPO_ROOT/wiki-data" "wiki-data"
         [ -n "$(git -C "$REPO_ROOT" status --porcelain)" ] && stash_partial_work "$REPO_ROOT" "main repo"
         LEFTOVER_POSSIBLE=0
     elif [ -n "$(git -C "$REPO_ROOT" status --porcelain)" ]; then
-        log "WARNING: uncommitted changes in $REPO_ROOT that no failed run accounts for — skipping this iteration to protect them (commit or stash manually to resume maintenance)"
-        sleep "$SLEEP_SECONDS"
-        continue
+        if [ "$FOREIGN_DIRT_TRIES" -lt 3 ]; then
+            FOREIGN_DIRT_TRIES=$((FOREIGN_DIRT_TRIES + 1))
+            log "Uncommitted changes that no failed run accounts for — dispatching recovery run (attempt $FOREIGN_DIRT_TRIES/3)"
+            run_recovery
+            if [ -z "$(git -C "$REPO_ROOT" status --porcelain)" ]; then
+                log "Recovery run resolved the changes; resuming maintenance"
+                FOREIGN_DIRT_TRIES=0
+            else
+                log "Recovery run left changes unresolved — skipping this iteration to protect them"
+                sleep "$SLEEP_SECONDS"
+                continue
+            fi
+        else
+            log "WARNING: uncommitted changes persist after $FOREIGN_DIRT_TRIES recovery attempts — skipping this iteration to protect them (commit or stash manually to resume maintenance)"
+            sleep "$SLEEP_SECONDS"
+            continue
+        fi
     fi
+    FOREIGN_DIRT_TRIES=0
 
     if [ $TASK_CHOICE -eq 0 ]; then
         log "Running wiki maintenance via hermes"
