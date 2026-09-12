@@ -24,4 +24,7 @@ public class PUtil {
 	public static long getAvailableInternalMemorySize() {
 		return 1024 * 1024 * 1024;
 	}
+
+	public static void gcHint() {
+	}
 }

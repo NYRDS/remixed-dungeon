@@ -17,8 +17,10 @@ project.ext {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_10
-    targetCompatibility = JavaVersion.VERSION_1_10
+    // :processor (lua-interface annotationProcessor) is VERSION_11 since the
+    // html-port merge; a Java 10 consumer cannot resolve it
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 application {

@@ -1,8 +1,69 @@
 # HTML (TeaVM) port — resume plan
 
-Branch: `html-port-runnable` (work in progress, see git log)
+Port lives on **master** since 2026-09-12 (session 14 merge); this file is
+the running state doc.
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
+
+## Session 14 (2026-09-12): html-port-teavm-0.15.0 merged into master
+
+- Merge ef3f843cb (branch = runnable + TeaVM 0.15.0 upgrade, 33 commits)
+  went in with ZERO conflicts; submodule pins took the branch side:
+  teavm = 8c554e54c (fork branch `remixed-0.15.0` on NYRDS/teavm: 12 of
+  our commits on the 0.15.0 base c436a8a6c + 2 cherry-picked upstream
+  wasm-gc fixes), luaj = 45d89907c. `html-port-runnable` is superseded
+  (0.15.0 is a strict superset) — delete or fast-forward it at will.
+- **teavm fork → mavenLocal recipe (REQUIRED, machine-local)**: the html
+  build resolves `org.teavm:teavm-classlib:0.15.0` + `teavm-core:0.15.0`
+  (release, no -SNAPSHOT) with plugin/core/jso/interop from Maven Central;
+  only classlib+core come from mavenLocal. Publish with:
+  `cd teavm && ./gradlew :core:publishToMavenLocal :classlib:publishToMavenLocal -Pteavm.project.version=0.15.0`
+  (~3.5 min; the fork's gradle.properties default is 0.15.0-SNAPSHOT, the
+  -P override MUST match the release version the build wants). A stale
+  June 0.15.0-SNAPSHOT in mavenLocal is NOT used and NOT sufficient.
+  Note the reflective-invoke fix (8c554e54c) lives in teavm-CORE
+  (ClassReflectionInfoGenerator + reflection.js), so core must be the
+  fork build, not Central stock.
+- Post-merge master fallout fixed here: `:processor` is now Java 11
+  bytecode, so `:RemixedDungeonHeadless` bumped VERSION_1_10 → 11 and its
+  PUtil/Game shims grew `gcHint()` / `dumpThreadStacks()` (shared
+  GameScene/GameLoop now call them; desktop/android/html already had
+  them).
+- **Build gates — pick the settings file** (`settings.*.gradle`): default
+  settings.gradle = desktop + headless; `-c settings.android.gradle` for
+  android (task `:RemixedDungeon:compileAndroidFdroidDebugJavaWithJavac`
+  — flavors make plain compileDebugJavaWithJavac ambiguous);
+  `-c settings.html.gradle` for html. All four green post-merge
+  (desktop 5s, headless, android-fdroid 1m30s, html generateJavaScript
+  28s, LUAREFL 176 classes).
+- Re-verified on the merged master: `teavm015_check.js` PASS (boot →
+  newgame → zip save → 12-strike luaj fight → continue-from-save, zero
+  fatal jsErr); screenshots of sewer level 1 + snow town clean (StatusPane,
+  pixel font, fog, tilemap). Still only ever verified on 0.14.1, NOT
+  re-verified on 0.15: real-browser audio, CJK lazy-font splash, perf on
+  real GPU (headless swiftshader can't).
+- Harness tooling on this machine: nvm npms crash when invoked by path
+  (they exec system node 12). Recipe:
+  `PATH=~/.nvm/versions/node/v22.19.0/bin:$PATH NODE_PATH=/tmp/rd-html-test/node_modules PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser node scripts/stuff/htmlport/teavm015_check.js`
+  (puppeteer 24 installed in /tmp/rd-html-test with
+  PUPPETEER_SKIP_DOWNLOAD=1; /usr/bin/chromium-browser = snap, headless OK
+  with --no-sandbox --enable-unsafe-swiftshader --use-gl=swiftshader).
+- Upstream teavm PR candidates from `remixed-0.15.0` (12 commits): clean
+  bugfixes = Deflater/Inflater Z_BUF_ERROR tolerance,
+  Collections.unmodifiableSortedSet, File disk-space + Field primitive
+  accessors, reflective instance-method invoke (arrow arg-shift) +
+  void→null normalize; features = ReflectionSupplier findable-by-name
+  classes + metadata emission, simple-ctor metadata limits; keep
+  fork-local = the classlib stubs (Process/InetAddress/Runtime.exec/
+  System.exit, CountDownLatch/Future/atomic arrays, FileChannel.map,
+  System.load) — upstream prefers UnsupportedOperationException.
+  remixed-patches (old 0.14.1 fork, 24 mixed commits incl. hash-mangled
+  upstream cherry-picks) is now dead weight — upstream anything via the
+  0.15.0 branch only.
+- make_webapp.py notes: Long_fromNumber runtime patch now self-skips
+  (fixed in the fork core); TeaInput getBoundingClientRect patch still
+  applies (4 fns). First gradle run may fail transiently on fresh
+  gdx-teavm resolution — rerun before diagnosing.
 
 ## Session 13 (2026-09-10): merged 32.4.beta.7 into the port
 

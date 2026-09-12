@@ -225,4 +225,16 @@ public class Game {
 
     static public void copyToClipboard(String label, String text) {
     }
+
+    public static void dumpThreadStacks() {
+        Thread.getAllStackTraces().forEach((thread, st) -> {
+            if (st.length == 0) {
+                return;
+            }
+            System.out.printf("[WATCHDOG] thread %s state=%s%n", thread.getName(), thread.getState());
+            for (StackTraceElement el : st) {
+                System.out.println("  at " + el);
+            }
+        });
+    }
 }
