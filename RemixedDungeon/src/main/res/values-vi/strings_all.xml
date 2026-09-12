@@ -1285,6 +1285,7 @@
     <string name="WandOfFlock_SheepBaa_2">Bê.</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfMagicMissile_Info">Cây gậy này phóng ra các tên lửa năng lượng ma thuật thuần khiết, gây sát thương trung bình cho mục tiêu.</string>
+    <string name="WandOfMagicMissile_Name">Đũa phóng tên lửa ma thuật</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Info">Khi sự sống kết thúc, sự sống mới luôn bắt đầu phát triển... Chu kỳ vĩnh cửu luôn tồn tại!</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
@@ -1617,6 +1618,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

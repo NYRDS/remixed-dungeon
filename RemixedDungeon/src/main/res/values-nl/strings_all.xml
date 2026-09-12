@@ -159,6 +159,7 @@
     <string name="Bishop_no_money">Je kunt er niet voor betalen.</string>
     <string name="Bishop_remove_curse">Vervloeking verwijderen - %d g</string>
     <string name="Bishop_text">Dag en nacht bid ik voor u, mijn kind.</string>
+    <string name="BlackCat_AiStatus">Deze kat doet gewone kattendingen.</string>
     <string name="BlackCat_Desc">Dit is een zwarte kat</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
@@ -213,6 +214,7 @@
     <string name="CagedKobold_Message3">Ik haat alles aan deze kooi</string>
     <string name="CagedKobold_Name">gekooide kobold</string>
     <string name="CagedKobold_Name_Objective">opgesloten kobold</string>
+    <string name="Calm_Cast">%s kalmeert.</string>
     <string name="Calm_Name">Kalmte</string>
     <string name="CandleOfMindVision_Info">Lijkt op een gewone kaars, niet iets wat je zou verwachten in een gevaarlijk duistere kelder. Raar genoeg is hij vrij warm aan de kant, ondanks dat hij nog niet was aangebrand.</string>
     <string name="CandleOfMindVision_Info_Lighted">De kaars lichtte op het moment dat je hem uit je rugzak haalde. De vlam geeft een zwak paars licht, en als je er doorheen kijkt, worden alle nabijgelegen monsters zichtbaar voor je.</string>
@@ -1316,6 +1318,7 @@
     <string name="WandMaker_Defense">geabsorbeerd</string>
     <string name="WandMaker_Desc">Deze oude maar kerngezonde heer draagt een lichtelijk verwarde uitdrukking. Hij wordt beschermd door een magisch schild.</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
+    <string name="WandOfAmok_Info1">er gebeurde niets</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
     <string name="WandOfAvalanche_Info1">Je verpletterde jezelf met je eigen Toverstaf van Lawine...</string>
     <string name="WandOfAvalanche_Name">Toverstaf van Lawine</string>
@@ -1679,6 +1682,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
