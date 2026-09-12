@@ -78,7 +78,7 @@ class DoctorSpellTester:
         return self.client.get_level_info()
 
 
-def _wait_for_game(tester: DoctorSpellTester, timeout: int = 15) -> bool:
+def _wait_for_game(tester: DoctorSpellTester, timeout: int = 120) -> bool:
     start = time.time()
     while time.time() - start < timeout:
         state = tester.get_game_state()

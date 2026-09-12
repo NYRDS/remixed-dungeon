@@ -25,3 +25,16 @@ def server_command(port: str = "8080"):
                 os.path.abspath(game_dir))
     return (["./gradlew", "-p", "RemixedDungeonDesktop", "runDesktopGameWithWebServer",
              "--args=--webserver=" + port + " --minimized"], project_root)
+
+
+def emit_ci_error(log_file, tail: int = 25):
+    """Surface the game log tail as ::error:: workflow commands - CI
+    annotations are the only failure output readable through the API
+    without credentials."""
+    try:
+        with open(log_file, "r", errors="replace") as f:
+            lines = f.read().splitlines()[-tail:]
+    except OSError:
+        lines = ["<game log %s unreadable>" % log_file]
+    for line in lines:
+        print("::error::" + line[:250], flush=True)

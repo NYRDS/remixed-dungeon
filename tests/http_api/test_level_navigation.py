@@ -22,7 +22,7 @@ from typing import Optional, List
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from game_client import GameClient
 from log_monitor import LogMonitor
-from headless_server import server_command
+from headless_server import server_command, emit_ci_error
 
 
 class TestRunner:
@@ -78,6 +78,7 @@ class TestRunner:
             print(".", end="", flush=True)
             time.sleep(2)
         print(" TIMEOUT!")
+        emit_ci_error(self.log_file)
         return False
 
     def stop_server(self):
