@@ -5,6 +5,64 @@ the running state doc.
 Serving setup: `python3 RemixedDungeonHtml/make_webapp.py --skip-build` then
 `python3 RemixedDungeonHtml/serve.py --port 8081` → http://127.0.0.1:8081
 
+## Session 15 (2026-09-12): desktop vs html parity pass (both on merged master)
+
+Method: same build lineage, same scenes (fresh newgame → town_2 spawn; SewerLevel
+depth 1), same 800×480 viewport (desktop `--windowed` debug instance +
+`/debug/screenshot`; html puppeteer at 800×480 + `?ep=` entrypoints).
+Raw shots + composites in `docs/html_port_parity/` (`cmp_town_800.png`,
+`cmp_level1_800.png`). NOTE: scenes are separately generated — compare
+elements, not pixels. Desktop ran with RU locale, html EN (config noise,
+both render pixel-font text fine).
+
+VERIFIED PARITY (same assets, same behavior):
+- World rendering: snow town is the SAME generated map on both — identical
+  tilesets (snow, trees, woodpiles, paths), hero sprite, item/prop sprites.
+- Sewer tileset family incl. moss floor variants on both.
+- StatusPane widgets identical (portrait, lvl badge, HP 20/20 / MP 10/10
+  bars), depth counter, journal/menu/search/help icons, 12-slot toolbar.
+- Pixel-font FreeType text incl. Cyrillic (desktop ru, html en).
+- Level generation, fog-of-war reveal, save/continue roundtrip, luaj mob AI
+  (fight harness), zip save pipeline.
+
+GAPS (html side unless noted):
+1. **Camera zoom ×2**: html picks zoom 2 (~32px tiles), desktop zoom 1
+   (~16px) at the SAME 800×480 — html shows ~¼ of the world per screen.
+   Not viewport-dependent (800×480 html still ×2). Check TeaApplication/
+   PixelScene zoom defaults vs libGDX.
+2. **Void/clear color beyond level bounds**: desktop renders paper-white
+   with a soft blurred edge vignette around the level; html solid black
+   with crisp fog edges. (Session-6 recorded "black on both" — desktop
+   master's 32.4 visual refresh changed it since.) Find the platform
+   divergence: background/clear-color + level-edge vignette sprite.
+3. **UI anchor layout**: desktop master = quickslot bar TOP, StatusPane
+   BOTTOM-left, depth+menu BOTTOM-right. html = StatusPane TOP-left,
+   depth/journal/menu TOP-right, toolbar BOTTOM (32.3-alpha-era anchoring,
+   survived the beta.7 merge). Not size-conditional — anchor logic is
+   platform-split somewhere in GameScene/ui.
+4. **No mods on web** (`isResourceExistInMod` = false by design); desktop
+   rundir/mods loads them.
+5. **Audio backends**: html = HTMLAudioElement data-URLs (ogg everywhere;
+   mp3 needs real browser — headless chromium has no mp3 codec), autoplay
+   gated until first gesture; desktop = OpenAL. Not exercised in this
+   pass (both launched muted).
+6. **html-only chrome (by design)**: perf-watchdog fps badge (bottom-left),
+   HeavyLoad splash for lazy fetches (18MB CJK font on demand), rAF-dead
+   occlusion shim.
+7. **Perf**: html heap 140–250MB + ~350ms V8 GC stall on first lua
+   instance per file (heap diet owed); desktop native. Headless-swiftshader
+   fps numbers are meaningless — real Chrome measured 50.9fps earlier.
+8. **Saves**: html localStorage-backed (`rdg_file_*`, gzip bundles,
+   `?ep=continue` verified); desktop files under rundir/saves. Same bundle
+   format.
+
+Tooling: desktop debug instance recipe = memory
+`desktop-only-build-workspace` (rundir + /tmp/rpd-desktop-cp.txt
+classpath + `/debug/{start_game,get_game_state,go_to_level,screenshot}`);
+html side = `scripts/stuff/htmlport/{shot_town,ep_shot}.js`
+(viewport 800×480 needs an override — ep_shot hardcodes 1024×600;
+/tmp/rd-html-test/parity_shots.js does both scenes at 800×480).
+
 ## Session 14 (2026-09-12): html-port-teavm-0.15.0 merged into master
 
 - Merge ef3f843cb (branch = runnable + TeaVM 0.15.0 upgrade, 33 commits)
