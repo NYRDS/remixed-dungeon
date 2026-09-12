@@ -1,9 +1,12 @@
 # HTML (TeaVM) port — resume plan
 
 **GOAL (Mike, 2026-09-12): the html version must be PLAYABLE ON MOBILE
-DEVICES, INCLUDING APPLE (iOS/iPadOS Safari).** Desktop-browser parity is
-secondary; the mobile layout (status top / toolbar bottom) is the TARGET,
-not a gap. See session 15 for what this changes.
+DEVICES, INCLUDING APPLE (iOS/iPadOS Safari).** Desktop-browser playability
+is the PRIMARY TEST VEHICLE for that goal — Mike owns no Apple device, so
+all development and QA happen in the desktop browser + puppeteer device
+emulation; real-device QA is deferred to external testers. The mobile
+layout (status top / toolbar bottom) is the TARGET, not a gap. See
+session 15 for what this changes.
 
 Port lives on **master** since 2026-09-12 (session 14 merge); this file is
 the running state doc.
