@@ -60,6 +60,7 @@ run_task() {
         --query-file "$prompt_file" \
         --in "$REPO_ROOT" \
         --toolsets "$TOOLSETS" \
+        --skills remixed-dungeon-maintenance \
         --run-budget "$RUN_BUDGET" \
         --yolo \
         --quiet \
