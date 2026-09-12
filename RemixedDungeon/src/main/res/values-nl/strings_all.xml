@@ -322,6 +322,7 @@
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
+    <string name="Codex_Story_13">Eldritch wapen - Bij een succesvolle treffer kan de vijand vluchten in Angst.</string>
     <string name="Codex_Story_14">Onstabiel wapen - Bij een succesvolle treffer kan het effect van willekeurige betovering optreden.</string>
     <string name="Codex_Story_15">Vampirisch wapen - Bij een succesvolle treffer kan het de Held genezen voor een deel van de schade die aan de vijand is toegebracht.</string>
     <string name="Codex_Story_16">Gelukkig wapen - negeert bijna volledig de pantser van de vijand, en doet veel meer schade.</string>
@@ -513,6 +514,7 @@
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileDescStatue">De paal is gemaakt van echte menselijke schedels. Geweldig.</string>
     <string name="Halls_TileStatue">Pilaar</string>
+    <string name="Haste_Name">Extreme Haast</string>
     <string name="Heal_Cast">%s is genezen.</string>
     <string name="Heal_Name">Genezing</string>
     <string name="HealerNPC_Gender">masculine</string>
@@ -1675,6 +1677,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
