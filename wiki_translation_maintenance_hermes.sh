@@ -6,8 +6,14 @@
 # Differences from the qwen version:
 #   - Uses hermes chat -q (single query, non-interactive) with --yolo for unattended runs
 #   - Prompts passed via --query-file to avoid shell-quoting issues with nested quotes
-#   - Wall-clock budget (--run-budget 18000 = 5h) replaces `timeout 300m`
-#   - Toolsets restricted to what the tasks need
+#   - Wall-clock budget (--run-budget 3600 = 1h) replaces `timeout 300m`
+#   - Toolsets restricted to what the tasks need (no delegation: free-model
+#     children hang on model calls and the parent loses the whole run)
+#   - A failed run is retried once with --resume latest
+#   - Uncommitted work is never wiped: a failed run's partial edits are
+#     stashed before the next iteration; unexplained dirt skips the iteration
+#   - Every LEARN_EVERY iterations, a learning run lets hermes update its own
+#     skill/memory files from observed maintenance history
 #   - Language list includes recently added locales (nl, vi, ar, he)
 
 set -u
@@ -16,10 +22,11 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROMPT_DIR="$(mktemp -d /tmp/hermes_maint.XXXXXX)"
 trap 'rm -rf "$PROMPT_DIR"' EXIT
 
-RUN_BUDGET="${RUN_BUDGET:-18000}"   # seconds per task run (default 5h)
-TOOLSETS="${TOOLSETS:-terminal,file,web,delegation}"
+RUN_BUDGET="${RUN_BUDGET:-3600}"    # seconds per task run; generous for a ~2-min task, tight enough to keep the hourly cadence
+TOOLSETS="${TOOLSETS:-terminal,file,web}"
 SLEEP_SECONDS="${SLEEP_SECONDS:-3600}"
-LOG_FILE="${LOG_FILE:-$REPO_ROOT/hermes_maintenance.log}"
+LOG_FILE="${LOG_FILE:-$HOME/.hermes/logs/hermes_maintenance.log}"   # outside the repo: must survive repo-side resets and cleans
+LEARN_EVERY="${LEARN_EVERY:-12}"    # run a skill/memory consolidation every N maintenance iterations
 
 WIKI_LANGS="en, ru, es, fr, de, it, pl, pt-rBR, ja, ko, zh-rCN, zh-rTW, uk, hu, tr, el, in, ms, nl, vi, ar, he"
 
@@ -31,12 +38,39 @@ cat > "$PROMPT_DIR/translation.txt" <<EOF
 Read @docs/TRANSLATION_TASK.md, pull repo master, identify a few random missing strings in random languages (use tools/select_random_missing_string.py — note that nl and vi currently have large gaps), find their context using tools/find_string_usage.py, translate them properly based on the English reference and code context, add translations to the appropriate strings_all.xml files using tools/insert_translated_string.py, verify consistency with existing translations, run tools/validate_translations.py --auto-fix before committing, also select a few random strings and ensure consistency among all languages. Commit your changes and push. Focus on maintaining consistency with existing translations, proper grammar, cultural appropriateness for target languages, and proper string formatting following Android XML standards.
 EOF
 
+cat > "$PROMPT_DIR/learn.txt" <<EOF
+Periodic self-maintenance for the Remixed Dungeon automation you operate.
+
+Review what actually happened in recent unattended maintenance runs:
+- git -C /home/nyrds/remixed-dungeon log (recent commits, including the wiki-data submodule)
+- /home/nyrds/.hermes/logs/hermes_maintenance.log (per-iteration outcomes, failures, retries)
+- /home/nyrds/remixed-dungeon/wiki_translation_maintenance_hermes.sh (the loop script — source of truth for current parameters)
+
+Then bring your learned knowledge up to date:
+1. Update your skill at /home/nyrds/.hermes/skills/software-development/remixed-dungeon-maintenance/ (SKILL.md and references/) so every fact matches current reality: script parameters (RUN_BUDGET, TOOLSETS, LEARN_EVERY, retry-on-failure behavior), log location, tool paths, and any recurring pitfall visible in the log or git history. Fix wrong facts, add only durable reusable knowledge, keep it concise.
+2. Update your persistent memories in /home/nyrds/.hermes/memories/ the same way (e.g. current model/fallback configuration, node-specific facts).
+
+Constraints: do NOT modify anything under /home/nyrds/remixed-dungeon, do not commit or push anything, and do not invent problems that the evidence does not support.
+EOF
+
 run_task() {
     local prompt_file="$1"
+    shift
     hermes chat \
         --query-file "$prompt_file" \
         --in "$REPO_ROOT" \
         --toolsets "$TOOLSETS" \
+        --run-budget "$RUN_BUDGET" \
+        --yolo \
+        --quiet \
+        "$@"
+}
+
+run_learning() {
+    hermes chat \
+        --query-file "$PROMPT_DIR/learn.txt" \
+        --in "$HOME" \
+        --toolsets terminal,file \
         --run-budget "$RUN_BUDGET" \
         --yolo \
         --quiet
@@ -46,17 +80,36 @@ log() {
     echo "[$(date)] $*" | tee -a "$LOG_FILE"
 }
 
+stash_partial_work() {
+    # $1 = repo dir, $2 = human-readable label
+    git -C "$1" stash push -u -m "hermes-maint: partial work from failed run ($2), $(date '+%F %T')" >/dev/null \
+        && log "Stashed partial work in $2 left by the failed run (recover with: git -C '$1' stash list)" \
+        || log "WARNING: failed to stash partial work in $2"
+}
+
 echo "Hermes maintenance script that randomly chooses between wiki and translation tasks"
 echo "Run budget per task: ${RUN_BUDGET}s, sleep between iterations: ${SLEEP_SECONDS}s"
 echo "Log file: $LOG_FILE"
 echo "Press Ctrl+C to stop."
 echo
 
+LEFTOVER_POSSIBLE=0
+ITERATION=0
 while true; do
     TASK_CHOICE=$((RANDOM % 2))
 
-    git -C "$REPO_ROOT" clean -xfdq
-    git -C "$REPO_ROOT" reset --hard -q
+    # Never wipe uncommitted work. Dirt left by a failed run is stashed
+    # (recoverable) so the loop can proceed; any other dirt belongs to a
+    # human, and the iteration is skipped rather than touching it.
+    if [ "$LEFTOVER_POSSIBLE" -eq 1 ]; then
+        [ -n "$(git -C "$REPO_ROOT/wiki-data" status --porcelain 2>/dev/null)" ] && stash_partial_work "$REPO_ROOT/wiki-data" "wiki-data"
+        [ -n "$(git -C "$REPO_ROOT" status --porcelain)" ] && stash_partial_work "$REPO_ROOT" "main repo"
+        LEFTOVER_POSSIBLE=0
+    elif [ -n "$(git -C "$REPO_ROOT" status --porcelain)" ]; then
+        log "WARNING: uncommitted changes in $REPO_ROOT that no failed run accounts for — skipping this iteration to protect them (commit or stash manually to resume maintenance)"
+        sleep "$SLEEP_SECONDS"
+        continue
+    fi
 
     if [ $TASK_CHOICE -eq 0 ]; then
         log "Running wiki maintenance via hermes"
@@ -71,8 +124,17 @@ while true; do
     run_task "$PROMPT_FILE"
     CMD_STATUS=$?
 
+    # Retry once by resuming the failed run's session so a run that died
+    # mid-task continues where it stopped instead of losing the work.
+    # --resume latest is safe here: hermes is not used manually on this node.
     if [ $CMD_STATUS -ne 0 ]; then
-        log "$TASK_NAME failed with exit status: $CMD_STATUS"
+        log "$TASK_NAME failed with exit status: $CMD_STATUS; retrying once with --resume latest"
+        run_task "$PROMPT_FILE" --resume latest
+        CMD_STATUS=$?
+    fi
+
+    if [ $CMD_STATUS -ne 0 ]; then
+        log "$TASK_NAME failed with exit status: $CMD_STATUS (retry exhausted)"
     else
         log "$TASK_NAME completed successfully"
 
@@ -105,6 +167,21 @@ Automated commit to $([ $TASK_CHOICE -eq 0 ] && echo 'update wiki pages' || echo
             fi
         else
             log "No changes detected after $([ $TASK_CHOICE -eq 0 ] && echo 'wiki' || echo 'translation') iteration"
+        fi
+    fi
+
+    if [ $CMD_STATUS -ne 0 ] && [ -n "$(git -C "$REPO_ROOT" status --porcelain)" ]; then
+        LEFTOVER_POSSIBLE=1
+        log "Failed run left uncommitted changes; they will be stashed before the next iteration"
+    fi
+
+    ITERATION=$((ITERATION + 1))
+    if [ $((ITERATION % LEARN_EVERY)) -eq 0 ]; then
+        log "Running periodic learning task via hermes"
+        if run_learning; then
+            log "Learning task completed"
+        else
+            log "Learning task failed (non-fatal; continuing loop)"
         fi
     fi
 
