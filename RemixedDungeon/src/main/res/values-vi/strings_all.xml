@@ -1012,6 +1012,7 @@
     <string name="SacrificialSword_Name">kiếm hiến tế</string>
     <string name="ScaleArmor_Name">giáp vảy</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
+    <string name="ScarecrowNPC_Name">bù nhìn</string>
     <string name="ScarecrowNPC_Name_Objective">ngáo</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
     <string name="Scorpio_Desc">Những sinh vật ác quỷ khổng lồ giống nhện này né tránh chiến đấu cận chiến bằng mọi giá, bắn ra những gai răng cưa làm tê liệt từ khoảng cách xa.</string>
@@ -1611,6 +1612,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

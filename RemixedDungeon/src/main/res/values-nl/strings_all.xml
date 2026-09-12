@@ -441,6 +441,7 @@
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">De doodskijk van %s heeft je gedood...</string>
     <string name="Eye_Name">boos oog</string>
+    <string name="Facilitations_Descriptions_3">Door de riem van ogerhuid aan te trekken, die aan elke nieuwe generatie werd doorgegeven, maak je een stap naar het onbekende dat voor je ligt.</string>
     <string name="Facilitations_Names_0">Geen honger</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
     <string name="Fadeleaf_Name">Verdwaand Blad</string>
@@ -1198,6 +1199,7 @@
     <string name="StartScene_ComingSoon">Binnenkort</string>
     <string name="StartScene_ContinueLatest">Ga verder met je laatste spel of kies een opslagplek</string>
     <string name="StartScene_Depth">Diepte: %1$d\nNiveau: %2$d</string>
+    <string name="StartScene_DifficultyEasy">Makkelijk (met advertenties)</string>
     <string name="StartScene_DifficultyEasyNoAds">makkelijk</string>
     <string name="StartScene_DifficultyExpert">Expert</string>
     <string name="StartScene_DifficultyNormal">Normaal</string>
@@ -1670,6 +1672,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
