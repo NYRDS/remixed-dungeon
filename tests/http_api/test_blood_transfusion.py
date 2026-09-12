@@ -651,9 +651,14 @@ def run_all(runner: TestRunner) -> int:
             print(f"\n  Lua errors found in logs:")
             for err in lua_errors[:5]:
                 print(f"    {err[:150]}")
+                print("::error::" + err[:250])
             return 1
 
     if runner.failed > 0:
+        # surface per-test results + game log tail as CI annotations
+        # (step logs are not readable via the API without credentials)
+        print("::error::python-tests blood_transfusion failed %d test(s)" % runner.failed)
+        emit_ci_error(runner.log_file, 40)
         return 1
     print("\nAll tests passed!")
     return 0
