@@ -699,4 +699,25 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    # tee stdout so failures can be surfaced as CI annotations (step logs
+    # are not readable through the API without credentials)
+    class _Tee:
+        def __init__(self, *streams):
+            self.streams = streams
+
+        def write(self, data):
+            for s in self.streams:
+                s.write(data)
+
+        def flush(self):
+            for s in self.streams:
+                s.flush()
+
+    _tee_path = tempfile.mktemp(prefix="bt_stdout_", suffix=".log")
+    _tee_file = open(_tee_path, "w")
+    sys.stdout = _Tee(sys.stdout, _tee_file)
+    _code = main()
+    _tee_file.close()
+    if _code != 0:
+        emit_ci_error(_tee_path, 60)
+    sys.exit(_code)
