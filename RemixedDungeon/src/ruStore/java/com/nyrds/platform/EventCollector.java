@@ -11,6 +11,9 @@ public class EventCollector {
     public static void logException(Exception e, String s) {
     }
 
+    public static void logException(Throwable e, String s) {
+    }
+
     public static void logException(Throwable e) {
     }
 
