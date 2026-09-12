@@ -137,6 +137,11 @@ def _wait_for_game(runner: TestRunner, timeout: int = 240) -> bool:
             print("::error::game-log: " + str(line)[:250])
     except Exception as e:
         print("::error::game-log unavailable: %s" % e)
+    try:
+        st = runner.client._get("/debug/dump_init_state")
+        print("::error::init-state: " + str(st)[:250])
+    except Exception as e:
+        print("::error::init-state unavailable: %s" % e)
     return False
 
 

@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.alchemy.AlchemyRecipes;
 import com.nyrds.pixeldungeon.alchemy.InputItem;
 import com.nyrds.pixeldungeon.alchemy.OutputItem;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.watabou.noosa.Scene;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
@@ -757,6 +758,22 @@ public class DebugEndpoints {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 String.format("{\"error\":\"Internal error: %s\"}", e.getMessage()));
         }
+    }
+
+    // probe for CI/test diagnostics: why is the game loop not initializing?
+    public static NanoHTTPD.Response handleDebugDumpInitState(NanoHTTPD.IHTTPSession session) {
+        GameLoop loop = GameLoop.instance();
+        Scene sc = loop != null ? loop.scene : null;
+        String json = String.format(
+            "{\"width\":%d,\"height\":%d,\"headless\":%b,\"framesSinceInit\":%d,\"scene\":\"%s\",\"hero\":%b}",
+            GameLoop.width,
+            GameLoop.height,
+            GameLoop.headless,
+            loop != null ? loop.framesSinceInit : -1,
+            sc != null ? sc.getClass().getSimpleName() : "none",
+            Dungeon.hero != null
+        );
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json);
     }
 
     public static NanoHTTPD.Response handleDebugGetHeroInfo(NanoHTTPD.IHTTPSession session) {
