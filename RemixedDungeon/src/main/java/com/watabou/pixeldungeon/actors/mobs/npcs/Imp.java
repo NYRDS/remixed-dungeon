@@ -4,6 +4,7 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
@@ -11,9 +12,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.quest.DwarfToken;
 import com.watabou.pixeldungeon.items.rings.Ring;
@@ -196,8 +195,8 @@ public class Imp extends NPC {
 				if (mob.undead || Dungeon.level instanceof CityBossLevel) {
 					return;
 				}
-				if ((alternative && mob instanceof Monk) ||
-					(!alternative && mob instanceof Golem)) {
+				if ((alternative && mob.getEntityKind().equals(MobFactory.MONK)) ||
+					(!alternative && mob.getEntityKind().equals(MobFactory.GOLEM))) {
 
 					new DwarfToken().doDrop(mob);
 				}

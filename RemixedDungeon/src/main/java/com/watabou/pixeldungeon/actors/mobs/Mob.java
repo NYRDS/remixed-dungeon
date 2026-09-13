@@ -22,6 +22,8 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
+import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -42,6 +44,8 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
+import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Item;
@@ -385,6 +389,7 @@ public abstract class Mob extends Char {
     }
 
     public void die(@NotNull NamedEntityKind cause) {
+        processQuestKills(cause);
         Badges.validateRare(this);
 
         Hero hero = Dungeon.hero;
@@ -443,6 +448,31 @@ public abstract class Mob extends Char {
         }
     }
 
+    // caveman: quest kills flow through the central death path, kind-gated.
+    // The gate is load-bearing - Scarecrow counts EVERY processed kill (25 -> done),
+    // so this must not fire for arbitrary mobs. Rat/Gnoll/Crab/Golem die()
+    // overrides used to do exactly this before their classes went data-defined.
+    private void processQuestKills(@NotNull NamedEntityKind cause) {
+        switch (getEntityKind()) {
+            case MobFactory.RAT:
+                ScarecrowNPC.Quest.process(getPos());
+                Ghost.Quest.process(getPos());
+                PlagueDoctorNPC.Quest.process(getPos());
+                break;
+            case MobFactory.GNOLL:
+                ScarecrowNPC.Quest.process(getPos());
+                Ghost.Quest.process(getPos());
+                break;
+            case MobFactory.CRAB:
+                Ghost.Quest.process(getPos());
+                break;
+            case MobFactory.GOLEM:
+            case MobFactory.MONK:
+                Imp.Quest.process(this);
+                break;
+        }
+    }
+
     public Mob split(int cell, int damage) {
 
         Mob clone = (Mob) makeClone();
@@ -474,6 +504,7 @@ public abstract class Mob extends Char {
         return clone;
     }
 
+    @LuaInterface
     public void resurrect() {
         resurrectAnim();
 

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
 import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
@@ -12,7 +13,6 @@ import com.nyrds.pixeldungeon.mobs.guts.YogsBrain;
 import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
 import com.nyrds.pixeldungeon.mobs.guts.YogsTeeth;
-import com.nyrds.pixeldungeon.mobs.guts.ZombieGnoll;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.icecaves.KoboldIcemancer;
@@ -52,19 +52,15 @@ import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Acidic;
 import com.watabou.pixeldungeon.actors.mobs.Bandit;
-import com.watabou.pixeldungeon.actors.mobs.Crab;
 import com.watabou.pixeldungeon.actors.mobs.DM300;
 import com.watabou.pixeldungeon.actors.mobs.Eye;
 import com.watabou.pixeldungeon.actors.mobs.FireElemental;
-import com.watabou.pixeldungeon.actors.mobs.Gnoll;
-import com.watabou.pixeldungeon.actors.mobs.Golem;
 import com.watabou.pixeldungeon.actors.mobs.Goo;
 import com.watabou.pixeldungeon.actors.mobs.King;
 import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Piranha;
-import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.actors.mobs.Scorpio;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Shaman;
@@ -100,7 +96,6 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
-import com.nyrds.LuaInterface;
 
 
 
@@ -136,6 +131,10 @@ public class MobFactory {
 	public static final String SHADOW = "Shadow";
 	public static final String DREAD_KNIGHT = "DreadKnight";
 	public static final String TREACHEROUS_SPIRIT = "TreacherousSpirit";
+	public static final String GNOLL = "Gnoll";
+	public static final String CRAB = "Crab";
+	public static final String GOLEM = "Golem";
+	public static final String MONK = "Monk";
 
 	static private Map<String, Class<? extends Mob>> mMobsList;
 
@@ -157,9 +156,6 @@ public class MobFactory {
 	private static void initMobsMap() {
 
 		mMobsList = new HashMap<>();
-		registerMobClass(Rat.class);
-		registerMobClass(Gnoll.class);
-		registerMobClass(Crab.class);
 		registerMobClass(Swarm.class);
 		registerMobClass(Thief.class);
 		registerMobClass(Skeleton.class);
@@ -187,7 +183,6 @@ public class MobFactory {
 		registerMobClass(WaterElemental.class);
 		registerMobClass(EarthElemental.class);
 		registerMobClass(Warlock.class);
-		registerMobClass(Golem.class);
 		registerMobClass(Succubus.class);
 		registerMobClass(King.class);
 		registerMobClass(Undead.class);
@@ -210,7 +205,6 @@ public class MobFactory {
 		registerMobClass(YogsEye.class);
 		registerMobClass(YogsHeart.class);
 		registerMobClass(YogsTeeth.class);
-		registerMobClass(ZombieGnoll.class);
 		registerMobClass(ShadowLord.class);
 		registerMobClass(Nightmare.class);
 		registerMobClass(SuspiciousRat.class);

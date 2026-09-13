@@ -8,7 +8,6 @@ import com.nyrds.pixeldungeon.alchemy.InputItem;
 import com.nyrds.pixeldungeon.alchemy.OutputItem;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
-import com.watabou.noosa.Scene;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
@@ -28,6 +27,7 @@ import com.nyrds.pixeldungeon.windows.WndPetBag;
 import com.nyrds.pixeldungeon.windows.WndPetInventoryOptions;
 import com.nyrds.pixeldungeon.windows.WndPetSelect;
 import com.nyrds.platform.storage.SaveUtils;
+import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -3902,6 +3902,13 @@ public class DebugEndpoints {
         return null;
     }
 
+    private static Char findCharByIdOrHero(int id) {
+        if (id == -1 && Dungeon.hero != null && Dungeon.hero.valid()) {
+            return Dungeon.hero;
+        }
+        return findMobById(id);
+    }
+
     private static void applyStance(Mob mob, String stance) {
         if ("friend".equalsIgnoreCase(stance) && Dungeon.hero != null) {
             mob.makePet(Dungeon.hero);
@@ -4208,40 +4215,48 @@ public class DebugEndpoints {
                     createErrorResponse("Game state not initialized - start a game first").toString());
             }
 
-            Mob mob = findMobById(id);
-            if (mob == null) {
+            // id=hero (or unparseable id) inspects the hero itself
+            Char chr = findCharByIdOrHero(id);
+            if (chr == null) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_FOUND, "application/json",
                     createErrorResponse("No mob with id " + id).toString());
             }
 
-            int pos = mob.getPos();
+            int pos = chr.getPos();
             int width = Dungeon.level.getWidth();
-            var action = mob.getCurAction();
+            var action = chr.getCurAction();
             String actionName = (action == null) ? "idle" : action.getClass().getSimpleName();
 
+            String buffs = chr.buffs().stream()
+                .map(b -> "\"" + b.getEntityKind() + "\"")
+                .collect(java.util.stream.Collectors.joining(","));
+
             // one-shot: the driver learns the watchdog fired
-            boolean reverted = mob.remoteReverted;
-            mob.remoteReverted = false;
+            boolean reverted = chr instanceof Mob && ((Mob) chr).remoteReverted;
+            if (chr instanceof Mob) {
+                ((Mob) chr).remoteReverted = false;
+            }
 
             String jsonString = String.format(
                 "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d," +
                     "\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d," +
                     "\"type\":\"%s\",\"fraction\":\"%s\",\"remote\":%b,\"reverted\":%b,\"revertAfter\":%d," +
-                    "\"speed\":%f,\"str\":%d}",
-                mob.isAlive(),
-                mob.hp(),
-                mob.ht(),
+                    "\"speed\":%f,\"str\":%d,\"buffs\":[%s]}",
+                chr.isAlive(),
+                chr.hp(),
+                chr.ht(),
                 pos, pos % width, pos / width,
                 actionName,
                 DungeonGenerator.getCurrentLevelId(),
                 Dungeon.depth,
-                mob.getEntityKind(),
-                mob.fraction().name(),
-                isRemote(mob),
+                chr.getEntityKind(),
+                chr.fraction().name(),
+                chr instanceof Mob && isRemote((Mob) chr),
                 reverted,
-                mob.remoteRevertAfter,
-                mob.speed(),
-                mob.effectiveSTR()
+                chr instanceof Mob ? ((Mob) chr).remoteRevertAfter : 0,
+                chr.speed(),
+                chr.effectiveSTR(),
+                buffs
             );
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);

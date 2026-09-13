@@ -2,14 +2,12 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -59,12 +57,6 @@ public class Monk extends Mob {
 		} else {
 			return super.actMeleeAttack(enemy);
 		}
-	}
-
-	public void die(@NotNull NamedEntityKind cause) {
-		Imp.Quest.process( this );
-
-		super.die( cause );
 	}
 
 	@Override

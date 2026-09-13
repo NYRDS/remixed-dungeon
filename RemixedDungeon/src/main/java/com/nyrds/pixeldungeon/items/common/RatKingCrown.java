@@ -1,10 +1,10 @@
 package com.nyrds.pixeldungeon.items.common;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Rat;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -44,8 +44,8 @@ public class RatKingCrown extends Artifact {
 
 		@Override
 		public int attackProc(Char attacker, Char defender, int damage) {
-			if (defender instanceof Rat && attacker.buffLevel(getEntityKind())>0) {
-				Mob.makePet((Rat)defender, attacker.getId());
+			if (defender.getEntityKind().equals(MobFactory.RAT) && attacker.buffLevel(getEntityKind())>0) {
+				Mob.makePet((Mob)defender, attacker.getId());
 			}
 			return super.attackProc(attacker, defender, damage);
 		}

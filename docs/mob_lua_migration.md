@@ -127,7 +127,51 @@ the ranged-tier zap story (Warlock/Shaman/Eye batch). `ZombieGnoll` —
 `resurrect()` is not `@LuaInterface` (gate blocks `self:resurrect()`); a
 one-line annotation unblocks it.
 
+Sixth batch 2026-09-13 (Step C shipped — quest-die hoist + sewer/dwarftown
+tier): engine change first — `Mob.die` now opens with
+`processQuestKills(cause)`, a kind-gated switch calling the quest processors
+at the exact point the old overrides did (before the die body):
+Rat → Scarecrow+Ghost+PlagueDoctor, Gnoll → Scarecrow+Ghost, Crab → Ghost,
+Golem/Monk → Imp. **The kind gate is load-bearing**: Scarecrow counts every
+processed kill (25 → done), so the switch must not fall through to arbitrary
+kinds. `Imp.Quest.process` inner checks became
+`getEntityKind().equals(MobFactory.MONK/GOLEM)`; `Monk` (stays java) lost its
+`die()` override — the hoist covers it. `@LuaInterface` added to
+`Mob.resurrect()` (the ZombieGnoll unblocker). New MobFactory constants
+GNOLL/CRAB/GOLEM/MONK. Deleted java: Rat, Gnoll, Crab, Golem, ZombieGnoll
+(new json defs + `spritesDesc/*.json` already existed); one straggler
+converted: `RatKingCrown` `instanceof Rat` → kind check (makePet on rats).
+
+Lua: `scripts/mobs/Rat.lua` (replaced an empty stub) and `Albino.lua` —
+`act` policy: enemy has the ratter aura → `RPD.setAi(self,"Fleeing")` +
+`RPD.affectBuff(self,"Terror",10)` once (java Terror.DURATION). The aura
+buff kind is **`artifactBuffRatterAura`**, not the class simple name —
+caught live: with the wrong string the rat kept hunting; `char_status`
+(now reports a `buffs` array, and accepts `id=hero`) showed the hero's
+actual buff kind. `scripts/mobs/ZombieGnoll.lua` — `die` hook:
+35 % (`math.random(100) > 65`) `self:resurrect()` unless
+`cause:getEntityKind() == "Burning"`, plus bone-speck emitter,
+`snd_death`, Goo_StaInfo1 status, ZombieGnoll_Info log. Resurrect-in-hook
+is safe: the hook runs inside `Char.die` before `destroy()`, the new mob's
+`occupyCell` overwrites the dying one in the cell map, and the dying mob's
+later `freeCell` is a two-arg remove that no-ops against the new occupant.
+
+Verified live: exact stat parity on all five (hp 8/12/15/85/210,
+str 10/10/10/16/13, Crab speed 2); 4 resurrect rises in 8 non-burning
+kills, 0 in 6 burning kills; resurrected zombie persists through
+save/reload; ratter aura flees both Rat and Albino (Terror observed,
+batch-3 parity gap — old java Albino inherited canAttack from Rat —
+restored); every switch branch exercised by real `die()` calls;
+save round-trip stores `entityKind`+`CustomMob` and restores exact
+hp/str/state (even HORRIFIED). Full CI python suite green on the new
+headless jar: blood_transfusion 6/6, doctor_spells 7/7 (drives the
+plague-doctor hide quest through the hoist), level_navigation 9/9,
+all_spells 38/38, alchemy 42/42. Debug tooling: `char_status` gained
+`buffs` + hero support.
+
 ## Step C — engine work that unblocks the rest
+
+(SHIPPED 2026-09-13 — see the sixth batch above. Kept for rationale.)
 
 **Quest statics in `die()` (the only real blocker left).** Rat/Gnoll/Crab
 call `Ghost/ScarecrowNPC/PlagueDoctorNPC Quest.process(pos)`, Golem/Monk
