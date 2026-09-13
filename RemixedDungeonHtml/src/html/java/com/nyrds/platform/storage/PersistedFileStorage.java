@@ -1,6 +1,5 @@
 package com.nyrds.platform.storage;
 
-import com.badlogic.gdx.files.FileHandle;
 import com.github.xpenatan.gdx.backends.teavm.TeaFileHandle;
 import com.github.xpenatan.gdx.backends.teavm.filesystem.FileData;
 import com.github.xpenatan.gdx.backends.teavm.filesystem.MemoryFileStorage;

@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.LuaInterface;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Dungeon;
@@ -8,7 +9,6 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class BlobEmitter extends Emitter {

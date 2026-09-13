@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.accessories;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
@@ -18,7 +19,6 @@ import java.util.List;
 import java.util.Map;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.Nullable;
-import com.nyrds.LuaInterface;
 
 /**
  * Created by DeadDie on 26.05.2016

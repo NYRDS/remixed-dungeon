@@ -1,10 +1,10 @@
 
 package com.watabou.pixeldungeon.effects.particles;
 
+import com.nyrds.LuaInterface;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.Emitter.Factory;
 import com.watabou.noosa.particles.PixelParticle;
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class FlameParticle extends PixelParticle.Shrinking {

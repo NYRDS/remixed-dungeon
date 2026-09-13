@@ -1,11 +1,11 @@
 
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class Effects {

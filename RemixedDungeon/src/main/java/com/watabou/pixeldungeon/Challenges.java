@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon;
 
 import android.annotation.SuppressLint;
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.watabou.pixeldungeon.items.DewVial;
@@ -12,7 +13,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class Challenges {

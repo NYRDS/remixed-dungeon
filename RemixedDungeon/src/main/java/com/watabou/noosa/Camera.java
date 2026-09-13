@@ -1,5 +1,6 @@
 package com.watabou.noosa;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.glwrap.Matrix;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -8,7 +9,6 @@ import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 import java.util.ArrayList;
 import org.jetbrains.annotations.NotNull;
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class Camera extends Gizmo {

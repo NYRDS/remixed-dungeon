@@ -1,5 +1,6 @@
 package com.watabou.noosa.particles;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.gl.Gl;
 import com.watabou.noosa.Gizmo;
@@ -8,7 +9,6 @@ import com.watabou.noosa.Visual;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class Emitter extends Group {

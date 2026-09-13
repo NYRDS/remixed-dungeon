@@ -2,9 +2,9 @@
 package com.watabou.pixeldungeon.ui;
 
 import static com.watabou.pixeldungeon.scenes.PixelScene.uiCamera;
-import com.nyrds.LuaInterface;
 
 import android.annotation.SuppressLint;
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;

@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.effects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
@@ -7,7 +8,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import java.util.HashMap;
 import java.util.Map;
 import org.json.JSONObject;
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class EffectsFactory {

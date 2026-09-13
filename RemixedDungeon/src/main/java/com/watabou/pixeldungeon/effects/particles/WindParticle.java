@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.effects.particles;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.Emitter;
@@ -10,7 +11,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class WindParticle extends PixelParticle {

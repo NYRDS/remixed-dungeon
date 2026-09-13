@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
@@ -19,7 +20,6 @@ import com.watabou.utils.ColorMath;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 import org.jetbrains.annotations.Nullable;
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public class MagicMissile extends Emitter {
