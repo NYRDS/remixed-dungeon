@@ -95,6 +95,13 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	}
 
 	@Override
+	public float speed() {
+		float base = super.speed();
+		// terrain-conditional speeds (water/earth elementals) live in the script
+		return (float) getScript().run("onSpeed", base).optdouble(base);
+	}
+
+	@Override
 	public void damage(int dmg, @NotNull NamedEntityKind src) {
 		if(immortal) {
 			return;

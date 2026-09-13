@@ -329,6 +329,76 @@ town staging geometry kept blocking the ray. Next session: provoke one with
 a dummy ally in FOV on a clear line (Statue def 4 as the zap TARGET works;
 the ALLY just needs to stand in FOV off-axis).
 
+Eleventh batch 2026-09-13 (elementals + piranha, batch 9b): engine surface first —
+`Char.add` dispatches `runOptional("onAddBuff", false, buff)` before the generic
+Burning tick (true = script handled the buff, base attach skipped; bridge
+`mob.onAddBuff`, script key `addBuff`); `CustomMob.speed()` override dispatches
+`run("onSpeed", base)` (bridge `mob.onSpeed`, script key `speed` — water ×2/×0.5,
+earth ×0.5 on liquid via `RPD.TerrainFlags:is(level.map[pos+1], LIQUID)`);
+`Spell.cast(Char,int)` protected→public `@LuaInterface` (all overrides were
+already public); new annotations: `setSkillLevel`, `ht(int)`, `hp(int)`,
+`STR(int)`, `Level.distance`, `Mob.setDmgMin/setDr/setExpForKill/getExpForKill/
+setMaxLvl`. Sandbox lesson: **bindClass access is gated on the CLASS being
+`@LuaInterface`-annotated** — TerrainFlags/Statistics/Random needed class-level
+annotations (warn-only failures had silently zeroed the piranha counter until
+annotated). commonClasses now binds Statistics/Random/TerrainFlags/Burning.
+MobFactory: constants FIRE/AIR/WATER/EARTH_ELEMENTAL + PIRANHA; the legacy-mod
+kind `Elemental` (was mMobsList→FireElemental.class) became `resolveAlias`
+consulted by hasMob+mobByName. PoolPainter piranhas via `MobFactory.mobByName`.
+Deleted java: FireElemental, AirElemental, WaterElemental, EarthElemental,
+Piranha; l10n keys and spritesDesc jsons pre-existed.
+
+Migrated: **`FireElemental`** (pure fixed-stat json + `attackProc` 1/2
+`Buff:affect(enemy,"Burning",Burning:duration(enemy))` (≡ java
+affect+reignite) + `addBuff`: Burning→heal(1..ht*4)+skip, Frost→damage(1..ht*2/3)+skip),
+**`WaterElemental`** (Wraith-pattern: json depth-1 defaults + `stats` re-derives
+from `RPD.Dungeon.depth`; speed hook; `act` heal-on-water; `attackProc` 1/2
+Frost with real duration; `addBuff`: Frost→heal(exp)+skip, Burning→damage
+1..ht/3+still-attach), **`EarthElemental`** (depth re-derive + liquid-speed +
+`attackProc` 1/2 `RPD.placeBlob(RPD.Blobs.Regrowth, cell, max(exp,10)*15)` on
+open terrain), **`AirElemental`** (depth re-derive + `setSkillLevel(3+lvl/10)`,
+json `attackRange:3`, Scorpio-style distance-band kite in `act` (Hunting→Fleeing
+at dist<2, back at ≥2), `zapProc` → `RPD.SpellFactory:getSpellByName("WindGust"):
+cast(self, enemyPos)` — WindGust's cast was registered in SpellFactory all
+along), **`Piranha`** (depth re-derive, `walkingType:"WATER"`, RawFish carry via
+the Scorpio stats-guard + `self:collect`, `act` self-die on dry land,
+`die` hook: `Statistics.piranhasKilled++` + `Badges:validatePiranhasKilled()`;
+luaj static field write works once the class is annotated).
+
+Discoveries: (1) **the 2-arg `Buff:affect(kindString)` attaches with left=0 →
+FlavourBuff expires instantly** — ColdSpirit's batch-2 Frost proc was a latent
+no-op; fixed to `RPD.affectBuff(enemy,"Frost",Frost:duration(enemy))`.
+DreadKnight Stun and Worm Roots are 2-arg in the ORIGINAL java too (faithful
+no-ops, left alone); Albino Bleeding works (DotBuff own timer). (2)
+**Water/Fire heal-from-immune-buff is zeroed by `resist()`** (heal src = the
+Frost/Burning buff the mob is immune to) — the java add()-heals were always
+no-ops; ported as-is. (3) **Frost detaches on ANY damage**
+(`Frost.charGotDamage→detach`) — an on-hit Frost proc is shattered by the same
+swing's damage in java and lua alike; verified attach-then-shatter via probes.
+(4) MultiKindMob kind variants (min(depth/5,4)) were visually inert in java
+(selectKind ignores kind) — dropped. (5) New debug endpoints (permanent):
+`/debug/make_pet`, `/debug/force_attack` (real `Char.attack` chain; melee path —
+ranged zaps need the AI), `/debug/affect_buff` (real `Buff.affect(Char,String,
+float)`); `/debug/go_to_level` sets a real Dungeon.depth unlike descend_to by
+id. (6) root `scripts/` and `assets/scripts/` are hardlink twins — commit both.
+
+Verified live: stat parity exact at depth 0 and depth 5 for all five
+(fire 65/25/20/16-20; air d5 16/23/11/0-4; water d5 26/6/11/13-13; earth d5
+51/2/3/10-10; piranha d5 35/30/20/5-14, speed 2); water speed 0.5 on land,
+earth 1.0 (only slows in liquid); water Frost-absorb skips attach (full + hurt),
+water Burning hurts AND attaches ✓, fire Frost 65→39 no attach ✓, fire
+Burning-heal observed via blob-Ignite (+1, regen-capped) with no Burning
+attach ✓; piranha land-death instant, counter/badge hook clean ×6; air kite
+band demonstrated at both edges (fled when staged inside dist<2, approached
+then held at dist 2). CI python suite green on the batch jar: blood 6/6, nav,
+doctor 7/7, spells 38/38, alchemy 42/42. Accepted deltas / leftovers: fire
+Burning proc and air gust-push not observed end-to-end (coin flips + staging
+geometry; both mechanisms component-proven — Burning persists through damage
+(no charGotDamage), WindGust casts via SpellFactory); water in-water heal
+needs a water tile; piranha `reset()→true` (never returns to spawn) not
+expressible — it now swims home; air skillLevel frozen at authored 3 (java
+3+lvl/10); level 1 json defaults equal depth-1 formulas exactly.
+
 Verified live (batch 6): exact stat parity on all five (hp 8/12/15/85/210,
 str 10/10/10/16/13, Crab speed 2); 4 resurrect rises in 8 non-burning
 kills, 0 in 6 burning kills; resurrected zombie persists through

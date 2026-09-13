@@ -35,6 +35,7 @@ local Buffs  = {
     Hunger       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Hunger"),
     Poison       = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Poison"),
     Frost        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Frost"),
+    Burning      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Burning"),
     Light        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Light"),
     Cripple      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Cripple"),
     Charm        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Charm"),
@@ -184,6 +185,9 @@ local Sfx = {
 
 local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")
 local ItemUtils = luajava.bindClass("com.nyrds.pixeldungeon.items.ItemUtils")
+local Statistics = luajava.bindClass("com.watabou.pixeldungeon.Statistics")
+local Random = luajava.bindClass("com.watabou.utils.Random")
+local TerrainFlags = luajava.bindClass("com.watabou.pixeldungeon.levels.TerrainFlags")
 
 local RPD = {
     RemixedDungeon = RemixedDungeon,
@@ -193,6 +197,9 @@ local RPD = {
     DungeonGenerator = DungeonGenerator,
     PathFinder = PathFinder,
     Badges = Badges,
+    Statistics = Statistics,
+    Random = Random,
+    TerrainFlags = TerrainFlags,
     Effects = Effects,
     ItemUtils = ItemUtils,
     DungeonTilemap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilemap"),

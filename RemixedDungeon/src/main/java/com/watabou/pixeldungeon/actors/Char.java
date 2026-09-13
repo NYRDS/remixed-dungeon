@@ -1092,6 +1092,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return false;
         }
 
+        // data-defined mobs: script handled the buff entirely (e.g. elemental
+        // Burning-heal/Frost-damage reactions) - base attach is skipped
+        if (getScript().runOptional("onAddBuff", false, buff)) {
+            return false;
+        }
+
         //GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
 
         if (!Dungeon.isLoading() && !restoringFromBundle) {
@@ -1453,6 +1459,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return Scrambler.descramble(HT);
     }
 
+    @LuaInterface
     public int ht(int hT) {
         HT = Scrambler.scramble(hT);
         return hT;
@@ -1463,6 +1470,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return Scrambler.descramble(HP);
     }
 
+    @LuaInterface
     public void hp(int hP) {
         HP = Scrambler.scramble(hP);
     }
@@ -2043,6 +2051,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void eat(Item food, float energy, String message) {
     }
 
+    @LuaInterface
     public void setSkillLevel(int level) {
         magicLvl = Scrambler.scramble(level);
     }
@@ -2253,6 +2262,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void setMaxSkillPoints(int points) {
     }
 
+    @LuaInterface
     public void STR(int sTR) {
         baseStr = sTR;
     }

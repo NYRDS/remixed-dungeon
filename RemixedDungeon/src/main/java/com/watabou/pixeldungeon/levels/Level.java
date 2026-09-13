@@ -1609,6 +1609,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	@LuaInterface
 	public int distance(int a, int b) {
 		int ax = cellX(a);
 		int ay = cellY(a);

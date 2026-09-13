@@ -2,6 +2,7 @@
 
 package com.watabou.utils;
 
+import com.nyrds.LuaInterface;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
@@ -9,6 +10,7 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+@LuaInterface
 public class Random {
 
 	public static float Float( float min, float max ) {

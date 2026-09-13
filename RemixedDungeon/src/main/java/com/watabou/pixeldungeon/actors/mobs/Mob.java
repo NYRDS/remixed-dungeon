@@ -112,6 +112,31 @@ public abstract class Mob extends Char {
     }
 
     @LuaInterface
+    public void setDmgMin(int value) {
+        dmgMin = value;
+    }
+
+    @LuaInterface
+    public void setDr(int value) {
+        dr = value;
+    }
+
+    @LuaInterface
+    public void setExpForKill(int value) {
+        expForKill = value;
+    }
+
+    @LuaInterface
+    public int getExpForKill() {
+        return expForKill;
+    }
+
+    @LuaInterface
+    public void setMaxLvl(int value) {
+        maxLvl = value;
+    }
+
+    @LuaInterface
     public int getMaxLvl() {
         return maxLvl;
     }

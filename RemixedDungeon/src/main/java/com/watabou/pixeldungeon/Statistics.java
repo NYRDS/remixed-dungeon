@@ -1,8 +1,10 @@
 
 package com.watabou.pixeldungeon;
 
+import com.nyrds.LuaInterface;
 import com.watabou.utils.Bundle;
 
+@LuaInterface
 public class Statistics {
 
 	public static int goldCollected;

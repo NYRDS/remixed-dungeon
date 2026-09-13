@@ -102,6 +102,25 @@ mob.onZap = function(self,mob,enemy)
     return not not self.zap(mob, enemy)
 end
 
+-- called from CustomMob.speed: return the (possibly adjusted) speed,
+-- base is the buff/armor-computed value
+mob.onSpeed = function(self,mob,base)
+    if not self.speed then
+        return base
+    end
+    return self.speed(mob, base)
+end
+
+-- called from Char.add before any buff attach: return true when the script
+-- handled the buff entirely (e.g. elemental Burning-heal/Frost-damage
+-- reactions) and the base attach must be skipped
+mob.onAddBuff = function(self,mob,buff)
+    if not self.addBuff then
+        return false
+    end
+    return not not self.addBuff(mob, buff)
+end
+
 mob.onScoreItemAction = function(self, mob, item, action)
     if not self.scoreItemAction then
         return 0

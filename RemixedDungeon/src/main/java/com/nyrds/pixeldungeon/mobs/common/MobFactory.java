@@ -1,9 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.pixeldungeon.mobs.elementals.AirElemental;
-import com.nyrds.pixeldungeon.mobs.elementals.EarthElemental;
-import com.nyrds.pixeldungeon.mobs.elementals.WaterElemental;
 import com.nyrds.pixeldungeon.mobs.guts.BurningFist;
 import com.nyrds.pixeldungeon.mobs.guts.Larva;
 import com.nyrds.pixeldungeon.mobs.guts.Nightmare;
@@ -47,13 +44,11 @@ import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.DM300;
 import com.watabou.pixeldungeon.actors.mobs.Eye;
-import com.watabou.pixeldungeon.actors.mobs.FireElemental;
 import com.watabou.pixeldungeon.actors.mobs.Goo;
 import com.watabou.pixeldungeon.actors.mobs.King;
 import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
-import com.watabou.pixeldungeon.actors.mobs.Piranha;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
@@ -126,6 +121,11 @@ public class MobFactory {
 	public static final String BANDIT = "Bandit";
 	public static final String ACIDIC = "Acidic";
 	public static final String SCORPIO = "Scorpio";
+	public static final String FIRE_ELEMENTAL = "FireElemental";
+	public static final String AIR_ELEMENTAL = "AirElemental";
+	public static final String WATER_ELEMENTAL = "WaterElemental";
+	public static final String EARTH_ELEMENTAL = "EarthElemental";
+	public static final String PIRANHA = "Piranha";
 
 	static private Map<String, Class<? extends Mob>> mMobsList;
 
@@ -157,12 +157,8 @@ public class MobFactory {
 		registerMobClass(SpiderNest.class);
 		registerMobClass(SpiderQueen.class);
 
-		registerMobClass(FireElemental.class);
 		registerMobClass(Monk.class);
 		registerMobClass(DM300.class);
-		registerMobClass(AirElemental.class);
-		registerMobClass(WaterElemental.class);
-		registerMobClass(EarthElemental.class);
 		registerMobClass(King.class);
 		registerMobClass(Undead.class);
 		registerMobClass(Senior.class);
@@ -175,7 +171,6 @@ public class MobFactory {
 		registerMobClass(FetidRat.class);
 
 		registerMobClass(Statue.class);
-		registerMobClass(Piranha.class);
 
 		registerMobClass(YogsBrain.class);
 		registerMobClass(YogsEye.class);
@@ -229,11 +224,20 @@ public class MobFactory {
 
 		mMobsList.put(SHEEP, WandOfFlock.Sheep.class);
 		//old mods compatibility
-		mMobsList.put(ELEMENTAL, FireElemental.class);
+	}
+
+	// legacy-mod kind aliases: kinds that existed only as compatibility shims
+	private static String resolveAlias(String kind) {
+		if (ELEMENTAL.equals(kind)) {
+			return FIRE_ELEMENTAL;
+		}
+		return kind;
 	}
 
 	@Contract(pure = true)
 	public static boolean hasMob(String mobClass) {
+		mobClass = resolveAlias(mobClass);
+
 		if(Dungeon.isChallenged(Challenges.NO_ARMOR) && mobClass.equals(ARMORED_STATUE)) {
 			return false;
 		}
@@ -247,6 +251,8 @@ public class MobFactory {
 
 	@NotNull
 	public static Mob mobByName(String selectedMobClass) {
+
+		selectedMobClass = resolveAlias(selectedMobClass);
 
 		try {
 			Class<? extends Mob> mobClass = mMobsList.get(selectedMobClass);

@@ -1,8 +1,11 @@
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.LuaInterface;
+
 /**
  * Created by mike on 22.02.2016.
  */
+@LuaInterface
 public class TerrainFlags {
 	public static final int   PASSABLE     = 0x01;
 	public static final int   LOS_BLOCKING = 0x02;

@@ -45,7 +45,8 @@ public class Spell implements NamedEntityKind {
 
     private SpellItem spellItem;
 
-    protected boolean cast(@NotNull Char chr, int cell) {
+    @LuaInterface
+    public boolean cast(@NotNull Char chr, int cell) {
         return true;
     }
 

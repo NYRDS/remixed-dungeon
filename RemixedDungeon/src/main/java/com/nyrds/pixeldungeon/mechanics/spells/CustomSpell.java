@@ -39,7 +39,7 @@ public class CustomSpell extends Spell {
     }
 
     @Override
-    protected boolean cast(@NotNull Char chr, int cell) {
+    public boolean cast(@NotNull Char chr, int cell) {
         boolean ret = script.run("castOnCell", chr, cell).optboolean(false);
         if(ret) {
             castCallback(chr);

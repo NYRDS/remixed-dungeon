@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -3720,6 +3721,94 @@ public class DebugEndpoints {
     // test endpoint: /debug/order_pet?id=<pet>&cell=<cell> - drives the real order
     // flow for a hero-owned pet (Interact enters order mode, handleCell issues it),
     // returns the resulting AI state, enemy validity and move target
+    public static NanoHTTPD.Response handleDebugMakePet(NanoHTTPD.IHTTPSession session) {
+        int id = -1;
+        String query = session.getQueryParameterString();
+        if (query != null) {
+            for (String param : query.split("&")) {
+                if (param.startsWith("id=")) {
+                    id = Integer.parseInt(param.substring(3));
+                }
+            }
+        }
+
+        Mob pet = findMobById(id);
+        if (pet == null || Dungeon.level == null || Dungeon.hero == null) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                createErrorResponse("need id, game running").toString());
+        }
+
+        final Mob finalPet = pet;
+        GameLoop.pushUiTaskAndWait(() -> Mob.makePet(finalPet, Dungeon.hero.getId()));
+
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+            String.format("{\"success\":true,\"pet\":\"%s\",\"id\":%d}", finalPet.getEntityKind(), id));
+    }
+
+    public static NanoHTTPD.Response handleDebugForceAttack(NanoHTTPD.IHTTPSession session) {
+        int attackerId = -2, targetId = -2;
+        String query = session.getQueryParameterString();
+        if (query != null) {
+            for (String param : query.split("&")) {
+                if (param.startsWith("attacker=")) {
+                    attackerId = Integer.parseInt(param.substring(9));
+                } else if (param.startsWith("target=")) {
+                    targetId = Integer.parseInt(param.substring(7));
+                }
+            }
+        }
+
+        if (Dungeon.level == null) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                createErrorResponse("game running required").toString());
+        }
+
+        final Char attacker = findCharByIdOrHero(attackerId);
+        final Char target = findCharByIdOrHero(targetId);
+        if (attacker == null || target == null || !attacker.isAlive() || !target.isAlive()) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                createErrorResponse("need attacker & target (target -1 = hero)").toString());
+        }
+
+        GameLoop.pushUiTaskAndWait(() -> attacker.attack(target));
+
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+            String.format("{\"success\":true,\"attacker\":\"%s\",\"target\":\"%s\"}",
+                attacker.getEntityKind(), target.getEntityKind()));
+    }
+
+    public static NanoHTTPD.Response handleDebugAffectBuff(NanoHTTPD.IHTTPSession session) {
+        int id = -2;
+        float dur = 10f;
+        String kind = null;
+        String query = session.getQueryParameterString();
+        if (query != null) {
+            for (String param : query.split("&")) {
+                if (param.startsWith("id=")) {
+                    id = Integer.parseInt(param.substring(3));
+                } else if (param.startsWith("buff=")) {
+                    kind = param.substring(5);
+                } else if (param.startsWith("dur=")) {
+                    dur = Float.parseFloat(param.substring(4));
+                }
+            }
+        }
+
+        final Char chr = findCharByIdOrHero(id);
+        if (chr == null || kind == null || !chr.isAlive()) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                createErrorResponse("need id (-1 = hero) & buff kind").toString());
+        }
+
+        final String buffKind = kind;
+        final float duration = dur;
+        GameLoop.pushUiTaskAndWait(() -> Buff.affect(chr, buffKind, duration));
+
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+            String.format("{\"success\":true,\"target\":\"%s\",\"buff\":\"%s\",\"dur\":%f}",
+                chr.getEntityKind(), buffKind, duration));
+    }
+
     public static NanoHTTPD.Response handleDebugOrderPet(NanoHTTPD.IHTTPSession session) {
         try {
             int id = -1, cell = -1;

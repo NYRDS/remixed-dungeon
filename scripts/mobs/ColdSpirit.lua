@@ -7,7 +7,10 @@ return mob.init{
         -- buff plus cell-side fire out / heap freeze; Frost is the
         -- Char-facing part)
         if math.random(4) == 1 then
-            RPD.Buffs.Buff:affect(enemy, "Frost")
+            -- explicit duration: the 2-arg affect leaves left=0 and the
+            -- Frost decays immediately (FlavourBuff); java applied
+            -- Frost.duration via the Freezing path
+            RPD.Buffs.Buff:affect(enemy, "Frost", RPD.Buffs.Frost:duration(enemy))
         end
         return dmg
     end
