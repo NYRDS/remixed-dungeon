@@ -203,6 +203,7 @@
     <string name="Brute_Name">grom</string>
     <string name="Brute_Name_Objective">grom</string>
     <string name="Brute_StaEnraged">woedend</string>
+    <string name="BuffParam_Cooldown">Afkoeltijd: %.2f</string>
     <string name="BurningBuff_Info">Het lichaam is verteerd in razende vlammen!</string>
     <string name="BurningBuff_Name">In brand</string>
     <string name="BurningFist_Desc">Brandende Vuist van de Oude God</string>
@@ -1045,6 +1046,7 @@
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
     <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
+    <string name="ScarecrowNPC_Quest_Reminder">Vijf snoepjes is alles wat ik nodig heb.\nOh, de beloning zal zo zoet zijn!</string>
     <string name="ScarecrowNPC_Quest_Start_Female">Nou, hallo klein meisje, hoe gaat het met je?\nIk heb iets spannends voor je!\n\nOh, hoe dankbaar zou ik zijn,\nAls je gaat en wat snoepjes voor me verzamelt!\n\n</string>
     <string name="Scorpio_Desc">Deze enorme, op spinnen lijkende demonische wezens vermijden gevechten van dichtbij ten koste van alles en schieten vanaf grote afstand verlammende getande stekels af.</string>
     <string name="Scorpio_Gender">masculine</string>
@@ -1702,6 +1704,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 

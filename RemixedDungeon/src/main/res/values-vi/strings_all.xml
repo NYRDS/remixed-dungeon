@@ -916,6 +916,7 @@
     <string name="Potion_Colors_4">vàng kim</string>
     <string name="Potion_Colors_6">than chì</string>
     <string name="Potion_Colors_8">hổ phách</string>
+    <string name="Potion_Info">Bình này chứa chất lỏng xoáy màu %s. Ai biết nó sẽ làm gì khi uống hoặc ném?</string>
     <string name="Potion_ItemFliesAway">%s vừa bay vụt khỏi tay bạn.</string>
     <string name="Potion_MoistenUseless">Có vẻ bạn vừa lãng phí bình thuốc này.</string>
     <string name="Potion_Name">%s thuốc</string>
@@ -1631,6 +1632,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
