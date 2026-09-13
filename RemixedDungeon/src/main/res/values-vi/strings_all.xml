@@ -734,6 +734,7 @@
     <string name="MageArmor_ACSpecial">ĐẤT NONG</string>
     <string name="MageArmor_Desc">Mặc chiếc áo choàng lộng lẫy này, một pháp sư có thể niệm phép đất nóng chảy: mọi kẻ thù trong tầm nhìn sẽ bị thiêu cháy và đồng thời không thể di chuyển.</string>
     <string name="MageArmor_NotMage">Chỉ pháp sư mới có thể sử dụng giáp này!</string>
+    <string name="MagicArrow_Info">Mũi tên ma thuật cũ, lựa chọn đúng khi hết đạn.</string>
     <string name="MagicArrow_Name">Mũi tên phép thuật</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
     <string name="MailArmor_Desc">Các vòng kim loại liên kết tạo nên một bộ giáp cứng cáp nhưng linh hoạt.</string>
@@ -1628,6 +1629,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

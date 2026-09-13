@@ -46,6 +46,7 @@
     <string name="AmuletScene_Stay">Ik ben er nog niet klaar mee</string>
     <string name="AmuletScene_Txt">Eindelijk houd je het in je handen, het Amulet van Yendor. Met zijn kracht kun je de wereld veroveren of vrede en voorspoed brengen of wat dan ook. In ieder geval zal je leven voor altijd veranderen en dit spel eindigt hier. Of je kunt nog even een gewone sterfelijke blijven.</string>
     <string name="AnesthesiaBuff_Info">Voelt geen pijn en wakert niet op bij aanvallen, maar krijgt nog steeds schade.</string>
+    <string name="Anesthesia_Cast">%s valt in een diepe, droomloze slaap.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="ArmorKit_ACAplly">TOEPASSSEN</string>
     <string name="ArmorKit_Name">rustingset</string>
@@ -311,6 +312,7 @@
     <string name="CityBossLevel_ChessSign">Leg je wapens neer — de Koning zal je verstand op de proef stellen, niet je kracht.</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
+    <string name="City_TileWater">Verdacht gekleurd water</string>
     <string name="ClassArmor_Desc">Het ding ziet er geweldig uit!</string>
     <string name="ClassArmor_NotEquipped">Je moet dit pantser dragen om zijn speciale kracht te gebruiken!</string>
     <string name="Claymore_Gender">masculine</string>
@@ -538,6 +540,7 @@
     <string name="HeroClass_Doctor">Pestdokter</string>
     <string name="HeroClass_Elf">elf</string>
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
+    <string name="HeroClass_ElfPerks_1">Elfen zijn immuun voor verstrikking.</string>
     <string name="HeroClass_ElfPerks_2">Elven beginnen met een verbeterde houten boog en een hoop pijlen.</string>
     <string name="HeroClass_ElfPerks_5">Elfen zijn minder bedreven met naiwapens.</string>
     <string name="HeroClass_GnollPerks_1">Gnollen starten met 5 levenspunten</string>
@@ -1117,6 +1120,7 @@
     <string name="ShadowsBuff_Name">samengesmoren met de schaduw</string>
     <string name="ShamanElder_Desc">Deze specifieke gnol ziet er veel ouder uit dan andere schamanen en heeft zeker een hogere status in de stam. Een vreemde aura vormt zich langzaam om hem heen, die alles wat het raakt lijkt te reflecteren.</string>
     <string name="ShamanElder_Gender">masculine</string>
+    <string name="Shaman_Desc">De intelligentste gnolls kunnen sjamanistische magie beheersen. Gnoll-sjamanen geven de voorkeur aan gevechtsmagie om hun gebrek aan kracht te compenseren, zonder te aarzelen om deze te gebruiken op degenen die hun status in de stam betwisten.</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Name">gnol schamaan</string>
     <string name="Shaman_Name_Objective">gnol sjamaan</string>
@@ -1696,6 +1700,10 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
+
 
 
 
