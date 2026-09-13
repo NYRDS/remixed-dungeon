@@ -1279,6 +1279,7 @@
     <string name="TownGuardNPC_Desc">Een gewone stadswacht</string>
     <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">Ga maar door.</string>
+    <string name="TownGuardNPC_Message2">Dankzij avonturiers zoals jij, werd het hierboven echt heel vredig.</string>
     <string name="TownGuardNPC_Message3">Je denkt dat er te veel bewakers in deze stad zijn? Nou, dat is omdat dit de enige stad is met een gigantische monster-geïnfesteerde dungeon, niet waar?</string>
     <string name="TownGuardNPC_Name">stadswacht</string>
     <string name="TownScript_NeedWeapon">Ik ga niet wapenloos de dungeon in!\nMisschien is het de moeite waard om eerst de stads winkel te bezoeken?</string>
@@ -1322,6 +1323,7 @@
     <string name="WandMaker_Berry2">Iemand geluk met een Gniestoel zaadje, %s? Nee? Maak je geen zorgen, ik heb het niet eilig.</string>
     <string name="WandMaker_Defense">geabsorbeerd</string>
     <string name="WandMaker_Desc">Deze oude maar kerngezonde heer draagt een lichtelijk verwarde uitdrukking. Hij wordt beschermd door een magisch schild.</string>
+    <string name="WandMaker_Dust2">Enig geluk met lijkstof, %s? Botstapels zijn de meest voor de hand liggende plekken om te doorzoeken.</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Info1">er gebeurde niets</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
@@ -1691,6 +1693,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
