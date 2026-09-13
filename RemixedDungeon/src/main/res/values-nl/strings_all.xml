@@ -800,6 +800,7 @@
     <string name="Mushroom_Eat_Message">Die paddenstoel smaakt raar!</string>
     <string name="MysteryMeat_Info">Eet op eigen risico!</string>
     <string name="MysteryMeat_Info3">Je voelt je niet goed.</string>
+    <string name="MysteryMeat_Name">raadselachtig vlees</string>
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
     <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
@@ -1394,6 +1395,7 @@
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Adres kopiëren</string>
+    <string name="WndCryptoDonate_currency">Valuta</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_supportDev">Ondersteun de ontwikkelaar</string>
     <string name="WndCryptoDonate_ton">Ton</string>
@@ -1521,6 +1523,7 @@
     <string name="WndSettings_moveTimeout">Zettijdlimiet: %s</string>
     <string name="WndStory_Guts">Verslagen, verstrooid in stukken, maar niet volledig vernietigd, werd de Oude God verzegeld in de diepste niveaus van de kerker. Maar onlangs werd het zegel gebroken, waardoor de toegang tot de demonenhoeve wijd open stond. De nachtmerrieachtige monsters, geschapen door de Oude God in zijn slummer, waren zo talrijk dat, zonder een manier om te vluchten, ze gedwongen waren om met elkaar te smelten en deze gruwelijke hallen te vormen. En terwijl je over hun levende vlees loopt, kun je de klop van een Ouds Gods hart door hen heen voelen.</string>
     <string name="WndStory_Spiders">Vele, vele jaren geleden was er een rijke mijn, vol magische steen. Maar toen de mineraaladers opdroogden, trokken de mijnwerkers weg, waardoor een breed netwerk van tunnels achterbleef. Uiteindelijk werd deze plek bevolkt door spinnen. Maar zelfs deze gevaarlijke wezens, die in het donker loerden, waren niet genoeg om de dappere en krankzinnige schattenjagers af te schrikken. Want de schaal van gevaar is altijd evenredig met de hoeveelheid geruchten over magische artefacten. Op een dag dwaalde een boze heks de tunnels in, op de vlucht voor vervolgers. Maar bijgelovige mensen durfden de duisternis niet te betreden. Dus besloten ze te wachten. Maar ze kwam nooit meer tevoorschijn. Misschien vond de heks een andere uitweg, misschien slaagde ze erin langs de bewakers te glippen... of ze stierf, omringd door het geruis van de wezens van het duister.</string>
+    <string name="WndTilesKind_NewLook">Nieuwe look</string>
     <string name="WndTilesKind_Title">Nog één ding:</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
     <string name="WndTradeItem_Buy">Koop voor %dg</string>
@@ -1686,6 +1689,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
