@@ -716,6 +716,7 @@
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">Ch-chào. Chào mừng đến Thư viện. Ở đây bạn có thể tìm thông tin về đủ thứ có thể tìm thấy trong hầm ngục... thực ra chúng tôi chỉ cung cấp kiến thức do các nhà mạo hiểm khám phá ra thôi. Điều đó... hơi đáng xấu hổ. Nên mỗi lần bạn ghé thăm, có lẽ sẽ lại có điều mới để đọc.</string>
     <string name="LibrarianNPC_Message_Not_Ready">T... Tôi xin lỗi, th-thư viện chưa mở... đợi chút.</string>
+    <string name="LibrarianNPC_Name">thủ thư</string>
     <string name="LibrarianNPC_Name_Objective">thủ thư</string>
     <string name="Lich_Gender">masculine</string>
     <string name="LightBuff_Info">Ánh sáng phát ra từ cơ thể, soi sáng mọi thứ xung quanh.</string>
@@ -949,6 +950,7 @@
     <string name="RatKing_Name">vua chuột</string>
     <string name="RatSkullBuff_Info">Mùi hôi nồng nặc khiến tất cả các loài gặm nhấm xung quanh khiếp sợ, làm chúng phải bỏ chạy khỏi người mang chiếc sọ này.</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
+    <string name="Rat_Desc">Chuột túi hung hãn nhưng khá yếu, thường sống trong cống rãnh. Chúng chỉ nguy hiểm khi số lượng lớn.</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">chuột túi</string>
     <string name="Rat_Name_Objective">chuột túi</string>
@@ -1629,6 +1631,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

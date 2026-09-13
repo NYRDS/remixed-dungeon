@@ -82,6 +82,7 @@
     <string name="Badges_DeathGlyph">Dood door een glyph</string>
     <string name="Badges_DeathNecrotism">Dood door necrotisme</string>
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
+    <string name="Badges_FoodEaten1">10 stukken voedsel gegeten</string>
     <string name="Badges_FoodEaten3">30 stukken voedsel gegeten</string>
     <string name="Badges_GamesPlayed1">10 spellen gespeeld</string>
     <string name="Badges_GamesPlayed2">100 spellen gespeeld</string>
@@ -1562,6 +1563,7 @@
     <string name="Wraith_Name">wraith</string>
     <string name="WrnExperimental_realtime">De real-time modus is geactiveerd: dit is nu een real-time roguelike, tik snel of sterf.\nWil je je inventaris controleren?\nVeel succes daarbij terwijl de rioolkrab je ingewanden bekijkt.</string>
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
+    <string name="Yog_Desc">Yog-Dzewa is een Oude God, een machtige entiteit uit de rijken van chaos. Een eeuw geleden wonnen de oude dwergen ternauwernood de oorlog tegen zijn leger van demonen, maar waren niet in staat de god zelf te doden. In plaats daarvan sloten ze hem op in de zalen onder hun stad, overtuigd dat hij te zwak was om ooit weer op te staan.</string>
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
     <string name="YogsBrain_Gender">masculine</string>
@@ -1700,6 +1702,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
