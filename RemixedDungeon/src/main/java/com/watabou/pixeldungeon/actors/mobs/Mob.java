@@ -95,6 +95,21 @@ public abstract class Mob extends Char {
     protected int dr = 0;
     protected boolean isBoss = false;
 
+    @LuaInterface
+    public void setDmgMax(int value) {
+        dmgMax = value;
+    }
+
+    @LuaInterface
+    public int getDmgMin() {
+        return dmgMin;
+    }
+
+    @LuaInterface
+    public int getDmgMax() {
+        return dmgMax;
+    }
+
     private Carcass carcassRef;
 
     // visual hint for MobSprite: a carcass replaced the corpse, fade it quicker
@@ -576,6 +591,7 @@ public abstract class Mob extends Char {
         setState(mobDesc.optString("aiState", getState().getTag()));
     }
 
+    @LuaInterface
     public AiState getState() {
         return state;
     }

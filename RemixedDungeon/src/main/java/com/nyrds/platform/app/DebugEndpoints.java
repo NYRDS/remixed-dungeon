@@ -4241,7 +4241,8 @@ public class DebugEndpoints {
                 "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d," +
                     "\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d," +
                     "\"type\":\"%s\",\"fraction\":\"%s\",\"remote\":%b,\"reverted\":%b,\"revertAfter\":%d," +
-                    "\"speed\":%f,\"str\":%d,\"buffs\":[%s]}",
+                    "\"speed\":%f,\"str\":%d,\"atk\":%d,\"def\":%d,\"dmgMin\":%d,\"dmgMax\":%d," +
+                    "\"state\":\"%s\",\"buffs\":[%s]}",
                 chr.isAlive(),
                 chr.hp(),
                 chr.ht(),
@@ -4256,6 +4257,11 @@ public class DebugEndpoints {
                 chr instanceof Mob ? ((Mob) chr).remoteRevertAfter : 0,
                 chr.speed(),
                 chr.effectiveSTR(),
+                chr.getBaseAttackSkill(),
+                chr.getBaseDefenseSkill(),
+                chr instanceof Mob ? ((Mob) chr).getDmgMin() : 0,
+                chr instanceof Mob ? ((Mob) chr).getDmgMax() : 0,
+                chr.getState().getTag(),
                 buffs
             );
 

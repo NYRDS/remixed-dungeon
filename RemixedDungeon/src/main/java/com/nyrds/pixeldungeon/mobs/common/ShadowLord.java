@@ -22,7 +22,6 @@ import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
-import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
@@ -83,7 +82,7 @@ public class ShadowLord extends Boss implements IZapper {
 			int cell = level().getEmptyCellNextTo(getPos());
 
 			if (level().cellValid(cell)) {
-				Wraith.spawnAt(cell);
+				CharUtils.spawnWraithAt(level(), cell);
 			}
 		}
 	}

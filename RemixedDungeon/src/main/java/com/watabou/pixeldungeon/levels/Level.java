@@ -351,6 +351,7 @@ public abstract class Level implements Bundlable {
 		GameScene.updateMap();
 	}
 
+	@LuaInterface
 	public int getViewDistance() {
 
 		if (!isSafe()) {

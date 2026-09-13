@@ -193,7 +193,7 @@ public class AlchemyRecipes {
             if (mobName.contains("King") || mobName.contains("Boss") || mobName.contains("Yog")) {
                 return 20; // High value for bosses
             } else if (mobName.contains("Elemental") || mobName.contains("Golem") ||
-                       mobName.contains("Scorpio") || mobName.contains("Tengu")) {
+                       mobName.contains(MobFactory.SCORPIO) || mobName.contains("Tengu")) {
                 return 10; // Medium-high value for strong mobs
             } else {
                 return 5; // Default for regular mobs

@@ -156,7 +156,70 @@ is safe: the hook runs inside `Char.die` before `destroy()`, the new mob's
 `occupyCell` overwrites the dying one in the cell map, and the dying mob's
 later `freeCell` is a two-arg remove that no-ops against the new occupant.
 
-Verified live: exact stat parity on all five (hp 8/12/15/85/210,
+Seventh batch 2026-09-13 (caves/sewers tier + thieves): **`Scorpio`**/**`Acidic`**
+(json + `attackRange:10` + lua `spawn` hook viewDistance=level+1 + `zapProc`
+1/2 Cripple + `act` kite: HUNTING+no clean ranged line → FLEEING, inverse
+back; the kite calls the newly exposed `CharUtils.canDoOnlyRangedAttack`, the
+java `canAttack`/`getCloser→getFurther` inversion expressed as a state pair),
+**`Acidic`** adds `defenceProc` acid reflect (`Random.IntRange(0,damage)` is
+inclusive → `math.random(0,dmg)`), **`Spinner`** (json + `attackProc` 1/2
+Poison 7-8×durationFactor → setAi Fleeing + `act` flips back when the victim
+is no longer poisoned + `move` hook seeds a Web blob at the cell being left —
+the hook runs before `placeTo`, so `getPos()` is still the old cell;
+`RPD.placeBlob(RPD.Blobs.Web, pos, 5-6)`), **`Thief`**/**`Bandit`** (json
+`attackDelay:0.5` + newly exposed `CharUtils.steal` → setAi "ThiefFleeing"
+(the tag registry covers it) + defenceProc drops Gold when struck mid-flight;
+Bandit adds 1/2-prolonged Blindness 5-11 + `enemy:observe()`; the "carries X"
+description suffix is NOT portable — accepted cosmetic delta), **`Wraith`**
+(json ht 1, flying, no body parts, immunities Death+Terror, carcass 0 +
+lua `stats` re-deriving dmgMax/atk/def from `RPD.Dungeon.depth` — spawn depth
+is the only depth it lives on, so restore-time re-derivation is faithful;
+depth-1 values sit in the json as defaults). Wraith spawn helpers moved to
+`CharUtils.spawnWraithAt/spawnWraithsAround` (Heap tomb/skeleton-cursed +
+ShadowLord summon; state Hunting, 2f delay, alpha tween + curse particles
+preserved). `Scorpio`'s ctor potion/meat roll lives in `stats` persisted via
+`mob.restoreData(javaChar)` — the per-mob lua data table (knownMobs roundtrip
+in mob.lua; callbacks receive the JAVA char as first arg, not the script
+table). `Item.doDrop`, `Char.getState/observe/setViewDistance` (lombok @Setter
+replaced by an explicit annotated setter), `MobAi.getTag`,
+`Level.getViewDistance` newly `@LuaInterface`; Mob gained annotated
+`setDmgMax/getDmgMin/getDmgMax`, Char `set/getBaseAttackSkill/set/getBaseDefenseSkill`.
+`/debug/char_status` now also reports `atk`/`def` (raw bases), `dmgMin`/`dmgMax`,
+`state` tag. Badges Bandit/Acidic rare-checks and AlchemyRecipes "Scorpio"
+contain() switched to the new MobFactory constants. Shipped lua fix: Zombie's
+poison was ported as `math.random(2,3)` but java `Random.Int(2,3)` is `[2,3)`
+i.e. always 2 — now a constant 2.
+
+Verified live: fixture restores all six with exact hp/ht/str parity
+(95/17, 95/17, 50/10, 20/11, 20/11, 1/13) and raw bases
+(atk/def/dmg 36/24/20-32 ×2, 20/14/12-16, 12/12/1-7 ×2, 10/50/1-3);
+Wraith depth-3 fresh spawn = atk 13 def 65 dmg 1-6 exactly as java's
+adjustStats(3); thief steal → THIEFFLEEING observed in logs
+("украл предмет золото у тебя"), bandit steal + "** Тебя ослепили!"
+(Blindness) + observe; scorpio/acidic `act` kite observed
+(HUNTING↔FLEEING flips, FLEEING engaged on no-LOS); acidic zap + reflect
+killed a pet golem (85→11 hp in one round); scorpio ctor roll persists
+(`luaData {rolled=true}`), re-saved level stores 17 CustomMob kinds with
+zero old FQNs and the rolled meat in belongings. CI python suite green:
+blood_transfusion, level_navigation 9/9, doctor_spells 7/7, all_spells 38/38,
+alchemy 42/42. Accepted deltas: Thief/Bandit lose the "carries X" description
+suffix (no hook); Wraith `reset()` (→Wandering) not expressible — a wraith
+that loses the hero walks back to its spawn cell instead of resetting in
+place; scorpio/acidic old saves with an EMPTY backpack may gain the ctor roll
+item once on first data-defined load (item-carrying ones are detected via the
+backpack guard).
+
+Deferred from batch 7: `Swarm` (split needs the clone's lua-data propagation —
+`Mob.split`/`makeClone` copies the java object but wiring `generation` into
+self.data across the split needs a design), `Skeleton` (Treasury category
+loot has no json form + die-AoE needs findChar/GLog/Sample bindings;
+Lich summons skeletons), `Succubus` (blink-in-getCloser — act hook can't move
+the mob; CharUtils.blinkTo IS exposed now, needs a delay/factor recipe),
+`KoboldIcemancer`/`Warlock`/`Shaman`/`Eye` (ranged-tier zap story: no-damage
+zaps), `FireElemental`/`WaterElemental`/`EarthElemental` (buff-add() hook),
+`Crystal` (wand arsenal), `Piranha` (Statistics/Badges counters).
+
+Verified live (batch 6): exact stat parity on all five (hp 8/12/15/85/210,
 str 10/10/10/16/13, Crab speed 2); 4 resurrect rises in 8 non-burning
 kills, 0 in 6 burning kills; resurrected zombie persists through
 save/reload; ratter aura flees both Rat and Albino (Terror observed,

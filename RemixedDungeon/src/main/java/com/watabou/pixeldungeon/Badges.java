@@ -14,8 +14,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingBase;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.mobs.Acidic;
-import com.watabou.pixeldungeon.actors.mobs.Bandit;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.items.Item;
@@ -786,13 +784,13 @@ public class Badges {
 		Badge badge = null;
 		if (mob.getEntityKind().equals(MobFactory.ALBINO)) {
 			badge = Badge.RARE_ALBINO;
-		} else if (mob instanceof Bandit) {
+		} else if (mob.getEntityKind().equals(MobFactory.BANDIT)) {
 			badge = Badge.RARE_BANDIT;
 		} else if (mob.getEntityKind().equals(MobFactory.SHIELDED)) {
 			badge = Badge.RARE_SHIELDED;
 		} else if (mob instanceof Senior) {
 			badge = Badge.RARE_SENIOR;
-		} else if (mob instanceof Acidic) {
+		} else if (mob.getEntityKind().equals(MobFactory.ACIDIC)) {
 			badge = Badge.RARE_ACIDIC;
 		} else if (mob instanceof SpiderGuard) {
 			badge = Badge.RARE_SPIDER_SOLDIER;

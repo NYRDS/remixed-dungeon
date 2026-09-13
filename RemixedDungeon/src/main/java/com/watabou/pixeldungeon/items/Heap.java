@@ -20,7 +20,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Effects;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -154,13 +153,13 @@ public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
                 }
                 break;
             case TOMB:
-                Wraith.spawnAround(chr.getPos());
+                CharUtils.spawnWraithsAround(chr.level(), chr.getPos());
                 break;
             case SKELETON:
                 CellEmitter.center(pos).start(Speck.factory(Speck.RATTLE), 0.1f, 3);
                 for (Item item : items) {
                     if (item.isCursed()) {
-                        if (Wraith.spawnAt(pos) == null) {
+                        if (CharUtils.spawnWraithAt(chr.level(), pos) == null) {
                             chr.getSprite().emitter().burst(ShadowParticle.CURSE, 6);
                             chr.damage(chr.hp() / 2, this);
                         }

@@ -50,8 +50,6 @@ import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.mobs.Acidic;
-import com.watabou.pixeldungeon.actors.mobs.Bandit;
 import com.watabou.pixeldungeon.actors.mobs.DM300;
 import com.watabou.pixeldungeon.actors.mobs.Eye;
 import com.watabou.pixeldungeon.actors.mobs.FireElemental;
@@ -61,18 +59,14 @@ import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Piranha;
-import com.watabou.pixeldungeon.actors.mobs.Scorpio;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Shaman;
 import com.watabou.pixeldungeon.actors.mobs.Skeleton;
-import com.watabou.pixeldungeon.actors.mobs.Spinner;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.actors.mobs.Succubus;
 import com.watabou.pixeldungeon.actors.mobs.Swarm;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
-import com.watabou.pixeldungeon.actors.mobs.Thief;
 import com.watabou.pixeldungeon.actors.mobs.Warlock;
-import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
@@ -135,6 +129,9 @@ public class MobFactory {
 	public static final String CRAB = "Crab";
 	public static final String GOLEM = "Golem";
 	public static final String MONK = "Monk";
+	public static final String BANDIT = "Bandit";
+	public static final String ACIDIC = "Acidic";
+	public static final String SCORPIO = "Scorpio";
 
 	static private Map<String, Class<? extends Mob>> mMobsList;
 
@@ -157,14 +154,12 @@ public class MobFactory {
 
 		mMobsList = new HashMap<>();
 		registerMobClass(Swarm.class);
-		registerMobClass(Thief.class);
 		registerMobClass(Skeleton.class);
 		registerMobClass(RatKing.class);
 		registerMobClass(Goo.class);
 
 		registerMobClass(Shaman.class);
 		registerMobClass(Tengu.class);
-		registerMobClass(Bandit.class);
 
 		registerMobClass(SpiderServant.class);
 		registerMobClass(SpiderGuard.class);
@@ -175,7 +170,6 @@ public class MobFactory {
 		registerMobClass(SpiderNest.class);
 		registerMobClass(SpiderQueen.class);
 
-		registerMobClass(Spinner.class);
 		registerMobClass(FireElemental.class);
 		registerMobClass(Monk.class);
 		registerMobClass(DM300.class);
@@ -189,15 +183,12 @@ public class MobFactory {
 		registerMobClass(Senior.class);
 
 		registerMobClass(Eye.class);
-		registerMobClass(Scorpio.class);
-		registerMobClass(Acidic.class);
 		registerMobClass(Larva.class);
 		registerMobClass(BurningFist.class);
 		registerMobClass(RottingFist.class);
 
 		registerMobClass(FetidRat.class);
 
-		registerMobClass(Wraith.class);
 		registerMobClass(Statue.class);
 		registerMobClass(Piranha.class);
 

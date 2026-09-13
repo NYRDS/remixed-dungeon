@@ -43,6 +43,7 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -55,6 +56,7 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
@@ -65,6 +67,7 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
@@ -132,11 +135,13 @@ public class CharUtils {
         }
     }
 
+    @LuaInterface
     public static boolean canDoOnlyRangedAttack(@NotNull Char attacker, @NotNull Char enemy) {
         return !attacker.adjacent(enemy)
                 && Ballistica.cast(attacker.getPos(), enemy.getPos(), false, true) == enemy.getPos();
     }
 
+    @LuaInterface
     public static boolean steal(@NotNull Char thief, @NotNull Char victim) {
 
         if (!thief.adjacent(victim)) {
@@ -155,6 +160,37 @@ public class CharUtils {
         victim.onActionTarget(CommonActions.MAC_STEAL, thief);
 
         return true;
+    }
+
+    // Wraith spawn moved here from the deleted Wraith class (mob-lua migration,
+    // batch 7): cursed heaps (tomb/skeleton) and Shadow Lord summon wraiths.
+    private static final float WRAITH_SPAWN_DELAY = 2f;
+
+    public static Mob spawnWraithAt(Level level, int pos) {
+        Mob wraith = MobFactory.mobByName(MobFactory.WRAITH);
+
+        if (!wraith.canSpawnAt(level, pos)) {
+            return null;
+        }
+
+        wraith.setPos(pos);
+        wraith.setState(MobAi.getStateByClass(Hunting.class));
+        level.spawnMob(wraith, WRAITH_SPAWN_DELAY);
+
+        final CharSprite sprite = wraith.getSprite();
+
+        sprite.alpha(0);
+        GameScene.addToMobLayer(new AlphaTweener(sprite, 1, 0.5f));
+
+        sprite.emitter().burst(ShadowParticle.CURSE, 5);
+
+        return wraith;
+    }
+
+    public static void spawnWraithsAround(Level level, int pos) {
+        for (int n : Level.NEIGHBOURS4) {
+            spawnWraithAt(level, pos + n);
+        }
     }
 
 

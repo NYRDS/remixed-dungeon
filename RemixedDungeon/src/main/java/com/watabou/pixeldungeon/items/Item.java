@@ -220,6 +220,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         }
     }
 
+    @LuaInterface
     public void doDrop(@NotNull Char chr) {
         chr.spend(TIME_TO_DROP);
         dropAt(chr);

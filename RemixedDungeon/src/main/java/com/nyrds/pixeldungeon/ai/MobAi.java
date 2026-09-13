@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.ai;
 
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
@@ -18,7 +19,6 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import org.jetbrains.annotations.NotNull;
-import com.nyrds.LuaInterface;
 
 @LuaInterface
 public abstract class MobAi implements AiState {
@@ -42,6 +42,7 @@ public abstract class MobAi implements AiState {
     }
 
     @Override
+    @LuaInterface
     public String getTag() {
         return getClass().getSimpleName().toUpperCase(Locale.ROOT);
     }
