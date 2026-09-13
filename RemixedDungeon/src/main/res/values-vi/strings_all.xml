@@ -1223,6 +1223,7 @@
     <string name="Tamahawk_Info">Mặc dù rìu ném này không quá nặng, nhưng vẫn cần sức mạnh đáng kể để sử dụng hiệu quả.</string>
     <string name="Tamahawk_Name">rìu tomahawk</string>
     <string name="Tengu_Gender">masculine</string>
+    <string name="Tengu_Info1">Cuối cùng cũng tự do...</string>
     <string name="Tengu_Info3">Bắt được rồi, %s!</string>
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
     <string name="Thief_Desc">Các tầng sâu của hầm ngục luôn là nơi trốn tránh cho mọi loại tội phạm. Không phải ai cũng giữ được tinh thần rõ ràng khi xa ánh sáng mặt trời lâu ngày. Lâu lắm rồi, những tên trộm cướp điên khùng này đã quên mất họ là ai và tại sao chúng trộm cướp.</string>
@@ -1627,6 +1628,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

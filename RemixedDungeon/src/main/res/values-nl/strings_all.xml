@@ -1231,6 +1231,7 @@
     <string name="Stylus_Info">Deze arcanische stylus is gemaakt van een donkere, zeer harde steen. Je kunt er een glyph of rune mee graveren, maar je kunt niet kiezen welke er wordt gegraveerd; de stylus beslist voor je.</string>
     <string name="Stylus_Inscribed">je hebt de %1$s op je %2$s gegraveerd</string>
     <string name="Stylus_Name">tooverstylus</string>
+    <string name="Succubus_Desc">Succubi zijn demonen die eruitzien als verleidelijke (op een licht gotische manier) meisjes. Met haar magie kan de succubus een held betoveren, die niet meer kan aanvallen totdat de betovering voorbij is.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succubus</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
@@ -1393,6 +1394,7 @@
     <string name="Welcome_Title">Welkom!</string>
     <string name="WndBag_BuySubtitle">(Je hebt %dg)</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
+    <string name="WndBlacksmith_Select">Selecteer een item om te hersmeden</string>
     <string name="WndCatalogus_Title">Catalogi</string>
     <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
@@ -1694,6 +1696,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
