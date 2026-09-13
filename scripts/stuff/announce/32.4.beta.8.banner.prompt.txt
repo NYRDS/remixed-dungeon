@@ -1,11 +1,13 @@
 16-bit pixel art with chibi proportions: big-headed cute characters with large expressive pixel faces, crisp chunky pixels, deliberate dithering on stone and shadows, clean readable silhouettes, consistent pixel grid, inspired by 1990s dungeon crawler key art.
 
-SCENE: a dungeon sewer level of grey-green cobblestone and brick slick with slime, dark still water pools reflecting torchlight, moss in wall joints, a heavy arched wooden door with iron hinges on the left third, the corridor receding into deep teal darkness on the right.
+SCENE: a dungeon sewer level of grey-green cobblestone and brick slick with slime, dark still water pools reflecting torchlight, moss in wall joints, a heavy arched wooden door with iron hinges, the corridor receding into deep teal darkness.
 
-CHARACTERS: in the center-right foreground, a stocky chibi ginger-haired human warrior with a big bushy orange beard and grumpy-cute face, in a white cloth tunic with blue trim, one hand raised in command, a short sword in the other. At his side, a small chibi brown marsupial rat with alert red eyes and a cream belly, sitting loyally and leaning against his boot, no hostile pose. Next to it, a small chibi grey stone statue mid-step, faint red glowing eyes, a tiny very real sword in hand, guarding, loyal, no hostile pose. Beyond the doorway on the left, half-hidden in shadow, a chibi worker spider with a swollen orange abdomen, bloated like a living bomb — clearly grumpy, clearly not part of the squad.
+CHARACTERS: a stocky chibi ginger-haired human warrior with a big bushy orange beard and grumpy-cute face, in a white cloth tunic with blue trim, one hand raised in command, a short sword in the other. At his side, a small chibi brown marsupial rat with alert red eyes and a cream belly, sitting loyally and leaning against his boot, no hostile pose. Next to it, a chibi grey stone statue exactly as tall as the hero, same human scale, walking mid-step beside him, faint red glowing eyes, a real sword in hand, guarding, loyal, no hostile pose. Half-hidden in shadow beyond the doorway, a chibi worker spider with a swollen orange abdomen, bloated like a living bomb — clearly grumpy, clearly not part of the squad.
 
 LIGHTING: dramatic torchlight; warm amber and orange highlights on characters and wall texture, cool teal and dark blue shadows, soft glow around flames.
 
-COMPOSITION: cast on one third, threat and door on the opposite third, depth toward the middle; top quarter dark, uncluttered, kept empty for logo.
+COMPOSITION: deep one-point perspective, the corridor's vanishing point at the center of the frame; the pet squad large in the left foreground, the arched door smaller mid-ground on the right with the spider worker silhouetted in it; top quarter dark, uncluttered, kept empty for logo.
+
+ cast on one third, threat and door on the opposite third, depth toward the middle; top quarter dark, uncluttered, kept empty for logo.
 
 CONSTRAINTS: no text, no letters, no numbers, no watermark, no signature, no photorealism, no 3D render.
