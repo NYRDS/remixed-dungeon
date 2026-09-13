@@ -391,13 +391,37 @@ Burning-heal observed via blob-Ignite (+1, regen-capped) with no Burning
 attach ✓; piranha land-death instant, counter/badge hook clean ×6; air kite
 band demonstrated at both edges (fled when staged inside dist<2, approached
 then held at dist 2). CI python suite green on the batch jar: blood 6/6, nav,
-doctor 7/7, spells 38/38, alchemy 42/42. Accepted deltas / leftovers: fire
-Burning proc and air gust-push not observed end-to-end (coin flips + staging
-geometry; both mechanisms component-proven — Burning persists through damage
-(no charGotDamage), WindGust casts via SpellFactory); water in-water heal
-needs a water tile; piranha `reset()→true` (never returns to spawn) not
-expressible — it now swims home; air skillLevel frozen at authored 3 (java
-3+lvl/10); level 1 json defaults equal depth-1 formulas exactly.
+doctor 7/7, spells 38/38, alchemy 42/42. Accepted deltas / leftovers: air
+gust-push not observed end-to-end (SpellFactory lua cast component-proven);
+water in-water heal needs a water tile; piranha `reset()→true` (never returns
+to spawn) not expressible — it now swims home; air skillLevel frozen at
+authored 3 (java 3+lvl/10); level 1 json defaults equal depth-1 formulas
+exactly. Fire Burning proc observed killing golems after the DeathStroke
+colon fix (below).
+
+"As intended" pass (same day, Mike's call on the no-ops): DreadKnight 1/10
+Stun and Worm 1/7 Roots now carry real durations (`RPD.affectBuff(enemy,
+"Stun", Stun:duration(enemy))` — the standard-convention 10×factor; Roots
+3 turns per the WandMaker precedent) — both verified live (golem stunned;
+RottingFist rooted at hit 4). Water/Fire elemental absorb-heals made real:
+the absorbed kind was REMOVED from the json immunities — an immune kind is
+pre-blocked at `Buff.attachTo` and never reaches `addBuff`, and `resist()`
+would zero a heal sourced by that very buff — the `addBuff` branch now heals
+with `src = self` and rejects the attach, so the mob stays frost/burn-proof
+in effect AND heals. Water heal-on-Frost observed (11→17 = exactly exp@5),
+fire Burning-heal observed (40→65 cap, no attach). Water/ColdSpirit hit
+procs restored to the full `RPD.PseudoBlobs.Freezing:affect(enemyPos)`
+(Freezing was already @LuaInterface and bound as PseudoBlobs.Freezing):
+duration-carrying Frost + fire put out + HEAP FREEZE at the victim cell —
+live-verified: MysteryMeat heap → FrozenCarpaccio, potion shattered
+(Heap.freeze: potions shatter, mimics wake chilled). The Frost itself still
+shatters to the same hit's damage (Frost.charGotDamage) — accepted.
+Bonus latent bugs found by the proc hunt: `RPD.Sfx.DeathStroke.hit(enemy)`
+(dot-call on a static → ch=null NPE) had been silently aborting BOTH
+knights' attackProcs since batch 5 — colon-call fixed, double damage
+observed; `Stun` was missing from the commonClasses Buffs table
+(RPD.Buffs.Stun was nil). get_items now reports item kinds (the bundle
+serialization lacks identity).
 
 Verified live (batch 6): exact stat parity on all five (hp 8/12/15/85/210,
 str 10/10/10/16/13, Crab speed 2); 4 resurrect rises in 8 non-burning

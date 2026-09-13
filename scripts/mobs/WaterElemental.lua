@@ -35,17 +35,24 @@ return mob.init{
     end,
 
     attackProc = function(self, enemy, dmg)
-        -- java did Freezing.affect on the victim cell; per the batch-2
-        -- decision only the Char-facing Frost proc is portable
-        RPD.affectBuff(enemy, "Frost", RPD.Buffs.Frost:duration(enemy))
+        -- java hit proc: Freezing.affect on the victim cell - Frost (with
+        -- duration), fire put out, and the heap under the victim freezes
+        -- (meat -> FrozenCarpaccio, potions shatter, mimics wake chilled).
+        -- The Frost itself still shatters to the same hit's damage.
+        if enemy ~= nil and math.random(2) == 1 then
+            RPD.PseudoBlobs.Freezing:affect(enemy:getPos())
+        end
         return dmg
     end,
 
     addBuff = function(self, buff)
         local kind = buff:getEntityKind()
         if kind == "Frost" then
+            -- absorb: heal (src = self, else resist() zeroes a heal sourced
+            -- by the Frost itself) and don't attach. The json no longer
+            -- lists Frost as immunity so the buff actually reaches here.
             if self:hp() < self:ht() then
-                self:heal(self:getExpForKill(), buff)
+                self:heal(self:getExpForKill(), self)
             end
             return true
         end

@@ -27,6 +27,7 @@ local Treasury         = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasur
 
 local Buffs  = {
     Buff         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Buff"),
+    Stun        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Stun"),
     Roots        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Roots"),
     Paralysis    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Paralysis"),
     Vertigo      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Vertigo"),

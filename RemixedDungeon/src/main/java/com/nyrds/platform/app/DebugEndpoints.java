@@ -898,7 +898,10 @@ public class DebugEndpoints {
                 if (item != null) {
                     Bundle itemBundle = new Bundle();
                     item.storeInBundle(itemBundle);
-                    itemsJson.append(itemBundle.serialize());
+                    String itemJson = itemBundle.serialize();
+                    // bundles lack identity - inject the kind for debugging
+                    itemJson = itemJson.replaceFirst("\\{", String.format("{\"kind\":\"%s\",", item.getEntityKind()));
+                    itemsJson.append(itemJson);
                 }
                 first = false;
             }

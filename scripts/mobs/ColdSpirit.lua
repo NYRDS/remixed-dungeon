@@ -3,14 +3,11 @@ local mob = require "scripts/lib/mob"
 
 return mob.init{
     attackProc = function(self, enemy, dmg)
-        -- 1/4 chance to chill the enemy (java did Freezing.affect: Frost
-        -- buff plus cell-side fire out / heap freeze; Frost is the
-        -- Char-facing part)
-        if math.random(4) == 1 then
-            -- explicit duration: the 2-arg affect leaves left=0 and the
-            -- Frost decays immediately (FlavourBuff); java applied
-            -- Frost.duration via the Freezing path
-            RPD.Buffs.Buff:affect(enemy, "Frost", RPD.Buffs.Frost:duration(enemy))
+        -- 1/4 chance to chill: java did Freezing.affect on the victim cell -
+        -- Frost (with duration), cell-side fire out, heap under the victim
+        -- freezes. The Frost itself still shatters to the same hit's damage.
+        if enemy ~= nil and math.random(4) == 1 then
+            RPD.PseudoBlobs.Freezing:affect(enemy:getPos())
         end
         return dmg
     end

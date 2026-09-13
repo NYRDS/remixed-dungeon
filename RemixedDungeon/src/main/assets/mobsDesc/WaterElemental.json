@@ -22,7 +22,7 @@
    "scriptFile"    : "scripts/mobs/WaterElemental",
    "lootChance"    : 0.1,
    "loot"          : { "kind": "PotionOfFrost" },
-   "immunities"    : ["Frost", "ScrollOfPsionicBlast", "Bleeding"],
+   "immunities"    : ["ScrollOfPsionicBlast", "Bleeding"],
    "carcassChance" : 0,
    "canBePet"      : true,
    "friendly"      : false,

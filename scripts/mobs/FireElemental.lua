@@ -15,7 +15,10 @@ return mob.init{
     addBuff = function(self, buff)
         local kind = buff:getEntityKind()
         if kind == "Burning" then
-            self:heal(RPD.Random:NormalIntRange(1, self:ht() * 4), buff)
+            -- absorb: heal (src = self, else resist() zeroes a heal sourced
+            -- by the Burning itself) and don't attach. The json no longer
+            -- lists Burning as immunity so the buff actually reaches here.
+            self:heal(RPD.Random:NormalIntRange(1, self:ht() * 4), self)
             return true
         end
         if kind == "Frost" then

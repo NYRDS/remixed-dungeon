@@ -22,7 +22,7 @@
    "scriptFile"    : "scripts/mobs/FireElemental",
    "lootChance"    : 0.1,
    "loot"          : { "kind": "PotionOfLiquidFlame" },
-   "immunities"    : ["Fire", "Burning", "WandOfFirebolt", "ScrollOfPsionicBlast", "Bleeding"],
+   "immunities"    : ["Fire", "WandOfFirebolt", "ScrollOfPsionicBlast", "Bleeding"],
    "carcassChance" : 0,
    "canBePet"      : true,
    "friendly"      : false,
