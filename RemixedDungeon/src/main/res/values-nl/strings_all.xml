@@ -322,6 +322,7 @@
     <string name="Codex_ACRead">LEZEN</string>
     <string name="Codex_Info">Een van de vele boeken die in elke bibliotheek te vinden zijn</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
+    <string name="Codex_Story_1">Terugstoot Glief - Veroorzaakt dat vijanden worden teruggeduwd nadat ze de Held raken.</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
     <string name="Codex_Story_13">Eldritch wapen - Bij een succesvolle treffer kan de vijand vluchten in Angst.</string>
@@ -1693,6 +1694,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 
