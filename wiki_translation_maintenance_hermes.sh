@@ -15,7 +15,8 @@
 #     scoped hermes recovery run that aligns submodules with master state,
 #     and only dirt it cannot resolve skips the iteration
 #   - Every LEARN_EVERY iterations, a learning run lets hermes update its own
-#     skill/memory files from observed maintenance history
+#     skill/memory files from observed maintenance history, including the
+#     session transcripts stored in its state.db (read-only)
 #   - Language list includes recently added locales (nl, vi, ar, he)
 
 set -u
@@ -48,11 +49,16 @@ Review what actually happened in recent unattended maintenance runs:
 - /home/nyrds/.hermes/logs/hermes_maintenance.log (per-iteration outcomes, failures, retries)
 - /home/nyrds/remixed-dungeon/wiki_translation_maintenance_hermes.sh (the loop script — source of truth for current parameters)
 
-Then bring your learned knowledge up to date:
-1. Update your skill at /home/nyrds/.hermes/skills/software-development/remixed-dungeon-maintenance/ (SKILL.md and references/) so every fact matches current reality: script parameters (RUN_BUDGET, TOOLSETS, LEARN_EVERY, retry-on-failure behavior), log location, tool paths, and any recurring pitfall visible in the log or git history. Fix wrong facts, add only durable reusable knowledge, keep it concise.
-2. Update your persistent memories in /home/nyrds/.hermes/memories/ the same way (e.g. current model/fallback configuration, node-specific facts).
+Mine the session transcripts for what the outcome log cannot show:
+- Full conversation transcripts live in /home/nyrds/.hermes/state.db (SQLite): table sessions (id, title, started_at, cwd) and table messages (session_id, role, content, tool_name, finish_reason, timestamp). Open it READ-ONLY via python3's sqlite3 module with a 'file:...?mode=ro' URI — there is no sqlite3 CLI on this node.
+- Scope: sessions with cwd='/home/nyrds/remixed-dungeon' started in the last 24 hours. Skim user prompts and assistant messages (truncate long content to ~500 chars per message) and note tool calls that failed or retried (error text, 'interrupted', patch-tool errors), repeated or wasted steps, validator failures, and how runs ended.
+- Learn from patterns, not one-offs: a hiccup that occurred once is noise; something recurring across sessions, or something that cost a run real time, is a pitfall worth recording. Cite session IDs as evidence.
 
-Constraints: do NOT modify anything under /home/nyrds/remixed-dungeon, do not commit or push anything, and do not invent problems that the evidence does not support.
+Then bring your learned knowledge up to date:
+1. Update your skill at /home/nyrds/.hermes/skills/software-development/remixed-dungeon-maintenance/ (SKILL.md and references/) so every fact matches current reality: script parameters (RUN_BUDGET, TOOLSETS, LEARN_EVERY, retry-on-failure behavior), log location, tool paths, and any recurring pitfall visible in the log, git history, or transcripts. Fix wrong facts, add only durable reusable knowledge, keep it concise.
+2. Update your persistent memories in /home/nyrds/.hermes/memories/ the same way (e.g. current model/fallback configuration, node-specific facts). When you refresh an entry, also refresh its 'as of' date.
+
+Constraints: do NOT modify anything under /home/nyrds/remixed-dungeon; never write to /home/nyrds/.hermes/state.db or anything under /home/nyrds/.hermes except your own skill and memories directories; do not commit or push anything; do not invent problems that the evidence does not support.
 EOF
 
 cat > "$PROMPT_DIR/recovery.txt" <<EOF
