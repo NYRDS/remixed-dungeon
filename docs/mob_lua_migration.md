@@ -259,6 +259,52 @@ swarm restore with carcassChance 0.2 instead of the generation-scaled value
 own future splits still scale correctly from gen 0); skeleton kills recorded
 through the generic Doom path only (message identical).
 
+Ninth batch 2026-09-13 (ranged tier + the zap hook): engine change —
+`Mob.zap` now opens with a script hook
+`getScript().runOptional("onZap", false, enemy)`: lua returning true has
+taken the zap entirely (hit roll, effects, death report), false falls through
+to the base damage zap. `Mob.zapHit` went protected→public `@LuaInterface`
+(it shows the miss status itself, so a full-replacement zap needs no extra
+miss handling). `CharUtils.blinkAwayFrom(chr, enemy, dist)` added so lua can
+reproduce `blinkAway(chr, new BlinkAwayFromChar(...))` without a java lambda.
+Bridge rule re-learned the hard way: engine hooks and script callbacks must
+NOT share a name — `invokemethod` prepends the script table, and a desc key
+named like the hook (onZap) shadows the mob.lua bridge, shifting every arg by
+one (self became the script table). Callbacks stay unprefixed (`zap`,
+`getCloser`); the bridge `mob.onZap` lives in mob.lua like `onGetCloser`.
+Also: call statics taking a Char arg with COLON syntax
+(`RPD.Buffs.Weakness:duration(enemy)` — dot-call feeds ch=null through
+luaj's instance slot); probe-verified colon returns the correct 40.
+Migrated: **`Warlock`** (json + lua `zap` = base damage chain in lua
+(zapHit → defenseProc/damage via public Char.defenseProc) + 1/2 Weakness +
+checkDeathReport, `defenceProc` blink-away thresholds via
+`RPD.CharUtils:blinkAwayFrom` with damage/2 (`math.floor` — java int div),
+treasury POTION 0.83 roll in `stats`),
+**`Shaman`** (lua `zap` = `RPD.CharUtils:lightningProc(self, pos,
+damageRoll()*2)` + report, 10% zapMiss yell via `self:yell("Shaman_ZapMiss")`,
+`defenceProc` two-stage flee (data.fleeState 1 at 2/3, 2 at 1/3, damage/2),
+`act` resumes Hunting when >2 cells from the enemy — the java getFurther
+override; SCROLL 0.33 roll),
+**`KoboldIcemancer`** (lua `zap` = NO damage at all — zapHit → 1/2
+`Slow(1)` + report; the whole point of the hook; POTION 0.83 roll).
+All three: `attackRange:8` (java canAttack had no distance cap but is FOV
+gated at viewDistance 8 — effective parity), `resistances` per java, l10n
+keys pre-existed, spritesDesc jsons pre-existed. `RingOfElements` FULL-list
+`Warlock.class.getSimpleName()` → `MobFactory.WARLOCK` constant.
+The treasury category roll (POTION/SCROLL) uses
+`RPD.Treasury:getLevelTreasury():random("POTION")` with the loot() hero-level
+gate re-checked in lua and the Scorpio rolled/backpack-guard pattern.
+Verified live: exact stat parity (70/15/25/18/12-20, 18/11/11/8/2-6,
+70/12/25/18/15-17); icemancer zap → Slow on a pet golem with hp UNCHANGED
+(no-damage ✓); warlock zap → 16 damage + Weakness buff; shaman zap → two
+lightning bolts totalling 18; zero script errors after the bridge fix; CI
+python suite green (6/6, nav, 7/7, 38/38, 42/42). Deferred from this batch:
+**Eye** — its canAttack (enemy on an aim-through ballistica trace + pierce
+beam over ALL traced chars) needs either a canAttack hook (dropped by design)
+or attackRange approximations that break the pierce; stays java with the
+bosses. Warlock's vestigial fx() (MagicMissile) was dead code — the zap
+visual comes from the sprite anim.
+
 Verified live (batch 6): exact stat parity on all five (hp 8/12/15/85/210,
 str 10/10/10/16/13, Crab speed 2); 4 resurrect rises in 8 non-burning
 kills, 0 in 6 burning kills; resurrected zombie persists through

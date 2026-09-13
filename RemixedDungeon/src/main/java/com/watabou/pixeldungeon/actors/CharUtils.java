@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.mobs.common.BlinkAwayFromChar;
 import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.Treasury;
@@ -434,6 +435,11 @@ public class CharUtils {
             chr.fx(chr.getPos(), () -> WandOfBlink.appear(ch, tgt));
         }
         chr.observe();
+    }
+
+    @LuaInterface
+    public static void blinkAwayFrom(@NotNull Char chr, @NotNull Char enemy, int dist) {
+        blinkAway(chr, new BlinkAwayFromChar(enemy, dist));
     }
 
     @LuaInterface

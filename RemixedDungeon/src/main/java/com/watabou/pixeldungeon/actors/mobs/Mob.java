@@ -677,6 +677,13 @@ public abstract class Mob extends Char {
 
     public boolean zap(@NotNull Char enemy) {
 
+        // script hook may take the zap entirely (no-damage controller zaps,
+        // custom beams) - true = handled, false = base damage flow
+        Boolean scriptZapped = getScript().runOptional("onZap", Boolean.FALSE, enemy);
+        if (Boolean.TRUE.equals(scriptZapped)) {
+            return true;
+        }
+
         if (enemy.valid()) {
             if (zapHit(enemy)) {
                 int damage = zapProc(enemy, damageRoll());
@@ -691,7 +698,8 @@ public abstract class Mob extends Char {
         return false;
     }
 
-    protected boolean zapHit(@NotNull Char enemy) {
+    @LuaInterface
+    public boolean zapHit(@NotNull Char enemy) {
         if (enemy == CharsList.DUMMY) {
             EventCollector.logException(String.format("%s zapping dummy enemy", getEntityKind()));
             return false;

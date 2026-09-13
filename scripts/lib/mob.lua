@@ -92,6 +92,16 @@ mob.onGetCloser = function(self,mob,target,ignorePets)
     return not not self.getCloser(mob, target, ignorePets)
 end
 
+-- called from Mob.zap before the base damage flow: return true when the
+-- script took the zap entirely (hit rolls, effects, death reports), false
+-- for the regular damage zap
+mob.onZap = function(self,mob,enemy)
+    if not self.zap then
+        return false
+    end
+    return not not self.zap(mob, enemy)
+end
+
 mob.onScoreItemAction = function(self, mob, item, action)
     if not self.scoreItemAction then
         return 0

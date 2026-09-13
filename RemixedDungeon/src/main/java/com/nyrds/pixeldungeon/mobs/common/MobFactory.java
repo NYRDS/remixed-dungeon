@@ -15,7 +15,6 @@ import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
 import com.nyrds.pixeldungeon.mobs.guts.YogsTeeth;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
-import com.nyrds.pixeldungeon.mobs.icecaves.KoboldIcemancer;
 import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
@@ -60,10 +59,8 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Piranha;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
-import com.watabou.pixeldungeon.actors.mobs.Shaman;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
-import com.watabou.pixeldungeon.actors.mobs.Warlock;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
@@ -107,6 +104,7 @@ public class MobFactory {
 	public static final String GOLDEN_STATUE = "GoldenStatue";
 	public static final String MIRROR_IMAGE = "MirrorImage";
 	public static final String WRAITH = "Wraith";
+	public static final String WARLOCK = "Warlock";
 	public static final String SKELETON = "Skeleton";
 	public static final String FETID_RAT = "FetidRat";
 	public static final String SUSPICIOUS_RAT = "SuspiciousRat";
@@ -153,7 +151,6 @@ public class MobFactory {
 		registerMobClass(RatKing.class);
 		registerMobClass(Goo.class);
 
-		registerMobClass(Shaman.class);
 		registerMobClass(Tengu.class);
 
 		registerMobClass(SpiderServant.class);
@@ -171,7 +168,6 @@ public class MobFactory {
 		registerMobClass(AirElemental.class);
 		registerMobClass(WaterElemental.class);
 		registerMobClass(EarthElemental.class);
-		registerMobClass(Warlock.class);
 		registerMobClass(King.class);
 		registerMobClass(Undead.class);
 		registerMobClass(Senior.class);
@@ -203,7 +199,6 @@ public class MobFactory {
 
 		registerMobClass(Crystal.class);
 
-		registerMobClass(KoboldIcemancer.class);
 
 		registerMobClass(IceGuardian.class);
 		registerMobClass(IceGuardianCore.class);

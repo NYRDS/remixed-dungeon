@@ -48,6 +48,7 @@ local Buffs  = {
     Barkskin     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Barkskin"),
     Sleep        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Sleep"),
     Slow         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Slow"),
+    Weakness     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Weakness"),
     Blindness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blindness")
 }
 
