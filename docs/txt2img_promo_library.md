@@ -26,6 +26,19 @@ keeps the images consistent across releases.
 
 ### STYLE
 
+Character banners use the PROVEN chibi style (32.4.beta.8 final banner, Mike
+picked 2026-09-14) — chibi CAST wording goes in the CHARACTERS block (see
+`32.4.beta.8.banner.prompt.txt`):
+
+```
+STYLE: 16-bit pixel art with chibi proportions: big-headed cute characters with
+large expressive pixel faces, crisp chunky pixels, deliberate dithering on stone
+and shadows, clean readable silhouettes, consistent pixel grid, inspired by
+1990s dungeon crawler key art.
+```
+
+Environment/prop-only shots may keep the older flat style:
+
 ```
 STYLE: crisp 16-bit pixel art, visible pixel clusters, deliberate dithering on
 stone and in shadows, clean readable silhouettes, consistent pixel grid, sharp
@@ -57,8 +70,16 @@ hands, extra limbs, oversaturated, neon colors
   square for feed posts, 832×1216 portrait for story/reels format.
 - Steps 30–40, CFG ~4.0 (higher burns the pixel art), sampler euler;
   pixel-art LoRA optional at weight ≤0.6.
-- Post-process: upscale 2× nearest neighbor, then downscale — never AI
-  upscalers, they smooth pixels.
+- Post-process (PROVEN 32.4.beta.8): render fullsize, then
+  `py-tools/pixelize.py RAW --pixel 6 --colors 128 --method nearest` (PIL 6×
+  nearest downscale to the true pixel grid + MAXCOVERAGE 128-color quantize +
+  nearest upscale). Method ranking on this art: pixelize mode-vote ≈ unfake.py
+  (`unfake IN -o OUT -s 6 -m dominant -c 128`, venv ~/.venvs/pixtools, needs
+  --no-snap for share sizes) > median > nearest > Pyxelate. Never AI upscalers.
+  Generation path: `py-tools/comfy_announce.py <prompt.txt> --unet
+  qwen_image_2512_pixelart_redmond_fp8.safetensors --reserve 4 --seed 7 --size
+  1664x832 --pixel 0` (Redmond pixel-art LoRA baked; model profiles: zimage /
+  krea2 / anima).
 
 ## Lighting presets (pick one per image)
 
