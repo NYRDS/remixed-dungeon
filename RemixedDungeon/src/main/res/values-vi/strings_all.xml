@@ -346,6 +346,7 @@
     <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 tự sửa chữa!</string>
     <string name="DM300_Info3">Phát hiện nhân viên không được phép.</string>
+    <string name="DM300_Name_Objective">DM-300</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Một cây khăn sắt đơn giản với tay cầm gỗ mòn.</string>
     <string name="Damage_Reduction">Giảm sát thương</string>
@@ -580,6 +581,7 @@
     <string name="Hero_StaFurious">cuồng nộ</string>
     <string name="Hero_StaFury">Ngươi trở nên cuồng bạo!</string>
     <string name="Hero_StaOoze">Bùn ăn mòn ăn mòn cơ thể bạn. Rửa sạch nó đi!</string>
+    <string name="Hero_StaPoison">Bạn bị trúng độc!</string>
     <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
     <string name="Hero_StaVertigo">Mọi thứ đang quay xoay quanh bạn!</string>
     <string name="Hero_Wait">...</string>
@@ -1622,6 +1624,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

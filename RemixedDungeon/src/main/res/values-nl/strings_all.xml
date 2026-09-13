@@ -1427,8 +1427,10 @@
     <string name="WndHats_Purchased">Geregeld!</string>
     <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndHero_Info">Info</string>
+    <string name="WndHero_SkillLevel">Vaardigheidsniveau</string>
     <string name="WndHero_StaCatalogus">Catalogi</string>
     <string name="WndHero_StaJournal">Dagboek</string>
+    <string name="WndHero_Stealth">Sluipkunst</string>
     <string name="WndHero_Str">Kracht</string>
     <string name="WndImp_Message">Oh ja! Je bent mijn held!\nWat je beloning betreft, ik heb geen contant geld bij me, maar ik heb iets beters voor je. Dit is mijn familie-erfstukring: mijn opa haalde het van een dode paladijn af.</string>
     <string name="WndImp_Reward">Neem de ring</string>
@@ -1689,6 +1691,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
