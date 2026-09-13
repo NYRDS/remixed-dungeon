@@ -665,6 +665,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
 
+    @LuaInterface
     public int defenceRoll(Char enemy) {
         if (enemy.ignoreDr()) {
             return 0;
@@ -797,6 +798,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return dmg;
     }
 
+    @LuaInterface
     public float speed() {
         final float[] speed = {baseSpeed};
         forEachBuff(b -> speed[0] *= b.speedMultiplier(this));
@@ -964,6 +966,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @Override
+    @LuaInterface
     public void spend(float d_t) {
         // A dead/dying char never advances time. On death Belongings.dropAll() -> doDrop/doUnequip
         // calls spend per carried item, which would bill N*spend to a corpse during someone else's

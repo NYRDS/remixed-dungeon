@@ -8,6 +8,7 @@ import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
@@ -24,7 +25,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Boss;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
@@ -187,7 +187,7 @@ public class Lich extends Boss {
                 while (i < skulls.size()){
                     int pos = level.getEmptyCellNextTo(getPos());
                     if (level.cellValid(pos)) {
-                        Skeleton skeleton = new Skeleton();
+                        Mob skeleton = MobFactory.mobByName(MobFactory.SKELETON);
                         skeleton.setPos(pos);
                         skeleton.setState(MobAi.getStateByClass(Hunting.class));
                         level.spawnMob(skeleton, 0, getPos());

@@ -165,6 +165,11 @@ public class Treasury {
         return ret;
     }
 
+    @LuaInterface
+    public Item worstOf(String cat, int n) {
+        return worstOf(Category.valueOf(cat), n);
+    }
+
     public Item bestOf(Category cat, int n) {
         Item ret = random(cat);
 

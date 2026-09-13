@@ -82,6 +82,16 @@ mob.onAct = function(self,mob)
     return not not (self.act and self.act(mob))
 end
 
+-- called from Mob.getCloser during the java AI step: return true when the
+-- script took the step itself (e.g. Succubus blink, incl. its spend refund),
+-- false to fall through to the regular pathfind
+mob.onGetCloser = function(self,mob,target,ignorePets)
+    if not self.getCloser then
+        return false
+    end
+    return not not self.getCloser(mob, target, ignorePets)
+end
+
 mob.onScoreItemAction = function(self, mob, item, action)
     if not self.scoreItemAction then
         return 0

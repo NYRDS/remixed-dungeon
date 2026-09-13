@@ -81,6 +81,7 @@ public abstract class Mob extends Char {
     protected float carcassChance = ModdingBase.inMod() ? ModQuirks.defaultCarcassChance : 0.5f;
 
     // caveman: scripts must be able to flag mobs as carcass-free (chess pieces)
+    @LuaInterface
     public void setCarcassChance(float chance) {
         carcassChance = chance;
     }
@@ -108,6 +109,11 @@ public abstract class Mob extends Char {
     @LuaInterface
     public int getDmgMax() {
         return dmgMax;
+    }
+
+    @LuaInterface
+    public int getMaxLvl() {
+        return maxLvl;
     }
 
     private Carcass carcassRef;
@@ -353,6 +359,12 @@ public abstract class Mob extends Char {
     }
 
     public boolean getCloser(int target, boolean ignorePets) {
+        // script hook may take the step (Succubus blink) - true = moved, false = java pathfind
+        Boolean scriptStepped = getScript().runOptional("onGetCloser", Boolean.FALSE, target, ignorePets);
+        if (Boolean.TRUE.equals(scriptStepped)) {
+            return true;
+        }
+
         int step = Dungeon.findPath(this, target, walkingType.passableCells(level()));
         return _doStep(step);
     }
@@ -488,6 +500,7 @@ public abstract class Mob extends Char {
         }
     }
 
+    @LuaInterface
     public Mob split(int cell, int damage) {
 
         Mob clone = (Mob) makeClone();
@@ -722,6 +735,7 @@ public abstract class Mob extends Char {
         return new_mob;
     }
 
+    @LuaInterface
     public void loot(Object loot, float lootChance) {
 
         if (Dungeon.hero.lvl() > maxLvl + 2 + lvl() && !isBoss) {
@@ -764,6 +778,7 @@ public abstract class Mob extends Char {
     }
 
     @Override
+    @LuaInterface
     public int damageRoll() {
         int dmg = Random.NormalIntRange(dmgMin, dmgMax) + Random.NormalIntRange(0, lvl());
 

@@ -209,15 +209,55 @@ place; scorpio/acidic old saves with an EMPTY backpack may gain the ctor roll
 item once on first data-defined load (item-carrying ones are detected via the
 backpack guard).
 
-Deferred from batch 7: `Swarm` (split needs the clone's lua-data propagation —
-`Mob.split`/`makeClone` copies the java object but wiring `generation` into
-self.data across the split needs a design), `Skeleton` (Treasury category
-loot has no json form + die-AoE needs findChar/GLog/Sample bindings;
-Lich summons skeletons), `Succubus` (blink-in-getCloser — act hook can't move
-the mob; CharUtils.blinkTo IS exposed now, needs a delay/factor recipe),
-`KoboldIcemancer`/`Warlock`/`Shaman`/`Eye` (ranged-tier zap story: no-damage
-zaps), `FireElemental`/`WaterElemental`/`EarthElemental` (buff-add() hook),
-`Crystal` (wand arsenal), `Piranha` (Statistics/Badges counters).
+Deferred from batch 7: `KoboldIcemancer`/`Warlock`/`Shaman`/`Eye` (ranged-tier
+zap story: no-damage zaps), `FireElemental`/`WaterElemental`/`EarthElemental`
+(buff-add() hook), `Crystal` (wand arsenal), `Piranha` (Statistics/Badges
+counters). Swarm/Skeleton/Succubus shipped as the eighth batch below.
+
+Eighth batch 2026-09-13 (split, treasury loot, blink — the "needs a design"
+trio): **`Swarm`** (json + lua `defenceProc` split: `self:split(cell,dmg)`
+(newly `@LuaInterface`) + `clone:loot(item,chance)` + `setCarcassChance`,
+all per-generation scaled; `generation` lives in `self.data` and reaches the
+clone for free — `Mob.makeClone` round-trips the mob through a Bundle, and
+`LUA_DATA` is part of that bundle, so no wiring was needed; `stats` re-derives
+the scaled carcass chance on every restore from the persisted generation),
+**`Skeleton`** (treasury category loot rolled in the `stats` hook following
+the Scorpio pattern — `RPD.Treasury:getLevelTreasury():worstOf("WEAPON",3)`
+via a new string-overload `Treasury.worstOf(String,int)` @LuaInterface;
+the roll persists via `data.rolled` with the empty-backpack legacy guard;
+the java loot() hero-level gate is re-checked in lua; the NecroBossLevel
+exception ports as `RPD.Dungeon.level:levelKind() == "NecroBossLevel"`;
+`die` hook does the bone-blast AoE — `RPD.Actor:findChar`, `self:damageRoll()`,
+`ch:defenceRoll(self)`, `ch:damage(dmg,self)` — plus `RPD.playSound("snd_bones")`
+and `RPD.glogn(RPD.textById("Skeleton_Killed"))`; the java `Dungeon.fail` in
+die was redundant — `Char implements Doom`, so the hero-death path already
+composes the identical fail message), **`Succubus`** (json + `spawn` hook
+viewDistance+1 + `attackProc` 1/3 Charm via `RPD.Buffs.Charm:durationFactor`
++ `RPD.affectBuff`; the OneWayLoveBuff self-charm redirect ports as
+`enemy:hasBuff("OneWayLoveBuff")` — the cursed/rose duration factors are
+handled inside durationFactor; the blink lives in a NEW script hook
+`getCloser` → engine `Mob.getCloser` now calls
+`getScript().runOptional("onGetCloser", false, target, ignorePets)` first —
+lua returns true when it took the step: `RPD.CharUtils:blinkTo` +
+`data.delay = 5` + `self:spend(-1 / self:speed())` refunding `doStepTo`'s
+pre-charge (the Tengu refund idiom); luaj arrays are 1-BASED so the FOV check
+is `level.fieldOfView[target + 1]`). Construction sites switched:
+`Lich.useSkull` blue-skull summon → `MobFactory.mobByName(MOBFactory.SKELETON)`.
+Newly `@LuaInterface`: `Mob.split/loot/setCarcassChance/damageRoll/getMaxLvl`,
+`Char.defenceRoll/speed/spend`. Verified live: exact stat parity
+(80/10/12/5/1-4, 25/11/12/9/3-8 — skeleton correctly loses the Regeneration
+buff via json `undead`, 80/13/40/25/15-25); pet-driven melee split produced
+3 clones with `generation=1.0` in their `luaData`, surviving
+reload → re-save; skeleton rolled a weapon and used it in AI combat
+("скелет использует кинжал"); skeleton death AoE dropped an adjacent rat
+8→3 hp; succubus blinked across the level (position jumps, `delay=4.0`
+persisted) and charmed the hero ("Ты зачарован!"); CI python suite green:
+blood_transfusion 6/6, level_navigation, doctor_spells 7/7, all_spells 38/38,
+alchemy 42/42. Accepted deltas: legacy (pre-migration) saves holding a SPLIT
+swarm restore with carcassChance 0.2 instead of the generation-scaled value
+(the java `generation` @Packable field has no json counterpart — the clones'
+own future splits still scale correctly from gen 0); skeleton kills recorded
+through the generic Doom path only (message identical).
 
 Verified live (batch 6): exact stat parity on all five (hp 8/12/15/85/210,
 str 10/10/10/16/13, Crab speed 2); 4 resurrect rises in 8 non-burning

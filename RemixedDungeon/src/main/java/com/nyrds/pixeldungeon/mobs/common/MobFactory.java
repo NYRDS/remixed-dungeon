@@ -61,10 +61,7 @@ import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Piranha;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Shaman;
-import com.watabou.pixeldungeon.actors.mobs.Skeleton;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
-import com.watabou.pixeldungeon.actors.mobs.Succubus;
-import com.watabou.pixeldungeon.actors.mobs.Swarm;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
 import com.watabou.pixeldungeon.actors.mobs.Warlock;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
@@ -153,8 +150,6 @@ public class MobFactory {
 	private static void initMobsMap() {
 
 		mMobsList = new HashMap<>();
-		registerMobClass(Swarm.class);
-		registerMobClass(Skeleton.class);
 		registerMobClass(RatKing.class);
 		registerMobClass(Goo.class);
 
@@ -177,7 +172,6 @@ public class MobFactory {
 		registerMobClass(WaterElemental.class);
 		registerMobClass(EarthElemental.class);
 		registerMobClass(Warlock.class);
-		registerMobClass(Succubus.class);
 		registerMobClass(King.class);
 		registerMobClass(Undead.class);
 		registerMobClass(Senior.class);
