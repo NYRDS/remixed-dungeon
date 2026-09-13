@@ -1,11 +1,11 @@
-Cute chibi cartoon character illustration for a retro dungeon crawler game, sticker style, isolated on a flat pure white background.
+Cute chibi cartoon illustration with a painterly storybook finish, thick clean dark outlines, soft cel shading, expressive minimal faces, oversized heads and chibi proportions for all characters.
 
-CHARACTER: a stocky ginger-haired human warrior with a big bushy orange beard and thick orange hair, grumpy-cute bored expression, oversized head, chibi proportions. He sits cross-legged in cream-white plate armor with round gold pauldrons over a crimson tunic, dark grey leggings, black boots, holding a small round baked pasty in both hands close to his chest.
+SCENE: a dungeon sewer level of grey-green cobblestone and brick slick with slime, dark still water pools reflecting torchlight, moss in wall joints, a heavy arched wooden door with iron hinges on the left third, the corridor receding into deep teal darkness on the right.
 
-PETS: at his side, a small brown marsupial rat with alert red eyes and a cream belly, round ears, sitting loyally and leaning against his leg, no hostile pose. From behind the backpack at the far edge, an annoyed worker spider with a swollen orange abdomen peeks out, clearly grumpy at being left out.
+CHARACTERS: in the center-right foreground, a stocky chibi ginger-haired human warrior with a big bushy orange beard and grumpy-cute face, in a white cloth tunic with blue trim, one hand raised in command, a short sword in the other. At his side, a small chibi brown marsupial rat with alert red eyes and a cream belly, sitting loyally and leaning against his boot, no hostile pose. Next to it, a small chibi grey stone statue mid-step, faint red glowing eyes, a tiny very real sword in hand, guarding, loyal, no hostile pose. Beyond the doorway on the left, half-hidden in shadow, a chibi worker spider with a swollen orange abdomen, bloated like a living bomb — clearly grumpy, clearly not part of the squad.
 
-PROPS scattered on the ground around him: a longsword lying flat in front, a leather scroll case with rolled scrolls, a big brown adventuring backpack, a tiny glass potion bottle with a cork.
+LIGHTING: dramatic torchlight; warm amber and orange highlights on characters and wall texture, cool teal and dark blue shadows, soft glow around flames.
 
-STYLE: clean thick dark outlines, flat colors with soft cel shading, smooth vector cartoon finish, expressive minimal face, mobile game character key art, single centered composition with generous white space around.
+COMPOSITION: cast on one third, threat and door on the opposite third, depth toward the middle; top quarter dark, uncluttered, kept empty for logo.
 
-CONSTRAINTS: no text, no letters, no numbers, no watermark, no signature, no photorealism, no 3D render, no background scenery, no shadows on background, no pixel grid.
+CONSTRAINTS: no text, no letters, no numbers, no watermark, no signature, no photorealism, no 3D render.
