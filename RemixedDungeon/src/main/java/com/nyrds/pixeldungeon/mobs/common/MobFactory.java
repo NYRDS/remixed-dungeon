@@ -37,12 +37,8 @@ import com.nyrds.pixeldungeon.mobs.npc.TownsfolkNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownsfolkSilentNPC;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderEgg;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderMind;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
@@ -105,6 +101,9 @@ public class MobFactory {
 	public static final String MIRROR_IMAGE = "MirrorImage";
 	public static final String WRAITH = "Wraith";
 	public static final String WARLOCK = "Warlock";
+	public static final String SPIDER_SERVANT = "SpiderServant";
+	public static final String SPIDER_GUARD = "SpiderGuard";
+	public static final String SPIDER_MIND_AMBER = "SpiderMindAmber";
 	public static final String SKELETON = "Skeleton";
 	public static final String FETID_RAT = "FetidRat";
 	public static final String SUSPICIOUS_RAT = "SuspiciousRat";
@@ -153,11 +152,7 @@ public class MobFactory {
 
 		registerMobClass(Tengu.class);
 
-		registerMobClass(SpiderServant.class);
-		registerMobClass(SpiderGuard.class);
 		registerMobClass(SpiderExploding.class);
-		registerMobClass(SpiderMind.class);
-		registerMobClass(SpiderMindAmber.class);
 		registerMobClass(SpiderEgg.class);
 		registerMobClass(SpiderNest.class);
 		registerMobClass(SpiderQueen.class);

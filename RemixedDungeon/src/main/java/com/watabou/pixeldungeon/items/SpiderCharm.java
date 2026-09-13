@@ -1,6 +1,6 @@
 package com.watabou.pixeldungeon.items;
 
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderServant;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -39,7 +39,7 @@ public class SpiderCharm extends UsableArtifact {
 			int spawnPos = level.getEmptyCellNextTo(ch.getPos());
 			
 			if (level.cellValid(spawnPos)) {
-				Mob pet = Mob.makePet(new SpiderServant(), ch.getId());
+				Mob pet = Mob.makePet(MobFactory.mobByName(MobFactory.SPIDER_SERVANT), ch.getId());
 				pet.setPos(spawnPos);
 				
 				level.spawnMob(pet );

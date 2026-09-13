@@ -369,6 +369,7 @@ public abstract class Mob extends Char {
         return _doStep(step);
     }
 
+    @LuaInterface
     public boolean getFurther(int target) {
         int step = Dungeon.flee(this, target, walkingType.passableCells(level()));
         return _doStep(step);

@@ -4,8 +4,6 @@ package com.watabou.pixeldungeon;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderGuard;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderMindAmber;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
@@ -792,9 +790,9 @@ public class Badges {
 			badge = Badge.RARE_SENIOR;
 		} else if (mob.getEntityKind().equals(MobFactory.ACIDIC)) {
 			badge = Badge.RARE_ACIDIC;
-		} else if (mob instanceof SpiderGuard) {
+		} else if (mob.getEntityKind().equals(MobFactory.SPIDER_GUARD)) {
 			badge = Badge.RARE_SPIDER_SOLDIER;
-		} else if (mob instanceof SpiderMindAmber) {
+		} else if (mob.getEntityKind().equals(MobFactory.SPIDER_MIND_AMBER)) {
 			badge = Badge.RARE_SPIDER_MIND;
 		} else if (mob.getEntityKind().equals(MobFactory.DREAD_KNIGHT)) {
 			badge = Badge.RARE_DREAD_KNIGHT;

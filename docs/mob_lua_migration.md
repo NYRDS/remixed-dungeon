@@ -305,6 +305,30 @@ or attackRange approximations that break the pierce; stays java with the
 bosses. Warlock's vestigial fx() (MagicMissile) was dead code — the zap
 visual comes from the sprite anim.
 
+Tenth batch 2026-09-13 (spider tier): **`SpiderServant`** (json + lua
+`attackProc` 1/4 Poison 2×durationFactor), **`SpiderGuard`** (json `var:1` +
+lua `attackProc` 1/10 Stun 3), **`SpiderMind`** (json + lua `zapProc` ally
+buff: iterate `level:getCopyOfMobsArray()` — a JAVA ARRAY, luaj-indexed
+1-based with `#mobs`/`mobs[i]`, NOT a List (no `:size()`); FOV check
+`level.fieldOfView[pos + 1]`; `RPD.Dungeon:isCellVisible(pos)` COLON (static
+taking an int arg — dot-call throws "userdata expected, got number");
+buffs by kind string incl. nested `Health`/`Armor` (BuffFactory registers
+nested classes under simple names) — returns 0 = no zap damage; `getCloser`
+hook flee-while-hunting via the new `@LuaInterface Mob.getFurther` +
+`self.enemySeen`), **`SpiderMindAmber`** (same kite + `zapProc` random
+Blindness/Slow/Weakness 3 turns on TOP of base damage — returns dmg).
+Java deleted: the four spider classes; `Badges` instanceof → new constants
+`MobFactory.SPIDER_GUARD/SPIDER_MIND_AMBER`; `SpiderCharm` summon →
+`MobFactory.mobByName(SPIDER_SERVANT)` (constant added). CI python suite
+green on the batch jar (6/6, nav, 7/7, 38/38, 42/42). Verification caveat:
+SpiderMind's ally-buff zap was verified component-wise (array iteration,
+FOV indexing, colon statics, friendly check, zero lua errors across many
+provoked zaps) but never observed end-to-end — its attack skill 10 vs any
+staged ally/enemy defense kept missing (zapProc fires only on hits), and
+town staging geometry kept blocking the ray. Next session: provoke one with
+a dummy ally in FOV on a clear line (Statue def 4 as the zap TARGET works;
+the ALLY just needs to stand in FOV off-axis).
+
 Verified live (batch 6): exact stat parity on all five (hp 8/12/15/85/210,
 str 10/10/10/16/13, Crab speed 2); 4 resurrect rises in 8 non-burning
 kills, 0 in 6 burning kills; resurrected zombie persists through
