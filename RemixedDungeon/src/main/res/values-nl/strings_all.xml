@@ -1095,6 +1095,7 @@
     <string name="ServantNPC_Name_Objective">herbergbediende</string>
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
     <string name="ServiceManNPC_Gender">masculine</string>
+    <string name="ServiceManNPC_Limit">Het spijt me, maar elke nieuwe avonturier kan in totaal slechts %d films bekijken.</string>
     <string name="ServiceManNPC_Name">bediende</string>
     <string name="ServiceManNPC_Name_Objective">medewerker</string>
     <string name="ServiceManNPC_NoConnection">Het spijt me, u kunt onze dienst nu niet gebruiken. (Internetverbinding vereist)</string>
@@ -1233,6 +1234,7 @@
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SummonBeast_Name">Beestenroep</string>
+    <string name="SummonDeathling_Info">Roept een ondode volgeling op. De HP en schade van Deathling\'s groeien met het heldenniveau. \n\nOproeplimiet: %1$d (+ 1 per Magieniveau)</string>
     <string name="SummonDeathling_Name">Doodswezen oproepen</string>
     <string name="Sungrass_Desc">Zonnegras staat bekend om de geneeskrachtige werking van zijn sap.</string>
     <string name="Sungrass_Name">zonnegras</string>
@@ -1684,6 +1686,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
