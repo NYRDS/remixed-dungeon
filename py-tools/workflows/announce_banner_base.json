@@ -1,0 +1,111 @@
+{
+ "1": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
+   "weight_dtype": "default"
+  }
+ },
+ "2": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+   "type": "qwen_image",
+   "device": "cpu"
+  }
+ },
+ "3": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "qwen_image_vae.safetensors"
+  }
+ },
+ "4": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "A 16-bit pixel art promotional image for a retro dungeon crawler game, landscape.\n\nSCENE: rough natural caverns of brown rock, glittering ore veins in the walls, patches of softly glowing fluorescent moss and mushrooms, freezing pools of pale water, uneven rocky floor, a rickety wooden bridge over a chasm.\nPALETTE: earth brown, moss green, glinting gold ore, pale cyan glow.\n\nCHARACTERS: a stocky ginger-haired human warrior in a white cloth tunic with blue trim, unique short sword in hand, seen from a back three-quarter view in the near foreground, facing a colossal rounded machine of grey-bronze metal, glowing yellow eye lights, drill arms and heavy pistons, stones raining from the ceiling around it, dominating the far half of the frame.\n\nLIGHTING: dramatic torchlight; warm amber and orange highlights on characters and wall texture, cool teal and dark blue shadows, strong rim light, soft bloom around flames, light floor fog catching the glow, the machine's yellow eye lights carving it out of the dark.\n\nCOMPOSITION: banner, main cast on one third, threat on the opposite third, depth toward the middle; top quarter dark, uncluttered, kept empty for logo.\n\nSTYLE: crisp 16-bit pixel art, visible pixel clusters, deliberate dithering on stone and in shadows, clean readable silhouettes, consistent pixel grid, sharp edges, inspired by 1990s dungeon crawler key art.\n\nCONSTRAINTS: no text, no letters, no numbers, no watermark, no signature, no photorealism, no 3D render, no anti-aliasing, no smooth gradients.\n",
+   "clip": [
+    "2",
+    0
+   ]
+  }
+ },
+ "5": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "blurry, lowres, jpeg artifacts, text, watermark, signature, logo, letters, numbers, photorealistic, 3d render, smooth gradients, antialiasing, deformed hands, extra limbs, oversaturated, neon colors",
+   "clip": [
+    "2",
+    0
+   ]
+  }
+ },
+ "7": {
+  "class_type": "EmptySD3LatentImage",
+  "inputs": {
+   "width": 1664,
+   "height": 832,
+   "batch_size": 1
+  }
+ },
+ "6": {
+  "class_type": "ModelSamplingAuraFlow",
+  "inputs": {
+   "model": [
+    "1",
+    0
+   ],
+   "shift": 3.1
+  }
+ },
+ "8": {
+  "class_type": "KSampler",
+  "inputs": {
+   "seed": 1234,
+   "steps": 32,
+   "cfg": 4.0,
+   "sampler_name": "euler",
+   "scheduler": "simple",
+   "denoise": 1.0,
+   "model": [
+    "6",
+    0
+   ],
+   "positive": [
+    "4",
+    0
+   ],
+   "negative": [
+    "5",
+    0
+   ],
+   "latent_image": [
+    "7",
+    0
+   ]
+  }
+ },
+ "9": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "8",
+    0
+   ],
+   "vae": [
+    "3",
+    0
+   ]
+  }
+ },
+ "10": {
+  "class_type": "SaveImage",
+  "inputs": {
+   "filename_prefix": "announce",
+   "images": [
+    "9",
+    0
+   ]
+  }
+ }
+}

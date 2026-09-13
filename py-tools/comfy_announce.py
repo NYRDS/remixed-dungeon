@@ -245,6 +245,7 @@ def main():
                     help="GB to hold on cuda:0 during render, forces ComfyUI partial-load (enables loras)")
     ap.add_argument("--need-vram", type=float, default=0, help="GB free required before submit, else wait")
     ap.add_argument("--retries", type=int, default=2, help="OOM resubmit attempts")
+    ap.add_argument("--save", metavar="PATH", help="write the API-format workflow JSON and exit")
     ap.add_argument("--wait", type=int, default=3600)
     ap.add_argument("--status", action="store_true")
     args = ap.parse_args()
@@ -269,6 +270,11 @@ def main():
         args.steps = args.steps or 32
         args.cfg = args.cfg or 4.0
     seed = args.seed if args.seed is not None else random.randint(0, 2**31 - 1)
+
+    if args.save:
+        Path(args.save).write_text(json.dumps(build_graph(args, seed), indent=1))
+        print(args.save)
+        return
 
     with VramReserve(args.reserve):
         entry = render(url, args, seed)
