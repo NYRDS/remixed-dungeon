@@ -1,11 +1,14 @@
 package com.nyrds.pixeldungeon.items.common.armor;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.MiasmaGas;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -17,6 +20,8 @@ import org.jetbrains.annotations.NotNull;
 public class DoctorArmor extends ClassArmor {
 
     private static final int CLOUD_VOLUME = 100;
+    // initHeroes.json kind of the wearable mask; ItemFactory has no constant for it
+    private static final String MASK = "PlagueDoctorMask";
 
     {
         image = 31;
@@ -59,10 +64,30 @@ public class DoctorArmor extends ClassArmor {
     @Override
     public boolean doEquip(@NotNull Char hero) {
         if (hero.getHeroClass() == HeroClass.DOCTOR) {
-            return super.doEquip(hero);
+            if (super.doEquip(hero)) {
+                // the built-in beaked mask is the real one
+                Buff.permanent(hero, BuffFactory.GASES_IMMUNITY);
+                return true;
+            }
+            return false;
         } else {
             GLog.w(StringsManager.getVar(R.string.DoctorArmor_NotDoctor));
             return false;
         }
+    }
+
+    @Override
+    protected boolean doUnequip(Char hero, boolean collect, boolean single) {
+        if (super.doUnequip(hero, collect, single)) {
+            if (!maskEquipped(hero)) {
+                Buff.detach(hero, BuffFactory.GASES_IMMUNITY);
+            }
+            return true;
+        }
+        return false;
+    }
+
+    private static boolean maskEquipped(@NotNull Char hero) {
+        return MASK.equals(hero.getBelongings().getItemFromSlot(Belongings.Slot.ARTIFACT).getEntityKind());
     }
 }
