@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Render announce/promo images via the ComfyUI on hdd_maxi1 (yggdrasil).
+"""Render announce/promo images via a ComfyUI instance (set COMFY_URL env var
+or pass --url; the plain http API has no auth — keep the node firewalled).
 
 Base: Qwen-Image-2512 fp8 + qwen2.5-vl-7b TE + qwen_image_vae (proven graph
 from the instance's own history). Prompts composed from
@@ -25,7 +26,7 @@ import urllib.request
 import urllib.parse
 from pathlib import Path
 
-DEFAULT_URL = "http://[201:b5b5:f6b:5ac2:1734:21ad:6eb3:2d33]:8188"
+DEFAULT_URL = "http://127.0.0.1:8188"
 
 UNET = "qwen_image_2512_fp8_e4m3fn.safetensors"
 CLIP = "qwen_2.5_vl_7b_fp8_scaled.safetensors"
