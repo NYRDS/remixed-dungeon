@@ -63,7 +63,7 @@ shields.info = function(baseDesc, str, shieldLevel, itemLevel)
             shields.blockChance(shieldLevel, str) * 100,
             shields.rechargeTime(shieldLevel, str))
             .. "\n\n"
-            .. RPD.format(strTemplate, strForLevel[shieldLevel])
+            .. RPD.format(strTemplate, math.max(2, strForLevel[shieldLevel] - itemLevel))
 end
 
 shields.infoWeapon = function(baseDesc, str, shieldLevel, itemLevel)
@@ -106,7 +106,7 @@ shields.makeShield = function(shieldLevel, shieldDesc, shieldBuff)
         end,
 
         requiredSTR = function(self, item)
-            return strForLevel[shieldLevel]
+            return math.max(2, strForLevel[shieldLevel] - item:level())
         end,
 
         slot = function(self, item, belongings)
