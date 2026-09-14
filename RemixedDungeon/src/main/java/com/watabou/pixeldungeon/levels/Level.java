@@ -397,6 +397,7 @@ public abstract class Level implements Bundlable {
 			GLog.debug("followCheck: %s id=%d ownerId=%d owner=%s -> %s", mob.getEntityKind(), mob.getId(), mob.getOwnerId(), mob.getOwner().getEntityKind(), follows);
 			if(follows) {
 				mobsToNextLevel.add(mob);
+				mob.levelId = level.levelId; // the pet's pos still belongs to the level it leaves
 				it.remove();
 			}
 		}
