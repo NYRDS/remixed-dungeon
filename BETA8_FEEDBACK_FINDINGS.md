@@ -100,12 +100,11 @@ Options: (a) auto-unequip conflicting slot in `Belongings.equip` for **everyone*
 
 ---
 
-## Proposed batches (nothing implemented yet)
+## Status (updated 2026-09-14)
 
-**Quick-fix batch (all confirmed bugs/doc, no open design):**
-A2 (ShadowLord scroll), A3/B6 (potions vs traps), B1 (clone loses undead), B7 (swap vs heap), B8 (sign strings), A6 (doctor perk string), AlchemyRecipes validation nit.
+**SHIPPED on beta.8:** A1 permanent death (f9fb7f3ce), A2 (9a8c95b1e), A3/B6 (fb5de3c9a), B1 (8a81ad382), B7 (8de307077), B8+A6 (8c914de94), AlchemyRecipes validation nit (cb996a6a5).
 
-**Decision-gated:**
+**Decision-gated (open):**
 - B2 — auto-unequip semantics (a/b/c above; recommend c)
 - B3 — display-stats gating direction (recommend yes)
 - B4 — same-level pet position restore (recommend yes)
@@ -116,4 +115,3 @@ A2 (ShadowLord scroll), A3/B6 (potions vs traps), B1 (clone loses undead), B7 (s
 - A8 — epic armor mask merge (needs code pass first)
 - A9 — BoneSaw stats authoring
 - A10 — per-mob carcass table (data work)
-- A1 — only if we want chess death to bypass auto-revive (recommend leave as is)
