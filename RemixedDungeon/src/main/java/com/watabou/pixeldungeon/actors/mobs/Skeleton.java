@@ -31,6 +31,7 @@ public class Skeleton extends Mob {
 		expForKill = 5;
 		maxLvl = 10;
 		setUndead(true);
+		naturalUndead = true;
 
 		loot(getLoot(), 0.2f);
 	}

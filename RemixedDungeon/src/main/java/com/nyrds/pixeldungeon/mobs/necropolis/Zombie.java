@@ -25,6 +25,7 @@ public class Zombie extends Mob {
         maxLvl = 15;
 
         setUndead(true);
+        naturalUndead = true;
         loot(Gold.class, 0.02f);
     }
 

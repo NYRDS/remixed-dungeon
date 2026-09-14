@@ -28,6 +28,7 @@ public class Deathling extends Mob {
 
         STR(17);
         setUndead(true);
+        naturalUndead = true;
         setSkillLevel(3);
     }
 

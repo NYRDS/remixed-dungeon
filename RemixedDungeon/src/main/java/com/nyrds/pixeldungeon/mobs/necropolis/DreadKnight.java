@@ -27,6 +27,7 @@ public class DreadKnight extends Mob {
         expForKill = 8;
         maxLvl = 15;
         setUndead(true);
+        naturalUndead = true;
 
         loot(Gold.class, 0.02f);
     }

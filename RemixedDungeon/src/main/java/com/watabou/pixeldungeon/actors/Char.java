@@ -228,6 +228,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Packable(defaultValue = "false")
     public boolean undead;
 
+    // born undead (skeleton, wight, json-authored) vs artificially raised - moonlight cures only the latter
+    @Packable(defaultValue = "false")
+    public boolean naturalUndead;
+
     @Getter
     private int buffsUpdatedCount;
 

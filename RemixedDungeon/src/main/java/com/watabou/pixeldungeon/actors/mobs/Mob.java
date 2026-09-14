@@ -525,6 +525,7 @@ public abstract class Mob extends Char {
         if(mobDesc.has("undead")) {
             if(mobDesc.getBoolean("undead")) {
                 setUndead(true);
+                naturalUndead = true; // authored as an undead creature - not a necromancy artifact
             }
         }
 
@@ -660,6 +661,7 @@ public abstract class Mob extends Char {
 
         // bare storeInBundle above skips @Packable fields - keep undead state and kill reward across clones
         new_mob.setUndead(undead);
+        new_mob.naturalUndead = naturalUndead;
         new_mob.expForKill = expForKill;
 
         if (getOwnerId() == getId()) {

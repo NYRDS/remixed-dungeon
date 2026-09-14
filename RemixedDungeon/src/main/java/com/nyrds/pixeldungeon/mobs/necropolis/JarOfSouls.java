@@ -24,6 +24,7 @@ public class JarOfSouls extends Mob {
 		postpone(20);
 
 		setUndead(true);
+		naturalUndead = true;
 		
 		//loot = new SoulShard();
 		//lootChance = 1f;
