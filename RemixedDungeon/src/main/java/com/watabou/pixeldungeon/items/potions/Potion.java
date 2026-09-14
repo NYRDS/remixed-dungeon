@@ -215,10 +215,13 @@ public class Potion extends Item implements UnknownItem {
 			apply( thrower );
 		} else {
 			Level level = thrower.level();
-			LevelObject lo = level.getTopLevelObject(cell);
-			if ((lo != null && lo.affectItems()) || level.pit[cell]) {
+			if (level.pit[cell]) {
 				super.onThrow( cell, thrower, enemy);
 			} else  {
+				LevelObject lo = level.getTopLevelObject(cell);
+				if (lo != null && lo.affectItems()) {
+					lo.bump(this); //traps and the like still react, but the potion breaks
+				}
 				shatter( cell );
 			}
 		}
