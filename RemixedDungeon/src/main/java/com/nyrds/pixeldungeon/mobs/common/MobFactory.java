@@ -44,7 +44,6 @@ import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
-import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
@@ -162,8 +161,8 @@ public class MobFactory {
 		registerMobClass(RottingFist.class);
 
 
-		registerMobClass(Statue.class);
-
+		// Statue kind is data now (mobsDesc/Statue.json) - class kept as the
+		// ArmoredStatue/GoldenStatue base only, kind must not resolve to it.
 		registerMobClass(YogsBrain.class);
 		registerMobClass(YogsEye.class);
 		registerMobClass(YogsHeart.class);

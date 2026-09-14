@@ -895,6 +895,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public void destroy() {
+        getScript().runOptional("onDestroy");
         hp(0);
         Actor.remove(this);
 
@@ -2222,6 +2223,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
 
     public String getDescription() {
+        // script hook first - mobs with item-dependent descriptions (statues)
+        String scriptDesc = getScript().runOptional("description", "");
+        if (scriptDesc != null && !scriptDesc.isEmpty()) {
+            return scriptDesc;
+        }
+
         var description = getClassParam("Desc", "missing desc", true);
 
         description = StringsManager.maybeId(getClassDef().optString("description", getEntityKind() + "_Desc"));

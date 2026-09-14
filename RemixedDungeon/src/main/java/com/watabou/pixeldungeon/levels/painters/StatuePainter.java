@@ -3,12 +3,11 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.STATUE;
 
-import com.nyrds.pixeldungeon.mobs.common.ArmoredStatue;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
@@ -61,18 +60,18 @@ public class StatuePainter extends Painter {
 		}
 
 		if(Dungeon.isChallenged(Challenges.NO_WEAPON)) {
-			statue = new ArmoredStatue();
+			statue = MobFactory.mobByName(MobFactory.ARMORED_STATUE);
 		}
 
 		if(Dungeon.isChallenged(Challenges.NO_ARMOR)) {
-			statue = new Statue();
+			statue = MobFactory.mobByName(MobFactory.STATUE);
 		}
 
 		if(statue == null) {
 			if(Random.Float()>0.5) {
-				statue = new Statue();
+				statue = MobFactory.mobByName(MobFactory.STATUE);
 			} else {
-				statue = new ArmoredStatue();
+				statue = MobFactory.mobByName(MobFactory.ARMORED_STATUE);
 			}
 		}
 

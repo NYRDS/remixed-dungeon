@@ -7,9 +7,12 @@ import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.util.JsonHelper;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
@@ -33,6 +36,12 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	private boolean friendly;
 	private boolean immortal = false;
 	private boolean humanoid = false;
+
+	// statue-style sprite: hero-layers + currently equipped item
+	private boolean heroSprite = false;
+
+	// survive Level.reset (statues stay, ordinary mobs are removed)
+	private boolean persistOnReset = false;
 
 	//For restoreFromBundle
 	@Keep
@@ -162,6 +171,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 		humanoid = classDesc.optBoolean("isHumanoid", humanoid);
 
+		heroSprite = classDesc.optBoolean("heroSprite", heroSprite);
+
+		persistOnReset = classDesc.optBoolean("persistOnReset", persistOnReset);
+
 		kind = classDesc.optInt("var", kind);
 		carcassChance = (float) classDesc.optDouble("carcassChance", carcassChance);
 		hasBodyParts = classDesc.optBoolean("hasBodyParts", hasBodyParts);
@@ -191,5 +204,22 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	public boolean hasBodyParts() {
 		return hasBodyParts;
+	}
+
+	@Override
+	public CharSprite newSprite() {
+		if (heroSprite) {
+			var item = getItemFromSlot(Belongings.Slot.WEAPON);
+			if (!item.valid()) {
+				item = getItemFromSlot(Belongings.Slot.ARMOR);
+			}
+			return HeroSpriteDef.createHeroSpriteDef(item);
+		}
+		return super.newSprite();
+	}
+
+	@Override
+	public boolean reset() {
+		return persistOnReset;
 	}
 }

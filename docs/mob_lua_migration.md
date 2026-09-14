@@ -767,6 +767,8 @@ persist randoms into `self.data`.
 |---|---|
 | `stats(mob)` | ctor + every restore (after bundle stats) |
 | `act(mob) → bool` | pre-AI policy: return value discarded, java AI still runs; never spend time here |
+| `desc(mob) → string\|nil` | Char.getDescription script hook; nil/empty = json classDesc answers |
+| `destroy(mob)` | from Char.destroy (journal cleanup etc.), no return |
 | `attackProc(mob, enemy, dmg) → dmg` | fires only on a hit |
 | `defenceProc(mob, enemy, dmg) → dmg` | |
 | `damage(mob, dmg, src)` | after taking damage |
@@ -875,6 +877,58 @@ defenceProc probe fired; save round-trip preserved damaged hp, positions,
 states and LUA_DATA (ticks counters, plant roll) with zero `skip:` lines.
 CI python suite green on the new headless jar: blood 6/6, navigation,
 doctor 7/7, all_spells 38/38, alchemy 42/42.
+
+Thirteenth batch 2026-09-15 (statues, the sprite delta; Mike scoped it to
+ONE mob): **`Statue`** only — ArmoredStatue/GoldenStatue stay java and
+keep `Statue` as their base class; the kind went data by dropping
+`registerMobClass(Statue.class)` (class stays for the two variants; kind
+"Statue" now resolves to CustomMob, old saves restore via the FQN-tail
+route like every other batch).
+
+Engine surface (all reusable, statue-motivated):
+- json `heroSprite: true` on CustomMob → `newSprite()` builds
+  `HeroSpriteDef.createHeroSpriteDef(item)` — the statue look is
+  hero-layers (`hero_modern/body|head/statue.png`) carrying the equipped
+  weapon (or armor, weapon slot checked first). No `spriteDesc` needed;
+  the legacy `spritesDesc/Statue.json` remains as super's fallback.
+- json `persistOnReset: true` → CustomMob.reset returns true (java
+  Statue.reset survived Level.reset; default mobs are removed).
+- script hook `description` (bridge → user `desc(mob)`) consulted at the
+  TOP of `Char.getDescription`; nil/empty falls through to the json
+  classDesc path — statues describe their rolled weapon, and pre-empt the
+  level suffix exactly like the java override did.
+- script hook `onDestroy` (bridge → user `destroy(mob)`) from
+  `Char.destroy` — journal-record cleanup on removal.
+- `ItemUtils.statueWeaponCandidate(item)` + `enchantStatueWeapon(item)`
+  @LuaInterface statics: the lua side has NO instanceof, and the java
+  grant filter (EquipableItem + goodForMelee + usableAsWeapon +
+  !MissileWeapon + level>=0, enchant only MeleeWeapon) is pure class
+  logic. commonClasses exports `RPD.Slot`
+  (Belongings$Slot enum for `setItemForSlot`).
+- debug: `/debug/journal` (records+depth), `/debug/char_desc?id=`.
+
+Statue.lua: depth-scaled stats re-derived in `stats` each load
+(def/atk 4+depth, dmg depth/4+1..depth, ht 15+5*depth — json holds the
+depth-1 fallbacks; `data.born` gates the fresh-spawn full heal so a
+restore never re-heals: ctor-time fillStats runs BEFORE the bundle
+overwrites hp anyway, the guard is refactor insurance); gear grant is
+the one-shot `gearGranted` in data (slot already filled → pre-migration
+save, mark and skip); `act` journals on visibility (`!isPet()` +
+`CharUtils:isVisible`), `destroy` un-journals; `desc` =
+`RPD.format("Statue_Desc", item:name())`, naked → plain `name()`.
+
+Verified live (desktop, town depth 0 + sewer depth 1 + save round):
+stats exact per formulas, three rolls granted 3 different weapons
+(str 14/16/20), desc with weapon name in RU, journal add on sight and
+drop on kill (per-depth records), sprite rendering weapon layers,
+damaged hp 13/20 + state + LUA_DATA across go_to_level/reload_game,
+zero skip lines, hero/rat descs untouched. CI: alchemy 42/42,
+all_spells 38/38, doctor 6/6, blood 6/6. Not exercised organically: a
+random STATUE special room (painter now calls the proven
+`MobFactory.mobByName`; sweep of depths 3-7 rolled no statue room).
+
+Next: batch 14 = ArmoredStatue/GoldenStatue (drop the Statue java base
+last), NPC design pass.
 
 ## Verification checklist
 

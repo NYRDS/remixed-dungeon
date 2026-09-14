@@ -82,6 +82,19 @@ mob.onAct = function(self,mob)
     return not not (self.act and self.act(mob))
 end
 
+-- called from Char.destroy: side cleanup on removal (journal entries etc.)
+mob.onDestroy = function(self,mob)
+    return not not (self.destroy and self.destroy(mob))
+end
+
+-- called from Char.getDescription: nil lets the json classDesc answer
+mob.description = function(self,mob)
+    if not self.desc then
+        return nil
+    end
+    return self.desc(mob)
+end
+
 -- called from Mob.getCloser during the java AI step: return true when the
 -- script took the step itself (e.g. Succubus blink, incl. its spend refund),
 -- false to fall through to the regular pathfind

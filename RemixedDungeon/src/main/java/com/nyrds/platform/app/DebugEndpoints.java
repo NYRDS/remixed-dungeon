@@ -32,6 +32,7 @@ import com.nyrds.pixeldungeon.windows.WndPetSelect;
 import com.nyrds.platform.storage.SaveUtils;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
@@ -3131,6 +3132,88 @@ public class DebugEndpoints {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 String.format("{\"success\":true,\"id\":%d,\"kind\":\"%s\",\"undead\":%b,\"naturalUndead\":%b,\"hasBodyParts\":%b}",
                     ch.getId(), ch.getEntityKind(), ch.undead, ch.naturalUndead, ch.hasBodyParts()));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
+    // caveman: /debug/char_desc?id= (id may be "hero") - what the mob tooltip says,
+    // exercises the Char.getDescription script hook
+    public static NanoHTTPD.Response handleDebugCharDesc(NanoHTTPD.IHTTPSession session) {
+        try {
+            String id = "hero";
+            String query = session.getQueryParameterString();
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = URLDecoder.decode(param.substring(3), "UTF-8");
+                    }
+                }
+            }
+
+            final Char[] target = new Char[1];
+            final String[] error = new String[1];
+            final String finalId = id;
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                if (finalId.equals("hero")) {
+                    target[0] = Dungeon.hero;
+                    return;
+                }
+                try {
+                    Char ch = CharsList.getById(Integer.parseInt(finalId));
+                    if (ch == null || !ch.valid()) {
+                        error[0] = "no char with id: " + finalId;
+                        return;
+                    }
+                    target[0] = ch;
+                } catch (NumberFormatException e) {
+                    error[0] = "bad id: " + finalId;
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"%s\"}", error[0]));
+            }
+            if (target[0] == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"game not initialized\"}");
+            }
+
+            Char ch = target[0];
+            String desc = ch.getDescription().replace("\"", "'");
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"id\":%d,\"kind\":\"%s\",\"desc\":\"%s\"}",
+                    ch.getId(), ch.getEntityKind(), desc));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
+    // caveman: /debug/journal - current journal records (feature + depth)
+    public static NanoHTTPD.Response handleDebugJournal(NanoHTTPD.IHTTPSession session) {
+        try {
+            final List<String> records = new ArrayList<>();
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                for (Journal.Record rec : Journal.records) {
+                    records.add(String.format("%s|%d", rec.getFeature(), rec.depth));
+                }
+            });
+
+            StringBuilder json = new StringBuilder("{\"success\":true,\"records\":[");
+            for (int i = 0; i < records.size(); ++i) {
+                if (i > 0) {
+                    json.append(',');
+                }
+                String rec = records.get(i).replace("\"", "'");
+                json.append('"').append(rec).append('"');
+            }
+            json.append("]}");
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
         } catch (Exception e) {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse(e.getMessage()).toString());

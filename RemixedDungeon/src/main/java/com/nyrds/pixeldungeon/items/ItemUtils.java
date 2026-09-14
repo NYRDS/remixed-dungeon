@@ -13,6 +13,9 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
+import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
@@ -48,6 +51,25 @@ public class ItemUtils {
 
 	public static boolean usableAsWeapon(@NotNull EquipableItem item) {
 		return item.slot(new Belongings(CharsList.DUMMY)) == Belongings.Slot.WEAPON;
+	}
+
+	// statue gear roll gate - the exact java Statue.getItem candidate filter,
+	// lua side has no instanceof
+	@LuaInterface
+	public static boolean statueWeaponCandidate(@NotNull Item candidate) {
+		return candidate instanceof EquipableItem
+				&& ((EquipableItem) candidate).goodForMelee()
+				&& usableAsWeapon((EquipableItem) candidate)
+				&& !(candidate instanceof MissileWeapon)
+				&& candidate.level() >= 0;
+	}
+
+	// only real melee weapons take enchantments
+	@LuaInterface
+	public static void enchantStatueWeapon(@NotNull EquipableItem weapon) {
+		if (weapon instanceof MeleeWeapon) {
+			((MeleeWeapon) weapon).enchant(Enchantment.random());
+		}
 	}
 
     public static void tintBackground(@NotNull Item item, @NotNull ColorBlock bg) {
