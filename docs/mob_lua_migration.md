@@ -619,17 +619,20 @@ Every Bundlable category that reaches a save, and how it resolves:
 Traps exist twice: terrain triggers (`ITrigger` classes, not bundled) and
 `LevelObject` trap objects (bundled, covered by the factory above).
 
-## Coverage audit (2026-09-10)
+## Coverage audit (2026-09-10; counts refreshed 2026-09-15 after batches 12-14)
 
 Transitive closure over all `Mob`/`Item` descendants in
 `RemixedDungeon/src/main/java`, checked against factory registrations and
 data-def scans (`mobsDesc/*.json`, `scripts/items/*.lua`):
 
-- Mobs: 108 concrete descendants. All registered or json-defined except
-  `TreacherousSpirit` (spawned by AzuterronNPC) and `ImpShopkeeper`
-  (LastShopLevel shops) — **registered 2026-09-10**. `CustomMob`/
-  `MultiKindMob` are base classes; the nested `WandOfFlock$Sheep` is
-  registered manually as `Sheep`.
+- Mobs: every concrete descendant is reachable by kind. 88 kinds are
+  data-defined (`mobsDesc/*.json`, the migration target), 50 + 3 manual
+  entries remain java-registered (bosses, NPCs, engine mobs — see the
+  batch-15 survey for their override surfaces). Statue, ArmoredStatue,
+  GoldenStatue and the batch-12 kinds have NO java class anymore; their
+  old-save FQNs resolve through the FQN-tail route to CustomMob.
+  `CustomMob`/`MultiKindMob` are base classes; the nested
+  `WandOfFlock$Sheep` is registered manually as `Sheep`.
 - Items: 185 concrete descendants. All registered or lua-defined except
   `ChaosBlade` (chaos event → inventory) — **was java-side, not lua;
   registered 2026-09-10**; `Carcass` (dropped on mob death, saved in
