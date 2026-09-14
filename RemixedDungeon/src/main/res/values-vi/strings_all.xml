@@ -1151,6 +1151,7 @@
     <string name="SpeedBuff_Info">Sức sống và năng lượng tỏa ra từ cơ thể, và chuyển động cảm thấy nhanh hơn bình thường.</string>
     <string name="SpeedBuff_Name">Tốc độ</string>
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="Spell_SelectACell">Chọn một ô mục tiêu.</string>
     <string name="Spell_SelectAChar">Chọn một mục tiêu.</string>
     <string name="Spells_NotEnoughSP">Bạn không đủ mana để thi triển phép \&quot;%1$s\&quot;.</string>
     <string name="Spells_NotInOwnBody">Bạn không thể thực hiện %s khi linh hồn bạn tách rời khỏi cơ thể.</string>
@@ -1634,6 +1635,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
