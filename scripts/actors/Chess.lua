@@ -222,7 +222,11 @@ local function processLose()
     -- caveman: hero:die at difficulty<2 opens the "AnotherTry" save-slot modal.
     -- any throw here aborts BEFORE gameInProgress=false - cellClicked then eats
     -- every click forever (soft lock). trap and report.
-    local ok, err = pcall(function() RPD.Dungeon.hero:die(RPD.Dungeon.hero) end)
+    -- mate is final: no dew vial / lich / ankh revive; flag cleared even if die throws
+    local hero = RPD.Dungeon.hero
+    hero:setPermanentDeath(true)
+    local ok, err = pcall(function() hero:die(hero) end)
+    hero:setPermanentDeath(false)
     if not ok then
         RPD.glog("chess: hero:die FAILED: %s", tostring(err))
     end

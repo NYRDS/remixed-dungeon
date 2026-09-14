@@ -117,6 +117,9 @@ public class Hero extends Char {
 
     public boolean restoreHealth = false;
 
+    // death while set skips dew vial / lich / ankh revives (chess duel loss)
+    private boolean permanentDeath;
+
     private float awareness;
 
     private int scrambledExp = Scrambler.scramble(0);
@@ -583,12 +586,12 @@ public class Hero extends Char {
 
         clearActions();
 
-        if (DewVial.autoDrink(this)) {
+        if (!permanentDeath && DewVial.autoDrink(this)) {
             resurrectAnim();
             return;
         }
 
-        if (getSubClass() == HeroSubClass.LICH && getSkillPoints() == getSkillPointsMax()) {
+        if (!permanentDeath && getSubClass() == HeroSubClass.LICH && getSkillPoints() == getSkillPointsMax()) {
             setSkillPoints(0);
             GameScene.show(new WndResurrect(null, cause));
             return;
@@ -598,7 +601,7 @@ public class Hero extends Char {
 
         super.die(cause);
 
-        if (!Ankh.resurrect(this, cause)) {
+        if (permanentDeath || !Ankh.resurrect(this, cause)) {
             Dungeon.deleteGame(false);
             Hero.reallyDie(this, cause);
         }
@@ -890,6 +893,11 @@ public class Hero extends Char {
     public void setSubClass(HeroSubClass subClass) {
         EventCollector.setSessionData("subClass", subClass.name());
         this.subClass = subClass;
+    }
+
+    @LuaInterface
+    public void setPermanentDeath(boolean value) {
+        permanentDeath = value;
     }
 
     @Override
