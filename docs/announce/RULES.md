@@ -84,6 +84,6 @@ Include a txt2img prompt with the announce:
 
 ## Deliverable
 
-- One file per release: `scripts/stuff/announce/<version>.telegram.md`,
+- One file per release: `docs/announce/<version>.telegram.md`,
   containing EN block, RU block, txt2img prompt section.
 - Leave untracked unless asked to commit.
