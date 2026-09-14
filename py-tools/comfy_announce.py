@@ -26,7 +26,19 @@ import urllib.request
 import urllib.parse
 from pathlib import Path
 
+# Never hardcode the internal node address here (public repo): it lives in
+# ~/.config/comfy_announce/url or the COMFY_URL env var.
 DEFAULT_URL = "http://127.0.0.1:8188"
+
+
+def resolve_url():
+    env = os.environ.get("COMFY_URL")
+    if env:
+        return env
+    f = Path.home() / ".config" / "comfy_announce" / "url"
+    if f.is_file():
+        return f.read_text().strip()
+    return DEFAULT_URL
 
 UNET = "qwen_image_2512_fp8_e4m3fn.safetensors"
 CLIP = "qwen_2.5_vl_7b_fp8_scaled.safetensors"
@@ -260,7 +272,7 @@ def postprocess(src, pixel, colors):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("prompt", nargs="?", help="prompt text, or path to a .txt file")
-    ap.add_argument("--url", default=os.environ.get("COMFY_URL", DEFAULT_URL))
+    ap.add_argument("--url", default=resolve_url())
     ap.add_argument("--size", default="1664x832", help="WxH, default banner 1664x832")
     ap.add_argument("--steps", type=int, default=None)
     ap.add_argument("--cfg", type=float, default=None)
