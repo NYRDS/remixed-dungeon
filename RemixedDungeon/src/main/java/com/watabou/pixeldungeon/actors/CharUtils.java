@@ -237,6 +237,11 @@ public class CharUtils {
 
 
         if (controlTarget instanceof Hero && (target == null || target.friendly(controlTarget))) {
+            // friendly char wins over heap under it - tapping a pet swaps; pick its loot by walking onto the cell
+            if (target != null && target != controlTarget) {
+                return new Interact(target);
+            }
+
             CharAction charAction = handleObjectOrHeap(actor, cell, level);
             if (charAction != null) return charAction;
 
