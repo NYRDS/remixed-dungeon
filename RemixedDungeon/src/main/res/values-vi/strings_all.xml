@@ -88,6 +88,7 @@
     <string name="Badges_GoldColleted3">Đã thu thập 2500 vàng</string>
     <string name="Badges_GoldColleted4">Đã thu thập 7500 vàng</string>
     <string name="Badges_GrimWepon">Quái vật bị giết bởi vũ khí Grim</string>
+    <string name="Badges_HappyEnd">Kết thúc có hậu</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
     <string name="Badges_ItemLvl1">Đã thu được vật phẩm cấp 3</string>
     <string name="Badges_ItemLvl2">Đã có vật phẩm cấp 6</string>
@@ -1643,6 +1644,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
