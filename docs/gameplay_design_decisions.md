@@ -30,7 +30,7 @@ Rules:
 ## Items & economy
 - 2026-09-14 — **Doctor class armor's built-in mask is the real one.** Wearing the epic DoctorArmor grants GasesImmunity; the accessory mask is an optional pre-armor backup. Either source alone keeps the immunity. (04ab87c01)
 - 2026-09-14 — **Shield upgrades lower STR requirement** like armor does: `max(2, base − level)`; blocked damage already scales ×1.3/level and the desc shows effective values. (4e73c6b05)
-- 2026-09-14 — **Rotberry brews Potion of Strength**: `Rotberry.Seed ×1 → PotionOfStrength` in the recipe system; the `+10 VileEssence → PotionOfMight` path stays alongside. (65db2ae68)
+- 2026-09-14 — **Rotberry → Potion of Strength belongs to the legacy pot lottery, not recipes.** The `Rotberry×1 → PotionOfStrength` recipe was reverted (66ac065f6, was 65db2ae68): the player's "30%" is the alchemy pot's 3-seed lottery — all-seed heap of ≥3 brews a potion, each seed's `alchemyClass` gets its weighted share, and rotberry's is PotionOfStrength (≈1/3 of a 3-seed pot). Dropping the seed alone does nothing (`SEEDS_TO_POTION = 3`). No authored strength-potion recipe; `Rotberry + 10 VileEssence → PotionOfMight` stays.
 - long-standing — Price 0 = not sellable (FOR_SALE gate); the 1g `adjustPrice` floor is deliberate.
 - long-standing — **Authored stats over derived heuristics:** game values live as authored data (java/lua/desc json), not computed from formulas where avoidable.
 
