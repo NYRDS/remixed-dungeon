@@ -761,6 +761,10 @@ public abstract class Mob extends Char {
         new_mob.restoreFromBundle(storedMob);
         new_mob.getId(); //Ensure valid id
 
+        // bare storeInBundle above skips @Packable fields - keep undead state and kill reward across clones
+        new_mob.setUndead(undead);
+        new_mob.expForKill = expForKill;
+
         if (getOwnerId() == getId()) {
             new_mob.setOwnerId(new_mob.getId());
         } else {
