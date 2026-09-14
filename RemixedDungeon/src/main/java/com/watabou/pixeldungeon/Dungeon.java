@@ -414,6 +414,11 @@ public class Dungeon {
     private static void spawnPet(Level level, Mob mob) {
         int pos = level.getNearestTerrain(hero.getPos(), mob::canSpawnAt);
 
+        // a pet keeps its spot when the game reloads on the level it was left on
+        if (level.levelId.equals(mob.levelId) && level.cellValid(mob.getPos()) && mob.canSpawnAt(level, mob.getPos())) {
+            pos = mob.getPos();
+        }
+
         GLog.debug("spawnPet: %s id=%d -> cell %d", mob.getEntityKind(), mob.getId(), pos);
 
         if (level.cellValid(pos)) {
@@ -421,6 +426,7 @@ public class Dungeon {
         } else {
             mob.setPos(hero.getPos());
         }
+        mob.levelId = level.levelId;
 
         mob.setEnemy(CharsList.DUMMY);
         // caveman: remote-controlled followers keep their injected state -
@@ -502,6 +508,7 @@ public class Dungeon {
         if (level != null) {
             for (Mob mob : level.mobs) {
                 if (mob.getOwner() instanceof Hero) {
+                    mob.levelId = level.levelId; // stamp the level the pet's pos belongs to
                     heroPets.add(mob);
                 }
             }

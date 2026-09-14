@@ -73,6 +73,10 @@ public abstract class Mob extends Char {
     @Packable(defaultValue = "1")
     public int expForKill = 1;
 
+    // level the mob's current pos belongs to (pets keep their spot on game reload)
+    @Packable(defaultValue = "unknown")
+    public String levelId = "unknown";
+
     protected int maxLvl = 50;
     protected float carcassChance = ModdingBase.inMod() ? ModQuirks.defaultCarcassChance : 0.5f;
 
