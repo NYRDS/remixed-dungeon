@@ -14,6 +14,10 @@ import com.watabou.utils.Bundle;
 
 
 public class MimicAmulet extends Mob {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	@Packable
 	public int level;

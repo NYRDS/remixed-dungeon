@@ -164,8 +164,8 @@ public class Carcass extends Item implements Doom {
         // Create random harvestable items to drop
         String[] harvestItems = {"ToxicGland", "RottenOrgan", "BoneShard"};
 
-        // Determine how many items to get based on the source mob's HP and carcass upgrade
-        int itemCount = Math.max(1, src.ht() * upgradeMultiplier() / 20);
+        // constructs and non-corporeal beings leave a carcass, but nothing dissectable
+        int itemCount = src.hasBodyParts() ? Math.max(1, src.ht() * upgradeMultiplier() / 20) : 0;
 
         int itemsObtained = 0;
         for (int i = 0; i < itemCount; i++) {

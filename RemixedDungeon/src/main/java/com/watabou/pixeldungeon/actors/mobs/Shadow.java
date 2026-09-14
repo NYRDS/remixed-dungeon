@@ -4,6 +4,11 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 
 public class Shadow extends Mob {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
+
 	{
 		hp(ht(20));
 		baseDefenseSkill = 15;

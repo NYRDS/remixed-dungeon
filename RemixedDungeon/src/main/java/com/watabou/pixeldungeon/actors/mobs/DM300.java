@@ -36,6 +36,10 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 public class DM300 extends Boss {
+    @Override
+    public boolean hasBodyParts() {
+    	return false;
+    }
 
     public DM300() {
         spriteClass = "spritesDesc/DM300.json";

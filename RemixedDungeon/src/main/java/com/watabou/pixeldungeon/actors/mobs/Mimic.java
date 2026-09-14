@@ -23,6 +23,10 @@ import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
 public class Mimic extends Mob implements IDepthAdjustable {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	private int level;
 

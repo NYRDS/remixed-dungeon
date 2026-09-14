@@ -12,6 +12,10 @@ import org.jetbrains.annotations.NotNull;
  * Created by DeadDie on 12.02.2016
  */
 public class ColdSpirit extends Mob {
+    @Override
+    public boolean hasBodyParts() {
+        return false;
+    }
 
     public ColdSpirit(){
         hp(ht(50));

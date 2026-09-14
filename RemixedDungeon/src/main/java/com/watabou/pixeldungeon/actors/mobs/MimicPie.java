@@ -8,7 +8,11 @@ import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.items.food.RottenPasty;
 
 public class MimicPie extends Mob implements IDepthAdjustable {
-	
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
+
 	private int level;
 	
 	public MimicPie() {

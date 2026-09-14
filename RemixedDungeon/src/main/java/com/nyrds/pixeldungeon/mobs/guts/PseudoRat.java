@@ -10,6 +10,11 @@ import com.watabou.pixeldungeon.items.Gold;
  * Created by DeadDie on 12.02.2016
  */
 public class PseudoRat extends Mob {
+    @Override
+    public boolean hasBodyParts() {
+        return false;
+    }
+
     {
         hp(ht(320));
         baseDefenseSkill = 30;

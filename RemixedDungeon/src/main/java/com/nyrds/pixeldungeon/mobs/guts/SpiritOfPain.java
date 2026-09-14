@@ -8,6 +8,10 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
  * Created by DeadDie on 19.04.2016
  */
 public class SpiritOfPain extends Mob {
+    @Override
+    public boolean hasBodyParts() {
+        return false;
+    }
 
     {
         carcassChance = 0;

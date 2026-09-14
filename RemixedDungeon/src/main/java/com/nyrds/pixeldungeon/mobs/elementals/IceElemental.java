@@ -16,6 +16,10 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 public class IceElemental extends Mob implements IDepthAdjustable {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	public IceElemental() {
 		carcassChance = 0;

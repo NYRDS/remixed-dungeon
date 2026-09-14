@@ -19,6 +19,10 @@ import org.jetbrains.annotations.NotNull;
  * Created by DeadDie on 12.02.2016
  */
 public class EnslavedSoul extends Mob {
+    @Override
+    public boolean hasBodyParts() {
+        return false;
+    }
 
     static final Class<?>[] BuffsForEnemy = {
             Blindness.class,

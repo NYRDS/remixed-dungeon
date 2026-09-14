@@ -22,6 +22,10 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import org.jetbrains.annotations.NotNull;
 
 public class BurningFist extends Mob implements IZapper {
+    @Override
+    public boolean hasBodyParts() {
+    	return false;
+    }
 
     {
 

@@ -14,6 +14,10 @@ import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 public class FireElemental extends Mob {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	public FireElemental() {
 		carcassChance = 0;

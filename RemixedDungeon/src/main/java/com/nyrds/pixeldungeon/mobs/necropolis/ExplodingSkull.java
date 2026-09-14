@@ -9,6 +9,11 @@ import org.jetbrains.annotations.NotNull;
  * Created by DeadDie on 12.02.2016
  */
 public class ExplodingSkull extends Mob {
+    @Override
+    public boolean hasBodyParts() {
+        return false;
+    }
+
     {
         carcassChance = 0;
         hp(ht(10));

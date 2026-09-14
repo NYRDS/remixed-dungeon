@@ -14,6 +14,10 @@ import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import org.jetbrains.annotations.NotNull;
 
 public class IceGuardian extends MultiKindMob {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 	public IceGuardian() {
 		hp(ht(70));

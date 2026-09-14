@@ -54,6 +54,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
         debugEndpoints.put("/debug/change_map", DebugEndpoints::handleDebugChangeMap);
         debugEndpoints.put("/debug/give_item", DebugEndpoints::handleDebugGiveItem);
         debugEndpoints.put("/debug/item_info", DebugEndpoints::handleDebugItemInfo);
+        debugEndpoints.put("/debug/use_item", DebugEndpoints::handleDebugUseItem);
         debugEndpoints.put("/debug/spawn_at", DebugEndpoints::handleDebugSpawnAt);
         debugEndpoints.put("/debug/start_game", DebugEndpoints::handleDebugStartGame);
         debugEndpoints.put("/debug/continue_game", DebugEndpoints::handleDebugContinueGame);

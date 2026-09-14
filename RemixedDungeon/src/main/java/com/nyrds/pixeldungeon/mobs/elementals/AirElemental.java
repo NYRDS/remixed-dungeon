@@ -13,6 +13,10 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import org.jetbrains.annotations.NotNull;
 
 public class AirElemental extends Mob implements IDepthAdjustable {
+	@Override
+	public boolean hasBodyParts() {
+		return false;
+	}
 
 
 	private static final WindGust windGust = new WindGust();

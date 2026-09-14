@@ -97,6 +97,13 @@ public abstract class Mob extends Char {
 
     private Carcass carcassRef;
 
+    // visual hint for MobSprite: a carcass replaced the corpse, fade it quicker
+    private boolean droppedCarcass = false;
+
+    public boolean droppedCarcass() {
+        return droppedCarcass;
+    }
+
     // caveman: remote-control watchdog - see RemoteControlled state.
     // remoteRevertAfter persists in the bundle; counters do not (reset on load).
     public static final String REMOTE_REVERT_AFTER = "remoteRevertAfter";
@@ -428,6 +435,7 @@ public abstract class Mob extends Char {
                 Item carcass = carcass();
                 if (carcass.valid()) {
                     level().drop(carcass, getPos());
+                    droppedCarcass = true;
                 }
             }
 
@@ -748,6 +756,7 @@ public abstract class Mob extends Char {
 
     public void revive() {
         carcassRef = null;
+        droppedCarcass = false;
 
     }
 
