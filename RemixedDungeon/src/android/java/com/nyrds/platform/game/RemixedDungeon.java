@@ -42,10 +42,6 @@ public class RemixedDungeon extends Game {
 		com.watabou.utils.Bundle.addAlias(
 				com.watabou.pixeldungeon.items.food.Ration.class,
 				"com.watabou.pixeldungeon.items.food.Food");
-		// remix 23.1.alpha
-		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat.class,
-				"com.nyrds.pixeldungeon.mobs.guts.Wererat");
 		// remix 23.2.alpha
 		com.watabou.utils.Bundle.addAlias(
 				com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore.class,
@@ -66,11 +62,6 @@ public class RemixedDungeon extends Game {
 		com.watabou.utils.Bundle.addAlias(
 				com.nyrds.pixeldungeon.mechanics.buffs.RageBuff.class,
 			"com.watabou.pixeldungeon.items.quest.CorpseDust.UndeadRageAuraBuff"
-		);
-
-		com.watabou.utils.Bundle.addAlias(
-				com.watabou.pixeldungeon.actors.mobs.FireElemental.class,
-				"com.watabou.pixeldungeon.actors.mobs.Elemental"
 		);
 
 	}

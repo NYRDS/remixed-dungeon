@@ -10,6 +10,8 @@ import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
+import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
@@ -19,6 +21,7 @@ import com.nyrds.pixeldungeon.ml.actions.InteractObject;
 import com.nyrds.pixeldungeon.ml.actions.Move;
 import com.nyrds.pixeldungeon.ml.actions.Unlock;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.GameControl;
 import com.nyrds.pixeldungeon.utils.Position;
@@ -33,7 +36,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -44,8 +46,6 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
-import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
-import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -4278,56 +4278,62 @@ public class DebugEndpoints {
 
     // caveman: AI-state probe - why is this mob not attacking?
     public static NanoHTTPD.Response handleDebugMobBrain(NanoHTTPD.IHTTPSession session) {
-        String query = session.getQueryParameterString();
-        int id = -1;
-        if (query != null) {
-            for (String param : query.split("&")) {
-                if (param.startsWith("id=")) {
-                    id = Integer.parseInt(param.substring(3));
+        try {
+            String query = session.getQueryParameterString();
+            int id = -1;
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = Integer.parseInt(param.substring(3));
+                    }
                 }
             }
-        }
-        final Mob mob = findMobById(id);
-        if (mob == null) {
-            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
-                createErrorResponse("need id of a live mob").toString());
-        }
-
-        final Char enemy = mob.getEnemy();
-        JSONObject json = new JSONObject();
-        json.put("id", mob.getId());
-        json.put("kind", mob.getEntityKind());
-        json.put("pos", mob.getPos());
-        json.put("state", mob.getState() != null ? mob.getState().getTag() : "none");
-        json.put("enemyValid", enemy != null && enemy.valid());
-        json.put("enemyId", enemy != null && enemy.valid() ? enemy.getId() : -1);
-        json.put("enemyKind", enemy != null && enemy.valid() ? enemy.getEntityKind() : "none");
-        json.put("enemyPos", enemy != null && enemy.valid() ? enemy.getPos() : -1);
-        json.put("enemyAlive", enemy != null && enemy.valid() && enemy.isAlive());
-        json.put("enemyInFov", mob.isEnemyInFov());
-        json.put("enemySeen", mob.enemySeen);
-        json.put("canAttackEnemy", enemy != null && enemy.valid() && mob.canAttack(enemy));
-        if (enemy != null && enemy.valid()) {
-            JSONArray blocks = new JSONArray();
-            int traceEnd = com.watabou.pixeldungeon.mechanics.Ballistica.cast(mob.getPos(), enemy.getPos(), false, true);
-            for (int i = 1; i < com.watabou.pixeldungeon.mechanics.Ballistica.distance; i++) {
-                int cell = com.watabou.pixeldungeon.mechanics.Ballistica.trace[i];
-                JSONObject step = new JSONObject();
-                step.put("cell", cell);
-                step.put("passable", mob.level().passable[cell]);
-                step.put("losBlock", mob.level().losBlocking[cell]);
-                com.watabou.pixeldungeon.actors.Actor onCell = com.watabou.pixeldungeon.actors.Actor.findChar(cell);
-                step.put("char", onCell != null ? onCell.getEntityKind() : null);
-                blocks.put(step);
+            final Mob mob = findMobById(id);
+            if (mob == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need id of a live mob").toString());
             }
-            json.put("traceEnd", traceEnd);
-            json.put("trace", blocks);
+
+            final Char enemy = mob.getEnemy();
+            JSONObject json = new JSONObject();
+            json.put("id", mob.getId());
+            json.put("kind", mob.getEntityKind());
+            json.put("pos", mob.getPos());
+            json.put("state", mob.getState() != null ? mob.getState().getTag() : "none");
+            json.put("enemyValid", enemy != null && enemy.valid());
+            json.put("enemyId", enemy != null && enemy.valid() ? enemy.getId() : -1);
+            json.put("enemyKind", enemy != null && enemy.valid() ? enemy.getEntityKind() : "none");
+            json.put("enemyPos", enemy != null && enemy.valid() ? enemy.getPos() : -1);
+            json.put("enemyAlive", enemy != null && enemy.valid() && enemy.isAlive());
+            json.put("enemyInFov", mob.isEnemyInFov());
+            json.put("enemySeen", mob.enemySeen);
+            json.put("canAttackEnemy", enemy != null && enemy.valid() && mob.canAttack(enemy));
+            if (enemy != null && enemy.valid()) {
+                JSONArray blocks = new JSONArray();
+                int traceEnd = com.watabou.pixeldungeon.mechanics.Ballistica.cast(mob.getPos(), enemy.getPos(), false, true);
+                for (int i = 1; i < com.watabou.pixeldungeon.mechanics.Ballistica.distance; i++) {
+                    int cell = com.watabou.pixeldungeon.mechanics.Ballistica.trace[i];
+                    JSONObject step = new JSONObject();
+                    step.put("cell", cell);
+                    step.put("passable", mob.level().passable[cell]);
+                    step.put("losBlock", mob.level().losBlocking[cell]);
+                    com.watabou.pixeldungeon.actors.Actor onCell = com.watabou.pixeldungeon.actors.Actor.findChar(cell);
+                    step.put("char", onCell != null ? onCell.getEntityKind() : null);
+                    blocks.put(step);
+                }
+                json.put("traceEnd", traceEnd);
+                json.put("trace", blocks);
+            }
+            json.put("distance", enemy != null && enemy.valid() ? mob.level().distance(mob.getPos(), enemy.getPos()) : -1);
+            json.put("paralysed", mob.paralysed);
+            json.put("pacified", mob.pacified);
+            json.put("hp", mob.hp());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugMobBrain: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
-        json.put("distance", enemy != null && enemy.valid() ? mob.level().distance(mob.getPos(), enemy.getPos()) : -1);
-        json.put("paralysed", mob.paralysed);
-        json.put("pacified", mob.pacified);
-        json.put("hp", mob.hp());
-        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
     }
 
     private static Mob findMobById(int id) {
@@ -4717,7 +4723,6 @@ public class DebugEndpoints {
                 chr.getState().getTag(),
                 buffs,
                 inv.toString()
-            );
             );
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);

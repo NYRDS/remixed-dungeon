@@ -1,7 +1,7 @@
 package com.nyrds.pixeldungeon.items.common.armor;
 
-import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
