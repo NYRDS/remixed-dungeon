@@ -709,6 +709,7 @@
     <string name="Level_TileDescAlchemy">Laat hier wat zaden vallen om een drank te brouwen.</string>
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
     <string name="Level_TileDescChasm">Je kunt de bodem niet zien.</string>
+    <string name="Level_TileDescEntrance">Trappen leiden naar een hogere verdieping.</string>
     <string name="Level_TileDescExit">De treden leiden naar beneden, naar een diepere verdieping.</string>
     <string name="Level_TileDescLockedDoor">Deze deur is op slot, je hebt een passende sleutel nodig om hem te openen.</string>
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
@@ -1642,6 +1643,7 @@
     <string name="town_deco_common_door_desc">Een beleefde avonturier zou geen private eigendom binnendringen, zonder uitnodiging natuurlijk.</string>
     <string name="town_deco_counter_name">Toonbank</string>
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
+    <string name="town_deco_crate_scrolls_name">Kist met rollen</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
     <string name="town_deco_cross_name">Kruis</string>
     <string name="town_deco_crossroad_desc">Een ruwe houten paal met pijlvormige bordjes, de tekst waarop vervaagd is door de harde weersomstandigheden.</string>
@@ -1725,6 +1727,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 

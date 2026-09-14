@@ -656,6 +656,7 @@
     <string name="Journal_Alchemy">Nồi giả kim thuật</string>
     <string name="Journal_Azuterron">Người lạ</string>
     <string name="Journal_Caged_Kobold">Kobold Bị Giam</string>
+    <string name="Journal_Ghost">Hồn ma buồn</string>
     <string name="Journal_Imp">Kẻ quỷ tham lam</string>
     <string name="Journal_PlagueDoctorNPC">Bác sĩ dịch hạch</string>
     <string name="Journal_Troll">Thợ rèn Troll</string>
@@ -1651,6 +1652,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
