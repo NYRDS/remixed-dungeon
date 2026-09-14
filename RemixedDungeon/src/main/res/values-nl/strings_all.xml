@@ -794,6 +794,7 @@
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
     <string name="MissileWeapon_Yes">Ja, ik weet wat ik doe</string>
     <string name="Mob_Attacking">Reken deze %s als dood!</string>
+    <string name="Mob_Died">Je hoort iets in de verte sterven</string>
     <string name="Mob_GoingTo">Al onderweg!</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
     <string name="Mob_PetDied">Je huisdier is gestorven: %s</string>
@@ -1720,6 +1721,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 
