@@ -560,6 +560,7 @@
     <string name="HeroClass_MagPerks_2">Wanneer gegeten, herstelt elk stuk voedsel 1 lading voor alle staven in de inventaris.</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroClass_MagPerks_5">De scrollen van identificatie zijn vanaf het begin geïdentificeerd.</string>
+    <string name="HeroClass_NecromancerPerks_0">Necromancers beginnen met 15 punten Gezondheid.</string>
     <string name="HeroClass_NecromancerPerks_1">Necromanten gebruiken mana om Doodsspreuken te spreken.</string>
     <string name="HeroClass_NecromancerPerks_2">Necromanten beginnen met een uniek Necromantengewaad, dat 1 manapunt geeft voor elk verslagen wezen.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
@@ -1659,6 +1660,7 @@
     <string name="town_deco_locked_door_desc">Wat ter wereld zou er achter die deur kunnen zitten?</string>
     <string name="town_deco_magenta_carpet_desc">De magenta kleur van dit tapijt doet denken aan lokale wijn.</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
+    <string name="town_deco_misc_desc">Een hoop rommel en snuisterijen.</string>
     <string name="town_deco_mud_desc">Ontdooide grond in dit permafrostgebied.</string>
     <string name="town_deco_mud_name">modder</string>
     <string name="town_deco_painting_desc">Een prachtig stuk kunst.</string>
@@ -1713,6 +1715,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
