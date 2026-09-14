@@ -240,7 +240,21 @@ def build_wiki_map(wiki_data_dir: Path) -> Tuple[Dict[str, List[Tuple[str, str]]
     media_dir = wiki_data_dir / 'media'
 
     if not pages_dir.exists():
-        print(f"Error: Pages directory {pages_dir} does not exist")
+        # The tool expects the wiki-data ROOT (it appends /pages itself);
+        # passing a deeper directory is a common mistake. Try to locate a
+        # wiki-data root by walking up from the current directory.
+        for candidate in [Path.cwd(), *Path.cwd().parents]:
+            if (candidate / 'wiki-data' / 'pages').is_dir():
+                wiki_data_dir = candidate / 'wiki-data'
+                print(f"Note: no pages/ under the given --dir; using {wiki_data_dir} (found via parent search)")
+                pages_dir = wiki_data_dir / 'pages'
+                media_dir = wiki_data_dir / 'media'
+                break
+
+    if not pages_dir.exists():
+        print(f"Error: Pages directory {pages_dir} does not exist. "
+              "Run from the repo root or pass --dir pointing at the wiki-data ROOT; "
+              "the tool appends /pages itself (e.g. --dir wiki-data, not --dir wiki-data/pages/en).")
         return {}, [], set(), [], set()
 
     if not media_dir.exists():
@@ -552,7 +566,19 @@ def main():
     wiki_data_dir = Path(args.dir)
 
     if not wiki_data_dir.exists():
-        print(f"Error: Wiki data directory {wiki_data_dir} does not exist")
+        # The tool expects the wiki-data ROOT (it appends /pages itself);
+        # a missing directory usually means we were run from the wrong
+        # working directory. Try to locate a wiki-data root by walking up.
+        for candidate in [Path.cwd(), *Path.cwd().parents]:
+            if (candidate / 'wiki-data' / 'pages').is_dir():
+                wiki_data_dir = candidate / 'wiki-data'
+                print(f"Note: '{args.dir}' does not exist here; using {wiki_data_dir} (found via parent search)")
+                break
+
+    if not wiki_data_dir.exists():
+        print(f"Error: Wiki data directory {wiki_data_dir} does not exist. "
+              "Run from the repo root or pass --dir pointing at the wiki-data ROOT; "
+              "the tool appends /pages itself (e.g. --dir wiki-data, not --dir wiki-data/pages/en).")
         return
 
     print(f"Analyzing wiki data in {wiki_data_dir}...")
