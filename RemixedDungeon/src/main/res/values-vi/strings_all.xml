@@ -226,6 +226,7 @@
     <string name="Challenges_Descriptions_2">Là một tín徒 của sự hồi phục tự nhiên của cơ thể bình thường, bạn luôn cảnh giác với những loại thuốc có tác dụng chữa bệnh. Thà phòng còn hơn chữa!</string>
     <string name="Challenges_Descriptions_3">Vùng đất xung quanh hầm ngục đã lâu bị ác ý xâm nhiễm, ngăn cản sự nảy mầm của hạt giống cho các loại thảo mộc và thực vật. Ai biết được còn bao lâu nữa cây cối cuối cùng sẽ ngừng tồn tại trên vùng đất hoang tàn này.</string>
     <string name="Challenges_Descriptions_4">Một hiện diện tà ác đang ẩn nấp trong tâm trí của tất cả sinh vật trong hầm ngục, khiến chúng nhận thức được những sự kiện xảy ra với nhau.</string>
+    <string name="Challenges_Descriptions_7">Bạn đã quen với việc rằng sở hữu và sử dụng vũ khí là sai về mặt đạo đức, nhưng còn gì khác có thể bảo vệ bạn khỏi những sinh vật lang thang dưới đây?</string>
     <string name="Challenges_Descriptions_8">Hành trình của bạn sẽ bắt đầu ở hố ga đen tối và nguy hiểm của thành phố, với lối duy nhất ra mặt đất bị chặn. Để tr tình trạng tồi tệ hơn, bạn chỉ có thể sử dụng trang bị tìm thấy trong ngục. Với tài nguyên và trang bị giới hạn, sự sống còn của bạn sẽ phụ thuộc vào kỹ năng và chiến lược của bạn.</string>
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
     <string name="Challenges_Names_4">Trí tuệ bầy đàn</string>
@@ -466,6 +467,7 @@
     <string name="FuryBuff_Name">Cuồng Nộ</string>
     <string name="GameScene_Chasm">Bước chân của bạn vang vọng khắp hầm ngục.</string>
     <string name="GameScene_NightMode">Hãy cẩn thận, hầm ngục còn nguy hiểm hơn vào ban đêm!</string>
+    <string name="GameScene_Secrets">Bầu không khí gợi ý rằng tầng này ẩn chứa nhiều bí mật.</string>
     <string name="GameScene_Water">Bạn nghe thấy tiếng nước vỗ quanh bạn.</string>
     <string name="GameScene_Welcome">Chào mừng bạn đến cấp %d của Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Chào mừng quay lại cấp %d của Remixed Dungeon!</string>
@@ -1635,6 +1637,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
