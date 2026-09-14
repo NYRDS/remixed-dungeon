@@ -864,6 +864,7 @@
     <string name="Piercing_Name_0">Thâm Nhập %s</string>
     <string name="Piercing_Name_1">Xuyên %s</string>
     <string name="Piercing_Name_2">Thâm Nhập %s</string>
+    <string name="Piranha_Desc">Những loài cá ăn thịt này không phải là cư dân tự nhiên của các hồ dưới lòng đất. Chúng được lai tạo đặc biệt để bảo vệ các kho báu bị ngập.</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">piranha khổng lồ</string>
     <string name="PirateSet_Name">Bộ Cướp Biển</string>
@@ -1538,6 +1539,7 @@
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="Zombie_Name_Objective">kẻ sống chết</string>
+    <string name="deco_candle_name">Nến</string>
     <string name="gdpr_agree">Có, tôi đồng ý</string>
     <string name="gdpr_title">Cá nhân hóa trải nghiệm quảng cáo của bạn</string>
     <string name="town_deco_armoronhanger_desc">Loại giáp nào đó trên móc treo.</string>
@@ -1648,6 +1650,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

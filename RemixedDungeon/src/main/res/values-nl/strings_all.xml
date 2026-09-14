@@ -307,6 +307,7 @@
     <string name="CharmBuff_Info">Geest en lichaam waren betoverd!</string>
     <string name="CharmSpell_Cast">%s is betoverd.</string>
     <string name="Chasm_Info">Je viel naar je dood...</string>
+    <string name="Chasm_Yes">Ja, ik weet wat ik doe</string>
     <string name="Chess_Stalemate">Pat! De Koning verlaat het bord en laat je passeren.</string>
     <string name="Chess_YouLose">Je verliest!</string>
     <string name="Chess_YouWin">Je wint!</string>
@@ -330,6 +331,7 @@
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_1">Terugstoot Glief - Veroorzaakt dat vijanden worden teruggeduwd nadat ze de Held raken.</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
+    <string name="Codex_Story_11">Grimmig wapen - Bij een succesvolle treffer kan het doelwit direct worden gedood (of tot 2x schade aan een baas worden toegebracht).</string>
     <string name="Codex_Story_12">Brandid wapen - Bij een succesvolle treffer geeft dit extra schade en kan het doel in brand steken.</string>
     <string name="Codex_Story_13">Eldritch wapen - Bij een succesvolle treffer kan de vijand vluchten in Angst.</string>
     <string name="Codex_Story_14">Onstabiel wapen - Bij een succesvolle treffer kan het effect van willekeurige betovering optreden.</string>
@@ -1244,6 +1246,7 @@
     <string name="StoneBloodBuff_Info">Het bloed verandert in steen die samensmelt met de nabije muren en het doorlopen ervan veel makkelijker maakt, maar tegen welke prijs.</string>
     <string name="StoneBloodBuff_Name">Stenen bloed</string>
     <string name="StrongShield_desc">Dit rechthoekige schild is bekleed met koperen platen en versierd met gekleurde stof. Het is aanzienlijk zwaarder, maar kan veel meer binnenkomende schade blokkeren.</string>
+    <string name="StunBuff_Info">Verdoofd!</string>
     <string name="Stylus_ACInscribe">Inschrijven</string>
     <string name="Stylus_Info">Deze arcanische stylus is gemaakt van een donkere, zeer harde steen. Je kunt er een glyph of rune mee graveren, maar je kunt niet kiezen welke er wordt gegraveerd; de stylus beslist voor je.</string>
     <string name="Stylus_Inscribed">je hebt de %1$s op je %2$s gegraveerd</string>
@@ -1721,6 +1724,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
