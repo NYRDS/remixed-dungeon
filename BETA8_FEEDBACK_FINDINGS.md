@@ -36,6 +36,7 @@ Doorway repro (a): the Ballistica diagonal reaches the warlock directly (the mob
 
 **Verdict: DESIGN.**
 Options: (a) add an explicit recipe `Rotberry ×1 → PotionOfStrength` (restores the remembered mechanic; decide if bare or with a cheap filler); (b) keep PotionOfMight as the only path and open a non-Doctor VileEssence source (see A5); (c) leave as is. Recommend (a).
+**Update 2026-09-14: corrected by Mike** — the report was about the *legacy alchemy pot*, not the recipe system: there, rotberry's `alchemyClass` (PotionOfStrength) gets its weighted share of the 3-seed lottery brew — the "30%" the player remembers. The trial recipe was reverted; no code changed. Answer for the reporter: the pot needs 3+ seeds (rotberry alone does nothing); rotberry + any 2 seeds gives roughly a 1-in-3 shot at Potion of Strength.
 
 ### A5. "Презренная субстанция" (VileEssence) — "nothing can be brewed from it"
 **Findings:** not a dead end in data — it is the hub ingredient: 12 fixed recipes (rat/spider/gnoll armors, gas potions, SacrificialSword, Goo, Zombie×10, PotionOfMight…) **plus every auto-generated necromancy resurrection recipe** (`5×Carcass + N×VileEssence`, AlchemyRecipes.java:118-144). The UI only shows the alchemy action when the player already holds **all** other ingredients of some recipe (Item.java:158-206), so with no carcasses in pack it looks useless. Practical catch: its own inputs (BoneShard + RottenOrgan + ToxicGland) come only from Doctor dissect / BoneSaw crits → for non-Doctor heroes it **is** a dead end in practice.
