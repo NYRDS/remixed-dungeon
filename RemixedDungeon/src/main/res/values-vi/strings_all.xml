@@ -829,6 +829,7 @@
     <string name="Order_Info">Với sự tập trung thích hợp, các mệnh lệnh của bạn gần như không thể chối cãi.</string>
     <string name="Order_Name">Mệnh lệnh</string>
     <string name="Order_Resist">Làm sao dám?!!</string>
+    <string name="OverpricedRation_Message">Món ăn này có vị ổn.</string>
     <string name="OverpricedRation_Name">phần thực phẩm giá cao bất hợp lý</string>
     <string name="PalaceServant_Golem_1">...</string>
     <string name="PalaceServant_Golem_2">Hội trường này là thiêng liêng.</string>
@@ -1650,6 +1651,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

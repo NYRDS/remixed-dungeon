@@ -607,6 +607,7 @@
     <string name="Hero_StaVertigo">Alles draait om je heen!</string>
     <string name="Hero_StaWeakness">Je voelt je verzwakt!</string>
     <string name="Hero_Wait">...</string>
+    <string name="HideInGrassSpell_Info">Je hebt je verstoppertje-meesterschap geperfectioneerd.</string>
     <string name="Horror_Name_1">Griezelige %s</string>
     <string name="Horror_Name_2">Griezelige %s</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
@@ -1724,6 +1725,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 
