@@ -768,6 +768,7 @@
     <string name="MercenaryNPC_Name">lính thuê</string>
     <string name="Metabolism_Txt">%s của trao đổi chất</string>
     <string name="MimicAmulet_Gender">masculine</string>
+    <string name="MimicAmulet_Name_Objective">mô phỏng</string>
     <string name="MimicPie_Desc">Mimics là những sinh vật phép thuật có thể biến hình thành bất kỳ hình dạng nào chúng muốn. Con này trông như một chiếc bánh ngon to lớn.</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimik</string>
@@ -1645,6 +1646,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

@@ -754,6 +754,7 @@
     <string name="MagicArrow_Name">Magische pijl</string>
     <string name="MailArmor_Name">maliënkolder</string>
     <string name="ManaPotion_Info">Deze drank herstelt je spirituele energie.</string>
+    <string name="ManaShieldBuff_Name">Magisch Schild</string>
     <string name="Mana_Cost">Manakosten: </string>
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Name">Chirurgisch masker</string>
@@ -935,6 +936,7 @@
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
     <string name="Potion_Colors_0">turkoois</string>
     <string name="Potion_Colors_1">karmozijn</string>
+    <string name="Potion_Colors_10">indigo</string>
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_Colors_15">parelmoer</string>
     <string name="Potion_Colors_3">jade</string>
@@ -1685,6 +1687,7 @@
     <string name="town_deco_sofa_desc">Lijkt erop dat deze bioscoop echt probeert de beste zitplaatsen voor haar klanten te bieden.</string>
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
     <string name="town_deco_statue_water_desc">Een majestueuze standbeeld van een engel die een kom met water vasthoudt.</string>
+    <string name="town_deco_statue_water_name">Engelenstandbeeld</string>
     <string name="town_deco_stock_name">voorraad</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
     <string name="town_deco_stones_name">Stenen</string>
@@ -1715,6 +1718,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
