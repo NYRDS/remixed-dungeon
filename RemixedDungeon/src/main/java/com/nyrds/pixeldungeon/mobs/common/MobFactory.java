@@ -3,16 +3,13 @@ package com.nyrds.pixeldungeon.mobs.common;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mobs.guts.BurningFist;
 import com.nyrds.pixeldungeon.mobs.guts.Larva;
-import com.nyrds.pixeldungeon.mobs.guts.Nightmare;
 import com.nyrds.pixeldungeon.mobs.guts.RottingFist;
-import com.nyrds.pixeldungeon.mobs.guts.SuspiciousRat;
 import com.nyrds.pixeldungeon.mobs.guts.YogsBrain;
 import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
 import com.nyrds.pixeldungeon.mobs.guts.YogsTeeth;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
-import com.nyrds.pixeldungeon.mobs.necropolis.JarOfSouls;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
@@ -32,9 +29,6 @@ import com.nyrds.pixeldungeon.mobs.npc.TownShopkeeper;
 import com.nyrds.pixeldungeon.mobs.npc.TownsfolkMovieNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownsfolkNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownsfolkSilentNPC;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderEgg;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderExploding;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderNest;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
@@ -54,7 +48,6 @@ import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost.FetidRat;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;
@@ -99,6 +92,9 @@ public class MobFactory {
 	public static final String SPIDER_SERVANT = "SpiderServant";
 	public static final String SPIDER_GUARD = "SpiderGuard";
 	public static final String SPIDER_MIND_AMBER = "SpiderMindAmber";
+	public static final String SPIDER_EGG = "SpiderEgg";
+	public static final String SPIDER_NEST = "SpiderNest";
+	public static final String JAR_OF_SOULS = "JarOfSouls";
 	public static final String SKELETON = "Skeleton";
 	public static final String FETID_RAT = "FetidRat";
 	public static final String SUSPICIOUS_RAT = "SuspiciousRat";
@@ -152,9 +148,6 @@ public class MobFactory {
 
 		registerMobClass(Tengu.class);
 
-		registerMobClass(SpiderExploding.class);
-		registerMobClass(SpiderEgg.class);
-		registerMobClass(SpiderNest.class);
 		registerMobClass(SpiderQueen.class);
 
 		registerMobClass(Monk.class);
@@ -168,7 +161,6 @@ public class MobFactory {
 		registerMobClass(BurningFist.class);
 		registerMobClass(RottingFist.class);
 
-		registerMobClass(FetidRat.class);
 
 		registerMobClass(Statue.class);
 
@@ -177,13 +169,10 @@ public class MobFactory {
 		registerMobClass(YogsHeart.class);
 		registerMobClass(YogsTeeth.class);
 		registerMobClass(ShadowLord.class);
-		registerMobClass(Nightmare.class);
-		registerMobClass(SuspiciousRat.class);
 
 		registerMobClass(ArmoredStatue.class);
 		registerMobClass(GoldenStatue.class);
 
-		registerMobClass(JarOfSouls.class);
 		registerMobClass(Lich.class);
 		registerMobClass(RunicSkull.class);
 

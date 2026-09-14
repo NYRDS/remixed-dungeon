@@ -145,6 +145,7 @@ local MobFactory      = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.Mo
 local EffectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.effects.EffectsFactory")
 local LevelObjectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory")
 local SpellFactory = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.spells.SpellFactory")
+local MobSpawner = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobSpawner")
 
 local Effects = luajava.bindClass("com.watabou.pixeldungeon.effects.Effects")
 
@@ -209,6 +210,7 @@ local RPD = {
     Util = Util,
     CharsList = CharsList,
     CharUtils = CharUtils,
+    MobSpawner = MobSpawner,
     Utils = luajava.bindClass("com.nyrds.lua.LuaUtils"),
     QuickSlot = luajava.bindClass("com.watabou.pixeldungeon.ui.QuickSlot"),
     BackpackMode = BackpackMode,
@@ -232,6 +234,7 @@ local RPD = {
     Actor = luajava.bindClass("com.watabou.pixeldungeon.actors.Actor"),
     MobFactory = MobFactory,
     ItemFactory = ItemFactory,
+    LevelObjectsFactory = LevelObjectsFactory,
     EffectsFactory = EffectsFactory,
     SpellFactory = SpellFactory,
     AlchemyRecipes = luajava.bindClass("com.nyrds.pixeldungeon.alchemy.AlchemyRecipes"),

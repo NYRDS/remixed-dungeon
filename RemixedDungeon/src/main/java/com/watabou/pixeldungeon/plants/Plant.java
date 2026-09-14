@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.plants;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
@@ -19,6 +20,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+@LuaInterface
 public class Plant extends LevelObject {
 
 	public Plant(int pos) {
@@ -86,12 +88,14 @@ public class Plant extends LevelObject {
 		return Utils.getClassParam(this.getClass().getSimpleName(), "Name", Utils.EMPTY_STRING, true);
 	}
 
+	@LuaInterface
 	public void effect(int pos, Presser ch) {
 
 	}
 
 	// activator - who triggered the plant on the target: the same char when the
 	// plant is stepped on, the attacking mob when a plant effect is applied by hit
+	@LuaInterface
 	public void effect(int pos, Presser ch, Char activator) {
 		effect(pos, ch);
 	}

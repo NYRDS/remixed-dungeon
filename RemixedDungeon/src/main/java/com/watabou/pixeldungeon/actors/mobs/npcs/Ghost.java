@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.windows.WndSadGhostNecro;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
@@ -17,8 +18,6 @@ import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
-import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
@@ -262,7 +261,7 @@ public class Ghost extends NPC {
 			if (spawned && given && !processed && (depth == Dungeon.depth)) {
 				if (alternative) {
 					Level level = Dungeon.level;
-					FetidRat rat = new FetidRat();
+					Mob rat = MobFactory.mobByName(MobFactory.FETID_RAT);
 					int ratPos = rat.respawnCell(level);
 					if (level.cellValid(ratPos)) {
 						rat.setPos(ratPos);
@@ -307,32 +306,5 @@ public class Ghost extends NPC {
 			return armor;
 		}
 
-	}
-	
-	public static class FetidRat extends Mob {
-
-		public FetidRat() {
-			spriteClass = "spritesDesc/FetidRat.json";
-			
-			hp(ht(15));
-			baseDefenseSkill = 5;
-			baseAttackSkill  = 12;
-			dmgMin = 2;
-			dmgMax = 6;
-			dr = 2;
-			
-			expForKill = 0;
-			
-			setState(MobAi.getStateByClass(Wandering.class));
-
-			collect( new RatSkull() );
-			addImmunity( Paralysis.class );
-		}
-
-		@Override
-		public int defenseProc( Char enemy, int damage ) {
-			GameScene.add( Blob.seed( getPos(), 20, ParalyticGas.class ) );
-			return super.defenseProc(enemy, damage);
-		}
 	}
 }

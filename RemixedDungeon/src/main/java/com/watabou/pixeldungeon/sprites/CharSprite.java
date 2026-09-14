@@ -292,6 +292,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         });
     }
 
+    @LuaInterface
     public void zap(int cell) {
         ch.ifPresent(chr -> {
             turnTo(chr.getPos(), cell);

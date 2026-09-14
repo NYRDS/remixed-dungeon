@@ -1243,6 +1243,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
     }
 
+    @LuaInterface
     public void playAttack(int cell) {
         final boolean realtime = Dungeon.realtime();
 

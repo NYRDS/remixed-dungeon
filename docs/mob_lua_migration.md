@@ -788,6 +788,94 @@ the act-policy kite (ShamanElder.lua) · `RPD.item("Gold",n)` +
 hero check: `enemy:getEntityKind() == "Hero"`. Item/Level methods are
 callable from engine scripts (the `@LuaInterface` gate binds mod scripts).
 
+Twelfth batch 2026-09-14 (spawner/summoner tier + guts): engine surface first —
+`Actor`-time spawners port as act-hook tick counters (java `postpone(n)`
+delays the mob's own turn; the lua `act` hook cannot spend, so
+`data.ticks` counting acts reproduces the same wall clock — Sleeping-state
+acts come slower than 1/tick, so effective delays stretch ~1.5x). New
+json key `"pacified"` on CustomMob (fillMobStats optBoolean; gates
+canAttack like the java field — SuspiciousRat/JarOfSouls need it). New
+`@LuaInterface`: `Char.playAttack(int)`, `Mob.remove()` (the quiet
+self-removal: Char.die without Mob.die drops/carcass), `CharSprite.zap(int)`,
+`Plant` class + both `effect` overloads, `MobSpawner` class +
+`spawnRandomMob` (bound as `RPD.MobSpawner`; statics via COLON call).
+`LevelObjectsFactory` was bound in commonClasses but never EXPORTED in the
+RPD table — added (`RPD.LevelObjectsFactory`; a sandboxed script got nil
++ "attempt to index nil with key 'objectByName'"). commonClasses also
+exports `MobSpawner` now. Construction sites switched: `Ghost.Quest.process`
+FetidRat → factory (new constant FETID_RAT; inner class deleted), 
+`SpiderSpawner.spawnEgg/spawnNest` → factory (SPIDER_EGG, SPIDER_NEST),
+`MobSpawner.spawnJarOfSouls` → factory (JAR_OF_SOULS). YogsBrain→Nightmare
+and SpiderQueen→SpiderEgg already spawned by string kind — no change needed.
+Deleted java: Nightmare, SuspiciousRat, SpiderEgg, SpiderNest,
+SpiderExploding, JarOfSouls, Ghost$FetidRat.
+
+Migrated: **`Nightmare`** (json + lua attackProc 1/10 Roots 3 / 1/10
+`Stun:duration` — real durations per the as-intended pass; `act` forces
+Hunting every tick), **`SuspiciousRat`** (pacified json + `act`:
+first enemySeen tick shows the twitch status (Goo_StaInfo1) + sprite zap,
+4 enemy-seen acts later spawns PSEUDO_RAT at own cell + snd_cursed +
+self-die; java spent 4 ticks at once — counter is same wall clock),
+**`FetidRat`** (json RatSkull loot 1.0 + Paralysis immunity + Wandering;
+defenceProc re-seeds ParalyticGas 20 under itself — the 20-volume gas is
+as weak as java's), **`SpiderEgg`** (movable:false + Sleeping; act
+counter 20 → `RPD.MobSpawner:spawnRandomMob(level,pos,25)`, self:remove()
+on success — remove = quiet vanish, NO loot drop, unlike die; 20%
+treasury SEED roll in stats per the Skeleton pattern), **`SpiderNest`**
+(same counter 20, limit 20, never removes; PotionOfHealing loot via json),
+**`SpiderExploding`** (kamikaze: attackProc rolls its plant INTO data in
+stats (java rolled a MultiKindMob kind per instance; kind is visually
+inert per batch 11), `LevelObjectsFactory:objectByName(plant):effect(
+enemyPos, enemy, self)` + self:die — Earthroot Armor buff observed on a
+zapped hero), **`JarOfSouls`** (undead + pacified + hasBodyParts:false +
+movable:false; act: while enemySeen, every 15th act playAttack +
+limitless `spawnRandomMob` (limit -1) — java postponed 15, same pacing).
+
+Batch 12 lessons:
+- **Sleeping mobs wake only probabilistically** — Sleeping.act
+  chooseEnemy rolls `Random.Int((dist + stealth)/attention)==0`
+  (attention 0.5 base) and needs the shared `level.fieldOfView` to see
+  the hero; wake-by-damage (seekRevenge) is the reliable staged path.
+- **`level.fieldOfView` is ONE shared array, overwritten by every
+  acting char** — a script reading it is only correct during its own
+  mob's act (AI-driven zap), never from an out-of-turn call.
+- **`test_damage` bypasses defenceProc** (raw `Char.damage`) — defenceProc
+  hooks need a real attack (`force_attack`/`force_zap`) to fire.
+- Spot a script that never attached vs one whose hook never fired via
+  `luaData` writes: no stats-time writes = indistinguishable.
+
+New permanent debug endpoints: `/debug/mob_brain?id=` (state, enemy
+id/kind/pos, enemySeen, canAttack, ballistica trace with per-cell
+passable/losBlock/char), `/debug/force_zap?attacker=&target=` (drives the
+real `Mob.zap` chain — onZap hook, zapHit, zapProc — without AI
+scheduling; note the FOV array is stale in that context).
+
+Leftovers closed this session (batches 10-11 tails):
+- **SpiderMind ally-buff zap observed end-to-end**: AI-driven zap at a
+  pet Statue (MindVision on the SM to force the wake; clean 2-cell line
+  on the sewer floor) → zapProc prolonged Blessed/Armor on the friendly
+  rat in FOV. The FOV check reads the SM's own array during its act —
+  correct as shipped.
+- **Air gust push observed**: hero pushed one cell away from an
+  AI-zapping AirElemental (no other mover). WindGust by design pushes
+  only chars BETWEEN caster and aim cell, never the aim cell itself —
+  the original java zapProc cast identically, so the port is faithful.
+- **Water heal observed**: damaged pet WaterElemental on a water tile
+  healed +1/turn (exp-scaled, regen-capped).
+
+Verification (batch 12): stat parity exact on all seven (80/17/26/24,
+140/17/25/25, 15/10/12/5, 2/10/1/1, 10/10/1/2, 5/11/125/1, 70/17/1/5 —
+hp/str/atk/def, dmg ranges + states matching the java ctors incl.
+Wandering FetidRat + JarOfSouls and Sleeping eggs/nest/rat); egg hatched
+a bestiary rat and removed itself, nest spawned and stayed, JarOfSouls
+spawned on its 15-tick gate, SuspiciousRat twitched then became a
+PseudoRat (320 ht), SpiderExploding burst on its hero hit leaving the
+Earthroot Armor buff, Nightmare landed Roots on a pet golem, FetidRat
+defenceProc probe fired; save round-trip preserved damaged hp, positions,
+states and LUA_DATA (ticks counters, plant roll) with zero `skip:` lines.
+CI python suite green on the new headless jar: blood 6/6, navigation,
+doctor 7/7, all_spells 38/38, alchemy 42/42.
+
 ## Verification checklist
 
 1. Build: `:RemixedDungeonDesktop:compileJava` (after Step A, this also

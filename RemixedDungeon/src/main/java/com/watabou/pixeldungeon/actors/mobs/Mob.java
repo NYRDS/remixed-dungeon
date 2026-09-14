@@ -437,6 +437,7 @@ public abstract class Mob extends Char {
         super.destroy();
     }
 
+    @LuaInterface
     public void remove() {
         super.die(this);
     }

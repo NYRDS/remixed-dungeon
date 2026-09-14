@@ -111,6 +111,8 @@ public abstract class BaseWebServer extends NanoHTTPD {
         debugEndpoints.put("/debug/affect_buff", DebugEndpoints::handleDebugAffectBuff);
         debugEndpoints.put("/debug/test_damage", DebugEndpoints::handleDebugTestDamage);
         debugEndpoints.put("/debug/test_equip", DebugEndpoints::handleDebugTestEquip);
+        debugEndpoints.put("/debug/mob_brain", DebugEndpoints::handleDebugMobBrain);
+        debugEndpoints.put("/debug/force_zap", DebugEndpoints::handleDebugForceZap);
     }
 
     public static boolean isRunning() {

@@ -156,6 +156,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		friendly = classDesc.optBoolean("friendly",friendly);
 		movable = classDesc.optBoolean("movable",movable);
 		immortal = classDesc.optBoolean("immortal",immortal);
+		pacified = classDesc.optBoolean("pacified",pacified);
 
 		spriteLayer = classDesc.optInt("spriteLayer",spriteLayer);
 

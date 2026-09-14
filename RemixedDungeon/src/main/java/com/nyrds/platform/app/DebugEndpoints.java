@@ -3982,6 +3982,89 @@ public class DebugEndpoints {
         }
     }
 
+    // caveman: drive the real Mob.zap chain (onZap hook, zapHit, zapProc) without AI scheduling
+    public static NanoHTTPD.Response handleDebugForceZap(NanoHTTPD.IHTTPSession session) {
+        String query = session.getQueryParameterString();
+        int attackerId = -2, targetId = -2;
+        if (query != null) {
+            for (String param : query.split("&")) {
+                if (param.startsWith("attacker=")) {
+                    attackerId = Integer.parseInt(param.substring(9));
+                } else if (param.startsWith("target=")) {
+                    targetId = Integer.parseInt(param.substring(7));
+                }
+            }
+        }
+        if (Dungeon.level == null) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                createErrorResponse("game running required").toString());
+        }
+        final Mob attacker = findMobById(attackerId);
+        final Char target = findCharByIdOrHero(targetId);
+        if (attacker == null || target == null || !attacker.isAlive() || !target.isAlive()) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                createErrorResponse("need live attacker & target (target -1 = hero)").toString());
+        }
+        GameLoop.pushUiTaskAndWait(() -> attacker.zap(target));
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+            String.format("{\"success\":true,\"attacker\":\"%s\",\"target\":\"%s\"}",
+                attacker.getEntityKind(), target.getEntityKind()));
+    }
+
+    // caveman: AI-state probe - why is this mob not attacking?
+    public static NanoHTTPD.Response handleDebugMobBrain(NanoHTTPD.IHTTPSession session) {
+        String query = session.getQueryParameterString();
+        int id = -1;
+        if (query != null) {
+            for (String param : query.split("&")) {
+                if (param.startsWith("id=")) {
+                    id = Integer.parseInt(param.substring(3));
+                }
+            }
+        }
+        final Mob mob = findMobById(id);
+        if (mob == null) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                createErrorResponse("need id of a live mob").toString());
+        }
+
+        final Char enemy = mob.getEnemy();
+        JSONObject json = new JSONObject();
+        json.put("id", mob.getId());
+        json.put("kind", mob.getEntityKind());
+        json.put("pos", mob.getPos());
+        json.put("state", mob.getState() != null ? mob.getState().getTag() : "none");
+        json.put("enemyValid", enemy != null && enemy.valid());
+        json.put("enemyId", enemy != null && enemy.valid() ? enemy.getId() : -1);
+        json.put("enemyKind", enemy != null && enemy.valid() ? enemy.getEntityKind() : "none");
+        json.put("enemyPos", enemy != null && enemy.valid() ? enemy.getPos() : -1);
+        json.put("enemyAlive", enemy != null && enemy.valid() && enemy.isAlive());
+        json.put("enemyInFov", mob.isEnemyInFov());
+        json.put("enemySeen", mob.enemySeen);
+        json.put("canAttackEnemy", enemy != null && enemy.valid() && mob.canAttack(enemy));
+        if (enemy != null && enemy.valid()) {
+            JSONArray blocks = new JSONArray();
+            int traceEnd = com.watabou.pixeldungeon.mechanics.Ballistica.cast(mob.getPos(), enemy.getPos(), false, true);
+            for (int i = 1; i < com.watabou.pixeldungeon.mechanics.Ballistica.distance; i++) {
+                int cell = com.watabou.pixeldungeon.mechanics.Ballistica.trace[i];
+                JSONObject step = new JSONObject();
+                step.put("cell", cell);
+                step.put("passable", mob.level().passable[cell]);
+                step.put("losBlock", mob.level().losBlocking[cell]);
+                com.watabou.pixeldungeon.actors.Actor onCell = com.watabou.pixeldungeon.actors.Actor.findChar(cell);
+                step.put("char", onCell != null ? onCell.getEntityKind() : null);
+                blocks.put(step);
+            }
+            json.put("traceEnd", traceEnd);
+            json.put("trace", blocks);
+        }
+        json.put("distance", enemy != null && enemy.valid() ? mob.level().distance(mob.getPos(), enemy.getPos()) : -1);
+        json.put("paralysed", mob.paralysed);
+        json.put("pacified", mob.pacified);
+        json.put("hp", mob.hp());
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
+    }
+
     private static Mob findMobById(int id) {
         if (Dungeon.level == null) {
             return null;
