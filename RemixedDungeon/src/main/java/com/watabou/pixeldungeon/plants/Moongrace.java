@@ -36,9 +36,11 @@ public class Moongrace extends Plant {
 		if(ch instanceof Mob) {
 			Mob mob = (Mob)ch;
 
-			// necromanced mobs don't multiply - moonlight revives them instead
-			if (mob.undead) {
+			// necromanced mobs don't multiply - moonlight returns them to life instead;
+			// natural undead (skeleton and such) just are that way and clone like the living
+			if (mob.undead && !mob.naturalUndead) {
 				mob.heal(mob.ht(), mob);
+				mob.setUndead(false);
 			} else {
 				int cell = level().getEmptyCellNextTo(pos);
 				if (level().cellValid(cell)) {

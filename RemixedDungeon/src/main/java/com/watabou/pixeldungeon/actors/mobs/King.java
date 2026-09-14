@@ -199,6 +199,7 @@ public class King extends Boss {
 			expForKill = 0;
 
 			setUndead(true);
+			naturalUndead = true;
 			setState(MobAi.getStateByClass(Wandering.class));
 		}
 
