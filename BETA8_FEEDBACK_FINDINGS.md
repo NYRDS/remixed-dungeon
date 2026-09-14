@@ -108,4 +108,10 @@ Options: (a) auto-unequip conflicting slot in `Belongings.equip` for **everyone*
 
 **Ruled, no change:** A5 VileEssence stays Doctor-only (necromancy = Doctor perk for now); A7 no hero renames — the names are a hidden Stick of Truth class-system joke.
 
-**Open:** A9 BoneSaw stats (needs authored numbers), A10 per-mob carcass tables (needs go).
+**Open:** A9 BoneSaw — investigated (see below), awaiting Mike's number picks. A10 per-mob carcass tables **deferred by Mike** — big refactoring ongoing on master, merge pain.
+
+### A9 update — BoneSaw investigation (lua-only, low complexity)
+`scripts/items/BoneSaw.lua` already has level-scaled damage/accuracy/delay (`damageRoll = (user_level+lvl)*random(2+lvl, 3+2*lvl)`, plus bleed, crit ×1.5, Doctor harvest on crit). What's missing:
+1. **Not upgradable:** `scripts/lib/item.lua` defaults `upgradable = false` for every lua item; BoneSaw doesn't override — ScrollOfUpgrade filters it out. Fix: `upgradable = true` in its desc (shields already do this). Upgrades then work with zero further code.
+2. **Damage invisible:** java MeleeWeapon composes a rich info window (tier/quality/avg damage); CustomItem `info` is just the desc string, and the item-cell corner shows `knownStatsText` = ":9". Fix: add an `info` hook to BoneSaw.lua (~15 lines) printing the effective damage range + STR.
+3. Quirks to rule on while there: `attackProc` applies **×2** vs paralyzed foes but the perk text promises **×1.5** (values-ru perk string says x1.5); `statsRequirementsSatisfied` demands STR > 9 while there is no `requiredSTR` hook, so the 9 STR req is display-only.
