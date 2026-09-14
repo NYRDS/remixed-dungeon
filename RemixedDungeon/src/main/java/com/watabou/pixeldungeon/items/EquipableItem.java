@@ -201,7 +201,12 @@ public abstract class EquipableItem extends Item {
 	}
 
 	public boolean statsRequirementsSatisfied() {
-		return requiredSTR() <= getOwner().effectiveSTR();
+		return displayedRequiredSTR() <= getOwner().effectiveSTR();
+	}
+
+	// what the requirement looks like to the owner - unidentified items show their typical value
+	public int displayedRequiredSTR() {
+		return isLevelKnown() ? requiredSTR() : typicalSTR();
 	}
 
 	public String knownStatsText() {
