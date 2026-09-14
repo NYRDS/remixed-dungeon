@@ -984,7 +984,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_None">commoner</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Plague Doctors harvest [yellow:Toxic Glands], [yellow:Rotten Organs], [yellow:Bone Shards] from slain enemies.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Plague Doctors are alchemy masters and able to use unique recipes.</string>
-    <string name="HeroClass_PlagueDoctorPerks_2">Start with a [yellow:Plague Mask] (immune to all Gases) and a [yellow:Bone Saw]. Critical hits drop extra parts, and the Saw deals x1.5 damage to paralyzed foes.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Start with a [yellow:Plague Mask] (immune to all Gases) and a [yellow:Bone Saw]. Critical hits drop extra parts, and the Saw deals x2 damage to paralyzed foes.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Potions of [yellow:Healing], [yellow:Paralysis Gas] and [yellow:Toxic Gas] are pre-identified.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer great accuracy penalties without beloved Bone Saw in hand and cannot use ranged weapons.</string>
 
