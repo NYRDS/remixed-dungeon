@@ -102,20 +102,10 @@ Options: (a) auto-unequip conflicting slot in `Belongings.equip` for **everyone*
 
 ---
 
-## Proposed batches (nothing implemented yet)
+## Status (updated 2026-09-14, second pass)
 
-**Quick-fix batch (all confirmed bugs/doc, no open design):**
-A2 (ShadowLord scroll), A3/B6 (potions vs traps), B1 (clone loses undead), B7 (swap vs heap), B8 (sign strings), A6 (doctor perk string), AlchemyRecipes validation nit.
+**SHIPPED on beta.8:** A1 permanent death (f9fb7f3ce), A2 (9a8c95b1e), A3/B6 (fb5de3c9a), B1 (8a81ad382), B7 (8de307077), B8+A6 (8c914de94), nit (cb996a6a5), A8-a doctor armor mask (04ab87c01), B2 2H auto-unequip (0f302d35f), B3 displayed stats (b257007be), B4 pet same-level spot (ad8f5a7fd), B5 shield STR (4e73c6b05). A4 corrected: legacy-pot lottery is the mechanic, trial recipe reverted (66ac065f6).
 
-**Decision-gated:**
-- B2 — auto-unequip semantics (a/b/c above; recommend c)
-- B3 — display-stats gating direction (recommend yes)
-- B4 — same-level pet position restore (recommend yes)
-- B5 — shield STR req per level (recommend yes)
-- A4 — rotberry recipe shape (recommend Rotberry×1 → PotionOfStrength)
-- A5 — general VileEssence source or Doctor-only necromancy
-- A7 — final class names EN+RU
-- A8 — epic armor mask merge (needs code pass first)
-- A9 — BoneSaw stats authoring
-- A10 — per-mob carcass table (data work)
-- A1 — only if we want chess death to bypass auto-revive (recommend leave as is)
+**Ruled, no change:** A5 VileEssence stays Doctor-only (necromancy = Doctor perk for now); A7 no hero renames — the names are a hidden Stick of Truth class-system joke.
+
+**Open:** A9 BoneSaw stats (needs authored numbers), A10 per-mob carcass tables (needs go).
