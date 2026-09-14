@@ -28,6 +28,7 @@ Rules:
 - long-standing — **Doors + heaps:** heaps wedging doors open is an established player tactic (death drops wedge too). Never remove `Door.leave`'s heap guard.
 
 ## Items & economy
+- 2026-09-14 — **BoneSaw is not upgradable by design** — it scales with its wielder's skill level instead. Its 9 STR requirement is mechanically real: a deficit applies the standard weapon encumbrance penalties (accuracy ÷1.5ⁿ, delay ×1.2ⁿ), and the item info shows effective average damage.
 - 2026-09-14 — **Doctor class armor's built-in mask is the real one.** Wearing the epic DoctorArmor grants GasesImmunity; the accessory mask is an optional pre-armor backup. Either source alone keeps the immunity. (04ab87c01)
 - 2026-09-14 — **Shield upgrades lower STR requirement** like armor does: `max(2, base − level)`; blocked damage already scales ×1.3/level and the desc shows effective values. (4e73c6b05)
 - 2026-09-14 — **Rotberry → Potion of Strength belongs to the legacy pot lottery, not recipes.** The `Rotberry×1 → PotionOfStrength` recipe was reverted (66ac065f6, was 65db2ae68): the player's "30%" is the alchemy pot's 3-seed lottery — all-seed heap of ≥3 brews a potion, each seed's `alchemyClass` gets its weighted share, and rotberry's is PotionOfStrength (≈1/3 of a 3-seed pot). Dropping the seed alone does nothing (`SEEDS_TO_POTION = 3`). No authored strength-potion recipe; `Rotberry + 10 VileEssence → PotionOfMight` stays.
