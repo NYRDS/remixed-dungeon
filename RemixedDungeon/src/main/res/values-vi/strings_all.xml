@@ -109,6 +109,7 @@
     <string name="Badges_PotionsCooked3">9 thuốc đã nấu</string>
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
     <string name="Badges_ShadowLord_Slain">Chúa Tể Bóng Tối đã bị tiêu diệt</string>
+    <string name="Badges_SpiderQueen_Slain">Nữ hoàng Nhện đã bị tiêu diệt</string>
     <string name="Badges_StrengthAttained1">Đạt 13 điểm Sức mạnh</string>
     <string name="Badges_Supporter">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="Badges_ThisIsSparta">Đây là Sparta!!!</string>
@@ -845,6 +846,7 @@
     <string name="PetInventory_HeroBackpackFull">Balo của bạn đã đầy</string>
     <string name="PetInventory_PetBackpackFull">Ba lô của thú cưng đã đầy</string>
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
+    <string name="PetInventory_TakeN">Lấy %d</string>
     <string name="PetInventory_Title">Kho thú cưng</string>
     <string name="PetInventory_TooFar">Quá xa khỏi thú cưng</string>
     <string name="PetInventory_TookItem">Đã lấy %1$s từ %2$s</string>
@@ -1206,6 +1208,7 @@
     <string name="Statue_Name">tượng sống</string>
     <string name="Stench_Txt">%s hôi thối</string>
     <string name="StoneBloodBuff_Info">Máu hóa đá, dung nhập với các bức tường gần đó và khiến việc đi xuyên qua chúng dễ dàng hơn nhiều, nhưng phải trả giá bằng cái gì?</string>
+    <string name="StrongShield_desc">Chiếc khiên hình chữ nhật này được mạ tấm đồng và trang trí vải màu. Nó nặng hơn đáng kể, nhưng có thể chặn được nhiều sát thương hơn.</string>
     <string name="StunBuff_Name">Choáng</string>
     <string name="Stylus_ACInscribe">KHẮC</string>
     <string name="Stylus_Info">Chiếc bút bí ẩn này được làm từ một loại đá đen và rất cứng. Bạn có thể dùng nó để khắc các ký tự hoặc rune, nhưng bút mới quyết định khắc cái gì, không phải bạn.</string>
@@ -1284,6 +1287,7 @@
     <string name="Undead_Gender">masculine</string>
     <string name="Undead_Name_Objective">cùn bất tử</string>
     <string name="Ushanka_Info">Mũ ushanka ấm áp và êm ái, được trang trí bằng một ngôi sao đỏ sang trọng. Một người bạn đồng hành hoàn hảo cho một người đồng chí chiến đấu chống lại ngục địa tàn ác và lạnh lẽo.</string>
+    <string name="Ushanka_Name">Ushanka</string>
     <string name="Using_Failed_Because_Blind">Bạn không thể sử dụng \\&quot;%s\\&quot; khi đang bị mù.</string>
     <string name="Using_Failed_Because_Magic">Một phép thuật mạnh mẽ ngăn cản bạn sử dụng \&quot;%s\&quot;.</string>
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
@@ -1451,6 +1455,7 @@
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_StaTitle">Cấp %1 %2</string>
     <string name="WndRanking_Stats">Thống kê</string>
+    <string name="WndResurrect_Yes">Có, tôi sẽ chiến đấu!</string>
     <string name="WndSadGhostNecro_No">Không, để nó nói.</string>
     <string name="WndSadGhost_Farewell">Tạm biệt, nhà thám hiểm! Chúc may mắn!</string>
     <string name="WndSadGhost_Rat">Vâng! Con quái vật xấu xí đã bị tiêu diệt và cuối cùng tôi có thể yên nghỉ... Xin hãy nhận lấy một trong những vật phẩm này, biết đâu chúng sẽ hữu ích cho bạn trên hành trình...</string>
@@ -1637,6 +1642,11 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
+
+
 
 
 

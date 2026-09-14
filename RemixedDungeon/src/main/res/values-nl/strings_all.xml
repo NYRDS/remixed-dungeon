@@ -116,6 +116,7 @@
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
     <string name="Badges_RingHaggler">Ring der Handelaar verkregen</string>
     <string name="Badges_ShadowLord_Slain">Schaduwheer verslagen</string>
+    <string name="Badges_SpiderQueen_Slain">Spinnenkoningin verslagen</string>
     <string name="Badges_StrengthAttained1">13 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained2">15 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained3">17 punten Kracht bereikt</string>
@@ -793,6 +794,7 @@
     <string name="Mob_Attacking">Reken deze %s als dood!</string>
     <string name="Mob_GoingTo">Al onderweg!</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
+    <string name="Mob_PetDied">Je huisdier is gestorven: %s</string>
     <string name="Mob_StaAmokStatus">%1$s loopt amok</string>
     <string name="Mob_StaFleeingStatus">Deze %s vlucht</string>
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
@@ -1507,6 +1509,7 @@
     <string name="WndRanking_StaHealth">Gezondheid</string>
     <string name="WndRanking_StaStr">Kracht</string>
     <string name="WndRanking_StaTitle">Level %1 %2</string>
+    <string name="WndResurrect_Yes">Ja, ik zal vechten!</string>
     <string name="WndSadGhostNecro_No">Nee, laat het spreken</string>
     <string name="WndSadGhostNecro_Persuaded">De verdrietige geest is overwonnen</string>
     <string name="WndSadGhostNecro_Text">Deze geest lijkt te worstelen met zijn vloek. Het lijkt alsof hij me om iets wil vragen. Met behulp van necromantie, kon ik hem ervan overtuigen dat de vraag vervuld is. Het zal me tijd besparen. Maar is het de moeite waard?</string>
@@ -1708,6 +1711,9 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
+
 
 
 
