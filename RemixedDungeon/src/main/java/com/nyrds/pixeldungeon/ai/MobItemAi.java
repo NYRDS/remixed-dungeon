@@ -148,12 +148,7 @@ public class MobItemAi {
                 }
                 return 0;
 
-            case "ScrollOfUpgrade":
-            case "ScrollOfWeaponUpgrade":
-                if (action.equals(CommonActions.AC_READ) && context == Context.COMBAT) {
-                    return expertGate(0.3f);
-                }
-                return 0;
+            // upgrade scrolls need an interactive item selection - mobs must never read them
 
             case "ScrollOfRecharging":
                 if (action.equals(CommonActions.AC_READ) && context == Context.COMBAT) {
