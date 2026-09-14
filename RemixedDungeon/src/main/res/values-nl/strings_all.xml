@@ -244,6 +244,7 @@
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
     <string name="Challenges_Descriptions_8">Je reis begint in de donkere en gevaarlijke rioleringen van de stad, met de enige weg naar de oppervlakte geblokkeerd. Om het erger te maken, kun je alleen uitrusting gebruiken die je in de kelder vindt. Met beperkte middelen en uitrusting hangt je overleving af van je vaardigheden en strategie.</string>
+    <string name="Challenges_Descriptions_9">Het nieuwste \'medicijn\' van de Pestdokter heeft je ruimtelijk geheugen gewist. Je kunt niets meer onthouden dat buiten je directe zicht is.</string>
     <string name="Challenges_Names_1">Geloof is mijn pantser</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="Challenges_Names_5">In de duisternis</string>
@@ -769,6 +770,7 @@
     <string name="MercenaryNPC_Desc">Een stevig mannetje.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">huurling</string>
+    <string name="MimicAmulet_Desc">Het meest glorieuze moment van je avonturierscarrière bleek een val te zijn.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimic</string>
@@ -1704,6 +1706,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
