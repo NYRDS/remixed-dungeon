@@ -93,6 +93,14 @@
     },
     {
       "input": [
+        {"name": "Rotberry.Seed", "count": 1}
+      ],
+      "outputs": [
+        {"name": "PotionOfStrength", "count": 1}
+      ]
+    },
+    {
+      "input": [
         {"name": "CorpseDust", "count": 1},
         {"name": "VileEssence", "count": 10}
       ],
