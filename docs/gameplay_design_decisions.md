@@ -15,7 +15,7 @@ Rules:
 
 ## Undead & necromancy
 - 2026-09-14 — **Moongrace never duplicates undead mobs; moonlight cures necromancy.** An *artificially raised* mob stepping on it is full-healed AND returned to life (undead flag dropped, with the whole immunity set that comes with it). *Natural undead* — species born undead: Skeleton, necropolis mobs (Zombie, knights, skulls, souls, Deathling, JarOfSouls), King.Undead, json `"undead": true` — carry `naturalUndead`, are not curable, and clone like the living. Artificial raise sites (curable): `Carcass.reanimate`, RaiseDead spell, skull-raised pets, the City King's raised servants. Undead state must survive every cloning path — `makeClone` carries `undead`/`naturalUndead`/`expForKill`. (8a81ad382, dbeca4d12, 3e3fe1b1f)
-- open (2026-09-14) — VileEssence inputs are Doctor-only (dissect / BoneSaw crits), so necromancy is effectively a Doctor perk. Pending: add a general VileEssence source or keep it Doctor-locked.
+- 2026-09-14 — **VileEssence stays Doctor-only.** Its inputs (dissect / BoneSaw crits) are Doctor loops, so necromancy remains a Doctor perk for now. No general source, ruled by Mike.
 
 ## Minions & pets
 - 2026-09-14 — **Tap priority: friendly char beats heap.** Tapping a pet (or any friendly) interacts/swaps even with a corpse-heap on the cell; loot under a pet is picked up by walking onto the cell. (8de307077)
@@ -41,4 +41,4 @@ Rules:
 ## Heroes & naming
 - long-standing — **Hero is just a mob:** no Hero special-casing; behavior belongs in Char/Mob generics.
 - long-term — No single-hero / single-level assumptions anywhere (multi-hero, multi-active-level goal).
-- open (2026-09-14) — Custom heroes may take DnD-style class names (Elf → Archer, Gnoll → Ranger, Plague Doctor → Physician), matching the original Warrior/Mage/Rogue/Huntress tradition. Final EN+RU names pending. Display-only; enum keys and saves untouched.
+- 2026-09-14 — **No hero renames.** The hero class names are a deliberate hidden joke referencing the Stick of Truth class system; renaming custom heroes to DnD-style classes (Archer/Ranger/Physician) would kill the reference. Player suggestion declined.
