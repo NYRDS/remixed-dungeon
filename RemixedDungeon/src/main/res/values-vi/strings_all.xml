@@ -947,6 +947,7 @@
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Ống đựng tên bằng da phù hợp để chứa bất kỳ số lượng mũi tên nào</string>
     <string name="RabbitEars_Info">Có quan niệm rằng thỏ sinh ra đã mang may mắn, và người sở hữu một phần cơ thể của nó sẽ được thú cưng ấy ban cho vận may. Nghĩ kỹ lại, bị giết chỉ vì đôi tai của bạn – thứ sẽ dùng để làm đồ trang sức – nghe có vẻ không mấy may mắn.</string>
+    <string name="RaiseDead_NoKill">Bạn cần phải giết ai đó trước khi cố gắng hồi sinh.</string>
     <string name="RankingsScene_NoGames">Chưa có ván chơi nào được chơi.</string>
     <string name="RankingsScene_Title">Bảng Xếp Hạng Cao Nhất</string>
     <string name="RatArmor_Info">Bộ giáp da làm từ da chuột. Nó có lẽ không truyền nhiễm...</string>
@@ -1646,6 +1647,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

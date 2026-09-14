@@ -1315,6 +1315,7 @@
     <string name="TownsfolkNPC_Name">stedelingen</string>
     <string name="TownsfolkSilentNPC_Desc">Een van de bewoners. Hoewel dit duidelijk een gewone burger is, lijken die kleren duur te zijn.</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
+    <string name="TownsfolkSilentNPC_Message1">Hm!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Name">stadbewoner</string>
     <string name="TownsfolkSilentNPC_Name_Objective">stadbewoner</string>
@@ -1396,6 +1397,7 @@
     <string name="WaterOfTransmutation_Info">Kracht van verandering straalt uit van het water van deze put. Gooi een item in de put om het in iets anders te veranderen.</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="WeaknessBuff_Name">Verzwakt</string>
+    <string name="Weapon_Identify">Je bent nu vertrouwd genoeg met je %1 om het te identificeren. Het is %2.</string>
     <string name="Weapon_Incompatible">Interactie van verschillende typen magie heeft de toverij op dit wapen ontkend!</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
     <string name="Weightstone_Accurate">je bracht je %s in balans om het nauwkeuriger te maken</string>
@@ -1718,6 +1720,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
