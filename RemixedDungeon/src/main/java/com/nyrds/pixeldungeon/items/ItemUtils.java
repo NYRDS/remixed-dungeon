@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -69,6 +70,22 @@ public class ItemUtils {
 	public static void enchantStatueWeapon(@NotNull EquipableItem weapon) {
 		if (weapon instanceof MeleeWeapon) {
 			((MeleeWeapon) weapon).enchant(Enchantment.random());
+		}
+	}
+
+	// statue armor roll gate - the java ArmoredStatue.getItem candidate filter
+	@LuaInterface
+	public static boolean statueArmorCandidate(@NotNull Item candidate) {
+		return candidate instanceof EquipableItem
+				&& usableAsArmor((EquipableItem) candidate)
+				&& candidate.level() >= 0;
+	}
+
+	// only classed armor takes glyphs
+	@LuaInterface
+	public static void inscribeStatueArmor(@NotNull EquipableItem armor) {
+		if (armor instanceof Armor) {
+			((Armor) armor).inscribe(Armor.Glyph.random());
 		}
 	}
 

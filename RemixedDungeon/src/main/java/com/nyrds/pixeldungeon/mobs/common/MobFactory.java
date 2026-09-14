@@ -160,17 +160,13 @@ public class MobFactory {
 		registerMobClass(BurningFist.class);
 		registerMobClass(RottingFist.class);
 
-
-		// Statue kind is data now (mobsDesc/Statue.json) - class kept as the
-		// ArmoredStatue/GoldenStatue base only, kind must not resolve to it.
+		// Statue/ArmoredStatue/GoldenStatue kinds are data now
+		// (mobsDesc/*.json) - classes deleted, kinds must never resolve to java.
 		registerMobClass(YogsBrain.class);
 		registerMobClass(YogsEye.class);
 		registerMobClass(YogsHeart.class);
 		registerMobClass(YogsTeeth.class);
 		registerMobClass(ShadowLord.class);
-
-		registerMobClass(ArmoredStatue.class);
-		registerMobClass(GoldenStatue.class);
 
 		registerMobClass(Lich.class);
 		registerMobClass(RunicSkull.class);

@@ -878,12 +878,13 @@ states and LUA_DATA (ticks counters, plant roll) with zero `skip:` lines.
 CI python suite green on the new headless jar: blood 6/6, navigation,
 doctor 7/7, all_spells 38/38, alchemy 42/42.
 
-Thirteenth batch 2026-09-15 (statues, the sprite delta; Mike scoped it to
-ONE mob): **`Statue`** only — ArmoredStatue/GoldenStatue stay java and
-keep `Statue` as their base class; the kind went data by dropping
-`registerMobClass(Statue.class)` (class stays for the two variants; kind
-"Statue" now resolves to CustomMob, old saves restore via the FQN-tail
-route like every other batch).
+Thirteenth+fourteenth batch 2026-09-15 (statues complete — the sprite
+delta; Mike scoped the first push to the base statue, the two variants
+followed same day once the pattern proved out): **`Statue`,
+`ArmoredStatue`, `GoldenStatue`** — all three kinds data, all three java
+classes DELETED. Kind went data by dropping the `registerMobClass` lines
+(kinds "Statue"/"ArmoredStatue"/"GoldenStatue" resolve to CustomMob, old
+saves restore via the FQN-tail route like every other batch).
 
 Engine surface (all reusable, statue-motivated):
 - json `heroSprite: true` on CustomMob → `newSprite()` builds
@@ -899,12 +900,14 @@ Engine surface (all reusable, statue-motivated):
   level suffix exactly like the java override did.
 - script hook `onDestroy` (bridge → user `destroy(mob)`) from
   `Char.destroy` — journal-record cleanup on removal.
-- `ItemUtils.statueWeaponCandidate(item)` + `enchantStatueWeapon(item)`
-  @LuaInterface statics: the lua side has NO instanceof, and the java
-  grant filter (EquipableItem + goodForMelee + usableAsWeapon +
-  !MissileWeapon + level>=0, enchant only MeleeWeapon) is pure class
-  logic. commonClasses exports `RPD.Slot`
-  (Belongings$Slot enum for `setItemForSlot`).
+- `ItemUtils.statueWeaponCandidate` / `enchantStatueWeapon` /
+  `statueArmorCandidate` / `inscribeStatueArmor` @LuaInterface statics:
+  the lua side has NO instanceof (this luaj fork has no
+  `luajava.instanceof`), and the java grant filters are pure class logic
+  (weapon: EquipableItem + goodForMelee + usableAsWeapon + !MissileWeapon
+  + level>=0, enchant only MeleeWeapon; armor: EquipableItem +
+  usableAsArmor + level>=0, inscribe only classed Armor). commonClasses
+  exports `RPD.Slot` (Belongings$Slot enum for `setItemForSlot`).
 - debug: `/debug/journal` (records+depth), `/debug/char_desc?id=`.
 
 Statue.lua: depth-scaled stats re-derived in `stats` each load
@@ -916,19 +919,28 @@ the one-shot `gearGranted` in data (slot already filled → pre-migration
 save, mark and skip); `act` journals on visibility (`!isPet()` +
 `CharUtils:isVisible`), `destroy` un-journals; `desc` =
 `RPD.format("Statue_Desc", item:name())`, naked → plain `name()`.
+ArmoredStatue.lua: def 4+2*depth, atk (9+depth)*2 − lvl() (java
+overrode attackSkill flat; base attack gains +lvl, the compensation
+keeps the effective roll identical), dmg 4-8 static in json, armor roll
+into the ARMOR slot (sprite flag takes weapon-else-armor). GoldenStatue
+.lua: base-statue formulas, weapon always GoldenSword +4 via
+`RPD.ItemFactory:itemByName` (no roll), STR never gear-derived (java
+parity). One deliberate delta: golden honors `gearGranted` — java
+re-granted a fresh +4 sword whenever the slot emptied, the same
+endless-refill farm the one-shot flag killed on the enslaved statue.
 
-Verified live (desktop, town depth 0 + sewer depth 1 + save round):
-stats exact per formulas, three rolls granted 3 different weapons
-(str 14/16/20), desc with weapon name in RU, journal add on sight and
-drop on kill (per-depth records), sprite rendering weapon layers,
-damaged hp 13/20 + state + LUA_DATA across go_to_level/reload_game,
-zero skip lines, hero/rat descs untouched. CI: alchemy 42/42,
-all_spells 38/38, doctor 6/6, blood 6/6. Not exercised organically: a
-random STATUE special room (painter now calls the proven
-`MobFactory.mobByName`; sweep of depths 3-7 rolled no statue room).
+Verified live (desktop, town depth 0 + sewer depths 1-2 + save round):
+base stats exact per formulas, three rolls granted 3 different weapons
+(str 14/16/20), armored: hp/ht 20 def 6 atk-base 19 (=20−lvl) dmg 4-8
+str 12 with ClothArmor slot + RU desc, golden: GoldenSword in slot,
+stats/str 10 per java; journal add on sight and drop on kill (per-depth
+records), sprite rendering weapon layers, damaged hp 15/20 + state +
+LUA_DATA across go_to_level/reload_game, zero skip lines, hero/rat descs
+untouched. CI: alchemy 42/42, all_spells 38/38, doctor 7/7, blood 6/6.
+Not exercised organically: a random STATUE special room (painter calls
+the proven `MobFactory.mobByName`; sweep of depths 3-7 rolled none).
 
-Next: batch 14 = ArmoredStatue/GoldenStatue (drop the Statue java base
-last), NPC design pass.
+Next: NPC design pass (batch 15) — needs Mike's design call first.
 
 ## Verification checklist
 
