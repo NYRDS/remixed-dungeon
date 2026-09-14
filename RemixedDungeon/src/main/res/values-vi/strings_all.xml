@@ -335,6 +335,7 @@
     <string name="CompoundBow_Info">Các mũi tên bắn từ cây cung hợp kim này gây sát thương lớn và có độ chính xác tốt hơn cung gỗ, đổi lại là phần nào chậm hơn.</string>
     <string name="CompoundBow_Name">cung ghép</string>
     <string name="ConcreteBlock_Description">Có vẻ khối này cần %d điểm sức mạnh để đẩy</string>
+    <string name="CorpseDust_Info">Quả bóng bụi xác chết không khác gì quả bóng bụi thường về bề ngoài. Tuy nhiên, bằng cách nào đó bạn biết rằng tốt nhất nên loại bỏ nó càng sớm càng tốt.</string>
     <string name="CorpseDust_Info2">Có lẽ vì chỉ cầm nó trong tay thôi đã khiến bạn cảm thấy lo lắng và giận dữ.</string>
     <string name="CorpseDust_Name">bụi xác</string>
     <string name="CorpseExplosion_Name">Nổ Xác Chết</string>
@@ -1642,6 +1643,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
