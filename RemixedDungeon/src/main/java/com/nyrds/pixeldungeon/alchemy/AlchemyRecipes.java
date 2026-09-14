@@ -88,23 +88,8 @@ public class AlchemyRecipes {
                     }
                 }
 
-                for (OutputItem output : outputs) {
-                    EntityType entityType = determineEntityType(output.getName());
-
-                    if (!isEntityValid(output.getName(), entityType)) {
-                        break;
-                    }
-                }
-
-                for (InputItem input : inputs) {
-                    EntityType entityType = determineEntityType(input.getName());
-
-                    if (!isEntityValid(input.getName(), entityType)) {
-                        break;
-                    }
-                }
-
-                getRecipes().add(new AlchemyRecipe(inputs, outputs));
+                // parse done - addRecipe validates inputs and outputs before registering
+                addRecipe(inputs, outputs);
             }
         } catch (JSONException e) {
             EventCollector.logException(e);
