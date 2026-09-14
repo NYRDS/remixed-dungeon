@@ -50,6 +50,8 @@ public class Sign extends LevelObject {
 			} else {
 				GameScene.show(new WndMessage(text));
 			}
+		} else {
+			GameScene.show(new WndMessage(StringsManager.getVar(R.string.Sign_CantRead)));
 		}
 		return super.interact(hero);
 	}

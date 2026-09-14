@@ -985,7 +985,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_PlagueDoctorPerks_0">Plague Doctors harvest [yellow:Toxic Glands], [yellow:Rotten Organs], [yellow:Bone Shards] from slain enemies.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Plague Doctors are alchemy masters and able to use unique recipes.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Start with a [yellow:Plague Mask] (immune to all Gases) and a [yellow:Bone Saw]. Critical hits drop extra parts, and the Saw deals x1.5 damage to paralyzed foes.</string>
-    <string name="HeroClass_PlagueDoctorPerks_3">Potions of [yellow:Paralysis Gas] and [yellow:Toxic Gas] are pre-identified.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Potions of [yellow:Healing], [yellow:Paralysis Gas] and [yellow:Toxic Gas] are pre-identified.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer great accuracy penalties without beloved Bone Saw in hand and cannot use ranged weapons.</string>
 
     <string name="HeroClass_Priest">Priest</string>
@@ -1270,7 +1270,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Level_TileDescLockedExit">Heavy bars block the stairs leading down.</string>
     <string name="Level_TileDescPedestal">A small pedestal.</string>
     <string name="Level_TileDescPileOfStones">A pile of extremely heavy stones, looks unmovable.</string>
-    <string name="Level_TileDescSign">You can\'t read the text from here.</string>
+    <string name="Level_TileDescSign">A wooden sign. Something is written on it.</string>
+    <string name="Sign_CantRead">You can\'t read.</string>
     <string name="Level_TileDescStatue">Someone wanted to adorn this place, but failed, obviously.</string>
     <string name="Level_TileDescTrap">Stepping onto a hidden pressure plate will activate the trap.</string>
     <string name="Level_TileDescWater">In case of burning step into the water to extinguish the fire.</string>
