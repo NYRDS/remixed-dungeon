@@ -14,7 +14,7 @@ Rules:
 - long-standing — The death revive chain (dew vial → LICH → Ankh) is *global* death behavior. Features must not bypass it without an explicit ruling — chess mate above is the only sanctioned bypass.
 
 ## Undead & necromancy
-- 2026-09-14 — **Moongrace never duplicates undead mobs.** Moonlight full-heals a necromanced mob instead of cloning it; living mobs still clone (including the hostile forced-split feral copy). Undead state must survive every cloning path — `makeClone` carries `undead` + `expForKill`. (8a81ad382, dbeca4d12)
+- 2026-09-14 — **Moongrace never duplicates undead mobs; moonlight cures necromancy.** An *artificially raised* mob stepping on it is full-healed AND returned to life (undead flag dropped, with the whole immunity set that comes with it). *Natural undead* — species born undead: Skeleton, necropolis mobs (Zombie, knights, skulls, souls, Deathling, JarOfSouls), King.Undead, json `"undead": true` — carry `naturalUndead`, are not curable, and clone like the living. Artificial raise sites (curable): `Carcass.reanimate`, RaiseDead spell, skull-raised pets, the City King's raised servants. Undead state must survive every cloning path — `makeClone` carries `undead`/`naturalUndead`/`expForKill`. (8a81ad382, dbeca4d12, 3e3fe1b1f)
 - open (2026-09-14) — VileEssence inputs are Doctor-only (dissect / BoneSaw crits), so necromancy is effectively a Doctor perk. Pending: add a general VileEssence source or keep it Doctor-locked.
 
 ## Minions & pets
