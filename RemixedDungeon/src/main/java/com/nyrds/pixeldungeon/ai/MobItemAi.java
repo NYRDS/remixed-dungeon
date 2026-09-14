@@ -13,6 +13,7 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
+import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -267,8 +268,14 @@ public class MobItemAi {
         }
         EquipableItem equip = (EquipableItem) item;
 
-        // STR check — mandatory.
-        if (equip.requiredSTR() > mob.effectiveSTR()) {
+        // judge by the stats the owner could know - unidentified items show their typical value
+        if (equip.displayedRequiredSTR() > mob.effectiveSTR()) {
+            return 0;
+        }
+
+        // never auto-strip gear to make room - manual equip auto-unequips, AI must not churn
+        if (equip.blockSlot() != Belongings.Slot.NONE
+                && mob.getBelongings().getItemFromSlot(equip.blockSlot()) != ItemsList.DUMMY) {
             return 0;
         }
 
