@@ -36,17 +36,22 @@ public class Moongrace extends Plant {
 		if(ch instanceof Mob) {
 			Mob mob = (Mob)ch;
 
-			int cell = level().getEmptyCellNextTo(pos);
-			if (level().cellValid(cell)) {
-				// stepping on the plant (own activation) clones the pet as usual;
-				// moonlight forced by a hostile activation leaves a feral copy
-				if (activator != null && !activator.friendly(mob)) {
-					mob.splitHostile(cell, 0);
-				} else {
-					mob.split(cell, 0);
-				}
-				if (Dungeon.isCellVisible(cell)) {
-					CellEmitter.get(cell).start(ShaftParticle.FACTORY, 0.2f, 6);
+			// necromanced mobs don't multiply - moonlight revives them instead
+			if (mob.undead) {
+				mob.heal(mob.ht(), mob);
+			} else {
+				int cell = level().getEmptyCellNextTo(pos);
+				if (level().cellValid(cell)) {
+					// stepping on the plant (own activation) clones the pet as usual;
+					// moonlight forced by a hostile activation leaves a feral copy
+					if (activator != null && !activator.friendly(mob)) {
+						mob.splitHostile(cell, 0);
+					} else {
+						mob.split(cell, 0);
+					}
+					if (Dungeon.isCellVisible(cell)) {
+						CellEmitter.get(cell).start(ShaftParticle.FACTORY, 0.2f, 6);
+					}
 				}
 			}
 		}
