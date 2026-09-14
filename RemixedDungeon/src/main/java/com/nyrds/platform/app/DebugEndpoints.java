@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -43,6 +44,8 @@ import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
+import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -451,12 +454,15 @@ public class DebugEndpoints {
         try {
             String query = session.getQueryParameterString();
             String itemType = null;
+            int targetId = -1;
 
             if (query != null && !query.isEmpty()) {
                 String[] params = query.split("&");
                 for (String param : params) {
                     if (param.startsWith("type=")) {
                         itemType = URLDecoder.decode(param.substring(5), "UTF-8"); // Remove "type=" prefix
+                    } else if (param.startsWith("id=")) {
+                        targetId = Integer.parseInt(param.substring(3));
                     }
                 }
             }
@@ -474,6 +480,7 @@ public class DebugEndpoints {
 
             // caveman: inventory collection touches hero state - game thread only
             final String finalItemType = itemType;
+            final int finalTargetId = targetId;
             final String[] error = new String[1];
 
             GameLoop.pushUiTaskAndWait(() -> {
@@ -481,8 +488,21 @@ public class DebugEndpoints {
                     // Create the item using the factory
                     Item item = ItemFactory.itemByName(finalItemType);
 
-                    // Give the item to the hero
-                    Dungeon.hero.getBelongings().collect(item);
+                    Char target = Dungeon.hero;
+                    String targetName = "hero";
+                    if (finalTargetId >= 0) {
+                        Char byId = CharsList.getById(finalTargetId);
+                        if (byId == null || !byId.valid()) {
+                            error[0] = "no char with id: " + finalTargetId;
+                            return;
+                        }
+                        target = byId;
+                        targetName = target.getEntityKind() + "#" + finalTargetId;
+                    }
+
+                    // Give the item to the target's backpack
+                    target.getBelongings().collect(item);
+                    GLog.toFile("debug give_item: %s -> %s", finalItemType, targetName);
                 } catch (Exception e) {
                     error[0] = e.getMessage();
                 }
@@ -2991,6 +3011,7 @@ public class DebugEndpoints {
         try {
             String itemKind = null;
             String action = null;
+            Integer cx = null, cy = null;
             String query = session.getQueryParameterString();
             if (query != null && !query.isEmpty()) {
                 for (String param : query.split("&")) {
@@ -2998,6 +3019,10 @@ public class DebugEndpoints {
                         itemKind = URLDecoder.decode(param.substring(5), "UTF-8");
                     } else if (param.startsWith("action=")) {
                         action = URLDecoder.decode(param.substring(7), "UTF-8");
+                    } else if (param.startsWith("x=")) {
+                        cx = Integer.parseInt(param.substring(2));
+                    } else if (param.startsWith("y=")) {
+                        cy = Integer.parseInt(param.substring(2));
                     }
                 }
             }
@@ -3014,6 +3039,9 @@ public class DebugEndpoints {
 
             final String finalItemKind = itemKind;
             final String finalAction = action;
+            final boolean doCast = cx != null && cy != null;
+            final int castCellX = doCast ? cx : -1;
+            final int castCellY = doCast ? cy : -1;
             final String[] error = new String[1];
 
             GameLoop.pushUiTaskAndWait(() -> {
@@ -3023,7 +3051,16 @@ public class DebugEndpoints {
                         error[0] = "no item of kind: " + finalItemKind;
                         return;
                     }
-                    item.execute(Dungeon.hero, finalAction);
+                    if (doCast) {
+                        // caveman: with a cell - real throw path (Ballistica + onThrow), no targeting UI
+                        if (Dungeon.level == null) {
+                            error[0] = "no level";
+                            return;
+                        }
+                        item.cast(Dungeon.hero, Dungeon.level.cell(castCellX, castCellY));
+                    } else {
+                        item.execute(Dungeon.hero, finalAction);
+                    }
                 } catch (Exception e) {
                     error[0] = e.getMessage();
                 }
@@ -3045,6 +3082,234 @@ public class DebugEndpoints {
     public static NanoHTTPD.Response handleDebugScreenshot(NanoHTTPD.IHTTPSession session) {
         return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.NOT_IMPLEMENTED, "application/json",
             "{\"error\":\"Screenshot not supported on this platform\"}");
+    }
+
+    // caveman: /debug/char_flags?id= (id may be "hero") - undead/naturalUndead/hasBodyParts probe
+    public static NanoHTTPD.Response handleDebugCharFlags(NanoHTTPD.IHTTPSession session) {
+        try {
+            String id = "hero";
+            String query = session.getQueryParameterString();
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = URLDecoder.decode(param.substring(3), "UTF-8");
+                    }
+                }
+            }
+
+            final Char[] target = new Char[1];
+            final String[] error = new String[1];
+            final String finalId = id;
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                if (finalId.equals("hero")) {
+                    target[0] = Dungeon.hero;
+                    return;
+                }
+                try {
+                    Char ch = CharsList.getById(Integer.parseInt(finalId));
+                    if (ch == null || !ch.valid()) {
+                        error[0] = "no char with id: " + finalId;
+                        return;
+                    }
+                    target[0] = ch;
+                } catch (NumberFormatException e) {
+                    error[0] = "bad id: " + finalId;
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"%s\"}", error[0]));
+            }
+            if (target[0] == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"game not initialized\"}");
+            }
+
+            Char ch = target[0];
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"id\":%d,\"kind\":\"%s\",\"undead\":%b,\"naturalUndead\":%b,\"hasBodyParts\":%b}",
+                    ch.getId(), ch.getEntityKind(), ch.undead, ch.naturalUndead, ch.hasBodyParts()));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
+    // caveman: /debug/set_undead?id=&undead=&natural= - state fixture for undead-cure testing
+    public static NanoHTTPD.Response handleDebugSetUndead(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int id = -1;
+            boolean undead = true;
+            boolean natural = false;
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = Integer.parseInt(param.substring(3));
+                    } else if (param.startsWith("undead=")) {
+                        undead = Boolean.parseBoolean(param.substring(7));
+                    } else if (param.startsWith("natural=")) {
+                        natural = Boolean.parseBoolean(param.substring(8));
+                    }
+                }
+            }
+            if (id < 0) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing id parameter\"}");
+            }
+
+            final int finalId = id;
+            final boolean finalUndead = undead;
+            final boolean finalNatural = natural;
+            final String[] error = new String[1];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                Char ch = CharsList.getById(finalId);
+                if (ch == null || !ch.valid()) {
+                    error[0] = "no char with id: " + finalId;
+                    return;
+                }
+                ch.setUndead(finalUndead);
+                ch.naturalUndead = finalNatural;
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    String.format("{\"error\":\"%s\"}", error[0]));
+            }
+            return handleDebugCharFlags(session);
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
+    // caveman: /debug/cell_info?x=&y= - what stands/lies/triggers on a cell
+    public static NanoHTTPD.Response handleDebugCellInfo(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int x = -1, y = -1;
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("x=")) {
+                        x = Integer.parseInt(param.substring(2));
+                    } else if (param.startsWith("y=")) {
+                        y = Integer.parseInt(param.substring(2));
+                    }
+                }
+            }
+            if (x < 0 || y < 0) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing x or y parameter\"}");
+            }
+
+            final int fx = x, fy = y;
+            final String[] json = new String[1];
+            final String[] error = new String[1];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    Level level = Dungeon.level;
+                    if (level == null) {
+                        error[0] = "no level";
+                        return;
+                    }
+                    int cell = level.cell(fx, fy);
+                    StringBuilder sb = new StringBuilder("{");
+                    sb.append(String.format("\"cell\":%d", cell));
+
+                    Char ch = Actor.findChar(cell);
+                    if (ch != null && ch.valid()) {
+                        sb.append(String.format(",\"char\":{\"id\":%d,\"kind\":\"%s\",\"owned\":%b}",
+                                ch.getId(), ch.getEntityKind(), ch.isPet()));
+                    }
+
+                    com.watabou.pixeldungeon.items.Heap heap = level.getHeap(cell);
+                    if (heap != null) {
+                        sb.append(String.format(",\"heap\":{\"type\":\"%s\",\"size\":%d,\"top\":\"%s\"}",
+                                heap.type, heap.items.size(),
+                                heap.peek() != null ? heap.peek().getEntityKind() : "?"));
+                    }
+
+                    com.nyrds.pixeldungeon.levels.objects.LevelObject lo = level.getTopLevelObject(cell);
+                    if (lo != null) {
+                        sb.append(String.format(",\"object\":{\"kind\":\"%s\",\"affectItems\":%b,\"interactive\":%b}",
+                                lo.getEntityKind(), lo.affectItems(), lo.interactive()));
+                    }
+                    sb.append("}");
+                    json[0] = sb.toString();
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"%s\"}", error[0]));
+            }
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json[0]);
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
+    // caveman: /debug/spawn_trap?x=&y=[&kind=ToxicTrap][&secret=false] - real LevelObject trap
+    public static NanoHTTPD.Response handleDebugSpawnTrap(NanoHTTPD.IHTTPSession session) {
+        try {
+            String query = session.getQueryParameterString();
+            int x = -1, y = -1;
+            String kind = LevelObjectsFactory.TOXIC_TRAP;
+            boolean secret = false;
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("x=")) {
+                        x = Integer.parseInt(param.substring(2));
+                    } else if (param.startsWith("y=")) {
+                        y = Integer.parseInt(param.substring(2));
+                    } else if (param.startsWith("kind=")) {
+                        kind = URLDecoder.decode(param.substring(5), "UTF-8");
+                    } else if (param.startsWith("secret=")) {
+                        secret = Boolean.parseBoolean(param.substring(7));
+                    }
+                }
+            }
+            if (x < 0 || y < 0) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Missing x or y parameter\"}");
+            }
+
+            final int fx = x, fy = y;
+            final String finalKind = kind;
+            final boolean finalSecret = secret;
+            final String[] error = new String[1];
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    Level level = Dungeon.level;
+                    if (level == null) {
+                        error[0] = "no level";
+                        return;
+                    }
+                    int cell = level.cell(fx, fy);
+                    level.putLevelObject(Trap.makeSimpleTrap(cell, finalKind, finalSecret));
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    String.format("{\"error\":\"%s\"}", error[0]));
+            }
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"x\":%d,\"y\":%d,\"kind\":\"%s\"}", x, y, kind));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
     }
 
     public static NanoHTTPD.Response handleDebugToggleUI(NanoHTTPD.IHTTPSession session) {
@@ -4412,12 +4677,25 @@ public class DebugEndpoints {
                 ((Mob) chr).remoteReverted = false;
             }
 
+            // caveman: backpack kinds - makes "mob consumed/read item X" assertions observable
+            StringBuilder inv = new StringBuilder("[");
+            Belongings belongings = chr.getBelongings();
+            if (belongings != null && belongings.backpack != null) {
+                for (Item it : belongings.backpack.items) {
+                    if (inv.length() > 1) {
+                        inv.append(",");
+                    }
+                    inv.append(String.format("\"%s\"", it.getEntityKind()));
+                }
+            }
+            inv.append("]");
+
             String jsonString = String.format(
                 "{\"alive\":%b,\"hp\":%d,\"ht\":%d,\"pos\":%d,\"x\":%d,\"y\":%d," +
                     "\"action\":\"%s\",\"levelId\":\"%s\",\"depth\":%d," +
                     "\"type\":\"%s\",\"fraction\":\"%s\",\"remote\":%b,\"reverted\":%b,\"revertAfter\":%d," +
                     "\"speed\":%f,\"str\":%d,\"atk\":%d,\"def\":%d,\"dmgMin\":%d,\"dmgMax\":%d," +
-                    "\"state\":\"%s\",\"buffs\":[%s]}",
+                    "\"state\":\"%s\",\"buffs\":[%s],\"inventory\":%s}",
                 chr.isAlive(),
                 chr.hp(),
                 chr.ht(),
@@ -4437,7 +4715,9 @@ public class DebugEndpoints {
                 chr instanceof Mob ? ((Mob) chr).getDmgMin() : 0,
                 chr instanceof Mob ? ((Mob) chr).getDmgMax() : 0,
                 chr.getState().getTag(),
-                buffs
+                buffs,
+                inv.toString()
+            );
             );
 
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", jsonString);
