@@ -720,10 +720,13 @@ public class Belongings implements Iterable<Item>, Bundlable {
         }
 
         if (blockingItem != ItemsList.DUMMY) {
-            GLog.w(StringsManager.getVar(R.string.Belongings_CantWearBoth),
-                    item.name(),
-                    blockingItem.name());
-            return false;
+            // two-hander vs offhand and back: the equipped item yields instead of refusing
+            if (!((EquipableItem) blockingItem).doUnequip(owner, true)) {
+                GLog.w(StringsManager.getVar(R.string.Belongings_CantWearBoth),
+                        item.name(),
+                        blockingItem.name());
+                return false;
+            }
         }
 
         if (slot == Slot.WEAPON) {
