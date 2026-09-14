@@ -35,11 +35,33 @@ return item.init{
 
     slot = item.slot_bothHands,
 
+    requiredSTR = function(self, item)
+        return 9
+    end,
+
+    info = function(self, item)
+        local lvl = item:level()
+        local hero = item:getOwner()
+        local user_level = hero:skillLevel()
+
+        local dmgMin = (user_level + lvl) * (2 + lvl)
+        local dmgMax = (user_level + lvl) * (3 + lvl * 2)
+        local avg = dmgMin + math.floor((dmgMax - dmgMin) / 2)
+
+        local text = RPD.textById("BoneSaw_Info")
+        text = text .. "\n\n" .. RPD.format(RPD.textById("MeleeWeapon_Info2a"), avg)
+        if self:requiredSTR(item) > hero:effectiveSTR() then
+            text = text .. "\n\n" .. RPD.textById("MeleeWeapon_Info2c")
+        end
+        return text
+    end,
+
     accuracyFactor    = function(self, item, user)
         local lvl = item:level()
         local user_level = user:skillLevel()
-
-        return 1 + (lvl + user_level) * 0.15
+        -- STR deficit bites like Weapon.accuracyFactor: /1.5^n accuracy
+        local encumbrance = math.max(self:requiredSTR(item) - user:effectiveSTR(), 0)
+        return (1 + (lvl + user_level) * 0.15) / math.pow(1.5, encumbrance)
     end,
 
     damageRoll        = function(self, item, user)
@@ -51,8 +73,9 @@ return item.init{
     attackDelayFactor = function(self, item, user)
         local lvl = item:level()
         local user_level = user:skillLevel()
-
-        return math.max(1 - (lvl + user_level) * 0.05, 0.25)
+        -- STR deficit bites like Weapon.attackDelayFactor: *1.2^n delay
+        local encumbrance = math.max(self:requiredSTR(item) - user:effectiveSTR(), 0)
+        return math.max(1 - (lvl + user_level) * 0.05, 0.25) * math.pow(1.2, encumbrance)
     end,
 
     attackProc        = function(self, item, attacker, defender, damage)
@@ -100,17 +123,5 @@ return item.init{
 
     typicalSTR = function(self, item)
         return 9
-    end,
-
-    statsRequirementsSatisfied = function(self, item)
-        return item:getOwner():effectiveSTR() > 9
-    end,
-
-    knownStatsText = function(self, item)
-        return ":9"
-    end,
-
-    unknownStatsText = function(self, item)
-        return "???"
     end
 }
