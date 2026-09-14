@@ -19,14 +19,18 @@ Rules:
 
 ## Minions & pets
 - 2026-09-14 — **Tap priority: friendly char beats heap.** Tapping a pet (or any friendly) interacts/swaps even with a corpse-heap on the cell; loot under a pet is picked up by walking onto the cell. (8de307077)
-- long-standing — Pets always follow their owner across level changes; pets live in the game bundle, never in level saves. Same-level position restore on re-entry is an open proposal.
-- open (2026-09-14) — 2H weapon vs occupied offhand: pick auto-unequip semantics (none / AI-only / everyone). Recommend "everyone" + AI stops retrying.
-- open (2026-09-14) — Pet equip decisions and pet-UI requirement indicators should use *displayed* (identification-aware) stats, not real ones.
+- 2026-09-14 — **Two-hander vs offhand: the equipped item yields.** Equipping a two-hander auto-removes the conflicting hand item (and back), for heroes and pets alike; cursed blockers still refuse. The pet AI never auto-strips gear to equip something — that path is manual-only. (0f302d35f, b257007be)
+- 2026-09-14 — **Pet equip decisions use displayed stats.** AI equip scoring and pet-UI requirement indicators judge unidentified items by their typical values, not the real ones — minions no longer "know" an unidentified claymore needs 20 STR. (b257007be)
+- 2026-09-14 — **Pets keep their spot on game reload.** Re-entering (loading) the level a pet was left on restores it to its own cell; it still follows the owner onto every *new* level. Implemented via a per-mob level-id stamp. (ad8f5a7fd)
+- long-standing — Pets always follow their owner across level changes; pets live in the game bundle, never in level saves.
 
 ## World & interaction
 - long-standing — **Doors + heaps:** heaps wedging doors open is an established player tactic (death drops wedge too). Never remove `Door.leave`'s heap guard.
 
 ## Items & economy
+- 2026-09-14 — **Doctor class armor's built-in mask is the real one.** Wearing the epic DoctorArmor grants GasesImmunity; the accessory mask is an optional pre-armor backup. Either source alone keeps the immunity. (04ab87c01)
+- 2026-09-14 — **Shield upgrades lower STR requirement** like armor does: `max(2, base − level)`; blocked damage already scales ×1.3/level and the desc shows effective values. (4e73c6b05)
+- 2026-09-14 — **Rotberry brews Potion of Strength**: `Rotberry.Seed ×1 → PotionOfStrength` in the recipe system; the `+10 VileEssence → PotionOfMight` path stays alongside. (65db2ae68)
 - long-standing — Price 0 = not sellable (FOR_SALE gate); the 1g `adjustPrice` floor is deliberate.
 - long-standing — **Authored stats over derived heuristics:** game values live as authored data (java/lua/desc json), not computed from formulas where avoidable.
 
