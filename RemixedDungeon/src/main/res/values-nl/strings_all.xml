@@ -668,6 +668,7 @@
     <string name="Item_Info2">iets</string>
     <string name="Item_Name">iets</string>
     <string name="JarOfSouls_Gender">masculine</string>
+    <string name="JarOfSouls_Name">zielenkruik</string>
     <string name="JarOfSouls_Name_Objective">pot met zielen</string>
     <string name="Javelin_Gender">neuter</string>
     <string name="Journal_Alchemy">Alchemieketel</string>
@@ -915,6 +916,7 @@
     <string name="PlagueDoctorQuest_AllDone">*Hij laat een droge, hijgende lach horen.* \&quot;Jouw daden hebben geheimen ontsluierd zonder maat! De verkregen kennis… het pulsert in mij, een symfonie van ontdekking. Maar kennis,\&quot; voegt hij eraan toe, zijn zinkend tot een samenzweerderig fluisteren, \&quot;kennis is macht. En macht… ah… dat is de meest bedwelmende elixer.\&quot; Hij kijkt je even intens aan, zijn amethistoogen branden met koortsachtige felheid. \&quot;Misschien,\&quot; mompelt hij, \&quot;kruisen onze paden elkaar weer. Want er zijn nog vele… mysteries… die nog ontrafeld moeten worden.\&quot;</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name_Objective">pestdokter</string>
+    <string name="Plant_ACPlant">PLANT</string>
     <string name="Plant_Info">Worp deze zaad naar de plaats waar je %1$s wilt laten groeien.\n\n%2$s</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="Poison_Name_1">Giftig %s</string>
@@ -1933,6 +1935,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
