@@ -8,21 +8,10 @@ import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
-import com.nyrds.pixeldungeon.mobs.npc.BellaNPC;
 import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
-import com.nyrds.pixeldungeon.mobs.npc.FortuneTellerNPC;
-import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
-import com.nyrds.pixeldungeon.mobs.npc.InquirerNPC;
-import com.nyrds.pixeldungeon.mobs.npc.LibrarianNPC;
-import com.nyrds.pixeldungeon.mobs.npc.NecromancerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
-import com.nyrds.pixeldungeon.mobs.npc.SociologistNPC;
-import com.nyrds.pixeldungeon.mobs.npc.TownGuardNPC;
 import com.nyrds.pixeldungeon.mobs.npc.TownShopkeeper;
-import com.nyrds.pixeldungeon.mobs.npc.TownsfolkMovieNPC;
-import com.nyrds.pixeldungeon.mobs.npc.TownsfolkNPC;
-import com.nyrds.pixeldungeon.mobs.npc.TownsfolkSilentNPC;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
@@ -41,11 +30,9 @@ import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
-import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.wands.WandOfFlock;
@@ -116,6 +103,9 @@ public class MobFactory {
 	public static final String EARTH_ELEMENTAL = "EarthElemental";
 	public static final String PIRANHA = "Piranha";
 	public static final String ICE_GUARDIAN = "IceGuardian";
+	public static final String RAT_KING = "RatKing";
+	public static final String HEDGEHOG = "Hedgehog";
+	public static final String NECROMANCER_NPC = "NecromancerNPC";
 
 	static private Map<String, Class<? extends Mob>> mMobsList;
 
@@ -137,7 +127,7 @@ public class MobFactory {
 	private static void initMobsMap() {
 
 		mMobsList = new HashMap<>();
-		registerMobClass(RatKing.class);
+		// RatKing kind is data now (mobsDesc/RatKing.json) - java class deleted.
 		registerMobClass(Goo.class);
 
 		registerMobClass(Tengu.class);
@@ -171,31 +161,24 @@ public class MobFactory {
 		// IceGuardianCore stays java (Boss die-flow: music/bossSlain/unseal/badges).
 		registerMobClass(IceGuardianCore.class);
 
-		registerMobClass(Hedgehog.class);
-		registerMobClass(HealerNPC.class);
-		registerMobClass(TownGuardNPC.class);
+		// Hedgehog/HealerNPC/TownGuardNPC/Townsfolk*NPC/LibrarianNPC/
+		// BellaNPC/FortuneTellerNPC/NecromancerNPC kinds are data now
+		// (mobsDesc/*.json) - classes deleted, kinds must never resolve to java.
+		// InquirerNPC/SociologistNPC kinds deleted entirely (dead promo stubs,
+		// sprites kept).
 		registerMobClass(ServiceManNPC.class);
-		registerMobClass(TownsfolkNPC.class);
 		// PlagueDoctorNPC kind is data now (mobsDesc/PlagueDoctorNPC.json);
 		// in-game doctor = lua PlagueDoctor kind, the java NPC class is deleted.
-		registerMobClass(TownsfolkMovieNPC.class);
-		registerMobClass(TownsfolkSilentNPC.class);
-		registerMobClass(BellaNPC.class);
-		registerMobClass(LibrarianNPC.class);
-		registerMobClass(FortuneTellerNPC.class);
 		registerMobClass(CagedKobold.class);
 		registerMobClass(WandMaker.class);
 		registerMobClass(Blacksmith.class);
 		registerMobClass(ScarecrowNPC.class);
-		registerMobClass(NecromancerNPC.class);
 		registerMobClass(Imp.class);
 		registerMobClass(AzuterronNPC.class);
 
 		registerMobClass(Deathling.class);
 
 		registerMobClass(Ghost.class);
-		registerMobClass(SociologistNPC.class);
-		registerMobClass(InquirerNPC.class);
 		registerMobClass(Shopkeeper.class);
 		registerMobClass(ImpShopkeeper.class);
 		registerMobClass(TownShopkeeper.class);

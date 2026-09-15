@@ -1,0 +1,14 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/TownsfolkMovieNPC.json",
+   "scriptFile"    :"scripts/npc/TownsfolkMovie",
+   "friendly"      :true,
+   "movable"       :false,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+   "immortal"      :true,
+   "npc"           :true,
+   "isHumanoid"    :true,
+   "ht"            :1,
+   "exp"           :0
+}

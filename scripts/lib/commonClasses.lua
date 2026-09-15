@@ -125,6 +125,8 @@ local Camera    = luajava.bindClass("com.watabou.noosa.Camera")
 
 local MobAi = luajava.bindClass("com.nyrds.pixeldungeon.ai.MobAi")
 
+local Fraction = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Fraction")
+
 local Position = "com.nyrds.pixeldungeon.utils.Position"
 
 local CharsList = luajava.newInstance("com.nyrds.pixeldungeon.utils.CharsList")
@@ -254,6 +256,7 @@ local RPD = {
 
     GLog = GLog,
     MobAi = MobAi,
+    Fraction = Fraction,
 
     Buffs = Buffs,
     BuffIndicator = luajava.bindClass("com.watabou.pixeldungeon.ui.BuffIndicator"),

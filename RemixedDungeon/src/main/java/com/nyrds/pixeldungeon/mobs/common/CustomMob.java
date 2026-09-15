@@ -91,7 +91,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	public boolean add(Buff buff) {
 		if (npc) {
-			return false;
+			// scripted NPCs (RatKing) may punch through the blanket immunity
+			if (!getScript().runOptional("onAllowBuff", false, buff)) {
+				return false;
+			}
 		}
 		return super.add(buff);
 	}
@@ -158,6 +161,11 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	public void damage(int dmg, @NotNull NamedEntityKind src) {
 		if(immortal) {
+			return;
+		}
+
+		// scripted mobs may consume the hit (RatKing anger gate)
+		if (getScript().runOptional("onBlockDamage", false, dmg, src)) {
 			return;
 		}
 

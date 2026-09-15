@@ -12,11 +12,6 @@
          "kind":"LibrarianNPC",
          "x":5,
          "y":4
-        }, 
-        {
-         "kind":"SociologistNPC",
-         "x":12,
-         "y":6
         }],
  "multiexit":[],
  "objects":[

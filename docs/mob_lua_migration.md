@@ -1093,13 +1093,79 @@ Sixteenth batch, part 16a 2026-09-15 (npc profile + doctor decommission):
 - Rat-kill regression clean (RAT branch still feeds Scarecrow/Ghost
   quests); boot clean with the new commonClasses bind (two launches).
 
-Next: batch 16b — town crowd (bishop-shaped json + small lua, java
-deleted): TownGuardNPC/TownsfolkNPC/TownsfolkSilentNPC/TownsfolkMovieNPC
-(pure text windows → showQuestWindow), HealerNPC, LibrarianNPC,
-BellaNPC, NecromancerNPC, InquirerNPC, SociologistNPC (7 windows,
-biggest), FortuneTellerNPC (new FortuneTeller.lua: chooseOption +
-itemSelector, identify-for-50g with Haggler 0.9 factor), RatKing,
-Hedgehog (say-phrases only). Then 16c — quest NPCs: Ghost/WandMaker/
+Sixteenth batch, part 16b 2026-09-15 (town crowd → data+lua, RatKing gates):
+
+- 10 kinds migrated, 13 java classes + 3 windows deleted
+  (~1100 lines): TownGuardNPC/TownsfolkNPC/TownsfolkSilentNPC/
+  TownsfolkMovieNPC/LibrarianNPC (one random WndQuest phrase each —
+  java `WndQuest(int...)` picks ONE phrase, so each lua keeps the id
+  list and shows one via showQuestWindow), HealerNPC+WndPriest,
+  FortuneTellerNPC+WndFortuneTeller, NecromancerNPC, Hedgehog, RatKing.
+  Each kind: bishop-shaped mobsDesc/<Kind>.json (same kind name = level
+  jsons needed NO edits; old saves restore by name) + scripts/npc/<Name>.lua.
+- New CustomMob plumbing (the only java surface RatKing needed, per
+  Mike ruling "damage/buff gate on RatKing.lua"): optional script vetoes
+  `onAllowBuff(mob,buff)` (consulted for npc-profile mobs before the
+  blanket buff-immunity return) and `onBlockDamage(mob,dmg,src)`
+  (consulted before super.damage; true = hit fully consumed, no hp loss,
+  no gotDamage — matches the old java RatKing.damage early-return).
+  mob.lua got matching wrappers; the gate DECISIONS live in RatKing.lua
+  (allowBuff = anger>=2, blockDamage = friendly hit sets anger=2).
+- mob.onInteract now FORWARDS the script's return (nil = handled, for
+  every legacy script; false declines → Char.interact falls through to
+  attack). RatKing interact returns false once anger>=2, java parity.
+- RatKing.json: NO friendly key (static friendly:true would pin
+  friendly() forever and block the hostile flip) — NEUTRAL fraction
+  gives the friendly behavior via super; anger flip does
+  setFraction(DUNGEON) + setAi("Hunting") from lua. RPD.Fraction bound
+  in commonClasses. carcassChance:0 explicit (data default is 0.5; the
+  java NPC base had 0) + persistOnReset (java reset()=true).
+- Healer: WndPriest math moved to `CharUtils.goldPrice(buyer,base)`
+  (difficulty factor, Haggler x0.9 — exact int-cast parity), heal to
+  `CharUtils.healPatient` (PotionOfHealing.heal + Hunger + the
+  Brute->Gnoll-badge easter egg; potion classes stay unbound java-side,
+  batch-15 clinit lesson). FortuneTeller: `CharUtils.identifyItem`
+  (= ScrollOfIdentify.identify) + `countUnidentified`; pick via proven
+  itemSelector.selectUnidentifiedItem; identify-all =
+  belongings:identify() straight from lua. Dialogs = RPD.chooseOption
+  with prices formatted into labels (Bishop pattern).
+- Necromancer: PrisonLevel d7 spawn + exit-1 removal swapped to
+  mobByName/getEntityKind (painter pattern); `introduced` via
+  restoreData; SkeletonKey via collectAnimated. Hedgehog: HallsLevel
+  d23 spawn (once-per-run static kept level-side) → mobByName; talk
+  ladder + Pasty-on-4th + speed ramp via onSpeed, state in restoreData.
+- InquirerNPC/SociologistNPC/BellaNPC DELETED entirely (Mike: "keep
+  just sprites") — Pollfish husk, graph-dead 2018 survey downloader,
+  unplaced kind. spritesDesc/*.json kept; WndSurvey deleted (sole
+  consumer). Deleted kinds resolve to a harmless dummy (verified via
+  create_mob — no crash), TownLibrary.json Sociologist entry stripped.
+- New permanent /debug/lua_eval?code=<lua> (runs a chunk in engine
+  globals on the game thread) — drove the dialog-handler math and the
+  heal/identify flows without UI clicks.
+- Verified live (desktop rig, --mod assets): town crowd spawns as data
+  (HP/HT 1, PASSIVE, NEUTRAL), guard/librarian/necromancer/fortune/
+  healer windows screenshot-verified, gold math 75g exact, heal
+  8/20→20/20 with gold debit, identify 1→0, king wake/anger ladder →
+  HUNTING+DUNGEON, 9-dmg hit blocked at anger ramp (HP stayed 30),
+  Blessed blocked while friendly / attached when angry, crown heap on
+  death, anger+awake survive save/reload, hedgehog speed 0.5→3.5 +
+  Pasty heap, deleted kinds → dummy, 120 town ticks zero lua errors.
+- Lessons: (1) mob.lua wrapper arg convention — user hooks receive the
+  JAVA mob as first arg: `act(self)`, `speed(self,base)`,
+  `blockDamage(self,dmg,src)`, `allowBuff(self,buff)`; a wrong second
+  param silently receives nil (Healer act crashed on :getPos until
+  fixed). (2) THIS workspace resolves game files from rundir/mods/
+  Remixed/ FIRST (FileSystem base-path list) — scripts/ and mobsDesc/
+  there are hardlink twins of the repo tree EXCEPT scripts/npc, which
+  is a real copy: new npc luas must be cp'd into
+  rundir/mods/Remixed/scripts/npc/ or the level dies with
+  "Missing file" (mobsDesc resolves anyway, making it look half-broken).
+  (3) Desktop town = levelsDesc/Town_2021_03_desktop.json (that's who
+  references it) — android/desktop town variants differ (movie folk is
+  android/legacy-only). (4) move_hero refuses unexplored targets —
+  /debug/reveal_map first.
+
+Then 16c — quest NPCs: Ghost/WandMaker/
 Blacksmith/ScarecrowNPC/Imp/CagedKobold/AzuterronNPC onto lib/quest +
 restoreData; per-NPC unwinding of Quest statics (Dungeon bundle nodes,
 processQuestKills branches, Journal, painter spawn hooks). WndSadGhost
@@ -1111,8 +1177,8 @@ Stay java: ServiceManNPC (Mike, for now), Shopkeeper/TownShopkeeper/
 ImpShopkeeper (shop windows — Mike ruling), MirrorImage/Sheep (engine
 mobs), bosses incl. YogsEye and IceGuardianCore (boss-flow story).
 
-Remaining java-registered after all of batch 16: ~13 bosses + minions +
-MirrorImage/Sheep + 3 shopkeepers.
+Remaining java-registered after 16b: 16c's 7 quest NPCs + ~13 bosses +
+minions + MirrorImage/Sheep + 3 shopkeepers + ServiceManNPC.
 
 ## Verification checklist
 

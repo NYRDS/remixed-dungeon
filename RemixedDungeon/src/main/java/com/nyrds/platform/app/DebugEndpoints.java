@@ -4255,6 +4255,47 @@ public class DebugEndpoints {
         }
     }
 
+    // permanent debug endpoint: /debug/lua_eval?code=<urlencoded lua chunk> -
+    // runs a lua chunk in the engine globals on the game thread, returns the
+    // chunk's first result as a string. Drives window handlers and hooks that
+    // have no HTTP surface.
+    public static NanoHTTPD.Response handleDebugLuaEval(NanoHTTPD.IHTTPSession session) {
+        try {
+            String code = null;
+            var codeParam = session.getParameters().get("code");
+            if (codeParam != null && !codeParam.isEmpty()) {
+                code = codeParam.get(0);
+            }
+            if (code == null || code.isEmpty()) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need code=<lua>").toString());
+            }
+
+            final String lua = code;
+            final String[] result = {null};
+            final String[] error = {null};
+
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    result[0] = com.nyrds.lua.LuaEngine.eval(lua).tojstring();
+                } catch (Exception e) {
+                    error[0] = e.getMessage();
+                }
+            });
+
+            if (error[0] != null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    createErrorResponse(error[0]).toString());
+            }
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"result\":\"%s\"}", result[0] == null ? "nil" : result[0].replace("\"", "\\\"")));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
     // test endpoint: /debug/test_damage?id=<mob>&dmg=<n>&src=buff|srcid=<mobId> -
     // damages a mob with a non-Char source (Burning buff, like a DoT tick) or with
     // another mob as the source, returns the resulting AI state - used to check

@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.gl.Gl;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Group;
@@ -11,7 +12,8 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Hedgehog;
+import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
@@ -140,11 +142,25 @@ public class HallsLevel extends RegularLevel {
 		}
 	}
 	
+	// the old java Hedgehog.spawn guard: once per run, depth 23 only
+	private static boolean hedgehogSpawned;
+
 	@Override
 	protected void createMobs() {
 		super.createMobs();
-		
-		Hedgehog.spawn(this);
+
+		if (!hedgehogSpawned && Dungeon.depth == 23) {
+			int mobPos = randomRespawnCell();
+
+			if (cellValid(mobPos)) {
+				Mob hedgehog = MobFactory.mobByName(MobFactory.HEDGEHOG);
+				hedgehog.setPos(mobPos);
+				mobs.add(hedgehog);
+				Actor.occupyCell(hedgehog);
+
+				hedgehogSpawned = true;
+			}
+		}
 	}
 	
 	private static class Stream extends Group {

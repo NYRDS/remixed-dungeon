@@ -2,7 +2,8 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.watabou.pixeldungeon.actors.mobs.npcs.RatKing;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -41,7 +42,7 @@ public class RatKingPainter extends Painter {
 			}
 		}
 		
-		RatKing king = new RatKing();
+		Mob king = MobFactory.mobByName(MobFactory.RAT_KING);
 		king.setPos(room.random(level, 1 ));
 		level.mobs.add( king );
 	}

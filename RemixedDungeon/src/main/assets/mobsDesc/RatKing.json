@@ -1,0 +1,19 @@
+{
+   "baseSpeed"     :2,
+   "spriteDesc"    :"spritesDesc/RatKing.json",
+   "scriptFile"    :"scripts/npc/RatKing",
+   "movable"       :true,
+   "aiState"       :"Sleeping",
+   "fraction"      :"NEUTRAL",
+   "npc"           :true,
+   "isHumanoid"    :false,
+   "ht"            :30,
+   "dmgMin"        :4,
+   "dmgMax"        :10,
+   "attackSkill"   :15,
+   "defenseSkill"  :20,
+   "dr"            :5,
+   "exp"           :1,
+   "carcassChance" :0,
+   "persistOnReset":true
+}

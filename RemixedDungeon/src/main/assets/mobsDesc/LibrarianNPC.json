@@ -1,0 +1,14 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/LibrarianNPC.json",
+   "scriptFile"    :"scripts/npc/Librarian",
+   "friendly"      :true,
+   "movable"       :false,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+   "immortal"      :true,
+   "npc"           :true,
+   "isHumanoid"    :true,
+   "ht"            :1,
+   "exp"           :0
+}

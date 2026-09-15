@@ -192,6 +192,11 @@ public class LuaEngine implements ResourceFinder {
 		getEngine().globals.loadfile(fileName).call();
 	}
 
+	// /debug/lua_eval: run a lua chunk in the engine globals (debug tooling)
+	static public LuaValue eval(@NotNull String code) {
+		return getEngine().globals.load(code, "=debug_eval").call();
+	}
+
 	static public Globals getGlobals() {
 		return getEngine().globals;
 	}

@@ -1,0 +1,14 @@
+{
+   "baseSpeed"     :0.5,
+   "spriteDesc"    :"spritesDesc/Hedgehog.json",
+   "scriptFile"    :"scripts/npc/Hedgehog",
+   "friendly"      :true,
+   "movable"       :true,
+   "aiState"       :"Wandering",
+   "fraction"      :"NEUTRAL",
+   "npc"           :true,
+   "isHumanoid"    :false,
+   "ht"            :1,
+   "exp"           :0,
+   "carcassChance" :0
+}

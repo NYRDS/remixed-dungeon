@@ -70,8 +70,13 @@ mob.onInteract = function(self,mob,chr)
         return false
     end
 
-    self.interact(mob, chr)
-    return true
+    -- nil = handled (legacy NPC scripts return nothing); a script may return
+    -- false to decline the interact (angry RatKing falls through to attack)
+    local handled = self.interact(mob, chr)
+    if handled == nil then
+        return true
+    end
+    return not not handled
 end
 
 mob.onMove = function(self,mob,cell)
@@ -169,6 +174,25 @@ mob.onZapProc = function(self,mob, enemy, damage)
     end
     return self.zapProc(mob, enemy, damage)
 end
+
+-- called from CustomMob.add for npc-profile mobs before the blanket buff
+-- veto: return true to let this buff attach anyway (RatKing when angered)
+mob.onAllowBuff = function(self,mob,buff)
+    if not self.allowBuff then
+        return false
+    end
+    return not not self.allowBuff(mob, buff)
+end
+
+-- called from CustomMob.damage before the base flow: return true when the
+-- script consumed the hit entirely (RatKing anger gate) and no hp is lost
+mob.onBlockDamage = function(self,mob,dmg,src)
+    if not self.blockDamage then
+        return false
+    end
+    return not not self.blockDamage(mob, dmg, src)
+end
+
 
 mob.onZapMiss = function(self,mob, enemy)
     if not self.zapMiss then

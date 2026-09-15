@@ -4,7 +4,7 @@ package com.watabou.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.effects.emitters.Torch;
 import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.npc.NecromancerNPC;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -74,7 +74,13 @@ public class PrisonLevel extends RegularLevel {
 		if(Dungeon.depth==7 && !necromancerSpawned && hasExit(1)) {
 			Room NecroExit = exitRoom(1);
 			if(NecroExit!=null && Dungeon.heroClass != HeroClass.NECROMANCER) {
-				NecromancerNPC.spawn(this, exitRoom(1));
+				Mob necromancer = MobFactory.mobByName(MobFactory.NECROMANCER_NPC);
+				int cell;
+				do {
+					cell = NecroExit.random(this);
+				} while (map[cell] == Terrain.LOCKED_EXIT || !isCellNonOccupied(cell));
+				necromancer.setPos(cell);
+				spawnMob(necromancer);
 				necromancerSpawned = true;
 			}
 		}
@@ -127,7 +133,7 @@ public class PrisonLevel extends RegularLevel {
 			int index = exitIndex(cell);
 			if(index == 1) {
 				for(Mob mob:mobs) {
-					if(mob instanceof NecromancerNPC) {
+					if(mob.getEntityKind().equals(MobFactory.NECROMANCER_NPC)) {
 						mobs.remove(mob);
 						break;
 					}

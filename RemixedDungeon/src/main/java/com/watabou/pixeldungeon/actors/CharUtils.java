@@ -7,6 +7,7 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.Treasury;
@@ -46,14 +47,17 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -62,6 +66,8 @@ import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -167,7 +173,51 @@ public class CharUtils {
     // batch 7): cursed heaps (tomb/skeleton) and Shadow Lord summon wraiths.
     private static final float WRAITH_SPAWN_DELAY = 2f;
 
-    public static Mob spawnWraithAt(Level level, int pos) {
+	// price math of the deleted WndPriest/WndFortuneTeller, for the lua
+	// Healer/FortuneTeller: base gold, scaled by difficulty, Haggler discount
+	@LuaInterface
+	public static int goldPrice(@NotNull Char buyer, int base) {
+		int price = (int) (base * GameLoop.getDifficultyFactor());
+		if (buyer.hasBuff(RingOfHaggler.Haggling.class)) {
+			price *= 0.9;
+		}
+		return price;
+	}
+
+	// the deleted WndPriest.doHeal for a single patient
+	@LuaInterface
+	public static void healPatient(@NotNull Char patient) {
+		PotionOfHealing.heal(patient, 1.0f);
+		patient.hunger().satisfy(Hunger.STARVING);
+
+		if (patient instanceof Mob && patient.getEntityKind().equals("Brute")) {
+			Badges.validateGnollUnlocked();
+		}
+	}
+
+	// the deleted WndFortuneTeller identify click (ScrollOfIdentify.identify)
+	@LuaInterface
+	public static void identifyItem(@NotNull Char chr, @NotNull Item item) {
+		GameScene.addToMobLayer(new Identification(chr.getSprite().center().offset(0, -16)));
+
+		item.identify();
+		GLog.i(Utils.format(R.string.ScrollOfIdentify_Info1, item));
+
+		Badges.validateItemLevelAcquired(item);
+	}
+
+	@LuaInterface
+	public static int countUnidentified(@NotNull Char chr) {
+		int count = 0;
+		for (Item item : chr.getBelongings()) {
+			if (!item.isIdentified()) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public static Mob spawnWraithAt(Level level, int pos) {
         Mob wraith = MobFactory.mobByName(MobFactory.WRAITH);
 
         if (!wraith.canSpawnAt(level, pos)) {
