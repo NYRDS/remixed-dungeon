@@ -926,6 +926,7 @@
     <string name="PotionBelt_Info">Deze sterke leren riem kan al je drankjes bevatten en beschermt ze tegen het breken door vorst.</string>
     <string name="PotionOfExperience_Info">De belevenissen van talloze veldslagen, herleid tot vloeibare vorm; deze drank verhoogt onmiddellijk je ervaringsniveau.</string>
     <string name="PotionOfFrost_Info">Bij blootstelling aan open lucht zal deze stof verdampen tot een vriezende wolk, waardoor elk wezen dat ermee in contact komt op zijn plek bevriest, onbeweeglijk en onmachtig.</string>
+    <string name="PotionOfFrost_Name">Vorstdrank</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfInvisibility_Apply">Je ziet je handen onzichtbaar worden!</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
@@ -1074,6 +1075,7 @@
     <string name="ScrollHolder_Name">koker voor perkamentrollen</string>
     <string name="ScrollOfChallenge_Info">Wanneer hardop gelezen, zal deze rol een uitdagende brul ontketenen die alle monsters wakker maakt en hen waarschuwt voor de locatie van de lezer.</string>
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
+    <string name="ScrollOfCurse_Info">Deze rol is speciaal gemaakt om dieven te straffen die dom genoeg zijn om magie te gebruiken die ze niet begrijpen. De magie is totaal nutteloos en zelfs schadelijk voor een gewone avonturier, maar wordt door handelaren goed gewaardeerd.</string>
     <string name="ScrollOfCurse_Name">Vloekscrol</string>
     <string name="ScrollOfDomination_Name">Scroll van Heerschappij</string>
     <string name="ScrollOfIdentify_Info1">Het is %s</string>
@@ -1511,6 +1513,7 @@
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
     <string name="WndPlayGames_Show_Ok">Gelukt!</string>
     <string name="WndPlayGames_Title">Google Play Games</string>
+    <string name="WndPortal_Info">Dit portaal stelt je in staat om terug te keren naar de stad. Het lijkt nogal instabiel en zal waarschijnlijk niet lang actief blijven.\nWil je het gebruiken?</string>
     <string name="WndPortal_Info_Return">Deze portal brengt je terug naar de dungeon.\nWil je hem gebruiken?</string>
     <string name="WndPortal_Title">Portaal</string>
     <string name="WndPortal_Warning_Title">Portaal Waarschuwing!</string>
@@ -1916,6 +1919,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

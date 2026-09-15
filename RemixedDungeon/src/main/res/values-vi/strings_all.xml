@@ -463,6 +463,7 @@
     <string name="FrostAuraBuff_Name">Hơi sương băng</string>
     <string name="FrostBuff_Info">Đông cứng hoàn toàn, không thể thực hiện bất kỳ hành động nào.</string>
     <string name="Frost_Shatter">Lạnh làm %s vỡ nát!</string>
+    <string name="Froth_ArrowInKnee">Tôi từng là một nhà thám hiểm như bạn,\nNhưng rồi tôi bị một mũi tên bắn vào đầu gối...</string>
     <string name="FrozenCarpaccio_Info1">Bạn thấy tay mình trở nên vô hình!</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenCarpaccio_Info3">Sảng khoái!</string>
@@ -1416,6 +1417,7 @@
     <string name="WndHero_Awareness">Nhận thức</string>
     <string name="WndHero_Buffs">Hiệu ứng</string>
     <string name="WndHero_Exp">Kinh nghiệm</string>
+    <string name="WndHero_Satiety">Độ no</string>
     <string name="WndHero_StaCatalogus">Danh mục</string>
     <string name="WndHero_StaJournal">Nhật ký</string>
     <string name="WndImp_Reward">Nhận chiếc nhẫn</string>
@@ -1662,6 +1664,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
