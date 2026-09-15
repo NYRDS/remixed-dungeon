@@ -628,6 +628,7 @@
     <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name_Objective">ijsbewaker</string>
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
+    <string name="Icecap_Name">IJskap</string>
     <string name="Ignite_Name">Ontbranden</string>
     <string name="ImpShopkeeper_Name">ambitieze duiveltje</string>
     <string name="Imp_Cya">Tot ziens, %s!</string>
@@ -749,6 +750,7 @@
     <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Name">langzwaard</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
+    <string name="Luck_Name_2">Gelukkig %s</string>
     <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">De ijzeren kop van dit wapen richt aanzienlijke schade aan.</string>
     <string name="Mace_Name">knots</string>
@@ -1729,6 +1731,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 

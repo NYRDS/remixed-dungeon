@@ -502,6 +502,7 @@
     <string name="Golem_Desc">Người lùn đã cố gắng kết hợp kiến thức cơ khí của họ với sức mạnh mới tìm thấy được của việc ràng buộc nguyên tố. Họ sử dụng linh hồn của đất làm \&quot;linh hồn\&quot; cho thân thể cơ khí của golem, được cho là dễ kiểm soát nhất trong tất cả. Mặc dù vậy, sai sót nhỏ nhất trong nghi thức cũng có thể gây ra bùng nổ.</string>
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">golem</string>
+    <string name="Golem_Name_Objective">golem</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">Goo đang bơm hơi cho mình!</string>
     <string name="Goo_Info3">Ọp-ọp!</string>
@@ -885,6 +886,7 @@
     <string name="PlagueDoctorQuest_1_2_InProgress">Mười ốc sên, mười thì thầm từ vực thẳm! Chất nhầy của chúng sẽ được phân tích, bản chất của chúng sẽ được thẩm định. Những bí mật chúng chứa đựng đã gần trong tầm tay.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Ho khan dữ dội* Hắt xì!\n Những con ốc... chúng trườn. Chúng tiết nhờn. Và chúng thì thầm bí mật của một thời đại bị lãng quên. Tôi cần chúng, _mười_ con, vỏ vẫn còn nguyên vẹn. Bạn nghĩ _năm mươi đồng vàng_ có đủ cho tri thức quý giá như vậy không?\n Ba! Không quan trọng. Thông tin chúng giữ có thể là chìa khóa để dừng dịch bệnh này. Hoặc... nó có thể dẫn chúng ta đến thứ gì đó còn kinh khủng hơn. Bạn quyết định.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_Thiên Hương_… minh chứng cho phép thuật vần vò thế giới này. Ta đã học được nhiều từ bản chất của chúng, nhưng phần thưởng của ngươi… tại ha, đã được chuẩn bị tận tâm. *Hàng cho anh hùng một bình _Mana Potion_ lấp lánh* Nguyện sức mạnh nó dẫn dắt ngươi vượt qua những hiểm nguy phía trước.</string>
+    <string name="PlagueDoctorQuest_3_1_InProgress">Hãy mang cho tôi một con _dơi ma cà rồng_, còn sống và nguyên vẹn! Máu của nó, đôi cánh của nó… chúng chứa những bí mật mà tôi phải khám phá!</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">Một _Kỵ Sĩ Cửu U_! *Giọng nói nứt nẻ vì hứng thú, ngón tay xương khô run rẩy khi nắm chặt bình thuốc bủa bọt đầy hỗn hợp mờ tối, chói lòa*. Một sinh vật như vậy… một ngọn đèn hiệu của cái chết! Bắt được một con, còn sống… đó sẽ là… một kỳ quan. Hãy tưởng tượng những bí mật chúng ta có thể khai phá! Sức mạnh chảy trong những mạch xương khô đó! Đúng, một _Kỵ Sĩ Cửu U_! Nó quan trọng cho nghiên cứu của ta! Vì nó sẽ cho phép chúng ta đi sâu hơn… vào những bí ẩn của sự sống… và cái chết bản thân!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Tâm trí anh ấy lang thang khi nói, giọng nói càng lúc càng nhỏ, chỉ còn là thì thầm.* Mang cho ta hai *súc quyên*... sống. Quyền năng của chúng... mê hoặc.</string>
@@ -1654,6 +1656,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
