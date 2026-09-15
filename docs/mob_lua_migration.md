@@ -1175,6 +1175,13 @@ lua-reachable (commonClasses class table) and WndTradeItem works with any
 Char shopkeeper, so data mobs run the real shop UI once their backpack is
 stocked.
 
+16c-1 SHIPPED 5535e5dae (2026-09-16): quest layer (quest.lua trySpawn +
+QuestBridge) + SadGhost; Ghost/WndSadGhost/WndSadGhostNecro java deleted.
+Gotchas for the remaining slices: bound-class static methods take
+COLON-calls from lua; lua quest state must stay serpent-safe plain
+values (rewards generated lazily at button-press); delete Mob.java
+switch lines with each quest (Scarecrow+Imp lines remain until 16c-3).
+
 Design:
 - Quest state = scripts/lib/quest.lua quest.state(name) via
   storage.gamePut (SCRIPTS_DATA bundle node, already round-trips). The 7
