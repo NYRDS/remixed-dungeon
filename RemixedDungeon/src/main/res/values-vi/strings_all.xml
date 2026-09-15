@@ -583,6 +583,7 @@
     <string name="Hero_Name">bạn</string>
     <string name="Hero_Name_Objective">bạn</string>
     <string name="Hero_NewLevel">Chào mừng đến cấp độ %d! Giờ bạn khỏe mạnh và tập trung hơn. Dễ dàng đánh trúng kẻ địch và né tránh đòn tấn công của chúng hơn.</string>
+    <string name="Hero_NoticedSmth">Bạn nhận thấy điều gì đó</string>
     <string name="Hero_Search">tìm kiếm</string>
     <string name="Hero_StaBleeding">Bạn đang chảy máu!</string>
     <string name="Hero_StaBurning">Bạn bị bốc cháy!</string>
@@ -1671,6 +1672,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

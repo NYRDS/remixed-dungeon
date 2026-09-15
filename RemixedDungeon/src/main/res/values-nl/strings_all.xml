@@ -1120,6 +1120,7 @@
     <string name="Scroll_Runes_9">BERKANAN</string>
     <string name="SeedPouch_Info">Deze kleine fluweelzakje stelt je in staat om elk aantal zaden in op te slaan. Erg handig.</string>
     <string name="SeedPouch_Name">zaadzakje</string>
+    <string name="Senior_Desc">Deze monniken zijn fanatieken, die zich hebben gewijd aan het beschermen van de geheimen van hun stad tegen alle buitenaardse wezens. Ze gebruiken geen pantser of wapens en vertrouwen uitsluitend op de kunst van het hand-to-hand gevecht. Deze specifieke monnik heeft de kunst van het uitschakelen van zijn tegenstanders onder de knie.</string>
     <string name="Senior_Gender">masculine</string>
     <string name="Senior_Name">senior monnik</string>
     <string name="Senior_Name_Objective">seniore monnik</string>
@@ -1179,6 +1180,7 @@
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
     <string name="SlowBuff_Name">Vertraagd</string>
+    <string name="Slow_Name_0">Chilling %s</string>
     <string name="Slow_Name_2">Bevriezend %s</string>
     <string name="SmashSpell_Info">Spring omhoog en creëer een krachtige klap bij het raken van de grond, die tijdelijk vijanden in de buurt verdooft en tegelijkertijd fysieke schade toebrengt.</string>
     <string name="SmashSpell_Name">Verpletteren</string>
@@ -1687,6 +1689,7 @@
     <string name="town_deco_inn_bed_desc">Ziet eruit als een heel comfortabel bed.</string>
     <string name="town_deco_inn_bed_name">Bed</string>
     <string name="town_deco_ladder_desc">Een oude ladder, onbetrouwbaar van uiterlijk.</string>
+    <string name="town_deco_ladder_name">Ladder</string>
     <string name="town_deco_library_books_desc">Nog steeds beter dan de boeken uit de kelder.</string>
     <string name="town_deco_library_books_name">Leesmateriaal</string>
     <string name="town_deco_library_sign_name">Bibliotheekbord</string>
@@ -1928,6 +1931,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
