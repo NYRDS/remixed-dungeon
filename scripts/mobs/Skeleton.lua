@@ -18,7 +18,10 @@ return mob.init{
         data.rolled = true
 
         -- java getLoot(): no treasury loot on the Lich's arena
-        if RPD.Dungeon.level:levelKind() == "NecroBossLevel" then
+        -- (ctor runs during level creation, Dungeon.level may be nil -
+        -- java's `level() instanceof NecroBossLevel` was null-safe too)
+        local lvl = RPD.Dungeon.level
+        if lvl ~= nil and lvl:levelKind() == "NecroBossLevel" then
             return
         end
 
