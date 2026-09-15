@@ -1284,6 +1284,7 @@
     <string name="Tengu_Info3">Toegesnapt, %s!</string>
     <string name="Tengu_Name">tengu</string>
     <string name="Tengu_Name_Objective">Tengu</string>
+    <string name="TerrorBuff_Info">Het lijkt erop dat iemand erg bang was.</string>
     <string name="TerrorBuff_Name">Versterkt</string>
     <string name="Thief_Desc">De diepere verdiepingen van de dungeon zijn altijd een schuilplaats geweest voor allerlei criminelen. Niet iedereen kon zijn verstand behouden tijdens langdurige afwezigheid van daglicht. Lang geleden vergeten deze gekke dieven en bandieten wie ze zijn en waarom ze stelen.</string>
     <string name="Thief_Gender">masculine</string>
@@ -1669,6 +1670,7 @@
     <string name="town_deco_library_books_name">Leesmateriaal</string>
     <string name="town_deco_library_sign_name">Bibliotheekbord</string>
     <string name="town_deco_locked_door_desc">Wat ter wereld zou er achter die deur kunnen zitten?</string>
+    <string name="town_deco_locked_door_name">Gesloten deur</string>
     <string name="town_deco_magenta_carpet_desc">De magenta kleur van dit tapijt doet denken aan lokale wijn.</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_misc_desc">Een hoop rommel en snuisterijen.</string>
@@ -1727,6 +1729,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
