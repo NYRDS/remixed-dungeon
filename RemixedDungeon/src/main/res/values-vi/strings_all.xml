@@ -461,6 +461,7 @@
     <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Name">Hơi sương băng</string>
+    <string name="FrostBuff_Info">Đông cứng hoàn toàn, không thể thực hiện bất kỳ hành động nào.</string>
     <string name="Frost_Shatter">Lạnh làm %s vỡ nát!</string>
     <string name="FrozenCarpaccio_Info1">Bạn thấy tay mình trở nên vô hình!</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
@@ -756,6 +757,7 @@
     <string name="MeleeWeapon_Info1c">đã nâng cấp</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
     <string name="MeleeWeapon_Info2a">Sát thương trung bình là %d điểm mỗi lần đánh.</string>
+    <string name="MeleeWeapon_Info2b">Sát thương trung bình điển hình là %1 điểm mỗi lần đánh và thường yêu cầu %2 điểm sức mạnh.</string>
     <string name="MeleeWeapon_Info2c">Vũ khí này có lẽ quá nặng đối với bạn.</string>
     <string name="MeleeWeapon_Info3a">Đây là một vũ khí khá %s.</string>
     <string name="MeleeWeapon_Info3b">nhanh</string>
@@ -1658,6 +1660,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

@@ -386,6 +386,7 @@
     <string name="DashSpell_TooFar">Ik kan niet zo ver dasen.</string>
     <string name="DeathKnight_Gender">masculine</string>
     <string name="Death_Name_1">Grim %s</string>
+    <string name="Death_Name_2">Grimmige %s</string>
     <string name="Deathling_Desc">De Doodsling is de ziel van een gevallen held die ongelukkig genoeg werd opgeroepen door een mede-avonturier die necromancie beoefent.</string>
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name_Objective">doodsklief</string>
@@ -1908,4 +1909,7 @@
 
 
 
+
+
+    <string name="town_table_fortune_name">Tafel</string>
 </resources>
