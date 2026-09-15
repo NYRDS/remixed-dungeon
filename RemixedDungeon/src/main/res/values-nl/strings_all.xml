@@ -1114,6 +1114,7 @@
     <string name="SeedPouch_Info">Deze kleine fluweelzakje stelt je in staat om elk aantal zaden in op te slaan. Erg handig.</string>
     <string name="SeedPouch_Name">zaadzakje</string>
     <string name="Senior_Gender">masculine</string>
+    <string name="Senior_Name">senior monnik</string>
     <string name="Senior_Name_Objective">seniore monnik</string>
     <string name="ServantNPC_Desc">Een heel drukke herbergbediende.</string>
     <string name="ServantNPC_Gender">feminine</string>
@@ -1709,6 +1710,7 @@
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
     <string name="town_deco_stones_name">Stenen</string>
     <string name="town_deco_stool_broken_name">Gebroken kruk</string>
+    <string name="town_deco_stool_sturdy_desc">Een gewone kruk van resistent hout.</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_stove_name">Stenen kachel</string>
     <string name="town_deco_trapdoor_desc">Waar zou dit toch naartoe leiden?</string>
@@ -1912,4 +1914,6 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 </resources>
