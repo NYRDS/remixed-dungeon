@@ -4128,8 +4128,33 @@ public class DebugEndpoints {
                 attacker.getEntityKind(), target.getEntityKind()));
     }
 
-    public static NanoHTTPD.Response handleDebugAffectBuff(NanoHTTPD.IHTTPSession session) {
+    // probe for mob leveling (Larva imago burst etc): dumps enough exp for
+    // one or more level-ups through the real Char.earnExp flow
+    public static NanoHTTPD.Response handleDebugLevelUp(NanoHTTPD.IHTTPSession session) {
         int id = -2;
+        String query = session.getQueryParameterString();
+        if (query != null) {
+            for (String param : query.split("&")) {
+                if (param.startsWith("id=")) {
+                    id = Integer.parseInt(param.substring(3));
+                }
+            }
+        }
+
+        final Char chr = findCharByIdOrHero(id);
+        if (chr == null || !chr.isAlive()) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                createErrorResponse("need id (-1 = hero)").toString());
+        }
+
+        GameLoop.pushUiTaskAndWait(() -> chr.earnExp(1000));
+
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+            String.format("{\"success\":true,\"target\":\"%s\",\"lvl\":%d}",
+                chr.getEntityKind(), chr.lvl()));
+    }
+
+    public static NanoHTTPD.Response handleDebugAffectBuff(NanoHTTPD.IHTTPSession session) {        int id = -2;
         float dur = 10f;
         String kind = null;
         String query = session.getQueryParameterString();

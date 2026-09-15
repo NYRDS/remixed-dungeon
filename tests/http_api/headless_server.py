@@ -25,8 +25,12 @@ def server_command(port: str = "8080"):
     if jar:
         game_dir = os.environ.get(
             "RPD_GAME_DIR", os.path.join(project_root, "RemixedDungeonDesktop/src/desktop/rundir"))
+        # --mod=Remixed: without it the headless build runs unmodded, and the
+        # suites' mod-data fixtures (alchemy recipes, doctor quest items)
+        # 404; use the assets-bundled jar (headlessShadowJar) so the mod
+        # resolves on CI too
         return (["java", "-jar", os.path.abspath(jar), "--webserver=" + port,
-                 "--fps=5"], os.path.abspath(game_dir))
+                 "--fps=5", "--mod=Remixed"], os.path.abspath(game_dir))
     return (["./gradlew", "-p", "RemixedDungeonDesktop", "runDesktopGameWithWebServer",
              "--args=--webserver=" + port + " --minimized"], project_root)
 

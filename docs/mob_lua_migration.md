@@ -625,12 +625,13 @@ Transitive closure over all `Mob`/`Item` descendants in
 `RemixedDungeon/src/main/java`, checked against factory registrations and
 data-def scans (`mobsDesc/*.json`, `scripts/items/*.lua`):
 
-- Mobs: every concrete descendant is reachable by kind. 88 kinds are
-  data-defined (`mobsDesc/*.json`, the migration target), 50 + 3 manual
+- Mobs: every concrete descendant is reachable by kind. 93 kinds are
+  data-defined (`mobsDesc/*.json`, the migration target), 45 + 3 manual
   entries remain java-registered (bosses, NPCs, engine mobs — see the
   batch-15 survey for their override surfaces). Statue, ArmoredStatue,
-  GoldenStatue and the batch-12 kinds have NO java class anymore; their
-  old-save FQNs resolve through the FQN-tail route to CustomMob.
+  GoldenStatue, the batch-12 kinds and the batch-15 Yog/IceGuardian kinds
+  have NO java class anymore; their old-save FQNs resolve through the
+  FQN-tail route to CustomMob.
   `CustomMob`/`MultiKindMob` are base classes; the nested
   `WandOfFlock$Sheep` is registered manually as `Sheep`.
 - Items: 185 concrete descendants. All registered or lua-defined except
@@ -943,7 +944,105 @@ untouched. CI: alchemy 42/42, all_spells 38/38, doctor 7/7, blood 6/6.
 Not exercised organically: a random STATUE special room (painter calls
 the proven `MobFactory.mobByName`; sweep of depths 3-7 rolled none).
 
-Next: NPC design pass (batch 15) — needs Mike's design call first.
+Fifteenth batch 2026-09-15 (Yog's flesh + ice guardian; the "NPC design
+pass" stays queued behind Mike's call — these five needed no design
+decisions): **`Larva`, `YogsHeart`, `YogsTeeth`, `YogsBrain`,
+`IceGuardian`** — all five kinds data, all five java classes DELETED.
+`IceGuardianCore` deliberately STAYS java: it is a `Boss` subclass and
+its die-flow (battleMusic from classDef, `GameScene.bossSlain()`,
+`level().unseal()`, `Badges.validateBossSlain`) is not lua-reachable —
+that is the boss-flow story for a later batch. Its `instanceof
+IceGuardian` switch is now a `getEntityKind().equals(ICE_GUARDIAN)` kind
+check, and `IceCavesBossLevel` builds the guard via
+`MobFactory.mobByName(MobFactory.ICE_GUARDIAN)` (new constant).
+
+Engine surface (all reusable):
+- `Level.getMobs()` @LuaInterface — the level mob list as a LuaTable
+  (mirrors `getLevelObjects`); enables beckon-all loops, kind scans and
+  "pick a random mob" logic in scripts.
+- @LuaInterface on `Char.damage(int,NamedEntityKind)` (IceGuardian feeds
+  its core), `Mob.beckon(int)` (Yog damage hooks), and
+  `CharUtils.spawnOnNextCell` (Heart/Brain summoners — java YogsEye still
+  uses it unchanged).
+- `Char.die(cause)` was already @LuaInterface — Larva self-destructs with
+  `self:die(self)` inside `act`, which runs at the top of `Char.act`
+  (before buffs), exactly where the java override did its work.
+- `Mob.resurrect()` spawns a fresh CustomMob of the same kind (FQN-free),
+  so the IceGuardian rebuild trick ports with no new plumbing.
+
+Gotcha worth remembering: do NOT eagerly `bindClass` item classes whose
+static init CONSTRUCTS an item (e.g. `PotionOfHealing` builds
+`pseudoPotion` in clinit) — `commonClasses.lua` is required at boot via
+`LuaEngine.<clinit>` (Dungeon.reset → TitleScene), before the item
+status handlers exist; the eager bind NPE'd the title screen. The
+heal-and-cleanse flow is inlined in YogsHeart.lua instead
+(`other:heal(ht*0.2, self)` + four `detachBuff`). Devour (safe clinit)
+is bound as `RPD.Devour`.
+
+Script notes: YogsBrain is the Scorpio kite shape verbatim
+(canDoOnlyRangedAttack HUNTING↔FLEEING flip + lightningProc in zapProc,
+return 0 = no base zap damage; attackRange authored 8 like Shaman/Warlock
+— java had no cap); its damage hook spawns "Nightmare" via
+spawnOnNextCell (Nightmare already data). YogsTeeth rolls the three
+independent procs (drain via `heal(dmg, self)`, `Bleeding` affect+level,
+Devour.hit + snd_bite + ×2). Heart's defenceProc spawns "Larva" the same
+way. Larva: `stats` floors lvl at 1 (java ctor `lvl(1)`, guard so
+earnExp-levelled larvae — fresh or pre-migration — keep their level),
+`spawn` sets Hunting (java ctor state; the only batch kind needing an
+initial state), `act` bursts into {Scorpio, Worm, Eye, Scorpio} at its
+own cell when lvl>=2 (mob leveling makes that live; the java
+sprite-emitter curse burst is done as a `CellEmitter:center` burst —
+same particles, cell-anchored).
+
+Verified live (desktop, town + sewer depth 1): all five stat parity
+exact vs the java ctors (120/17/30/20/25-30, 450/18/26/40/35-45,
+350/18/46/44/50-80, 350/18/31/30/15-25, 70/14/31/30/10-15 speed 0.7 +
+FrozenCarpaccio loot), Larva HUNTING at spawn; level_up probe → burst
+(Larva gone, HUNTING Scorpio imago at its cell); guardian death → core
+took exactly 150 → two fresh guardians (and core's own death removes
+them); teeth→core hit dealt 90 (> the 80 max single hit = a bleed/devour
+proc fired; drain masked by full hp); heart damage → every mob on the
+level flipped WANDERING (beckon-all); wounded pet rat healed +1
+(= floor(ht*0.2), pets have no natural regen); rat→heart real attack
+spawned a Larva next to it; brain zap dealt exactly 18 (in 15-25,
+no base damage), brain damage → Nightmare spawned; brain
+HUNTING→FLEEING kite with real retreat moves. Save round-trip:
+damaged larva (65/120), FLEEING brain, heart, nightmare all restored at
+positions, zero skip lines. New permanent debug endpoint
+`/debug/level_up?id=` (real `earnExp(1000)` — mob-leveling probe).
+Suite harness (this session's find, bd bwi material): the alchemy suite
+finishes 37/42 on every headless variant tried; the 5 fails are ALL
+"No recipe found" for MOD-data recipes (trio→VileEssence, Zombie,
+Brute). Root cause chain, fully diagnosed: (1) the headless launcher
+runs UNMODDED unless `--mod=Remixed` is passed (server_command in
+tests/http_api/headless_server.py now passes it, and the CI workflow
+now builds the assets-bundled `headlessShadowJar` —
+`RemixedDungeon-Headless.jar` — instead of the bare `shadowJar`, which
+bundles no assets so the mod can't resolve); (2) with the mod active,
+mod recipe registration still dies on headless because ANY Potion
+instance construction NPEs (`Potion.handler` null) — the item status
+handlers are only initialized by the scene/full-game init path the
+headless build skips; core-json recipes load, the mod's lua/json recipe
+set half-loads (4 recipes) and everything downstream cascades. The
+desktop build inits handlers during normal boot, which is why it serves
+all 105 recipes. Next bwi step = initialize item status handlers in the
+headless boot (or make recipe validation lazy about item construction).
+Also fixed en route: ServerManager.start() waits on check_server()
+without a port-ownership check — any leftover game on :8080 hijacks the
+suite (watch for instant READY). My diff touches no alchemy/recipe/mod
+code; all five batch kinds were verified through the live debug API
+instead.
+
+Not exercised: organic IceCavesBossLevel pressHero spawn (the boss level
+is unreachable from the town debug flow; the guard line compiles and
+`mobByName(ICE_GUARDIAN)` is the proven create_mob path), YogsEye
+stays java and its "Larva"/Yog-part strings keep resolving.
+
+Next: NPC design pass (batch 16) — needs Mike's design call first
+(friendly() hook, add(Buff)-block, quest-interact inventory, shopkeeper
+flow). Remaining java-registered: 45 + 3 manual entries (bosses incl.
+the two Yogs parts, IceGuardianCore, NPCs, MirrorImage/Sheep engine
+mobs).
 
 ## Verification checklist
 

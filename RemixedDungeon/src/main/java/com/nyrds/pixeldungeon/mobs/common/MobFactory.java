@@ -2,13 +2,8 @@ package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mobs.guts.BurningFist;
-import com.nyrds.pixeldungeon.mobs.guts.Larva;
 import com.nyrds.pixeldungeon.mobs.guts.RottingFist;
-import com.nyrds.pixeldungeon.mobs.guts.YogsBrain;
 import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
-import com.nyrds.pixeldungeon.mobs.guts.YogsHeart;
-import com.nyrds.pixeldungeon.mobs.guts.YogsTeeth;
-import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
@@ -121,6 +116,7 @@ public class MobFactory {
 	public static final String WATER_ELEMENTAL = "WaterElemental";
 	public static final String EARTH_ELEMENTAL = "EarthElemental";
 	public static final String PIRANHA = "Piranha";
+	public static final String ICE_GUARDIAN = "IceGuardian";
 
 	static private Map<String, Class<? extends Mob>> mMobsList;
 
@@ -156,16 +152,14 @@ public class MobFactory {
 		registerMobClass(Senior.class);
 
 		registerMobClass(Eye.class);
-		registerMobClass(Larva.class);
+		// Larva/YogsHeart/YogsTeeth/YogsBrain kinds are data now
+		// (mobsDesc/*.json) - classes deleted, kinds must never resolve to java.
 		registerMobClass(BurningFist.class);
 		registerMobClass(RottingFist.class);
 
 		// Statue/ArmoredStatue/GoldenStatue kinds are data now
 		// (mobsDesc/*.json) - classes deleted, kinds must never resolve to java.
-		registerMobClass(YogsBrain.class);
 		registerMobClass(YogsEye.class);
-		registerMobClass(YogsHeart.class);
-		registerMobClass(YogsTeeth.class);
 		registerMobClass(ShadowLord.class);
 
 		registerMobClass(Lich.class);
@@ -174,7 +168,8 @@ public class MobFactory {
 		registerMobClass(Crystal.class);
 
 
-		registerMobClass(IceGuardian.class);
+		// IceGuardian kind is data now (mobsDesc/IceGuardian.json);
+		// IceGuardianCore stays java (Boss die-flow: music/bossSlain/unseal/badges).
 		registerMobClass(IceGuardianCore.class);
 
 		registerMobClass(Hedgehog.class);

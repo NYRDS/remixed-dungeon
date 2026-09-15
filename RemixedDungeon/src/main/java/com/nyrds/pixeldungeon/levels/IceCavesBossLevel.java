@@ -4,7 +4,7 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardian;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -108,7 +108,7 @@ public class IceCavesBossLevel extends BossLevel {
 			enteredArena = true;
 			
 			Mob boss = Bestiary.mob(this);
-			Mob guard = new IceGuardian();
+			Mob guard = MobFactory.mobByName(MobFactory.ICE_GUARDIAN);
 
 			Mob mob = boss;
 

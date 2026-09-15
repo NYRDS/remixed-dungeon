@@ -186,6 +186,11 @@ public abstract class Level implements Bundlable {
 		return LuaUtils.arrayToTable(getAllLevelObjects().toArray());
 	}
 
+	@LuaInterface
+	public LuaTable getMobs() {
+		return LuaUtils.arrayToTable(getCopyOfMobsArray());
+	}
+
 	public List<LevelObject> getAllLevelObjects() {
 		ArrayList<LevelObject> ret = new ArrayList<>();
 

@@ -204,6 +204,10 @@ local RPD = {
     TerrainFlags = TerrainFlags,
     Effects = Effects,
     ItemUtils = ItemUtils,
+    -- NB: never eagerly bind item classes whose static init CONSTRUCTS items
+    -- (e.g. PotionOfHealing builds pseudoPotion): boot-time bindClass runs
+    -- their clinit before the item status handlers exist and NPEs the title.
+    Devour = luajava.bindClass("com.nyrds.pixeldungeon.effects.Devour"),
     DungeonTilemap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilemap"),
     ModdingMode = luajava.bindClass("com.nyrds.util.ModdingMode"),
     ModQuirks = ModQuirks,

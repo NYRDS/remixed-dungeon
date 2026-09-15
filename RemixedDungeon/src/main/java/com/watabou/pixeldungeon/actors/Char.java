@@ -850,6 +850,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
     }
 
+    @LuaInterface
     public void damage(int dmg, @NotNull NamedEntityKind src) {
 
         GLog.debug("%s: <- %d dmg from %s", getEntityKind(), dmg, src.getEntityKind());

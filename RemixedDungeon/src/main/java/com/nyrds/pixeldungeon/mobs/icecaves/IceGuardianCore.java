@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.mobs.icecaves;
 import com.nyrds.pixeldungeon.items.icecaves.IceKey;
 import com.nyrds.pixeldungeon.items.icecaves.WandOfIcebolt;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -52,7 +53,8 @@ public class IceGuardianCore extends Boss {
 		super.die(cause);
 
 		for (Mob mob : level().getCopyOfMobsArray()) {
-			if (mob instanceof IceGuardian) {
+			// IceGuardian is data (CustomMob) now - match by kind, not class
+			if (mob.getEntityKind().equals(MobFactory.ICE_GUARDIAN)) {
 				mob.die(cause);
 			}
 		}

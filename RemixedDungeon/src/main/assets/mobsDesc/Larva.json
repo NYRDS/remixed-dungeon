@@ -1,0 +1,23 @@
+{
+   "name"          : "Larva_Name",
+   "name_objective": "Larva_Name_Objective",
+   "description"   : "Yog_Desc",
+   "gender"        : "Larva_Gender",
+   "attackSkill"   : 30,
+   "defenseSkill"  : 20,
+   "dmgMin"        : 25,
+   "dmgMax"        : 30,
+   "dr"            : 8,
+   "str"           : 17,
+   "ht"            : 120,
+   "exp"           : 0,
+   "maxLvl"        : 50,
+   "baseSpeed"     : 1,
+   "attackDelay"   : 1,
+   "attackRange"   : 1,
+   "spriteDesc"    : "spritesDesc/Larva.json",
+   "scriptFile"    : "scripts/mobs/Larva",
+   "canBePet"      : true,
+   "friendly"      : false,
+   "fraction"      : "DUNGEON"
+}

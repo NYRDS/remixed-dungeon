@@ -14,7 +14,7 @@ jobs:
     env:
       # tests launch the no-GL headless build (the desktop GUI run needs a
       # display and freezes under --minimized, so it can never work on CI)
-      RPD_HEADLESS_JAR: ${{ github.workspace }}/RemixedDungeonHeadless/build/libs/RemixedDungeonHeadless-all.jar
+      RPD_HEADLESS_JAR: ${{ github.workspace }}/RemixedDungeonHeadless/build/libs/RemixedDungeon-Headless.jar
       RPD_GAME_DIR: /tmp/rpd-ci/rundir
 
     steps:
@@ -43,7 +43,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build headless jar
-        run: ./gradlew :RemixedDungeonHeadless:shadowJar --console=plain
+        run: ./gradlew :RemixedDungeonHeadless:headlessShadowJar --console=plain
 
       - name: Generate l10n json
         run: python3 make_json.py

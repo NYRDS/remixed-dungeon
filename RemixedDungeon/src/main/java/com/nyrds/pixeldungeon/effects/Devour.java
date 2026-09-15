@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.effects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
@@ -40,6 +41,7 @@ public class Devour extends Image {
 		}
 	}
 	
+	@LuaInterface
 	public static void hit( Char ch ) {
 		hit( ch, 0 );
 	}

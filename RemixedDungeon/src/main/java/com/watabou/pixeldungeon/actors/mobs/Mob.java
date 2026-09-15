@@ -602,6 +602,7 @@ public abstract class Mob extends Char {
         return false;
     }
 
+    @LuaInterface
     public void beckon(int cell) {
         notice();
         setState(MobAi.getStateByClass(Wandering.class));

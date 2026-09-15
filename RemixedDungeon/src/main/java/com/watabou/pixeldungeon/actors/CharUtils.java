@@ -483,6 +483,7 @@ public class CharUtils {
     }
 
     @NotNull
+    @LuaInterface
     public static Char spawnOnNextCell(@NotNull Char src, String mobClass, int limit) {
         final Level level = src.level();
         int pos = src.emptyCellNextTo();
