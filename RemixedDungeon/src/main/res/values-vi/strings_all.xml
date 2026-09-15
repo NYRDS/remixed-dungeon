@@ -1062,6 +1062,7 @@
     <string name="ScrollOfLullaby_Info1">Cuộn giấy phát ra giai điệu dịu dàng.</string>
     <string name="ScrollOfLullaby_Info2">Cuộn giấy vang lên giai điệu dịu dàng và %s đã chìm vào giấc ngủ!</string>
     <string name="ScrollOfLullaby_Info3">Cuộn giấy phát ra giai điệu êm dịu và quái vật ngủ say!</string>
+    <string name="ScrollOfMagicMapping_Info">Khi đọc cuộn giấy này, một hình ảnh rõ nét như pha lê sẽ khắc sâu vào trí nhớ của bạn, cho bạn biết bố cục chính xác của tầng và tiết lộ mọi bí mật ẩn giấu. Vị trí của vật phẩm và sinh vật vẫn chưa được biết.</string>
     <string name="ScrollOfMagicMapping_Name">Cuộn Bản Đồ Phép Thuật</string>
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
     <string name="ScrollOfMirrorImage_Name">Cuộn giấy Bản sao Gương</string>
@@ -1661,6 +1662,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
