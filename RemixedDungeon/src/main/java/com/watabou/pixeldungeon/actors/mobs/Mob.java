@@ -43,7 +43,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Item;
@@ -515,10 +514,6 @@ public abstract class Mob extends Char {
                 break;
             case MobFactory.GNOLL:
                 ScarecrowNPC.Quest.process(getPos());
-                break;
-            case MobFactory.GOLEM:
-            case MobFactory.MONK:
-                Imp.Quest.process(this);
                 break;
         }
     }

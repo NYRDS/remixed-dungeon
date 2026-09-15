@@ -91,6 +91,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class CharUtils {
 
+    @LuaInterface
     static public boolean isVisible(@Nullable Char ch) {
 
         if (Dungeon.isLoading()) {

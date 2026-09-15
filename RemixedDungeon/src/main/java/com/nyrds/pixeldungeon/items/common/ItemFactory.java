@@ -47,7 +47,6 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
-import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.ArmorKit;
@@ -202,10 +201,12 @@ import com.watabou.pixeldungeon.plants.Fadeleaf;
 import com.watabou.pixeldungeon.plants.Firebloom;
 import com.watabou.pixeldungeon.plants.Icecap;
 import com.watabou.pixeldungeon.plants.Moongrace;
+import com.watabou.pixeldungeon.plants.Rotberry;
 import com.watabou.pixeldungeon.plants.Sorrowmoss;
 import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Bundle;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -417,7 +418,11 @@ public class ItemFactory {
         registerItemClass(BlackSkullOfMastery.class);
         registerItemClass(CandleOfMindVision.class);
 
-        registerItemClassByName(WandMaker.Rotberry.Seed.class, "Rotberry.Seed");
+        registerItemClassByName(Rotberry.Seed.class, "Rotberry.Seed");
+        // class moved out of WandMaker (batch 16c-2): pre-split untagged saves
+        // carry the old inner-class FQN, derived kind "Seed" misses the
+        // "Rotberry.Seed" registry, so route the old FQN through the alias map
+        Bundle.addAlias(Rotberry.Seed.class, "com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker$Rotberry$Seed");
         registerItemClassByName(Earthroot.Seed.class, "Earthroot.Seed");
         registerItemClassByName(Firebloom.Seed.class, "Firebloom.Seed");
         registerItemClassByName(Sungrass.Seed.class, "Sungrass.Seed");

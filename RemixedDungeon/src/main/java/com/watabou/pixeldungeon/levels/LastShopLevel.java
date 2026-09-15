@@ -5,8 +5,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.QuestBridge;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
@@ -100,7 +100,8 @@ public class LastShopLevel extends RegularLevel {
 		if (roomShop == null || shopSquare < 30) {
 			return false;
 		} else {
-			roomShop.type = Imp.Quest.isCompleted() ? Room.Type.SHOP : Room.Type.STANDARD;
+			// imp quest completed flag lives in scripts/lib/quest.lua (batch 16c)
+			roomShop.type = QuestBridge.isCompleted("imp") ? Room.Type.SHOP : Room.Type.STANDARD;
 		}
 		
 		paint();
@@ -130,7 +131,7 @@ public class LastShopLevel extends RegularLevel {
 			}
 		}
 		
-		if (Imp.Quest.isCompleted()) {
+		if (QuestBridge.isCompleted("imp")) {
 			placeEntranceSign();
 		}
 	}

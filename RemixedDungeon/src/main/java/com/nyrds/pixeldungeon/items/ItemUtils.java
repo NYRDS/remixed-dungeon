@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.noosa.ColorBlock;
@@ -35,6 +36,13 @@ public class ItemUtils {
 				level.animatedDrop(item,cell);
 			}
 		}
+	}
+
+	// drop an item by kind with an explicit heap type (e.g. quest items in
+	// SKELETON heaps) - the Heap.Type enum is not reachable from the lua sandbox
+	@LuaInterface
+	public static void dropAt(String itemKind, int pos, String heapType) {
+		Dungeon.level.drop(ItemFactory.itemByName(itemKind), pos, Heap.Type.valueOf(heapType));
 	}
 
     public static void evoke(@NotNull Char hero) {

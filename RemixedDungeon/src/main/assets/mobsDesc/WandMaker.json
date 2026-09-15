@@ -1,0 +1,15 @@
+{
+   "spriteDesc"    :"spritesDesc/WandMaker.json",
+   "scriptFile"    :"scripts/npc/WandMaker",
+   "friendly"      :true,
+   "movable"       :true,
+   "aiState"       :"Wandering",
+   "fraction"      :"NEUTRAL",
+   "npc"           :true,
+   "isHumanoid"    :true,
+   "defenseSkill"  :1000,
+   "ht"            :1,
+   "exp"           :0,
+   "carcassChance" :0,
+   "persistOnReset":true
+}

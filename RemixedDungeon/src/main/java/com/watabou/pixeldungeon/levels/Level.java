@@ -541,6 +541,7 @@ public abstract class Level implements Bundlable {
 		heaps.remove(pos);
 	}
 
+	@LuaInterface
 	public List<Heap> allHeaps() {
 		return new ArrayList<>(heaps.values());
 	}
@@ -1203,6 +1204,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	@LuaInterface
 	public void drop(Item item, int cell, Heap.Type type) {
 		if(!cellValid(cell)) {
 			return;
@@ -1330,6 +1332,7 @@ public abstract class Level implements Bundlable {
 		GameScene.add(obj);
 	}
 
+	@LuaInterface
 	public void plant(Seed seed, int pos) {
 
 	    LevelObject lo = getTopLevelObject(pos);

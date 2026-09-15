@@ -9,9 +9,9 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.QuestBridge;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.NecroExitPainter;
 import com.watabou.utils.Random;
@@ -68,8 +68,16 @@ public class PrisonLevel extends RegularLevel {
 	@Override
 	protected void createMobs() {
 		super.createMobs();
-		
-		WandMaker.Quest.spawn( this, roomEntrance );
+
+		// wandmaker quest state and roll live in scripts/lib/quest.lua (batch 16c);
+		// java keeps only the mechanical placement inside the entrance room
+		if (QuestBridge.trySpawn("wandmaker", 10)) {
+			Mob wandmaker = MobFactory.mobByName(MobFactory.WANDMAKER);
+			do {
+				wandmaker.setPos(roomEntrance.random(this));
+			} while (map[wandmaker.getPos()] == Terrain.ENTRANCE);
+			spawnMob(wandmaker);
+		}
 
 		if(Dungeon.depth==7 && !necromancerSpawned && hasExit(1)) {
 			Room NecroExit = exitRoom(1);

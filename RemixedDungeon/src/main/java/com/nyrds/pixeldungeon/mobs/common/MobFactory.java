@@ -29,11 +29,9 @@ import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
-import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.wands.WandOfFlock;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -105,6 +103,8 @@ public class MobFactory {
 	public static final String RAT_KING = "RatKing";
 	public static final String HEDGEHOG = "Hedgehog";
 	public static final String NECROMANCER_NPC = "NecromancerNPC";
+	public static final String WANDMAKER = "WandMaker";
+	public static final String IMP = "Imp";
 
 	static private Map<String, Class<? extends Mob>> mMobsList;
 
@@ -169,10 +169,10 @@ public class MobFactory {
 		// PlagueDoctorNPC kind is data now (mobsDesc/PlagueDoctorNPC.json);
 		// in-game doctor = lua PlagueDoctor kind, the java NPC class is deleted.
 		registerMobClass(CagedKobold.class);
-		registerMobClass(WandMaker.class);
+		// WandMaker and Imp kinds are data now (mobsDesc/WandMaker.json,
+		// mobsDesc/Imp.json) - java classes deleted.
 		registerMobClass(Blacksmith.class);
 		registerMobClass(ScarecrowNPC.class);
-		registerMobClass(Imp.class);
 		registerMobClass(AzuterronNPC.class);
 
 		registerMobClass(Deathling.class);

@@ -45,8 +45,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
-import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
@@ -172,11 +170,9 @@ public class Dungeon {
         Statistics.reset();
         Journal.reset();
 
-        // sadGhost quest lives in scripts/lib/quest.lua now - state clears with LuaEngine.reset()
+        // sadGhost/wandmaker/imp quests live in scripts/lib/quest.lua now - state clears with LuaEngine.reset()
 
-        WandMaker.Quest.reset();
         Blacksmith.Quest.reset();
-        Imp.Quest.reset();
         ScarecrowNPC.Quest.reset();
         AzuterronNPC.Quest.reset();
         CagedKobold.Quest.reset();
@@ -547,9 +543,7 @@ public class Dungeon {
         bundle.put(CHAPTERS, ids);
 
         Bundle quests = new Bundle();
-        WandMaker.Quest.storeInBundle(quests);
         Blacksmith.Quest.storeInBundle(quests);
-        Imp.Quest.storeInBundle(quests);
         AzuterronNPC.Quest.storeInBundle(quests);
         ScarecrowNPC.Quest.storeInBundle(quests);
         CagedKobold.Quest.storeInBundle(quests);
@@ -745,16 +739,12 @@ public class Dungeon {
 
             Bundle quests = bundle.getBundle(QUESTS);
             if (!quests.isNull()) {
-                WandMaker.Quest.restoreFromBundle(quests);
                 Blacksmith.Quest.restoreFromBundle(quests);
-                Imp.Quest.restoreFromBundle(quests);
                 AzuterronNPC.Quest.restoreFromBundle(quests);
                 ScarecrowNPC.Quest.restoreFromBundle(quests);
                 CagedKobold.Quest.restoreFromBundle(quests);
             } else {
-                WandMaker.Quest.reset();
                 Blacksmith.Quest.reset();
-                Imp.Quest.reset();
                 AzuterronNPC.Quest.reset();
                 ScarecrowNPC.Quest.reset();
                 CagedKobold.Quest.reset();

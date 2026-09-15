@@ -4,10 +4,12 @@ package com.watabou.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.effects.emitters.Smoke;
 import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
+import com.watabou.pixeldungeon.QuestBridge;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.utils.Random;
 
@@ -65,8 +67,16 @@ public class CityLevel extends RegularLevel {
 	@Override
 	protected void createItems() {
 		super.createItems();
-		
-		Imp.Quest.spawn( this, roomEntrance );
+
+		// imp quest state and roll live in scripts/lib/quest.lua (batch 16c);
+		// java keeps only the mechanical placement on a heap-free cell
+		if (QuestBridge.trySpawn("imp", 20)) {
+			Mob imp = MobFactory.mobByName(MobFactory.IMP);
+			do {
+				imp.setPos(randomRespawnCell());
+			} while (imp.getPos() == -1 || getHeap(imp.getPos()) != null);
+			spawnMob(imp);
+		}
 	}
 	
 	@Override
