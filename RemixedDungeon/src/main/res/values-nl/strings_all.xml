@@ -709,6 +709,7 @@
     <string name="Level_TileAlchemy">Alchemiepot</string>
     <string name="Level_TileBarricade">Barricade</string>
     <string name="Level_TileChasm">Afgrond</string>
+    <string name="Level_TileClosedDoor">Gesloten deur</string>
     <string name="Level_TileDefault">\???</string>
     <string name="Level_TileDescAlchemy">Laat hier wat zaden vallen om een drank te brouwen.</string>
     <string name="Level_TileDescBarricade">De houten barricade zit stevig, maar is over de jaren uitgedroogd. Zal hij branden?</string>
@@ -1919,6 +1920,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
