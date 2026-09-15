@@ -1347,6 +1347,7 @@
     <string name="TrapWnd_Title">Val</string>
     <string name="TreacherousSpirit_Desc">Deze monsterlijke verschijning lijkt op een wolk van levende duisternis. Zijn gigantische oog staart je aan en pulseert bij elke beweging die je maakt.</string>
     <string name="TreacherousSpirit_Gender">masculine</string>
+    <string name="TreacherousSpirit_Name">Verraderlijke geest</string>
     <string name="TreacherousSpirit_Name_Objective">verradelijke geest</string>
     <string name="Typical_Damage">Typische schade</string>
     <string name="Undead_Defense">geblokkeerd</string>
@@ -1588,6 +1589,7 @@
     <string name="WndWandmaker_Battle">Gevechtsstaf</string>
     <string name="Wnd_Button_Back">Terug</string>
     <string name="Wnd_Button_Cancel">Annuleren</string>
+    <string name="Wnd_Button_No">Nee</string>
     <string name="Wnd_Button_Ok">Ok</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Deze eenvoudige houten boog kan nuttig blijken, zodra je pijlen vindt.</string>
@@ -1926,6 +1928,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

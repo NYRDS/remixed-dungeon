@@ -1410,6 +1410,7 @@
     <string name="WndFortuneTeller_Title">Người soi đồn.</string>
     <string name="WndGame_Customizations">Tùy chỉnh</string>
     <string name="WndGame_Exit">Thoát Remixed Dungeon</string>
+    <string name="WndGame_Load">Tải</string>
     <string name="WndGame_Ranking">Bảng xếp hạng</string>
     <string name="WndGame_Save">Lưu</string>
     <string name="WndGame_Start">Bắt đầu trò chơi mới</string>
@@ -1621,6 +1622,7 @@
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_pedestal_desc">Một giá đỡ có một cuốn sách thánh trên đó.</string>
     <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
+    <string name="town_deco_pillar_name">Trụ</string>
     <string name="town_deco_porch_desc">Hiên làm bằng gỗ.</string>
     <string name="town_deco_poster_name">Áp phích</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
@@ -1669,6 +1671,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
