@@ -274,6 +274,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return ret;
     }
 
+    @LuaInterface
     public int respawnCell(Level level) {
         return walkingType.respawnCell(level);
     }
@@ -1740,6 +1741,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @Override
+    @LuaInterface
     public String getEntityKind() {
         return super.getEntityKind();
     }

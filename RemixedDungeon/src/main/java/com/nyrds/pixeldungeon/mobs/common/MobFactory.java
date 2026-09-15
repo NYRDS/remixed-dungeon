@@ -29,7 +29,6 @@ import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
@@ -178,7 +177,7 @@ public class MobFactory {
 
 		registerMobClass(Deathling.class);
 
-		registerMobClass(Ghost.class);
+		// Ghost kind is data now (mobsDesc/Ghost.json) - java class deleted.
 		registerMobClass(Shopkeeper.class);
 		registerMobClass(ImpShopkeeper.class);
 		registerMobClass(TownShopkeeper.class);

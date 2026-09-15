@@ -58,6 +58,7 @@ public class LuaEngine implements ResourceFinder {
 	}
 
 	public static final String    SCRIPTS_LIB_STORAGE = "scripts/lib/storage";
+	public static final String    SCRIPTS_LIB_QUEST   = "scripts/lib/quest";
     public static final String    LUA_DATA = "luaData";
 	public static final LuaTable  emptyTable = new LuaTable();
 

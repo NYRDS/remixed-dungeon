@@ -43,7 +43,6 @@ import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
@@ -513,14 +512,9 @@ public abstract class Mob extends Char {
         switch (getEntityKind()) {
             case MobFactory.RAT:
                 ScarecrowNPC.Quest.process(getPos());
-                Ghost.Quest.process(getPos());
                 break;
             case MobFactory.GNOLL:
                 ScarecrowNPC.Quest.process(getPos());
-                Ghost.Quest.process(getPos());
-                break;
-            case MobFactory.CRAB:
-                Ghost.Quest.process(getPos());
                 break;
             case MobFactory.GOLEM:
             case MobFactory.MONK:

@@ -245,6 +245,7 @@ public class CharUtils {
     }
 
 
+    @LuaInterface
     public static void teleportRandomForce(@NotNull Char ch) {
         Level level = ch.level();
 

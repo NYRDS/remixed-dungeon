@@ -453,6 +453,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
     public void charDied(Char chr, NamedEntityKind cause) {
     }
 
+    @LuaInterface
     public void removeItemFrom(@NotNull Char hero) {
         setCursed(false);
         if (isEquipped(hero)) {
@@ -464,6 +465,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         QuickSlot.refresh(hero);
     }
 
+    @LuaInterface
     public Item identify() {
 
         setLevelKnown(true);

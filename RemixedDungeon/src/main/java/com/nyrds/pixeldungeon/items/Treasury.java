@@ -8,6 +8,7 @@ import com.nyrds.util.ModError;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 import java.util.ArrayList;
@@ -168,6 +169,22 @@ public class Treasury {
     @LuaInterface
     public Item worstOf(String cat, int n) {
         return worstOf(Category.valueOf(cat), n);
+    }
+
+    @LuaInterface
+    public Item bestOf(String cat, int n) {
+        return bestOf(Category.valueOf(cat), n);
+    }
+
+    // quest-reward roll (SadGhost): best-of-n weapons, missiles excluded -
+    // class-family check is not reachable from lua (no luajava.instanceof)
+    @LuaInterface
+    public Item bestWeapon(int n) {
+        Item ret;
+        do {
+            ret = bestOf(Category.WEAPON, n);
+        } while (ret instanceof MissileWeapon);
+        return ret;
     }
 
     public Item bestOf(Category cat, int n) {

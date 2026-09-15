@@ -524,6 +524,7 @@ public abstract class Level implements Bundlable {
 		return this.getClass().getSimpleName();
 	}
 
+	@LuaInterface
 	public Heap getHeap(int pos) {
 		Heap heap = heaps.get(pos);
 		if (heap != null) {
@@ -925,6 +926,7 @@ public abstract class Level implements Bundlable {
 		return 0;
 	}
 
+	@LuaInterface
 	public void spawnMob(Mob mob) {
 		spawnMob(mob, 0);
 	}
@@ -1792,6 +1794,7 @@ public abstract class Level implements Bundlable {
 		return x > 0 && y > 0 && x < getWidth() - 1 && y < getHeight() - 1;
 	}
 
+	@LuaInterface
 	public boolean cellValid(int cell) {
 		return cell >= 0 && cell < getLength();
 	}

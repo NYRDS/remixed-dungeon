@@ -1,0 +1,18 @@
+{
+   "baseSpeed"     :0.5,
+   "spriteDesc"    :"spritesDesc/Ghost.json",
+   "scriptFile"    :"scripts/npc/Ghost",
+   "friendly"      :true,
+   "movable"       :true,
+   "aiState"       :"Wandering",
+   "fraction"      :"NEUTRAL",
+   "npc"           :true,
+   "flying"        :true,
+   "isHumanoid"    :false,
+   "immunities"    :["Paralysis", "Stun", "Roots"],
+   "defenseSkill"  :1000,
+   "ht"            :1,
+   "exp"           :0,
+   "carcassChance" :0,
+   "persistOnReset":true
+}

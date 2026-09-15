@@ -1166,19 +1166,72 @@ Sixteenth batch, part 16b 2026-09-15 (town crowd → data+lua, RatKing gates):
   /debug/reveal_map first.
 
 Then 16c — quest NPCs: Ghost/WandMaker/
-Blacksmith/ScarecrowNPC/Imp/CagedKobold/AzuterronNPC onto lib/quest +
-restoreData; per-NPC unwinding of Quest statics (Dungeon bundle nodes,
-processQuestKills branches, Journal, painter spawn hooks). WndSadGhost
-reward choice → chooseOption; Blacksmith's WndBlacksmith rework UI:
-approximate with chooseOption + itemSelector or stay java — decide in
-batch.
+Blacksmith/ScarecrowNPC/Imp/CagedKobold/AzuterronNPC + the shopkeeper
+family (Shopkeeper/TownShopkeeper/ImpShopkeeper). Mike rulings 2026-09-15:
+ALL quest logic moves lua (quest state reset on old saves is acceptable,
+no java bundle-node shims); WndBlacksmith gets recreated lua-side (expose
+the tools); shop windows no longer stay java — WndShopOptions is already
+lua-reachable (commonClasses class table) and WndTradeItem works with any
+Char shopkeeper, so data mobs run the real shop UI once their backpack is
+stocked.
 
-Stay java: ServiceManNPC (Mike, for now), Shopkeeper/TownShopkeeper/
-ImpShopkeeper (shop windows — Mike ruling), MirrorImage/Sheep (engine
+Design:
+- Quest state = scripts/lib/quest.lua quest.state(name) via
+  storage.gamePut (SCRIPTS_DATA bundle node, already round-trips). The 7
+  java Quest statics + Dungeon bundle nodes die; old-save quest state
+  resets silently (accepted; worst case WandMaker placeItem re-runs and
+  duplicates the Rotberry/CorpseDust).
+- Spawn hooks stay at the java decorate sites (Necromancer/Hedgehog
+  precedent), each shrunk to a shim: QuestBridge.trySpawn(name) (new ~40
+  line class, java→lua via the LuaEngine.require pattern) consults+rolls+
+  records spawned/alternative lua-side, java places via mobByName. Blacksmith
+  room scan/type mutation stays java (level painting, not quest logic);
+  BlacksmithPainter places via mobByName. Rewards go lazy lua-side at first
+  interact (Ghost.Quest.getWeapon lazy precedent). Kill counting = per-NPC
+  lua installOnDieCallback (mob.onDie already dispatches); Mob.
+  processQuestKills switch deleted. LastShopLevel's Imp.Quest.isCompleted()
+  → QuestBridge.isCompleted("imp").
+- Windows: WndSadGhost/WndSadGhostNecro/WndWandmaker/WndImp → RPD.
+  chooseOption (Bishop pattern). WndBlacksmith recreated lua: sequential
+  itemSelector.selectItem(UPGRADEABLE) picks + lua verify checks + confirm;
+  the effect bundle (sound, ScrollOfUpgrade.upgrade, evoke, unequip/upgrade/
+  detach, badges, spend) moves to ItemUtils.reforge(item1,item2) static.
+- Shopkeeper family: Shopkeeper.lua interact = stock food (Remixed,
+  difficulty<2), once-per-mob bagSold via restoreData + Badges:getNotBroughtBag,
+  CharUtils.generateNewItem fill loop (add @LuaInterface), then
+  GameScene:show(WndShopOptions(mob, hero)). TownShopkeeper/ImpShopkeeper =
+  json kinds sharing the lua (ImpShopkeeper adds act-greeting). ShopPainter
+  picks kind via mobByName. AzuterronNPC completed phase = same shop
+  interact, imported from Shopkeeper.lua.
+- Rotberry plant+Seed splits out of WandMaker.java into
+  com.watabou.pixeldungeon.plants.Rotberry (mirrors all sibling plants,
+  Earthroot/Firebloom/etc — inner Seed classes there too) and stays java
+  (plants out of scope). FQN-change handling for old saves (researched
+  2026-09-15): restore is kind-keyed first — item kind "Rotberry.Seed"
+  (ItemFactory registerItemClassByName, explicit because every plant Seed
+  has simple name "Seed") and levelObject kind "Rotberry" (LevelObjects
+  Factory getSimpleName) are stable strings, so updating the two
+  registration lines keeps every post-entity-tags save restoring. Legacy
+  pre-tag entries carry bare CLASS_NAME and resolve via Bundle derived
+  kind (last . then last $ segment): the plant derives "Rotberry" → hits
+  the registry, no alias needed; the Seed derives "Seed" → MISSES
+  "Rotberry.Seed" and falls to Class.forName — so register
+  Bundle.addAlias(newSeedClass, "…npcs.WandMaker$Rotberry$Seed") next to
+  the ItemFactory registration (first caller of the mechanism, map
+  applied at Bundle.java alias lookup). Fixtures: cleartext-save grep for
+  the Rotberry entry shape pre/post move, reload, both must restore.
+  ImmortalNPC stays for ServiceManNPC.
+
+Kind strings stay the java simple names (Ghost, WandMaker, Blacksmith, Imp,
+ScarecrowNPC, CagedKobold, AzuterronNPC, Shopkeeper, TownShopkeeper,
+ImpShopkeeper) — old saves, town/shop level jsons and mobByName call sites
+resolve by string.
+
+Stay java: ServiceManNPC (Mike, for now), MirrorImage/Sheep (engine
 mobs), bosses incl. YogsEye and IceGuardianCore (boss-flow story).
 
-Remaining java-registered after 16b: 16c's 7 quest NPCs + ~13 bosses +
-minions + MirrorImage/Sheep + 3 shopkeepers + ServiceManNPC.
+Remaining java-registered after 16c: ~13 bosses + minions +
+MirrorImage/Sheep + ServiceManNPC.
 
 ## Verification checklist
 

@@ -45,7 +45,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -173,7 +172,8 @@ public class Dungeon {
         Statistics.reset();
         Journal.reset();
 
-        Ghost.Quest.reset();
+        // sadGhost quest lives in scripts/lib/quest.lua now - state clears with LuaEngine.reset()
+
         WandMaker.Quest.reset();
         Blacksmith.Quest.reset();
         Imp.Quest.reset();
@@ -547,7 +547,6 @@ public class Dungeon {
         bundle.put(CHAPTERS, ids);
 
         Bundle quests = new Bundle();
-        Ghost.Quest.storeInBundle(quests);
         WandMaker.Quest.storeInBundle(quests);
         Blacksmith.Quest.storeInBundle(quests);
         Imp.Quest.storeInBundle(quests);
@@ -746,7 +745,6 @@ public class Dungeon {
 
             Bundle quests = bundle.getBundle(QUESTS);
             if (!quests.isNull()) {
-                Ghost.Quest.restoreFromBundle(quests);
                 WandMaker.Quest.restoreFromBundle(quests);
                 Blacksmith.Quest.restoreFromBundle(quests);
                 Imp.Quest.restoreFromBundle(quests);
@@ -754,7 +752,6 @@ public class Dungeon {
                 ScarecrowNPC.Quest.restoreFromBundle(quests);
                 CagedKobold.Quest.restoreFromBundle(quests);
             } else {
-                Ghost.Quest.reset();
                 WandMaker.Quest.reset();
                 Blacksmith.Quest.reset();
                 Imp.Quest.reset();

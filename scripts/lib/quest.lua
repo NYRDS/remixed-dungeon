@@ -69,6 +69,34 @@ quest.isGiven = function(name)
     return quest.state(name) ~= nil
 end
 
+-- java side calls QuestBridge.trySpawn(quest, rollBase) from level decorate
+-- shims: once-per-run gate + spawn roll live here, in game storage.
+-- roll mirrors java Random.Int(rollBase - depth) == 0 (rolls <=1 always spawn).
+-- state keeps only serpent-safe plain values - no java objects.
+quest.trySpawn = function(name, rollBase)
+    local state = quest.state(name)
+
+    if state and state.spawned then
+        return false
+    end
+
+    local roll = (rollBase or 1) - RPD.Dungeon.depth
+
+    if roll > 1 and math.random(roll) ~= 1 then
+        return false
+    end
+
+    state = state or {}
+    state.spawned     = true
+    state.alternative = math.random(2) == 1
+    state.given       = false
+    state.processed   = false
+    state.depth       = RPD.Dungeon.depth
+    quest.state(name, state)
+
+    return true
+end
+
 quest.isCompleted = function(name)
     local state = quest.state(name) or {}
     return state.completed or false

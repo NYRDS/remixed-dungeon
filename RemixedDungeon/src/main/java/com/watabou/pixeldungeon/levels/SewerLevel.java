@@ -3,13 +3,15 @@ package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.effects.emitters.WaterSink;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingBase;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
+import com.watabou.pixeldungeon.QuestBridge;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.utils.Random;
 
@@ -97,7 +99,15 @@ public class SewerLevel extends RegularLevel {
 	protected void createMobs() {
 		super.createMobs();
 
-		Ghost.Quest.spawn(this);
+		// sadGhost quest state and roll live in scripts/lib/quest.lua (batch 16c);
+		// java keeps only the mechanical placement of the data-defined Ghost
+		if (QuestBridge.trySpawn("sadGhost", 5)) {
+			Mob ghost = MobFactory.mobByName(MobFactory.GHOST);
+			do {
+				ghost.setPos(randomRespawnCell());
+			} while (ghost.getPos() == -1);
+			spawnMob(ghost);
+		}
 
 		if (ModdingBase.isHalloweenEvent()) {
 			if (Dungeon.depth == 2) {
