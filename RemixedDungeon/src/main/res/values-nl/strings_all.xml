@@ -108,6 +108,7 @@
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
     <string name="Badges_MonsterSlain2">50 vijanden verslagen</string>
     <string name="Badges_MonsterSlain3">150 vijanden gedood</string>
+    <string name="Badges_MonsterSlain4">250 vijanden verslagen</string>
     <string name="Badges_MonsterSlain5">1000 vijanden verslagen</string>
     <string name="Badges_NightHunter">5 monsters gedood in de nacht</string>
     <string name="Badges_NoMonsterSlain">Niveau voltooid zonder monsters te doden</string>
@@ -1398,6 +1399,7 @@
     <string name="Wand_Wood_Types_1">taxus</string>
     <string name="Wand_Wood_Types_11">berk</string>
     <string name="Wand_Wood_Types_2">ebbenhout</string>
+    <string name="Wand_Wood_Types_4">teak</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="Wand_Wood_Types_7">mahonie</string>
     <string name="Wand_Wood_Types_8">bamboe</string>
@@ -1578,6 +1580,7 @@
     <string name="WndTilesKind_Title">Nog één ding:</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
     <string name="WndTradeItem_Buy">Koop voor %dg</string>
+    <string name="WndTradeItem_BuyAll">Koop alles voor %dg</string>
     <string name="WndTradeItem_Cancel">Vergeet het</string>
     <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
     <string name="WndTradeItem_Sell1">Verkoop 1 voor %dg</string>
@@ -1923,6 +1926,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

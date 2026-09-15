@@ -420,6 +420,7 @@
     <string name="ElfArmor_ACSpecial">TIẾNG GỌI CỦA THIÊN NHIÊN</string>
     <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenDagger_Gender">masculine</string>
+    <string name="ElvenDagger_Name">dao gỗ yêu tinh</string>
     <string name="EncumbranceBuff_CharAct_1">Tôi không đủ sức để sử dụng %s đúng cách.</string>
     <string name="EncumbranceBuff_CharAct_2">Cái %s này quá nặng để tôi có thể sử dụng hiệu quả.</string>
     <string name="EncumbranceBuff_CharAct_4">Tôi thiếu sức mạnh để sử dụng %s với đầy đủ tiềm năng của nó.</string>
@@ -1510,6 +1511,7 @@
     <string name="WndTilesKind_NewLook">Giao diện mới</string>
     <string name="WndTilesKind_text">Bạn sắp bước vào một Hầm ngục bị xâm chiếm bởi ma thuật bóp méo, nhưng bây giờ bạn có thể chọn cách nhìn nó:\n Bạn có muốn dùng dạng giả 3D hiện đại hay dạng phẳng cổ điển không?\nBạn có thể thay đổi sau trong menu tùy chọn trò chơi.</string>
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
+    <string name="WndTradeItem_BuyAll">Mua tất cả với %d g</string>
     <string name="WndTradeItem_Cancel">Bỏ qua</string>
     <string name="WndTradeItem_SellAll">Bán tất cả cho %dg</string>
     <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
@@ -1667,6 +1669,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
