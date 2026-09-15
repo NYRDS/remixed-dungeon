@@ -1630,6 +1630,7 @@
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_snowdrift_desc">Đó là một đống tuyết khá lớn và rõ ràng không ai định dọn nó.</string>
+    <string name="town_deco_sofa_name">Ghế sofa ấm áp</string>
     <string name="town_deco_statue_blood_desc">Một bức tượng đầy uy nghi của thiên thần đang cầm một bát máu.</string>
     <string name="town_deco_statue_water_name">Tượng thiên thần</string>
     <string name="town_deco_stock_name">kho</string>
@@ -1656,6 +1657,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

@@ -518,6 +518,7 @@
     <string name="Golem_Name_Objective">golem</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">De slime blaast zichzelf op!</string>
+    <string name="Goo_Info2">glurp... glurp...</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
     <string name="GothicArmor_Info">Een gotische pantser is de hoogtepunt van de kunst van pantser smeden.</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
@@ -1445,6 +1446,7 @@
     <string name="WndDonate_silverDonateText">Elke donatie helpt de ontwikkeling van het project</string>
     <string name="WndDonate_silverDonateText2">Ook schakelt u reclame uit in alle spelmodi en ontgrendelt u de Jageres vanaf het begin.</string>
     <string name="WndDontLikeAds_NotThisTime">Niet deze keer</string>
+    <string name="WndError_Title">FOUT</string>
     <string name="WndFortuneTeller_IdentifyAll">Alles</string>
     <string name="WndFortuneTeller_No_Item">Wees voorzichtig, je wilt je geld toch niet voor niets uitgeven, toch? Er zijn geen ongeïdentificeerde items in je inventaris.</string>
     <string name="WndFortuneTeller_Title">Waarzegger.</string>
@@ -1731,6 +1733,8 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
+
 
 
 
