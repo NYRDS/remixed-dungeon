@@ -1250,6 +1250,7 @@
     <string name="StartScene_New">Nieuw spel</string>
     <string name="StartScene_No">Nee, terug naar hoofdmenu</string>
     <string name="StartScene_Really">Wil je echt een nieuw spel starten?</string>
+    <string name="StartScene_UnlockElf">Om deze klasse te ontgrendelen, versla de Koning-baas met een andere klasse</string>
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">levend standbeeld</string>
@@ -1920,6 +1921,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
