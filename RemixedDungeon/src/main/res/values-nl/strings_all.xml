@@ -1380,6 +1380,7 @@
     <string name="WandOfTelekinesis_Name">Staff van Telekinese</string>
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
     <string name="Wand_ACZap">ZAP</string>
+    <string name="Wand_Damage">Wanneer deze toverstok als slagwapen wordt gebruikt, is de gemiddelde schade %d punten per slag.</string>
     <string name="Wand_Name">%s toverstaf</string>
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
@@ -1733,6 +1734,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
+
 
 
 
