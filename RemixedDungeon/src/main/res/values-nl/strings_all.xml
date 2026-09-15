@@ -852,6 +852,7 @@
     <string name="Nightcap_Name">Slaapmuts</string>
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">nachtmerrie</string>
+    <string name="No_Valid_Cell">Er is geen geschikte cel in de buurt.</string>
     <string name="OozeBuff_Name">Bijtend Slijk</string>
     <string name="Ooze_Death">%s slikt je op...</string>
     <string name="Order_Name">Bevelen</string>
@@ -1090,6 +1091,7 @@
     <string name="ScrollOfLullaby_Info3">De scroll spreekt een kalmerende melodie uit en de monsters vallen in slaap!</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
     <string name="ScrollOfMagicMapping_Name">Scroll van Magische Kaartvorming</string>
+    <string name="ScrollOfMirrorImage_Name">Spiegelbeeldrol</string>
     <string name="ScrollOfPsionicBlast_Info">Deze scroll bevat vernietigende energie, die psionisch kan worden gekanaliseerd om massale schade toe te brengen aan alle wezens binnen het gezichtsveld. Een begeleidende lichtflits zal tijdelijk iedereen in het effectgebied verblinden, inclusief de lezer van de scroll.</string>
     <string name="ScrollOfRemoveCurse_Info">De bezwering op deze rol zal onmiddellijk alle kwaadaardige betoveringen van het wapen, pantser, ringen en voorwerpen van de lezer verwijderen die het dragen ervan zouden kunnen verhinderen.</string>
     <string name="ScrollOfRemoveCurse_Name">Schrift van Vervloeking Verwijderen</string>
@@ -1931,6 +1933,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

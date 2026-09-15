@@ -556,6 +556,7 @@
     <string name="HeroClass_Necromancer">pháp sư</string>
     <string name="HeroClass_NecromancerPerks_3">Pháp sư gọi hồn bắt đầu với một chiếc chìa khóa xương cấp 7.</string>
     <string name="HeroClass_None">thường dân</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Bác sĩ dịch là bậc thầy giả kim và có thể sử dụng công thức độc đáo.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Bác sĩ dịch bệnh bị trừng phạt lớn về độ chính xác nếu không cầm Cưa Xương thân yêu trên tay và không thể dùng vũ khí tầm xa.</string>
     <string name="HeroClass_Rog">kẻ lừa đảo</string>
     <string name="HeroClass_RogPerks_0">Kẻ lừa đảo bắt đầu với Nhẫn Bóng Tối+1.</string>
@@ -1672,6 +1673,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
