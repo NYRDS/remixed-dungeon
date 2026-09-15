@@ -1038,11 +1038,64 @@ is unreachable from the town debug flow; the guard line compiles and
 `mobByName(ICE_GUARDIAN)` is the proven create_mob path), YogsEye
 stays java and its "Larva"/Yog-part strings keep resolving.
 
-Next: NPC design pass (batch 16) — needs Mike's design call first
-(friendly() hook, add(Buff)-block, quest-interact inventory, shopkeeper
-flow). Remaining java-registered: 45 + 3 manual entries (bosses incl.
-the two Yogs parts, IceGuardianCore, NPCs, MirrorImage/Sheep engine
-mobs).
+Next: batch 16 — NPC pass (design settled with Mike 2026-09-15).
+
+Key research finding: the lua NPC toolkit ALREADY exists and is proven
+in-game. `scripts/npc/` hosts lua NPC scripts bound via the `scriptFile`
+json key (CustomMob loads them as instances): Bishop (2019, gold-for-bless
+dialogs on `RPD.chooseOption`), PlagueDoctor (2024, five-stage quest chain
+on `mob.restoreData/storeData` per-NPC state + `RPD.showQuestWindow` +
+`chr:checkItem`/`collectAnimated`), plus Bard/Barman/Innkeeper/Inquirer/
+ItemSelectorExample/QuestGiverDemo. Also present: `itemSelector.selectItem`
++ `RPD.BackpackMode` (backpack picking), `scripts/lib/quest` (kill-tracking
+quest state: `quest.give(name,chr,{kills={...}})`; `Char.die` runs `onDie`
+on the dying mob and lib/mob.lua routes it into `quest.mobDied`), and the
+`RPD.Journal` binding. The NPC json profile mostly exists too —
+friendly/movable/immortal/fraction/aiState/baseSpeed:0 — see
+mobsDesc/BishopNPC.json.
+
+The in-game town is `town_2` → `levelsDesc/Town_2021_03.json` (Dungeon.json
+graph), which places the LUA `PlagueDoctor` kind. Mike confirmed: the lua
+doctor IS the in-game doctor. Java `PlagueDoctorNPC` is placed only by the
+legacy, graph-unreferenced `Town.json`; its class is dead weight except
+`questCompleted()` (called from PlagueDoctor.lua's special reward — badge +
+hat unlock) and Quest statics wired into Dungeon bundles and
+`Mob.processQuestKills` (dead in game: `given` only ever set by the java
+interact, which never runs).
+
+16a — engine + doctor decommission:
+- `npc: true` json key on CustomMob (Mike lgtm): act() preamble from
+  NPC.act (throw items off the cell, step off level objects via
+  getEmptyNonStairsCellNextTo — never onto stairs, face hero), absolute
+  beckon no-op, `add(Buff)` false (currently only damage is gated by
+  `immortal`), canBePet false. friendly = existing `friendly` json key
+  (Mike lgtm, no new hook).
+- Delete PlagueDoctorNPC.java: relocate questCompleted to a lua-reachable
+  static off the NPC class (e.g. on PlagueDoctorMask), drop Quest statics +
+  Dungeon bundle wiring + the processQuestKills RAT line. Add
+  mobsDesc/PlagueDoctorNPC.json so old-save FQN-tail restores land on a
+  working data NPC. Known cost (Mike to accept): legacy RatHide quest state
+  is lost on old saves. Legacy Town.json placement updated to the lua kind.
+16b — town crowd (bishop-shaped json + small lua, java deleted):
+TownGuardNPC/TownsfolkNPC/TownsfolkSilentNPC/TownsfolkMovieNPC (pure text
+windows → showQuestWindow), HealerNPC, LibrarianNPC, BellaNPC,
+NecromancerNPC, InquirerNPC, SociologistNPC (7 windows, biggest),
+FortuneTellerNPC (new FortuneTeller.lua: chooseOption + itemSelector,
+identify-for-50g with Haggler 0.9 factor — both primitives proven),
+RatKing, Hedgehog (say-phrases only). ServiceManNPC needs its resetLimit
+static relocated (StartScene + GameControl call it).
+16c — quest NPCs: Ghost/WandMaker/Blacksmith/ScarecrowNPC/Imp/
+CagedKobold/AzuterronNPC onto lib/quest + restoreData; per-NPC unwinding
+of Quest statics (Dungeon bundle nodes, processQuestKills branches,
+Journal, painter spawn hooks). WndSadGhost reward choice → chooseOption;
+Blacksmith's WndBlacksmith rework UI: approximate with chooseOption +
+itemSelector or stay java — decide in batch.
+Stay java: Shopkeeper/TownShopkeeper/ImpShopkeeper (shop windows — Mike
+ruling), MirrorImage/Sheep (engine mobs), bosses incl. YogsEye and
+IceGuardianCore (boss-flow story).
+
+Remaining java-registered after all of batch 16: ~13 bosses + minions +
+MirrorImage/Sheep + 3 shopkeepers.
 
 ## Verification checklist
 
