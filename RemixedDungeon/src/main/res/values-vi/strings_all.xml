@@ -1389,6 +1389,7 @@
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Sao chép địa chỉ</string>
     <string name="WndCryptoDonate_infoText">Bạn có thể hỗ trợ phát triển Remixed Dungeon bằng cách gửi quyên góp tiền điện tử đến các địa chỉ bên dưới. Cảm ơn bạn đã ủng hộ hào phóng!</string>
+    <string name="WndCryptoDonate_openWallet">Mở Ví</string>
     <string name="WndCryptoDonate_supportDev">Ủng hộ nhà phát triển</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_warningText">CẢNH BÁO: Luôn xác minh địa chỉ trước khi gửi tiền. Các giao dịch tiền điện tử không thể đảo ngược!</string>
@@ -1666,6 +1667,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

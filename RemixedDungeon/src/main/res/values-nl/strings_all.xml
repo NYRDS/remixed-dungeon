@@ -307,6 +307,7 @@
     <string name="Char_Stole_2">%1$s stal %2$s van %3$s!</string>
     <string name="CharmBuff_Info">Geest en lichaam waren betoverd!</string>
     <string name="CharmSpell_Cast">%s is betoverd.</string>
+    <string name="CharmSpell_Name">Charme</string>
     <string name="Chasm_Info">Je viel naar je dood...</string>
     <string name="Chasm_Yes">Ja, ik weet wat ik doe</string>
     <string name="Chess_Stalemate">Pat! De Koning verlaat het bord en laat je passeren.</string>
@@ -458,6 +459,7 @@
     <string name="Eye_Kill">De doodskijk van %s heeft je gedood...</string>
     <string name="Eye_Name">boos oog</string>
     <string name="Facilitations_Descriptions_1">Het is nog steeds onbekend wie je ouders waren, maar de natuurlijke troll-achtige regeneratie zal alle komende strijdlittekens helpen helen.</string>
+    <string name="Facilitations_Descriptions_2">Een diepgaande en grondige studie van de natuur als energiebron stelt je in staat om je magische reserves tijdens de reis aan te vullen.</string>
     <string name="Facilitations_Descriptions_3">Door de riem van ogerhuid aan te trekken, die aan elke nieuwe generatie werd doorgegeven, maak je een stap naar het onbekende dat voor je ligt.</string>
     <string name="Facilitations_Names_0">Geen honger</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
@@ -1921,6 +1923,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
