@@ -1182,6 +1182,18 @@ COLON-calls from lua; lua quest state must stay serpent-safe plain
 values (rewards generated lazily at button-press); delete Mob.java
 switch lines with each quest (Scarecrow+Imp lines remain until 16c-3).
 
+16c-2 SHIPPED 00a78a4c8 (2026-09-16): Imp + WandMaker; Imp/WandMaker/
+WndImp/WndWandmaker java deleted; LastShopLevel gated via QuestBridge.
+isCompleted; Rotberry split to plants/ with the first Bundle.addAlias
+(pre-tag Seed FQN); ItemUtils.dropAt(kind,pos,heapType) added because
+Heap.Type is sandbox-unreachable.java allHeaps() returns a java List —
+iterate size()/get(i), never ipairs; heap.type is a field (type:name()).
+Headless launches need --add-opens java.base/java.util for palace levels
+(pre-existing PalaceServants.lua); headlessShadowJar ignores symlinked
+assets/scripts changes — rm the jar before rebuilding. Remaining: 16c-3
+Blacksmith + Scarecrow + CagedKobold + Azuterron + shopkeeper trio +
+processQuestKills/Dungeon statics sweep.
+
 Design:
 - Quest state = scripts/lib/quest.lua quest.state(name) via
   storage.gamePut (SCRIPTS_DATA bundle node, already round-trips). The 7
