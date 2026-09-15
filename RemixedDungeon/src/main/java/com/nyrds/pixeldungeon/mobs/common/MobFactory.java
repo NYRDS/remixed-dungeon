@@ -15,7 +15,6 @@ import com.nyrds.pixeldungeon.mobs.npc.HealerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.InquirerNPC;
 import com.nyrds.pixeldungeon.mobs.npc.LibrarianNPC;
 import com.nyrds.pixeldungeon.mobs.npc.NecromancerNPC;
-import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.pixeldungeon.mobs.npc.SociologistNPC;
@@ -177,7 +176,8 @@ public class MobFactory {
 		registerMobClass(TownGuardNPC.class);
 		registerMobClass(ServiceManNPC.class);
 		registerMobClass(TownsfolkNPC.class);
-		registerMobClass(PlagueDoctorNPC.class);
+		// PlagueDoctorNPC kind is data now (mobsDesc/PlagueDoctorNPC.json);
+		// in-game doctor = lua PlagueDoctor kind, the java NPC class is deleted.
 		registerMobClass(TownsfolkMovieNPC.class);
 		registerMobClass(TownsfolkSilentNPC.class);
 		registerMobClass(BellaNPC.class);

@@ -199,6 +199,7 @@ local RPD = {
     DungeonGenerator = DungeonGenerator,
     PathFinder = PathFinder,
     Badges = Badges,
+    PlagueDoctorMask = luajava.bindClass("com.nyrds.pixeldungeon.items.accessories.PlagueDoctorMask"),
     Statistics = Statistics,
     Random = Random,
     TerrainFlags = TerrainFlags,

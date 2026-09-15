@@ -22,7 +22,6 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
@@ -515,7 +514,6 @@ public abstract class Mob extends Char {
             case MobFactory.RAT:
                 ScarecrowNPC.Quest.process(getPos());
                 Ghost.Quest.process(getPos());
-                PlagueDoctorNPC.Quest.process(getPos());
                 break;
             case MobFactory.GNOLL:
                 ScarecrowNPC.Quest.process(getPos());

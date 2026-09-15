@@ -1063,36 +1063,53 @@ hat unlock) and Quest statics wired into Dungeon bundles and
 `Mob.processQuestKills` (dead in game: `given` only ever set by the java
 interact, which never runs).
 
-16a — engine + doctor decommission:
-- `npc: true` json key on CustomMob (Mike lgtm): act() preamble from
-  NPC.act (throw items off the cell, step off level objects via
-  getEmptyNonStairsCellNextTo — never onto stairs, face hero), absolute
-  beckon no-op, `add(Buff)` false (currently only damage is gated by
-  `immortal`), canBePet false. friendly = existing `friendly` json key
-  (Mike lgtm, no new hook).
-- Delete PlagueDoctorNPC.java: relocate questCompleted to a lua-reachable
-  static off the NPC class (e.g. on PlagueDoctorMask), drop Quest statics +
-  Dungeon bundle wiring + the processQuestKills RAT line. Add
-  mobsDesc/PlagueDoctorNPC.json so old-save FQN-tail restores land on a
-  working data NPC. Known cost (Mike to accept): legacy RatHide quest state
-  is lost on old saves. Legacy Town.json placement updated to the lua kind.
-16b — town crowd (bishop-shaped json + small lua, java deleted):
-TownGuardNPC/TownsfolkNPC/TownsfolkSilentNPC/TownsfolkMovieNPC (pure text
-windows → showQuestWindow), HealerNPC, LibrarianNPC, BellaNPC,
-NecromancerNPC, InquirerNPC, SociologistNPC (7 windows, biggest),
-FortuneTellerNPC (new FortuneTeller.lua: chooseOption + itemSelector,
-identify-for-50g with Haggler 0.9 factor — both primitives proven),
-RatKing, Hedgehog (say-phrases only). ServiceManNPC needs its resetLimit
-static relocated (StartScene + GameControl call it).
-16c — quest NPCs: Ghost/WandMaker/Blacksmith/ScarecrowNPC/Imp/
-CagedKobold/AzuterronNPC onto lib/quest + restoreData; per-NPC unwinding
-of Quest statics (Dungeon bundle nodes, processQuestKills branches,
-Journal, painter spawn hooks). WndSadGhost reward choice → chooseOption;
-Blacksmith's WndBlacksmith rework UI: approximate with chooseOption +
-itemSelector or stay java — decide in batch.
-Stay java: Shopkeeper/TownShopkeeper/ImpShopkeeper (shop windows — Mike
-ruling), MirrorImage/Sheep (engine mobs), bosses incl. YogsEye and
-IceGuardianCore (boss-flow story).
+Sixteenth batch, part 16a 2026-09-15 (npc profile + doctor decommission):
+- CustomMob gained the `npc` json key: act() preamble from the old
+  NPC base class (throw items off the cell, blink off level objects via
+  getEmptyNonStairsCellNextTo — never onto stairs, face the hero),
+  absolute beckon no-op, `add(Buff)` false, canBePet forced false.
+  Verified live: restored doctor blocked Burning (non-npc doctor took
+  it — contrast probe), blinked off a ToxicTrap spawned under it,
+  makePet left it NEUTRAL/un-owned.
+- `PlagueDoctorNPC.java` DELETED. The in-game doctor is the LUA
+  `PlagueDoctor` kind (live graph town_2 → Town_2021_03.json); the java
+  kind survived only in the graph-unreferenced legacy Town.json, whose
+  placement now points at the lua kind too. questCompleted() (badge +
+  hat unlock, called from PlagueDoctor.lua's special reward) moved to a
+  @LuaInterface static on `PlagueDoctorMask`, bound in commonClasses as
+  `RPD.PlagueDoctorMask`. Quest statics removed from Dungeon save/restore
+  and the processQuestKills RAT branch (dead code: `given` was only ever
+  set by the java interact). Old saves keep the "plaguedoctornpc" quest
+  bundle node unread; legacy RatHide quest state is lost (accepted).
+- New `mobsDesc/PlagueDoctorNPC.json` (bishop-shaped + npc:true,
+  scriptFile → scripts/npc/PlagueDoctor) so old-save FQN-tail restores
+  land on a working data NPC. Verified live: fixture save with a java
+  PlagueDoctorNPC (spawned pre-deletion) restores as CustomMob, script
+  binds, quest state auto-inits, /debug/interact (new permanent endpoint
+  driving the real tap-a-mob Interact CharAction) opens the prologue and
+  stores questInProgress/questVariant. PlagueDoctor.lua also got a
+  questIndex nil-guard for restored NPCs and now calls
+  RPD.PlagueDoctorMask:questCompleted().
+- Rat-kill regression clean (RAT branch still feeds Scarecrow/Ghost
+  quests); boot clean with the new commonClasses bind (two launches).
+
+Next: batch 16b — town crowd (bishop-shaped json + small lua, java
+deleted): TownGuardNPC/TownsfolkNPC/TownsfolkSilentNPC/TownsfolkMovieNPC
+(pure text windows → showQuestWindow), HealerNPC, LibrarianNPC,
+BellaNPC, NecromancerNPC, InquirerNPC, SociologistNPC (7 windows,
+biggest), FortuneTellerNPC (new FortuneTeller.lua: chooseOption +
+itemSelector, identify-for-50g with Haggler 0.9 factor), RatKing,
+Hedgehog (say-phrases only). Then 16c — quest NPCs: Ghost/WandMaker/
+Blacksmith/ScarecrowNPC/Imp/CagedKobold/AzuterronNPC onto lib/quest +
+restoreData; per-NPC unwinding of Quest statics (Dungeon bundle nodes,
+processQuestKills branches, Journal, painter spawn hooks). WndSadGhost
+reward choice → chooseOption; Blacksmith's WndBlacksmith rework UI:
+approximate with chooseOption + itemSelector or stay java — decide in
+batch.
+
+Stay java: ServiceManNPC (Mike, for now), Shopkeeper/TownShopkeeper/
+ImpShopkeeper (shop windows — Mike ruling), MirrorImage/Sheep (engine
+mobs), bosses incl. YogsEye and IceGuardianCore (boss-flow story).
 
 Remaining java-registered after all of batch 16: ~13 bosses + minions +
 MirrorImage/Sheep + 3 shopkeepers.

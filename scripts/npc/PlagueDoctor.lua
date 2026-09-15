@@ -89,12 +89,17 @@ return mob.init({
     interact = function(self, chr)
         local data = mob.restoreData(self)
 
+        -- restored old-save java NPCs carry no lua data: init before use
+        if not data["questIndex"] then
+            data["questIndex"] = 1
+            data["questInProgress"] = false
+        end
+
         local questIndex = data["questIndex"]
         local questVariant = data["questVariant"]
 
         if data['needToGiveSpecialReward'] then
-            local npc = luajava.bindClass("com.nyrds.pixeldungeon.mobs.npc.PlagueDoctorNPC")
-            npc:questCompleted()
+            RPD.PlagueDoctorMask:questCompleted()
 
             data['needToGiveSpecialReward'] = false
             mob.storeData(self, data)

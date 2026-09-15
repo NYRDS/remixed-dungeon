@@ -3,13 +3,18 @@ package com.nyrds.pixeldungeon.mobs.common;
 import androidx.annotation.Keep;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.items.ItemUtils;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.util.JsonHelper;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
@@ -43,6 +48,11 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	// survive Level.reset (statues stay, ordinary mobs are removed)
 	private boolean persistOnReset = false;
 
+	// NPC profile (npc: true in the mob def): static town-folk behavior —
+	// steps off objects/stairs in act, never beckoned, immune to buffs, not
+	// petable. Replaces the deleted java NPC base-class behavior.
+	private boolean npc = false;
+
 	//For restoreFromBundle
 	@Keep
 	public CustomMob() {
@@ -70,9 +80,44 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 	@Override
 	public void beckon(int cell) {
+		if (npc) {
+			return;
+		}
 		if(!friendly && movable) {
 			super.beckon(cell);
 		}
+	}
+
+	@Override
+	public boolean add(Buff buff) {
+		if (npc) {
+			return false;
+		}
+		return super.add(buff);
+	}
+
+	// the old java NPC.act preamble: keep the cell clean, never park on an
+	// object tile or stairs, face the hero
+	@Override
+	public void act() {
+		if (npc) {
+			int pos = getPos();
+
+			ItemUtils.throwItemAway(pos);
+
+			LevelObject levelObject = level().getTopLevelObject(pos);
+			if (levelObject != null) {
+				int newPos = level().getEmptyNonStairsCellNextTo(pos);
+				if (level().cellValid(newPos) && newPos != pos) {
+					WandOfBlink.appear(this, newPos);
+				}
+			}
+
+			if (Dungeon.hero != null) {
+				getSprite().turnTo(pos, Dungeon.hero.getPos());
+			}
+		}
+		super.act();
 	}
 
 	@Override
@@ -174,6 +219,11 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		heroSprite = classDesc.optBoolean("heroSprite", heroSprite);
 
 		persistOnReset = classDesc.optBoolean("persistOnReset", persistOnReset);
+
+		npc = classDesc.optBoolean("npc", npc);
+		if (npc) {
+			canBePet = false;
+		}
 
 		kind = classDesc.optInt("var", kind);
 		carcassChance = (float) classDesc.optDouble("carcassChance", carcassChance);

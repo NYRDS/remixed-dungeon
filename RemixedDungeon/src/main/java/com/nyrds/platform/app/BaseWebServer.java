@@ -113,6 +113,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
         // test endpoints: drive the pet order flow and probe AI-state survival of damage
         debugEndpoints.put("/debug/order_pet", DebugEndpoints::handleDebugOrderPet);
         debugEndpoints.put("/debug/make_pet", DebugEndpoints::handleDebugMakePet);
+        debugEndpoints.put("/debug/interact", DebugEndpoints::handleDebugInteract);
         debugEndpoints.put("/debug/force_attack", DebugEndpoints::handleDebugForceAttack);
         debugEndpoints.put("/debug/affect_buff", DebugEndpoints::handleDebugAffectBuff);
         debugEndpoints.put("/debug/level_up", DebugEndpoints::handleDebugLevelUp);

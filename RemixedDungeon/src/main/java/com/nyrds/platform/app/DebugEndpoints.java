@@ -4223,6 +4223,38 @@ public class DebugEndpoints {
         }
     }
 
+    public static NanoHTTPD.Response handleDebugInteract(NanoHTTPD.IHTTPSession session) {
+        try {
+            int id = -1;
+            String query = session.getQueryParameterString();
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = Integer.parseInt(param.substring(3));
+                    }
+                }
+            }
+
+            Mob target = findMobById(id);
+            if (target == null || Dungeon.hero == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need id, game running").toString());
+            }
+
+            final Mob finalTarget = target;
+            GameLoop.pushUiTaskAndWait(() -> {
+                // the real production flow: tap on a mob = Interact CharAction
+                new Interact(finalTarget).act(Dungeon.hero);
+            });
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"interacted\":\"%s\",\"id\":%d}", finalTarget.getEntityKind(), id));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
     // test endpoint: /debug/test_damage?id=<mob>&dmg=<n>&src=buff|srcid=<mobId> -
     // damages a mob with a non-Char source (Burning buff, like a DoT tick) or with
     // another mob as the source, returns the resulting AI state - used to check
