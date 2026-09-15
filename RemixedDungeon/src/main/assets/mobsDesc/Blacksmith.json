@@ -1,0 +1,17 @@
+{
+   "baseSpeed"     :0.5,
+   "spriteDesc"    :"spritesDesc/Blacksmith.json",
+   "scriptFile"    :"scripts/npc/Blacksmith",
+   "friendly"      :true,
+   "movable"       :false,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+   "npc"           :true,
+   "isHumanoid"    :true,
+   "defenseSkill"  :1000,
+   "defenceVerb"   :"Ghost_Defense",
+   "ht"            :1,
+   "exp"           :0,
+   "carcassChance" :0,
+   "persistOnReset":true
+}

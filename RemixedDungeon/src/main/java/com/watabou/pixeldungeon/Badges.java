@@ -399,6 +399,7 @@ public class Badges {
 		displayBadge(badge);
 	}
 
+	@LuaInterface
 	public static void validateItemLevelAcquired(Item item) {
 
 		// This method should be called:
@@ -464,6 +465,7 @@ public class Badges {
 		}
 	}
 
+	@LuaInterface
 	public static Item getNotBroughtBag() {
 		List<Item> bags = new ArrayList<>();
 

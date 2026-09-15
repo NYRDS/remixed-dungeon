@@ -1,9 +1,11 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
-import com.nyrds.pixeldungeon.mobs.npc.TownShopkeeper;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
@@ -64,33 +66,40 @@ public class TownShopLevel extends Level {
 	}
 
 
-	static public void fillInventory(Shopkeeper shopkeeper)
+	static public void fillInventory(Mob shopkeeper)
 	{
-		shopkeeper.collect( new LeatherArmor().identify() );
-		shopkeeper.collect( new Dagger().identify() );
-		shopkeeper.collect( new Knuckles().identify() );
-		shopkeeper.collect( new Sword().identify() );
-		shopkeeper.collect( new Quarterstaff().identify() );
-		shopkeeper.collect( new TomeOfKnowledge().identify() );
+		stock( shopkeeper, new LeatherArmor().identify() );
+		stock( shopkeeper, new Dagger().identify() );
+		stock( shopkeeper, new Knuckles().identify() );
+		stock( shopkeeper, new Sword().identify() );
+		stock( shopkeeper, new Quarterstaff().identify() );
+		stock( shopkeeper, new TomeOfKnowledge().identify() );
 
 		for (int i = 0; i <3; i++){
-			shopkeeper.collect( new OverpricedRation() );
-			shopkeeper.collect( new Dart(5).identify() );
-			shopkeeper.collect( new CommonArrow(25) );
-			shopkeeper.collect( new Torch().identify() );
+			stock( shopkeeper, new OverpricedRation() );
+			stock( shopkeeper, new Dart(5).identify() );
+			stock( shopkeeper, new CommonArrow(25) );
+			stock( shopkeeper, new Torch().identify() );
 		}
 
-		shopkeeper.collect( new Keyring());
-		shopkeeper.collect( new ScrollHolder());
-		shopkeeper.collect( new PotionBelt());
-		shopkeeper.collect( new SeedPouch());
-		shopkeeper.collect( new Quiver());
-		shopkeeper.collect( new WandHolster());
+		stock( shopkeeper, new Keyring());
+		stock( shopkeeper, new ScrollHolder());
+		stock( shopkeeper, new PotionBelt());
+		stock( shopkeeper, new SeedPouch());
+		stock( shopkeeper, new Quiver());
+		stock( shopkeeper, new WandHolster());
+	}
+
+	// the deleted Shopkeeper.collect applied a treasury check on everything it
+	// stocked; the data-defined TownShopkeeper's plain Char.collect does not
+	static private void stock(Mob shopkeeper, Item item)
+	{
+		shopkeeper.collect( Treasury.getLevelTreasury().check( item ) );
 	}
 
 	@Override
 	protected void createMobs() {
-		Shopkeeper shopkeeper =  new TownShopkeeper();
+		Mob shopkeeper = MobFactory.mobByName(MobFactory.TOWN_SHOPKEEPER);
 
 		fillInventory(shopkeeper);
 

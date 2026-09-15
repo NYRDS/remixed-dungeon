@@ -7,11 +7,7 @@ import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
-import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
-import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
-import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
-import com.nyrds.pixeldungeon.mobs.npc.TownShopkeeper;
 import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
@@ -28,10 +24,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Monk;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
-import com.watabou.pixeldungeon.actors.mobs.npcs.ImpShopkeeper;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.wands.WandOfFlock;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -105,6 +98,11 @@ public class MobFactory {
 	public static final String NECROMANCER_NPC = "NecromancerNPC";
 	public static final String WANDMAKER = "WandMaker";
 	public static final String IMP = "Imp";
+	public static final String SCARECROW = "ScarecrowNPC";
+	public static final String CAGED_KOBOLD = "CagedKobold";
+	public static final String BLACKSMITH = "Blacksmith";
+	public static final String AZUTERRON = "AzuterronNPC";
+	public static final String IMP_SHOPKEEPER = "ImpShopkeeper";
 
 	static private Map<String, Class<? extends Mob>> mMobsList;
 
@@ -168,19 +166,12 @@ public class MobFactory {
 		registerMobClass(ServiceManNPC.class);
 		// PlagueDoctorNPC kind is data now (mobsDesc/PlagueDoctorNPC.json);
 		// in-game doctor = lua PlagueDoctor kind, the java NPC class is deleted.
-		registerMobClass(CagedKobold.class);
-		// WandMaker and Imp kinds are data now (mobsDesc/WandMaker.json,
-		// mobsDesc/Imp.json) - java classes deleted.
-		registerMobClass(Blacksmith.class);
-		registerMobClass(ScarecrowNPC.class);
-		registerMobClass(AzuterronNPC.class);
+		// Ghost/WandMaker/Imp/CagedKobold/Blacksmith/ScarecrowNPC/AzuterronNPC
+		// and the Shopkeeper trio kinds are data now (mobsDesc/*.json, batch
+		// 16c) - java classes deleted, kinds must never resolve to java.
 
 		registerMobClass(Deathling.class);
 
-		// Ghost kind is data now (mobsDesc/Ghost.json) - java class deleted.
-		registerMobClass(Shopkeeper.class);
-		registerMobClass(ImpShopkeeper.class);
-		registerMobClass(TownShopkeeper.class);
 		registerMobClass(MirrorImage.class);
 
 		mMobsList.put(SHEEP, WandOfFlock.Sheep.class);

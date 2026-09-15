@@ -1190,9 +1190,55 @@ Heap.Type is sandbox-unreachable.java allHeaps() returns a java List —
 iterate size()/get(i), never ipairs; heap.type is a field (type:name()).
 Headless launches need --add-opens java.base/java.util for palace levels
 (pre-existing PalaceServants.lua); headlessShadowJar ignores symlinked
-assets/scripts changes — rm the jar before rebuilding. Remaining: 16c-3
-Blacksmith + Scarecrow + CagedKobold + Azuterron + shopkeeper trio +
-processQuestKills/Dungeon statics sweep.
+assets/scripts changes — rm the jar before rebuilding.
+
+16c-3 SHIPPED (2026-09-16): Blacksmith/ScarecrowNPC/CagedKobold/AzuterronNPC
++ Shopkeeper/TownShopkeeper/ImpShopkeeper are data; the 7 mob java classes,
+WndBlacksmith and the Dungeon QUESTS bundle node + Mob.processQuestKills are
+deleted. Lua: scripts/npc/{Blacksmith,ScarecrowNPC,CagedKobold,AzuterronNPC,
+Shopkeeper}.lua — Shopkeeper.lua is shared by all three shop kinds via
+scriptFile (Imp greeting kind-gated in act, seenBefore in restoreData;
+AzuterronNPC.lua requires it and falls through to shop.interact on
+completion). Quest state keys: "blacksmith", "scarecrow", "cagedKobold",
+"azuterron" in quest.lua storage. Java kept: spawn shims (SewerLevel
+halloween+d2, IceCavesLevel d18 exit room, CavesLevel room mutation gated
+depth>11 with the fit-room scan BEFORE trySpawn so a failed roll doesn't
+consume the quest; rollBase depth+1 short-circuits the trySpawn roll for the
+unconditional once-per-run quests), painters/TownShopLevel place via
+mobByName and stock through a treasury:check+collect helper (the deleted
+Shopkeeper.collect applied check() to everything; plain Char.collect does
+not — keeps stock parity), WndDontLikeAds face via mobByName. reforge is
+fully lua (Mike): effect bundle inlined in Blacksmith.lua (snd_evoke,
+UP-specks via emitter:start, ItemUtils:evoke, doUnequip/upgrade/detach,
+spendAndNext, badges), order-by-level + verify gates ported verbatim;
+verify/reforge exported on the script table for /debug/lua_eval probing.
+Shop _buyMode/_sellMode return RPD.BackpackMode constants — Char.sellMode
+already script-dispatches those hook names (mob.lua wrappers were already
+there). Shopkeeper vanish-on-hit = blockDamage hook (fires before
+super.damage; immortal is json-gated separately so the hook stays reachable
+on npc mobs — Shopkeeper.json deliberately has NO immortal key). New java
+surface: @LuaInterface on ItemUtils.isBag/isFood/evoke (instanceof-family
+gates for lua — no luajava.instanceof), Badges.validateItemLevelAcquired/
+getNotBroughtBag. defenceVerb is a json key (Char.getClassDef optString) —
+the immortal trio + Azuterron keep Ghost_Defense via
+"defenceVerb":"Ghost_Defense". Deltas accepted: scarecrow killed float→int
+and the java quirk where the quest-START call counted as kill #1 (the lua
+port counts real kills only — 25 kills instead of 24); town
+fillInventory bags stock unconditionally (the deleted hero-owns-bag gate in
+Shopkeeper.collect is gone at paint time; the interact-time bagSold gate
+lives in Shopkeeper.lua); effectiveSTR hero-mirror and useBags=false
+overrides die (nothing on the stock path reads them). Lua gotcha: method
+call then FIELD access is `x:getBelongings().backpack` — `:backpack` without
+parens is a parse error ("function arguments expected"). Headless
+verification: all 7 spawn via create_mob, full quest flows driven through
+/debug/lua_eval (stock counts, verify gates, reforge +1/consume, kill
+ladder, exchanges, spirit spawn, shop fallthrough), shopkeeper save/reload
+round-trip with stock intact, quest state persists across change_level.
+CharUtils.isVisible is always false headless (FOV never builds) — the
+ImpShopkeeper greeting needs a desktop run to see; logic is a 1:1 act-hook
+port. Scarecrow's halloween spawn shim and painter shop placement are
+code-mirror shims of proven patterns (organic/holiday spawns not
+headless-drivable).
 
 Design:
 - Quest state = scripts/lib/quest.lua quest.state(name) via
@@ -1249,8 +1295,12 @@ resolve by string.
 Stay java: ServiceManNPC (Mike, for now), MirrorImage/Sheep (engine
 mobs), bosses incl. YogsEye and IceGuardianCore (boss-flow story).
 
-Remaining java-registered after 16c: ~13 bosses + minions +
-MirrorImage/Sheep + ServiceManNPC.
+ALL quest NPCs and shopkeepers are data-defined after 16c-3. Remaining
+java-registered: ~13 bosses + minions (ShadowLord/Crystal/Deathling/
+SpiderQueen/Lich/RunicSkull/BurningFist/RottingFist/YogsEye/IceGuardianCore/
+Goo/Tengu/DM300/King/Monk/Eye/Senior/Undead...) + MirrorImage/Sheep +
+ServiceManNPC. The mobs/npc java package now holds only CustomMob machinery,
+MobSpawner and ServiceManNPC/ImmortalNPC.
 
 ## Verification checklist
 

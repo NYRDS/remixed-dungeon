@@ -15,6 +15,8 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -45,9 +47,21 @@ public class ItemUtils {
 		Dungeon.level.drop(ItemFactory.itemByName(itemKind), pos, Heap.Type.valueOf(heapType));
 	}
 
+    @LuaInterface
     public static void evoke(@NotNull Char hero) {
         hero.getSprite().emitter().burst(Speck.factory(Speck.EVOKE), 5);
     }
+
+	// class-family gate for scripts (lua has no instanceof)
+	@LuaInterface
+	public static boolean isBag(@NotNull Item item) {
+		return item instanceof Bag;
+	}
+
+	@LuaInterface
+	public static boolean isFood(@NotNull Item item) {
+		return item instanceof Food;
+	}
 
 	public static void equipCursed(@NotNull Char chr) {
 		chr.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );

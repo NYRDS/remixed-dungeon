@@ -2,8 +2,9 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
@@ -35,7 +36,7 @@ public class BlacksmithPainter extends Painter {
 			drawInside( level, room, door, 1, Terrain.EMPTY );
 		}
 		
-		Blacksmith npc = new Blacksmith();
+		Mob npc = MobFactory.mobByName(MobFactory.BLACKSMITH);
 		do {
 			npc.setPos(room.random(level, 1 ));
 		} while (level.getHeap( npc.getPos() ) != null);

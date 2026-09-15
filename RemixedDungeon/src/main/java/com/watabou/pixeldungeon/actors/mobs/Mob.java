@@ -22,7 +22,6 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -444,7 +443,9 @@ public abstract class Mob extends Char {
     }
 
     public void die(@NotNull NamedEntityKind cause) {
-        processQuestKills(cause);
+        // quest kill counting lives in lua scripts now (mob.installOnDieCallback
+        // - ScarecrowNPC.lua rat/gnoll gate is the last consumer)
+
         Badges.validateRare(this);
 
         Hero hero = Dungeon.hero;
@@ -500,21 +501,6 @@ public abstract class Mob extends Char {
 
         if (hero.isAlive() && !CharUtils.isVisible(this)) {
             GLog.i(StringsManager.getVar(R.string.Mob_Died));
-        }
-    }
-
-    // caveman: quest kills flow through the central death path, kind-gated.
-    // The gate is load-bearing - Scarecrow counts EVERY processed kill (25 -> done),
-    // so this must not fire for arbitrary mobs. Rat/Gnoll/Crab/Golem die()
-    // overrides used to do exactly this before their classes went data-defined.
-    private void processQuestKills(@NotNull NamedEntityKind cause) {
-        switch (getEntityKind()) {
-            case MobFactory.RAT:
-                ScarecrowNPC.Quest.process(getPos());
-                break;
-            case MobFactory.GNOLL:
-                ScarecrowNPC.Quest.process(getPos());
-                break;
         }
     }
 

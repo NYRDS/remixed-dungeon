@@ -1,0 +1,16 @@
+{
+   "baseSpeed"     :1,
+   "spriteDesc"    :"spritesDesc/Imp.json",
+   "scriptFile"    :"scripts/npc/Shopkeeper",
+   "friendly"      :true,
+   "movable"       :false,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+   "npc"           :true,
+   "isHumanoid"    :true,
+   "immunities"    :["Regeneration"],
+   "ht"            :1,
+   "exp"           :0,
+   "carcassChance" :0,
+   "persistOnReset":true
+}

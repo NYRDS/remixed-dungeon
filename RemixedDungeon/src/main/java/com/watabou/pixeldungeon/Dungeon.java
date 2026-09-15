@@ -19,9 +19,6 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.mobs.npc.AzuterronNPC;
-import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
-import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
@@ -44,7 +41,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
@@ -170,12 +166,8 @@ public class Dungeon {
         Statistics.reset();
         Journal.reset();
 
-        // sadGhost/wandmaker/imp quests live in scripts/lib/quest.lua now - state clears with LuaEngine.reset()
-
-        Blacksmith.Quest.reset();
-        ScarecrowNPC.Quest.reset();
-        AzuterronNPC.Quest.reset();
-        CagedKobold.Quest.reset();
+        // ALL quests (sadGhost/wandmaker/imp/blacksmith/scarecrow/cagedKobold/
+        // azuterron) live in scripts/lib/quest.lua now - state clears with LuaEngine.reset()
 
         Badges.reset();
         ItemsList.reset();
@@ -479,7 +471,6 @@ public class Dungeon {
     private static final String DV = "dewVial";
     private static final String WT = "transmutation";
     private static final String CHAPTERS = "chapters";
-    private static final String QUESTS = "quests";
     private static final String BADGES = "badges";
     private static final String SCRIPTS_DATA = "scripts_data";
     private static final String PETS = "pets";
@@ -542,12 +533,8 @@ public class Dungeon {
         }
         bundle.put(CHAPTERS, ids);
 
-        Bundle quests = new Bundle();
-        Blacksmith.Quest.storeInBundle(quests);
-        AzuterronNPC.Quest.storeInBundle(quests);
-        ScarecrowNPC.Quest.storeInBundle(quests);
-        CagedKobold.Quest.storeInBundle(quests);
-        bundle.put(QUESTS, quests);
+        // quest statics bundle node (QUESTS) is gone - all quest state lives
+        // in scripts/lib/quest.lua storage (SCRIPTS_DATA bundle node)
 
         Room.storeRoomsInBundle(bundle);
 
@@ -737,18 +724,9 @@ public class Dungeon {
                 chapters.add(id);
             }
 
-            Bundle quests = bundle.getBundle(QUESTS);
-            if (!quests.isNull()) {
-                Blacksmith.Quest.restoreFromBundle(quests);
-                AzuterronNPC.Quest.restoreFromBundle(quests);
-                ScarecrowNPC.Quest.restoreFromBundle(quests);
-                CagedKobold.Quest.restoreFromBundle(quests);
-            } else {
-                Blacksmith.Quest.reset();
-                AzuterronNPC.Quest.reset();
-                ScarecrowNPC.Quest.reset();
-                CagedKobold.Quest.reset();
-            }
+            // old saves carry a QUESTS node with the java quest statics - it
+            // is simply not read anymore; lua quest state resets silently
+            // (accepted 16c ruling)
 
             Room.restoreRoomsFromBundle(bundle);
         }

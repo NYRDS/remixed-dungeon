@@ -1,18 +1,19 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.ui.IconButton;
 import com.watabou.pixeldungeon.ui.Icons;
 
 class WndDontLikeAds extends WndQuest {
 
     public WndDontLikeAds() {
-        super(new Shopkeeper(), StringsManager.getVar(R.string.WndSaveSlotSelect_dontLike));
+        // data-defined Shopkeeper (batch 16c) - just a face for this dialog
+        super(MobFactory.mobByName(MobFactory.SHOPKEEPER), StringsManager.getVar(R.string.WndSaveSlotSelect_dontLike));
 
         float y = height;
 

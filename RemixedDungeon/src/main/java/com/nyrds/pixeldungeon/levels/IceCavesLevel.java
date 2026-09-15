@@ -2,11 +2,13 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.effects.emitters.IceVein;
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.npc.CagedKobold;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.QuestBridge;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Patch;
 import com.watabou.pixeldungeon.levels.RegularLevel;
@@ -157,8 +159,16 @@ public class IceCavesLevel extends RegularLevel {
 	protected void createMobs() {
 		super.createMobs();
 
-		if(Dungeon.depth==18) {
-			CagedKobold.spawn(this, exitRoom(0));
+		// cagedKobold: d18 gate stays java, once-per-run state is lua-side;
+		// rollBase depth+1 short-circuits the trySpawn roll
+		if (Dungeon.depth == 18 && QuestBridge.trySpawn("cagedKobold", Dungeon.depth + 1)) {
+			Mob kobold = MobFactory.mobByName(MobFactory.CAGED_KOBOLD);
+			int cell;
+			do {
+				cell = exitRoom(0).random(this);
+			} while (map[cell] == Terrain.EXIT);
+			kobold.setPos(cell);
+			spawnMob(kobold);
 		}
 	}
 

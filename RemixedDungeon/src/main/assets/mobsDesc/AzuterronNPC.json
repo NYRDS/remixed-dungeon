@@ -1,0 +1,18 @@
+{
+   "baseSpeed"     :0.5,
+   "spriteDesc"    :"spritesDesc/AzuterronNPC.json",
+   "scriptFile"    :"scripts/npc/AzuterronNPC",
+   "friendly"      :true,
+   "movable"       :false,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+   "npc"           :true,
+   "isHumanoid"    :true,
+   "defenseSkill"  :1000,
+   "defenceVerb"   :"Ghost_Defense",
+   "immunities"    :["Paralysis", "Stun", "Roots"],
+   "ht"            :1,
+   "exp"           :0,
+   "carcassChance" :0,
+   "persistOnReset":true
+}

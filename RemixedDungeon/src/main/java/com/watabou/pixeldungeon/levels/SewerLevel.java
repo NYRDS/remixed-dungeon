@@ -4,7 +4,6 @@ package com.watabou.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.effects.emitters.WaterSink;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.mobs.npc.ScarecrowNPC;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingBase;
 import com.watabou.noosa.Scene;
@@ -109,10 +108,13 @@ public class SewerLevel extends RegularLevel {
 			spawnMob(ghost);
 		}
 
-		if (ModdingBase.isHalloweenEvent()) {
-			if (Dungeon.depth == 2) {
-				ScarecrowNPC.spawn(this);
-			}
+		// halloween scarecrow: event+depth gate stays java, once-per-run state
+		// is lua-side; rollBase depth+1 short-circuits the trySpawn roll
+		if (ModdingBase.isHalloweenEvent() && Dungeon.depth == 2
+				&& QuestBridge.trySpawn("scarecrow", Dungeon.depth + 1)) {
+			Mob scarecrow = MobFactory.mobByName(MobFactory.SCARECROW);
+			scarecrow.setPos(randomRespawnCell());
+			spawnMob(scarecrow);
 		}
 
 	}

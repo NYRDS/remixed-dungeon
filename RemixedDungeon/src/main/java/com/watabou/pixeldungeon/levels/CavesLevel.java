@@ -7,7 +7,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.QuestBridge;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Random;
@@ -54,8 +55,20 @@ public class CavesLevel extends RegularLevel {
 	@Override
 	protected void assignRoomType() {
 		super.assignRoomType();
-		
-		Blacksmith.Quest.spawn( rooms );
+
+		// blacksmith: roll + once-per-run state live in scripts/lib/quest.lua
+		// via QuestBridge (java kept the depth>11 gate); the room scan and type
+		// mutation stay java - level painting, not quest logic
+		if (Dungeon.depth > 11) {
+			for (Room room : rooms) {
+				if (room.type == Type.STANDARD && room.width() > 4 && room.height() > 4) {
+					if (QuestBridge.trySpawn("blacksmith", 15)) {
+						room.type = Type.BLACKSMITH;
+					}
+					break;
+				}
+			}
+		}
 	}
 	
 	@Override
