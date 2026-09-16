@@ -586,6 +586,7 @@
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
     <string name="HeroSubClass_DescSnip">_Sluipschutters_ zijn in staat om zwakke punten in de bepantsering van een vijand te ontdekken, waardoor ze deze effectief negeren bij het gebruik van een afstandswapen.</string>
     <string name="HeroSubClass_DescWarL">Na het doden van een vijand consumeert de _Heksenaar_ zijn ziel. Het geneest zijn wonden en stilt zijn honger.</string>
+    <string name="HeroSubClass_DescWard">Een sterke verbinding met de natuurkrachten geeft _Wachters_ het vermogen om dauwdruppels en zaden van planten te verzamelen. Ook geeft het vertrappen van hoog gras hen een tijdelijke pantserbonus.</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="HeroSubClass_NameAssa">meuchelmoorder</string>
     <string name="HeroSubClass_NameFreR">freerunner</string>
@@ -1723,6 +1724,7 @@
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
     <string name="town_deco_skullboard_name">trofeerek</string>
+    <string name="town_deco_snow_name">Sneeuw</string>
     <string name="town_deco_snowman_name">Sneeuwpop</string>
     <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
     <string name="town_deco_sofa_desc">Lijkt erop dat deze bioscoop echt probeert de beste zitplaatsen voor haar klanten te bieden.</string>
@@ -1937,6 +1939,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
