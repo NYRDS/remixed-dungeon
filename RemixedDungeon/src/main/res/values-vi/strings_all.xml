@@ -74,6 +74,7 @@
     <string name="Badges_AllScrolls">Đã nhận dạng tất cả cuốn</string>
     <string name="Badges_AllWands">Đã nhận dạng tất cả gậy</string>
     <string name="Badges_BossSlain1">Goo đã bị tiêu diệt</string>
+    <string name="Badges_Champion">Thử thách đã hoàn thành</string>
     <string name="Badges_DeathFalling">Tử vong do rơi xuống</string>
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
     <string name="Badges_DeathHunger">Chết vì đói</string>
@@ -1674,6 +1675,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

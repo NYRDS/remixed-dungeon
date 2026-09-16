@@ -707,6 +707,7 @@
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
     <string name="LastShopLevel_TileDescExit">Een helling leidt naar beneden in de hel.</string>
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
+    <string name="LastShopLevel_TileWater">Verdacht gekleurd water</string>
     <string name="LeatherArmor_Name">leren harnas</string>
     <string name="Leech_Name_2">Vampier %s</string>
     <string name="Level_TileAlarmTrap">alarmprikkel</string>
@@ -1259,6 +1260,7 @@
     <string name="StartScene_New">Nieuw spel</string>
     <string name="StartScene_No">Nee, terug naar hoofdmenu</string>
     <string name="StartScene_Really">Wil je echt een nieuw spel starten?</string>
+    <string name="StartScene_UnlockDoctor">Om de Plague Doctor te ontgrendelen - voltooi de opdracht van de oude Plague Doctor</string>
     <string name="StartScene_UnlockElf">Om deze klasse te ontgrendelen, versla de Koning-baas met een andere klasse</string>
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
     <string name="Statue_Gender">feminine</string>
@@ -1935,6 +1937,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
