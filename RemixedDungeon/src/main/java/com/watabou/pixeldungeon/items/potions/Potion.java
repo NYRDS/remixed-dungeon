@@ -71,6 +71,14 @@ public class Potion extends Item implements UnknownItem {
 		}
 	}
 
+	// potions are constructed before Dungeon.init in some boot paths
+	// (alchemy recipe validation), and the ctor's knownHamful() would NPE
+	// on a null handler; self-init like Ring does, Dungeon.init/restore
+	// still replace this with the per-run handler afterwards
+	static {
+		initColors();
+	}
+
 	public static final String ITEMS_POTIONS_PNG = "items/potions.png";
 
 	{
