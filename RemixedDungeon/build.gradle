@@ -161,6 +161,13 @@ dependencies {
 
 
     googlePlayImplementation("com.appodeal.ads:sdk:3.10.0.0") {
+        // caveman: aps-sdk 11.x DTBAdActivity NPEs in onCreate on missing ad_state
+        // extra (fixed only in APS 12, pulled by no adapter stack) - cut all amazon
+        // demand routes instead, com.amazon.android:aps-sdk must not resolve
+        exclude group: "com.appodeal.ads.sdk.networks", module: "amazon"
+        exclude group: "com.applovin.mediation", module: "amazon-tam-adapter"
+        exclude group: "org.bidon", module: "amazon-adapter"
+        exclude group: "io.bidmachine", module: "ads.networks.amazon"
         exclude group: "com.applovin.mediation", module: "facebook-adapter"
         exclude group: "com.applovin.mediation", module: "google-adapter"
         exclude group: "com.applovin.mediation", module: "yandex-adapter"
