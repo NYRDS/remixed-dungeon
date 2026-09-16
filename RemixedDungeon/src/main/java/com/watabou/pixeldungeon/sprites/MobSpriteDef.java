@@ -268,7 +268,7 @@ public class MobSpriteDef extends MobSprite {
             if (parent != null) {
                 super.zap(cell);
 
-                ZapEffect.zap(getParent(), chr.getPos(), cell, zapEffect);
+                ZapEffect.zap(parent, chr.getPos(), cell, zapEffect);
             }
         });
     }

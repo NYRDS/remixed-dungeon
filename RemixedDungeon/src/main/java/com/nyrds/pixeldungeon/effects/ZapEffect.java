@@ -28,7 +28,8 @@ public class ZapEffect {
     static public void zap(Group parent, int from, int to, String zapEffect)
     {
         Level level = Dungeon.level;
-        if (zapEffect != null && level.cellValid(from) && level.cellValid(to)) {
+        // parent can be nulled concurrently by sprite orphaning (die fade, push, scene teardown)
+        if (parent != null && zapEffect != null && level.cellValid(from) && level.cellValid(to)) {
             
             if (!Dungeon.isCellVisible(from) && !Dungeon.isCellVisible(to)){
                 return;
