@@ -343,6 +343,7 @@
     <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
     <string name="Codex_Story_20">Vrieswapen - Een succesvolle treffer kan het doel vertragen en voorkomen dat het in brand vliegt.</string>
     <string name="Codex_Story_22">Dit boek is geschreven in de taal der demonen</string>
+    <string name="Codex_Story_23">Dit boek is geschreven in de taal van dwergen.</string>
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_25">Zij stak, bevroren, voor de zware eikenen deur, en keek naar het licht dat uit de deurranden doordrong. Uit een verwaarloosd hoekje van haar geest kwam herkenning.\n\&quot;Zonlicht..\&quot; mompelde ze tegen zichzelf. Hoe lang was het geweest? In de eeuwige duisternis van de Kelder had ze lang geleden opgehouden de dagen te tellen. Het licht verlichtte vergeten herinneringen. Ze herinnerde haar training, lange dagen van zware oefening met boomerang en zwaard, van logboek bijhouden en kaarten maken. Ze herinnerde de mantra\'s en disciplines die bedoeld waren om haar een schijn van gezond verstand te laten behouden terwijl ze de onbekende diepgang verkennde. Wat ze niet herinnerde, niet kon herinneren, waren mensen.\nZe herinnerde hun stemmen, hun bevelen en hun waarschuwingen, maar niet hun gezichten, noch hun aanraking.\nPijn had haar getraind. Onthoud de gevaren, altijd de gevaren. Tollende dieren, onoversterven, onzinnige bendes en slimme ninja\'s waren voor haar gevallen. Ze had gesneden, gebrand, gestoken en vergiftigd haar weg gebaan door afschuwelijke wezens, demonen, klokwerk-afschuwelijkheden en onzinnige necromanten. Zelfs goden waren voor haar gevallen.\nZe had Yog gevolgd door Hemel en Hel, voordat ze zijn corrumpterende fluisteringen voor altijd stilte. Toch was er nog werk te doen. Yog was een dienaar van iemand nog meer occulte en krachtigere dan hijzelf.\nZo dook ze verder, dieper. Het dagboek van de oude tovenaar, nog steeds stralend van kracht, had haar de weg getoond. Met de magie in zijn bladen reisde ze naar een woud nieuw land, een klein dorpje verborgen in een machtig bos. Daar voltooide ze ten slotte het kwaad tot zijn doolhof-achtige bron, en versloeg allen die voor haar stonden.\nNu, in het felle daglicht, onderzocht ze zichzelf in een kuil grotwater. Haar lichaam was door magie bijna onherkenbaar vervormd. Haar huid, bleek tot het punt van doorschijnend, was bedekt met vuil, slijk en roet. Haar ketting met ringen kon een koningsgeld waard zijn, en haar wapenhouder met staven bevatte genoeg magische energie om legers te verwoesten. Ze greep haar wapens, letterlijk fijn genoeg om de goden zelf neer te hakken. Werkelijk, ze was meester geworden van dit donkere rijk, deze woestijn van wanhoop.\nZe had het kwaad gejaagd tot in de verre hoeken van het multiversum, maar nu was ze bevroren van angst. Wat als ze haar verwerpte? Wat als ze dat niet deed? Hoe kon ze nog ooit met deze mensen omgaan? Hel, ze had de keren dat de dood haar had geëist, en weer was weggehaald uit zijn ijzergreep, niet meer geteld.\nNee, er was geen plek voor haar in het licht, niet meer. Ze keerde zich af van het mager licht, en daalde in het donker, misschien voor de laatste keer.\n\n\n\tby drazool from reddit</string>
     <string name="Codex_Story_3">Anti-entropie Glif - De Held wordt verlicht en vangt brand, en de vijand wordt bevroren.</string>
@@ -724,6 +725,7 @@
     <string name="Level_TileDescExit">De treden leiden naar beneden, naar een diepere verdieping.</string>
     <string name="Level_TileDescLockedDoor">Deze deur is op slot, je hebt een passende sleutel nodig om hem te openen.</string>
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
+    <string name="Level_TileDescWater">Als je in brand staat, stap in het water om het vuur te doven.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
     <string name="Level_TileEmptyWell">Lege put</string>
     <string name="Level_TileEntrance">Diepte-ingang</string>
@@ -1939,6 +1941,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

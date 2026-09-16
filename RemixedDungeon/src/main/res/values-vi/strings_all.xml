@@ -74,6 +74,7 @@
     <string name="Badges_AllScrolls">Đã nhận dạng tất cả cuốn</string>
     <string name="Badges_AllWands">Đã nhận dạng tất cả gậy</string>
     <string name="Badges_BossSlain1">Goo đã bị tiêu diệt</string>
+    <string name="Badges_BossSlain3All">DM-300 đã bị tiêu diệt bởi tất cả các phân lớp</string>
     <string name="Badges_Champion">Thử thách đã hoàn thành</string>
     <string name="Badges_DeathFalling">Tử vong do rơi xuống</string>
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
@@ -1223,6 +1224,7 @@
     <string name="StartScene_DifficultyNormalWithSavesNoAds">bình thường có lưu</string>
     <string name="StartScene_DifficultySelect">Chọn số phận của bạn</string>
     <string name="StartScene_New">Trò chơi mới</string>
+    <string name="StartScene_No">Không, quay về menu chính</string>
     <string name="StartScene_Really">Bạn có thực sự muốn bắt đầu một trò chơi mới không?</string>
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
@@ -1677,6 +1679,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
