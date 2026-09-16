@@ -1,4 +1,25 @@
 {
-  "battleMusic":"ost_boss_2_fight",
-  "battleMusicFallback":"ost_boss_fight"
+  "name"          : "Tengu_Name",
+  "name_objective": "Tengu_Name_Objective",
+  "description"   : "Tengu_Desc",
+  "gender"        : "Tengu_Gender",
+  "attackSkill"   : 20,
+  "defenseSkill"  : 20,
+  "dmgMin"        : 8,
+  "dmgMax"        : 15,
+  "dr"            : 5,
+  "str"           : 10,
+  "ht"            : 120,
+  "exp"           : 20,
+  "baseSpeed"     : 1,
+  "attackDelay"   : 1,
+  "walkingType"   : "NORMAL",
+  "spriteDesc"    : "spritesDesc/Tengu.json",
+  "scriptFile"    : "scripts/mobs/Tengu",
+  "resistances"   : ["ToxicGas", "Poison"],
+  "isBoss"        : true,
+  "friendly"      : false,
+  "fraction"      : "DUNGEON",
+  "battleMusic"        : "ost_boss_2_fight",
+  "battleMusicFallback": "ost_boss_fight"
 }

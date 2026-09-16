@@ -1,4 +1,26 @@
 {
-  "battleMusic":"ost_boss_ice_fight",
-  "battleMusicFallback":"ost_boss_fight"
+  "name"          : "IceGuardianCore_Name",
+  "name_objective": "IceGuardianCore_Name_Objective",
+  "description"   : "IceGuardianCore_Desc",
+  "gender"        : "IceGuardianCore_Gender",
+  "attackSkill"   : 26,
+  "defenseSkill"  : 10,
+  "dmgMin"        : 13,
+  "dmgMax"        : 23,
+  "dr"            : 11,
+  "str"           : 10,
+  "ht"            : 1000,
+  "exp"           : 5,
+  "baseSpeed"     : 0.5,
+  "attackDelay"   : 1,
+  "walkingType"   : "NORMAL",
+  "spriteDesc"    : "spritesDesc/IceGuardianCore.json",
+  "scriptFile"    : "scripts/mobs/IceGuardianCore",
+  "immunities"    : ["Paralysis", "ToxicGas", "Terror", "Death", "Amok", "Blindness", "Sleep"],
+  "hasBodyParts"  : false,
+  "isBoss"        : true,
+  "friendly"      : false,
+  "fraction"      : "DUNGEON",
+  "battleMusic"        : "ost_boss_ice_fight",
+  "battleMusicFallback": "ost_boss_fight"
 }

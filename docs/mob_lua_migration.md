@@ -1527,9 +1527,87 @@ transposed vs level.passable — scan level.passable from lua for
 staging runs; findChar takes POS not id; move_hero is one step per
 call (loop it).
 
-17d remains: Tengu, Yog organs (+YogsEye pierce folds in),
-Lich+RunicSkull (pair!), King, IceGuardianCore; ShadowLord+Crystal
-close the series.
+17d remains: Yog organs (+YogsEye pierce folds in),
+Lich+RunicSkull (pair!), King; ShadowLord+Crystal close the series.
+
+## Batch 17d-1 — Tengu, IceGuardianCore (SHIPPED 2026-09-16)
+
+Two more boss kinds data-defined; classes deleted. Zero level-class
+edits needed — both spawn via `BossLevel.spawnBoss → Bestiary.mob →
+MobFactory.mobByName` kind strings (Bestiary.json entries predate
+migration); factory now resolves them through the mobsDesc scan.
+
+New surface (tiny): `@LuaInterface Char.move(int)` (Tengu jump
+teleport), explicit `@LuaInterface Level.getWidth()` (lombok `@Getter`
+replaced by a hand-written annotated getter) + `@LuaInterface
+Level.getLength()` (cell-math in lua: java `Level.adjacent` is a raw
+cell-diff check `diff==1||diff==W||diff==W±1` that can wrap rows —
+ported verbatim, NOT a chebyshev), class-level `@LuaInterface
+ScrollOfMagicMapping` (Tengu re-arm reveals the trap cell; script
+binds the class at runtime, not in commonClasses).
+
+Tengu (mobsDesc/Tengu.json + scripts/mobs/Tengu.lua): jump = getCloser
+hook (target in FOV → `spend(-1/speed)` refund + jump, Succubus
+refund idiom); dodge = doAttack hook decrementing `data.timeToJump`,
+every 5th attack adjacent → jump; jump re-arms up to 4 random traps
+into PoisonTrap (`getLevelObjects()` + `isTrap()` + `reactivate`,
+object list = random-with-replacement like the java getRandomTerrain
+rolls) + `ScrollOfMagicMapping:discover(cell)`; no free landing cell →
+potion-style fallback `heal(floor(ht*0.1), self)` + detach
+Poison/Cripple/Weakness/Bleeding (PotionOfHealing.heal is NOT
+lua-bound — clinit trap, batch-15 lesson — so the 4-line body ports
+inline); hero-class-gated loot in spawn hook (TomeOfMastery unless
+NECROMANCER/GNOLL/DOCTOR, TenguLiver for GNOLL) guarded by
+`bag:getItem(kind)` so the restore-time re-run of onSpawn can't
+duplicate items; notice yell gender-branched
+(`hero:getHeroClass():getGender() == 2` = FEMININE, enum instance
+methods work warn-only); die = validateBossSlain("BOSS_SLAIN_2") +
+say. SkeletonKey rides isBoss auto-collect.
+
+IceGuardianCore (mobsDesc/IceGuardianCore.json +
+scripts/mobs/IceGuardianCore.lua): near-pure json (hp 1000,
+baseSpeed 0.5, hasBodyParts false, 7 immunities); spawn hook collects
+WandOfIcebolt+1 and IceKey (same getItem guard); die hook sweeps
+`level:getMobs()` kind=="IceGuardian" → `m:die(cause)` (same-cause
+kill) + validateBossSlain("ICE_GUARDIAN_SLAIN"). Guardian's own die
+hook (damage core + respawn pair) behaves identically to the java
+loop: core already dead → no-op, fresh guardians outside the loop
+snapshot survive, same as before migration.
+
+Verified live headless on the real levels: Tengu via create_mob on
+PrisonBossLevel — exact stat parity (120/20/20/8-15/str10),
+SkeletonKey+TomeOfMastery (warrior branch) in inventory; jump observed
+(666→733, 15+ cells in one AI step, wool-puff path); controlled trap
+re-arm: 3 AlarmTrap→PoisonTrap kind flips after a staged jump (the
+level's traps are LEVEL OBJECTS — placeTraps makes POISON_TRAP
+objects — so the re-arm shows as object kind changes); damaged-hp +
+inventory round-trip via go_to_level away/back; kill → badge
+"Тенгу побеждён" + both yells in logs (notice yell formatted with the
+hero-class title, die say) + TomeOfMastery/SkeletonKey heap at the
+death cell + BOSS_SLAIN_2 persisted in gzip badges.dat (ZGREP).
+IceGuardianCore via the REAL pressHero→Bestiary arena flow on ice5:
+core (Bestiary kind) + guardian spawned, exact parity
+(1000/26/10/13-23, SkeletonKey+IceKey+WandOfIcebolt); killing the
+core took the guardian with it (die loop). Zero LuaErrors; allMobs
+smoke 126 kinds; hasMob ✓ for all nine 17d kinds; android gate green;
+blood 6/6, doctor 7/7, all_spells 38/38. Alchemy fails on headless
+are the PRE-EXISTING mod-recipe gap (bd bwi): baseline rebuild without
+17d-1 changes fails identically ("Potion.handler is null" → lua
+recipes half-load, 4 instead of ≥16) — verified by stash-rebuild
+A/B, not a regression.
+
+Harness notes added: PrisonBossLevel has NO static arena traps — its
+scattered traps are trap LEVEL OBJECTS, and the prison "portal" exit
+(room with the portal) is not the spawn room; PrisonBossLevel spawns
+Tengu via pressHero when the hero enters the PRISON_BOSS_EXIT room
+(getRoomExit is protected — for staging use create_mob instead).
+IceCavesBossLevel arena = `outsideEntranceRoom` = hero row above the
+arena-door line: walk north through the x15 corridor, one move_hero
+step per call WITH position readback between steps (move_to on ice5
+queues an action the hero never completes; move_hero to a
+non-passable cell reports success but does nothing). reveal_map sets
+Dungeon.visible/mapped/visited all-true — avoid before boss-arena
+staging that depends on visibility.
 
 ## Verification checklist
 

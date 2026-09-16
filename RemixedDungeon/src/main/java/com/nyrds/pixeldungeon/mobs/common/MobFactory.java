@@ -4,7 +4,6 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mobs.guts.BurningFist;
 import com.nyrds.pixeldungeon.mobs.guts.RottingFist;
 import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
-import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
@@ -16,7 +15,6 @@ import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.King;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Tengu;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.items.wands.WandOfFlock;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -123,7 +121,8 @@ public class MobFactory {
 		// Goo kind is data now (mobsDesc/Goo.json, batch 17c-1)
 		// - java class deleted, kind must never resolve to java.
 
-		registerMobClass(Tengu.class);
+		// Tengu kind is data now (mobsDesc/Tengu.json, batch 17d-1)
+		// - java class deleted, kind must never resolve to java.
 
 		// SpiderQueen kind is data now (mobsDesc/SpiderQueen.json, batch 17c-2a)
 		// - java class deleted, kind must never resolve to java.
@@ -151,9 +150,9 @@ public class MobFactory {
 		registerMobClass(Crystal.class);
 
 
-		// IceGuardian kind is data now (mobsDesc/IceGuardian.json);
-		// IceGuardianCore stays java (Boss die-flow: music/bossSlain/unseal/badges).
-		registerMobClass(IceGuardianCore.class);
+		// IceGuardian/IceGuardianCore kinds are data now
+		// (mobsDesc/IceGuardian.json, mobsDesc/IceGuardianCore.json, batch 17d-1)
+		// - java classes deleted, kinds must never resolve to java.
 
 		// Hedgehog/HealerNPC/TownGuardNPC/Townsfolk*NPC/LibrarianNPC/
 		// BellaNPC/FortuneTellerNPC/NecromancerNPC kinds are data now

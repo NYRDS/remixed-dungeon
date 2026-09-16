@@ -429,6 +429,13 @@ public abstract class Level implements Bundlable {
 	// Dungeon collects them from here after loading the level
 	public static final List<Mob> recoveredFollowers = new ArrayList<>();
 
+	// explicit annotated getter: lua needs the level width for cell math
+	// (replaces the lombok-generated one)
+	@LuaInterface
+    public int getWidth() {
+		return width;
+	}
+
 	@Getter
     protected int width  = 32;
 	@Getter
@@ -1789,6 +1796,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+    @LuaInterface
     public int getLength() {
 		return width * height;
 	}

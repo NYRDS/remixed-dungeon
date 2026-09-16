@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -20,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 
 
+@LuaInterface
 public class ScrollOfMagicMapping extends Scroll {
 
     @Override

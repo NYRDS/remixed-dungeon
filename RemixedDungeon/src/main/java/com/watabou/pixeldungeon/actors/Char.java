@@ -1197,6 +1197,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
     }
 
+    @LuaInterface
     public void move(int step) {
         if (!isMovable() || hasBuff(Roots.class)) {
             return;
