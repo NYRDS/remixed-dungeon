@@ -949,6 +949,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return 1.f;
     }
 
+    @LuaInterface
     public float attackDelay() {
         float mainDelayFactor = getActiveWeapon().attackDelayFactor(this);
         float secondaryDelayFactor = getSecondaryWeapon().attackDelayFactor(this);
@@ -1224,6 +1225,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         next();
     }
 
+    @LuaInterface
     public void onAttackComplete() {
         if (isAlive()) {
             Char enemy = getEnemy();
@@ -1941,6 +1943,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void itemPickedUp(Item item) {
     }
 
+    @LuaInterface
     public void setEnemy(@NotNull Char enemy) {
         if (enemy == this) {
             EventCollector.logException(enemy.getEntityKind() + " gonna suicidal");

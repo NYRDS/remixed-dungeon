@@ -194,6 +194,15 @@ public class CharUtils {
         return false;
     }
 
+    // extra-attack-anim bridge for lua mobs (Monk kick): lua can't hand
+    // java a closure as a Callback - the coercion yields null silently -
+    // so the sprite callback is built java-side and the attack completes
+    // through the standard onAttackComplete flow when the anim ends
+    @LuaInterface
+    public static void extraAttack(@NotNull Char ch, String anim) {
+        ch.getSprite().playExtra(anim, ch::onAttackComplete);
+    }
+
     // Wraith spawn moved here from the deleted Wraith class (mob-lua migration,
     // batch 7): cursed heaps (tomb/skeleton) and Shadow Lord summon wraiths.
     private static final float WRAITH_SPAWN_DELAY = 2f;

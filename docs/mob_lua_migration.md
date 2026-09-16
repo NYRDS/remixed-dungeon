@@ -1375,8 +1375,21 @@ New java surface:
 Monk: attackDelay 0.5 json key covers the old `_attackDelay` override;
 Amok/Terror immunity via json immunities. The java "kick" actMeleeAttack
 override was DEAD CODE (actMeleeAttack is hero-only; mob AI attacks via
-doAttack) — deliberately NOT migrated (bug fixes stay out; migrating it
-would have CHANGED live behavior). Senior: own json (dmg 12-20, str 15)
+doAttack) — the anim never fired in java. Mike wanted the kick playable,
+so it is restored ON THE LIVE PATH: lua `doAttack` hook (Monk 50%,
+Senior 30%) rolls the kick, then setEnemy + spend + sprite turnTo +
+`CharUtils:extraAttack(self, "kick")` — a tiny java bridge that owns the
+sprite Callback, because lua closures coerced to java interfaces come
+out NULL silently (proven: 20 kicks, 0 damage pre-bridge; 18 kicks,
+6 damage events landed post-bridge, rest dodged by the level-11 hero —
+codebase convention is lua never passes closures into java, and Mike
+vetoed luajava.createProxy: breaks the TeaVM/html build). New
+method-level @LuaInterface: Char.setEnemy / attackDelay /
+onAttackComplete (natural lua surface for attack scripting; no
+createProxy anywhere). Headless drives the hook via
+`mob:getScript():run("onDoAttack", hero)` — calling "doAttack" directly
+BYPASSES the mob.lua wrapper and shifts args (script table lands in
+`self`) — false-positive nil errors, cost one debug round. Senior: own json (dmg 12-20, str 15)
 + attackProc = 1/10 Stun 1.1 then disarm. Undead: `undead: true` json key
 (gives setUndead + naturalUndead), exp 0, Wandering aiState, snd_bones on
 visible death; 1/5 Stun 1.0 proc. clearBlob dropped per ruling — undead
