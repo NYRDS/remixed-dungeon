@@ -87,6 +87,8 @@ android {
         googlePlay {
             dimension "market"
             versionCode defaultConfig.versionCode + 10000
+            // appodeal 4.2+ requires API 24; ads were API 24+ only anyway (AppodealAdapter.usable)
+            minSdkVersion 24
         }
 
         ruStore {
@@ -160,49 +162,34 @@ dependencies {
     googlePlayImplementation 'com.google.android.ads.consent:consent-library:1.0.8'
 
 
-    googlePlayImplementation("com.appodeal.ads:sdk:3.10.0.0") {
-        // caveman: aps-sdk 11.x DTBAdActivity NPEs in onCreate on missing ad_state
-        // extra (fixed only in APS 12, pulled by no adapter stack) - cut all amazon
-        // demand routes instead, com.amazon.android:aps-sdk must not resolve
-        exclude group: "com.appodeal.ads.sdk.networks", module: "amazon"
-        exclude group: "com.applovin.mediation", module: "amazon-tam-adapter"
-        exclude group: "org.bidon", module: "amazon-adapter"
-        exclude group: "io.bidmachine", module: "ads.networks.amazon"
-        exclude group: "com.applovin.mediation", module: "facebook-adapter"
-        exclude group: "com.applovin.mediation", module: "google-adapter"
-        exclude group: "com.applovin.mediation", module: "yandex-adapter"
-        exclude group: "com.appodeal.ads.sdk.networks", module: "level_play"
-        exclude group: "com.appodeal.ads.sdk.networks", module: "meta"
-        exclude group: "com.appodeal.ads.sdk.networks", module: "yandex"
-        exclude group: "com.appodeal.ads.sdk.services", module: "adjust"
-        exclude group: "com.appodeal.ads.sdk.services", module: "appsflyer"
-        exclude group: "com.appodeal.ads.sdk.services", module: "facebook_analytics"
-        exclude group: "com.appodeal.ads.sdk.services", module: "firebase"
-        exclude group: "com.unity3d.ads-mediation", module: "admob-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "applovin-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "aps-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "bidmachine-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "bigo-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "facebook-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "fyber-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "inmobi-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "mintegral-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "mobilefuse-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "moloco-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "mytarget-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "ogury-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "pangle-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "smaato-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "unityads-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "verve-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "vungle-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "yandex-adapter"
-        exclude group: "com.unity3d.ads-mediation", module: "yandex-adapter"
-        exclude group: "io.bidmachine", module: "ads.adapters.ironsource"
-        exclude group: "io.bidmachine", module: "ads.networks.meta_audience"
-        exclude group: "org.bidon", module: "meta-adapter"
-        exclude group: "org.bidon", module: "yandex-adapter"
-    }
+    // caveman: appodeal 4.x = core + explicit opt-in adapters, versions track
+    // the network SDKs. amazon adapter deliberately absent: aps-sdk 11.x
+    // DTBAdActivity NPEs in onCreate on missing ad_state extra, fix exists only
+    // in APS 12 which only the 4.x amazon adapter line pulls - reintroduce
+    // adapters:amazon only when its aps-sdk dep is 12.x
+    googlePlayImplementation 'com.appodeal.ads.sdk:core:4.3.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:admob:25.4.0.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:applovin:13.6.4.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:applovin_max:13.6.4.1'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:bidmachine:3.8.0.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:bidon:0.16.0.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:bigo_ads:6.1.0.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:dt_exchange:8.4.7.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:iab:1.8.1.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:inmobi:11.4.1.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:ironsource:9.6.0.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:mintegral:17.1.81.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:mobilefuse:1.12.0.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:moloco:4.3.1.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:my_target:5.51.2.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:ogury:6.2.0.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:pangle:7.7.0.2.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:pubmatic:4.10.0.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:sentry_analytics:8.56.0.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:smaato:22.7.2.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:unity_ads:4.20.0.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:verve:3.7.1.0'
+    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:vungle:7.7.7.0'
 
     googlePlayImplementation 'com.yandex.android:mobileads:7.16.1'
 
@@ -214,7 +201,7 @@ dependencies {
     googlePlayImplementation 'com.google.android.gms:play-services-base:18.9.0'
     googlePlayImplementation 'com.google.android.gms:play-services-auth:21.4.0'
     googlePlayImplementation "com.google.android.gms:play-services-games-v2:21.0.0"
-    googlePlayImplementation 'com.google.android.gms:play-services-ads:24.7.0'
+    googlePlayImplementation 'com.google.android.gms:play-services-ads:25.4.0'
 
 
     googlePlayImplementation 'com.android.billingclient:billing:8.0.0'
