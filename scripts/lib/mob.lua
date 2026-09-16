@@ -146,8 +146,17 @@ mob.onScoreItemAction = function(self, mob, item, action)
     return self.scoreItemAction(mob, item, action) or 0
 end
 
+-- numeric return replaces the incoming damage (Char.damage consumes it
+-- pre-buff/pre-resist); any other value is coerced to a boolean as before
 mob.onDamage = function(self,mob,dmg,src)
-    return not not (self.damage and self.damage(mob, dmg, src))
+    if not self.damage then
+        return false
+    end
+    local ret = self.damage(mob, dmg, src)
+    if type(ret) == "number" then
+        return ret
+    end
+    return not not ret
 end
 
 mob.onSpawn = function(self,mob,level)

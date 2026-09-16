@@ -1,9 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.pixeldungeon.mobs.guts.BurningFist;
-import com.nyrds.pixeldungeon.mobs.guts.RottingFist;
-import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
@@ -87,6 +84,9 @@ public class MobFactory {
 	public static final String EARTH_ELEMENTAL = "EarthElemental";
 	public static final String PIRANHA = "Piranha";
 	public static final String ICE_GUARDIAN = "IceGuardian";
+	public static final String YOGS_EYE = "YogsEye";
+	public static final String BURNING_FIST = "BurningFist";
+	public static final String ROTTING_FIST = "RottingFist";
 	public static final String RAT_KING = "RatKing";
 	public static final String HEDGEHOG = "Hedgehog";
 	public static final String NECROMANCER_NPC = "NecromancerNPC";
@@ -134,14 +134,12 @@ public class MobFactory {
 
 		// Eye kind is data now (mobsDesc/Eye.json, batch 17c-2a)
 		// - java class deleted, kind must never resolve to java.
-		// Larva/YogsHeart/YogsTeeth/YogsBrain kinds are data now
-		// (mobsDesc/*.json) - classes deleted, kinds must never resolve to java.
-		registerMobClass(BurningFist.class);
-		registerMobClass(RottingFist.class);
+		// Larva/YogsHeart/YogsTeeth/YogsBrain/BurningFist/RottingFist/YogsEye
+		// kinds are data now (mobsDesc/*.json, batch 17d-2)
+		// - classes deleted, kinds must never resolve to java.
 
 		// Statue/ArmoredStatue/GoldenStatue kinds are data now
 		// (mobsDesc/*.json) - classes deleted, kinds must never resolve to java.
-		registerMobClass(YogsEye.class);
 		registerMobClass(ShadowLord.class);
 
 		registerMobClass(Lich.class);

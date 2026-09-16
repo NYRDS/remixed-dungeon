@@ -2,7 +2,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.pixeldungeon.mobs.guts.YogsEye;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -112,14 +112,15 @@ public class HallsBossLevel extends BossLevel {
 
 			Dungeon.observe();
 			
-			YogsEye boss = new YogsEye();
+			// YogsEye is data now (batch 17d-2) - the eye's own lua spawn
+			// hook places its organs; kind must never resolve to java.
+			var boss = MobFactory.mobByName(MobFactory.YOGS_EYE);
 			do {
 				boss.setPos(Random.Int( getLength() ));
 			} while (
 				!passable[boss.getPos()] || !passable[boss.getPos() - getWidth()] ||
 				Dungeon.isCellVisible(boss.getPos()));
 			spawnMob(boss);
-			boss.spawnOrgans();
 		}
 	}
 

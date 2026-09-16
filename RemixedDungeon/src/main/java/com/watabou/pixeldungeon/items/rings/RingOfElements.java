@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon.items.rings;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
-import com.nyrds.pixeldungeon.mobs.guts.BurningFist;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -38,7 +37,7 @@ public class RingOfElements extends Ring {
 			FULL.add( LightningTrap.Electricity.class.getSimpleName() );
 			FULL.add( MobFactory.WARLOCK );
 			FULL.add( MobFactory.EYE );
-			FULL.add( BurningFist.class.getSimpleName() );
+			FULL.add( MobFactory.BURNING_FIST );
 			FULL.add( LiquidFlame.class.getSimpleName() );
 		}
 

@@ -860,7 +860,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return;
         }
 
-        getScript().run("onDamage", dmg, src);
+        // numeric script return replaces the incoming damage (pre-buff/pre-resist,
+        // where a java damage() override would have shifted it); nil/boolean ignored
+        LuaValue scriptedDamage = getScript().run("onDamage", dmg, src);
+        if (scriptedDamage.isnumber()) {
+            dmg = scriptedDamage.toint();
+        }
         getState().gotDamage(this, src, dmg);
 
         final int[] dmg_ = {dmg};

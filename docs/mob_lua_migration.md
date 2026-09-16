@@ -1609,6 +1609,85 @@ non-passable cell reports success but does nothing). reveal_map sets
 Dungeon.visible/mapped/visited all-true — avoid before boss-arena
 staging that depends on visibility.
 
+## Batch 17d-2 — Yog family: YogsEye, BurningFist, RottingFist (SHIPPED 2026-09-17)
+
+Three guts classes deleted (~330 lines); kind strings unchanged, no
+level json edits (HallsBossLevel was the only java construction site:
+`new YogsEye()` → `MobFactory.mobByName(MobFactory.YOGS_EYE)` and the
+explicit `boss.spawnOrgans()` call DIED — the eye's own lua `spawn`
+hook places 2-3 distinct organs of {RottingFist, BurningFist,
+YogsBrain, YogsHeart, YogsTeeth}, difficulty>2 → 3).
+
+Engine surface (tiny): `Char.damage` now CONSUMES a numeric script
+return from `onDamage` (mob.lua wrapper `onDamage` forwards numbers,
+coerces everything else to boolean as before) — the numeric replaces
+the incoming damage BEFORE gotDamage/buffs/resist, exactly where a
+java damage() override shifted it. All pre-existing `damage` hooks
+return nil, so nothing else changes. That was the whole java delta;
+organ placement is PURE LUA (a ~10-line nearest-free-cell scan in
+YogsEye.lua mirrors Level.getNearestTerrain min-path-distance +
+random-pick semantics; java predicate lambdas are not lua-reachable —
+lua closures coerce to java interfaces as null).
+
+Mike rulings that shaped the batch: the eye's damage-shift is LIVE
+(the java `mob.isBoss()` scan counted nothing — the organs were plain
+Mob, never Boss, so `dmg >>= shift` was a no-op since the fork began);
+lua counts the 5 organ KINDS present instead, beckons them toward the
+eye, halves per organ (verified: 5 organ-kind mobs staged → 32 dmg →
+hp -1). BurningFist's ranged attack is LIVE feedback: java flashed the
+victim in `attack()`, which only ever runs adjacent (ranged hits go
+Char.doAttack → sprite zap → Mob.zap → zapProc), so the flash was dead
+code; lua wires it in `zapProc`, which fires exactly on ranged hits.
+
+Key facts: `isBoss:true` json now carries the eye's whole die-flow
+(banner/unseal/SkeletonKey/implicit Death+PsionicBlast resists); the
+2-key battleMusic stub in mobsDesc/YogsEye.json merged into the full
+def. `movable:false` keeps beckon a no-op for the eye (java override
+parity for free); fists beckon ALL mobs from their damage hooks
+(ported — they were initially missed, caught by the live water-heal
+probe). Fists keep displaying Yog_Name/Yog_Desc (no per-fist default
+strings exist; only el/uk translations carry fist ids — unused).
+`spawnOnNextCell(mob,kind,limit)` third arg is a POPULATION CAP (the
+java larva cap 10×difficultyFactor), not a chance. The `spawn` hook
+re-runs on restore — `data.organsSpawned` via restoreData/storeData
+guards organ duplication across the change_level snapshot round-trip
+(verified: exactly eye+2 organs before and after). Accepted deltas:
+beam particle count IntRange(1,3) vs java IntRange(2,3) (beamStrike's
+fixed shape, one particle of spread); Boss-ctor mobLeveling lvl roll
+not replicated (quirk-gated, consistent with Goo/Tengu/Eye).
+RingOfElements' fire-immunity whitelist now uses
+MobFactory.BURNING_FIST (last java guts reference outside the shim).
+
+Verified live (headless): stat parity ×3 exact (eye 1000/1000 30/30
+20-30 SLEEPING SkeletonKey; fists 400/400·26/25·40-62 and 500/500·36/
+25·34-46 WANDERING); fire trail blob after 3 ticks; ranged fist hit
+at distance 4 with the fist stationary (pet -39 hp through the base
+zap flow, canAttack ray cast(flags false,true) == enemyPos); Ooze proc
+through real Char.attack chain (1/3 landed on hit 9 of a heal-topped
+pet; direct attackProc call also proved attach); water heal +10 via
+direct act() on a water tile (Wandering walks the fist off water —
+java parity); eye shift math exact twice (32>>5=1, 16>>3=2), larva
+spawn + cap, organs beckoned; beam kill at range 4 (base zap + beam
+double-dip); organsSpawned guard; YOG_SLAIN badge in gzip badges.dat
+after reload; allMobs() smoke — all 126 kinds construct, zero
+DummyMob. CI suites all green on the batch jar: alchemy 42/42,
+all_spells 38/38, blood 6/6, doctor 7/7, level_navigation 9/9,
+pet_transition 5/5 (--start-server), turn_economy 1/1
+(--start-server); android gate green. No windowed smoke needed: the
+eye sprite json is untouched and beamStrike's visuals were
+window-verified in 17c-2.
+
+Harness notes: `pkill -f "[R]emixedDungeon-Headless"` must be a LONE
+call even when later arguments of the SAME compound command contain
+the jar name — the shell's own cmdline matches and the command dies
+before the build (cost one gradle round). change_level takes
+`level=` (not `to=`); reload_game restores the last SAVED game (town
+after start_game) — for mob round-trips use change_level, which
+restores the level snapshot with mobs. test_damage with a srcid that
+matches no mob silently no-ops. MobFactory:allMobs() returns
+pre-CONSTRUCTED mob instances (java List, `:size()`/`:get(i)`) — its
+successful construction of every registered kind is the whole smoke.
+
 ## Verification checklist
 
 1. Build: `:RemixedDungeonDesktop:compileJava` (after Step A, this also
