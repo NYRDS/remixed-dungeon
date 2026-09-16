@@ -2289,6 +2289,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void accumulateSkillPoints(int n) {
     }
 
+    @LuaInterface
     public boolean isBoss() {
         return false;
     }

@@ -3,25 +3,35 @@ package com.nyrds.pixeldungeon.mobs.common;
 import androidx.annotation.Keep;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.util.JsonHelper;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.WalkingType;
+import com.watabou.pixeldungeon.items.keys.SkeletonKey;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.utils.Bundle;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaValue;
 
 /**
  * Created by mike on 11.04.2017.
@@ -52,6 +62,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	// steps off objects/stairs in act, never beckoned, immune to buffs, not
 	// petable. Replaces the deleted java NPC base-class behavior.
 	private boolean npc = false;
+
+	// boss battle track, played while the boss is Hunting (java Boss parity)
+	@Nullable
+	private String battleMusic = "";
 
 	//For restoreFromBundle
 	@Keep
@@ -120,7 +134,29 @@ public class CustomMob extends MultiKindMob implements IZapper {
 				getSprite().turnTo(pos, Dungeon.hero.getPos());
 			}
 		}
+
+		if (isBoss && !battleMusic.isEmpty() && getState() instanceof Hunting) {
+			MusicManager.INSTANCE.play(battleMusic, true);
+		}
 		super.act();
+	}
+
+	// java Boss die-flow parity: level music back, banner, open the sealed stair
+	@Override
+	public void die(@NotNull NamedEntityKind cause) {
+		if (isBoss) {
+			GameScene.playLevelMusic();
+			GameScene.bossSlain();
+			level().unseal();
+		}
+		super.die(cause);
+	}
+
+	// boss intro yells etc; sprite alert already played by the base
+	@Override
+	public void notice() {
+		super.notice();
+		getScript().runOptionalNoRet("onNotice");
 	}
 
 	@Override
@@ -140,11 +176,44 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			return false;
 		}
 
+		// script replaces the range+LOS check entirely (pumped Goo reach, ray attacks)
+		LuaValue scripted = getScript().run("onCanAttack", enemy);
+		if (scripted.isboolean()) {
+			return scripted.toboolean();
+		}
+
 		int enemyPos = enemy.getPos();
 		int distance = level().distance(getPos(), enemyPos);
 
         return distance <= attackRange && Ballistica.cast(getPos(), enemyPos, false, true) == enemyPos;
     }
+
+	// script takes the attack entirely (Goo pump: spends and poses itself)
+	@Override
+	public void doAttack(Char enemy) {
+		if (getScript().runOptional("onDoAttack", Boolean.FALSE, enemy)) {
+			return;
+		}
+		super.doAttack(enemy);
+	}
+
+	@Override
+	public int attackSkill(Char target) {
+		LuaValue scripted = getScript().run("onAttackSkill", target);
+		if (scripted.isnumber()) {
+			return scripted.toint();
+		}
+		return super.attackSkill(target);
+	}
+
+	@Override
+	public int damageRoll() {
+		LuaValue scripted = getScript().run("onDamageRoll");
+		if (scripted.isnumber()) {
+			return scripted.toint();
+		}
+		return super.damageRoll();
+	}
 
 	@Override
 	public boolean friendly(@NotNull Char chr) {
@@ -208,6 +277,17 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 		attackRange = classDesc.optInt("attackRange",attackRange);
 		isBoss = classDesc.optBoolean("isBoss",isBoss);
+		if (isBoss) {
+			// java Boss ctor semantics: uncapturable, death/psionic-blast proof
+			canBePet = false;
+			addResistance(Death.class);
+			addResistance(ScrollOfPsionicBlast.class);
+		}
+
+		battleMusic = classDesc.optString("battleMusic", "");
+		if (!battleMusic.isEmpty() && !ModdingMode.isSoundExists(battleMusic)) {
+			battleMusic = classDesc.optString("battleMusicFallback", "");
+		}
 
 		String scriptFile = classDesc.optString("scriptFile","");
 		if(!scriptFile.isEmpty()) {
@@ -244,6 +324,21 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			setFraction(Enum.valueOf(Fraction.class, classDesc.optString("fraction","DUNGEON")));
 			hp(ht(classDesc.optInt("ht", 1)));
 			fromJson(classDesc);
+
+			if (isBoss) {
+				// bosses carry the SkeletonKey that drops with their gear
+				collect(new SkeletonKey());
+			}
+		}
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+
+		// java Boss fixup parity: a save predating the key must not brick the stair
+		if (isBoss && getBelongings().getItem(SkeletonKey.class) == null) {
+			collect(new SkeletonKey());
 		}
 	}
 
@@ -256,6 +351,13 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	public boolean isHumanoid() {
 		return humanoid;
+	}
+
+	// Mob stores the flag as a field; the isBoss() method lives on Char only
+	@LuaInterface
+	@Override
+	public boolean isBoss() {
+		return isBoss;
 	}
 
 	@LuaInterface

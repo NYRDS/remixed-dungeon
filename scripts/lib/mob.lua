@@ -175,6 +175,47 @@ mob.onZapProc = function(self,mob, enemy, damage)
     return self.zapProc(mob, enemy, damage)
 end
 
+-- called from CustomMob.notice (after the sprite alert): boss intro yells etc.
+mob.onNotice = function(self,mob)
+    if not self.notice then
+        return
+    end
+    return self.notice(mob)
+end
+
+-- called from CustomMob.canAttack: return true/false to replace the
+-- range+LOS check entirely (ray attacks, pumped Goo reach), nil to keep it
+mob.onCanAttack = function(self,mob,enemy)
+    if not self.canAttack then
+        return nil
+    end
+    return not not self.canAttack(mob, enemy)
+end
+
+-- called from CustomMob.doAttack before the base attack: return true when
+-- the script took the attack (incl. its own spend), false/nil for the regular one
+mob.onDoAttack = function(self,mob,enemy)
+    if not self.doAttack then
+        return false
+    end
+    return not not self.doAttack(mob, enemy)
+end
+
+-- nil keeps the java roll from the json dmg range
+mob.onAttackSkill = function(self,mob,target)
+    if not self.attackSkill then
+        return nil
+    end
+    return self.attackSkill(mob, target)
+end
+
+mob.onDamageRoll = function(self,mob)
+    if not self.damageRoll then
+        return nil
+    end
+    return self.damageRoll(mob)
+end
+
 -- called from CustomMob.add for npc-profile mobs before the blanket buff
 -- veto: return true to let this buff attach anyway (RatKing when angered)
 mob.onAllowBuff = function(self,mob,buff)

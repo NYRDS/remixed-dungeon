@@ -61,6 +61,7 @@ import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.Gold;
@@ -534,21 +535,58 @@ public class CharUtils {
         shopkeeper.collect(newItem);
     }
 
-    @NotNull
-    @LuaInterface
-    public static Char spawnOnNextCell(@NotNull Char src, String mobClass, int limit) {
-        final Level level = src.level();
-        int pos = src.emptyCellNextTo();
+	@NotNull
+	@LuaInterface
+	public static Char spawnOnNextCell(@NotNull Char src, String mobClass, int limit) {
+		final Level level = src.level();
+		int pos = src.emptyCellNextTo();
 
-        if (level.cellValid(pos) && level.countMobsOfKind(mobClass) < limit) {
-            Mob mob = MobFactory.mobByName(mobClass);
-            mob.setPos(pos);
-            level.spawnMob(mob, 0, src.getPos());
-            return mob;
-        }
+		if (level.cellValid(pos) && level.countMobsOfKind(mobClass) < limit) {
+			Mob mob = MobFactory.mobByName(mobClass);
+			mob.setPos(pos);
+			level.spawnMob(mob, 0, src.getPos());
+			return mob;
+		}
 
-        return CharsList.DUMMY;
-    }
+		return CharsList.DUMMY;
+	}
+
+	// caveman: Eye/YogsEye gaze - rolls and damages every char along the ray
+	// (attacker spared), per-victim, like the java zapProc originals
+	@LuaInterface
+	public static void beamStrike(@NotNull Char attacker, @NotNull Char enemy, int fromPos,
+	                              @NotNull String killReport, int burstMax) {
+		Ballistica.cast(fromPos, enemy.getPos(), true, false);
+
+		for (int i = 1; i < Ballistica.distance; i++) {
+			int cell = Ballistica.trace[i];
+
+			Char victim = Actor.findChar(cell);
+			if (victim == null || victim == attacker) {
+				continue;
+			}
+
+			if (hit(attacker, victim, true)) {
+				victim.damage(attacker.damageRoll(), attacker);
+				int pos = victim.getPos();
+
+				if (Dungeon.isCellVisible(pos)) {
+					victim.getSprite().flash();
+					CellEmitter.center(pos).burst(PurpleParticle.BURST, Random.IntRange(1, burstMax));
+				}
+
+				checkDeathReport(attacker, victim, StringsManager.maybeId(killReport));
+			} else {
+				victim.showStatus(CharSprite.NEUTRAL, victim.defenseVerb());
+			}
+		}
+	}
+
+	// per-boss slain badges from lua (inner-enum access is sandbox-hostile)
+	@LuaInterface
+	public static void validateBossSlain(@NotNull String badge) {
+		Badges.validateBossSlain(Badges.Badge.valueOf(badge));
+	}
 
     @NotNull
     public static VHBox makeActionsBlock(int maxWidth, Char mob, @NotNull Char selector) {

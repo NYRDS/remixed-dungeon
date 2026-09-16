@@ -1295,6 +1295,65 @@ resolve by string.
 Stay java: ServiceManNPC (Mike, for now), MirrorImage/Sheep (engine
 mobs), bosses incl. YogsEye and IceGuardianCore (boss-flow story).
 
+## Batch 17 — boss tier groundwork (17a SHIPPED 2026-09-16)
+
+Mike's rulings (2026-09-16): SkeletonKey goes in the boss inventory
+(implicit, like the java Boss ctors); isBoss implications are implicit
+(no per-mob json re-statement); combat-hook cluster approved; ShadowLord
++ Crystal STAY in lua scope — LevelTools may be exposed or the arena
+re-implemented in lua; onNotice hook approved.
+
+17a = java-only groundwork, no migrations. CustomMob now honors the
+existing `isBoss` json key with full java-Boss semantics:
+die-flow (GameScene.playLevelMusic + bossSlain banner + level().unseal
+BEFORE super.die), implicit canBePet=false + Death/ScrollOfPsionicBlast
+resistances, SkeletonKey collected at spawn (fresh) and at restore time
+only if the bundle lacks one (Boss.restoreFromBundle fixup parity —
+verified: reload keeps exactly one key), battleMusic/battleMusicFallback
+json keys played from act while Hunting (fallback key used when the
+primary path fails ModdingMode.isSoundExists). CustomMob.isBoss() override
+added — the flag was a Mob FIELD, the METHOD lived on Char returning
+false; without the override lua and the shadowlord-style java checks see
+the wrong answer.
+
+New lua surface (mob.lua dispatchers + CustomMob delegations, all
+tri-state: nil = fall through to java):
+- `notice(self)` — after the base sprite alert (boss intro yells)
+- `canAttack(self, enemy)` — replaces the range+LOS check entirely
+- `doAttack(self, enemy)` — return true = script took the attack incl.
+  its own spend (Goo pump pattern)
+- `attackSkill(self, target)` / `damageRoll(self)` — dynamic combat stats
+- `CharUtils:beamStrike(attacker, enemy, fromPos, killReportId, burstMax)`
+  — Eye/YogsEye gaze: rolls+damages every char on the Ballistica ray
+  (attacker spared; recomputes the ray at strike time, no stale trace),
+  damage via attacker:damageRoll so the dynamic hook flows through
+- `CharUtils:validateBossSlain("<BADGE_ENUM_NAME>")` — per-boss badges
+  without inner-enum access; `Char.isBoss()` now @LuaInterface
+
+BossProbe fixture (mobsDesc/BossProbe.json + scripts/mobs/BossProbe.lua,
+permanent, isBoss:true + bogus battleMusic key) exercises every new hook
+with an observable effect. Headless-verified: implicit pet veto, isBoss,
+attackSkill 40 / damageRoll 3 flats, canAttack override, doAttack pump
+(no damage) then real attack after ticks, zapProc beamStrike 3+3 per zap
+with the Eye_Kill death report when the beam killed the staged hero,
+die yell, SkeletonKey heap on the death cell, save/reload round-trip
+(one key, isBoss intact). bossSlain banner/level music/unseal are
+headless-silent (scene guards) — first real boss migration (17c Goo)
+should do one windowed look at the banner + battle track.
+
+Hook convention reminder: user hooks take the JAVA char as arg 1 —
+`canAttack = function(self, enemy)`, NOT (self, mob, enemy); a third
+param silently reads nil (cost one debug round here).
+
+17b next: Monk + Senior + King$Undead extraction (King stays java,
+spawns by kind string); then 17c Goo/SpiderQueen/DM300/Eye/Deathling;
+17d Tengu/Yog organs/Lich+RunicSkull (pair!)/King/IceGuardianCore;
+ShadowLord+Crystal close the batch series (LevelTools exposure ok per
+Mike). RunicSkull must migrate WITH Lich (Activate/Deactivate are
+lua-reachable only lua-side). Existing hooks already cover: kiting
+(onGetCloser, Succubus precedent), placeBlob fire/gas trails,
+Trap:reactivate (DM300), getNearestLevelObject (King pedestals).
+
 ALL quest NPCs and shopkeepers are data-defined after 16c-3. Remaining
 java-registered: ~13 bosses + minions (ShadowLord/Crystal/Deathling/
 SpiderQueen/Lich/RunicSkull/BurningFist/RottingFist/YogsEye/IceGuardianCore/
