@@ -53,6 +53,7 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
@@ -64,12 +65,14 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
@@ -169,6 +172,26 @@ public class CharUtils {
         victim.onActionTarget(CommonActions.MAC_STEAL, thief);
 
         return true;
+    }
+
+    // disarm of the deleted Monk family (mob-lua migration, batch 17b):
+    // 1/6 per slot to strip weapon or left hand; knuckles and cursed
+    // gear stay put
+    @LuaInterface
+    public static boolean disarm(@NotNull Char disarmer, @NotNull Char victim) {
+        Belongings.Slot[] slots = { Belongings.Slot.WEAPON, Belongings.Slot.LEFT_HAND };
+        for (Belongings.Slot slot : slots) {
+            if (Random.Int(6) != 0) {
+                continue;
+            }
+            EquipableItem weapon = victim.getItemFromSlot(slot);
+
+            if (!(weapon instanceof Knuckles) && !weapon.isCursed() && victim.getBelongings().drop(weapon)) {
+                GLog.w(StringsManager.getVar(R.string.Monk_Disarm), disarmer.getName(), weapon.name());
+                return true;
+            }
+        }
+        return false;
     }
 
     // Wraith spawn moved here from the deleted Wraith class (mob-lua migration,

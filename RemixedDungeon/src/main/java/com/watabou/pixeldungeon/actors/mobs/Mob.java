@@ -590,8 +590,17 @@ public abstract class Mob extends Char {
         BundleHelper.UnPack(this, descBundle);
 
         if (mobDesc.has(LOOT)) {
-            float lootChance = (float) mobDesc.optDouble("lootChance", 1f);
-            loot(ItemFactory.createItemFromDesc(mobDesc.getJSONObject(LOOT)), lootChance);
+            JSONObject lootDesc = mobDesc.getJSONObject(LOOT);
+            if (lootDesc.has("category")) {
+                // category roll at creation: item rides in the inventory
+                // and drops with the corpse (Monk food sack)
+                if (Random.Float() <= mobDesc.optDouble("lootChance", 1f)) {
+                    collect(Treasury.getLevelTreasury().random(Treasury.Category.valueOf(lootDesc.getString("category"))));
+                }
+            } else {
+                float lootChance = (float) mobDesc.optDouble("lootChance", 1f);
+                loot(ItemFactory.createItemFromDesc(lootDesc), lootChance);
+            }
         }
 
         if(mobDesc.has("undead")) {

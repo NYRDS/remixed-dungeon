@@ -4,7 +4,6 @@ package com.watabou.pixeldungeon.actors.mobs;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
-import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
@@ -18,9 +17,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.effects.Flare;
@@ -142,7 +139,8 @@ public class King extends Boss {
 
 	private Mob createSummonedServant() {
 		if (Random.Int(2) == 0) {
-			return new Undead();
+			// Undead kind is data now (mobsDesc/Undead.json, batch 17b)
+			return MobFactory.mobByName(MobFactory.UNDEAD);
 		}
 		Mob servant = MobFactory.mobByName(UNDEAD_CITY_MOBS[Random.Int(UNDEAD_CITY_MOBS.length)]);
 		servant.setUndead(true);
@@ -169,7 +167,7 @@ public class King extends Boss {
 
 				WandOfBlink.appear(servant, pos);
 				// caveman: deathly green tint marks raised city mobs as undead.
-				if (!(servant instanceof Undead)) {
+				if (!servant.getEntityKind().equals(MobFactory.UNDEAD)) {
 					servant.getSprite().tint(0x225522, 0.5f);
 				}
 				new Flare(3, 32).color(0x000000, false).show(servant.getSprite(), 2f);
@@ -182,57 +180,5 @@ public class King extends Boss {
 	public void notice() {
 		super.notice();
         yell(StringsManager.getVar(R.string.King_Info3));
-	}
-	
-	public static class Undead extends Mob {
-
-		public Undead() {
-			hp(ht(28));
-			baseDefenseSkill = 15;
-			baseAttackSkill  = 16;
-
-			dmgMin = 12;
-			dmgMax = 16;
-			dr = 5;
-			STR(15);
-
-			expForKill = 0;
-
-			setUndead(true);
-			naturalUndead = true;
-			setState(MobAi.getStateByClass(Wandering.class));
-		}
-
-		@Override
-		public int attackProc(@NotNull Char enemy, int damage ) {
-			if (Random.Int( MAX_ARMY_SIZE ) == 0) {
-				Buff.prolong( enemy, Stun.class, 1 );
-			}
-			
-			return damage;
-		}
-		
-		@Override
-		public void damage(int dmg, @NotNull NamedEntityKind src ) {
-			super.damage( dmg, src );
-			if (src instanceof ToxicGas) {		
-				((ToxicGas)src).clearBlob( getPos() );
-			}
-		}
-		
-		@Override
-		public void die(@NotNull NamedEntityKind cause) {
-			super.die( cause );
-
-			if (CharUtils.isVisible(this)) {
-				Sample.INSTANCE.play( Assets.SND_BONES );
-			}
-		}
-
-		@Override
-		public boolean isHumanoid() {
-			return true;
-		}
-
 	}
 }

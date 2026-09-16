@@ -19,10 +19,7 @@ import com.watabou.pixeldungeon.actors.mobs.DM300;
 import com.watabou.pixeldungeon.actors.mobs.Eye;
 import com.watabou.pixeldungeon.actors.mobs.Goo;
 import com.watabou.pixeldungeon.actors.mobs.King;
-import com.watabou.pixeldungeon.actors.mobs.King.Undead;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Monk;
-import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.items.wands.WandOfFlock;
@@ -83,7 +80,8 @@ public class MobFactory {
 	public static final String GNOLL = "Gnoll";
 	public static final String CRAB = "Crab";
 	public static final String GOLEM = "Golem";
-	public static final String MONK = "Monk";
+		public static final String MONK = "Monk";
+		public static final String SENIOR = "Senior";
 	public static final String BANDIT = "Bandit";
 	public static final String ACIDIC = "Acidic";
 	public static final String SCORPIO = "Scorpio";
@@ -131,11 +129,10 @@ public class MobFactory {
 
 		registerMobClass(SpiderQueen.class);
 
-		registerMobClass(Monk.class);
 		registerMobClass(DM300.class);
 		registerMobClass(King.class);
-		registerMobClass(Undead.class);
-		registerMobClass(Senior.class);
+		// Monk/Senior/Undead kinds are data now (mobsDesc/*.json, batch 17b)
+		// - classes deleted, kinds must never resolve to java.
 
 		registerMobClass(Eye.class);
 		// Larva/YogsHeart/YogsTeeth/YogsBrain kinds are data now

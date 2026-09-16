@@ -1345,21 +1345,67 @@ Hook convention reminder: user hooks take the JAVA char as arg 1 —
 `canAttack = function(self, enemy)`, NOT (self, mob, enemy); a third
 param silently reads nil (cost one debug round here).
 
-17b next: Monk + Senior + King$Undead extraction (King stays java,
-spawns by kind string); then 17c Goo/SpiderQueen/DM300/Eye/Deathling;
-17d Tengu/Yog organs/Lich+RunicSkull (pair!)/King/IceGuardianCore;
-ShadowLord+Crystal close the batch series (LevelTools exposure ok per
-Mike). RunicSkull must migrate WITH Lich (Activate/Deactivate are
-lua-reachable only lua-side). Existing hooks already cover: kiting
-(onGetCloser, Succubus precedent), placeBlob fire/gas trails,
-Trap:reactivate (DM300), getNearestLevelObject (King pedestals).
+## Batch 17b — Monk / Senior / King$Undead (SHIPPED 2026-09-16)
 
-ALL quest NPCs and shopkeepers are data-defined after 16c-3. Remaining
-java-registered: ~13 bosses + minions (ShadowLord/Crystal/Deathling/
-SpiderQueen/Lich/RunicSkull/BurningFist/RottingFist/YogsEye/IceGuardianCore/
-Goo/Tengu/DM300/King/Monk/Eye/Senior/Undead...) + MirrorImage/Sheep +
-ServiceManNPC. The mobs/npc java package now holds only CustomMob machinery,
-MobSpawner and ServiceManNPC/ImmortalNPC.
+Mike's rulings (2026-09-16): Monk's FOOD category loot = roll into the
+inventory at CREATION (not the death-roll `loot()` path); Undead = drop
+the ToxicGas clearBlob-on-damage outright (no resistance compensation).
+
+Three kinds data-defined: mobsDesc/Monk.json + Senior.json + Undead.json,
+scripts/mobs/Monk.lua + Senior.lua + Undead.lua. Kind strings unchanged
+(Monk/Senior/Undead) — old saves, CityLevel spawn tables, the Imp quest
+token check and King's UNDEAD_CITY_MOBS all resolve by string. java
+deleted: Monk.java, Senior.java, King$Undead inner class (~190 lines).
+MobFactory: kinds now resolve via the mobsDesc scan → CustomMob; new
+`MobFactory.SENIOR` constant (Badges.validateRare was the one
+`instanceof Senior` check in a kind-string chain — now SENIOR).
+
+New java surface:
+- `CharUtils:disarm(disarmer, victim)` — the Monk-family disarm,
+  line-for-line from the old Monk.attackProc body minus the call site:
+  1/6 per slot (WEAPON then LEFT_HAND), knuckles and cursed gear stay,
+  drop + Monk_Disarm GLog. Static → COLON-call from lua
+  (dot-call silently shifts args — victim arrived null, cost one
+  debug round; same lesson as 16c-1).
+- category loot json form: loot object `{"category": "FOOD"}` (any
+  Treasury.Category name) + `lootChance` → rolled once at creation, the
+  item is collected into the mob's inventory and drops with the corpse.
+  Same net drop rate as the java death-roll for Monk (0.153).
+
+Monk: attackDelay 0.5 json key covers the old `_attackDelay` override;
+Amok/Terror immunity via json immunities. The java "kick" actMeleeAttack
+override was DEAD CODE (actMeleeAttack is hero-only; mob AI attacks via
+doAttack) — deliberately NOT migrated (bug fixes stay out; migrating it
+would have CHANGED live behavior). Senior: own json (dmg 12-20, str 15)
++ attackProc = 1/10 Stun 1.1 then disarm. Undead: `undead: true` json key
+(gives setUndead + naturalUndead), exp 0, Wandering aiState, snd_bones on
+visible death; 1/5 Stun 1.0 proc. clearBlob dropped per ruling — undead
+now just take gas damage like anything else.
+
+King.java stays java (17d): summon spawns by kind string
+(`MobFactory.mobByName(MobFactory.UNDEAD)`), tint skip is a kind-string
+check. Summoned city mobs keep the runtime-raised profile (undead=true,
+naturalUndead=false, exp 0, Hunting) vs the natural Undead kind
+(undead+naturalUndead from json) — verified both after save/reload.
+
+Headless-verified: spawn + names/descs for all three; 8/41 Monks carried
+creation-rolled Pasty/Ration (expected ~6); disarm live-proven in forced
+combat (staff+dagger stripped from hero slots, heap on the floor);
+Senior live stun=true after attack batches (probe via direct script
+invocation first, then real combat); Undead stun + clean kill; King
+zap-summon on CityBossLevel spawns Wandering Undead + HUNTING raised
+city mobs; full descend→reload round-trip keeps ids/HP/states/undead
+flags; allMobs() smoke clean. android gate compileAndroidFdroidDebug...:
+green.
+
+Remaining java-registered after 17b: ~13 bosses + minions (ShadowLord/
+Crystal/Deathling/SpiderQueen/Lich/RunicSkull/BurningFist/RottingFist/
+YogsEye/IceGuardianCore/Goo/Tengu/DM300/King/Eye) + MirrorImage/Sheep +
+ServiceManNPC. 17c next: Goo/SpiderQueen/DM300/Eye/Deathling; 17d
+Tengu/Yog organs/Lich+RunicSkull (pair!)/King/IceGuardianCore;
+ShadowLord+Crystal close the series. Existing hooks already cover:
+kiting (onGetCloser, Succubus precedent), placeBlob fire/gas trails,
+Trap:reactivate (DM300), getNearestLevelObject (King pedestals).
 
 ## Verification checklist
 
