@@ -17,7 +17,6 @@ import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.DM300;
 import com.watabou.pixeldungeon.actors.mobs.Eye;
-import com.watabou.pixeldungeon.actors.mobs.Goo;
 import com.watabou.pixeldungeon.actors.mobs.King;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
@@ -122,8 +121,8 @@ public class MobFactory {
 	private static void initMobsMap() {
 
 		mMobsList = new HashMap<>();
-		// RatKing kind is data now (mobsDesc/RatKing.json) - java class deleted.
-		registerMobClass(Goo.class);
+		// Goo kind is data now (mobsDesc/Goo.json, batch 17c-1)
+		// - java class deleted, kind must never resolve to java.
 
 		registerMobClass(Tengu.class);
 

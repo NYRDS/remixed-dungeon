@@ -1413,12 +1413,53 @@ green.
 
 Remaining java-registered after 17b: ~13 bosses + minions (ShadowLord/
 Crystal/Deathling/SpiderQueen/Lich/RunicSkull/BurningFist/RottingFist/
-YogsEye/IceGuardianCore/Goo/Tengu/DM300/King/Eye) + MirrorImage/Sheep +
-ServiceManNPC. 17c next: Goo/SpiderQueen/DM300/Eye/Deathling; 17d
-Tengu/Yog organs/Lich+RunicSkull (pair!)/King/IceGuardianCore;
-ShadowLord+Crystal close the series. Existing hooks already cover:
-kiting (onGetCloser, Succubus precedent), placeBlob fire/gas trails,
-Trap:reactivate (DM300), getNearestLevelObject (King pedestals).
+YogsEye/IceGuardianCore/Tengu/DM300/King/Eye) + MirrorImage/Sheep +
+ServiceManNPC.
+
+## Batch 17c-1 — Goo (SHIPPED 2026-09-16)
+
+First real boss migration. Goo.java (143 lines) deleted; kind resolves
+via mobsDesc/Goo.json (battleMusic stub from 17a merged in: primary
+`ost_boss_1_fight` = Mike's HiFiDLC pack, vanilla rigs resolve the
+`battleMusicFallback` → ost_boss_fight.ogg). isBoss json carries the
+whole die-flow (banner/music/unseal/implicit key). Mechanics on hooks:
+pumpedUp rides script `data` (mob.restoreData idiom — NOT `self.data`,
+the java char has no data field; cost one debug round) and round-trips
+the save via serpent (verified: luaData `pumpedUp=true` after
+descend→reload); damageRoll 4-11 / 7-21 and attackSkill 11 / 26 via
+the 17a dynamic-stat hooks; canAttack returns reach-2 only when pumped
+(nil = java check otherwise); water soak heal 1/act in the act hook
+(level.water is lua-indexed `pos+1`, WaterElemental precedent);
+attackProc = 1/3 Ooze (2-arg Buff:affect is safe for non-Flavour Ooze)
++ black burst + pumped camera shake (RPD.shakeCamera, headless-safe);
+doAttack = pump branch (spend 2.2, playExtra "pump", status+GLog:n —
+GLog varargs need the trailing `{}` table arg from lua); getCloser and
+zap clear pumpedUp — the pumped reach-2 strike at exactly range two is
+a BLANK zap that un-pumps (doAttack dist>1 → visual zap → Mob.
+onZapComplete → zap() consumed) — faithful java quirk, kept. die hook =
+CharUtils:validateBossSlain("BOSS_SLAIN_1") + Goo_Info2 yell; notice
+hook = Goo_Info3. Old saves: entityKind Goo → CustomMob; the old
+@Packable pumpedUp field is dropped (mid-pump saves un-pump — accepted
+delta, Mike's old-save-state-loss precedent).
+
+Verified headless: spawn/name/isBoss/hp68; unpumped + pumped stat
+probes via the mob.lua WRAPPER names; zap/getCloser un-pump; ooze
+proc; exact +1/act water heal on a staged water cell; SkeletonKey
+heap on the death cell; BOSS_SLAIN_1 persisted in badges.dat (debug
+saves are gzip — zgrep, plain grep lies); pumpedUp round-trip;
+allMobs 126 kinds. WINDOWED (the 17a debt): bossSlain banner renders
+(sword art + "Босс повержен!" text), badge log line, death yell in
+red, battle music machinery fired with fallback resolution, level
+unsealed, 0 exceptions. Debug-harness lessons: Sleeping mobs ignore
+test_damage/affect_buff wakes on this level — force `notice()` /
+setState via lua; re-spawn the mob after editing its script mid-run
+(script cache reload leaves restoreData's knownMobs stale).
+
+17c next: SpiderQueen/DM300/Eye/Deathling; 17d Tengu/Yog organs/
+Lich+RunicSkull (pair!)/King/IceGuardianCore; ShadowLord+Crystal
+close the series. Existing hooks already cover: kiting (onGetCloser,
+Succubus precedent), placeBlob fire/gas trails, Trap:reactivate
+(DM300), getNearestLevelObject (King pedestals).
 
 ## Verification checklist
 
