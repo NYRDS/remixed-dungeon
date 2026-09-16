@@ -91,26 +91,14 @@ public class WebServer extends BaseWebServer {
                         latch.countDown();
                         return;
                     }
+                    // glReadPixels gives bottom-up rows - single flip, or the png is upside down
                     pixmap = flipVertically(pixmap);
 
-                    // glReadPixels gives bottom-up rows - flip them, otherwise the png is upside down
-                    Pixmap flipped = new Pixmap(width, height, Pixmap.Format.RGBA8888);
-                    java.nio.ByteBuffer src = pixmap.getPixels();
-                    java.nio.ByteBuffer dst = flipped.getPixels();
-                    int rowBytes = width * 4;
-                    byte[] line = new byte[rowBytes];
-                    for (int y = 0; y < height; y++) {
-                        src.position((height - 1 - y) * rowBytes).get(line);
-                        dst.position(y * rowBytes).put(line);
-                    }
-                    dst.position(0);
-                    pixmap.dispose();
-
                     FileHandle fileHandle = Gdx.files.local("screenshot_tmp.png");
-                    PixmapIO.writePNG(fileHandle, flipped);
+                    PixmapIO.writePNG(fileHandle, pixmap);
                     pngData[0] = fileHandle.readBytes();
                     fileHandle.delete();
-                    flipped.dispose();
+                    pixmap.dispose();
                 } catch (Exception e) {
                     error[0] = "Error capturing screenshot: " + e.getMessage();
                 } finally {
