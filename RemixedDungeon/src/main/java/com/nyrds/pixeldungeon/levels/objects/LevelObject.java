@@ -232,6 +232,13 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
         return super.getEntityKind();
     }
 
+    // lua has no instanceof; scripted mobs (DM-300 trap-eating) filter
+    // level objects by family with this
+    @LuaInterface
+    public boolean isTrap() {
+        return false;
+    }
+
     @Override
     public String getEntitySystem() {
         return "levelObject";

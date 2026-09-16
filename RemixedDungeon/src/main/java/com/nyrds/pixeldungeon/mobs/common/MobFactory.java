@@ -8,15 +8,12 @@ import com.nyrds.pixeldungeon.mobs.icecaves.IceGuardianCore;
 import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
 import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
-import com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.mobs.DM300;
-import com.watabou.pixeldungeon.actors.mobs.Eye;
 import com.watabou.pixeldungeon.actors.mobs.King;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Tengu;
@@ -60,6 +57,8 @@ public class MobFactory {
 	public static final String SPIDER_MIND_AMBER = "SpiderMindAmber";
 	public static final String SPIDER_EGG = "SpiderEgg";
 	public static final String SPIDER_NEST = "SpiderNest";
+	public static final String SPIDER_QUEEN = "SpiderQueen";
+	public static final String EYE = "Eye";
 	public static final String JAR_OF_SOULS = "JarOfSouls";
 	public static final String SKELETON = "Skeleton";
 	public static final String FETID_RAT = "FetidRat";
@@ -126,14 +125,16 @@ public class MobFactory {
 
 		registerMobClass(Tengu.class);
 
-		registerMobClass(SpiderQueen.class);
+		// SpiderQueen kind is data now (mobsDesc/SpiderQueen.json, batch 17c-2a)
+		// - java class deleted, kind must never resolve to java.
 
-		registerMobClass(DM300.class);
 		registerMobClass(King.class);
 		// Monk/Senior/Undead kinds are data now (mobsDesc/*.json, batch 17b)
 		// - classes deleted, kinds must never resolve to java.
+		// DM300/Deathling kinds are data now (mobsDesc/*.json, batch 17c-2b).
 
-		registerMobClass(Eye.class);
+		// Eye kind is data now (mobsDesc/Eye.json, batch 17c-2a)
+		// - java class deleted, kind must never resolve to java.
 		// Larva/YogsHeart/YogsTeeth/YogsBrain kinds are data now
 		// (mobsDesc/*.json) - classes deleted, kinds must never resolve to java.
 		registerMobClass(BurningFist.class);
@@ -165,8 +166,7 @@ public class MobFactory {
 		// Ghost/WandMaker/Imp/CagedKobold/Blacksmith/ScarecrowNPC/AzuterronNPC
 		// and the Shopkeeper trio kinds are data now (mobsDesc/*.json, batch
 		// 16c) - java classes deleted, kinds must never resolve to java.
-
-		registerMobClass(Deathling.class);
+		// Deathling kind is data too (mobsDesc/Deathling.json, batch 17c-2b).
 
 		registerMobClass(MirrorImage.class);
 

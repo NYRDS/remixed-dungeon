@@ -89,6 +89,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 	@Override
 	public int dr() {
+		LuaValue scripted = getScript().run("onDr");
+		if (scripted.isnumber()) {
+			return scripted.toint();
+		}
 		return dr;
 	}
 
@@ -213,6 +217,16 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			return scripted.toint();
 		}
 		return super.damageRoll();
+	}
+
+	// dynamic stats of owner-scaled summons (Deathling) live in the script
+	@Override
+	public int defenseSkill(@NotNull Char enemy) {
+		LuaValue scripted = getScript().run("onDefenseSkill", enemy);
+		if (scripted.isnumber()) {
+			return scripted.toint();
+		}
+		return super.defenseSkill(enemy);
 	}
 
 	@Override

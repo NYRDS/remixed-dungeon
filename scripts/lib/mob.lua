@@ -209,6 +209,20 @@ mob.onAttackSkill = function(self,mob,target)
     return self.attackSkill(mob, target)
 end
 
+mob.onDefenseSkill = function(self,mob,enemy)
+    if not self.defenseSkill then
+        return nil
+    end
+    return self.defenseSkill(mob, enemy)
+end
+
+mob.onDr = function(self,mob)
+    if not self.dr then
+        return nil
+    end
+    return self.dr(mob)
+end
+
 mob.onDamageRoll = function(self,mob)
     if not self.damageRoll then
         return nil

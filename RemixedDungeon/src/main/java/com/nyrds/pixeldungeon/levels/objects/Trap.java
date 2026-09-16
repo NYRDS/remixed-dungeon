@@ -91,6 +91,11 @@ public class Trap extends LevelObject {
 		return ret;
 	}
 
+	@Override
+	public boolean isTrap() {
+		return true;
+	}
+
 	@LuaInterface
 	public void reactivate(String kind, int uses) {
 		this.kind = kind;

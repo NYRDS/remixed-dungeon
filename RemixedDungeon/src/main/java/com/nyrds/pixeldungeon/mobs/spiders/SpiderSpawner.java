@@ -10,7 +10,7 @@ import com.watabou.pixeldungeon.levels.Level;
 public class SpiderSpawner {
 
 	static public void spawnQueen(Level level, int position) {
-		Mob mob = new SpiderQueen();
+		Mob mob = MobFactory.mobByName(MobFactory.SPIDER_QUEEN);
 		mob.setPos(position);
 		mob.setState(MobAi.getStateByClass(Wandering.class));
 		level.spawnMob(mob);

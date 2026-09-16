@@ -1515,6 +1515,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
     }
 
+    @LuaInterface
     public boolean collect(@NotNull Item item) {
         item = Treasury.get().check(item);
 
@@ -2159,6 +2160,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         CharsList.add(this, id);
     }
 
+    @LuaInterface
     public int getId() {
         if (id == EntityIdSource.INVALID_ID || id == EntityIdSource.DUPLICATE_ID) {
             assignNextId();

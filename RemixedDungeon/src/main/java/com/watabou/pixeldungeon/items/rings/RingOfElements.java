@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.mobs.Eye;
 import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.utils.Random;
 import java.util.HashSet;
@@ -38,7 +37,7 @@ public class RingOfElements extends Ring {
 			FULL.add( Poison.class.getSimpleName() );
 			FULL.add( LightningTrap.Electricity.class.getSimpleName() );
 			FULL.add( MobFactory.WARLOCK );
-			FULL.add( Eye.class.getSimpleName() );
+			FULL.add( MobFactory.EYE );
 			FULL.add( BurningFist.class.getSimpleName() );
 			FULL.add( LiquidFlame.class.getSimpleName() );
 		}

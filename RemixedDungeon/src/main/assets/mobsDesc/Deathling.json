@@ -1,0 +1,20 @@
+{
+  "name"          : "Deathling_Name",
+  "name_objective": "Deathling_Name_Objective",
+  "description"   : "Deathling_Desc",
+  "gender"        : "Deathling_Gender",
+  "ht"            : 4,
+  "exp"           : 0,
+  "maxLvl"        : 32,
+  "str"           : 17,
+  "baseSpeed"     : 1.1,
+  "attackDelay"   : 1,
+  "walkingType"   : "NORMAL",
+  "flying"        : true,
+  "undead"        : true,
+  "carcassChance" : 0,
+  "spriteDesc"    : "spritesDesc/Deathling.json",
+  "scriptFile"    : "scripts/mobs/Deathling",
+  "friendly"      : false,
+  "fraction"      : "DUNGEON"
+}

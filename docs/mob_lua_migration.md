@@ -1461,6 +1461,76 @@ close the series. Existing hooks already cover: kiting (onGetCloser,
 Succubus precedent), placeBlob fire/gas trails, Trap:reactivate
 (DM300), getNearestLevelObject (King pedestals).
 
+## Batch 17c-2 — light bosses: Eye, SpiderQueen, DM300, Deathling (SHIPPED 2026-09-16)
+
+~400 java lines out (Eye 107, SpiderQueen 93, DM300 134, Deathling 66),
+kinds ride mobsDesc/*.json + scripts/mobs/*.lua. New surface, all
+method-level: `@LuaInterface Char.collect` (queen carry-gear via spawn
+hook), `LevelObject.isTrap()`/Trap override (lua has no instanceof —
+DM300 trap-eat filter), `@LuaInterface Char.getId` (self-identity in
+the stun check; luajava userdata `==` is unreliable), and two new
+tri-state hooks in CustomMob mirroring attackSkill: `defenseSkill`
+(Mob.defenseSkill, Am spelling) + `dr` — for Deathling's owner-scaled
+stats. mob.lua wrappers onDefenseSkill/onDr (nil = java default).
+
+Eye: canAttack = raw Ballistica ray, NO range cap (script replaces the
+range+LOS check; RPD.Ballistica trace/distance statics readable) —
+ARRAY GOTCHA BIT AGAIN: luajava arrays are 0-based under 1-based lua
+indexing (loop `for i=2,distance`, `trace[i]==enemyPos` — the +1 is on
+the INDEX, never on the stored cell VALUE; cost one debug round).
+zapProc hook = CharUtils:beamStrike(self, enemy, pos, "Eye_Kill", 2) —
+17a groundwork, exact java parity; primary target takes zap + beam
+(java double-dip, kept). spawn hook: setViewDistance(level view + 1).
+Melee/zap split is positional in Char.doAttack — adjacent = plain
+melee, no beam, faithful automatically. CustomMob.canAttack's
+friendly() gate short-circuits BEFORE the script — same-fraction
+probes of canAttack return false regardless of the script (stage
+enemy-fraction targets).
+
+SpiderQueen: 1/21 egg roll in act (math.random(0,20), spawnOnNextCell
+w/ 100*difficultyFactor limit — GameLoop bound in commonClasses);
+Poison attackProc (7-9)*Poison:durationFactor; below-half canAttack
+refusal + getCloser kite (getFurther, HUNTING via
+getState():getTag()=="HUNTING" — uppercase); gear = 1/3
+ChaosCrystal/SpiderCharm/SpiderArmor collect at spawn, one-shot
+gearGranted flag (restore re-runs onSpawn); isBoss json = SkeletonKey
++ die-flow. Her real kill in town registered SPIDER_QUEEN_SLAIN.
+
+DM300: act = seed ToxicGas 30 on own cell (RPD.n); move hook fires
+MID-move (before placeTo — self pos still old, `cell` arg = dest, trap
+and rock effects key off it like the java post-super code);
+object:isTrap() && hp<ht → reactivate("ToxicTrap", difficulty+1) +
+heal math.random(1, missing-1) (watabou Random.Int(1,n) is [1,n-1] —
+lua uniform differs at both ends) + Elmo burst + repair glog; rock
+shower = random NEIGHBOURS8 cell (computed from width — no Level class
+binding needed), CellEmitter/Speck.ROCK, shakeCamera(3,0.7),
+playSound("snd_rocks"), water ripple or EMPTY→EMPTY_DECO set+updateMap,
+findChar → Stun prolong (skip self via getId). Loot 50/50
+ChaosCrystal|RingOfThorns:random() at 0.333 via spawn hook
+(Mob.loot(item,chance) is @LuaInterface; json loot desc is single-kind,
+hence the hook). die = BOSS_SLAIN_3 + yell; notice = yell. Verified
+headless: trap-eat (FireTrap→ToxicTrap + heal 140→197 + glog + rat
+Stun), gas DoT on a bystander, fresh badge + death yell.
+
+Deathling: owner-scaled (lvl + skillLevel²) via the new hooks +
+per-act ht(4+modifier); firstAct full-heal rides script data —
+round-trip proven by damage-to-7 → descend → reload → 6 ticks → still
+7/14 (no heal replay); owner guard `owner==nil or not owner:valid()`
+(java would NPE); setSkillLevel(3) in spawn hook. Accepted delta (Mike
+lgtm): ARTIFACT/LEFT_ARTIFACT equipment-slot override dropped — pets
+are never equipped by the game. Doctor-owner verified: 1+3² → 14/14.
+
+Windowed smoke: Eye sprite renders (data spriteDesc + DeathRay zap
+effect), beam fired on-screen mid-screenshot, rat killed, render loop
+healthy, 0 exceptions. Harness notes: get_map passable grid reads
+transposed vs level.passable — scan level.passable from lua for
+staging runs; findChar takes POS not id; move_hero is one step per
+call (loop it).
+
+17d remains: Tengu, Yog organs (+YogsEye pierce folds in),
+Lich+RunicSkull (pair!), King, IceGuardianCore; ShadowLord+Crystal
+close the series.
+
 ## Verification checklist
 
 1. Build: `:RemixedDungeonDesktop:compileJava` (after Step A, this also

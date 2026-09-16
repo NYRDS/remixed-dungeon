@@ -1,4 +1,26 @@
 {
-  "battleMusic":"ost_boss_spider_fight",
-  "battleMusicFallback":"ost_boss_fight"
+  "name"          : "SpiderQueen_Name",
+  "name_objective": "SpiderQueen_Name_Objective",
+  "description"   : "SpiderQueen_Desc",
+  "gender"        : "SpiderQueen_Gender",
+  "attackSkill"   : 21,
+  "defenseSkill"  : 18,
+  "dmgMin"        : 12,
+  "dmgMax"        : 20,
+  "dr"            : 10,
+  "str"           : 16,
+  "ht"            : 120,
+  "exp"           : 11,
+  "baseSpeed"     : 1,
+  "attackDelay"   : 1,
+  "walkingType"   : "NORMAL",
+  "spriteDesc"    : "spritesDesc/SpiderQueen.json",
+  "scriptFile"    : "scripts/mobs/SpiderQueen",
+  "isHumanoid"    : true,
+  "isBoss"        : true,
+  "friendly"      : false,
+  "fraction"      : "DUNGEON",
+  "immunities"    : ["Fire", "Burning"],
+  "battleMusic"        : "ost_boss_spider_fight",
+  "battleMusicFallback": "ost_boss_fight"
 }

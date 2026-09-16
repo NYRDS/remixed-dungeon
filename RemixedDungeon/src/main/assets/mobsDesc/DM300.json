@@ -1,4 +1,26 @@
 {
-  "battleMusic":"ost_boss_3_fight",
-  "battleMusicFallback":"ost_boss_fight"
+  "name"          : "DM300_Name",
+  "name_objective": "DM300_Name_Objective",
+  "description"   : "DM300_Desc",
+  "gender"        : "DM300_Gender",
+  "attackSkill"   : 28,
+  "defenseSkill"  : 18,
+  "dmgMin"        : 18,
+  "dmgMax"        : 24,
+  "dr"            : 10,
+  "str"           : 16,
+  "ht"            : 200,
+  "exp"           : 30,
+  "baseSpeed"     : 1,
+  "attackDelay"   : 1,
+  "walkingType"   : "NORMAL",
+  "spriteDesc"    : "spritesDesc/DM300.json",
+  "scriptFile"    : "scripts/mobs/DM300",
+  "hasBodyParts"  : false,
+  "isBoss"        : true,
+  "friendly"      : false,
+  "fraction"      : "DUNGEON",
+  "immunities"    : ["ToxicGas", "Bleeding", "Terror"],
+  "battleMusic"        : "ost_boss_3_fight",
+  "battleMusicFallback": "ost_boss_fight"
 }
