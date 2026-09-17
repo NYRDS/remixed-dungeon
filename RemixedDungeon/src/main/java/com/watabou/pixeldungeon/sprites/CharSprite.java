@@ -194,6 +194,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         }
     }
 
+    @LuaInterface
     public void idle() {
         if(curAnim==null || curAnim==run) {
             play(idle);

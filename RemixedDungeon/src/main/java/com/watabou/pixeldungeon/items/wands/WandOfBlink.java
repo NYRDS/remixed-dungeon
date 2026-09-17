@@ -55,6 +55,7 @@ public class WandOfBlink extends Wand {
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
 
+	@LuaInterface
 	public static void appear(@NotNull Char ch, int pos ) {
 
 		Level level = ch.level();

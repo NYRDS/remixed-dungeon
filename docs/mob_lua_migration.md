@@ -1688,6 +1688,89 @@ matches no mob silently no-ops. MobFactory:allMobs() returns
 pre-CONSTRUCTED mob instances (java List, `:size()`/`:get(i)`) — its
 successful construction of every registered kind is the whole smoke.
 
+## Batch 17d-3 — Lich, RunicSkull (SHIPPED 2026-09-17)
+
+Necropolis boss pair deleted (~400 lines); kind strings unchanged,
+Bestiary.json spawns `"Lich"` by kind — zero level edits (NecroBossLevel
+keeps building the 4 pedestals in java; level classes stay java).
+
+Architecture: **RunicSkull is pure json, no script** — the Lich drives
+everything. Lich.lua scans `level:getMobs()` for kind `"RunicSkull"`
+and keys each skull's variant (RED/BLUE/GREEN/PURPLE = spawn order i,
+java `makeNewSkull(i)`) in its OWN `data.variantByPos` keyed by the
+skull's cell — skulls never move, so position is a free stable id; no
+cross-script restoreData sharing. Skull visuals: the lich self-zaps at
+useSkull (java parity); the skull's own act-zap loop is dropped (the
+zap anim ends on its own; re-trigger per 5-turn switch = same cadence).
+Skull json: `aiState Passive` + `pacified` + `movable:false` +
+`flying` — movable:false is load-bearing (beckon is the one thing that
+both moved a pedestal skull and flipped its state; verified fixed by a
+direct `beckon` + ticks probe). The kind int 0-3 was visually inert
+(spritesDesc has ONE texture), so variant is data-only.
+
+Engine delta: **CustomMob.canAttack honors `pacified` now** — the
+override silently dropped Mob.canAttack's `!pacified` gate (override
+predates the batch-12 json key), so pacified data mobs could attack;
+RunicSkull hit the hero through it. Fixed for SuspiciousRat and
+JarOfSouls too (author intent: `pacified` = never attacks). New
+annotations: `WandOfBlink.appear` (skull spawn-in; clinit-safe) and
+`CharSprite.idle`. LATENT BUG FIXED in shipped Tengu.lua: its jump
+burst called `RPD.CellEmitter`/`RPD.Speck` which don't exist top-level
+in commonClasses — they live in `RPD.Sfx` (Tengu jumped fine because
+the crash came after `move`); Lich.lua uses `RPD.Sfx.CellEmitter` from
+the start.
+
+Lich.lua: act hook cycles `data.timeToSkull` (5); on expiry spawns
+once (difficulty 0→2 skulls, >2→4, pedestals from
+`getLevelObjects()` kind `"pedestal"`, random sample, variants ride
+the random order) then activates a random ALIVE skull — RED heals
+floor(ht·0.07·alive) + 4 detachBuffs (PotionOfHealing inline port,
+Tengu fallback idiom), BLUE loops `CharUtils:spawnOnNextCell(self,
+"Skeleton", 999)` + `setAi Hunting` until DUMMY/invalid (spawnOnNextCell
+population-cap arg unused at 999 — java counted set size, level-wide
+skeleton count is irrelevant at that bound), GREEN
+`RPD.placeBlob(RPD.Blobs.ToxicGas, pos, 30·alive)`, PURPLE = no
+use-effect. defenceProc: activated variant PURPLE → return 0 (damage
+nullify); else 50% `timeToJump=true`; doAttack hook jumps BEFORE the
+base attack when flagged (java order). getCloser = Tengu jump verbatim
+(FOV gate, spend refund). spawn hook collects SkeletonKey +
+BlackSkull (NECROMANCER → BlackSkullOfMastery) with getItem guards.
+die hook: badge + remove() every non-pet mob — **with `m ~= self`**:
+the onDie hook runs BEFORE Char.die's destroy(), so the lich is still
+in the level list and remove() would quietly eat its own loot (java's
+wipe ran after super.die had already dequeued it). Old-save guard:
+respawn gated on "no RunicSkull alive", so a half-fight save can't
+duplicate skulls while any skull persists.
+
+Accepted deltas: RED heal multiplies ALIVE skull count vs java's stale
+set size (java healed less late-fight — arguably a fix); old-save java
+`kind` int + `@Packable skullsSpawned`/`timeToJump` bundle fields have
+no data twin (old-save skull variants unknown → purple nullify won't
+fire until skulls re-spawn); GREEN is not observable headless —
+`GameScene.add(Blob)` skips `Actor.add` when no scene (verified the
+seed itself lands: manual `Blob:seed` + Actor:add → blobAmountAt 30).
+
+Verified live (headless): stat parity exact (lich 200/200 35/23 12-20
+str14 + SkeletonKey/BlackSkull by hero class; skull 70hp PASSIVE);
+2 skulls on pedestals at difficulty 0; BLUE summoned 2 Hunting
+skeletons; RED heal +14 = floor(200·0.07·1) exactly; PURPLE A/B: hit
+155→155 armed vs 155→138 disarmed (WarHammer — note: bare lvl-54 fists
+lose to dr 15, first "nullify" observation was dr-eaten 0s); defenceProc
+50% jump roll observed (timeToJump true→consumed, jump-before-attack:
+lich teleported then base attack proceeded); getCloser jumps
+repeatedly; die = badge «Лич побеждён» + full level wipe + BlackSkull
+heap; save/reload round-trip kept hp 141, variantByPos, latch, skull
+pos; movable:false beckon probe; allMobs() smoke 126 kinds / 0
+DummyMob. CI green on batch jar: blood 6/6, level_navigation 9/9,
+doctor 7/7, all_spells 38/38, alchemy 42/42.
+
+Harness notes: level_up takes `id=-1` for the hero (the param is
+parseInt'd — `id=hero` 500s). A dead hero FREEZES the world (no acts
+for anyone) — stage boss fights with a levelled hero (level_up ×4).
+`lvl:blobAmountAt(class, cell)` is the direct blob assertion.
+setPos-teleporting the hero does not trigger pressHero — real
+`move_hero` steps do (NecroBossLevel spawns the boss on arena entry).
+
 ## Verification checklist
 
 1. Build: `:RemixedDungeonDesktop:compileJava` (after Step A, this also

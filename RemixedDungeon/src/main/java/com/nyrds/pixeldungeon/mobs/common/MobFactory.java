@@ -1,8 +1,6 @@
 package com.nyrds.pixeldungeon.mobs.common;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.pixeldungeon.mobs.necropolis.Lich;
-import com.nyrds.pixeldungeon.mobs.necropolis.RunicSkull;
 import com.nyrds.pixeldungeon.mobs.npc.ServiceManNPC;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
@@ -142,8 +140,9 @@ public class MobFactory {
 		// (mobsDesc/*.json) - classes deleted, kinds must never resolve to java.
 		registerMobClass(ShadowLord.class);
 
-		registerMobClass(Lich.class);
-		registerMobClass(RunicSkull.class);
+		// Lich/RunicSkull kinds are data now (mobsDesc/Lich.json,
+		// mobsDesc/RunicSkull.json, batch 17d-3) - java classes deleted,
+		// kinds must never resolve to java.
 
 		registerMobClass(Crystal.class);
 

@@ -71,7 +71,7 @@ local function jump(self)
     self:move(newPos)
 
     if RPD.CharUtils:isVisible(self) then
-        RPD.CellEmitter:get(newPos):burst(RPD.Speck:factory(RPD.Speck.WOOL), 6)
+        RPD.Sfx.CellEmitter:get(newPos):burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.WOOL), 6)
         RPD.playSound("snd_puff")
     end
 

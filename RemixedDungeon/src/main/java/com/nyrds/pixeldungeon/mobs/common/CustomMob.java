@@ -180,6 +180,12 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			return false;
 		}
 
+		// pacified mobs never attack (Mob.canAttack contract; this override
+		// used to silently drop the gate)
+		if(pacified) {
+			return false;
+		}
+
 		// script replaces the range+LOS check entirely (pumped Goo reach, ray attacks)
 		LuaValue scripted = getScript().run("onCanAttack", enemy);
 		if (scripted.isboolean()) {
