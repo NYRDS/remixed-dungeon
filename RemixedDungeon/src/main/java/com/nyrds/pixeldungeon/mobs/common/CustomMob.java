@@ -200,6 +200,7 @@ public class CustomMob extends MultiKindMob implements IZapper {
 
 	// script takes the attack entirely (Goo pump: spends and poses itself)
 	@Override
+	@LuaInterface
 	public void doAttack(Char enemy) {
 		if (getScript().runOptional("onDoAttack", Boolean.FALSE, enemy)) {
 			return;

@@ -170,6 +170,7 @@ public class Visual extends Gizmo implements IPlaceable{
 		ba = b * strength;
 	}
 	
+	@LuaInterface
 	public void tint( int color, float strength ) {
 		rm = gm = bm = 1f - strength;
 		ra = ((color >> 16) & 0xFF) / 255f * strength;

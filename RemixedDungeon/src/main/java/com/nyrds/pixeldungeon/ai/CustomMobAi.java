@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.ai;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.platform.util.StringsManager;
@@ -27,10 +28,11 @@ public class CustomMobAi extends MobAi implements AiState {
         script.run("gotDamage",me, src, dmg);
     }
 
-    @Override
-    public String getTag() {
-        return scriptFile;
-    }
+	@Override
+	@LuaInterface
+	public String getTag() {
+		return scriptFile;
+	}
 
     @Override
     public String status(Char me) {

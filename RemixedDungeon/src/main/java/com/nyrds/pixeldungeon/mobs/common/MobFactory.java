@@ -8,7 +8,6 @@ import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.mobs.King;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.items.wands.WandOfFlock;
@@ -125,7 +124,8 @@ public class MobFactory {
 		// SpiderQueen kind is data now (mobsDesc/SpiderQueen.json, batch 17c-2a)
 		// - java class deleted, kind must never resolve to java.
 
-		registerMobClass(King.class);
+		// King kind is data now (mobsDesc/King.json, batch 17d-4)
+		// - java class deleted, kind must never resolve to java.
 		// Monk/Senior/Undead kinds are data now (mobsDesc/*.json, batch 17b)
 		// - classes deleted, kinds must never resolve to java.
 		// DM300/Deathling kinds are data now (mobsDesc/*.json, batch 17c-2b).

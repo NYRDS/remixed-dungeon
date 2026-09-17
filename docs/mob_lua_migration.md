@@ -1771,6 +1771,86 @@ for anyone) — stage boss fights with a levelled hero (level_up ×4).
 setPos-teleporting the hero does not trigger pressHero — real
 `move_hero` steps do (NecroBossLevel spawns the boss on arena entry).
 
+## Batch 17d-4 — King (SHIPPED 2026-09-17)
+
+City boss deleted (184 lines); kind string unchanged — Chess.lua's
+hard `'King'` kind matches and AlchemyRecipes' `contains("King")` are
+unaffected. The "owes getCloser numeric target-replace" debt DISSOLVED
+instead of being paid: the retarget-in-getCloser design was rejected
+(patching movement mechanics to fake a goal) in favor of a **dedicated
+scripted AI state** — machinery that already existed:
+`MobAi.getStateByTag` falls back to `CustomMobAi`, which runs
+`scripts/ai/<Tag>.lua` (`act(me)` = run("act", parent, me); with
+LuaScript's parent binding + invokemethod module-self the state hook
+signature is `(self, aiState, me)` — NpcDefault/BlackCat were right,
+the `ai.lua` lib defaults are just lenient). `RPD.setAi(mob,"Tag")`
+flips states; `Mob.act`'s state loop (5-iteration cap + TICK fallback)
+re-dispatches a state switch WITHIN the same turn when the state spends
+nothing — so KingPedestal→Hunting handoff costs zero turns and cannot
+spin (flip only happens on the canTryToSummon boundary).
+
+Split: `scripts/mobs/King.lua` = spawn hook (SkeletonKey + ArmorKit,
+getItem guards), act hook (nearest-pedestal scan + flip into
+KingPedestal, gated to HUNTING/WANDERING so a sleeping king stays put —
+java only retargeted while moving), die (BOSS_SLAIN_4 + King_Info1),
+notice (King_Info3). `scripts/ai/KingPedestal.lua` = the pedestal walk
++ summon: exit-to-Hunting when canTryToSummon false (no spend =
+same-turn handoff), melee-first when enemy adjacent (summoning must not
+suppress melee), summon when at targetPedestal (Speck.SCREAM +
+snd_challenge; 50% Undead else Monk/Warlock/Golem/Senior via Lich's
+`WandOfBlink:appear`; raised city mobs get setUndead + exp 0 + Hunting
++ green tint + black Flare), else `doStepTo(targetPedestal)`. Helpers
+exported on the state module; King.lua requires it — lua state is one
+engine (`LuaEngine.require` cache), so `mob.restoreData` is shared
+cross-script; `lastPedestal`/`targetPedestal` live there (@Packable
+replaced by serpent data, survives saves). No getCloser/canAttack/zap
+hooks at all — chase is stock Hunting, attackRange default 1 = melee.
+
+The ped-summon cap reproduces a JAVA QUIRK verbatim:
+`1 + 5*(ht-hp)/ht*difficultyFactor` is integer division —
+(ht-hp)/ht is ALWAYS 0 (hp<ht), so maxArmySize==1 at every difficulty;
+the King keeps one servant alive and raises a replacement (at a
+different pedestal — lastPedestal excluded, random tie-break on the
+nearest scan) whenever it dies. The classic watabou fraction formula
+was clearly the intent; flagged, not "fixed" (behavior preservation).
+Pedestal-nearest is a `getNearestTerrain` port over `getLevelObjects()`
+(kind "pedestal") with `Level.distance` (already exposed).
+
+New annotations: `CustomMobAi.getTag` (state-tag guard reads it from
+lua), `CustomMob.doAttack` (state-script melee), `Char.isUndead` (new
+getter) + `Char.setUndead`, `CharSprite.centerEmitter`, `Visual.tint`
+(noosa base — tint is inherited, not on CharSprite),
+`Level.getEmptyCellNextTo`. Lombok note: `Char.target`'s setTarget is
+@LuaInterface via field annotations — grep for the METHOD finds nothing.
+
+Verified live (headless, `--add-opens java.base/java.util=ALL-UNNAMED`
+required for lua `pairs()` over java collections — without it every
+pairs(getLevelObjects()) throws InaccessibleObjectException inside
+GameLoop.update): allMobs 126 kinds / 0 DummyMob, King kind present;
+stat parity vs NeutralKing probes identical (hp300 atk32 def25 20-38
+dr14 exp40); sleep→damage→Wandering→KingPedestal walk→summon (Senior,
+undead=true, exp=0, walking)→cap-full exit to HUNTING; kill servant→
+re-enter→second pedestal (last=496→144, rotation + tie-break);
+battleMusic ost_boss_4_fight consumed by Boss.setupCharData;
+save/reload round-trip exact (pos 331, last/target, undead servant
+flag); die = BOSS_SLAIN_4 badge in badges.dat + ArmorKit heap at death
+cell. SkeletonKey does NOT drop — pre-existing java behavior (key
+collects into the Keyring bag; Belongings iteration = equipped +
+backpack only, so dropAll skips it; unseal() is what opens the exit) —
+flagged, parity kept. CityBossLevel live spawn NOT re-tested headless
+(entering the hall with an unarmed hero triggers the chess path, and
+`enteredArena` latches for the cached level instance — spawnBoss
+resolves the kind via MobFactory, covered by allMobs + create_mob).
+CI green: alchemy 43/43, blood/level_nav/doctor/all_spells exit 0,
+pet_transition 5/5, turn_economy 1/1 (last two need --start-server).
+
+Harness notes: `reload_game` LOADS THE LAST SAVE (no implicit save) —
+a debug-spawned mob unsaved by a transition vanishes; force the save
+with a level round-trip (go_to_level away+back). `getMobs()` result is
+pairs-able but has no `:size()`; `getItems()` lua accessor doesn't
+exist — use the /debug/get_items endpoint; hero key check via
+`belongings:getItem("SkeletonKey")`.
+
 ## Verification checklist
 
 1. Build: `:RemixedDungeonDesktop:compileJava` (after Step A, this also

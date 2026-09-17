@@ -2433,6 +2433,12 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return ItemsList.DUMMY;
     }
 
+    @LuaInterface
+    public boolean isUndead() {
+        return undead;
+    }
+
+    @LuaInterface
     public void setUndead(boolean flag) {
         undead = flag;
         if (undead) {

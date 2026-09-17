@@ -1823,6 +1823,7 @@ public abstract class Level implements Bundlable {
 		return oneCellFrom(candidates);
 	}
 
+	@LuaInterface
 	public int getEmptyCellNextTo(int cell) {
 		ArrayList<Integer> candidates = new ArrayList<>();
 

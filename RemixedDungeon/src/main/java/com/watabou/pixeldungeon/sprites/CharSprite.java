@@ -327,6 +327,7 @@ public class CharSprite extends CompositeMovieClip implements Tweener.Listener, 
         return emitter;
     }
 
+    @LuaInterface
     public Emitter centerEmitter() {
         Emitter emitter = GameScene.emitter();
         emitter.pos(center());
