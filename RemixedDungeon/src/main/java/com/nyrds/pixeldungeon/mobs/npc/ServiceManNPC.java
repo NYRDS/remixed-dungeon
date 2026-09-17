@@ -28,6 +28,11 @@ public class ServiceManNPC extends ImmortalNPC {
         AdsUtils.initRewardVideo();
     }
 
+    @Override
+    public boolean isNpc() {
+        return true;
+    }
+
     public static Item getReward() {
         return new Gold(BASIC_GOLD_REWARD + (filmsSeen / 5) * 50);
     }

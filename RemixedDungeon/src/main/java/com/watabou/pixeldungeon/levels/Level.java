@@ -44,7 +44,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.particles.FlowParticle;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
@@ -1286,7 +1285,8 @@ public abstract class Level implements Bundlable {
 		}
 
 		final int emptyCellNextTo = getEmptyCellNextTo(cell);
-		if ( Actor.findChar(cell) instanceof NPC) {
+		Char occupant = Actor.findChar(cell);
+		if (occupant != null && occupant.isNpc()) {
 			if (cellValid(emptyCellNextTo)) {
 				cell = emptyCellNextTo;
 			}

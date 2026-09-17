@@ -1054,6 +1054,12 @@ public class Mob extends Char implements IZapper {
 
     @LuaInterface
     @Override
+    public boolean isNpc() {
+        return npc;
+    }
+
+    @LuaInterface
+    @Override
     public boolean hasBodyParts() {
         return hasBodyParts;
     }

@@ -2078,3 +2078,31 @@ sacrificial-sword/teleport-armor/CharUtils.actions/Level step-off) are
 left as-is: they only ever matched ServiceManNPC since the NPC tier
 went data (CustomMob never extended NPC). Retargeting them to a real
 isNpc() predicate would change behavior for data NPCs - separate ruling.
+
+## isNpc() retarget of the stale instanceof-NPC gates (2026-09-18)
+
+Mike ruled `isNpc()` right. New predicate: `Char.isNpc()` default false
+(@LuaInterface), `Mob.isNpc()` returns the `npc` json flag,
+`ServiceManNPC` overrides true (no json desc - java town NPC). The 7
+gates that read `instanceof NPC` - a check that matched only ServiceMan
+since the NPC tier went data - now mean npc-ness for real:
+
+- ScrollOfDomination: domination pool excludes data NPCs (guards were
+  previously candidates, wasted by the canBePet gate downstream).
+- ChaosStaff chaos-instakill branch + SacrificialSword life-conversion:
+  skip data NPCs.
+- Necrotism spread: no longer curses data NPCs.
+- TeleportCellListener (rogue armor): no longer blinds/Wandering-izes
+  data NPCs.
+- Level.drop: heaps redirect off cells occupied by data NPCs (matches
+  the npc act preamble stepping OFF objects).
+- CharUtils.actions: data NPCs get no context action menu - talk stays
+  on bump-interact. Flagged delta: a hostile data NPC (angry RatKing)
+  has no MAC_HIT action entry; bump-attack still works.
+
+Verified live: guard isNpc=true actions=[], rat isNpc=false 3 actions,
+ServiceManNPC true/0 (java override path), 0 LuaErrors over town ticks;
+suites alchemy 42/42 all_spells 38/38 blood 6/6 doctor 7/7 nav pet 5/5
+turn 1/1; android gate green. NPC/ImmortalNPC classes untouched - the
+ServiceMan json-ization (npc:true profile on a mobsDesc json) remains
+available as future cleanup.

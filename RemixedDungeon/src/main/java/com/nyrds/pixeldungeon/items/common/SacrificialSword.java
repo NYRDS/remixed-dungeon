@@ -5,7 +5,6 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.sprites.Glowing;
 
@@ -54,7 +53,7 @@ public class SacrificialSword extends MeleeWeapon {
 			return;
 		}
 		
-		if(tgt instanceof NPC) {
+		if(tgt.isNpc()) {
 			return;
 		}
 		

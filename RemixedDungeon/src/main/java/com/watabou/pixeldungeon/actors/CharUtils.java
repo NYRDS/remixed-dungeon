@@ -56,7 +56,6 @@ import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.effects.Lightning;
@@ -480,7 +479,7 @@ public class CharUtils {
     public static @NotNull ArrayList<String> actions(@NotNull Char target, Char hero) {
         ArrayList<String> actions = new ArrayList<>();
 
-        if (target instanceof NPC) {
+        if (target.isNpc()) {
             return actions;
         }
 

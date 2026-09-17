@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -38,7 +37,7 @@ class TeleportCellListener implements CellSelector.Listener {
             }
 
             for (Mob mob : level.getCopyOfMobsArray()) {
-                if (level.fieldOfView[mob.getPos()] && !(mob instanceof NPC)) {
+                if (level.fieldOfView[mob.getPos()] && !mob.isNpc()) {
                     Buff.prolong( mob, Blindness.class, 2 );
                     mob.setState(MobAi.getStateByClass(Wandering.class));
                     mob.getSprite().emitter().burst( Speck.factory( Speck.LIGHT ), 4 );

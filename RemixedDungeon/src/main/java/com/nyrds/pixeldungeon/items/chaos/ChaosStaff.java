@@ -7,7 +7,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -72,7 +71,7 @@ public class ChaosStaff extends Wand {
             if (ch instanceof Mob) {
                 Mob mob = (Mob) ch;
 
-                if ((mob.isBoss()) || (mob instanceof NPC)) {
+                if ((mob.isBoss()) || (mob.isNpc())) {
                     return;
                 }
 

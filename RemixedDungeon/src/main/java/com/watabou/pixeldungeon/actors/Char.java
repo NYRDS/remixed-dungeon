@@ -2302,6 +2302,13 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void accumulateSkillPoints(int n) {
     }
 
+    // NPC-profile chars (npc:true data mobs, java town NPCs): no context
+    // actions, excluded from domination/chaos/necrotism etc.
+    @LuaInterface
+    public boolean isNpc() {
+        return false;
+    }
+
     @LuaInterface
     public boolean isBoss() {
         return false;

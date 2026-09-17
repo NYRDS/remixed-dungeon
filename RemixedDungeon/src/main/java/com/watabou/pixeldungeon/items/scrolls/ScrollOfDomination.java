@@ -6,7 +6,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.levels.Level;
@@ -26,7 +25,7 @@ public class ScrollOfDomination extends Scroll {
 
 		Level level = Dungeon.level;
 		for (Mob mob : level.getCopyOfMobsArray()) {
-			if (level.fieldOfView[mob.getPos()] && !(mob.isBoss()) && !mob.isPet() && !(mob instanceof NPC)) {
+			if (level.fieldOfView[mob.getPos()] && !(mob.isBoss()) && !mob.isPet() && !mob.isNpc()) {
 				mobsInSight.add(mob);
 			}
 		}

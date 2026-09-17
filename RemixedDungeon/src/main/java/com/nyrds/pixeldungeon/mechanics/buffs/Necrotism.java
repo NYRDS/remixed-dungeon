@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -60,7 +59,7 @@ public class Necrotism extends Buff implements Doom {
 			for (int n : Level.NEIGHBOURS16) {
 				int p = n + cell;
 				Char ch = Actor.findChar(p);
-				if (Dungeon.level.cellValid(p) && ch != null && !(ch instanceof  Hero) && !(ch instanceof NPC)){
+				if (Dungeon.level.cellValid(p) && ch != null && !(ch instanceof  Hero) && !ch.isNpc()){
 					if(Random.Int(1) == 0 && !ch.hasBuff(Necrotism.class)){
 						Buff.affect( ch, Necrotism.class ).set(duration, iteration + 1);
 					}
