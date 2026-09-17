@@ -1878,3 +1878,56 @@ exist — use the /debug/get_items endpoint; hero key check via
    (now via factory→CustomMob).
 8. `spotlessApply` (imports only); match the file's dominant indent — repo
    has no unified indent style.
+
+## Kite state (17d-4 follow-up, SHIPPED 2026-09-17)
+
+Mike's rule formalized: **goal-directed mob behavior = dedicated
+`scripts/ai/<Name>.lua` AI state, never monkey-patched general hooks**
+(`getCloser` retarget/inversion, `canAttack` gating, act-hook state
+flipping). First application: the seven hand-rolled kite policies
+(Scorpio, Acidic, AirElemental, ShamanElder, SpiderMind,
+SpiderMindAmber, SpiderQueen) collapsed into **`scripts/ai/Kite.lua`**
+— entered via `"aiState": "Kite"` in the mob json, per-mob tuning in
+the mob script `data` (set in `stats`, serpent-persisted):
+
+- `kiteRanged` — retreat while the enemy is unseen or not in a clean
+  ranged line (`CharUtils:canDoOnlyRangedAttack` = `!adjacent && LOS`),
+  Scorpio/Acidic's exact java gate.
+- `kiteMinDist` — retreat while closer than this (Air 2, Elder 2, Queen 5).
+- `kiteNeverApproach` — retreat whenever seen and unattackable
+  (Mind/Amber buff-bots, needs `me:canAttack` — newly `@LuaInterface`
+  on `Mob.canAttack`).
+- `kiteBelowHp` — kite only below this hp fraction (Queen 0.5; above it
+  she melee-attacks via her `canAttack` hook, which Kite's delegated
+  Hunting turn honors).
+
+Mechanics: Kite.act **delegates the turn to the stock state objects**
+(`fleeing:act(me)` for the retreat leg — Fleeing.act never flips state;
+`hunting:act(me)` for attack/approach/acquisition — full stock Hunting
+machinery incl. pet-range guard and item use), then re-asserts
+`setAi(me,"Kite")`, so Kite owns policy every turn while buff states
+(Terror/amok) still win their duration. Delegated acts spend their own
+time; a delegated no-op (enemy-friendly → Wandering flip) is caught by
+the re-assert + Mob.act's TICK fallback — no spin. Mob scripts keep
+their combat hooks (zapProc/attackProc/defenceProc/damage) and
+side-effect act hooks (SpiderQueen eggs); the kite code is deleted.
+
+Accepted deltas: kite mobs spawn alert (json aiState = Kite replaces
+the default Sleeping wake — they scan from turn one) and ShamanElder's
+2..4 hysteresis band is gone (it now attacks at dist 2..4 instead of
+keeping Fleeing — truer kiting, flagged). Verified live: Scorpio
+(ranged hits + Cripple at dist 3, holds, retreats adjacency 1→2, flees
+without LOS), Acidic (same rhythm), Air (dist 1→2 back-off, approaches
+into band), Elder (holds 2, zap + ManaShield cycling), Mind (harmless
+hold at 5), Amber (Blindness proc at 5), Queen (full-hp adjacent melee
++ Poison; wounded <50% kites 1→2→3+). allMobs 126/0, zero LuaErrors,
+alchemy 43/43 + nav/doctor/all_spells/blood green, android gate green.
+
+Staging lessons: lua-driven `mobByName`+`appear` staging breaks if you
+`setPos` before `appear` (mob never registers — appear alone places
+it); `setEnemy(hero)` stores only the id — after many level
+round-trips `CharsList` loses the hero and getEnemy() silently becomes
+DummyChar (fresh `start_game` fixes; also wipes lua_eval globals —
+redefine helpers); stage in cells with 2+ free neighbors or the retreat
+leg looks broken (boxed mobs stand still, and `Level.distance` can read
+1 while the mob is genuinely fleeing along a wall).

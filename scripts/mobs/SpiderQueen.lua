@@ -2,7 +2,8 @@
   SpiderQueen - spiders lair boss (batch 17c-2a,
   was com.nyrds.pixeldungeon.mobs.spiders.SpiderQueen.java).
   Lays a SpiderEgg about every 21 turns, poisons on hit, below half hp
-  she refuses melee and kites away while the target is close. The 1/3
+  she refuses melee and kites away while the target is close (aiState
+  Kite + kiteMinDist 5 behind the kiteBelowHp gate). The 1/3
   crystal/charm/armor carry-gear roll rides the spawn hook, one-shot
   guarded (restore re-runs onSpawn). isBoss json carries the die-flow
   and the SkeletonKey.
@@ -11,6 +12,11 @@ local RPD = require "scripts/lib/commonClasses"
 local mob = require "scripts/lib/mob"
 
 return mob.init{
+    stats = function(self)
+        mob.restoreData(self).kiteMinDist = 5
+        mob.restoreData(self).kiteBelowHp = 0.5
+    end,
+
     act = function(self)
         if math.random(0, 20) == 0 then
             RPD.CharUtils:spawnOnNextCell(self, "SpiderEgg",
@@ -28,15 +34,6 @@ return mob.init{
 
     canAttack = function(self, enemy)
         return self:hp() > self:ht() / 2 and self:distance(enemy) == 1
-    end,
-
-    getCloser = function(self, target, ignorePets)
-        if self:hp() < self:ht() / 2
-                and self:getState():getTag() == "HUNTING"
-                and RPD.Dungeon.level:distance(self:getPos(), target) < 5 then
-            return self:getFurther(target)
-        end
-        return false
     end,
 
     spawn = function(self, level)

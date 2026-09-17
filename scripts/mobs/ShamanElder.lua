@@ -9,18 +9,9 @@ local RPD = require "scripts/lib/commonClasses"
 local mob = require "scripts/lib/mob"
 
 return mob.init{
-	act = function(me)
-		local d = me:distance(me:getEnemy())
-
-		if d < 2 then
-			RPD.setAi(me, "Fleeing")
-			return
-		end
-
-		if d > 4 then
-			RPD.setAi(me, "Hunting")
-			return
-		end
+	stats = function(me)
+		-- aiState Kite + kiteMinDist 2: never lets the enemy close in
+		mob.restoreData(me).kiteMinDist = 2
 	end,
 
     zapProc = function(me, enemy, dmg)

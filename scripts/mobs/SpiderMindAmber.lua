@@ -3,8 +3,12 @@ local mob = require "scripts/lib/mob"
 
 -- java SpiderMindAmber (batch 10): zap debuffs the enemy (one of Blindness,
 -- Slow, Weakness, 3 turns) on top of the base damage, and it retreats while
--- hunting (getCloser = flee) keeping its ranged line.
+-- hunting (aiState Kite + kiteNeverApproach) keeping its ranged line.
 return mob.init{
+    stats = function(self)
+        mob.restoreData(self).kiteNeverApproach = true
+    end,
+
     zapProc = function(self, enemy, dmg)
         if enemy ~= nil then
             local debuffs = {"Blindness", "Slow", "Weakness"}
@@ -13,14 +17,4 @@ return mob.init{
         return dmg
     end,
 
-    getCloser = function(self, target, ignorePets)
-        -- java override: while hunting, flee instead of approaching
-        if self:getState():getTag() == "HUNTING" then
-            if self.enemySeen then
-                return not not self:getFurther(target)
-            end
-            return false
-        end
-        return false
-    end
 }

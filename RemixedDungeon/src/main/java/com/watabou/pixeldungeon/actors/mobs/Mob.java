@@ -379,6 +379,7 @@ public abstract class Mob extends Char {
         return true;
     }
 
+    @LuaInterface
     public boolean canAttack(@NotNull Char enemy) {
         return !pacified && super.canAttack(enemy);
     }

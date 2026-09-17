@@ -1,4 +1,5 @@
 {
+  "aiState"       : "Kite",
    "name"          : "SpiderMind_Name",
    "name_objective": "SpiderMind_Name_Objective",
    "description"   : "SpiderMind_Desc",

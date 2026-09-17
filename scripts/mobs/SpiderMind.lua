@@ -3,8 +3,13 @@ local mob = require "scripts/lib/mob"
 
 -- java SpiderMind (batch 10): harmless buff-bot - its zap buffs the first
 -- friendly mob in sight (3 turns) instead of hurting the enemy, and it
--- retreats while hunting (getCloser = flee) keeping its ranged line.
+-- retreats while hunting (aiState Kite + kiteNeverApproach) keeping its
+-- ranged line.
 return mob.init{
+    stats = function(self)
+        mob.restoreData(self).kiteNeverApproach = true
+    end,
+
     zapProc = function(self, enemy, dmg)
         local level = RPD.Dungeon.level
         local buffs = {"Speed", "Barkskin", "Blessed", "Health", "Armor", "ManaShield", "Fury"}
@@ -27,14 +32,4 @@ return mob.init{
         return 0
     end,
 
-    getCloser = function(self, target, ignorePets)
-        -- java override: while hunting, flee instead of approaching
-        if self:getState():getTag() == "HUNTING" then
-            if self.enemySeen then
-                return not not self:getFurther(target)
-            end
-            return false
-        end
-        return false
-    end
 }
