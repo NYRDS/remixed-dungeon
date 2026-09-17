@@ -14,19 +14,25 @@ import com.nyrds.pixeldungeon.ai.Sleeping;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Carcass;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.nyrds.pixeldungeon.mobs.common.IZapper;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
+import com.nyrds.platform.audio.MusicManager;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
+import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingBase;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
@@ -45,9 +51,16 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.keys.SkeletonKey;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
+import com.watabou.pixeldungeon.items.wands.WandOfBlink;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.features.Chasm;
+import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
+import com.watabou.pixeldungeon.sprites.HeroSpriteDef;
 import com.watabou.pixeldungeon.sprites.MobSpriteDef;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -60,13 +73,18 @@ import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaValue;
 
-public abstract class Mob extends Char {
+public class Mob extends Char implements IZapper {
 
     public static final String TXT_RAGE = "#$%^";
 
     private static final float SPLIT_DELAY = 1f;
     public static final String LOOT = "loot";
+
+    private static final String STATE = "state";
+    private static final String FRACTION = "fraction";
+    private static final String KIND_TAG = "KIND";
 
     protected String spriteClass;
 
@@ -88,13 +106,53 @@ public abstract class Mob extends Char {
 
     public static final float TIME_TO_WAKE_UP = 1f;
 
-    private static final String STATE = "state";
-    private static final String FRACTION = "fraction";
     protected int dmgMin = 0;
     protected int dmgMax = 0;
     protected final int attackSkill = 0;
     protected int dr = 0;
     protected boolean isBoss = false;
+
+    // sprite variant (`var` json key, KIND bundle tag): picks the frame in the sprite def
+    private int kind = 0;
+
+    // data-mob state (authored via mobsDesc json); plain java mobs keep engine defaults
+    private float attackDelay = 1;
+    private int spriteLayer = 0;
+
+    @Packable
+    public String mobClass = "Unknown";
+
+    private boolean canBePet = true;
+    private boolean friendly;
+    private boolean immortal = false;
+    private boolean humanoid = false;
+    private boolean hasBodyParts = true;
+
+    // statue-style sprite: hero-layers + currently equipped item
+    private boolean heroSprite = false;
+
+    // hero-look sprite layers (MirrorImage clones): set by Hero.makeClone,
+    // persisted like the java MirrorImage look/deathEffect fields were
+    @Packable
+    public String[] heroLook = new String[0];
+    @Packable
+    public String heroDeathEffect;
+
+    // survive Level.reset (statues stay, ordinary mobs are removed)
+    private boolean persistOnReset = false;
+
+    // NPC profile (npc: true in the mob def): static town-folk behavior —
+    // steps off objects/stairs in act, never beckoned, immune to buffs, not
+    // petable. Replaces the deleted java NPC base-class behavior.
+    private boolean npc = false;
+
+    // true once a mobsDesc json was applied to this mob (json stat formulas
+    // diverge from the engine ones: raw dr field, range+LOS canAttack)
+    private boolean dataDriven = false;
+
+    // boss battle track, played while the boss is Hunting (java Boss parity)
+    @Nullable
+    private String battleMusic = "";
 
     @LuaInterface
     public void setDmgMax(int value) {
@@ -163,6 +221,7 @@ public abstract class Mob extends Char {
 
     public Mob() {
         super();
+        mobClass = getClass().getSimpleName();
         setupCharData();
         // explicit stat only: mobsDesc "baseStr" key; STR() in java class or
         // fillStats lua script overrides later in the ctor chain
@@ -171,6 +230,14 @@ public abstract class Mob extends Char {
         if (ModQuirks.mobLeveling) {
             lvl(Random.Int(1, (int) RemixedDungeon.getDifficultyFactor() + 1));
         }
+    }
+
+    // data-mob construction path (MobFactory): kind names the mobsDesc json
+    public Mob(String mobClass) {
+        this();
+        this.mobClass = mobClass;
+        fillMobStats(false);
+        getScript().run("fillStats");
     }
 
     public void releasePet() {
@@ -236,12 +303,15 @@ public abstract class Mob extends Char {
         bundle.put(STATE, getState().getTag());
         bundle.put(FRACTION, fraction.ordinal());
         bundle.put(REMOTE_REVERT_AFTER, remoteRevertAfter);
+        bundle.put(KIND_TAG, kind);
     }
 
     @Override
     public void restoreFromBundle(Bundle bundle) {
 
         super.restoreFromBundle(bundle);
+
+        kind = bundle.optInt(KIND_TAG, kind);
 
         String state = bundle.getString(STATE);
         setState(state);
@@ -254,6 +324,11 @@ public abstract class Mob extends Char {
         if (bundle.contains(LOOT)) { //pre 29.6 saves compatibility
             loot(bundle.get(LOOT), 1);
         }
+
+        // java Boss fixup parity: a save predating the key must not brick the stair
+        if (isBoss && !mobClass.equals(MobFactory.SHADOW_LORD) && getBelongings().getItem(SkeletonKey.class) == null) {
+            collect(new SkeletonKey());
+        }
     }
 
     @LuaInterface
@@ -262,11 +337,27 @@ public abstract class Mob extends Char {
     }
 
     protected int getKind() {
-        return 0;
+        return kind;
+    }
+
+    @Override
+    public String getEntityKind() {
+        return mobClass;
     }
 
     @SneakyThrows
     public CharSprite newSprite() {
+
+        if (heroSprite) {
+            if (heroLook.length > 0 && heroDeathEffect != null && !heroDeathEffect.isEmpty()) {
+                return HeroSpriteDef.createHeroSpriteDef(heroLook, heroDeathEffect);
+            }
+            var item = getItemFromSlot(Belongings.Slot.WEAPON);
+            if (!item.valid()) {
+                item = getItemFromSlot(Belongings.Slot.ARMOR);
+            }
+            return HeroSpriteDef.createHeroSpriteDef(item);
+        }
 
         if (spriteClass!= null && !spriteClass.isEmpty()) {
             return new MobSpriteDef(spriteClass, getKind());
@@ -282,6 +373,28 @@ public abstract class Mob extends Char {
 
     @Override
     public void act() {
+        if (npc) {
+            int pos = getPos();
+
+            ItemUtils.throwItemAway(pos);
+
+            LevelObject levelObject = level().getTopLevelObject(pos);
+            if (levelObject != null) {
+                int newPos = level().getEmptyNonStairsCellNextTo(pos);
+                if (level().cellValid(newPos) && newPos != pos) {
+                    WandOfBlink.appear(this, newPos);
+                }
+            }
+
+            if (Dungeon.hero != null) {
+                getSprite().turnTo(pos, Dungeon.hero.getPos());
+            }
+        }
+
+        if (isBoss && !battleMusic.isEmpty() && getState() instanceof Hunting) {
+            MusicManager.INSTANCE.play(battleMusic, true);
+        }
+
         super.act(); //Calculate FoV
 
         if (!isAlive()) {
@@ -358,6 +471,13 @@ public abstract class Mob extends Char {
 
     @Override
     public boolean add(Buff buff) {
+        if (npc) {
+            // scripted NPCs (RatKing) may punch through the blanket immunity
+            if (!getScript().runOptional("onAllowBuff", false, buff)) {
+                return false;
+            }
+        }
+
         super.add(buff);
 
         if (!isOnStage()) {
@@ -371,7 +491,7 @@ public abstract class Mob extends Char {
             setState(MobAi.getStateByClass(Horrified.class));
         } else if (buff instanceof Sleep) {
             new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
-            
+
             // Use regular Sleeping AI (it will handle pain immunity internally)
             setState(MobAi.getStateByClass(Sleeping.class));
             postpone(Sleep.SWS);
@@ -379,9 +499,174 @@ public abstract class Mob extends Char {
         return true;
     }
 
+    @Override
     @LuaInterface
     public boolean canAttack(@NotNull Char enemy) {
-        return !pacified && super.canAttack(enemy);
+
+        if(friendly(enemy)) {
+            return false;
+        }
+
+        // pacified mobs never attack (Mob.canAttack contract; an older
+        // override used to silently drop the gate)
+        if(pacified) {
+            return false;
+        }
+
+        // script replaces the range+LOS check entirely (pumped Goo reach, ray attacks)
+        LuaValue scripted = getScript().run("onCanAttack", enemy);
+        if (scripted.isboolean()) {
+            return scripted.toboolean();
+        }
+
+        if (!dataDriven) {
+            return super.canAttack(enemy);
+        }
+
+        int enemyPos = enemy.getPos();
+        int distance = level().distance(getPos(), enemyPos);
+
+        return distance <= attackRange && Ballistica.cast(getPos(), enemyPos, false, true) == enemyPos;
+    }
+
+    // script takes the attack entirely (Goo pump: spends and poses itself)
+    @Override
+    @LuaInterface
+    public void doAttack(Char enemy) {
+        if (getScript().runOptional("onDoAttack", Boolean.FALSE, enemy)) {
+            return;
+        }
+        super.doAttack(enemy);
+    }
+
+    @Override
+    public int attackSkill(Char target) {
+        LuaValue scripted = getScript().run("onAttackSkill", target);
+        if (scripted.isnumber()) {
+            return scripted.toint();
+        }
+        return super.attackSkill(target);
+    }
+
+    @Override
+    @LuaInterface
+    public int damageRoll() {
+        LuaValue scripted = getScript().run("onDamageRoll");
+        if (scripted.isnumber()) {
+            return scripted.toint();
+        }
+        int dmg = Random.NormalIntRange(dmgMin, dmgMax) + Random.NormalIntRange(0, lvl());
+
+        dmg += getActiveWeapon().damageRoll(this);
+
+        if (!rangedWeapon.valid()) {
+            dmg += getSecondaryWeapon().damageRoll(this);
+        }
+
+        return dmg;
+    }
+
+    // dynamic stats of owner-scaled summons (Deathling) live in the script
+    @Override
+    public int defenseSkill(Char enemy) {
+        LuaValue scripted = getScript().run("onDefenseSkill", enemy);
+        if (scripted.isnumber()) {
+            return scripted.toint();
+        }
+
+        // pets fight their own battles: once they hold an enemy they keep full
+        // evasion wherever the hero looks; a visible attacker is required,
+        // unseen (invisible) ones keep the sneak hit
+        if (isPet() && enemy.invisible <= 0
+                && getEnemy().valid() && getEnemy().isAlive()) {
+            return super.defenseSkill(enemy);
+        }
+        return enemySeen ? super.defenseSkill(enemy) : 0;
+    }
+
+    @Override
+    public boolean friendly(@NotNull Char chr, int r_level) {
+
+        if (friendly) {
+            return true;
+        }
+
+        if (r_level > 7) {
+            EventCollector.logException("too high r_level in Mob::friendly");
+            return false;
+        }
+
+        if (chr == this) {
+            return true;
+        }
+
+        if (hasBuff(BuffFactory.AMOK) || chr.hasBuff(BuffFactory.AMOK)) {
+            return false;
+        }
+
+        if (getOwnerId() == chr.getId() || getId() == chr.getId()) {
+            return true;
+        }
+
+        if (getEnemy() == chr) {
+            return false;
+        }
+
+        if (getOwnerId() != getId()) {
+            Char owner = getOwner();
+            // Don't recurse into a stale/DUMMY owner (getOwner() returns DUMMY for unresolved ids)
+            // or back into ourselves — both extend/cycle the chain and trip the r_level circuit-breaker.
+            if (owner != this && owner.valid() && owner.friendly(chr, r_level + 1)) {
+                return true;
+            }
+        }
+
+        if (chr instanceof Hero) {
+            if(chr.getHeroClass().friendlyTo(getEntityKind())) {
+                return true;
+            }
+        }
+
+        return super.friendly(chr, r_level);
+    }
+
+    @Override
+    public float speed() {
+        float base = super.speed();
+        // terrain-conditional speeds (water/earth elementals) live in the script
+        return (float) getScript().run("onSpeed", base).optdouble(base);
+    }
+
+    @Override
+    public void damage(int dmg, @NotNull NamedEntityKind src) {
+        if(immortal) {
+            return;
+        }
+
+        // scripted mobs may consume the hit (RatKing anger gate)
+        if (getScript().runOptional("onBlockDamage", false, dmg, src)) {
+            return;
+        }
+
+        super.damage(dmg, src);
+    }
+
+    @Override
+    public int dr() {
+        LuaValue scripted = getScript().run("onDr");
+        if (scripted.isnumber()) {
+            return scripted.toint();
+        }
+        if (dataDriven) {
+            // authored DR is the whole story for data mobs (no armor formula)
+            return dr;
+        }
+        return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr + lvl() / 2;
+    }
+
+    @LuaInterface
+    public boolean canBePet() {
+        return canBePet;
     }
 
     public boolean getCloser(int target, boolean ignorePets) {
@@ -420,19 +705,6 @@ public abstract class Mob extends Char {
     }
 
     @Override
-    public int defenseSkill(Char enemy) {
-        // pets fight their own battles: once they hold an enemy they keep full
-        // evasion wherever the hero looks; a visible attacker is required,
-        // unseen (invisible) ones keep the sneak hit
-        if (isPet() && enemy.invisible <= 0
-                && getEnemy().valid() && getEnemy().isAlive()) {
-            return super.defenseSkill(enemy);
-        }
-        return enemySeen ? super.defenseSkill(enemy) : 0;
-    }
-
-
-    @Override
     public void destroy() {
         level().mobs.remove(this);
         super.destroy();
@@ -443,7 +715,15 @@ public abstract class Mob extends Char {
         super.die(this);
     }
 
+    // java Boss die-flow parity: level music back, banner, open the sealed stair
+    @Override
     public void die(@NotNull NamedEntityKind cause) {
+        if (isBoss) {
+            GameScene.playLevelMusic();
+            GameScene.bossSlain();
+            level().unseal();
+        }
+
         // quest kill counting lives in lua scripts now (mob.installOnDieCallback
         // - ScarecrowNPC.lua rat/gnoll gate is the last consumer)
 
@@ -503,6 +783,13 @@ public abstract class Mob extends Char {
         if (hero.isAlive() && !CharUtils.isVisible(this)) {
             GLog.i(StringsManager.getVar(R.string.Mob_Died));
         }
+    }
+
+    // boss intro yells etc; sprite alert already played by the base
+    @Override
+    public void notice() {
+        super.notice();
+        getScript().runOptionalNoRet("onNotice");
     }
 
     @LuaInterface
@@ -573,11 +860,17 @@ public abstract class Mob extends Char {
     }
 
     public boolean reset() {
-        return false;
+        return persistOnReset;
     }
 
     @LuaInterface
     public void beckon(int cell) {
+        if (npc) {
+            return;
+        }
+        if (dataDriven && !(friendly && movable)) {
+            return;
+        }
         notice();
         setState(MobAi.getStateByClass(Wandering.class));
         setTarget(cell);
@@ -635,62 +928,137 @@ public abstract class Mob extends Char {
         return friendly(chr, 0);
     }
 
+    @SneakyThrows
     @Override
-    public boolean friendly(@NotNull Char chr, int r_level) {
-
-        if (r_level > 7) {
-            EventCollector.logException("too high r_level in Mob::friendly");
-            return false;
+    protected void fillMobStats(boolean restoring) {
+        JSONObject classDesc = getClassDef();
+        if(! classDesc.keys().hasNext()) {
+            GLog.debug("No mob def: " + mobClass);
+            return;
         }
 
-        if (chr == this) {
-            return true;
+        dataDriven = true;
+        canBePet = false;
+
+        baseDefenseSkill = classDesc.optInt("defenseSkill", baseDefenseSkill);
+        baseAttackSkill = classDesc.optInt("attackSkill", attackSkill);
+
+        expForKill = classDesc.optInt("exp", expForKill);
+        maxLvl = classDesc.optInt("maxLvl", maxLvl);
+        dmgMin = classDesc.optInt("dmgMin", dmgMin);
+        dmgMax = classDesc.optInt("dmgMax", dmgMax);
+
+        dr = classDesc.optInt("dr", dr);
+
+        baseStr = classDesc.optInt("str", baseStr);
+
+        baseSpeed = (float) classDesc.optDouble("baseSpeed", baseSpeed);
+        attackDelay = (float) classDesc.optDouble("attackDelay", attackDelay);
+
+        spriteClass = classDesc.optString("spriteDesc", "spritesDesc/Rat.json");
+
+        flying = classDesc.optBoolean("flying", flying);
+
+        setViewDistance(classDesc.optInt("viewDistance", getViewDistance()));
+
+        walkingType = Enum.valueOf(WalkingType.class, classDesc.optString("walkingType","NORMAL"));
+
+        canBePet = classDesc.optBoolean("canBePet",canBePet);
+
+        attackRange = classDesc.optInt("attackRange",attackRange);
+        isBoss = classDesc.optBoolean("isBoss",isBoss);
+        if (isBoss) {
+            // java Boss ctor semantics: uncapturable, death/psionic-blast proof
+            canBePet = false;
+            addResistance(Death.class);
+            addResistance(ScrollOfPsionicBlast.class);
         }
 
-        if (hasBuff(BuffFactory.AMOK) || chr.hasBuff(BuffFactory.AMOK)) {
-            return false;
+        battleMusic = classDesc.optString("battleMusic", "");
+        if (!battleMusic.isEmpty() && !ModdingMode.isSoundExists(battleMusic)) {
+            battleMusic = classDesc.optString("battleMusicFallback", "");
         }
 
-        if (getOwnerId() == chr.getId() || getId() == chr.getId()) {
-            return true;
+        String scriptFile = classDesc.optString("scriptFile","");
+        if(!scriptFile.isEmpty()) {
+            script = new LuaScript(scriptFile, this);
+            script.asInstance();
         }
 
-        if (getEnemy() == chr) {
-            return false;
+        friendly = classDesc.optBoolean("friendly",friendly);
+        movable = classDesc.optBoolean("movable",movable);
+        immortal = classDesc.optBoolean("immortal",immortal);
+        pacified = classDesc.optBoolean("pacified",pacified);
+
+        spriteLayer = classDesc.optInt("spriteLayer",spriteLayer);
+
+        humanoid = classDesc.optBoolean("isHumanoid", humanoid);
+
+        heroSprite = classDesc.optBoolean("heroSprite", heroSprite);
+
+        persistOnReset = classDesc.optBoolean("persistOnReset", persistOnReset);
+
+        npc = classDesc.optBoolean("npc", npc);
+        if (npc) {
+            canBePet = false;
         }
 
-        if (getOwnerId() != getId()) {
-            Char owner = getOwner();
-            // Don't recurse into a stale/DUMMY owner (getOwner() returns DUMMY for unresolved ids)
-            // or back into ourselves — both extend/cycle the chain and trip the r_level circuit-breaker.
-            if (owner != this && owner.valid() && owner.friendly(chr, r_level + 1)) {
-                return true;
+        kind = classDesc.optInt("var", kind);
+        carcassChance = (float) classDesc.optDouble("carcassChance", carcassChance);
+        hasBodyParts = classDesc.optBoolean("hasBodyParts", hasBodyParts);
+
+        JsonHelper.readStringSet(classDesc, Char.IMMUNITIES, immunities);
+        JsonHelper.readStringSet(classDesc, Char.RESISTANCES, resistances);
+
+        if(!restoring) {
+            setFraction(Enum.valueOf(Fraction.class, classDesc.optString("fraction","DUNGEON")));
+            hp(ht(classDesc.optInt("ht", 1)));
+            fromJson(classDesc);
+
+            if (isBoss && !mobClass.equals(MobFactory.SHADOW_LORD)) {
+                // bosses carry the SkeletonKey that drops with their gear;
+                // ShadowLord never did (java Boss.restoreFromBundle exclusion)
+                collect(new SkeletonKey());
             }
         }
+    }
 
-        if (chr instanceof Hero) {
-            if(chr.getHeroClass().friendlyTo(getEntityKind())) {
-                return true;
-            }
-        }
-
-        return super.friendly(chr, r_level);
+    // hero-interaction hooks (steal etc.): java Crystal.onActionTarget parity
+    public void setHeroLook(String[] look, String deathEffect) {
+        heroLook = look;
+        heroDeathEffect = deathEffect;
     }
 
     @Override
-    public boolean canBePet() {
-        return true;
+    public void onActionTarget(String action, Char actor) {
+        getScript().runOptionalNoRet("onActionTarget", action, actor);
+        super.onActionTarget(action, actor);
     }
 
     @Override
-    public boolean swapPosition(Char chr) {
-        if (super.swapPosition(chr)) {
-            setState(MobAi.getStateByClass(Wandering.class));
-            return true;
-        }
-        return false;
+    public int getSpriteLayer() {
+        return spriteLayer;
     }
 
+    @LuaInterface
+    public boolean isHumanoid() {
+        return humanoid;
+    }
+
+    // Mob stores the flag as a field; the isBoss() method lives on Char only
+    @LuaInterface
+    @Override
+    public boolean isBoss() {
+        return isBoss;
+    }
+
+    @LuaInterface
+    @Override
+    public boolean hasBodyParts() {
+        return hasBodyParts;
+    }
+
+    @Override
     public boolean zap(@NotNull Char enemy) {
 
         // script hook may take the zap entirely (no-damage controller zaps,
@@ -808,25 +1176,6 @@ public abstract class Mob extends Char {
 
     @Override
     @LuaInterface
-    public int damageRoll() {
-        int dmg = Random.NormalIntRange(dmgMin, dmgMax) + Random.NormalIntRange(0, lvl());
-
-        dmg += getActiveWeapon().damageRoll(this);
-
-        if (!rangedWeapon.valid()) {
-            dmg += getSecondaryWeapon().damageRoll(this);
-        }
-
-        return dmg;
-    }
-
-    @Override
-    public int dr() {
-        return getItemFromSlot(Belongings.Slot.ARMOR).effectiveDr() + dr + lvl() / 2;
-    }
-
-    @Override
-    @LuaInterface
     public Item carcass() {
         if(carcassRef != null) {
             return carcassRef;
@@ -842,11 +1191,6 @@ public abstract class Mob extends Char {
     }
 
     public void adjustStats(int depth) {
-    }
-
-    @LuaInterface
-    public boolean isHumanoid() {
-        return false;
     }
 
     @Override

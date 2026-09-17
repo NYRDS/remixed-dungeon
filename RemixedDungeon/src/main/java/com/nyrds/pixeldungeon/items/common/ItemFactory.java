@@ -39,7 +39,6 @@ import com.nyrds.pixeldungeon.items.material.SoulShard;
 import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
-import com.nyrds.pixeldungeon.mobs.common.CustomMob;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
@@ -47,6 +46,7 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.ArmorKit;
@@ -526,10 +526,10 @@ public class ItemFactory {
                         return new Carcass(MobFactory.mobByName(mobKind));
                     } catch (Exception e) {
                         EventCollector.logException(e, mobKind);
-                        return new Carcass(new CustomMob(MobFactory.SNAIL));
+                        return new Carcass(new Mob(MobFactory.SNAIL));
                     }
                 }
-                return new Carcass(new CustomMob(MobFactory.SNAIL));
+                return new Carcass(new Mob(MobFactory.SNAIL));
             }
 
             try {

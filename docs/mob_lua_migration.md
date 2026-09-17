@@ -2028,3 +2028,53 @@ available.
 `getScript().runOptionalNoRet` chains at the WandOfFlock/Hero call sites.
 Deliberately NOT @LuaInterface — luaj silently drops trailing args when lua
 calls an annotated varargs method, so it is a java→script dispatch only.
+
+## Tier-3 squash: CustomMob merged into Mob (2026-09-17)
+
+After 17d-5 closed the boss series the Char tree was 9 classes, and every
+mob in the game was a `CustomMob` except the ads-driven `ServiceManNPC`.
+The duality was pure overhead, so `CustomMob` (429 lines) and its last
+shell parent `MultiKindMob` (35 lines) were merged into `Mob` (861);
+both classes deleted. `Mob` is now concrete and data-capable: one class
+owns the json stat block, the script-hook cluster and the engine
+behavior. Hero/DummyChar/DummyHero/NPC(ServiceMan) unchanged.
+
+Shape of the merge (method-by-method parity):
+
+- CustomMob's overrides that called `super.xxx()` had the old Mob body
+  inlined under their gates (add/act/die/beckon/damageRoll/defenseSkill/
+  dr/canAttack/newSprite/restoreFromBundle/friendly/speed/notice).
+- New `dataDriven` flag set when a mobsDesc json actually applied; it
+  picks the json-era formula (raw `dr` field, range+LOS `canAttack`,
+  beckon gate) vs the engine formula for plain java mobs
+  (armor dr, Char.canAttack, unconditional beckon).
+- `canBePet` field defaults true (plain-mob parity); `fillMobStats`
+  resets it to false before reading the json key, so data mobs keep the
+  old CustomMob default.
+- `mobClass` defaults to the runtime class simple name in the no-arg
+  ctor (ServiceMan keeps its kind); the `(String)` ctor is the factory
+  path. `kind` (MultiKindMob, `var` json key, KIND bundle tag) moved in
+  verbatim - sprite-frame selection for the spider jsons survives.
+- The Char ctor/restore already dispatched `fillMobStats` virtually, so
+  the CustomMob ctor's explicit re-call is preserved (the first, pre-
+  mobClass call is a no-op on "Unknown") - construction byte-order
+  unchanged.
+- IZapper now implemented by Mob itself.
+- MobFactory json-scan maps kinds to `Mob.class` (was CustomMob.class);
+  the `mobClass != Mob.class` guard keeps registered java classes on the
+  newInstance path. ItemFactory SNAIL carcass fallback constructs
+  `new Mob(SNAIL)`; Hero.makeClone calls `setHeroLook` directly.
+
+Save compatibility: none needed - `getEntitySystem()` was Char's
+`"mob"` all along, the kind tags are unchanged, and `@Packable mobClass`
+rides under the same key. allMobs 126/0, live probes (Goo/ShadowLord
+SkeletonKey parity, Skeleton undead, npc buff veto, Scorpio Kite state,
+Icemancer no-damage zap, wounded-mob level round-trip, MirrorImage
+clone pet, Statue gear STR), suites alchemy 42/42 all_spells 38/38
+blood 6/6 doctor 7/7 nav pet 5/5 turn 1/1, android + desktop green.
+
+The 7 `instanceof NPC` gates (domination/necrotism/chaos-staff/
+sacrificial-sword/teleport-armor/CharUtils.actions/Level step-off) are
+left as-is: they only ever matched ServiceManNPC since the NPC tier
+went data (CustomMob never extended NPC). Retargeting them to a real
+isNpc() predicate would change behavior for data NPCs - separate ruling.

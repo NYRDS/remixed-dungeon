@@ -103,7 +103,7 @@ public class MobFactory {
 		for(String mobFile: ModdingMode.listResources("mobsDesc", (dir, name) -> name.endsWith(".json"))) {
 			String mobKind = mobFile.replace(".json", Utils.EMPTY_STRING);
 			if(!mMobsList.containsKey(mobKind)) {	// do not shadow built-in classes by partial json definitions
-				mMobsList.put(mobKind, CustomMob.class);
+				mMobsList.put(mobKind, Mob.class);
 			}
 		}
 	}
@@ -201,10 +201,10 @@ public class MobFactory {
 		try {
 			Class<? extends Mob> mobClass = mMobsList.get(selectedMobClass);
 
-			if (mobClass!=null && mobClass != CustomMob.class) {
+			if (mobClass!=null && mobClass != Mob.class) {
 				return mobClass.newInstance();
 			} else {
-				return new CustomMob(selectedMobClass);
+				return new Mob(selectedMobClass);
 			}
 		} catch (Exception e) {
 			throw new TrackedRuntimeException(selectedMobClass,e);
@@ -213,7 +213,7 @@ public class MobFactory {
 
 	/**
 	 * Gated resolver for save-restore: null unless the kind is registered or
-	 * has a data def. Never constructs a def-less CustomMob from a bare kind.
+	 * has a data def. Never constructs a def-less data mob from a bare kind.
 	 */
 	@Nullable
 	public static Mob tryByName(String kind) {
