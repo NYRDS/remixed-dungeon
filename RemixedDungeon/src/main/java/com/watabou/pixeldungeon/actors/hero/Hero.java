@@ -11,6 +11,8 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.CustomMob;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
@@ -52,7 +54,6 @@ import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Ankh;
@@ -370,7 +371,14 @@ public class Hero extends Char {
 
     @Override
     public Char makeClone() {
-        return new MirrorImage(this);
+        // MirrorImage kind is lua data now (batch 17d-5): the script hook
+        // snapshots combat stats and pet ownership, java captures the look
+        Char image = MobFactory.mobByName(MobFactory.MIRROR_IMAGE);
+        image.getScript().runOptionalNoRet("onClone", this);
+        if (image instanceof CustomMob) {
+            ((CustomMob) image).setHeroLook(getHeroSprite().getLayersDesc(), getHeroSprite().getDeathEffect());
+        }
+        return image;
     }
 
     public void rest(boolean tillHealthy) {

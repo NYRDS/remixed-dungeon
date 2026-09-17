@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
@@ -251,6 +252,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         return 2;
     }
 
+    @LuaInterface
     public void mobWandUse(Char user, final int tgt) {
 
         if (user.invalid()) {

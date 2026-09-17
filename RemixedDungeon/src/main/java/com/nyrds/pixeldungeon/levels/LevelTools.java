@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -17,6 +18,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class LevelTools {
 
+    @LuaInterface
     public static void buildShadowLordMaze(Level level, final int roomStep) {
         int w = level.getWidth();
         int h = level.getHeight();
@@ -91,6 +93,7 @@ public class LevelTools {
         }
     }
 
+    @LuaInterface
     public static void makeEmptyLevel(Level level, boolean randomEntrance) {
         int width = level.getWidth();
         int height = level.getHeight();

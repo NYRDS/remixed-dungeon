@@ -1931,3 +1931,94 @@ DummyChar (fresh `start_game` fixes; also wipes lua_eval globals —
 redefine helpers); stage in cells with 2+ free neighbors or the retreat
 leg looks broken (boxed mobs stand still, and `Level.distance` can read
 1 while the mob is genuinely fleeing along a wall).
+
+## 17d-5: ShadowLord + Crystal + MirrorImage + Sheep (SHIPPED 2026-09-17)
+
+The tail of the series. Bosses: **ShadowLord** (depth 25 arena) + its
+**Crystal** pedestal minion; specials: **MirrorImage** (hero clone) +
+**Sheep** (flock block). `mobsDesc/{ShadowLord,Crystal,MirrorImage,Sheep}.json`
++ `scripts/mobs/{ShadowLord,Crystal,MirrorImage,Sheep}.lua`. Java deleted:
+ShadowLord, Crystal, MirrorImage, the nested WandOfFlock.Sheep **and
+`Boss.java` itself** - after ShadowLord moved, Boss had no subclasses left.
+Boss die-flow/music/key semantics live on in CustomMob (`isBoss` +
+`battleMusic` json). Remaining java mob kinds: ServiceManNPC only.
+
+- ShadowLord: `attackRange: 3` ≡ java `dist < 4` (integer distances), zap
+  visual rides the existing `zapEffect: "Shadow"` sprite key - base
+  CustomMob range+LOS check needed no hook. Damage reaction (blink
+  `blinkAwayFrom`, twist via exposed `LevelTools.makeEmptyLevel` /
+  `buildShadowLordMaze`, 5×5 Darkness) rides the `damage` hook; the
+  Fleeing state is **re-asserted in act** - the revenge AI re-asserts
+  HUNTING over anything a pre-flow damage hook sets (Kite re-assert
+  pattern again). Flee window uses `self.time` (Actor.time is the actor's
+  own turn clock) not act-tick counts.
+- Crystal: depth-scaled stats hook, pure-Ballistica `canAttack` (Eye
+  pattern), kind<2 auto-hit (`attackSkill` hook 1000 - pedestal rooms
+  spawn kind 0!), kind-2 = 25% shadowbolt. Wand re-found after reload by
+  `getItemPartialMatch("WandOf")` - no lua instanceof needed. Death on
+  pedestal: remove object, EMBERS, clear Darkness / fill Foliage 5×5.
+  Steal reaction via new generic `CustomMob.onActionTarget` script
+  dispatch (key `onActionTarget`), `ChaosCommon.doChaosMark` now bound.
+- MirrorImage: `Hero.makeClone` is the sole factory (Multiplicity switched
+  from `new MirrorImage`): mobByName + script `onClone` (stat snapshot +
+  makePet) + java-captured hero look into new `@Packable` CustomMob
+  fields `heroLook`/`heroDeathEffect`, consumed by the `heroSprite`
+  newSprite branch before the statue item path. `attackProc` hook
+  self-destructs after the first attack. RaiseDead's kind-string
+  exclusion untouched.
+- Sheep: immortal + Passive + NEUTRAL + `movable:false` (movable:false
+  doubles as the beckon veto the old NPC base had). Lifespan via script
+  `setLifespan` (java WandOfFlock) / module require (ChaosShieldLeft),
+  measured against `self.time`, kept in a module-local weak table so the
+  java quirk "lifespan not saved, reloaded sheep fade fast" is preserved.
+  `addBuff` hook returns true = the old NPC blanket buff immunity.
+- SkeletonKey: ShadowLord keeps its no-key exclusion (wiki-documented);
+  CustomMob's two key spots exempt `MobFactory.SHADOW_LORD`.
+
+Java surface added: `@LuaInterface` on LevelTools.makeEmptyLevel/
+buildShadowLordMaze, Level.set(3-arg)/remove/fillAreaWith×2/
+clearAreaFrom×2/getSolidCellNextTo, CharUtils.spawnWraithAt/Around +
+new `CharUtils.isChar(Object)` (luaj has no `luajava.instanceof`),
+Wand.mobWandUse, SimpleWand.createRandomSimpleWand, ChaosCommon.doChaosMark,
+Char.attackSkill/defenseSkill; commonClasses binds RPD.LevelTools/
+SimpleWand/ChaosCommon/StringsManager/Char + Tweeners.AlphaTweener.
+
+Latent bug fixed en route: StandardPainter's pedestal rooms spawned the
+crystal via bare `level.mobs.add` (actor never registered - the crystal
+was inert and, worse, the script spawn hook never ran). Now proper
+`MobFactory.mobByName` + `level.spawnMob`. Also hardened
+`RPD.spawnMob` against the empty-desc `{}` → `[]` gson foot-gun.
+
+Accepted deltas: blink-away loses the purple missile fx + sprite hide
+(Char.fx unreachable from lua); MirrorImage old saves lose the custom
+look (re-copy hero look; copied stats were never saved anyway); crystal
+kinds 0/1 static alternation dropped - behaviorally identical (both
+auto-hit), painter crystals always kind 0 now; sheep lifetime fuzz
+approximates java's `Random.Float(2)`; boss battle-music act hook and
+ModQuirks.mobLeveling boss-level roll ride the json isBoss path (17d-4
+precedent).
+
+**Direct-dispatch hook signature (new lesson):** hooks dispatched
+straight by java (`getScript().run/runOptionalNoRet`) - onClone,
+onActionTarget, setLifespan - receive `(scriptTable, boundMob, ...args)`:
+the bound instance is ALWAYS arg1, the java call args follow. The
+mob.lua wrapper hooks (act/damage/spawn/...) hide this. Actor.time is
+per-actor turn time - use its delta, never raw act-call counts (Mob.act
+re-dispatches the act hook several times per turn).
+
+Verified live: go_to_level 25 → boss via Bestiary 260hp, no SkeletonKey
+in belongings, ScrollOfWeaponUpgrade present; damage → blink + Fleeing
+re-assert + maze twist + kind-2 crystal on pedestal (WandOfRegrowth +8 =
+⌊25/3⌋) + Darkness; crystal death → pedestal removed + EMBERS + Foliage,
+wand drops; flee window closes → Wandering + wraith summons; kill →
+badge SHADOW_LORD_SLAIN + arena entrance/exit restored; MirrorImage
+clone → pet + atk snapshot + attackProc self-destruct; sheep lifespan
+fades on schedule, baa interact; steal → chaos mark + death;
+allMobs 126/0; save round-trip clean. CI: alchemy 42/42, nav 9/9,
+doctor 7/7, blood 6/6, all_spells green. Android + desktop compile green.
+
+Open follow-up (bd write blocked by identity check this session): expert
+difficulty bosses carrying readable items — ShadowLord drops/holds a
+ScrollOfWeaponUpgrade and MobItemAi may "read" it mid-combat, opening a
+modal. Kept verbatim for parity; file a bd bug when bd identity is
+available.

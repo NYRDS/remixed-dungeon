@@ -154,7 +154,8 @@ local Effects = luajava.bindClass("com.watabou.pixeldungeon.effects.Effects")
 
 local Tweeners = {
     PosTweener  = luajava.bindClass("com.watabou.noosa.tweeners.PosTweener"),
-    JumpTweener = luajava.bindClass("com.watabou.noosa.tweeners.JumpTweener")
+    JumpTweener = luajava.bindClass("com.watabou.noosa.tweeners.JumpTweener"),
+    AlphaTweener = luajava.bindClass("com.watabou.noosa.tweeners.AlphaTweener")
 }
 
 local Sfx = {
@@ -193,6 +194,10 @@ local ItemUtils = luajava.bindClass("com.nyrds.pixeldungeon.items.ItemUtils")
 local Statistics = luajava.bindClass("com.watabou.pixeldungeon.Statistics")
 local Random = luajava.bindClass("com.watabou.utils.Random")
 local TerrainFlags = luajava.bindClass("com.watabou.pixeldungeon.levels.TerrainFlags")
+local LevelTools = luajava.bindClass("com.nyrds.pixeldungeon.levels.LevelTools")
+local SimpleWand = luajava.bindClass("com.watabou.pixeldungeon.items.wands.SimpleWand")
+local ChaosCommon = luajava.bindClass("com.nyrds.pixeldungeon.items.chaos.ChaosCommon")
+local Char = luajava.bindClass("com.watabou.pixeldungeon.actors.Char")
 
 local RPD = {
     RemixedDungeon = RemixedDungeon,
@@ -220,6 +225,11 @@ local RPD = {
     CharsList = CharsList,
     CharUtils = CharUtils,
     MobSpawner = MobSpawner,
+    LevelTools = LevelTools,
+    SimpleWand = SimpleWand,
+    ChaosCommon = ChaosCommon,
+    StringsManager = StringsManager,
+    Char = Char,
     Utils = luajava.bindClass("com.nyrds.lua.LuaUtils"),
     QuickSlot = luajava.bindClass("com.watabou.pixeldungeon.ui.QuickSlot"),
     BackpackMode = BackpackMode,
@@ -467,6 +477,10 @@ local RPD = {
     end,
 
     spawnMob = function(mobClass, cell, mobDesc)
+        -- an empty lua table encodes to "[]" and createMob needs an object
+        if mobDesc ~= nil and next(mobDesc) == nil then
+            mobDesc = nil
+        end
         local mob = MobFactory:createMob(mobClass, json.encode(mobDesc or {_=""}))
         mob:setPos(cell)
         assert(mob, "can't spawn mob "..mobClass)

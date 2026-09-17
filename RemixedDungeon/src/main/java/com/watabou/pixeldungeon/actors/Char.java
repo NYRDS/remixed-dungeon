@@ -599,6 +599,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return getItemFromSlot(Belongings.Slot.WEAPON) instanceof KindOfBow;
     }
 
+    @LuaInterface
     public int attackSkill(Char target) {
 
         int[] bf = {0};
@@ -628,6 +629,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return aSkill;
     }
 
+    @LuaInterface
     public int defenseSkill(Char enemy) {
 
         int defenseSkill = baseDefenseSkill + lvl();

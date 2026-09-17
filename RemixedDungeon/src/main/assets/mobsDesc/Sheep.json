@@ -1,0 +1,21 @@
+{
+  "name"          : "Sheep_Name",
+  "name_objective": "Sheep_Name_Objective",
+  "description"   : "Sheep_Desc",
+  "gender"        : "Sheep_Gender",
+  "str"           : 10,
+  "ht"            : 1,
+  "exp"           : 0,
+  "baseSpeed"     : 1,
+  "attackDelay"   : 1,
+  "walkingType"   : "NORMAL",
+  "aiState"       : "Passive",
+  "spriteDesc"    : "spritesDesc/Sheep.json",
+  "scriptFile"    : "scripts/mobs/Sheep",
+  "immortal"      : true,
+  "movable"       : false,
+  "carcassChance" : 0,
+  "canBePet"      : false,
+  "friendly"      : false,
+  "fraction"      : "NEUTRAL"
+}

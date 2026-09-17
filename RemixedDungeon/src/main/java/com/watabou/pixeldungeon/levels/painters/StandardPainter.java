@@ -4,8 +4,9 @@ package com.watabou.pixeldungeon.levels.painters;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Trap;
-import com.nyrds.pixeldungeon.mobs.common.Crystal;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.Level;
@@ -149,9 +150,12 @@ public class StandardPainter extends Painter {
 		level.putLevelObject(LevelObjectsFactory.createCustomObject(level, LevelObjectsFactory.PEDESTAL, level.cell(roomCenter.x, roomCenter.y)));
 
 		if(Random.Float(1) < 0.25f) {
-			Crystal crystal = new Crystal();
+			// Crystal kind is lua data now (mobsDesc/Crystal.json, batch 17d-5);
+			// proper spawnMob instead of the legacy bare mobs.add so the script
+			// spawn hook (held wand) actually runs
+			Mob crystal = MobFactory.mobByName(MobFactory.CRYSTAL);
 			crystal.setPos(level.cell(roomCenter.x, roomCenter.y));
-			level.mobs.add( crystal );
+			level.spawnMob(crystal);
 		}
 	}
 	

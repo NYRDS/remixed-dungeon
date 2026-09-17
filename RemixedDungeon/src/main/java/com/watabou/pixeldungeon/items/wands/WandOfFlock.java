@@ -1,15 +1,15 @@
 
 package com.watabou.pixeldungeon.items.wands;
 
-import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -18,8 +18,6 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
-import com.watabou.utils.Random;
-import org.jetbrains.annotations.NotNull;
 
 public class WandOfFlock extends SimpleWand  {
 
@@ -51,23 +49,25 @@ public class WandOfFlock extends SimpleWand  {
 		}
 		
 		float lifespan = spellLevel + 3;
-		
+
 	sheepLabel:
 		for (int i=0; i < n; i++) {
 			do {
 				for (int j=0; j < level.getLength(); j++) {
 					if (PathFinder.distance[j] == dist) {
-						
-						Sheep sheep = new Sheep();
-						sheep.lifespan = lifespan;
+
+						// Sheep kind is lua data now (mobsDesc/Sheep.json, batch 17d-5);
+						// the lifetime rides the script via setLifespan
+						Mob sheep = MobFactory.mobByName(MobFactory.SHEEP);
+						sheep.getScript().runOptionalNoRet("setLifespan", lifespan);
 						sheep.setPos(j);
 						level.spawnMob(sheep);
 						level.press(sheep.getPos(), sheep );
-						
+
 						CellEmitter.get( j ).burst( Speck.factory( Speck.WOOL ), 4 );
-						
+
 						PathFinder.distance[j] = Integer.MAX_VALUE;
-						
+
 						continue sheepLabel;
 					}
 				}
@@ -75,7 +75,7 @@ public class WandOfFlock extends SimpleWand  {
 			} while (dist < n);
 		}
 	}
-	
+
 	protected void fx( int cell, Callback callback ) {
 		MagicMissile.wool( getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
@@ -85,38 +85,4 @@ public class WandOfFlock extends SimpleWand  {
 	public String desc() {
         return StringsManager.getVar(R.string.WandOfFlock_Info);
     }
-
-	public static class Sheep extends NPC {
-		
-		public Sheep() {
-			super();
-			spriteClass = "spritesDesc/Sheep.json";
-		}
-
-		public float lifespan;
-		
-		private boolean initialized = false;
-		
-		@Override
-        public void act() {
-			if (initialized) {
-				destroy();
-				getSprite().die();
-				
-			} else {
-				initialized = true;
-				spend( lifespan + Random.Float( 2 ) );
-			}
-		}
-		
-		@Override
-		public void damage(int dmg, @NotNull NamedEntityKind src ) {
-		}
-
-		@Override
-		public boolean interact(final Char hero) {
-            say( Random.element(StringsManager.getVars(R.array.WandOfFlock_SheepBaa)) );
-			return false;
-		}
-	}
 }

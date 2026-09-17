@@ -55,6 +55,13 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	// statue-style sprite: hero-layers + currently equipped item
 	private boolean heroSprite = false;
 
+	// hero-look sprite layers (MirrorImage clones): set by Hero.makeClone,
+	// persisted like the java MirrorImage look/deathEffect fields were
+	@Packable
+	public String[] heroLook = new String[0];
+	@Packable
+	public String heroDeathEffect;
+
 	// survive Level.reset (statues stay, ordinary mobs are removed)
 	private boolean persistOnReset = false;
 
@@ -346,8 +353,9 @@ public class CustomMob extends MultiKindMob implements IZapper {
 			hp(ht(classDesc.optInt("ht", 1)));
 			fromJson(classDesc);
 
-			if (isBoss) {
-				// bosses carry the SkeletonKey that drops with their gear
+			if (isBoss && !mobClass.equals(MobFactory.SHADOW_LORD)) {
+				// bosses carry the SkeletonKey that drops with their gear;
+				// ShadowLord never did (java Boss.restoreFromBundle exclusion)
 				collect(new SkeletonKey());
 			}
 		}
@@ -358,9 +366,21 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		super.restoreFromBundle(bundle);
 
 		// java Boss fixup parity: a save predating the key must not brick the stair
-		if (isBoss && getBelongings().getItem(SkeletonKey.class) == null) {
+		if (isBoss && !mobClass.equals(MobFactory.SHADOW_LORD) && getBelongings().getItem(SkeletonKey.class) == null) {
 			collect(new SkeletonKey());
 		}
+	}
+
+	// hero-interaction hooks (steal etc.): java Crystal.onActionTarget parity
+	public void setHeroLook(String[] look, String deathEffect) {
+		heroLook = look;
+		heroDeathEffect = deathEffect;
+	}
+
+	@Override
+	public void onActionTarget(String action, Char actor) {
+		getScript().runOptionalNoRet("onActionTarget", action, actor);
+		super.onActionTarget(action, actor);
 	}
 
 	@Override
@@ -390,6 +410,9 @@ public class CustomMob extends MultiKindMob implements IZapper {
 	@Override
 	public CharSprite newSprite() {
 		if (heroSprite) {
+			if (heroLook.length > 0 && heroDeathEffect != null && !heroDeathEffect.isEmpty()) {
+				return HeroSpriteDef.createHeroSpriteDef(heroLook, heroDeathEffect);
+			}
 			var item = getItemFromSlot(Belongings.Slot.WEAPON);
 			if (!item.valid()) {
 				item = getItemFromSlot(Belongings.Slot.ARMOR);

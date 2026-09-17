@@ -251,6 +251,7 @@ public class CharUtils {
 		return count;
 	}
 
+	@LuaInterface
 	public static Mob spawnWraithAt(Level level, int pos) {
         Mob wraith = MobFactory.mobByName(MobFactory.WRAITH);
 
@@ -272,7 +273,8 @@ public class CharUtils {
         return wraith;
     }
 
-    public static void spawnWraithsAround(Level level, int pos) {
+	@LuaInterface
+	public static void spawnWraithsAround(Level level, int pos) {
         for (int n : Level.NEIGHBOURS4) {
             spawnWraithAt(level, pos + n);
         }
@@ -618,6 +620,12 @@ public class CharUtils {
 	@LuaInterface
 	public static void validateBossSlain(@NotNull String badge) {
 		Badges.validateBossSlain(Badges.Badge.valueOf(badge));
+	}
+
+	// lua has no instanceof for the damage-source Char check (ShadowLord blink)
+	@LuaInterface
+	public static boolean isChar(@Nullable Object obj) {
+		return obj instanceof Char;
 	}
 
     @NotNull

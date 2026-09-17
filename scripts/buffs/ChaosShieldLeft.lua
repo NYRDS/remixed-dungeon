@@ -107,7 +107,8 @@ return buff.init{
                     enemy:getSprite():killAndErase();
                     enemy:destroy()
                     local sheep = RPD.spawnMob("Sheep",pos,{})
-                    sheep.lifespan = math.random(3,5)
+                    -- lifespan rides the Sheep script now (17d-5)
+                    require "scripts/mobs/Sheep".setLifespan(sheep, math.random(3,5))
                     sheep:getSprite():emitter():burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.WOOL ), 4)
                 end
 

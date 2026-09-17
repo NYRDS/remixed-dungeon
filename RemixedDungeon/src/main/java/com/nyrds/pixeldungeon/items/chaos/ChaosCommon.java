@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.chaos;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -25,6 +26,7 @@ public class ChaosCommon {
 	};
 	
 	@SuppressWarnings("unchecked")
+	@LuaInterface
 	public static void doChaosMark(int cell, int charge) {
 		if(charge > 0) {
 			CellEmitter.center( cell ).burst( PurpleParticle.BURST, Random.IntRange( 10, 20 ) );

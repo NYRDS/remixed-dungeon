@@ -1172,6 +1172,7 @@ public abstract class Level implements Bundlable {
 		}
 	}
 
+	@LuaInterface
 	public void set(int x, int y, int terrain) {
 		int cell = cell(x, y);
 		set(cell, terrain);
@@ -1354,6 +1355,7 @@ public abstract class Level implements Bundlable {
 		GameScene.add(plant);
 	}
 
+	@LuaInterface
 	public boolean remove(@NotNull LevelObject levelObject) {
 
 		var objectsLayer = objects.get(levelObject.getLayer());
@@ -1810,6 +1812,7 @@ public abstract class Level implements Bundlable {
 		return cell >= 0 && cell < getLength();
 	}
 
+	@LuaInterface
 	public int getSolidCellNextTo(int cell) {
 		ArrayList<Integer> candidates = new ArrayList<>();
 
@@ -2074,11 +2077,13 @@ public abstract class Level implements Bundlable {
 		return cell / width;
 	}
 
+	@LuaInterface
 	public void fillAreaWith(Class<? extends Blob> blobClass, int cell, int xs, int ys, int amount) {
 		fillAreaWith(blobClass, cellX(cell), cellY(cell), xs, ys, amount);
 	}
 
 	@SneakyThrows
+	@LuaInterface
 	public void fillAreaWith(Class<? extends Blob> blobClass, int x, int y, int xs, int ys, int amount) {
 		Blob blob = blobs.get(blobClass);
 		if (blob == null) {
@@ -2097,6 +2102,7 @@ public abstract class Level implements Bundlable {
 		blobPut(blobClass, blob);
 	}
 
+	@LuaInterface
 	public void clearAreaFrom(Class<? extends Blob> blobClass, int cell, int xs, int ys) {
 		clearAreaFrom(blobClass, cellX(cell), cellY(cell), xs, ys);
 	}
@@ -2110,6 +2116,7 @@ public abstract class Level implements Bundlable {
 		blob.clearAllBlob();
 	}
 
+	@LuaInterface
 	public void clearAreaFrom(Class<? extends Blob> blobClass, int x, int y, int xs, int ys) {
 		Blob blob = blobs.get(blobClass);
 		if (blob == null) {

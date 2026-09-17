@@ -9,8 +9,6 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
-import com.watabou.pixeldungeon.items.wands.WandOfFlock;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.util.ArrayList;
@@ -65,6 +63,8 @@ public class MobFactory {
 	public static final String ALBINO = "Albino";
 	public static final String SHIELDED = "Shielded";
 	public static final String SHADOW = "Shadow";
+	public static final String SHADOW_LORD = "ShadowLord";
+	public static final String CRYSTAL = "Crystal";
 	public static final String DREAD_KNIGHT = "DreadKnight";
 	public static final String TREACHEROUS_SPIRIT = "TreacherousSpirit";
 	public static final String GNOLL = "Gnoll";
@@ -138,13 +138,13 @@ public class MobFactory {
 
 		// Statue/ArmoredStatue/GoldenStatue kinds are data now
 		// (mobsDesc/*.json) - classes deleted, kinds must never resolve to java.
-		registerMobClass(ShadowLord.class);
+		// ShadowLord/Crystal kinds are data now (mobsDesc/ShadowLord.json,
+		// mobsDesc/Crystal.json, batch 17d-5) - java classes deleted, kinds
+		// must never resolve to java.
 
 		// Lich/RunicSkull kinds are data now (mobsDesc/Lich.json,
 		// mobsDesc/RunicSkull.json, batch 17d-3) - java classes deleted,
 		// kinds must never resolve to java.
-
-		registerMobClass(Crystal.class);
 
 
 		// IceGuardian/IceGuardianCore kinds are data now
@@ -164,10 +164,10 @@ public class MobFactory {
 		// 16c) - java classes deleted, kinds must never resolve to java.
 		// Deathling kind is data too (mobsDesc/Deathling.json, batch 17c-2b).
 
-		registerMobClass(MirrorImage.class);
-
-		mMobsList.put(SHEEP, WandOfFlock.Sheep.class);
-		//old mods compatibility
+		// MirrorImage kind is data now (mobsDesc/MirrorImage.json, batch 17d-5)
+		// - java class deleted, kind must never resolve to java.
+		// Sheep kind is data too (mobsDesc/Sheep.json, batch 17d-5), the java
+		// WandOfFlock.Sheep nested class is deleted.
 	}
 
 	// legacy-mod kind aliases: kinds that existed only as compatibility shims

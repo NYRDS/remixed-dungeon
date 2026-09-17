@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.items.wands;
 
+import com.nyrds.LuaInterface;
 import com.watabou.utils.Random;
 import lombok.SneakyThrows;
 
@@ -16,6 +17,7 @@ public abstract class SimpleWand extends Wand {
 		WandOfSlowness.class};
 
 	@SneakyThrows
+	@LuaInterface
 	static public SimpleWand createRandomSimpleWand() {
 		return (SimpleWand) Random.element(variants).newInstance();
 	}
