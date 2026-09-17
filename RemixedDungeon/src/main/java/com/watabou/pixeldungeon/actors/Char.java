@@ -2405,6 +2405,14 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return script;
     }
 
+    // generic fire-and-forget hook dispatch from java (Sheep setLifespan,
+    // MirrorImage onClone): a missing handler is fine, script errors are
+    // logged by the engine, never thrown. JAVA-ONLY: luaj drops trailing
+    // args on annotated varargs methods, lua callers use the script table.
+    public void runInScript(@NotNull String method, @Nullable Object... args) {
+        getScript().runOptionalNoRet(method, args);
+    }
+
     @LuaInterface
     public void setGlowing(int color, float period) {
         this.glowColor = color;

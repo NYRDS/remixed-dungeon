@@ -59,7 +59,7 @@ public class WandOfFlock extends SimpleWand  {
 						// Sheep kind is lua data now (mobsDesc/Sheep.json, batch 17d-5);
 						// the lifetime rides the script via setLifespan
 						Mob sheep = MobFactory.mobByName(MobFactory.SHEEP);
-						sheep.getScript().runOptionalNoRet("setLifespan", lifespan);
+						sheep.runInScript("setLifespan", lifespan);
 						sheep.setPos(j);
 						level.spawnMob(sheep);
 						level.press(sheep.getPos(), sheep );

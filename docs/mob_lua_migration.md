@@ -2022,3 +2022,9 @@ difficulty bosses carrying readable items — ShadowLord drops/holds a
 ScrollOfWeaponUpgrade and MobItemAi may "read" it mid-combat, opening a
 modal. Kept verbatim for parity; file a bd bug when bd identity is
 available.
+
+17d-5 follow-up: generic `Char.runInScript(method, args...)` (fire-and-forget
+`LuaScript.runOptionalNoRet` on the mob's own script) replaces the ad-hoc
+`getScript().runOptionalNoRet` chains at the WandOfFlock/Hero call sites.
+Deliberately NOT @LuaInterface — luaj silently drops trailing args when lua
+calls an annotated varargs method, so it is a java→script dispatch only.

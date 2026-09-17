@@ -374,7 +374,7 @@ public class Hero extends Char {
         // MirrorImage kind is lua data now (batch 17d-5): the script hook
         // snapshots combat stats and pet ownership, java captures the look
         Char image = MobFactory.mobByName(MobFactory.MIRROR_IMAGE);
-        image.getScript().runOptionalNoRet("onClone", this);
+        image.runInScript("onClone", this);
         if (image instanceof CustomMob) {
             ((CustomMob) image).setHeroLook(getHeroSprite().getLayersDesc(), getHeroSprite().getDeathEffect());
         }
