@@ -2106,3 +2106,36 @@ suites alchemy 42/42 all_spells 38/38 blood 6/6 doctor 7/7 nav pet 5/5
 turn 1/1; android gate green. NPC/ImmortalNPC classes untouched - the
 ServiceMan json-ization (npc:true profile on a mobsDesc json) remains
 available as future cleanup.
+
+## NPC/ImmortalNPC folded; ServiceManNPC rides a json profile (2026-09-18)
+
+Mike: "squash NPC/ImmortalNPC/ServiceMan tree too". NPC.java (103) and
+ImmortalNPC.java (47) deleted; ServiceManNPC extends Mob directly and
+carries its whole behavior profile in mobsDesc/ServiceManNPC.json:
+Passive/NEUTRAL/friendly, immortal (damage no-op), npc:true (beckon
+veto, blanket buff block, act preamble, no actions), movable:false,
+baseSpeed 0.5, ht 1, exp 0, carcassChance 0, defenseSkill 1000,
+defenceVerb Ghost_Defense, persistOnReset (ImmortalNPC.reset parity).
+The java class keeps only the ads machinery (interact/reward
+video/statics) - stays java on purpose.
+
+Engine enabler: Mob() no-arg ctor now calls fillMobStats(false) after
+pinning mobClass to the runtime simple name - java-registered classes
+can carry mobsDesc profiles (the Char-ctor call ran on "Unknown" and
+was a no-op). Safe for the factory path: new Mob("Goo") -> this()
+looks up "Mob" (no desc, no-op) before the explicit "Goo" fill, so
+bosses still collect exactly one SkeletonKey. sayRandomPhrase and
+exchangeItem died with NPC - zero java callers (CagedKobold.lua carries
+the lua port).
+
+Deltas, all invisible: defenseSkill 1000 is now json-backed (Mob's
+enemySeen gate applies to unseen attackers - irrelevant, immortal eats
+all damage); speed 0.5 is buff-modifiable (ServiceMan never moves,
+movable:false). Old saves unaffected - ServiceManNPC FQN and kind never
+changed.
+
+Verified live: kind/isNpc/ht1/PASSIVE/Burning-blocked/damage-immune/
+actions 0/not petable/isMovable false/speed 0.5, town snapshot
+round-trip keeps hp+state+isNpc, allMobs 126/0, 0 LuaErrors; suites
+alchemy 42/42 all_spells 38/38 blood 6/6 doctor 7/7 nav pet 5/5 turn
+1/1; android + desktop compile green.

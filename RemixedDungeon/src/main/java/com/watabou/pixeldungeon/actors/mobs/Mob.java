@@ -222,6 +222,10 @@ public class Mob extends Char implements IZapper {
     public Mob() {
         super();
         mobClass = getClass().getSimpleName();
+        // java-registered classes may carry a mobsDesc/<SimpleName>.json
+        // profile (ServiceManNPC npc:true) - the Char-ctor fillMobStats ran
+        // on "Unknown" and was a no-op
+        fillMobStats(false);
         setupCharData();
         // explicit stat only: mobsDesc "baseStr" key; STR() in java class or
         // fillStats lua script overrides later in the ctor chain

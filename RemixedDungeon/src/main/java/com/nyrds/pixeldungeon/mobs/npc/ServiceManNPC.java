@@ -11,13 +11,20 @@ import com.nyrds.platform.util.Os;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
 
-public class ServiceManNPC extends ImmortalNPC {
+/**
+ * Ad-reward theatre NPC. The behavior profile (Passive/NEUTRAL/immortal/
+ * npc, Ghost_Defense, speed 0.5, reset-survivor) lives in
+ * mobsDesc/ServiceManNPC.json - this class keeps only the ads machinery,
+ * which stays java on purpose.
+ */
+public class ServiceManNPC extends Mob {
 
     private static final int BASIC_GOLD_REWARD = 150;
 
@@ -26,11 +33,6 @@ public class ServiceManNPC extends ImmortalNPC {
 
     public ServiceManNPC() {
         AdsUtils.initRewardVideo();
-    }
-
-    @Override
-    public boolean isNpc() {
-        return true;
     }
 
     public static Item getReward() {
