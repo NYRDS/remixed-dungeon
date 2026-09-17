@@ -1813,8 +1813,13 @@ the King keeps one servant alive and raises a replacement (at a
 different pedestal — lastPedestal excluded, random tie-break on the
 nearest scan) whenever it dies. The classic watabou fraction formula
 was clearly the intent; flagged, not "fixed" (behavior preservation).
-Pedestal-nearest is a `getNearestTerrain` port over `getLevelObjects()`
-(kind "pedestal") with `Level.distance` (already exposed).
+Pedestal seek is **`Level.nearestLevelObject(cell, kind, excludeCell)`**
+(generic, lua-reachable; Mike's call over a hand-rolled lua scan):
+`getNearestTerrain` semantics — min `Level.distance`, random tie-break,
+top-object-only on a cell (a buried object never matches), returns
+INVALID_CELL when nothing qualifies. KingPedestal's nearestPedestal is
+a one-line delegation; YogsEye's organ scan is the next candidate to
+convert if a second kind-based query ever appears.
 
 New annotations: `CustomMobAi.getTag` (state-tag guard reads it from
 lua), `CustomMob.doAttack` (state-script melee), `Char.isUndead` (new

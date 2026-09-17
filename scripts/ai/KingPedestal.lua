@@ -24,32 +24,10 @@ local function adjacent(level, a, b)
     return diff == 1 or diff == W or diff == W + 1 or diff == W - 1
 end
 
--- port of Level.getNearestTerrain over the level's pedestals: minimal
--- path distance, random tie-break, lastPedestal excluded
+-- nearest pedestal, java side: min path distance over top level objects,
+-- random tie-break, lastPedestal excluded (Level.nearestLevelObject)
 local function nearestPedestal(self, data)
-    local level = RPD.Dungeon.level
-    local candidates = {}
-    local minima = level:getLength() + 1
-
-    for _, obj in pairs(level:getLevelObjects()) do
-        if obj:getEntityKind() == "pedestal" then
-            local pos = obj:getPos()
-            if pos ~= data.lastPedestal then
-                local dist = level:distance(self:getPos(), pos)
-                if dist < minima then
-                    candidates = { pos }
-                    minima = dist
-                elseif dist == minima then
-                    candidates[#candidates + 1] = pos
-                end
-            end
-        end
-    end
-
-    if #candidates == 0 then
-        return -1
-    end
-    return candidates[math.random(#candidates)]
+    return RPD.Dungeon.level:nearestLevelObject(self:getPos(), "pedestal", data.lastPedestal or -1)
 end
 
 local function countServants()

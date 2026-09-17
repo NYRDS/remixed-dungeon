@@ -1959,6 +1959,44 @@ public abstract class Level implements Bundlable {
 		return oneCellFrom(candidates);
 	}
 
+	// generic lua-side pedestal/sign/etc seek: nearest top level object of
+	// the given kind, min path distance, random tie-break (getNearestTerrain
+	// semantics over object kinds — lua has no cellCondition closures)
+	@LuaInterface
+	public int nearestLevelObject(int cell, String kind, int excludeCell) {
+		if(!cellValid(cell)) {
+			return INVALID_CELL;
+		}
+
+		int minima = getLength();
+		candidates.clear();
+
+		for (LevelObject object : getAllLevelObjects()) {
+			int pos = object.getPos();
+
+			if (pos == excludeCell || !kind.equals(object.getEntityKind())) {
+				continue;
+			}
+
+			if (getTopLevelObject(pos) != object) {
+				continue; // buried under another object on the same cell
+			}
+
+			int delta = distance(cell, pos);
+
+			if(delta < minima) {
+				candidates.clear();
+				minima = delta;
+			}
+
+			if (delta == minima) {
+				candidates.add(pos);
+			}
+		}
+
+		return oneCellFrom(candidates);
+	}
+
 	private int oneCellFrom(@NotNull ArrayList<Integer> candidates) {
 		if (!candidates.isEmpty()) {
 			return Random.element(candidates);
