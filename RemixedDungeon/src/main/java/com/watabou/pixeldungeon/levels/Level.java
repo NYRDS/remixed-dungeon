@@ -16,6 +16,7 @@ import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
@@ -56,14 +57,6 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.features.Chasm;
 import com.watabou.pixeldungeon.levels.features.Door;
 import com.watabou.pixeldungeon.levels.features.HighGrass;
-import com.watabou.pixeldungeon.levels.traps.AlarmTrap;
-import com.watabou.pixeldungeon.levels.traps.FireTrap;
-import com.watabou.pixeldungeon.levels.traps.GrippingTrap;
-import com.watabou.pixeldungeon.levels.traps.LightningTrap;
-import com.watabou.pixeldungeon.levels.traps.ParalyticTrap;
-import com.watabou.pixeldungeon.levels.traps.PoisonTrap;
-import com.watabou.pixeldungeon.levels.traps.SummoningTrap;
-import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
 import com.watabou.pixeldungeon.levels.traps.TrapHelper;
 import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.plants.Plant;
@@ -1471,35 +1464,35 @@ public abstract class Level implements Bundlable {
 
 		switch (map[cell]) {
 			case Terrain.TOXIC_TRAP:
-				ToxicTrap.trigger(cell, chr);
+				Trap.triggerLua("ToxicTrap", cell, chr);
 				break;
 
 			case Terrain.FIRE_TRAP:
-				FireTrap.trigger(cell, chr);
+				Trap.triggerLua("FireTrap", cell, chr);
 				break;
 
 			case Terrain.PARALYTIC_TRAP:
-				ParalyticTrap.trigger(cell, chr);
+				Trap.triggerLua("ParalyticTrap", cell, chr);
 				break;
 
 			case Terrain.POISON_TRAP:
-				PoisonTrap.trigger(cell, chr);
+				Trap.triggerLua("PoisonTrap", cell, chr);
 				break;
 
 			case Terrain.ALARM_TRAP:
-				AlarmTrap.trigger(cell, chr);
+				Trap.triggerLua("AlarmTrap", cell, chr);
 				break;
 
 			case Terrain.LIGHTNING_TRAP:
-				LightningTrap.trigger(cell, chr);
+				Trap.triggerLua("LightningTrap", cell, chr);
 				break;
 
 			case Terrain.GRIPPING_TRAP:
-				GrippingTrap.trigger(cell, chr);
+				Trap.triggerLua("GrippingTrap", cell, chr);
 				break;
 
 			case Terrain.SUMMONING_TRAP:
-				SummoningTrap.trigger(cell, chr);
+				Trap.triggerLua("SummoningTrap", cell, chr);
 				break;
 
 			case Terrain.DOOR:

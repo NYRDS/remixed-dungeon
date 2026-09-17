@@ -303,6 +303,7 @@ public class Dungeon {
 
     }
 
+    @LuaInterface
     public static boolean bossLevel() {
         final Level level = Dungeon.level;
 
@@ -898,6 +899,7 @@ public class Dungeon {
             return Optional.absent();
     }
 
+    @LuaInterface
     public static void fail(String desc) {
         if (hero.getBelongings().getItem(Ankh.class) == null) {
             Rankings.INSTANCE.submit(Rankings.gameOver.LOSE, desc);

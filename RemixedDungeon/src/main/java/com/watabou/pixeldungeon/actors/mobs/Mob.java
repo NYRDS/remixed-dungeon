@@ -867,18 +867,16 @@ public class Mob extends Char implements IZapper {
         return persistOnReset;
     }
 
-    @LuaInterface
-    public void beckon(int cell) {
-        if (npc) {
-            return;
-        }
-        if (dataDriven && !(friendly && movable)) {
-            return;
-        }
-        notice();
-        setState(MobAi.getStateByClass(Wandering.class));
-        setTarget(cell);
-    }
+	@LuaInterface
+	public void beckon(int cell) {
+		// furniture opts out via movable:false; NPCs are never beckoned
+		if (npc || !movable) {
+			return;
+		}
+		notice();
+		setState(MobAi.getStateByClass(Wandering.class));
+		setTarget(cell);
+	}
 
     @SneakyThrows
     public void fromJson(JSONObject mobDesc) {

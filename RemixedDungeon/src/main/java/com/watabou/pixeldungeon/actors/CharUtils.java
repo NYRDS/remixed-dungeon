@@ -74,7 +74,7 @@ import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.levels.traps.LightningTrap;
+import com.watabou.pixeldungeon.levels.traps.Electricity;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -136,7 +136,7 @@ public class CharUtils {
             damage *= 2;
         }
 
-        enemy.damage(damage, LightningTrap.LIGHTNING);
+        enemy.damage(damage, Electricity.INSTANCE);
 
         enemy.getSprite().centerEmitter().burst(SparkParticle.FACTORY, 3);
         enemy.getSprite().flash();

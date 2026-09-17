@@ -20,12 +20,10 @@ trap.init = function(trigger)
 end
 
 trap.setData = function(self, data)
-    print("trap.setData:", data)
     self.data = data
 end
 
 trap.trigger = function(self, cell, char)
-    print("trap.trigger:",cell, char, self.data)
     self.__trigger(cell, char, self.data)
 end
 

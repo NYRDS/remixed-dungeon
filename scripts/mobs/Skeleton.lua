@@ -58,7 +58,11 @@ return mob.init{
         end
 
         if heroKilled then
-            -- Dungeon.fail comes from the generic hero-death path (Char implements Doom)
+            -- java Skeleton.die set the death report explicitly (on top of the
+            -- generic Doom path, which composes the same MOB wording)
+            RPD.Dungeon:fail(RPD.JavaUtils:format(
+                    RPD.ResultDescriptions:getDescription(RPD.ResultReason.MOB),
+                    { RPD.JavaUtils:indefinite(self:getName()), RPD.Dungeon.depth }))
             RPD.glogn(RPD.textById("Skeleton_Killed"))
         end
     end

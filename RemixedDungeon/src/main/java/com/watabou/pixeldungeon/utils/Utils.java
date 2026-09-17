@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.utils;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
@@ -17,6 +18,7 @@ import java.util.regex.Pattern;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 
+@LuaInterface
 public class Utils {
 
     public static final String UNKNOWN = "unknown";

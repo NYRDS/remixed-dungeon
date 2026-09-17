@@ -198,6 +198,11 @@ local LevelTools = luajava.bindClass("com.nyrds.pixeldungeon.levels.LevelTools")
 local SimpleWand = luajava.bindClass("com.watabou.pixeldungeon.items.wands.SimpleWand")
 local ChaosCommon = luajava.bindClass("com.nyrds.pixeldungeon.items.chaos.ChaosCommon")
 local Char = luajava.bindClass("com.watabou.pixeldungeon.actors.Char")
+local Utils = luajava.bindClass("com.watabou.pixeldungeon.utils.Utils")
+local ResultDescriptions = luajava.bindClass("com.watabou.pixeldungeon.ResultDescriptions")
+local ResultReason = luajava.bindClass("com.watabou.pixeldungeon.ResultDescriptions$Reason")
+local Electricity = luajava.bindClass("com.watabou.pixeldungeon.levels.traps.Electricity")
+local Lightning = luajava.bindClass("com.watabou.pixeldungeon.effects.Lightning")
 
 local RPD = {
     RemixedDungeon = RemixedDungeon,
@@ -230,6 +235,12 @@ local RPD = {
     ChaosCommon = ChaosCommon,
     StringsManager = StringsManager,
     Char = Char,
+    -- RPD.Utils is LuaUtils; java watabou Utils rides under JavaUtils
+    JavaUtils = Utils,
+    ResultDescriptions = ResultDescriptions,
+    ResultReason = ResultReason,
+    Electricity = Electricity,
+    Lightning = Lightning,
     Utils = luajava.bindClass("com.nyrds.lua.LuaUtils"),
     QuickSlot = luajava.bindClass("com.watabou.pixeldungeon.ui.QuickSlot"),
     BackpackMode = BackpackMode,

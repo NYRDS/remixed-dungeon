@@ -5,24 +5,19 @@ import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.traps.AlarmTrap;
-import com.watabou.pixeldungeon.levels.traps.FireTrap;
-import com.watabou.pixeldungeon.levels.traps.GrippingTrap;
-import com.watabou.pixeldungeon.levels.traps.LightningTrap;
-import com.watabou.pixeldungeon.levels.traps.ParalyticTrap;
-import com.watabou.pixeldungeon.levels.traps.PoisonTrap;
-import com.watabou.pixeldungeon.levels.traps.SummoningTrap;
-import com.watabou.pixeldungeon.levels.traps.ToxicTrap;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaTable;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
@@ -33,15 +28,16 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 public class Trap extends LevelObject {
 
-	private static final Class<?>[] traps = new Class<?>[]{
-			ToxicTrap.class,
-			FireTrap.class,
-			ParalyticTrap.class,
-			PoisonTrap.class,
-			AlarmTrap.class,
-			LightningTrap.class,
-			SummoningTrap.class,
-			GrippingTrap.class};
+	// order is load-bearing: image() derives the sprite index from the position
+	private static final String[] TRAP_KINDS = {
+			"ToxicTrap",
+			"FireTrap",
+			"ParalyticTrap",
+			"PoisonTrap",
+			"AlarmTrap",
+			"LightningTrap",
+			"SummoningTrap",
+			"GrippingTrap"};
 
 	@Packable
 	public String kind;
@@ -156,16 +152,21 @@ public class Trap extends LevelObject {
 
 		if (uses != 0) {
 			uses--;
-			ITrigger trigger;
+			ITrigger trigger = null;
 
 			if (kind.equals("scriptFile")) {
 				trigger = new ScriptTrap(script, data);
-			} else {
-				trigger = Util.byNameFromList(traps, kind);
+			} else if (ModdingMode.isResourceExists("scripts/traps/" + kind + ".lua")) {
+				trigger = new ScriptTrap("scripts/traps/" + kind, data);
 			}
 
 			if (trigger != null) {
-				trigger.doTrigger(targetCell, hero);
+				try {
+					trigger.doTrigger(targetCell, hero);
+				} catch (LuaError e) {
+					// missing/broken trap module must not kill the actor cycle
+					EventCollector.logException(e, "trap script " + kind);
+				}
 			}
 			if (uses == 0) {
 				lo_sprite.ifPresent(
@@ -236,7 +237,7 @@ public class Trap extends LevelObject {
 			if(imageIndex >= 0) {
 				return imageIndex;
 			}
-			int nKind = Util.indexOf(traps, kind) + 16 * level().objectsKind();
+			int nKind = Util.indexOf(TRAP_KINDS, kind) + 16 * level().objectsKind();
 			return nKind + 1;
 		} else {
 			return usedImage();
@@ -278,6 +279,15 @@ public class Trap extends LevelObject {
 		return true;
 	}
 
+	// classic terrain-map traps (Terrain.TOXIC_TRAP etc.) share the lua modules
+	static public void triggerLua(String kind, int cell, Char ch) {
+		try {
+			new ScriptTrap("scripts/traps/" + kind, "").doTrigger(cell, ch);
+		} catch (LuaError e) {
+			EventCollector.logException(e, "terrain trap " + kind);
+		}
+	}
+
 	static class ScriptTrap implements ITrigger {
 		private final String scriptFile;
 		private final String data;
@@ -291,8 +301,9 @@ public class Trap extends LevelObject {
 		public void doTrigger(int cell, Char ch) {
 			LuaTable trap = LuaEngine.require(scriptFile).checktable();
 
-			trap.get("setData").call(trap,LuaValue.valueOf(data));
-			trap.get("trigger").call(trap,LuaValue.valueOf(cell), CoerceJavaToLua.coerce(ch));
+			// LevelObject.data is null for traps not authored via level json
+			trap.get("setData").call(trap, LuaValue.valueOf(data != null ? data : ""));
+			trap.get("trigger").call(trap, LuaValue.valueOf(cell), CoerceJavaToLua.coerce(ch));
 		}
 	}
 

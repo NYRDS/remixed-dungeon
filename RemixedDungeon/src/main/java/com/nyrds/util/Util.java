@@ -52,13 +52,11 @@ public class Util {
 		return null;
 	}
 
-	static public  int indexOf(Class<?>[] classList, @NotNull String name) {
-		int index = 0;
-		for (Class<?> clazz : classList) {
-			if (clazz.getSimpleName().equals(name)) {
-				return index;
+	static public int indexOf(String[] list, @NotNull String name) {
+		for (int i = 0; i < list.length; i++) {
+			if (list[i].equals(name)) {
+				return i;
 			}
-			++index;
 		}
 		return -1;
 	}

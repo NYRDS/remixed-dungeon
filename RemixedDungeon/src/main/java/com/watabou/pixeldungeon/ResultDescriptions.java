@@ -1,10 +1,12 @@
 
 package com.watabou.pixeldungeon;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import java.util.HashMap;
 
+@LuaInterface
 public final class ResultDescriptions {
 
 	public enum Reason {

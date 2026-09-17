@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gl.Gl;
@@ -9,9 +10,11 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
+@LuaInterface
 public class Lightning extends Group {
 
 	private static final float DURATION = 0.3f;
@@ -40,6 +43,13 @@ public class Lightning extends Group {
 
 	public Lightning( int[] cells, Callback callback ) {
 		init(cells, callback);
+	}
+
+	@LuaInterface
+	static public void spawnBolts(int cell) {
+		int width = Dungeon.level.getWidth();
+		GameScene.addToMobLayer(new Lightning(new int[]{cell - width, cell + width}));
+		GameScene.addToMobLayer(new Lightning(new int[]{cell - 1, cell + 1}));
 	}
 
 	private void init ( int[] cells, Callback callback ) {

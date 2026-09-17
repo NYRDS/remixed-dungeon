@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
-import com.watabou.pixeldungeon.levels.traps.LightningTrap;
+import com.watabou.pixeldungeon.levels.traps.Electricity;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -26,9 +26,9 @@ public class Potential extends Glyph {
 		if (attacker.adjacent(defender) && Random.Int( level + 7 ) >= 6) {
 			
 			int dmg = Random.IntRange( 1, damage );
-			attacker.damage( dmg, LightningTrap.LIGHTNING );
+			attacker.damage( dmg, Electricity.INSTANCE );
 			dmg = Random.IntRange( 1, dmg );
-			defender.damage( dmg, LightningTrap.LIGHTNING );
+			defender.damage( dmg, Electricity.INSTANCE );
 
 			if (defender == Dungeon.hero) {
 				Camera.main.shake( 2, 0.3f );

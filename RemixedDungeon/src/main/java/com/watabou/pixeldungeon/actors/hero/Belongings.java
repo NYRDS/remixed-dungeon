@@ -472,6 +472,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
         return backpack.remove(itemToRemove);
     }
 
+    @LuaInterface
     public int charge(boolean full) {
 
         int count = 0;

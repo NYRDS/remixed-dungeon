@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.traps.LightningTrap;
+import com.watabou.pixeldungeon.levels.traps.Electricity;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -49,7 +49,7 @@ public class WandOfLightning extends SimpleWand  {
 		}
 		
 		affected.add( ch );
-		ch.damage( Dungeon.level.water[ch.getPos()] && !ch.isFlying() ? damage * 2 : damage, LightningTrap.LIGHTNING  );
+		ch.damage( Dungeon.level.water[ch.getPos()] && !ch.isFlying() ? damage * 2 : damage, Electricity.INSTANCE  );
 		
 		ch.getSprite().centerEmitter().burst( SparkParticle.FACTORY, 3 );
 		ch.getSprite().flash();

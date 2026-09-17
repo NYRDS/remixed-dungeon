@@ -2139,3 +2139,79 @@ actions 0/not petable/isMovable false/speed 0.5, town snapshot
 round-trip keeps hp+state+isNpc, allMobs 126/0, 0 LuaErrors; suites
 alchemy 42/42 all_spells 38/38 blood 6/6 doctor 7/7 nav pet 5/5 turn
 1/1; android + desktop compile green.
+
+## Batch 18 — all 8 vanilla traps to lua (SHIPPED 2026-09-18)
+
+The 8 vanilla trap triggers (Toxic/Fire/Paralytic/Poison/Alarm/Lightning/
+Summoning/Gripping) are now lua modules in `scripts/traps/<Kind>.lua`;
+the java trigger classes are deleted (~360 lines out, ~130 lua in).
+Placement is untouched: `CommonLevel.traps` weight roll + `Trap.makeSimpleTrap`
+(LevelTools/StandardPainter/PrisonBossLevel), `TrapHelper`/`WndStepOnTrap`
+stay java. Saves unchanged (`kind/uses/secret/script` were already @Packable).
+
+Dispatch (`Trap.activate`): `scriptFile` kinds keep their json script; every
+other kind loads `scripts/traps/<kind>` via `ScriptTrap`, guarded by
+`ModdingMode.isResourceExists("scripts/traps/<kind>.lua")` — missing module =
+old null-trigger no-op, broken module = caught + logged (an unknown trapKind
+from a mod now RUNS lua if the mod ships a module with that name; deliberate).
+`Lib/trap.lua` debug prints removed. `ScriptTrap.doTrigger` null-guards the
+data string (`LuaValue.valueOf(null)` NPE'd for makeSimpleTrap traps — the
+old java fallback never touched data, only the lua path exposed it).
+
+Terrain-map traps (Terrain.TOXIC_TRAP etc. in `Level.pressCell`) share the
+modules: `Trap.triggerLua(kind, cell, ch)` replaces the old static
+`X.trigger(cell, chr)` calls. `Trap.image()` reads `String[] TRAP_KINDS`
+(same order as the deleted Class[] — array position is the sprite index;
+note `LevelObjectsFactory.allLevelObjects` uses a DIFFERENT order and is not
+load-bearing). `Util.indexOf(Class<?>[],String)` died with its last caller;
+`Util.indexOf(String[],String)` added.
+
+New java surface (annotations + 2 tiny helpers): `Lightning.spawnBolts(cell)`
+(bolt visuals — the luaj sandbox cannot build the int[] ctor arg),
+`Electricity` extracted from LightningTrap as the electric death-cause marker
+(`Electricity.INSTANCE` consumed by WandOfLightning/Potential/CharUtils;
+ RingOfElements immunity string unchanged) + class @LuaInterface on
+Lightning/Utils/ResultDescriptions; method @LuaInterface on `Dungeon.fail`,
+`Dungeon.bossLevel`, `Belongings.charge`. commonClasses exports `JavaUtils`
+(watabou Utils — `RPD.Utils` is taken by LuaUtils), `ResultDescriptions`,
+`ResultReason`, `Electricity`, `Lightning`.
+
+Custom Doom wording (Mike ruling — the skeleton-batch shortcut revised):
+`LightningTrap.lua` and `Skeleton.lua` call `Dungeon.fail` explicitly through
+`JavaUtils:format(getDescription(Reason.X), {args})` (positional `%1$s`
+specifiers are java-format only; the `{...}` table coerces to the varargs
+Object[] — GLog idiom). The lightning explicit fail is load-bearing:
+`Electricity` is not a `Doom` source, so without it the rankings cause would
+be missing entirely; the skeleton fail re-sets the same MOB wording the
+generic path already composed (java parity, harmless double-set) and both
+keep their bespoke GLog lines.
+
+Beckon gate fix (engine, caught live): `Mob.beckon` gated
+`dataDriven && !(friendly && movable)` — hostile data mobs (rat: friendly
+defaults false) were deaf to AlarmTrap/bait since the early data batches.
+Now `npc || !movable`: NPCs still immune, stationary furniture keeps its
+authored `movable:false` (SpiderEgg/Nest/JarOfSouls/Crystal/RunicSkull/
+Statue all author it), every normal hostile data mob beckons again —
+java-era alarm behavior restored.
+
+Accepted deltas (flagged, Mike lgtm): SummoningTrap spawns immediately on
+free neighbour cells without `canSpawnAt` re-validation and the 0.1s
+`DelayedMobSpawner` delay; hero-facing lightning wording verified in RU.
+
+Verified live (headless, lua dispatch — blob/buff/hp assertions per trap:
+toxic 300+20·d, paralytic 80+5·d, fire 2, Poison/Bleeding/Cripple attach,
+lightning hp loss within [hp/3, 2hp/3) with the max(1,..) floor at low hp;
+alarm wakes a data Rat to WANDERING; summoning rolls 3-5 Wandering from the
+level Bestiary; lightning kill logs the custom RU death line; trap fields
+survive go_to_level snapshot round-trip; windowed run: damage badge + no
+crash, bolt sprite = the shipped Lightning effect, 0.3s lifetime outruns the
+screenshot round-trip); suites alchemy 42/42 all_spells 38/38 blood 6/6
+doctor 7/7 nav 9/9 pet 5/5 turn 1/1; allMobs 126/0; android + desktop green.
+
+Harness lessons: this rig's live lua source is the file-by-file symlink farm
+in `rundir/mods/Remixed/scripts/` — jar-only scripts do NOT resolve (require
+fails "Missing file" while `isResourceExists` says true, so the java
+fallback masked the first battery run); sync new script dirs into the farm
+(`scripts/ai/KingPedestal.lua` was also missing since 17d-4 — allMobs threw
+"King" until linked). Launch cwd must be the rundir (parent exposes assets);
+a failed `cd` compound silently skipped a relaunch and the curls hit nothing.
