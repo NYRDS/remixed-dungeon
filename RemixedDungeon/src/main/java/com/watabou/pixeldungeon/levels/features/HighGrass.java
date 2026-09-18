@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
@@ -49,7 +48,7 @@ public class HighGrass {
 			}
 
 			if (ch.getSubClass() == HeroSubClass.SCOUT) {
-				Buff.prolong(ch, Invisibility.class, 5);
+				Buff.prolong(ch, BuffFactory.INVISIBILITY, 5);
 				leaves = 2;
 			}
 		}

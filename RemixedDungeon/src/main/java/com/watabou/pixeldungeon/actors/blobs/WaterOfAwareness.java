@@ -1,7 +1,7 @@
 
 package com.watabou.pixeldungeon.actors.blobs;
-
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
-import com.watabou.pixeldungeon.actors.buffs.Awareness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
@@ -48,7 +47,7 @@ public class WaterOfAwareness extends WellWater {
 			}
 		}
 		
-		Buff.affect( hero, Awareness.class, Awareness.DURATION );
+		Buff.affect( hero, BuffFactory.AWARENESS, 2f );
 		hero.observe();
 
 		hero.interrupt();

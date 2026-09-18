@@ -7,7 +7,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -31,7 +30,7 @@ public class FrozenCarpaccio extends Food {
 			switch (Random.Int( 5 )) {
 			case 0:
                 GLog.i(StringsManager.getVar(R.string.FrozenCarpaccio_Info1));
-				Buff.affect(chr, Invisibility.class, Invisibility.DURATION );
+				Buff.affect(chr, BuffFactory.INVISIBILITY, 15f );
 				break;
 			case 1:
                 GLog.i(StringsManager.getVar(R.string.FrozenCarpaccio_Info2));

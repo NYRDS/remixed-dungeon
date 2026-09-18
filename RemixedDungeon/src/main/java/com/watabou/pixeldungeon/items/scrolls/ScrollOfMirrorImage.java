@@ -1,11 +1,10 @@
 
 package com.watabou.pixeldungeon.items.scrolls;
-
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import org.jetbrains.annotations.NotNull;
@@ -36,7 +35,7 @@ public class ScrollOfMirrorImage extends Scroll {
 		}
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(reader);
+		CharUtils.dispelInvisibility(reader);
 		
 		reader.spend( TIME_TO_READ );
 	}

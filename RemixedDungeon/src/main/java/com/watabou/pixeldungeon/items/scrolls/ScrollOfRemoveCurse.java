@@ -6,8 +6,8 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
@@ -23,7 +23,7 @@ public class ScrollOfRemoveCurse extends Scroll {
 
 		new Flare(6, 32).show(reader.getSprite(), 2f);
 		Sample.INSTANCE.play(Assets.SND_READ);
-		Invisibility.dispel(reader);
+		CharUtils.dispelInvisibility(reader);
 
 		boolean procced = uncurse(reader.getBelongings());
 

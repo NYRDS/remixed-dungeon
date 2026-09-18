@@ -1,6 +1,5 @@
 
 package com.watabou.pixeldungeon.items.wands;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
@@ -16,7 +15,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -341,7 +340,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
                 onZap(cell, victim);
             });
             wandUsed();
-            Invisibility.dispel(selector);
+            CharUtils.dispelInvisibility(selector);
         } else {
 
             selector.spend(TIME_TO_ZAP);

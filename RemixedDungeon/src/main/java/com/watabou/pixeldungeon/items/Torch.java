@@ -1,12 +1,11 @@
 
 package com.watabou.pixeldungeon.items;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import java.util.ArrayList;
@@ -44,7 +43,7 @@ public class Torch extends Item {
 			chr.doOperate(TIME_TO_LIGHT );
 			
 			detach( chr.getBelongings().backpack );
-			Buff.affect(chr, Light.class, Light.DURATION );
+			Buff.affect(chr, BuffFactory.LIGHT, 250f );
 			
 			Emitter emitter = chr.getSprite().centerEmitter();
 			emitter.start( FlameParticle.FACTORY, 0.2f, 3 );

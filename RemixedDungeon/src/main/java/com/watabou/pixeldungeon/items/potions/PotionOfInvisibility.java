@@ -1,13 +1,12 @@
 
 package com.watabou.pixeldungeon.items.potions;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -21,7 +20,7 @@ public class PotionOfInvisibility extends UpgradablePotion {
 	@Override
 	protected void apply(Char hero ) {
 		setKnown();
-		Buff.affect( hero, Invisibility.class, (float) (Invisibility.DURATION * qualityFactor()));
+		Buff.affect( hero, BuffFactory.INVISIBILITY, (float) (15f * qualityFactor()));
         GLog.i(StringsManager.getVar(R.string.PotionOfInvisibility_Apply));
 		Sample.INSTANCE.play( Assets.SND_MELD );
 	}

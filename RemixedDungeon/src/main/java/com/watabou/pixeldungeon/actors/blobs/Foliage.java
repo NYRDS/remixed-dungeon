@@ -1,13 +1,11 @@
 
 package com.watabou.pixeldungeon.actors.blobs;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Shadows;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
@@ -48,7 +46,7 @@ public class Foliage extends Blob {
 		
 		Hero hero = Dungeon.hero;
 		if (hero.isAlive() && hero.visibleEnemies() == 0 && cur[hero.getPos()] > 0) {
-			Buff.affect( hero, Shadows.class ).prolong();
+			CharUtils.refreshShadows(hero);
 		}
 		
 		if (regrowth) {

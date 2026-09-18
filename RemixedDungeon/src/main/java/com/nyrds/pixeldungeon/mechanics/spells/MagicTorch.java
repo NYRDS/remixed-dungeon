@@ -1,5 +1,5 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -25,7 +25,7 @@ public class MagicTorch extends Spell{
 	public boolean cast(@NotNull Char chr){
 		if (super.cast(chr)){
 			castCallback(chr);
-			Buff.affect(chr, com.watabou.pixeldungeon.actors.buffs.Light.class, 80);
+			Buff.affect(chr, BuffFactory.LIGHT, 80);
 
 			Emitter emitter = chr.getSprite().centerEmitter();
 			emitter.start(FlameParticle.FACTORY, 0.2f, 3);

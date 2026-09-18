@@ -1,12 +1,11 @@
 
 package com.watabou.pixeldungeon.items.scrolls;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.effects.particles.EnergyParticle;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -21,7 +20,7 @@ public class ScrollOfRecharging extends Scroll {
 		charge( reader );
 		
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(reader);
+		CharUtils.dispelInvisibility(reader);
 		
 		if (count > 0) {
             GLog.i((count > 1 ? StringsManager.getVar(R.string.ScrollOfRecharging_Info1b)

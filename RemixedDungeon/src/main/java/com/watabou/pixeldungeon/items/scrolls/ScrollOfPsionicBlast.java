@@ -5,8 +5,8 @@ import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Random;
@@ -20,7 +20,7 @@ public class ScrollOfPsionicBlast extends Scroll {
 		GameScene.flash( 0xFFFFFF );
 		
 		Sample.INSTANCE.play( Assets.SND_BLAST );
-		Invisibility.dispel(reader);
+		CharUtils.dispelInvisibility(reader);
 		
 		for (Mob mob : Dungeon.level.getCopyOfMobsArray()) {
 			if (Dungeon.level.fieldOfView[mob.getPos()]) {

@@ -37,8 +37,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.ManaRegeneration;
-import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CheckedCell;
@@ -221,8 +219,8 @@ public class Hero extends Char {
 
     private void live() {
 
-        Buff.affect(this, ManaRegeneration.class);
-        Buff.affect(this, Regeneration.class);
+        Buff.affect(this, BuffFactory.MAGIC_REGENERATION);
+        Buff.affect(this, BuffFactory.REGENERATION);
         if (!Dungeon.isFacilitated(Facilitations.NO_HUNGER)) {
             Buff.affect(this, Hunger.class);
         }

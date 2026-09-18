@@ -6,8 +6,8 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.levels.Level;
@@ -22,7 +22,7 @@ public class ScrollOfTerror extends Scroll {
 
 		new Flare( 5, 32 ).color( 0xFF0000, true ).show( reader.getSprite(), 2f );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(reader);
+		CharUtils.dispelInvisibility(reader);
 
 		Level level = reader.level();
 

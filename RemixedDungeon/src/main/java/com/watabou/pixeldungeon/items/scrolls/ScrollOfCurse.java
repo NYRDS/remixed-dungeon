@@ -4,8 +4,8 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
@@ -25,7 +25,7 @@ public class ScrollOfCurse extends Scroll {
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void doRead(@NotNull Char reader) {
-		Invisibility.dispel(reader);
+		CharUtils.dispelInvisibility(reader);
 
 		reader.getSprite().emitter().burst( ShadowParticle.CURSE, 6 );
 		Sample.INSTANCE.play( Assets.SND_CURSED );

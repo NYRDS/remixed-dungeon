@@ -1,8 +1,8 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
@@ -51,7 +51,7 @@ public class Burning extends Buff implements Doom {
 		if (target.isAlive()) {
 			
 			if (target instanceof Hero) {
-				Buff.prolong( target, Light.class, TICK * 1.01f );
+				Buff.prolong( target, BuffFactory.LIGHT, TICK * 1.01f );
 			}
 			int bonusDamage = Dungeon.depth / 2;
 			target.damage( Random.Int( 1 + bonusDamage, 5 + bonusDamage ), this );

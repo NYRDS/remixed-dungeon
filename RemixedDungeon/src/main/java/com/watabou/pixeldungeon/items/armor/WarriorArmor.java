@@ -7,8 +7,8 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -69,7 +69,7 @@ public class WarriorArmor extends ClassArmor {
 						cell = Ballistica.trace[Ballistica.distance - 2];
 					}
 
-					Invisibility.dispel(selector);
+					CharUtils.dispelInvisibility(selector);
 
 					final int dest = cell;
 					((HeroSpriteDef) selector.getSprite()).jump(pos, cell, () -> {

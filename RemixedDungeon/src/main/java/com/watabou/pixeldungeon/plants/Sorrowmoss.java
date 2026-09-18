@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
@@ -56,7 +55,7 @@ public class Sorrowmoss extends Plant {
 
 			if (action.equals( CommonActions.AC_EAT )) {
 				Buff.affect(chr, BuffFactory.POISON, CharUtils.durationFactor(chr) * (chr.lvl()) );
-				Buff.affect(chr, Invisibility.class, 2 );
+				Buff.affect(chr, BuffFactory.INVISIBILITY, 2 );
 			}
 		}
 	}

@@ -1,12 +1,11 @@
 package com.watabou.pixeldungeon.items.scrolls;
-
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.SpellSprite;
@@ -46,7 +45,7 @@ public class ScrollOfSummoning extends Scroll {
 
 		SpellSprite.show( reader, SpellSprite.SUMMON );
 		Sample.INSTANCE.play( Assets.SND_READ );
-		Invisibility.dispel(reader);
+		CharUtils.dispelInvisibility(reader);
 
 		reader.spend( TIME_TO_READ );
 	}

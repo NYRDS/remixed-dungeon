@@ -16,6 +16,7 @@ import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.nyrds.pixeldungeon.mechanics.buffs.CustomBuff;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.Ascend;
 import com.nyrds.pixeldungeon.ml.actions.Attack;
@@ -53,7 +54,6 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -333,6 +333,39 @@ public class CharUtils {
         return 0;
     }
 
+    /**
+     * Invisibility.dispel: breaks vanilla invisibility and the Cloak buff,
+     * but only while the target is seen by someone.
+     */
+    public static void dispelInvisibility(Char tgt) {
+        if (tgt.visibleEnemies() > 0) {
+            Buff.detach(tgt, BuffFactory.INVISIBILITY);
+            Buff.detach(tgt, "Cloak");
+        }
+    }
+
+    /**
+     * MindVision potion flavor report.
+     */
+    public static void reportMindVisionEffect() {
+        Dungeon.observe();
+        if (!Dungeon.level.mobs.isEmpty()) {
+            GLog.i(StringsManager.getVar(R.string.PotionOfMindVision_Apply1));
+        } else {
+            GLog.i(StringsManager.getVar(R.string.PotionOfMindVision_Apply2));
+        }
+    }
+
+    /**
+     * Refreshes the Foliage shadows: prolongs the lua buffs internal left counter.
+     */
+    public static void refreshShadows(Char hero) {
+        Buff shadows = Buff.affect(hero, BuffFactory.SHADOWS);
+        if (shadows instanceof CustomBuff) {
+            ((CustomBuff) shadows).runScriptVoid("prolong");
+        }
+    }
+
     public static void teleportRandomForce(@NotNull Char ch) {
         Level level = ch.level();
 
@@ -399,7 +432,7 @@ public class CharUtils {
         ch.getSprite().centerEmitter().start(Speck.factory(Speck.SCREAM), 0.3f, 3);
 
         Sample.INSTANCE.play(sound);
-        Invisibility.dispel(ch);
+        dispelInvisibility(ch);
     }
 
     @NotNull

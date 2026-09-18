@@ -1,10 +1,9 @@
 package com.nyrds.pixeldungeon.items.artifacts;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.MindVision;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.utils.Bundle;
 import org.jetbrains.annotations.NotNull;
@@ -57,7 +56,7 @@ public class CandleOfMindVision extends Artifact implements IActingItem {
 			}
 
 			if (charges > 0) {
-				Buff.affect(hero, MindVision.class, charges);
+				Buff.affect(hero, BuffFactory.MIND_VISION, charges);
 			}
 		}
 		return ret;
@@ -66,7 +65,7 @@ public class CandleOfMindVision extends Artifact implements IActingItem {
 	@Override
 	public boolean doUnequip(Char hero, boolean collect) {
 		if(charges > 0) {
-			Buff.detach(hero, MindVision.class);
+			Buff.detach(hero, BuffFactory.MIND_VISION);
 		}
 		return super.doUnequip(hero, collect);
 	}

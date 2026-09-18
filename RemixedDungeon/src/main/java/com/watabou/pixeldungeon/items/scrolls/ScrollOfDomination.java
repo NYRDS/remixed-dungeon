@@ -1,10 +1,9 @@
 package com.watabou.pixeldungeon.items.scrolls;
-
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.SpellSprite;
@@ -19,7 +18,7 @@ public class ScrollOfDomination extends Scroll {
 	protected void doRead(@NotNull Char reader) {
 		SpellSprite.show( reader, SpellSprite.DOMINATION );
 		Sample.INSTANCE.play( Assets.SND_DOMINANCE );
-		Invisibility.dispel(reader);
+		CharUtils.dispelInvisibility(reader);
 		
 		ArrayList<Mob> mobsInSight = new ArrayList<>();
 

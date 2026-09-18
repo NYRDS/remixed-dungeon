@@ -48,8 +48,6 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.buffs.Regeneration;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -1234,7 +1232,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
             setCurAction(null);
 
-            Invisibility.dispel(this);
+            CharUtils.dispelInvisibility(this);
         }
         next();
     }
@@ -1564,7 +1562,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public void onSpawn(Level level) {
         if (!undead) {
-            Buff.affect(this, Regeneration.class);
+            Buff.affect(this, BuffFactory.REGENERATION);
         }
 
         getScript().run("onSpawn", level);
@@ -2448,6 +2446,26 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @LuaInterface
     public void setPacified(boolean value) {
         pacified = value;
+    }
+
+    @LuaInterface
+    public void adjustInvisibility(int delta) {
+        invisible += delta;
+    }
+
+    // lua cannot cross forEachBuff lambda bridges; sums for the regen buffs
+    @LuaInterface
+    public int regenerationBonusSum() {
+        final int[] bonus = {0};
+        forEachBuff(b -> bonus[0] += b.regenerationBonus(this));
+        return bonus[0];
+    }
+
+    @LuaInterface
+    public int manaRegenerationBonusSum() {
+        final int[] bonus = {0};
+        forEachBuff(b -> bonus[0] += b.manaRegenerationBonus(this));
+        return bonus[0];
     }
 
     @LuaInterface
