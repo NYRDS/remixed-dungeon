@@ -10,8 +10,6 @@ local RPD = require "scripts/lib/commonClasses"
 local mob = require "scripts/lib/mob"
 
 local PUMP_UP_DELAY = 2.2
-local CharSprite = luajava.bindClass("com.watabou.pixeldungeon.sprites.CharSprite")
-
 local function pumped(self)
     return mob.restoreData(self).pumpedUp
 end
@@ -72,7 +70,7 @@ return mob.init{
         self:getSprite():playExtra("pump")
 
         if RPD.CharUtils:isVisible(self) then
-            self:getSprite():showStatus(CharSprite.NEGATIVE, RPD.textById("Goo_StaInfo1"))
+            self:getSprite():showStatus(RPD.CharSprite.NEGATIVE, RPD.textById("Goo_StaInfo1"))
             RPD.GLog:n(RPD.textById("Goo_Info1"), {})
         end
         return true

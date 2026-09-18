@@ -4,8 +4,6 @@
 local RPD  = require "scripts/lib/commonClasses"
 local buff = require "scripts/lib/buff"
 
-local CharSprite = luajava.bindClass("com.watabou.pixeldungeon.sprites.CharSprite")
-
 return buff.init{
     desc  = function ()
         return {

@@ -6,8 +6,6 @@
 local RPD  = require "scripts/lib/commonClasses"
 local buff = require "scripts/lib/buff"
 
-local Facilitations = luajava.bindClass("com.watabou.pixeldungeon.Facilitations")
-
 local REGENERATION_DELAY = 10
 
 return buff.init{
@@ -32,7 +30,7 @@ return buff.init{
 
         local bonus = target:regenerationBonusSum()
         if target:getEntityKind() == "Hero"
-            and RPD.Dungeon:isFacilitated(Facilitations.FAST_REGENERATION) then
+            and RPD.Dungeon:isFacilitated(RPD.Facilitations.FAST_REGENERATION) then
             bonus = bonus + 10
         end
 

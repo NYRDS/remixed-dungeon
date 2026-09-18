@@ -36,7 +36,7 @@ local function makeWand(battle)
     if battle then
         kinds = { "WandOfAvalanche", "WandOfDisintegration", "WandOfFirebolt", "WandOfLightning", "WandOfPoison" }
     else
-        kinds = { "WandOfAmok", "WandOfBlink", "WandOfRegrowth", "WandOfSlowness", "WandOfTelekinesis" }
+        kinds = { "WandOfAmok", "RPD.WandOfBlink", "WandOfRegrowth", "WandOfSlowness", "WandOfTelekinesis" }
     end
 
     local wand = RPD.item(kinds[math.random(#kinds)])

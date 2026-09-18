@@ -12,9 +12,6 @@
 ]]
 local RPD = require "scripts/lib/commonClasses"
 local mob = require "scripts/lib/mob"
-local WandOfBlink = luajava.bindClass("com.watabou.pixeldungeon.items.wands.WandOfBlink")
-local ShadowParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.ShadowParticle")
-
 local SKULL_DELAY = 5
 
 local RED, BLUE, GREEN, PURPLE = 0, 1, 2, 3
@@ -67,9 +64,9 @@ local function spawnSkulls(self, data)
         local pos = table.remove(pedestals, math.random(#pedestals))
 
         local skull = RPD.MobFactory:mobByName("RunicSkull")
-        WandOfBlink:appear(skull, pos)
+        RPD.WandOfBlink:appear(skull, pos)
         data.variantByPos[pos] = i
-        RPD.Sfx.CellEmitter:get(pos):burst(ShadowParticle.CURSE, 8)
+        RPD.Sfx.CellEmitter:get(pos):burst(RPD.Sfx.ShadowParticle.CURSE, 8)
     end
 end
 

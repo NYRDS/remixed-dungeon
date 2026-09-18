@@ -10,8 +10,6 @@
 ]]
 local RPD = require "scripts/lib/commonClasses"
 local mob = require "scripts/lib/mob"
-local WandOfBlink = luajava.bindClass("com.watabou.pixeldungeon.items.wands.WandOfBlink")
-
 local function carveAround(level, cell)
 	if not level:cellValid(cell) then
 		return
@@ -115,7 +113,7 @@ return mob.init{
 				if RPD.Dungeon.level:cellValid(cell) then
 					local shadow = RPD.MobFactory:mobByName("Shadow")
 					RPD.setAi(shadow, "Wandering")
-					WandOfBlink:appear(shadow, cell)
+					RPD.WandOfBlink:appear(shadow, cell)
 				end
 			end
 			self:yell(RPD.textById("ShadowLord_Intro"))

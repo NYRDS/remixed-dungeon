@@ -4,8 +4,6 @@
 local RPD  = require "scripts/lib/commonClasses"
 local buff = require "scripts/lib/buff"
 
-local CharSprite = luajava.bindClass("com.watabou.pixeldungeon.sprites.CharSprite")
-
 return buff.init{
     desc  = function ()
         return {
@@ -28,6 +26,6 @@ return buff.init{
     end,
 
     attachVisual = function(self, buff)
-        buff.target:showStatus(CharSprite.NEGATIVE, RPD.textById("Char_StaStunned"))
+        buff.target:showStatus(RPD.CharSprite.NEGATIVE, RPD.textById("Char_StaStunned"))
     end
 }

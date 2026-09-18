@@ -1,7 +1,5 @@
 local RPD = require "scripts/lib/commonClasses"
 local mob = require "scripts/lib/mob"
-local CharSprite = luajava.bindClass("com.watabou.pixeldungeon.sprites.CharSprite")
-
 -- java SuspiciousRat (batch 12): once it sees the enemy it twitches, then
 -- becomes a wererat (PseudoRat) ~4 ticks later. Java spent 4 ticks at once;
 -- the act hook cannot spend, so the delay is a tick counter - same wall clock.
@@ -16,7 +14,7 @@ return mob.init{
         if not data.transforming then
             data.transforming = true
             data.ticks = 0
-            self:showStatus(CharSprite.NEGATIVE, RPD.textById("Goo_StaInfo1"))
+            self:showStatus(RPD.CharSprite.NEGATIVE, RPD.textById("Goo_StaInfo1"))
             RPD.glogn(RPD.textById("SuspiciousRat_Info1"))
             local enemy = self:getEnemy()
             if enemy ~= nil then

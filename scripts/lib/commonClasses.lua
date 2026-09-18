@@ -190,6 +190,13 @@ local Sfx = {
     HighlightCell = luajava.bindClass("com.watabou.pixeldungeon.effects.HighlightCell")
 }
 
+local CharSprite      = luajava.bindClass("com.watabou.pixeldungeon.sprites.CharSprite")
+local Facilitations   = luajava.bindClass("com.watabou.pixeldungeon.Facilitations")
+local WandOfBlink     = luajava.bindClass("com.watabou.pixeldungeon.items.wands.WandOfBlink")
+local ScrollOfMagicMapping = luajava.bindClass("com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping")
+local Accessory       = luajava.bindClass("com.nyrds.pixeldungeon.items.accessories.Accessory")
+local GameControl     = luajava.bindClass("com.nyrds.pixeldungeon.utils.GameControl")
+local AlchemyPot      = luajava.bindClass("com.watabou.pixeldungeon.levels.features.AlchemyPot")
 local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")
 local ItemUtils = luajava.bindClass("com.nyrds.pixeldungeon.items.ItemUtils")
 local Statistics = luajava.bindClass("com.watabou.pixeldungeon.Statistics")
@@ -212,6 +219,13 @@ local RPD = {
     Dungeon = Dungeon,
     DungeonGenerator = DungeonGenerator,
     PathFinder = PathFinder,
+    CharSprite = CharSprite,
+    Facilitations = Facilitations,
+    WandOfBlink = WandOfBlink,
+    ScrollOfMagicMapping = ScrollOfMagicMapping,
+    Accessory = Accessory,
+    GameControl = GameControl,
+    AlchemyPot = AlchemyPot,
     Badges = Badges,
     PlagueDoctorMask = luajava.bindClass("com.nyrds.pixeldungeon.items.accessories.PlagueDoctorMask"),
     Statistics = Statistics,

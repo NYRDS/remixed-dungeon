@@ -9,8 +9,6 @@ local RPD = require "scripts/lib/commonClasses"
 
 local item = require "scripts/lib/item"
 
-local Accessory = luajava.bindClass("com.nyrds.pixeldungeon.items.accessories.Accessory")
-
 return item.init{
     desc  = function ()
         return {
@@ -24,13 +22,13 @@ return item.init{
     end,
 
     activate = function(self, item, hero)
-        local mask = Accessory:getByName("PlagueDoctorMask")
+        local mask = RPD.Accessory:getByName("PlagueDoctorMask")
         mask:equip(true)
         RPD.permanentBuff(hero, "GasesImmunity")
     end,
 
     deactivate = function(self, item, hero)
-        Accessory:unequip()
+        RPD.Accessory:unequip()
         -- the class armor has its own beaked mask: immunity lives while either source is worn
         local armor = hero:getBelongings():getItemFromSlot(RPD.Slots.armor)
         if armor:getEntityKind() ~= "DoctorArmor" then

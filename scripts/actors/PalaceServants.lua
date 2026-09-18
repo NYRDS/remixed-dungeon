@@ -7,8 +7,6 @@ local RPD = require "scripts/lib/commonClasses"
 local util = require "scripts/lib/util"
 local actor = require "scripts/lib/actor"
 
-local Fraction = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Fraction")
-
 local truceBroken = false  -- caveman: one-shot. once true, never re-checks.
 
 -- caveman: servant entity kinds we manage.
@@ -30,7 +28,7 @@ local function flipAllServants()
     while iter:hasNext() do
         local m = iter:next()
         if servantKinds[m:getEntityKind()] and m:friendly(RPD.Dungeon.hero) then
-            m:setFraction(Fraction.DUNGEON)
+            m:setFraction(RPD.Fraction.DUNGEON)
             RPD.setAi(m, "Hunting")
         end
     end

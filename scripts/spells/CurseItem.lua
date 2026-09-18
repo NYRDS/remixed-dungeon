@@ -38,7 +38,7 @@ return spell.init{
                     RPD.glog("You have cursed your " .. item:name() .. "!")
                     
                     -- Apply a visual effect
-                    RPD.zapEffect(chr:getPos(), chr:getPos(), "ShadowParticle")
+                    RPD.zapEffect(chr:getPos(), chr:getPos(), "RPD.Sfx.ShadowParticle")
                     
                     -- Play a sound effect
                     RPD.playSound("snd_cursed.mp3")

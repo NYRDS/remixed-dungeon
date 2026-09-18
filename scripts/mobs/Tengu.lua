@@ -8,8 +8,6 @@
 ]]
 local RPD = require "scripts/lib/commonClasses"
 local mob = require "scripts/lib/mob"
-local ScrollOfMagicMapping = luajava.bindClass("com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping")
-
 local JUMP_DELAY = 5
 
 -- java Level.adjacent is a raw cell-diff check (rows can "wrap"); port it
@@ -34,7 +32,7 @@ local function rearmTraps(level)
         end
         local trap = traps[math.random(#traps)]
         trap:reactivate("PoisonTrap", 1)
-        ScrollOfMagicMapping:discover(trap:getPos())
+        RPD.ScrollOfMagicMapping:discover(trap:getPos())
     end
 end
 

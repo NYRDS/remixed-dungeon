@@ -65,8 +65,7 @@ return object.init {
     end,
 
     interact = function(self, object, hero)
-        local alchemyPot = luajava.bindClass("com.watabou.pixeldungeon.levels.features.AlchemyPot")
-        alchemyPot:operate(hero,object:getPos())
+                RPD.AlchemyPot:operate(hero,object:getPos())
         return true
     end
 }

@@ -7,13 +7,11 @@
 local RPD     = require "scripts/lib/commonClasses"
 local mob     = require "scripts/lib/mob"
 
-local Fraction = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Fraction")
-
 return mob.init({
     -- caveman: hurt while neutral -> turn hostile, hunt the attacker.
     damage = function(self, dmg, src)
         if self:isNeutral() then
-            self:setFraction(Fraction.DUNGEON)
+            self:setFraction(RPD.Fraction.DUNGEON)
             RPD.setAi(self, "Hunting")
             RPD.glog("NeutralKing_Hostile")
         end

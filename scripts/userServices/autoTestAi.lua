@@ -30,14 +30,14 @@ local testItemPool = {
     "PotionOfHealing", "PotionOfStrength", "PotionOfMana", "PotionOfInvisibility",
     "PotionOfLevitation", "PotionOfMindVision", "PotionOfFrost", "PotionOfPurity",
     "PotionOfToxicGas", "PotionOfParalyticGas",
-    "ScrollOfIdentify", "ScrollOfUpgrade", "ScrollOfMagicMapping", "ScrollOfRemoveCurse",
+    "ScrollOfIdentify", "ScrollOfUpgrade", "RPD.ScrollOfMagicMapping", "ScrollOfRemoveCurse",
     "ScrollOfTeleportation", "ScrollOfChallenge", "ScrollOfMirrorImage", "ScrollOfRecharging",
     "Dagger", "ShortSword", "Sword", "Mace", "Longsword", "Quarterstaff",
     "ClothArmor", "LeatherArmor", "MailArmor", "ScaleArmor",
     "RingOfAccuracy", "RingOfEvasion", "RingOfHaste", "RingOfMending", "RingOfPower",
     "Ration", "Pasty", "ChargrilledMeat", "MysteryMeat",
     "Sungrass.Seed", "Firebloom.Seed", "Icecap.Seed", "Earthroot.Seed", "Dreamweed.Seed",
-    "WandOfMagicMissile", "WandOfFirebolt", "WandOfLightning", "WandOfBlink",
+    "WandOfMagicMissile", "WandOfFirebolt", "WandOfLightning", "RPD.WandOfBlink",
     "Torch", "Ankh", "DewVial", "LloydsBeacon", "ArmorKit",
 }
 

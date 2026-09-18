@@ -31,7 +31,6 @@ return buff.init{
 
     attachVisual = function(self, buff)
         RPD.Sfx.CellEmitter:center(buff.target:getPos()):burst(RPD.Sfx.PoisonParticle.SPLASH, 5)
-        local CharSprite = luajava.bindClass("com.watabou.pixeldungeon.sprites.CharSprite")
-        buff.target:showStatus(CharSprite.NEGATIVE, RPD.textById("Char_StaPoisoned"))
+                buff.target:showStatus(RPD.CharSprite.NEGATIVE, RPD.textById("Char_StaPoisoned"))
     end
 }

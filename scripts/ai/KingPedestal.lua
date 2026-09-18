@@ -12,8 +12,6 @@
 local RPD = require "scripts/lib/commonClasses"
 local mob = require "scripts/lib/mob"
 local ai = require "scripts/lib/ai"
-local WandOfBlink = luajava.bindClass("com.watabou.pixeldungeon.items.wands.WandOfBlink")
-
 local MAX_ARMY_SIZE = 5
 
 -- java Level.adjacent is a raw cell-diff check (rows can "wrap"); port it
@@ -80,7 +78,7 @@ local function summon(self, data)
             end
 
             local servant = RPD.MobFactory:mobByName(kind)
-            WandOfBlink:appear(servant, pos)
+            RPD.WandOfBlink:appear(servant, pos)
 
             -- plain Undead kind is born undead (json); raised city mobs
             -- get the flag, no XP and the deathly green tint

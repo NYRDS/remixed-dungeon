@@ -9,8 +9,6 @@ local RPD = require "scripts/lib/commonClasses"
 local gameScene = require "scripts.userServices.gameScene"
 local interlevelScene = require "scripts.userServices.interlevelScene"
 
-local GameControl = luajava.bindClass("com.nyrds.pixeldungeon.utils.GameControl")
-
 local autoTestAi = require "scripts.userServices.autoTestAi"
 
 local levels = RPD.DungeonGenerator:getLevelsList()
@@ -49,7 +47,7 @@ local function levelsTestModeOnStep(self, scene)
         if sceneChanged then
             RPD.glog("autoTest: amulet reached, run complete")
             autoTestAi.onLeaveLevel()
-            GameControl:titleScene()
+            RPD.GameControl:titleScene()
         end
         return
     end
@@ -84,10 +82,10 @@ local function levelsTestModeOnStep(self, scene)
                 local nextLevelId = levels:get(currentLevel)
                 --nextLevelId = 'Rat5'
                 RPD.glog("trying level: %s", nextLevelId)
-                GameControl:changeLevel(nextLevelId)
+                RPD.GameControl:changeLevel(nextLevelId)
             else
                 service.onStep = stdModeOnStep
-                GameControl:titleScene()
+                RPD.GameControl:titleScene()
             end
         end
     end
@@ -99,7 +97,7 @@ local function levelsTestModeOnStep(self, scene)
         local heroClass = classes[math.random(1, #classes)]
         local difficulty = difficulties[math.random(1, #difficulties)]
         RPD.glog("autoTest: starting %s difficulty %d", heroClass, difficulty)
-        GameControl:startNewGame(heroClass, difficulty, true)
+        RPD.GameControl:startNewGame(heroClass, difficulty, true)
     end
 end
 
