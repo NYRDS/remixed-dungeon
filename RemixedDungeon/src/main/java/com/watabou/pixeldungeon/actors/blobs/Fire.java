@@ -1,6 +1,5 @@
 
 package com.watabou.pixeldungeon.actors.blobs;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.R;
@@ -8,8 +7,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.Heap;
@@ -53,7 +51,7 @@ public class Fire extends Blob {
 		//GLog.debug("Burn %d", pos);
 		Char ch = Actor.findChar( pos );
 		if (ch != null) {
-			Buff.affect( ch, Burning.class ).reignite( ch );
+			CharUtils.ignite( ch );
 		}
 
 		final Level level = Dungeon.level;

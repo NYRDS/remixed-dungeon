@@ -353,7 +353,7 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         source = id;
     }
 
-    protected void applyToCarriedItems(ItemAction action) {
+    public void applyToCarriedItems(ItemAction action) {
 
         if(Dungeon.isLoading()) { // already applied
             return;

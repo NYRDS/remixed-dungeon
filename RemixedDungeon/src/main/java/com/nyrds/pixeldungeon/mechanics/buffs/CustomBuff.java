@@ -168,9 +168,9 @@ public class CustomBuff extends Buff implements Doom {
         script.runOptionalNoRet("onHeroDeath");
     }
 
-    // java callers poking script-only state (e.g. Shadows prolong)
-    public void runScriptVoid(String fn) {
-        script.runOptionalNoRet(fn);
+    // java callers poking script-only state (Shadows prolong, Burning reignite)
+    public void runScriptVoid(String fn, Object... args) {
+        script.runOptionalNoRet(fn, args);
     }
 
     @Override

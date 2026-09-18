@@ -54,10 +54,12 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
+import com.watabou.pixeldungeon.actors.buffs.ItemAction;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.Effects;
 import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.effects.Pushing;
@@ -69,6 +71,7 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
@@ -364,6 +367,64 @@ public class CharUtils {
         if (shadows instanceof CustomBuff) {
             ((CustomBuff) shadows).runScriptVoid("prolong");
         }
+    }
+
+    /**
+     * Burning.reignite: fresh full duration on the existing (script) buff.
+     */
+    public static void ignite(Char ch) {
+        Buff burning = Buff.affect(ch, BuffFactory.BURNING);
+        if (burning instanceof CustomBuff) {
+            ((CustomBuff) burning).runScriptVoid("reignite", durationFactor(ch) * 8f);
+        }
+    }
+
+    /**
+     * Burning carried-item scorching (was Burning.burnItem).
+     */
+    public static void burnCarriedItems(Buff burning) {
+        final Char target = burning.target;
+        burning.applyToCarriedItems(new ItemAction() {
+            @Override
+            public Item act(Item srcItem) {
+                return srcItem.burn(target.getPos());
+            }
+
+            @Override
+            public void carrierFx() {
+                Effects.burnFX(target.getPos());
+            }
+
+            @Override
+            public String actionText(Item srcItem) {
+                return Utils.format(R.string.Burning_Burns, srcItem.toString());
+            }
+        });
+    }
+
+    /**
+     * Frost carried-item freezing: potions shatter (was Frost.freezeItem).
+     */
+    public static void freezeCarriedItems(Buff frost) {
+        final Char target = frost.target;
+        frost.applyToCarriedItems(new ItemAction() {
+            @Override
+            public Item act(Item srcItem) {
+                return srcItem.freeze(target.getPos());
+            }
+
+            @Override
+            public void carrierFx() {
+            }
+
+            @Override
+            public String actionText(Item srcItem) {
+                if (srcItem instanceof Potion) {
+                    return Utils.format(R.string.Frost_Shatter, srcItem.toString());
+                }
+                return null;
+            }
+        });
     }
 
     public static void teleportRandomForce(@NotNull Char ch) {

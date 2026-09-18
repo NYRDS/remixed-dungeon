@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -36,7 +35,7 @@ public class WandOfIcebolt extends Wand {
 			ch.damage( Random.Int( 3 + level, 4 + level * 2 ), this );
 			ch.getSprite().burst( 0xFF99FFFF, level / 2 + 3 );
 
-			Buff.affect( ch, Frost.class, Frost.duration( ch ) / 2 + level );
+			Buff.affect( ch, BuffFactory.FROST, CharUtils.durationFactor(ch) * 5f / 2 + level );
 			Buff.affect( ch, BuffFactory.SLOW, CharUtils.durationFactor(ch) * 10f / 2 + level );
 
 			if (ch == getOwner() && !ch.isAlive()) {

@@ -7,8 +7,8 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
@@ -39,7 +39,7 @@ public class MageArmor extends ClassArmor {
 
 		for (Mob mob : level.getCopyOfMobsArray()) {
 			if (level.fieldOfView[mob.getPos()]) {
-				Buff.affect( mob, Burning.class ).reignite( mob );
+				CharUtils.ignite( mob );
 				Buff.prolong( mob, BuffFactory.ROOTS, 3 );
 			}
 		}

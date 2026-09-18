@@ -1,9 +1,7 @@
 
 package com.watabou.pixeldungeon.items.weapon.enchantments;
-
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.sprites.Glowing;
@@ -23,7 +21,7 @@ public class Fire extends Weapon.Enchantment {
 		if (Random.Int( level + 3 ) >= 2) {
 			
 			if (Random.Int( 2 ) == 0) {
-				Buff.affect( defender, Burning.class ).reignite( defender );
+				CharUtils.ignite( defender );
 			}
 			defender.damage( Random.Int( 1, level + 2 ), this );
 			

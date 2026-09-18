@@ -6,7 +6,6 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.levels.traps.Electricity;
 import com.watabou.utils.Random;
 import java.util.HashSet;
@@ -30,7 +29,7 @@ public class RingOfElements extends Ring {
 		private final Set<String> FULL;
 		{
 			FULL = new HashSet<>();
-			FULL.add( Burning.class.getSimpleName() );
+			FULL.add( "Burning" );
 			FULL.add( ToxicGas.class.getSimpleName() );
 			FULL.add( "Poison" );
 			FULL.add( Electricity.class.getSimpleName() );

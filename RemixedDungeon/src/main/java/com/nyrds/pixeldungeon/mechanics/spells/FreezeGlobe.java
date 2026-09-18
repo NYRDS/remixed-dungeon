@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import org.jetbrains.annotations.NotNull;
@@ -35,7 +34,7 @@ public class FreezeGlobe extends Spell{
 				ch.getSprite().emitter().burst( SnowParticle.FACTORY, 5 );
 				ch.getSprite().burst( 0xFF99FFFF, 3 );
 
-				Buff.affect( ch, Frost.class, Frost.duration( ch ) );
+				Buff.affect( ch, BuffFactory.FROST, CharUtils.durationFactor(ch) * 5f );
 				Buff.affect( ch, BuffFactory.SLOW, CharUtils.durationFactor(ch) * 10f );
 				Sample.INSTANCE.play( Assets.SND_SHATTER );
 				triggered = true;

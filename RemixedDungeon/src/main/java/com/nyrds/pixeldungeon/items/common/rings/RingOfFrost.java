@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.items.rings.ArtifactBuff;
@@ -47,7 +46,7 @@ public class RingOfFrost extends Artifact {
 				if (enemy.isAlive()) {
 					Buff.affect(enemy, BuffFactory.SLOW, CharUtils.durationFactor(enemy) * 10f / 5 + level());
 					if (Random.Int(100) < 10 + level()) {
-						Buff.affect(enemy, Frost.class, Frost.duration(enemy) / 5 + level());
+						Buff.affect(enemy, BuffFactory.FROST, CharUtils.durationFactor(enemy) * 5f / 5 + level());
 					}
 					enemy.damage(level() / 2, this);
 				}

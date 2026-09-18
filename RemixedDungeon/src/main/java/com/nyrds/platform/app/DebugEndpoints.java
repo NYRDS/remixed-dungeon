@@ -1,5 +1,4 @@
 package com.nyrds.platform.app;
-
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.RemoteControlled;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
@@ -13,6 +12,7 @@ import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Trap;
 import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
+import com.nyrds.pixeldungeon.mechanics.buffs.CustomBuff;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.actions.Attack;
@@ -37,7 +37,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -4331,7 +4330,7 @@ public class DebugEndpoints {
             final boolean finalBuffSrc = buffSrc;
             GameLoop.pushUiTaskAndWait(() -> {
                 if (finalBuffSrc) {
-                    finalVictim.damage(finalDmg, new Burning());
+                    finalVictim.damage(finalDmg, new CustomBuff("Burning"));
                 } else {
                     Mob attacker = findMobById(finalSrcId);
                     if (attacker != null) {

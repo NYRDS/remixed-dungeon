@@ -1,6 +1,5 @@
 
 package com.watabou.pixeldungeon.items.wands;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
@@ -9,10 +8,9 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.Heap;
@@ -51,7 +49,7 @@ public class WandOfFirebolt extends SimpleWand  {
 		if (ch != null) {
 			
 			ch.damage( Random.Int( 1, 8 + wandLevel * wandLevel ), this );
-			Buff.affect( ch, Burning.class ).reignite( ch );
+			CharUtils.ignite( ch );
 			
 			ch.getSprite().emitter().burst( FlameParticle.FACTORY, 5 );
 			

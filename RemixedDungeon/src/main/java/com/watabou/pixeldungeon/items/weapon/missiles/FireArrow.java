@@ -1,9 +1,7 @@
 
 package com.watabou.pixeldungeon.items.weapon.missiles;
-
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.CharUtils;
 
 public class FireArrow extends Arrow {
 
@@ -32,7 +30,7 @@ public class FireArrow extends Arrow {
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
 		if(activateSpecial(attacker, defender, damage)) {
-			Buff.affect( defender, Burning.class ).reignite( defender );
+			CharUtils.ignite( defender );
 		}
 		super.attackProc( attacker, defender, damage );
 	}

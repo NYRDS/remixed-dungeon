@@ -1,15 +1,15 @@
 
 package com.watabou.pixeldungeon.plants;
-
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.BArray;
@@ -60,7 +60,7 @@ public class Icecap extends Plant {
 			
 			if (action.equals( CommonActions.AC_EAT )) {
 
-				Buff.prolong(chr, Frost.class, Frost.duration(chr) * 2);
+				Buff.prolong(chr, BuffFactory.FROST, CharUtils.durationFactor(chr) * 5f * 2);
 				chr.heal( Random.Int(0, Math.max((chr.ht() - chr.hp()) / 4, 10) ), this);
 			}
 		}

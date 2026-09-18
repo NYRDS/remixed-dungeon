@@ -7,7 +7,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -33,7 +32,7 @@ public class MysteryMeat extends Food {
 			switch (Random.Int( 5 )) {
 			case 0:
                 GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info1));
-				Buff.affect(chr, Burning.class ).reignite(chr);
+				CharUtils.ignite(chr);
 				break;
 			case 1:
                 GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info2));

@@ -1,12 +1,12 @@
 
 package com.watabou.pixeldungeon.actors.blobs;
-
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.items.Heap;
@@ -28,7 +28,7 @@ public class Freezing {
 
 		Char ch = Actor.findChar( cell ); 
 		if (ch != null) {
-			Buff.prolong( ch, Frost.class, Frost.duration( ch ) * Random.Float( 1.0f, 1.5f ) );
+			Buff.prolong( ch, BuffFactory.FROST, CharUtils.durationFactor(ch) * 5f * Random.Float( 1.0f, 1.5f ) );
 		}
 		
 		if (fire != null) {

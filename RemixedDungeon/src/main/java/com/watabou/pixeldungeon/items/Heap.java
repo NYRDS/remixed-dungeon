@@ -1,11 +1,10 @@
 
 package com.watabou.pixeldungeon.items;
-
-
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.mechanics.HasPositionOnLevel;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.EventCollector;
@@ -17,8 +16,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Effects;
@@ -295,7 +292,7 @@ public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
         if (type == Type.MIMIC) {
             Mob m = CharUtils.spawnMimicAt(pos, items);
             if (m != null) {
-                Buff.affect(m, Burning.class).reignite(m);
+                CharUtils.ignite(m);
                 m.getSprite().emitter().burst(FlameParticle.FACTORY, 5);
                 destroy();
             }
@@ -339,7 +336,7 @@ public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
         if (type == Type.MIMIC) {
             Mob m = CharUtils.spawnMimicAt(pos, items);
             if (m != null) {
-                Buff.prolong(m, Frost.class, Frost.duration(m) * Random.Float(1.0f, 1.5f));
+                Buff.prolong(m, BuffFactory.FROST, CharUtils.durationFactor(m) * 5f * Random.Float(1.0f, 1.5f));
                 destroy();
             }
         }

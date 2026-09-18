@@ -9,9 +9,7 @@ import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.DummyBuff;
-import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.items.armor.glyphs.Viscosity;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
@@ -108,14 +106,12 @@ public class BuffFactory {
     }
 
     private static void initBuffsMap() {
-        registerBuffClass(Burning.class);
         registerBuffClass(Viscosity.DeferedDamage.class);
         registerBuffClass(Earthroot.Armor.class);
         registerBuffClass(Hunger.class);
         //registerBuffClass(Charger.class);
         registerBuffClass(Necrotism.class);
         registerBuffClass(Sungrass.Health.class);
-        registerBuffClass(Frost.class);
         registerBuffClass(HeartOfDarkness.HeartOfDarknessBuff.class);
         registerBuffClass(DriedRose.OneWayCursedLoveBuff.class);
         registerBuffClass(RatKingCrown.RatKingAuraBuff.class);
