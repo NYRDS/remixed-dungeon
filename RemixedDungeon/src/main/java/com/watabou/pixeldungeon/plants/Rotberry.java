@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.plants;
-
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
@@ -42,7 +41,7 @@ public class Rotberry extends Plant {
 		level().animatedDrop(new Seed(), pos);
 
 		if (ch instanceof Char) {
-			Buff.prolong((Char) ch, Roots.class, TICK * 3);
+			Buff.prolong((Char) ch, BuffFactory.ROOTS, TICK * 3);
 		}
 	}
 

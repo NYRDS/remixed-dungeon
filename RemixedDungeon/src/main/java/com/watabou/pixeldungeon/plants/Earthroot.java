@@ -1,17 +1,15 @@
 
 package com.watabou.pixeldungeon.plants;
-
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
@@ -61,8 +59,9 @@ public class Earthroot extends Plant {
             super._execute(chr, action);
 
             if (action.equals(CommonActions.AC_EAT)) {
-                Buff.affect(chr, Roots.class, 25);
-                Buff.affect(chr, Barkskin.class).level(chr.effectiveSTR() / 4);
+                Buff.affect(chr, BuffFactory.ROOTS, 25);
+                Buff barkskin = Buff.affect(chr, BuffFactory.BARKSKIN);
+                if (barkskin.level() < chr.effectiveSTR() / 4) barkskin.level(chr.effectiveSTR() / 4);
             }
         }
     }

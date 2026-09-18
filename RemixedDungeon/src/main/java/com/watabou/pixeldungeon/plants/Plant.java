@@ -1,15 +1,14 @@
 
 package com.watabou.pixeldungeon.plants;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.noosa.Gizmo;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -47,7 +46,8 @@ public class Plant extends LevelObject {
 	@Override
 	public boolean interact(Char ch) {
 		if (ch.getSubClass() == HeroSubClass.WARDEN) {
-			Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
+			Buff barkskin = Buff.affect(ch, BuffFactory.BARKSKIN);
+				if (barkskin.level() < ch.ht() / 3) barkskin.level(ch.ht() / 3);
 
 			if (Random.Int(5) == 0) {
 				Treasury.getLevelTreasury().random(Treasury.Category.SEED).dropAt(ch);

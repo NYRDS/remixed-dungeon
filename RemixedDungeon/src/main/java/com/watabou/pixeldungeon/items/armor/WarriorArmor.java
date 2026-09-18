@@ -1,6 +1,6 @@
 
 package com.watabou.pixeldungeon.items.armor;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -81,7 +80,7 @@ public class WarriorArmor extends ClassArmor {
 						for (int i = 0; i < Level.NEIGHBOURS8.length; i++) {
 							Char mob = Actor.findChar(pos + Level.NEIGHBOURS8[i]);
 							if (mob != null && mob != selector) {
-								Buff.prolong(mob, Paralysis.class, SHOCK_TIME);
+								Buff.prolong(mob, BuffFactory.PARALYSIS, SHOCK_TIME);
 							}
 						}
 

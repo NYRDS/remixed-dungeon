@@ -1,10 +1,9 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
 import org.jetbrains.annotations.NotNull;
 
@@ -26,7 +25,7 @@ public class RootSpell extends Spell{
 			target.getSprite().emitter().burst( EarthParticle.FACTORY, 5 );
 			target.getSprite().burst( 0xFF99FFFF, 3 );
 
-			Buff.prolong( target, Roots.class, 10 );
+			Buff.prolong( target, BuffFactory.ROOTS, 10 );
 			Sample.INSTANCE.play( Assets.SND_PUFF );
 
 			castCallback(chr);

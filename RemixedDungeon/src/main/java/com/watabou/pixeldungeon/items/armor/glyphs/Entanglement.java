@@ -1,11 +1,10 @@
 
 package com.watabou.pixeldungeon.items.armor.glyphs;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.noosa.Camera;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -26,7 +25,7 @@ public class Entanglement extends Glyph {
 		
 		if (Random.Int( 4 ) == 0) {
 			
-			Buff.prolong( defender, Roots.class, 5 - level / 5 );
+			Buff.prolong( defender, BuffFactory.ROOTS, 5 - level / 5 );
 			Buff.affect( defender, Earthroot.Armor.class ).level( 5 * (level + 1) );
 			CellEmitter.bottom( defender.getPos() ).start( EarthParticle.FACTORY, 0.05f, 8 );
 			Camera.main.shake( 1, 0.4f );

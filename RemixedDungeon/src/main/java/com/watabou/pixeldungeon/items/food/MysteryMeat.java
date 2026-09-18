@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -38,7 +37,7 @@ public class MysteryMeat extends Food {
 				break;
 			case 1:
                 GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info2));
-				Buff.prolong(chr, Roots.class, CharUtils.durationFactor(chr) * 10f );
+				Buff.prolong(chr, BuffFactory.ROOTS, CharUtils.durationFactor(chr) * 10f );
 				break;
 			case 2:
                 GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info3));

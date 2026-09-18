@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
-import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -22,7 +21,7 @@ public class WandOfAmok extends SimpleWand {
 			if (victim  == Dungeon.hero) {
 				Buff.affect( victim , BuffFactory.VERTIGO, CharUtils.durationFactor(victim) * 10f );
 			} else {
-				Buff.affect( victim , Amok.class, 3f + effectiveLevel() );
+				Buff.affect( victim , BuffFactory.AMOK, 3f + effectiveLevel() );
 			}
 		} else {
             GLog.i(StringsManager.getVar(R.string.WandOfAmok_Info1));

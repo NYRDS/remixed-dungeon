@@ -9,7 +9,7 @@ return mob.init{
             RPD.affectBuff(enemy, "Roots", 3)
         end
         if math.random(5) == 1 then
-            local factor = RPD.Buffs.Poison:durationFactor(enemy)
+            local factor = RPD.CharUtils:durationFactor(enemy)
             RPD.Buffs.Buff:affect(enemy, "Poison", math.random(7, 8) * factor)
         end
         return dmg

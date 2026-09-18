@@ -1,9 +1,8 @@
 
 package com.watabou.pixeldungeon.items.weapon.missiles;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
 
@@ -30,7 +29,7 @@ public class CurareDart extends Dart {
 	
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
-		Buff.prolong( defender, Paralysis.class, DURATION );
+		Buff.prolong( defender, BuffFactory.PARALYSIS, DURATION );
 		super.attackProc( attacker, defender, damage );
 	}
 

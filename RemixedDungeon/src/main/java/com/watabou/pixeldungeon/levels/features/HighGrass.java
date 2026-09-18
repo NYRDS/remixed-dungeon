@@ -1,10 +1,9 @@
 
 package com.watabou.pixeldungeon.levels.features;
-
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
@@ -44,7 +43,8 @@ public class HighGrass {
 		if(ch != null) {
 			// Barkskin
 			if (ch.getSubClass() == HeroSubClass.WARDEN) {
-				Buff.affect(ch, Barkskin.class).level(ch.ht() / 3);
+				Buff barkskin = Buff.affect(ch, BuffFactory.BARKSKIN);
+				if (barkskin.level() < ch.ht() / 3) barkskin.level(ch.ht() / 3);
 				leaves = 8;
 			}
 

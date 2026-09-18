@@ -9,7 +9,7 @@ return trap.init(
             char = RPD.Actor:findChar(cell)
         end
         if char ~= nil then
-            local duration = RPD.Buffs.Poison:durationFactor(char) * (4 + math.floor(RPD.Dungeon.depth / 2))
+            local duration = RPD.CharUtils:durationFactor(char) * (4 + math.floor(RPD.Dungeon.depth / 2))
             RPD.Buffs.Buff:affect(char, "Poison", duration)
         end
         RPD.Sfx.CellEmitter:center(cell):burst(RPD.Sfx.PoisonParticle.SPLASH, 3)

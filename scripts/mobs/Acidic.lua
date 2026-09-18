@@ -29,7 +29,7 @@ return mob.init{
 
     zapProc = function(self, enemy, dmg)
         if enemy ~= nil and math.random(2) == 1 then
-            RPD.Buffs.Buff:prolong(enemy, "Cripple", RPD.Buffs.Cripple.DURATION)
+            RPD.Buffs.Buff:prolong(enemy, "Cripple", 10)
         end
         return dmg
     end,

@@ -42,7 +42,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -496,7 +495,7 @@ public class Mob extends Char implements IZapper {
 
             // Use regular Sleeping AI (it will handle pain immunity internally)
             setState(MobAi.getStateByClass(Sleeping.class));
-            postpone(Sleep.SWS);
+            postpone(1.5f); // was Sleep.SWS
         }
         return true;
     }

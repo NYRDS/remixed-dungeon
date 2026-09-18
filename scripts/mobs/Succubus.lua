@@ -17,7 +17,7 @@ return mob.init{
             if enemy:hasBuff("OneWayLoveBuff") then
                 target = self
             end
-            local duration = RPD.Buffs.Charm:durationFactor(target) * math.random(2, 5)
+            local duration = RPD.CharUtils:charmDurationFactor(target) * math.random(2, 5)
             RPD.affectBuff(target, "Charm", duration)
         end
         return dmg

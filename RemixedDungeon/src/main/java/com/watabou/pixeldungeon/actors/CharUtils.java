@@ -51,6 +51,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
@@ -289,6 +290,47 @@ public class CharUtils {
     public static float durationFactor(Char ch) {
         RingOfElements.Resistance resistance = ch.buff(RingOfElements.Resistance.class);
         return resistance != null ? resistance.durationFactor() : 1f;
+    }
+
+    /**
+     * Charm duration scaling: the DriedRose one-way-love states override the
+     * RingOfElements factor (their java buffs are item-batch scope).
+     */
+    public static float charmDurationFactor(Char ch) {
+        if (ch.hasBuff("OneWayLoveBuff")) {
+            return 0f;
+        }
+        if (ch.hasBuff("OneWayCursedLoveBuff")) {
+            return 2f;
+        }
+        return durationFactor(ch);
+    }
+
+    /**
+     * Terror.recover: fresh terror (less than full duration left) breaks on damage.
+     */
+    public static void terrorRecover(Char ch) {
+        Buff terror = ch.buff(BuffFactory.TERROR);
+        if (terror != null && terror.cooldown() < 10f) {
+            terror.detach();
+        }
+    }
+
+    /**
+     * Gladiator combo counter; count rides in the buff level.
+     */
+    public static int comboHit(Char holder, int damage) {
+        Buff combo = Buff.affect(holder, BuffFactory.COMBO);
+        int count = combo.level() + 1;
+        combo.level(count);
+        if (count >= 3) {
+            Badges.validateMasteryCombo(count);
+            GLog.p(StringsManager.getVar(R.string.Combo_Combo), count);
+            combo.postpone(1.41f - count / 10f);
+            return (int) (damage * (count - 2) / 5f);
+        }
+        combo.postpone(1.1f);
+        return 0;
     }
 
     public static void teleportRandomForce(@NotNull Char ch) {

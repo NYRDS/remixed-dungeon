@@ -27,7 +27,7 @@ return mob.init{
     attackProc = function(self, enemy, dmg)
         if enemy ~= nil and math.random(2) == 1 then
             RPD.Buffs.Buff:affect(enemy, "Poison",
-                math.random(7, 9) * RPD.Buffs.Poison:durationFactor(enemy))
+                math.random(7, 9) * RPD.CharUtils:durationFactor(enemy))
         end
         return dmg
     end,

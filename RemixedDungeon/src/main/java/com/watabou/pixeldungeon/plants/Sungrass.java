@@ -1,15 +1,15 @@
 
 package com.watabou.pixeldungeon.plants;
-
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -57,7 +57,7 @@ public class Sungrass extends Plant {
 
 			if (action.equals(CommonActions.AC_EAT)) {
 
-				Buff.affect(chr, Charm.class, Charm.durationFactor(chr) * Random.IntRange(10, 15));
+				Buff.affect(chr, BuffFactory.CHARM, CharUtils.charmDurationFactor(chr) * Random.IntRange(10, 15));
 
 				chr.heal(Random.Int(0, Math.max((chr.ht() - chr.hp()) / 4, 15)), this);
 			}

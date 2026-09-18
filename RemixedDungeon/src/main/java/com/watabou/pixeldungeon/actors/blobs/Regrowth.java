@@ -1,12 +1,11 @@
 
 package com.watabou.pixeldungeon.actors.blobs;
-
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
 import com.watabou.pixeldungeon.levels.Level;
@@ -42,7 +41,7 @@ public class Regrowth extends Blob {
 					
 					Char ch = Actor.findChar( i );
 					if (ch != null) {
-						Buff.prolong( ch, Roots.class, TICK );
+						Buff.prolong( ch, BuffFactory.ROOTS, TICK );
 					}
 				}
 			}

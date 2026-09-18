@@ -5,7 +5,6 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
@@ -36,7 +35,8 @@ public class FrozenCarpaccio extends Food {
 				break;
 			case 1:
                 GLog.i(StringsManager.getVar(R.string.FrozenCarpaccio_Info2));
-				Buff.affect(chr, Barkskin.class ).level( chr.ht() / 4 );
+				Buff barkskin = Buff.affect(chr, BuffFactory.BARKSKIN);
+				if (barkskin.level() < chr.ht() / 4) barkskin.level(chr.ht() / 4);
 				break;
 			case 2:
                 GLog.i(StringsManager.getVar(R.string.FrozenCarpaccio_Info3));

@@ -1,13 +1,12 @@
 
 package com.watabou.pixeldungeon.items.scrolls;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.levels.Level;
@@ -28,8 +27,8 @@ public class ScrollOfLullaby extends Scroll {
 		Level level = reader.level();
 		for (Mob mob : level.getCopyOfMobsArray()) {
 			if (level.fieldOfView[mob.getPos()]) {
-				Buff.affect( mob, Sleep.class );
-				if (mob.hasBuff( Sleep.class )) {
+				Buff.affect( mob, BuffFactory.SLEEP );
+				if (mob.hasBuff( BuffFactory.SLEEP )) {
 					affected = mob;
 					count++;
 				}

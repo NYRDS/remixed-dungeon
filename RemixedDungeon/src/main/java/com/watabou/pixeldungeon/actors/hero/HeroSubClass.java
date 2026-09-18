@@ -1,6 +1,5 @@
 
 package com.watabou.pixeldungeon.actors.hero;
-
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
@@ -12,11 +11,9 @@ import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
-import com.watabou.pixeldungeon.actors.buffs.Combo;
-import com.watabou.pixeldungeon.actors.buffs.Fury;
-import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
@@ -151,7 +148,7 @@ public enum HeroSubClass implements CharModifier {
         switch (this) {
             case GLADIATOR:
                 if (primaryItem instanceof MeleeWeapon) {
-                    damage += Buff.affect(attacker, Combo.class).hit(defender, damage);
+                    damage += CharUtils.comboHit(attacker, damage);
                 }
                 break;
             case BATTLEMAGE:
@@ -169,7 +166,7 @@ public enum HeroSubClass implements CharModifier {
                 break;
             case SNIPER:
                 if (attacker.rangedWeapon.valid()) {
-                    Buff.prolong(defender, SnipersMark.class, attacker.attackDelay() * 1.1f);
+                    Buff.prolong(defender, BuffFactory.SNIPER_MARK, attacker.attackDelay() * 1.1f);
                 }
                 break;
             case SHAMAN:
@@ -199,7 +196,7 @@ public enum HeroSubClass implements CharModifier {
     public int charGotDamage(int damage, NamedEntityKind src, Char target) {
         switch (this) {
             case BERSERKER:
-                if (0 < target.hp() && target.hp() <= target.ht() * Fury.LEVEL) {
+                if (0 < target.hp() && target.hp() <= target.ht() * 0.4f) {
                     if (!target.hasBuff(BuffFactory.FURY)) {
                         Buff.affect(target, BuffFactory.FURY);
                     }

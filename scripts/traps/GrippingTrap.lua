@@ -9,7 +9,7 @@ return trap.init(
             local damage = math.max(0, (RPD.Dungeon.depth + 3) - math.floor(char:defenceRoll(char) / 2))
             local bleeding = RPD.Buffs.Buff:affect(char, "Bleeding")
             bleeding:level(damage)
-            RPD.Buffs.Buff:prolong(char, "Cripple", RPD.Buffs.Cripple.DURATION)
+            RPD.Buffs.Buff:prolong(char, "Cripple", 10)
             RPD.Sfx.Wound:hit(char)
         else
             RPD.Sfx.Wound:hit(cell)

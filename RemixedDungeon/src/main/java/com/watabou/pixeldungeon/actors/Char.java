@@ -2441,6 +2441,16 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @LuaInterface
+    public boolean isMob() {
+        return this instanceof Mob;
+    }
+
+    @LuaInterface
+    public void setPacified(boolean value) {
+        pacified = value;
+    }
+
+    @LuaInterface
     public boolean isUndead() {
         return undead;
     }

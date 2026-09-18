@@ -1,6 +1,5 @@
 
 package com.watabou.pixeldungeon.plants;
-
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
@@ -8,8 +7,8 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
@@ -85,7 +84,7 @@ public class Moongrace extends Plant {
 			super._execute(chr, action);
 
 			if (action.equals(CommonActions.AC_EAT)) {
-				Buff.affect(chr, Charm.class, Charm.durationFactor(chr) * Random.IntRange(10, 15));
+				Buff.affect(chr, BuffFactory.CHARM, CharUtils.charmDurationFactor(chr) * Random.IntRange(10, 15));
 				chr.accumulateSkillPoints(Random.Int(0, Math.max((chr.getSkillPointsMax() - chr.getSkillPoints()) / 4, 15)));
 			}
 		}

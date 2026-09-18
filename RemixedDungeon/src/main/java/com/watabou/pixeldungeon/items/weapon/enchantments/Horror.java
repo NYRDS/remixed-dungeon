@@ -5,7 +5,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.utils.Random;
@@ -26,7 +25,7 @@ public class Horror extends Weapon.Enchantment {
 			if (defender == Dungeon.hero) {
 				Buff.affect( defender, BuffFactory.VERTIGO, CharUtils.durationFactor(defender) * 10f );
 			} else {
-				Buff.affect( defender, Terror.class, Terror.DURATION );
+				Buff.affect( defender, BuffFactory.TERROR, 10f );
 			}
 			
 			return true;

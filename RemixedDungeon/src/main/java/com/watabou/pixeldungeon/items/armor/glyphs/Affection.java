@@ -1,10 +1,10 @@
 
 package com.watabou.pixeldungeon.items.armor.glyphs;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Charm;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
@@ -26,10 +26,10 @@ public class Affection extends Glyph {
 
 			int duration = Random.IntRange(2, 5);
 
-			Buff.affect(attacker, Charm.class, Charm.durationFactor(attacker) * duration);
+			Buff.affect(attacker, BuffFactory.CHARM, CharUtils.charmDurationFactor(attacker) * duration);
 			attacker.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
 
-			Buff.affect(defender, Charm.class, Random.Float(Charm.durationFactor(defender) * duration / 2, duration));
+			Buff.affect(defender, BuffFactory.CHARM, Random.Float(CharUtils.charmDurationFactor(defender) * duration / 2, duration));
 			defender.getSprite().centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
 		}
 
