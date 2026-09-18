@@ -1,7 +1,7 @@
 
 package com.watabou.pixeldungeon.levels.features;
-
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -57,7 +56,7 @@ public class Chasm implements Doom {
 		heroSprite.burst( heroSprite.blood(), 10 );
 		Camera.main.shake( 4, 0.2f );
 		
-		Buff.prolong( hero, Cripple.class, Cripple.DURATION );
+		Buff.prolong( hero, BuffFactory.CRIPPLE, 10f );
 		hero.damage( Random.IntRange( hero.ht() / 3, hero.ht() / 2 ), new Chasm() );
 	}
 

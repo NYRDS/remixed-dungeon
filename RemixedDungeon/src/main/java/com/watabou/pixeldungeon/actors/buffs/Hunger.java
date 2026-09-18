@@ -1,15 +1,16 @@
 
 package com.watabou.pixeldungeon.actors.buffs;
-
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.rings.RingOfSatiety;
@@ -55,11 +56,11 @@ public class Hunger extends Buff implements Doom {
 				
 				if(difficulty >= 3) {
 					if(Random.Float() < 0.01) {
-						Buff.prolong(target, Weakness.class, Weakness.duration(target));
+						Buff.prolong(target, BuffFactory.WEAKNESS, CharUtils.durationFactor(target) * 40f);
 					}
 					
 					if(Random.Float() < 0.01) {
-						Buff.prolong(target, Vertigo.class, Vertigo.duration(target));
+						Buff.prolong(target, BuffFactory.VERTIGO, CharUtils.durationFactor(target) * 10f);
 					}
 				}
 				

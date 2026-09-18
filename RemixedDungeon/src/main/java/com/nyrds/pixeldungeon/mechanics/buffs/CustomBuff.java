@@ -12,6 +12,7 @@ import com.nyrds.util.ModError;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
@@ -22,7 +23,7 @@ import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaTable;
 
 @LuaInterface
-public class CustomBuff extends Buff {
+public class CustomBuff extends Buff implements Doom {
 
     private String name;
     private String desc;
@@ -99,7 +100,10 @@ public class CustomBuff extends Buff {
 
             if (script.run("attachTo", target).checkboolean()) {
                 this.target = target;
-                return target.add(this);
+                if (target.add(this)) {
+                    script.runOptionalNoRet("attached");
+                    return true;
+                }
             }
             return false;
         } catch (Exception e) {
@@ -151,6 +155,17 @@ public class CustomBuff extends Buff {
     @Override
     public void charAct(Char chr) {
         script.runOptional("charAct", chr);
+    }
+
+    @Override
+    public void attachVisual() {
+        script.runOptionalNoRet("attachVisual");
+        super.attachVisual();
+    }
+
+    @Override
+    public void onHeroDeath() {
+        script.runOptionalNoRet("onHeroDeath");
     }
 
     @Override

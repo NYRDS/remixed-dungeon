@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.items.armor;
-
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -9,7 +9,6 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -38,7 +37,7 @@ class TeleportCellListener implements CellSelector.Listener {
 
             for (Mob mob : level.getCopyOfMobsArray()) {
                 if (level.fieldOfView[mob.getPos()] && !mob.isNpc()) {
-                    Buff.prolong( mob, Blindness.class, 2 );
+                    Buff.prolong( mob, BuffFactory.BLINDNESS, 2 );
                     mob.setState(MobAi.getStateByClass(Wandering.class));
                     mob.getSprite().emitter().burst( Speck.factory( Speck.LIGHT ), 4 );
                 }

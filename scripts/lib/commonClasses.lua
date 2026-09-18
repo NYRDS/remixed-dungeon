@@ -185,6 +185,7 @@ local Sfx = {
     SpellSprite = luajava.bindClass("com.watabou.pixeldungeon.effects.SpellSprite"),
     DeathStroke= luajava.bindClass("com.nyrds.pixeldungeon.effects.DeathStroke"),
     Wound = luajava.bindClass("com.watabou.pixeldungeon.effects.Wound"),
+    Splash = luajava.bindClass("com.watabou.pixeldungeon.effects.Splash"),
     Flare = luajava.bindClass("com.watabou.pixeldungeon.effects.Flare"),
     HighlightCell = luajava.bindClass("com.watabou.pixeldungeon.effects.HighlightCell")
 }

@@ -1,17 +1,13 @@
 
 package com.watabou.pixeldungeon.items.potions;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Cripple;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
-import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.HealthArrow;
@@ -38,10 +34,10 @@ public class PotionOfHealing extends Potion {
 	
 	public static void heal( Char ch, float portion ) {
 		ch.heal((int) (ch.ht()*portion), pseudoPotion);
-		Buff.detach( ch, Poison.class );
-		Buff.detach( ch, Cripple.class );
-		Buff.detach( ch, Weakness.class );
-		Buff.detach( ch, Bleeding.class );
+		Buff.detach( ch, BuffFactory.POISON );
+		Buff.detach( ch, BuffFactory.CRIPPLE );
+		Buff.detach( ch, BuffFactory.WEAKNESS );
+		Buff.detach( ch, BuffFactory.BLEEDING );
 	}
 	
 	@Override

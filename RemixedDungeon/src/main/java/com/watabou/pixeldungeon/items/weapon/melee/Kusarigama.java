@@ -1,5 +1,5 @@
 package com.watabou.pixeldungeon.items.weapon.melee;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Image;
@@ -7,7 +7,6 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.effects.KusarigamaChain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
@@ -73,7 +72,7 @@ public class Kusarigama extends MeleeWeapon {
     @Override
     public void postAttack(Char tgt) {
         if (Random.Float(1) < 0.1f) {
-            Buff.prolong(tgt, Vertigo.class, 3);
+            Buff.prolong(tgt, BuffFactory.VERTIGO, 3);
         }
     }
 

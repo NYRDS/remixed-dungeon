@@ -1,6 +1,6 @@
 
 package com.watabou.pixeldungeon.items.weapon.enchantments;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -20,7 +20,7 @@ public class Slow extends Weapon.Enchantment {
 		
 		if (Random.Int( level + 4 ) >= 3) {
 			
-			Buff.prolong( defender, com.watabou.pixeldungeon.actors.buffs.Slow.class, 
+			Buff.prolong( defender, BuffFactory.SLOW, 
 				Random.Float( 1, 1.5f + level ) );
 			
 			return true;

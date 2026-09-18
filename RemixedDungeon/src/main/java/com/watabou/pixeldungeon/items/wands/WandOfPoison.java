@@ -1,13 +1,13 @@
 
 package com.watabou.pixeldungeon.items.wands;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
@@ -17,7 +17,7 @@ public class WandOfPoison extends SimpleWand  {
 	@Override
 	protected void onZap( int cell, Char ch ) {
 		if (ch != null) {
-			Buff.affect( ch, Poison.class,Poison.durationFactor( ch ) * (5 + effectiveLevel()) );
+			Buff.affect( ch, BuffFactory.POISON, CharUtils.durationFactor(ch) * (5 + effectiveLevel()) );
 		} else {
             GLog.i(StringsManager.getVar(R.string.WandOfPoison_Info1));
 		}

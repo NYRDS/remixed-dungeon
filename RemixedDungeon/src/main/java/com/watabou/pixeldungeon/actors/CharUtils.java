@@ -69,6 +69,7 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
@@ -281,6 +282,15 @@ public class CharUtils {
 
 
     @LuaInterface
+    /**
+     * RingOfElements resistance factor, shared duration scaler for the
+     * vanilla control buffs (their old X.duration(ch) statics).
+     */
+    public static float durationFactor(Char ch) {
+        RingOfElements.Resistance resistance = ch.buff(RingOfElements.Resistance.class);
+        return resistance != null ? resistance.durationFactor() : 1f;
+    }
+
     public static void teleportRandomForce(@NotNull Char ch) {
         Level level = ch.level();
 

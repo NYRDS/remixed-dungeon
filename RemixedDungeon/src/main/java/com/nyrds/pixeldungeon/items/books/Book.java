@@ -1,10 +1,9 @@
 package com.nyrds.pixeldungeon.items.books;
-
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ abstract public class Book extends Item {
 	public void _execute(@NotNull Char chr, @NotNull String action ) {
 		if (action.equals( CommonActions.AC_READ )) {
 
-			if (chr.hasBuff( Blindness.class )) {
+			if (chr.hasBuff( BuffFactory.BLINDNESS )) {
                 GLog.w(StringsManager.getVar(R.string.Codex_Blinded));
 			} else {
 				doRead(chr);

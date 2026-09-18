@@ -1,11 +1,10 @@
 
 package com.watabou.pixeldungeon.items.weapon.missiles;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Cripple;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
@@ -32,7 +31,7 @@ public class Javelin extends MissileWeapon {
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
 		super.attackProc( attacker, defender, damage );
-		Buff.prolong( defender, Cripple.class, Cripple.DURATION );
+		Buff.prolong( defender, BuffFactory.CRIPPLE, 10f );
 	}
 	
 	@Override

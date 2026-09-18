@@ -1,11 +1,10 @@
 
 package com.watabou.pixeldungeon.items.weapon.missiles;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.buffs.RageBuff;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
 
@@ -31,7 +30,7 @@ public class AmokDart extends Dart {
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
 		Buff.affect(defender, Amok.class,20);
-		Buff.affect(defender, Speed.class,20);
+		Buff.affect(defender, BuffFactory.SPEED, 20);
 		Buff rage = new RageBuff();
 		rage.attachTo(defender);
 

@@ -1,8 +1,8 @@
 
 package com.watabou.pixeldungeon.plants;
-
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
@@ -11,7 +11,6 @@ import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.Speed;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
@@ -62,7 +61,7 @@ public class Firebloom extends Plant {
 
 			if (action.equals(CommonActions.AC_EAT)) {
 				Buff.affect(chr, Burning.class).reignite(chr);
-				Buff.affect(chr, Speed.class, Speed.DURATION);
+				Buff.affect(chr, BuffFactory.SPEED, 10f);
 			}
 		}
 	}

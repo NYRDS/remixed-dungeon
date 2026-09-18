@@ -1,9 +1,8 @@
 
 package com.watabou.pixeldungeon.items.weapon.missiles;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Slow;
 
 public class FrostArrow extends Arrow {
 
@@ -34,7 +33,7 @@ public class FrostArrow extends Arrow {
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
 		if(activateSpecial(attacker, defender, damage)) {
-			Buff.prolong( defender, Slow.class, DURATION );
+			Buff.prolong( defender, BuffFactory.SLOW, DURATION );
 		}
 		super.attackProc( attacker, defender, damage );
 	}

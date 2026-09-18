@@ -1,15 +1,15 @@
 
 package com.watabou.pixeldungeon.plants;
-
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PoisonParticle;
 import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
@@ -25,7 +25,7 @@ public class Sorrowmoss extends Plant {
 	public void effect(int pos, Presser ch ) {
 		if (ch instanceof Char) {
 			Char chr = (Char)ch;
-			Buff.affect( chr, Poison.class, Poison.durationFactor( chr ) * (4 + Dungeon.depth / 2) );
+			Buff.affect( chr, BuffFactory.POISON, CharUtils.durationFactor(chr) * (4 + Dungeon.depth / 2) );
 		}
 
 		if (Dungeon.isCellVisible(pos)) {
@@ -55,7 +55,7 @@ public class Sorrowmoss extends Plant {
 			super._execute(chr, action );
 
 			if (action.equals( CommonActions.AC_EAT )) {
-				Buff.affect(chr, Poison.class, Poison.durationFactor(chr) * (chr.lvl()) );
+				Buff.affect(chr, BuffFactory.POISON, CharUtils.durationFactor(chr) * (chr.lvl()) );
 				Buff.affect(chr, Invisibility.class, 2 );
 			}
 		}

@@ -1,17 +1,15 @@
 
 package com.watabou.pixeldungeon.items.food;
-
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.Slow;
-import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -40,15 +38,15 @@ public class MysteryMeat extends Food {
 				break;
 			case 1:
                 GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info2));
-				Buff.prolong(chr, Roots.class, Stun.duration(chr) );
+				Buff.prolong(chr, Roots.class, CharUtils.durationFactor(chr) * 10f );
 				break;
 			case 2:
                 GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info3));
-				Buff.affect(chr, Poison.class,Poison.durationFactor(chr) * chr.ht() / 5 );
+				Buff.affect(chr, BuffFactory.POISON, CharUtils.durationFactor(chr) * chr.ht() / 5 );
 				break;
 			case 3:
                 GLog.w(StringsManager.getVar(R.string.MysteryMeat_Info4));
-				Buff.prolong(chr, Slow.class, Slow.duration(chr) );
+				Buff.prolong(chr, BuffFactory.SLOW, CharUtils.durationFactor(chr) * 10f );
 				break;
 			}
 		}

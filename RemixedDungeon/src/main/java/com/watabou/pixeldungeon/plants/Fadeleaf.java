@@ -1,8 +1,8 @@
 
 package com.watabou.pixeldungeon.plants;
-
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
@@ -64,7 +63,7 @@ public class Fadeleaf extends Plant {
 				chr.interrupt();
 				CharUtils.teleportRandom(chr);
 				chr.spend(Actor.TICK);
-				Buff.affect(chr, Vertigo.class, Vertigo.DURATION * 2);
+				Buff.affect(chr, BuffFactory.VERTIGO, 10f * 2);
 			}
 		}
 	}

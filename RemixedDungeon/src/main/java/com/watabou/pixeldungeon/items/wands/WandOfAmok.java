@@ -1,15 +1,15 @@
 
 package com.watabou.pixeldungeon.items.wands;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
@@ -20,7 +20,7 @@ public class WandOfAmok extends SimpleWand {
 	protected void onZap( int cell, Char victim ) {
 		if (victim != null) {
 			if (victim  == Dungeon.hero) {
-				Buff.affect( victim , Vertigo.class, Vertigo.duration( victim  ) );
+				Buff.affect( victim , BuffFactory.VERTIGO, CharUtils.durationFactor(victim) * 10f );
 			} else {
 				Buff.affect( victim , Amok.class, 3f + effectiveLevel() );
 			}

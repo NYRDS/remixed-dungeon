@@ -1,8 +1,8 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
-
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
 
 public class PoisonArrow extends Arrow {
 
@@ -40,8 +40,8 @@ public class PoisonArrow extends Arrow {
 		}
 		if (activateSpecial(attacker, defender, damage)) {
 			Buff.affect(defender,
-					Poison.class,
-					Poison.durationFactor(defender) * poisonFactor);
+					BuffFactory.POISON,
+					CharUtils.durationFactor(defender) * poisonFactor);
 		}
 		super.attackProc(attacker, defender, damage);
 	}
