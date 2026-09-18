@@ -935,6 +935,7 @@
     <string name="PotionOfMindVision_Info">Sau khi uống loại này, trí tuệ của bạn sẽ được điều chỉnh theo dấu hiệu tâm linh của các sinh vật xa xôi, cho phép bạn cảm nhận sự hiện diện của sinh vật qua tường. Ngoài ra, bình thuốc này cũng cho phép bạn nhìn xuyên qua các bức tường và cánh cửa gần đó.</string>
     <string name="PotionOfPurity_Freshness">Bạn cảm thấy một sự tươi mát bất thường trong không khí.</string>
     <string name="PotionOfPurity_NoSmell">Bạn đã ngừng cảm nhận được mùi hương nào cả!</string>
+    <string name="PotionOfStrength_Apply">Sức mạnh mới mẻ tràn ngập cơ thể bạn.</string>
     <string name="Potion_ACMoisten">LÀM ẨM</string>
     <string name="Potion_Beneficial">Chai thuốc có lợi</string>
     <string name="Potion_Colors_1">đỏ tươi</string>
@@ -1428,6 +1429,7 @@
     <string name="WndHats_InfoButton">Xem xét</string>
     <string name="WndHats_ListTitle">Danh sách Phụ kiện</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
+    <string name="WndHats_UnequipButton">Tháo ra</string>
     <string name="WndHero_Awareness">Nhận thức</string>
     <string name="WndHero_Buffs">Hiệu ứng</string>
     <string name="WndHero_Exp">Kinh nghiệm</string>
@@ -1680,6 +1682,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
