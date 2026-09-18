@@ -35,22 +35,10 @@ import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
-import com.watabou.pixeldungeon.actors.buffs.Bleeding;
-import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
-import com.watabou.pixeldungeon.actors.buffs.Charm;
-import com.watabou.pixeldungeon.actors.buffs.Cripple;
-import com.watabou.pixeldungeon.actors.buffs.Fury;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.ManaRegeneration;
-import com.watabou.pixeldungeon.actors.buffs.Ooze;
-import com.watabou.pixeldungeon.actors.buffs.Paralysis;
-import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.buffs.Vertigo;
-import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CheckedCell;
@@ -533,35 +521,48 @@ public class Hero extends Char {
             return false;
         }
 
-        if (buff instanceof Burning) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaBurning));
-            interrupt();
-        } else if (buff instanceof Paralysis) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaParalysis));
-            interrupt();
-        } else if (buff instanceof Poison) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaPoison));
-            interrupt();
-        } else if (buff instanceof Ooze) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaOoze));
-        } else if (buff instanceof Roots) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaRoots));
-        } else if (buff instanceof Weakness) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaWeakness));
-        } else if (buff instanceof Blindness) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaBlindness));
-        } else if (buff instanceof Fury) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaFury));
-            getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_StaFurious));
-        } else if (buff instanceof Charm) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaCharm));
-        } else if (buff instanceof Cripple) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaCripple));
-        } else if (buff instanceof Bleeding) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaBleeding));
-        } else if (buff instanceof Vertigo) {
-            GLog.w(StringsManager.getVar(R.string.Hero_StaVertigo));
-            interrupt();
+        switch (buff.getEntityKind()) {
+            case BuffFactory.BURNING:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaBurning));
+                interrupt();
+                break;
+            case BuffFactory.PARALYSIS:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaParalysis));
+                interrupt();
+                break;
+            case BuffFactory.POISON:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaPoison));
+                interrupt();
+                break;
+            case BuffFactory.OOZE:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaOoze));
+                break;
+            case BuffFactory.ROOTS:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaRoots));
+                break;
+            case BuffFactory.WEAKNESS:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaWeakness));
+                break;
+            case BuffFactory.BLINDNESS:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaBlindness));
+                break;
+            case BuffFactory.FURY:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaFury));
+                getSprite().showStatus(CharSprite.POSITIVE, StringsManager.getVar(R.string.Hero_StaFurious));
+                break;
+            case BuffFactory.CHARM:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaCharm));
+                break;
+            case BuffFactory.CRIPPLE:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaCripple));
+                break;
+            case BuffFactory.BLEEDING:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaBleeding));
+                break;
+            case BuffFactory.VERTIGO:
+                GLog.w(StringsManager.getVar(R.string.Hero_StaVertigo));
+                interrupt();
+                break;
         }
 
         return true;

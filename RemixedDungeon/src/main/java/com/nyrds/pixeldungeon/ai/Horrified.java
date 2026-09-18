@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -24,7 +25,7 @@ public class Horrified extends MobAi implements AiState{
             return;
         }
 
-        Terror terror = me.buff(Terror.class);
+        Buff terror = me.buff(BuffFactory.TERROR);
         NamedEntityKind src = terror.getSource();
 
         var sourceOfFear = CharsList.DUMMY;
@@ -47,7 +48,7 @@ public class Horrified extends MobAi implements AiState{
     public String status(Char me) {
 
         if(me.hasBuff(BuffFactory.TERROR)) {
-            Terror terror = me.buff(Terror.class);
+            Buff terror = me.buff(BuffFactory.TERROR);
 
                 NamedEntityKind src = terror.getSource();
 

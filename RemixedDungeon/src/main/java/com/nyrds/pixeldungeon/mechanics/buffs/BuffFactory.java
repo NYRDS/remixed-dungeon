@@ -75,28 +75,45 @@ public class BuffFactory {
     static private final Set<String> customBuffs = new HashSet<>();
 
     public static final String GASES_IMMUNITY = "GasesImmunity";
-    public static final String BLESSED = Blessed.class.getSimpleName();
 
-    public static final String SHADOWS = Shadows.class.getSimpleName();
-    public static final String BLINDNESS = Blindness.class.getSimpleName();
-    public static final String MIND_VISION = MindVision.class.getSimpleName();
-    public static final String AWARENESS = Awareness.class.getSimpleName();
-    public static final String HUNGER = Hunger.class.getSimpleName();
-    public static final String INVISIBILITY = Invisibility.class.getSimpleName();
-    public static final String POISON = Poison.class.getSimpleName();
-    public static final String SLEEP = Sleep.class.getSimpleName();
-    public static final String SPEED = Speed.class.getSimpleName();
-    public static final String MAGIC_REGENERATION = ManaRegeneration.class.getSimpleName();
-    public static final String AMOK = Amok.class.getSimpleName();
-    public static final String CHARM = Charm.class.getSimpleName();
-    public static final String SNIPER_MARK = SnipersMark.class.getSimpleName();
-    public static final String WEAKNESS = Weakness.class.getSimpleName();
-    public static final String ROOTS = Roots.class.getSimpleName();
-    public static final String TERROR = Terror.class.getSimpleName();
+    // vanilla buff kinds; stable across the java -> lua migration (a dying
+    // java class leaves the string behind, CustomBuff picks the kind up)
+    public static final String BURNING = "Burning";
+    public static final String BARKSKIN = "Barkskin";
+    public static final String POISON = "Poison";
+    public static final String FURY = "Fury";
+    public static final String COMBO = "Combo";
+    public static final String OOZE = "Ooze";
+    public static final String HUNGER = "Hunger";
+    public static final String REGENERATION = "Regeneration";
+    public static final String MAGIC_REGENERATION = "ManaRegeneration";
+    public static final String BLEEDING = "Bleeding";
+    public static final String CHARM = "Charm";
+    public static final String FROST = "Frost";
+    public static final String SLEEP = "Sleep";
+    public static final String LEVITATION = "Levitation";
+    public static final String MIND_VISION = "MindVision";
+    public static final String BLINDNESS = "Blindness";
+    public static final String VERTIGO = "Vertigo";
+    public static final String STUN = "Stun";
+    public static final String PARALYSIS = "Paralysis";
+    public static final String TERROR = "Terror";
+    public static final String WEAKNESS = "Weakness";
+    public static final String LIGHT = "Light";
+    public static final String INVISIBILITY = "Invisibility";
+    public static final String SHADOWS = "Shadows";
+    public static final String SPEED = "Speed";
+    public static final String CRIPPLE = "Cripple";
+    public static final String AWARENESS = "Awareness";
+    public static final String SNIPER_MARK = "SnipersMark";
+    public static final String BLESSED = "Blessed";
+    public static final String SLOW = "Slow";
+    public static final String ROOTS = "Roots";
+    public static final String AMOK = "Amok";
     public static final String RAGE = new RageBuff().getEntityKind();
 
     // the Moongrace plant shares this buff's simple name and cannot import it
-    public static final String MOONGRACE = Moongrace.class.getSimpleName();
+    public static final String MOONGRACE = "Moongrace";
 
     public static final String RING_OF_DETECTION = new RingOfDetection().buff().getEntityKind();
     public static final String RING_OF_EVASION = new RingOfEvasion().buff().getEntityKind();
@@ -106,8 +123,6 @@ public class BuffFactory {
     public static final String RING_OF_ELEMENTS = new RingOfElements().buff().getEntityKind();
 
     public static final String RAT_SKULL_RATTER_AURA = new RatSkull().buff().getEntityKind();
-    public static final String VERTIGO = new Vertigo().getEntityKind();
-    public static final String FURY = new Fury().getEntityKind();
 
 
     static {

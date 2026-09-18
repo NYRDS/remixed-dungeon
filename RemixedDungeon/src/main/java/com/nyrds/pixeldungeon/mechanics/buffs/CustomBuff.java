@@ -139,6 +139,16 @@ public class CustomBuff extends Buff {
     }
 
     @Override
+    public int manaRegenerationBonus(Char chr) {
+        return script.runOptional("manaRegenerationBonus",0, chr);
+    }
+
+    @Override
+    public int dewBonus(Char chr) {
+        return script.runOptional("dewBonus",0, chr);
+    }
+
+    @Override
     public void charAct(Char chr) {
         script.runOptional("charAct", chr);
     }

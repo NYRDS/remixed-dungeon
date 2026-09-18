@@ -50,15 +50,11 @@ import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
-import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
-import com.watabou.pixeldungeon.actors.buffs.Levitation;
-import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Regeneration;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Stun;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -1116,8 +1112,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         //GLog.debug("%s (%s) added to %s", buff.getEntityKind(), buff.getSource().getEntityKind(), getEntityKind());
 
         if (!Dungeon.isLoading() && !restoringFromBundle) {
-            if (buff instanceof Burning
-            ) {
+            if (BuffFactory.BURNING.equals(buff.getEntityKind())) {
                 damage(Random.NormalIntRange(1, ht() / 8), buff);
             }
         }
@@ -1206,7 +1201,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     @LuaInterface
     public void move(int step) {
-        if (!isMovable() || hasBuff(Roots.class)) {
+        if (!isMovable() || hasBuff(BuffFactory.ROOTS)) {
             return;
         }
 
@@ -1554,7 +1549,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     public boolean isFlying() {
-        return !paralysed && (flying || hasBuff(Levitation.class));
+        return !paralysed && (flying || hasBuff(BuffFactory.LEVITATION));
     }
 
     @LuaInterface
@@ -1826,7 +1821,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return false;
         }
 
-        if (hasBuff(Roots.class)) {
+        if (hasBuff(BuffFactory.ROOTS)) {
             return false;
         }
 
@@ -2111,7 +2106,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (hasBuff(BuffFactory.BLINDNESS)) {
             computedViewDistance = 1;
         } else {
-            if (hasBuff(Light.class)) {
+            if (hasBuff(BuffFactory.LIGHT)) {
                 computedViewDistance = Utils.max(computedViewDistance, Level.MIN_VIEW_DISTANCE + 1, levelViewDistance);
             }
         }

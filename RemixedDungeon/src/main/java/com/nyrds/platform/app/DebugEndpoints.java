@@ -3747,7 +3747,7 @@ public class DebugEndpoints {
             JSONArray buffsJson = new JSONArray();
             for (var buff : hero.buffs()) {
                 JSONObject buffJson = new JSONObject();
-                buffJson.put("name", buff.getClass().getSimpleName());
+                buffJson.put("name", buff.getEntityKind());
                 buffJson.put("level", buff.level());
                 buffsJson.put(buffJson);
             }

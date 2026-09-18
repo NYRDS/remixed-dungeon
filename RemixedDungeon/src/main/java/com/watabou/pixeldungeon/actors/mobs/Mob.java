@@ -41,10 +41,8 @@ import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
-import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
-import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -488,12 +486,12 @@ public class Mob extends Char implements IZapper {
             return true;
         }
 
-        if (buff instanceof Amok) {
+        if (BuffFactory.AMOK.equals(buff.getEntityKind())) {
             getSprite().showStatus(CharSprite.NEGATIVE, TXT_RAGE);
             setState(MobAi.getStateByClass(RunningAmok.class));
-        } else if (buff instanceof Terror) {
+        } else if (BuffFactory.TERROR.equals(buff.getEntityKind())) {
             setState(MobAi.getStateByClass(Horrified.class));
-        } else if (buff instanceof Sleep) {
+        } else if (BuffFactory.SLEEP.equals(buff.getEntityKind())) {
             new Flare(4, 32).color(0x44ffff, true).show(getSprite(), 2f);
 
             // Use regular Sleeping AI (it will handle pain immunity internally)
