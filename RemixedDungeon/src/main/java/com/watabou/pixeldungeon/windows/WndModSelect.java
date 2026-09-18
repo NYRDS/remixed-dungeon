@@ -166,6 +166,14 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 	protected void onSelect(String option) {
 
 		ModDesc desc = modsList.get(option);
+		if (!option.equals(ModdingBase.REMIXED) && !desc.needUpdate
+				&& !ModdingBase.modVersionSupported(option, desc.version)) {
+			GameLoop.addToScene(new WndError(Utils.format(
+					"Mod %s v%d is too old for this version of Remixed Pixel Dungeon. Update the mod to v%d or newer.",
+					option, desc.version, ModdingBase.minModVersion(option))));
+			return;
+		}
+
 		if (!option.equals(ModdingBase.REMIXED) || desc.needUpdate) {
 
 			if (desc.needUpdate) {

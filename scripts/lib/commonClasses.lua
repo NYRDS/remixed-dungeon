@@ -52,7 +52,16 @@ local Buffs  = {
     Sleep        = "Sleep",
     Slow         = "Slow",
     Weakness     = "Weakness",
-    Blindness    = "Blindness"
+    Blindness    = "Blindness",
+    Bleeding     = "Bleeding",
+    Shadows      = "Shadows",
+    Ooze         = "Ooze",
+    Combo        = "Combo",
+    Speed        = "Speed",
+    Fury         = "Fury",
+    SnipersMark  = "SnipersMark",
+    Regeneration = "Regeneration",
+    CandleOfMindVisionBuff = "CandleOfMindVisionBuff"
 }
 
 local Blobs = {

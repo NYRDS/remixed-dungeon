@@ -34,6 +34,7 @@ import com.nyrds.platform.util.Os;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.ModdingBase;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Rankings.gameOver;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -151,6 +152,11 @@ public class Dungeon {
     }
 
     public static void reset() {
+        if (!ModdingBase.activeModSupported()) {
+            throw ModdingMode.modException(new Exception(
+                Utils.format("Mod %s is too old for this version of Remixed Pixel Dungeon. Update the mod.",
+                    ModdingBase.activeMod())));
+        }
         ModQuirks.reset();
         if (!Scene.sceneMode.equals(Scene.LEVELS_TEST)) {
             LuaEngine.reset();

@@ -31,6 +31,11 @@ public class ModdingBase {
 
     private static final Set<String> trustedMods = new HashSet<>();
 
+    // Official mods pinned to their first engine-compatible release: older
+    // distributions use engine APIs removed by the lua-migration rounds and
+    // must not activate. Bump alongside the mod repos when a breaking round ships.
+    private static final Map<String, Integer> minModVersion = new HashMap<>();
+
     static {
         trustedMods.add(MAZE);
         trustedMods.add(CONUNDRUM);
@@ -47,12 +52,33 @@ public class ModdingBase {
         dlcSet.add(HI_FI_DLC);
         dlcSet.add(REMIXED);
 
+        minModVersion.put(REMIXED_ADDITIONS, 20);
+        minModVersion.put(REMIXED_RPG, 29);
+        minModVersion.put(THE_EPIC_DUNGEON, 49);
+
         resourcesRemap.put("spellsIcons/elemental(new).png", "spellsIcons/elemental_all.png");
 
         sizeAgnosticFiles.add("ui/title.png");
         sizeAgnosticFiles.add("amulet.png");
         sizeAgnosticFiles.add("ui/arcs1.png");
         sizeAgnosticFiles.add("ui/arcs2.png");
+    }
+
+    public static int minModVersion(@NotNull String mod) {
+        Integer min = minModVersion.get(mod);
+        return min != null ? min : 0;
+    }
+
+    public static boolean modVersionSupported(@NotNull String mod, int installedVersion) {
+        return installedVersion >= minModVersion(mod);
+    }
+
+    public static boolean activeModSupported() {
+        if (!inMod()) {
+            return true;
+        }
+        JSONObject version = JsonHelper.tryReadJsonFromAssets("version.json");
+        return modVersionSupported(mActiveMod, version.optInt("version"));
     }
 
     public static int activeModVersion() {
