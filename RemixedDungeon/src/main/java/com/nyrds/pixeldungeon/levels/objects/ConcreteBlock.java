@@ -36,7 +36,7 @@ public class ConcreteBlock extends LevelObject {
 	}
 
 	@Override
-	void setupFromJson(Level level, JSONObject obj) {
+	protected void setupFromJson(Level level, JSONObject obj) {
 		requiredStr = obj.optInt("str", 10);
 	}
 

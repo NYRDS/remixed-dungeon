@@ -57,7 +57,7 @@ public class CustomObject extends Deco {
     }
 
     @Override
-    void setupFromJson(Level level, JSONObject obj) throws JSONException {
+    protected void setupFromJson(Level level, JSONObject obj) throws JSONException {
         super.setupFromJson(level, obj);
         String data = Utils.EMPTY_STRING;
         if(obj.has("data")) {

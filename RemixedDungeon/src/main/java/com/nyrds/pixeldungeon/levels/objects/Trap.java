@@ -177,7 +177,7 @@ public class Trap extends LevelObject {
 	}
 
 	@Override
-	void setupFromJson(Level level, JSONObject obj) throws JSONException {
+	protected void setupFromJson(Level level, JSONObject obj) throws JSONException {
 		super.setupFromJson(level,obj);
 
 		int targetX = obj.getInt("x");

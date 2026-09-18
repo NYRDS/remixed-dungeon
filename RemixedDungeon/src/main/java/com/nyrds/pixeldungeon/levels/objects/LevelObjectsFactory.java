@@ -7,15 +7,7 @@ import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.plants.Dreamweed;
-import com.watabou.pixeldungeon.plants.Earthroot;
-import com.watabou.pixeldungeon.plants.Fadeleaf;
-import com.watabou.pixeldungeon.plants.Firebloom;
-import com.watabou.pixeldungeon.plants.Icecap;
-import com.watabou.pixeldungeon.plants.Moongrace;
-import com.watabou.pixeldungeon.plants.Rotberry;
-import com.watabou.pixeldungeon.plants.Sorrowmoss;
-import com.watabou.pixeldungeon.plants.Sungrass;
+import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
@@ -58,6 +50,10 @@ public class LevelObjectsFactory {
         mObjectsList.put(objectClass.getSimpleName(), objectClass);
     }
 
+    private static void registerObjectClassByName(String kind, Class<? extends LevelObject> objectClass) {
+        mObjectsList.put(kind, objectClass);
+    }
+
     private static void initObjectsMap() {
 
         mObjectsList = new HashMap<>();
@@ -69,16 +65,27 @@ public class LevelObjectsFactory {
         registerObjectClass(PortalGateReceiver.class);
         registerObjectClass(Trap.class);
         registerObjectClass(Deco.class);
-        registerObjectClass(Dreamweed.class);
-        registerObjectClass(Earthroot.class);
-        registerObjectClass(Fadeleaf.class);
-        registerObjectClass(Firebloom.class);
-        registerObjectClass(Icecap.class);
-        registerObjectClass(Rotberry.class);
-        registerObjectClass(Sorrowmoss.class);
-        registerObjectClass(Sungrass.class);
-        registerObjectClass(Moongrace.class);
         registerObjectClass(CustomObject.class);
+
+        // batch 20: all plants are data-defined; Plant serves every kind,
+        // behavior lives in scripts/plants/<Kind>.lua
+        registerObjectClass(Plant.class);
+        registerObjectClassByName("Dreamweed", Plant.class);
+        registerObjectClassByName("Earthroot", Plant.class);
+        registerObjectClassByName("Fadeleaf", Plant.class);
+        registerObjectClassByName("Firebloom", Plant.class);
+        registerObjectClassByName("Icecap", Plant.class);
+        registerObjectClassByName("Rotberry", Plant.class);
+        registerObjectClassByName("Sorrowmoss", Plant.class);
+        registerObjectClassByName("Sungrass", Plant.class);
+        registerObjectClassByName("Moongrace", Plant.class);
+
+        // mods can add plants by shipping scripts/plants/<Kind>.lua
+        // (+ plantsDesc/<Kind>.json for the sprite frame)
+        for(String plantScript: ModdingMode.listResources("scripts/plants", (dir, name) -> name.endsWith(".lua"))) {
+            String plantKind = plantScript.replace(".lua", Utils.EMPTY_STRING);
+            mObjectsList.putIfAbsent(plantKind, Plant.class);
+        }
     }
 
     public static boolean isValidObjectClass(String objectClass) {

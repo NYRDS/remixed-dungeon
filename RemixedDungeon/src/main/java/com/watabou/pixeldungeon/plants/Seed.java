@@ -1,6 +1,7 @@
 package com.watabou.pixeldungeon.plants;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -15,7 +16,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.util.ArrayList;
-import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 
 public class Seed extends Item {
@@ -30,7 +30,9 @@ public class Seed extends Item {
         imageFile = "items/seeds.png";
     }
 
-    protected Class<? extends Plant> plantClass;
+    // entity kind of the plant this seed grows ("Firebloom", ...), resolved
+    // through LevelObjectsFactory
+    protected String plantKind;
     protected String plantName;
 
     @LuaInterface
@@ -79,10 +81,10 @@ public class Seed extends Item {
         return null;
     }
 
-    @SneakyThrows
     public Plant couch(int pos) {
         Sample.INSTANCE.play(Assets.SND_PLANT);
-        Plant plant = plantClass.newInstance();
+        Plant plant = (Plant) LevelObjectsFactory.objectByName(plantKind);
+        plant.setKind(plantKind);
         plant.setPos(pos);
         return plant;
     }

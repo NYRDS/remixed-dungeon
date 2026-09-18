@@ -5,8 +5,8 @@ import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.plants.Moongrace;
-import com.watabou.pixeldungeon.plants.Sungrass;
+import com.watabou.pixeldungeon.plants.MoongraceSeed;
+import com.watabou.pixeldungeon.plants.SungrassSeed;
 import com.watabou.utils.Random;
 
 public class GardenPainter extends Painter {
@@ -24,12 +24,12 @@ public class GardenPainter extends Painter {
 			int cellToPlant = room.random(level);
 			
 			if(level.getTopLevelObject(cellToPlant)==null) {
-				level.plant( new Sungrass.Seed(), cellToPlant );
+				level.plant( new SungrassSeed(), cellToPlant );
 			}
 
 			cellToPlant = room.random(level);
 			if(level.getTopLevelObject(cellToPlant)==null) {
-				level.plant( new Moongrace.Seed(), cellToPlant );
+				level.plant( new MoongraceSeed(), cellToPlant );
 			}
 		}
 		

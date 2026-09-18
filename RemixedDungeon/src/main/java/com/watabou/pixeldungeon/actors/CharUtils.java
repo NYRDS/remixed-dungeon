@@ -427,6 +427,7 @@ public class CharUtils {
         });
     }
 
+    @LuaInterface
     public static void teleportRandomForce(@NotNull Char ch) {
         Level level = ch.level();
 
@@ -442,6 +443,7 @@ public class CharUtils {
         }
     }
 
+    @LuaInterface
     public static void teleportRandom(@NotNull Char ch) {
         Level level = ch.level();
         if (level.isBossLevel() || !ch.isMovable()) {

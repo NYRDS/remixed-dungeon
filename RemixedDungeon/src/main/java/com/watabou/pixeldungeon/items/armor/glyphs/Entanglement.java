@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.EarthParticle;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
-import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -26,7 +25,11 @@ public class Entanglement extends Glyph {
 		if (Random.Int( 4 ) == 0) {
 			
 			Buff.prolong( defender, BuffFactory.ROOTS, 5 - level / 5 );
-			Buff.affect( defender, Earthroot.Armor.class ).level( 5 * (level + 1) );
+			// Armor pool is a script buff now; keep the raise-only semantics of the
+			// old Earthroot.Armor.level(int) override
+			Buff pool = Buff.affect( defender, BuffFactory.ARMOR );
+			int wantLevel = 5 * (level + 1);
+			if (pool.level() < wantLevel) pool.level( wantLevel );
 			CellEmitter.bottom( defender.getPos() ).start( EarthParticle.FACTORY, 0.05f, 8 );
 			Camera.main.shake( 1, 0.4f );
 			

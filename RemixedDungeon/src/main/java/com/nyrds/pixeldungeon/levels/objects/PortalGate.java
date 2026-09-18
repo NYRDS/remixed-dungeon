@@ -45,7 +45,7 @@ public abstract class PortalGate extends Deco {
 
 
 	@Override
-	void setupFromJson(Level level, JSONObject obj) throws JSONException {
+	protected void setupFromJson(Level level, JSONObject obj) throws JSONException {
 
 		objectDesc = "portalGate";
 

@@ -78,7 +78,7 @@ public abstract class LevelObject extends Actor implements Bundlable, Presser, H
         return imageIndex;
     }
 
-    void setupFromJson(Level level, JSONObject obj) throws JSONException {
+    protected void setupFromJson(Level level, JSONObject obj) throws JSONException {
         textureFile = obj.optString("textureFile", textureFile);
         imageIndex = obj.optInt("imageIndex", imageIndex);
         data = StringsManager.maybeId(obj.optString("data", Utils.EMPTY_STRING));

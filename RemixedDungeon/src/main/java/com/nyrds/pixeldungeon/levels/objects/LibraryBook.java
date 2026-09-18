@@ -25,7 +25,7 @@ public class LibraryBook extends LevelObject {
 	}
 
 	@Override
-	void setupFromJson(Level level, JSONObject obj) {
+	protected void setupFromJson(Level level, JSONObject obj) {
 	}
 
 	@Override

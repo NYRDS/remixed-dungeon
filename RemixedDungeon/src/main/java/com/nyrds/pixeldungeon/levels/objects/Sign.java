@@ -38,7 +38,7 @@ public class Sign extends LevelObject {
 	}
 
 	@Override
-	void setupFromJson(Level level, @NotNull JSONObject obj) throws JSONException {
+	protected void setupFromJson(Level level, @NotNull JSONObject obj) throws JSONException {
 		text = StringsManager.maybeId(obj.getString(TEXT));
 	}
 

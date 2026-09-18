@@ -20,8 +20,6 @@ import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfPower;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
-import com.watabou.pixeldungeon.plants.Earthroot;
-import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -83,6 +81,9 @@ public class BuffFactory {
     // the Moongrace plant shares this buff's simple name and cannot import it
     public static final String MOONGRACE = "Moongrace";
 
+    public static final String HEALTH = "Health";
+    public static final String ARMOR = "Armor";
+
     public static final String RING_OF_DETECTION = new RingOfDetection().buff().getEntityKind();
     public static final String RING_OF_EVASION = new RingOfEvasion().buff().getEntityKind();
     public static final String RING_OF_ACCURACY = new RingOfAccuracy().buff().getEntityKind();
@@ -107,11 +108,9 @@ public class BuffFactory {
 
     private static void initBuffsMap() {
         registerBuffClass(Viscosity.DeferedDamage.class);
-        registerBuffClass(Earthroot.Armor.class);
         registerBuffClass(Hunger.class);
         //registerBuffClass(Charger.class);
         registerBuffClass(Necrotism.class);
-        registerBuffClass(Sungrass.Health.class);
         registerBuffClass(HeartOfDarkness.HeartOfDarknessBuff.class);
         registerBuffClass(DriedRose.OneWayCursedLoveBuff.class);
         registerBuffClass(RatKingCrown.RatKingAuraBuff.class);

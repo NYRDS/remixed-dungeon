@@ -195,15 +195,15 @@ import com.watabou.pixeldungeon.items.weapon.missiles.ParalysisArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.PoisonArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Shuriken;
 import com.watabou.pixeldungeon.items.weapon.missiles.Tamahawk;
-import com.watabou.pixeldungeon.plants.Dreamweed;
-import com.watabou.pixeldungeon.plants.Earthroot;
-import com.watabou.pixeldungeon.plants.Fadeleaf;
-import com.watabou.pixeldungeon.plants.Firebloom;
-import com.watabou.pixeldungeon.plants.Icecap;
-import com.watabou.pixeldungeon.plants.Moongrace;
-import com.watabou.pixeldungeon.plants.Rotberry;
-import com.watabou.pixeldungeon.plants.Sorrowmoss;
-import com.watabou.pixeldungeon.plants.Sungrass;
+import com.watabou.pixeldungeon.plants.DreamweedSeed;
+import com.watabou.pixeldungeon.plants.EarthrootSeed;
+import com.watabou.pixeldungeon.plants.FadeleafSeed;
+import com.watabou.pixeldungeon.plants.FirebloomSeed;
+import com.watabou.pixeldungeon.plants.IcecapSeed;
+import com.watabou.pixeldungeon.plants.MoongraceSeed;
+import com.watabou.pixeldungeon.plants.RotberrySeed;
+import com.watabou.pixeldungeon.plants.SorrowmossSeed;
+import com.watabou.pixeldungeon.plants.SungrassSeed;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -418,19 +418,30 @@ public class ItemFactory {
         registerItemClass(BlackSkullOfMastery.class);
         registerItemClass(CandleOfMindVision.class);
 
-        registerItemClassByName(Rotberry.Seed.class, "Rotberry.Seed");
-        // class moved out of WandMaker (batch 16c-2): pre-split untagged saves
-        // carry the old inner-class FQN, derived kind "Seed" misses the
-        // "Rotberry.Seed" registry, so route the old FQN through the alias map
-        Bundle.addAlias(Rotberry.Seed.class, "com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker$Rotberry$Seed");
-        registerItemClassByName(Earthroot.Seed.class, "Earthroot.Seed");
-        registerItemClassByName(Firebloom.Seed.class, "Firebloom.Seed");
-        registerItemClassByName(Sungrass.Seed.class, "Sungrass.Seed");
-        registerItemClassByName(Dreamweed.Seed.class, "Dreamweed.Seed");
-        registerItemClassByName(Sorrowmoss.Seed.class, "Sorrowmoss.Seed");
-        registerItemClassByName(Icecap.Seed.class, "Icecap.Seed");
-        registerItemClassByName(Fadeleaf.Seed.class, "Fadeleaf.Seed");
-        registerItemClassByName(Moongrace.Seed.class, "Moongrace.Seed");
+        registerItemClassByName(RotberrySeed.class, "Rotberry.Seed");
+        registerItemClassByName(EarthrootSeed.class, "Earthroot.Seed");
+        registerItemClassByName(FirebloomSeed.class, "Firebloom.Seed");
+        registerItemClassByName(SungrassSeed.class, "Sungrass.Seed");
+        registerItemClassByName(DreamweedSeed.class, "Dreamweed.Seed");
+        registerItemClassByName(SorrowmossSeed.class, "Sorrowmoss.Seed");
+        registerItemClassByName(IcecapSeed.class, "Icecap.Seed");
+        registerItemClassByName(FadeleafSeed.class, "Fadeleaf.Seed");
+        registerItemClassByName(MoongraceSeed.class, "Moongrace.Seed");
+
+        // seeds moved to top-level classes (batch 20): item kinds unchanged,
+        // but untagged saves carry the old inner-class FQNs whose derived kind
+        // ("Seed") misses the "<Plant>.Seed" registries — route the old FQNs
+        // through the alias map
+        Bundle.addAlias(RotberrySeed.class, "com.watabou.pixeldungeon.plants.Rotberry$Seed");
+        Bundle.addAlias(RotberrySeed.class, "com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker$Rotberry$Seed");
+        Bundle.addAlias(EarthrootSeed.class, "com.watabou.pixeldungeon.plants.Earthroot$Seed");
+        Bundle.addAlias(FirebloomSeed.class, "com.watabou.pixeldungeon.plants.Firebloom$Seed");
+        Bundle.addAlias(SungrassSeed.class, "com.watabou.pixeldungeon.plants.Sungrass$Seed");
+        Bundle.addAlias(DreamweedSeed.class, "com.watabou.pixeldungeon.plants.Dreamweed$Seed");
+        Bundle.addAlias(SorrowmossSeed.class, "com.watabou.pixeldungeon.plants.Sorrowmoss$Seed");
+        Bundle.addAlias(IcecapSeed.class, "com.watabou.pixeldungeon.plants.Icecap$Seed");
+        Bundle.addAlias(FadeleafSeed.class, "com.watabou.pixeldungeon.plants.Fadeleaf$Seed");
+        Bundle.addAlias(MoongraceSeed.class, "com.watabou.pixeldungeon.plants.Moongrace$Seed");
 
         registerItemClass(DwarfToken.class);
         registerItemClass(RatArmor.class);

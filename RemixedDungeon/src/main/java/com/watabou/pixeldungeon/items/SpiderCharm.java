@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.items;
 
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -9,7 +10,6 @@ import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.rings.UsableArtifact;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.plants.Sungrass.Health;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import org.jetbrains.annotations.NotNull;
@@ -33,7 +33,7 @@ public class SpiderCharm extends UsableArtifact {
 		if (action.equals( AC_USE )) {
 			Wound.hit(ch);
 			ch.damage(ch.ht()/4, this);
-			Buff.detach(ch, Health.class);
+			Buff.detach(ch, BuffFactory.HEALTH);
 			Level level = ch.level();
 
 			int spawnPos = level.getEmptyCellNextTo(ch.getPos());

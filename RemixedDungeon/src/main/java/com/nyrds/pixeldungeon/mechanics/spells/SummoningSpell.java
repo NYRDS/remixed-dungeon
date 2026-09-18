@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
@@ -8,7 +9,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.util.Collection;
@@ -50,7 +50,7 @@ public class SummoningSpell extends Spell {
         int spawnPos = level.getEmptyCellNextTo(casterPos);
 
         Wound.hit(chr);
-        Buff.detach(chr, Sungrass.Health.class);
+        Buff.detach(chr, BuffFactory.HEALTH);
 
         if (level.cellValid(spawnPos)) {
             Mob pet = MobFactory.mobByName(mobKind);

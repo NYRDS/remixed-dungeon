@@ -5,6 +5,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.effects.Devour;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.util.StringsManager;
@@ -21,7 +22,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.plants.Sungrass;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.DummySprite;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -216,7 +216,7 @@ public class Carcass extends Item implements Doom {
             caster.damage(src.ht() / 4, this);
         }
 
-        Buff.detach(caster, Sungrass.Health.class);
+        Buff.detach(caster, BuffFactory.HEALTH);
 
         if (level.cellValid(spawnPos)) {
             src.setPos(caster.getPos());

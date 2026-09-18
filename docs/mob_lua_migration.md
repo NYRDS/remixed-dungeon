@@ -2215,3 +2215,67 @@ fallback masked the first battery run); sync new script dirs into the farm
 (`scripts/ai/KingPedestal.lua` was also missing since 17d-4 — allMobs threw
 "King" until linked). Launch cwd must be the rundir (parent exposes assets);
 a failed `cd` compound silently skipped a relaunch and the curls hit nothing.
+
+## Batch 20 — plants family to json+lua (SHIPPED 2026-09-18)
+
+All 9 vanilla plants are data-defined; plant classes deleted (~750 lines out):
+Dreamweed, Sorrowmoss, Firebloom, Icecap, Fadeleaf, Moongrace, Rotberry,
+Sungrass, Earthroot. `Plant` is the single factory-served class (kind-keyed
+registrations in LevelObjectsFactory, kinds unchanged so save-compat is free).
+
+Mechanics:
+- `Plant` gained a `@Packable kind` field (Trap precedent): getEntityKind,
+  kind-keyed `getClassParam(kind,"Name"/"Desc")` string ids, lazy LuaScript
+  per kind (`scripts/plants/<Kind>.lua`, `isResourceExists` gate, missing
+  module = the old empty no-op effect), LUA_DATA save/load, and
+  `plantsDesc/<Kind>.json` for imageIndex (Rotberry also overrides name/info
+  via script hooks to keep the WandMaker_* string ids).
+- Per-plant effects are 10-25-line lua modules on `scripts/lib/plant.lua`
+  (`plant.init{}` wrapper, per-instance script tables). No default name/info
+  hooks in the lib: a nil-returning hook would shadow the java fallback
+  (runOptional honors nil over the default).
+- Seeds stay java as top-level classes (`FirebloomSeed` etc.); item kinds
+  `"<Plant>.Seed"` unchanged. Old saves carrying the dead inner-class FQNs
+  route through 9 new `Bundle.addAlias` lines in ItemFactory (plus the
+  pre-existing WandMaker$Rotberry alias retarget).
+- `Seed.plantClass` Class-ref replaced by `plantKind` string; `couch()` =
+  `LevelObjectsFactory.objectByName` + `setKind`. `Level.plant(Seed,pos)`
+  untouched (already lua-exposed).
+- Mods can add plants by shipping `scripts/plants/<Kind>.lua`
+  (+ plantsDesc json); LevelObjectsFactory auto-registers the kind at clinit.
+- Inner buffs Sungrass.Health / Earthroot.Armor went lua per the batch-19
+  pattern (scripts/buffs/Health.lua, Armor.lua; pool = buffLevel; absorb via
+  defenceProc; pos-coupled detach via serpent data). Kinds "Health"/"Armor"
+  resolve via the customBuffs scan; BuffFactory registrations dropped,
+  HEALTH/ARMOR kind constants added (SummoningSpell/SpiderCharm/Carcass
+  detaches converted). Entanglement glyph keeps the raise-only semantics
+  with an explicit guard (base level(int) is a raw write).
+
+Old-save deltas (accepted, flagged): Health/Armor pos state (java @Packable
+fields) resets — an active Health/Armor detaches on the first act after
+restore; Earthroot Armor pool resets to default (old field name "level" does
+not map onto buffLevel). Both are mid-save edge cases; new saves persist via
+serpent data / @Packable buffLevel.
+
+Verification (headless + live): all 9 kinds construct via factory with
+correct imageIndex and localized names; seed→plant couch path for all kinds;
+effects pressed via hero `placeTo` (atomic) — Fire blob@cell, ConfusionGas
+320, ToxicGas 100 + Rotberry.Seed heap re-drop + Roots, Frost on presser
+(Freezing 8-neighbour + losBlocking port incl. the row-wrap quirk),
+teleport, Poison × durationFactor, Moongrace pet split (2→3 rats, feral
+branch gated by `friendly`); Sungrass Health heal +2/act stays-on-cell,
+Armor pool absorb under forced rat attack (20→19) + detach-on-move;
+seed eat effects stay java (renamed classes, bodies identical); plant
+survives d1→d2→d1 through the level save; Treasury/item kinds for all 9
+seeds resolve; Warden interact untouched in Plant.interact.
+
+Harness lessons: `change_level` REGENERATES the level (transfers mobs only)
+— never a plant/object round-trip fixture; use leave-and-return
+(go_to_level away and back) for level-save persistence. `move_hero` queues a
+Move action — probes race the walk; press plants atomically via
+`hero:placeTo(cell)`. Editing a script mid-run needs a SERVER RESTART (not
+just respawn): LuaScript chunk caching served stale modules for buffs (the
+17c-1 respawn lesson covers mob instances, not the chunk cache). One more
+self-kill: `pkill -f "RemixedDungeon-[H]eadless"` in the same compound as a
+launch line that spells the jar path kills the launch itself — pkill stays a
+lone call.

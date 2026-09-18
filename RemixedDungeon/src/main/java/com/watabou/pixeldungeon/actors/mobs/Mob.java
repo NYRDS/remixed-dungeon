@@ -816,6 +816,7 @@ public class Mob extends Char implements IZapper {
 
     // split whose copy always turns hostile: a hero pet (Moongrace plant,
     // exploding Moongrace spider hit) leaves a feral copy, not a free minion
+    @LuaInterface
     public Mob splitHostile(int cell, int damage) {
         Mob clone = split(cell, damage);
         clone.setOwnerId(clone.getId());
