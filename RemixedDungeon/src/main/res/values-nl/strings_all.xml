@@ -250,6 +250,7 @@
     <string name="Challenges_Descriptions_8">Je reis begint in de donkere en gevaarlijke rioleringen van de stad, met de enige weg naar de oppervlakte geblokkeerd. Om het erger te maken, kun je alleen uitrusting gebruiken die je in de kelder vindt. Met beperkte middelen en uitrusting hangt je overleving af van je vaardigheden en strategie.</string>
     <string name="Challenges_Descriptions_9">Het nieuwste \'medicijn\' van de Pestdokter heeft je ruimtelijk geheugen gewist. Je kunt niets meer onthouden dat buiten je directe zicht is.</string>
     <string name="Challenges_Names_1">Geloof is mijn pantser</string>
+    <string name="Challenges_Names_2">Farmacofobie</string>
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="Challenges_Names_5">In de duisternis</string>
     <string name="Challenges_Names_8">Geen stad</string>
@@ -1717,6 +1718,7 @@
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_pedestal_name">Postament</string>
     <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
+    <string name="town_deco_pole_name">Paaltje</string>
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_rug_name">kleed</string>
@@ -1944,6 +1946,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
