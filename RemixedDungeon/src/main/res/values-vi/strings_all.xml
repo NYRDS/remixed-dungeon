@@ -313,6 +313,7 @@
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Thanh kiếm đồ sộ này chắc chắn có thể chém xuyên qua bất cứ thứ gì.</string>
     <string name="Claymore_Name">Kiếm Claymore</string>
+    <string name="CloakSpell_EnemiesNearby">Bạn không thể bước vào bóng tối khi có kẻ địch ở gần.</string>
     <string name="CloakSpell_Info">Bước vào bóng tối để trở nên vô hình. Giảm đáng kể cơ hội bị phát hiện. Không thể sử dụng khi kẻ địch ở gần.</string>
     <string name="ClothArmor_Desc">Bộ giáp nhẹ này chỉ cung cấp khả năng bảo vệ cơ bản.</string>
     <string name="Codex_ACRead">ĐỌC</string>
@@ -364,6 +365,7 @@
     <string name="DarkGold_Name">quặng vàng tối</string>
     <string name="DarkSacrifice_Name">Hy Sinh Tối Tăm</string>
     <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
+    <string name="DarkSacrifice_Self">Vì Tai Ương!</string>
     <string name="DarkVeilBuff_Name">Màn tối</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Những chiếc gai kim loại đơn giản này được cân bằng lý tưởng để đâm trúng con mồi của chúng một cách chính xác.</string>
@@ -1694,6 +1696,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

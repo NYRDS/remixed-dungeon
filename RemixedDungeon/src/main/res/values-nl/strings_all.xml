@@ -538,6 +538,7 @@
     <string name="Guts_TileGrass">Droge struik</string>
     <string name="Guts_TileWater">Vreemde slijmerige vloeistof</string>
     <string name="Halberd_Gender">feminine</string>
+    <string name="Halberd_Info">Een stokwapen met een bijl aan het uiteinde van de stok.</string>
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileDescStatue">De paal is gemaakt van echte menselijke schedels. Geweldig.</string>
     <string name="Halls_TileStatue">Pilaar</string>
@@ -966,6 +967,7 @@
     <string name="PotionOfPurity_Name">Zuiveringselixer</string>
     <string name="PotionOfPurity_NoSmell">Je ruikt niets meer!</string>
     <string name="PotionOfStrength_Info">Deze krachtige vloeistof zal door je spieren stromen en je kracht permanent met één punt verhogen.</string>
+    <string name="PotionOfStrength_Name">Drankje van Sterkte</string>
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
     <string name="Potion_Colors_0">turkoois</string>
     <string name="Potion_Colors_1">karmozijn</string>
@@ -1961,6 +1963,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
