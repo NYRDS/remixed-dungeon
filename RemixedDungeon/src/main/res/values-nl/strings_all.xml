@@ -411,6 +411,7 @@
     <string name="DoctorArmor_Info">Deze pantser van de pestdokter maakt gebruik mogelijk van de \&quot;Miasma Wolk\&quot; vaardigheid, die een giftige gas vrijlaat dat vijanden vergiftigt, verzwakt en desorienteert. De dokter, beschermd door hun masker, is immuun voor deze effecten.</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
     <string name="DoctorSpecial">Miasma Wolk</string>
+    <string name="DogeMask_Name">Doge-mask</string>
     <string name="DonateButton_pleaseDonate">overweeg alstublieft te doneren</string>
     <string name="DonateButton_thanks">Bedankt voor je steun!</string>
     <string name="DreadKnight_Gender">masculine</string>
@@ -1444,6 +1445,7 @@
     <string name="Warlock_Killed">%s\'s schaduwbliksem heeft je gedood...</string>
     <string name="Warlock_Name_Objective">dwerg heksemeester</string>
     <string name="WarriorArmor_Desc">Hoewel dit pantser zwaar lijkt, stelt het een krijger in staat om een heldhaftige sprong naar een doelwit te maken, waarbij hij neerkomt en alle naburige vijanden verdooft.</string>
+    <string name="WarriorArmor_Name">krijgspak</string>
     <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
     <string name="WaterElemental_Desc">Water elementalen komen voor bij grote watermassa\'s. Meestal dwalen deze magisch gebonden golven gewoon rond.</string>
     <string name="WaterElemental_Gender">masculine</string>
@@ -1968,6 +1970,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
