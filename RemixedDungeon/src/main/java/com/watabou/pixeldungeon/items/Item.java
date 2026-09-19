@@ -909,7 +909,14 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
 
     public void consumedOneBy(Char chr) {
         if(heap!=null) {
-            heap.pickUp();
+            // caveman: consume THIS item - the old code popped the heap's first
+            // entry, eating someone else's loot out of a mixed stack
+            if (quantity() > 1) {
+                quantity(quantity() - 1);
+                heap.updateHeap();
+            } else {
+                heap.pickUp(this);
+            }
         } else {
             detach(chr.getBelongings().backpack);
         }
