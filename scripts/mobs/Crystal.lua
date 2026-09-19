@@ -58,6 +58,9 @@ return mob.init{
 	end,
 
 	canAttack = function(self, enemy)
+		if RPD.Dungeon.level:distance(self:getPos(), enemy:getPos()) <= 1 then
+			return not self:meleeBlockedByCorner(enemy) -- corner-safe melee at contact range
+		end
 		return RPD.Ballistica:cast(self:getPos(), enemy:getPos(), false, true) == enemy:getPos()
 	end,
 

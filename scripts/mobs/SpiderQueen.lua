@@ -34,6 +34,7 @@ return mob.init{
 
     canAttack = function(self, enemy)
         return self:hp() > self:ht() / 2 and self:distance(enemy) == 1
+                and not self:meleeBlockedByCorner(enemy)
     end,
 
     spawn = function(self, level)
