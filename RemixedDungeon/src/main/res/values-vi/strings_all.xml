@@ -1442,6 +1442,7 @@
     <string name="WndHero_StaJournal">Nhật ký</string>
     <string name="WndImp_Reward">Nhận chiếc nhẫn</string>
     <string name="WndInfoItem_Inside">Bạn có thể thấy %s bên trong, nhưng để mở rương bạn cần một chìa khóa vàng.</string>
+    <string name="WndInfoItem_LockedChest">Rương bị khóa</string>
     <string name="WndInfoItem_NeedKey">Nhưng để mở nó, bạn cần một chìa khóa vàng.</string>
     <string name="WndInfoItem_Owner">Ngòi mộ cổ này có thể chứa vật hữu ích, nhưng chủ sở hữu chắc chắn sẽ phản đối việc kiểm tra.</string>
     <string name="WndInfoItem_Remains">Đây là tất cả những gì còn lại từ một trong những người đi trước bạn. Có thể đáng để kiểm tra xem có vật phẩm quý nào không.</string>
@@ -1689,6 +1690,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

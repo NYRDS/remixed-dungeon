@@ -1496,6 +1496,7 @@
     <string name="WndHats_ListTitle">Lijst van accessoires</string>
     <string name="WndHats_Purchased">Geregeld!</string>
     <string name="WndHero_Awareness">Aandacht</string>
+    <string name="WndHero_Gold">Verzameld Goud</string>
     <string name="WndHero_Info">Info</string>
     <string name="WndHero_SkillLevel">Vaardigheidsniveau</string>
     <string name="WndHero_StaCatalogus">Catalogi</string>
@@ -1739,6 +1740,7 @@
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
     <string name="town_deco_skullboard_name">trofeerek</string>
+    <string name="town_deco_slush_desc">Deze sneeuw begon te smelten, waardoor de omgeving in modder veranderde.</string>
     <string name="town_deco_snow_name">Sneeuw</string>
     <string name="town_deco_snowman_name">Sneeuwpop</string>
     <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
@@ -1954,6 +1956,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
