@@ -189,8 +189,7 @@ public class Plant extends LevelObject {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		// legacy saves of java plant classes carry no kind field; the
-		// entityKind tag names the very same kind
+		// legacy saves carry no kind field; the tag names the same kind
 		if (kind == null || kind.isEmpty()) {
 			String tag = bundle.entityKind();
 			if (tag != null) {

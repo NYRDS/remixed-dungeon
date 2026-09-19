@@ -1,6 +1,5 @@
 ---
---- LibraryBook, data-served (batch 21). Opens the library window; does not
---- burn (java super.burn was a no-op). Not walkable-over (stepOn false).
+--- LibraryBook, data-served; opens the library window.
 ---
 
 local RPD = require "scripts/lib/commonClasses"

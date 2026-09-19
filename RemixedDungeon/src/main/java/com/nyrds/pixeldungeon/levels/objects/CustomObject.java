@@ -69,20 +69,12 @@ public class CustomObject extends Deco {
         script.runOptionalNoRet("init", level, data, obj);
     }
 
-    /**
-     * Java-side fire-and-forget script dispatch (windows and engine call sites).
-     * Deliberately not @LuaInterface: luaj silently drops trailing args when
-     * lua calls an annotated varargs method - see Char.runInScript.
-     */
+    /** Java-side script dispatch; not @LuaInterface (lua can't call java varargs). */
     public void runScript(String method, Object... args) {
         script.runOptionalNoRet(method, args);
     }
 
-    /**
-     * Plays a named animation from the object def and reports completion back
-     * to the script hook. Lua closures coerce to NULL as java Callbacks, so
-     * the callback has to be owned java-side (CharUtils:extraAttack pattern).
-     */
+    /** Plays a def animation; java owns the Callback (lua closures coerce to NULL). */
     @LuaInterface
     public void playObjectAnim(String kind, String doneHook) {
         Animation anim = loadAnimation(kind);
@@ -107,8 +99,7 @@ public class CustomObject extends Deco {
         return script.runOptional("pushable", super.pushable(hero), hero);
     }
 
-    // script hook is a gate only: the actual move logic lives in super and
-    // must not run twice (a default of super.push(chr) would evaluate it eagerly)
+    // gate only: super.push(chr) must not run twice
     @Override
     public boolean push(Char chr) {
         Boolean allow = script.runOptional("push", (Boolean) null, chr);

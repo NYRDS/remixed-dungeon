@@ -1,7 +1,5 @@
 ---
---- ConcreteBlock, data-served (batch 21). Required STR rides the "data"
---- field (a number as string, e.g. the boss-level seal "50"); default 10.
---- The gate is pushable only: LevelObject.push consults it internally.
+--- ConcreteBlock, data-served; required STR rides the "data" field (default 10).
 ---
 
 local RPD = require "scripts/lib/commonClasses"

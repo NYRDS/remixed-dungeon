@@ -87,9 +87,7 @@ public abstract class BossLevel extends RegularLevel {
 
 
         for(var obj: getAllLevelObjects()) {
-            // seal blocks are data-served (CustomObject); the STR requirement
-            // rides the data field. Java-era blocks carried a requiredStr field
-            // no data object has, so those legacy seals survive unseal.
+            // STR rides the data field; legacy requiredStr seals survive unseal
             if(obj.getEntityKind().equals(LevelObjectsFactory.CONCRETE_BLOCK)
                     && "50".equals(obj.getData())) {
                 obj.remove();

@@ -47,8 +47,7 @@ public class WndPortal extends Window {
 			protected void onClick() {
 				super.onClick();
 				hide();
-				// portal gates are data objects; the use accounting lives in
-				// the script ("useUp" hook)
+				// use accounting lives in the script
 				if (portal instanceof CustomObject) {
 					((CustomObject) portal).runScript("useUp");
 				}

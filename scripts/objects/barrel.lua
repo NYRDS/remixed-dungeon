@@ -1,7 +1,5 @@
 ---
---- Barrel, data-served (batch 21). Burns once into a LiquidFlame seed; the
---- burn-down animation comes from the def ("burn"), removal rides its
---- completion hook.
+--- Barrel, data-served; burns once into a LiquidFlame seed.
 ---
 
 local RPD = require "scripts/lib/commonClasses"

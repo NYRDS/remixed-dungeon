@@ -4913,11 +4913,7 @@ public class DebugEndpoints {
         }
     }
 
-    /**
-     * Dispatches a java-side script call on a kind-served level object, the
-     * same path WndPortal uses for "useUp". lua_eval cannot reach it: luaj
-     * cannot coerce lua calls into java varargs (trailing-args gotcha).
-     */
+    /** Java-side script dispatch probe; lua_eval can't call java varargs. */
     public static NanoHTTPD.Response handleObjectScript(NanoHTTPD.IHTTPSession session) {
         String query = session.getQueryParameterString();
         String kind = null, method = null;

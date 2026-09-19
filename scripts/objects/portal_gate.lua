@@ -1,9 +1,6 @@
 ---
---- Portal gates, data-served (batch 21). One script serves both roles:
---- a placement with a "target" block acts as a sender (opens a travel
---- window to that target), otherwise as a receiver (returns the hero to
---- where they used the sender). The WndPortal confirm button calls the
---- "useUp" hook back through CustomObject.runScript.
+--- Portal gates, data-served; "target" placement = sender, else receiver.
+--- WndPortal confirm calls the "useUp" hook via CustomObject.runScript.
 ---
 
 local RPD = require "scripts/lib/commonClasses"

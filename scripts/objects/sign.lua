@@ -1,6 +1,5 @@
 ---
---- Sign, data-served (batch 21). The text rides the object's "data" field,
---- authored via createCustomObject(level, "Sign", cell, text).
+--- Sign, data-served; text rides the object's "data" field.
 ---
 
 local RPD = require "scripts/lib/commonClasses"

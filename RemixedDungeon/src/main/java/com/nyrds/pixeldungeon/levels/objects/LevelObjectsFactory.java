@@ -63,10 +63,7 @@ public class LevelObjectsFactory {
     private static void initObjectsMap() {
 
         mObjectsList = new HashMap<>();
-        // batch 21: furniture kinds are data-defined; CustomObject serves every
-        // kind, behavior lives in scripts/objects/<Kind>.lua, defs in
-        // levelObjects/<Kind>.json. Kind strings stay stable for saves and
-        // level jsons; objectDesc is recovered from the kind (Deco fallbacks).
+        // batch 21: furniture kinds are data-defined; kind strings stay stable
         registerObjectClassByName(SIGN, CustomObject.class);
         registerObjectClassByName(BARREL, CustomObject.class);
         registerObjectClassByName(CONCRETE_BLOCK, CustomObject.class);
@@ -115,10 +112,7 @@ public class LevelObjectsFactory {
         return createCustomObject(level, kind, cell, null);
     }
 
-    /**
-     * Kind-served object with per-instance data (e.g. a sign's text).
-     * The string rides the LevelObject.data field, so it round-trips in saves.
-     */
+    /** Kind-served object with per-instance data (rides LevelObject.data). */
     @SneakyThrows
     @LuaInterface
     public static LevelObject createCustomObject(Level level, String kind, int cell, String data) {
@@ -195,8 +189,7 @@ public class LevelObjectsFactory {
 
         for (String objectClass : mObjectsList.keySet()) {
             LevelObject object = objectByName(objectClass);
-            // kind-served objects need their def seeded for the listing to
-            // describe them (name/texture come from the def, not the class)
+            // seed the def so the listing can describe kind-served objects
             if (object instanceof CustomObject && object.getEntityKind() == null) {
                 ((CustomObject) object).objectDesc = objectClass;
             }

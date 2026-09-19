@@ -84,10 +84,7 @@ public class Deco extends LevelObject {
 	@Override
 	protected void setupFromJson(Level level, JSONObject obj) throws JSONException {
 		super.setupFromJson(level,obj);
-		// kind-served objects (Sign, Barrel, ... registered onto CustomObject)
-		// carry no object_desc: fall back to the placement's "kind" key.
-		// Precedence: object_desc key, then an objectDesc preset in code,
-		// then the kind key.
+		// object_desc key, then a preset objectDesc, then the placement's kind
 		if (obj.has("object_desc")) {
 			objectDesc = obj.getString("object_desc");
 		} else if (objectDesc == null) {
@@ -102,13 +99,9 @@ public class Deco extends LevelObject {
 		super.restoreFromBundle(bundle);
 		String tag = bundle.entityKind();
 		if (objectDesc == null) {
-			// legacy saves of kind-served objects carry no objectDesc field;
-			// the entityKind tag names the very same def
-			objectDesc = tag;
+			objectDesc = tag; // legacy saves carry no objectDesc
 		} else if (tag != null && !tag.equals("CustomObject") && LevelObjectsFactory.isValidObjectClass(tag)) {
-			// legacy java-era saves may carry an outdated def name (e.g.
-			// "portalGate" for both gate kinds); the tag is the true kind
-			objectDesc = tag;
+			objectDesc = tag; // tag is the true kind (java gates stored "portalGate")
 		}
 		readObjectDesc();
 	}
