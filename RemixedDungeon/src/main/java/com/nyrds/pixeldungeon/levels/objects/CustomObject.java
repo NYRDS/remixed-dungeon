@@ -1,8 +1,11 @@
 package com.nyrds.pixeldungeon.levels.objects;
 
 import androidx.annotation.Keep;
+import com.nyrds.LuaInterface;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.util.Util;
+import com.watabou.noosa.Animation;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -63,12 +66,67 @@ public class CustomObject extends Deco {
         if(obj.has("data")) {
             data = obj.getString("data");
         }
-        script.runOptionalNoRet("init", level, data);
+        script.runOptionalNoRet("init", level, data, obj);
+    }
+
+    /**
+     * Java-side fire-and-forget script dispatch (windows and engine call sites).
+     * Deliberately not @LuaInterface: luaj silently drops trailing args when
+     * lua calls an annotated varargs method - see Char.runInScript.
+     */
+    public void runScript(String method, Object... args) {
+        script.runOptionalNoRet(method, args);
+    }
+
+    /**
+     * Plays a named animation from the object def and reports completion back
+     * to the script hook. Lua closures coerce to NULL as java Callbacks, so
+     * the callback has to be owned java-side (CharUtils:extraAttack pattern).
+     */
+    @LuaInterface
+    public void playObjectAnim(String kind, String doneHook) {
+        Animation anim = loadAnimation(kind);
+        if (anim == null) {
+            runScript(doneHook);
+            return;
+        }
+        if (doneHook == null || doneHook.isEmpty()) {
+            lo_sprite.ifPresent(sprite -> sprite.playAnim(anim, Util.nullCallback));
+        } else {
+            lo_sprite.ifPresent(sprite -> sprite.playAnim(anim, () -> runScript(doneHook)));
+        }
     }
 
     @Override
     protected void act() {
         script.runOptional("act");
+    }
+
+    @Override
+    public boolean pushable(Char hero) {
+        return script.runOptional("pushable", super.pushable(hero), hero);
+    }
+
+    // script hook is a gate only: the actual move logic lives in super and
+    // must not run twice (a default of super.push(chr) would evaluate it eagerly)
+    @Override
+    public boolean push(Char chr) {
+        Boolean allow = script.runOptional("push", (Boolean) null, chr);
+        if (allow != null && !allow) {
+            return false;
+        }
+        return super.push(chr);
+    }
+
+    @Override
+    public boolean affectLevelObjects() {
+        return script.runOptional("affectLevelObjects", super.affectLevelObjects());
+    }
+
+    @Override
+    public void resetVisualState() {
+        super.resetVisualState();
+        script.runOptionalNoRet("resetVisualState");
     }
 
     @Override

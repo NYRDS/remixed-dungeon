@@ -1,0 +1,30 @@
+{
+  "kind":"CustomObject",
+
+  "script": "barrel",
+  "layer" : 0,
+  "appearance": {
+    "desc": {
+      "desc": "Barrel_Desc",
+      "name": "Barrel_Name"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/barrels.png",
+      "imageIndex" : 8,
+      "width": 16,
+      "height": 16,
+      "animations": {
+        "basic": {
+          "fps": 1,
+          "frames": [8],
+          "looped": true
+        },
+        "burn": {
+          "fps": 10,
+          "frames": [8, 9, 10, 11, 12],
+          "looped": false
+        }
+      }
+    }
+  }
+}

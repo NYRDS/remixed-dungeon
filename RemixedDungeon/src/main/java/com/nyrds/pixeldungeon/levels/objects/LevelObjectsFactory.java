@@ -30,6 +30,11 @@ public class LevelObjectsFactory {
     public static final String BARRICADE = "barricade";
     public static final String WELL = "well";
     public static final String POT = "pot";
+    public static final String SIGN = "Sign";
+    public static final String BARREL = "Barrel";
+    public static final String LIBRARY_BOOK = "LibraryBook";
+    public static final String PORTAL_GATE_SENDER = "PortalGateSender";
+    public static final String PORTAL_GATE_RECEIVER = "PortalGateReceiver";
     public static final String FIRE_TRAP = "FireTrap";
     public static final String TOXIC_TRAP = "ToxicTrap";
     public static final String PARALYTIC_TRAP = "ParalyticTrap";
@@ -39,6 +44,7 @@ public class LevelObjectsFactory {
     public static final String GRIPPING_TRAP = "GrippingTrap";
     public static final String SUMMONING_TRAP = "SummoningTrap";
     public static final String PILE_OF_STONES = "pile_of_stones";
+    public static final String CONCRETE_BLOCK = "ConcreteBlock";
 
     static private HashMap<String, Class<? extends LevelObject>> mObjectsList;
 
@@ -57,12 +63,16 @@ public class LevelObjectsFactory {
     private static void initObjectsMap() {
 
         mObjectsList = new HashMap<>();
-        registerObjectClass(Sign.class);
-        registerObjectClass(Barrel.class);
-        registerObjectClass(ConcreteBlock.class);
-        registerObjectClass(LibraryBook.class);
-        registerObjectClass(PortalGateSender.class);
-        registerObjectClass(PortalGateReceiver.class);
+        // batch 21: furniture kinds are data-defined; CustomObject serves every
+        // kind, behavior lives in scripts/objects/<Kind>.lua, defs in
+        // levelObjects/<Kind>.json. Kind strings stay stable for saves and
+        // level jsons; objectDesc is recovered from the kind (Deco fallbacks).
+        registerObjectClassByName(SIGN, CustomObject.class);
+        registerObjectClassByName(BARREL, CustomObject.class);
+        registerObjectClassByName(CONCRETE_BLOCK, CustomObject.class);
+        registerObjectClassByName(LIBRARY_BOOK, CustomObject.class);
+        registerObjectClassByName(PORTAL_GATE_SENDER, CustomObject.class);
+        registerObjectClassByName(PORTAL_GATE_RECEIVER, CustomObject.class);
         registerObjectClass(Trap.class);
         registerObjectClass(Deco.class);
         registerObjectClass(CustomObject.class);
@@ -102,6 +112,16 @@ public class LevelObjectsFactory {
     @SneakyThrows
     @LuaInterface
     public static LevelObject createCustomObject(Level level, String kind, int cell) {
+        return createCustomObject(level, kind, cell, null);
+    }
+
+    /**
+     * Kind-served object with per-instance data (e.g. a sign's text).
+     * The string rides the LevelObject.data field, so it round-trips in saves.
+     */
+    @SneakyThrows
+    @LuaInterface
+    public static LevelObject createCustomObject(Level level, String kind, int cell, String data) {
 
         level.clearCellForObject(cell);
 
@@ -109,6 +129,10 @@ public class LevelObjectsFactory {
         JSONObject desc = new JSONObject();
 
         desc.put("object_desc", kind);
+        if (data != null) {
+            desc.put("data", data);
+        }
+
         obj.setPos(cell);
 
         obj.setupFromJson(level, desc);
@@ -170,7 +194,13 @@ public class LevelObjectsFactory {
         List<LevelObject> objects = new ArrayList<>();
 
         for (String objectClass : mObjectsList.keySet()) {
-            objects.add(objectByName(objectClass));
+            LevelObject object = objectByName(objectClass);
+            // kind-served objects need their def seeded for the listing to
+            // describe them (name/texture come from the def, not the class)
+            if (object instanceof CustomObject && object.getEntityKind() == null) {
+                ((CustomObject) object).objectDesc = objectClass;
+            }
+            objects.add(object);
         }
 
         // Add all trap variants

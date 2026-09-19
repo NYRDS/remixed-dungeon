@@ -4,7 +4,6 @@ import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.ai.AiState;
 import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
-import com.nyrds.pixeldungeon.levels.objects.ConcreteBlock;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.Dungeon;
@@ -88,11 +87,12 @@ public abstract class BossLevel extends RegularLevel {
 
 
         for(var obj: getAllLevelObjects()) {
-            if(obj instanceof ConcreteBlock) { //backward compatibility, remove soon
-                ConcreteBlock block = (ConcreteBlock)obj;
-                if (block.getRequiredStr() == 50) {
-                    obj.remove();
-                }
+            // seal blocks are data-served (CustomObject); the STR requirement
+            // rides the data field. Java-era blocks carried a requiredStr field
+            // no data object has, so those legacy seals survive unseal.
+            if(obj.getEntityKind().equals(LevelObjectsFactory.CONCRETE_BLOCK)
+                    && "50".equals(obj.getData())) {
+                obj.remove();
             }
 
             if(obj.getEntityKind().equals(LevelObjectsFactory.PILE_OF_STONES)) {

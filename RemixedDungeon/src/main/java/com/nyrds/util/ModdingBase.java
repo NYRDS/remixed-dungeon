@@ -107,6 +107,7 @@ public class ModdingBase {
         return trustedMods.contains(mActiveMod);
     }
 
+    @LuaInterface
     public static boolean isHalloweenEvent() {
 
         Calendar now = new GregorianCalendar();

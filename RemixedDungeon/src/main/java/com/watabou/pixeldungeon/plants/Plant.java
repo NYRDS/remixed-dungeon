@@ -189,6 +189,14 @@ public class Plant extends LevelObject {
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
+		// legacy saves of java plant classes carry no kind field; the
+		// entityKind tag names the very same kind
+		if (kind == null || kind.isEmpty()) {
+			String tag = bundle.entityKind();
+			if (tag != null) {
+				setKind(tag);
+			}
+		}
 		applyDef();
 
 		String luaData = bundle.optString(LuaEngine.LUA_DATA, null);

@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
-import com.nyrds.pixeldungeon.levels.objects.PortalGate;
+import com.nyrds.pixeldungeon.levels.objects.CustomObject;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.Position;
 import com.nyrds.platform.util.StringsManager;
@@ -23,7 +24,7 @@ public class WndPortal extends Window {
         return StringsManager.getVar(R.string.WndPortal_Info);
     }
 
-	public WndPortal(final PortalGate portal, final Hero hero, final Position returnTo ) {
+	public WndPortal(final LevelObject portal, final Hero hero, final Position returnTo ) {
 		super();
 
 		//Title text
@@ -46,7 +47,11 @@ public class WndPortal extends Window {
 			protected void onClick() {
 				super.onClick();
 				hide();
-				portal.useUp();
+				// portal gates are data objects; the use accounting lives in
+				// the script ("useUp" hook)
+				if (portal instanceof CustomObject) {
+					((CustomObject) portal).runScript("useUp");
+				}
 
 				hero.setPortalLevelCoordinates(portal.getPosition());
 

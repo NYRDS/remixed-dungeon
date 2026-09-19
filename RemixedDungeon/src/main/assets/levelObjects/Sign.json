@@ -1,0 +1,16 @@
+{
+  "kind":"CustomObject",
+
+  "script": "sign",
+  "layer" : 0,
+  "appearance": {
+    "desc": {
+      "desc": "Level_TileDescSign",
+      "name": "Level_TileSign"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/objects.png",
+      "imageIndex" : 16
+    }
+  }
+}

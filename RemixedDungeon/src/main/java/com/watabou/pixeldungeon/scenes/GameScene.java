@@ -947,6 +947,7 @@ public class GameScene extends PixelScene {
         }
     }
 
+    @LuaInterface
     public static void discoverTile(int pos) {
         if (isSceneReady()) {
             scene.baseTiles.discover(pos);

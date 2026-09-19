@@ -1,0 +1,16 @@
+{
+  "kind":"CustomObject",
+
+  "script": "library_book",
+  "layer" : 0,
+  "appearance": {
+    "desc": {
+      "desc": "LibraryBook_Description",
+      "name": "LibraryBook_Name"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/objects.png",
+      "imageIndex" : 1
+    }
+  }
+}

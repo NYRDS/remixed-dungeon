@@ -113,6 +113,15 @@ public class Bundle {
         return data.optString(key, defVal);
     }
 
+    /**
+     * The entityKind tag this entry was saved with (null when absent).
+     * Lets factory-served objects recover their kind on legacy saves that
+     * predate a per-kind field.
+     */
+    public String entityKind() {
+        return data.optString(ENTITY_KIND, null);
+    }
+
     public String getString(String key) {
         return data.optString(key);
     }

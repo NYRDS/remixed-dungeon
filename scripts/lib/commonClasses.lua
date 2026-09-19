@@ -23,6 +23,7 @@ local CharUtils        = luajava.bindClass("com.watabou.pixeldungeon.actors.Char
 local ModQuirks        = luajava.bindClass("com.nyrds.pixeldungeon.game.ModQuirks")
 local Util             = luajava.bindClass("com.nyrds.util.Util")
 local ModdingBase      = luajava.bindClass("com.nyrds.util.ModdingBase")
+local CommonActions    = luajava.bindClass("com.nyrds.pixeldungeon.mechanics.CommonActions")
 local BackpackMode     = luajava.bindClass("com.watabou.pixeldungeon.windows.WndBag").Mode
 local Treasury         = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasury")
 
@@ -120,6 +121,9 @@ local Objects = {
         WndShopOptions = "com.nyrds.pixeldungeon.windows.WndShopOptions",
         WndChooseWay   = "com.watabou.pixeldungeon.windows.WndChooseWay",
         WndBag         = "com.watabou.pixeldungeon.windows.WndBag",
+        WndLibrary     = "com.nyrds.pixeldungeon.windows.WndLibrary",
+        WndPortal      = "com.nyrds.pixeldungeon.windows.WndPortal",
+        WndPortalReturn = "com.nyrds.pixeldungeon.windows.WndPortalReturn",
         Image          = "com.watabou.noosa.Image",
         Banner         = "com.watabou.pixeldungeon.ui.Banner"
     },
@@ -251,6 +255,7 @@ local RPD = {
     ModQuirks = ModQuirks,
     Util = Util,
     ModdingBase = ModdingBase,
+    CommonActions = CommonActions,
     CharsList = CharsList,
     CharUtils = CharUtils,
     MobSpawner = MobSpawner,
@@ -403,6 +408,10 @@ local RPD = {
     teleportTo = function(levelId, x, y)
         local position = luajava.newInstance(Position,levelId, x, y)
         Dungeon.hero:teleportTo(position)
+    end,
+
+    newPosition = function(levelId, x, y)
+        return luajava.newInstance(Position, levelId, x, y)
     end,
 
     ---@param handler function

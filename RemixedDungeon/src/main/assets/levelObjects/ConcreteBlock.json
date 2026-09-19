@@ -1,0 +1,17 @@
+{
+  "kind":"CustomObject",
+
+  "script": "concrete_block",
+  "layer" : 0,
+  "appearance": {
+    "desc": {
+      "desc": "ConcreteBlock_Description",
+      "name": "ConcreteBlock_Name",
+      "nonPassable" : true
+    },
+    "sprite":{
+      "textureFile": "levelObjects/objects.png",
+      "imageIndex" : 0
+    }
+  }
+}

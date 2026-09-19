@@ -26,6 +26,12 @@ import org.jetbrains.annotations.NotNull;
 
 public class ItemUtils {
 
+    // lua has no instanceof; object scripts filter Presser args with this
+    @LuaInterface
+    public static boolean isItem(Object obj) {
+        return obj instanceof Item;
+    }
+
     @LuaInterface
     public static void throwItemAway(int pos) {
         final Level level = Dungeon.level;

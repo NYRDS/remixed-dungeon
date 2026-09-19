@@ -1927,6 +1927,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
     }
 
+    @LuaInterface
     public int effectiveSTR() {
         return baseStr + lvl() / 5;
     }

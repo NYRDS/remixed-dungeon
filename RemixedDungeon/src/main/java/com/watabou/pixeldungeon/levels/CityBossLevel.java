@@ -6,7 +6,6 @@ import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
-import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -270,7 +269,7 @@ public class CityBossLevel extends BossLevel {
 		LevelTools.northWallDecorate(this, 10, 8);
 
 		int sign = arenaDoor + getWidth();  // caveman: below throne door, in antechamber
-		addLevelObject(new Sign(sign, StringsManager.getVar(R.string.CityBossLevel_ChessSign)));
+		addLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.SIGN, sign, StringsManager.getVar(R.string.CityBossLevel_ChessSign)));
 	}
 
 	@Override

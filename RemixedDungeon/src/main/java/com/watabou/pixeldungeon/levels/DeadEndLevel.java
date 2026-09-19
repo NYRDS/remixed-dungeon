@@ -2,7 +2,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.levels.LevelTools;
-import com.nyrds.pixeldungeon.levels.objects.Sign;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import java.util.Arrays;
@@ -55,7 +55,7 @@ public class DeadEndLevel extends Level {
 
 		setExit(-1,0);
 
-		addLevelObject(new Sign((SIZE / 2 + 1) * (getWidth() + 1), Dungeon.tip(this)));
+		addLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.SIGN, (SIZE / 2 + 1) * (getWidth() + 1), Dungeon.tip(this)));
 		
 		return true;
 	}

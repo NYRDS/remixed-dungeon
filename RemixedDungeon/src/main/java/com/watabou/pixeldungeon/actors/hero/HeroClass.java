@@ -321,6 +321,7 @@ public enum HeroClass implements CharModifier, NamedEntityKind {
         return name().toLowerCase(Locale.ROOT);
     }
 
+    @LuaInterface
     public boolean forbidden(String action) {
         return forbiddenActions.contains(action);
     }

@@ -4912,4 +4912,57 @@ public class DebugEndpoints {
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
     }
+
+    /**
+     * Dispatches a java-side script call on a kind-served level object, the
+     * same path WndPortal uses for "useUp". lua_eval cannot reach it: luaj
+     * cannot coerce lua calls into java varargs (trailing-args gotcha).
+     */
+    public static NanoHTTPD.Response handleObjectScript(NanoHTTPD.IHTTPSession session) {
+        String query = session.getQueryParameterString();
+        String kind = null, method = null;
+        if (query != null) {
+            for (String param : query.split("&")) {
+                if (param.startsWith("kind=")) {
+                    kind = param.substring(5);
+                } else if (param.startsWith("method=")) {
+                    method = param.substring(7);
+                }
+            }
+        }
+        if (kind == null || method == null) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                "{\"error\":\"Missing kind or method parameter\"}");
+        }
+
+        final String fKind = kind, fMethod = method;
+        final String[] json = new String[1];
+
+        GameLoop.pushUiTaskAndWait(() -> {
+            try {
+                Level level = Dungeon.level;
+                if (level == null) {
+                    json[0] = "{\"error\":\"no level\"}";
+                    return;
+                }
+                com.nyrds.pixeldungeon.levels.objects.LevelObject target = null;
+                for (com.nyrds.pixeldungeon.levels.objects.LevelObject lo : level.getAllLevelObjects()) {
+                    if (fKind.equals(lo.getEntityKind())) {
+                        target = lo;
+                        break;
+                    }
+                }
+                if (!(target instanceof com.nyrds.pixeldungeon.levels.objects.CustomObject)) {
+                    json[0] = String.format("{\"error\":\"no CustomObject of kind %s on level\"}", fKind);
+                    return;
+                }
+                ((com.nyrds.pixeldungeon.levels.objects.CustomObject) target).runScript(fMethod);
+                json[0] = String.format("{\"success\":true,\"kind\":\"%s\",\"method\":\"%s\"}", fKind, fMethod);
+            } catch (Exception e) {
+                json[0] = String.format("{\"error\":\"%s\"}", e.getMessage());
+            }
+        });
+
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json[0]);
+    }
 }

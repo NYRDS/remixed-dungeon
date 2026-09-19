@@ -2,7 +2,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.levels.LevelTools;
-import com.nyrds.pixeldungeon.levels.objects.Sign;
+import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -140,7 +140,7 @@ public class CavesBossLevel extends BossLevel {
 		do {
 			sign = Random.Int( _RoomLeft(), _RoomRight() ) + Random.Int( _RoomTop(), _RoomBottom() ) * getWidth();
 		} while (sign == entrance);
-		addLevelObject(new Sign(sign,Dungeon.tip(this)));
+		addLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.SIGN, sign, Dungeon.tip(this)));
 	}
 
 	@Override

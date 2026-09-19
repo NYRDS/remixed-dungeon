@@ -3,9 +3,7 @@ package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.CustomLevel;
-import com.nyrds.pixeldungeon.levels.objects.Barrel;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
-import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.utils.DungeonGenerator;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -589,8 +587,7 @@ public abstract class RegularLevel extends CustomLevel {
 		while (attempts++ < 100) {
 			int pos = roomEntrance.random(this);
 			if (pos != entrance && !avoid[pos] && getTopLevelObject(pos)==null) {
-				Sign sign = new Sign(pos, Dungeon.tip(this));
-				addLevelObject(sign);
+				addLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.SIGN, pos, Dungeon.tip(this)));
 				break;
 			}
 		}
@@ -600,7 +597,7 @@ public abstract class RegularLevel extends CustomLevel {
 		for (int i = 0; i < num; i++) {
 			int pos = getRandomTerrainCell(Terrain.EMPTY);
 			if (cellValid(pos) && isCellNonOccupied(pos)) {
-				addLevelObject(new Barrel(pos));
+				addLevelObject(LevelObjectsFactory.createCustomObject(this, LevelObjectsFactory.BARREL, pos));
 			}
 		}
 	}
