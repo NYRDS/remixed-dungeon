@@ -445,6 +445,7 @@
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="ElfArmor_ACSpecial">ROEP VAN DE NATUUR</string>
     <string name="ElvenBow_Gender">masculine</string>
+    <string name="ElvenBow_Info">Een uitzonderlijk voorbeeld van elvenvakmanschap. Het is duidelijk effectiever en nauwkeuriger dan een gewone houten boog.</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="EncumbranceBuff_CharAct_2">Deze %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EncumbranceBuff_CharAct_4">Mij ontbreekt de kracht om %s optimaal te benutten.</string>
@@ -1365,6 +1366,7 @@
     <string name="TreacherousSpirit_Name_Objective">verradelijke geest</string>
     <string name="Typical_Damage">Typische schade</string>
     <string name="Undead_Defense">geblokkeerd</string>
+    <string name="Undead_Desc">Deze ondode dwergen, opgewekt door de wil van de Koning der Dwergen, waren leden van zijn hofhouding. Ze verschijnen als skeletten met een indrukwekkende hoeveelheid gezichtshaar.</string>
     <string name="Undead_Gender">masculine</string>
     <string name="Undead_Name_Objective">on-dode dwerg</string>
     <string name="Using_Failed_Because_Blind">Je kunt \\&quot;%s\\&quot; niet gebruiken terwijl je verblind bent.</string>
@@ -1554,6 +1556,7 @@
     <string name="WndRanking_StaChallenges">Uitdagingen</string>
     <string name="WndRanking_StaDepth">Maximale Diepte</string>
     <string name="WndRanking_StaDuration">Spelduur</string>
+    <string name="WndRanking_StaEnemies">Monsters Gedood</string>
     <string name="WndRanking_StaHealth">Gezondheid</string>
     <string name="WndRanking_StaStr">Kracht</string>
     <string name="WndRanking_StaTitle">Level %1 %2</string>
@@ -1946,6 +1949,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

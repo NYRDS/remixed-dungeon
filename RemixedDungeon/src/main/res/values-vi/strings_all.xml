@@ -1218,6 +1218,7 @@
     <string name="Spinner_Gender">masculine</string>
     <string name="SpiritOfPain_Desc">Một mảnh vỡ của bóng tối sống.</string>
     <string name="SpiritOfPain_Gender">masculine</string>
+    <string name="SpiritOfPain_Name">linh hồn đau đớn</string>
     <string name="Sprout_Info">Đánh thức các hạt giống ngủ.\nTuy nhiên, cần có cây cỏ trên mặt đất để phép thuật này thành công.</string>
     <string name="Sprout_Name">Mầm Non</string>
     <string name="StartScene_ComingSoon">Sắp ra mắt</string>
@@ -1487,6 +1488,7 @@
     <string name="WndPriest_Title">Linh mục thị trấn</string>
     <string name="WndRanking_Items">Vật phẩm</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
+    <string name="WndRanking_StaEnemies">Quái vật bị tiêu diệt</string>
     <string name="WndRanking_StaHealth">Máu</string>
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_StaTitle">Cấp %1 %2</string>
@@ -1683,6 +1685,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
