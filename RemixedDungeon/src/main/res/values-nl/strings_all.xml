@@ -837,6 +837,7 @@
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
     <string name="Mushroom_Eat_Message">Die paddenstoel smaakt raar!</string>
     <string name="MysteryMeat_Info">Eet op eigen risico!</string>
+    <string name="MysteryMeat_Info2">Je kunt je benen niet voelen!</string>
     <string name="MysteryMeat_Info3">Je voelt je niet goed.</string>
     <string name="MysteryMeat_Name">raadselachtig vlees</string>
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
@@ -1952,6 +1953,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

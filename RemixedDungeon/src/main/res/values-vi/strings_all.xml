@@ -1586,6 +1586,7 @@
     <string name="town_deco_barrel_wine_desc">Được dùng để chứa một thức uống quý giá như rượu vang.</string>
     <string name="town_deco_barrel_wine_name">Thùng rượu</string>
     <string name="town_deco_bell_desc">Một cái chuông giáo đường điển hình. Trông nó như đã không ai rung chuông này được khá lâu rồi, thậm chí dây treo cũng đã mất.</string>
+    <string name="town_deco_bell_tower_name">Tháp chuông</string>
     <string name="town_deco_blue_carpet_name">thảm</string>
     <string name="town_deco_broken_roof_desc">Các viên ngói trên mái nhà này bị nứt và cần được thay thế.</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
@@ -1687,6 +1688,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
