@@ -397,6 +397,7 @@
     <string name="Death_Name_2">Grimmige %s</string>
     <string name="Deathling_Desc">De Doodsling is de ziel van een gevallen held die ongelukkig genoeg werd opgeroepen door een mede-avonturier die necromancie beoefent.</string>
     <string name="Deathling_Gender">masculine</string>
+    <string name="Deathling_Name">doodskind</string>
     <string name="Deathling_Name_Objective">doodsklief</string>
     <string name="DeepSnail_Desc">Dit soort weekdier is vaak te zien nabij waterbronnen en is veel sneller dan een gewone slak. Pas echter op voor de beten, die kunnen een onaangenaam effect hebben op je huid.</string>
     <string name="DeepSnail_Gender">masculine</string>
@@ -991,6 +992,7 @@
     <string name="PumpkinPie_Name">pompoentaart</string>
     <string name="Pumpkin_Info">Vroeger waren Pompoenmensen een trots en bloeiend volk. Maar alles veranderde toen de mensen kwamen, die alleen ruïnes achterlieten. En de afgehakte, uitgeholde hoofden van lang verdwenen Pompoenstammen herinneren nog aan die verschrikkelijke gebeurtenissen.</string>
     <string name="Quarterstaff_Gender">masculine</string>
+    <string name="Quarterstaff_Info">Een staf van hardhout, waarvan de uiteinden met ijzer beslagen zijn.</string>
     <string name="Quest_DarkGoldOre_full_name">donker gouderts</string>
     <string name="QuickSlot_SelectSlot">Selecteer een snelslot ervoor</string>
     <string name="QuickSlot_SelectedItem">Selecteer een item voor de quickslot</string>
@@ -1959,6 +1961,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

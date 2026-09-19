@@ -797,6 +797,7 @@
     <string name="MissileWeapon_Info2">Vì thể lực không đủ, độ chính xác và tốc độ tấn công của bạn với %1$s này bị giảm.</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
     <string name="MissileWeapon_No">Không, tôi đã đổi ý rồi</string>
+    <string name="MissileWeapon_Sure">Bạn có thực sự muốn trang bị nó như vũ khí cận chiến không?</string>
     <string name="MobAi_status">Con %1$s này đang %2$s</string>
     <string name="Mob_Attacking">Hãy coi %s này như đã chết!</string>
     <string name="Mob_Died">Bạn nghe thấy thứ gì đó đã chết ở phía xa</string>
@@ -805,6 +806,7 @@
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
     <string name="Mob_StaFleeingStatus2">Cái %1$s này đang chạy trốn khỏi %2$s</string>
     <string name="Mob_StaHuntingStatus">Đây %s đang săn bắn</string>
+    <string name="Mob_StaPassiveStatus">%s đang thụ động</string>
     <string name="Mob_StaSleepingStatus">%s này đang ngủ</string>
     <string name="Mob_StaTerrorStatus2">%1 này kinh hoàng trước %2</string>
     <string name="Mob_StaWanderingStatus">%s đang lang thang</string>
@@ -1692,6 +1694,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
