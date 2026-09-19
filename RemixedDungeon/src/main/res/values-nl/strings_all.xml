@@ -48,6 +48,7 @@
     <string name="Amulet_ACEnd">SPEL BEËINDIGEN</string>
     <string name="AnesthesiaBuff_Info">Voelt geen pijn en wakert niet op bij aanvallen, maar krijgt nog steeds schade.</string>
     <string name="Anesthesia_Cast">%s valt in een diepe, droomloze slaap.</string>
+    <string name="Ankh_Info">Dit oude symbool van onsterfelijkheid geeft de mogelijkheid om na de dood tot leven terug te keren. Bij de opstanding gaan alle niet-uitgeruste voorwerpen verloren.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="ArmorKit_ACAplly">TOEPASSSEN</string>
     <string name="ArmorKit_Info">Met deze set gereedschappen en materialen kan iedereen elk harnas veranderen in een \&quot;episch harnas\&quot;, dat alle eigenschappen van het originele harnas behoudt, maar de drager ook een speciale vaardigheid biedt afhankelijk van zijn klasse. Geen vaardigheden in kleermakerij, leerbewerking of smederij vereist.</string>
@@ -469,6 +470,7 @@
     <string name="Facilitations_Descriptions_3">Door de riem van ogerhuid aan te trekken, die aan elke nieuwe generatie werd doorgegeven, maak je een stap naar het onbekende dat voor je ligt.</string>
     <string name="Facilitations_Names_0">Geen honger</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
+    <string name="Fadeleaf_Desc">Het aanraken van een Fadeleaf teleporteert elk wezen naar een willekeurige plek op het huidige niveau.</string>
     <string name="Fadeleaf_Name">Verdwaand Blad</string>
     <string name="FetidRat_Gender">feminine</string>
     <string name="Fez_Name">Fez</string>
@@ -1957,6 +1959,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

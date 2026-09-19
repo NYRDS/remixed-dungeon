@@ -501,6 +501,7 @@
     <string name="Hero_Wait">انتظار...</string>
     <string name="HideInGrassSpell_NeedGrassToHide">حتى أنا لا أستطيع الاختباء في العراء</string>
     <string name="Horror_Name_1">%s مخيف</string>
+    <string name="Horror_Name_2">غامض %s</string>
     <string name="HungerBuff_Info1">أنت جائع!</string>
     <string name="HungerBuff_Info2">أنت تموت جوعاً! تحتاج إلى تناول الطعام!</string>
     <string name="HungerBuff_Name2">يموت من الجوع</string>
@@ -1352,6 +1353,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 
