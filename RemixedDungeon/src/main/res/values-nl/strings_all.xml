@@ -1402,6 +1402,7 @@
     <string name="WandOfDisintegration_Info">Deze staf straalt een bundel vernietigende energie uit, die alle wezens op zijn pad doorboort. Hoe meer slachtoffers het raakt, des te meer schade het aan elk van hen toebrengt.</string>
     <string name="WandOfFirebolt_Info1">Je verbrandde jezelf met je eigen Toverstaf van Vuurpijl...</string>
     <string name="WandOfFirebolt_Name">Toverstaf van Vuurpijl</string>
+    <string name="WandOfFlock_Info">Een zwaai met deze toverstaf roept een kudde magische schapen op, die een tijdelijk ondoordringbaar obstakel vormen.</string>
     <string name="WandOfFlock_Name">Toverstaf van de Kudde</string>
     <string name="WandOfFlock_SheepBaa_3">Baa...</string>
     <string name="WandOfIcebolt_Info">Deze toverstaf lanceert een ijsbout, die lichte schade toebrengt aan het doelwit. Er is ook een kans om de vijand te vertragen of zelfs te bevriezen.</string>
@@ -1965,6 +1966,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
