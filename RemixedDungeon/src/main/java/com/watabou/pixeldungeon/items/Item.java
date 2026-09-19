@@ -619,7 +619,10 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         Level level = user.level();
         if (level.distance(cell, dst) == 1) {
             val lo = level.getTopLevelObject(dst);
-            if (lo != null && lo.affectItems()) {
+            // snap to the object cell only when the path wasn't actually blocked:
+            // a blocked stop lands on a char or on a losBlocking cell (wall, closed door)
+            if (lo != null && lo.affectItems()
+                    && Actor.findChar(cell) == null && !level.losBlocking[cell]) {
                 cell = dst;
             }
         }

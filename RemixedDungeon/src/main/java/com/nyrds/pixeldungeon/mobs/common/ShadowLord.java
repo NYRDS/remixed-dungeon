@@ -157,6 +157,9 @@ public class ShadowLord extends Boss implements IZapper {
 
 	@Override
     public boolean canAttack(@NotNull Char enemy) {
+		if (level().distance(getPos(), enemy.getPos()) <= 1) {
+			return super.canAttack(enemy); // corner-safe melee at contact range
+		}
 		return level().distance(getPos(), enemy.getPos()) < 4 && Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 

@@ -106,6 +106,14 @@ public class MissileWeapon extends Weapon {
                             }
                             wndBag.updateItems();
                         }
+
+                        // the bag list is disabled while this dialog is up: re-enable on
+                        // every way out, not just the buttons (outside tap exits via hide())
+                        @Override
+                        public void hide() {
+                            wndBag.setItemsActive(true);
+                            super.hide();
+                        }
                     }
             );
         } else {

@@ -66,7 +66,7 @@ public class SpiderQueen extends Boss {
 	
 	@Override
     public boolean canAttack(@NotNull Char enemy) {
-		return adjacent(enemy) && hp() > ht() / 2;
+		return adjacent(enemy) && !meleeBlockedByCorner(enemy) && hp() > ht() / 2;
 	}
 	
 	@Override

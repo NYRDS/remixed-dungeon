@@ -236,6 +236,15 @@ public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
             return;
         }
 
+        if (type == Type.MIMIC) {
+            // a fed mimic shows itself instead of silently eating the offering;
+            // the item still ends up in its loot (beta.10 feedback round)
+            item.setHeap(this);
+            items.addFirst(item);
+            open(null);
+            return;
+        }
+
         item.setHeap(this);
         if (items.contains(item)) { //TODO fix me
             return;

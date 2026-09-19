@@ -35,6 +35,9 @@ public class KoboldIcemancer extends Mob implements IZapper {
 
 	@Override
     public boolean canAttack(@NotNull Char enemy) {
+		if (level().distance(getPos(), enemy.getPos()) <= 1) {
+			return super.canAttack(enemy); // corner-safe melee at contact range
+		}
 		return Ballistica.cast(getPos(), enemy.getPos(), false, true) == enemy.getPos();
 	}
 

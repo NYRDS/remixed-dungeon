@@ -32,7 +32,8 @@ return item.init{
     deactivate = function(self, item, hero)
         Accessory:unequip()
         -- the class armor has its own beaked mask: immunity lives while either source is worn
-        local armor = hero:getBelongings():getItemFromSlot(RPD.Slots.armor)
+        -- Char.getItemFromSlot(String) - Belongings' own overload takes the Slot enum only
+        local armor = hero:getItemFromSlot(RPD.Slots.armor)
         if armor:getEntityKind() ~= "DoctorArmor" then
             RPD.removeBuff(hero, "GasesImmunity")
         end

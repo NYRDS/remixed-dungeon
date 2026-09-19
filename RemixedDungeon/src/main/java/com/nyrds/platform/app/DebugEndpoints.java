@@ -1,5 +1,6 @@
 package com.nyrds.platform.app;
 
+import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.RemoteControlled;
 import com.nyrds.pixeldungeon.alchemy.AlchemyRecipe;
@@ -71,6 +72,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaValue;
 
 public class DebugEndpoints {
     
@@ -4505,5 +4507,56 @@ public class DebugEndpoints {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
+    }
+
+    // runs a lua chunk in the engine's script environment (RPD table, luajava, require).
+    // headless-testing workhorse: place blobs, move chars, poke internals - the real flows.
+    public static NanoHTTPD.Response handleDebugRunLua(NanoHTTPD.IHTTPSession session) {
+        Map<String, List<String>> params = session.getParameters();
+        String code = params.containsKey("code") && !params.get("code").isEmpty()
+                ? params.get("code").get(0) : null;
+        if (code == null || code.isEmpty()) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                "{\"error\":\"Missing code parameter\"}");
+        }
+
+        final String finalCode = code;
+        final String[] result = new String[1];
+        final String[] error = new String[1];
+
+        // lua touches actors and level state - game thread like the other mutating endpoints
+        CountDownLatch latch = new CountDownLatch(1);
+        GameLoop.pushUiTask(() -> {
+            try {
+                LuaValue chunk = LuaEngine.getGlobals().load(
+                        new java.io.ByteArrayInputStream(finalCode.getBytes()),
+                        "=debug_run_lua", "t", LuaEngine.getGlobals());
+                LuaValue ret = chunk.call();
+                result[0] = ret.tojstring();
+            } catch (Exception e) {
+                error[0] = e.getMessage();
+            } finally {
+                latch.countDown();
+            }
+        });
+
+        try {
+            if (!latch.await(10, TimeUnit.SECONDS)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for lua execution\"}");
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                "{\"error\":\"Interrupted\"}");
+        }
+
+        if (error[0] != null) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                String.format("{\"error\":\"%s\"}", error[0].replace("\"", "'")));
+        }
+
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+            String.format("{\"success\":true,\"result\":\"%s\"}", result[0] == null ? "nil" : result[0].replace("\"", "'").replace("\n", "\\n")));
     }
 }

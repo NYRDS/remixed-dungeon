@@ -86,6 +86,10 @@ public class CustomMob extends MultiKindMob implements IZapper {
 		int enemyPos = enemy.getPos();
 		int distance = level().distance(getPos(), enemyPos);
 
+		if (distance <= 1) {
+			return super.canAttack(enemy); // corner-safe melee at contact range
+		}
+
         return distance <= attackRange && Ballistica.cast(getPos(), enemyPos, false, true) == enemyPos;
     }
 
