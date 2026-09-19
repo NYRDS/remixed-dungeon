@@ -45,6 +45,7 @@
     <string name="AmuletScene_Exit">Mijn taak hier is voltooid</string>
     <string name="AmuletScene_Stay">Ik ben er nog niet klaar mee</string>
     <string name="AmuletScene_Txt">Eindelijk houd je het in je handen, het Amulet van Yendor. Met zijn kracht kun je de wereld veroveren of vrede en voorspoed brengen of wat dan ook. In ieder geval zal je leven voor altijd veranderen en dit spel eindigt hier. Of je kunt nog even een gewone sterfelijke blijven.</string>
+    <string name="Amulet_ACEnd">SPEL BEËINDIGEN</string>
     <string name="AnesthesiaBuff_Info">Voelt geen pijn en wakert niet op bij aanvallen, maar krijgt nog steeds schade.</string>
     <string name="Anesthesia_Cast">%s valt in een diepe, droomloze slaap.</string>
     <string name="Ankh_Name">Ankh</string>
@@ -1953,6 +1954,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
