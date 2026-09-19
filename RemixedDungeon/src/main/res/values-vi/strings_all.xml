@@ -745,6 +745,7 @@
     <string name="LibrarianNPC_Name_Objective">thủ thư</string>
     <string name="Lich_Gender">masculine</string>
     <string name="LightBuff_Info">Ánh sáng phát ra từ cơ thể, soi sáng mọi thứ xung quanh.</string>
+    <string name="LightBuff_Name">Được chiếu sáng</string>
     <string name="LightningBolt_Info">Phép thuật được lưu truyền giữa các pháp sư cổ, khiến kẻ thù của bạn bị choáng gấp đôi hiệu quả, đặc biệt nếu chúng ngu ngốc đến mức đứng trên mặt nước.</string>
     <string name="LightningBolt_Name">Tia chớp</string>
     <string name="LightningTrap_Name">bẫy sét</string>
@@ -1669,6 +1670,7 @@
     <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_shelf_name">Các kệ sách</string>
     <string name="town_deco_shieldboard_desc">Các loại khiên treo trên bảng. Chưa được bán.</string>
+    <string name="town_deco_skullboard_desc">Chiếc hộp sọ này hoàn hảo ghi lại khoảnh khắc kinh hoàng bất ngờ.</string>
     <string name="town_deco_skulls_desc">Các chiếc sọ được mài bóng thuộc về các sinh vật trong ngục.</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
@@ -1701,6 +1703,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
