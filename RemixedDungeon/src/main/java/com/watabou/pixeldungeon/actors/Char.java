@@ -2031,7 +2031,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return false;
         }
 
-        if (adjacent(enemy)) {
+        if (adjacent(enemy) && !meleeBlockedByCorner(enemy)) {
             return true;
         }
 
@@ -2055,6 +2055,29 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         }
 
         return false;
+    }
+
+    /**
+     * A solid corner post between diagonal neighbours blocks melee - no hitting
+     * around corners (beta.10 feedback round). At diagonal distance 1 a ballistica
+     * check always passes because the flanking cells are never sampled, so melee
+     * needs its own corner rule. Ranged weapons and spells keep theirs.
+     */
+    @LuaInterface
+    public boolean meleeBlockedByCorner(@NotNull Char enemy) {
+        Level level = level();
+        int dx = level.cellX(enemy.getPos()) - level.cellX(getPos());
+        int dy = level.cellY(enemy.getPos()) - level.cellY(getPos());
+        if (Math.abs(dx) != 1 || Math.abs(dy) != 1) {
+            return false; // orthogonal adjacency has no corner post
+        }
+
+        int x = level.cellX(getPos());
+        int y = level.cellY(getPos());
+
+        boolean side1Open = level.cellValid(x + dx, y) && level.passable[level.cell(x + dx, y)];
+        boolean side2Open = level.cellValid(x, y + dy) && level.passable[level.cell(x, y + dy)];
+        return !side1Open && !side2Open;
     }
 
     @LuaInterface

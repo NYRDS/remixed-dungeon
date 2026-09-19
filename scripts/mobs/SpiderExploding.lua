@@ -1,17 +1,21 @@
 local RPD = require "scripts/lib/commonClasses"
 local mob = require "scripts/lib/mob"
 
+local healerAct = require "scripts/mobs/SpiderHealer"
+
 -- java SpiderExploding (batch 12): living bomb - on a hit applies its random
 -- plant to the victim and bursts (attackProc fires only on a hit, same as the
 -- java attack() override that died on super.attack()==true). Java picked the
 -- plant via a random MultiKindMob kind; kind is visually inert, so the roll
 -- lives in lua data.
+-- + sungrass medic behavior (see SpiderHealer.lua)
 local PLANTS = {
     "Firebloom", "Icecap", "Sorrowmoss", "Dreamweed",
     "Sungrass", "Earthroot", "Fadeleaf", "Moongrace"
 }
 
 return mob.init{
+    act = healerAct.act,
     stats = function(self)
         local data = mob.restoreData(self)
         if data.plant then

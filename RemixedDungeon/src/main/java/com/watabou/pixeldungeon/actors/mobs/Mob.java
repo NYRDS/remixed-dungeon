@@ -527,6 +527,12 @@ public class Mob extends Char implements IZapper {
         int enemyPos = enemy.getPos();
         int distance = level().distance(getPos(), enemyPos);
 
+        // contact range goes through the corner-safe adjacency check; at
+        // diagonal distance 1 a ballistica check always passes
+        if (distance <= 1) {
+            return super.canAttack(enemy);
+        }
+
         return distance <= attackRange && Ballistica.cast(getPos(), enemyPos, false, true) == enemyPos;
     }
 

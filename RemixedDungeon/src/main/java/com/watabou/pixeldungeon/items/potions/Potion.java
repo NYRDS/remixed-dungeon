@@ -13,6 +13,9 @@ import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness;
+import com.watabou.pixeldungeon.actors.blobs.WaterOfHealth;
+import com.watabou.pixeldungeon.actors.blobs.WaterOfTransmutation;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
@@ -228,13 +231,25 @@ public class Potion extends Item implements UnknownItem {
 			if (level.pit[cell]) {
 				super.onThrow( cell, thrower, enemy);
 			} else  {
-				LevelObject lo = level.getTopLevelObject(cell);
-				if (lo != null && lo.affectItems()) {
-					lo.bump(this); //traps and the like still react, but the potion breaks
+				if (isMagicWell(level, cell)) {
+					// magic wells take the potion whole: it lands, then the water
+					// identifies / transmutes / tosses it out - no shatter (beta.10 round)
+					level.drop(this, cell);
+				} else {
+					LevelObject lo = level.getTopLevelObject(cell);
+					if (lo != null && lo.affectItems()) {
+						lo.bump(this); //traps and the like still react, but the potion breaks
+					}
+					shatter( cell );
 				}
-				shatter( cell );
 			}
 		}
+	}
+
+	private boolean isMagicWell(Level level, int cell) {
+		return level.blobAmountAt(WaterOfAwareness.class, cell) > 0
+				|| level.blobAmountAt(WaterOfHealth.class, cell) > 0
+				|| level.blobAmountAt(WaterOfTransmutation.class, cell) > 0;
 	}
 	
 	protected void apply(Char hero ) {
