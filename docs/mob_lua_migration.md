@@ -2279,3 +2279,91 @@ just respawn): LuaScript chunk caching served stale modules for buffs (the
 self-kill: `pkill -f "RemixedDungeon-[H]eadless"` in the same compound as a
 launch line that spells the jar path kills the launch itself — pkill stays a
 lone call.
+
+## Batch 21 — furniture level objects to CustomObject+lua (SHIPPED 2026-09-19)
+
+Sign, Barrel, ConcreteBlock, LibraryBook, PortalGateSender, PortalGateReceiver
+and the PortalGate base deleted (~570 java lines). CustomObject serves every
+kind: def `levelObjects/<Kind>.json` (kind "CustomObject", required
+`script` key) + `scripts/objects/<Kind>.lua` (object.init contract, hooks
+`(self, object, ...)`).
+
+**Migration shape — kind strings never change.** LevelObjectsFactory keeps
+all 6 kind strings registered, retargeted to CustomObject.class. Deco gains
+two fallbacks: setupFromJson — `object_desc` key wins, else a preset
+objectDesc, else the placement's `"kind"` key; restoreFromBundle — null
+objectDesc recovers from the bundle `entityKind` tag (`Bundle.entityKind()`
+accessor added), and a tag naming a REGISTERED kind overrides a stale stored
+def (legacy java gates stored `objectDesc="portalGate"`). Net: zero level-json
+edits, zero save-format change, entityKind tags byte-stable.
+
+**Engine additions:** CustomObject forwards pushable / push (GATE-only — a
+default of `super.push(chr)` would evaluate the move eagerly; the move logic
+always runs in super, script may only veto) / affectLevelObjects /
+resetVisualState; `playObjectAnim(animKind, doneHook)` owns the java Callback
+(lua closures coerce to NULL — extraAttack pattern; nil doneHook = nullCallback,
+used for the non-completing activatedLoop); `runScript(method, args...)`
+java-side fire-and-forget (mirror of Char.runInScript, deliberately NOT
+@LuaInterface — luaj cannot coerce lua calls into java varargs: lua_eval
+`gate:runScript("useUp")` dies "wrong number of arguments", java callers are
+fine); setupFromJson passes the raw placement JSONObject to `init(level, data,
+json)` so the sender reads its nested `target` block (Portal.json). WndPortal
+and WndPortalReturn widened `PortalGate` → `LevelObject`; the confirm button
+dispatches `runScript("useUp")` (the use accounting lives in script data).
+BossLevel.unseal: `instanceof ConcreteBlock` → kind-equals +
+`"50".equals(obj.getData())` (STR rides the @Packable `data` field; a legacy
+java-era seal has no data field and survives unseal — accepted delta).
+Annotations: Char.effectiveSTR, GameScene.discoverTile, HeroClass.forbidden,
+ModdingBase.isHalloweenEvent (class bound in commonClasses); tileName/
+tileDesc were already exposed. ItemUtils.isItem(Object) (luajava has no
+instanceof; bump filters Item pressers). commonClasses: Objects.Ui +=
+WndLibrary/WndPortal/WndPortalReturn, RPD.newPosition helper, RPD.CommonActions.
+New permanent endpoint `/debug/object_script?kind=&method=` — drives the same
+java→script path as the window button.
+
+**Plant freebie:** Plant.restoreFromBundle seeds `kind` from the entityKind
+tag when null — retro-fixes old saves that restored java plant kinds as a
+nameless/spriteless Plant since batch 20.
+
+**Old-save deltas (accepted, flagged):** sign text lost (legacy bundles have
+no `data` field; text rides `data` now); ConcreteBlock requiredStr → default
+10; portal uses/activated reset (gate just re-arms); legacy 50-STR boss seal
+survives unseal; pre-entityKind-tag (pre-2026-09-11) saves of gates carry
+objectDesc "portalGate" with no tag → restore onto portalGate.json as a
+role-auto gate (no crash; sender-vs-receiver distinction lost — only affects
+ancient in-flight saves, entityKind tags shipped 2026-09-11).
+
+Verification: entrance Sign live on d1 (kind/name/data/image 16), interact
+(true) + Blindness/AC_READ gates in script, burn → EMBERS + removed; barrel:
+localized name, LiquidFlame blob 10 at cell, pushable, nonPassable-for-chars;
+blocks: STR-10 hero vs data "12" (blocked) / "5" (pushable), desc formatted
+«12» силы; LibraryBook interact/stepOn-false; listing (allLevelObjects) 64
+entries, every def+script parses, each new kind listed (bare registry
+instances get objectDesc seeded from the kind for the sprite generator);
+data round-trip d1→d2→d1 (blocks pushable from restored serpent data);
+LEGACY SIMULATION: objectDesc stripped from the saved Sign entry → reload →
+restores via the entityKind tag with name+data intact; BossLevel unseal
+drops the data-"50" block, keeps "10"; windowed: town receiver activation
+completes («Древний портал пробудился!» — the playObjectAnim callback
+fires), WndPortalReturn and WndPortal render with the CustomObject (ctor
+widening), useUp dispatch via /debug/object_script, RETURN travel to
+town_2 verified (fixture sender level → town). Suites 5/5 green (blood,
+nav, doctor, all_spells, alchemy); mod gate PASS ×7; android + desktop
+compile green.
+
+Harness lessons: (1) the headless rig resolves assets from `../assets/`,
+`../d_assets/`, `../l10ns/` relative to cwd — the repo-root symlinks
+(HF-era) were gone; recreated `assets → RemixedDungeon/src/main/assets`
+(+d_assets, +l10ns) at repo root, mirroring the CI /tmp/rpd-ci layout;
+missing defs then surface as `Missing file: levelObjects/Sign.json` at
+RegularLevel sign placement (every sewer descent places the entrance sign —
+fastest smoke for the whole object path). (2) `createCustomObject` does NOT
+register the object in the level — construction sites must `putLevelObject`
+/ `addLevelObject` themselves; eval-created fixtures therefore need an
+explicit `lvl:putLevelObject(obj)` to survive a level save. (3) Mid-session
+placed fixtures never get a scene sprite (`lo_sprite` empty) →
+`playObjectAnim` done-hooks never fire headless/fixture — activation-type
+flows need a windowed rig and a gate placed at level creation (the town
+receiver). (4) InterlevelScene.Do(RETURN) from inside a blocking
+`pushUiTaskAndWait` eval wedges the game thread (scene switch reentrancy) —
+drive travel assertions around it, not through it.
