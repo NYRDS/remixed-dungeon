@@ -350,6 +350,7 @@
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">cua cống</string>
     <string name="Crab_Name_Objective">cua cống</string>
+    <string name="CrippleBuff_Info">Cơ thể bị tàn phế nhưng cuộc chiến vẫn tiếp tục.</string>
     <string name="CrippleBuff_Name">Tàn tật</string>
     <string name="Crystal_Desc">Hòn đá lớn lấp lánh bay giữa không trung. Có vẻ như nó chứa đựng phép thuật mạnh mẽ.</string>
     <string name="Crystal_Gender">masculine</string>
@@ -1696,6 +1697,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

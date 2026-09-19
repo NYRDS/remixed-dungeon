@@ -87,6 +87,7 @@
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
     <string name="Badges_FoodEaten1">10 stukken voedsel gegeten</string>
     <string name="Badges_FoodEaten3">30 stukken voedsel gegeten</string>
+    <string name="Badges_FoodEaten4">40 stukken voedsel gegeten</string>
     <string name="Badges_GamesPlayed1">10 spellen gespeeld</string>
     <string name="Badges_GamesPlayed2">100 spellen gespeeld</string>
     <string name="Badges_GamesPlayed3">500 spellen gespeeld</string>
@@ -723,6 +724,7 @@
     <string name="LastShopLevel_TileWater">Verdacht gekleurd water</string>
     <string name="LeatherArmor_Name">leren harnas</string>
     <string name="Leech_Name_2">Vampier %s</string>
+    <string name="Level_HiddenPlate">Een verborgen drukplaat klikt!</string>
     <string name="Level_TileAlarmTrap">alarmprikkel</string>
     <string name="Level_TileAlchemy">Alchemiepot</string>
     <string name="Level_TileBarricade">Barricade</string>
@@ -1963,6 +1965,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

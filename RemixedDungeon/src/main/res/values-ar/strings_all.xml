@@ -965,6 +965,7 @@
     <string name="Spear_Gender">neuter</string>
     <string name="SpeedBuff_Name">سرعة</string>
     <string name="SpellBook_Info_Identified">في هذه الصفحات اكتشفت النص الكامل للتعويذة \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="Spell_SelectACell">اختر خلية مستهدفة.</string>
     <string name="Spell_SelectAChar">اختر هدفًا.</string>
     <string name="Spells_NotEnoughSP">ليس لديك ما يكفي من المانا لإلقاء تعويذة \&quot;%1$s\&quot;.</string>
     <string name="Spells_NotInOwnBody">لا يمكنك تنفيذ %s عندما تنفصل روحك عن جسدك.</string>
@@ -1353,6 +1354,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 
