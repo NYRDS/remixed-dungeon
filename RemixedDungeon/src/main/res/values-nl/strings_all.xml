@@ -641,6 +641,7 @@
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
     <string name="Icecap_Name">IJskap</string>
     <string name="Ignite_Name">Ontbranden</string>
+    <string name="ImpShopkeeper_Greetings">Hallo, vriend!</string>
     <string name="ImpShopkeeper_Name">ambitieze duiveltje</string>
     <string name="Imp_Cya">Tot ziens, %s!</string>
     <string name="Imp_Defense">ontweek</string>
@@ -710,6 +711,7 @@
     <string name="Larva_Name">larve van de god</string>
     <string name="LastLevel_TileDescWater">Het lijkt op lava, maar het is koud en waarschijnlijk veilig om aan te raken.</string>
     <string name="LastLevel_TileStatue">Pilaar</string>
+    <string name="LastShopLevel_TileDescDeco">Hier ontbreken verschillende tegels.</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
     <string name="LastShopLevel_TileDescExit">Een helling leidt naar beneden in de hel.</string>
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
@@ -1698,6 +1700,7 @@
     <string name="town_deco_firewood_desc">Een onmisbaar ding bij zulke streng vorst.</string>
     <string name="town_deco_floor_desc">Deze vloer is gemaakt van eenvoudige houten planken. Wat zoek je precies?</string>
     <string name="town_deco_flowerinthepot_desc">Decoratieve bloem met een zoete smaak</string>
+    <string name="town_deco_flowerinthepot_name">Bloem in een pot</string>
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
     <string name="town_deco_glass_stained_name">Glas in lood</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
@@ -1949,6 +1952,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

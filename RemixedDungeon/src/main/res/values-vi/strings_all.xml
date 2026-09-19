@@ -243,6 +243,7 @@
     <string name="ChampionOfFireBuff_Info">\&quot;Được thâu nhục bởi cơn giận của ngọn lửa, đặc tính này khuếch đại sự dữ dằn và khả năng chiến đấu của sinh vật. Võ sĩ Lửa nổi lên như một đối thủ đáng sợ, tung ra những đòn tấn công tàn khốc có thể bao quanh kẻ thù trong ngọn lửa thiêu rực, khiến tất cả những kẻ dám chống đối đều run rợn.\&quot;</string>
     <string name="ChampionOfFireBuff_Name">Nhà Vô Địch Lửa</string>
     <string name="ChampionOfWaterBuff_Name">Vô Địch Nước</string>
+    <string name="ChaosArmor_Info">Áo giáp này gồm các tấm màu đỏ máu được khâu lại bằng dây xích đỏ đậm. Chúng phát ra năng lượng hỗn loạn khi bạn chạm vào.</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Mot thanh kiem mot tay cua hon loan than khiet. No phat trien trong chien dau nhu nguoi anh em hai tay cua no, nhung cham hon va tiem nang nho hon — de tay con lai tu do cho khiên.</string>
     <string name="ChaosBlade_Name">kiem hon loan</string>
@@ -634,6 +635,7 @@
     <string name="IceGuardian_Name_Objective">vệ binh băng</string>
     <string name="IceKey_Name">chìa khóa băng</string>
     <string name="Ignite_Name">Đốt Cháy</string>
+    <string name="ImpShopkeeper_Greetings">Xin chào, bạn!</string>
     <string name="Imp_Desc">Imp là những con quỷ cấp thấp. Chúng không nổi bật về sức mạnh hay tài năng phép thuật, nhưng lại khá thông minh và dễ gần. Nhiều imp thích sống giữa những người không phải quỷ.</string>
     <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
     <string name="Imp_Monks2">Ôi, bạn vẫn còn sống! Tôi biết rằng kung-fu của bạn mạnh hơn ;) Chỉ đừng quên nhặt những tín chỉ của các nhà sư này.</string>
@@ -1685,6 +1687,9 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
