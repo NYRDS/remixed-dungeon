@@ -13,6 +13,13 @@ Rules:
 - 2026-09-14 — **Chess duel: checkmate death is final.** Mate kills through the whole revive chain (dew vial auto-drink, LICH resurrect, Ankh are all bypassed). A lost duel is a lost run. (f9fb7f3ce)
 - long-standing — The death revive chain (dew vial → LICH → Ankh) is *global* death behavior. Features must not bypass it without an explicit ruling — chess mate above is the only sanctioned bypass.
 
+## Chaos & magic items
+- 2026-09-19 — **The chaos shield may clone bosses, and killing the clone counts.** ChaosShieldLeft's block-effect pool includes `cloneEnemy` (`enemy:split`) with no boss guard, on purpose: a cloned Shadow Lord is a real second boss, and killing it runs the full boss death (stairs unseal, badge). Player report ruled *not a bug, keep it*. (9f46db353 docs entry; code unchanged)
+
+## Combat & mobs
+- 2026-09-19 — **A solid corner post blocks diagonal melee.** At diagonal distance 1 a ballistica check always passes (the flanking cells are never sampled), so melee got its own rule: `Char.meleeBlockedByCorner` — a diagonal attack is refused when both flanking cells are impassable. Applies to every char incl. the hero; ranged weapons, wand-style zaps at range ≥ 2 and spells keep their ballistica rules. Ranged-mob overrides (KoboldIcemancer, Warlock, Shaman, BurningFist, Crystal, ShadowLord, CustomMob) route contact-range attacks through the corner-safe base check. (9f46db353)
+- 2026-09-19 — **Sungrass medic spiders.** Nest spiders (SpiderServant, SpiderExploding, SpiderGuard) standing in Sungrass foliage switch to the `Healer` AI state: heal one wounded ally per turn (+2), never press the attack. Damage taken flips them back to HUNTING; leaving the grass returns them to hunting via the mob script's pre-act hook. (9f46db353)
+
 ## Undead & necromancy
 - 2026-09-14 — **Moongrace never duplicates undead mobs; moonlight cures necromancy.** An *artificially raised* mob stepping on it is full-healed AND returned to life (undead flag dropped, with the whole immunity set that comes with it). *Natural undead* — species born undead: Skeleton, necropolis mobs (Zombie, knights, skulls, souls, Deathling, JarOfSouls), King.Undead, json `"undead": true` — carry `naturalUndead`, are not curable, and clone like the living. Artificial raise sites (curable): `Carcass.reanimate`, RaiseDead spell, skull-raised pets, the City King's raised servants. Undead state must survive every cloning path — `makeClone` carries `undead`/`naturalUndead`/`expForKill`. (8a81ad382, dbeca4d12, 3e3fe1b1f)
 - 2026-09-14 — **VileEssence stays Doctor-only.** Its inputs (dissect / BoneSaw crits) are Doctor loops, so necromancy remains a Doctor perk for now. No general source, ruled by Mike.
@@ -28,6 +35,8 @@ Rules:
 - long-standing — **Doors + heaps:** heaps wedging doors open is an established player tactic (death drops wedge too). Never remove `Door.leave`'s heap guard.
 
 ## Items & economy
+- 2026-09-19 — **Magic wells take potions whole.** A potion thrown into WaterOfAwareness / WaterOfHealth / WaterOfTransmutation lands as a heap and the well water processes it (identify / transmute / toss-out intact) instead of shattering; water is consumed only when it actually affects the potion. Traps keep the beta.8 rule: they react, the potion breaks. (9f46db353)
+- 2026-09-19 — **A fed mimic shows itself.** Dropping or throwing an item onto a MIMIC heap reveals the mimic immediately; the item still ends up in its loot. (9f46db353)
 - 2026-09-14 — **BoneSaw is not upgradable by design** — it scales with its wielder's skill level instead. Its 9 STR requirement is mechanically real: a deficit applies the standard weapon encumbrance penalties (accuracy ÷1.5ⁿ, delay ×1.2ⁿ), and the item info shows effective average damage.
 - 2026-09-14 — **Doctor class armor's built-in mask is the real one.** Wearing the epic DoctorArmor grants GasesImmunity; the accessory mask is an optional pre-armor backup. Either source alone keeps the immunity. (04ab87c01)
 - 2026-09-14 — **Shield upgrades lower STR requirement** like armor does: `max(2, base − level)`; blocked damage already scales ×1.3/level and the desc shows effective values. (4e73c6b05)

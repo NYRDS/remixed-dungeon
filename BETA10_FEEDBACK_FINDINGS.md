@@ -1,7 +1,9 @@
 # Beta.10 feedback round — triage findings (2026-09-19)
 
 Raw player feedback relayed 2026-09-19 (two beta.9 items + six beta.10 items + one suggestion), triaged against `beta.8` @ d61b790de = 32.4.beta.10.
-Verdicts: **BUG** / **AS-CODED** (works as designed, explanation attached) / **DESIGN** (needs a call) / **SUGGESTION** (feature) / **NEEDS-INFO**. Nothing changed yet — decision sheet. Note: **none of the beta.9 items were touched by beta.10** — both are alive in beta.10 builds.
+Verdicts: **BUG** / **AS-CODED** (works as designed, explanation attached) / **DESIGN** (needs a call) / **SUGGESTION** (feature) / **NEEDS-INFO**. Note: **none of the beta.9 items were touched by beta.10** — both are alive in beta.10 builds.
+
+**Update 2026-09-19: round closed.** Mike ruled: mimic = option (a) reveal; wells = option (a) for **all** wells; corner-attack = fix; boss clone = **not a bug, keep it**; sungrass medics = adopt. Fixes shipped in 9f46db353: B9-1, B10-1..B10-5, S1 (B10-3 awaits player info). Headless-verified via `/debug/run_lua`: mask unequip clean, mimic reveal + loot, well identify + water consume, corner diagonal refused while orthogonal attack still passes, medic spider heals wounded nestmate (22→25). Mod sweep: 7/7 mods boot, 0 ctor fails, 0 class-load fails.
 
 ---
 
@@ -71,15 +73,15 @@ The chaos shield itself never touches equipment: its block effects are heal / da
 
 | # | Item | Verdict | Fix size |
 |---|------|---------|----------|
-| B9-1 | PlagueDoctorMask unequip crash | BUG (crash) | one line lua |
-| B9-2 | Boss cloned by chaos shield, clone-kill = victory | BUG | small lua guard |
-| B10-1 | Throw-at-trap flies through obstacle | BUG | small java guard |
-| B10-2 | Outside-click leaves inventory disabled | BUG | tiny java |
+| B9-1 | PlagueDoctorMask unequip crash | BUG (crash) | one line lua — **fixed 9f46db353** |
+| B9-2 | Boss cloned by chaos shield, clone-kill = victory | **not a bug (Mike: keep)** | — |
+| B10-1 | Throw-at-trap flies through obstacle | BUG | small java guard — **fixed 9f46db353** |
+| B10-2 | Outside-click leaves inventory disabled | BUG | tiny java — **fixed 9f46db353** |
 | B10-3 | Snail-kill freeze + DummyItem on reload | BUG (NEEDS-INFO) | carcass area, repro pending |
-| B10-4 | Mimic absorbs thrown weapons, no reveal | BUG (design gap) | small, option (a)/(b) |
-| B10-5 | Potion into Well of Knowledge breaks | BUG (ordering) | medium, option (a)/(b) |
-| B10-6 | Kobold melee through diagonal corner | DESIGN (quirk) | decision |
-| S1 | Sungrass spiders heal allies | SUGGESTION | design note |
+| B10-4 | Mimic absorbs thrown weapons, no reveal | BUG (design gap) | option (a) — **fixed 9f46db353** |
+| B10-5 | Potion into Well of Knowledge breaks | BUG (ordering) | option (a), all wells — **fixed 9f46db353** |
+| B10-6 | Kobold melee through diagonal corner | DESIGN (quirk) | fixed 9f46db353 (corner-safe `canAttack`) |
+| S1 | Sungrass spiders heal allies | SUGGESTION | adopted — **implemented 9f46db353** |
 
-**Decisions needed from Mike:** B10-4 (a/b), B10-5 (a/b + other wells?), B10-6 (keep quirk vs corner-safe), B9-2 (lua-only vs engine split guard), S1 (adopt?).
-**Needs from player:** B10-3 error text/save.
+**Decisions applied (Mike, 2026-09-19):** B10-4 = (a); B10-5 = (a) all wells; B10-6 = fix; B9-2 = keep (intended chaos); S1 = adopt.
+**Still needs from player:** B10-3 error text/save.
