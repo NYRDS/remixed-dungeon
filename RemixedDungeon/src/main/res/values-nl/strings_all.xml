@@ -416,6 +416,7 @@
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">angstridder</string>
     <string name="DriedRoseBuff_Info">De roos ziet er heel aantrekkelijk uit.</string>
+    <string name="DriedRoseBuff_Name">Charmant</string>
     <string name="DriedRoseCursedBuff_Name">Verliefd</string>
     <string name="DriedRose_Name">gedroogde roos</string>
     <string name="Drink_Message">Die drank was verfrissend!</string>
@@ -1352,6 +1353,7 @@
     <string name="TownShopkeeper_Name">winkelier</string>
     <string name="TownsfolkMovieNPC_Desc">Een van de plaatselijke bewoners. Hoewel dit duidelijk een gewone burger is, zien die kleren er duur uit.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
+    <string name="TownsfolkMovieNPC_Name">stadsbewoner</string>
     <string name="TownsfolkMovieNPC_Name_Objective">stadbewoner</string>
     <string name="TownsfolkNPC_Desc">Een van de lokale bewoners. Hoewel dit duidelijk een gewone burger is, zien die kleren er toch duur uit.</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
@@ -1966,6 +1968,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
