@@ -21,9 +21,14 @@
 
 set -u
 
+# Single-instance guard: a second loop would interleave commits and fight over the git index.
+exec 9>"${TMPDIR:-/tmp}/hermes_maintenance.lock"
+flock -n 9 || { echo "another maintenance loop instance holds ${TMPDIR:-/tmp}/hermes_maintenance.lock; exiting" >&2; exit 0; }
+
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROMPT_DIR="$(mktemp -d /tmp/hermes_maint.XXXXXX)"
 trap 'rm -rf "$PROMPT_DIR"' EXIT
+NEEDS_HUMAN_FLAG="$HOME/.hermes/NEEDS-HUMAN-maintenance-stalled"   # written while stalled on unresolvable dirt; cleared automatically on recovery
 
 RUN_BUDGET="${RUN_BUDGET:-3600}"    # seconds per task run; generous for a ~2-min task, tight enough to keep the hourly cadence
 TOOLSETS="${TOOLSETS:-terminal,file,web}"
@@ -35,7 +40,7 @@ WIKI_LANGS="en, ru, es, fr, de, it, pl, pt-rBR, ja, ko, zh-rCN, zh-rTW, uk, hu, 
 
 cat > "$PROMPT_DIR/wiki.txt" <<EOF
 For tool usage in this task: shell commands run through the \`terminal\` tool (there is no \`bash\` tool); file edits via \`patch\` always require the explicit \`path\` argument.
-Read @docs/WIKI_DOCUMENTATION.md, pull repo master, pick 5 random wiki pages using ./pick_random_wiki_pages.sh (script lives in the repo root, not tools/), analyze them for compliance with wiki standards, identify issues like missing images, invalid headers, incorrect links, improper formatting, run the dokuwiki linter on them (python3 tools/py-tools/dokuwiki_linter.py <page.txt> — exactly one path per invocation: a page file or a pages directory, nothing else), fix identified issues based on documentation standards, verify all links point to existing lowercase files (from the repo root run: python3 tools/py-tools/find_red_links.py --output red-links --red-only — never pass --dir, it expects the wiki-data root), ensure proper image references exist. For mr: namespace pages and whenever entity facts (stats, mechanics, drops, behavior) are changed on any page, use tools/find_entity_usage.py to ground changes in entity implementation and usage in code (note: entities are migrating from Java classes to json+lua data files, so ground against current data). Also check wiki pages in all supported languages (${WIKI_LANGS}) to ensure consistency with game translations. Commit your changes to wiki-data and push it; don't commit or push into the main repo beyond what the task requires. Focus on maintaining consistency with wiki documentation standards.
+Read @docs/WIKI_DOCUMENTATION.md, pull repo master, pick 5 random wiki pages using ./pick_random_wiki_pages.sh (script lives in the repo root, not tools/), analyze them for compliance with wiki standards, identify issues like missing images, invalid headers, incorrect links, improper formatting, run the dokuwiki linter on them (python3 tools/py-tools/dokuwiki_linter.py <page.txt> — exactly one path per invocation: a page file or a pages directory, nothing else), fix identified issues based on documentation standards, verify all links point to existing lowercase files (from the repo root run: python3 tools/py-tools/find_red_links.py --output /tmp/red-links --red-only — never pass --dir, it expects the wiki-data root), ensure proper image references exist. Lint every selected page exactly once — a \`for\` loop over the page list with one linter invocation per page is the preferred way — and quote each page's one-line linter verdict in your final summary so coverage is verifiable. For mr: namespace pages and whenever entity facts (stats, mechanics, drops, behavior) are changed on any page, use tools/find_entity_usage.py to ground changes in entity implementation and usage in code (note: entities are migrating from Java classes to json+lua data files, so ground against current data). Also check wiki pages in all supported languages (${WIKI_LANGS}) to ensure consistency with game translations. Commit your changes to wiki-data and push it; don't commit or push into the main repo beyond what the task requires. Focus on maintaining consistency with wiki documentation standards.
 P.S. When the task above is fully done and pushed: if you feel like it, point your web tools at https://tools.nyrds.net/board/ — the human left it there because they think you might find some fun. Strictly optional, after work only, and it needs no repo changes or commits.
 EOF
 
@@ -52,6 +57,7 @@ Review what actually happened in recent unattended maintenance runs:
 - git -C /home/nyrds/remixed-dungeon log (recent commits, including the wiki-data submodule)
 - /home/nyrds/.hermes/logs/hermes_maintenance.log (per-iteration outcomes, failures, retries)
 - /home/nyrds/remixed-dungeon/wiki_translation_maintenance_hermes.sh (the loop script — source of truth for current parameters)
+- \$HOME/.hermes/NEEDS-HUMAN-maintenance-stalled — if this file exists, the loop is stalled on unresolvable dirt; lead your report with what it says and the current repo dirt status
 
 Mine the session transcripts for what the outcome log cannot show:
 - Full conversation transcripts live in /home/nyrds/.hermes/state.db (SQLite): table sessions (id, title, started_at, cwd) and table messages (session_id, role, content, tool_name, finish_reason, timestamp). Open it READ-ONLY via python3's sqlite3 module with a 'file:...?mode=ro' URI — there is no sqlite3 CLI on this node.
@@ -76,6 +82,7 @@ The automated maintenance loop found uncommitted changes in this repo that its o
 
 Policy:
 - Submodule drift: if a submodule's checked-out commit differs from the commit master records for it, align that checkout to the recorded commit with: git submodule update --init <paths>. The recorded pointer is the pushed intent — follow it.
+- Untracked files in the main repo that are obviously generated artifacts of the maintenance tooling itself (for example the red-links report) may be deleted.
 - Do NOT touch anything else: no file edits, no stash, no commit, no push, no branch changes, no history rewrites, no pulls.
 - If dirt remains that this policy does not cover, or anything is ambiguous (uncommitted changes inside a submodule, unpushed local submodule commits, a submodule update that fails), leave it exactly as it is and explain what a human must decide.
 
@@ -161,12 +168,14 @@ while true; do
                 continue
             fi
         else
-            log "WARNING: uncommitted changes persist after $FOREIGN_DIRT_TRIES recovery attempts — skipping this iteration to protect them (commit or stash manually to resume maintenance)"
+            printf 'Hermes maintenance is stalled since %s.\nUncommitted changes persist after 3 recovery attempts; iterations are being skipped to protect them.\nInspect: git -C %s status --porcelain (also inside wiki-data/)\nResolution is up to a human; clear this file when resolved: rm %s\n' "$(date -u '+%F %T UTC')" "$REPO_ROOT" "$NEEDS_HUMAN_FLAG" > "$NEEDS_HUMAN_FLAG"
+            log "WARNING: uncommitted changes persist after $FOREIGN_DIRT_TRIES recovery attempts — skipping this iteration to protect them (escalation marker: $NEEDS_HUMAN_FLAG)"
             sleep "$SLEEP_SECONDS"
             continue
         fi
     fi
     FOREIGN_DIRT_TRIES=0
+    rm -f "$NEEDS_HUMAN_FLAG" 2>/dev/null || true
 
     if [ $TASK_CHOICE -eq 0 ]; then
         log "Running wiki maintenance via hermes"
