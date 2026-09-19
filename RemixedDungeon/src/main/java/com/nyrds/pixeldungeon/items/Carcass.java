@@ -70,6 +70,9 @@ public class Carcass extends Item implements Doom {
         }
         ttl--;
         if(ttl <= 0) {
+            // caveman: stacked carcasses merge into one heap item - the merged-away
+            // copies stay in the actor set with no heap and would tick forever
+            deactivateActor();
             val heap = getHeap();
             if(heap!= null) {
                 heap.replace(this, null);
