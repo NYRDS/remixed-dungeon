@@ -670,6 +670,7 @@
     <string name="Item_Name">vật phẩm</string>
     <string name="JarOfSouls_Desc">Cặp mắt sáng lóa của chiếc sọ được vẽ trên cái hũ cũ này, cũng như năng lượng kỳ lạ mà nó tỏa ra, khiến bạn cảm thấy bất an.</string>
     <string name="JarOfSouls_Gender">masculine</string>
+    <string name="JarOfSouls_Name">bình đựng linh hồn</string>
     <string name="JarOfSouls_Name_Objective">bình chứa linh hồn</string>
     <string name="Javelin_Gender">neuter</string>
     <string name="Journal_Alchemy">Nồi giả kim thuật</string>
@@ -1706,6 +1707,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

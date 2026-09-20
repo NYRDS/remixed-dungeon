@@ -1691,6 +1691,7 @@
     <string name="town_deco_broken_wall_desc">De balken in deze muur zijn al lang verrot en hebben hun gewone weerstandskracht verloren.</string>
     <string name="town_deco_brown_carpet_desc">Deze bruine tapijt is onder voet getrapt door veel avonturiers, zwervers en toeschouwers.</string>
     <string name="town_deco_brown_carpet_name">Tapijt</string>
+    <string name="town_deco_cabinet_desc">Een ruim kabinet met veel deuren en planken.</string>
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_carpet_desc">Prachtig rode tapijt gereserveerd voor speciale gasten.</string>
@@ -1977,6 +1978,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
