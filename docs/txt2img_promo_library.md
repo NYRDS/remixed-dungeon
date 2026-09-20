@@ -210,8 +210,8 @@ cyan and purple; midnight blue mist.
 
 ```
 SCENE: caverns of snow-capped deep blue ice bricks, jutting ice spikes and
-stalagmites, frozen torches in their brackets, statues of gnolls caught
-mid-run encased in ice, frost-covered wooden bridges, kobold machinery
+stalagmites, frozen torches in their brackets, frost-dusted stone warrior
+statues standing in alcoves, frost-covered wooden bridges, kobold machinery
 half-buried in ice, crisp star-like glints.
 PALETTE: glacier blue, white frost and snow, pale steel, warm accent torch
 points.
