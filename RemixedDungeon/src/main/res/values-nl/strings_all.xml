@@ -1184,6 +1184,7 @@
     <string name="ShamanElder_Gender">masculine</string>
     <string name="Shaman_Desc">De intelligentste gnolls kunnen sjamanistische magie beheersen. Gnoll-sjamanen geven de voorkeur aan gevechtsmagie om hun gebrek aan kracht te compenseren, zonder te aarzelen om deze te gebruiken op degenen die hun status in de stam betwisten.</string>
     <string name="Shaman_Gender">masculine</string>
+    <string name="Shaman_Killed">%s\'s bliksemschicht heeft je gedood...</string>
     <string name="Shaman_Name">gnol schamaan</string>
     <string name="Shaman_Name_Objective">gnol sjamaan</string>
     <string name="Sheep_Desc">Dit is een magisch schaap. Wat is er zo magisch aan? Je kunt het niet doden. Het blijft staan tot het magisch verdwijnt, terwijl het herkauwt met een lege blik.</string>
@@ -1347,6 +1348,7 @@
     <string name="Toolbar_Info1">Je weet niet wat er is.</string>
     <string name="Torch_ACLight">AANSTEKEN</string>
     <string name="Torch_Info2">Het is een onmisbaar item in de kerker, berucht om zijn slechte verlichting.</string>
+    <string name="Torch_Name">fakkel</string>
     <string name="ToughShield_desc">Dit met riemen versterkte schild oogt robuuster dan een houten exemplaar. Het kan zeker meer schade blokkeren.</string>
     <string name="ToughShield_name">Versterkt Leren Schild</string>
     <string name="TownGuardNPC_Desc">Een gewone stadswacht</string>
@@ -1982,6 +1984,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
