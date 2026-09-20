@@ -873,6 +873,13 @@ public class CharUtils {
      */
     public static Mob spawnMimicAt(int pos, List<Item> items) {
         Level level = Dungeon.level;
+
+        if (level == null) {
+            // level is null during InterlevelScene load - spawn would NPE, heap keeps its items instead
+            EventCollector.logException(new Exception("spawnMimicAt while level is loading"), "MimicSpawn");
+            return null;
+        }
+
         Char ch = Actor.findChar(pos);
         if (ch != null) {
             int newPos = level.getEmptyCellNextTo(pos);
