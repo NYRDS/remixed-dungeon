@@ -836,6 +836,7 @@
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
+    <string name="Mods_CreatedBy">Gemaakt door:</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
     <string name="Mods_RestartRequired">Herstart vereist</string>
     <string name="Monk_Defense">geparreerd</string>
@@ -1408,6 +1409,7 @@
     <string name="WandOfFirebolt_Name">Toverstaf van Vuurpijl</string>
     <string name="WandOfFlock_Info">Een zwaai met deze toverstaf roept een kudde magische schapen op, die een tijdelijk ondoordringbaar obstakel vormen.</string>
     <string name="WandOfFlock_Name">Toverstaf van de Kudde</string>
+    <string name="WandOfFlock_SheepBaa_1">Bèè?</string>
     <string name="WandOfFlock_SheepBaa_3">Baa...</string>
     <string name="WandOfIcebolt_Info">Deze toverstaf lanceert een ijsbout, die lichte schade toebrengt aan het doelwit. Er is ook een kans om de vijand te vertragen of zelfs te bevriezen.</string>
     <string name="WandOfIcebolt_Info1">Je hebt jezelf gedood met je eigen IJsbout...</string>
@@ -1972,6 +1974,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

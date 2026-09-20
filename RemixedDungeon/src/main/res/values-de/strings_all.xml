@@ -2073,6 +2073,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Sternenförmige Metallstücke mit rasiermesserscharfen Klingen machen erheblichen Schaden, wenn sie einen Gegner treffen. Sie können sehr schnell geworfen werden.</string>
     <string name="Shuriken_Name">Wurfstern</string>
+    <string name="Sign_CantRead">Du kannst nicht lesen.</string>
     <string name="SkeletonKey_Info">Dieser Schlüssel sieht seriös aus: Der Kopf ist wie ein Schädel geformt. Wahrscheinlich lässt sich damit eine seriöse Tür öffnen.</string>
     <string name="SkeletonKey_Name">Skelettschlüssel</string>
     <string name="Skeleton_Defense">abgeblockt</string>
@@ -3067,6 +3068,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

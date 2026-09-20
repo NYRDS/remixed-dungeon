@@ -817,6 +817,7 @@
     <string name="Mob_StaTerrorStatus2">%1 này kinh hoàng trước %2</string>
     <string name="Mob_StaWanderingStatus">%s đang lang thang</string>
     <string name="Mods_AuthorSite">Trang tác giả:</string>
+    <string name="Mods_CreatedBy">Tạo bởi:</string>
     <string name="Mods_Disclaimer">Mod được tạo ra bởi người chơi cho người chơi.\n\nMod đôi khi thay đổi lối chơi theo cách không thể đoán trước hoặc kỳ lạ, bạn đã được cảnh báo!\n\nĐội ngũ NYRDS không chịu trách nhiệm về nội dung, chất lượng hoặc ổn định của mod.\n\nTải về trên rủi ro của bạn và vui vẻ!</string>
     <string name="Monk_Disarm">%1$s đã đánh rơi %2$s khỏi tay bạn!</string>
     <string name="Monk_Gender">masculine</string>
@@ -1703,6 +1704,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
