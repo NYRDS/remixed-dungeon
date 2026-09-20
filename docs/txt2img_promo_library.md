@@ -388,7 +388,7 @@ written.
 ### Ice Caves
 
 - **kobold** — `a squat brown-furred kobold under a dark engineer hood with round goggles, gadgets on the belt`
-- **kobold icemancer** — `an elite kobold in a pale blue-grey hooded robe, zapping a bolt of ice`
+- **kobold icemancer** — `a small figure in a steel-blue hooded robe, dark shadowed face with glowing cyan eyes and a small white beard, no tusks, zapping a bolt of ice` (sprite-true per kobold_icemancer.png 2026-09-20; unnamed faces render as green orcs with tusks)
 - **cold spirit** — `a small spiky wisp of pale white-blue frost, trailing snow`
 - **ice elemental** — `a jagged walking figure of clear ice, frost aura cracking the ground`
 - **Ice Guardian (boss)** — `a tall automaton of pale green ice and metal, sword arm, reassembling itself from floating shards around one exposed energy core`
@@ -401,7 +401,7 @@ written.
 ### Specials (any region)
 
 - **mimic** — `a brown-and-gold wooden treasure chest with a red gem clasp, mid-bite: teeth in the lid, tongue lolling` (sprite-true per mimic.png, 2026-09-20)
-- **magic well** — `an ancient stone-rimmed well pit with softly swirling glowing water`
+- **magic well** — `a floor-level stone well basin with softly swirling glowing water` (game wells are flush stone basins, not above-ground wishing wells — 2026-09-20)
 - **wraith** — `a hooded vengeful ghost hovering over a disturbed grave`
 - **animated statue** — `a grey stone statue mid-step, red glowing eyes, a very real sword in hand`
 - **giant piranha** — `a huge carnivorous fish breaking the water surface, teeth first`
@@ -448,7 +448,7 @@ For town-square and interiors promos.
 ## Elements — props and icons
 
 - **Amulet of Yendor** — `a radiant golden amulet with a glowing gem, resting on a carved stone pedestal, light beams in the dark` — the macguffin; for the fake ending use `a tarnished fake amulet, paint peeling`
-- **Potion** — `a small round glass bottle of brightly colored liquid, wax-sealed cork, glinting highlight`
+- **Potion** — `a slim glass vial with a cork stopper, filled with brightly colored liquid, glinting highlight` (game potions are slim vials per items/potions.png, not round flasks — fixed 2026-09-20)
 - **Scroll** — `a rolled parchment scroll with a wax seal, faintly smoking runes`
 - **Wand** — `a slender knotted wooden wand with a glowing tip`
 - **Ring** — `a small golden ring with a cut gemstone`
