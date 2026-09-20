@@ -1,11 +1,14 @@
 
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.LuaInterface;
+
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
+@LuaInterface
 public class WndQuest extends WndTitledMessage {
 	
 	public WndQuest(Char questgiver, String text ) {

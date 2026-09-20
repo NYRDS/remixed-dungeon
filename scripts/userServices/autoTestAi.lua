@@ -343,6 +343,17 @@ end
 ai.step = function()
     local hero = RPD.Dungeon.hero
 
+    -- Windows must be closed before the readiness gate: a modal (e.g. a mob
+    -- death-report WndQuest) pauses the world and keeps a stale hero action
+    -- from completing, so isReady() would never turn true and the closer
+    -- below would be unreachable - the run stalls forever.
+    local hwOk, hwHandled = pcall(function() return handleWindow(hero) end)
+    if not hwOk then
+        RPD.debug("[autoTestAi] handleWindow error: %s", tostring(hwHandled))
+    elseif hwHandled then
+        return
+    end
+
     if not hero:isReady() then
         return
     end
@@ -354,15 +365,6 @@ ai.step = function()
     maybeGiveItemsToMobs(hero)
 
     local heroPos = hero:getPos()
-
-    -- handleWindow is wrapped as a whole so any window-handler raise is caught and the
-    -- AI falls through to normal decision-making this step instead of aborting.
-    local hwOk, hwHandled = pcall(function() return handleWindow(hero) end)
-    if not hwOk then
-        RPD.debug("[autoTestAi] handleWindow error: %s", tostring(hwHandled))
-    elseif hwHandled then
-        return
-    end
 
     local level = hero:level()
 

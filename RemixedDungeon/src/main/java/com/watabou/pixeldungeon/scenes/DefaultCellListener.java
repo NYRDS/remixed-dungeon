@@ -1,10 +1,13 @@
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.LuaInterface;
+
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.actors.Char;
 import org.jetbrains.annotations.NotNull;
 
+@LuaInterface
 class DefaultCellListener implements CellSelector.Listener {
     @Override
     public void onSelect(Integer cell, @NotNull Char selector) {

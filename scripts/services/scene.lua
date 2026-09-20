@@ -81,6 +81,11 @@ local function levelsTestModeOnStep(self, scene)
             if currentLevel < levelsSize then
                 framesOnLevel = 0
 
+                -- drop any pending hero action (walk/pickup) before the hop: a stale
+                -- action across the transition can never complete and wedges the bot
+                -- (hero never ready again, isReady-gated code unreachable)
+                hero:readyAndIdle()
+
                 local nextLevelId = levels:get(currentLevel)
                 --nextLevelId = 'Rat5'
                 RPD.glog("trying level: %s", nextLevelId)
