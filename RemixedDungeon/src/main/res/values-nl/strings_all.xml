@@ -65,6 +65,7 @@
     <string name="AttackDelay_Increased">Kan de %1$s niet zo hanteren. Langzame slagen, zware ademhaling...</string>
     <string name="AwarenessBuff_Info">De zintuigen zijn verscherpt, wat meer bewustzijn van de omgeving geeft.</string>
     <string name="AzuterronNPC_Gender">masculine</string>
+    <string name="AzuterronNPC_Name">Vreemdeling</string>
     <string name="AzuterronNPC_Name_Objective">vreemdeling</string>
     <string name="AzuterronNPC_Quest_End">Uitstekend. Hier, neem dit drankje, vast zul je er baat bij hebben.</string>
     <string name="AzuterronNPC_Quest_Reminder">Help mij en ik help jou.</string>
@@ -1707,6 +1708,7 @@
     <string name="town_deco_common_bed_name">Bed</string>
     <string name="town_deco_common_door_desc">Een beleefde avonturier zou geen private eigendom binnendringen, zonder uitnodiging natuurlijk.</string>
     <string name="town_deco_counter_name">Toonbank</string>
+    <string name="town_deco_covered_table_name">Tafel</string>
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
     <string name="town_deco_crate_scrolls_name">Kist met rollen</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
@@ -1977,6 +1979,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

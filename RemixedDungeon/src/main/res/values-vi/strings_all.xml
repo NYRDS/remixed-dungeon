@@ -516,6 +516,7 @@
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">golem</string>
+    <string name="Goo_Desc">Người ta biết rất ít về The Goo. Rất có thể nó thậm chí không phải là một sinh vật, mà là một khối các chất từ cống rãnh đã đạt được những khả năng tự do ý chí cơ bản. Dù sao đi nữa, rõ ràng có ma thuật đen tối đang hoạt động ở đây.</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">Goo đang bơm hơi cho mình!</string>
     <string name="Goo_Info3">Ọp-ọp!</string>
@@ -1706,6 +1707,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
