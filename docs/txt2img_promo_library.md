@@ -269,7 +269,7 @@ hair and armor colors exactly as written.
 - **Warrior** — `a stocky ginger-haired human warrior in a white cloth tunic with blue trim, unique short sword in hand, confident stance`; class-armor look: `dark steel plate with orange pauldrons, mid-heroic-leap`
 - **Mage** — `an old human mage with white hair and a white beard, in bright blue robes, a knotted wooden wand tipped with glowing blue magic`
 - **Rogue** — `a brown-haired human rogue under a dark hooded cloak, face half lost in shadow, daggers at the belt, a glinting shadowy ring on one hand`
-- **Huntress** — `a wiry blonde human huntress, hair falling over one eye, in a teal leather suit, a carved wooden boomerang in hand`
+- **Huntress** — `a wiry blonde human huntress, hair falling over one eye, in a teal leather suit, a flat bent wooden throwing stick with two wings - a V-shaped boomerang - in hand` (named boomerangs render as sickles — keep the geometry wording, 2026-09-20)
 - **Elf** — `a slender elf archer with brown hair and pointed ears, in a green hood and forest-green tunic, drawing a long elven wooden bow, a full quiver of arrows at the hip`
 - **Necromancer** — `a pale dark-haired human necromancer in a black robe with purple trim, an oversized ornate skeleton key hanging at the belt, faint green wisps curling around the raised hand`
 - **Gnoll** — `a hyena-headed gnoll hero with reddish-brown fur and a wicked grin, wearing only a leather strap and pouch, gripping a throwing tomahawk, no armor`
@@ -381,7 +381,7 @@ written.
 - **enslaved soul** — `a small dark-blue ghostly orb where a pained face flashes in and out`
 - **exploding skull** — `a floating skull wrapped in trapped orange flame, cracking apart`
 - **runic skull** — `a skull set in a stone plate, rune-eyes glowing red` (rare variant: blue)
-- **death knight** — `a mighty knight in dark steel armor, cold blue eye-glow under the helm, dead grin`
+- **death knight** — `a mighty knight in dark steel armor, violet eye-glow under the helm, dead grin` (sprite eye-glow is violet, not blue — fixed 2026-09-20)
 - **dread knight** — `a broken ancient knight in rusted brown-black armor, burning red eye-glow, aura of torment`
 - **Lich (boss)** — `a skeletal lich in a green robe, staff crowned with a purple soul orb, standing over a jar of glowing souls`
 
@@ -400,7 +400,8 @@ written.
 
 ### Specials (any region)
 
-- **mimic** — `a treasure chest mid-bite, teeth in the lid, tongue lolling over spilled gold`
+- **mimic** — `a brown-and-gold wooden treasure chest with a red gem clasp, mid-bite: teeth in the lid, tongue lolling` (sprite-true per mimic.png, 2026-09-20)
+- **magic well** — `an ancient stone-rimmed well pit with softly swirling glowing water`
 - **wraith** — `a hooded vengeful ghost hovering over a disturbed grave`
 - **animated statue** — `a grey stone statue mid-step, red glowing eyes, a very real sword in hand`
 - **giant piranha** — `a huge carnivorous fish breaking the water surface, teeth first`

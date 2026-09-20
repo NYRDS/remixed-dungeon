@@ -33,6 +33,9 @@ for 32.4.beta.6 (in this directory) is the reference example.
 - NEVER announce asset/sprite pipeline work (retro sprites, sprite tools) — internal.
 - NEVER announce store-compliance bumps (target SDK, Play policy) — anti-features
   forced by Google, not user value.
+- NEVER mention ads or ad networks in announces (Mike, 2026-09-19) — not
+  even crash fixes caused by ad SDKs; users don't like it. Ad-stack changes
+  ship silently, crash bullets are game crashes only.
 - No crash IDs (snap-xxx), no commit shas, no internal codenames in the text.
 - State the user-visible outcome, not the mechanism; cause after a dash only if
   it reads naturally.
