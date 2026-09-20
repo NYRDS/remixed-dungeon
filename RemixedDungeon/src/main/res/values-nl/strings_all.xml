@@ -958,6 +958,7 @@
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfInvisibility_Apply">Je ziet je handen onzichtbaar worden!</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
+    <string name="PotionOfLevitation_Info">Het drinken van deze merkwaardige vloeistof zorgt ervoor dat je in de lucht zweeft, moeiteloos over valstrikken glijdt. Vlammen en gassen vullen echter de lucht en kunnen niet worden ontweken terwijl je zweeft.</string>
     <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
     <string name="PotionOfLiquidFlame_Name">Drankje van Vloeibare Vlam</string>
     <string name="PotionOfMana_Info">Deze drank herstelt je spirituele energie.</string>
@@ -1514,6 +1515,7 @@
     <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndHero_Gold">Verzameld Goud</string>
     <string name="WndHero_Info">Info</string>
+    <string name="WndHero_Satiety">Verzadiging</string>
     <string name="WndHero_SkillLevel">Vaardigheidsniveau</string>
     <string name="WndHero_StaCatalogus">Catalogi</string>
     <string name="WndHero_StaJournal">Dagboek</string>
@@ -1974,6 +1976,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
