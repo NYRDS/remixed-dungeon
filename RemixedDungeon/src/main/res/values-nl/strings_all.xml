@@ -493,7 +493,6 @@
     <string name="FortuneTellerNPC_Name_Objective">waarzegster</string>
     <string name="FreezeGlobe_Info">Bevriest het geselecteerde personage, waardoor het korte tijd geen acties kan uitvoeren.</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
-    <string name="FriedFish_Taste">Lekker!</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Info">Vorst omringt het lichaam, wat alles in de buurt vertraagt.</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
@@ -837,7 +836,6 @@
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
-    <string name="Mods_AuthorSite">Site van auteur:</string>
     <string name="Mods_CreatedBy">Gemaakt door:</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
     <string name="Mods_RestartRequired">Herstart vereist</string>
@@ -1231,7 +1229,6 @@
     <string name="SoulShard_Name">zielenscherf</string>
     <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
-    <string name="Spear_Name">Speer</string>
     <string name="SpeedBuff_Name">Snelheid</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="SpellBook_Name">Toverboek</string>
@@ -1980,9 +1977,6 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
-
-
-
 
 
 

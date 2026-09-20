@@ -448,7 +448,7 @@ For town-square and interiors promos.
 ## Elements — props and icons
 
 - **Amulet of Yendor** — `a radiant golden amulet with a glowing gem, resting on a carved stone pedestal, light beams in the dark` — the macguffin; for the fake ending use `a tarnished fake amulet, paint peeling`
-- **Potion** — `a slim glass vial with a cork stopper, filled with brightly colored liquid, glinting highlight` (game potions are slim vials per items/potions.png, not round flasks — fixed 2026-09-20)
+- **Potion** — `a small round glass potion flask with a narrow corked neck, half filled with brightly colored liquid, glinting highlight` (canonical shape = items.png idx 56-63 round flasks; the slim test-tubes in items/potions.png are the wrong look for promos — Mike 2026-09-20, supersedes my same-day slim-vial edit)
 - **Scroll** — `a rolled parchment scroll with a wax seal, faintly smoking runes`
 - **Wand** — `a slender knotted wooden wand with a glowing tip`
 - **Ring** — `a small golden ring with a cut gemstone`

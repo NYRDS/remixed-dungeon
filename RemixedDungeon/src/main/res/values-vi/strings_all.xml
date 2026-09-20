@@ -817,7 +817,6 @@
     <string name="Mob_StaSleepingStatus">%s này đang ngủ</string>
     <string name="Mob_StaTerrorStatus2">%1 này kinh hoàng trước %2</string>
     <string name="Mob_StaWanderingStatus">%s đang lang thang</string>
-    <string name="Mods_AuthorEmail">Email tác giả:</string>
     <string name="Mods_AuthorSite">Trang tác giả:</string>
     <string name="Mods_CreatedBy">Tạo bởi:</string>
     <string name="Mods_Disclaimer">Mod được tạo ra bởi người chơi cho người chơi.\n\nMod đôi khi thay đổi lối chơi theo cách không thể đoán trước hoặc kỳ lạ, bạn đã được cảnh báo!\n\nĐội ngũ NYRDS không chịu trách nhiệm về nội dung, chất lượng hoặc ổn định của mod.\n\nTải về trên rủi ro của bạn và vui vẻ!</string>
@@ -1320,7 +1319,6 @@
     <string name="TownsfolkSilentNPC_Name">người dân thành phố</string>
     <string name="ToxicGas_Info">Một đám mây khí độc màu xanh lá cây đang xoáy ở đây.</string>
     <string name="ToxicGas_Info1">Bạn đã chết vì hít phải khí độc...</string>
-    <string name="ToxicGland_Info">Một tuyến độc thu được từ kẻ địch bị đánh bại. Các tuyến này chứa đầy chất độc mạnh và có thể dùng trong giả kim.</string>
     <string name="ToxicGland_Name">Tuyến độc</string>
     <string name="TrapWnd_Step">Bạn thực sự muốn giẫm lên cái bẫy này? Bạn có thể chết đấy.</string>
     <string name="TrapWnd_Title">Bẫy</string>
@@ -1708,8 +1706,6 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
-
-
 
 
 
