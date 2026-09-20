@@ -447,6 +447,7 @@
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">Tia tử thần của %s đã giết bạn...</string>
     <string name="Eye_Name">con mắt quỷ</string>
+    <string name="Facilitations_Descriptions_3">Siết chặt chiếc thắt lưng làm từ da ogre, được truyền lại cho mỗi thế hệ mới, bạn tiến một bước về phía những điều chưa biết phía trước.</string>
     <string name="Facilitations_Names_0">Không đói</string>
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
     <string name="Facilitations_Names_2">Linh hồn thần đèn</string>
@@ -1707,6 +1708,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
