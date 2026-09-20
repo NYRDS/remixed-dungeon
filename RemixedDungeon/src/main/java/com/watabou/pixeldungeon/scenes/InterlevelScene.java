@@ -86,7 +86,13 @@ public class InterlevelScene extends PixelScene {
                         break;
                 }
             } catch (Throwable e) {
-                com.watabou.pixeldungeon.utils.GLog.w("LevelChanger error: " + e.getMessage());
+                EventCollector.logException(e, "LevelChanger");
+                com.watabou.pixeldungeon.utils.GLog.w("LevelChanger error: %s", e.toString());
+                // a failed load leaves Dungeon.level null - without a fallback the scene
+                // wedges into "GameScene when level is nil" on every frame
+                if (Dungeon.level == null) {
+                    rescue(new Exception(e));
+                }
             } finally {
                 if (latchRef != null) {
                     latchRef.countDown();

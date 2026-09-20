@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -71,6 +72,13 @@ public class Mimic extends Mob implements IDepthAdjustable {
 
 	public static Mimic spawnAt(int pos, List<Item> items) {
 		Level level = Dungeon.level;
+
+		if (level == null) {
+			// level is null during InterlevelScene load - spawn would NPE, heap keeps its items instead
+			EventCollector.logException(new Exception("Mimic.spawnAt while level is loading"), "MimicSpawn");
+			return null;
+		}
+
 		Char ch = Actor.findChar(pos);
 		if (ch != null) {
 			int newPos = level.getEmptyCellNextTo(pos);

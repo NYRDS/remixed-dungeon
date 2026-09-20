@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.ai.Hunting;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mobs.common.IDepthAdjustable;
+import com.nyrds.platform.EventCollector;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -71,6 +72,13 @@ public class Wraith extends Mob implements IDepthAdjustable {
 	
 	public static Wraith spawnAt( int pos ) {
 		final Level level = Dungeon.level;
+
+		if (level == null) {
+			// level is null during InterlevelScene load - spawn would NPE
+			EventCollector.logException(new Exception("Wraith.spawnAt while level is loading"), "WraithSpawn");
+			return null;
+		}
+
 		Wraith w = new Wraith();
 
 		if (w.canSpawnAt(level, pos)) {
