@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.LuaInterface;
+
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.ui.Component;
@@ -20,6 +22,7 @@ import com.watabou.pixeldungeon.windows.elements.Tab;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+@LuaInterface
 public class WndPetBag extends WndBag {
 
     private final Hero hero;

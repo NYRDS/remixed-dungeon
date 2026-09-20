@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.LuaInterface;
+
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.BuyItemSelector;
 import com.nyrds.pixeldungeon.utils.SellItemSelector;
@@ -11,6 +13,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
+@LuaInterface
 public class WndShopOptions extends WndOptions {
     private final Char client;
     private final Bag backpack;

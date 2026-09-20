@@ -1,5 +1,7 @@
 package com.nyrds.pixeldungeon.windows;
 
+import com.nyrds.LuaInterface;
+
 import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -19,6 +21,7 @@ import java.util.List;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+@LuaInterface
 public class WndPetSelect extends Window {
 
     private static final float BUTTON_WIDTH = 36;

@@ -1,6 +1,8 @@
 
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.LuaInterface;
+
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -16,6 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 import org.jetbrains.annotations.NotNull;
 
+@LuaInterface
 public class WndStory extends Window {
 
 	private static final int WIDTH  = 120;
