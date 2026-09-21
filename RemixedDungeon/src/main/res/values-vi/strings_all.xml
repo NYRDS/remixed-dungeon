@@ -420,6 +420,7 @@
     <string name="Dungeon_Tips_17">Giếng Chuyển Hóa có thể ban cho bạn một vật phẩm không thể có được bằng cách khác.</string>
     <string name="Dungeon_Tips_18">Cách duy nhất để phù phép vũ khí là nâng cấp nó bằng cuộn giấy Nâng cấp vũ khí.</string>
     <string name="Dungeon_Tips_20">Pixel-Mart. Giá đặc biệt cho những người săn quỷ!</string>
+    <string name="Dungeon_Tips_21">Văn bản được viết bằng ngôn ngữ của quỷ.</string>
     <string name="Dungeon_Tips_23">Văn bản được viết bằng ngôn ngữ quỷ dữ.</string>
     <string name="Dungeon_Tips_3">Bạn có thể dùng vàng của mình ở các cửa hàng hoặc dịch vụ trong thị trấn hoặc ngục.</string>
     <string name="Dungeon_Tips_4">Cẩn thận Goo!</string>
@@ -720,6 +721,7 @@
     <string name="Leech_Name_2">Hút máu %s</string>
     <string name="Level_TileAlarmTrap">bẫy báo động</string>
     <string name="Level_TileAlchemy">nồialchemy</string>
+    <string name="Level_TileBarricade">Chướng ngại vật</string>
     <string name="Level_TileChasm">Vực thẳm</string>
     <string name="Level_TileClosedDoor">Cửa đóng</string>
     <string name="Level_TileDefault">\?\?\?</string>
@@ -1718,6 +1720,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

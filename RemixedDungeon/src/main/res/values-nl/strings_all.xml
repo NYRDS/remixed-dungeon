@@ -634,6 +634,7 @@
     <string name="Horror_Name_2">Griezelige %s</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
+    <string name="HungerBuff_Name1">Hongerig</string>
     <string name="HungerBuff_Name2">Uitgehongerd</string>
     <string name="Hunger_Hungry_0">Je hebt honger.</string>
     <string name="Hunger_Hungry_1">Je hebt honger.</string>
@@ -1776,6 +1777,7 @@
     <string name="town_deco_skullboard_name">trofeerek</string>
     <string name="town_deco_slush_desc">Deze sneeuw begon te smelten, waardoor de omgeving in modder veranderde.</string>
     <string name="town_deco_snow_name">Sneeuw</string>
+    <string name="town_deco_snowdrift_desc">Het is een vrij grote sneeuwhoop en blijkbaar gaat niemand het opruimen.</string>
     <string name="town_deco_snowman_name">Sneeuwpop</string>
     <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
     <string name="town_deco_sofa_desc">Lijkt erop dat deze bioscoop echt probeert de beste zitplaatsen voor haar klanten te bieden.</string>
@@ -1991,6 +1993,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
