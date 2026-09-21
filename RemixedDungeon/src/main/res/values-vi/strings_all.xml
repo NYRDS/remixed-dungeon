@@ -74,6 +74,7 @@
     <string name="Badges_AllScrolls">Đã nhận dạng tất cả cuốn</string>
     <string name="Badges_AllWands">Đã nhận dạng tất cả gậy</string>
     <string name="Badges_BossSlain1">Goo đã bị tiêu diệt</string>
+    <string name="Badges_BossSlain3">DM-300 đã bị tiêu diệt</string>
     <string name="Badges_BossSlain3All">DM-300 đã bị tiêu diệt bởi tất cả các phân lớp</string>
     <string name="Badges_Champion">Thử thách đã hoàn thành</string>
     <string name="Badges_DeathFalling">Tử vong do rơi xuống</string>
@@ -1294,6 +1295,7 @@
     <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Chơi</string>
     <string name="TitleScene_PlayOnPC">Chơi trên PC</string>
+    <string name="TomeOfKnowledge_Name">Sách Kiến Thức</string>
     <string name="TomeOfMastery_Info">Cuốn sách da cũ này không quá dày, nhưng bạn cảm thấy có thể học được rất nhiều điều từ nó. Hãy nhớ rằng việc đọc bộ sách này có thể mất một chút thời gian.</string>
     <string name="Toolbar_Info1">Bạn không biết đó có gì.</string>
     <string name="Torch_ACLight">THÁP</string>
@@ -1713,6 +1715,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
