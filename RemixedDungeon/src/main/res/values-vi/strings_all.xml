@@ -1270,6 +1270,7 @@
     <string name="SungrassBuff_Name">Chữa lành thảo dược</string>
     <string name="Sungrass_Desc">Cỏ mặt trời nổi tiếng nhờ nhựa cây có tác dụng chữa lành.</string>
     <string name="Sungrass_Name">cỏ mặt trời</string>
+    <string name="SurfaceScene_GameOver">Trò chơi kết thúc</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Con chuột đáng ngờ đang co giật dữ dội.</string>
     <string name="Swarm_Gender">masculine</string>
@@ -1712,6 +1713,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

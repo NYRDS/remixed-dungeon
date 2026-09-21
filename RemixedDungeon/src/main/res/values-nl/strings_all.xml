@@ -348,6 +348,7 @@
     <string name="Codex_Story_15">Vampirisch wapen - Bij een succesvolle treffer kan het de Held genezen voor een deel van de schade die aan de vijand is toegebracht.</string>
     <string name="Codex_Story_16">Gelukkig wapen - negeert bijna volledig de pantser van de vijand, en doet veel meer schade.</string>
     <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
+    <string name="Codex_Story_18">Doorborend wapen - Bij een succesvolle treffer kan het schade toebrengen aan alle vijanden in een rechte lijn achter het doelwit.</string>
     <string name="Codex_Story_20">Vrieswapen - Een succesvolle treffer kan het doel vertragen en voorkomen dat het in brand vliegt.</string>
     <string name="Codex_Story_22">Dit boek is geschreven in de taal der demonen</string>
     <string name="Codex_Story_23">Dit boek is geschreven in de taal van dwergen.</string>
@@ -1986,6 +1987,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
