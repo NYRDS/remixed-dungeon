@@ -365,6 +365,7 @@
     <string name="Dungeon_Tips_8">الهجمات المفاجئة لديها فرصة أكبر للإصابة. على سبيل المثال، يمكنك نصب كمين لعدوك خلف باب مغلق عندما تعلم أنه يقترب.</string>
     <string name="Dungeon_saveIoError">عند محاولة إنشاء ملف الحفظ:</string>
     <string name="EarthElemental_Gender">masculine</string>
+    <string name="EarthElemental_Name">عنصر الأرض</string>
     <string name="EarthElemental_Name_Objective">عنصر الأرض</string>
     <string name="Earthroot_Desc">عندما يلمس مخلوق جذر الأرض، تخلق جذوره نوعًا من الدروع الطبيعية حوله.</string>
     <string name="ElvenBow_Gender">masculine</string>
@@ -1354,6 +1355,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 
