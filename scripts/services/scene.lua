@@ -91,13 +91,16 @@ local function levelsTestModeOnStep(self, scene)
                 RPD.glog("trying level: %s", nextLevelId)
                 GameControl:changeLevel(nextLevelId)
             else
-                service.onStep = stdModeOnStep
+                -- caveman: a full sweep with no amulet is still a complete run -
+                -- cycle to the next one instead of stranding the test in std mode
+                RPD.glog("autoTest: sweep complete, run complete")
                 GameControl:titleScene()
             end
         end
     end
 
     if scene == "TitleScene" and framesOnScene > 2 then
+        currentLevel = 0
         levels = RPD.DungeonGenerator:getLevelsList()
         local classes = {"WARRIOR","MAGE","ROGUE","HUNTRESS","ELF","NECROMANCER","GNOLL","PRIEST","DOCTOR"}
         local difficulties = { 0, 1, 2, 3 } -- Snail, Rat, Gnoll, Crab
@@ -121,6 +124,9 @@ service.onStep = stdModeOnStep
 service.setMode = function(self, mode)
     service.onStep = onStepModes[mode] or noneMode
     service.selectCell = selectCellModes[mode] or noneMode
+    -- caveman: global read by interlevelScene - the auto test bot has no one
+    -- to tap the death-report modals it would otherwise wedge on
+    levelsTestActive = (mode == "levelsTest")
 end
 
 service.selectCell = function(self)

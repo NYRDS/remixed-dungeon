@@ -44,8 +44,15 @@ public class Uniform {
 	public void valueM3( float[] value ) {
 		Gdx.gl20.glUniformMatrix3fv( location, 1, false, value, 0 );
 	}
-	
+
 	public void valueM4( float[] value ) {
+		if (Gl.matrixIsPoisoned(value)) {
+			// caveman: a NaN/Inf matrix wedges some desktop GL drivers forever
+			// inside the next glGetError sync (bd 8b7). collapse to a zero-scale
+			// matrix - nothing rasterizes, game keeps running.
+			Gdx.gl20.glUniformMatrix4fv( location, 1, false, Gl.zeroMatrix(), 0 );
+			return;
+		}
 		Gdx.gl20.glUniformMatrix4fv( location, 1, false, value, 0 );
 	}
 }

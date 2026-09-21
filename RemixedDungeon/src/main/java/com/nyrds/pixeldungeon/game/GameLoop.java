@@ -56,6 +56,7 @@ public class GameLoop {
 
     @SuppressWarnings("unused")
     public static volatile boolean softPaused = false;
+    public static boolean headless = false;
 
     private final ReportingExecutor stepExecutor;
     private final ReportingExecutor executor;
@@ -265,6 +266,10 @@ public class GameLoop {
 
         if (framesSinceInit > 2 && !Game.softPaused && loadingOrSaving.get() == 0) {
             stepExecutor.execute(this::update);
+        }
+
+        if (headless) {
+            return;
         }
 
         NoosaScript.get().resetCamera();

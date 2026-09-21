@@ -35,6 +35,12 @@ interlevelScene.onStep = function(mode, done)
     end
 
     if not wnd then
+        -- caveman: levelsTest bot has no one to tap the modals below - they
+        -- would wedge the scene in STATIC forever (bd 8b7), so skip creating
+        if levelsTestActive then
+            return true
+        end
+
         if RPD.ModdingMode:inRemixed() then
             if RPD.Dungeon.previousLevelId == '10s' and RPD.Badges:isUnlockedInThisGame(RPD.Badges.Badge.SPIDER_QUEEN_SLAIN) then
                 wnd = RPD.new(RPD.Objects.Ui.WndQuest, RPD.Dungeon.hero, RPD.textById("SpiderQueen_DieInfo"))

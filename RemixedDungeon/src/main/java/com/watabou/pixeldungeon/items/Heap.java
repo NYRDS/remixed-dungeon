@@ -173,8 +173,11 @@ public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
 
         if (type != Type.MIMIC) {
             type = Type.HEAP;
-            sprite.link(this);
-            sprite.drop();
+            // caveman: spriteless platforms (headless) have no ItemSprite to link
+            if (sprite != null) {
+                sprite.link(this);
+                sprite.drop();
+            }
         }
     }
 
