@@ -143,6 +143,7 @@
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Tôi không quan tâm đến những kẻ phàm nhân như bạn!</string>
     <string name="BellaNPC_Yes_End_Game">Chắc chắn rồi (Kết thúc trò chơi)</string>
+    <string name="Belongings_Name">ba lô</string>
     <string name="BishopNPC_Desc">Giám mục của Giáo hội Thánh của Santa Chúa Sâu</string>
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Giám mục</string>
@@ -1698,6 +1699,7 @@
     <string name="town_deco_wall_brazier_name">Bát lửa</string>
     <string name="town_deco_wall_candles_desc">Những ngọn nến đã tắt, nhưng hương thơm dễ chịu vẫn còn lan tỏa.</string>
     <string name="town_deco_wall_candles_name">Nến</string>
+    <string name="town_deco_wall_name">Bức tường</string>
     <string name="town_deco_wallpaper_desc">Một giải pháp trang trí tuyệt vời cho một nơi như thế này.</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
@@ -1710,6 +1712,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

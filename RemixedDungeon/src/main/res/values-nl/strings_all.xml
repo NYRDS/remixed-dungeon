@@ -1123,6 +1123,7 @@
     <string name="ScrollOfMagicMapping_Name">Scroll van Magische Kaartvorming</string>
     <string name="ScrollOfMirrorImage_Name">Spiegelbeeldrol</string>
     <string name="ScrollOfPsionicBlast_Info">Deze scroll bevat vernietigende energie, die psionisch kan worden gekanaliseerd om massale schade toe te brengen aan alle wezens binnen het gezichtsveld. Een begeleidende lichtflits zal tijdelijk iedereen in het effectgebied verblinden, inclusief de lezer van de scroll.</string>
+    <string name="ScrollOfRecharging_Info2">een energiegolf stroomt door je rugzak, maar er gebeurt niets</string>
     <string name="ScrollOfRemoveCurse_Info">De bezwering op deze rol zal onmiddellijk alle kwaadaardige betoveringen van het wapen, pantser, ringen en voorwerpen van de lezer verwijderen die het dragen ervan zouden kunnen verhinderen.</string>
     <string name="ScrollOfRemoveCurse_Name">Schrift van Vervloeking Verwijderen</string>
     <string name="ScrollOfRemoveCurse_Proced">Je zak gloeit met een reinigend licht, en een kwaadaardige energie verdwijnt.</string>
@@ -1371,6 +1372,7 @@
     <string name="TownsfolkNPC_Message3">Wat een prachtige dag.</string>
     <string name="TownsfolkNPC_Message4">Ik hoop dat de riolering niet overstort wanneer de lente aankomt. We kunnen geen nieuwe rattenplaag gebruiken.</string>
     <string name="TownsfolkNPC_Name">stedelingen</string>
+    <string name="TownsfolkNPC_Name_Objective">stadbewoner</string>
     <string name="TownsfolkSilentNPC_Desc">Een van de bewoners. Hoewel dit duidelijk een gewone burger is, lijken die kleren duur te zijn.</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">Hm!</string>
@@ -1984,6 +1986,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
