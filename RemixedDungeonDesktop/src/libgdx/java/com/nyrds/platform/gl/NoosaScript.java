@@ -56,40 +56,29 @@ public class NoosaScript extends Script {
 
 	public void drawElements(FloatBuffer vertices, ShortBuffer indices, int size ) {
 
-		if (Gl.verticesArePoisoned(vertices, size)) {
-			// caveman: NaN/Inf quads wedge some desktop GL drivers forever
-			// inside the next glGetError sync (bd 8b7) - refuse to submit them
-			return;
-		}
-
 		vertices.position( 0 );
 		aXY.vertexPointer( 2, 4, vertices );
-
+		
 		vertices.position( 2 );
 		aUV.vertexPointer( 2, 4, vertices );
-
+		
 		Gdx.gl20.glDrawElements( GL20.GL_TRIANGLES, Quad.SIZE * size, GL20.GL_UNSIGNED_SHORT, indices );
 	}
-
+	
 	public void drawQuad( FloatBuffer vertices ) {
 
 		if(vertices.limit()<16){
 			throw new AssertionError();
 		}
 
-		if (Gl.verticesArePoisoned(vertices, 1)) {
-			// caveman: NaN/Inf quads wedge some desktop GL drivers forever - refused
-			return;
-		}
-
 		vertices.position( 0);
 		aXY.vertexPointer( 2, 4, vertices );
-
+		
 		vertices.position( 2 );
 		aUV.vertexPointer( 2, 4, vertices );
 
 		Gdx.gl20.glDrawElements( GL20.GL_TRIANGLES, Quad.SIZE, GL20.GL_UNSIGNED_SHORT, Quad.getIndices( 1 ) );
-
+		
 	}
 	
 	public void drawQuadSet( FloatBuffer vertices, int size ) {
