@@ -7,6 +7,7 @@ import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.TextureFilm;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.WeakHashMap;
 import lombok.Synchronized;
 import lombok.val;
 import org.jetbrains.annotations.NotNull;
@@ -15,7 +16,9 @@ import org.jetbrains.annotations.Nullable;
 public class TextureCache {
 
 	private static final Map<Object, SmartTexture> all = new HashMap<>();
-	private static final Map<Object, TextureFilm> allFilm = new HashMap<>();
+	// weak keys: object-keyed films (bitmaps/textures as keys) would otherwise pin
+	// the whole SmartTexture->BitmapData chain forever, string keys stay while in use
+	private static final Map<Object, TextureFilm> allFilm = new WeakHashMap<>();
 
 	public static SmartTexture createSolid(int color) {
 		String key = "1x1:" + color;
@@ -109,6 +112,7 @@ public class TextureCache {
 			txt.delete();
 		}
 		all.clear();
+		allFilm.clear();
 	}
 
 	@Synchronized
