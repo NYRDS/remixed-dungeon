@@ -792,6 +792,7 @@
     <string name="MageArmor_ACSpecial">GESMOLTEN AARDE</string>
     <string name="MageArmor_Desc">Als een magi\u00ebr deze prachtige robe draagt, kan hij de spreuk \u0027Gemolten Aarde\u0027 spreken: alle vijanden in zijn zichtveld worden in brand gestoken en onbewegelijk gemaakt.</string>
     <string name="MageArmor_Name">magiër\'s robe</string>
+    <string name="MagicArrow_Info">Goede oude magische pijl, de juiste keuze als je geen pijlen meer hebt.</string>
     <string name="MagicArrow_Name">Magische pijl</string>
     <string name="MailArmor_Name">maliënkolder</string>
     <string name="ManaPotion_Info">Deze drank herstelt je spirituele energie.</string>
@@ -1492,6 +1493,7 @@
     <string name="WndCatalogus_Title">Catalogi</string>
     <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
+    <string name="WndClass_Mastery">Meesterschap</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Adres kopiëren</string>
     <string name="WndCryptoDonate_currency">Valuta</string>
@@ -1994,6 +1996,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

@@ -789,6 +789,7 @@
     <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">فأر كاذب</string>
     <string name="PseudoRat_Name_Objective">فأر كاذب</string>
+    <string name="PumpkinPie_Info">فطيرة قرع لذيذة، تمامًا مثل تلك التي كانت أمك تخبزها.</string>
     <string name="Pumpkin_Info">في الأيام الخوالي، كان شعب اليقطين أمة فخورة ومزدهرة. لكن كل شيء تغيّر بعد مجيء البشر، تاركين خلفهم الدمار فقط. وتبقى الرؤوس المنحوتة والمقطوعة لقبائل اليقطين المنقرضة تذكيراً بتلك الأحداث المروعة.</string>
     <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">عصا من خشب صلب، أطرافها مغطاة بالحديد.</string>
@@ -1355,6 +1356,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

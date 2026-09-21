@@ -470,6 +470,7 @@
     <string name="Fire_Name_1">Đang cháy %s</string>
     <string name="Firebloom_Name">Hoa Lửa</string>
     <string name="Foliage_Info">Các tia sáng chọc xuyên màn sương của khu vườn ngầm.</string>
+    <string name="Food_ACEat">ĂN</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">người xem bói</string>
     <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
@@ -1310,6 +1311,7 @@
     <string name="TownGuardNPC_Desc">Một vệ sĩ thành phố bình thường</string>
     <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">Đi tiếp nào.</string>
+    <string name="TownGuardNPC_Message2">Nhờ những nhà phiêu lưu như bạn, nơi đây đã thực sự trở nên yên bình.</string>
     <string name="TownGuardNPC_Message3">Bạn nghĩ có quá nhiều vệ sĩ ở thành phố này? Vâng, vì đây là thành phố duy nhất có một hang động khổng lồ đầy quái vật, đúng không?</string>
     <string name="TownGuardNPC_Name">lính gác thị trấn</string>
     <string name="TownPortal_Info">Phép thuật này cho phép bạn quay về nơi an toàn ngay lập tức. Tuy nhiên, các nguồn sức mạnh phép thuật gần đó có thể ngăn nó hoạt động như mong muốn.</string>
@@ -1721,6 +1723,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
