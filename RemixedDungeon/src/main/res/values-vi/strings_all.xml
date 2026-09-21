@@ -924,6 +924,7 @@
     <string name="PlagueDoctorQuest_AllDone">*Hắn bật ra một tràng cười khàn khô.* \&quot;Chiến công của ngươi đã mở khóa những bí mật vô biên! Khối kiến thức thu được… đang dồn dập trong ta, như một bản giao hưởng của khám phá. Nhưng kiến thức,\&quot; hắn nói thêm, giọng hạ xuống thành lời thì thầm đầy mưu mẹo, \&quot;kiến thức là quyền lực. Và quyền lực… à… đó là thứ thuốc tiên say đắm nhất.\&quot; Hắn chăm chú nhìn bạn một lúc, đôi mắt tím hổ phách rực cháy cuồng nhiệt. \&quot;Biết đâu,\&quot; hắn lẩm bẩm, \&quot;đường chúng ta sẽ lại giao nhau. Vì vẫn còn nhiều… bí ẩn… chờ được vén màn.\&quot;</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">y sĩ đen</string>
+    <string name="Plant_Info">Ném hạt giống này vào nơi bạn muốn trồng %1$s.\n\n%2$s</string>
     <string name="PlateArmor_Name">áo giáp tấm</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonBuff_Name">Bị Độc</string>
@@ -1011,6 +1012,7 @@
     <string name="RemixedPixelDungeonApp_sendCrash">Trò chơi của chúng tôi đã bị lỗi...\n Xin lỗi.\nVui lòng gửi báo cáo lỗi để giúp chúng tôi khắc phục.</string>
     <string name="ResultDescriptions_Burning">Bị thiêu rụi trên cấp độ %d</string>
     <string name="ResultDescriptions_Gas">Chết vì khí độc ở tầng %d</string>
+    <string name="ResultDescriptions_Hunger">Chết đói trên tầng %d</string>
     <string name="ResultDescriptions_Immured">Bị vùi kín trong đá ở tầng %d</string>
     <string name="ResultDescriptions_Mob">Bị giết bởi %1$s ở tầng %2$d</string>
     <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
@@ -1416,6 +1418,7 @@
     <string name="Welcome_Title">Chào mừng!</string>
     <string name="WindGust_Info">Triệu hồi một cơn gió giật, đẩy nhân vật được chọn ra xa.</string>
     <string name="WizardHat_Name">Nón Phép Thuật</string>
+    <string name="WndBag_BuySubtitle">(Bạn có %dg)</string>
     <string name="WndBlacksmith_Prompt">Được, lời đã nói không thể lấy lại, đây là điều tôi có thể làm cho bạn: Tôi có thể luyện lại 2 vật phẩm và biến chúng thành 1 vật phẩm chất lượng tốt hơn.</string>
     <string name="WndCatalogus_Potions">Thuốc</string>
     <string name="WndCatalogus_Scrolls">Cuộn</string>
@@ -1715,6 +1718,9 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
