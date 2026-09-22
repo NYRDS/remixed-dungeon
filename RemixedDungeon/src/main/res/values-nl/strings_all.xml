@@ -890,6 +890,7 @@
     <string name="No_Valid_Cell">Er is geen geschikte cel in de buurt.</string>
     <string name="OozeBuff_Name">Bijtend Slijk</string>
     <string name="Ooze_Death">%s slikt je op...</string>
+    <string name="Order_Info">Met de juiste concentratie zijn jouw bevelen bijna onweerlegbaar.</string>
     <string name="Order_Name">Bevelen</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="OverpricedRation_Message">Dat eten smaakte oké.</string>
@@ -1080,6 +1081,7 @@
     <string name="Ring_Gems_4">amethist</string>
     <string name="Ring_Gems_6">onyx</string>
     <string name="Ring_Gems_8">smaragd</string>
+    <string name="Ring_Identify">je bent nu vertrouwd genoeg met je %1 om het te identificeren. Het is %2.</string>
     <string name="Ring_Info1">Je kunt slechts 2 ringen tegelijk dragen.</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
@@ -1439,6 +1441,7 @@
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
     <string name="WandOfMagicMissile_Info">Deze staf lanceert missiles van zuivere magische energie, wat matige schade aan een doelwit toebrengt.</string>
     <string name="WandOfMagicMissile_Name">Toverstaf van Magische Projectielen</string>
+    <string name="WandOfPoison_Info">De giftige uitbarsting van dit krom stuk hout bedekt zijn doelwit met dodelijk gif. Het vergiftigde wezen zal periodieke schade lijden totdat het effect eindigt. De duur van het effect neemt toe met het niveau van de staf.</string>
     <string name="WandOfRegrowth_Info">Wanneer het leven eindigt, begint nieuw leven altijd te groeien... De eeuwige cyclus blijft altijd bestaan!</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
     <string name="WandOfSlowness_Info">Deze toverstaf zorgt ervoor dat een wezen met de helft van zijn normale snelheid beweegt en aanvalt, totdat het effect afloopt.</string>
@@ -2004,6 +2007,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

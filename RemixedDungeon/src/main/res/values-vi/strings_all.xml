@@ -945,6 +945,7 @@
     <string name="Possess_Info">Nghệ thuật đen tối của kiểm soát tâm trí cho phép người thi phép cong vẹo ý chí của hầu hết các sinh vật.</string>
     <string name="PotionBelt_Info">Chiếc đai da chắc chắn này có thể đựng tất cả bình thuốc của bạn, đồng thời bảo vệ chúng không bị vỡ do giá lạnh.</string>
     <string name="PotionOfFrost_Info">Khi tiếp xúc với không khí cởi trời, hóa chất này sẽ bay hơi thành một đám mây đóng băng, khiến bất kỳ sinh vật nào chạm vào nó bị đóng băng ngay tại chỗ, không thể hành động hay di chuyển.</string>
+    <string name="PotionOfHealing_Apply">Vết thương của bạn đã hồi phục hoàn toàn.</string>
     <string name="PotionOfHealing_Name">Thuốc hồi phục</string>
     <string name="PotionOfInvisibility_Apply">Bạn thấy đôi tay mình trở nên vô hình!</string>
     <string name="PotionOfInvisibility_Name">Chai Tàng Hình</string>
@@ -1728,6 +1729,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
