@@ -843,6 +843,7 @@
     <string name="Mob_GoingTo">Al onderweg!</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
     <string name="Mob_PetDied">Je huisdier is gestorven: %s</string>
+    <string name="Mob_ReadyForOrder">%s klaar voor je order.</string>
     <string name="Mob_StaAmokStatus">%1$s loopt amok</string>
     <string name="Mob_StaFleeingStatus">Deze %s vlucht</string>
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
@@ -1473,6 +1474,7 @@
     <string name="WaterElemental_Desc">Water elementalen komen voor bij grote watermassa\'s. Meestal dwalen deze magisch gebonden golven gewoon rond.</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name_Objective">waterelementair</string>
+    <string name="WaterOfAwareness_Info">De kracht van kennis straalt vanuit het water van deze bron. Neem een slok om alle geheimen van je uitrusting te onthullen.</string>
     <string name="WaterOfHealth_Info">De kracht van gezondheid straalt uit het water van deze put. Neem een slok om je wonden te helen en je honger te stillen.</string>
     <string name="WaterOfTransmutation_Info">Kracht van verandering straalt uit van het water van deze put. Gooi een item in de put om het in iets anders te veranderen.</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
@@ -2002,6 +2004,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
