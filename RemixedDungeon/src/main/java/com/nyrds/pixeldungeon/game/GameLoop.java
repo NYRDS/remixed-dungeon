@@ -378,7 +378,6 @@ public class GameLoop {
     }
 
     private void switchScene(Scene requestedScene) {
-        SystemText.invalidate();
         TextureCache.clear();
         Camera.reset();
 
