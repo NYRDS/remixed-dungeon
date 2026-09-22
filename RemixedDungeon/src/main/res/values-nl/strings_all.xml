@@ -860,6 +860,7 @@
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
     <string name="Mods_RestartRequired">Herstart vereist</string>
     <string name="Monk_Defense">geparreerd</string>
+    <string name="Monk_Disarm">%1 heeft de %2 uit je handen geslagen!</string>
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">dwerg monnik</string>
     <string name="Monk_Name_Objective">dwerg monnik</string>
@@ -2021,6 +2022,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

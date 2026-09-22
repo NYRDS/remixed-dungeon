@@ -1076,6 +1076,7 @@
     <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">nắm đấm thối rữa</string>
     <string name="RottingFist_Name_Objective">nắm đấm thối rữa</string>
+    <string name="RoyalShield_desc">Một chiếc khiên kim loại hoàn toàn. Đúng vậy, nó nặng, nhưng chỉ nó mới có thể cung cấp cho bạn sự bảo vệ tốt nhất.</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Name">Nỏ hồng ngọc</string>
@@ -1740,6 +1741,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
