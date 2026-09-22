@@ -814,6 +814,7 @@
     <string name="MeleeWeapon_Info3c">langzaam</string>
     <string name="MeleeWeapon_Info3d">en</string>
     <string name="MeleeWeapon_Info3e">maar</string>
+    <string name="MeleeWeapon_Info3g">onnauwkeurig</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
     <string name="MeleeWeapon_Info6b">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
@@ -841,6 +842,7 @@
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
     <string name="MissileWeapon_Yes">Ja, ik weet wat ik doe</string>
     <string name="Mob_Attacking">Reken deze %s als dood!</string>
+    <string name="Mob_Desc">Een echte beschrijving komt binnenkort!</string>
     <string name="Mob_Died">Je hoort iets in de verte sterven</string>
     <string name="Mob_GoingTo">Al onderweg!</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
@@ -2010,6 +2012,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

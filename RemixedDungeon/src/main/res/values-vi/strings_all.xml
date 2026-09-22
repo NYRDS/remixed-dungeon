@@ -1452,6 +1452,7 @@
     <string name="WndDonate_rubyDonate">quyên góp ruby</string>
     <string name="WndDonate_silverDonate">quyên góp bạc</string>
     <string name="WndDonate_silverDonateText">Mọi khoản quyên góp đều sẽ giúp phát triển dự án</string>
+    <string name="WndDonate_silverDonateText2">Cũng tắt quảng cáo trong tất cả chế độ chơi và mở khóa thợ săn từ đầu.</string>
     <string name="WndDontLikeAds_NotThisTime">Không phải lần này</string>
     <string name="WndFortuneTeller_IdentifyAll">Tất cả</string>
     <string name="WndFortuneTeller_Instruction">Tôi có thể tiết lộ những bí mật đằng sau các vật phẩm mà bạn sở hữu.\nMột lần nhận diện sẽ tốn %d đồng tiền.</string>
@@ -1732,6 +1733,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
