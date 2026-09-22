@@ -334,6 +334,7 @@
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
     <string name="CloakBuff_Info">Een donkere mantel verhult je in de schaduw, waardoor je minder zichtbaar bent voor vijanden.</string>
     <string name="CloakBuff_Name">Verguld</string>
+    <string name="CloakSpell_Info">Stap in de schaduwen om onzichtbaar te worden. Vermindert je kans op ontdekking aanzienlijk. Kan niet worden gebruikt als er vijanden in de buurt zijn.</string>
     <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
     <string name="ClothArmor_Name">stoffen pantser</string>
     <string name="Codex_ACRead">LEZEN</string>
@@ -1078,6 +1079,7 @@
     <string name="Ring_Gems_4">amethist</string>
     <string name="Ring_Gems_6">onyx</string>
     <string name="Ring_Gems_8">smaragd</string>
+    <string name="Ring_Info1">Je kunt slechts 2 ringen tegelijk dragen.</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="Roar_Name">Brul</string>
@@ -1801,6 +1803,7 @@
     <string name="town_deco_trapdoor_desc">Waar zou dit toch naartoe leiden?</string>
     <string name="town_deco_urn_desc">Kleien, misschien met as van iemand.</string>
     <string name="town_deco_urn_name">urn</string>
+    <string name="town_deco_vat_desc">Deze stenen vat is tot de rand gevuld met heilig water.</string>
     <string name="town_deco_vat_name">vat</string>
     <string name="town_deco_wall_beam_desc">Dient als een betrouwbare steun voor deze constructie.</string>
     <string name="town_deco_wall_beam_name">Balk</string>
@@ -1999,6 +2002,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

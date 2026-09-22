@@ -366,6 +366,7 @@
     <string name="Dagger_Name">dao găm</string>
     <string name="Damage_Reduction">Giảm sát thương</string>
     <string name="DarkGold_Name">quặng vàng tối</string>
+    <string name="DarkSacrifice_Hint">Chọn một người phục vụ trung thành của bạn để hy sinh!</string>
     <string name="DarkSacrifice_Name">Hy Sinh Tối Tăm</string>
     <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
     <string name="DarkSacrifice_Self">Vì Tai Ương!</string>
@@ -1725,6 +1726,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
