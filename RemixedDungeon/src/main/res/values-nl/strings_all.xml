@@ -1785,6 +1785,7 @@
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_rug_name">kleed</string>
     <string name="town_deco_screen_desc">Dit mysterieuze doek heet een \&quot;scherm\&quot; en kan bewegende beelden tonen</string>
+    <string name="town_deco_shelf_full_desc">Op deze plank staan allerlei snuisterijen.</string>
     <string name="town_deco_shelf_name">Planken</string>
     <string name="town_deco_shelving_desc">Een indrukwekkend groot rek, waarvan de planken gevuld zijn met diverse dranken en versnaperingen.</string>
     <string name="town_deco_shelving_name">rekken</string>
@@ -2012,6 +2013,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

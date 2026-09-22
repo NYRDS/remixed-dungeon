@@ -968,6 +968,7 @@
     <string name="Potion_Colors_10">chàm</string>
     <string name="Potion_Colors_15">ngọc trai</string>
     <string name="Potion_Colors_2">xanh ngọc bích</string>
+    <string name="Potion_Colors_3">ngọc bích</string>
     <string name="Potion_Colors_4">vàng kim</string>
     <string name="Potion_Colors_6">than chì</string>
     <string name="Potion_Colors_8">hổ phách</string>
@@ -1733,6 +1734,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
