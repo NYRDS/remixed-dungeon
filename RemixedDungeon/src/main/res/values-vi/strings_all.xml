@@ -1076,6 +1076,7 @@
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name">đầu lâu rune</string>
     <string name="SacrificialSword_Gender">masculine</string>
+    <string name="SacrificialSword_Info">Thoạt nhìn thanh kiếm đồng cũ kỹ này, phủ đầy vết ố đồng, trông hoàn toàn vô dụng. Nhưng có một loại sức mạnh cổ xưa, kỳ bí đang ngủ yên bên trong. Những sức mạnh đó có thể biến gần như bất kỳ sinh vật nào thành nô lệ vô ý chí. Chỉ cần tìm đúng cách để đánh thức chúng...</string>
     <string name="SacrificialSword_Name">kiếm hiến tế</string>
     <string name="ScaleArmor_Name">giáp vảy</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
@@ -1395,6 +1396,7 @@
     <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">Tia bóng tối của %1$s đã giết bạn...</string>
     <string name="Warlock_Name_Objective">phù thủy lùn</string>
+    <string name="WarriorArmor_ACSpecial">NHẢY ANH HÙNG</string>
     <string name="WarriorArmor_Prompt">Chọn hướng để nhảy</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
@@ -1723,6 +1725,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

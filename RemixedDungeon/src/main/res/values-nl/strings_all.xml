@@ -405,6 +405,8 @@
     <string name="Deathling_Name_Objective">doodsklief</string>
     <string name="DeepSnail_Desc">Dit soort weekdier is vaak te zien nabij waterbronnen en is veel sneller dan een gewone slak. Pas echter op voor de beten, die kunnen een onaangenaam effect hebben op je huid.</string>
     <string name="DeepSnail_Gender">masculine</string>
+    <string name="DeepSnail_Name">diepe slak</string>
+    <string name="DeepSnail_Name_Objective">diepe slak</string>
     <string name="DeferedDamageBuff_Info">De pijn is omgezet in vertraagde pijn, wat de schade die op een keer wordt opgelopen vermindert.\nOvergebleven schade om te ontvangen %d</string>
     <string name="DeferedDamage_Killed_Txt">%s heeft je gedood...</string>
     <string name="DewVial_Collected">Je verzamelde een dauwdruppel in je dauwflesje.</string>
@@ -905,6 +907,7 @@
     <string name="ParalysisBuff_Name">Verlamd</string>
     <string name="Paralysis_Name_0">Verdovende %s</string>
     <string name="Paralysis_Name_2">Verstomming %s</string>
+    <string name="ParalyticGas_Info">Een wolk van verlammend gas wervelt hier.</string>
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
     <string name="PetInventory_GaveItem">Gaf %1 aan %2</string>
     <string name="PetInventory_HeroBackpackFull">Je rugzak is vol</string>
@@ -1996,6 +1999,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
