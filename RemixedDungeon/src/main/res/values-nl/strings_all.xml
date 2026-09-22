@@ -618,6 +618,7 @@
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
     <string name="Hero_AnotherTry">Je bent gestorven.\n Wil je het opnieuw proberen?</string>
     <string name="Hero_LevelUp">niveau omhoog!</string>
+    <string name="Hero_LockedChest">Deze kist is op slot en je hebt geen passende sleutel</string>
     <string name="Hero_LockedDoor">Je hebt geen bijpassende sleutel</string>
     <string name="Hero_Name">jij</string>
     <string name="Hero_Name_Objective">je</string>
@@ -1226,6 +1227,7 @@
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="ShortSword_Reforged">je hebt de korte zwaard hersmeed om je %s te upgraden</string>
     <string name="Shuriken_Gender">masculine</string>
+    <string name="Shuriken_Info">Stervormige metalen stukken met vlijmscherpe messen richten veel schade aan hun doelen aan. Ze kunnen met een zeer hoge snelheid worden geworpen.</string>
     <string name="Shuriken_Name">shuriken</string>
     <string name="SkeletonKey_Info">Deze sleutel ziet er serieus uit: het kopje is vormgegeven als een schedel. Waarschijnlijk kan hij een serieuze deur openen.</string>
     <string name="Skeleton_Desc">Skeletten zijn samengesteld uit botten van ongelukkige avonturiers en bewoners van de dungeon, tot leven gewekt door uitstralingen van het kwaad uit de diepte. Zodra ze genoeg beschadigd zijn, vallen ze uiteen in een ontploffing van botten.</string>
@@ -2017,6 +2019,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

@@ -937,6 +937,7 @@
     <string name="PoisonBuff_Name">Bị Độc</string>
     <string name="Poison_Death">Bạn đã chết vì độc...</string>
     <string name="Poison_Name_0">Độc %s</string>
+    <string name="Poison_Name_2">Độc %s</string>
     <string name="PortalExit_Desc">Cổng dịch chuyển này sẽ đưa bạn đến tầng đầu tiên của %s.</string>
     <string name="PortalExit_Desc_SpiderNest">Hang động nhện</string>
     <string name="PortalGate_Activated">Cổng cổ đại đã thức tỉnh!</string>
@@ -1737,6 +1738,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
