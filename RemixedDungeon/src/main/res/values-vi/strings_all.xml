@@ -574,6 +574,7 @@
     <string name="HeroClass_NecromancerPerks_3">Pháp sư gọi hồn bắt đầu với một chiếc chìa khóa xương cấp 7.</string>
     <string name="HeroClass_None">thường dân</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Bác sĩ dịch là bậc thầy giả kim và có thể sử dụng công thức độc đáo.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Bắt đầu với [yellow:Mặt Nạ Dịch Hạch] (miễn nhiễm với mọi khí độc) và [yellow:Cưa Xương]. Đòn chí mạng rơi thêm bộ phận, và Cưa gây x2 sát thương lên kẻ địch bị tê liệt.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Bác sĩ dịch bệnh bị trừng phạt lớn về độ chính xác nếu không cầm Cưa Xương thân yêu trên tay và không thể dùng vũ khí tầm xa.</string>
     <string name="HeroClass_Rog">kẻ lừa đảo</string>
     <string name="HeroClass_RogPerks_0">Kẻ lừa đảo bắt đầu với Nhẫn Bóng Tối+1.</string>
@@ -1077,6 +1078,7 @@
     <string name="RottingFist_Name_Objective">nắm đấm thối rữa</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyCrossbow_Gender">masculine</string>
+    <string name="RubyCrossbow_Name">Nỏ hồng ngọc</string>
     <string name="Rudolph_Info">Có gì lễ hội hơn một chiếc mũi đỏ phát sáng? Cùng với một đôi gạc nai, tất nhiên.</string>
     <string name="Rudolph_Name">Mũi đỏ và sừng hươu</string>
     <string name="RunicSkull_Desc">Đối với thứ gì đó được tạo ra nhân tạo, chiếc sọ này quá giống một chiếc sọ thật. Bạn cũng có thể thấy một chút ánh sáng yếu ớt bao quanh nó.</string>
@@ -1738,6 +1740,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

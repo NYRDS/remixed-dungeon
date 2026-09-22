@@ -56,9 +56,11 @@
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Armor_Glyph">glyph</string>
     <string name="Armor_Incompatible">De interactie van verschillende soorten magie heeft het symbool op dit pantser gewist!</string>
+    <string name="Armor_Info2">\n\nDoor onvoldoende kracht zijn je bewegingssnelheid en verdedigingsvaardigheid verminderd.</string>
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
     <string name="Armor_Info8">\n\nJe kunt een kwaadaardige magie voelen die in de %s grijpt.</string>
+    <string name="Armor_ToString">%1 :%2</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">levende standbeeld</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
@@ -2019,6 +2021,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
