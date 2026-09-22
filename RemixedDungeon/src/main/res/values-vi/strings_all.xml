@@ -480,6 +480,7 @@
     <string name="FrostBuff_Info">Đông cứng hoàn toàn, không thể thực hiện bất kỳ hành động nào.</string>
     <string name="Frost_Shatter">Lạnh làm %s vỡ nát!</string>
     <string name="Froth_ArrowInKnee">Tôi từng là một nhà thám hiểm như bạn,\nNhưng rồi tôi bị một mũi tên bắn vào đầu gối...</string>
+    <string name="FrozenCarpaccio_Info">Đây là một miếng thịt sống đông lạnh. Cách duy nhất để ăn nó là cắt thành những lát mỏng. Và như vậy nó lại ngon một cách bất ngờ.</string>
     <string name="FrozenCarpaccio_Info1">Bạn thấy tay mình trở nên vô hình!</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenCarpaccio_Info3">Sảng khoái!</string>
@@ -737,6 +738,7 @@
     <string name="Level_TileDescSign">Bạn không thể đọc được văn bản từ đây.</string>
     <string name="Level_TileEntrance">Lối vào sâu</string>
     <string name="Level_TileExit">Lối ra sâu</string>
+    <string name="Level_TileFireTrap">Bẫy lửa</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TileOpenDoor">Cửa mở</string>
     <string name="Level_TileParalyticTrap">Bẫy khí gây tê liệt</string>
@@ -1176,6 +1178,7 @@
     <string name="Shielded_Desc">Quái vật lớn nhất, mạnh nhất và kiên cường nhất trong số tất cả các gnoll. Khi bị thương nặng, chúng sẽ điên cuồng, gây thiệt hại lớn hơn cho kẻ thù. Quái vật này đang khiêng một khiên khổng lồ!</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">côn đồ khiên thủ</string>
+    <string name="ShootInEye_Name">Bắn Vào Mắt</string>
     <string name="Shopkeeper_Buy">Chọn vật phẩm để mua</string>
     <string name="Shopkeeper_BuyPrompt">Để tôi xem hàng hóa của bạn</string>
     <string name="Shopkeeper_Desc">Người đàn ông này trông giống như một thương nhân ở khu thương mại thành phố lớn hơn là ở hang động. Giá cả của anh ấy giải thích vì sao anh ấy thích làm ăn ở đây.</string>
@@ -1729,6 +1732,9 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
