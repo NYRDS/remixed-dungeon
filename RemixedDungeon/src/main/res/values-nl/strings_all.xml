@@ -1202,6 +1202,7 @@
     <string name="ShadowsBuff_Name">samengesmoren met de schaduw</string>
     <string name="ShamanElder_Desc">Deze specifieke gnol ziet er veel ouder uit dan andere schamanen en heeft zeker een hogere status in de stam. Een vreemde aura vormt zich langzaam om hem heen, die alles wat het raakt lijkt te reflecteren.</string>
     <string name="ShamanElder_Gender">masculine</string>
+    <string name="ShamanElder_Name_Objective">oudere sjamaan</string>
     <string name="Shaman_Desc">De intelligentste gnolls kunnen sjamanistische magie beheersen. Gnoll-sjamanen geven de voorkeur aan gevechtsmagie om hun gebrek aan kracht te compenseren, zonder te aarzelen om deze te gebruiken op degenen die hun status in de stam betwisten.</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">%s\'s bliksemschicht heeft je gedood...</string>
@@ -1529,6 +1530,7 @@
     <string name="WndDontLikeAds_NotThisTime">Niet deze keer</string>
     <string name="WndError_Title">FOUT</string>
     <string name="WndFortuneTeller_IdentifyAll">Alles</string>
+    <string name="WndFortuneTeller_Instruction">Ik kan geheimen onthullen achter voorwerpen die je bezit.\nEén identificatie kost %d munten.</string>
     <string name="WndFortuneTeller_No_Item">Wees voorzichtig, je wilt je geld toch niet voor niets uitgeven, toch? Er zijn geen ongeïdentificeerde items in je inventaris.</string>
     <string name="WndFortuneTeller_Title">Waarzegger.</string>
     <string name="WndGame_Challenges">Uitdagingen</string>
@@ -1612,6 +1614,7 @@
     <string name="WndRanking_StaDepth">Maximale Diepte</string>
     <string name="WndRanking_StaDuration">Spelduur</string>
     <string name="WndRanking_StaEnemies">Monsters Gedood</string>
+    <string name="WndRanking_StaFood">Gegeten voedsel</string>
     <string name="WndRanking_StaHealth">Gezondheid</string>
     <string name="WndRanking_StaStr">Kracht</string>
     <string name="WndRanking_StaTitle">Level %1 %2</string>
@@ -2013,6 +2016,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

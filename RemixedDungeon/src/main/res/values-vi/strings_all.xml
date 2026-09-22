@@ -1430,6 +1430,7 @@
 - Đã sửa lỗi</string>
     <string name="Welcome_Title">Chào mừng!</string>
     <string name="WindGust_Info">Triệu hồi một cơn gió giật, đẩy nhân vật được chọn ra xa.</string>
+    <string name="WindGust_Name">Gió giật</string>
     <string name="WizardHat_Name">Nón Phép Thuật</string>
     <string name="WndBag_BuySubtitle">(Bạn có %dg)</string>
     <string name="WndBlacksmith_Prompt">Được, lời đã nói không thể lấy lại, đây là điều tôi có thể làm cho bạn: Tôi có thể luyện lại 2 vật phẩm và biến chúng thành 1 vật phẩm chất lượng tốt hơn.</string>
@@ -1530,6 +1531,7 @@
     <string name="WndRanking_Items">Vật phẩm</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
     <string name="WndRanking_StaEnemies">Quái vật bị tiêu diệt</string>
+    <string name="WndRanking_StaFood">Thức ăn đã ăn</string>
     <string name="WndRanking_StaHealth">Máu</string>
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_StaTitle">Cấp %1 %2</string>
@@ -1734,6 +1736,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
