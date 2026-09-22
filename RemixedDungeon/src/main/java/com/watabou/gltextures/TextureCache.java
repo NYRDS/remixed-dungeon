@@ -108,8 +108,11 @@ public class TextureCache {
 
 	@Synchronized
 	public static void clear() {
-		for (Texture txt : all.values()) {
+		for (SmartTexture txt : all.values()) {
 			txt.delete();
+			// terminal drop of the cache reference - free the upload pixmap of
+			// any texture that was never bound (dispose-on-bind never ran)
+			txt.releaseBitmapData();
 		}
 		all.clear();
 		allFilm.clear();

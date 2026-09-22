@@ -199,11 +199,10 @@ public class BitmapData {
     public void save(String path) {
         try {
             if (bmp != null) {
+                // wrapper does not own the native pixmap - disposing it would
+                // free bmp out from under this BitmapData
                 Pixmap pixmap = new Pixmap(bmp);
-                // Log the path where the file will be saved
-                // PUtil.slog("bitmap","Bitmap saving to: " + path); // Suppressing verbose logging
                 PixmapIO.writePNG(Gdx.files.absolute(path), pixmap);
-                pixmap.dispose();
             }
         } catch (Exception e) {
             EventCollector.logException(e);
@@ -372,9 +371,13 @@ public class BitmapData {
 
     @LuaInterface
     public void dispose() {
-        // Note: We're not disposing of the bitmap here to avoid native crashes
-        // The garbage collector will handle cleanup
-        // If bmp != null, bmp.dispose() would cause a double free error
-        bmp = null;
+        // bmp is a native Gdx2DPixmap with no finalizer - skipping dispose here
+        // leaks w*h*4 bytes of native memory per texture upload. Every
+        // BitmapData owner allocates its pixmap exclusively, so a null-guarded
+        // dispose is single-owner safe.
+        if (bmp != null) {
+            bmp.dispose();
+            bmp = null;
+        }
     }
 }

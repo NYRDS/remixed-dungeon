@@ -146,6 +146,20 @@ public class Texture {
         }
     }
 
+    /**
+     * Terminal release of the upload bitmap. Textures created but never bound
+     * keep their bitmap data here forever otherwise. Call only when the texture
+     * is being discarded (e.g. TextureCache.clear), not on reversible delete().
+     */
+    public void releaseBitmapData() {
+        if (bitmapData != null) {
+            if (autoDisposeBitmapData) {
+                bitmapData.dispose();
+            }
+            bitmapData = null;
+        }
+    }
+
     public void bitmap(BitmapData bitmap) {
         this.bitmapData = bitmap;
 

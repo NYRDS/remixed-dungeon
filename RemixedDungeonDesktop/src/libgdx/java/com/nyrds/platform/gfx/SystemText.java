@@ -96,11 +96,21 @@ public class SystemText extends SystemTextBase {
 
         synchronized (pseudoFontCache) {
             if (!pseudoFontCache.containsKey(fontKey)) {
+                if (fontParameters.packer == null) {
+                    fontParameters.packer = new PseudoPixmapPacker();
+                }
                 adjustFontParams();
                 BitmapFont.BitmapFontData generatedData = activeGenerator.generateData(fontParameters);
                 pseudoFontCache.put(fontKey, generatedData);
             }
             fontData = pseudoFontCache.get(fontKey);
+        }
+
+        // pseudo packer pages are measurement-only, data keeps the metrics.
+        // Not disposing them leaks a 1024x1024 native pixmap per call.
+        if (fontParameters.packer != null) {
+            fontParameters.packer.dispose();
+            fontParameters.packer = null;
         }
 
         pseudoGlyphLayout = new PseudoGlyphLayout();
@@ -166,7 +176,6 @@ public class SystemText extends SystemTextBase {
                 fontParameters.packer = null; // Use default packer for real font generation
                 adjustFontParams();
                 fontCache.put(fontKey, activeGenerator.generateFont(fontParameters));
-                fontParameters.packer = new PseudoPixmapPacker(); // Restore for future pseudo-generations
             }
             font = fontCache.get(fontKey);
         }
@@ -288,6 +297,8 @@ public class SystemText extends SystemTextBase {
         checkParams.characters = FreeTypeFontGenerator.DEFAULT_CHARS + StringsManager.getAllCharsAsString();
         checkParams.packer = new PseudoPixmapPacker();
         pixelFontCheckData = pixelGenerator.generateData(checkParams);
+        checkParams.packer.dispose();
+        checkParams.packer = null;
     }
 
     @Override
