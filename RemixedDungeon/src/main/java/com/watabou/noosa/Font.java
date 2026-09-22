@@ -172,7 +172,9 @@ public class Font extends TextureFilm {
 		BitmapData bmp = ModdingMode.getBitmapData(tex_src);
 		Font font = new Font( tex_src );
 		font.splitByAlpha( bmp, chars );
-		//bmp.dispose();
+		// split source is a native Gdx2DPixmap with no finalizer - the texture
+		// holds its own decode, this one would leak if dropped undisposed
+		bmp.dispose();
 		return font;
 	}
 

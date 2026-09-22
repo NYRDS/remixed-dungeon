@@ -296,8 +296,14 @@ public class ModdingMode extends ModdingBase {
 
             if (modAsset.getHeight() * modAsset.getWidth() < baseAsset.getWidth() * baseAsset.getHeight()) {
                 RemixedDungeon.toast("%s image in %s smaller than in Remixed, using base version", src, activeMod());
+                // the unused decode is a native Gdx2DPixmap with no finalizer -
+                // dropping it here leaks w*h*4 bytes per texture per scene switch
+                modAsset.dispose();
                 return baseAsset;
             }
+
+            // same for the mod copy when the base version wins or matches
+            baseAsset.dispose();
         }
 
         return modAsset;
