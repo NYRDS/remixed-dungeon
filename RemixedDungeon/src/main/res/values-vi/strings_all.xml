@@ -283,6 +283,7 @@
     <string name="Char_Hit_1">%1$s đánh %2$s</string>
     <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
     <string name="Char_Kill_1">%s đã giết ngươi...</string>
+    <string name="Char_OutParalysis">Nỗi đau khiến %s thoát khỏi tê liệt</string>
     <string name="Char_StaAmok">phát cuồng</string>
     <string name="Char_StaDizzy">choáng váng</string>
     <string name="Char_StaDodged_0">tránh</string>
@@ -1668,6 +1669,7 @@
     <string name="town_deco_curtains_name">Bức rèm</string>
     <string name="town_deco_dungeon_door_desc">lối vào hang động.</string>
     <string name="town_deco_dungeon_door_name">cửa hang</string>
+    <string name="town_deco_emptyboard_desc">Giá tiêu chuẩn nhất để trưng bày đồ vật.</string>
     <string name="town_deco_emptyboard_name">Kệ đựng</string>
     <string name="town_deco_entrance_name">cổng vào</string>
     <string name="town_deco_fireplace_name">Lò sưởi</string>
@@ -1751,6 +1753,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

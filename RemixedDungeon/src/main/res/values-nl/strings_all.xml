@@ -165,6 +165,7 @@
     <string name="BellaNPC_No">Nee, niet met jou</string>
     <string name="BellaNPC_Yes_End_Game">Zeker (Beëindig het spel)</string>
     <string name="Belongings_CantWearBoth">Je kunt %1$s en %2$s niet tegelijkertijd uitrusten!</string>
+    <string name="Belongings_Name">rugzak</string>
     <string name="BishopNPC_Desc">Bisschop van de Heilige Kerk van Santa de Heer der Diepten</string>
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
@@ -2033,6 +2034,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
