@@ -616,6 +616,7 @@
     <string name="HeroSubClass_DescWard">Een sterke verbinding met de natuurkrachten geeft _Wachters_ het vermogen om dauwdruppels en zaden van planten te verzamelen. Ook geeft het vertrappen van hoog gras hen een tijdelijke pantserbonus.</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="HeroSubClass_NameAssa">meuchelmoorder</string>
+    <string name="HeroSubClass_NameBers">berserker</string>
     <string name="HeroSubClass_NameFreR">freerunner</string>
     <string name="HeroSubClass_NameGlad">gladiator</string>
     <string name="HeroSubClass_NameLich">Lich</string>
@@ -2038,6 +2039,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
