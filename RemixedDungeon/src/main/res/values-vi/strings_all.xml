@@ -1567,6 +1567,7 @@
     <string name="WndSettings_ClassicFont">Font Classic</string>
     <string name="WndSettings_ExperementalFont">Font mới</string>
     <string name="WndSettings_Handedness">Ưu tiên tay</string>
+    <string name="WndSettings_Immersive">Chế độ đắm chìm</string>
     <string name="WndSettings_InGameUiSettings">Cài đặt giao diện</string>
     <string name="WndSettings_Music">Nhạc</string>
     <string name="WndSettings_Quickslots">Khe truy cập nhanh</string>
@@ -1613,6 +1614,7 @@
     <string name="WrnExperimental_realtime">Chế độ thời gian thực đã được kích hoạt: đây giờ là một roguelike thời gian thực, nhấn nhanh hoặc chết.\nBạn muốn kiểm tra túi đồ?\nChúc may mắn với việc đó trong khi con cua rạch kiểm tra ruột gan bạn.</string>
     <string name="WrnExperimental_title">Các tùy chọn thực nghiệm đã được bật!</string>
     <string name="Yog_Gender">masculine</string>
+    <string name="Yog_Name">Yog-Dzewa</string>
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">Bộ não của Yog-Dzewa. Nguồn gốc của mọi điều ác từng xuất hiện từ ngục dưới đất.</string>
     <string name="YogsBrain_Gender">masculine</string>
@@ -1753,6 +1755,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
