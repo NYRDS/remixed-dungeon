@@ -1433,6 +1433,7 @@
     <string name="WandMaker_Defense">geabsorbeerd</string>
     <string name="WandMaker_Desc">Deze oude maar kerngezonde heer draagt een lichtelijk verwarde uitdrukking. Hij wordt beschermd door een magisch schild.</string>
     <string name="WandMaker_Dust2">Enig geluk met lijkstof, %s? Botstapels zijn de meest voor de hand liggende plekken om te doorzoeken.</string>
+    <string name="WandMaker_RotberryDesc">De bessen van deze struik smaken naar een zoete, zoete dood.</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Info1">er gebeurde niets</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
@@ -2024,6 +2025,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

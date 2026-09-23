@@ -1516,6 +1516,7 @@
     <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
     <string name="WndPetSelect_Title">Chọn thú cưng</string>
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
+    <string name="WndPlayGames_RestoreProgress">Khôi phục tiến độ trò chơi</string>
     <string name="WndPlayGames_Show_Badges">Hiện huy hiệu</string>
     <string name="WndPlayGames_Show_Error">Thao tác thất bại. Có lỗi xảy ra...</string>
     <string name="WndPlayGames_Show_Ok">Thành công!</string>
@@ -1743,6 +1744,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
