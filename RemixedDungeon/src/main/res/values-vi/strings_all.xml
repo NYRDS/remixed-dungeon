@@ -724,6 +724,7 @@
     <string name="LastShopLevel_TileHighGrass">Hoa nở rộ cao</string>
     <string name="LeatherArmor_Desc">Áo giáp làm từ da thú đã thuộc. Không nhẹ như áo giáp vải, nhưng cho khả năng bảo vệ tốt hơn.</string>
     <string name="Leech_Name_0">Hút máu %s</string>
+    <string name="Leech_Name_1">Hút máu %s</string>
     <string name="Leech_Name_2">Hút máu %s</string>
     <string name="Level_TileAlarmTrap">bẫy báo động</string>
     <string name="Level_TileAlchemy">nồialchemy</string>
@@ -1746,6 +1747,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
