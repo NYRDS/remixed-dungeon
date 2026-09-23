@@ -79,7 +79,18 @@ public class RemixedDungeon extends Game {
 		super.onCreate(savedInstanceState);
 
 		isDev = GameLoop.version.contains("in_dev");
-		
+
+		if ((getApplicationInfo().flags & android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0) {
+			// debug builds: autostart the /debug endpoints so adb forward is enough
+			// to drive the game (AboutScene 4-tap stays as the manual path)
+			try {
+				new com.nyrds.platform.app.WebServer(8080).start();
+				GLog.debug("debug build: WebServer autostarted on port 8080");
+			} catch (Exception e) {
+				GLog.debug("WebServer autostart failed: %s", e.getMessage());
+			}
+		}
+
 		EuConsent.check(this);
 		playGamesAdapter = new PlayGamesAdapter();
     }
