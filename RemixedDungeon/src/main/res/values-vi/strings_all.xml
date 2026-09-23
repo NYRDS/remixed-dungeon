@@ -787,6 +787,7 @@
     <string name="Mana_Title">Năng lượng</string>
     <string name="MedicineMask_Name">Khẩu trang y tế</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
+    <string name="MeleeWeapon_Info1a">%1 là %2 vũ khí cận chiến cấp-%3.</string>
     <string name="MeleeWeapon_Info1c">đã nâng cấp</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
     <string name="MeleeWeapon_Info2a">Sát thương trung bình là %d điểm mỗi lần đánh.</string>
@@ -1724,6 +1725,7 @@
     <string name="town_deco_stone_wall_desc">Không hiểu sao bức tường này lại tỏa ra hơi ấm và có vẻ hơi ẩm.</string>
     <string name="town_deco_stones_desc">Chỉ là một đống đá.</string>
     <string name="town_deco_stones_name">Đá</string>
+    <string name="town_deco_stool_broken_name">Ghế đẩu bị hỏng</string>
     <string name="town_deco_tile_name">Ô gạch</string>
     <string name="town_deco_trapdoor_desc">Liệu cái này có thể dẫn đến đâu?</string>
     <string name="town_deco_tree_desc">Một cảm giác kỳ lạ dâng lên khi nhìn chiếc cây sống và bình yên này. Dù sao, không xa nơi này là một ngục địa đầy rẫy khủng khiếp và cái chết.</string>
@@ -1747,6 +1749,9 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

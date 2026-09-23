@@ -196,6 +196,7 @@
     <string name="Blacksmith_Verify6">Ik kan deze items niet hersmelten!</string>
     <string name="BlankScroll_Info">Gewoon een leeg perkament. Misschien kan er iets op geschreven worden?</string>
     <string name="BlankScroll_ReallyBlank">Deze perkament is leeg</string>
+    <string name="BleedingBuff_Info">De wonden bloeden snel leeg.</string>
     <string name="BleedingBuff_Name">Bloedend</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
     <string name="BloodTransfusion_Drained">De levensessentie vloeit van je huisdier naar jou.</string>
@@ -1429,6 +1430,7 @@
     <string name="VampireSkull_Info">Deze masker is gemaakt van een volledig natuurlijke vampierschedel. Eigenlijk is het een vampierschedel... schedel van een grootkopige vampier. Griezelig.</string>
     <string name="VampireSkull_Name">Vampierschedel</string>
     <string name="VertigoBuff_Info">Het duizelig gevoel maakt het moeilijker om rechtdoor te lopen!</string>
+    <string name="View_Distance">Zichtafstand</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
     <string name="WandMaker_Berry1">Oh, wat een aangename verrassing een fatsoenlijk persoon te ontmoeten op zo\'n plek! Ik kwam hier voor een zeldzaam ingrediënt - een _Rotberry-zaad_. Omdat ik een magiër ben, kan ik mezelf goed verdedigen tegen lokale monsters, maar ik verdwaal altijd in no-time, het is erg gênant. Zou je me kunnen helpen? Ik zou je graag betalen met een van mijn beste toverstokken.</string>
     <string name="WandMaker_Berry2">Iemand geluk met een Gniestoel zaadje, %s? Nee? Maak je geen zorgen, ik heb het niet eilig.</string>
@@ -2029,6 +2031,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
