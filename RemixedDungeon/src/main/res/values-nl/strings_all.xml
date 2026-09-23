@@ -683,6 +683,7 @@
     <string name="InnServant_Phrase_1">Bah, nog zoveel te doen!</string>
     <string name="InnServant_Phrase_2">Deze dronken drijft me in de waanzin!</string>
     <string name="InnServant_Phrase_4">Oh jee, zoveel gasten vandaag!</string>
+    <string name="Instability_Name_2">Instabiel %s</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="InterLevelScene_Returning">Terugkeren...</string>
@@ -1794,6 +1795,7 @@
     <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
     <string name="town_deco_pole_name">Paaltje</string>
     <string name="town_deco_porch_name">Veranda</string>
+    <string name="town_deco_poster_desc">Flyers voor de aankondiging van komende filmvoorstellingen.</string>
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_rug_name">kleed</string>
     <string name="town_deco_screen_desc">Dit mysterieuze doek heet een \&quot;scherm\&quot; en kan bewegende beelden tonen</string>
@@ -2025,6 +2027,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

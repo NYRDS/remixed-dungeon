@@ -1153,6 +1153,7 @@
     <string name="Scroll_Runes_9">BERKANAN</string>
     <string name="SeedPouch_Info">Túi velour nhỏ này cho phép bạn chứa bất kỳ số lượng hạt giống nào trong đó. Rất tiện lợi.</string>
     <string name="SeedPouch_Name">túi hạt giống</string>
+    <string name="Senior_Desc">Những tu sĩ này là những tín đồ cuồng tín, đã hiến mình để bảo vệ bí mật thành phố khỏi mọi kẻ ngoại bang. Họ không dùng giáp hay vũ khí, chỉ dựa vào nghệ thuật chiến đấu tay không. Tu sĩ này đã thành thạo nghệ thuật vô hiệu hóa đối thủ.</string>
     <string name="Senior_Gender">masculine</string>
     <string name="ServantNPC_Gender">feminine</string>
     <string name="ServantNPC_Name">nhân viên khách sạn</string>
@@ -1462,6 +1463,7 @@
     <string name="WndDonate_silverDonateText">Mọi khoản quyên góp đều sẽ giúp phát triển dự án</string>
     <string name="WndDonate_silverDonateText2">Cũng tắt quảng cáo trong tất cả chế độ chơi và mở khóa thợ săn từ đầu.</string>
     <string name="WndDontLikeAds_NotThisTime">Không phải lần này</string>
+    <string name="WndError_Title">LỖI</string>
     <string name="WndFortuneTeller_IdentifyAll">Tất cả</string>
     <string name="WndFortuneTeller_Instruction">Tôi có thể tiết lộ những bí mật đằng sau các vật phẩm mà bạn sở hữu.\nMột lần nhận diện sẽ tốn %d đồng tiền.</string>
     <string name="WndFortuneTeller_No_Item">Cẩn thận, bạn chắc không muốn tiêu tiền oan, phải không? Trong túi đồ của bạn không có vật phẩm chưa định danh.</string>
@@ -1744,6 +1746,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
