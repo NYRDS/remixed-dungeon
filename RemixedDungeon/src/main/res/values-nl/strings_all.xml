@@ -278,6 +278,7 @@
     <string name="ChaosCrystal_Name_2">Chaos Kristal</string>
     <string name="ChaosCrystal_ShieldFused">De kristal smolt met jouw schild en nam de chaosvorm aan.</string>
     <string name="ChaosCrystal_SwordFused">De kristal absorbeert je wapen en neemt de vorm aan van een Zwaard</string>
+    <string name="ChaosCrystal_Use">GEBRUIK</string>
     <string name="ChaosHelmet_Name">Chaos Helm</string>
     <string name="ChaosShield_desc">Het Chaos Schild ontstaat door het samensmelten van een Chaos Kristal met een gewoon schild, waardoor het bij elke succesvolle blokkade willekeurige chaotische effecten vertoont.</string>
     <string name="ChaosShield_name">Chaos Schild</string>
@@ -1217,6 +1218,7 @@
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name_Objective">schaap</string>
     <string name="ShieldBuffNotReady_Info">Je schild is nog niet klaar om de volgende aanval te blokkeren.</string>
+    <string name="ShieldBuffNotReady_Name">Schild is niet klaar</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">schildgedrocht</string>
@@ -2022,6 +2024,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

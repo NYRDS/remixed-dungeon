@@ -115,6 +115,7 @@
     <string name="Badges_ShadowLord_Slain">Chúa Tể Bóng Tối đã bị tiêu diệt</string>
     <string name="Badges_SpiderQueen_Slain">Nữ hoàng Nhện đã bị tiêu diệt</string>
     <string name="Badges_StrengthAttained1">Đạt 13 điểm Sức mạnh</string>
+    <string name="Badges_StrengthAttained4">Đạt 19 điểm Sức mạnh</string>
     <string name="Badges_Supporter">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="Badges_ThisIsSparta">Đây là Sparta!!!</string>
     <string name="Badges_VictoryAll">Bùa Yendor thu được bởi tất cả các lớp nhân vật</string>
@@ -935,6 +936,7 @@
     <string name="Plant_Info">Ném hạt giống này vào nơi bạn muốn trồng %1$s.\n\n%2$s</string>
     <string name="PlateArmor_Name">áo giáp tấm</string>
     <string name="PoisonArrow_Gender">feminine</string>
+    <string name="PoisonArrow_Name">mũi tên độc</string>
     <string name="PoisonBuff_Name">Bị Độc</string>
     <string name="Poison_Death">Bạn đã chết vì độc...</string>
     <string name="Poison_Name_0">Độc %s</string>
@@ -1741,6 +1743,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
