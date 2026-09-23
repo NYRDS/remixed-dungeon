@@ -1008,6 +1008,7 @@
     <string name="Potion_Colors_0">turkoois</string>
     <string name="Potion_Colors_1">karmozijn</string>
     <string name="Potion_Colors_10">indigo</string>
+    <string name="Potion_Colors_12">epidoot</string>
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_Colors_15">parelmoer</string>
     <string name="Potion_Colors_3">jade</string>
@@ -1202,6 +1203,7 @@
     <string name="Sewer_TileWater">Troebel water</string>
     <string name="Shades_Info">Sommige mensen zeggen dat kerkers te donker zijn om die te dragen. En jij zegt dat die mensen gewoon niet cool genoeg zijn.</string>
     <string name="Shades_Name">Zonnebril</string>
+    <string name="ShadowLord_Death">Neeeee...</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Bereid je voor!</string>
     <string name="ShadowLord_Name">schaduwheer</string>
@@ -2036,6 +2038,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

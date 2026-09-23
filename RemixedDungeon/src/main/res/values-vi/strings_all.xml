@@ -1416,6 +1416,7 @@
     <string name="Warlock_Killed">Tia bóng tối của %1$s đã giết bạn...</string>
     <string name="Warlock_Name_Objective">phù thủy lùn</string>
     <string name="WarriorArmor_ACSpecial">NHẢY ANH HÙNG</string>
+    <string name="WarriorArmor_NotWarrior">Chỉ chiến binh mới dùng được giáp này!</string>
     <string name="WarriorArmor_Prompt">Chọn hướng để nhảy</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
@@ -1755,6 +1756,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
