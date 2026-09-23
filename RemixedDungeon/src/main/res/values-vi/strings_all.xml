@@ -720,6 +720,7 @@
     <string name="Larva_Desc">Ấu trùng của Thần Cổ</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">ấu trùng của thần</string>
+    <string name="Larva_Name_Objective">ấu trùng của thần</string>
     <string name="LastLevel_TileStatue">Cột trụ</string>
     <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
     <string name="LastShopLevel_TileDescExit">Một con dốc dẫn xuống địa ngục.</string>
@@ -750,6 +751,7 @@
     <string name="Level_TilePedestal">Bệ đá</string>
     <string name="Level_TilePileOfStones">Đống đá</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
+    <string name="Level_TileSummoningTrap">Bẫy triệu hồi</string>
     <string name="Level_TileWater">Nước</string>
     <string name="Level_TileWell">Giếng</string>
     <string name="LevitationBuff_Info">Cơ thể lơ lửng trên mặt đất, tránh các bẫy và nguy hiểm khác trên mặt đất.</string>
@@ -1757,6 +1759,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

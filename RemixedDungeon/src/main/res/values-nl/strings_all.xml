@@ -776,6 +776,7 @@
     <string name="Level_TilePedestal">Voetstuk</string>
     <string name="Level_TilePoisonTrap">Gifpijl-val</string>
     <string name="Level_TileStatue">Standbeeld</string>
+    <string name="Level_TileSummoningTrap">Oproepval</string>
     <string name="Level_TileToxicTrap">Giftig gas val</string>
     <string name="Level_TileWell">put</string>
     <string name="LevitationBuff_Info">Het lichaam zweeft boven de grond en vermijdt vallen en andere gevaren op de grond.</string>
@@ -1101,6 +1102,7 @@
     <string name="Ring_Identify">je bent nu vertrouwd genoeg met je %1 om het te identificeren. Het is %2.</string>
     <string name="Ring_Info1">Je kunt slechts 2 ringen tegelijk dragen.</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
+    <string name="Ring_Name">ring van %s</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="Roar_Name">Brul</string>
     <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
@@ -2039,6 +2041,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
