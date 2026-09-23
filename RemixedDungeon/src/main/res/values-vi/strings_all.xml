@@ -438,6 +438,7 @@
     <string name="ElvenDagger_Name">dao gỗ yêu tinh</string>
     <string name="EncumbranceBuff_CharAct_1">Tôi không đủ sức để sử dụng %s đúng cách.</string>
     <string name="EncumbranceBuff_CharAct_2">Cái %s này quá nặng để tôi có thể sử dụng hiệu quả.</string>
+    <string name="EncumbranceBuff_CharAct_3">Tôi cần rèn luyện sức mạnh trước khi có thể sử dụng %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Tôi thiếu sức mạnh để sử dụng %s với đầy đủ tiềm năng của nó.</string>
     <string name="EncumbranceBuff_Name">Gánh nặng</string>
     <string name="EnslavedSoul_Desc">Bạn gần như có thể nhìn xuyên qua bóng ma này. Và mặc dù nó trông giống một chiếc hộp sọ, đôi khi trong tích tắc một khuôn mặt hiện ra, ngập tràn đau đớn và khổ sở.</string>
@@ -1097,6 +1098,7 @@
     <string name="ScarecrowNPC_Name">bù nhìn</string>
     <string name="ScarecrowNPC_Name_Objective">ngáo</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">Xin chào cô bé, cháu thế nào rồi?\nTa có một điều thú vị dành cho cháu!\n\nÔi ta sẽ biết ơn biết bao,\nNếu cháu đi thu thập kẹo cho ta!\n\n</string>
     <string name="Scorpio_Desc">Những sinh vật ác quỷ khổng lồ giống nhện này né tránh chiến đấu cận chiến bằng mọi giá, bắn ra những gai răng cưa làm tê liệt từ khoảng cách xa.</string>
     <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name_Objective">bọ cạp</string>
@@ -1749,6 +1751,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

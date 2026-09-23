@@ -1668,6 +1668,7 @@
     <string name="WndStory_Guts">Verslagen, verstrooid in stukken, maar niet volledig vernietigd, werd de Oude God verzegeld in de diepste niveaus van de kerker. Maar onlangs werd het zegel gebroken, waardoor de toegang tot de demonenhoeve wijd open stond. De nachtmerrieachtige monsters, geschapen door de Oude God in zijn slummer, waren zo talrijk dat, zonder een manier om te vluchten, ze gedwongen waren om met elkaar te smelten en deze gruwelijke hallen te vormen. En terwijl je over hun levende vlees loopt, kun je de klop van een Ouds Gods hart door hen heen voelen.</string>
     <string name="WndStory_Sewers">Het riool ligt direct onder de stad; de bovenste niveaus vormen feitelijk het rioolsysteem van de stad. Omdat ze formeel deel uitmaken van de stad, zijn deze niveaus niet zo gevaarlijk. Niemand zou ze veilig noemen, maar je hoeft hier in elk geval niet veel kwade magie te verwachten.</string>
     <string name="WndStory_Spiders">Vele, vele jaren geleden was er een rijke mijn, vol magische steen. Maar toen de mineraaladers opdroogden, trokken de mijnwerkers weg, waardoor een breed netwerk van tunnels achterbleef. Uiteindelijk werd deze plek bevolkt door spinnen. Maar zelfs deze gevaarlijke wezens, die in het donker loerden, waren niet genoeg om de dappere en krankzinnige schattenjagers af te schrikken. Want de schaal van gevaar is altijd evenredig met de hoeveelheid geruchten over magische artefacten. Op een dag dwaalde een boze heks de tunnels in, op de vlucht voor vervolgers. Maar bijgelovige mensen durfden de duisternis niet te betreden. Dus besloten ze te wachten. Maar ze kwam nooit meer tevoorschijn. Misschien vond de heks een andere uitweg, misschien slaagde ze erin langs de bewakers te glippen... of ze stierf, omringd door het geruis van de wezens van het duister.</string>
+    <string name="WndTilesKind_ClassicLook">Klassiek uiterlijk</string>
     <string name="WndTilesKind_NewLook">Nieuwe look</string>
     <string name="WndTilesKind_Title">Nog één ding:</string>
     <string name="WndTradeItem_Bought">Je hebt %1$s gekocht voor %2$dg</string>
@@ -1696,6 +1697,7 @@
     <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">wraith</string>
+    <string name="WrnExperimental_moveTimeout">Beweegtijd ingesteld op %d milliseconden, denk snel!</string>
     <string name="WrnExperimental_realtime">De real-time modus is geactiveerd: dit is nu een real-time roguelike, tik snel of sterf.\nWil je je inventaris controleren?\nVeel succes daarbij terwijl de rioolkrab je ingewanden bekijkt.</string>
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
     <string name="Yog_Desc">Yog-Dzewa is een Oude God, een machtige entiteit uit de rijken van chaos. Een eeuw geleden wonnen de oude dwergen ternauwernood de oorlog tegen zijn leger van demonen, maar waren niet in staat de god zelf te doden. In plaats daarvan sloten ze hem op in de zalen onder hun stad, overtuigd dat hij te zwak was om ooit weer op te staan.</string>
@@ -2031,6 +2033,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
