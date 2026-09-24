@@ -516,6 +516,7 @@
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
     <string name="FuryBuff_Name">Woede</string>
+    <string name="GameScene_Grass">De geur van vegetatie hangt zwaar in de lucht.</string>
     <string name="GameScene_NightMode">Wees voorzichtig, de kerker is \'s nachts nog gevaarlijker!</string>
     <string name="GameScene_Welcome">Welkom op niveau %d van Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Welkom terug op niveau %d van Remixed Dungeon!</string>
@@ -770,6 +771,7 @@
     <string name="Level_TileGrippingTrap">Klemval</string>
     <string name="Level_TileHighGrass">Hoog gras</string>
     <string name="Level_TileInactiveTrap">Geactiveerde val</string>
+    <string name="Level_TileLightningTrap">Bliksemval</string>
     <string name="Level_TileLockedDoor">Gesloten deur</string>
     <string name="Level_TileLockedExit">Vergrendelde uitgang naar de diepte</string>
     <string name="Level_TileOpenDoor">Open deur</string>
@@ -2041,6 +2043,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

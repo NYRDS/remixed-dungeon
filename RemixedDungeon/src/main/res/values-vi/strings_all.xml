@@ -115,6 +115,7 @@
     <string name="Badges_ShadowLord_Slain">Chúa Tể Bóng Tối đã bị tiêu diệt</string>
     <string name="Badges_SpiderQueen_Slain">Nữ hoàng Nhện đã bị tiêu diệt</string>
     <string name="Badges_StrengthAttained1">Đạt 13 điểm Sức mạnh</string>
+    <string name="Badges_StrengthAttained3">17 điểm Sức mạnh đạt được</string>
     <string name="Badges_StrengthAttained4">Đạt 19 điểm Sức mạnh</string>
     <string name="Badges_Supporter">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="Badges_ThisIsSparta">Đây là Sparta!!!</string>
@@ -257,6 +258,7 @@
     <string name="ChaosCrystal_Info_1">Sức mạnh hỗn loạn chảy qua viên tinh thể này. Có lẽ nó có ích.</string>
     <string name="ChaosCrystal_Name">Huyền Tinh Kỳ Lạ</string>
     <string name="ChaosCrystal_Name_2">Viên Ngọc Hỗn Mang</string>
+    <string name="ChaosCrystal_SelectForFuse">Chọn vật phẩm để hợp nhất Tinh thể Hỗn loạn</string>
     <string name="ChaosCrystal_StaffFused">Viên ngọc hấp thụ cây đũa phép của bạn và biến thành hình dạng một Cây Gậy</string>
     <string name="ChaosCrystal_SwordFused">Kính hấp thụ vũ khí của bạn và biến thành một Chiếc Kiếm</string>
     <string name="ChaosCrystal_Use">DÙNG</string>
@@ -1759,6 +1761,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
