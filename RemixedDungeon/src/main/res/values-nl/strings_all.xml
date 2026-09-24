@@ -1279,6 +1279,7 @@
     <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
     <string name="SpeedBuff_Name">Snelheid</string>
+    <string name="SpellBook_Info">Het lijkt meer op een verzameling van verschillende pagina\'s die aan elkaar zijn genaaid, dan op een echt boek. Je zou er misschien iets van kunnen maken als je er genoeg aandacht aan besteedt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
     <string name="SpellBook_Name">Toverboek</string>
     <string name="Spell_SelectACell">Selecteer een doelcel.</string>
@@ -1789,6 +1790,7 @@
     <string name="town_deco_fireplace_name">Open haard</string>
     <string name="town_deco_firewood_desc">Een onmisbaar ding bij zulke streng vorst.</string>
     <string name="town_deco_floor_desc">Deze vloer is gemaakt van eenvoudige houten planken. Wat zoek je precies?</string>
+    <string name="town_deco_floor_name">Vloer</string>
     <string name="town_deco_flowerinthepot_desc">Decoratieve bloem met een zoete smaak</string>
     <string name="town_deco_flowerinthepot_name">Bloem in een pot</string>
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
@@ -2048,6 +2050,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

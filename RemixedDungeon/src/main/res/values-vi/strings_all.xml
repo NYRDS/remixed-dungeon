@@ -299,6 +299,7 @@
     <string name="Char_StaSlowed">bị làm chậm</string>
     <string name="Char_StaStunned">choáng váng</string>
     <string name="Char_StaVision">tầm nhìn</string>
+    <string name="Char_Stole_0">%1 đã trộm %2 từ %3!</string>
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
     <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
     <string name="CharmBuff_Info">Tâm trí và cơ thể đã bị mê hoặc!</string>
@@ -1765,6 +1766,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
