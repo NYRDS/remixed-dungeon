@@ -463,6 +463,7 @@
     <string name="Dungeon_saveIoError">Bij het proberen een opslagbestand aan te maken:</string>
     <string name="DwarfToken_Name">dwerg-teken</string>
     <string name="EarthElemental_Gender">masculine</string>
+    <string name="EarthElemental_Name">aarde-elementaal</string>
     <string name="EarthElemental_Name_Objective">aardelementaal</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="ElfArmor_ACSpecial">ROEP VAN DE NATUUR</string>
@@ -690,6 +691,7 @@
     <string name="InnKeeperNPC_Name_Objective">herbergier</string>
     <string name="InnServant_Phrase_1">Bah, nog zoveel te doen!</string>
     <string name="InnServant_Phrase_2">Deze dronken drijft me in de waanzin!</string>
+    <string name="InnServant_Phrase_3">Het ziet er schoon uit voor mij</string>
     <string name="InnServant_Phrase_4">Oh jee, zoveel gasten vandaag!</string>
     <string name="Instability_Name_2">Instabiel %s</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
@@ -1004,6 +1006,7 @@
     <string name="PotionOfMight_Name">Drankje van Kracht</string>
     <string name="PotionOfMindVision_Apply1">Je kunt op een of andere manier de aanwezigheid van andere wezens\' geesten voelen!</string>
     <string name="PotionOfMindVision_Apply2">Je kunt op de een of andere manier voelen dat je op dit moment alleen bent op dit level.</string>
+    <string name="PotionOfMindVision_Info">Na het drinken hiervan wordt je geest afgestemd op de psychische signatuur van verre wezens, waardoor je levende organismen door muren heen kunt voelen. Ook stelt dit drankje je in staat om door nabijgelegen muren en deuren heen te kijken.</string>
     <string name="PotionOfMindVision_Name">Drank van Geestesblik</string>
     <string name="PotionOfParalyticGas_Info">Bij blootstelling aan open lucht verdampt de vloeistof in deze fles tot een benauwende gele nevel. Wie de wolk inademt, wordt onmiddellijk ge paralyseerd, en kan een tijdje niet bewegen nadat de wolk is verdampt. Dit item kan op verafstaande vijanden worden gegooid om hen in het effect van de gas te betrekken.</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
@@ -2050,6 +2053,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
