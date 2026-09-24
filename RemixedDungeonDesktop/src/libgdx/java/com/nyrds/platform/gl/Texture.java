@@ -34,6 +34,98 @@ public class Texture {
 	// Static flag to control whether bitmap data should be disposed after upload
 	private static boolean autoDisposeBitmapData = true;
 
+	// GL id lifecycle counters for leak debugging. Visible via the debug web
+	// server: luajava.bindClass("com.nyrds.platform.gl.Texture"):glStats()
+	// gen-del == live GL texture ids (grows forever => a delete() path is missed).
+	private static volatile int genCount = 0;
+	private static volatile int delCount = 0;
+
+	// live GL id -> gen-site stack, insertion(=age)-ordered; leakProbe() dumps
+	// the oldest live ids, which is where a missed delete() shows up first
+	private static final java.util.Map<Integer, String> liveIds = new java.util.LinkedHashMap<>();
+
+	// epoch = number of TextureCache.clear() calls; ids stamped with an older
+	// epoch than the current one have survived a full cache clear => leaked
+	private static volatile int cacheClears = 0;
+
+	public static void noteCacheClear() {
+		cacheClears++;
+	}
+
+	// GL ids of textures garbage-collected without delete(). TextureCache.clear
+	// releases ownership of textures that live sprites may still re-bind; when
+	// such a sprite later dies its texture is unreachable unmanaged, so nothing
+	// would ever glDeleteTextures its id. The queue is drained on the GL thread
+	// at the next bind() - a missed delete costs one frame, not forever.
+	private static final java.util.Queue<Integer> orphanedIds = new java.util.concurrent.ConcurrentLinkedQueue<>();
+
+	@Override
+	protected void finalize() throws Throwable {
+		if (id != -1) {
+			orphanedIds.add(id);
+			id = -1;
+		}
+		super.finalize();
+	}
+
+	private static void drainOrphanedIds() {
+		Integer orphan;
+		while ((orphan = orphanedIds.poll()) != null) {
+			if (liveIds.remove(orphan) != null) {
+				Gdx.gl20.glDeleteTexture(orphan);
+				delCount++;
+			}
+		}
+	}
+
+	public static String glStats() {
+		return "gen=" + genCount + " del=" + delCount + " live=" + (genCount - delCount);
+	}
+
+	public boolean debugHasLiveGlId() {
+		return id != -1;
+	}
+
+	public static String leakProbe() {
+	    java.util.Map<String, Integer> bySite = new java.util.LinkedHashMap<>();
+	    int leaked = 0;
+	    for (String entry : liveIds.values()) {
+	        int sep = entry.indexOf('|');
+	        int epoch = Integer.parseInt(entry.substring(0, sep));
+	        if (epoch == cacheClears) {
+	            continue; // generated in the current epoch: normal scene content
+	        }
+	        leaked++;
+	        int sep2 = entry.indexOf('|', sep + 1);
+	        String dims = entry.substring(sep + 1, sep2);
+	        String site = dims + " @ " + entry.substring(sep2 + 1);
+	        Integer c = bySite.get(site);
+	        bySite.put(site, c == null ? 1 : c + 1);
+	    }
+	    StringBuilder sb = new StringBuilder("live=").append(liveIds.size())
+	            .append(" leaked=").append(leaked).append(';');
+	    int n = 0;
+	    for (java.util.Map.Entry<String, Integer> e : bySite.entrySet()) {
+	        if (n++ >= 12) break;
+	        sb.append("\n").append(e.getValue()).append("x: ").append(e.getKey());
+	    }
+	    return sb.toString();
+	}
+
+	// creation-site stack of this texture: identifies who constructed a
+	// texture whose GL id leaked (string survives the owner's GC)
+	private final String createdAt = captureCreationSite();
+
+	private static String captureCreationSite() {
+		StackTraceElement[] st = new Throwable().getStackTrace();
+		StringBuilder sb = new StringBuilder();
+		for (int i = 2; i < Math.min(st.length, 8); i++) {
+			sb.append(st[i].getClassName()).append('.').append(st[i].getMethodName())
+					.append(':').append(st[i].getLineNumber()).append(" <- ");
+		}
+		return sb.toString();
+	}
+
 	public Texture() {
 		// Texture generation is deferred until bind() is called
 	}
@@ -44,11 +136,20 @@ public class Texture {
 	}
 
 	public void bind() {
+		drainOrphanedIds();
 		if (id == -1) {
 			id = Gdx.gl20.glGenTexture();
 			if (id == 0) {
 				throw new AssertionError();
 			}
+			genCount++;
+			StackTraceElement[] st = new Throwable().getStackTrace();
+			StringBuilder sb = new StringBuilder();
+			for (int i = 1; i < Math.min(st.length, 11); i++) {
+				sb.append(st[i].getClassName()).append('.').append(st[i].getMethodName())
+				  .append(':').append(st[i].getLineNumber()).append(" <- ");
+			}
+			liveIds.put(id, cacheClears + "|" + width + "x" + height + "|" + sb);
 		}
 
 		if (bound[active] != id) {
@@ -171,7 +272,9 @@ public class Texture {
 	public void delete() {
 		if (id != -1) {
 			Gdx.gl20.glDeleteTexture(id);
+			liveIds.remove(id);
 			id = -1;
+			delCount++;
 			dataDirty = true; // Mark data as dirty to regenerate on next bind()
 		}
 	}

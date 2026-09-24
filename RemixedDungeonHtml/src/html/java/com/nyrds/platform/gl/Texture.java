@@ -252,4 +252,23 @@ public class Texture {
     public static boolean getAutoDisposeBitmapData() {
         return autoDisposeBitmapData;
     }
+	/**
+	 * Epoch hook used by TextureCache leak debugging; html has no GL counters.
+	 */
+	public static void noteCacheClear() {
+	}
+
+	public boolean debugHasLiveGlId() {
+		return false;
+	}
+
+	/**
+	 * Terminal release of the upload bitmap; mirrors the desktop variant.
+	 */
+	public void releaseBitmapData() {
+		if (pixmap != null) {
+			pixmap.dispose();
+			pixmap = null;
+		}
+	}
 }

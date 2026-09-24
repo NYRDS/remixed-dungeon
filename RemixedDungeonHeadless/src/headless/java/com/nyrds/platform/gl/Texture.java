@@ -89,6 +89,14 @@ public class Texture {
 	 * Terminal release of the upload bitmap; mirrors the desktop variant.
 	 * Call only when the texture is being discarded, not on reversible delete().
 	 */
+	public static void noteCacheClear() {
+		// no GL in headless; epoch hook for Texture leakProbe parity
+	}
+
+	public boolean debugHasLiveGlId() {
+		return false;
+	}
+
 	public void releaseBitmapData() {
 		if (bitmapData != null) {
 			if (autoDisposeBitmapData) {
