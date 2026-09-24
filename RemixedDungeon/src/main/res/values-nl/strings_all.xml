@@ -577,6 +577,7 @@
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">De punt van deze pijl is bedekt met een genezende drank.</string>
     <string name="HealthDart_Gender">masculine</string>
+    <string name="HealthDart_Name">Genezing dart</string>
     <string name="Heap_Mimic">Dit is een mimic!</string>
     <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Het zwart pulserende hart van de Bedrieglijke Geest.</string>
@@ -1827,6 +1828,7 @@
     <string name="town_deco_pole_name">Paaltje</string>
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_poster_desc">Flyers voor de aankondiging van komende filmvoorstellingen.</string>
+    <string name="town_deco_rope_desc">Met de hand gedraaid touw.</string>
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_rug_name">kleed</string>
     <string name="town_deco_screen_desc">Dit mysterieuze doek heet een \&quot;scherm\&quot; en kan bewegende beelden tonen</string>
@@ -2058,6 +2060,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

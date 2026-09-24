@@ -1019,6 +1019,7 @@
     <string name="RatArmor_Info">Bộ giáp da làm từ da chuột. Nó có lẽ không truyền nhiễm...</string>
     <string name="RatArmor_Name">giáp chuột</string>
     <string name="RatHide_Name">da chuột</string>
+    <string name="RatKingCrownBuff_Name">Chuột tính</string>
     <string name="RatKingCrown_Name">Mũ Vua Chuột</string>
     <string name="RatKing_Died">Vua đã chết. Chúc Vua vạn tuế!</string>
     <string name="RatKing_Gender">masculine</string>
@@ -1675,6 +1676,7 @@
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
     <string name="town_deco_common_bed_desc">Giường bình thường.</string>
     <string name="town_deco_common_door_desc">Một phiêu lưu gia có nhân cách không nên xâm phạm tài sản riêng tư, nếu không được mời.</string>
+    <string name="town_deco_common_door_name">Cửa</string>
     <string name="town_deco_counter_desc">Giữ khoảng cách hợp lý giữa bạn và người đứng phía sau nó.</string>
     <string name="town_deco_counter_name">Quầy</string>
     <string name="town_deco_crate_bottles_desc">Chai bia đã trở thành một sở thích rất phổ biến giữa các chủ quán rượu.</string>
@@ -1769,9 +1771,13 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_chair_desc">Chiếc ghế này được làm từ gỗ</string>
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
+    <string name="town_deco_wooden_drawer_name">Ngăn kéo gỗ</string>
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
