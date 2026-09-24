@@ -92,8 +92,8 @@ public class Texture {
 	    for (String entry : liveIds.values()) {
 	        int sep = entry.indexOf('|');
 	        int epoch = Integer.parseInt(entry.substring(0, sep));
-	        if (epoch == cacheClears) {
-	            continue; // generated in the current epoch: normal scene content
+	        if (cacheClears - epoch < 3) {
+	            continue; // young enough to still be pending normal reuse
 	        }
 	        leaked++;
 	        int sep2 = entry.indexOf('|', sep + 1);
