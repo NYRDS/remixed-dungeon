@@ -40,7 +40,7 @@ if ! echo "$*" | grep -q -- '--\(windowed\|fullscreen\|minimized\)'; then
 fi
 
 exec "$APPDIR/jdk/bin/java" \
-  -Xms64m -Xmx512m \
+  -Xms64m -Xmx512m -XX:+UseSerialGC \
   --add-opens java.base/java.util=ALL-UNNAMED \
   -Dassets.dir="$APPDIR/mods/Remixed" \
   -Duser.home="$HOME" \
