@@ -1,9 +1,12 @@
 package com.nyrds.platform.gfx;
 
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
+import com.badlogic.gdx.graphics.g2d.PixmapPacker;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
 import com.nyrds.pixeldungeon.game.GamePreferences;
@@ -173,9 +176,20 @@ public class SystemText extends SystemTextBase {
         BitmapFont font;
         synchronized (fontCache) {
             if (!fontCache.containsKey(fontKey)) {
-                fontParameters.packer = null; // Use default packer for real font generation
+                fontParameters.packer = newFontPacker(fontParameters);
                 adjustFontParams();
-                fontCache.put(fontKey, activeGenerator.generateFont(fontParameters));
+                BitmapFont newFont = activeGenerator.generateFont(fontParameters);
+                // pixels are in the page textures now; gdx keeps page pixmaps forever
+                // for incremental re-upload - ~1-4MB native each, x many cached fonts.
+                // on context loss create()/onResume rebuild everything via invalidate()
+                for (PixmapPacker.Page page : fontParameters.packer.getPages()) {
+                    Pixmap pixmap = page.getPixmap();
+                    if (pixmap != null) {
+                        pixmap.dispose();
+                    }
+                }
+                fontParameters.packer = null;
+                fontCache.put(fontKey, newFont);
             }
             font = fontCache.get(fontKey);
         }
@@ -275,6 +289,19 @@ public class SystemText extends SystemTextBase {
         return false;
     }
 
+    // gdx's self-made page is next-pow2(sqrt(lineHeight^2 * chars)) which
+    // overshoots narrow-glyph fonts 2-4x; tight 512 pages hold the same pixels
+    private static PixmapPacker newFontPacker(FreeTypeFontParameter params) {
+        PixmapPacker packer = new PixmapPacker(512, 512, Pixmap.Format.RGBA8888, 1, false, new PixmapPacker.SkylineStrategy());
+        packer.setTransparentColor(params.color);
+        packer.getTransparentColor().a = 0;
+        if (params.borderWidth > 0) {
+            packer.setTransparentColor(params.borderColor);
+            packer.getTransparentColor().a = 0;
+        }
+        return packer;
+    }
+
     public static void invalidate() {
         if (pixelGenerator != null) pixelGenerator.dispose();
         if (fallbackGenerator != null) fallbackGenerator.dispose();
@@ -285,6 +312,11 @@ public class SystemText extends SystemTextBase {
         synchronized (fontCache) {
             for (BitmapFont font : fontCache.values()) {
                 font.dispose();
+                // packer-made fonts own no textures (ownsTexture=false), dispose here
+                // so the GL ids leave gdx's managed-registry cleanly
+                for (TextureRegion region : font.getRegions()) {
+                    region.getTexture().dispose();
+                }
             }
             fontCache.clear();
         }

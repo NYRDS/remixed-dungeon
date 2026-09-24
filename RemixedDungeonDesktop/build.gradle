@@ -21,7 +21,9 @@ project.ext {
 // default JVM heap on big-RAM boxes: G1 commits ~200MB during decode churn and
 // glibc arenas churn ~100MB+ - desktop levelsTest RSS plateau ~590MB default vs
 // ~340MB with these flags (soaks 2026-09-24); 512m covers the ~196MB heap peak.
-def gameJvmOpts = ['-Xms64m', '-Xmx512m']
+// SerialGC: G1 bookkeeping alone commits ~73MB on many-core boxes (~1MB on Serial),
+// young pauses are 1-frame on a 60MB live set - fine for a turn-based game
+def gameJvmOpts = ['-Xms64m', '-Xmx512m', '-XX:+UseSerialGC']
 // glibc arena/trim tuning, linux-only effect, inert env vars elsewhere
 def gameNativeEnv = [MALLOC_ARENA_MAX: '2', MALLOC_TRIM_THRESHOLD_: '262144', MALLOC_MMAP_THRESHOLD_: '65536']
 
