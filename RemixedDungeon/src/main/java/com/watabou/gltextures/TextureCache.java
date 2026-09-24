@@ -106,14 +106,47 @@ public class TextureCache {
 		}
 	}
 
+	// debug: size of `all` at the most recent clear(); visible via lua_eval
+	private static int lastClearSize = -1;
+	private static int lastClearLiveIds = -1;
+	private static int maxClearSize = -1;
+	private static int clearsTotal = 0;
+
+	public static int debugLastClearSize() {
+		return lastClearSize;
+	}
+
+	public static int debugLastClearLiveIds() {
+		return lastClearLiveIds;
+	}
+
+	public static int debugMaxClearSize() {
+		return maxClearSize;
+	}
+
+	public static int debugClearsTotal() {
+		return clearsTotal;
+	}
+
 	@Synchronized
 	public static void clear() {
+		Texture.noteCacheClear();
+		clearsTotal++;
+		lastClearSize = all.size();
+		if (all.size() > maxClearSize) {
+			maxClearSize = all.size();
+		}
+		int liveIds = 0;
 		for (SmartTexture txt : all.values()) {
+			if (txt.debugHasLiveGlId()) {
+				liveIds++;
+			}
 			txt.delete();
 			// terminal drop of the cache reference - free the upload pixmap of
 			// any texture that was never bound (dispose-on-bind never ran)
 			txt.releaseBitmapData();
 		}
+		lastClearLiveIds = liveIds;
 		all.clear();
 		allFilm.clear();
 	}
