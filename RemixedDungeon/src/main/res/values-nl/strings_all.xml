@@ -111,6 +111,7 @@
     <string name="Badges_ItemLvl3">Item van niveau 9 verkregen</string>
     <string name="Badges_ItemLvl4">Item van niveau 12 verkregen</string>
     <string name="Badges_ItemLvl5">Item van niveau 15 verkregen</string>
+    <string name="Badges_LevelReached1">Niveau 6 bereikt</string>
     <string name="Badges_LevelReached5">Niveau 30 bereikt</string>
     <string name="Badges_Lich_Slain">Lich gedood</string>
     <string name="Badges_MonsterSlain1">10 vijanden gedood</string>
@@ -749,6 +750,7 @@
     <string name="LastShopLevel_TileDescExit">Een helling leidt naar beneden in de hel.</string>
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
     <string name="LastShopLevel_TileWater">Verdacht gekleurd water</string>
+    <string name="LeatherArmor_Desc">Pantser gemaakt van gelooide monsterhuid. Niet zo licht als stoffen pantser, maar biedt betere bescherming.</string>
     <string name="LeatherArmor_Name">leren harnas</string>
     <string name="Leech_Name_2">Vampier %s</string>
     <string name="Level_HiddenPlate">Een verborgen drukplaat klikt!</string>
@@ -2046,6 +2048,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

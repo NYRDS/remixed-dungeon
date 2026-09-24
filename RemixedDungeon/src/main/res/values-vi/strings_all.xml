@@ -349,6 +349,7 @@
     <string name="CompoundBow_Info">Các mũi tên bắn từ cây cung hợp kim này gây sát thương lớn và có độ chính xác tốt hơn cung gỗ, đổi lại là phần nào chậm hơn.</string>
     <string name="CompoundBow_Name">cung ghép</string>
     <string name="ConcreteBlock_Description">Có vẻ khối này cần %d điểm sức mạnh để đẩy</string>
+    <string name="CorpseDustBuff_Info">Các đòn tấn công tăng mạnh đối với những kẻ đầy khát máu, khiến chúng đặc biệt nguy hiểm.</string>
     <string name="CorpseDust_Info">Quả bóng bụi xác chết không khác gì quả bóng bụi thường về bề ngoài. Tuy nhiên, bằng cách nào đó bạn biết rằng tốt nhất nên loại bỏ nó càng sớm càng tốt.</string>
     <string name="CorpseDust_Info2">Có lẽ vì chỉ cầm nó trong tay thôi đã khiến bạn cảm thấy lo lắng và giận dữ.</string>
     <string name="CorpseDust_Name">bụi xác</string>
@@ -1222,6 +1223,7 @@
     <string name="Snail_Name">ốc sên</string>
     <string name="SnipersMarkBuff_Info">Dấu ấn này được tạo ra bởi một xạ thủ.</string>
     <string name="SnipersMarkBuff_Name">Dấu ấn xạ thủ</string>
+    <string name="SociologistNPC_Desc">Nhà xã hội học này đang trên một nhiệm vụ thiêng liêng thu thập ý kiến công chúng</string>
     <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
     <string name="Sorrowmoss_Name">Rêu Buồn</string>
@@ -1763,6 +1765,8 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
