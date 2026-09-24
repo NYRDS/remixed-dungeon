@@ -1067,6 +1067,7 @@
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Gems_11">mã não</string>
     <string name="Ring_Gems_2">garnet</string>
+    <string name="Ring_Gems_4">thạch anh tím</string>
     <string name="Ring_Gems_7">tourmalin</string>
     <string name="Ring_Gems_9">lam ngọc</string>
     <string name="Ring_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
@@ -1767,8 +1768,11 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_chair_desc">Chiếc ghế này được làm từ gỗ</string>
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
+    <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

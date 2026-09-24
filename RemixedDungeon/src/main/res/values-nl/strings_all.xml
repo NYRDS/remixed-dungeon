@@ -515,6 +515,7 @@
     <string name="FrostAuraBuff_Info">Vorst omringt het lichaam, wat alles in de buurt vertraagt.</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="Frost_Shatter">De koude doet %s barsten!</string>
+    <string name="FrozenCarpaccio_Info1">Je ziet je handen onzichtbaar worden!</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
     <string name="FrozenCarpaccio_Info3">Verversend!</string>
     <string name="FrozenCarpaccio_Name">bevroren carpaccio</string>
@@ -968,6 +969,7 @@
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Hoest hevig* Hatsjoe!\n De slakken... ze glijden. Ze slijmen. En ze fluisteren geheimen van een vergeten eeuw. Ik heb ze nodig, _tien_ van hen, hun schillen nog intact. Denk je dat slechts _vijftig goudmunten_ genoeg is voor zulke kostbare kennis?\n Bah! Maakt niet uit. De informatie die ze bergen kan de sleutel zijn om deze pest te stoppen. Of... het kan ons leiden tot iets nog vreselijker. Jij beslist.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
+    <string name="PlagueDoctorQuest_2_2_Prologue">  Ah, _zonnekruid_! Een delicate bloem, haar bloemblaadjes stralen de warmte van de zon uit. Ik geloof dat haar essentie de sleutel bevat tot... ah, vergeet de details voor nu. Het volstaat te zeggen dat het cruciaal is voor mijn onderzoek. _Twee zonnekruidzaden_. Haal ze voor mij, en ik zal je belonen met iets dat zeker van pas zal komen op je avonturen - een _Drankje van Gezondheid_, bruisend van de vitaliteit van de zon.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Breng me een _vampier vleermuis_, levend en onbeschadigd! Haar bloed, haar vleugels… ze bevatten geheimen die ik moet onthullen!</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Dit is geen enkel beest! Het is een levend getuigenis van nekromantische kracht! Vang er eentje, levend en onbeschadigd! Deze _Doodsridder_… hij is de sleutel!</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Schitterend! Vijf _Kobold Ijsmagiers_, hun ijzige essentie nu van mij om te onderzoeken! Hun verbinding met de bevroren woestenijen, het is werkelijk fascinerend. De manier waarop ze water zelf manipuleren… werkelijk opmerkelijk. *Hij overhandigt je een flonkerende fiool gevuld met een levendige karmozijnrode vloeistof* Dit, is voor je dappere inspanningen: een _Drankje van Kracht_! Drink diep en voel de kracht van tien krijgers door je aderen stromen! Onthoud, kennis is macht… en macht is het enige wapen dat we hebben tegen de naderende duisternis. Nu… laten we deze ijzige zielen ontleden en hun ijzige geheimen onthullen!</string>
@@ -2054,6 +2056,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
