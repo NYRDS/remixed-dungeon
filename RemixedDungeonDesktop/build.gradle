@@ -18,6 +18,26 @@ project.ext {
     version_code = versionProps['VERSION_CODE'].toInteger()
 }
 
+// default JVM heap on big-RAM boxes: G1 commits ~200MB during decode churn and
+// glibc arenas churn ~100MB+ - desktop levelsTest RSS plateau ~590MB default vs
+// ~340MB with these flags (soaks 2026-09-24); 512m covers the ~196MB heap peak.
+def gameJvmOpts = ['-Xms64m', '-Xmx512m']
+// glibc arena/trim tuning, linux-only effect, inert env vars elsewhere
+def gameNativeEnv = [MALLOC_ARENA_MAX: '2', MALLOC_TRIM_THRESHOLD_: '262144', MALLOC_MMAP_THRESHOLD_: '65536']
+
+// -Pargs support: plain `args = ...` inside a task closure silently writes the
+// Gradle SCRIPT's own args binding and never reaches the task - use setArgs()
+def cliAppArgs(String defaults) {
+    if (!project.hasProperty('args')) {
+        return defaults == null ? [] : defaults.split(' ') as List
+    }
+    def v = project.property('args')
+    if (v instanceof List) {
+        return v
+    }
+    return v.toString().split(' ') as List
+}
+
 java {
     sourceCompatibility = JavaVersion.VERSION_1_10
     targetCompatibility = JavaVersion.VERSION_1_10
@@ -59,6 +79,7 @@ tasks.register('webServerShadowJar', ShadowJar) {
 application {
     applicationName = 'RemixedDungeon-desktop'
     mainClass = 'com.nyrds.pixeldungeon.desktop.DesktopLauncher'
+    applicationDefaultJvmArgs = ['--add-opens', 'java.base/java.util=ALL-UNNAMED', '-Dhttps.protocols=TLSv1.2'] + gameJvmOpts
 
     sourceSets {
         main {
@@ -85,7 +106,8 @@ tasks.register('quickModTest', JavaExec) {
         args project.args.split(',')
     }
 
-    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"] + gameJvmOpts
+    environment gameNativeEnv
 }
 
 
@@ -100,9 +122,10 @@ tasks.register('runModForTurns', JavaExec) {
     def modName = project.hasProperty('mod') ? project.property('mod') : 'Remixed'
     def turns = project.hasProperty('turns') ? project.property('turns') : '0'  // 0 means run indefinitely
 
-    args = ["--mod", modName, "--turns", turns.toString()]
+    setArgs(["--mod", modName, "--turns", turns.toString()])
 
-    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"] + gameJvmOpts
+    environment gameNativeEnv
 
     // Set working directory to rundir to ensure proper asset access
     workingDir = file('src/desktop/rundir')
@@ -115,14 +138,10 @@ tasks.register('runWebServer', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 
     // Set default arguments if not provided
-    if (project.hasProperty('args')) {
-        // When using --args, Gradle passes the arguments properly
-        args project.property('args').toString().split(' ') as List<String>
-    } else {
-        args = ['--webserver=8082', '--mod=Remixed']
-    }
+    setArgs(cliAppArgs('--webserver=8082 --mod=Remixed'))
 
-    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"] + gameJvmOpts
+    environment gameNativeEnv
 
     // Set working directory to rundir to ensure proper asset access
     workingDir = file('src/desktop/rundir')
@@ -134,7 +153,8 @@ tasks.register('runAlchemyWindow', JavaExec) {
     mainClass = 'com.nyrds.pixeldungeon.desktop.AlchemyWindowLauncher'
     classpath = sourceSets.main.runtimeClasspath
 
-    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"] + gameJvmOpts
+    environment gameNativeEnv
 
     // Set working directory to rundir to ensure proper asset access
     workingDir = file('src/desktop/rundir')
@@ -147,11 +167,10 @@ tasks.register('runDesktopGame', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 
     // Allow passing arguments to the application
-    if (project.hasProperty('args')) {
-        args = project.property('args').toString().split(' ')
-    }
+    setArgs(cliAppArgs(null))
 
-    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"] + gameJvmOpts
+    environment gameNativeEnv
 
     // Set working directory to rundir to ensure proper asset access
     workingDir = file('src/desktop/rundir')
@@ -167,13 +186,10 @@ tasks.register('runDesktopGameWithWebServer', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 
     // Set default arguments to start web server on port 8080
-    if (project.hasProperty('args')) {
-        args = project.property('args').toString().split(' ')
-    } else {
-        args = ['--webserver=8080']
-    }
+    setArgs(cliAppArgs('--webserver=8080'))
 
-    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"] + gameJvmOpts
+    environment gameNativeEnv
 
     // Set working directory to rundir to ensure proper asset access
     workingDir = file('src/desktop/rundir')
@@ -183,7 +199,8 @@ tasks.register('runDesktopGameWithWebServer', JavaExec) {
 }
 
 tasks.withType(JavaExec).configureEach {
-    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"] + gameJvmOpts
+    environment gameNativeEnv
 }
 
 tasks.register('codegen', Exec) {
@@ -383,7 +400,7 @@ launch4j {
     jvmOptions = [
             '--add-opens', 'java.base/java.util=ALL-UNNAMED',
             '-Dhttps.protocols=TLSv1.2'
-    ]
+    ] + gameJvmOpts
 }
 
 
@@ -574,7 +591,8 @@ tasks.register('generateSpritesFromFactories', JavaExec) {
     mainClass = 'com.nyrds.pixeldungeon.desktop.FactorySpriteGenerator'
     classpath = sourceSets.main.runtimeClasspath
 
-    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"] + gameJvmOpts
+    environment gameNativeEnv
 
     // Set working directory to rundir to ensure proper asset access
     workingDir = file('src/desktop/rundir')
@@ -586,7 +604,8 @@ tasks.register('testLuaScripts', JavaExec) {
     mainClass = 'com.nyrds.pixeldungeon.desktop.LuaScriptTester' // This class will need to be created
     classpath = sourceSets.main.runtimeClasspath
 
-    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"]
+    jvmArgs = ["--add-opens", "java.base/java.util=ALL-UNNAMED", "-Dhttps.protocols=TLSv1.2"] + gameJvmOpts
+    environment gameNativeEnv
 
     // Set working directory to rundir to ensure proper asset access
     workingDir = file('src/desktop/rundir')

@@ -6,6 +6,9 @@
 APPDIR="$(dirname "$(readlink -f "$0")")"
 export APPDIR
 
+# glibc arena/trim tuning: keeps native churn from ballooning RSS
+export MALLOC_ARENA_MAX=2 MALLOC_TRIM_THRESHOLD_=262144 MALLOC_MMAP_THRESHOLD_=65536
+
 # User data directory (saves, prefs, mods, logs)
 DATA_DIR="$HOME/.local/share/remixed-dungeon"
 mkdir -p "$DATA_DIR"
@@ -37,6 +40,7 @@ if ! echo "$*" | grep -q -- '--\(windowed\|fullscreen\|minimized\)'; then
 fi
 
 exec "$APPDIR/jdk/bin/java" \
+  -Xms64m -Xmx512m \
   --add-opens java.base/java.util=ALL-UNNAMED \
   -Dassets.dir="$APPDIR/mods/Remixed" \
   -Duser.home="$HOME" \
