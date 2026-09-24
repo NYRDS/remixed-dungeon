@@ -48,6 +48,7 @@ import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.XyzDungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -550,6 +551,7 @@ public class GameScene extends PixelScene {
     public void destroy() {
         sceneCreated = false;
         scene = null;
+        CharUtils.clearMarkers(); // markers pin destroyed-scene images if a scene swap interrupts targeting
         super.destroy();
     }
 

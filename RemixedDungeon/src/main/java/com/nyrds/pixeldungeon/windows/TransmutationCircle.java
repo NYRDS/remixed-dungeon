@@ -226,10 +226,28 @@ public class TransmutationCircle extends Image {
 
     private void updateTexture() {
         SmartTexture tex = generateAlchemyArray();
+        SmartTexture old = texture;
         texture(tex);
+        disposeTexture(old);
         setWidth(SIZE);
         setHeight(SIZE);
         frame(new RectF(0, 0, 1, 1));
+    }
+
+    // textures made here are NOT in TextureCache, nobody else deletes them
+    private static void disposeTexture(SmartTexture tex) {
+        if (tex != null) {
+            tex.delete();
+            if (tex.getBitmapData() != null) {
+                tex.getBitmapData().dispose();
+            }
+        }
+    }
+
+    @Override
+    public void destroy() {
+        super.destroy();
+        disposeTexture(texture);
     }
 
     private SmartTexture generateAlchemyArray() {

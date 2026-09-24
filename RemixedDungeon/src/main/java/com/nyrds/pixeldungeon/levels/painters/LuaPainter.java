@@ -16,6 +16,7 @@ import org.luaj.vm2.LuaValue;
 public class LuaPainter {
 
     private static final Map<String, LuaTable> luaPaintersCache = new HashMap<>();
+    private static int cacheGeneration = -1;
 
     /**
      * Static method to be called by the room type enum
@@ -64,6 +65,13 @@ public class LuaPainter {
      * Gets or creates a Lua painter from cache
      */
     private static LuaTable getOrCreateLuaPainter(String luaScriptName) {
+        // cached tables belong to a LuaEngine generation; after LuaEngine.reset()
+        // they pin the dead engine's Globals and serve stale module state
+        if (cacheGeneration != LuaEngine.getGeneration()) {
+            luaPaintersCache.clear();
+            cacheGeneration = LuaEngine.getGeneration();
+        }
+
         LuaTable cachedPainter = luaPaintersCache.get(luaScriptName);
 
         if (cachedPainter == null) {

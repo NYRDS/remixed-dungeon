@@ -64,6 +64,9 @@ public class LuaEngine implements ResourceFinder {
 
 	static private      LuaEngine engine              = new LuaEngine();
 
+	// bumped on reset(), lets static lua-table caches (LuaPainter) drop tables of the dead engine
+	static private volatile int generation;
+
     private final WeakHashMap<String, LuaTable> modules = new WeakHashMap<>();
     private final WeakHashMap<LuaScript, LuaTable> moduleInstance = new WeakHashMap<>();
 
@@ -74,6 +77,11 @@ public class LuaEngine implements ResourceFinder {
 	@Synchronized
 	public static void reset() {
 		engine = new LuaEngine();
+		generation++;
+	}
+
+	public static int getGeneration() {
+		return generation;
 	}
 
 	static public LuaValue call(String method) {

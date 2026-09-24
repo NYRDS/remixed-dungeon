@@ -102,6 +102,14 @@ public class SpellSprite extends Image {
 		super.kill();
 		all.remove( target );
 	}
+
+	// scene destroy never calls kill(), sprites mid-animation at a level swap
+	// would strand here pinning their target Char forever
+	@Override
+	public void destroy() {
+		super.destroy();
+		all.remove( target );
+	}
 	
 	public static void show( Char ch, int index ) {
 		

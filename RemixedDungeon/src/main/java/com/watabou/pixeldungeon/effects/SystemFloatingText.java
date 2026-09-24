@@ -43,6 +43,19 @@ public class SystemFloatingText extends SystemText {
 
 	@Override
 	public void kill() {
+		detachFromStack();
+		super.kill();
+	}
+
+	// scene destroy never calls kill(), texts in flight at a level swap
+	// would strand in the static stacks map forever
+	@Override
+	public void destroy() {
+		detachFromStack();
+		super.destroy();
+	}
+
+	private void detachFromStack() {
 		ArrayList<SystemFloatingText> stack = stacks.get(key);
 		if (stack != null) {
 			stack.remove(this);
@@ -51,7 +64,6 @@ public class SystemFloatingText extends SystemText {
 				stacks.remove(key);
 			}
 		}
-		super.kill();
 	}
 
 	public void reset(float x, float y, String text, int color) {

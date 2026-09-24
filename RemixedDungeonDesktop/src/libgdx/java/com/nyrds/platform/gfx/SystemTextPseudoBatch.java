@@ -7,13 +7,13 @@ import com.watabou.glwrap.Quad;
 import com.watabou.noosa.Visual;
 import java.nio.Buffer;
 import java.nio.FloatBuffer;
-import java.util.HashMap;
 
 
 public class SystemTextPseudoBatch extends PseudoBatch {
     public static SystemText textBeingRendered = null;
     private static final float[] vertices = new float[16];
-    private static final HashMap<Integer, FloatBuffer> buffers = new HashMap<>();
+    // one grow-only buffer: a buffer per distinct quad count accumulated native memory forever
+    private static FloatBuffer verticesBuffer = Quad.createSet(16);
 
     private static final Color tempColor = new Color();
 
@@ -22,15 +22,11 @@ public class SystemTextPseudoBatch extends PseudoBatch {
         Visual v = textBeingRendered;
 
         int quadCount = count / 20;
-        FloatBuffer verticesBuffer;
 
-        if (buffers.containsKey(quadCount)){
-            verticesBuffer = buffers.get(quadCount);
-            ((Buffer)verticesBuffer).position(0);
-        } else {
-            verticesBuffer = Quad.createSet(quadCount);
-            buffers.put(quadCount, verticesBuffer);
+        if (verticesBuffer.capacity() < quadCount * 16) {
+            verticesBuffer = Quad.createSet(quadCount * 2);
         }
+        ((Buffer)verticesBuffer).position(0);
 
         // This loop can remain as is, since we are sending the color via a uniform
         for (int i = 0; i < count; i += 20){
