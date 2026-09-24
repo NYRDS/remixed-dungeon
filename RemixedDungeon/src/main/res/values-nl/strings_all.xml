@@ -30,6 +30,7 @@
     <string name="AlarmTrap_Desc">De val laat een doordringend geluid horen dat door de hele dungeon weergalmt!</string>
     <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">albino rat</string>
+    <string name="Albino_Name_Objective">albino rat</string>
     <string name="AlchemyPot_SelectSeed">Selecteer een zaadje om te werpen</string>
     <string name="AllowStatisticsCollectionScene_Allow">Toestaan</string>
     <string name="AllowStatisticsCollectionScene_Deny">Weigeren</string>
@@ -2053,6 +2054,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

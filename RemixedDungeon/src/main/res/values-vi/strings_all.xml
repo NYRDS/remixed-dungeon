@@ -1213,6 +1213,7 @@
     <string name="ShortSword_Name">kiếm ngắn</string>
     <string name="ShortSword_NotBoomerang">bạn không thể nâng cấp bumerang theo cách này</string>
     <string name="Shuriken_Gender">masculine</string>
+    <string name="Shuriken_Info">Những mảnh kim loại hình sao với lưỡi dao sắc bén gây sát thương lớn cho mục tiêu. Chúng có thể được ném với tốc độ rất cao.</string>
     <string name="Shuriken_Name">shuriken</string>
     <string name="SkeletonKey_Info">Cái chìa khóa này trông rất nghiêm trọng: đầu nó được đúc hình cái sọ. Có lẽ nó có thể mở được cánh cửa quan trọng nào đó.</string>
     <string name="Skeleton_Gender">masculine</string>
@@ -1768,6 +1769,7 @@
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
