@@ -1364,6 +1364,7 @@
     <string name="SummonDeathling_Name">Doodswezen oproepen</string>
     <string name="Sungrass_Desc">Zonnegras staat bekend om de geneeskrachtige werking van zijn sap.</string>
     <string name="Sungrass_Name">zonnegras</string>
+    <string name="SurfaceScene_GameOver">Spel over</string>
     <string name="SuspiciousRat_Desc">Een rat is in de kerkers geen zeldzaamheid, maar dat er zo diep een woont... Je ziet hoe het hele lichaam van de rat spastisch beweegt wanneer hij beweegt.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
@@ -1762,6 +1763,7 @@
     <string name="town_deco_broken_roof_desc">De dakpannen op dit dak zijn gebarsten en moeten vervangen worden.</string>
     <string name="town_deco_broken_roof_name">kapot dak</string>
     <string name="town_deco_broken_wall_desc">De balken in deze muur zijn al lang verrot en hebben hun gewone weerstandskracht verloren.</string>
+    <string name="town_deco_broken_wall_name">Gebroken muur</string>
     <string name="town_deco_brown_carpet_desc">Deze bruine tapijt is onder voet getrapt door veel avonturiers, zwervers en toeschouwers.</string>
     <string name="town_deco_brown_carpet_name">Tapijt</string>
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
@@ -2056,6 +2058,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
