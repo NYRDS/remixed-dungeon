@@ -79,6 +79,7 @@ public class CharsList {
 
     static public void reset() {
         getCharsMap().clear();
+        destroyedChars.clear();
     }
 
     public static ConcurrentHashMap<Integer, Char> getCharsMap() {

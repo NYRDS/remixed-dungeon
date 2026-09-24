@@ -33,8 +33,28 @@ mob.init = function(desc)
 end
 
 local onDieCallbacks = {}
+local onDieCallbackSites = {}
 
-mob.installOnDieCallback = function(callback)
+-- npc scripts are dofile'd per spawn and install at module scope: dedup by
+-- call site (short_src:linedefined) so each site keeps one live callback
+-- instead of accumulating a fresh closure per spawn. Optional explicit key
+-- overrides the debug-derived one; without debug info falls back to set semantics.
+mob.installOnDieCallback = function(callback, key)
+    if key == nil then
+        local ok, info = pcall(function()
+            return debug.getinfo(callback, "S")
+        end)
+        if ok and type(info) == "table" and info.short_src ~= nil then
+            key = tostring(info.short_src) .. ":" .. tostring(info.linedefined)
+        end
+    end
+    if key ~= nil then
+        local prev = onDieCallbackSites[key]
+        if prev ~= nil then
+            onDieCallbacks[prev] = nil
+        end
+        onDieCallbackSites[key] = callback
+    end
     onDieCallbacks[callback] = true
 end
 

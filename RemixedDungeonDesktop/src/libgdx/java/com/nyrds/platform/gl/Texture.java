@@ -50,6 +50,23 @@ public class Texture {
 
 	public static void noteCacheClear() {
 		cacheClears++;
+		evictIdleIds();
+	}
+
+	// textures not re-bound for 3 cache-clear epochs are idle orphans (owner
+	// alive but no longer drawing them): delete their GL id. If the owner ever
+	// draws again, bind() regenerates - correctness preserved.
+	private static void evictIdleIds() {
+		java.util.Iterator<java.util.Map.Entry<Integer, String>> it = liveIds.entrySet().iterator();
+		while (it.hasNext()) {
+			java.util.Map.Entry<Integer, String> e = it.next();
+			int epoch = Integer.parseInt(e.getValue().substring(0, e.getValue().indexOf('|')));
+			if (cacheClears - epoch >= 3) {
+				Gdx.gl20.glDeleteTexture(e.getKey());
+				delCount++;
+				it.remove();
+			}
+		}
 	}
 
 	// GL ids of textures garbage-collected without delete(). TextureCache.clear
