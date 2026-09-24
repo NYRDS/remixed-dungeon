@@ -1149,6 +1149,7 @@
     <string name="ScrollOfUpgrade_Info">Cuộn giấy này sẽ nâng cấp một vật phẩm duy nhất, cải thiện chất lượng của nó. Một cây đũa phép sẽ tăng sức mạnh và số lượng điện tích; một vũ khí sẽ gây thêm sát thương hoặc tìm điểm yếu thường xuyên hơn; một bộ giáp sẽ đỡ thêm nhiều đòn; hiệu quả của chiếc nhẫn lên người đeo sẽ được tăng cường. Vũ khí và giáp cũng sẽ yêu cầu ít sức mạnh hơn để sử dụng, và mọi lời nguyền trên vật phẩm sẽ được hóa giải.</string>
     <string name="ScrollOfUpgrade_InvTitle">Chọn một vật phẩm để nâng cấp</string>
     <string name="ScrollOfWeaponUpgrade_Info">Cuộn này sẽ nâng cấp một vũ khí cận chiến, cải thiện chất lượng của nó. Khác với Cuộn Nâng Cấp thông thường, phiên bản chuyên biệt này sẽ không bao giờ phá hủy phép thuật đang có trên vũ khí. Ngược lại, nó có thể phù phép ngẫu nhiên cho một vũ khí chưa có phép thuật.</string>
+    <string name="ScrollOfWeaponUpgrade_InvTitle">Chọn vũ khí để nâng cấp</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="ScrollOfWeaponUpgrade_Name">Cuộn Nâng Cấp Vũ Khí</string>
     <string name="Scroll_ACRead">ĐỌC</string>
@@ -1362,6 +1363,7 @@
     <string name="TownsfolkNPC_Message4">Tôi hy vọng cống rãnh sẽ không bị ngập khi mùa xuân đến. Chúng tôi không cần một đợt xâm nhập chuột khác.</string>
     <string name="TownsfolkNPC_Name">người dân thành phố</string>
     <string name="TownsfolkNPC_Name_Objective">người dân thị trấn</string>
+    <string name="TownsfolkSilentNPC_Desc">Một trong những người dân địa phương. Dù rõ ràng đây là thường dân, nhưng trang phục đó trông khá đắt tiền.</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hừm...</string>
@@ -1775,6 +1777,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

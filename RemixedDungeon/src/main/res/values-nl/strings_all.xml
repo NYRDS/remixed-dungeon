@@ -401,6 +401,7 @@
     <string name="Dagger_Name">dolk</string>
     <string name="Damage_Reduction">Schadevermindering</string>
     <string name="DarkGold_Name">donker gouderts</string>
+    <string name="DarkSacrifice_Ok">Mijn leven is van jou!</string>
     <string name="DarkSacrifice_Resist">Je hebt geen macht over mij!</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Name">dart</string>
@@ -911,6 +912,7 @@
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
     <string name="NeutralKing_Hostile">De Koning keert zich tegen je!</string>
     <string name="Nightcap_Name">Slaapmuts</string>
+    <string name="Nightmare_Desc">Een grotesk schepsel dat lijkt op een bundel vleesachtige tentakels. Nachtmerries zijn de belichaming van de sinistere gedachten van de Oude God.</string>
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">nachtmerrie</string>
     <string name="No_Valid_Cell">Er is geen geschikte cel in de buurt.</string>
@@ -2060,6 +2062,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
