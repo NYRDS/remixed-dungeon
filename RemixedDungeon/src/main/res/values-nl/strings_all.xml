@@ -910,6 +910,7 @@
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
+    <string name="NekoEars_Name">Neko-oren</string>
     <string name="NeutralKing_Hostile">De Koning keert zich tegen je!</string>
     <string name="Nightcap_Name">Slaapmuts</string>
     <string name="Nightmare_Desc">Een grotesk schepsel dat lijkt op een bundel vleesachtige tentakels. Nachtmerries zijn de belichaming van de sinistere gedachten van de Oude God.</string>
@@ -2062,6 +2063,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

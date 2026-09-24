@@ -1150,6 +1150,7 @@
     <string name="WndFortuneTeller_No_Item">احذر، أنت لا تريد إنفاق أموالك بلا فائدة، أليس كذلك؟ لا توجد عناصر غير محددة في مخزونك.</string>
     <string name="WndFortuneTeller_Title">العَرّافَة</string>
     <string name="WndGame_Exit">الخروج من Remixed Dungeon</string>
+    <string name="WndGame_Return">العودة إلى اللعبة</string>
     <string name="WndHats_BackButton">رجوع</string>
     <string name="WndHats_BuyButton">شراء</string>
     <string name="WndHats_EquipButton">تجهيز</string>
@@ -1356,6 +1357,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

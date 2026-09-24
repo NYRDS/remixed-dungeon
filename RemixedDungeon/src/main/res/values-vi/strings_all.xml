@@ -670,6 +670,7 @@
     <string name="InnKeeperNPC_Name_Objective">chủ quán</string>
     <string name="InnServant_Phrase_2">Gã say rượu này khiến tôi phát điên!</string>
     <string name="InnServant_Phrase_3">Trông sạch sẽ với tôi</string>
+    <string name="InnServant_Phrase_4">Ôi trời, hôm nay nhiều khách quá</string>
     <string name="Instability_Name_0">Bất ổn %s</string>
     <string name="Instability_Name_1">Bất ổn %s</string>
     <string name="Instability_Name_2">Bất ổn %s</string>
@@ -1777,6 +1778,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
