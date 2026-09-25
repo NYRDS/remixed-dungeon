@@ -753,6 +753,7 @@
     <string name="Level_TileEntrance">Lối vào sâu</string>
     <string name="Level_TileExit">Lối ra sâu</string>
     <string name="Level_TileFireTrap">Bẫy lửa</string>
+    <string name="Level_TileFloor">Sàn</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
     <string name="Level_TileOpenDoor">Cửa mở</string>
     <string name="Level_TileParalyticTrap">Bẫy khí gây tê liệt</string>
@@ -1780,6 +1781,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

@@ -919,6 +919,7 @@
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">nachtmerrie</string>
     <string name="No_Valid_Cell">Er is geen geschikte cel in de buurt.</string>
+    <string name="OozeBuff_Info">Bijtende slijm vreet het vlees weg!</string>
     <string name="OozeBuff_Name">Bijtend Slijk</string>
     <string name="Ooze_Death">%s slikt je op...</string>
     <string name="Order_Info">Met de juiste concentratie zijn jouw bevelen bijna onweerlegbaar.</string>
@@ -1095,6 +1096,7 @@
     <string name="ResultDescriptions_Necromancy">Uitgeput van levenskracht tijdens het proberen een lijk te animeren op niveau %d</string>
     <string name="ResultDescriptions_Necrotism">Gestorven door Necrotisme op niveau %d</string>
     <string name="ResultDescriptions_Poison">Gestorven aan vergiftiging op niveau %d</string>
+    <string name="ResultDescriptions_Trap">Gedood door ontlading van %1 op niveau %2</string>
     <string name="ResultDescriptions_Unknown">Stierf onder mysterieuze omstandigheden op niveau %d</string>
     <string name="RingOfDetection_Info">Als je deze ring draagt, merk je verborgen geheimen - vallen en geheime deuren - op zonder tijd aan zoeken te besteden. Versleten detectieringen verdoven je zinnen, waardoor het moeilijker wordt om geheimen op te merken, zelfs als je er actief naar zoekt.</string>
     <string name="RingOfElements_Name">Ring der Elementen</string>
@@ -2065,6 +2067,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
