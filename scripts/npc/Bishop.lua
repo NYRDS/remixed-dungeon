@@ -40,7 +40,9 @@ local dialog = function(index)
     if index == 2 then
         if client:gold() >= removeCursePrice then
             client:spendGold(removeCursePrice)
-            RPD.item("ScrollOfRemoveCurse"):uncurse(client:getBelongings())
+            -- RPD.item() swaps forbidden items for gold (NO_SCROLLS challenge), and gold has no uncurse
+            local scroll = RPD.ItemFactory:itemByName("ScrollOfRemoveCurse")
+            scroll:uncurse(client:getBelongings())
             RPD.glogp("ScrollOfRemoveCurse_Proced")
             client:getSprite():emitter():start(RPD.Sfx.ShadowParticle.UP, 0.05, 10);
             return
