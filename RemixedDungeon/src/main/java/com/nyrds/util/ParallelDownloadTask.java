@@ -9,6 +9,8 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.security.cert.X509Certificate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
@@ -16,6 +18,9 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
 public class ParallelDownloadTask implements Runnable {
+
+    private static final String MAIN_HOST = "https://nyrds.net/";
+    private static final String RU_MIRROR_HOST = "https://ru.nyrds.net/";
 
     private final DownloadStateListener m_listener;
     private final String[] m_urls;
@@ -65,6 +70,38 @@ public class ParallelDownloadTask implements Runnable {
             return;
         }
 
+        List<String> attempts = new ArrayList<>();
+        attempts.add(url);
+        attempts.addAll(mirrorUrl(url));
+
+        for (String attempt : attempts) {
+            if (downloadCompleted.get()) {
+                return;
+            }
+            if (downloadFrom(attempt, index)) {
+                return;
+            }
+        }
+    }
+
+    // The two mod hosts serve identical paths; ru.nyrds.net has stricter TLS and
+    // rejects old clients (tlsv1 alert protocol version), so retry on the sibling
+    private static List<String> mirrorUrl(String url) {
+        List<String> mirror = new ArrayList<>();
+        if (url.startsWith(MAIN_HOST)) {
+            mirror.add(RU_MIRROR_HOST + url.substring(MAIN_HOST.length()));
+        } else if (url.startsWith(RU_MIRROR_HOST)) {
+            mirror.add(MAIN_HOST + url.substring(RU_MIRROR_HOST.length()));
+        }
+        return mirror;
+    }
+
+    private boolean downloadFrom(String url, int index) {
+        // If another download already completed, skip this one
+        if (downloadCompleted.get()) {
+            return true;
+        }
+
         try {
             URL urlObj = new URL(url);
             File file = new File(m_downloadTo + ".tmp" + index);
@@ -77,7 +114,7 @@ public class ParallelDownloadTask implements Runnable {
                 trustAllHosts((HttpsURLConnection) ucon);
             }
 
-            ucon.setReadTimeout(10000);
+            ucon.setReadTimeout(30000);
             ucon.setInstanceFollowRedirects(true);
             ucon.connect();
 
@@ -112,13 +149,14 @@ public class ParallelDownloadTask implements Runnable {
                         finalFile.delete();
                     }
                     file.renameTo(finalFile);
-                    
+
                     // Cancel other downloads by interrupting their threads
                     m_listener.DownloadComplete(url, true);
                 } else {
                     // Another download already completed, clean up this file
                     file.delete();
                 }
+                return true;
             } else {
                 GLog.debug("Failed to download from " + url + ", response code: " + repCode);
             }
@@ -127,6 +165,7 @@ public class ParallelDownloadTask implements Runnable {
             GLog.debug("Exception downloading from " + url + ": " + e.getMessage());
             EventCollector.logException(new ModError("Downloading from " + url, e));
         }
+        return false;
     }
 
     private static void trustAllHosts(HttpsURLConnection connection) {
