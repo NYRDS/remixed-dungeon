@@ -6,6 +6,7 @@ import android.widget.LinearLayout;
 import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
@@ -15,6 +16,7 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.platform.support.AAdsComboProvider;
 import com.nyrds.platform.util.StringsManager;
 import com.yandex.mobile.ads.banner.BannerAdView;
+import com.yandex.mobile.ads.common.YandexAds;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -32,7 +34,7 @@ public class AdsUtils {
 
     static {
         try {
-            com.yandex.mobile.ads.common.MobileAds.initialize(RemixedDungeonApp.getContext(), () -> {
+            YandexAds.initialize(RemixedDungeonApp.getContext(), () -> {
                 YandexInitialized = true;
                 EventCollector.logEvent("yandex_initialized");
 
@@ -40,7 +42,7 @@ public class AdsUtils {
 
             if (!GamePreferences.uiLanguage().equals("ru")) {
                 //AdMob
-                com.google.android.gms.ads.MobileAds.initialize(RemixedDungeonApp.getContext(), initializationStatus -> {
+                MobileAds.initialize(RemixedDungeonApp.getContext(), initializationStatus -> {
                     AdsUtils.initializationStatus = initializationStatus;
                     var status = initializationStatus.getAdapterStatusMap();
 

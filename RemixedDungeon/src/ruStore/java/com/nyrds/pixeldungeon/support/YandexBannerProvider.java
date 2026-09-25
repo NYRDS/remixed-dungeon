@@ -38,7 +38,7 @@ public class YandexBannerProvider implements AdsUtilsCommon.IBannerProvider {
         }
         final int adWidth = Math.round(adWidthPixels / displayMetrics.density);
 
-        return BannerAdSize.stickySize(Game.instance(), adWidth);
+        return BannerAdSize.sticky(Game.instance(), adWidth);
     }
 
 
@@ -46,13 +46,11 @@ public class YandexBannerProvider implements AdsUtilsCommon.IBannerProvider {
     @Override
     public void displayBanner() {
         adView = new BannerAdView(Game.instance());
-        adView.setAdUnitId(adId);
         adView.setBackgroundColor(Color.TRANSPARENT);
-        adView.setAdUnitId(adId);
         adView.setBannerAdEventListener(new YandexBannerListener());
         adView.setAdSize(getAdSize());
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        // 8.x: ad unit id travels in the AdRequest, BannerAdView.setAdUnitId is gone
+        adView.loadAd(new AdRequest.Builder(adId).build());
     }
 
     @Override
@@ -75,15 +73,7 @@ public class YandexBannerProvider implements AdsUtilsCommon.IBannerProvider {
             AdsUtilsCommon.bannerFailed(YandexBannerProvider.this);
         }
 
-        @Override
-        public void onLeftApplication() {
-
-        }
-
-        @Override
-        public void onReturnedToApplication() {
-
-        }
+        // 8.x dropped onLeftApplication/onReturnedToApplication callbacks
 
         @Override
         public void onImpression(@Nullable ImpressionData impressionData) {
