@@ -82,6 +82,7 @@
     <string name="Badges_DeathHunger">Chết vì đói</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Badges_FoodEaten3">30 phần thức ăn đã ăn</string>
+    <string name="Badges_FoodEaten5">đã ăn 60 miếng thức ăn</string>
     <string name="Badges_GamesPlayed1">Đã chơi 10 ván</string>
     <string name="Badges_GamesPlayed2">Đã chơi 100 ván</string>
     <string name="Badges_GamesPlayed3">Đã chơi 500 ván</string>
@@ -1428,6 +1429,7 @@
     <string name="Wand_Wood_Types_10">sồi</string>
     <string name="Wand_Wood_Types_11">bạch dương</string>
     <string name="Wand_Wood_Types_2">gỗ mun</string>
+    <string name="Wand_Wood_Types_3">anh đào</string>
     <string name="Wand_Wood_Types_4">gỗ tếch</string>
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
     <string name="Wand_Wood_Types_9">gỗ tím</string>
@@ -1758,6 +1760,7 @@
     <string name="town_deco_stones_desc">Chỉ là một đống đá.</string>
     <string name="town_deco_stones_name">Đá</string>
     <string name="town_deco_stool_broken_name">Ghế đẩu bị hỏng</string>
+    <string name="town_deco_stool_sturdy_name">Ghế đẩu</string>
     <string name="town_deco_tile_name">Ô gạch</string>
     <string name="town_deco_trapdoor_desc">Liệu cái này có thể dẫn đến đâu?</string>
     <string name="town_deco_trapdoor_name">Cửa sập</string>
@@ -1784,6 +1787,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

@@ -843,6 +843,7 @@
     <string name="MeleeWeapon_Info3d">en</string>
     <string name="MeleeWeapon_Info3e">maar</string>
     <string name="MeleeWeapon_Info3g">onnauwkeurig</string>
+    <string name="MeleeWeapon_Info4a">Het was uitgebalanceerd om het sneller te maken.</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
     <string name="MeleeWeapon_Info6b">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
@@ -1512,6 +1513,7 @@
     <string name="Wand_Wood_Types_1">taxus</string>
     <string name="Wand_Wood_Types_11">berk</string>
     <string name="Wand_Wood_Types_2">ebbenhout</string>
+    <string name="Wand_Wood_Types_3">kersenhout</string>
     <string name="Wand_Wood_Types_4">teak</string>
     <string name="Wand_Wood_Types_6">wilgen</string>
     <string name="Wand_Wood_Types_7">mahonie</string>
@@ -1611,6 +1613,7 @@
     <string name="WndInfoItem_Remains">Dit is alles wat overblijft van een van je voorgangers. Misschien is het de moeite waard om te kijken of er waardevolle items in zitten.</string>
     <string name="WndInfoItem_Skeleton">Skelettenresten</string>
     <string name="WndInstallingMod_copying_file">Kopiëren van %s naar Remixed Dungeon opslag</string>
+    <string name="WndInstallingMod_please_wait">Mod wordt geïnstalleerd, even geduld...</string>
     <string name="WndInstallingMod_skipping_file">Overslaan %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Recept uitvoeren</string>
     <string name="WndItemAlchemy_NoRecipes">Geen recepten beschikbaar met dit item en je huidige inventaris.</string>
@@ -1839,6 +1842,7 @@
     <string name="town_deco_pole_name">Paaltje</string>
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_poster_desc">Flyers voor de aankondiging van komende filmvoorstellingen.</string>
+    <string name="town_deco_potions_desc">Een soort drankjes op de plank.</string>
     <string name="town_deco_rope_desc">Met de hand gedraaid touw.</string>
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_rug_name">kleed</string>
@@ -2071,6 +2075,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
