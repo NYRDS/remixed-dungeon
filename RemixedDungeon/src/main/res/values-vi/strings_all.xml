@@ -449,6 +449,7 @@
     <string name="EncumbranceBuff_Name">Gánh nặng</string>
     <string name="EnslavedSoul_Desc">Bạn gần như có thể nhìn xuyên qua bóng ma này. Và mặc dù nó trông giống một chiếc hộp sọ, đôi khi trong tích tắc một khuôn mặt hiện ra, ngập tràn đau đớn và khổ sở.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
+    <string name="Entanglement_Txt">%s vướng víu</string>
     <string name="EquipableItem_ACUnequip">THÁO TRANG BỊ</string>
     <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
     <string name="ExplodingSkull_Desc">Đầu lâu bay này đang bốc lửa, có vẻ cực kỳ mong manh, dường như nó sẽ bùng nổ bất cứ lúc nào.</string>
@@ -1755,6 +1756,7 @@
     <string name="town_deco_stool_broken_name">Ghế đẩu bị hỏng</string>
     <string name="town_deco_tile_name">Ô gạch</string>
     <string name="town_deco_trapdoor_desc">Liệu cái này có thể dẫn đến đâu?</string>
+    <string name="town_deco_trapdoor_name">Cửa sập</string>
     <string name="town_deco_tree_desc">Một cảm giác kỳ lạ dâng lên khi nhìn chiếc cây sống và bình yên này. Dù sao, không xa nơi này là một ngục địa đầy rẫy khủng khiếp và cái chết.</string>
     <string name="town_deco_tree_name">Cây</string>
     <string name="town_deco_urn_name">Hũ</string>
@@ -1778,6 +1780,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

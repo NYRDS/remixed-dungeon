@@ -62,6 +62,7 @@
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
     <string name="Armor_Info8">\n\nJe kunt een kwaadaardige magie voelen die in de %s grijpt.</string>
     <string name="Armor_ToString">%1 :%2</string>
+    <string name="ArmoredStatue_Desc">Niemand zou zelfs kunnen denken dat dit gewoon een standbeeld is. Het zijn niet alleen de rood gloeiende ogen, maar ook het feit dat niemand een echte _%s_ op zoiets zou plaatsen.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">levende standbeeld</string>
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
@@ -246,6 +247,7 @@
     <string name="Capotain_Name">Puriteinse hoed</string>
     <string name="Carcass_DissectResult_Many">Uit %1$s krijg je %2$d voorwerpen.</string>
     <string name="Carcass_DissectResult_One">Uit %1$s krijg je één voorwerp.</string>
+    <string name="Carcass_Info">restanten van een volledig dode %s.</string>
     <string name="Carcass_Kick">Deze %s is volledig dood, geen reden om het te schoppen.</string>
     <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
     <string name="Carcass_SelectItem">Selecteer een voorwerp</string>
@@ -2063,6 +2065,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
