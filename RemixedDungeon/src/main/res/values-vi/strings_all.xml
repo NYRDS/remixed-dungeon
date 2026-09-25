@@ -446,6 +446,7 @@
     <string name="EncumbranceBuff_CharAct_2">Cái %s này quá nặng để tôi có thể sử dụng hiệu quả.</string>
     <string name="EncumbranceBuff_CharAct_3">Tôi cần rèn luyện sức mạnh trước khi có thể sử dụng %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Tôi thiếu sức mạnh để sử dụng %s với đầy đủ tiềm năng của nó.</string>
+    <string name="EncumbranceBuff_Info">Không đủ sức để sử dụng %s hiệu quả.</string>
     <string name="EncumbranceBuff_Name">Gánh nặng</string>
     <string name="EnslavedSoul_Desc">Bạn gần như có thể nhìn xuyên qua bóng ma này. Và mặc dù nó trông giống một chiếc hộp sọ, đôi khi trong tích tắc một khuôn mặt hiện ra, ngập tràn đau đớn và khổ sở.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
@@ -919,6 +920,7 @@
     <string name="Pickaxe_Info">Đây là một công cụ lớn và chắc chắn để phá đá. Nó có thể được dùng như một vũ khí.</string>
     <string name="Pickaxe_InsufficientStr">Không đủ sức mạnh để khai thác!</string>
     <string name="Pickaxe_Name">cuốc chim</string>
+    <string name="Pickaxe_NoVein">Không có mạch vàng tối gần bạn để khai thác</string>
     <string name="Pickaxe_NothingToMine">Không có gì để khai thác ở đây!</string>
     <string name="Piercing_Name_0">Thâm Nhập %s</string>
     <string name="Piercing_Name_1">Xuyên %s</string>
@@ -1782,6 +1784,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

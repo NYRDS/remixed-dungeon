@@ -146,6 +146,7 @@
     <string name="BardNPC_Name">bard</string>
     <string name="BardNPC_Name_Objective">bard</string>
     <string name="BarkskinBuff_Info">Het lichaam is bedekt met bast die een deel van de ontvangen schade blokkeert.</string>
+    <string name="BarkskinBuff_Name">Schorshuid</string>
     <string name="Barrel_Name">vat</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
     <string name="Bat_Defense">ontweken</string>
@@ -440,6 +441,7 @@
     <string name="DreadKnight_Name">angstridder</string>
     <string name="DriedRoseBuff_Info">De roos ziet er heel aantrekkelijk uit.</string>
     <string name="DriedRoseBuff_Name">Charmant</string>
+    <string name="DriedRoseCursedBuff_Info">De roos ziet er mooi uit, maar niet erg charmant.</string>
     <string name="DriedRoseCursedBuff_Name">Verliefd</string>
     <string name="DriedRose_Name">gedroogde roos</string>
     <string name="Drink_Message">Die drank was verfrissend!</string>
@@ -2069,6 +2071,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
