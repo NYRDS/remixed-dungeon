@@ -6,4 +6,7 @@ import com.nyrds.platform.app.RemixedDungeonApp;
 public class MarketApp {
     static public void init(RemixedDungeonApp app) {
     }
+
+    static public void integrityReport(RemixedDungeonApp app) {
+    }
 }

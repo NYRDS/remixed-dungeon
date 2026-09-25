@@ -8,7 +8,7 @@ import com.watabou.noosa.InterstitialPoint;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.yandex.mobile.ads.common.AdError;
-import com.yandex.mobile.ads.common.AdRequestConfiguration;
+import com.yandex.mobile.ads.common.AdRequest;
 import com.yandex.mobile.ads.common.AdRequestError;
 import com.yandex.mobile.ads.common.ImpressionData;
 import com.yandex.mobile.ads.rewarded.Reward;
@@ -44,8 +44,22 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 	private void loadNextVideo() {
 		try {
 			EventCollector.logEvent("yandex_reward_requested");
-			mRewardedAdLoader = new RewardedAdLoader(Game.instance());
-			mRewardedAdLoader.setAdLoadListener(new RewardedAdLoadListener() {
+			if (mRewardedAdLoader == null) {
+				mRewardedAdLoader = new RewardedAdLoader(Game.instance());
+			}
+			loadRewardedAd();
+
+		} catch (Exception e) {
+			AdsUtilsCommon.rewardVideoFailed(YandexRewardVideoAds.this);
+			EventCollector.logException(e, "YandexRewardVideoAds");
+		}
+	}
+
+	private void loadRewardedAd() {
+		if (mRewardedAdLoader != null ) {
+			// 8.x: AdRequestConfiguration is gone, loadAd takes the AdRequest and the listener
+			final AdRequest adRequest = new AdRequest.Builder(adId).build();
+			mRewardedAdLoader.loadAd(adRequest, new RewardedAdLoadListener() {
 				@Override
 				public void onAdFailedToLoad(@NotNull AdRequestError adRequestError) {
 					AdsUtilsCommon.rewardVideoFailed(YandexRewardVideoAds.this);
@@ -58,19 +72,6 @@ public class YandexRewardVideoAds implements AdsUtilsCommon.IRewardVideoProvider
 				}
 
 			});
-			loadRewardedAd();
-
-		} catch (Exception e) {
-			AdsUtilsCommon.rewardVideoFailed(YandexRewardVideoAds.this);
-			EventCollector.logException(e, "YandexRewardVideoAds");
-		}
-	}
-
-	private void loadRewardedAd() {
-		if (mRewardedAdLoader != null ) {
-			final AdRequestConfiguration adRequestConfiguration =
-					new AdRequestConfiguration.Builder(adId).build();
-			mRewardedAdLoader.loadAd(adRequestConfiguration);
 		}
 	}
 

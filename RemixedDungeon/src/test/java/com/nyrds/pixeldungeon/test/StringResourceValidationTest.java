@@ -26,8 +26,8 @@ public class StringResourceValidationTest {
         assertTrue("strings_all.xml should exist", Files.exists(stringsPath));
         assertTrue("string_arrays.xml should exist", Files.exists(arraysPath));
         
-        String stringsContent = Files.readString(stringsPath);
-        String arraysContent = Files.readString(arraysPath);
+        String stringsContent = new String(Files.readAllBytes(stringsPath));
+        String arraysContent = new String(Files.readAllBytes(arraysPath));
         
         // Validate basic XML structure for string resources
         validateStringResources(stringsContent);

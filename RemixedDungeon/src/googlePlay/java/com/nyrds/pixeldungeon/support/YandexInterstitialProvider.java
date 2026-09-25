@@ -7,7 +7,7 @@ import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.game.Game;
 import com.watabou.noosa.InterstitialPoint;
 import com.yandex.mobile.ads.common.AdError;
-import com.yandex.mobile.ads.common.AdRequestConfiguration;
+import com.yandex.mobile.ads.common.AdRequest;
 import com.yandex.mobile.ads.common.AdRequestError;
 import com.yandex.mobile.ads.common.ImpressionData;
 import com.yandex.mobile.ads.interstitial.InterstitialAd;
@@ -36,31 +36,32 @@ public class YandexInterstitialProvider implements AdsUtilsCommon.IInterstitialP
 
         // Interstitial ads loading should occur after initialization of the SDK.
         // Initialize SDK as early as possible, for example in Application.onCreate or Activity.onCreate
-        mInterstitialAdLoader = new InterstitialAdLoader(Game.instance());
-        mInterstitialAdLoader.setAdLoadListener(new InterstitialAdLoadListener() {
-            @Override
-            public void onAdLoaded(@NotNull final InterstitialAd interstitialAd) {
-                mInterstitialAd = interstitialAd;
-                // The ad was loaded successfully. You can now show the ad.
-                EventCollector.logEvent("yandex_interstitial_loaded");
-            }
-
-            @Override
-            public void onAdFailedToLoad(@NotNull final AdRequestError adRequestError) {
-                // Ad failed to load with AdRequestError.
-                // Attempting to load a new ad from the onAdFailedToLoad() method is strongly discouraged.
-                EventCollector.logEvent("yandex_interstitial_failed", adRequestError.toString());
-            }
-        });
+        if (mInterstitialAdLoader == null) {
+            mInterstitialAdLoader = new InterstitialAdLoader(Game.instance());
+        }
         loadInterstitialAd();
     }
 
 
     private void loadInterstitialAd() {
         if (mInterstitialAdLoader != null ) {
-            final AdRequestConfiguration adRequestConfiguration =
-                    new AdRequestConfiguration.Builder(adId).build();
-            mInterstitialAdLoader.loadAd(adRequestConfiguration);
+            // 8.x: AdRequestConfiguration is gone, loadAd takes the AdRequest and the listener
+            final AdRequest adRequest = new AdRequest.Builder(adId).build();
+            mInterstitialAdLoader.loadAd(adRequest, new InterstitialAdLoadListener() {
+                @Override
+                public void onAdLoaded(@NotNull final InterstitialAd interstitialAd) {
+                    mInterstitialAd = interstitialAd;
+                    // The ad was loaded successfully. You can now show the ad.
+                    EventCollector.logEvent("yandex_interstitial_loaded");
+                }
+
+                @Override
+                public void onAdFailedToLoad(@NotNull final AdRequestError adRequestError) {
+                    // Ad failed to load with AdRequestError.
+                    // Attempting to load a new ad from the onAdFailedToLoad() method is strongly discouraged.
+                    EventCollector.logEvent("yandex_interstitial_failed", adRequestError.toString());
+                }
+            });
         }
     }
 

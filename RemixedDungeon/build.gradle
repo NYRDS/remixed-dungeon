@@ -191,9 +191,9 @@ dependencies {
     googlePlayImplementation 'com.appodeal.ads.sdk.adapters:verve:3.7.1.0'
     googlePlayImplementation 'com.appodeal.ads.sdk.adapters:vungle:7.7.7.0'
 
-    googlePlayImplementation 'com.yandex.android:mobileads:7.16.1'
+    googlePlayImplementation 'com.yandex.android:mobileads:8.5.0'
 
-    ruStoreImplementation 'com.yandex.android:mobileads:7.16.1'
+    ruStoreImplementation 'com.yandex.android:mobileads:8.5.0'
     ruStoreImplementation 'ru.rustore.sdk:billingclient:9.1.0'
 
 

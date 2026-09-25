@@ -10,7 +10,7 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.platform.util.StringsManager;
 import com.yandex.mobile.ads.banner.BannerAdView;
 import com.yandex.mobile.ads.common.InitializationListener;
-import com.yandex.mobile.ads.common.MobileAds;
+import com.yandex.mobile.ads.common.YandexAds;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -27,7 +27,7 @@ public class AdsUtils {
 
     static {
         try {
-            MobileAds.initialize(RemixedDungeonApp.getContext(), new InitializationListener() {
+            YandexAds.initialize(RemixedDungeonApp.getContext(), new InitializationListener() {
                 @Override
                 public void onInitializationCompleted() {
                     YandexInitialized = true;

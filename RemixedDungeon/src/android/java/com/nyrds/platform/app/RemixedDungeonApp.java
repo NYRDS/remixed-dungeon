@@ -41,6 +41,11 @@ public class RemixedDungeonApp extends MultiDexApplication {
             defaultExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         }
 
+        // integrity telemetry runs regardless of the signature gate:
+        // repacked installs are exactly the ones the gate would silence
+        AppIntegrity.collect(this);
+        MarketApp.integrityReport(this);
+
         if(checkOwnSignature()) {
             MarketApp.init(this);
         }

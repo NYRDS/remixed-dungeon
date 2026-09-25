@@ -41,6 +41,11 @@ public abstract class BaseWebServer extends NanoHTTPD {
     // Debug endpoint routing map
     private static final Map<String, Function<NanoHTTPD.IHTTPSession, NanoHTTPD.Response>> debugEndpoints = new HashMap<>();
 
+    // platform layers may add endpoints for stuff main cannot see (android PackageManager etc)
+    public static void registerDebugEndpoint(String path, Function<NanoHTTPD.IHTTPSession, NanoHTTPD.Response> handler) {
+        debugEndpoints.put(path, handler);
+    }
+
     static {
         // Initialize debug endpoint routing map
         debugEndpoints.put("/debug/change_level", DebugEndpoints::handleDebugChangeLevel);
