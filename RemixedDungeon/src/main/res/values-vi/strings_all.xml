@@ -753,6 +753,7 @@
     <string name="Level_TileDescLockedDoor">Cái cửa này bị khóa, bạn cần một chìa khóa phù hợp để mở khóa nó.</string>
     <string name="Level_TileDescPileOfStones">Một đống đá cực kỳ nặng, trông không thể di chuyển được.</string>
     <string name="Level_TileDescSign">Bạn không thể đọc được văn bản từ đây.</string>
+    <string name="Level_TileDescWell">Một cái giếng bí ẩn. Bạn có thể cảm nhận sức mạnh ma thuật phát ra từ nó.</string>
     <string name="Level_TileEntrance">Lối vào sâu</string>
     <string name="Level_TileExit">Lối ra sâu</string>
     <string name="Level_TileFireTrap">Bẫy lửa</string>
@@ -857,6 +858,7 @@
     <string name="Monk_Name_Objective">tu sĩ lùn</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
     <string name="Moongrace_Name">Ánh Trăng</string>
+    <string name="Multiplicity_Txt">%s của tính đa dạng</string>
     <string name="Mushroom_Eat_Message">Cái nấm này có vị kỳ lạ!</string>
     <string name="MysteryMeat_Info2">Ngươi không cảm thấy chân mình nữa!</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
@@ -1792,6 +1794,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
