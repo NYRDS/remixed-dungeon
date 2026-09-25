@@ -401,6 +401,7 @@
     <string name="DewVial_Full">Lọ hơi sương đã đầy!</string>
     <string name="DewVial_Name">lọ sương</string>
     <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
+    <string name="DieHardSpell_Name">Chết Cứng</string>
     <string name="Displacement_Txt">%s الخدمة</string>
     <string name="DoctorArmor_Name">Trang phục bác sĩ</string>
     <string name="DoctorSpecial">Đám Mây Miasma</string>
@@ -1517,6 +1518,7 @@
     <string name="WndHero_Satiety">Độ no</string>
     <string name="WndHero_StaCatalogus">Danh mục</string>
     <string name="WndHero_StaJournal">Nhật ký</string>
+    <string name="WndImp_Message">Ồ đúng rồi! Bạn là anh hùng của tôi!\nVề phần thưởng, tôi không có tiền mặt ngay bây giờ, nhưng tôi có thứ tốt hơn. Đây là chiếc nhẫn gia truyền của tôi: ông tôi đã lấy nó từ ngón tay của một paladin đã chết.</string>
     <string name="WndImp_Reward">Nhận chiếc nhẫn</string>
     <string name="WndInfoItem_Inside">Bạn có thể thấy %s bên trong, nhưng để mở rương bạn cần một chìa khóa vàng.</string>
     <string name="WndInfoItem_LockedChest">Rương bị khóa</string>
@@ -1761,6 +1763,7 @@
     <string name="town_deco_stones_name">Đá</string>
     <string name="town_deco_stool_broken_name">Ghế đẩu bị hỏng</string>
     <string name="town_deco_stool_sturdy_name">Ghế đẩu</string>
+    <string name="town_deco_stove_name">Bếp đá</string>
     <string name="town_deco_tile_name">Ô gạch</string>
     <string name="town_deco_trapdoor_desc">Liệu cái này có thể dẫn đến đâu?</string>
     <string name="town_deco_trapdoor_name">Cửa sập</string>
@@ -1787,6 +1790,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

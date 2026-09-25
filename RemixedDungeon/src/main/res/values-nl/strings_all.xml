@@ -466,6 +466,7 @@
     <string name="Dungeon_Tips_23">De tekst is geschreven in een demonische taal.</string>
     <string name="Dungeon_Tips_3">Je kunt je goud uitgeven in winkels in de stad of de dungeon.</string>
     <string name="Dungeon_Tips_4">Pas op voor de Slijm!</string>
+    <string name="Dungeon_Tips_5">Pixel-Mart - alles wat je nodig hebt voor een succesvol avontuur!</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="Dungeon_Tips_9">Laat de Tengu niet vrij!</string>
     <string name="Dungeon_saveIoError">Bij het proberen een opslagbestand aan te maken:</string>
@@ -1000,6 +1001,7 @@
     <string name="PortalExit_Desc_SpiderNest">Spinennest</string>
     <string name="PortalGate_Activated">De oude portaal is ontwaakt!</string>
     <string name="PortalGate_Desc">De gravures op het oppervlak van deze portal vormen een eigenaardig patroon. Het lijkt alsof het een gigantische tunnel is die in de verte leidt. Maar vanaf de zijkant bekeken wordt duidelijk dat het oppervlak bijna vlak is.</string>
+    <string name="PortalGate_Desc_Activated">Het portaal lekt een soort gloeiende substantie. Het lijkt volkomen stil, afgezien van rimpelingen vanuit het midden.</string>
     <string name="PortalGate_Name">Portaal</string>
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="Possess_Info">De donkere kunst van geestelijke controle stelt de spreker in staat de wil van de meeste wezens te buigen.</string>
@@ -1656,6 +1658,7 @@
     <string name="WndPremiumSettings_ruby">robijn</string>
     <string name="WndPremiumSettings_status">Selecteer materiaal van de statusbalk</string>
     <string name="WndPremiumSettings_std">standaard</string>
+    <string name="WndPriest_Heal">genezen - %d goud</string>
     <string name="WndPriest_Heal_Minions">Genees al je volgelingen - Slechts %d goud!</string>
     <string name="WndPriest_Instruction2_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
     <string name="WndPriest_Instruction_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa, de Heer der Diepten! Helaas kan ik je nu niet doorlaten, want het gebouw wordt gerenoveerd. Maar als je hulp zoekt, kan ik genezing en voedsel aanbieden voor slechts %d gouden munten!</string>
@@ -1872,7 +1875,7 @@
     <string name="town_deco_stool_broken_name">Gebroken kruk</string>
     <string name="town_deco_stool_sturdy_desc">Een gewone kruk van resistent hout.</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
-    <string name="town_deco_stove_name">Stenen kachel</string>
+    <string name="town_deco_stove_name">Stenen kookplaats</string>
     <string name="town_deco_trapdoor_desc">Waar zou dit toch naartoe leiden?</string>
     <string name="town_deco_urn_desc">Kleien, misschien met as van iemand.</string>
     <string name="town_deco_urn_name">urn</string>
@@ -1885,6 +1888,7 @@
     <string name="town_deco_wall_desc">Een eenvoudige muur gemaakt van houten stammen.</string>
     <string name="town_deco_wallpaper_name">behang</string>
     <string name="town_deco_wardrobe_desc">Grote houten kast.</string>
+    <string name="town_deco_weaponboard_desc">Een soort wapen dat op het bord hangt.</string>
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_weaponrack_name">Wapenrek</string>
     <string name="town_deco_window_name">Raam</string>
@@ -2075,6 +2079,11 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
 
 
 
