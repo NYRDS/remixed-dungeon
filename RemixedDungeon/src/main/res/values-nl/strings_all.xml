@@ -271,6 +271,7 @@
     <string name="Challenges_Names_1">Geloof is mijn pantser</string>
     <string name="Challenges_Names_2">Farmacofobie</string>
     <string name="Challenges_Names_3">Woestijn</string>
+    <string name="Challenges_Names_4">Zwermintelligentie</string>
     <string name="Challenges_Names_5">In de duisternis</string>
     <string name="Challenges_Names_7">Pacifisme</string>
     <string name="Challenges_Names_8">Geen stad</string>
@@ -1260,6 +1261,7 @@
     <string name="Sheep_Name_Objective">schaap</string>
     <string name="ShieldBuffNotReady_Info">Je schild is nog niet klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldBuffNotReady_Name">Schild is niet klaar</string>
+    <string name="ShieldBuffReady_Info">Je schild is klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">schildgedrocht</string>
@@ -1321,6 +1323,7 @@
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">spinnen elitewachter</string>
+    <string name="SpiderElite_Name_Objective">elite spinwacht</string>
     <string name="SpiderExploding_Desc">Harde werkers tijdens vredige tijden, deze wezens zullen niet aarzelen om hun vijanden aan te vallen en de eerste plant die ze tegenkomen te grijpen, waardoor ze zichzelf in lopende bommen veranderen.</string>
     <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderGuard_Desc">Net als soldaten hebben spinnenwachters een eed afgelegd om hun koninkrijk te beschermen. Het gif van de wachter wordt gebruikt om zijn doelwit te verlammen, waardoor verlamming ontstaat en het een makkelijke prooi wordt.</string>
@@ -2085,6 +2088,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

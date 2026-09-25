@@ -326,6 +326,7 @@
     <string name="CloakSpell_Info">Bước vào bóng tối để trở nên vô hình. Giảm đáng kể cơ hội bị phát hiện. Không thể sử dụng khi kẻ địch ở gần.</string>
     <string name="ClothArmor_Desc">Bộ giáp nhẹ này chỉ cung cấp khả năng bảo vệ cơ bản.</string>
     <string name="Codex_ACRead">ĐỌC</string>
+    <string name="Codex_Blinded">Bạn không thể đọc khi bị mù</string>
     <string name="Codex_Info">Một trong nhiều cuốn sách có thể tìm thấy ở bất kỳ thư viện nào</string>
     <string name="Codex_Story_10">Glyph Entangle - Anh hùng có thể nhận được giáp thảo mộc, nhưng đồng thời cũng có thể bị rễ cây trói chân.</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
@@ -1794,6 +1795,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
