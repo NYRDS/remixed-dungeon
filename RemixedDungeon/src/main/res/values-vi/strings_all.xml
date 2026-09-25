@@ -1557,6 +1557,7 @@
     <string name="WndPlayGames_Show_Ok">Thành công!</string>
     <string name="WndPlayGames_Title">Google Play Games</string>
     <string name="WndPlayGames_Use">sử dụng Google Play Games</string>
+    <string name="WndPlayGames_WorkInCloud">Đang làm việc trên đám mây... Vui lòng đợi.</string>
     <string name="WndPortal_Info">Cổng này sẽ cho phép bạn quay lại thị trấn. Nó có vẻ khá không ổn định, và có lẽ sẽ không hoạt động quá lâu.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPortal_Info_Return">Cổng truyền tàng này sẽ đưa bạn trở lại hang động.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPremiumSettings_banners">Chọn chất liệu cờ</string>
@@ -1594,6 +1595,7 @@
     <string name="WndSettings_Brightness">Độ sáng</string>
     <string name="WndSettings_ClassicFont">Font Classic</string>
     <string name="WndSettings_ExperementalFont">Font mới</string>
+    <string name="WndSettings_GameplaySettings">Chơi</string>
     <string name="WndSettings_Handedness">Ưu tiên tay</string>
     <string name="WndSettings_Immersive">Chế độ đắm chìm</string>
     <string name="WndSettings_InGameUiSettings">Cài đặt giao diện</string>
@@ -1790,6 +1792,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

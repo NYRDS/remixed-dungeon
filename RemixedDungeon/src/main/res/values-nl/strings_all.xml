@@ -34,6 +34,7 @@
     <string name="AlchemyPot_SelectSeed">Selecteer een zaadje om te werpen</string>
     <string name="AllowStatisticsCollectionScene_Allow">Toestaan</string>
     <string name="AllowStatisticsCollectionScene_Deny">Weigeren</string>
+    <string name="AllowStatisticsCollectionScene_Request">Als je toestaat, zal Remixed Dungeon gebruiksstatistieken verzamelen. Deze gegevens worden gebruikt voor:\n\n    - het opsporen en oplossen van diverse kleine fouten (bij een kritieke fout zal het spel je expliciet vragen een rapport te verzenden)\n\n    - verbeteringen van de spelbalans\n\n    - het oplossen van apparaatspecifieke prestatieproblemen\n\n    - het van tijd tot tijd publiceren van grappige statistische feiten\n\n    Je kunt je beslissing op elk moment wijzigen (klik op het diagramicoon op het titelscherm)</string>
     <string name="AllowStatisticsCollectionScene_Title">Verzameling van gebruikstatistieken</string>
     <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">De oplossing op de punt van deze pijl zal iedereen veranderen in een gedachtenloze, genadeloze berzerker.</string>
@@ -626,6 +627,7 @@
     <string name="HeroClass_WarPerks_4">Krachtpotionen zijn van het begin bekend.</string>
     <string name="HeroSubClass_DescAssa">Bij het uitvoeren van een verrassingsaanval, richt de _Meuchelmoorder_ extra schade aan bij zijn doelwit.</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
+    <string name="HeroSubClass_DescGlad">Een succesvolle aanval met een melee-wapen stelt de _Gladiator_ in staat een combo te starten, waarbij elke volgende treffer meer schade aanricht.</string>
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
     <string name="HeroSubClass_DescSnip">_Sluipschutters_ zijn in staat om zwakke punten in de bepantsering van een vijand te ontdekken, waardoor ze deze effectief negeren bij het gebruik van een afstandswapen.</string>
     <string name="HeroSubClass_DescWarL">Na het doden van een vijand consumeert de _Heksenaar_ zijn ziel. Het geneest zijn wonden en stilt zijn honger.</string>
@@ -1327,6 +1329,7 @@
     <string name="SpiderMindAmber_Name_Objective">amber spin</string>
     <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Psi-Spin</string>
+    <string name="SpiderMind_Name_Objective">Psi-Spin</string>
     <string name="SpiderNest_Desc">Deze cocon is gemaakt van het fijnste zijde en verbergt iets levends.</string>
     <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderQueenCarapace_Name">Spinnenkoninginnenpantser</string>
@@ -2079,6 +2082,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
