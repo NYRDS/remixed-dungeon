@@ -1602,6 +1602,7 @@
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
     <string name="WndStory_Guts">Thần Cổ bị đánh bại, vỡ vụn thành trăm mảnh nhưng chưa bị tiêu diệt hoàn toàn, đã bị phong ấn tại những tầng sâu nhất của hầm ngục. Nhưng gần đây con dấu đã bị phá vỡ, mở toang lối đi đến tổ của quỷ dữ. Những con quái vật ác mộng mà Thần Cổ tạo ra trong giấc ngủ của ngài đông đến mức chẳng còn lối thoát, chúng buộc phải hợp nhất với nhau tạo nên những đại sảnh kỳ dị này. Và khi bạn bước trên lớp thịt sống của chúng, bạn có thể cảm nhận nhịp đập trái tim của Thần Cổ vang vọng khắp nơi.</string>
+    <string name="WndStory_Halls">Trong quá khứ những tầng này là vùng ngoại ô của Metropolis. Sau chiến thắng đắt giá trong cuộc chiến với vị thần cũ, người lùn quá suy yếu để dọn sạch những con quỷ còn sót lại. Dần dần quỷ đã thắt chặt quyền kiểm soát nơi này và giờ nó được gọi là Sảnh Quỷ.\n\nRất ít nhà thám hiểm từng xuống xa đến vậy...</string>
     <string name="WndStory_Metropolis">Thành phố Lục phủ Mat người lùn từng là lớn nhất trong các thành bang của người lùn. Vào thời kỳ thịnh vượng, quân đội cơ giới của người lùn đã đẩy lùi thành công cuộc xâm lược của vị thần cổ xưa và quân đoàn quỷ của ngài. Người ta nói rằng, các chiến binh trở về đã mang theo những hạt giống của sự tàn phá, và chiến thắng đó là khởi đầu của sự chấm dứt cho vương quốc dưới đất.</string>
     <string name="WndTilesKind_ClassicLook">Giao diện cổ điển</string>
     <string name="WndTilesKind_NewLook">Giao diện mới</string>
@@ -1781,6 +1782,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

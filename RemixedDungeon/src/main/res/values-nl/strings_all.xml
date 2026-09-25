@@ -210,6 +210,7 @@
     <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
     <string name="BodyArmorBuff_Info">De pantser wordt verhoogd ten koste van bewegingssnelheid.</string>
     <string name="BodyArmorBuff_Name">Lichaamspantser</string>
+    <string name="BodyArmorSpell_Name">Lichaamspantser</string>
     <string name="BoneSaw_Info">Een precisie-geengineerde chirurgische zaag ontworpen voor snelle ontleding. De schade en aanvalsnelheid worden dodelijker met de vaardigheid van de Pestdokter. Critische treffers snijden extra oogstbare delen van vijanden, en het slaat met ruthloze efficiëntie tegen gelamde vijanden.</string>
     <string name="BoneSaw_Name">botenzaag</string>
     <string name="Boomerang_Gender">masculine</string>
@@ -397,6 +398,7 @@
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">zwevend kristal</string>
     <string name="CurareDart_Gender">masculine</string>
+    <string name="DM300_Desc">Deze machine werd enkele eeuwen geleden door de Dwergen gemaakt. Later begonnen de Dwergen machines te vervangen door golems, elementalen en zelfs demonen. Uiteindelijk leidde dit tot het verval van hun beschaving. De DM-300 en vergelijkbare machines werden doorgaans gebruikt voor bouw en mijnbouw, en in sommige gevallen voor stadsverdediging.</string>
     <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
     <string name="Dagger_Gender">masculine</string>
@@ -2067,6 +2069,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
