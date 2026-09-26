@@ -8,6 +8,7 @@ import com.appodeal.ads.BannerView;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
@@ -16,8 +17,15 @@ import com.nyrds.platform.game.Game;
 import com.nyrds.platform.support.AAdsComboProvider;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Util;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.yandex.mobile.ads.banner.BannerAdView;
+import com.yandex.mobile.ads.common.AdRequest;
+import com.yandex.mobile.ads.common.AdRequestError;
 import com.yandex.mobile.ads.common.YandexAds;
+import com.yandex.mobile.ads.interstitial.InterstitialAd;
+import com.yandex.mobile.ads.interstitial.InterstitialAdLoadListener;
+import com.yandex.mobile.ads.interstitial.InterstitialAdLoader;
+import org.jetbrains.annotations.NotNull;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -38,6 +46,7 @@ public class AdsUtils {
             if (Util.isDebug()) {
                 // verbose ad request lifecycle in logcat, live-fill debugging
                 YandexAds.enableLogging(true);
+                GameLoop.runOnMainThread(AdsUtils::adsFillProbe);
             }
             YandexAds.initialize(RemixedDungeonApp.getContext(), () -> {
                 YandexInitialized = true;
@@ -79,6 +88,26 @@ public class AdsUtils {
         } catch (Exception e) {
             EventCollector.logException(e,"AdsUtils init error");
         }
+    }
+
+
+    // debug-only: one-shot demo-unit load proving the 8.x load path end-to-end,
+    // result lands in logcat under the GAME tag
+    static private InterstitialAdLoader mProbeLoader;
+
+    static private void adsFillProbe() {
+        mProbeLoader = new InterstitialAdLoader(RemixedDungeonApp.getContext());
+        mProbeLoader.loadAd(new AdRequest.Builder("demo-interstitial-yandex").build(), new InterstitialAdLoadListener() {
+            @Override
+            public void onAdLoaded(@NotNull InterstitialAd ad) {
+                GLog.debug("AdsTest: yandex demo interstitial LOADED");
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NotNull AdRequestError error) {
+                GLog.w("AdsTest: yandex demo interstitial failed: %s", error.toString());
+            }
+        });
     }
 
 
