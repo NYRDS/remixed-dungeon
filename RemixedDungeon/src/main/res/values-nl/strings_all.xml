@@ -1192,6 +1192,7 @@
     <string name="ScrollOfMagicMapping_Name">Scroll van Magische Kaartvorming</string>
     <string name="ScrollOfMirrorImage_Name">Spiegelbeeldrol</string>
     <string name="ScrollOfPsionicBlast_Info">Deze scroll bevat vernietigende energie, die psionisch kan worden gekanaliseerd om massale schade toe te brengen aan alle wezens binnen het gezichtsveld. Een begeleidende lichtflits zal tijdelijk iedereen in het effectgebied verblinden, inclusief de lezer van de scroll.</string>
+    <string name="ScrollOfRecharging_Info">De rauwe magische kracht gebonden in dit perkament zal, bij vrijgave, alle toverstokken van de lezer volledig opladen.</string>
     <string name="ScrollOfRecharging_Info1b">een golf van energie stroomt door je rugzak en laadt je toverstokken op</string>
     <string name="ScrollOfRecharging_Info2">een energiegolf stroomt door je rugzak, maar er gebeurt niets</string>
     <string name="ScrollOfRemoveCurse_Info">De bezwering op deze rol zal onmiddellijk alle kwaadaardige betoveringen van het wapen, pantser, ringen en voorwerpen van de lezer verwijderen die het dragen ervan zouden kunnen verhinderen.</string>
@@ -2094,6 +2095,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

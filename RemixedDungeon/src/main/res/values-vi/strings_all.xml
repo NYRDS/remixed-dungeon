@@ -875,6 +875,7 @@
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
     <string name="NecromancerNPC_Intro2">À! Một bạn đồng hành phiêu lưu không chỉ là một xác chết vô tri. Chẳng thể tin nổi! Ô... xin lỗi, đôi khi tôi hơi quá hứng phấn. Cậu thấy, chính tôi là một pháp sư phục sinh. Dù việc nghiên cứu xác chết và chính cái chết được chúng tôi coi trọng, nhưng sự đơn điệu này sớm muộn cũng khiến ai đó chán nản. Mặt khác đó chính là lý do tôi ở đây. Hôm kia có chuyện lớn xảy ra! _Necropolis_, một thành phố cổ của người chết đã mở cửa cho chúng ta ngắm nhìn. Thực lòng mà nói, chúng ta đang đứng ngay trước cánh cửa ấy. Và... cậu biết sao, hãy lấy chìa khóa và đi trước đi, cậu thích những phiêu lưu, phải không? Còn tôi sẽ theo sau... chỉ cần chuẩn bị chút đã.</string>
     <string name="NecromancerNPC_Name">pháp sư chết chóc</string>
+    <string name="NecromancerNPC_Name_Objective">thầy gọi hồn</string>
     <string name="NecromancerRobe_Info">Chiếc áo choàng này sẽ cho phép Necromancer triệu hồi Deathling với chi phí 5 linh hồn. Deathling là một tỳ phu bất tử sẽ mạnh lên cùng với chủ nhân của nó.</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: giới hạn triệu hồi đã đạt đến (Hiện tại tối đa: %d)!</string>
     <string name="Necromancer_ACSpecial">THUẬT HỒI SINH</string>
@@ -1800,6 +1801,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
