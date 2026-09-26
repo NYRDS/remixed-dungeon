@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.effects;
 
+import com.nyrds.LuaInterface;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.DungeonTilemap;
@@ -8,6 +9,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
+@LuaInterface
 public class Splash {
 	
 	public static void at( int cell, final int color, int n ) {

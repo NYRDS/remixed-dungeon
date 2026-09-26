@@ -337,7 +337,8 @@ public class Mob extends Char implements IZapper {
         setState(MobAi.getStateByTag(state));
     }
 
-    protected int getKind() {
+    @LuaInterface
+    public int getKind() {
         return kind;
     }
 

@@ -102,6 +102,10 @@ local function levelsTestModeOnStep(self, scene)
     if scene == "TitleScene" and framesOnScene > 2 then
         currentLevel = 0
         levels = RPD.DungeonGenerator:getLevelsList()
+        -- re-capture the size with the list: the registry can change between
+        -- module load and here (mod levels registering late/failing), and a
+        -- stale size makes levels:get() throw IOOBE every frame, wedging the bot
+        levelsSize = levels:size()
         local classes = {"WARRIOR","MAGE","ROGUE","HUNTRESS","ELF","NECROMANCER","GNOLL","PRIEST","DOCTOR"}
         local difficulties = { 0, 1, 2, 3 } -- Snail, Rat, Gnoll, Crab
         local heroClass = classes[math.random(1, #classes)]

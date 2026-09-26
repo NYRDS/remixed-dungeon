@@ -2,8 +2,10 @@
 
 package com.watabou.noosa.tweeners;
 
+import com.nyrds.LuaInterface;
 import com.watabou.noosa.Visual;
 
+@LuaInterface
 public class AlphaTweener extends Tweener {
 
 	public final Visual image;

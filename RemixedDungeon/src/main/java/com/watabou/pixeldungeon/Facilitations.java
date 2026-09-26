@@ -1,11 +1,13 @@
 package com.watabou.pixeldungeon;
 
+import com.nyrds.LuaInterface;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
 
+@LuaInterface
 public class Facilitations {
     public static final int NO_HUNGER = (int)Math.pow(2,16);
     public static final int FAST_REGENERATION = (int)Math.pow(2,16+1);

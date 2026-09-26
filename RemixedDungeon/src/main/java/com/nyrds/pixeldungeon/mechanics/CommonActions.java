@@ -1,10 +1,13 @@
 package com.nyrds.pixeldungeon.mechanics;
 
+import com.nyrds.LuaInterface;
+
 /**
  * Created by mike on 17.01.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
 
+@LuaInterface
 public class CommonActions {
     public static final String AC_READ = "Scroll_ACRead";
     public static final String NPC_TALK = "NPC_Talk";
