@@ -873,6 +873,7 @@
     <string name="NecromancerArmor_Info">Bộ giáp này cho phép Pháp sư Hắc huyết triệu hồi tối đa hai Deathling, mỗi thứ tốn 5 linh hồn. Những tôi tớ bất tử này sẽ theo chủ và tấn công kẻ thù. Deathling sẽ trở nên mạnh hơn theo cấp độ anh hùng.</string>
     <string name="NecromancerArmor_Info2">Mặc bộ giáp này cho phép pháp sư tử thi sử dụng khả năng \&quot;Necrotism\&quot;, lan truyền một dịch hạch phép thuật có thể lây nhiễm bất kỳ sinh vật nào trong khu vực, sống hoặc chết.</string>
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
+    <string name="NecromancerNPC_Desc">Người đàn ông trung niên này có vẻ hơi khó chịu và phấn khích cùng lúc. Ông mặc một bộ giáp tổng hợp làm từ các mảnh xương được ghép lại.</string>
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
     <string name="NecromancerNPC_Intro2">À! Một bạn đồng hành phiêu lưu không chỉ là một xác chết vô tri. Chẳng thể tin nổi! Ô... xin lỗi, đôi khi tôi hơi quá hứng phấn. Cậu thấy, chính tôi là một pháp sư phục sinh. Dù việc nghiên cứu xác chết và chính cái chết được chúng tôi coi trọng, nhưng sự đơn điệu này sớm muộn cũng khiến ai đó chán nản. Mặt khác đó chính là lý do tôi ở đây. Hôm kia có chuyện lớn xảy ra! _Necropolis_, một thành phố cổ của người chết đã mở cửa cho chúng ta ngắm nhìn. Thực lòng mà nói, chúng ta đang đứng ngay trước cánh cửa ấy. Và... cậu biết sao, hãy lấy chìa khóa và đi trước đi, cậu thích những phiêu lưu, phải không? Còn tôi sẽ theo sau... chỉ cần chuẩn bị chút đã.</string>
@@ -978,6 +979,7 @@
     <string name="PortalGate_Used">Ngươi chạm vào cổng và... không có gì xảy ra.</string>
     <string name="Possess_CantPossessSelf">Bạn không thể chiếm hữu chính mình</string>
     <string name="Possess_Info">Nghệ thuật đen tối của kiểm soát tâm trí cho phép người thi phép cong vẹo ý chí của hầu hết các sinh vật.</string>
+    <string name="Potential_Txt">%s của tiềm năng</string>
     <string name="PotionBelt_Info">Chiếc đai da chắc chắn này có thể đựng tất cả bình thuốc của bạn, đồng thời bảo vệ chúng không bị vỡ do giá lạnh.</string>
     <string name="PotionOfFrost_Info">Khi tiếp xúc với không khí cởi trời, hóa chất này sẽ bay hơi thành một đám mây đóng băng, khiến bất kỳ sinh vật nào chạm vào nó bị đóng băng ngay tại chỗ, không thể hành động hay di chuyển.</string>
     <string name="PotionOfHealing_Apply">Vết thương của bạn đã hồi phục hoàn toàn.</string>
@@ -1810,6 +1812,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

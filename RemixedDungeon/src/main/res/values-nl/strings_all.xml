@@ -739,6 +739,7 @@
     <string name="Journal_Statue">Geanimeerd standbeeld</string>
     <string name="Journal_Wandmaker">Oude toverstafmaker</string>
     <string name="Journal_WellAwareness">Bron van Bewustzijn</string>
+    <string name="Keyring_Name">sleutelring</string>
     <string name="KindOfBow_SelectArrowKind">Welke pijlen moet ik gebruiken?</string>
     <string name="KindOfWeapon_EquipCursed">je huivert als je grip onwillekeurig strakker wordt rond je %s</string>
     <string name="King_Defense">geparreerd</string>
@@ -1617,6 +1618,7 @@
     <string name="WndGame_Save">Opslaan</string>
     <string name="WndHats_BackButton">Terug</string>
     <string name="WndHats_BuyButton">Kopen</string>
+    <string name="WndHats_EquipButton">Uitrusten</string>
     <string name="WndHats_InfoButton">Bekijken</string>
     <string name="WndHats_ListTitle">Lijst van accessoires</string>
     <string name="WndHats_Purchased">Geregeld!</string>
@@ -1769,6 +1771,7 @@
     <string name="Yog_Desc">Yog-Dzewa is een Oude God, een machtige entiteit uit de rijken van chaos. Een eeuw geleden wonnen de oude dwergen ternauwernood de oorlog tegen zijn leger van demonen, maar waren niet in staat de god zelf te doden. In plaats daarvan sloten ze hem op in de zalen onder hun stad, overtuigd dat hij te zwak was om ooit weer op te staan.</string>
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
+    <string name="YogsBrain_Desc">Brein van Yog-Dzewa. Bron van al het kwaad dat ooit uit de kerker kwam.</string>
     <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">Yog\'s hersenen</string>
     <string name="YogsBrain_Name_Objective">Hersenen van Yog</string>
@@ -2105,6 +2108,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
