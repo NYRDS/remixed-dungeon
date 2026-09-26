@@ -27,6 +27,7 @@
     <string name="AirElemental_Name">nguyên tố không khí</string>
     <string name="AirElemental_Name_Objective">nguyên tố khí</string>
     <string name="Albino_Gender">masculine</string>
+    <string name="Albino_Name_Objective">chuột bạch</string>
     <string name="AlchemyPot_SelectSeed">Chọn một hạt giống để ném</string>
     <string name="AllowStatisticsCollectionScene_Allow">Cho phép</string>
     <string name="AllowStatisticsCollectionScene_Deny">Từ chối</string>
@@ -1820,6 +1821,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

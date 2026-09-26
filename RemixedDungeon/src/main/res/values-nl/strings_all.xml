@@ -1800,6 +1800,7 @@
     <string name="town_deco_armoronhanger_desc">Iets wat lijkt op pantser op een hanger.</string>
     <string name="town_deco_armoronhanger_name">Pantser</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
+    <string name="town_deco_armorstand_leather_name">Leren pantser</string>
     <string name="town_deco_armorstand_plate_desc">Volgens de koopman behoorde deze zware plastruim ooit toe aan een groot krijger.</string>
     <string name="town_deco_armorstand_scale_desc">De vergulde platen van deze schubpantser zien er gloednieuw uit.</string>
     <string name="town_deco_armorstand_scale_name">Schubbenpantser</string>
@@ -1886,6 +1887,7 @@
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_rug_name">kleed</string>
     <string name="town_deco_screen_desc">Dit mysterieuze doek heet een \&quot;scherm\&quot; en kan bewegende beelden tonen</string>
+    <string name="town_deco_screen_name">Scherm</string>
     <string name="town_deco_shelf_full_desc">Op deze plank staan allerlei snuisterijen.</string>
     <string name="town_deco_shelf_name">Planken</string>
     <string name="town_deco_shelving_desc">Een indrukwekkend groot rek, waarvan de planken gevuld zijn met diverse dranken en versnaperingen.</string>
@@ -2115,6 +2117,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
