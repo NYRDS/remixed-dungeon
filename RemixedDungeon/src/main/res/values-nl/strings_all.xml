@@ -568,6 +568,7 @@
     <string name="Golem_Defense">geblokkeerd</string>
     <string name="Golem_Gender">masculine</string>
     <string name="Golem_Name_Objective">golem</string>
+    <string name="Goo_Desc">Er is weinig bekend over De Goo. Het is heel goed mogelijk dat het niet eens een schepsel is, maar eerder een samenklontering van stoffen uit de riolen die rudimenten van vrije wil verkreeg. Hoe dan ook, het is duidelijk dat donkere magie hier aan het werk is.</string>
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">De slime blaast zichzelf op!</string>
     <string name="Goo_Info2">glurp... glurp...</string>
@@ -1129,6 +1130,7 @@
     <string name="RingOfEvasion_Name">Ring van Ontwijking</string>
     <string name="RingOfFrost_Name">Ring van de Vorst</string>
     <string name="RingOfHaggler_Info">Dit ring biedt in feite geen magisch effect, maar toont aan handelaren en verkopers dat de eigenaar lid is van het Dievengilde. Meestal geven ze graag een korting in ruil voor een tijdelijke immuniteitsgarantie. Het verbeteren van deze ring levert geen extra bonussen op.</string>
+    <string name="RingOfHaggler_Name">Ring van de Handelaar</string>
     <string name="RingOfHaste_Name">Ring van Snelheid</string>
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
     <string name="RingOfMending_Info">Deze ring verhoogt de regeneratieve eigenschappen van het lichaam, waardoor men verloren gezondheid kan herstellen met een versnelde snelheid. Verslechterde ringen zullen de natuurlijke regeneratie verminderen of zelfs stopzetten.</string>
@@ -2111,6 +2113,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
