@@ -13,7 +13,6 @@ import com.nyrds.platform.util.PUtil;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
@@ -242,7 +241,7 @@ final class DebugEntryPoints {
 		Level level = Dungeon.level;
 		Mob target = null;
 		for (Mob m : level.mobs) {
-			if (m.isAlive() && !(m instanceof NPC)) {
+			if (m.isAlive() && !m.isNpc()) {
 				target = m;
 				break;
 			}

@@ -57,12 +57,4 @@ public class SmartTexture extends Texture {
 				(float)right / getWidth(),
 				(float)bottom / getHeight() );
 	}
-
-	/**
-	 * Get the bitmap data associated with this texture
-	 * @return The bitmap data, or null if it's not available
-	 */
-	public BitmapData getBitmapData() {
-		return bitmapData;
-	}
 }
