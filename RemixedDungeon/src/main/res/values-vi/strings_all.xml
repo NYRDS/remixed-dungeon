@@ -1676,12 +1676,14 @@
     <string name="town_deco_armorstand_scale_desc">Những tấm thép mạ vàng của bộ giáp vảy này trông như mới tinh.</string>
     <string name="town_deco_armorstand_scale_name">Giáp vảy</string>
     <string name="town_deco_banner_desc">Một lá cờ thanh lịch vẽ các biểu tượng của quán rượu này.</string>
+    <string name="town_deco_banner_name">Cờ hiệu</string>
     <string name="town_deco_barrel_desc">Một chiếc thùng gỗ bình thường, cũng không còn ở tình trạng tốt nữa.</string>
     <string name="town_deco_barrel_wine_desc">Được dùng để chứa một thức uống quý giá như rượu vang.</string>
     <string name="town_deco_barrel_wine_name">Thùng rượu</string>
     <string name="town_deco_bell_desc">Một cái chuông giáo đường điển hình. Trông nó như đã không ai rung chuông này được khá lâu rồi, thậm chí dây treo cũng đã mất.</string>
     <string name="town_deco_bell_tower_name">Tháp chuông</string>
     <string name="town_deco_blue_carpet_name">thảm</string>
+    <string name="town_deco_book_desc">Cuốn sách này trông như ai đó vô tình để quên</string>
     <string name="town_deco_broken_roof_desc">Các viên ngói trên mái nhà này bị nứt và cần được thay thế.</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
@@ -1796,6 +1798,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

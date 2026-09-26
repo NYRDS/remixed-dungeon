@@ -1120,6 +1120,7 @@
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
     <string name="RingOfMending_Info">Deze ring verhoogt de regeneratieve eigenschappen van het lichaam, waardoor men verloren gezondheid kan herstellen met een versnelde snelheid. Verslechterde ringen zullen de natuurlijke regeneratie verminderen of zelfs stopzetten.</string>
     <string name="RingOfMending_Name">Ring der Genezing</string>
+    <string name="RingOfPower_Info">Je toverstokken worden krachtiger in het energieveld dat vanuit deze ring straalt. Beschadigde ringen van kracht zullen je toverstokken in plaats daarvan verzwakken.</string>
     <string name="RingOfSatiety_Name">Ring van Voldoening</string>
     <string name="RingOfShadows_Info">Vijanden zullen je minder snel opmerken als je deze ring draagt. Aangetaste ringen van schaduwen zullen vijanden waarschuwen die je anders misschien niet hadden opgemerkt.</string>
     <string name="RingOfStoneWalking_ImmuredInStone">Je bent in steen gemetseld. Voor altijd.</string>
@@ -1189,6 +1190,7 @@
     <string name="ScrollOfMagicMapping_Name">Scroll van Magische Kaartvorming</string>
     <string name="ScrollOfMirrorImage_Name">Spiegelbeeldrol</string>
     <string name="ScrollOfPsionicBlast_Info">Deze scroll bevat vernietigende energie, die psionisch kan worden gekanaliseerd om massale schade toe te brengen aan alle wezens binnen het gezichtsveld. Een begeleidende lichtflits zal tijdelijk iedereen in het effectgebied verblinden, inclusief de lezer van de scroll.</string>
+    <string name="ScrollOfRecharging_Info1b">een golf van energie stroomt door je rugzak en laadt je toverstokken op</string>
     <string name="ScrollOfRecharging_Info2">een energiegolf stroomt door je rugzak, maar er gebeurt niets</string>
     <string name="ScrollOfRemoveCurse_Info">De bezwering op deze rol zal onmiddellijk alle kwaadaardige betoveringen van het wapen, pantser, ringen en voorwerpen van de lezer verwijderen die het dragen ervan zouden kunnen verhinderen.</string>
     <string name="ScrollOfRemoveCurse_Name">Schrift van Vervloeking Verwijderen</string>
@@ -2089,6 +2091,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
