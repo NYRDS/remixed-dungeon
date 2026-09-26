@@ -1088,6 +1088,7 @@
     <string name="RatArmor_Info">Een leren pantser gemaakt van rattenhuid. Het is waarschijnlijk niet besmettelijk...</string>
     <string name="RatArmor_Name">ratten pantser</string>
     <string name="RatHide_Name">rattenhuid</string>
+    <string name="RatKingCrownBuff_Info">Hul de Heer der ratten, elke rat zal gehoorzamen en prijzen.</string>
     <string name="RatKingCrownBuff_Name">Rattenheid</string>
     <string name="RatKingCrown_Info">Gouden kroon van Zijn Rattigheid, symbool van eeuwigdurende Macht</string>
     <string name="RatKingCrown_Name">Kroon van de rattenkoning</string>
@@ -2101,6 +2102,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
