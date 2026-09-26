@@ -176,8 +176,37 @@ public class ModdingMode extends ModdingBase {
         }
     }
     
+    private static List<String> sResourceIndex;
+
+    // resource paths come from index.lst shipped by make_webapp.py and
+    // preloaded with the rest of the assets (TeaVM has no directory listing)
+    private static List<String> resourceIndex() {
+        if (sResourceIndex == null) {
+            sResourceIndex = new ArrayList<>();
+            String index = getResource("index.lst");
+            if (index != null) {
+                for (String line : index.split("\n")) {
+                    String res = line.trim();
+                    if (!res.isEmpty()) {
+                        sResourceIndex.add(res);
+                    }
+                }
+            }
+        }
+        return sResourceIndex;
+    }
+
     public static List<String> listResources(String path, FilenameFilter filter) {
-        // In HTML version, we return an empty list
-        return new ArrayList<>();
+        List<String> result = new ArrayList<>();
+        String prefix = path + "/";
+        for (String res : resourceIndex()) {
+            if (res.startsWith(prefix)) {
+                String relative = res.substring(prefix.length());
+                if (filter == null || filter.accept(null, relative)) {
+                    result.add(relative);
+                }
+            }
+        }
+        return result;
     }
 }

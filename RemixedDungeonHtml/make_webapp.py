@@ -760,6 +760,16 @@ def main() -> None:
         lines.append("i:b:%s:%d:0" % (name, os.path.getsize(src)))
         count += 1
 
+    # TeaVM cannot list directories over http - ship the manifest paths as a
+    # preloaded plain-text index so ModdingMode.listResources can discover
+    # scripts/items, effects etc. (ItemFactory registers lua items from it)
+    index_lines = [ln.split(":")[2] for ln in lines if ln.count(":") >= 4]
+    index_path = os.path.join(assets_dir, "index.lst")
+    with open(index_path, "w") as f:
+        f.write("\n".join(index_lines) + "\n")
+    lines.append("i:b:index.lst:%d:0" % os.path.getsize(index_path))
+    count += 1
+
     with open(os.path.join(assets_dir, "assets.txt"), "w") as f:
         f.write("\n".join(lines) + "\n")
 
