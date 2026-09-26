@@ -1843,6 +1843,7 @@
     <string name="town_deco_flowerinthepot_desc">Decoratieve bloem met een zoete smaak</string>
     <string name="town_deco_flowerinthepot_name">Bloem in een pot</string>
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
+    <string name="town_deco_glass_name">Breed Raam</string>
     <string name="town_deco_glass_stained_name">Glas in lood</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
     <string name="town_deco_hay_name">hooi</string>
@@ -2102,6 +2103,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
