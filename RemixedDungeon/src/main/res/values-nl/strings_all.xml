@@ -1126,6 +1126,7 @@
     <string name="RingOfEvasion_Info">Deze ring vergroot je kans om een aanval van een vijand te ontwijken.</string>
     <string name="RingOfEvasion_Name">Ring van Ontwijking</string>
     <string name="RingOfFrost_Name">Ring van de Vorst</string>
+    <string name="RingOfHaggler_Info">Dit ring biedt in feite geen magisch effect, maar toont aan handelaren en verkopers dat de eigenaar lid is van het Dievengilde. Meestal geven ze graag een korting in ruil voor een tijdelijke immuniteitsgarantie. Het verbeteren van deze ring levert geen extra bonussen op.</string>
     <string name="RingOfHaste_Name">Ring van Snelheid</string>
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
     <string name="RingOfMending_Info">Deze ring verhoogt de regeneratieve eigenschappen van het lichaam, waardoor men verloren gezondheid kan herstellen met een versnelde snelheid. Verslechterde ringen zullen de natuurlijke regeneratie verminderen of zelfs stopzetten.</string>
@@ -2108,6 +2109,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
