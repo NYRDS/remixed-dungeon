@@ -688,6 +688,7 @@
     <string name="InventoryScroll_Warning">Bạn có thực sự muốn hủy việc sử dụng cuộn giấy này không? Nó sẽ bị tiêu hao dù sao.</string>
     <string name="InvisibilityBuff_Info">Hoàn toàn vô hình, có thể giúp tránh nguy hiểm hoặc trở thành nguy hiểm.</string>
     <string name="IronKey_FromDepth">chìa khóa sắt từ độ sâu %d</string>
+    <string name="Item_ACAlchemy">GIẢ KIM THUẬT</string>
     <string name="Item_ACDrop">THẢ</string>
     <string name="Item_DirThrow">Chọn hướng ném</string>
     <string name="Item_Info">gì đó</string>
@@ -1794,10 +1795,14 @@
     <string name="town_deco_wooden_bench_name">Ghế gỗ</string>
     <string name="town_deco_wooden_chair_desc">Chiếc ghế này được làm từ gỗ</string>
     <string name="town_deco_wooden_chair_name">Ghế gỗ</string>
+    <string name="town_deco_wooden_drawer_desc">Thật thú vị khi biết những gì được giữ bên trong.</string>
     <string name="town_deco_wooden_drawer_name">Ngăn kéo gỗ</string>
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

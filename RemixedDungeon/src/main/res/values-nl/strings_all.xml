@@ -747,6 +747,7 @@
     <string name="Knuckles_Name">boksbeugel</string>
     <string name="KoboldIcemancer_Desc">Kobold IJsbezweerders waren de elite van de samenleving. Vooraanstaande krijgers, tovenaars en bovenal wetenschappers. Oude ijsmesters grepen de kunst van het bevelen over ijs, en creëerden complexe mechanismen versterkt met speciale spreuken.</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
+    <string name="KoboldIcemancer_Name_Objective">kobold ijstovenaar</string>
     <string name="Kobold_Desc">Er werd aangenomen dat kobolds niets meer waren dan een legende. Als voorouders van de gewone gnolls woonden kobolds in de diepste en koudste grotten. Er wordt ook verteld dat hun ras techniek en machinebouw beheerste lang voordat de dwergen dat deden.</string>
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
@@ -1001,6 +1002,7 @@
     <string name="Plant_ACPlant">PLANT</string>
     <string name="Plant_Info">Worp deze zaad naar de plaats waar je %1$s wilt laten groeien.\n\n%2$s</string>
     <string name="PoisonArrow_Gender">feminine</string>
+    <string name="PoisonArrow_Name">giftige pijl</string>
     <string name="Poison_Name_1">Giftig %s</string>
     <string name="Poison_Name_2">Vergiftigde %s</string>
     <string name="PortalExit_Desc">Deze portal brengt je naar het eerste niveau van de %s.</string>
@@ -1371,6 +1373,7 @@
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">levend standbeeld</string>
+    <string name="Statue_Name_Objective">bewegend standbeeld</string>
     <string name="Stench_Txt">%s van stank</string>
     <string name="StoneBloodBuff_Info">Het bloed verandert in steen die samensmelt met de nabije muren en het doorlopen ervan veel makkelijker maakt, maar tegen welke prijs.</string>
     <string name="StoneBloodBuff_Name">Stenen bloed</string>
@@ -1908,7 +1911,7 @@
     <string name="town_deco_wooden_bench_desc">Houten bank, ziet er ongemakkelijk uit om op te zitten.</string>
     <string name="town_deco_wooden_bench_name">Houten bank</string>
     <string name="town_deco_wooden_chair_name">Houten stoel</string>
-    <string name="town_deco_wooden_drawer_desc">Interessant wat erin bewaard zit.</string>
+    <string name="town_deco_wooden_drawer_desc">Interessant wat erin bewaard wordt.</string>
     <string name="town_deco_wooden_drawer_name">lade</string>
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
@@ -2091,6 +2094,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
