@@ -12,7 +12,7 @@ local mob = require "scripts/lib/mob"
 
 return mob.init{
     act = function(self)
-        RPD.n(RPD.Blobs.ToxicGas, self:getPos(), 30)
+        RPD.placeBlob(RPD.Blobs.ToxicGas, self:getPos(), 30)
     end,
 
     spawn = function(self, level)

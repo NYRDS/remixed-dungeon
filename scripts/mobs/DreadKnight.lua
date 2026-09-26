@@ -9,9 +9,9 @@ return mob.init{
             return dmg * 2
         end
         -- 1/10 chance to stun (java's 2-arg affect carried no duration and
-        -- never stunned anyone; Stun.duration = the standard convention)
+        -- never stunned anyone; Stun.duration = 10 turns, resistance-scaled)
         if enemy ~= nil and math.random(10) == 1 then
-            RPD.affectBuff(enemy, "Stun", RPD.Buffs.Stun:duration(enemy))
+            RPD.affectBuff(enemy, "Stun", RPD.CharUtils:durationFactor(enemy) * 10)
         end
         return dmg
     end

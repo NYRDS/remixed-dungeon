@@ -37,7 +37,8 @@ return mob.init{
             local eff = enemy:defenseProc(self, self:damageRoll())
             enemy:damage(eff, self)
             if math.random(2) == 1 then
-                    RPD.Buffs.Buff:prolong(enemy, "Weakness", RPD.Buffs.Weakness:duration(enemy))
+                    -- Weakness.duration static died with batch 19: 40 turns, resistance-scaled via CharUtils
+                    RPD.Buffs.Buff:prolong(enemy, "Weakness", RPD.CharUtils:durationFactor(enemy) * 40)
             end
             RPD.CharUtils:checkDeathReport(self, enemy, RPD.textById("Warlock_Killed"))
         end

@@ -7,7 +7,8 @@ return mob.init{
     attackProc = function(self, enemy, dmg)
         if enemy ~= nil and math.random(2) == 1 then
             -- java: affect + reignite(ch) == attach with duration(ch)
-            RPD.Buffs.Buff:affect(enemy, "Burning", RPD.Buffs.Burning:duration(enemy))
+            -- Burning.duration static died with the buff migration: 8 turns, resistance-scaled
+            RPD.Buffs.Buff:affect(enemy, "Burning", RPD.CharUtils:durationFactor(enemy) * 8)
         end
         return dmg
     end,

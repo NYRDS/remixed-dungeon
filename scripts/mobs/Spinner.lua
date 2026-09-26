@@ -22,7 +22,7 @@ return mob.init{
     attackProc = function(self, enemy, dmg)
         -- 1/2 chance to poison for 7-8 turns (Random.Int(7,9) is [7,9)) and flee
         if enemy ~= nil and math.random(2) == 1 then
-            local factor = RPD.Buffs.Poison:durationFactor(enemy)
+            local factor = RPD.CharUtils:durationFactor(enemy)
             RPD.Buffs.Buff:affect(enemy, "Poison", math.random(7, 8) * factor)
             RPD.setAi(self, "Fleeing")
         end

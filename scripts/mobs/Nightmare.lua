@@ -10,7 +10,8 @@ return mob.init{
                 RPD.affectBuff(enemy, "Roots", 3)
             end
             if math.random(10) == 1 then
-                RPD.affectBuff(enemy, "Stun", RPD.Buffs.Stun:duration(enemy))
+                -- Stun.duration static died with batch 19: 10 turns, resistance-scaled via CharUtils
+                RPD.affectBuff(enemy, "Stun", RPD.CharUtils:durationFactor(enemy) * 10)
             end
         end
         return dmg

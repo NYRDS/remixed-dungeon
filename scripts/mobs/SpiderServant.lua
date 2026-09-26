@@ -9,7 +9,7 @@ return mob.init{
     act = healerAct.act,
     attackProc = function(self, enemy, dmg)
         if enemy ~= nil and math.random(4) == 1 then
-            RPD.affectBuff(enemy, "Poison", 2 * RPD.Buffs.Poison:durationFactor(enemy))
+            RPD.affectBuff(enemy, "Poison", 2 * RPD.CharUtils:durationFactor(enemy))
         end
         return dmg
     end
