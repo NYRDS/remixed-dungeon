@@ -724,6 +724,7 @@
     <string name="Knuckles_Name">cặp đấm</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">Bolt băng của %s đã giết bạn...</string>
+    <string name="KoboldIcemancer_Name_Objective">kobold băng thuật</string>
     <string name="Kobold_Desc">Người ta tin rằng Kobold chỉ là truyền thuyết. Là tổ tiên của loài quỷ lùn, kobold cư ngụ trong những hang động sâu và lạnh nhất. Người ta cũng kể rằng giống loài này đã làm chủ kỹ nghệ và máy móc từ lâu trước khi người lùn làm được điều đó.</string>
     <string name="Kobold_Gender">masculine</string>
     <string name="Kobold_Name">kobold</string>
@@ -828,6 +829,7 @@
     <string name="MeleeWeapon_Info4b">Nó đã được cân bằng để tăng độ chính xác.</string>
     <string name="MeleeWeapon_Info5">Nó đã được phù phép.</string>
     <string name="MeleeWeapon_Info6b">Do sức mạnh dư thừa, sát thương tấn công của bạn với %s này được tăng lên.</string>
+    <string name="MeleeWeapon_Info7a">Bạn cầm %1 sẵn sàng%2.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">lính thuê</string>
     <string name="Metabolism_Txt">%s của trao đổi chất</string>
@@ -1818,6 +1820,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

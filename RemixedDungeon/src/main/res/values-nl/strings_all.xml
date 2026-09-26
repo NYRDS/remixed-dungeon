@@ -49,6 +49,7 @@
     <string name="AmuletScene_Txt">Eindelijk houd je het in je handen, het Amulet van Yendor. Met zijn kracht kun je de wereld veroveren of vrede en voorspoed brengen of wat dan ook. In ieder geval zal je leven voor altijd veranderen en dit spel eindigt hier. Of je kunt nog even een gewone sterfelijke blijven.</string>
     <string name="Amulet_ACEnd">SPEL BEËINDIGEN</string>
     <string name="AnesthesiaBuff_Info">Voelt geen pijn en wakert niet op bij aanvallen, maar krijgt nog steeds schade.</string>
+    <string name="AnesthesiaBuff_Name">Narcose</string>
     <string name="Anesthesia_Cast">%s valt in een diepe, droomloze slaap.</string>
     <string name="Ankh_Info">Dit oude symbool van onsterfelijkheid geeft de mogelijkheid om na de dood tot leven terug te keren. Bij de opstanding gaan alle niet-uitgeruste voorwerpen verloren.</string>
     <string name="Ankh_Name">Ankh</string>
@@ -388,6 +389,7 @@
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
     <string name="CompoundBow_Gender">masculine</string>
     <string name="CompoundBow_Name">compogite boog</string>
+    <string name="ConcreteBlock_Description">Het lijkt erop dat voor het duwen van dit blok %d punten kracht nodig zijn.</string>
     <string name="ConcreteBlock_Name">Zwaar betonnen blok</string>
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
@@ -2113,6 +2115,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
