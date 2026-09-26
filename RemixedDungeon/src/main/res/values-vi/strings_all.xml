@@ -413,6 +413,7 @@
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name_Objective">hiệp sĩ đáng sợ</string>
     <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
+    <string name="DriedRoseCursedBuff_Name">Say đắm</string>
     <string name="DriedRose_Info">Bông hồng này đã khô héo từ lâu, nhưng cách nào đó nó vẫn giữ nguyên tất cả cánh hoa.</string>
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
     <string name="DriedRose_Name">hoa hồng khô</string>
@@ -1795,6 +1796,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

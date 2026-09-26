@@ -782,6 +782,7 @@
     <string name="Level_TileDescChasm">Je kunt de bodem niet zien.</string>
     <string name="Level_TileDescEntrance">Trappen leiden naar een hogere verdieping.</string>
     <string name="Level_TileDescExit">De treden leiden naar beneden, naar een diepere verdieping.</string>
+    <string name="Level_TileDescInactiveTrap">De val is al eerder geactiveerd en is niet meer gevaarlijk.</string>
     <string name="Level_TileDescLockedDoor">Deze deur is op slot, je hebt een passende sleutel nodig om hem te openen.</string>
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
     <string name="Level_TileDescWater">Als je in brand staat, stap in het water om het vuur te doven.</string>
@@ -2088,6 +2089,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
