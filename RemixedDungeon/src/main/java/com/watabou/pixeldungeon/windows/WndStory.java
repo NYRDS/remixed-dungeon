@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.LuaInterface;
-
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;

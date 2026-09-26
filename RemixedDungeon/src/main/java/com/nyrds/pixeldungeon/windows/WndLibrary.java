@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.LuaInterface;
-
 import com.nyrds.pixeldungeon.items.common.Library;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;

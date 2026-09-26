@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.LuaInterface;
-
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
