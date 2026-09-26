@@ -15,6 +15,7 @@ import com.nyrds.platform.app.RemixedDungeonApp;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.support.AAdsComboProvider;
 import com.nyrds.platform.util.StringsManager;
+import com.nyrds.util.Util;
 import com.yandex.mobile.ads.banner.BannerAdView;
 import com.yandex.mobile.ads.common.YandexAds;
 import java.util.Map;
@@ -34,6 +35,10 @@ public class AdsUtils {
 
     static {
         try {
+            if (Util.isDebug()) {
+                // verbose ad request lifecycle in logcat, live-fill debugging
+                YandexAds.enableLogging(true);
+            }
             YandexAds.initialize(RemixedDungeonApp.getContext(), () -> {
                 YandexInitialized = true;
                 EventCollector.logEvent("yandex_initialized");
