@@ -1028,6 +1028,7 @@
     <string name="RabbitEars_Info">Có quan niệm rằng thỏ sinh ra đã mang may mắn, và người sở hữu một phần cơ thể của nó sẽ được thú cưng ấy ban cho vận may. Nghĩ kỹ lại, bị giết chỉ vì đôi tai của bạn – thứ sẽ dùng để làm đồ trang sức – nghe có vẻ không mấy may mắn.</string>
     <string name="RaiseDead_Name">Hồi sinh người chết</string>
     <string name="RaiseDead_NoKill">Bạn cần phải giết ai đó trước khi cố gắng hồi sinh.</string>
+    <string name="RaiseDead_NoSpace">Hồi sinh thất bại vì không có không gian trống gần đây.</string>
     <string name="RankingsScene_NoGames">Chưa có ván chơi nào được chơi.</string>
     <string name="RankingsScene_Title">Bảng Xếp Hạng Cao Nhất</string>
     <string name="RatArmor_Info">Bộ giáp da làm từ da chuột. Nó có lẽ không truyền nhiễm...</string>
@@ -1365,6 +1366,7 @@
     <string name="TownGuardNPC_Message2">Nhờ những nhà phiêu lưu như bạn, nơi đây đã thực sự trở nên yên bình.</string>
     <string name="TownGuardNPC_Message3">Bạn nghĩ có quá nhiều vệ sĩ ở thành phố này? Vâng, vì đây là thành phố duy nhất có một hang động khổng lồ đầy quái vật, đúng không?</string>
     <string name="TownGuardNPC_Name">lính gác thị trấn</string>
+    <string name="TownGuardNPC_Name_Objective">vệ sĩ thành phố</string>
     <string name="TownPortal_Info">Phép thuật này cho phép bạn quay về nơi an toàn ngay lập tức. Tuy nhiên, các nguồn sức mạnh phép thuật gần đó có thể ngăn nó hoạt động như mong muốn.</string>
     <string name="TownPortal_Name">Cổng Thần Thoại</string>
     <string name="TownsfolkMovieNPC_Desc">Một người dân địa phương. Dù rõ ràng chỉ là thường dân, bộ quần áo của hắn lại trông rất đắt tiền.</string>
@@ -1804,6 +1806,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
