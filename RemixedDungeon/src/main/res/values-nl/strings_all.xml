@@ -680,6 +680,7 @@
     <string name="Hunger_Hungry_0">Je hebt honger.</string>
     <string name="Hunger_Hungry_1">Je hebt honger.</string>
     <string name="Hunger_Hungry_2">Je hebt honger.</string>
+    <string name="Hunger_Starving_0">Je verhongert!</string>
     <string name="Hunger_Starving_1">Je bent uitgehongerd!</string>
     <string name="Hunger_Starving_2">Je verhongert!</string>
     <string name="HuntressArmor_NoEnemies">Geen vijanden in zicht</string>
@@ -1500,6 +1501,7 @@
     <string name="VampireSkull_Name">Vampierschedel</string>
     <string name="VertigoBuff_Info">Het duizelig gevoel maakt het moeilijker om rechtdoor te lopen!</string>
     <string name="View_Distance">Zichtafstand</string>
+    <string name="VileEssence_Info">Een geconcentreerde essentie van corruptie, geoogst van een verslagen vijand. Deze donkere substantie pulseert met kwaadaardige energie en wordt zeer gewaardeerd in alchemistische processen.</string>
     <string name="VileEssence_Name">Verachtelijke Essentie</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
     <string name="WandMaker_Berry1">Oh, wat een aangename verrassing een fatsoenlijk persoon te ontmoeten op zo\'n plek! Ik kwam hier voor een zeldzaam ingrediënt - een _Rotberry-zaad_. Omdat ik een magiër ben, kan ik mezelf goed verdedigen tegen lokale monsters, maar ik verdwaal altijd in no-time, het is erg gênant. Zou je me kunnen helpen? Ik zou je graag betalen met een van mijn beste toverstokken.</string>
@@ -1837,6 +1839,7 @@
     <string name="town_deco_common_door_desc">Een beleefde avonturier zou geen private eigendom binnendringen, zonder uitnodiging natuurlijk.</string>
     <string name="town_deco_counter_name">Toonbank</string>
     <string name="town_deco_covered_table_name">Tafel</string>
+    <string name="town_deco_crate_bottles_name">Bierkrat</string>
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
     <string name="town_deco_crate_scrolls_name">Kist met rollen</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
@@ -2117,6 +2120,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
