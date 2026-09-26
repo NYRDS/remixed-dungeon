@@ -4277,13 +4277,24 @@ public class DebugEndpoints {
             final String[] result = {null};
             final String[] error = {null};
 
-            GameLoop.pushUiTaskAndWait(() -> {
+            final boolean ran = GameLoop.pushUiTaskAndWait(() -> {
                 try {
                     result[0] = com.nyrds.lua.LuaEngine.eval(lua).tojstring();
-                } catch (Exception e) {
-                    error[0] = e.getMessage();
+                } catch (Throwable t) {
+                    // Throwable on purpose: luaj OrphanedThread/StackOverflowError are
+                    // Errors, and an Exception-only catch left them as silent nil results
+                    error[0] = t.getClass().getSimpleName() + ": " + t.getMessage();
                 }
             });
+
+            if (!ran) {
+                // task never drained: render thread dead or a frame wedged (it holds
+                // stepLock while draining uiTasks) - report that instead of a
+                // misleading success:nil
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.SERVICE_UNAVAILABLE,
+                    "application/json",
+                    "{\"success\":false,\"error\":\"ui task not executed within 5s - game loop not draining uiTasks (dead render thread or wedged frame?)\"}");
+            }
 
             if (error[0] != null) {
                 return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",

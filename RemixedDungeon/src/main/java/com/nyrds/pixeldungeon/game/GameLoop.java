@@ -117,11 +117,15 @@ public class GameLoop {
     /**
      * Push a UI task and wait for it to complete (up to 5 seconds)
      * This is useful for debug endpoints that need to wait for game state changes
+     *
+     * @return true if the task ran, false if the 5s wait expired - a false means
+     * the game loop is not draining uiTasks (dead render thread or a wedged
+     * frame), callers must not treat their task as executed
      */
-    static public void pushUiTaskAndWait(Runnable task) {
+    static public boolean pushUiTaskAndWait(Runnable task) {
         if(instance() == null) { // for headless mode
             task.run();
-            return;
+            return true;
         }
 
         CountDownLatch latch = new CountDownLatch(1);
@@ -143,6 +147,8 @@ public class GameLoop {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
+
+        return latch.getCount() == 0;
     }
 
     static public Future<?> stepExecute(Runnable task) {

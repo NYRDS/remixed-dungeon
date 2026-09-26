@@ -80,26 +80,42 @@ public class RemixedDungeonApp {
             }
         }
 
-        if(!BuildConfig.DEBUG && webServerPort <= 0) {
-            Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
+        // an uncaught throwable on the main/render thread must never leave a
+        // zombie process (loop dead, non-daemon webserver/executor threads
+        // keeping the JVM alive) - log, then die cleanly in every mode
+        final int fWebServerPort = webServerPort;
+        Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
+            try {
+                EventCollector.logException(throwable, "Uncaught on " + thread.getName());
+            } catch (Throwable ignored) {
+            }
 
-                StringWriter stringWriter = new StringWriter();
-                PrintWriter printWriter = new PrintWriter(stringWriter);
-                throwable.printStackTrace(printWriter);
-                String stackTrace = stringWriter.toString();
+            StringWriter stringWriter = new StringWriter();
+            PrintWriter printWriter = new PrintWriter(stringWriter);
+            throwable.printStackTrace(printWriter);
+            String stackTrace = stringWriter.toString();
 
+            if(!BuildConfig.DEBUG && fWebServerPort <= 0) {
                 javax.swing.SwingUtilities.invokeLater(() -> {
-                    JOptionPane.showMessageDialog(
-                            null,
-                            "Unhandled Exception:\n" + throwable.getMessage() + "\n\nStack Trace:\n" + stackTrace,
-                            "Error",
-                            JOptionPane.ERROR_MESSAGE
-                    );
-
-                    System.exit(1);
+                    try {
+                        JOptionPane.showMessageDialog(
+                                null,
+                                "Unhandled Exception:\n" + throwable.getMessage() + "\n\nStack Trace:\n" + stackTrace,
+                                "Error",
+                                JOptionPane.ERROR_MESSAGE
+                        );
+                    } finally {
+                        System.exit(1);
+                    }
                 });
-            });
+            } else {
+                System.err.println("Uncaught exception on " + thread.getName() + ":");
+                throwable.printStackTrace();
+                System.exit(1);
+            }
+        });
 
+        if(!BuildConfig.DEBUG && webServerPort <= 0) {
             try {
                 String logPath = getUserDataPath();
                 // Ensure the directory exists
