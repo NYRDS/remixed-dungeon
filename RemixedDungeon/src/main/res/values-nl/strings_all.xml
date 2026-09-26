@@ -572,6 +572,7 @@
     <string name="Goo_Info1">De slime blaast zichzelf op!</string>
     <string name="Goo_Info2">glurp... glurp...</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
+    <string name="Goo_Name">Goo</string>
     <string name="GothicArmor_Info">Een gotische pantser is de hoogtepunt van de kunst van pantser smeden.</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
     <string name="Guts_TileGrass">Droge struik</string>
@@ -830,6 +831,7 @@
     <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Name">langzwaard</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
+    <string name="Luck_Name_1">Gelukkig %s</string>
     <string name="Luck_Name_2">Gelukkig %s</string>
     <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">De ijzeren kop van dit wapen richt aanzienlijke schade aan.</string>
@@ -2109,6 +2111,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

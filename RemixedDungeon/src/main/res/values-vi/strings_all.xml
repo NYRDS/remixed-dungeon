@@ -544,6 +544,7 @@
     <string name="Goo_Gender">feminine</string>
     <string name="Goo_Info1">Goo đang bơm hơi cho mình!</string>
     <string name="Goo_Info3">Ọp-ọp!</string>
+    <string name="Goo_Name">Nhầy</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Guts_TileGrass">Bụi cây khô</string>
     <string name="Halberd_Gender">feminine</string>
@@ -1627,6 +1628,7 @@
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
     <string name="WndSettings_moveTimeout">Thời gian chờ di chuyển: %s</string>
+    <string name="WndStory_Caves">Những hang động, trải dài dưới nhà tù bị bỏ hoang, thưa thớt người ở. Chúng nằm quá sâu để Thành phố có thể khai thác và quá nghèo khoáng sản để khiến người lùn quan tâm. Trong quá khứ từng có một trạm giao thương ở đây trên tuyến đường giữa hai quốc gia này, nhưng nó đã tiêu tan từ khi Đô thị Lùn sụp đổ. Giờ đây chỉ còn những con gnoll phổ biến và các loài thú dưới đất sinh sống ở đây.</string>
     <string name="WndStory_Guts">Thần Cổ bị đánh bại, vỡ vụn thành trăm mảnh nhưng chưa bị tiêu diệt hoàn toàn, đã bị phong ấn tại những tầng sâu nhất của hầm ngục. Nhưng gần đây con dấu đã bị phá vỡ, mở toang lối đi đến tổ của quỷ dữ. Những con quái vật ác mộng mà Thần Cổ tạo ra trong giấc ngủ của ngài đông đến mức chẳng còn lối thoát, chúng buộc phải hợp nhất với nhau tạo nên những đại sảnh kỳ dị này. Và khi bạn bước trên lớp thịt sống của chúng, bạn có thể cảm nhận nhịp đập trái tim của Thần Cổ vang vọng khắp nơi.</string>
     <string name="WndStory_Halls">Trong quá khứ những tầng này là vùng ngoại ô của Metropolis. Sau chiến thắng đắt giá trong cuộc chiến với vị thần cũ, người lùn quá suy yếu để dọn sạch những con quỷ còn sót lại. Dần dần quỷ đã thắt chặt quyền kiểm soát nơi này và giờ nó được gọi là Sảnh Quỷ.\n\nRất ít nhà thám hiểm từng xuống xa đến vậy...</string>
     <string name="WndStory_Metropolis">Thành phố Lục phủ Mat người lùn từng là lớn nhất trong các thành bang của người lùn. Vào thời kỳ thịnh vượng, quân đội cơ giới của người lùn đã đẩy lùi thành công cuộc xâm lược của vị thần cổ xưa và quân đoàn quỷ của ngài. Người ta nói rằng, các chiến binh trở về đã mang theo những hạt giống của sự tàn phá, và chiến thắng đó là khởi đầu của sự chấm dứt cho vương quốc dưới đất.</string>
@@ -1814,6 +1816,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
