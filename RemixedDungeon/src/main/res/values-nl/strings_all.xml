@@ -862,6 +862,7 @@
     <string name="MercenaryNPC_Desc">Een stevig mannetje.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">huurling</string>
+    <string name="MercenaryNPC_Name_Objective">huurling</string>
     <string name="Metabolism_Txt">%s van metabolisme</string>
     <string name="MimicAmulet_Desc">Het meest glorieuze moment van je avonturierscarrière bleek een val te zijn.</string>
     <string name="MimicAmulet_Gender">masculine</string>
@@ -1192,6 +1193,7 @@
     <string name="ScrollOfIdentify_Info1">Het is %s</string>
     <string name="ScrollOfIdentify_InvTitle">Kies een voorwerp om te identificeren</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
+    <string name="ScrollOfLullaby_Info">Een rustgevende melodie zal alle wezens in je gezichtsveld in een diepe slaap brengen, zodat je kunt vluchten of een verrassingsaanval kunt uitvoeren.</string>
     <string name="ScrollOfLullaby_Info1">De pergament uitte een kalmerende melodie.</string>
     <string name="ScrollOfLullaby_Info2">Het pergament brengt een kalmerende melodie voort en de %s valt in slaap!</string>
     <string name="ScrollOfLullaby_Info3">De scroll spreekt een kalmerende melodie uit en de monsters vallen in slaap!</string>
@@ -2103,6 +2105,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
