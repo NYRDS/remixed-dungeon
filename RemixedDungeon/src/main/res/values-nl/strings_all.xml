@@ -396,6 +396,7 @@
     <string name="CorpseExplosion_Name">Lijk Explosie</string>
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">rioolkrab</string>
+    <string name="Crab_Name_Objective">rioolkrab</string>
     <string name="CrippleBuff_Info">Het lichaam is verlamd, maar de strijd gaat door.</string>
     <string name="CrippleBuff_Name">Verstompt</string>
     <string name="Crystal_Desc">Grote schitterende kristal zweeft in de lucht. Waarschijnlijk is het vol met krachtige magie.</string>
@@ -546,6 +547,7 @@
     <string name="Ghost_Rose1">Hallo avonturier... Eens was ik als jij - sterk en zelfverzekerd... En nu ben ik dood... Maar ik kan deze plek niet verlaten... Niet voordat ik mijn _gedroogde roos_ terugheb... Het is heel belangrijk voor me... Sommige monsters hebben het van mijn lichaam gestolen...</string>
     <string name="Ghost_Rose2">Alsjeblieft... Help me... Vind de roos...</string>
     <string name="Glaive_Gender">feminine</string>
+    <string name="Glaive_Info">Een polearm bestaande uit een zwaardblad aan het uiteinde van een paal.</string>
     <string name="Glaive_Name">gleve</string>
     <string name="GnollArmor_ACSpecial">DOMINEREN</string>
     <string name="GnollArmor_Info">Draagsters van het Gnome-Luitenant-kostuum zijn bekend om hun vermogen om zelfs de woestste monsters te overtuigen tot loyale dienaren van de Kroon.</string>
@@ -758,6 +760,7 @@
     <string name="KunaiThrow_Name">Kunai-worp</string>
     <string name="Kusarigama_Gender">feminine</string>
     <string name="Kusarigama_Info">Dit wapen bestaat uit een zeis aan een metalen ketting met een zwaar ijzeren gewicht aan het andere uiteinde.</string>
+    <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">TREKKEN</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">larve van de god</string>
@@ -1145,6 +1148,7 @@
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="RootSpell_Info">Bevestigt de geselecteerde karakter met wortels, waardoor hij voor korte tijd niet kan bewegen.</string>
     <string name="RootsBuff_Name">Geworteld</string>
+    <string name="RottenFish_Taste">Walgelijk!</string>
     <string name="RottenFood_Message">Walging!</string>
     <string name="RottenMeat_Name">bedorven vlees</string>
     <string name="RottenOrgan_Info">Een ontbindend orgaan, geoogst van een verslagen vijand. Ondanks zijn verrotte staat bevat het waardevolle stoffen voor alchemistische processen.</string>
@@ -2095,6 +2099,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

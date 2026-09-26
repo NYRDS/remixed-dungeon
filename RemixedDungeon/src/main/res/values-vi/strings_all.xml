@@ -401,6 +401,7 @@
     <string name="DewVial_Collected">Bạn đã nhặt một giọt sương vào lọ sương.</string>
     <string name="DewVial_Full">Lọ hơi sương đã đầy!</string>
     <string name="DewVial_Name">lọ sương</string>
+    <string name="Dewdrop_Info">Một giọt sương trong vắt.</string>
     <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
     <string name="DieHardSpell_Name">Chết Cứng</string>
     <string name="Displacement_Txt">%s الخدمة</string>
@@ -1313,6 +1314,7 @@
     <string name="Stench_Txt">%s hôi thối</string>
     <string name="StoneBloodBuff_Info">Máu hóa đá, dung nhập với các bức tường gần đó và khiến việc đi xuyên qua chúng dễ dàng hơn nhiều, nhưng phải trả giá bằng cái gì?</string>
     <string name="StrongShield_desc">Chiếc khiên hình chữ nhật này được mạ tấm đồng và trang trí vải màu. Nó nặng hơn đáng kể, nhưng có thể chặn được nhiều sát thương hơn.</string>
+    <string name="StrongShield_name">Khiên Mạ Đồng</string>
     <string name="StunBuff_Name">Choáng</string>
     <string name="Stylus_ACInscribe">KHẮC</string>
     <string name="Stylus_Info">Chiếc bút bí ẩn này được làm từ một loại đá đen và rất cứng. Bạn có thể dùng nó để khắc các ký tự hoặc rune, nhưng bút mới quyết định khắc cái gì, không phải bạn.</string>
@@ -1758,6 +1760,7 @@
     <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_shelf_name">Các kệ sách</string>
     <string name="town_deco_shieldboard_desc">Các loại khiên treo trên bảng. Chưa được bán.</string>
+    <string name="town_deco_shieldboard_name">Khiên</string>
     <string name="town_deco_skullboard_desc">Chiếc hộp sọ này hoàn hảo ghi lại khoảnh khắc kinh hoàng bất ngờ.</string>
     <string name="town_deco_skulls_desc">Các chiếc sọ được mài bóng thuộc về các sinh vật trong ngục.</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
@@ -1801,6 +1804,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
