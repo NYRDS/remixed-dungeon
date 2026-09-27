@@ -1408,6 +1408,7 @@
     <string name="TownsfolkSilentNPC_Name">người dân thành phố</string>
     <string name="ToxicGas_Info">Một đám mây khí độc màu xanh lá cây đang xoáy ở đây.</string>
     <string name="ToxicGas_Info1">Bạn đã chết vì hít phải khí độc...</string>
+    <string name="ToxicGland_Info">Một tuyến độc thu hoạch từ kẻ địch bị đánh bại. Các tuyến này chứa đầy độc tố mạnh và có thể dùng trong các quá trình giả kim.</string>
     <string name="ToxicGland_Name">Tuyến độc</string>
     <string name="TrapWnd_Step">Bạn thực sự muốn giẫm lên cái bẫy này? Bạn có thể chết đấy.</string>
     <string name="TrapWnd_Title">Bẫy</string>
@@ -1832,6 +1833,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

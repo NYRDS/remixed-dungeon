@@ -210,6 +210,7 @@
     <string name="BleedingBuff_Info">De wonden bloeden snel leeg.</string>
     <string name="BleedingBuff_Name">Bloedend</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
+    <string name="BlindnessBuff_Info">Volledig verblind, alleen de geluiden om je heen kunnen worden gehoord.</string>
     <string name="BloodTransfusion_Drained">De levensessentie vloeit van je huisdier naar jou.</string>
     <string name="BloodTransfusion_Name">Bloedtransfusie</string>
     <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
@@ -2130,6 +2131,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
