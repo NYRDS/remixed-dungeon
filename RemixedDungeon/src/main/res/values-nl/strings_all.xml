@@ -984,6 +984,7 @@
     <string name="Pasty_Info">Dit is een authentieke Cornish pasty met de traditionele vulling van rundvlees en aardappel.</string>
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
     <string name="PetInventory_GaveItem">Gaf %1 aan %2</string>
+    <string name="PetInventory_GiveToPet">Aan huisdier geven</string>
     <string name="PetInventory_HeroBackpackFull">Je rugzak is vol</string>
     <string name="PetInventory_PetBackpackFull">De rugzak van het huisdier is vol</string>
     <string name="PetInventory_TakeFromPet">Nemen van huisdier</string>
@@ -1137,6 +1138,7 @@
     <string name="ResultDescriptions_Fall">Ter dood gevallen op niveau %d</string>
     <string name="ResultDescriptions_Gas">Gestorven door giftig gas op niveau %d</string>
     <string name="ResultDescriptions_Immured">Ingemureerd in steen op niveau %d</string>
+    <string name="ResultDescriptions_Mob">Gedood door %1 op niveau %2</string>
     <string name="ResultDescriptions_Necromancy">Uitgeput van levenskracht tijdens het proberen een lijk te animeren op niveau %d</string>
     <string name="ResultDescriptions_Necrotism">Gestorven door Necrotisme op niveau %d</string>
     <string name="ResultDescriptions_Poison">Gestorven aan vergiftiging op niveau %d</string>
@@ -1204,6 +1206,7 @@
     <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
     <string name="ScarecrowNPC_Quest_Reminder">Vijf snoepjes is alles wat ik nodig heb.\nOh, de beloning zal zo zoet zijn!</string>
     <string name="ScarecrowNPC_Quest_Start_Female">Nou, hallo klein meisje, hoe gaat het met je?\nIk heb iets spannends voor je!\n\nOh, hoe dankbaar zou ik zijn,\nAls je gaat en wat snoepjes voor me verzamelt!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Hallo kleine jongen, hoe gaat het met jou?\nIk heb iets spannends voor jou!\n\nOh, wat zou ik dankbaar zijn,\nAls je wat snoepjes voor mij zou verzamelen!\n\n</string>
     <string name="Scorpio_Desc">Deze enorme, op spinnen lijkende demonische wezens vermijden gevechten van dichtbij ten koste van alles en schieten vanaf grote afstand verlammende getande stekels af.</string>
     <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">schorpioen</string>
@@ -2136,6 +2139,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

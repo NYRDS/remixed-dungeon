@@ -1520,6 +1520,7 @@
     <string name="WndCryptoDonate_supportDev">Ủng hộ nhà phát triển</string>
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_warningText">CẢNH BÁO: Luôn xác minh địa chỉ trước khi gửi tiền. Các giao dịch tiền điện tử không thể đảo ngược!</string>
+    <string name="WndCustomizations_Title">Tùy chỉnh</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - miễn phí cho tất cả mọi người và mãi mãi như vậy.\n\nTuy nhiên, bạn có thể giúp chúng tôi làm cho trò chơi còn tốt hơn nữa.\n\nNgoài lời cảm ơn chân thành, bạn sẽ nhận được một số cải tiến thẩm mỹ.</string>
     <string name="WndDonate_gold">vàng</string>
     <string name="WndDonate_goldDonate">quyên góp vàng</string>
@@ -1794,6 +1795,7 @@
     <string name="town_deco_shelf_name">Các kệ sách</string>
     <string name="town_deco_shieldboard_desc">Các loại khiên treo trên bảng. Chưa được bán.</string>
     <string name="town_deco_shieldboard_name">Khiên</string>
+    <string name="town_deco_shop_sign_name">Biển hiệu cửa hàng</string>
     <string name="town_deco_skullboard_desc">Chiếc hộp sọ này hoàn hảo ghi lại khoảnh khắc kinh hoàng bất ngờ.</string>
     <string name="town_deco_skulls_desc">Các chiếc sọ được mài bóng thuộc về các sinh vật trong ngục.</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
@@ -1837,6 +1839,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
