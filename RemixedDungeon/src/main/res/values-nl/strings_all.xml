@@ -222,6 +222,7 @@
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Bow_Info1">Dit is een afstandswapen. Het is nutteloos voor iedereen behalve elfen op zeer korte afstand. Met een boog uitgerust kun je pijlen afschieten.\n\n</string>
+    <string name="Bowknot_Info">Een mooie, roze, glinsterende strik vastgemaakt in een knoop aan een haarspeld.</string>
     <string name="Bowknot_Name">Lintknoop</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en hardste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
     <string name="Brute_Gender">masculine</string>
@@ -2135,6 +2136,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
