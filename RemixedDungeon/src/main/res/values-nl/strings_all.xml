@@ -350,6 +350,7 @@
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
     <string name="City_TileWater">Verdacht gekleurd water</string>
     <string name="ClassArmor_Desc">Het ding ziet er geweldig uit!</string>
+    <string name="ClassArmor_LowHealt">Je gezondheid is te laag!</string>
     <string name="ClassArmor_NotEquipped">Je moet dit pantser dragen om zijn speciale kracht te gebruiken!</string>
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
@@ -637,6 +638,7 @@
     <string name="HeroClass_Rog">schurke</string>
     <string name="HeroClass_RogPerks_1">Schurken identificeren het type van een ring bij het uitrusten ervan.</string>
     <string name="HeroClass_RogPerks_2">Schurken zijn bedreven in lichte bepantsering en ontwijken aanvallen er beter in.</string>
+    <string name="HeroClass_RogPerks_4">Schurken kunnen langer zonder voedsel.</string>
     <string name="HeroClass_War">krijger</string>
     <string name="HeroClass_WarPerks_0">Krijgers beginnen met 11 punten Kracht.</string>
     <string name="HeroClass_WarPerks_4">Krachtpotionen zijn van het begin bekend.</string>
@@ -820,6 +822,7 @@
     <string name="Level_TileStatue">Standbeeld</string>
     <string name="Level_TileSummoningTrap">Oproepval</string>
     <string name="Level_TileToxicTrap">Giftig gas val</string>
+    <string name="Level_TileWall">Muur</string>
     <string name="Level_TileWell">put</string>
     <string name="LevitationBuff_Info">Het lichaam zweeft boven de grond en vermijdt vallen en andere gevaren op de grond.</string>
     <string name="LevitationBuff_Name">Zwevend</string>
@@ -2132,6 +2135,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

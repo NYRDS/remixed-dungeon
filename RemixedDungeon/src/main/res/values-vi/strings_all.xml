@@ -642,6 +642,7 @@
     <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
     <string name="Hero_StaVertigo">Mọi thứ đang quay xoay quanh bạn!</string>
     <string name="Hero_Wait">...</string>
+    <string name="HideInGrassSpell_Name">Ẩn Trong Cỏ</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Ngay cả tôi cũng không thể ẩn nấp ngay trước mũi.</string>
     <string name="Horror_Name_0">Quái dị %s</string>
     <string name="Horror_Name_1">%s rùng rợn</string>
@@ -692,6 +693,7 @@
     <string name="Instability_Name_1">Bất ổn %s</string>
     <string name="Instability_Name_2">Bất ổn %s</string>
     <string name="InterLevelScene_ErrorGeneric">Đã có lỗi xảy ra...</string>
+    <string name="InterLevelScene_Falling">Đang rơi...</string>
     <string name="InterLevelScene_FileNotFound">Không tìm thấy tập tin. Với một số lý do...</string>
     <string name="InterLevelScene_Loading">Đang tải...</string>
     <string name="InterLevelScene_Returning">Đang quay lại...</string>
@@ -1834,6 +1836,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
