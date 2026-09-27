@@ -1803,6 +1803,7 @@
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name_Objective">zombie</string>
     <string name="deco_candle_desc">Grote kaars</string>
+    <string name="deco_candle_name">Kaars</string>
     <string name="gdpr_agree">Ja, ik ga akkoord</string>
     <string name="gdpr_title">Personaliseer uw advertentie-ervaring</string>
     <string name="town_deco_armoronhanger_desc">Iets wat lijkt op pantser op een hanger.</string>
@@ -2126,6 +2127,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

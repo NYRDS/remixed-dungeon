@@ -1081,6 +1081,7 @@
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
     <string name="ResultDescriptions_Unknown">Chết dưới hoàn cảnh bí ẩn ở tầng %d</string>
     <string name="ResultDescriptions_Wand">Bị giết bởi chính %1 của bạn ở tầng %2</string>
+    <string name="RingOfAccuracy_Info">Chiếc nhẫn này tăng khả năng trúng đòn của bạn.</string>
     <string name="RingOfDetection_Info">Đeo nhẫn này giúp bạn nhận ra những bí mật ẩn giấu - bẫy và cửa bí mật - mà không cần dành thời gian tìm kiếm. Nhẫn dò tìm xuống cấp sẽ làm tê liệt giác quan của bạn, khiến bạn khó nhận ra bí mật hơn ngay cả khi chủ động tìm kiếm.</string>
     <string name="RingOfDetection_Name">Nhẫn Phát Hiện</string>
     <string name="RingOfElements_Info">Chiếc nhẫn này giúp kháng lại các nguyên tố khác nhau, chẳng hạn như lửa, điện, khí độc, v.v. Nó cũng làm giảm thời gian chịu các hiệu ứng bất lợi.</string>
@@ -1828,6 +1829,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
