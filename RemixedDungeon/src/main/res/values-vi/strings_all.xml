@@ -491,6 +491,7 @@
     <string name="Firebloom_Name">Hoa Lửa</string>
     <string name="Foliage_Info">Các tia sáng chọc xuyên màn sương của khu vườn ngầm.</string>
     <string name="Food_ACEat">ĂN</string>
+    <string name="Food_Message">Món ăn này thật ngon miệng!</string>
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">người xem bói</string>
     <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
@@ -809,6 +810,7 @@
     <string name="MailArmor_Desc">Các vòng kim loại liên kết tạo nên một bộ giáp cứng cáp nhưng linh hoạt.</string>
     <string name="MailArmor_Name">áo giáp xích</string>
     <string name="ManaPotion_Info">Bình này sẽ khôi phục năng lượng tinh thần của bạn.</string>
+    <string name="ManaPotion_Name">Bình Mana</string>
     <string name="ManaRegenerationBuff_Info">Chức năng hồi mana được tạo thành một buff để đơn giản hóa.</string>
     <string name="ManaShieldBuff_Name">Khiên phép thuật</string>
     <string name="Mana_Title">Năng lượng</string>
@@ -1823,6 +1825,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
