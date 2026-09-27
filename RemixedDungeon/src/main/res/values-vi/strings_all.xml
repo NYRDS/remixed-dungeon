@@ -463,6 +463,7 @@
     <string name="Entanglement_Txt">%s vướng víu</string>
     <string name="EquipableItem_ACUnequip">THÁO TRANG BỊ</string>
     <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
+    <string name="Exhumation_Info">Mở mộ là một hành động đen tối tự nó, nhưng chưa đủ cho ai phục vụ cái Chết chính mình. Người thực hiện Nghi lễ Tối này có cơ hội lớn (và nó sẽ tăng cùng với kỹ năng người thực hiện) để khuất phục một linh hồn đáng thương của một người nằm đây.</string>
     <string name="Exhumation_NoGrave">Không có ngôi mộ nào ở đây để thực hiện Khai Quật.</string>
     <string name="ExplodingSkull_Desc">Đầu lâu bay này đang bốc lửa, có vẻ cực kỳ mong manh, dường như nó sẽ bùng nổ bất cứ lúc nào.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
@@ -1491,6 +1492,7 @@
     <string name="Weightstone_WndChoice">Bạn muốn cân bằng %s như thế nào?</string>
     <string name="Weightstone_WndSpeed">Tốc độ</string>
     <string name="Welcome_Ok">Được thôi!</string>
+    <string name="Welcome_Text_30_1">\n    remix.30.1\n\n    - Lối chơi:\n\n    -- Phân lớp Gnoll!\n\n    -- Ốc sên!\n\n    -- Giảm sức mạnh tiến trình vật phẩm Hỗn loạn.\n\n    -- Thuốc mana giờ là thuốc thường.\n\n    -- Huy hiệu giờ có thể nhận khi chơi DLC (nhưng không phải mod).\n\n    - Lỗi đã sửa\n\n    </string>
     <string name="Welcome_Text_31_0">remix.31.0
 - Lối chơi:
 -- Chế độ Isometric tùy chọn!
@@ -1829,6 +1831,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

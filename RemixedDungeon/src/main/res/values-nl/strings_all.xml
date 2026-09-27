@@ -498,6 +498,7 @@
     <string name="Entanglement_Txt">%s van verstrengeling</string>
     <string name="EquipableItem_ACUnequip">UITRUSTEN</string>
     <string name="EquipableItem_Unequip">Je kunt de vervloekte %s niet verwijderen!</string>
+    <string name="Exhumation_Info">Het openen van een graf is op zichzelf een sinistere daad, maar niet genoeg voor iemand die de Dood zelf dient. De uitvoerder van dit Donkere Ritueel heeft een grote kans (en die zal groeien met de beheersing van de uitvoerder) om een arme ziel van iemand die hier ligt te onderwerpen.</string>
     <string name="Exhumation_Name">Exhumatie</string>
     <string name="Exhumation_NoGrave">Hier is geen graf om een Exhumatie uit te voeren.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
@@ -559,6 +560,7 @@
     <string name="GnollArmor_Info">Draagsters van het Gnome-Luitenant-kostuum zijn bekend om hun vermogen om zelfs de woestste monsters te overtuigen tot loyale dienaren van de Kroon.</string>
     <string name="GnollArmor_NotGnoll">Alleen gnollen kunnen de Gnoll Armor uitrusten!</string>
     <string name="GnollCostume_Info">Een ongelooflijk warm en fluffy kostuum. Wie dit kostuum aantrekt zal eruitzien als... iemand die zich probeert te vermommen als een gnoll. Maar gnolls trappen daar niet in, ze vallen je nog steeds aan.</string>
+    <string name="GnollCostume_Name">Gnoll-kostuum</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnol verkenner</string>
@@ -2127,6 +2129,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
