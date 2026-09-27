@@ -33,6 +33,15 @@ public class WandOfTelekinesis extends Wand {
 		boolean mapUpdated = false;
 
 		int maxDistance = effectiveLevel() + 4;
+
+		// caveman: the beam trace was computed at aim time, but onZap runs when the
+		// missile lands - a distant victim can step off the trace meanwhile and the
+		// zap whiffs entirely. Re-acquire the aimed victim so it gets hit like with
+		// every other wand (those hold the victim reference instead of the trace).
+		if (victim != null && victim.valid() && victim.getPos() != cell) {
+			Ballistica.cast(getOwner().getPos(), victim.getPos(), true, hitChars, hitObjects);
+		}
+
 		Ballistica.distance = Math.min(Ballistica.distance, maxDistance);
 
 		Char ch;

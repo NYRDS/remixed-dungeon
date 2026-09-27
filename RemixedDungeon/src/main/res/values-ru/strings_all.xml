@@ -1536,12 +1536,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PetInventory_ACTakeFromPet">ЗАБРАТЬ У ПИТОМЦА</string>
     <string name="PetInventory_CantGiveEquipped">Нельзя отдать экипированный предмет</string>
     <string name="PetInventory_GaveItem">Отдал %1$s питомцу %2$s</string>
+    <string name="PetInventory_GiveAll">Отдать всё</string>
     <string name="PetInventory_GiveN">Отдать %d</string>
 
     <string name="PetInventory_GiveToPet">Отдать питомцу</string>
     <string name="PetInventory_HeroBackpackFull">Ваш рюкзак полон</string>
     <string name="PetInventory_PetBackpackFull">Рюкзак питомца полон</string>
     <string name="PetInventory_TakeFromPet">Забрать у питомца</string>
+    <string name="PetInventory_TakeAll">Забрать всё</string>
     <string name="PetInventory_TakeN">Забрать %d</string>
     <string name="PetInventory_Title">Инвентарь питомца</string>
     <string name="PetInventory_TooFar">Слишком далеко от питомца</string>
