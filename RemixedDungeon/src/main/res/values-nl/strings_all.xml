@@ -1653,6 +1653,7 @@
     <string name="WndHero_DefenceSkill">Verdedigingsvaardigheid</string>
     <string name="WndHero_Depth">Maximale Diepte</string>
     <string name="WndHero_Gold">Verzameld Goud</string>
+    <string name="WndHero_Health">Gezondheid</string>
     <string name="WndHero_Info">Info</string>
     <string name="WndHero_Satiety">Verzadiging</string>
     <string name="WndHero_SkillLevel">Vaardigheidsniveau</string>
@@ -2139,6 +2140,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

@@ -1288,6 +1288,7 @@
     <string name="Spells_NotInOwnBody">Bạn không thể thực hiện %s khi linh hồn bạn tách rời khỏi cơ thể.</string>
     <string name="Spells_SummonLimitReached">%1$s: đã đạt giới hạn triệu hồi (Tối đa hiện tại: %2$d)!</string>
     <string name="SpiderArmor_Gender">feminine</string>
+    <string name="SpiderArmor_Info">Bộ giáp này được làm từ lớp vỏ chitin cũ của nhện và một số loại vải. Đáng ngạc nhiên nhất là nó dường như vẫn chứa các tuyến nhện hoạt động. Nếu bạn ấn mạnh vào các tấm, chúng sẽ bắn ra mạng nhện. Và đế giày có răng cưa cho phép bạn di chuyển tự do trên loại mạng đó.</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderCharm_Use">DÙNG</string>
     <string name="SpiderEgg_Gender">neuter</string>
@@ -1839,6 +1840,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
