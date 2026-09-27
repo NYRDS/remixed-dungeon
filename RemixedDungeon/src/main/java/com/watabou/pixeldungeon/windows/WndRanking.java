@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.ml.R;
@@ -62,7 +63,9 @@ public class WndRanking extends WndTabbed {
                     Dungeon.loadGameForRankings(gameFile);
                 } catch (Exception e) {
                     EventCollector.logException(e);
-                    error = e.getMessage();
+                    // caveman: getMessage() alone is null for NPEs - the user would
+                    // see a bare "null" error window with nothing to triage from
+                    error = e.toString();
                 }
             }
         };
@@ -88,7 +91,7 @@ public class WndRanking extends WndTabbed {
                     createControls();
                 } catch (Exception e) {
                     EventCollector.logException(e);
-                    error = e.getMessage();
+                    error = e.toString();
                     reportError();
                 }
             } else {
@@ -247,7 +250,9 @@ public class WndRanking extends WndTabbed {
         }
 
         private void addItem(Item item) {
-            if (item == ItemsList.DUMMY) {
+            if (item == ItemsList.DUMMY || item instanceof DummyItem) {
+                // caveman: old saves can carry packed DummyItems - they restore as
+                // fresh instances, so the singleton identity check alone misses them
                 return;
             }
 

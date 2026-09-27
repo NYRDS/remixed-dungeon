@@ -1537,12 +1537,14 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PetInventory_ACTakeFromPet">TAKE FROM PET</string>
     <string name="PetInventory_CantGiveEquipped">Cannot give equipped item</string>
     <string name="PetInventory_GaveItem">Gave %1$s to %2$s</string>
+    <string name="PetInventory_GiveAll">Give all</string>
     <string name="PetInventory_GiveN">Give %d</string>
 
     <string name="PetInventory_GiveToPet">Give to Pet</string>
     <string name="PetInventory_HeroBackpackFull">Your backpack is full</string>
     <string name="PetInventory_PetBackpackFull">Pet\'s backpack is full</string>
     <string name="PetInventory_TakeFromPet">Take from Pet</string>
+    <string name="PetInventory_TakeAll">Take all</string>
     <string name="PetInventory_TakeN">Take %d</string>
     <string name="PetInventory_Title">Pet Inventory</string>
     <string name="PetInventory_TooFar">Too far from pet</string>

@@ -50,13 +50,11 @@ public class WndPetQuantity extends Window {
         vbox.clear();
 
         int maxQty = item.quantity();
-        boolean hasMultipleOptions = false;
 
         for (int i = 0; i < QUANTITIES.length; ++i) {
-            if (maxQty > QUANTITIES[i]) {
+            if (maxQty >= QUANTITIES[i]) {
                 final int qty = QUANTITIES[i];
-                final int finalI = i;
-                RedButton btn = new RedButton(getButtonText(qty, finalI)) {
+                RedButton btn = new RedButton(getButtonText(qty)) {
                     @Override
                     protected void onClick() {
                         executeTransfer(qty);
@@ -64,12 +62,11 @@ public class WndPetQuantity extends Window {
                 };
                 btn.setSize(WIDTH, BTN_HEIGHT);
                 vbox.add(btn);
-                hasMultipleOptions = true;
             }
         }
 
-        if (!hasMultipleOptions || maxQty > QUANTITIES[QUANTITIES.length - 1]) {
-            RedButton btnAll = new RedButton(getButtonText(maxQty, -1)) {
+        if (maxQty > 1) {
+            RedButton btnAll = new RedButton(getAllButtonText()) {
                 @Override
                 protected void onClick() {
                     executeTransfer(maxQty);
@@ -105,7 +102,7 @@ public class WndPetQuantity extends Window {
         }
     }
 
-    private String getButtonText(int qty, int index) {
+    private String getButtonText(int qty) {
         if (itemInPetInventory) {
             // Taking from pet
             return Utils.format(R.string.PetInventory_TakeN, qty);
@@ -113,6 +110,13 @@ public class WndPetQuantity extends Window {
             // Giving to pet
             return Utils.format(R.string.PetInventory_GiveN, qty);
         }
+    }
+
+    private String getAllButtonText() {
+        if (itemInPetInventory) {
+            return StringsManager.getVar(R.string.PetInventory_TakeAll);
+        }
+        return StringsManager.getVar(R.string.PetInventory_GiveAll);
     }
 
     private void executeTransfer(int qty) {
