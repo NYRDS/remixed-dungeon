@@ -463,6 +463,7 @@
     <string name="Entanglement_Txt">%s vướng víu</string>
     <string name="EquipableItem_ACUnequip">THÁO TRANG BỊ</string>
     <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
+    <string name="Exhumation_NoGrave">Không có ngôi mộ nào ở đây để thực hiện Khai Quật.</string>
     <string name="ExplodingSkull_Desc">Đầu lâu bay này đang bốc lửa, có vẻ cực kỳ mong manh, dường như nó sẽ bùng nổ bất cứ lúc nào.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">đầu lâu nổ</string>
@@ -1827,6 +1828,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
