@@ -1019,6 +1019,7 @@
     <string name="PlagueDoctorQuest_4_2_Prologue">*Zijn skeletvingers tikken ritmisch tegen een borrelende ketel, de lucht om hem heek dik van de pittige stank van zwavel en verwesing*\n_Kobold Ijsmagiers_! Die jammerlijke wezens, gekrocht in hun bevroren grotten, wanhopig vasthoudend aan hun ijsmagie. Ik heb er vijf nodig, hun bevroren lichamen zullen... verlichtend zijn. Hun meesterwerk van ijs, het is... eigenaardig. Ik geloof dat ze aansluiten bij een oerenergie, een kracht die sluimert onder het oppervlakte van deze wereld.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hij stottert, zijn stem kraakt als een broze tak*. A-ah, _succubi_! Twee... ja, twee, levend! Het is... hem... voor mijn onderzoek! Je ziet... hun feromonen... het is cruciaal om het delicate evenwicht te begrijpen van... ah... *Hij zwijgt, zijn botten hand reikt op om nerveus zijn masker te corrigeren, zijn ogen schieten naar jou met een koortsachtige intensiteit.* Hun... essentie... het is een puzzel... een prachtige, enigmatische puzzel! *Hij hoest hevig, probeert zijn kalmte te herwinnen.* Ik beloof, voor het brengen van twee van deze... wezens... zul je mijn eeuwige dankbaarheid hebben. Zie het als een... een gave aan kennis! Ja! Aan kennis!</string>
     <string name="PlagueDoctorQuest_AllDone">*Hij laat een droge, hijgende lach horen.* \&quot;Jouw daden hebben geheimen ontsluierd zonder maat! De verkregen kennis… het pulsert in mij, een symfonie van ontdekking. Maar kennis,\&quot; voegt hij eraan toe, zijn zinkend tot een samenzweerderig fluisteren, \&quot;kennis is macht. En macht… ah… dat is de meest bedwelmende elixer.\&quot; Hij kijkt je even intens aan, zijn amethistoogen branden met koortsachtige felheid. \&quot;Misschien,\&quot; mompelt hij, \&quot;kruisen onze paden elkaar weer. Want er zijn nog vele… mysteries… die nog ontrafeld moeten worden.\&quot;</string>
+    <string name="PlagueDoctor_Desc">Het hele lichaam van deze gebochelde persoon is verborgen onder een leren jumpsuit. Ook komt er een bittere geur van medicijnen en... knoflook?</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name_Objective">pestdokter</string>
     <string name="Plant_ACPlant">PLANT</string>
@@ -2131,6 +2132,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
