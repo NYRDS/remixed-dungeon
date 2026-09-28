@@ -373,6 +373,7 @@
     <string name="Codex_Story_16">Gelukkig wapen - negeert bijna volledig de pantser van de vijand, en doet veel meer schade.</string>
     <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
     <string name="Codex_Story_18">Doorborend wapen - Bij een succesvolle treffer kan het schade toebrengen aan alle vijanden in een rechte lijn achter het doelwit.</string>
+    <string name="Codex_Story_2">Betoverings Glief - De vijand wordt enkele beurten betoverd, terwijl de Held ook enkele beurten betoverd wordt, maar nooit langer dan de vijand.</string>
     <string name="Codex_Story_20">Vrieswapen - Een succesvolle treffer kan het doel vertragen en voorkomen dat het in brand vliegt.</string>
     <string name="Codex_Story_22">Dit boek is geschreven in de taal der demonen</string>
     <string name="Codex_Story_23">Dit boek is geschreven in de taal van dwergen.</string>
@@ -1079,6 +1080,7 @@
     <string name="Potion_Colors_15">parelmoer</string>
     <string name="Potion_Colors_3">jade</string>
     <string name="Potion_Colors_6">anthraciet</string>
+    <string name="Potion_Colors_7">ivoor</string>
     <string name="Potion_Colors_8">amber</string>
     <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
     <string name="Potion_MoistenUseless">Het lijkt erop dat je dit drankje net hebt verspild.</string>
@@ -2144,6 +2146,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
