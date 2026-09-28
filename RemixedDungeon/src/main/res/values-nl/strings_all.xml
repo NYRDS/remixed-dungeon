@@ -384,6 +384,7 @@
     <string name="Codex_Story_9">Verplaatsing Glief - Wanneer de Held wordt geraakt, bestaat de kans dat de Held naar een willekeurige zichtbare tegel wordt geteleporteerd. Deze glief werkt niet op baasniveaus.</string>
     <string name="ColdSpirit_Desc">De koude geest is de uitvlucht van vorst, in zijn zuiverste vorm. Als een gedachtenloze klomp magische energie gehoorzaamt hij de wil van de magiër die hem oproept, of handelt volgens basisinstincten.</string>
     <string name="ColdSpirit_Gender">masculine</string>
+    <string name="ColdSpirit_Name_Objective">koude geest</string>
     <string name="ComboBuff_Info">De volgende aanval zal een combo-aanval zijn.</string>
     <string name="Combo_Combo">%d treffer combo!</string>
     <string name="CommonArrow_Gender">feminine</string>
@@ -1428,6 +1429,7 @@
     <string name="Stylus_Info">Deze arcanische stylus is gemaakt van een donkere, zeer harde steen. Je kunt er een glyph of rune mee graveren, maar je kunt niet kiezen welke er wordt gegraveerd; de stylus beslist voor je.</string>
     <string name="Stylus_Inscribed">je hebt de %1$s op je %2$s gegraveerd</string>
     <string name="Stylus_Name">tooverstylus</string>
+    <string name="Stylus_SelectArmor">Selecteer een item om op te graveren</string>
     <string name="Succubus_Desc">Succubi zijn demonen die eruitzien als verleidelijke (op een licht gotische manier) meisjes. Met haar magie kan de succubus een held betoveren, die niet meer kan aanvallen totdat de betovering voorbij is.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succubus</string>
@@ -1612,6 +1614,7 @@
     <string name="Weightstone_WndChoice">Hoe wil je je %s balanceren?</string>
     <string name="Weightstone_WndSpeed">Voor snelheid</string>
     <string name="Welcome_Ok">Oké!</string>
+    <string name="Welcome_Text_32">    remix.32\n\n    - Gameplay:\n\n    -- Mobs en Huisdieren krijgen nu ervaring en niveaus\n\n    -- Chaos Schild\n\n    -- Kampioenen\n\n    -- Yog strijd opnieuw gebalanceerd\n\n    -- Balans aanpassingen\n\n    - UX:\n\n    -- Gedetailleerde Held en Mobs statistieken\n\n    -- Beter Aanpassingen interface\n\n    -- Soepele camera\n\n    - Modding:\n\n    -- Aangepaste animaties\n\n    -- Aangepaste Scripts voor ingebouwde Mobs\n\n    -- Gloed voor Mobs\n\n    - Bugs opgelost\n    </string>
     <string name="Welcome_Text_32_1">    remix.32.1\n\n    - Gameplay:\n\n    -- Pesten Dokter questlijn\n\n    -- Lichamen van monsters nu enigszins bruikbare items\n\n    -- Betere huisdierenbesturing\n\n    - UX:\n\n    -- Verbeterd beheer van saves\n\n    - Modding:\n\n    -- Lokale mod installatiemethoden\n\n    -- Aangepaste items kunnen nu acties uitvoeren terwijl ze in stapels liggen\n\n    - Bugs opgelost\n\n    </string>
     <string name="Welcome_Title">Welkom!</string>
     <string name="WizardHat_Name">Toverhoed</string>
@@ -2153,6 +2156,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
