@@ -694,6 +694,7 @@
     <string name="Hunger_Starving_2">Je verhongert!</string>
     <string name="HuntressArmor_NoEnemies">Geen vijanden in zicht</string>
     <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
+    <string name="IceCaves_TileDescHighGrass">Dichte bevroren vegetatie blokkeert het zicht.</string>
     <string name="IceCaves_TileDescStatue">Weer een afschuwelijk standbeeld... Oh wacht, dat is een bevroren gnol.</string>
     <string name="IceCaves_TileGrass">Bevroren gras.</string>
     <string name="IceCaves_TileHighGrass">Bevroren hoog gras</string>
@@ -2142,6 +2143,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

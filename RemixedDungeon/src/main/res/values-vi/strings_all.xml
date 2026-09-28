@@ -293,6 +293,7 @@
     <string name="Char_Name_Objective">quái vật</string>
     <string name="Char_OutParalysis">Nỗi đau khiến %s thoát khỏi tê liệt</string>
     <string name="Char_StaAmok">phát cuồng</string>
+    <string name="Char_StaBleeding">chảy máu</string>
     <string name="Char_StaDizzy">choáng váng</string>
     <string name="Char_StaDodged_0">tránh</string>
     <string name="Char_StaDodged_1">tránh</string>
@@ -1733,6 +1734,7 @@
     <string name="town_deco_cabinet_desc">Một tủ đồ rộng rãi với nhiều cánh cửa và ngăn kệ.</string>
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_carpet_desc">Đệm đỏ xa xỉ dành cho khách đặc biệt.</string>
+    <string name="town_deco_chimney_desc">Ống khói đá - người bạn đồng hành đúng đắn cho mọi ngôi nhà, được xây dựng ở nơi thời tiết băng giá thường xuyên ghé thăm.</string>
     <string name="town_deco_church_sign_desc">Có vẻ như bên trong tòa nhà này có một nhà thờ.</string>
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
     <string name="town_deco_common_bed_desc">Giường bình thường.</string>
@@ -1842,6 +1844,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
