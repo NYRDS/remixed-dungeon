@@ -1230,6 +1230,7 @@
     <string name="ScrollOfLullaby_Info1">De pergament uitte een kalmerende melodie.</string>
     <string name="ScrollOfLullaby_Info2">Het pergament brengt een kalmerende melodie voort en de %s valt in slaap!</string>
     <string name="ScrollOfLullaby_Info3">De scroll spreekt een kalmerende melodie uit en de monsters vallen in slaap!</string>
+    <string name="ScrollOfMagicMapping_Info">Wanneer deze rol wordt gelezen, wordt een beeld van kristalheldere helderheid in je geheugen geëtst, dat je waarschuwt voor de precieze indeling van het niveau en alle verborgen geheimen onthult. De locaties van voorwerpen en wezens blijven onbekend.</string>
     <string name="ScrollOfMagicMapping_Layout">Je kent nu de indeling van het niveau.</string>
     <string name="ScrollOfMagicMapping_Name">Scroll van Magische Kaartvorming</string>
     <string name="ScrollOfMirrorImage_Name">Spiegelbeeldrol</string>
@@ -2150,6 +2151,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

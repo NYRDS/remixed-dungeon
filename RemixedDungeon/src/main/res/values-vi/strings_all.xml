@@ -652,6 +652,7 @@
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
     <string name="HungerBuff_Info2">Bạn đang chết đói! Bạn cần ăn!</string>
     <string name="HungerBuff_Name1">Đói</string>
+    <string name="Hunger_Death">Bạn đã chết vì đói...</string>
     <string name="Hunger_Hungry_0">Bạn đang đói.</string>
     <string name="Hunger_Starving_0">Bạn đang chết đói!</string>
     <string name="Hunger_Starving_1">Bạn đang chết đói!</string>
@@ -1852,6 +1853,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
