@@ -1726,6 +1726,7 @@
     <string name="WndPriest_Heal_Minions">Genees al je volgelingen - Slechts %d goud!</string>
     <string name="WndPriest_Instruction2_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
     <string name="WndPriest_Instruction_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa, de Heer der Diepten! Helaas kan ik je nu niet doorlaten, want het gebouw wordt gerenoveerd. Maar als je hulp zoekt, kan ik genezing en voedsel aanbieden voor slechts %d gouden munten!</string>
+    <string name="WndPriest_Title">Stadsprediker</string>
     <string name="WndRanking_Items">Voorwerpen</string>
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
     <string name="WndRanking_StaChallenges">Uitdagingen</string>
@@ -1889,6 +1890,7 @@
     <string name="town_deco_flowerinthepot_name">Bloem in een pot</string>
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
     <string name="town_deco_glass_name">Breed Raam</string>
+    <string name="town_deco_glass_stained_desc">De maker van dit glas heeft er waarschijnlijk veel moeite in gestoken.</string>
     <string name="town_deco_glass_stained_name">Glas in lood</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
     <string name="town_deco_hay_name">hooi</string>
@@ -2151,6 +2153,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

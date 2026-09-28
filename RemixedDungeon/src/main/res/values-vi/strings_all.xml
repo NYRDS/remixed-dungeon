@@ -1462,6 +1462,7 @@
     <string name="WandOfRegrowth_Info">Khi sự sống kết thúc, sự sống mới luôn bắt đầu phát triển... Chu kỳ vĩnh cửu luôn tồn tại!</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Name">Gậy hồi sinh</string>
+    <string name="WandOfShadowbolt_Name">gậy tia bóng tối</string>
     <string name="WandOfSlowness_Info">Cây gậy này khiến sinh vật bị trúng di chuyển và tấn công chậm hơn một nửa cho đến khi hiệu ứng kết thúc.</string>
     <string name="WandOfSlowness_Info1">Không có gì xảy ra.</string>
     <string name="WandOfTelekinesis_Name">Gậy Thôi Miên</string>
@@ -1853,6 +1854,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
