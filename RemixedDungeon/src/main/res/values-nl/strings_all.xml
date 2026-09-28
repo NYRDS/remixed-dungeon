@@ -1015,6 +1015,7 @@
     <string name="PlagueDoctorNPC_Quest_Reminder">Breng me %d rattenhuiden.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Kun je het geloven?! Die idiooten hebben nog steeds niet door hoe gevaarlijk deze verdomde riool is! Alsof bewakers en avonturiers de stad kunnen beschermen tegen wat dan ook. Hah! Geen wapen kan de ziekte tegenhouden. Maar ik heb bewijzen nodig, misschien kun je me helpen? Breng me %d rattenvellen, zodat ik extra tests kan doen.</string>
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, je bent terug! _Vijf dode ratten_, perfect! Hun huiden zullen cruciaal zijn voor mijn onderzoek. En zoals beloofd, voor je dappere inspanning heb ik dit harnas voor je gemaakt van hun eigen vellen. Het is doordrenkt met een vleugje van de pest, maar maak je geen zorgen! Het is gecontroleerd, het beschermt! Ga nu! Bescherm de stad!</string>
+    <string name="PlagueDoctorQuest_1_1_InProgress">Breng me _vijf dode ratten_! Elke die je me brengt, brengt ons dichter bij het begrijpen van deze verschrikkelijke plaag.</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Hoest hevig* Hatsjoe!\n De slakken... ze glijden. Ze slijmen. En ze fluisteren geheimen van een vergeten eeuw. Ik heb ze nodig, _tien_ van hen, hun schillen nog intact. Denk je dat slechts _vijftig goudmunten_ genoeg is voor zulke kostbare kennis?\n Bah! Maakt niet uit. De informatie die ze bergen kan de sleutel zijn om deze pest te stoppen. Of... het kan ons leiden tot iets nog vreselijker. Jij beslist.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
@@ -2147,6 +2148,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
