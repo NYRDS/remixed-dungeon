@@ -1681,6 +1681,7 @@
     <string name="Wnd_Button_Yes">Có</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Cây cung gỗ đơn giản này có thể hữu ích, khi bạn tìm được một vài mũi tên.</string>
+    <string name="WoodenBow_Name">cung gỗ</string>
     <string name="WoodenCrossbow_Gender">masculine</string>
     <string name="WoodenCrossbow_Info">Cái nỏ gỗ đơn giản này có vẻ được thiết kế để bắn mũi tên cung.</string>
     <string name="WoodenCrossbow_Name">Nỏ gỗ</string>
@@ -1816,6 +1817,7 @@
     <string name="town_deco_stakes_name">Cọc</string>
     <string name="town_deco_statue_blood_desc">Một bức tượng đầy uy nghi của thiên thần đang cầm một bát máu.</string>
     <string name="town_deco_statue_water_name">Tượng thiên thần</string>
+    <string name="town_deco_stock_desc">Thực phẩm được cất giữ ở đây, cùng với một đống đồ linh tinh đủ loại và màu sắc.</string>
     <string name="town_deco_stock_name">kho</string>
     <string name="town_deco_stone_wall_desc">Không hiểu sao bức tường này lại tỏa ra hơi ấm và có vẻ hơi ẩm.</string>
     <string name="town_deco_stones_desc">Chỉ là một đống đá.</string>
@@ -1850,6 +1852,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
