@@ -928,6 +928,7 @@
     <string name="MysteryMeat_Info">Eet op eigen risico!</string>
     <string name="MysteryMeat_Info2">Je kunt je benen niet voelen!</string>
     <string name="MysteryMeat_Info3">Je voelt je niet goed.</string>
+    <string name="MysteryMeat_Message">Dat eten smaakte... vreemd.</string>
     <string name="MysteryMeat_Name">raadselachtig vlees</string>
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
@@ -2141,6 +2142,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
