@@ -1950,6 +1950,7 @@
     <string name="town_deco_wall_brazier_name">Vuurkorf</string>
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
     <string name="town_deco_wall_desc">Een eenvoudige muur gemaakt van houten stammen.</string>
+    <string name="town_deco_wall_name">Muur</string>
     <string name="town_deco_wallpaper_name">behang</string>
     <string name="town_deco_wardrobe_desc">Grote houten kast.</string>
     <string name="town_deco_weaponboard_desc">Een soort wapen dat op het bord hangt.</string>
@@ -2143,6 +2144,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

@@ -551,6 +551,7 @@
     <string name="Goo_Info1">Goo đang bơm hơi cho mình!</string>
     <string name="Goo_Info3">Ọp-ọp!</string>
     <string name="Goo_Name">Nhầy</string>
+    <string name="GothicArmor_Name">Áo giáp Gothic</string>
     <string name="Guts_TileDescBookshelf">Chiếc kệ sách này hoàn toàn bị bao phủ bởi mạng nhện dày đặc từ thịt, và không có cách nào để tiếp cận những cuốn sách trên nó.</string>
     <string name="Guts_TileGrass">Bụi cây khô</string>
     <string name="Halberd_Gender">feminine</string>
@@ -1110,6 +1111,7 @@
     <string name="Ring_Gems_11">mã não</string>
     <string name="Ring_Gems_2">garnet</string>
     <string name="Ring_Gems_4">thạch anh tím</string>
+    <string name="Ring_Gems_6">onyx</string>
     <string name="Ring_Gems_7">tourmalin</string>
     <string name="Ring_Gems_9">lam ngọc</string>
     <string name="Ring_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
@@ -1844,6 +1846,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
