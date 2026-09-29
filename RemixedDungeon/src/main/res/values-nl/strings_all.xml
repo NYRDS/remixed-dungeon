@@ -860,6 +860,7 @@
     <string name="MageArmor_Name">magiër\'s robe</string>
     <string name="MagicArrow_Info">Goede oude magische pijl, de juiste keuze als je geen pijlen meer hebt.</string>
     <string name="MagicArrow_Name">Magische pijl</string>
+    <string name="MagicTorch_Info">Een spreuk die licht produceert, om de donkere verdiepingen van de kerker te verlichten.</string>
     <string name="MailArmor_Name">maliënkolder</string>
     <string name="ManaPotion_Info">Deze drank herstelt je spirituele energie.</string>
     <string name="ManaPotion_Name">Mana Drankje</string>
@@ -1083,6 +1084,7 @@
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_Colors_15">parelmoer</string>
     <string name="Potion_Colors_3">jade</string>
+    <string name="Potion_Colors_5">magenta</string>
     <string name="Potion_Colors_6">anthraciet</string>
     <string name="Potion_Colors_7">ivoor</string>
     <string name="Potion_Colors_8">amber</string>
@@ -1701,6 +1703,7 @@
     <string name="WndLibrary_Items_Btn">Voorwerpen</string>
     <string name="WndLibrary_Mobs_Btn">Monsters</string>
     <string name="WndLocalModInstall_title">Mod installeren vanuit lokale map</string>
+    <string name="WndModInstall_InstallingMod">Mod installeren</string>
     <string name="WndModInstall_PleaseUpdate">Gelieve Remixed Dungeon te updaten voordat u deze mod installeert</string>
     <string name="WndModInstall_Version">versie</string>
     <string name="WndModsDisclaimer_install">Lokale mod installeren</string>
@@ -2159,6 +2162,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

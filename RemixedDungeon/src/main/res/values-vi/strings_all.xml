@@ -971,6 +971,7 @@
     <string name="PlagueDoctorNPC_Name">bác sĩ dịch hạch</string>
     <string name="PlagueDoctorNPC_Name_Objective">bác sĩ dịch hạch</string>
     <string name="PlagueDoctorNPC_Quest_End">À, cảm ơn cậu. Tôi hy vọng lần này ít nhất chúng cũng có dấu vết của bệnh tật. Những mẫu trước hoàn toàn vô hại. Vì thế tôi đã có thời gian làm món này cho cậu trong lúc chờ mẫu mới.</string>
+    <string name="PlagueDoctorNPC_Quest_Reminder">Mang cho tôi %d da chuột.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Mang cho ta _năm con chuột chết_! Mỗi con chuột bạn mang đến khiến chúng ta gần hơn với việc hiểu rõ về cơn dịch kinh hoàng này.</string>
@@ -1614,6 +1615,7 @@
     <string name="WndPlayGames_WorkInCloud">Đang làm việc trên đám mây... Vui lòng đợi.</string>
     <string name="WndPortal_Info">Cổng này sẽ cho phép bạn quay lại thị trấn. Nó có vẻ khá không ổn định, và có lẽ sẽ không hoạt động quá lâu.\nBạn có muốn sử dụng nó không?</string>
     <string name="WndPortal_Info_Return">Cổng truyền tàng này sẽ đưa bạn trở lại hang động.\nBạn có muốn sử dụng nó không?</string>
+    <string name="WndPortal_Warning_Info">Bạn chưa sử dụng cổng trên tầng này. Sau khi rời đi, bạn sẽ không thể sử dụng cổng này nữa!\nBạn có chắc muốn rời đi không?</string>
     <string name="WndPremiumSettings_banners">Chọn chất liệu cờ</string>
     <string name="WndPremiumSettings_chrome">Chọn vật liệu giao diện</string>
     <string name="WndPremiumSettings_notAvailbale">Tùy chọn này chưa có sẵn</string>
@@ -1858,6 +1860,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
