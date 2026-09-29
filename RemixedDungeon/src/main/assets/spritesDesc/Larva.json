@@ -5,7 +5,7 @@
   "idle": { "fps": 5, "looped": true, "frames": [4, 4, 4, 4, 4, 5, 5] },
   "run": { "fps": 12, "looped": true, "frames": [0, 1, 2, 3] },
   "attack": { "fps": 15, "looped": false, "frames": [6, 5, 7] },
-  "die": { "fps": 10, "looped": false, "frames": [8] },
+  "die": { "fps": 10, "looped": false, "frames": [7] },
   
   "eventHandlers": {
     "onComplete": [

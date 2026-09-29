@@ -239,17 +239,31 @@ local function processWin()
     restorePets()
 
     -- caveman: only tracked pieces die - same-kind mobs (real Warlocks on
-    -- CityBossLevel) must survive
+    -- CityBossLevel) must survive. both sides field a King piece, and each
+    -- King carries SkeletonKey + ArmorKit (King.lua spawn): letting both die
+    -- dropped 2 kits + 2 keys (beta.13 report). the mated Dwarf King (black
+    -- 'k') dies normally = boss loot once; the player's own 'K' is removed
+    -- quietly, like processTie does.
     local mobsToDie = {}
-    for _, mob in pairs(pieces) do
+    local mobsToDestroy = {}
+    chess:ensure_board()
+    for cc, mob in pairs(pieces) do
         if mob and mob:isAlive() then
-            table.insert(mobsToDie, mob)
+            if mob:getEntityKind() == "King"
+               and getPiece(chess.board, sunfish.cell_2_move(cc)) == "K" then
+                table.insert(mobsToDestroy, mob)
+            else
+                table.insert(mobsToDie, mob)
+            end
         end
     end
     pieces = {}
 
     for i,mob in ipairs(mobsToDie) do
         mob:die(RPD.Dungeon.hero)
+    end
+    for i,mob in ipairs(mobsToDestroy) do
+        mob:destroy()
     end
 
     RPD.glog("Chess_YouWin")

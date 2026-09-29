@@ -194,16 +194,25 @@ public enum HeroSubClass implements CharModifier {
 
     @Override
     public int charGotDamage(int damage, NamedEntityKind src, Char target) {
+        return damage;
+    }
+
+    @Override
+    public void afterDamage(int damage, NamedEntityKind src, Char target) {
         switch (this) {
             case BERSERKER:
+                // caveman: must observe the post-hit HP - the old charGotDamage
+                // site ran before hp() was reduced, so the hit that crossed the
+                // rage threshold never triggered it (beta.13 report).
+                // 0.4f literal: the Fury class is gone on master, value kept
                 if (0 < target.hp() && target.hp() <= target.ht() * 0.4f) {
                     if (!target.hasBuff(BuffFactory.FURY)) {
                         Buff.affect(target, BuffFactory.FURY);
                     }
                 }
                 break;
+            default:
         }
-        return damage;
     }
 
     @Override

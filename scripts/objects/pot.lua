@@ -29,6 +29,9 @@ return object.init {
             RPD.ItemUtils:throwItemAway(pos)
             return
         end
+        -- caveman: item presses (seeds landing in the pot) bump too - transmute
+        -- is a no-op below 3 seeds and the heap must STAY in the pot to brew;
+        -- only kick heaps for price-carrying pressers above
         RPD.Blobs.Alchemy:transmute(pos)
     end,
 
