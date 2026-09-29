@@ -506,6 +506,7 @@
     <string name="Exhumation_Info">Het openen van een graf is op zichzelf een sinistere daad, maar niet genoeg voor iemand die de Dood zelf dient. De uitvoerder van dit Donkere Ritueel heeft een grote kans (en die zal groeien met de beheersing van de uitvoerder) om een arme ziel van iemand die hier ligt te onderwerpen.</string>
     <string name="Exhumation_Name">Exhumatie</string>
     <string name="Exhumation_NoGrave">Hier is geen graf om een Exhumatie uit te voeren.</string>
+    <string name="Exhumation_Ok">Ik zal u gehoorzamen.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="Eye_Desc">Een van de andere namen van deze demon is \&quot;orb of hatred\&quot;, omdat wanneer hij een vijand ziet, hij zijn doodsblik onbeschoft gebruikt, vaak de bondgenoten negerend en ze verwondend.</string>
     <string name="Eye_Gender">neuter</string>
@@ -917,6 +918,7 @@
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
+    <string name="Mob_StaWanderingStatus">Deze %s dwaalt rond.</string>
     <string name="Mods_CreatedBy">Gemaakt door:</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
     <string name="Mods_RestartRequired">Herstart vereist</string>
@@ -1675,6 +1677,7 @@
     <string name="WndHero_Str">Kracht</string>
     <string name="WndImp_Message">Oh ja! Je bent mijn held!\nWat je beloning betreft, ik heb geen contant geld bij me, maar ik heb iets beters voor je. Dit is mijn familie-erfstukring: mijn opa haalde het van een dode paladijn af.</string>
     <string name="WndImp_Reward">Neem de ring</string>
+    <string name="WndInfoCell_Nothing">Hier is niets.</string>
     <string name="WndInfoItem_Chest">Kist</string>
     <string name="WndInfoItem_CrystalChest">Kristallen kist</string>
     <string name="WndInfoItem_NeedKey"> Maar om het te openen heb je een gouden sleutel nodig.</string>
@@ -2156,6 +2159,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

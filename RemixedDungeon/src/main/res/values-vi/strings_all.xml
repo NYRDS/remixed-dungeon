@@ -92,6 +92,7 @@
     <string name="Badges_GamesPlayed4">Đã chơi 2000 ván</string>
     <string name="Badges_GamesPlayed5">Đã chơi 5000 ván</string>
     <string name="Badges_GnollUnlocked">Gnoll đã được mở khóa</string>
+    <string name="Badges_GoldColleted2">Đã thu thập 500 vàng.</string>
     <string name="Badges_GoldColleted3">Đã thu thập 2500 vàng</string>
     <string name="Badges_GoldColleted4">Đã thu thập 7500 vàng</string>
     <string name="Badges_GrimWepon">Quái vật bị giết bởi vũ khí Grim</string>
@@ -1161,6 +1162,7 @@
     <string name="ScarecrowNPC_Name_Objective">ngáo</string>
     <string name="ScarecrowNPC_Quest_Reminder">Năm cái kẹo là tất cả những gì tôi cần.\nÔi, phần thưởng sẽ rất ngon!</string>
     <string name="ScarecrowNPC_Quest_Start_Female">Xin chào cô bé, cháu thế nào rồi?\nTa có một điều thú vị dành cho cháu!\n\nÔi ta sẽ biết ơn biết bao,\nNếu cháu đi thu thập kẹo cho ta!\n\n</string>
+    <string name="ScarecrowNPC_Quest_Start_Male">Chào cậu bé nhỏ, bạn thế nào?\nMình có điều thú vị cho bạn đây!\n\nÔi mình sẽ biết ơn biết bao,\nNếu bạn đi thu thập vài viên kẹo cho mình!\n\n</string>
     <string name="Scorpio_Desc">Những sinh vật ác quỷ khổng lồ giống nhện này né tránh chiến đấu cận chiến bằng mọi giá, bắn ra những gai răng cưa làm tê liệt từ khoảng cách xa.</string>
     <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name_Objective">bọ cạp</string>
@@ -1742,6 +1744,7 @@
     <string name="town_deco_brown_carpet_desc">Chiếc thảm nâu này đã bị đạp nát bởi nhiều phiêu lưu gia, người lang thang và người đi đường.</string>
     <string name="town_deco_brown_carpet_name">Thảm</string>
     <string name="town_deco_cabinet_desc">Một tủ đồ rộng rãi với nhiều cánh cửa và ngăn kệ.</string>
+    <string name="town_deco_canvas_desc">Một mảnh vải dày treo trên tường.</string>
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_carpet_desc">Đệm đỏ xa xỉ dành cho khách đặc biệt.</string>
     <string name="town_deco_chimney_desc">Ống khói đá - người bạn đồng hành đúng đắn cho mọi ngôi nhà, được xây dựng ở nơi thời tiết băng giá thường xuyên ghé thăm.</string>
@@ -1855,6 +1858,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
