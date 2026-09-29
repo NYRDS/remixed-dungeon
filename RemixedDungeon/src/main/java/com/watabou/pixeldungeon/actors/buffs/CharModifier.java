@@ -24,6 +24,12 @@ public interface CharModifier {
 
     int charGotDamage(int damage, NamedEntityKind src, Char target);
 
+    // caveman: observation hook fired after hp() was actually reduced - unlike
+    // charGotDamage (a pre-application damage modifier chain), state checks that
+    // depend on the post-hit HP (berserker rage threshold) must run here
+    default void afterDamage(int damage, NamedEntityKind src, Char target) {
+    }
+
     int regenerationBonus(Char chr);
     int manaRegenerationBonus(Char chr);
     void charAct(Char chr);

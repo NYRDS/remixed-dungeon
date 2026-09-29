@@ -102,7 +102,14 @@ public class Alchemy extends Blob {
 			}
 
 			if (result.valid()) {
-				level.animatedDrop( result, cell );
+				// caveman: the pot is a non-passable object - a heap dropped on its
+				// cell can't be walked onto or clicked (the pot menu wins), so the
+				// brewed potion lands next to the pot instead
+				int dropCell = level.getEmptyCellNextTo(cell);
+				if (!level.cellValid(dropCell)) {
+					dropCell = cell;
+				}
+				level.animatedDrop( result, dropCell );
 			}
 		}
 	}

@@ -620,9 +620,14 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         if (level.distance(cell, dst) == 1) {
             val lo = level.getTopLevelObject(dst);
             // snap to the object cell only when the path wasn't actually blocked:
-            // a blocked stop lands on a char or on a losBlocking cell (wall, closed door)
+            // a blocked stop lands on a char or on a losBlocking cell (wall, closed door).
+            // the thrower's own cell counts as free here: standing next to a pot/well
+            // and throwing into it, ballistica stops on the thrower (the object cell
+            // is not passable) - without this the item bounces back and (for seeds)
+            // plants at the thrower's feet instead of landing in the pot
+            Char cellChar = Actor.findChar(cell);
             if (lo != null && lo.affectItems()
-                    && Actor.findChar(cell) == null && !level.losBlocking[cell]) {
+                    && (cellChar == null || cellChar == user) && !level.losBlocking[cell]) {
                 cell = dst;
             }
         }

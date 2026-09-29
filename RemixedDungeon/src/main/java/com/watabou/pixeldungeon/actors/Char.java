@@ -848,6 +848,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
         hp(hp() - dmg);
 
+        if (hp() > 0) {
+            final int appliedDmg = dmg;
+            forEachBuff(b -> b.afterDamage(appliedDmg, src, this));
+        }
+
         getSprite().showStatus(hp() > ht() / 2 ?
                         CharSprite.WARNING :
                         CharSprite.NEGATIVE,

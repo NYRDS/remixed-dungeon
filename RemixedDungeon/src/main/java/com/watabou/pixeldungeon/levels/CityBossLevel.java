@@ -107,8 +107,10 @@ public class CityBossLevel extends BossLevel {
 			Painter.fill(this, wLootL, lootTop, lootRoomW, 1, Terrain.WALL);
 			Painter.fill(this, wLootL, lootTop + lootRoomH - 1, lootRoomW, 1, Terrain.WALL);
 			Painter.fill(this, wLootL, lootTop, 1, lootRoomH, Terrain.WALL);
-			// caveman: punch the door through the room's right column (which is the
-			// column adjacent to the hall) — connects loot room <-> throne hall.
+			// caveman: wall the column shared with the hall too, then punch the
+			// door through it — without this fill the room carve leaves the hall's
+			// side wall a 6-tall gap with a lone door in the middle
+			Painter.fill(this, wLootL + lootRoomW - 1, lootTop, 1, lootRoomH, Terrain.WALL);
 			set(wLootL + lootRoomW - 1, lootTop + lootRoomH / 2, Terrain.DOOR);
 			lootRoomCells[0] = cell(wLootL + 1, lootTop + 1);
 		}
@@ -117,7 +119,9 @@ public class CityBossLevel extends BossLevel {
 			Painter.fill(this, eLootL, lootTop, lootRoomW, 1, Terrain.WALL);
 			Painter.fill(this, eLootL, lootTop + lootRoomH - 1, lootRoomW, 1, Terrain.WALL);
 			Painter.fill(this, eLootL + lootRoomW - 1, lootTop, 1, lootRoomH, Terrain.WALL);
-			set(eLootL, lootTop + lootRoomH / 2, Terrain.DOOR); // door through room's left column (adjacent to hall)
+			// caveman: same shared-column wall on the east side (col adjacent to hall)
+			Painter.fill(this, eLootL, lootTop, 1, lootRoomH, Terrain.WALL);
+			set(eLootL, lootTop + lootRoomH / 2, Terrain.DOOR);
 			lootRoomCells[1] = cell(eLootL + 1, lootTop + 1);
 		}
 
