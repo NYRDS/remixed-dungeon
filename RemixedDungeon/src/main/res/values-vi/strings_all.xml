@@ -789,6 +789,7 @@
     <string name="Level_TilePileOfStones">Đống đá</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
     <string name="Level_TileSummoningTrap">Bẫy triệu hồi</string>
+    <string name="Level_TileToxicTrap">Bẫy khí độc</string>
     <string name="Level_TileWater">Nước</string>
     <string name="Level_TileWell">Giếng</string>
     <string name="LevitationBuff_Info">Cơ thể lơ lửng trên mặt đất, tránh các bẫy và nguy hiểm khác trên mặt đất.</string>
@@ -1251,6 +1252,7 @@
     <string name="Shaman_Name_Objective">gnoll shaman</string>
     <string name="Sheep_Desc">Đây là một con cừu ma thuật. Điều gì làm nó trở nên ma thuật? Bạn không thể giết nó. Nó sẽ đứng yên tại chỗ cho đến khi nó biến mất bằng phép thuật, trong khi vẫn nhai cỏ với ánh mắt trống rỗng.</string>
     <string name="Sheep_Gender">feminine</string>
+    <string name="Sheep_Name">cừu</string>
     <string name="ShieldBuffNotReady_Info">Khiên của bạn chưa sẵn sàng để chặn đòn tấn công tiếp theo.</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShieldStrTemplate">Người đeo khiên cần có ít nhất %1$d điểm Sức mạnh để sử dụng nó đúng cách.</string>
@@ -1863,6 +1865,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

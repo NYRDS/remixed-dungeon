@@ -612,6 +612,7 @@
     <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Het zwart pulserende hart van de Bedrieglijke Geest.</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
+    <string name="Hedgehog_ImLate">Ik ben laat, ik ben vreselijk laat...</string>
     <string name="Hedgehog_Info1">Zoek jij ook naar Beer?</string>
     <string name="Hedgehog_Name">egel</string>
     <string name="HeroClass_Doctor">Pestdokter</string>
@@ -1314,6 +1315,7 @@
     <string name="Shaman_Name_Objective">gnol sjamaan</string>
     <string name="Sheep_Desc">Dit is een magisch schaap. Wat is er zo magisch aan? Je kunt het niet doden. Het blijft staan tot het magisch verdwijnt, terwijl het herkauwt met een lege blik.</string>
     <string name="Sheep_Gender">feminine</string>
+    <string name="Sheep_Name">schaap</string>
     <string name="Sheep_Name_Objective">schaap</string>
     <string name="ShieldBuffNotReady_Info">Je schild is nog niet klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldBuffNotReady_Name">Schild is niet klaar</string>
@@ -1874,6 +1876,7 @@
     <string name="town_deco_church_sign_desc">Het lijkt erop dat er een kerk in dat gebouw zit.</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_cinema_sign_desc">Het lijkt erop dat er een bioscoop in dat gebouw zit.</string>
+    <string name="town_deco_cinema_sign_name">Bioscoopbord</string>
     <string name="town_deco_clock_name">Klok</string>
     <string name="town_deco_common_bed_desc">Gewoon bed.</string>
     <string name="town_deco_common_bed_name">Bed</string>
@@ -2164,6 +2167,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
