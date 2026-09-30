@@ -21,7 +21,7 @@
    "scriptFile"    : "scripts/mobs/IceElemental",
    "lootChance"    : 0.1,
    "loot"          : { "kind": "FrozenCarpaccio" },
-   "immunities"    : ["Roots", "Paralysis", "Stun", "ToxicGas"],
+   "immunities"    : ["Roots", "Paralysis", "Stun", "ToxicGas", "Frost"],
    "carcassChance" : 0,
    "canBePet"      : true,
    "friendly"      : false,

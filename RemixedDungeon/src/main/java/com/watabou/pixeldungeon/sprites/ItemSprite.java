@@ -154,7 +154,7 @@ public class ItemSprite extends MovieClip {
 
 		val customImage = item.getCustomImage();
 		if(customImage!= null) {
-			if ((this.glowing = item.glowing()) == null) {
+			if (noGlow(this.glowing = item.glowing())) {
 				resetColor();
 			}
 			copy(customImage);
@@ -173,10 +173,17 @@ public class ItemSprite extends MovieClip {
 			view(Assets.ITEMS, ItemSpriteSheet.SMTH, null);
 			EventCollector.logException("Something wrong with "+file+" frame: "+ image);
 		}
-		if ((this.glowing = glowing) == null) {
+		if (noGlow(this.glowing = glowing)) {
 			resetColor();
 		}
 		return this;
+	}
+
+	// caveman: NO_GLOWING sentinel (lua items without a glow) must clear the
+	// tint channels too - otherwise the previous item's last glow frame stays
+	// frozen on the heap sprite after the glowing item is picked up
+	private static boolean noGlow(Glowing glowing) {
+		return glowing == null || glowing == Glowing.NO_GLOWING;
 	}
 
 	@Override
