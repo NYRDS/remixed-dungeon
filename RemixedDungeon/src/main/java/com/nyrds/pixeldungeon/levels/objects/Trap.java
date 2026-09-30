@@ -130,7 +130,9 @@ public class Trap extends LevelObject {
 		}
 
 		if (presser instanceof Mob && activatedByMob) {
-			activate(null);
+			// caveman: the mob stepping on the trap is the victim - passing null
+			// made GrippingTrap and friends fire visually without any effect
+			activate((Char) presser);
 			return;
 		}
 

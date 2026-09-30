@@ -47,6 +47,8 @@ import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker;
 import com.watabou.pixeldungeon.items.Ankh;
+import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
@@ -115,6 +117,11 @@ public class Dungeon {
 
     public static HashSet<Integer> chapters;
 
+    // items tossed into a chasm/pit - they fall to the next depth and are
+    // handed back when the hero gets there
+    public static final List<Item>   chasmItems = new ArrayList<>();
+    public static final List<Integer> chasmItemDepths = new ArrayList<>();
+
     // Hero's field of view
     public static boolean[] visible;
 
@@ -176,6 +183,9 @@ public class Dungeon {
         ItemsList.reset();
         CharsList.reset();
         QuickSlot.reset();
+
+        chasmItems.clear();
+        chasmItemDepths.clear();
 
         hero = CharsList.DUMMY_HERO;
     }
@@ -409,6 +419,43 @@ public class Dungeon {
         previousLevelId = levelId;
         levelId = level.levelId;
         Dungeon.level = level;
+
+        drainChasmItems();
+    }
+
+    // caveman: items that fell into a chasm land on the floor the hero just
+    // entered (fell or walked) - scatter them next to the hero
+    private static void drainChasmItems() {
+        if (chasmItems.isEmpty() || level == null) {
+            return;
+        }
+
+        for (int i = chasmItems.size() - 1; i >= 0; --i) {
+            if (chasmItemDepths.get(i) != depth) {
+                continue;
+            }
+
+            Item item = chasmItems.remove(i);
+            chasmItemDepths.remove(i);
+
+            int cell = level.getEmptyCellNextTo(hero.getPos());
+            if (!level.cellValid(cell)) {
+                cell = level.randomRespawnCell();
+            }
+            if (level.cellValid(cell)) {
+                GLog.debug("chasm item %s lands on %s", item.getEntityKind(), level.levelId);
+                level.drop(item, cell);
+            }
+        }
+    }
+
+    // caveman: a heap landing on a chasm/pit cell is visually discarded, but
+    // its items keep falling - the hero can recover them one depth lower
+    public static void addToChasmTransit(Heap heap) {
+        for (Item item : heap.items) {
+            chasmItems.add(item);
+            chasmItemDepths.add(depth + 1);
+        }
     }
 
     private static void spawnPet(Level level, Mob mob) {
@@ -429,6 +476,14 @@ public class Dungeon {
         mob.levelId = level.levelId;
 
         mob.setEnemy(CharsList.DUMMY);
+
+        // caveman: self-heal fraction-stripped pets from saves made before the
+        // CityBossLevel servant-call fix - owner is still the hero, so re-pet it
+        if (mob.getOwner() instanceof Hero && !mob.isPet()) {
+            GLog.debug("spawnPet: restoring stripped pet %s id=%d", mob.getEntityKind(), mob.getId());
+            mob.makePet(mob, hero.getId());
+        }
+
         // caveman: remote-controlled followers keep their injected state -
         // the driver owns them, Wandering would silently free them
         if (!mob.isRemoteControlled()) {
@@ -478,6 +533,8 @@ public class Dungeon {
     private static final String BADGES = "badges";
     private static final String SCRIPTS_DATA = "scripts_data";
     private static final String PETS = "pets";
+    private static final String CHASM_ITEMS = "chasmItems";
+    private static final String CHASM_ITEMS_DEPTHS = "chasmItemsDepths";
     private static final String GAME_ID = "game_id";
     private static final String MOVE_TIMEOUT = "move_timeout";
     private static final String LAST_USED_ID = "lastUsedId";
@@ -519,6 +576,13 @@ public class Dungeon {
             }
         }
         bundle.put(PETS, heroPets);
+
+        bundle.put(CHASM_ITEMS, chasmItems);
+        int[] chasmDepths = new int[chasmItemDepths.size()];
+        for (int i = 0; i < chasmDepths.length; i++) {
+            chasmDepths[i] = chasmItemDepths.get(i);
+        }
+        bundle.put(CHASM_ITEMS_DEPTHS, chasmDepths);
 
         bundle.put(POS, potionOfStrength);
         bundle.put(SOU, scrollsOfUpgrade);
@@ -717,6 +781,13 @@ public class Dungeon {
             if (mob != null && mob.valid() && !CharsList.isDestroyed(mob.getId())) {
                 restoredFollowers.add(mob);
             }
+        }
+
+        chasmItems.clear();
+        chasmItems.addAll(bundle.getCollection(CHASM_ITEMS, Item.class));
+        chasmItemDepths.clear();
+        for (int d : bundle.getIntArray(CHASM_ITEMS_DEPTHS)) {
+            chasmItemDepths.add(d);
         }
 
         potionOfStrength = bundle.getInt(POS);

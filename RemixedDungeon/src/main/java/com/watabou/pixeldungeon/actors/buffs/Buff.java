@@ -395,7 +395,9 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
                 }
             }
 
-            if (actionText != null || target == Dungeon.hero) {
+            // caveman: hero-targeted freeze with no action text (non-potion item)
+            // used to log a literal null into the chat
+            if (actionText != null) {
                 GLog.w(actionText);
             }
         }

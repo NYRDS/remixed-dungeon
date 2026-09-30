@@ -456,6 +456,12 @@ public class CityBossLevel extends BossLevel {
 		for (Mob mob : getCopyOfMobsArray()) {
 			String kind = mob.getEntityKind();
 			if (kind.equals("Monk") || kind.equals("Warlock") || kind.equals("Golem")) {
+				// caveman: hero-owned pets never answer the King's call - the
+				// fraction flip used to strip golem minions for good (no heart,
+				// no attacks, deaf to orders) and the save then kept them stripped
+				if (mob.getOwner() instanceof Hero) {
+					continue;
+				}
 				if (mob.friendly(Dungeon.hero)) {
 					mob.setFraction(com.watabou.pixeldungeon.actors.mobs.Fraction.DUNGEON);
 					mob.setState(com.nyrds.pixeldungeon.ai.MobAi.getStateByClass(

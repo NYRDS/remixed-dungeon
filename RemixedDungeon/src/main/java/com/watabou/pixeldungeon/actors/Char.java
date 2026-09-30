@@ -401,6 +401,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             restoringFromBundle = false;
         }
 
+        // caveman: the invisibility counter is maintained by attach/detach only -
+        // re-derive it from the restored buff set so a mid-session desync can't
+        // leak into the save and expose the hero to mobs on the next load
+        invisible = buffs(Invisibility.class).size();
+
         spellsUsage = bundle.getMap(SPELLS_USAGE);
 
         setupCharData();

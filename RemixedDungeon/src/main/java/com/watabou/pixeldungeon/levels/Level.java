@@ -1297,6 +1297,7 @@ public abstract class Level implements Bundlable {
 
 		if(newHeap) {
 			if (map[cell] == Terrain.CHASM || pit[cell]) {
+				Dungeon.addToChasmTransit(heap);
 				GameScene.discard(heap);
 			} else {
 				heaps.put(cell, heap);
