@@ -826,6 +826,7 @@
     <string name="ManaPotion_Info">Bình này sẽ khôi phục năng lượng tinh thần của bạn.</string>
     <string name="ManaPotion_Name">Bình Mana</string>
     <string name="ManaRegenerationBuff_Info">Chức năng hồi mana được tạo thành một buff để đơn giản hóa.</string>
+    <string name="ManaRegenerationBuff_Name">Hồi phục mana</string>
     <string name="ManaShieldBuff_Name">Khiên phép thuật</string>
     <string name="Mana_Title">Năng lượng</string>
     <string name="MedicineMask_Name">Khẩu trang y tế</string>
@@ -1826,6 +1827,7 @@
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_snowdrift_desc">Đó là một đống tuyết khá lớn và rõ ràng không ai định dọn nó.</string>
     <string name="town_deco_sofa_name">Ghế sofa ấm áp</string>
+    <string name="town_deco_stakes_desc">Những khúc gỗ nhọn này trông thật đáng sợ, nhưng thực ra chúng hoàn toàn vô dụng.</string>
     <string name="town_deco_stakes_name">Cọc</string>
     <string name="town_deco_statue_blood_desc">Một bức tượng đầy uy nghi của thiên thần đang cầm một bát máu.</string>
     <string name="town_deco_statue_water_name">Tượng thiên thần</string>
@@ -1865,6 +1867,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

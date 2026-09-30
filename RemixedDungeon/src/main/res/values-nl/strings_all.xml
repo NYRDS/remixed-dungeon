@@ -866,6 +866,7 @@
     <string name="MailArmor_Name">maliënkolder</string>
     <string name="ManaPotion_Info">Deze drank herstelt je spirituele energie.</string>
     <string name="ManaPotion_Name">Mana Drankje</string>
+    <string name="ManaRegenerationBuff_Name">Mana regeneratie</string>
     <string name="ManaShieldBuff_Name">Magisch Schild</string>
     <string name="Mana_Cost">Manakosten: </string>
     <string name="Mana_Title">Mana</string>
@@ -1100,6 +1101,7 @@
     <string name="Prison_TileDescDeco">Er zijn oude bloedvlekken op de vloer.</string>
     <string name="PseudoPasty_Info">Dit is een authentiek Cornish pasty met de traditionele vulling van rundvlees en aardappelen.</string>
     <string name="PseudoPasty_Name">pasteitje</string>
+    <string name="PseudoRat_Desc">Een afschuwelijk beest dat uit het lijk van de rat tevoorschijn kwam, lijkt op geen enkele knaagdier of ander dier dat je ooit zag. Een enorme mond, vol vlijmscherpe tanden, neemt het grootste deel van zijn lichaam in.</string>
     <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">pseudo-rat</string>
     <string name="PseudoRat_Name_Objective">pseudo-rat</string>
@@ -2167,6 +2169,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
