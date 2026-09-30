@@ -14,10 +14,8 @@ return buff.init{
         }
     end,
 
-    attachTo = function(self, buff, target)
-        target:adjustInvisibility(1)
-        return true
-    end,
+    -- counter maintenance lives in CustomBuff.attachTo for INVISIBLE-state
+    -- buffs (beta.13 r3b); attachTo hook kept only for its return contract
 
     attached = function(self, buff)
         RPD.playSound("snd_meld")
@@ -25,7 +23,6 @@ return buff.init{
     end,
 
     detach = function(self, buff)
-        buff.target:adjustInvisibility(-1)
         buff.target:observe()
     end,
 

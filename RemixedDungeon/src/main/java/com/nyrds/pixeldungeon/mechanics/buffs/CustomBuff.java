@@ -100,10 +100,14 @@ public class CustomBuff extends Buff implements Doom {
 
             if (script.run("attachTo", target).checkboolean()) {
                 this.target = target;
-                if (target.add(this)) {
-                    script.runOptionalNoRet("attached");
-                    return true;
+                boolean attached = target.add(this);
+                if (attached && charSpriteStatus() == CharSprite.State.INVISIBLE) {
+                    target.invisible++;
                 }
+                if (attached) {
+                    script.runOptionalNoRet("attached");
+                }
+                return attached;
             }
             return false;
         } catch (Exception e) {
@@ -113,6 +117,13 @@ public class CustomBuff extends Buff implements Doom {
 
     @Override
     public void detach() {
+        // caveman: state-based, not history-based - a restored buff's attachTo
+        // may not have run the increment branch, but the restore re-derivation
+        // counts it, so the decrement must fire unconditionally (same contract
+        // as java Invisibility.detach)
+        if (charSpriteStatus() == CharSprite.State.INVISIBLE) {
+            target.invisible--;
+        }
         super.detach();
         script.runOptional("detach");
     }

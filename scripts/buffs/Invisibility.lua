@@ -14,14 +14,8 @@ return buff.init{
         }
     end,
 
-    attachTo = function(self, buff, target)
-        target:adjustInvisibility(1)
-        return true
-    end,
-
-    detach = function(self, buff)
-        buff.target:adjustInvisibility(-1)
-    end,
+    -- counter maintenance lives in CustomBuff.attachTo/detach for any
+    -- INVISIBLE-state buff (beta.13 r3b) - no manual adjustInvisibility here
 
     spellCasted = function(self, buff, caster, spell)
         RPD.CharUtils:dispelInvisibility(buff.target)

@@ -71,13 +71,17 @@ public class PrisonLevel extends RegularLevel {
 
 		// wandmaker quest state and roll live in scripts/lib/quest.lua (batch 16c);
 		// java keeps only the mechanical placement inside the entrance room
-		if (QuestBridge.trySpawn("wandmaker", 10)) {
-			Mob wandmaker = MobFactory.mobByName(MobFactory.WANDMAKER);
-			do {
-				wandmaker.setPos(roomEntrance.random(this));
-			} while (map[wandmaker.getPos()] == Terrain.ENTRANCE);
-			spawnMob(wandmaker);
-		}
+			if (QuestBridge.trySpawn("wandmaker", 10)) {
+				Mob wandmaker = MobFactory.mobByName(MobFactory.WANDMAKER);
+				do {
+					wandmaker.setPos(roomEntrance.random(this));
+				} while (map[wandmaker.getPos()] == Terrain.ENTRANCE
+						// caveman: no spawning on the entrance sign (or any object tile) -
+						// the sign shares this room, an NPC standing on it is misplaced at
+						// best and can wedge the only passage (beta.13 r3b softlock report)
+						|| getTopLevelObject(wandmaker.getPos()) != null);
+				spawnMob(wandmaker);
+			}
 
 		if(Dungeon.depth==7 && !necromancerSpawned && hasExit(1)) {
 			Room NecroExit = exitRoom(1);

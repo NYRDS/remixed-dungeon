@@ -29,6 +29,7 @@ import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.CharAction;
 import com.nyrds.pixeldungeon.ml.actions.Move;
+import com.nyrds.pixeldungeon.mechanics.buffs.CustomBuff;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.pixeldungeon.utils.EntityIdSource;
 import com.nyrds.pixeldungeon.utils.ItemsList;
@@ -414,7 +415,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         // caveman: the invisibility counter is maintained by attach/detach only -
         // re-derive it from the restored buff set so a mid-session desync can't
         // leak into the save and expose the hero to mobs on the next load
-        invisible = buffs(Invisibility.class).size();
+        invisible = invisibilitySources();
 
         spellsUsage = bundle.getMap(SPELLS_USAGE);
 
@@ -433,6 +434,19 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         getScript().run("fillStats");
 
         setUndead(undead);
+    }
+
+    // caveman: functional invisibility sources - on master every invisibility
+    // is a lua buff (Invisibility/Shadows/Cloak), each wearing the INVISIBLE
+    // sprite state, so the CustomBuff count alone is the full set
+    private int invisibilitySources() {
+        int n = 0;
+        for (CustomBuff b : buffs(CustomBuff.class)) {
+            if (b.charSpriteStatus() == CharSprite.State.INVISIBLE) {
+                n++;
+            }
+        }
+        return n;
     }
 
     private String getClassParam(String paramName, String defaultValue, boolean warnIfAbsent) {
