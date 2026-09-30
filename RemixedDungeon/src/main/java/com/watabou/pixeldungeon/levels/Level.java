@@ -1855,7 +1855,22 @@ public abstract class Level implements Bundlable {
 			}
 
 			if (!candidates.isEmpty()) {
-				return Random.element(candidates); // nearest wave, random pick within it
+				// caveman: prefer roomy cells over corridor throats - a passive NPC
+				// parked in a 1-wide corridor blocks the only way through
+				ArrayList<Integer> roomy = new ArrayList<>();
+				for (int c : candidates) {
+					int free = 0;
+					for (int n : Level.NEIGHBOURS4) {
+						int p = c + n;
+						if (cellValid(p) && (passable[p] || avoid[p])) {
+							free++;
+						}
+					}
+					if (free >= 3) {
+						roomy.add(c);
+					}
+				}
+				return Random.element(!roomy.isEmpty() ? roomy : candidates); // nearest wave, roomy pick, random within it
 			}
 			frontier = next;
 		}

@@ -99,7 +99,11 @@ public class CustomBuff extends Buff {
 
             if (script.run("attachTo", target).checkboolean()) {
                 this.target = target;
-                return target.add(this);
+                boolean attached = target.add(this);
+                if (attached && charSpriteStatus() == CharSprite.State.INVISIBLE) {
+                    target.invisible++;
+                }
+                return attached;
             }
             return false;
         } catch (Exception e) {
@@ -109,6 +113,13 @@ public class CustomBuff extends Buff {
 
     @Override
     public void detach() {
+        // caveman: state-based, not history-based - a restored buff's attachTo
+        // may not have run the increment branch, but the restore re-derivation
+        // counts it, so the decrement must fire unconditionally (same contract
+        // as java Invisibility.detach)
+        if (charSpriteStatus() == CharSprite.State.INVISIBLE) {
+            target.invisible--;
+        }
         super.detach();
         script.runOptional("detach");
     }

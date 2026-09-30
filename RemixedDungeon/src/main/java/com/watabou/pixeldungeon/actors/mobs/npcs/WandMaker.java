@@ -203,12 +203,16 @@ public class WandMaker extends NPC {
 			}
 			
 			if (!spawned && Dungeon.depth > 6 && Random.Int( 10 - Dungeon.depth ) == 0) {
-				
+
 				WandMaker npc = new WandMaker();
 				do {
 					int cell = room.random(level);
 					npc.setPos(cell);
-				} while (level.map[npc.getPos()] == Terrain.ENTRANCE);
+				} while (level.map[npc.getPos()] == Terrain.ENTRANCE
+						// caveman: no spawning on the entrance sign (or any object tile) -
+						// standing on an object makes the NPC evasion-blink away, and the
+						// nearest free cell can be the level's only corridor (beta.13 softlock report)
+						|| level.getTopLevelObject(npc.getPos()) != null);
 				level.mobs.add( npc );
 				Actor.occupyCell( npc );
 				
