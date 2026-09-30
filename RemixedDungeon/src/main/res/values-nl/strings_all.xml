@@ -314,6 +314,7 @@
     <string name="CharAction_Take">pakken</string>
     <string name="CharAction_Taunt">uitdagen</string>
     <string name="CharInfo_Level">Dit is een %2$s op niveau %1$d.</string>
+    <string name="Char_Defeat_0">%1$s heeft %2$s verslagen</string>
     <string name="Char_Hit_0">%1$s raakte %2$s</string>
     <string name="Char_Hit_1">%1$s raakte %2$s</string>
     <string name="Char_Hit_2">%1$s raakte %2$s</string>
@@ -2162,6 +2163,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
