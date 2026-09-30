@@ -495,6 +495,7 @@
     <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Een uitzonderlijk voorbeeld van elvenvakmanschap. Het is duidelijk effectiever en nauwkeuriger dan een gewone houten boog.</string>
     <string name="ElvenDagger_Gender">masculine</string>
+    <string name="EncumbranceBuff_CharAct_1">Ik ben niet sterk genoeg om %s goed te hanteren.</string>
     <string name="EncumbranceBuff_CharAct_2">Deze %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EncumbranceBuff_CharAct_4">Mij ontbreekt de kracht om %s optimaal te benutten.</string>
     <string name="EncumbranceBuff_Name">Last</string>
@@ -544,6 +545,7 @@
     <string name="FrozenCarpaccio_Info1">Je ziet je handen onzichtbaar worden!</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
     <string name="FrozenCarpaccio_Info3">Verversend!</string>
+    <string name="FrozenCarpaccio_Info4">Je voelt je beter!</string>
     <string name="FrozenCarpaccio_Name">bevroren carpaccio</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
@@ -1027,6 +1029,7 @@
     <string name="PlagueDoctorQuest_1_1_InProgress">Breng me _vijf dode ratten_! Elke die je me brengt, brengt ons dichter bij het begrijpen van deze verschrikkelijke plaag.</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Hoest hevig* Hatsjoe!\n De slakken... ze glijden. Ze slijmen. En ze fluisteren geheimen van een vergeten eeuw. Ik heb ze nodig, _tien_ van hen, hun schillen nog intact. Denk je dat slechts _vijftig goudmunten_ genoeg is voor zulke kostbare kennis?\n Bah! Maakt niet uit. De informatie die ze bergen kan de sleutel zijn om deze pest te stoppen. Of... het kan ons leiden tot iets nog vreselijker. Jij beslist.</string>
+    <string name="PlagueDoctorQuest_2_2_Epilogue">Geweldig! _Het zonnekruid_, zijn gouden essentie pulseert met vitaliteit. Ik heb al veel geleerd van zijn delicate structuur. *Hij overhandigt je een _Drankje der Gezondheid_, de vloeistof glimt met een zwak, gouden licht.* Drink dit als de wereld zwaar op je drukt, en voel hoe de warmte van de zon je geest doet herleven.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">  Ah, _zonnekruid_! Een delicate bloem, haar bloemblaadjes stralen de warmte van de zon uit. Ik geloof dat haar essentie de sleutel bevat tot... ah, vergeet de details voor nu. Het volstaat te zeggen dat het cruciaal is voor mijn onderzoek. _Twee zonnekruidzaden_. Haal ze voor mij, en ik zal je belonen met iets dat zeker van pas zal komen op je avonturen - een _Drankje van Gezondheid_, bruisend van de vitaliteit van de zon.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Breng me een _vampier vleermuis_, levend en onbeschadigd! Haar bloed, haar vleugels… ze bevatten geheimen die ik moet onthullen!</string>
@@ -2176,6 +2179,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

@@ -509,6 +509,7 @@
     <string name="FrozenCarpaccio_Info1">Bạn thấy tay mình trở nên vô hình!</string>
     <string name="FrozenCarpaccio_Info2">Bạn cảm thấy da mình cứng lại!</string>
     <string name="FrozenCarpaccio_Info3">Sảng khoái!</string>
+    <string name="FrozenCarpaccio_Info4">Bạn cảm thấy khỏe hơn!</string>
     <string name="FrozenCarpaccio_Name">carpaccio đông lạnh</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
     <string name="FuryBuff_Info">Đôi mắt đỏ máu vì cơn giận dữ bên trong.</string>
@@ -836,6 +837,7 @@
     <string name="MedicineMask_Name">Khẩu trang y tế</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1a">%1 là %2 vũ khí cận chiến cấp-%3.</string>
+    <string name="MeleeWeapon_Info1b">một</string>
     <string name="MeleeWeapon_Info1c">đã nâng cấp</string>
     <string name="MeleeWeapon_Info1d">yếu</string>
     <string name="MeleeWeapon_Info2a">Sát thương trung bình là %d điểm mỗi lần đánh.</string>
@@ -1331,6 +1333,7 @@
     <string name="SpiderNest_Name">lòng tử cung nhện</string>
     <string name="SpiderQueenCarapace_Name">Lớp giáp của Nữ Hoàng Nhện</string>
     <string name="SpiderQueen_Desc">Cơ thể một người phụ nữ xinh đẹp kết hợp với con nhện ghê tởm. Mọi sinh vật sống trong hang ổ này đều là tôi tớ của bà ta. Gặp gỡ người phụ nữ phi thường này có thể là trải nghiệm chí mạng. Vì bạn là kẻ đột nhập!</string>
+    <string name="SpiderQueen_DieInfo">Nữ hoàng nhện đã bị tiêu diệt! Bây giờ tôi phải quay lại tầng 5 và tiếp tục hành trình đến Vực sâu.</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name_Objective">nữ hoàng nhện</string>
     <string name="SpiderServant_Desc">Chiến binh là những đơn vị đông đảo nhất trong hang nhện. Chúng sinh ra để bảo vệ lãnh thổ. Kìm của chiến binh đã phát triển các tuyến độc để đầu độc kẻ thù của chúng.</string>
@@ -1873,6 +1876,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
