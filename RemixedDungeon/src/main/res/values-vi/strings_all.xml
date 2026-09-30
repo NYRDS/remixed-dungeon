@@ -869,6 +869,7 @@
     <string name="Mob_Died">Bạn nghe thấy thứ gì đó đã chết ở phía xa</string>
     <string name="Mob_GoingTo">Đang đi rồi!</string>
     <string name="Mob_ItemUse">%1$s sử dụng %2$s</string>
+    <string name="Mob_ReadyForOrder">%s sẵn sàng cho lệnh của bạn.</string>
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
     <string name="Mob_StaFleeingStatus2">Cái %1$s này đang chạy trốn khỏi %2$s</string>
     <string name="Mob_StaHuntingStatus">Đây %s đang săn bắn</string>
@@ -1383,6 +1384,7 @@
     <string name="Tengu_Info1">Cuối cùng cũng tự do...</string>
     <string name="Tengu_Info3">Bắt được rồi, %s!</string>
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
+    <string name="TerrorBuff_Name">Sợ hãi</string>
     <string name="Thief_Desc">Các tầng sâu của hầm ngục luôn là nơi trốn tránh cho mọi loại tội phạm. Không phải ai cũng giữ được tinh thần rõ ràng khi xa ánh sáng mặt trời lâu ngày. Lâu lắm rồi, những tên trộm cướp điên khùng này đã quên mất họ là ai và tại sao chúng trộm cướp.</string>
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">tên trộm điên</string>
@@ -1861,6 +1863,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

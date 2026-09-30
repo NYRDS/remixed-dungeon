@@ -1319,6 +1319,7 @@
     <string name="ShieldBuffNotReady_Name">Schild is niet klaar</string>
     <string name="ShieldBuffReady_Info">Je schild is klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
+    <string name="Shielded_Desc">Bruten zijn de grootste, sterkste en taaiste van alle gnolls. Bij ernstige verwonding worden ze razend en richten ze nog meer schade aan. Deze brute draagt een gigantisch schild!</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">schildgedrocht</string>
     <string name="Shopkeeper_Buy">Selecteer item om te kopen</string>
@@ -2163,6 +2164,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
