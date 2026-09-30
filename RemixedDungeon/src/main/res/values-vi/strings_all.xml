@@ -666,6 +666,7 @@
     <string name="IceCaves_TileDescStatue">Một bức tượng khủng khiếp nữa... Ồ khoan đã, đó là một con gnoll bị đóng băng.</string>
     <string name="IceCaves_TileGrass">Cỏ đóng băng.</string>
     <string name="IceCaves_TileHighGrass">Cỏ cao đóng băng</string>
+    <string name="IceCaves_TileStatue">Gnoll Đóng Băng</string>
     <string name="IceElemental_Desc">Trong tất cả các nguyên tố hiện có trong hầm, nguyên tố băng khó có thể được coi là mạnh mẽ nhất, nhưng thực sự có thể được gọi là một trong những nguy hiểm nhất. Khí lạnh phát ra từ cơ thể chúng có thể làm chậm bất kỳ kẻ thù nào.</string>
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name_Objective">nguyên tố băng</string>
@@ -1867,6 +1868,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

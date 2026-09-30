@@ -1891,6 +1891,7 @@
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
     <string name="town_deco_cross_name">Kruis</string>
     <string name="town_deco_crossroad_desc">Een ruwe houten paal met pijlvormige bordjes, de tekst waarop vervaagd is door de harde weersomstandigheden.</string>
+    <string name="town_deco_curtains_desc">Houdt al het onnodige licht tegen en dient ook als een geweldige decoratie.</string>
     <string name="town_deco_curtains_name">Gordijnen</string>
     <string name="town_deco_dungeon_door_desc">De ingang van de kerker.</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
@@ -1954,6 +1955,7 @@
     <string name="town_deco_snowman_name">Sneeuwpop</string>
     <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
     <string name="town_deco_sofa_desc">Lijkt erop dat deze bioscoop echt probeert de beste zitplaatsen voor haar klanten te bieden.</string>
+    <string name="town_deco_stakes_name">Palissaden</string>
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
     <string name="town_deco_statue_water_desc">Een majestueuze standbeeld van een engel die een kom met water vasthoudt.</string>
     <string name="town_deco_statue_water_name">Engelenstandbeeld</string>
@@ -2169,6 +2171,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
