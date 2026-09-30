@@ -99,7 +99,6 @@
     <string name="AttackDelay_Increased">這樣無法使用%s。揮動緩慢，呼吸沉重…</string>
     <string name="Attack_Cooldown">攻擊冷卻時間</string>
     <string name="Attack_Range">攻擊距離</string>
-    <string name="AwarenessBuff_Info">Perasaan menjadi lebih tajam, memberikan kesedaran yang lebih besar tentang persekitaran.</string>
     <string name="AwarenessBuff_Name">察覺</string>
     <string name="AzuterronNPC_Desc">被黑霧包圍著的神秘人</string>
     <string name="AzuterronNPC_Gender">masculine</string>
@@ -789,7 +788,6 @@
     <string name="Facilitations_Descriptions_2">對大自然作為能量來源進行深入而徹底的研究，將使你在旅程中補充魔法儲備。</string>
     <string name="Facilitations_Descriptions_3">緊緊繫上由食人魔皮革製成、代代相傳的腰帶，你朝著前方的未知邁出一步。</string>
     <string name="Facilitations_Names_0">無飢餓</string>
-    <string name="Facilitations_Names_1">Corpo di troll</string>
     <string name="Facilitations_Names_2">精靈</string>
     <string name="Facilitations_Names_3">巨人力量</string>
     <string name="Fadeleaf_Desc">觸碰到消逝草的任何生物都會被傳送至當前層的一個隨機地點。</string>
@@ -1139,7 +1137,6 @@
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">旅店老闆</string>
     <string name="InnKeeperNPC_Name_Objective">旅館主人</string>
-    <string name="InnServant_Phrase_1">Ugh, masih banyak yang harus dilakukan!</string>
     <string name="InnServant_Phrase_2">這個醉漢讓我發瘋！</string>
     <string name="InnServant_Phrase_3">我看起來很乾淨</string>
     <string name="InnServant_Phrase_4">我的天，今天這麼多的客人</string>
@@ -2047,7 +2044,7 @@
     <string name="ShieldBuffNotReady_Info">你的盾牌還沒準備好抵擋下一次攻擊。</string>
     <string name="ShieldBuffNotReady_Name">盾牌還沒準備好</string>
     <string name="ShieldBuffReady_Info">你的盾牌已準備好抵擋下一次攻擊。</string>
-    <string name="ShieldBuffReady_Name">Щит готовий</string>
+    <string name="ShieldBuffReady_Name">準備完畢</string>
     <string name="ShieldInfoTemplate">這個盾牌最多可以格擋%1$d傷害。  格擋幾率為%2$d %% 。 成功格擋後需要%3$3.1f個回合來恢復。</string>
     <string name="ShieldStrTemplate">盾牌的佩戴者應至少具有%1$d力量才能正常的使用它。</string>
     <string name="ShieldWeaponInfo">當此盾牌作為武器使用時，平均會造成 %1$d 點傷害。</string>
@@ -2098,7 +2095,6 @@
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">蝸牛</string>
     <string name="Snail_Name_Objective">snail</string>
-    <string name="SnipersMarkBuff_Info">Tanda dibuat oleh penembak jitu.</string>
     <string name="SnipersMarkBuff_Name">狙擊手標記</string>
     <string name="SociologistNPC_AlreadyTaken">你已經反饋過了。請稍後再來</string>
     <string name="SociologistNPC_Desc">這位調研員專門收集你對這款混合地牢的意見和建議</string>
@@ -2530,7 +2526,6 @@
     <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">錢包地址</string>
-    <string name="WndCryptoDonate_warningText">ATTENZIONE: Verifica sempre l\'indirizzo prima di inviare fondi. Le transazioni in criptovaluta sono irreversibili!</string>
     <string name="WndCustomizations_Title">自訂設定</string>
     <string name="WndDonate_commonDonateText">混合地牢——永遠對所有人免費。
 但是，你能幫我們讓這個遊戲變得更好。
