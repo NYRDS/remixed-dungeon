@@ -595,6 +595,7 @@
     <string name="HeroClass_HunPerks_3">Các Nữ Thợ Săn hồi phục nhiều máu hơn từ giọt sương.</string>
     <string name="HeroClass_HunPerks_4">Các Nữ Săn Bắt có thể cảm nhận quái vật lân cận ngay cả khi chúng bị che khuất bởi chướng ngại vật.</string>
     <string name="HeroClass_Mag">pháp sư</string>
+    <string name="HeroClass_MagPerks_1">Pháp sư nạp lại gậy nhanh hơn.</string>
     <string name="HeroClass_MagPerks_2">Khi ăn, bất kỳ món ăn nào cũng khôi phục 1 sạc cho tất cả cây gậy phép trong túi đồ.</string>
     <string name="HeroClass_MagPerks_4">Pháp sư sử dụng mana để thi triển các phép thuật nguyên tố.</string>
     <string name="HeroClass_MagPerks_5">Cuộn giấy Nhận diện đã được nhận diện ngay từ đầu.</string>
@@ -1453,6 +1454,7 @@
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
     <string name="View_Distance">Tầm nhìn</string>
     <string name="VileEssence_Info">Một tinh chất đậm đặc của sự hư hỏng thu hoạch từ kẻ thù đã bị đánh bại. Chất tối đen này đập nhịp với năng lượng độc ác và rất có giá trị trong các quá trình giả kim.</string>
+    <string name="WandHolster_Info">Bao đựng mảnh mai này làm từ da của một con vật kỳ lạ. Nó cho phép mang gọn gàng tối đa %d gậy.</string>
     <string name="WandMaker_Defense">đã hấp thụ</string>
     <string name="WandMaker_Desc">Người đàn ông già nua nhưng vẫn khỏe mạnh này mang vẻ bối rối nhẹ. Anh ta được bảo vệ bởi một khiên phép thuật.</string>
     <string name="WandMaker_Dust1">Ôi, thật bất ngờ dễ chịu khi gặp được một người đàng hoàng ở nơi này! Tôi đến đây để tìm một nguyên liệu hiếm - _bụi xác chết_. Nó có thể thu thập từ những bộ xương, và trong dungeon có rất nhiều. Là một pháp sư, tôi hoàn toàn có thể tự vệ trước quái vật nơi đây, nhưng tôi lạc mất chỉ trong chốc lát — thật xấu hổ. Có lẽ bạn có thể giúp tôi? Tôi sẽ vui lòng trả công cho bạn bằng một trong những cây đũa phép tốt nhất của mình.</string>
@@ -1474,6 +1476,7 @@
     <string name="WandOfRegrowth_Info">Khi sự sống kết thúc, sự sống mới luôn bắt đầu phát triển... Chu kỳ vĩnh cửu luôn tồn tại!</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Name">Gậy hồi sinh</string>
+    <string name="WandOfShadowbolt_Info">Cây gậy này phát ra năng lượng tối tăm, độc ác.</string>
     <string name="WandOfShadowbolt_Name">gậy tia bóng tối</string>
     <string name="WandOfSlowness_Info">Cây gậy này khiến sinh vật bị trúng di chuyển và tấn công chậm hơn một nửa cho đến khi hiệu ứng kết thúc.</string>
     <string name="WandOfSlowness_Info1">Không có gì xảy ra.</string>
@@ -1870,6 +1873,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

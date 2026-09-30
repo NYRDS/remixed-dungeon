@@ -632,6 +632,7 @@
     <string name="HeroClass_HunPerks_3">Jachtvrouwjes krijgen meer gezondheid van dauwdruppels.</string>
     <string name="HeroClass_HunPerks_4">Jachtvrouwen voelen buurmonsters zelfs als ze achter obstakels verstopt zitten.</string>
     <string name="HeroClass_Mag">magier</string>
+    <string name="HeroClass_MagPerks_1">Magiërs laden hun toverstaven sneller op.</string>
     <string name="HeroClass_MagPerks_2">Wanneer gegeten, herstelt elk stuk voedsel 1 lading voor alle staven in de inventaris.</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroClass_MagPerks_5">De scrollen van identificatie zijn vanaf het begin geïdentificeerd.</string>
@@ -1544,6 +1545,7 @@
     <string name="VileEssence_Info">Een geconcentreerde essentie van corruptie, geoogst van een verslagen vijand. Deze donkere substantie pulseert met kwaadaardige energie en wordt zeer gewaardeerd in alchemistische processen.</string>
     <string name="VileEssence_Name">Verachtelijke Essentie</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
+    <string name="WandHolster_Info">Deze slanke houder is gemaakt van leer van een exotisch dier. Het maakt het mogelijk om tot %d toverstaven compact bij je te dragen.</string>
     <string name="WandMaker_Berry1">Oh, wat een aangename verrassing een fatsoenlijk persoon te ontmoeten op zo\'n plek! Ik kwam hier voor een zeldzaam ingrediënt - een _Rotberry-zaad_. Omdat ik een magiër ben, kan ik mezelf goed verdedigen tegen lokale monsters, maar ik verdwaal altijd in no-time, het is erg gênant. Zou je me kunnen helpen? Ik zou je graag betalen met een van mijn beste toverstokken.</string>
     <string name="WandMaker_Berry2">Iemand geluk met een Gniestoel zaadje, %s? Nee? Maak je geen zorgen, ik heb het niet eilig.</string>
     <string name="WandMaker_Defense">geabsorbeerd</string>
@@ -1575,6 +1577,7 @@
     <string name="WandOfPoison_Info">De giftige uitbarsting van dit krom stuk hout bedekt zijn doelwit met dodelijk gif. Het vergiftigde wezen zal periodieke schade lijden totdat het effect eindigt. De duur van het effect neemt toe met het niveau van de staf.</string>
     <string name="WandOfRegrowth_Info">Wanneer het leven eindigt, begint nieuw leven altijd te groeien... De eeuwige cyclus blijft altijd bestaan!</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
+    <string name="WandOfShadowbolt_Info">Deze toverstaf straalt donkere, kwaadaardige energie uit.</string>
     <string name="WandOfSlowness_Info">Deze toverstaf zorgt ervoor dat een wezen met de helft van zijn normale snelheid beweegt en aanvalt, totdat het effect afloopt.</string>
     <string name="WandOfSlowness_Info1">Er gebeurde niets.</string>
     <string name="WandOfSlowness_Name">Toverstaf van Vertraging</string>
@@ -2173,6 +2176,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
