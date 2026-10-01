@@ -709,6 +709,7 @@
     <string name="Hunger_Starving_1">Je bent uitgehongerd!</string>
     <string name="Hunger_Starving_2">Je verhongert!</string>
     <string name="HuntressArmor_NoEnemies">Geen vijanden in zicht</string>
+    <string name="HuntressArmor_NotHuntress">Alleen jachtvrouwen kunnen dit pantser gebruiken!</string>
     <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
     <string name="IceCaves_TileDescHighGrass">Dichte bevroren vegetatie blokkeert het zicht.</string>
     <string name="IceCaves_TileDescStatue">Weer een afschuwelijk standbeeld... Oh wacht, dat is een bevroren gnol.</string>
@@ -1424,6 +1425,7 @@
     <string name="SpiritOfPain_Desc">Een splinter van levende duisternis.</string>
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">geest van pijn</string>
+    <string name="SpiritOfPain_Name_Objective">geest van pijn</string>
     <string name="Sprout_Info">Weak de slapende zaden.\nEr moet echter wat groen op de grond zijn om de toverspreuk te laten slagen.</string>
     <string name="StartScene_ComingSoon">Binnenkort</string>
     <string name="StartScene_ContinueLatest">Ga verder met je laatste spel of kies een opslagplek</string>
@@ -2188,6 +2190,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

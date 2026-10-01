@@ -329,6 +329,7 @@
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Thanh kiếm đồ sộ này chắc chắn có thể chém xuyên qua bất cứ thứ gì.</string>
     <string name="Claymore_Name">Kiếm Claymore</string>
+    <string name="CloakBuff_Name">Ẩn thân</string>
     <string name="CloakSpell_EnemiesNearby">Bạn không thể bước vào bóng tối khi có kẻ địch ở gần.</string>
     <string name="CloakSpell_Info">Bước vào bóng tối để trở nên vô hình. Giảm đáng kể cơ hội bị phát hiện. Không thể sử dụng khi kẻ địch ở gần.</string>
     <string name="ClothArmor_Desc">Bộ giáp nhẹ này chỉ cung cấp khả năng bảo vệ cơ bản.</string>
@@ -1071,6 +1072,7 @@
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Ống đựng tên bằng da phù hợp để chứa bất kỳ số lượng mũi tên nào</string>
     <string name="RabbitEars_Info">Có quan niệm rằng thỏ sinh ra đã mang may mắn, và người sở hữu một phần cơ thể của nó sẽ được thú cưng ấy ban cho vận may. Nghĩ kỹ lại, bị giết chỉ vì đôi tai của bạn – thứ sẽ dùng để làm đồ trang sức – nghe có vẻ không mấy may mắn.</string>
+    <string name="RabbitEars_Name">Tai thỏ</string>
     <string name="RaiseDead_Name">Hồi sinh người chết</string>
     <string name="RaiseDead_NoKill">Bạn cần phải giết ai đó trước khi cố gắng hồi sinh.</string>
     <string name="RaiseDead_NoSpace">Hồi sinh thất bại vì không có không gian trống gần đây.</string>
@@ -1884,6 +1886,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
