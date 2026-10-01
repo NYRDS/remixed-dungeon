@@ -1411,13 +1411,17 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Mob_CantDoIt">Yapamam. Küçük pençelerim var.</string>
     <string name="Mob_Desc">Gerçek açıklama yakında gelecek!</string>
     <string name="Mob_Died">Uzakta birşeyin öldüğünü duydun</string>
+    <string name="Mob_FollowMe">Seni takip ediyorum!</string>
     <string name="Mob_GoingTo">Zaten gidiyor!</string>
+    <string name="Mob_Guarding">Bu yeri koruyorum!</string>
     <string name="Mob_ItemUse">%1$s %2$s kullanır</string>
+    <string name="Mob_PetDied">Evcil hayvanın öldü: %s</string>
     <string name="Mob_ReadyForOrder">%s siparişiniz için hazır.</string>
     <string name="Mob_StaAmokStatus">Bu %1$s, delidana gibi koşuyor.</string>
     <string name="Mob_StaControlledStatus">Bu %s kutsal olmayan bir şekilde ele geçirilmiş.</string>
     <string name="Mob_StaFleeingStatus">%s kaçıyor</string>
     <string name="Mob_StaFleeingStatus2">Bu %1$s,%2$s\'den/dan kaçıyor.</string>
+    <string name="Mob_StaGuardStatus">Bu %s nöbet tutuyor</string>
     <string name="Mob_StaHuntingStatus">%s avlanıyor</string>
     <string name="Mob_StaHuntingStatus2">Bu %1$s, %2$savlıyor.</string>
     <string name="Mob_StaPassiveStatus">%s pasif</string>
@@ -2063,6 +2067,7 @@ seviyenin başka bir yeri.</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Jilet gibi keskin bıçaklara sahip yıldız şeklindeki metal parçaları hedeflerine önemli hasar verir. Çok yüksek hızda fırlatılabilirler.</string>
     <string name="Shuriken_Name">shuriken (Ninja Yıldızı)</string>
+    <string name="Sign_CantRead">Okuyamazsın.</string>
     <string name="SkeletonKey_Info">Çok ağırbaşlı duruyor. Bununla önemli bir kapıyı açabilirsin.</string>
     <string name="SkeletonKey_Name">iskelet anahtar</string>
     <string name="Skeleton_Defense">engellenmiş</string>
@@ -3094,6 +3099,11 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
+
+
+
 
 
 

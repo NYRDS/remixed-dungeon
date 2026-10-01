@@ -1414,13 +1414,17 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Mob_CantDoIt">Nie mogę tego zrobić. Mam drobne łapy.</string>
     <string name="Mob_Desc">Prawdziwe opisy pojawią się wkrótce!</string>
     <string name="Mob_Died">Usłyszałeś jak coś gdzieś umarło.</string>
+    <string name="Mob_FollowMe">Idę za tobą!</string>
     <string name="Mob_GoingTo">Nadchodzi!</string>
+    <string name="Mob_Guarding">Strzegę tego miejsca!</string>
     <string name="Mob_ItemUse">%1$s używa %2$s</string>
+    <string name="Mob_PetDied">Twój zwierzak zginął: %s</string>
     <string name="Mob_ReadyForOrder">%s gotowy na twoje rozkazy</string>
     <string name="Mob_StaAmokStatus">%1$s biegnie w szale</string>
     <string name="Mob_StaControlledStatus"> %s jest objęty władaniem siły nieczystej</string>
     <string name="Mob_StaFleeingStatus">%s ucieka w popłochu</string>
     <string name="Mob_StaFleeingStatus2">%1$s ucieka przed %2$s</string>
+    <string name="Mob_StaGuardStatus">Ten %s pilnuje</string>
     <string name="Mob_StaHuntingStatus">%s poluje</string>
     <string name="Mob_StaHuntingStatus2"> %1$s poluje na%2$s</string>
     <string name="Mob_StaPassiveStatus">%s jest przyjazny</string>
@@ -1725,7 +1729,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="PumpkinPie_Name">ciasto dyniowe</string>
     <string name="Pumpkin_Info">W czasach swojej świetności, Dyniolud był dumnym i prosperującym narodem. Lecz gdy nadeszli ludzie, wszystko obróciło się w perzynę. Zdekapitowane, wydrążone głowy poległych dawno temu tubylców z plemień Dynioludzi po dziś dzień służą jako przypomnienie tych strasznych wydarzeń.</string>
     <string name="Pumpkin_Name">Dynia</string>
-    <string name="Quarterstaff_Gender">feminine</string>
+    <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">Pałka wykonana z twardego drewna, z czubkami obitymi żelazem.</string>
     <string name="Quarterstaff_Name">pałka bojowa</string>
     <string name="QuickSlot_SelectSlot">Wybierz slot szybkiego wyboru dla</string>
@@ -2065,6 +2069,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Te ostre jak brzytwa kawałki metalu w kształcie gwiazdek zadają niczego sobie obrażenia kiedy uderzą cel. Mogą być rzucane z dużą szybkością.</string>
     <string name="Shuriken_Name">shuriken</string>
+    <string name="Sign_CantRead">Nie możesz czytać.</string>
     <string name="SkeletonKey_Info">Ten klucz wygląda poważnie: jego głowica ma kształt czaszki. Może otworzy jakieś równie poważnie wyglądające drzwi.</string>
     <string name="SkeletonKey_Name">kościany klucz</string>
     <string name="Skeleton_Defense">blok</string>
@@ -3100,6 +3105,11 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
+
+
+
 
 
 
