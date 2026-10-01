@@ -1998,6 +1998,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shaman_Killed">%s의 번개 화살이 당신을 죽였다...</string>
     <string name="Shaman_Name">놀 주술사</string>
     <string name="Shaman_Name_Objective">놀 주술사</string>
+    <string name="Shaman_ZapMiss">*노올리어로 욕함*</string>
     <string name="Sheep_Desc">이 양은 마법 양입니다. 어떤 마법이 있냐고요? 당신은 그 양을 죽일 수 없습니다. 그 양은 멍한 눈으로 되새김질이나 하면서, 마법이 없어질 때까지 계속 있을 겁니다.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">양</string>
@@ -3049,6 +3050,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

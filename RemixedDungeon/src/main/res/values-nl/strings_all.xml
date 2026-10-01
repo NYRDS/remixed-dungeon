@@ -282,6 +282,7 @@
     <string name="Challenges_Names_7">Pacifisme</string>
     <string name="Challenges_Names_8">Geen stad</string>
     <string name="ChampionOfAirBuff_Info">Deze eigenschap schenkt het wezen de essentie van de winden, wat zijn beweeglijkheid en strijdvaardigheid versterkt. De Kampioen van de Lucht wordt een vijandige tegenstander, in staat om snelle en verwoestende aanvallen los te laten die het verloop van de strijd snel kunnen veranderen.</string>
+    <string name="ChampionOfAirBuff_Name">Kampioen van de Lucht</string>
     <string name="ChampionOfEarthBuff_Info">De Kampioen van de Aarde belichaamt onwrikbare kracht: deze eigenschap verbetert de schadeweerstand van het wezen en vergroot zijn maximale vitaliteit. Deze transformatie maakt hem een geduchte tegenstander in de verraderlijke diepten, die aanvallen moeiteloos kan pareren en langdurige gevechten doorstaat met onwrikbaar vastberadenheid.</string>
     <string name="ChampionOfEarthBuff_Name">Kampioen van de Aarde</string>
     <string name="ChampionOfFireBuff_Info">\&quot;Doordrenkt met de woede van de vlammen, versterkt deze eigenschap de felheid en gevechtskracht van het wezen. De Kampioen van het Vuur doemt op als een geduchte tegenstander, die verwoestende aanvallen ontketent die zijn vijanden in verzengende vlammen hullen, en angst inboezemt bij allen die het wagen zich tegen hem te verzetten.</string>
@@ -2186,6 +2187,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

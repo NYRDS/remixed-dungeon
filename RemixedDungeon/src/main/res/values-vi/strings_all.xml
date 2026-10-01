@@ -985,6 +985,7 @@
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Mang cho ta _năm con chuột chết_! Mỗi con chuột bạn mang đến khiến chúng ta gần hơn với việc hiểu rõ về cơn dịch kinh hoàng này.</string>
+    <string name="PlagueDoctorQuest_1_1_Prologue">Achooo!\n Nguyền rủa bệnh dịch địa ngục này! Nó lan khắp thành phố như cháy rừng, mục nát trong xương của dân chúng không chút nghi ngờ! BAH! Các ngươi nghĩ những tên lính canh tồi tệ đó có cơ hội nào chống lại tai ương quỷ quyệt này? Ngươi, kia! Một mẫu vật khỏe mạnh. Có lẽ ngươi có thể giúp ta. Những con _chuột_ cống bẩn thỉu đó... chúng mang nó, ta nói cho ngươi biết, hạt giống của bệnh dịch trong những thân thể nhỏ bé thối rữa của chúng! Hãy mang cho ta _năm_ sinh vật khốn khổ đó, tất nhiên là đã _chết_! Da của chúng sẽ vô giá cho nghiên cứu của ta. Ta sẽ chế tạo cho ngươi một bộ giáp kỳ diệu, một lớp bảo vệ chống lại chính bệnh dịch mà nó bắt nguồn từ đó!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Aaaa… tuyệt vời! Những _con ốc sên_, bí mật của chúng từ từ hé lộ như những cánh hoa dưới ánh trăng. Quả là một món quà thông tin dồi dào! Nhưng bạn nói đúng, _năm mươi đồng vàng_ chẳng phải là phần thưởng xứng đáng. *Cười man rợ*.</string>
     <string name="PlagueDoctorQuest_1_2_InProgress">Mười ốc sên, mười thì thầm từ vực thẳm! Chất nhầy của chúng sẽ được phân tích, bản chất của chúng sẽ được thẩm định. Những bí mật chúng chứa đựng đã gần trong tầm tay.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Ho khan dữ dội* Hắt xì!\n Những con ốc... chúng trườn. Chúng tiết nhờn. Và chúng thì thầm bí mật của một thời đại bị lãng quên. Tôi cần chúng, _mười_ con, vỏ vẫn còn nguyên vẹn. Bạn nghĩ _năm mươi đồng vàng_ có đủ cho tri thức quý giá như vậy không?\n Ba! Không quan trọng. Thông tin chúng giữ có thể là chìa khóa để dừng dịch bệnh này. Hoặc... nó có thể dẫn chúng ta đến thứ gì đó còn kinh khủng hơn. Bạn quyết định.</string>
@@ -1882,6 +1883,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
