@@ -25,6 +25,10 @@ return mob.init{
         RPD.playSound("snd_cursed")
         local grown = RPD.MobFactory:mobByName(imago[math.random(#imago)])
         grown:setPos(self:getPos())
+        if self:isPet() and self:getOwner() ~= nil then
+            -- a pet larva grows into a pet imago, not a hostile one (beta.13 r4)
+            grown:makePet(self:getOwner())
+        end
         RPD.Dungeon.level:spawnMob(grown)
         self:die(self)
     end

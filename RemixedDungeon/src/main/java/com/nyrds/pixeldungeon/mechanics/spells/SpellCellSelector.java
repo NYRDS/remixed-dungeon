@@ -34,7 +34,7 @@ class SpellCellSelector implements CellSelector.Listener {
 
     @Override
     public Image icon() {
-        return spell.image();
+        return spell.castIcon(caster);
     }
 
     public boolean mayBeCanceled() {

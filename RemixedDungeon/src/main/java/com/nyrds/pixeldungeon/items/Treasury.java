@@ -222,7 +222,9 @@ public class Treasury {
     public Item check(@NotNull Item item) {
         if(isForbidden(item.getEntityKind())) {
             GLog.debug("Forbidden item: %s",item.getEntityKind());
-            return ItemFactory.itemByName(ItemFactory.GOLD).quantity(item.price());
+            // price 0 (unsellable items) must not mint an empty Gold - a
+            // zero-quantity item is invalid and would strand a ghost heap
+            return ItemFactory.itemByName(ItemFactory.GOLD).quantity(Math.max(1, item.price()));
         }
         return item;
     }
