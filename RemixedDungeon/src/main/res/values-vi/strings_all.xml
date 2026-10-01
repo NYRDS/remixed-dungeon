@@ -1643,7 +1643,9 @@
     <string name="WndPriest_Instruction_f">Chào con gái của ta, chào mừng đến với nhà thờ thánh của Santa Thần Sâu vĩ đại! Rất tiếc ta không thể cho con đi qua lúc này, vì tòa nhà đang được tu sửa, nhưng nếu con cần giúp đỡ, ta có thể cung cấp dịch vụ chữa lành và thức ăn chỉ với %d vàng!</string>
     <string name="WndPriest_Title">Linh mục thị trấn</string>
     <string name="WndRanking_Items">Vật phẩm</string>
+    <string name="WndRanking_StaAlchemy">Thuốc đã nấu</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
+    <string name="WndRanking_StaDuration">Thời gian chơi</string>
     <string name="WndRanking_StaEnemies">Quái vật bị tiêu diệt</string>
     <string name="WndRanking_StaFood">Thức ăn đã ăn</string>
     <string name="WndRanking_StaHealth">Máu</string>
@@ -1876,6 +1878,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
