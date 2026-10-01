@@ -417,6 +417,7 @@
     <string name="DM300_Desc">Deze machine werd enkele eeuwen geleden door de Dwergen gemaakt. Later begonnen de Dwergen machines te vervangen door golems, elementalen en zelfs demonen. Uiteindelijk leidde dit tot het verval van hun beschaving. De DM-300 en vergelijkbare machines werden doorgaans gebruikt voor bouw en mijnbouw, en in sommige gevallen voor stadsverdediging.</string>
     <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
+    <string name="DM300_Info2">Missie mislukt. Uitschakelen.</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Name">dolk</string>
     <string name="Damage_Reduction">Schadevermindering</string>
@@ -2184,6 +2185,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
