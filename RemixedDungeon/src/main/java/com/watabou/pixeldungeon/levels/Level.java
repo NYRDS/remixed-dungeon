@@ -754,7 +754,9 @@ public abstract class Level implements Bundlable {
 		weakFloorCreated = false;
 
 		for (Heap heap : bundle.getCollection(HEAPS, Heap.class)) {
-			heaps.put(heap.pos, heap);
+			if (!heap.isEmpty()) {
+				heaps.put(heap.pos, heap);
+			}
 		}
 
 		for (LevelObject object : bundle.getCollection(OBJECTS, LevelObject.class)) {
@@ -1295,7 +1297,9 @@ public abstract class Level implements Bundlable {
 
 		heap.drop(item);
 
-		if(newHeap) {
+		// an item rejected by Heap.drop (invalid, quantity 0) must not leave a
+		// registered empty heap - it shows a sprite nothing can interact with
+		if(newHeap && !heap.isEmpty()) {
 			if (map[cell] == Terrain.CHASM || pit[cell]) {
 				Dungeon.addToChasmTransit(heap);
 				GameScene.discard(heap);

@@ -46,6 +46,10 @@ public class Larva extends Mob {
 
             Mob mob = MobFactory.mobByName(Random.element(imago));
             mob.setPos(getPos());
+            if (isPet() && getOwner() != null) {
+                // a pet larva grows into a pet imago, not a hostile one
+                mob.makePet(getOwner());
+            }
             level().spawnMob(mob, 0, getPos());
             die(this);
         }

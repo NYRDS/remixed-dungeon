@@ -11,8 +11,11 @@ import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
+import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -159,10 +162,41 @@ public class Spell implements NamedEntityKind {
         }
     }
 
-    protected void castCallback(Char chr) {
-        chr.spellCasted(this);
-        chr.spendSkillPoints(spellCost());
-    }
+	protected void castCallback(Char chr) {
+		chr.spellCasted(this);
+		chr.spendSkillPoints(spellCost());
+		identifySourceBook(chr);
+	}
+
+	// casting a spell from a spellbook reveals the book to the caster
+	private void identifySourceBook(Char chr) {
+		if (chr != Dungeon.hero) {
+			return;
+		}
+		EquipableItem artifact = chr.getBelongings().getItemFromSlot(Belongings.Slot.ARTIFACT);
+		if (artifact instanceof SpellBook) {
+			SpellBook book = (SpellBook) artifact;
+			if (getEntityKind().equals(book.spell) && !book.isIdentified()) {
+				book.identify();
+			}
+		}
+	}
+
+	// an unidentified book hides its spell icon in the targeting prompt
+	public Image castIcon(@NotNull Char caster) {
+		if (caster == Dungeon.hero) {
+			EquipableItem artifact = caster.getBelongings().getItemFromSlot(Belongings.Slot.ARTIFACT);
+			if (artifact instanceof SpellBook) {
+				SpellBook book = (SpellBook) artifact;
+				if (getEntityKind().equals(book.spell) && !book.isIdentified()) {
+					Image bookImage = new Image(TextureCache.get(book.imageFile()));
+					bookImage.frame(TextureCache.getFilm(book.imageFile(), 16, 16).get(book.image()));
+					return bookImage;
+				}
+			}
+		}
+		return image();
+	}
 
     public String name() {
         return name;

@@ -57,6 +57,11 @@ public class Torch extends Item {
 	}
 	
 	@Override
+	public Item burn(int cell) {
+		return null;
+	}
+
+	@Override
 	public boolean isUpgradable() {
 		return false;
 	}
