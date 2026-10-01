@@ -1411,6 +1411,7 @@
     <string name="Mob_StaControlledStatus">这个%s已被邪恶的力量所控制</string>
     <string name="Mob_StaFleeingStatus">这个%s正在逃跑</string>
     <string name="Mob_StaFleeingStatus2">这个%1$s正在逃离%2$s</string>
+    <string name="Mob_StaGuardStatus">这个 %s 正在守卫</string>
     <string name="Mob_StaHuntingStatus">这个%s正在追杀</string>
     <string name="Mob_StaHuntingStatus2">这个%1$s正在追杀%2$s</string>
     <string name="Mob_StaPassiveStatus">这个%s是平和的</string>
@@ -3060,6 +3061,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

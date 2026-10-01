@@ -2057,6 +2057,7 @@ Potrebbe bruciare?</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Pezzi di metallo modellati a forma di stella con lame affilate come rasoi che infliggono danni significativi quando colpiscono il bersaglio. Possono venir lanciati ad un ritmo molto elevato.</string>
     <string name="Shuriken_Name">shuriken</string>
+    <string name="Sign_CantRead">Non sai leggere.</string>
     <string name="SkeletonKey_Info">Questa chiave sembra molto notevole: la sua testa è plasmata a forma di teschio. Probabilmente può aprire qualche porta notevole.</string>
     <string name="SkeletonKey_Name">Chiave scheletro</string>
     <string name="Skeleton_Defense">Bloccato</string>
@@ -3071,6 +3072,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

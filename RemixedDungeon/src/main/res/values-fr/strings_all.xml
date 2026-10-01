@@ -2065,6 +2065,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Des morceaux de métal en forme d\'étoile avec des lames aiguisées font des dommages considérables quand ils atteignent leur cible. Ils peuvent être lancés à un rythme soutenu.</string>
     <string name="Shuriken_Name">shuriken</string>
+    <string name="Sign_CantRead">Vous ne savez pas lire.</string>
     <string name="SkeletonKey_Info">Cette clé doit être importante : son anneau est taillé en forme de crâne. Elle ouvre sûrement une porte importante.</string>
     <string name="SkeletonKey_Name">Clé squelette</string>
     <string name="Skeleton_Defense">bloqué</string>
@@ -3091,6 +3092,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
