@@ -1805,6 +1805,7 @@
     <string name="town_deco_locked_door_name">Cửa khóa</string>
     <string name="town_deco_magenta_carpet_desc">Tông màu đỏ tươi của thảm này gợi nhớ đến rượu vang địa phương.</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
+    <string name="town_deco_movies_door_desc">Cánh cửa này trông đặc biệt chắc chắn. Nó có thể dẫn đến điều gì đó tuyệt vời.</string>
     <string name="town_deco_mud_desc">Đất đã tan chảy trong vùng băng vĩnh cửu này.</string>
     <string name="town_deco_mud_name">Bùn</string>
     <string name="town_deco_painting_desc">Một tác phẩm nghệ thuật đẹp đẽ.</string>
@@ -1878,6 +1879,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

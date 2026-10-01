@@ -485,6 +485,7 @@
     <string name="Dungeon_Tips_4">Pas op voor de Slijm!</string>
     <string name="Dungeon_Tips_5">Pixel-Mart - alles wat je nodig hebt voor een succesvol avontuur!</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
+    <string name="Dungeon_Tips_8">Verrassingsaanvallen hebben een grotere kans om te raken. Bijvoorbeeld: je kunt een vijand bij een gesloten deur in een hinderlaag lokken als je weet dat hij nadert.</string>
     <string name="Dungeon_Tips_9">Laat de Tengu niet vrij!</string>
     <string name="Dungeon_saveIoError">Bij het proberen een opslagbestand aan te maken:</string>
     <string name="DwarfToken_Name">dwerg-teken</string>
@@ -2181,6 +2182,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
