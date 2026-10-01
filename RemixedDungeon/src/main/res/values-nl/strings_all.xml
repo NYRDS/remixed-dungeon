@@ -365,6 +365,7 @@
     <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
     <string name="ClothArmor_Name">stoffen pantser</string>
     <string name="Codex_ACRead">LEZEN</string>
+    <string name="Codex_Blinded">Je kunt niet lezen als je verblind bent</string>
     <string name="Codex_Info">Een van de vele boeken die in elke bibliotheek te vinden zijn</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_1">Terugstoot Glief - Veroorzaakt dat vijanden worden teruggeduwd nadat ze de Held raken.</string>
@@ -2187,6 +2188,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

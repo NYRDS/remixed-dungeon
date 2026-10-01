@@ -451,6 +451,7 @@
     <string name="EarthElemental_Name">nguyên tố đất</string>
     <string name="EarthElemental_Name_Objective">nguyên tố đất</string>
     <string name="EarthrootBuff_Info">Rễ đã mọc từ mặt đất, cung cấp giáp tự nhiên.</string>
+    <string name="EarthrootBuff_Name">Giáp thảo mộc</string>
     <string name="ElfArmor_ACSpecial">TIẾNG GỌI CỦA THIÊN NHIÊN</string>
     <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenDagger_Gender">masculine</string>
@@ -1883,6 +1884,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
