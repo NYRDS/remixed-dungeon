@@ -1416,6 +1416,7 @@ Parede
     <string name="Mob_StaControlledStatus">Este %s está sob possessão maligna</string>
     <string name="Mob_StaFleeingStatus">%s está fugindo</string>
     <string name="Mob_StaFleeingStatus2">%1$s está fugindo de %2$s</string>
+    <string name="Mob_StaGuardStatus">Este %s está guardando</string>
     <string name="Mob_StaHuntingStatus">%s está caçando</string>
     <string name="Mob_StaHuntingStatus2">%1$s está caçando %2$s</string>
     <string name="Mob_StaPassiveStatus">%s é passivo</string>
@@ -3085,6 +3086,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

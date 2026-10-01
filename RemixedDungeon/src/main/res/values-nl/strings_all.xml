@@ -595,6 +595,7 @@
     <string name="Goo_Info2">glurp... glurp...</string>
     <string name="Goo_Info3">GLURP-GLURP!</string>
     <string name="Goo_Name">Goo</string>
+    <string name="Goo_Name_Objective">Goo</string>
     <string name="GothicArmor_Info">Een gotische pantser is de hoogtepunt van de kunst van pantser smeden.</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
     <string name="Guts_TileGrass">Droge struik</string>
@@ -2185,6 +2186,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
