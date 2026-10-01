@@ -1084,6 +1084,7 @@
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="PotionOfPurity_Name">Zuiveringselixer</string>
     <string name="PotionOfPurity_NoSmell">Je ruikt niets meer!</string>
+    <string name="PotionOfStrength_Apply">Nieuwe kracht stroomt door je lichaam.</string>
     <string name="PotionOfStrength_Info">Deze krachtige vloeistof zal door je spieren stromen en je kracht permanent met één punt verhogen.</string>
     <string name="PotionOfStrength_Name">Drankje van Sterkte</string>
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
@@ -1994,6 +1995,7 @@
     <string name="town_deco_weaponboard_desc">Een soort wapen dat op het bord hangt.</string>
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_weaponrack_name">Wapenrek</string>
+    <string name="town_deco_window_desc">Gewoon glazen raam, niets bijzonders.</string>
     <string name="town_deco_window_name">Raam</string>
     <string name="town_deco_wood_wall_desc">Een stevig uitziende stammenmuur.</string>
     <string name="town_deco_wooden_bench_desc">Houten bank, ziet er ongemakkelijk uit om op te zitten.</string>
@@ -2182,6 +2184,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

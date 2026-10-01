@@ -125,6 +125,7 @@
     <string name="Badges_Supporter">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="Badges_ThisIsSparta">Đây là Sparta!!!</string>
     <string name="Badges_VictoryAll">Bùa Yendor thu được bởi tất cả các lớp nhân vật</string>
+    <string name="Badges_Yasd">Chết vì lửa, độc, khí độc &amp;amp; đói</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa đã bị tiêu diệt</string>
     <string name="Bag_ACOpen">MỞ</string>
     <string name="Bandit_Gender">masculine</string>
@@ -1769,6 +1770,7 @@
     <string name="town_deco_church_sign_desc">Có vẻ như bên trong tòa nhà này có một nhà thờ.</string>
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
     <string name="town_deco_common_bed_desc">Giường bình thường.</string>
+    <string name="town_deco_common_bed_name">Giường</string>
     <string name="town_deco_common_door_desc">Một phiêu lưu gia có nhân cách không nên xâm phạm tài sản riêng tư, nếu không được mời.</string>
     <string name="town_deco_common_door_name">Cửa</string>
     <string name="town_deco_counter_desc">Giữ khoảng cách hợp lý giữa bạn và người đứng phía sau nó.</string>
@@ -1879,6 +1881,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
