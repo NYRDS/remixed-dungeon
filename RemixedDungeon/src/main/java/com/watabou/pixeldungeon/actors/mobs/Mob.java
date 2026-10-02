@@ -696,6 +696,16 @@ public class Mob extends Char implements IZapper {
 
     public boolean _doStep(int step) {
         if (level().cellValid(step)) {
+            // barrels are a static-passable leak (passable[] is seeded through
+            // DummyChar, which barrels don't block), so paths lead mobs right
+            // onto them and the press detonates the barrel - voluntary steps
+            // must respect dynamic object solidity (beta.13 report). The hero's
+            // own move handles pushing; knockbacks bypass _doStep and keep
+            // their press semantics.
+            LevelObject lo = level().getTopLevelObject(step);
+            if (lo != null && lo.nonPassable(this)) {
+                return false;
+            }
             move(step);
             return true;
         }

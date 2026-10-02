@@ -37,7 +37,7 @@ class ItemButton extends ItemSlot {
     private BitmapText alchemyIndicator;
     
     public ItemButton(WndBag wndBag, Item item) {
-        
+
         super( item );
         this.wndBag = wndBag;
         this.item = item;
@@ -49,6 +49,20 @@ class ItemButton extends ItemSlot {
         placeItem(item, wndBag.getMode());
 
         width = height = WndBag.SLOT_SIZE;
+    }
+
+    @Override
+    public boolean setActive(boolean value) {
+        // ItemSlot.item() runs from the super constructor before our fields
+        // exist - pass through untouched there
+        if (item == null) {
+            return super.setActive(value);
+        }
+        // empty-slot buttons are disabled by ItemSlot.item() and must stay so:
+        // once active, ItemSprite.update() re-shows the "?" placeholder icon
+        // (beta.13: missile-equip dialog dismissed by outside tap re-enabled
+        // them via WndBag.setItemsActive(true) and filled the bag with "?")
+        return super.setActive(value && item.valid());
     }
     
     @Override
