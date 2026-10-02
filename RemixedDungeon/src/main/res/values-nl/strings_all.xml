@@ -446,6 +446,7 @@
     <string name="DeepSnail_Name_Objective">diepe slak</string>
     <string name="DeferedDamageBuff_Info">De pijn is omgezet in vertraagde pijn, wat de schade die op een keer wordt opgelopen vermindert.\nOvergebleven schade om te ontvangen %d</string>
     <string name="DeferedDamage_Killed_Txt">%s heeft je gedood...</string>
+    <string name="DewVial_ACDRINK">DRINK</string>
     <string name="DewVial_Collected">Je verzamelde een dauwdruppel in je dauwflesje.</string>
     <string name="DewVial_Full">Je dauwflesje is vol!</string>
     <string name="DewVial_Info">Je kunt overtollige dauw in dit kleine vat bewaren om het later te drinken. Als het flesje vol is, wordt de dauw op een moment van dodelijk gevaar automatisch verbruikt.</string>
@@ -674,6 +675,7 @@
     <string name="HeroSubClass_NameGlad">gladiator</string>
     <string name="HeroSubClass_NameLich">Lich</string>
     <string name="HeroSubClass_NameNone">geen</string>
+    <string name="HeroSubClass_NameShaman">sjamaan</string>
     <string name="HeroSubClass_NameSnip">sluipschutter</string>
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
     <string name="Hero_AnotherTry">Je bent gestorven.\n Wil je het opnieuw proberen?</string>
@@ -2193,6 +2195,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

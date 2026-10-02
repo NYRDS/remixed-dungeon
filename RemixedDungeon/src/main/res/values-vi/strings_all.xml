@@ -632,6 +632,7 @@
     <string name="HeroSubClass_NameGuardian">thủ vệ</string>
     <string name="HeroSubClass_NameLich">Lich</string>
     <string name="HeroSubClass_NameNone">không</string>
+    <string name="HeroSubClass_NameShaman">pháp sư</string>
     <string name="HeroSubClass_NameSnip">xạ thủ</string>
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
@@ -1820,6 +1821,7 @@
     <string name="town_deco_mud_name">Bùn</string>
     <string name="town_deco_painting_desc">Một tác phẩm nghệ thuật đẹp đẽ.</string>
     <string name="town_deco_painting_name">Bức Tranh</string>
+    <string name="town_deco_pathway_desc">Một con đường bị giẫm nát trong tuyết.</string>
     <string name="town_deco_pathway_name">đường mòn</string>
     <string name="town_deco_pedestal_desc">Một giá đỡ có một cuốn sách thánh trên đó.</string>
     <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
@@ -1889,6 +1891,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
