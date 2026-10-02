@@ -479,6 +479,7 @@
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">Tia tử thần của %s đã giết bạn...</string>
     <string name="Eye_Name">con mắt quỷ</string>
+    <string name="Eye_Name_Objective">mắt ác</string>
     <string name="Facilitations_Names_0">Không đói</string>
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
     <string name="Facilitations_Names_2">Linh hồn thần đèn</string>
@@ -1760,6 +1761,7 @@
     <string name="town_deco_barrel_wine_desc">Được dùng để chứa một thức uống quý giá như rượu vang.</string>
     <string name="town_deco_barrel_wine_name">Thùng rượu</string>
     <string name="town_deco_bell_desc">Một cái chuông giáo đường điển hình. Trông nó như đã không ai rung chuông này được khá lâu rồi, thậm chí dây treo cũng đã mất.</string>
+    <string name="town_deco_bell_name">Chuông</string>
     <string name="town_deco_bell_tower_name">Tháp chuông</string>
     <string name="town_deco_blue_carpet_name">thảm</string>
     <string name="town_deco_book_desc">Cuốn sách này trông như ai đó vô tình để quên</string>
@@ -1887,6 +1889,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

@@ -800,6 +800,7 @@
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">larve van de god</string>
     <string name="LastLevel_TileDescWater">Het lijkt op lava, maar het is koud en waarschijnlijk veilig om aan te raken.</string>
+    <string name="LastLevel_TileGrass">Embermos</string>
     <string name="LastLevel_TileStatue">Pilaar</string>
     <string name="LastShopLevel_TileDescDeco">Hier ontbreken verschillende tegels.</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
@@ -1208,6 +1209,7 @@
     <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
     <string name="RootSpell_Info">Bevestigt de geselecteerde karakter met wortels, waardoor hij voor korte tijd niet kan bewegen.</string>
     <string name="RootsBuff_Name">Geworteld</string>
+    <string name="RottenFish_Info">Rotte vis, ruikt vreselijk</string>
     <string name="RottenFish_Taste">Walgelijk!</string>
     <string name="RottenFood_Message">Walging!</string>
     <string name="RottenMeat_Name">bedorven vlees</string>
@@ -2191,6 +2193,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
