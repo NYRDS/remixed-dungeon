@@ -1347,6 +1347,7 @@
     <string name="Shielded_Desc">Bruten zijn de grootste, sterkste en taaiste van alle gnolls. Bij ernstige verwonding worden ze razend en richten ze nog meer schade aan. Deze brute draagt een gigantisch schild!</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">schildgedrocht</string>
+    <string name="ShootInEye_Name">Schiet in het Oog</string>
     <string name="Shopkeeper_Buy">Selecteer item om te kopen</string>
     <string name="Shopkeeper_BuyPrompt">Laat me je inventaris zien</string>
     <string name="Shopkeeper_Name">winkelier</string>
@@ -1509,6 +1510,7 @@
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="Toolbar_Info1">Je weet niet wat er is.</string>
     <string name="Torch_ACLight">AANSTEKEN</string>
+    <string name="Torch_Info">Het is een onmisbaar item in De Demonenzalen, die berucht zijn om hun slechte verlichting.</string>
     <string name="Torch_Info2">Het is een onmisbaar item in de kerker, berucht om zijn slechte verlichting.</string>
     <string name="Torch_Name">fakkel</string>
     <string name="ToughShield_desc">Dit met riemen versterkte schild oogt robuuster dan een houten exemplaar. Het kan zeker meer schade blokkeren.</string>
@@ -1776,6 +1778,7 @@
     <string name="WndRanking_StaHealth">Gezondheid</string>
     <string name="WndRanking_StaStr">Kracht</string>
     <string name="WndRanking_StaTitle">Level %1 %2</string>
+    <string name="WndRanking_Stats">Statistieken</string>
     <string name="WndResurrect_No">Nee, ik geef op</string>
     <string name="WndResurrect_Yes">Ja, ik zal vechten!</string>
     <string name="WndSadGhostNecro_No">Nee, laat het spreken</string>
@@ -2198,6 +2201,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
