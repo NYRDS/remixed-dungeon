@@ -1525,6 +1525,7 @@
     <string name="WaterOfTransmutation_Info">Sức mạnh của sự biến đổi tỏa ra từ nước của giếng này. Hãy ném một vật phẩm vào giếng để biến nó thành thứ khác.</string>
     <string name="WeaknessBuff_Info">Sự yếu đuối bao quanh cơ thể, khiến ai đó trở thành mục tiêu dễ dàng hơn.</string>
     <string name="WeaknessBuff_Name">Yếu</string>
+    <string name="Weapon_Incompatible">Tương tác của các loại ma thuật khác nhau đã làm mất đi bùa chú trên vũ khí này!</string>
     <string name="Weightstone_Accurate">bạn đã cân bằng %s để nó chính xác hơn</string>
     <string name="Weightstone_Fast">bạn đã cân bằng %s để làm nó nhanh hơn</string>
     <string name="Weightstone_Info">Sử dụng đá cân, bạn có thể cân bằng vũ khí cận chiến của mình để tăng tốc độ hoặc độ chính xác.</string>
@@ -1893,6 +1894,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
