@@ -174,6 +174,7 @@
     <string name="BlackSkull_Info">Một chiếc hộp sọ nhỏ bằng đá obsidian. Nó từng là nguồn sức mạnh của Thành Phố Người Chết, nhưng sau thất bại của Lich, dường như nó đã mất đi toàn bộ sức mạnh. Tuy nhiên, khi bạn cầm nó trong tay, một suy nghĩ kỳ lạ thoáng qua đầu bạn: \&quot;Nó đang đói\&quot;.</string>
     <string name="BlackSkull_Name">đầu lâu đen</string>
     <string name="BlackSkull_Ressurrect">Đỉnh Đen Đã Hồi Sinh Quái Vật Chết Để Phục Vụ Bạn!</string>
+    <string name="Blacksmith_Blood1">Này, con người! Muốn giúp đỡ à? Cầm lấy cái cuốc này và _giết một con dơi_ bằng nó, ta cần máu nó trên đầu. Ý ngươi là sao, ta sẽ trả thế nào? Đồ tham lam...\nĐược rồi, được rồi, ta không có tiền, nhưng ta có thể rèn cho ngươi. Hãy coi mình may mắn, ta là thợ rèn duy nhất quanh đây.</string>
     <string name="Blacksmith_GetLost">Tôi đang bận. Cút đi!</string>
     <string name="Blacksmith_Gold1">Này người! Muốn làm việc hữu ích chứ? Lên cái cuốc này và đào cho ta ít _khoáng vàng đen_, _15 miếng_ là đủ rồi. Cái gì? Như thế nào mà ta trả tiền? Ngươi tham lam...\nỪ, ừ, ta không có tiền trả, nhưng ta có thể làm đồ sắt cho ngươi. Coi ngươi may mắn, ta là thợ rèn duy nhất ở đây.</string>
     <string name="Blacksmith_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
@@ -1886,6 +1887,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

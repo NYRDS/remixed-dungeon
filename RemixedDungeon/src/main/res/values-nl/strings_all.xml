@@ -90,6 +90,7 @@
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_BossSlain1">De Goo is gedood</string>
     <string name="Badges_Champion">Uitdaging gewonnen</string>
+    <string name="Badges_DeathFire">Dood door vuur</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
     <string name="Badges_DeathGlyph">Dood door een glyph</string>
     <string name="Badges_DeathNecrotism">Dood door necrotisme</string>
@@ -2190,6 +2191,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
