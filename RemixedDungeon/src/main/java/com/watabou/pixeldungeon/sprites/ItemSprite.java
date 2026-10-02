@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.sprites;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.gl.NoosaScript;
@@ -33,6 +34,10 @@ public class ItemSprite extends MovieClip {
 	protected TextureFilm film;
 
 	protected Heap heap;
+
+	// mimic heap revealed by mind vision swaps its chest look for a "?" -
+	// cached to avoid re-viewing every frame
+	private boolean mimicExposed;
 
 	@Nullable
 	private Glowing glowing;
@@ -192,6 +197,22 @@ public class ItemSprite extends MovieClip {
 
 		// Visibility
 		setVisible(heap == null || Dungeon.isCellVisible(heap.pos));
+
+		// a disguised mimic under mind vision is sensed as a creature: render it
+		// as an unknown box instead of the chest it pretends to be
+		if (heap != null && heap.type == Heap.Type.MIMIC && Dungeon.hero != null) {
+			boolean exposed = Dungeon.hero.buffLevel(BuffFactory.MIND_VISION) > 0;
+			if (exposed != mimicExposed) {
+				mimicExposed = exposed;
+				if (exposed) {
+					view(Assets.ITEMS, ItemSpriteSheet.SMTH, null);
+				} else {
+					// back to the real disguise look (its imageFile may differ
+					// from items.png, e.g. the big chest frames)
+					view(heap.imageFile(), heap.image(), heap.glowing());
+				}
+			}
+		}
 
 		// Dropping
 		final float elapsed = GameLoop.elapsed;

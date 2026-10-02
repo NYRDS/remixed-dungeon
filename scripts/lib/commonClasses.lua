@@ -485,9 +485,12 @@ local RPD = {
         local x = level:cellX(cell)
         local y = level:cellY(cell)
 
+        -- border cells are real map cells: the 2D cellValid() drops the whole
+        -- outer ring, which made edge gold veins unmineable (beta.13 report)
         for i = x - 1, x + 1 do
             for j = y - 1, y + 1 do
-                if (i~=x or j~=y) and level:cellValid(i,j) then
+                if (i~=x or j~=y) and i >= 0 and j >= 0
+                    and i < level:getWidth() and j < level:getHeight() then
                     action(level:cell(i,j))
                 end
             end

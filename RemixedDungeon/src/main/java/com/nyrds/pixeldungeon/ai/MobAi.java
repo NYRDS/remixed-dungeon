@@ -10,7 +10,9 @@ import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -53,6 +55,11 @@ public abstract class MobAi implements AiState {
             return;
         }
 
+        Hero traitor = heroAggressor(me, src);
+        if (traitor != null) {
+            onHeroHarmedKin(traitor, me);
+        }
+
         if (src instanceof Char && !me.friendly((Char)src)) {
             me.setEnemy((Char) src);
         } else {
@@ -66,6 +73,45 @@ public abstract class MobAi implements AiState {
         } else {
             me.setTarget(me.respawnCell(me.level()));
             me.setState(MobAi.getStateByClass(Wandering.class));
+        }
+    }
+
+    // resolves the hero behind a damage source: direct hero hits carry the hero,
+    // wands and thrown potions carry the item (its owner is the thrower)
+    private static Hero heroAggressor(Char me, NamedEntityKind src) {
+        Char attacker = CharsList.DUMMY;
+        if (src instanceof Char) {
+            attacker = (Char) src;
+        } else if (src instanceof Item) {
+            attacker = ((Item) src).getOwner();
+        }
+        if (attacker instanceof Hero && attacker != me && !me.isPet()
+                && ((Hero) attacker).getHeroClass().friendlyTo(me.getEntityKind())) {
+            return (Hero) attacker;
+        }
+        return null;
+    }
+
+    // hero damaged a mob his class list marks as kin (gnoll hero vs gnolls):
+    // betrayal - the whole level's kin turns on him. Wands and spells skip
+    // defenceProc, so class-kin never aggro through the plain revenge path.
+    // Public for CharUtils.lightningProc, whose damage src is the LIGHTNING
+    // kind (kept for resistance math) and carries no caster.
+    public static void onHeroHarmedKin(@NotNull Hero hero, @NotNull Char victim) {
+        if (victim == hero || victim.isPet() || !(victim instanceof Mob)) {
+            return;
+        }
+        if (!hero.getHeroClass().friendlyTo(victim.getEntityKind())) {
+            return;
+        }
+        for (Mob mob : hero.level().getCopyOfMobsArray()) {
+            if (mob.isPet() || !hero.getHeroClass().friendlyTo(mob.getEntityKind())) {
+                continue;
+            }
+            mob.setState(MobAi.getStateByClass(Hunting.class));
+            mob.setTarget(hero.getPos());
+            mob.setEnemy(hero);
+            mob.notice();
         }
     }
 

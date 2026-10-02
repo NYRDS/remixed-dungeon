@@ -29,7 +29,10 @@ import com.nyrds.pixeldungeon.windows.WndHelper;
 import com.nyrds.pixeldungeon.windows.WndPetBag;
 import com.nyrds.pixeldungeon.windows.WndPetInventoryOptions;
 import com.nyrds.pixeldungeon.windows.WndPetSelect;
+import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.platform.storage.SaveUtils;
+import com.watabou.noosa.Gizmo;
+import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -49,6 +52,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Icons;
+import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
@@ -3458,6 +3462,121 @@ public class DebugEndpoints {
                 createErrorResponse("Internal error: " + e.getMessage()).toString());
         }
     }
+
+    // caveman: /debug/ui_slots - dump the live WndBag item grid (item kind + icon
+    // frame rect per slot) so icon corruption ("?" slots) is observable without
+    // reading pixels; reflection because ItemButton.icon/item are not public
+    public static NanoHTTPD.Response handleDebugUiSlots(NanoHTTPD.IHTTPSession session) {
+        try {
+            final JSONObject resp = new JSONObject();
+            GameLoop.pushUiTaskAndWait(() -> {
+                try {
+                    Gizmo root = GameLoop.instance().scene;
+                    if (root == null) {
+                        root = WndBag.getInstance();
+                    }
+                    if (root == null) {
+                        resp.put("error", "no scene and no WndBag instance");
+                        return;
+                    }
+                    JSONArray slots = new JSONArray();
+                    collectUiSlots(root, slots);
+                    resp.put("window", root.getClass().getSimpleName());
+                    resp.put("parented", root.getParent() != null);
+                    resp.put("slots", slots);
+                } catch (Exception e) {
+                    try {
+                        resp.put("error", e.toString());
+                    } catch (Exception ignored) {
+                    }
+                }
+            });
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", resp.toString());
+        } catch (Exception e) {
+            GLog.w("Error in handleDebugUiSlots: " + e.getMessage());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
+    private static void collectUiSlots(Gizmo g, JSONArray out) throws Exception {
+        if (g instanceof ItemSlot) {
+            JSONObject o = new JSONObject();
+            Field fItem = findDeclaredField(g.getClass(), "item");
+            if (fItem != null) {
+                fItem.setAccessible(true);
+                Object it = fItem.get(g);
+                o.put("item", it == null ? "null" :
+                    (((Item) it).getEntityKind() + (((Item) it).valid() ? "" : "#invalid")));
+            } else {
+                o.put("item", "?");
+            }
+            Field fIcon = findDeclaredField(ItemSlot.class, "icon");
+            if (fIcon != null) {
+                fIcon.setAccessible(true);
+                Object icon = fIcon.get(g);
+                if (icon instanceof ItemSprite) {
+                    o.put("iconVisible", ((ItemSprite) icon).getVisible());
+                    Field fFrame = findDeclaredField(ItemSprite.class, "frame");
+                    if (fFrame == null) {
+                        fFrame = findDeclaredField(icon.getClass(), "frame");
+                    }
+                    if (fFrame != null) {
+                        fFrame.setAccessible(true);
+                        RectF r = (RectF) fFrame.get(icon);
+                        if (r != null) {
+                            o.put("frame", String.format(java.util.Locale.ROOT, "(%.3f,%.3f %.3f,%.3f)",
+                                r.left, r.top, r.right, r.bottom));
+                        }
+                    }
+                }
+            }
+            out.put(o);
+        } else if (g instanceof ItemSprite) {
+            // world heap sprites: report linked heap pos/type + current frame
+            Field fHeap = findDeclaredField(ItemSprite.class, "heap");
+            if (fHeap != null) {
+                fHeap.setAccessible(true);
+                Object heap = fHeap.get(g);
+                if (heap instanceof Heap) {
+                    JSONObject o = new JSONObject();
+                    o.put("heapPos", ((Heap) heap).pos);
+                    o.put("heapType", ((Heap) heap).type.toString());
+                    o.put("iconVisible", g.getVisible());
+                    Field fFrame = findDeclaredField(ItemSprite.class, "frame");
+                    if (fFrame == null) {
+                        fFrame = findDeclaredField(g.getClass(), "frame");
+                    }
+                    if (fFrame != null) {
+                        fFrame.setAccessible(true);
+                        RectF r = (RectF) fFrame.get(g);
+                        if (r != null) {
+                            o.put("frame", String.format(java.util.Locale.ROOT, "(%.3f,%.3f %.3f,%.3f)",
+                                r.left, r.top, r.right, r.bottom));
+                        }
+                    }
+                    out.put(o);
+                }
+            }
+        }
+        if (g instanceof Group) {
+            Group grp = (Group) g;
+            for (int i = 0; i < grp.getLength(); i++) {
+                collectUiSlots(grp.getMember(i), out);
+            }
+        }
+    }
+
+    private static Field findDeclaredField(Class<?> cls, String name) {
+        for (Class<?> c = cls; c != null; c = c.getSuperclass()) {
+            try {
+                return c.getDeclaredField(name);
+            } catch (NoSuchFieldException ignored) {
+            }
+        }
+        return null;
+    }
+
 
     public static NanoHTTPD.Response handleDebugRevealMap(NanoHTTPD.IHTTPSession session) {
         try {

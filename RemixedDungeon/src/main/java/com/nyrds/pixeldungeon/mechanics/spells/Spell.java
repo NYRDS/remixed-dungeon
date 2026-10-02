@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.UseSpell;
@@ -15,7 +16,6 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
-import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;

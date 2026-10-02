@@ -1598,6 +1598,14 @@ public abstract class Level implements Bundlable {
 				for (Mob mob : mobs) {
 					updateFovForObjectAt(mob.getPos());
 				}
+				// a disguised mimic is a creature, not loot - mind vision senses
+				// it through walls like any other mob (beta.13 report: mimics
+				// stayed hidden under the Potion of Mind Vision)
+				for (Heap heap : heaps.values()) {
+					if (heap.type == Heap.Type.MIMIC) {
+						updateFovForObjectAt(heap.pos);
+					}
+				}
 			} else if (c.getHeroClass() == HeroClass.HUNTRESS) {
 				for (Mob mob : mobs) {
 					int p = mob.getPos();

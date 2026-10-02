@@ -122,6 +122,13 @@ public class CharUtils {
 
         enemy.damage(damage, LightningTrap.LIGHTNING);
 
+        if (caster instanceof Hero) {
+            // the LIGHTNING damage kind is kept for resistance math, so the
+            // caster is unattributable in Char.damage - kin betrayal for hero
+            // casts (gnoll hero lightning spells) is triggered here instead
+            MobAi.onHeroHarmedKin((Hero) caster, enemy);
+        }
+
         enemy.getSprite().centerEmitter().burst(SparkParticle.FACTORY, 3);
         enemy.getSprite().flash();
 

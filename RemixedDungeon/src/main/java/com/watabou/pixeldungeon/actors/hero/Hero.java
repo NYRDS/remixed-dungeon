@@ -1136,6 +1136,12 @@ public class Hero extends Char {
             if (mob.isPet()) {
                 return super.friendly(chr);
             }
+            // kin that turned on us (betrayal revenge, a shove) is no longer
+            // spared - mirrors the getEnemy() check on the mob side, without it
+            // an aggroed gnoll chases forever but canAttack() is always false
+            if (mob.getEnemy() == this) {
+                return false;
+            }
             return heroClass.friendlyTo(mob.getEntityKind());
         }
         return super.friendly(chr);

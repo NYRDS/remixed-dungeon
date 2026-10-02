@@ -17,6 +17,7 @@ import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.Library;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
@@ -349,6 +350,16 @@ public abstract class Mob extends Char {
 
     public boolean _doStep(int step) {
         if (level().cellValid(step)) {
+            // barrels are a static-passable leak (passable[] is seeded through
+            // DummyChar, which barrels don't block), so paths lead mobs right
+            // onto them and the press detonates the barrel - voluntary steps
+            // must respect dynamic object solidity (beta.13 report). The hero's
+            // own move handles pushing; knockbacks bypass _doStep and keep
+            // their press semantics.
+            LevelObject lo = level().getTopLevelObject(step);
+            if (lo != null && lo.nonPassable(this)) {
+                return false;
+            }
             move(step);
             return true;
         }
