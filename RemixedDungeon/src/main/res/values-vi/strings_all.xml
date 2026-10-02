@@ -1007,6 +1007,7 @@
     <string name="Plant_Info">Ném hạt giống này vào nơi bạn muốn trồng %1$s.\n\n%2$s</string>
     <string name="PlateArmor_Name">áo giáp tấm</string>
     <string name="PoisonArrow_Gender">feminine</string>
+    <string name="PoisonArrow_Info">Một giọt chất độc chết người lấp lánh trên đầu mũi tên này.</string>
     <string name="PoisonArrow_Name">mũi tên độc</string>
     <string name="PoisonBuff_Name">Bị Độc</string>
     <string name="Poison_Death">Bạn đã chết vì độc...</string>
@@ -1550,6 +1551,7 @@
     <string name="WndCatalogus_Potions">Thuốc</string>
     <string name="WndCatalogus_Scrolls">Cuộn</string>
     <string name="WndCatalogus_Title">Danh mục</string>
+    <string name="WndChallenges_Title">Thử thách</string>
     <string name="WndChooseWay_Cancel">Tôi sẽ quyết định sau</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Sao chép địa chỉ</string>
@@ -1891,6 +1893,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

@@ -1047,6 +1047,7 @@
     <string name="PlagueDoctorQuest_3_1_InProgress">Breng me een _vampier vleermuis_, levend en onbeschadigd! Haar bloed, haar vleugels… ze bevatten geheimen die ik moet onthullen!</string>
     <string name="PlagueDoctorQuest_3_1_Prologue">*Zijn ogen schitteren met een vreemde, koortsachtige intensiteit* Ah, de _vampire vleermuis_! Een schepsel van de nacht, dat zich voedt met de levenskracht van zijn prooi. Fascinerend... werkelijk fascinerend. Ik heb er een levend nodig om zijn unieke fysiologie te bestuderen. Het draait allemaal om... begrijpen... de... de... *Hij verliest zich in een stroom van obscure termen, mompelend in zichzelf*. Ja! De _vleermuis\' echolocatie, zijn vermogen om in volledige duisternis te navigeren... dat is de sleutel tot een geheim.</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Dit is geen enkel beest! Het is een levend getuigenis van nekromantische kracht! Vang er eentje, levend en onbeschadigd! Deze _Doodsridder_… hij is de sleutel!</string>
+    <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Dwergen! Die koppige, ondergrondse bewoners, geobsedeerd door edelstenen en goud. Maar het zijn de _Dwerg Warlocks_ waar ik naar verlang... hun verwrongen magie, gevoed door de diepten die ze bewonen. Vijf, ik heb vijf van die verschrompelde zielen nodig! Hun lichamen bevatten de sleutel tot het begrijpen van een bepaald... fenomeen. Iets over het kanaliseren van arcane energieën door de aarde zelf. Ik geloof dat ik dichtbij een doorbraak ben, maar ik heb hun essentie nodig, hun bedorven magie! *Hij hoest gewelddadig in zijn zakdoek, een donkere vlek verspreidt zich over de fijne stof*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Schitterend! Vijf _Kobold Ijsmagiers_, hun ijzige essentie nu van mij om te onderzoeken! Hun verbinding met de bevroren woestenijen, het is werkelijk fascinerend. De manier waarop ze water zelf manipuleren… werkelijk opmerkelijk. *Hij overhandigt je een flonkerende fiool gevuld met een levendige karmozijnrode vloeistof* Dit, is voor je dappere inspanningen: een _Drankje van Kracht_! Drink diep en voel de kracht van tien krijgers door je aderen stromen! Onthoud, kennis is macht… en macht is het enige wapen dat we hebben tegen de naderende duisternis. Nu… laten we deze ijzige zielen ontleden en hun ijzige geheimen onthullen!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Haal vijf dode _Kobold Ijsbezweerders_ op! Hun bevroren lichamen bevatten de sleutel tot het ontrafelen van de geheimen van hun ijzige magie!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Zijn skeletvingers tikken ritmisch tegen een borrelende ketel, de lucht om hem heek dik van de pittige stank van zwavel en verwesing*\n_Kobold Ijsmagiers_! Die jammerlijke wezens, gekrocht in hun bevroren grotten, wanhopig vasthoudend aan hun ijsmagie. Ik heb er vijf nodig, hun bevroren lichamen zullen... verlichtend zijn. Hun meesterwerk van ijs, het is... eigenaardig. Ik geloof dat ze aansluiten bij een oerenergie, een kracht die sluimert onder het oppervlakte van deze wereld.</string>
@@ -1897,6 +1898,7 @@
     <string name="town_deco_charcoal_carpet_name">Tapijt</string>
     <string name="town_deco_chest_desc">Handig meubelstuk voor het opbergen van allerlei spullen en sieraden.</string>
     <string name="town_deco_chest_name">Kist</string>
+    <string name="town_deco_chimney_desc">Stenen schoorsteen - een rechtmatige metgezel voor elke woning, die wordt opgetrokken waar vrieskou een veelvoorkomende gast is.</string>
     <string name="town_deco_chimney_name">Schoorsteen</string>
     <string name="town_deco_church_sign_desc">Het lijkt erop dat er een kerk in dat gebouw zit.</string>
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
@@ -2195,6 +2197,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
