@@ -922,6 +922,7 @@
     <string name="NecromancerNPC_Name">pháp sư chết chóc</string>
     <string name="NecromancerNPC_Name_Objective">thầy gọi hồn</string>
     <string name="NecromancerRobe_Info">Chiếc áo choàng này sẽ cho phép Necromancer triệu hồi Deathling với chi phí 5 linh hồn. Deathling là một tỳ phu bất tử sẽ mạnh lên cùng với chủ nhân của nó.</string>
+    <string name="NecromancerRobe_Name">áo choàng tử linh</string>
     <string name="NecromancerRobe_PetLimitReached">Necromancy: giới hạn triệu hồi đã đạt đến (Hiện tại tối đa: %d)!</string>
     <string name="Necromancer_ACSpecial">THUẬT HỒI SINH</string>
     <string name="Necromancy_BecameALich">Bạn đã trở thành Lich! Sức mạnh của bạn tăng lên và dung lượng linh hồn đã được gấp đôi! Nhưng bạn đã mất %1$d điểm sức mạnh.</string>
@@ -1053,6 +1054,7 @@
     <string name="Potion_Beneficial">Chai thuốc có lợi</string>
     <string name="Potion_Colors_1">đỏ tươi</string>
     <string name="Potion_Colors_10">chàm</string>
+    <string name="Potion_Colors_12">epidot</string>
     <string name="Potion_Colors_15">ngọc trai</string>
     <string name="Potion_Colors_2">xanh ngọc bích</string>
     <string name="Potion_Colors_3">ngọc bích</string>
@@ -1905,6 +1907,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

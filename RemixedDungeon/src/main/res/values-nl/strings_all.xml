@@ -402,6 +402,7 @@
     <string name="CompositeCrossbow_Info">Deze versterkte handboog bewijst een efficiënter instrument te zijn dan zijn houten tegenhanger.</string>
     <string name="CompositeCrossbow_Name">Samengestelde kruisboog</string>
     <string name="CompoundBow_Gender">masculine</string>
+    <string name="CompoundBow_Info">Pijlen afgevuurd met deze samengestelde boog richten enorme schade aan en hebben een betere nauwkeurigheid dan een houten boog, ten koste van wat snelheid.</string>
     <string name="CompoundBow_Name">compogite boog</string>
     <string name="ConcreteBlock_Description">Het lijkt erop dat voor het duwen van dit blok %d punten kracht nodig zijn.</string>
     <string name="ConcreteBlock_Name">Zwaar betonnen blok</string>
@@ -1358,6 +1359,7 @@
     <string name="Shopkeeper_Buy">Selecteer item om te kopen</string>
     <string name="Shopkeeper_BuyPrompt">Laat me je inventaris zien</string>
     <string name="Shopkeeper_Name">winkelier</string>
+    <string name="Shopkeeper_Sell">Selecteer een item om te verkopen</string>
     <string name="Shopkeeper_SellPrompt">Ik heb spullen te verkopen</string>
     <string name="Shopkeeper_title">Winkel</string>
     <string name="ShortSword_ACReforge">HERKASTEN</string>
@@ -2213,6 +2215,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
