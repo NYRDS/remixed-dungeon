@@ -927,6 +927,7 @@
     <string name="Necromancy_SoulsCountLabel">Linh hồn</string>
     <string name="NecrotismBuff_Info">Dấu ấn của chính cái chết, mùi hôi từ đó ảnh hưởng đến những người gần đó và khiến họ chia sẻ chung một định mệnh.</string>
     <string name="NecrotismBuff_Name">Hoại tử</string>
+    <string name="Necrotism_Death">Bạn đã chết vì hoại tử...</string>
     <string name="NekoEars_Name">Tai Mèo</string>
     <string name="NeutralKing_Hostile">Nhà Vua quay lại tấn công bạn!</string>
     <string name="Nightmare_Desc">Một sinh vật quái dị trông giống như một bó xúc tu làm bằng thịt. Ác mộng là hiện thân của những suy nghĩ đen tối của Thần Cổ Đại.</string>
@@ -1899,6 +1900,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

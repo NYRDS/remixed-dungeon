@@ -328,6 +328,7 @@
     <string name="Char_StaAmok">amok</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaDizzy">duizelig</string>
+    <string name="Char_StaDodged_2">ontweek</string>
     <string name="Char_StaFrightened">verschrikt</string>
     <string name="Char_StaInvisible">onzichtbaar</string>
     <string name="Char_StaMind">geest</string>
@@ -1835,6 +1836,7 @@
     <string name="Wnd_Button_Cancel">Annuleren</string>
     <string name="Wnd_Button_No">Nee</string>
     <string name="Wnd_Button_Ok">Ok</string>
+    <string name="Wnd_Button_Yes">Ja</string>
     <string name="WoodenBow_Gender">masculine</string>
     <string name="WoodenBow_Info">Deze eenvoudige houten boog kan nuttig blijken, zodra je pijlen vindt.</string>
     <string name="WoodenBow_Name">houten boog</string>
@@ -2205,6 +2207,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
