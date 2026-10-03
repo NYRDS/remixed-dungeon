@@ -1683,10 +1683,13 @@
     <string name="WndCryptoDonate_warningText">WAARSCHUWING: Verifieer altijd het adres voordat je geld stuurt. Cryptocurrency-transacties zijn onomkeerbaar!</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratis voor iedereen en dat blijft zo.\n\nJe kunt ons echter helpen om het spel nog beter te maken.\n\nNaast onze oprechte dank ontvang je enkele cosmetische verbeteringen.</string>
     <string name="WndDonate_donate">doneren: </string>
+    <string name="WndDonate_gold">goud</string>
     <string name="WndDonate_goldDonateText">Dank voor uw hulp</string>
+    <string name="WndDonate_royal">koninklijk</string>
     <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
     <string name="WndDonate_royalDonateText2">Daarnaast ontvang je elke hoed uit de in-app winkel! Zowel als elke hoed die ooit nog uitgegeven gaat worden.</string>
     <string name="WndDonate_ruby">robijn</string>
+    <string name="WndDonate_silver">zilver</string>
     <string name="WndDonate_silverDonate">zilverdonatie</string>
     <string name="WndDonate_silverDonateText">Elke donatie helpt de ontwikkeling van het project</string>
     <string name="WndDonate_silverDonateText2">Ook schakelt u reclame uit in alle spelmodi en ontgrendelt u de Jageres vanaf het begin.</string>
@@ -2215,6 +2218,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
