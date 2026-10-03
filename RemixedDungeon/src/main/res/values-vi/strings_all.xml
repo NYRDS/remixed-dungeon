@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="AC_Devour">Nuốt chửng</string>
     <string name="AC_Dissect">Phẫu thuật</string>
@@ -768,6 +767,7 @@
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">ấu trùng của thần</string>
     <string name="Larva_Name_Objective">ấu trùng của thần</string>
+    <string name="LastLevel_TileDescWater">Nó trông giống như nham thạch, nhưng lạnh và có lẽ an toàn để chạm.</string>
     <string name="LastLevel_TileStatue">Cột trụ</string>
     <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
     <string name="LastShopLevel_TileDescExit">Một con dốc dẫn xuống địa ngục.</string>
@@ -1845,6 +1845,7 @@
     <string name="town_deco_rope_name">dây thừng</string>
     <string name="town_deco_rug_desc">Được thiết kế với phong cách tinh tế.</string>
     <string name="town_deco_rug_name">Thảm</string>
+    <string name="town_deco_screen_desc">Tấm vải bí ẩn này được gọi là \&quot;màn hình\&quot; và nó có thể hiển thị những hình ảnh chuyển động</string>
     <string name="town_deco_scrolls_name">Cuộn</string>
     <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_shelf_name">Các kệ sách</string>
@@ -1897,6 +1898,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

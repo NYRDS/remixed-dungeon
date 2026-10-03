@@ -879,6 +879,7 @@
     <string name="MagicArrow_Info">Goede oude magische pijl, de juiste keuze als je geen pijlen meer hebt.</string>
     <string name="MagicArrow_Name">Magische pijl</string>
     <string name="MagicTorch_Info">Een spreuk die licht produceert, om de donkere verdiepingen van de kerker te verlichten.</string>
+    <string name="MagicTorch_Name">Magische fakkel</string>
     <string name="MailArmor_Name">maliënkolder</string>
     <string name="ManaPotion_Info">Deze drank herstelt je spirituele energie.</string>
     <string name="ManaPotion_Name">Mana Drankje</string>
@@ -1714,6 +1715,7 @@
     <string name="WndInfoCell_Nothing">Hier is niets.</string>
     <string name="WndInfoItem_Chest">Kist</string>
     <string name="WndInfoItem_CrystalChest">Kristallen kist</string>
+    <string name="WndInfoItem_LockedChest">Vergrendelde kist</string>
     <string name="WndInfoItem_NeedKey"> Maar om het te openen heb je een gouden sleutel nodig.</string>
     <string name="WndInfoItem_Owner">Deze oude graf kan iets nuttigs bevatten, maar de eigenaar zal zich zeker verzetten tegen het controleren ervan.</string>
     <string name="WndInfoItem_Remains">Dit is alles wat overblijft van een van je voorgangers. Misschien is het de moeite waard om te kijken of er waardevolle items in zitten.</string>
@@ -2202,6 +2204,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
