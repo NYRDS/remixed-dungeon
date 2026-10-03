@@ -523,6 +523,7 @@
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">De doodskijk van %s heeft je gedood...</string>
     <string name="Eye_Name">boos oog</string>
+    <string name="Facilitations_Descriptions_0">Mutanten zijn altijd met minachting en angst behandeld, maar het ontbreken van honger geeft je opnieuw de overhand, deze keer bij het veroveren van de diepten van de kerker.</string>
     <string name="Facilitations_Descriptions_1">Het is nog steeds onbekend wie je ouders waren, maar de natuurlijke troll-achtige regeneratie zal alle komende strijdlittekens helpen helen.</string>
     <string name="Facilitations_Descriptions_2">Een diepgaande en grondige studie van de natuur als energiebron stelt je in staat om je magische reserves tijdens de reis aan te vullen.</string>
     <string name="Facilitations_Descriptions_3">Door de riem van ogerhuid aan te trekken, die aan elke nieuwe generatie werd doorgegeven, maak je een stap naar het onbekende dat voor je ligt.</string>
@@ -1355,6 +1356,7 @@
     <string name="Shopkeeper_BuyPrompt">Laat me je inventaris zien</string>
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="Shopkeeper_SellPrompt">Ik heb spullen te verkopen</string>
+    <string name="Shopkeeper_title">Winkel</string>
     <string name="ShortSword_ACReforge">HERKASTEN</string>
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Dit zwaard is inderdaad vrij kort, slechts enkele centimeters langer dan een dolk.</string>
@@ -2208,6 +2210,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

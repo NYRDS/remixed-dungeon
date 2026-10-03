@@ -1361,6 +1361,7 @@
     <string name="Sprout_Info">Đánh thức các hạt giống ngủ.\nTuy nhiên, cần có cây cỏ trên mặt đất để phép thuật này thành công.</string>
     <string name="Sprout_Name">Mầm Non</string>
     <string name="StartScene_ComingSoon">Sắp ra mắt</string>
+    <string name="StartScene_ContinueLatest">Tiếp tục trò chơi gần nhất hoặc chọn từ một ô lưu</string>
     <string name="StartScene_Depth">Độ sâu: %1$d\nCấp độ: %2$d</string>
     <string name="StartScene_DifficultyEasyNoAds">dễ</string>
     <string name="StartScene_DifficultyNormalWithSaves">Bình thường với lưu (và quảng cáo)</string>
@@ -1825,6 +1826,7 @@
     <string name="town_deco_locked_door_name">Cửa khóa</string>
     <string name="town_deco_magenta_carpet_desc">Tông màu đỏ tươi của thảm này gợi nhớ đến rượu vang địa phương.</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
+    <string name="town_deco_misc_name">Rác</string>
     <string name="town_deco_movies_door_desc">Cánh cửa này trông đặc biệt chắc chắn. Nó có thể dẫn đến điều gì đó tuyệt vời.</string>
     <string name="town_deco_mud_desc">Đất đã tan chảy trong vùng băng vĩnh cửu này.</string>
     <string name="town_deco_mud_name">Bùn</string>
@@ -1901,6 +1903,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
