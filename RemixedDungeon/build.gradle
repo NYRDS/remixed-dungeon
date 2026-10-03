@@ -181,7 +181,6 @@ dependencies {
     googlePlayImplementation 'com.appodeal.ads.sdk.adapters:mintegral:17.1.81.0'
     googlePlayImplementation 'com.appodeal.ads.sdk.adapters:mobilefuse:1.12.0.0'
     googlePlayImplementation 'com.appodeal.ads.sdk.adapters:moloco:4.3.1.0'
-    googlePlayImplementation 'com.appodeal.ads.sdk.adapters:my_target:5.51.2.0'
     googlePlayImplementation 'com.appodeal.ads.sdk.adapters:ogury:6.2.0.0'
     googlePlayImplementation 'com.appodeal.ads.sdk.adapters:pangle:7.7.0.2.0'
     googlePlayImplementation 'com.appodeal.ads.sdk.adapters:pubmatic:4.10.0.0'
@@ -191,9 +190,14 @@ dependencies {
     googlePlayImplementation 'com.appodeal.ads.sdk.adapters:verve:3.7.1.0'
     googlePlayImplementation 'com.appodeal.ads.sdk.adapters:vungle:7.7.7.0'
 
+    // caveman: VK Ads (ex.myTarget) rides Yandex mediation only. Adapter needs
+    // mobileads >=8.5.0, tracks mytarget-sdk 5.51.x. Appodeal my_target adapter
+    // removed - one VK mediation path, don't reintroduce it
     googlePlayImplementation 'com.yandex.android:mobileads:8.5.0'
+    googlePlayImplementation 'com.yandex.ads.mediation:mobileads-mytarget:5.51.2.1'
 
     ruStoreImplementation 'com.yandex.android:mobileads:8.5.0'
+    ruStoreImplementation 'com.yandex.ads.mediation:mobileads-mytarget:5.51.2.1'
     ruStoreImplementation 'ru.rustore.sdk:billingclient:9.1.0'
 
 
