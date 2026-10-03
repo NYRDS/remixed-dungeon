@@ -1761,6 +1761,7 @@
     <string name="WndPremiumSettings_marble">marmer</string>
     <string name="WndPremiumSettings_royal">koninklijk</string>
     <string name="WndPremiumSettings_ruby">robijn</string>
+    <string name="WndPremiumSettings_silver">zilver</string>
     <string name="WndPremiumSettings_status">Selecteer materiaal van de statusbalk</string>
     <string name="WndPremiumSettings_std">standaard</string>
     <string name="WndPriest_Heal">genezen - %d goud</string>
@@ -2201,6 +2202,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
