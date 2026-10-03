@@ -376,6 +376,7 @@
     <string name="Crystal_Desc">Hòn đá lớn lấp lánh bay giữa không trung. Có vẻ như nó chứa đựng phép thuật mạnh mẽ.</string>
     <string name="Crystal_Gender">masculine</string>
     <string name="CurareDart_Gender">masculine</string>
+    <string name="CurareDart_Info">Những mũi phi tiêu nhỏ độc ác này không gây nhiều sát thương, nhưng có thể làm tê liệt mục tiêu khiến nó bất lực và bất động trong một thời gian.</string>
     <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 tự sửa chữa!</string>
     <string name="DM300_Info3">Phát hiện nhân viên không được phép.</string>
@@ -1903,6 +1904,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
