@@ -271,6 +271,7 @@
     <string name="Challenges_Descriptions_1">Aanval is de beste verdediging. Volgens deze leerstellingen waag je je in de kerker, met geloof als de sterkste beschermer van je lichaam.</string>
     <string name="Challenges_Descriptions_2">Als aanhanger van de natuurlijke regeneratie van het normale lichaam, was je altijd voorzichtig met drankjes die genezende eigenschappen hebben. Beter voorzichtig dan spijt!</string>
     <string name="Challenges_Descriptions_3">Het land rond de kerker is al lang besmet met boosaardigheid, waardoor de zaden van allerlei kruiden en planten niet kunnen groeien. Wie weet hoe lang het nog duurt voordat de laatste plant op deze barre gronden ophoudt te bestaan.</string>
+    <string name="Challenges_Descriptions_4">Een kwaadaardige aanwezigheid sluimert in de geest van alle wezens in de kerker, waardoor ze zich bewust worden van gebeurtenissen die met elkaar plaatsvinden.</string>
     <string name="Challenges_Descriptions_5">Het eerste dat met het kwaad kwam, was een dichte en ondoordringbare mist, waardoor het bijna onmogelijk is om de eindeloze gangen van de kelder duidelijk te navigeren.</string>
     <string name="Challenges_Descriptions_6">De oude kunst van runen lezen is verboden en wordt tegen alle kosten vermeden, vanwege de vloek die rust op elk perkament dat de kelder of haar omgeving binnenbereikt.</string>
     <string name="Challenges_Descriptions_8">Je reis begint in de donkere en gevaarlijke rioleringen van de stad, met de enige weg naar de oppervlakte geblokkeerd. Om het erger te maken, kun je alleen uitrusting gebruiken die je in de kelder vindt. Met beperkte middelen en uitrusting hangt je overleving af van je vaardigheden en strategie.</string>
@@ -1250,6 +1251,7 @@
     <string name="Scorpio_Desc">Deze enorme, op spinnen lijkende demonische wezens vermijden gevechten van dichtbij ten koste van alles en schieten vanaf grote afstand verlammende getande stekels af.</string>
     <string name="Scorpio_Gender">masculine</string>
     <string name="Scorpio_Name">schorpioen</string>
+    <string name="Scorpio_Name_Objective">schorpio</string>
     <string name="ScrollHolder_Info">In deze buisvormige houder kun je een willekeurig aantal scrollen plaatsen. Het bespaart ruimte in je rugzak en beschermt scrollen tegen vuur.</string>
     <string name="ScrollHolder_Name">koker voor perkamentrollen</string>
     <string name="ScrollOfChallenge_Info">Wanneer hardop gelezen, zal deze rol een uitdagende brul ontketenen die alle monsters wakker maakt en hen waarschuwt voor de locatie van de lezer.</string>
@@ -2211,6 +2213,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
