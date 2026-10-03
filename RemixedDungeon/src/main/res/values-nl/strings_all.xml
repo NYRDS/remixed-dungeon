@@ -779,6 +779,7 @@
     <string name="KindOfWeapon_EquipCursed">je huivert als je grip onwillekeurig strakker wordt rond je %s</string>
     <string name="King_Defense">geparreerd</string>
     <string name="King_Gender">masculine</string>
+    <string name="King_Info1">Je kunt me niet doden, %s... Ik ben... onsterfelijk...</string>
     <string name="King_Info3">Hoe durf je!</string>
     <string name="King_Name">Koning der Dwergen</string>
     <string name="King_Name_Objective">Koning der Dwergen</string>
@@ -2204,6 +2205,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
