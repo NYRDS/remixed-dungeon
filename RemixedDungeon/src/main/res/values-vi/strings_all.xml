@@ -1149,6 +1149,7 @@
     <string name="Ring_Info2">Chiếc %1$s của bạn siết chặt vào ngón tay đau đớn</string>
     <string name="Ring_Info3b">, và vì nó bị nguyền rủa, bạn không có cách nào tháo nó ra.</string>
     <string name="Ring_Info4">%1$s\n\nBạn có thể cảm thấy một phép thuật độc ác ẩn mình bên trong %2$s.</string>
+    <string name="Roar_Info">Tiếng gầm mạnh mẽ chắc chắn sẽ khiến kẻ thù khiếp sợ và truyền cảm hứng cho đồng minh.</string>
     <string name="Roar_Name">Gầm thét</string>
     <string name="RootSpell_Info">Gây rễ nhân vật được chọn, khiến hắn không thể di chuyển trong một khoảng thời gian ngắn.</string>
     <string name="RootSpell_Name">Rễ</string>
@@ -1900,6 +1901,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

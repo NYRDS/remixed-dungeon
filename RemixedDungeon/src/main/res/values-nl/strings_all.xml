@@ -1505,6 +1505,7 @@
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">gekke dief</string>
     <string name="Thief_Name_Objective">gekke dief</string>
+    <string name="TitleScene_About">Over</string>
     <string name="TitleScene_Badges">Badges</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Spelen</string>
@@ -2207,6 +2208,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
