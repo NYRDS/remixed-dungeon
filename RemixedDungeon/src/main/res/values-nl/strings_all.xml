@@ -984,6 +984,7 @@
     <string name="Necromancy_Title">Necromantie</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
+    <string name="NekoEars_Info">Soms wil je gewoon alle monsterbloed en vuil van jezelf afwassen en je gewoon schattig en pluizig voelen... Of je kunt op z\'n minst schattige kattenoren dragen.</string>
     <string name="NekoEars_Name">Neko-oren</string>
     <string name="NeutralKing_Hostile">De Koning keert zich tegen je!</string>
     <string name="Nightcap_Name">Slaapmuts</string>
@@ -1986,6 +1987,7 @@
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_poster_desc">Flyers voor de aankondiging van komende filmvoorstellingen.</string>
     <string name="town_deco_potions_desc">Een soort drankjes op de plank.</string>
+    <string name="town_deco_red_carpet_name">Tapijt</string>
     <string name="town_deco_rope_desc">Met de hand gedraaid touw.</string>
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_rug_name">kleed</string>
@@ -2225,6 +2227,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

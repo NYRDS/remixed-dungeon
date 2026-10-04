@@ -1190,6 +1190,7 @@
     <string name="SacrificialSword_Name">kiếm hiến tế</string>
     <string name="ScaleArmor_Desc">Các vảy kim loại khâu trên áo da tạo thành một lớp giáp linh hoạt nhưng vẫn bảo vệ tốt.</string>
     <string name="ScaleArmor_Name">giáp vảy</string>
+    <string name="ScarecrowNPC_Desc">Không còn nghi ngờ gì nữa... con bù nhìn này đang theo dõi từng cử động của bạn. Đôi mắt đỏ rực rỡ của nó xuyên thấu bạn, nhưng thật ngạc nhiên là bạn không cảm thấy bị đe dọa.</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">bù nhìn</string>
     <string name="ScarecrowNPC_Name_Objective">ngáo</string>
@@ -1693,6 +1694,7 @@
     <string name="WndSadGhost_Wepon">Vũ khí ma</string>
     <string name="WndSaveSlotSelect_Delete_No">Không</string>
     <string name="WndSaveSlotSelect_Delete_Title">Bạn có chắc chắn muốn xóa trạng thái lưu này?</string>
+    <string name="WndSaveSlotSelect_LoadAutoSave">Tải tự động lưu</string>
     <string name="WndSelectLanguage_ImproveTranslation">Vui lòng giúp cải thiện bản dịch Remixed Dungeon</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Nhấn vào đây để tham gia đội dịch Remixed Dungeon</string>
     <string name="WndSettingsInGame_GameLog">Nhật ký trò chơi</string>
@@ -1917,6 +1919,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
