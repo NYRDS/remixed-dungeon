@@ -1229,7 +1229,7 @@
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="Roar_Name">Brul</string>
     <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
-    <string name="RogueArmor_Prompt">Kies een locatie om naar te springen</string>
+    <string name="RogueArmor_Prompt">Kies een locatie om naartoe te springen</string>
     <string name="RootSpell_Info">Bevestigt de geselecteerde karakter met wortels, waardoor hij voor korte tijd niet kan bewegen.</string>
     <string name="RootsBuff_Name">Geworteld</string>
     <string name="RottenFish_Info">Rotte vis, ruikt vreselijk</string>
@@ -1998,6 +1998,7 @@
     <string name="town_deco_pole_name">Paaltje</string>
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_poster_desc">Flyers voor de aankondiging van komende filmvoorstellingen.</string>
+    <string name="town_deco_poster_name">Poster</string>
     <string name="town_deco_potions_desc">Een soort drankjes op de plank.</string>
     <string name="town_deco_red_carpet_name">Tapijt</string>
     <string name="town_deco_rope_desc">Met de hand gedraaid touw.</string>
@@ -2239,6 +2240,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
