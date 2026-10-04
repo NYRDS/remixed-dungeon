@@ -2037,6 +2037,7 @@
     <string name="town_deco_window_desc">Gewoon glazen raam, niets bijzonders.</string>
     <string name="town_deco_window_name">Raam</string>
     <string name="town_deco_wood_wall_desc">Een stevig uitziende stammenmuur.</string>
+    <string name="town_deco_wood_wall_name">Houten muur</string>
     <string name="town_deco_wooden_bench_desc">Houten bank, ziet er ongemakkelijk uit om op te zitten.</string>
     <string name="town_deco_wooden_bench_name">Houten bank</string>
     <string name="town_deco_wooden_chair_name">Houten stoel</string>
@@ -2223,6 +2224,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
