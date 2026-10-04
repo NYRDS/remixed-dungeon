@@ -563,6 +563,7 @@
     <string name="FrozenCarpaccio_Name">bevroren carpaccio</string>
     <string name="FullFaceMask_Info">Een gasmasker is een masker dat de drager beschermt tegen het inademen van luchtverontreinigingen en giftige gassen. Het masker vormt een afgesloten dekking over de neus, mond en ogen.\n\nFilters ontbreken in dit masker, maar het ziet er toch wel cool uit.</string>
     <string name="FullFaceMask_Name">gasmasker</string>
+    <string name="FuryBuff_Info">De ogen werden bloedrood van alle woede binnenin.</string>
     <string name="FuryBuff_Name">Woede</string>
     <string name="GameScene_Chasm">Je stappen galmen door de kerker.</string>
     <string name="GameScene_Grass">De geur van vegetatie hangt zwaar in de lucht.</string>
@@ -706,6 +707,7 @@
     <string name="Hero_StaWeakness">Je voelt je verzwakt!</string>
     <string name="Hero_Wait">...</string>
     <string name="HideInGrassSpell_Info">Je hebt je verstoppertje-meesterschap geperfectioneerd.</string>
+    <string name="HideInGrassSpell_NeedGrassToHide">Zelfs ik kan me niet in het zicht verstoppen.</string>
     <string name="Horror_Name_1">Griezelige %s</string>
     <string name="Horror_Name_2">Griezelige %s</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
@@ -2229,6 +2231,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
