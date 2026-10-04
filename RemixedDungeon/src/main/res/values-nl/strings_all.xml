@@ -615,6 +615,7 @@
     <string name="Halls_TileStatue">Pilaar</string>
     <string name="Haste_Name">Extreme Haast</string>
     <string name="Heal_Cast">%s is genezen.</string>
+    <string name="Heal_Info">Een behoorlijk nuttige spreuk in de Dungeon, toch?</string>
     <string name="Heal_Name">Genezing</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Gratis behandeling voor elke avonturier!</string>
@@ -2218,6 +2219,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

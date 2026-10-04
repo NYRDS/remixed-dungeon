@@ -1354,6 +1354,7 @@
     <string name="SpiderQueen_Desc">Cơ thể một người phụ nữ xinh đẹp kết hợp với con nhện ghê tởm. Mọi sinh vật sống trong hang ổ này đều là tôi tớ của bà ta. Gặp gỡ người phụ nữ phi thường này có thể là trải nghiệm chí mạng. Vì bạn là kẻ đột nhập!</string>
     <string name="SpiderQueen_DieInfo">Nữ hoàng nhện đã bị tiêu diệt! Bây giờ tôi phải quay lại tầng 5 và tiếp tục hành trình đến Vực sâu.</string>
     <string name="SpiderQueen_Gender">feminine</string>
+    <string name="SpiderQueen_Name">nữ hoàng nhện</string>
     <string name="SpiderQueen_Name_Objective">nữ hoàng nhện</string>
     <string name="SpiderServant_Desc">Chiến binh là những đơn vị đông đảo nhất trong hang nhện. Chúng sinh ra để bảo vệ lãnh thổ. Kìm của chiến binh đã phát triển các tuyến độc để đầu độc kẻ thù của chúng.</string>
     <string name="SpiderServant_Gender">masculine</string>
@@ -1910,6 +1911,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
