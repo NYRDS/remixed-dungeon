@@ -316,6 +316,7 @@
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
     <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
     <string name="CharmBuff_Info">Tâm trí và cơ thể đã bị mê hoặc!</string>
+    <string name="CharmSpell_Name">Mê Hoặc</string>
     <string name="Chasm_Chasm">Vực</string>
     <string name="Chasm_Info">Bạn đã rơi xuống vực chết chóc...</string>
     <string name="Chess_Stalemate">Bế tắc! Nhà Vua rời bàn cờ và để bạn đi qua.</string>
@@ -1929,6 +1930,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

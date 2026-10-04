@@ -994,6 +994,7 @@
     <string name="NekoEars_Info">Soms wil je gewoon alle monsterbloed en vuil van jezelf afwassen en je gewoon schattig en pluizig voelen... Of je kunt op z\'n minst schattige kattenoren dragen.</string>
     <string name="NekoEars_Name">Neko-oren</string>
     <string name="NeutralKing_Hostile">De Koning keert zich tegen je!</string>
+    <string name="Nightcap_Info">Het veroveren van kerkers in de nacht moet een zeer vermoeiende taak zijn. Hoe zou het zijn om deze warme, knusse hoed op te zetten en gewoon te ontspannen, en de hele wereld te laten wachten.</string>
     <string name="Nightcap_Name">Slaapmuts</string>
     <string name="Nightmare_Desc">Een grotesk schepsel dat lijkt op een bundel vleesachtige tentakels. Nachtmerries zijn de belichaming van de sinistere gedachten van de Oude God.</string>
     <string name="Nightmare_Gender">masculine</string>
@@ -2240,6 +2241,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
