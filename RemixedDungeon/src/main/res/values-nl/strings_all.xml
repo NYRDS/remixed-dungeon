@@ -783,6 +783,7 @@
     <string name="Journal_Statue">Geanimeerd standbeeld</string>
     <string name="Journal_Wandmaker">Oude toverstafmaker</string>
     <string name="Journal_WellAwareness">Bron van Bewustzijn</string>
+    <string name="Keyring_Info">Dit is een koperen sleutelring waarmee je al je sleutels apart van de rest van je bezittingen kunt bewaren.</string>
     <string name="Keyring_Name">sleutelring</string>
     <string name="KindOfBow_SelectArrowKind">Welke pijlen moet ik gebruiken?</string>
     <string name="KindOfWeapon_EquipCursed">je huivert als je grip onwillekeurig strakker wordt rond je %s</string>
@@ -834,6 +835,7 @@
     <string name="Level_TileDescChasm">Je kunt de bodem niet zien.</string>
     <string name="Level_TileDescEntrance">Trappen leiden naar een hogere verdieping.</string>
     <string name="Level_TileDescExit">De treden leiden naar beneden, naar een diepere verdieping.</string>
+    <string name="Level_TileDescHighGrass">Dichte begroeiing blokkeert het zicht.</string>
     <string name="Level_TileDescInactiveTrap">De val is al eerder geactiveerd en is niet meer gevaarlijk.</string>
     <string name="Level_TileDescLockedDoor">Deze deur is op slot, je hebt een passende sleutel nodig om hem te openen.</string>
     <string name="Level_TileDescLockedExit">Zware tralies blokkeren de trap naar beneden.</string>
@@ -2233,6 +2235,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

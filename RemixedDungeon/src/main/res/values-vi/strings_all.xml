@@ -1803,6 +1803,7 @@
     <string name="town_deco_canvas_desc">Một mảnh vải dày treo trên tường.</string>
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_carpet_desc">Đệm đỏ xa xỉ dành cho khách đặc biệt.</string>
+    <string name="town_deco_charcoal_carpet_desc">Nhằm mang lại sự thoải mái cho khách, ban quản lý rạp chiếu phim đã chọn những tấm thảm chất lượng cao nhất có màu than đen.</string>
     <string name="town_deco_chimney_desc">Ống khói đá - người bạn đồng hành đúng đắn cho mọi ngôi nhà, được xây dựng ở nơi thời tiết băng giá thường xuyên ghé thăm.</string>
     <string name="town_deco_church_sign_desc">Có vẻ như bên trong tòa nhà này có một nhà thờ.</string>
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
@@ -1922,6 +1923,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
