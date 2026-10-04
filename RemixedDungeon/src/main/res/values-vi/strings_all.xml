@@ -427,6 +427,7 @@
     <string name="DreadKnight_Desc">Hiệp sĩ kinh hoàng là một chiến binh cổ đại, khi còn sống không biết đến điều thiện hay chính nghĩa. Vì tội lỗi của mình, anh ta bị nguyền rủa phải lang thang vĩnh viễn trong thân thể chết chóc tan nát này. Và mỗi khoảnh khắc tồn tại đau đớn của anh ta đầy đau khổ và thống khổ, tương tự những gì anh ta đã gây ra cho các nạn nhân.</string>
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name_Objective">hiệp sĩ đáng sợ</string>
+    <string name="Dreamweed_Desc">Khi chạm vào Dreamweed, nó tiết ra một đám mây khí phát sáng gây nhầm lẫn.</string>
     <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
     <string name="DriedRoseCursedBuff_Name">Say đắm</string>
     <string name="DriedRose_Info">Bông hồng này đã khô héo từ lâu, nhưng cách nào đó nó vẫn giữ nguyên tất cả cánh hoa.</string>
@@ -836,7 +837,7 @@
     <string name="Mace_Name">chùy</string>
     <string name="MageArmor_ACSpecial">ĐẤT NONG</string>
     <string name="MageArmor_Desc">Mặc chiếc áo choàng lộng lẫy này, một pháp sư có thể niệm phép đất nóng chảy: mọi kẻ thù trong tầm nhìn sẽ bị thiêu cháy và đồng thời không thể di chuyển.</string>
-    <string name="MageArmor_NotMage">Chỉ pháp sư mới có thể sử dụng giáp này!</string>
+    <string name="MageArmor_NotMage">Chỉ phù thủy mới có thể dùng áo giáp này!</string>
     <string name="MagicArrow_Info">Mũi tên ma thuật cũ, lựa chọn đúng khi hết đạn.</string>
     <string name="MagicArrow_Name">Mũi tên phép thuật</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
@@ -1161,6 +1162,7 @@
     <string name="Ring_Info2">Chiếc %1$s của bạn siết chặt vào ngón tay đau đớn</string>
     <string name="Ring_Info3b">, và vì nó bị nguyền rủa, bạn không có cách nào tháo nó ra.</string>
     <string name="Ring_Info4">%1$s\n\nBạn có thể cảm thấy một phép thuật độc ác ẩn mình bên trong %2$s.</string>
+    <string name="Ring_Name">%s nhẫn</string>
     <string name="Roar_Info">Tiếng gầm mạnh mẽ chắc chắn sẽ khiến kẻ thù khiếp sợ và truyền cảm hứng cho đồng minh.</string>
     <string name="Roar_Name">Gầm thét</string>
     <string name="RogueArmor_Prompt">Chọn một vị trí để nhảy đến</string>
@@ -1930,6 +1932,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
