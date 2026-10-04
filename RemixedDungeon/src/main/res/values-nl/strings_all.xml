@@ -1381,6 +1381,7 @@
     <string name="SleepBuff_Info">Volledig in slaap</string>
     <string name="SlowBuff_Name">Vertraagd</string>
     <string name="Slow_Name_0">Chilling %s</string>
+    <string name="Slow_Name_1">Verkoelende %s</string>
     <string name="Slow_Name_2">Bevriezend %s</string>
     <string name="SmashSpell_Info">Spring omhoog en creëer een krachtige klap bij het raken van de grond, die tijdelijk vijanden in de buurt verdooft en tegelijkertijd fysieke schade toebrengt.</string>
     <string name="SmashSpell_Name">Verpletteren</string>
@@ -1932,6 +1933,7 @@
     <string name="town_deco_common_bed_name">Bed</string>
     <string name="town_deco_common_door_desc">Een beleefde avonturier zou geen private eigendom binnendringen, zonder uitnodiging natuurlijk.</string>
     <string name="town_deco_counter_name">Toonbank</string>
+    <string name="town_deco_covered_table_desc">Houten tafel met een effen wit tafelkleed.</string>
     <string name="town_deco_covered_table_name">Tafel</string>
     <string name="town_deco_crate_bottles_name">Bierkrat</string>
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
@@ -2221,6 +2223,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
