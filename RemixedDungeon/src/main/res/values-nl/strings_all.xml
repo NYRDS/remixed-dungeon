@@ -1678,6 +1678,7 @@
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
     <string name="WndBlacksmith_Select">Selecteer een item om te hersmeden</string>
     <string name="WndCatalogus_Potions">Drankjes</string>
+    <string name="WndCatalogus_Scrolls">Perkamenten</string>
     <string name="WndCatalogus_Title">Catalogi</string>
     <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
@@ -1742,6 +1743,7 @@
     <string name="WndInfoItem_Owner">Deze oude graf kan iets nuttigs bevatten, maar de eigenaar zal zich zeker verzetten tegen het controleren ervan.</string>
     <string name="WndInfoItem_Remains">Dit is alles wat overblijft van een van je voorgangers. Misschien is het de moeite waard om te kijken of er waardevolle items in zitten.</string>
     <string name="WndInfoItem_Skeleton">Skelettenresten</string>
+    <string name="WndInfoItem_Tomb">Graf</string>
     <string name="WndInstallingMod_copying_file">Kopiëren van %s naar Remixed Dungeon opslag</string>
     <string name="WndInstallingMod_please_wait">Mod wordt geïnstalleerd, even geduld...</string>
     <string name="WndInstallingMod_skipping_file">Overslaan %s</string>
@@ -2231,6 +2233,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
