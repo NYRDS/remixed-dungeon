@@ -426,6 +426,7 @@
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
     <string name="DM300_Info2">Missie mislukt. Uitschakelen.</string>
     <string name="Dagger_Gender">masculine</string>
+    <string name="Dagger_Info">Een eenvoudige ijzeren dolk met een goed versleten houten handvat.</string>
     <string name="Dagger_Name">dolk</string>
     <string name="Damage_Reduction">Schadevermindering</string>
     <string name="DarkGold_Name">donker gouderts</string>
@@ -2224,6 +2225,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
