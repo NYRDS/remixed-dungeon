@@ -1476,6 +1476,7 @@
     <string name="Undead_Defense">chặn</string>
     <string name="Undead_Desc">Những xác sống người lùn này, được hồi sinh bởi ý chí của Vua Người Lùn, từng là thành viên trong triều đình của ông. Họ xuất hiện như bộ xương với lượng râu mặt ấn tượng.</string>
     <string name="Undead_Gender">masculine</string>
+    <string name="Undead_Name">người lùn xác sống</string>
     <string name="Undead_Name_Objective">cùn bất tử</string>
     <string name="Ushanka_Info">Mũ ushanka ấm áp và êm ái, được trang trí bằng một ngôi sao đỏ sang trọng. Một người bạn đồng hành hoàn hảo cho một người đồng chí chiến đấu chống lại ngục địa tàn ác và lạnh lẽo.</string>
     <string name="Ushanka_Name">Ushanka</string>
@@ -1919,6 +1920,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

@@ -898,6 +898,7 @@
     <string name="MedicineMask_Name">Chirurgisch masker</string>
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
     <string name="MeleeWeapon_Info1c">een opgewaardeerd</string>
+    <string name="MeleeWeapon_Info1d">een verslechterd</string>
     <string name="MeleeWeapon_Info2a">De gemiddelde schade is %d punten per slag.</string>
     <string name="MeleeWeapon_Info2b">De typische gemiddelde schade is %1$d punten per slag en vereist meestal %2$d punten kracht.</string>
     <string name="MeleeWeapon_Info3a">Dit is een nogal %s wapen.</string>
@@ -1110,6 +1111,7 @@
     <string name="PotionOfToxicGas_Info">Het ontdopen of verbrijzelen van deze onder druk staande glasfles zal de inhoud laten exploderen tot een dodelijke wolk van giftige groene gas. Je kunt ervoor kiezen om deze drank op verafstaande vijanden te werpen in plaats van hem met de hand te openen.</string>
     <string name="PotionOfToxicGas_Name">Drankje van Giftig Gas</string>
     <string name="Potion_ACMoisten">BEVOCHTIGEN</string>
+    <string name="Potion_ArrowMoisten">Pijlen succesvol bevochtigd.</string>
     <string name="Potion_Colors_0">turkoois</string>
     <string name="Potion_Colors_1">karmozijn</string>
     <string name="Potion_Colors_10">indigo</string>
@@ -2227,6 +2229,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
