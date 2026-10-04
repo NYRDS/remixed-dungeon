@@ -1056,6 +1056,7 @@
     <string name="PotionOfStrength_StaApply">+1 sức mạnh</string>
     <string name="Potion_ACMoisten">LÀM ẨM</string>
     <string name="Potion_Beneficial">Chai thuốc có lợi</string>
+    <string name="Potion_Colors_0">ngọc lam</string>
     <string name="Potion_Colors_1">đỏ tươi</string>
     <string name="Potion_Colors_10">chàm</string>
     <string name="Potion_Colors_12">epidot</string>
@@ -1397,6 +1398,7 @@
     <string name="Stylus_ACInscribe">KHẮC</string>
     <string name="Stylus_Info">Chiếc bút bí ẩn này được làm từ một loại đá đen và rất cứng. Bạn có thể dùng nó để khắc các ký tự hoặc rune, nhưng bút mới quyết định khắc cái gì, không phải bạn.</string>
     <string name="Stylus_Name">bút huyền bí</string>
+    <string name="Succubus_Desc">Succubus là những con quỷ trông giống những cô gái quyến rũ (theo phong cách gothic nhẹ). Bằng ma thuật của mình, succubus có thể mê hoặc anh hùng, khiến anh ta không thể tấn công cho đến khi hiệu ứng biến mất.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succubus</string>
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
@@ -1925,6 +1927,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
