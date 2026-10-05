@@ -140,6 +140,7 @@
     <string name="Badges_StrengthAttained4">19 punten Kracht bereikt</string>
     <string name="Badges_StrengthAttained5">21 punten Kracht bereikt</string>
     <string name="Badges_Supporter">Bedankt voor je steun!</string>
+    <string name="Badges_ThisIsSparta">Dit is Sparta!!!</string>
     <string name="Badges_VictoryAll">Amulet van Yendor verkregen door alle klassen</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa verslagen</string>
     <string name="Bag_ACOpen">OPENEN</string>
@@ -2066,6 +2067,7 @@
     <string name="town_deco_wall_name">Muur</string>
     <string name="town_deco_wallpaper_name">behang</string>
     <string name="town_deco_wardrobe_desc">Grote houten kast.</string>
+    <string name="town_deco_wardrobe_name">Houten kast</string>
     <string name="town_deco_weaponboard_desc">Een soort wapen dat op het bord hangt.</string>
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_weaponrack_name">Wapenrek</string>
@@ -2259,6 +2261,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
