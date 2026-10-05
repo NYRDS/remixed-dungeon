@@ -1082,6 +1082,7 @@
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
     <string name="Potion_Yes">Vâng, tôi biết tôi đang làm gì</string>
     <string name="Prison_TileDescBookshelf">Đây có lẽ là dấu tích của một thư viện nhà tù. Liệu nó có cháy không?</string>
+    <string name="Prison_TileWater">Nước lạnh tối màu.</string>
     <string name="PseudoPasty_Info">Đây là chiếc bánh nhân Cornwall chính hiệu với nhân truyền thống là thịt bò và khoai tây.</string>
     <string name="PseudoPasty_Name">bánh nhúng</string>
     <string name="PseudoRat_Gender">feminine</string>
@@ -1939,6 +1940,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

@@ -771,6 +771,7 @@
     <string name="InterLevelScene_Returning">Terugkeren...</string>
     <string name="InventoryScroll_No">Nee, ik heb mijn keuze veranderd</string>
     <string name="InventoryScroll_Title">Selecteer een voorwerp</string>
+    <string name="InventoryScroll_Yes">Ja, ik weet het zeker</string>
     <string name="InvisibilityBuff_Info">Volledig onzichtbaar, wat kan helpen gevaren te vermijden of er een te worden.</string>
     <string name="InvisibilityBuff_Name">Onzichtbaar</string>
     <string name="IronKey_FromDepth">ijzeren sleutel van diepte %d</string>
@@ -1171,6 +1172,7 @@
     <string name="RaiseDead_Name">Dood opwekken</string>
     <string name="RaiseDead_NoSpace">Doden opwekken mislukt omdat er geen vrije ruimte in de buurt is.</string>
     <string name="RankingsScene_NoGames">Er zijn nog geen spellen gespeeld.</string>
+    <string name="RankingsScene_NoInfo">Geen extra informatie</string>
     <string name="RankingsScene_Title">Topranglijsten</string>
     <string name="RankingsScene_Total">Totaal gespeelde spellen: </string>
     <string name="RatArmor_Info">Een leren pantser gemaakt van rattenhuid. Het is waarschijnlijk niet besmettelijk...</string>
@@ -2253,6 +2255,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
