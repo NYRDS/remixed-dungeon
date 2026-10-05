@@ -57,6 +57,7 @@
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
     <string name="Armor_Info7b">và vì nó bị nguyền rủa, bạn không thể cởi nó ra</string>
     <string name="Armor_ToString">%1 :%2</string>
+    <string name="ArmoredStatue_Desc">Không ai có thể nghĩ rằng đó chỉ là một bức tượng bình thường. Không chỉ vì đôi mắt phát sáng đỏ, mà còn vì không ai lại đặt một _%s_ thực sự lên một thứ như vậy.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
     <string name="ArmoredStatue_Name">tượng hoạt động</string>
     <string name="ArmoredStatue_Name_Objective">tượng hoạt động</string>
@@ -1519,6 +1520,7 @@
     <string name="WandOfDisintegration_Name">Đũa phép Phân rã</string>
     <string name="WandOfFlock_SheepBaa_2">Bê.</string>
     <string name="WandOfIcebolt_Info">Cây gậy này phóng ra một tia băng, gây sát thương nhẹ cho mục tiêu. Cũng có khả năng làm chậm hoặc thậm chí đóng băng kẻ địch.</string>
+    <string name="WandOfIcebolt_Info1">Bạn đã tự giết mình bằng Đũa phép Băng đạn của chính mình...</string>
     <string name="WandOfLightning_Name">Gậy Sét</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfMagicMissile_Info">Cây gậy này phóng ra các tên lửa năng lượng ma thuật thuần khiết, gây sát thương trung bình cho mục tiêu.</string>
@@ -1948,6 +1950,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

@@ -1127,6 +1127,7 @@
     <string name="PotionOfMindVision_Info">Na het drinken hiervan wordt je geest afgestemd op de psychische signatuur van verre wezens, waardoor je levende organismen door muren heen kunt voelen. Ook stelt dit drankje je in staat om door nabijgelegen muren en deuren heen te kijken.</string>
     <string name="PotionOfMindVision_Name">Drank van Geestesblik</string>
     <string name="PotionOfParalyticGas_Info">Bij blootstelling aan open lucht verdampt de vloeistof in deze fles tot een benauwende gele nevel. Wie de wolk inademt, wordt onmiddellijk ge paralyseerd, en kan een tijdje niet bewegen nadat de wolk is verdampt. Dit item kan op verafstaande vijanden worden gegooid om hen in het effect van de gas te betrekken.</string>
+    <string name="PotionOfParalyticGas_Name">Drankje van verlammend gas</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="PotionOfPurity_Name">Zuiveringselixer</string>
     <string name="PotionOfPurity_NoSmell">Je ruikt niets meer!</string>
@@ -1522,6 +1523,7 @@
     <string name="SurfaceScene_GameOver">Spel over</string>
     <string name="SuspiciousRat_Desc">Een rat is in de kerkers geen zeldzaamheid, maar dat er zo diep een woont... Je ziet hoe het hele lichaam van de rat spastisch beweegt wanneer hij beweegt.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
+    <string name="SuspiciousRat_Info1">Verdachte rat schokt hevig.</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
     <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">vliegenzwerm</string>
@@ -2265,6 +2267,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
