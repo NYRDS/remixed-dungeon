@@ -1217,6 +1217,7 @@
     <string name="ScrollOfDomination_Name">Cuộn sách Chiếm hữu</string>
     <string name="ScrollOfIdentify_InvTitle">Chọn một vật phẩm để nhận diện</string>
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
+    <string name="ScrollOfLullaby_Info">Một giai điệu êm dịu sẽ đưa tất cả sinh vật trong tầm nhìn của bạn vào giấc ngủ sâu, cho bạn cơ hội trốn thoát hoặc tấn công bất ngờ.</string>
     <string name="ScrollOfLullaby_Info1">Cuộn giấy phát ra giai điệu dịu dàng.</string>
     <string name="ScrollOfLullaby_Info2">Cuộn giấy vang lên giai điệu dịu dàng và %s đã chìm vào giấc ngủ!</string>
     <string name="ScrollOfLullaby_Info3">Cuộn giấy phát ra giai điệu êm dịu và quái vật ngủ say!</string>
@@ -1935,6 +1936,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

@@ -374,6 +374,7 @@
     <string name="Codex_ACRead">LEZEN</string>
     <string name="Codex_Blinded">Je kunt niet lezen als je verblind bent</string>
     <string name="Codex_Info">Een van de vele boeken die in elke bibliotheek te vinden zijn</string>
+    <string name="Codex_Name">Codex</string>
     <string name="Codex_Story_0">En hij creëerde Watabou Pixel Dungeon. En hij keek naar zijn handewerk. En hij zag dat het goed was!</string>
     <string name="Codex_Story_1">Terugstoot Glief - Veroorzaakt dat vijanden worden teruggeduwd nadat ze de Held raken.</string>
     <string name="Codex_Story_10">Verstrengelingsglyph - De held kan plantaardig pantser ontvangen, maar ook tegelijkertijd geworteld raken.</string>
@@ -1695,6 +1696,7 @@
     <string name="WndCatalogus_Title">Catalogi</string>
     <string name="WndChallenges_Title">Uitdagingen</string>
     <string name="WndChooseWay_Cancel">Ik besluit later</string>
+    <string name="WndChooseWay_Message">Welke weg volg je?</string>
     <string name="WndClass_Mastery">Meesterschap</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Adres kopiëren</string>
@@ -2247,6 +2249,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
