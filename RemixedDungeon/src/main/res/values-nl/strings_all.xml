@@ -417,6 +417,7 @@
     <string name="CorpseDust_Info2">Misschien omdat het er maar aan vast te houden je al ongerust en boos maakt.</string>
     <string name="CorpseDust_Name">lijkenstof</string>
     <string name="CorpseExplosion_Name">Lijk Explosie</string>
+    <string name="Crab_Defense">gepareerd</string>
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">rioolkrab</string>
     <string name="Crab_Name_Objective">rioolkrab</string>
@@ -630,6 +631,7 @@
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Gratis behandeling voor elke avonturier!</string>
     <string name="HealerNPC_Message3">Ik vraag me af waarom de kerk ons verbodt petten te dragen... het is echt koud hier buiten.</string>
+    <string name="HealerNPC_Name_Objective">stadspriester</string>
     <string name="Healing_Info">Deze spreuk is essentieel voor elke avonturier. Het herstelt 1/3 van de maximale hoeveelheid van de gezondheid van de werper.</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">De punt van deze pijl is bedekt met een genezende drank.</string>
@@ -2251,6 +2253,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

@@ -696,6 +696,7 @@
     <string name="IceGuardian_Name">thiên thần băng giá</string>
     <string name="IceGuardian_Name_Objective">vệ binh băng</string>
     <string name="IceKey_Name">chìa khóa băng</string>
+    <string name="Ignite_Info">Đốt ô được chọn. Có thể dùng để đốt cỏ, nhân vật và vật thể.</string>
     <string name="Ignite_Name">Đốt Cháy</string>
     <string name="ImpShopkeeper_Greetings">Xin chào, bạn!</string>
     <string name="Imp_Defense">đã né</string>
@@ -1820,6 +1821,7 @@
     <string name="town_deco_chimney_desc">Ống khói đá - người bạn đồng hành đúng đắn cho mọi ngôi nhà, được xây dựng ở nơi thời tiết băng giá thường xuyên ghé thăm.</string>
     <string name="town_deco_church_sign_desc">Có vẻ như bên trong tòa nhà này có một nhà thờ.</string>
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
+    <string name="town_deco_clock_name">Đồng hồ</string>
     <string name="town_deco_common_bed_desc">Giường bình thường.</string>
     <string name="town_deco_common_bed_name">Giường</string>
     <string name="town_deco_common_door_desc">Một phiêu lưu gia có nhân cách không nên xâm phạm tài sản riêng tư, nếu không được mời.</string>
@@ -1937,6 +1939,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
