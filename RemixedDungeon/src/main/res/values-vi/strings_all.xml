@@ -1323,6 +1323,7 @@
     <string name="SkeletonKey_Info">Cái chìa khóa này trông rất nghiêm trọng: đầu nó được đúc hình cái sọ. Có lẽ nó có thể mở được cánh cửa quan trọng nào đó.</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">Bạn đã bị giết bởi vụ nổ xương...</string>
+    <string name="Skeleton_Name_Objective">bộ xương</string>
     <string name="SleepBuff_Info">Hoàn toàn ngủ say.</string>
     <string name="SlowBuff_Info">Cảm giác chậm chạp khiến người ta chậm hơn bình thường.</string>
     <string name="SlowBuff_Name">Làm chậm</string>
@@ -1947,6 +1948,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
