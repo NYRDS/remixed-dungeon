@@ -1348,6 +1348,7 @@
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderCharm_Use">DÙNG</string>
     <string name="SpiderEgg_Gender">neuter</string>
+    <string name="SpiderEgg_Name_Objective">trứng nhện</string>
     <string name="SpiderElite_Desc">Cũng như lính, nhện canh gác thề bảo vệ vương quốc của chúng. Nọc độc của vệ binh tinh nhuệ được dùng để làm mất phương hướng mục tiêu.</string>
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">vệ binh nhện tinh nhuệ</string>
@@ -1936,6 +1937,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

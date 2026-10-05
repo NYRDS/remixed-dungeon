@@ -332,6 +332,7 @@
     <string name="Char_Name">wezen</string>
     <string name="Char_StaAmok">amok</string>
     <string name="Char_StaBleeding">bloeding</string>
+    <string name="Char_StaCrippled">verlamd</string>
     <string name="Char_StaDizzy">duizelig</string>
     <string name="Char_StaDodged_2">ontweek</string>
     <string name="Char_StaFrightened">verschrikt</string>
@@ -1051,6 +1052,7 @@
     <string name="Piercing_Name_2">Doorborende %s</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">reuzepiranha</string>
+    <string name="PirateSet_Name">Piraten Set</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
     <string name="PlagueDoctorMask_Info">Dit… dit is geen gewone masker. Het is… een barrière. Een schild tegen de krachten van verval waar de Pestmeester onvermoeid tegen vecht. Gemaakt van het fijnste ebenhout, kunstvol ingesneden met het gezicht van een gierige schedel. De holle oogkasjes zijn gevuld met schitterende amethisten die zwak pulseren, als uitgaande kolen van een vuur. Elke adem die je neemt, elk woord dat je spreekt, wordt gefilterd door een labyrintachtig netwerk van buizen en filters. Een mengsel van krachtige kruiden en exotische specerijen vult de lucht binnenin, het stank van de dood maskerend dat als een lijkhemd om je heen hangt.</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
@@ -2249,6 +2251,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
