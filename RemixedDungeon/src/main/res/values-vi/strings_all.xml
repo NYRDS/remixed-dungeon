@@ -294,6 +294,7 @@
     <string name="CharAction_Take">Nhặt lấy</string>
     <string name="CharAction_Taunt">khiêu khích</string>
     <string name="Char_Defeat_0">%1 đã đánh bại %2</string>
+    <string name="Char_Defeat_2">%1 đã đánh bại %2</string>
     <string name="Char_Hit_1">%1$s đánh %2$s</string>
     <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
     <string name="Char_Kill_1">%s đã giết ngươi...</string>
@@ -1749,6 +1750,7 @@
     <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
     <string name="WndTradeItem_Sold">Bạn đã bán %1 của mình với giá %2</string>
     <string name="WndWandmaker_Battle">Gậy chiến đấu</string>
+    <string name="WndWandmaker_Farawell">Chúc may mắn trong hành trình của bạn, %s!</string>
     <string name="Wnd_Button_Back">Quay lại</string>
     <string name="Wnd_Button_Cancel">Hủy</string>
     <string name="Wnd_Button_Close">Đóng</string>
@@ -1941,6 +1943,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
