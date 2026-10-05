@@ -591,6 +591,7 @@
     <string name="GnollCostume_Info">Een ongelooflijk warm en fluffy kostuum. Wie dit kostuum aantrekt zal eruitzien als... iemand die zich probeert te vermommen als een gnoll. Maar gnolls trappen daar niet in, ze vallen je nog steeds aan.</string>
     <string name="GnollCostume_Name">Gnoll-kostuum</string>
     <string name="GnollTamahawk_Gender">masculine</string>
+    <string name="Gnoll_Desc">Gnollen zijn hyena-achtige humanoïden. Ze wonen in riolen en kerkers, en trekken soms op naar het oppervlak om te plunderen. Gnol-verkenners zijn gewone leden van hun roedel, ze zijn niet zo sterk als bruten en niet zo intelligent als sjamanen.</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnol verkenner</string>
     <string name="Gnoll_Name_Objective">gnol verkenner</string>
@@ -789,6 +790,7 @@
     <string name="Journal_WellAwareness">Bron van Bewustzijn</string>
     <string name="Keyring_Info">Dit is een koperen sleutelring waarmee je al je sleutels apart van de rest van je bezittingen kunt bewaren.</string>
     <string name="Keyring_Name">sleutelring</string>
+    <string name="KindOfBow_ChooseArrows">PIJLEN KIEZEN</string>
     <string name="KindOfBow_SelectArrowKind">Welke pijlen moet ik gebruiken?</string>
     <string name="KindOfWeapon_EquipCursed">je huivert als je grip onwillekeurig strakker wordt rond je %s</string>
     <string name="King_Defense">geparreerd</string>
@@ -2244,6 +2246,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

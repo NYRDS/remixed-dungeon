@@ -546,6 +546,7 @@
     <string name="GnollCostume_Info">Một bộ trang phục ấm áp và bồng bềnh cực kỳ. Ai mặc bộ trang phục này sẽ trông như... người đang cố gắng cải trang thành gnoll. Nhưng gnoll sẽ không bị lừa, chúng vẫn sẽ tấn công bạn.</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Một chiếc Rìu Tomahawk truyền thống được tạo ra bởi các bậc thầy Gnoll, nơi mỗi bộ lạc có thiết kế độc đáo riêng. Chiếc Rìu này nhẹ hơn một chút so với các đối thủ của nó.</string>
+    <string name="Gnoll_Desc">Gnoll là những nhân loại giống linh cẩu. Chúng sống trong cống và ngục tối, thỉnh thoảng lên bề mặt để cướp phá. Trinh sát Gnoll là thành viên bình thường của bầy, không mạnh mẽ như kẻ cục súc và không thông minh như pháp sư.</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gold_Collect">Thu thập đồng xu vàng để chi tiêu sau đó tại cửa hàng.</string>
     <string name="Gold_Name">vàng</string>
@@ -1933,6 +1934,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
