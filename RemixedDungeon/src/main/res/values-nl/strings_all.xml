@@ -659,6 +659,7 @@
     <string name="HeroClass_Hun">jachtvrouw</string>
     <string name="HeroClass_HunPerks_0">Jachtvrouwen beginnen met 15 levenspunten.</string>
     <string name="HeroClass_HunPerks_1">Jachtvrouwen beginnen met een unieke, upgradeerbare boemerang.</string>
+    <string name="HeroClass_HunPerks_2">Jaagsters zijn bedreven met afstandswapens en krijgen een schadebonus voor overtollige kracht als ze deze gebruiken.</string>
     <string name="HeroClass_HunPerks_3">Jachtvrouwjes krijgen meer gezondheid van dauwdruppels.</string>
     <string name="HeroClass_HunPerks_4">Jachtvrouwen voelen buurmonsters zelfs als ze achter obstakels verstopt zitten.</string>
     <string name="HeroClass_Mag">magier</string>
@@ -1601,6 +1602,7 @@
     <string name="Undead_Defense">geblokkeerd</string>
     <string name="Undead_Desc">Deze ondode dwergen, opgewekt door de wil van de Koning der Dwergen, waren leden van zijn hofhouding. Ze verschijnen als skeletten met een indrukwekkende hoeveelheid gezichtshaar.</string>
     <string name="Undead_Gender">masculine</string>
+    <string name="Undead_Name">ondode dwerg</string>
     <string name="Undead_Name_Objective">on-dode dwerg</string>
     <string name="Using_Failed_Because_Blind">Je kunt \\&quot;%s\\&quot; niet gebruiken terwijl je verblind bent.</string>
     <string name="Using_Failed_Because_Magic">Krachtige magie voorkomt dat je \&quot;%s\&quot; gebruikt.</string>
@@ -2261,6 +2263,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
