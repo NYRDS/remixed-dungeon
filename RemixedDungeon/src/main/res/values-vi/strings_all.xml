@@ -1548,6 +1548,7 @@
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name_Objective">nguyên tố nước</string>
+    <string name="WaterOfAwareness_Procced">Khi bạn nhấp một ngụm, bạn cảm thấy kiến thức tràn vào tâm trí. Bạn giờ biết mọi thứ về các vật phẩm đang trang bị. Ngoài ra, bạn cảm nhận được tất cả vật phẩm trên tầng và biết tất cả bí mật của nó.</string>
     <string name="WaterOfHealth_Info">Sức mạnh của sức khỏe tỏa ra từ nước của giếng này. Hãy nhấp một ngụm để chữa lành vết thương và thỏa mãn cơn đói.</string>
     <string name="WaterOfTransmutation_Info">Sức mạnh của sự biến đổi tỏa ra từ nước của giếng này. Hãy ném một vật phẩm vào giếng để biến nó thành thứ khác.</string>
     <string name="WeaknessBuff_Info">Sự yếu đuối bao quanh cơ thể, khiến ai đó trở thành mục tiêu dễ dàng hơn.</string>
@@ -1932,6 +1933,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

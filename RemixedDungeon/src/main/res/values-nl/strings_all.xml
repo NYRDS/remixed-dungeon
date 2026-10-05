@@ -71,6 +71,7 @@
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
     <string name="Artifact_Limit">Je kunt maar 2 artefacten tegelijk dragen.</string>
     <string name="AttackDelay_Increased">Kan de %1$s niet zo hanteren. Langzame slagen, zware ademhaling...</string>
+    <string name="Attack_Range">Aanvalsbereik</string>
     <string name="AwarenessBuff_Info">De zintuigen zijn verscherpt, wat meer bewustzijn van de omgeving geeft.</string>
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">Vreemdeling</string>
@@ -2243,6 +2244,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
