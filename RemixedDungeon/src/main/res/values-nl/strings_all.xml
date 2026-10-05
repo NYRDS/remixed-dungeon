@@ -686,6 +686,7 @@
     <string name="HeroSubClass_NameBers">berserker</string>
     <string name="HeroSubClass_NameFreR">freerunner</string>
     <string name="HeroSubClass_NameGlad">gladiator</string>
+    <string name="HeroSubClass_NameGuardian">bewaker</string>
     <string name="HeroSubClass_NameLich">Lich</string>
     <string name="HeroSubClass_NameNone">geen</string>
     <string name="HeroSubClass_NameShaman">sjamaan</string>
@@ -2246,6 +2247,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

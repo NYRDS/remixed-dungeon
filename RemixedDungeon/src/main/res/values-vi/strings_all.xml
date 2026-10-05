@@ -1700,6 +1700,7 @@
     <string name="WndRanking_Stats">Thống kê</string>
     <string name="WndResurrect_Yes">Có, tôi sẽ chiến đấu!</string>
     <string name="WndSadGhostNecro_No">Không, để nó nói.</string>
+    <string name="WndSadGhostNecro_Persuaded">Linh hồn buồn đã bị chi phối!</string>
     <string name="WndSadGhost_Farewell">Tạm biệt, nhà thám hiểm! Chúc may mắn!</string>
     <string name="WndSadGhost_Rat">Vâng! Con quái vật xấu xí đã bị tiêu diệt và cuối cùng tôi có thể yên nghỉ... Xin hãy nhận lấy một trong những vật phẩm này, biết đâu chúng sẽ hữu ích cho bạn trên hành trình...</string>
     <string name="WndSadGhost_Rose">Đúng rồi! Đúng rồi!!! Chính là nó! Xin hãy đưa nó cho tôi! Và bạn có thể lấy một trong những món đồ này, biết đâu chúng sẽ hữu ích cho bạn trên hành trình...</string>
@@ -1934,6 +1935,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
