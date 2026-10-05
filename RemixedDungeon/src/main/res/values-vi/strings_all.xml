@@ -110,6 +110,7 @@
     <string name="Badges_LevelReached5">Đã đạt cấp 30</string>
     <string name="Badges_Lich_Slain">Đã hạ Lich</string>
     <string name="Badges_MonsterSlain1">10 kẻ thù đã bị tiêu diệt</string>
+    <string name="Badges_MonsterSlain2">50 kẻ địch đã bị tiêu diệt</string>
     <string name="Badges_MonsterSlain4">250 kẻ thù đã bị tiêu diệt</string>
     <string name="Badges_MonsterSlain5">Hạ gục 1000 kẻ địch</string>
     <string name="Badges_NightHunter">5 quái vật bị giết vào ban đêm</string>
@@ -1940,6 +1941,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
