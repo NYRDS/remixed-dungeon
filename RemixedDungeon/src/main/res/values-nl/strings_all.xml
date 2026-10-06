@@ -549,6 +549,7 @@
     <string name="Fadeleaf_Name">Verdwaand Blad</string>
     <string name="FetidRat_Gender">feminine</string>
     <string name="Fez_Name">Fez</string>
+    <string name="FilteredMask_Name">N95-masker</string>
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">vuurelementair</string>
@@ -2271,6 +2272,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
