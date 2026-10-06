@@ -1223,6 +1223,7 @@
     <string name="ScrollOfCurse_Info">Cuộn giấy này được tạo ra đặc biệt để trừng phạt những tên trộm đủ ngu ngốc để cố gắng sử dụng phép thuật mà chúng không thể hiểu. Pháp thuật của cuộn giấy hoàn toàn vô dụng thậm chí có hại cho phiêu lưu gia thông thường, nhưng được các thương nhân trân trọng rất cao.</string>
     <string name="ScrollOfCurse_Name">Cuộn Giấy Nguyền Rủa</string>
     <string name="ScrollOfDomination_Name">Cuộn sách Chiếm hữu</string>
+    <string name="ScrollOfIdentify_Info">Vĩnh viễn tiết lộ tất cả bí mật của một vật phẩm duy nhất.</string>
     <string name="ScrollOfIdentify_InvTitle">Chọn một vật phẩm để nhận diện</string>
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
     <string name="ScrollOfLullaby_Info">Một giai điệu êm dịu sẽ đưa tất cả sinh vật trong tầm nhìn của bạn vào giấc ngủ sâu, cho bạn cơ hội trốn thoát hoặc tấn công bất ngờ.</string>
@@ -1950,6 +1951,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
