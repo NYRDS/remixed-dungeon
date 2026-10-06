@@ -583,6 +583,7 @@
     <string name="GameScene_Chasm">Je stappen galmen door de kerker.</string>
     <string name="GameScene_Grass">De geur van vegetatie hangt zwaar in de lucht.</string>
     <string name="GameScene_NightMode">Wees voorzichtig, de kerker is \'s nachts nog gevaarlijker!</string>
+    <string name="GameScene_Secrets">De atmosfeer suggereert dat deze verdieping veel geheimen verbergt.</string>
     <string name="GameScene_Welcome">Welkom op niveau %d van Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Welkom terug op niveau %d van Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Info">Immuun voor alle gassen.</string>
@@ -1103,6 +1104,7 @@
     <string name="Plant_Seed">zaadje van %s</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Name">giftige pijl</string>
+    <string name="Poison_Death">Je stierf door vergif...</string>
     <string name="Poison_Name_1">Giftig %s</string>
     <string name="Poison_Name_2">Vergiftigde %s</string>
     <string name="PortalExit_Desc">Deze portal brengt je naar het eerste niveau van de %s.</string>
@@ -2280,6 +2282,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
