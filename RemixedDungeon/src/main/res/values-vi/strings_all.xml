@@ -1061,6 +1061,7 @@
     <string name="PotionOfMindVision_Apply2">Bạn có thể cảm nhận được rằng bạn là sinh vật sống duy nhất trên tầng này lúc này.</string>
     <string name="PotionOfMindVision_Info">Sau khi uống loại này, trí tuệ của bạn sẽ được điều chỉnh theo dấu hiệu tâm linh của các sinh vật xa xôi, cho phép bạn cảm nhận sự hiện diện của sinh vật qua tường. Ngoài ra, bình thuốc này cũng cho phép bạn nhìn xuyên qua các bức tường và cánh cửa gần đó.</string>
     <string name="PotionOfParalyticGas_Info">Khi tiếp xúc với không khí, chất lỏng trong bình này sẽ bốc hơi thành một làn khói vàng gây tê liệt. Bất kỳ ai hít phải đám mây sẽ ngay lập tức bị tê liệt, không thể di chuyển trong một thời gian sau khi khói tan. Vật phẩm này có thể được ném về phía kẻ địch từ xa để chúng chịu tác động của khí độc.</string>
+    <string name="PotionOfParalyticGas_Name">Thuốc Độc Khí Tê Liệt</string>
     <string name="PotionOfPurity_Freshness">Bạn cảm thấy một sự tươi mát bất thường trong không khí.</string>
     <string name="PotionOfPurity_NoSmell">Bạn đã ngừng cảm nhận được mùi hương nào cả!</string>
     <string name="PotionOfStrength_Apply">Sức mạnh mới mẻ tràn ngập cơ thể bạn.</string>
@@ -1446,6 +1447,9 @@
     <string name="Tengu_Info3">Bắt được rồi, %s!</string>
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
     <string name="TerrorBuff_Name">Sợ hãi</string>
+    <string name="Thief_Carries">
+
+%1$s đang mang một _%2$s_. Rõ ràng là ăn cắp.</string>
     <string name="Thief_Desc">Các tầng sâu của hầm ngục luôn là nơi trốn tránh cho mọi loại tội phạm. Không phải ai cũng giữ được tinh thần rõ ràng khi xa ánh sáng mặt trời lâu ngày. Lâu lắm rồi, những tên trộm cướp điên khùng này đã quên mất họ là ai và tại sao chúng trộm cướp.</string>
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">tên trộm điên</string>
@@ -1955,6 +1959,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

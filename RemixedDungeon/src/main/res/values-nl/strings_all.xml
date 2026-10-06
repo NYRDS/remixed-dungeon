@@ -91,6 +91,7 @@
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_BossSlain1">De Goo is gedood</string>
     <string name="Badges_Champion">Uitdaging gewonnen</string>
+    <string name="Badges_DeathFalling">Dood door vallen</string>
     <string name="Badges_DeathFire">Dood door vuur</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
     <string name="Badges_DeathGlyph">Dood door een glyph</string>
@@ -229,6 +230,7 @@
     <string name="BodyArmorSpell_Name">Lichaamspantser</string>
     <string name="BoneSaw_Info">Een precisie-geengineerde chirurgische zaag ontworpen voor snelle ontleding. De schade en aanvalsnelheid worden dodelijker met de vaardigheid van de Pestdokter. Critische treffers snijden extra oogstbare delen van vijanden, en het slaat met ruthloze efficiëntie tegen gelamde vijanden.</string>
     <string name="BoneSaw_Name">botenzaag</string>
+    <string name="BoneShard_Info">Een scherpe botfragment geoogst uit een verslagen vijand. Deze fragmenten zijn verrassend duurzaam en nuttig voor ambacht.</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Bounce_Txt">%s van stuiteren</string>
@@ -2275,6 +2277,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
