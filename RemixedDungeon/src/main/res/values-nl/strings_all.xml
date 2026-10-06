@@ -1558,6 +1558,7 @@
     <string name="Thief_Name_Objective">gekke dief</string>
     <string name="TitleScene_About">Over</string>
     <string name="TitleScene_Badges">Badges</string>
+    <string name="TitleScene_InternalStorageLow">Niet genoeg ruimte\n in interne opslag\n Je voortgang kan verloren gaan!</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
@@ -1915,6 +1916,7 @@
     <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">wraith</string>
+    <string name="WrnExperimental_hint">Als deze vreemde en verwrongen wereld te hard voor je is, schakel deze opties uit via\nStartscherm-&gt;Opties-&gt;Gameplay\nmenu en start een nieuw spel of laad een andere save.</string>
     <string name="WrnExperimental_moveTimeout">Beweegtijd ingesteld op %d milliseconden, denk snel!</string>
     <string name="WrnExperimental_realtime">De real-time modus is geactiveerd: dit is nu een real-time roguelike, tik snel of sterf.\nWil je je inventaris controleren?\nVeel succes daarbij terwijl de rioolkrab je ingewanden bekijkt.</string>
     <string name="WrnExperimental_title">Experimentele opties ingeschakeld!</string>
@@ -2278,6 +2280,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
