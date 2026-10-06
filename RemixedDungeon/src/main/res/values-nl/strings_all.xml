@@ -689,6 +689,7 @@
     <string name="HeroClass_WarPerks_0">Krijgers beginnen met 11 punten Kracht.</string>
     <string name="HeroClass_WarPerks_4">Krachtpotionen zijn van het begin bekend.</string>
     <string name="HeroSubClass_DescAssa">Bij het uitvoeren van een verrassingsaanval, richt de _Meuchelmoorder_ extra schade aan bij zijn doelwit.</string>
+    <string name="HeroSubClass_DescBatM">Wanneer hij vecht met een toverstaf in zijn handen, richt de _Strijdmagiër_ extra schade aan afhankelijk van het huidige aantal ladingen. Elke succesvolle treffer herstelt 1 lading van deze toverstaf.</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
     <string name="HeroSubClass_DescGlad">Een succesvolle aanval met een melee-wapen stelt de _Gladiator_ in staat een combo te starten, waarbij elke volgende treffer meer schade aanricht.</string>
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
@@ -1997,6 +1998,7 @@
     <string name="town_deco_curtains_desc">Houdt al het onnodige licht tegen en dient ook als een geweldige decoratie.</string>
     <string name="town_deco_curtains_name">Gordijnen</string>
     <string name="town_deco_dungeon_door_desc">De ingang van de kerker.</string>
+    <string name="town_deco_dungeon_door_name">Ingang</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_entrance_name">ingang</string>
     <string name="town_deco_fence_desc">Een houten hekwerk bedekt met sneeuw.</string>
@@ -2282,6 +2284,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
