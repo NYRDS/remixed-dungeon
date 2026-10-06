@@ -333,6 +333,7 @@
     <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
     <string name="City_TileDescEmptySP">Một tấm thảm dày phủ kín sàn.</string>
     <string name="City_TileDescEntrance">Một lối dốc dẫn lên tầng trên.</string>
+    <string name="City_TileWater">Nước có màu đáng nghi</string>
     <string name="ClassArmor_LowMana">Không đủ mana!</string>
     <string name="ClassArmor_NotEquipped">Bạn cần mặc bộ giáp này để sử dụng sức mạnh đặc biệt của nó!</string>
     <string name="Claymore_Gender">masculine</string>
@@ -1959,6 +1960,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

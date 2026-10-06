@@ -1701,6 +1701,7 @@
     <string name="Web_Info">Alles is bedekt met een dik web.</string>
     <string name="Weightstone_ACApply">TOEPASSSEN</string>
     <string name="Weightstone_Accurate">je bracht je %s in balans om het nauwkeuriger te maken</string>
+    <string name="Weightstone_Fast">je hebt je %s gebalanceerd om het sneller te maken</string>
     <string name="Weightstone_Info">Met een weegsteen kun je je naarstwapens balanceren om de snelheid of nauwkeurigheid te verhogen.</string>
     <string name="Weightstone_Name">gewichtsteen</string>
     <string name="Weightstone_WndAccuracy">Voor nauwkeurigheid</string>
@@ -2277,6 +2278,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
