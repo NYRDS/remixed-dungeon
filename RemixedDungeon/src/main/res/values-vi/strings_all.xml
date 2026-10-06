@@ -1154,6 +1154,7 @@
     <string name="RingOfMending_Info">Nhẫn này tăng cường khả năng tái sinh của cơ thể, cho phép hồi phục sức khỏe đã mất ở tốc độ nhanh hơn. Nhẫn bị suy yếu sẽ giảm hoặc thậm chí dừng lại quá trình tái sinh tự nhiên.</string>
     <string name="RingOfMending_Name">Nhẫn Chữa Lành</string>
     <string name="RingOfPower_Info">Cây gậy phép của bạn sẽ trở nên mạnh mẽ hơn trong trường năng lượng phát ra từ chiếc nhẫn này. Các nhẫn sức mạnh bị suy yếu sẽ làm yếu đi cây gậy phép của bạn.</string>
+    <string name="RingOfPower_Name">Nhẫn Quyền Lực</string>
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="RingOfSatiety_Name">Nhẫn No Đủ</string>
     <string name="RingOfShadows_Info">Kẻ thù sẽ khó nhận ra bạn hơn khi bạn đeo nhẫn này. Nhẫn Bóng Tối xuống cấp sẽ báo động cho kẻ thù mà lẽ ra chúng không hề để ý đến sự hiện diện của bạn.</string>
@@ -1470,6 +1471,7 @@
     <string name="TownGuardNPC_Name_Objective">vệ sĩ thành phố</string>
     <string name="TownPortal_Info">Phép thuật này cho phép bạn quay về nơi an toàn ngay lập tức. Tuy nhiên, các nguồn sức mạnh phép thuật gần đó có thể ngăn nó hoạt động như mong muốn.</string>
     <string name="TownPortal_Name">Cổng Thần Thoại</string>
+    <string name="TownShopkeeper_Objective">người bán hàng</string>
     <string name="TownsfolkMovieNPC_Desc">Một người dân địa phương. Dù rõ ràng chỉ là thường dân, bộ quần áo của hắn lại trông rất đắt tiền.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">Bạn có biết về dịch vụ đặc biệt mà \&quot;rạp chiếu phim\&quot; cung cấp không? Thật tiếc họ yêu cầu một thứ kỳ lạ gọi là \&quot;Internet\&quot;, tôi chưa bao giờ nghe nói về điều đó.</string>
@@ -1953,6 +1955,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

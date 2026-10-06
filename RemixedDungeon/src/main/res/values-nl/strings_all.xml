@@ -1098,6 +1098,7 @@
     <string name="PlagueDoctor_Name_Objective">pestdokter</string>
     <string name="Plant_ACPlant">PLANT</string>
     <string name="Plant_Info">Worp deze zaad naar de plaats waar je %1$s wilt laten groeien.\n\n%2$s</string>
+    <string name="Plant_Seed">zaadje van %s</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Name">giftige pijl</string>
     <string name="Poison_Name_1">Giftig %s</string>
@@ -1576,6 +1577,7 @@
     <string name="TownScript_NeedWeapon">Ik ga niet wapenloos de dungeon in!\nMisschien is het de moeite waard om eerst de stads winkel te bezoeken?</string>
     <string name="TownShopkeeper_Desc">Deze kerel is een typische winkelier. Je ziet meteen dat hij je prijs al kent.</string>
     <string name="TownShopkeeper_Name">winkelier</string>
+    <string name="TownShopkeeper_Objective">winkelier</string>
     <string name="TownsfolkMovieNPC_Desc">Een van de plaatselijke bewoners. Hoewel dit duidelijk een gewone burger is, zien die kleren er duur uit.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">Weet je van die speciale dienst die het \&quot;filmtheater\&quot; biedt? Jammer dat ze vragen om iets exotisch dat \&quot;Internet\&quot; heet, daar heb ik nog nooit van gehoord.</string>
@@ -2074,6 +2076,7 @@
     <string name="town_deco_wall_beam_name">Balk</string>
     <string name="town_deco_wall_brazier_name">Vuurkorf</string>
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
+    <string name="town_deco_wall_candles_name">Kaarsen</string>
     <string name="town_deco_wall_desc">Een eenvoudige muur gemaakt van houten stammen.</string>
     <string name="town_deco_wall_name">Muur</string>
     <string name="town_deco_wallpaper_name">behang</string>
@@ -2272,6 +2275,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
