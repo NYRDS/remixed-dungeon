@@ -142,7 +142,6 @@ dependencies {
     annotationProcessor project(':processor')
 
     implementation project(':luaj')
-    implementation 'info.guardianproject.netcipher:netcipher:2.1.0'
     implementation 'org.hjson:hjson:3.1.0'
     implementation 'commons-io:commons-io:2.6' //don't upgrade will cause runtime crash on old devices
     implementation 'org.jetbrains:annotations:26.0.2-1'
