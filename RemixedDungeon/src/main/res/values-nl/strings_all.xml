@@ -3,6 +3,7 @@
     <string name="AC_Dissect">Ontleden</string>
     <string name="AC_Kick">Trappen</string>
     <string name="AC_Necromancy">Necromantie</string>
+    <string name="Abilities_Common">Algemene spreuken</string>
     <string name="Abilities_Default">Hoofdvermogen</string>
     <string name="Abilities_Elemental">Elementaire toverspreuken</string>
     <string name="Abilities_Necromancy">Necromantie</string>
@@ -11,6 +12,7 @@
     <string name="AboutScene_Graphics">Grafisch:</string>
     <string name="AboutScene_Music">Muziek:</string>
     <string name="AboutScene_OurSite">Onze site:</string>
+    <string name="AboutScene_Snd">E-mail verzenden</string>
     <string name="AboutScene_Sound">Geluid:</string>
     <string name="AboutScene_SourceCode">Download de broncode van Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Speciale dank aan:</string>
@@ -23,6 +25,7 @@
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">zure schorpioen</string>
     <string name="Acidic_Name_Objective">zure schorpioen</string>
+    <string name="Actions_Speed">Haastniveau</string>
     <string name="AirElemental_Desc">Luchtelementalen zijn vliegende magische wezens gemaakt van levende lucht.</string>
     <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">luchtelementaal</string>
@@ -2294,6 +2297,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

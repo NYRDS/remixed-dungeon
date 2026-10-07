@@ -3,6 +3,7 @@
     <string name="AC_Dissect">Phẫu thuật</string>
     <string name="AC_Kick">Đá</string>
     <string name="AC_Necromancy">Hồi sinh tử thi</string>
+    <string name="Abilities_Common">Phép thông thường</string>
     <string name="Abilities_Default">Năng lực chính</string>
     <string name="Abilities_Elemental">Phép thuật nguyên tố</string>
     <string name="Abilities_Necromancy">Hồi sinh thuật</string>
@@ -11,6 +12,7 @@
     <string name="AboutScene_Graphics">Đồ họa:</string>
     <string name="AboutScene_Music">Nhạc:</string>
     <string name="AboutScene_OurSite">Trang web của chúng tôi:</string>
+    <string name="AboutScene_Snd">Gửi E-mail</string>
     <string name="AboutScene_SourceCode">Tải mã nguồn Remixed Dungeon:</string>
     <string name="AboutScene_Thanks">Cảm ơn đặc biệt đến:</string>
     <string name="AboutScene_Translation">Bản địa hóa bởi:</string>
@@ -1971,6 +1973,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
