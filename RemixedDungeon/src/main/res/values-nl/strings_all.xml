@@ -923,6 +923,7 @@
     <string name="LloidsBeacon_Return">De baken van Lloyd is succesvol geplaatst op je huidige locatie, nu kun je hier altijd terugkeren.</string>
     <string name="LloidsBeacon_Set">\n\nDeze beacon is ergens op niveau %d van Remixed Dungeon ingesteld.</string>
     <string name="Longsword_Gender">masculine</string>
+    <string name="Longsword_Info">Dit massieve zwaard brengt zware schade toe door bij elke slag zijn gewicht in te zetten.</string>
     <string name="Longsword_Name">langzwaard</string>
     <string name="Luck_Name_0">Gelukkig %s</string>
     <string name="Luck_Name_1">Gelukkig %s</string>
@@ -969,6 +970,7 @@
     <string name="Metabolism_Txt">%s van metabolisme</string>
     <string name="MimicAmulet_Desc">Het meest glorieuze moment van je avonturierscarrière bleek een val te zijn.</string>
     <string name="MimicAmulet_Gender">masculine</string>
+    <string name="MimicAmulet_Name">mimic</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimic</string>
     <string name="MimicPie_Name_Objective">mimic</string>
@@ -2316,6 +2318,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

@@ -553,6 +553,7 @@
     <string name="Ghost_Rose1">Chào bạn phiêu lưu gia... Một thời tôi giống như bạn - mạnh mẽ và tự tin... Và bây giờ tôi đã chết... Nhưng tôi không thể rời khỏi nơi này... Cho đến khi tôi tìm được _bông hồng khô_ của tôi... Nó rất quan trọng với tôi... Một vài quái vật đã cướp nó từ thi thể của tôi...</string>
     <string name="Ghost_Rose2">Làm ơn... Giúp tôi... Tìm đóa hồng...</string>
     <string name="Glaive_Gender">feminine</string>
+    <string name="Glaive_Name">glaive</string>
     <string name="GnollArmor_ACSpecial">CHIẾM LĨNH</string>
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
     <string name="GnollArmor_NotGnoll">Chỉ gnoll mới có thể trang bị Áo Giáp Gnoll!</string>
@@ -1987,6 +1988,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
