@@ -1174,6 +1174,7 @@
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="RingOfSatiety_Name">Nhẫn No Đủ</string>
     <string name="RingOfShadows_Info">Kẻ thù sẽ khó nhận ra bạn hơn khi bạn đeo nhẫn này. Nhẫn Bóng Tối xuống cấp sẽ báo động cho kẻ thù mà lẽ ra chúng không hề để ý đến sự hiện diện của bạn.</string>
+    <string name="RingOfStoneWalking_Info">Chiếc nhẫn kỳ lạ này được làm từ đá chắc chắn. Thứ bạn nghĩ là ruby thực ra là máu lỏng đang được giữ tại chỗ! Bên trong là một mũi tên chỉ về thứ gì đó giống bức tường, cùng với một trái tim tan vỡ... Nó có thể làm gì?</string>
     <string name="Ring_BuffKnown">Đây là %s</string>
     <string name="Ring_Gems_1">opal</string>
     <string name="Ring_Gems_10">thạch anh</string>
@@ -1381,6 +1382,7 @@
     <string name="SpiderArmor_Info">Bộ giáp này được làm từ lớp vỏ chitin cũ của nhện và một số loại vải. Đáng ngạc nhiên nhất là nó dường như vẫn chứa các tuyến nhện hoạt động. Nếu bạn ấn mạnh vào các tấm, chúng sẽ bắn ra mạng nhện. Và đế giày có răng cưa cho phép bạn di chuyển tự do trên loại mạng đó.</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
     <string name="SpiderCharm_Use">DÙNG</string>
+    <string name="SpiderEgg_Desc">Quả trứng mong manh này đang đập nhẹ, bên trong bạn có thể thấy thứ gì đó có nhiều chân.</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name_Objective">trứng nhện</string>
     <string name="SpiderElite_Desc">Cũng như lính, nhện canh gác thề bảo vệ vương quốc của chúng. Nọc độc của vệ binh tinh nhuệ được dùng để làm mất phương hướng mục tiêu.</string>
@@ -1985,6 +1987,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

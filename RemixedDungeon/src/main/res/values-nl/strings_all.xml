@@ -806,6 +806,7 @@
     <string name="IronKey_FromDepth">ijzeren sleutel van diepte %d</string>
     <string name="IronKey_Name">ijzeren sleutel</string>
     <string name="Item_ACDrop">LATEN VALLEN</string>
+    <string name="Item_ACPickup">Oppakken</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Info">iets</string>
     <string name="Item_Info2">iets</string>
@@ -821,6 +822,7 @@
     <string name="Journal_Imp">Ambitieuze ketter</string>
     <string name="Journal_PlagueDoctorNPC">pestdokter</string>
     <string name="Journal_Statue">Geanimeerd standbeeld</string>
+    <string name="Journal_Troll">Trol-smeder</string>
     <string name="Journal_Wandmaker">Oude toverstafmaker</string>
     <string name="Journal_WellAwareness">Bron van Bewustzijn</string>
     <string name="Keyring_Info">Dit is een koperen sleutelring waarmee je al je sleutels apart van de rest van je bezittingen kunt bewaren.</string>
@@ -2314,6 +2316,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
