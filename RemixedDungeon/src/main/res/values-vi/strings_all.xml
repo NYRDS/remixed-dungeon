@@ -470,6 +470,7 @@
     <string name="EarthElemental_Name_Objective">nguyên tố đất</string>
     <string name="EarthrootBuff_Info">Rễ đã mọc từ mặt đất, cung cấp giáp tự nhiên.</string>
     <string name="EarthrootBuff_Name">Giáp thảo mộc</string>
+    <string name="Earthroot_Desc">Khi một sinh vật chạm vào Earthroot, rễ của nó tạo ra một loại giáp tự nhiên xung quanh nó.</string>
     <string name="ElfArmor_ACSpecial">TIẾNG GỌI CỦA THIÊN NHIÊN</string>
     <string name="ElfArmor_Desc">Với sự giúp đỡ của chiếc áo choàng này, yêu tinh có thể triệu hồi lực lượng của chính thiên nhiên. Cỏ cao sẽ mọc trong chớp mắt ngay cả qua đá cứng, làm bất động tất cả kẻ thù trong tầm nhìn.</string>
     <string name="ElvenBow_Gender">masculine</string>
@@ -1979,6 +1980,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

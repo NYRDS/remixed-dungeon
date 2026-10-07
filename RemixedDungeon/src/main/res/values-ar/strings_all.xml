@@ -551,6 +551,7 @@
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
     <string name="Item_Info">شيء</string>
     <string name="Item_Name">شيء ما</string>
+    <string name="Item_PackFull">حقيبتك ممتلئة جدًا لـ %s</string>
     <string name="JarOfSouls_Desc">عينا الجمجمة المضيئة المرسومة على هذا الجرّة القديمة، بالإضافة إلى الطاقة الغريبة التي تنبعث منها، تجعلك تشعر بعدم الارتياح.</string>
     <string name="JarOfSouls_Gender">masculine</string>
     <string name="Javelin_Gender">neuter</string>
@@ -1357,6 +1358,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

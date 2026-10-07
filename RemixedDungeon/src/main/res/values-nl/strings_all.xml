@@ -1305,6 +1305,7 @@
     <string name="RunicSkull_Name_Objective">runische schedel</string>
     <string name="SacrificialSword_Gender">masculine</string>
     <string name="SantaHat_Info">Niets zet je zo in de \&quot;Dungeoning\&quot; stemming als de rode zijden hoed van Santa, Heer van de Diepten.</string>
+    <string name="ScaleArmor_Desc">De metalen schubben op een leren vest zorgen voor een flexibel, maar beschermend pantser.</string>
     <string name="ScaleArmor_Name">schubpantser</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
@@ -2305,6 +2306,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
