@@ -1200,6 +1200,7 @@
     <string name="RottingFist_Name_Objective">nắm đấm thối rữa</string>
     <string name="RoyalShield_desc">Một chiếc khiên kim loại hoàn toàn. Đúng vậy, nó nặng, nhưng chỉ nó mới có thể cung cấp cho bạn sự bảo vệ tốt nhất.</string>
     <string name="RubyBow_Gender">masculine</string>
+    <string name="RubyBow_Info">Chỉ những cung thủ vĩ đại nhất mới có thể sử dụng cung hồng ngọc này. Hầu hết mọi mũi tên đều xuyên thủng kẻ thù, để lại một lỗ lớn trên cơ thể hắn, nhưng cần sức mạnh cực lớn để kéo dây cung.</string>
     <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Name">Nỏ hồng ngọc</string>
     <string name="Rudolph_Info">Có gì lễ hội hơn một chiếc mũi đỏ phát sáng? Cùng với một đôi gạc nai, tất nhiên.</string>
@@ -1336,6 +1337,7 @@
     <string name="SleepBuff_Info">Hoàn toàn ngủ say.</string>
     <string name="SlowBuff_Info">Cảm giác chậm chạp khiến người ta chậm hơn bình thường.</string>
     <string name="SlowBuff_Name">Làm chậm</string>
+    <string name="Slow_Name_0">Làm lạnh %s</string>
     <string name="Slow_Name_1">Lạnh giá %s</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
@@ -1417,6 +1419,7 @@
     <string name="Statue_Name">tượng sống</string>
     <string name="Stench_Txt">%s hôi thối</string>
     <string name="StoneBloodBuff_Info">Máu hóa đá, dung nhập với các bức tường gần đó và khiến việc đi xuyên qua chúng dễ dàng hơn nhiều, nhưng phải trả giá bằng cái gì?</string>
+    <string name="StoneBloodBuff_Name">Máu đá</string>
     <string name="StrongShield_desc">Chiếc khiên hình chữ nhật này được mạ tấm đồng và trang trí vải màu. Nó nặng hơn đáng kể, nhưng có thể chặn được nhiều sát thương hơn.</string>
     <string name="StrongShield_name">Khiên Mạ Đồng</string>
     <string name="StunBuff_Name">Choáng</string>
@@ -1964,6 +1967,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
