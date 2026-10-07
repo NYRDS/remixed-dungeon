@@ -1795,6 +1795,7 @@
     <string name="WndHats_ListTitle">Lijst van accessoires</string>
     <string name="WndHats_Purchased">Geregeld!</string>
     <string name="WndHero_Awareness">Aandacht</string>
+    <string name="WndHero_Buffs">Effecten</string>
     <string name="WndHero_DefenceSkill">Verdedigingsvaardigheid</string>
     <string name="WndHero_Depth">Maximale Diepte</string>
     <string name="WndHero_Gold">Verzameld Goud</string>
@@ -2313,6 +2314,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

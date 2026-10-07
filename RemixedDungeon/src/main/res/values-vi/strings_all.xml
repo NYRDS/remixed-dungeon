@@ -1897,6 +1897,7 @@
     <string name="town_deco_grandclock_desc">Một cơ chế khá cũ nhưng vẫn hoạt động.</string>
     <string name="town_deco_hay_desc">Một đống rơm nhỏ thơm thơm.</string>
     <string name="town_deco_hay_name">Cỏ khô</string>
+    <string name="town_deco_identifier_sign_desc">Có vẻ như có một thầy bói bên trong tòa nhà đó.</string>
     <string name="town_deco_identifier_sign_name">Biển hiệu Quả Cầu Phép Thuật</string>
     <string name="town_deco_inn_bed_desc">Trông có vẻ là một chiếc giường rất thoải mái.</string>
     <string name="town_deco_inn_bed_name">Giường</string>
@@ -1984,6 +1985,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
