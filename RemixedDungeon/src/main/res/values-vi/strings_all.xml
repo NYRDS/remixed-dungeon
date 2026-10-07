@@ -844,6 +844,7 @@
     <string name="LightBuff_Name">Được chiếu sáng</string>
     <string name="LightningBolt_Info">Phép thuật được lưu truyền giữa các pháp sư cổ, khiến kẻ thù của bạn bị choáng gấp đôi hiệu quả, đặc biệt nếu chúng ngu ngốc đến mức đứng trên mặt nước.</string>
     <string name="LightningBolt_Name">Tia chớp</string>
+    <string name="LightningTrap_Desc">Bạn đã bị giết bởi một vụ phóng điện từ bẫy sấm...</string>
     <string name="LightningTrap_Name">bẫy sét</string>
     <string name="LloidsBeacon_ACReturn">TRỞ VỀ</string>
     <string name="LloidsBeacon_ACSet">ĐẶT</string>
@@ -1988,6 +1989,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
