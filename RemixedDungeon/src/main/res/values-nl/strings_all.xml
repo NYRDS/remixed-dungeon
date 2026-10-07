@@ -265,6 +265,7 @@
     <string name="Calm_Cast">%s kalmeert.</string>
     <string name="Calm_Name">Kalmte</string>
     <string name="CandleOfMindVision_Info">Lijkt op een gewone kaars, niet iets wat je zou verwachten in een gevaarlijk duistere kelder. Raar genoeg is hij vrij warm aan de kant, ondanks dat hij nog niet was aangebrand.</string>
+    <string name="CandleOfMindVision_Info_Exhausted">De kaars is opgebrand, ze brandt niet meer als je hem vasthoudt. Het lijkt erop dat je hem niet meer kunt gebruiken.</string>
     <string name="CandleOfMindVision_Info_Lighted">De kaars lichtte op het moment dat je hem uit je rugzak haalde. De vlam geeft een zwak paars licht, en als je er doorheen kijkt, worden alle nabijgelegen monsters zichtbaar voor je.</string>
     <string name="CandleOfMindVision_Name">Kaars der Visioenen</string>
     <string name="Candy_Info">Deze snoep ziet er zo mooi uit en ruikt ook lekker. Moet je hem echt aan iemand anders geven?</string>
@@ -741,6 +742,7 @@
     <string name="Hero_StaWeakness">Je voelt je verzwakt!</string>
     <string name="Hero_Wait">...</string>
     <string name="HideInGrassSpell_Info">Je hebt je verstoppertje-meesterschap geperfectioneerd.</string>
+    <string name="HideInGrassSpell_Name">Verberg-in-Gras</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Zelfs ik kan me niet in het zicht verstoppen.</string>
     <string name="Horror_Name_1">Griezelige %s</string>
     <string name="Horror_Name_2">Griezelige %s</string>
@@ -1122,6 +1124,7 @@
     <string name="Poison_Name_1">Giftig %s</string>
     <string name="Poison_Name_2">Vergiftigde %s</string>
     <string name="PortalExit_Desc">Deze portal brengt je naar het eerste niveau van de %s.</string>
+    <string name="PortalExit_Desc_Necropolis">Necropolis</string>
     <string name="PortalExit_Desc_SpiderNest">Spinennest</string>
     <string name="PortalGate_Activated">De oude portaal is ontwaakt!</string>
     <string name="PortalGate_Desc">De gravures op het oppervlak van deze portal vormen een eigenaardig patroon. Het lijkt alsof het een gigantische tunnel is die in de verte leidt. Maar vanaf de zijkant bekeken wordt duidelijk dat het oppervlak bijna vlak is.</string>
@@ -1259,6 +1262,7 @@
     <string name="RingOfShadows_Info">Vijanden zullen je minder snel opmerken als je deze ring draagt. Aangetaste ringen van schaduwen zullen vijanden waarschuwen die je anders misschien niet hadden opgemerkt.</string>
     <string name="RingOfStoneWalking_ImmuredInStone">Je bent in steen gemetseld. Voor altijd.</string>
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
+    <string name="RingOfThorns_Name">Ring der Doornen</string>
     <string name="Ring_BuffKnown">Dit is een %1$s</string>
     <string name="Ring_Gems_0">diamant</string>
     <string name="Ring_Gems_1">opaal</string>
@@ -2300,6 +2304,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
