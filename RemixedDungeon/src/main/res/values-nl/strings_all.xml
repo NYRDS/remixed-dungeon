@@ -387,6 +387,7 @@
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
     <string name="CloakBuff_Info">Een donkere mantel verhult je in de schaduw, waardoor je minder zichtbaar bent voor vijanden.</string>
     <string name="CloakBuff_Name">Verguld</string>
+    <string name="CloakSpell_EnemiesNearby">Je kunt niet in de schaduwen stappen terwijl er vijanden in de buurt zijn.</string>
     <string name="CloakSpell_Info">Stap in de schaduwen om onzichtbaar te worden. Vermindert je kans op ontdekking aanzienlijk. Kan niet worden gebruikt als er vijanden in de buurt zijn.</string>
     <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
     <string name="ClothArmor_Name">stoffen pantser</string>
@@ -2307,6 +2308,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

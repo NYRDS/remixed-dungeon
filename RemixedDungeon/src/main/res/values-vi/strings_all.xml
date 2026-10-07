@@ -716,6 +716,7 @@
     <string name="ImpShopkeeper_Greetings">Xin chào, bạn!</string>
     <string name="Imp_Defense">đã né</string>
     <string name="Imp_Desc">Imp là những con quỷ cấp thấp. Chúng không nổi bật về sức mạnh hay tài năng phép thuật, nhưng lại khá thông minh và dễ gần. Nhiều imp thích sống giữa những người không phải quỷ.</string>
+    <string name="Imp_Golems1">Bạn có phải là một nhà thám hiểm không? Tôi thích các nhà thám hiểm! Bạn luôn có thể tin vào họ nếu cần giết thứ gì đó. Tôi nói đúng không? Vì tiền thưởng đấy ;)\nTrong trường hợp của tôi thì _golem_ là thứ cần bị giết. Bạn thấy đấy, tôi sẽ bắt đầu một công việc nhỏ ở đây, nhưng những con golem ngu ngốc này thật tệ cho việc làm ăn! Rất khó để đàm phán với những đống đá lang thang, chết tiệt chúng! Vì vậy, xin hãy giết... nói rằng _6 con_ và phần thưởng sẽ là của bạn.</string>
     <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
     <string name="Imp_Monks2">Ôi, bạn vẫn còn sống! Tôi biết rằng kung-fu của bạn mạnh hơn ;) Chỉ đừng quên nhặt những tín chỉ của các nhà sư này.</string>
     <string name="Imp_Name">imp tham vọng</string>
@@ -1981,6 +1982,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
