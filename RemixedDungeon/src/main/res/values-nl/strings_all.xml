@@ -313,6 +313,7 @@
     <string name="ChaosCrystal_Info_2">Ja! Nu weet je dat je het kunt fuseren met een van je voorwerpen, maar wat komt daarna?</string>
     <string name="ChaosCrystal_Name">Vreemde Kristal</string>
     <string name="ChaosCrystal_Name_2">Chaos Kristal</string>
+    <string name="ChaosCrystal_ScrollFused">Kristal geabsorbeerd door rune op rol gegraveerd, en nu is het een %s</string>
     <string name="ChaosCrystal_ShieldFused">De kristal smolt met jouw schild en nam de chaosvorm aan.</string>
     <string name="ChaosCrystal_SwordFused">De kristal absorbeert je wapen en neemt de vorm aan van een Zwaard</string>
     <string name="ChaosCrystal_Use">GEBRUIK</string>
@@ -2293,6 +2294,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

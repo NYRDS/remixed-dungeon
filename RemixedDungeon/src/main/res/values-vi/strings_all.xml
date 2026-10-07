@@ -1170,6 +1170,7 @@
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Gems_11">mã não</string>
     <string name="Ring_Gems_2">garnet</string>
+    <string name="Ring_Gems_3">hồng ngọc</string>
     <string name="Ring_Gems_4">thạch anh tím</string>
     <string name="Ring_Gems_6">onyx</string>
     <string name="Ring_Gems_7">tourmalin</string>
@@ -1970,6 +1971,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
