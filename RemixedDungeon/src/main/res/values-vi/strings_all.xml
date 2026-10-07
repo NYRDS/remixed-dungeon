@@ -929,6 +929,7 @@
     <string name="Mushroom_Eat_Message">Cái nấm này có vị kỳ lạ!</string>
     <string name="MysteryMeat_Info2">Ngươi không cảm thấy chân mình nữa!</string>
     <string name="MysteryMeat_Info3">Bạn cảm thấy không khỏe.</string>
+    <string name="MysteryMeat_Info4">Bạn no căng.</string>
     <string name="MysteryMeat_Message">Món ăn này có vị... lạ.</string>
     <string name="MysteryMeat_Name">thịt bí ẩn</string>
     <string name="NatureArmorSpell_Info">Thiên thần cũng có thể cứng rắn, đặc biệt khi được bảo vệ bởi chính Mẹ Thiên Nhiên.</string>
@@ -1974,6 +1975,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

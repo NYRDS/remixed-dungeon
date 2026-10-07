@@ -481,6 +481,7 @@
     <string name="DewVial_Info">Je kunt overtollige dauw in dit kleine vat bewaren om het later te drinken. Als het flesje vol is, wordt de dauw op een moment van dodelijk gevaar automatisch verbruikt.</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DieHardBuff_Name">Die Hard</string>
+    <string name="Displacement_Txt">%s van verplaatsing</string>
     <string name="DoctorArmor_Info">Deze pantser van de pestdokter maakt gebruik mogelijk van de \&quot;Miasma Wolk\&quot; vaardigheid, die een giftige gas vrijlaat dat vijanden vergiftigt, verzwakt en desorienteert. De dokter, beschermd door hun masker, is immuun voor deze effecten.</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
     <string name="DoctorSpecial">Miasma Wolk</string>
@@ -1540,6 +1541,7 @@
     <string name="SummonBeast_Name">Beestenroep</string>
     <string name="SummonDeathling_Info">Roept een ondode volgeling op. De HP en schade van Deathling\'s groeien met het heldenniveau. \n\nOproeplimiet: %1$d (+ 1 per Magieniveau)</string>
     <string name="SummonDeathling_Name">Doodswezen oproepen</string>
+    <string name="SungrassBuff_Info">Wortels zijn uit de grond ontsproten en bieden geneeskrachtige kruiden.</string>
     <string name="SungrassBuff_Name">Kruidengenezing</string>
     <string name="Sungrass_Desc">Zonnegras staat bekend om de geneeskrachtige werking van zijn sap.</string>
     <string name="Sungrass_Name">zonnegras</string>
@@ -2298,6 +2300,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
