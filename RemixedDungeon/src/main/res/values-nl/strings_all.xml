@@ -1124,6 +1124,7 @@
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
     <string name="Possess_Info">De donkere kunst van geestelijke controle stelt de spreker in staat de wil van de meeste wezens te buigen.</string>
     <string name="Possess_Name">Bezetting</string>
+    <string name="Possess_Possessed">%s wacht op jouw bevelen</string>
     <string name="Possess_PossessionFailed">Wil van %s is te sterk</string>
     <string name="PotionBelt_Info">Deze sterke leren riem kan al je drankjes bevatten en beschermt ze tegen het breken door vorst.</string>
     <string name="PotionOfExperience_Info">De belevenissen van talloze veldslagen, herleid tot vloeibare vorm; deze drank verhoogt onmiddellijk je ervaringsniveau.</string>
@@ -1642,6 +1643,7 @@
     <string name="WandMaker_Desc">Deze oude maar kerngezonde heer draagt een lichtelijk verwarde uitdrukking. Hij wordt beschermd door een magisch schild.</string>
     <string name="WandMaker_Dust2">Enig geluk met lijkstof, %s? Botstapels zijn de meest voor de hand liggende plekken om te doorzoeken.</string>
     <string name="WandMaker_RotberryDesc">De bessen van deze struik smaken naar een zoete, zoete dood.</string>
+    <string name="WandMaker_RotberryInfo">Het zaad stoot een brul uit die door het hele kerker weerklinkt!</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Info1">er gebeurde niets</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
@@ -2291,6 +2293,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
