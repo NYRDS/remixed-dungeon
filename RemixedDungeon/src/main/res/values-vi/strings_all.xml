@@ -1824,6 +1824,7 @@
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="Zombie_Name_Objective">kẻ sống chết</string>
+    <string name="deco_candle_desc">Nến lớn</string>
     <string name="deco_candle_name">Nến</string>
     <string name="gdpr_agree">Có, tôi đồng ý</string>
     <string name="gdpr_title">Cá nhân hóa trải nghiệm quảng cáo của bạn</string>
@@ -1973,6 +1974,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
