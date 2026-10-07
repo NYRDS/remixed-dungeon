@@ -826,6 +826,7 @@
     <string name="KindOfBow_SelectArrowKind">Welke pijlen moet ik gebruiken?</string>
     <string name="KindOfWeapon_EquipCursed">je huivert als je grip onwillekeurig strakker wordt rond je %s</string>
     <string name="King_Defense">geparreerd</string>
+    <string name="King_Desc">De laatste koning van de dwergen stond bekend om zijn diepe kennis van de processen van leven en dood. Hij had leden van zijn hof overtuigd om deel te nemen aan een ritueel, dat hen eeuwige jeugdigheid zou moeten schenken. Uiteindelijk was hij de enige die het kreeg - en een leger ondoden als bonus.</string>
     <string name="King_Gender">masculine</string>
     <string name="King_Info1">Je kunt me niet doden, %s... Ik ben... onsterfelijk...</string>
     <string name="King_Info3">Hoe durf je!</string>
@@ -2304,6 +2305,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
