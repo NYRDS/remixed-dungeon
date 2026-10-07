@@ -459,6 +459,7 @@
     <string name="DarkGold_Name">donker gouderts</string>
     <string name="DarkSacrifice_Ok">Mijn leven is van jou!</string>
     <string name="DarkSacrifice_Resist">Je hebt geen macht over mij!</string>
+    <string name="DarkSacrifice_Self">Voor de Plaag!</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Name">dart</string>
     <string name="DashSpell_Info">Das naar een aangewezen richting terwijl je met vijanden botst, schade toebrengend en verstommeling veroorzakend.</string>
@@ -1437,6 +1438,7 @@
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Stervormige metalen stukken met vlijmscherpe messen richten veel schade aan hun doelen aan. Ze kunnen met een zeer hoge snelheid worden geworpen.</string>
     <string name="Shuriken_Name">shuriken</string>
+    <string name="Sign_CantRead">Je kunt het niet lezen.</string>
     <string name="SkeletonKey_Info">Deze sleutel ziet er serieus uit: het kopje is vormgegeven als een schedel. Waarschijnlijk kan hij een serieuze deur openen.</string>
     <string name="Skeleton_Desc">Skeletten zijn samengesteld uit botten van ongelukkige avonturiers en bewoners van de dungeon, tot leven gewekt door uitstralingen van het kwaad uit de diepte. Zodra ze genoeg beschadigd zijn, vallen ze uiteen in een ontploffing van botten.</string>
     <string name="Skeleton_Gender">masculine</string>
@@ -1603,6 +1605,7 @@
     <string name="TownGuardNPC_Message2">Dankzij avonturiers zoals jij, werd het hierboven echt heel vredig.</string>
     <string name="TownGuardNPC_Message3">Je denkt dat er te veel bewakers in deze stad zijn? Nou, dat is omdat dit de enige stad is met een gigantische monster-geïnfesteerde dungeon, niet waar?</string>
     <string name="TownGuardNPC_Name">stadswacht</string>
+    <string name="TownPortal_Name">Stadsportaal</string>
     <string name="TownScript_NeedWeapon">Ik ga niet wapenloos de dungeon in!\nMisschien is het de moeite waard om eerst de stads winkel te bezoeken?</string>
     <string name="TownShopkeeper_Desc">Deze kerel is een typische winkelier. Je ziet meteen dat hij je prijs al kent.</string>
     <string name="TownShopkeeper_Name">winkelier</string>
@@ -1659,6 +1662,7 @@
     <string name="WandMaker_Dust2">Enig geluk met lijkstof, %s? Botstapels zijn de meest voor de hand liggende plekken om te doorzoeken.</string>
     <string name="WandMaker_RotberryDesc">De bessen van deze struik smaken naar een zoete, zoete dood.</string>
     <string name="WandMaker_RotberryInfo">Het zaad stoot een brul uit die door het hele kerker weerklinkt!</string>
+    <string name="WandMaker_RotberryName">Rotbes</string>
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Info1">er gebeurde niets</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
@@ -1758,6 +1762,7 @@
     <string name="WndCryptoDonate_supportDev">Ondersteun de ontwikkelaar</string>
     <string name="WndCryptoDonate_ton">Ton</string>
     <string name="WndCryptoDonate_tron">Tron</string>
+    <string name="WndCryptoDonate_walletAddress">Portefeuille-adres</string>
     <string name="WndCryptoDonate_warningText">WAARSCHUWING: Verifieer altijd het adres voordat je geld stuurt. Cryptocurrency-transacties zijn onomkeerbaar!</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratis voor iedereen en dat blijft zo.\n\nJe kunt ons echter helpen om het spel nog beter te maken.\n\nNaast onze oprechte dank ontvang je enkele cosmetische verbeteringen.</string>
     <string name="WndDonate_donate">doneren: </string>
@@ -2308,6 +2313,11 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
 
 
 
