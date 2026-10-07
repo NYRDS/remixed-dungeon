@@ -54,6 +54,7 @@
     <string name="AnesthesiaBuff_Info">Voelt geen pijn en wakert niet op bij aanvallen, maar krijgt nog steeds schade.</string>
     <string name="AnesthesiaBuff_Name">Narcose</string>
     <string name="Anesthesia_Cast">%s valt in een diepe, droomloze slaap.</string>
+    <string name="Anesthesia_Name">Anesthesie</string>
     <string name="Ankh_Info">Dit oude symbool van onsterfelijkheid geeft de mogelijkheid om na de dood tot leven terug te keren. Bij de opstanding gaan alle niet-uitgeruste voorwerpen verloren.</string>
     <string name="Ankh_Name">Ankh</string>
     <string name="ArmorKit_ACAplly">TOEPASSSEN</string>
@@ -2306,6 +2307,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

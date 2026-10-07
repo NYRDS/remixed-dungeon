@@ -1327,6 +1327,7 @@
     <string name="Shielded_Desc">Quái vật lớn nhất, mạnh nhất và kiên cường nhất trong số tất cả các gnoll. Khi bị thương nặng, chúng sẽ điên cuồng, gây thiệt hại lớn hơn cho kẻ thù. Quái vật này đang khiêng một khiên khổng lồ!</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">côn đồ khiên thủ</string>
+    <string name="Shielded_Name_Objective">côn đồ khiên thủ</string>
     <string name="ShootInEye_Name">Bắn Vào Mắt</string>
     <string name="Shopkeeper_Buy">Chọn vật phẩm để mua</string>
     <string name="Shopkeeper_BuyPrompt">Để tôi xem hàng hóa của bạn</string>
@@ -1980,6 +1981,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
