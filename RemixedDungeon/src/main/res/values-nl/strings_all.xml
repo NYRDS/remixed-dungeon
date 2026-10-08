@@ -1547,6 +1547,7 @@
     <string name="StartScene_UnlockDoctor">Om de Plague Doctor te ontgrendelen - voltooi de opdracht van de oude Plague Doctor</string>
     <string name="StartScene_UnlockElf">Om deze klasse te ontgrendelen, versla de Koning-baas met een andere klasse</string>
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
+    <string name="Statue_Desc">Je zou denken dat het gewoon nog zo\'n lelijke standbeeld van deze kerker is, maar de rood oplichtende ogen verraden hem. Hoewel het standbeeld zelf van steen is gemaakt, ziet het wapen, de _%s_, er echt uit.</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">levend standbeeld</string>
     <string name="Statue_Name_Objective">bewegend standbeeld</string>
@@ -2333,6 +2334,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

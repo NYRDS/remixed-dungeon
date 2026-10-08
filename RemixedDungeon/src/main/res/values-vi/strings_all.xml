@@ -746,6 +746,7 @@
     <string name="InterLevelScene_Returning">Đang quay lại...</string>
     <string name="IntroScene_Txt">Nhiều anh hùng đủ mọi loại đã mạo hiểm vào Ngục Trại trước bạn. Một số đã trở về với kho báu và pháp thuật, hầu hết thì không bao giờ được nghe tin tức. Nhưng không ai thành công trong việc lấy được Huyền Chương Yendor, đồ vật được cho là chôn sâu trong lòng Ngục Trại. Bạn cảm thấy mình đã sẵn sàng cho thử thách, và quan trọng hơn, bạn tin rằng may mắn đang mỉm cười với bạn. Đã đến lúc bắt đầu cuộc phiêu lưu của mình!</string>
     <string name="InventoryScroll_Warning">Bạn có thực sự muốn hủy việc sử dụng cuộn giấy này không? Nó sẽ bị tiêu hao dù sao.</string>
+    <string name="InventoryScroll_Yes">Vâng, tôi chắc chắn</string>
     <string name="InvisibilityBuff_Info">Hoàn toàn vô hình, có thể giúp tránh nguy hiểm hoặc trở thành nguy hiểm.</string>
     <string name="IronKey_FromDepth">chìa khóa sắt từ độ sâu %d</string>
     <string name="IronKey_Name">chìa khóa sắt</string>
@@ -2001,6 +2002,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
