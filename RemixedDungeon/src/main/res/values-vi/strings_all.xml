@@ -1203,6 +1203,7 @@
     <string name="RootsBuff_Name">Bám rễ</string>
     <string name="RottenFish_Info">Cá thối, bốc mùi khủng khiếp</string>
     <string name="RottenFood_Message">Ghét quá!</string>
+    <string name="RottenMeat_Info">Một miếng thịt thối</string>
     <string name="RottenMeat_Name">thịt thối</string>
     <string name="RottenOrgan_Info">Một cơ quan đang phân hủy được thu hoạch từ kẻ thù bị đánh bại. Dù ở trạng thái thối rữa, nó vẫn chứa các hợp chất giá trị cho quá trình luyện kim.</string>
     <string name="RottenOrgan_Name">Cơ quan thối rữa</string>
@@ -1990,6 +1991,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
