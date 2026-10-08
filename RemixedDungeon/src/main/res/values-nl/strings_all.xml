@@ -508,6 +508,7 @@
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">dronkaard</string>
     <string name="Drunkard_Phrase_1">MEER BIER ALSJEBLIEFT!</string>
+    <string name="Drunkard_Phrase_2">Wie heeft er water nodig als je bier hebt?</string>
     <string name="Drunkard_Phrase_3">Dit bier smaakt als modder</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_DeadEnd">Wat doe je hier?!</string>
@@ -564,6 +565,7 @@
     <string name="Facilitations_Descriptions_2">Een diepgaande en grondige studie van de natuur als energiebron stelt je in staat om je magische reserves tijdens de reis aan te vullen.</string>
     <string name="Facilitations_Descriptions_3">Door de riem van ogerhuid aan te trekken, die aan elke nieuwe generatie werd doorgegeven, maak je een stap naar het onbekende dat voor je ligt.</string>
     <string name="Facilitations_Names_0">Geen honger</string>
+    <string name="Facilitations_Names_1">Trollichaam</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
     <string name="Fadeleaf_Desc">Het aanraken van een Fadeleaf teleporteert elk wezen naar een willekeurige plek op het huidige niveau.</string>
     <string name="Fadeleaf_Name">Verdwaand Blad</string>
@@ -2323,6 +2325,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

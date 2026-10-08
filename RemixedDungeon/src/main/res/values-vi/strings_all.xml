@@ -499,6 +499,7 @@
     <string name="Eye_Kill">Tia tử thần của %s đã giết bạn...</string>
     <string name="Eye_Name">con mắt quỷ</string>
     <string name="Eye_Name_Objective">mắt ác</string>
+    <string name="Facilitations_Descriptions_1">Vẫn chưa rõ cha mẹ bạn là ai, nhưng khả năng hồi phục tự nhiên như troll sẽ giúp chữa lành mọi vết thương chiến đấu sắp tới.</string>
     <string name="Facilitations_Names_0">Không đói</string>
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
     <string name="Facilitations_Names_2">Linh hồn thần đèn</string>
@@ -802,6 +803,7 @@
     <string name="Leech_Name_0">Hút máu %s</string>
     <string name="Leech_Name_1">Hút máu %s</string>
     <string name="Leech_Name_2">Hút máu %s</string>
+    <string name="Level_HiddenPlate">Một tấm áp lực ẩn đã phát ra tiếng tách!</string>
     <string name="Level_TileAlarmTrap">bẫy báo động</string>
     <string name="Level_TileAlchemy">nồialchemy</string>
     <string name="Level_TileBarricade">Chướng ngại vật</string>
@@ -1991,6 +1993,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
