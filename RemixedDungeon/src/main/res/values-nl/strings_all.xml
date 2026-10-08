@@ -391,6 +391,7 @@
     <string name="CloakBuff_Name">Verguld</string>
     <string name="CloakSpell_EnemiesNearby">Je kunt niet in de schaduwen stappen terwijl er vijanden in de buurt zijn.</string>
     <string name="CloakSpell_Info">Stap in de schaduwen om onzichtbaar te worden. Vermindert je kans op ontdekking aanzienlijk. Kan niet worden gebruikt als er vijanden in de buurt zijn.</string>
+    <string name="CloakSpell_Name">Mantel</string>
     <string name="ClothArmor_Desc">Deze lichte bepantsering biedt eenvoudige bescherming.</string>
     <string name="ClothArmor_Name">stoffen pantser</string>
     <string name="Codex_ACRead">LEZEN</string>
@@ -1666,6 +1667,7 @@
     <string name="VampireSkull_Info">Deze masker is gemaakt van een volledig natuurlijke vampierschedel. Eigenlijk is het een vampierschedel... schedel van een grootkopige vampier. Griezelig.</string>
     <string name="VampireSkull_Name">Vampierschedel</string>
     <string name="VertigoBuff_Info">Het duizelig gevoel maakt het moeilijker om rechtdoor te lopen!</string>
+    <string name="VertigoBuff_Name">Vertigo</string>
     <string name="View_Distance">Zichtafstand</string>
     <string name="VileEssence_Info">Een geconcentreerde essentie van corruptie, geoogst van een verslagen vijand. Deze donkere substantie pulseert met kwaadaardige energie en wordt zeer gewaardeerd in alchemistische processen.</string>
     <string name="VileEssence_Name">Verachtelijke Essentie</string>
@@ -2330,6 +2332,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

@@ -433,6 +433,7 @@
     <string name="DoctorArmor_Name">Trang phục bác sĩ</string>
     <string name="DoctorSpecial">Đám Mây Miasma</string>
     <string name="DogeMask_Info">Bạn có từng muốn cải trang thành Doge nổi tiếng? Bây giờ là cơ hội của bạn!\nCái Mặt nạ Đấy! Nhiều Cải Trang! Wow!</string>
+    <string name="DogeMask_Name">Mặt nạ Doge</string>
     <string name="DonateButton_pleaseDonate">vui lòng cân nhắc ủng hộ</string>
     <string name="DonateButton_thanks">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="DreadKnight_Desc">Hiệp sĩ kinh hoàng là một chiến binh cổ đại, khi còn sống không biết đến điều thiện hay chính nghĩa. Vì tội lỗi của mình, anh ta bị nguyền rủa phải lang thang vĩnh viễn trong thân thể chết chóc tan nát này. Và mỗi khoảnh khắc tồn tại đau đớn của anh ta đầy đau khổ và thống khổ, tương tự những gì anh ta đã gây ra cho các nạn nhân.</string>
@@ -1558,6 +1559,7 @@
     <string name="WandOfAvalanche_Info">Khi một xung điện của que này trúng vào tường (hoặc bất kỳ chướng ngại vật rắn nào khác), nó gây ra một trận băng tuyết đá, gây sát thương và choáng tất cả sinh vật trong khu vực bị ảnh hưởng.</string>
     <string name="WandOfAvalanche_Info1">Bạn đã nghiền nát chính mình bằng Gậy Bão Tuyết của chính mình...</string>
     <string name="WandOfAvalanche_Name">Đũa phép Tuyết lở</string>
+    <string name="WandOfBlink_Info">Cây gậy này cho phép bạn dịch chuyển theo hướng đã chọn. Sinh vật và các vật cản vô tri sẽ chặn đường dịch chuyển.</string>
     <string name="WandOfBlink_Name">Gậy phép thuật nháy mắt</string>
     <string name="WandOfDisintegration_Info">Cây gậy này phát ra một tia năng lượng hủy diệt, xuyên thủng tất cả sinh vật trên đường đi. Càng nhiều mục tiêu bị trúng, càng nhiều sát thương nó gây ra cho mỗi mục tiêu.</string>
     <string name="WandOfDisintegration_Name">Đũa phép Phân rã</string>
@@ -1998,6 +2000,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
