@@ -2062,6 +2062,7 @@ outro local do nível.</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Peças de metal em forma de estrela com lâminas afiadas podem causar danos significativos quando atingem o alvo. Eles podem ser jogados em altas velocidades.</string>
     <string name="Shuriken_Name">shuriken</string>
+    <string name="Sign_CantRead">Você não sabe ler.</string>
     <string name="SkeletonKey_Info">Esta chave parece importante: sua cabeça tem a forma de uma caveira. Provavelmente, ele pode abrir alguma porta importante.</string>
     <string name="SkeletonKey_Name">chave esqueleto</string>
     <string name="Skeleton_Defense">bloqueado</string>
@@ -3088,6 +3089,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

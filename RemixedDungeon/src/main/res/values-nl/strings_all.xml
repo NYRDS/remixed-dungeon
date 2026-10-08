@@ -1041,6 +1041,7 @@
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_SoulsCountLabel">Zielen</string>
     <string name="Necromancy_Title">Necromantie</string>
+    <string name="NecrotismBuff_Info">Het teken van de dood zelf, de stank waarvan degenen in de buurt beïnvloedt en hen dwingt hetzelfde lot te delen.</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
     <string name="Necrotism_Death">Je bent gestorven aan necrotisme...</string>
     <string name="NekoEars_Info">Soms wil je gewoon alle monsterbloed en vuil van jezelf afwassen en je gewoon schattig en pluizig voelen... Of je kunt op z\'n minst schattige kattenoren dragen.</string>
@@ -2325,6 +2326,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
