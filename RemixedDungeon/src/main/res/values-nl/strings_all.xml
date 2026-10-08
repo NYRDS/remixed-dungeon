@@ -135,6 +135,7 @@
     <string name="Badges_NightHunter">5 monsters gedood in de nacht</string>
     <string name="Badges_NoMonsterSlain">Niveau voltooid zonder monsters te doden</string>
     <string name="Badges_Piranhas">6 piranha\'s gedood</string>
+    <string name="Badges_PotionsCooked2">6 drankjes gebrouwen</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
     <string name="Badges_RingHaggler">Ring der Handelaar verkregen</string>
@@ -448,6 +449,7 @@
     <string name="Crystal_Gender">masculine</string>
     <string name="Crystal_Name">zwevend kristal</string>
     <string name="CurareDart_Gender">masculine</string>
+    <string name="CurareDart_Info">Deze kwaadaardige kleine dartpijlen doen niet veel schade, maar kunnen het doelwit verlammen, waardoor het voor enige tijd hulpeloos en onbeweeglijk blijft.</string>
     <string name="DM300_Desc">Deze machine werd enkele eeuwen geleden door de Dwergen gemaakt. Later begonnen de Dwergen machines te vervangen door golems, elementalen en zelfs demonen. Uiteindelijk leidde dit tot het verval van hun beschaving. De DM-300 en vergelijkbare machines werden doorgaans gebruikt voor bouw en mijnbouw, en in sommige gevallen voor stadsverdediging.</string>
     <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
@@ -2320,6 +2322,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
