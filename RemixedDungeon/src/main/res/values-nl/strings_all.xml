@@ -105,6 +105,7 @@
     <string name="Badges_FoodEaten1">10 stukken voedsel gegeten</string>
     <string name="Badges_FoodEaten3">30 stukken voedsel gegeten</string>
     <string name="Badges_FoodEaten4">40 stukken voedsel gegeten</string>
+    <string name="Badges_FoodEaten5">60 stuks voedsel gegeten</string>
     <string name="Badges_GamesPlayed1">10 spellen gespeeld</string>
     <string name="Badges_GamesPlayed2">100 spellen gespeeld</string>
     <string name="Badges_GamesPlayed3">500 spellen gespeeld</string>
@@ -591,6 +592,7 @@
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostAuraBuff_Info">Vorst omringt het lichaam, wat alles in de buurt vertraagt.</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
+    <string name="FrostBuff_Name">Bevroren</string>
     <string name="Frost_Shatter">De koude doet %s barsten!</string>
     <string name="FrozenCarpaccio_Info1">Je ziet je handen onzichtbaar worden!</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
@@ -2326,6 +2328,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
