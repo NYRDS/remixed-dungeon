@@ -594,6 +594,7 @@
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FrostBuff_Name">Bevroren</string>
     <string name="Frost_Shatter">De koude doet %s barsten!</string>
+    <string name="FrozenCarpaccio_Info">Het is een stuk bevroren rauw vlees. De enige manier om het te eten is door dunne plakjes af te snijden. En op die manier is het verrassend goed.</string>
     <string name="FrozenCarpaccio_Info1">Je ziet je handen onzichtbaar worden!</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
     <string name="FrozenCarpaccio_Info3">Verversend!</string>
@@ -1312,6 +1313,7 @@
     <string name="RottingFist_Gender">masculine</string>
     <string name="RottingFist_Name">verrotte vuist</string>
     <string name="RottingFist_Name_Objective">vergaande vuist</string>
+    <string name="RoyalShield_desc">Een volledig metalen schild. Ja, het is zwaar, maar alleen dit kan je de beste bescherming bieden.</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Alleen de grootste bogenschutters kunnen deze robijnboog gebruiken. Bijna elke pijl doorboort de vijand, een groot gat in zijn lichaam achterlatend, maar extreme kracht is nodig om de boogteef te spannen.</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -2328,6 +2330,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
