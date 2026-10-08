@@ -2106,6 +2106,7 @@
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
     <string name="town_deco_skullboard_name">trofeerek</string>
+    <string name="town_deco_skulls_name">Schedels</string>
     <string name="town_deco_slush_desc">Deze sneeuw begon te smelten, waardoor de omgeving in modder veranderde.</string>
     <string name="town_deco_snow_name">Sneeuw</string>
     <string name="town_deco_snowdrift_desc">Het is een vrij grote sneeuwhoop en blijkbaar gaat niemand het opruimen.</string>
@@ -2332,6 +2333,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
