@@ -1814,6 +1814,7 @@
     <string name="WndGame_Load">Laden</string>
     <string name="WndGame_Return">Terug naar spel</string>
     <string name="WndGame_Save">Opslaan</string>
+    <string name="WndGame_Start">Nieuw spel starten</string>
     <string name="WndHats_BackButton">Terug</string>
     <string name="WndHats_BuyButton">Kopen</string>
     <string name="WndHats_EquipButton">Uitrusten</string>
@@ -1899,6 +1900,7 @@
     <string name="WndPriest_Title">Stadsprediker</string>
     <string name="WndRanking_Items">Voorwerpen</string>
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
+    <string name="WndRanking_StaAnkhs">Gebruikte ankhs</string>
     <string name="WndRanking_StaChallenges">Uitdagingen</string>
     <string name="WndRanking_StaDepth">Maximale Diepte</string>
     <string name="WndRanking_StaDuration">Spelduur</string>
@@ -2343,6 +2345,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
