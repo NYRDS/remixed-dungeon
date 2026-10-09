@@ -406,6 +406,7 @@
     <string name="DarkSacrifice_Name">Hy Sinh Tối Tăm</string>
     <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
     <string name="DarkSacrifice_Self">Vì Tai Ương!</string>
+    <string name="DarkVeilBuff_Info">Một tấm màn đen bao quanh chủ nhân, triệu hồi một linh hồn mỗi khi nhận sát thương.</string>
     <string name="DarkVeilBuff_Name">Màn tối</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Những chiếc gai kim loại đơn giản này được cân bằng lý tưởng để đâm trúng con mồi của chúng một cách chính xác.</string>
@@ -2003,6 +2004,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

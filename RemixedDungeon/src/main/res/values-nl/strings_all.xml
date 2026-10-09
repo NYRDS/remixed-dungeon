@@ -1249,6 +1249,7 @@
     <string name="RatSkull_Name">reuzenschedel</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">buidelrat</string>
+    <string name="Ration_Info">Niets bijzonders: gedroogd vlees, wat koekjes - dat soort dingen.</string>
     <string name="RawFish_Info">Rauwe vis, eet op eigen risico</string>
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RawFish_Taste">Visachtig!</string>
@@ -2336,6 +2337,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
