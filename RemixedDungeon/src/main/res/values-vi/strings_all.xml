@@ -186,6 +186,7 @@
     <string name="Blacksmith_GetLost">Tôi đang bận. Cút đi!</string>
     <string name="Blacksmith_Gold1">Này người! Muốn làm việc hữu ích chứ? Lên cái cuốc này và đào cho ta ít _khoáng vàng đen_, _15 miếng_ là đủ rồi. Cái gì? Như thế nào mà ta trả tiền? Ngươi tham lam...\nỪ, ừ, ta không có tiền trả, nhưng ta có thể làm đồ sắt cho ngươi. Coi ngươi may mắn, ta là thợ rèn duy nhất ở đây.</string>
     <string name="Blacksmith_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
+    <string name="Blacksmith_Txt2">Bạn đang đùa tôi sao? Cái cuốc của tôi đâu rồi?!</string>
     <string name="Blacksmith_Verify1">Hãy chọn 2 vật phẩm khác nhau, không được chọn cùng một vật phẩm hai lần!</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
     <string name="Blacksmith_Verify4">Tôi không làm việc với vật phẩm bị nguyền rủa!</string>
@@ -625,6 +626,7 @@
     <string name="HeroClass_GnollPerks_1">Gnoll bắt đầu với 5 điểm sức khỏe</string>
     <string name="HeroClass_GnollPerks_2">Gnoll bắt đầu không có giáp nào nhưng có một cái rìu tomahawk độc nhất</string>
     <string name="HeroClass_GnollPerks_3">Gnoll không thể đọc hoặc viết.</string>
+    <string name="HeroClass_HunPerks_0">Thợ săn bắt đầu với 15 điểm Sức khỏe.</string>
     <string name="HeroClass_HunPerks_1">Các Nữ Thợ Săn bắt đầu với một bumerang độc đáo có thể nâng cấp.</string>
     <string name="HeroClass_HunPerks_3">Các Nữ Thợ Săn hồi phục nhiều máu hơn từ giọt sương.</string>
     <string name="HeroClass_HunPerks_4">Các Nữ Săn Bắt có thể cảm nhận quái vật lân cận ngay cả khi chúng bị che khuất bởi chướng ngại vật.</string>
@@ -2004,6 +2006,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
