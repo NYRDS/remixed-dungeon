@@ -256,6 +256,7 @@
     <string name="Challenges_Descriptions_2">Là một tín徒 của sự hồi phục tự nhiên của cơ thể bình thường, bạn luôn cảnh giác với những loại thuốc có tác dụng chữa bệnh. Thà phòng còn hơn chữa!</string>
     <string name="Challenges_Descriptions_3">Vùng đất xung quanh hầm ngục đã lâu bị ác ý xâm nhiễm, ngăn cản sự nảy mầm của hạt giống cho các loại thảo mộc và thực vật. Ai biết được còn bao lâu nữa cây cối cuối cùng sẽ ngừng tồn tại trên vùng đất hoang tàn này.</string>
     <string name="Challenges_Descriptions_4">Một hiện diện tà ác đang ẩn nấp trong tâm trí của tất cả sinh vật trong hầm ngục, khiến chúng nhận thức được những sự kiện xảy ra với nhau.</string>
+    <string name="Challenges_Descriptions_5">Thứ đầu tiên đến cùng với cái ác là một màn sương mù dày đặc và không thể xuyên qua, khiến việc định hướng rõ ràng trong những hành lang vô tận của ngục tối gần như không thể.</string>
     <string name="Challenges_Descriptions_7">Bạn đã quen với việc rằng sở hữu và sử dụng vũ khí là sai về mặt đạo đức, nhưng còn gì khác có thể bảo vệ bạn khỏi những sinh vật lang thang dưới đây?</string>
     <string name="Challenges_Descriptions_8">Hành trình của bạn sẽ bắt đầu ở hố ga đen tối và nguy hiểm của thành phố, với lối duy nhất ra mặt đất bị chặn. Để tr tình trạng tồi tệ hơn, bạn chỉ có thể sử dụng trang bị tìm thấy trong ngục. Với tài nguyên và trang bị giới hạn, sự sống còn của bạn sẽ phụ thuộc vào kỹ năng và chiến lược của bạn.</string>
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
@@ -2007,6 +2008,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
