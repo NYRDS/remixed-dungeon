@@ -360,6 +360,7 @@
     <string name="Codex_Story_16">Vũ khí may mắn - gần như hoàn toàn bỏ qua giáp địch, và gây nhiều sát thương hơn đáng kể.</string>
     <string name="Codex_Story_17">Vũ khí gây choáng - Khi đánh trúng, có thể khiến mục tiêu bị tê liệt.</string>
     <string name="Codex_Story_19">Vũ khí đính độc - Khi tấn công trúng mục tiêu, có thể gây độc.</string>
+    <string name="Codex_Story_2">Bùa Tình Cảm - Kẻ địch sẽ bị mê hoặc vài lượt, còn Anh Hùng cũng bị mê hoặc vài lượt nhưng không bao giờ lâu hơn kẻ địch.</string>
     <string name="Codex_Story_21">Vũ khí hoang dã - Khi đánh trúng, có thể gây sát thương cho tất cả kẻ địch liền kề mục tiêu.</string>
     <string name="Codex_Story_22">Cuốn sách này được viết bằng ngôn ngữ quỷ</string>
     <string name="Codex_Story_3">Ký tự Chống-entropi - Anh hùng sẽ được chiếu sáng và bốc cháy, và kẻ thù sẽ bị đóng băng.</string>
@@ -2006,6 +2007,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

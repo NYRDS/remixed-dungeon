@@ -2126,6 +2126,7 @@
     <string name="town_deco_stone_wall_broken_name">Kapotte muur</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
     <string name="town_deco_stones_name">Stenen</string>
+    <string name="town_deco_stool_broken_desc">Deze kruk heeft betere dagen gekend.</string>
     <string name="town_deco_stool_broken_name">Gebroken kruk</string>
     <string name="town_deco_stool_sturdy_desc">Een gewone kruk van resistent hout.</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
@@ -2338,6 +2339,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

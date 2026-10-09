@@ -1326,6 +1326,7 @@
     <string name="town_deco_rug_name">سجادة</string>
     <string name="town_deco_screen_name">فاصل</string>
     <string name="town_deco_scrolls_desc">رف مغبر مليء بأنواع مختلفة من اللفائف والكتب.</string>
+    <string name="town_deco_shelf_desc">أرفف فارغة.</string>
     <string name="town_deco_shelf_full_desc">على هذا الرف توجد مقتنيات صغيرة متنوعة.</string>
     <string name="town_deco_shelving_name">أرفف</string>
     <string name="town_deco_shop_sign_desc">يبدو أن هناك متجراً داخل هذا المبنى.</string>
@@ -1358,6 +1359,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 
