@@ -1572,6 +1572,7 @@
     <string name="WandOfBlink_Name">Gậy phép thuật nháy mắt</string>
     <string name="WandOfDisintegration_Info">Cây gậy này phát ra một tia năng lượng hủy diệt, xuyên thủng tất cả sinh vật trên đường đi. Càng nhiều mục tiêu bị trúng, càng nhiều sát thương nó gây ra cho mỗi mục tiêu.</string>
     <string name="WandOfDisintegration_Name">Đũa phép Phân rã</string>
+    <string name="WandOfFirebolt_Info1">Bạn tự đốt cháy mình bằng Cây Trượng Lửa...</string>
     <string name="WandOfFlock_SheepBaa_2">Bê.</string>
     <string name="WandOfIcebolt_Info">Cây gậy này phóng ra một tia băng, gây sát thương nhẹ cho mục tiêu. Cũng có khả năng làm chậm hoặc thậm chí đóng băng kẻ địch.</string>
     <string name="WandOfIcebolt_Info1">Bạn đã tự giết mình bằng Đũa phép Băng đạn của chính mình...</string>
@@ -1965,6 +1966,7 @@
     <string name="town_deco_shop_sign_name">Biển hiệu cửa hàng</string>
     <string name="town_deco_skullboard_desc">Chiếc hộp sọ này hoàn hảo ghi lại khoảnh khắc kinh hoàng bất ngờ.</string>
     <string name="town_deco_skulls_desc">Các chiếc sọ được mài bóng thuộc về các sinh vật trong ngục.</string>
+    <string name="town_deco_skulls_name">Đầu lâu</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_snowdrift_desc">Đó là một đống tuyết khá lớn và rõ ràng không ai định dọn nó.</string>
@@ -2009,6 +2011,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

@@ -384,6 +384,7 @@
     <string name="CityBossLevel_ChessSign">Leg je wapens neer — de Koning zal je verstand op de proef stellen, niet je kracht.</string>
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
+    <string name="City_TileDescEmptySP">Een dik tapijt bedekt de vloer.</string>
     <string name="City_TileWater">Verdacht gekleurd water</string>
     <string name="ClassArmor_Desc">Het ding ziet er geweldig uit!</string>
     <string name="ClassArmor_LowHealt">Je gezondheid is te laag!</string>
@@ -1898,6 +1899,7 @@
     <string name="WndPriest_Instruction2_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
     <string name="WndPriest_Instruction_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa, de Heer der Diepten! Helaas kan ik je nu niet doorlaten, want het gebouw wordt gerenoveerd. Maar als je hulp zoekt, kan ik genezing en voedsel aanbieden voor slechts %d gouden munten!</string>
     <string name="WndPriest_Title">Stadsprediker</string>
+    <string name="WndRanking_Badges">Insignes</string>
     <string name="WndRanking_Items">Voorwerpen</string>
     <string name="WndRanking_StaAlchemy">Gebrouwen Dranken</string>
     <string name="WndRanking_StaAnkhs">Gebruikte ankhs</string>
@@ -2131,6 +2133,7 @@
     <string name="town_deco_stock_name">voorraad</string>
     <string name="town_deco_stone_wall_broken_name">Kapotte muur</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
+    <string name="town_deco_stones_desc">Gewoon een stapel stenen.</string>
     <string name="town_deco_stones_name">Stenen</string>
     <string name="town_deco_stool_broken_desc">Deze kruk heeft betere dagen gekend.</string>
     <string name="town_deco_stool_broken_name">Gebroken kruk</string>
@@ -2345,6 +2348,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
