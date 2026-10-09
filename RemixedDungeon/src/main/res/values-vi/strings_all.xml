@@ -576,6 +576,7 @@
     <string name="GoldenKey_Info">Những khía trên chiếc chìa khóa vàng này rất nhỏ và tinh xảo. Có lẽ nó có thể mở ổ khóa của một chiếc rương nào đó?</string>
     <string name="GoldenKey_Name">chìa khóa vàng</string>
     <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenStatue_Name">tượng vàng</string>
     <string name="GoldenStatue_Name_Objective">bức tượng vàng</string>
     <string name="GoldenSword_Gender">masculine</string>
     <string name="Golem_Defense">đã chặn</string>
@@ -2008,6 +2009,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
