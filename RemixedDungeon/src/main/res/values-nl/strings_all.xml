@@ -1888,6 +1888,7 @@
     <string name="WndPortal_Info">Dit portaal stelt je in staat om terug te keren naar de stad. Het lijkt nogal instabiel en zal waarschijnlijk niet lang actief blijven.\nWil je het gebruiken?</string>
     <string name="WndPortal_Info_Return">Deze portal brengt je terug naar de dungeon.\nWil je hem gebruiken?</string>
     <string name="WndPortal_Title">Portaal</string>
+    <string name="WndPortal_Warning_Info">Je hebt het portaal op dit niveau niet gebruikt. Na vertrek kun je dit portaal niet meer gebruiken!\nWeet je zeker dat je wilt vertrekken?</string>
     <string name="WndPortal_Warning_Title">Portaal Waarschuwing!</string>
     <string name="WndPremiumSettings_banners">Selecteer het materiaal van de banieren</string>
     <string name="WndPremiumSettings_chrome">Selecteer GUI-materiaal</string>
@@ -2353,6 +2354,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

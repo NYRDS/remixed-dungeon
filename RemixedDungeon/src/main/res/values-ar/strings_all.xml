@@ -1193,6 +1193,7 @@
     <string name="WndPriest_Instruction2_f">أهلاً بك يا ابنتي، أهلاً بك في الكنيسة المقدسة للقديس سانتا سيد الأعماق!</string>
     <string name="WndPriest_Instruction_m">أهلاً بك يا بني، أهلاً بك في الكنيسة المقدسة لسانتا العظيم سيد الأعماق! لسوء الحظ لا يمكنني السماح لك بالمرور الآن، لأن المبنى قيد إعادة الإعمار، لكن إذا كنت تبحث عن المساعدة، يمكنني تقديم خدمة الشفاء والطعام فقط مقابل %d قطعة ذهبية!</string>
     <string name="WndRanking_Badges">شارات</string>
+    <string name="WndRanking_StaAlchemy">الجرعات المطبوخة</string>
     <string name="WndRanking_StaChallenges">التحديات</string>
     <string name="WndRanking_StaEnemies">وحوش مقتولة</string>
     <string name="WndRanking_StaStr">القوة</string>
@@ -1359,6 +1360,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

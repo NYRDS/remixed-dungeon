@@ -428,6 +428,7 @@
     <string name="Deathling_Name_Objective">chết con</string>
     <string name="DeepSnail_Desc">Loài thân mềm này thường xuất hiện gần nguồn nước và nhanh hơn nhiều so với ốc sên thường. Tuy nhiên hãy cẩn thận với vết cắn, chúng có thể gây ảnh hưởng khó chịu lên làn da của bạn.</string>
     <string name="DeepSnail_Gender">masculine</string>
+    <string name="DeepSnail_Name_Objective">ốc sên sâu</string>
     <string name="DeferedDamageBuff_Info">Cơn đau đã biến thành cơn đau chậm, làm giảm sát thương nhận được một lần.\nSát thương còn lại để nhận %d</string>
     <string name="DeferedDamage_Killed_Txt">%s đã giết bạn...</string>
     <string name="DewVial_Collected">Bạn đã nhặt một giọt sương vào lọ sương.</string>
@@ -2015,6 +2016,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
