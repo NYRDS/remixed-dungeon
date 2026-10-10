@@ -80,6 +80,7 @@
     <string name="Badges_AllScrolls">Đã nhận dạng tất cả cuốn</string>
     <string name="Badges_AllWands">Đã nhận dạng tất cả gậy</string>
     <string name="Badges_BossSlain1">Goo đã bị tiêu diệt</string>
+    <string name="Badges_BossSlain2">Tengu đã bị tiêu diệt</string>
     <string name="Badges_BossSlain3">DM-300 đã bị tiêu diệt</string>
     <string name="Badges_BossSlain3All">DM-300 đã bị tiêu diệt bởi tất cả các phân lớp</string>
     <string name="Badges_Champion">Thử thách đã hoàn thành</string>
@@ -1863,6 +1864,7 @@
     <string name="YogsHeart_Name">trái tim của Yog</string>
     <string name="YogsHeart_Name_Objective">trái tim Yog</string>
     <string name="YogsTeeth_Gender">masculine</string>
+    <string name="YogsTeeth_Name_Objective">răng của Yog</string>
     <string name="ZombieGnoll_Desc">Cơ thể biến dạng, gãy đổ của gnoll zombie không còn giống người hay linh chó nữa. Còn lại chỉ là một đống thịt thối và xương, đầy lòng thù ghét khao khát giết chóc và nhấn nhá.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="Zombie_Gender">masculine</string>
@@ -2021,6 +2023,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

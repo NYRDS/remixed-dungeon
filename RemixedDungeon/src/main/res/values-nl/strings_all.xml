@@ -140,6 +140,7 @@
     <string name="Badges_PotionsCooked2">6 drankjes gebrouwen</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
+    <string name="Badges_RareAll">Alle zeldzame monsters verslagen</string>
     <string name="Badges_RingHaggler">Ring der Handelaar verkregen</string>
     <string name="Badges_ShadowLord_Slain">Schaduwheer verslagen</string>
     <string name="Badges_SpiderQueen_Slain">Spinnenkoningin verslagen</string>
@@ -324,6 +325,7 @@
     <string name="ChaosCrystal_Fuse">SMETEN</string>
     <string name="ChaosCrystal_Info_2">Ja! Nu weet je dat je het kunt fuseren met een van je voorwerpen, maar wat komt daarna?</string>
     <string name="ChaosCrystal_Name">Vreemde Kristal</string>
+    <string name="ChaosCrystal_Name_1">Chaotisch Kristal</string>
     <string name="ChaosCrystal_Name_2">Chaos Kristal</string>
     <string name="ChaosCrystal_ScrollFused">Kristal geabsorbeerd door rune op rol gegraveerd, en nu is het een %s</string>
     <string name="ChaosCrystal_ShieldFused">De kristal smolt met jouw schild en nam de chaosvorm aan.</string>
@@ -1013,6 +1015,7 @@
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
     <string name="MissileWeapon_Yes">Ja, ik weet wat ik doe</string>
     <string name="Mob_Attacking">Reken deze %s als dood!</string>
+    <string name="Mob_CantDoIt">Ik kan het niet. Ik heb kleine pootjes.</string>
     <string name="Mob_Desc">Een echte beschrijving komt binnenkort!</string>
     <string name="Mob_Died">Je hoort iets in de verte sterven</string>
     <string name="Mob_GoingTo">Al onderweg!</string>
@@ -2362,6 +2365,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
