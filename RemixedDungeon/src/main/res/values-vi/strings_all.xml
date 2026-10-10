@@ -653,6 +653,7 @@
     <string name="HeroClass_WarPerks_1">Chiến binh bắt đầu với một thanh kiếm ngắn độc đáo. Thanh kiếm này sau đó có thể được \&quot;rèn lại\&quot; để nâng cấp một vũ khí cận chiến khác.</string>
     <string name="HeroClass_WarPerks_2">Chiến binh kém thành thạo hơn với vũ khí tầm xa.</string>
     <string name="HeroSubClass_DescAssa">Khi thực hiện một đòn tấn công bất ngờ, _Sát Thủ_ gây thêm sát thương lên mục tiêu của mình.</string>
+    <string name="HeroSubClass_DescBers">Khi bị thương nặng, _Berzerker_ rơi vào trạng thái cuồng nộ dữ dội, tăng đáng kể lượng sát thương gây ra.</string>
     <string name="HeroSubClass_DescFreR">_Kẻ Vượt Rào_ có thể di chuyển gần gấp đôi so với hầu hết quái vật. Khi đang chạy, kẻ vượt rào khó bị đánh trúng hơn nhiều. Nhưng để làm được điều đó, anh ta không được quá tải và phải no bụng.</string>
     <string name="HeroSubClass_DescGlad">Một cú đánh thành công bằng vũ khí cận chiến cho phép _Gladiator_ bắt đầu một combo, trong đó mỗi đòn đánh thành công tiếp theo gây sát thương lớn hơn.</string>
     <string name="HeroSubClass_DescShaman">_Shaman_ yêu tinh có thể sử dụng đũa phép như vũ khí cận chiến. Các đòn đánh thành công có khả năng kích hoạt sức mạnh của đũa trên mục tiêu mà không tiêu tốn một lần sạc.</string>
@@ -2012,6 +2013,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

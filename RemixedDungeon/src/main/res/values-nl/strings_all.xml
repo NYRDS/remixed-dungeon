@@ -213,6 +213,7 @@
     <string name="BlackSkull_Info">Een kleine schedel van obsidiaan. Het was de bron van de krachten van de Necropolis, maar na de nederlaag van de Lich lijkt het al zijn krachten verloren te hebben. Maar wanneer je het in je handen houdt, gaat er een vreemde gedachte door je heen: \&quot;Het Hongert\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">De schedel pulseert met kracht, en je kunt zien hoe het uit zijn lege oogkassen stroomt. En terwijl je het in je handen houdt, hoor je een vreselijke stem: \&quot; Zie de mars van de dood \&quot;.</string>
     <string name="BlackSkull_Name">zwarte schedel</string>
+    <string name="BlackSkull_Name_Awakened">ontwaakte zwarte schedel</string>
     <string name="BlackSkull_Ressurrect">De Zwarte Schedel Heeft Dode Wezens Herrezen Om Je Te Dienen!</string>
     <string name="Blacksmith_Completed">Oh, je bent terug... Beter laat dan nooit.</string>
     <string name="Blacksmith_Desc">Deze trol-smeder lijkt op alle andere trollen: hij is lang en slank, en zijn huid lijkt op steen qua kleur en textuur. De trol-smeder werkt met onevenredig kleine gereedschappen.</string>
@@ -445,6 +446,7 @@
     <string name="CorpseDust_Info2">Misschien omdat het er maar aan vast te houden je al ongerust en boos maakt.</string>
     <string name="CorpseDust_Name">lijkenstof</string>
     <string name="CorpseExplosion_Name">Lijk Explosie</string>
+    <string name="CorpseExplosion_NoCorpse">Er is geen lijk op die plek.</string>
     <string name="Crab_Defense">gepareerd</string>
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">rioolkrab</string>
@@ -2349,6 +2351,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
