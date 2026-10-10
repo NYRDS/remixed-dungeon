@@ -1476,6 +1476,7 @@
     <string name="Slow_Name_2">Bevriezend %s</string>
     <string name="SmashSpell_Info">Spring omhoog en creëer een krachtige klap bij het raken van de grond, die tijdelijk vijanden in de buurt verdooft en tegelijkertijd fysieke schade toebrengt.</string>
     <string name="SmashSpell_Name">Verpletteren</string>
+    <string name="SmashSpell_NeedWeapon">Ik heb een wapen nodig voor deze zet.</string>
     <string name="Snail_Desc">Deze kleine weekdier is behoorlijk gegroeid door te voeden met rioolwater, maar hij is nog steeds heel traag, wat hem een makkelijke tegenstander maakt.</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">slak</string>
@@ -2348,6 +2349,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
