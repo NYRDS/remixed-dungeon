@@ -262,6 +262,7 @@
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
     <string name="Challenges_Names_4">Trí tuệ bầy đàn</string>
     <string name="Challenges_Names_5">Vào bóng tối</string>
+    <string name="Challenges_Names_7">Chủ nghĩa hòa bình</string>
     <string name="ChampionOfAirBuff_Info">Đặc tính này ban tặng cho sinh vật bản chất của gió, nâng cao sự nhanh nhẹn và khả năng chiến đấu. Võ sĩ Bậc Thầy Khí trở thành đối thủ đáng gờm, có thể tung ra những đòn tấn công nhanh chóng và tàn phá có thể thay đổi nhanh chóng cục diện trận chiến.</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
     <string name="ChampionOfEarthBuff_Name">Nhà vô địch Đất</string>
@@ -2014,6 +2015,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

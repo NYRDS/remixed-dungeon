@@ -685,6 +685,7 @@
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
     <string name="Hedgehog_ImLate">Ik ben laat, ik ben vreselijk laat...</string>
     <string name="Hedgehog_Info1">Zoek jij ook naar Beer?</string>
+    <string name="Hedgehog_Info3">Hou je van thee met frambozenjam?</string>
     <string name="Hedgehog_Name">egel</string>
     <string name="HeroClass_Doctor">Pestdokter</string>
     <string name="HeroClass_Elf">elf</string>
@@ -2352,6 +2353,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
