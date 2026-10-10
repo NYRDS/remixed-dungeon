@@ -1257,6 +1257,7 @@
     <string name="ScarecrowNPC_Quest_Start_Male">Chào cậu bé nhỏ, bạn thế nào?\nMình có điều thú vị cho bạn đây!\n\nÔi mình sẽ biết ơn biết bao,\nNếu bạn đi thu thập vài viên kẹo cho mình!\n\n</string>
     <string name="Scorpio_Desc">Những sinh vật ác quỷ khổng lồ giống nhện này né tránh chiến đấu cận chiến bằng mọi giá, bắn ra những gai răng cưa làm tê liệt từ khoảng cách xa.</string>
     <string name="Scorpio_Gender">masculine</string>
+    <string name="Scorpio_Name">bò cạp</string>
     <string name="Scorpio_Name_Objective">bọ cạp</string>
     <string name="ScrollHolder_Info">Bạn có thể đặt bất kỳ số lượng cuộn giấy nào vào chiếc hộp hình ống này. Nó tiết kiệm chỗ trong ba lô của bạn và bảo vệ các cuộn giấy khỏi lửa.</string>
     <string name="ScrollOfChallenge_Info">Khi đọc to, cuộn sách này sẽ giải phóng một tiếng gầm thách thức đánh thức tất cả quái vật và cảnh báo chúng về vị trí của người đọc.</string>
@@ -2013,6 +2014,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

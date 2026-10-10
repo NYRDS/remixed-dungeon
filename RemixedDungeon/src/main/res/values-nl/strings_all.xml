@@ -467,6 +467,7 @@
     <string name="Dagger_Name">dolk</string>
     <string name="Damage_Reduction">Schadevermindering</string>
     <string name="DarkGold_Name">donker gouderts</string>
+    <string name="DarkSacrifice_Info">Offer je trouwe dienaar op om een explosie te veroorzaken. Het gebied dat door de explosie wordt bedekt, hangt af van de resterende gezondheid van de dienaar en je vaardigheidsniveau.</string>
     <string name="DarkSacrifice_Ok">Mijn leven is van jou!</string>
     <string name="DarkSacrifice_Resist">Je hebt geen macht over mij!</string>
     <string name="DarkSacrifice_Self">Voor de Plaag!</string>
@@ -2351,6 +2352,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
