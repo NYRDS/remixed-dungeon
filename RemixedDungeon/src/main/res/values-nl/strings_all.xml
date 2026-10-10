@@ -538,6 +538,7 @@
     <string name="Dungeon_Tips_3">Je kunt je goud uitgeven in winkels in de stad of de dungeon.</string>
     <string name="Dungeon_Tips_4">Pas op voor de Slijm!</string>
     <string name="Dungeon_Tips_5">Pixel-Mart - alles wat je nodig hebt voor een succesvol avontuur!</string>
+    <string name="Dungeon_Tips_6">Identificeer drankjes en rollen zo snel mogelijk. Stel het niet uit tot het moment dat je ze echt nodig hebt.</string>
     <string name="Dungeon_Tips_7">Honger doet geen pijn, maar verhongeren wel.</string>
     <string name="Dungeon_Tips_8">Verrassingsaanvallen hebben een grotere kans om te raken. Bijvoorbeeld: je kunt een vijand bij een gesloten deur in een hinderlaag lokken als je weet dat hij nadert.</string>
     <string name="Dungeon_Tips_9">Laat de Tengu niet vrij!</string>
@@ -887,6 +888,7 @@
     <string name="LastShopLevel_TileWater">Verdacht gekleurd water</string>
     <string name="LeatherArmor_Desc">Pantser gemaakt van gelooide monsterhuid. Niet zo licht als stoffen pantser, maar biedt betere bescherming.</string>
     <string name="LeatherArmor_Name">leren harnas</string>
+    <string name="Leech_Name_0">Vampirisch %s</string>
     <string name="Leech_Name_2">Vampier %s</string>
     <string name="Level_HiddenPlate">Een verborgen drukplaat klikt!</string>
     <string name="Level_TileAlarmTrap">alarmprikkel</string>
@@ -2360,6 +2362,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

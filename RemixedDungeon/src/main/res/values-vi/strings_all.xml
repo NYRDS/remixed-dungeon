@@ -1496,6 +1496,7 @@
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Cuối cùng cũng tự do...</string>
     <string name="Tengu_Info3">Bắt được rồi, %s!</string>
+    <string name="Tengu_Name_Objective">Tengu</string>
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
     <string name="TerrorBuff_Name">Sợ hãi</string>
     <string name="Thief_Carries">
@@ -1740,6 +1741,7 @@
     <string name="WndMovieTheatre_Bye">Hãy quay lại bất cứ lúc nào, chúng tôi luôn hoan nghênh bạn!</string>
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndMovieTheatre_Title">Rạp Phim</string>
+    <string name="WndMovieTheatre_Watch">xem quảng cáo</string>
     <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
     <string name="WndPetSelect_Title">Chọn thú cưng</string>
     <string name="WndPlayGames_Connecting">Đang kết nối với Google Play Games, vui lòng chờ một chút</string>
@@ -2019,6 +2021,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
