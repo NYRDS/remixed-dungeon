@@ -536,6 +536,7 @@
     <string name="FortuneTellerNPC_Name">người xem bói</string>
     <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
     <string name="FrostArrow_Gender">feminine</string>
+    <string name="FrostArrow_Info">Bạn có thể cảm nhận một luồng khí lạnh toát ra từ mũi tên.</string>
     <string name="FrostAuraBuff_Name">Hơi sương băng</string>
     <string name="FrostBuff_Info">Đông cứng hoàn toàn, không thể thực hiện bất kỳ hành động nào.</string>
     <string name="Frost_Shatter">Lạnh làm %s vỡ nát!</string>
@@ -2017,6 +2018,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

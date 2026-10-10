@@ -1161,6 +1161,7 @@
     <string name="PortalGate_Desc_Activated">Het portaal lekt een soort gloeiende substantie. Het lijkt volkomen stil, afgezien van rimpelingen vanuit het midden.</string>
     <string name="PortalGate_Name">Portaal</string>
     <string name="PortalGate_Used">Je raakte de portaal aan en... er gebeurde niets.</string>
+    <string name="Possess_CantPossessSelf">Je kunt jezelf niet bezitten</string>
     <string name="Possess_Info">De donkere kunst van geestelijke controle stelt de spreker in staat de wil van de meeste wezens te buigen.</string>
     <string name="Possess_Name">Bezetting</string>
     <string name="Possess_Possessed">%s wacht op jouw bevelen</string>
@@ -2164,6 +2165,7 @@
     <string name="town_deco_wardrobe_desc">Grote houten kast.</string>
     <string name="town_deco_wardrobe_name">Houten kast</string>
     <string name="town_deco_weaponboard_desc">Een soort wapen dat op het bord hangt.</string>
+    <string name="town_deco_weaponboard_name">Wapen</string>
     <string name="town_deco_weaponrack_desc">Op deze rek liggen wapens die duidelijk te duur voor je zijn.</string>
     <string name="town_deco_weaponrack_name">Wapenrek</string>
     <string name="town_deco_window_desc">Gewoon glazen raam, niets bijzonders.</string>
@@ -2356,6 +2358,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
