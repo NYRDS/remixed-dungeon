@@ -888,6 +888,7 @@
     <string name="ScrollOfLullaby_Info1">يتلو اللفافة لحناً هادئاً.</string>
     <string name="ScrollOfLullaby_Info3">القرطاس ينطق بلحن هادئ والوحوش تنام!</string>
     <string name="ScrollOfMagicMapping_Info">عند قراءة هذه اللفيفة، ستنطبع صورة بوضوح البلور في ذاكرتك، لتنبيهك على التخطيط الدقيق للمستوى وكشف جميع الأسرار المخفية. ستبقى مواقع الأشياء والمخلوقات مجهولة.</string>
+    <string name="ScrollOfMagicMapping_Name">لفافة رسم الخريطة السحرية</string>
     <string name="ScrollOfMirrorImage_Info">سيؤدي التعويذة الموجودة على هذه اللفافة إلى إنشاء توأم وهمي للقارئ، والذي سيطارد أعداءه.</string>
     <string name="ScrollOfPsionicBlast_Info">تحتوي هذه اللفيفة على طاقة مدمرة، يمكن توجيهها نفسانياً لإلحاق ضرر هائل بجميع المخلوقات في نطاق الرؤية. ستُصاحبها ومضة ضوء تُعمى مؤقتاً كل من في منطقة التأثير، بما في ذلك قارئ اللفيفة.</string>
     <string name="ScrollOfTeleportation_Teleport">في غمضة عين، تم نقلك فجأة إلى موقع آخر من المستوى.</string>
@@ -1360,6 +1361,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

@@ -439,6 +439,7 @@
     <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
     <string name="DieHardSpell_Name">Chết Cứng</string>
     <string name="Displacement_Txt">%s الخدمة</string>
+    <string name="DoctorArmor_Info">Bộ giáp này của bác sĩ dịch bệnh cho phép sử dụng khả năng \&quot;Đám Mây Miasma\&quot;, giải phóng khí độc gây độc, làm yếu và làm mất phương hướng cho kẻ địch. Bác sĩ, được bảo vệ bởi mặt nạ, miễn nhiễm với các hiệu ứng này.</string>
     <string name="DoctorArmor_Name">Trang phục bác sĩ</string>
     <string name="DoctorSpecial">Đám Mây Miasma</string>
     <string name="DogeMask_Info">Bạn có từng muốn cải trang thành Doge nổi tiếng? Bây giờ là cơ hội của bạn!\nCái Mặt nạ Đấy! Nhiều Cải Trang! Wow!</string>
@@ -2023,6 +2024,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
