@@ -202,6 +202,7 @@
     <string name="BlackCat_AiStatus">Deze kat doet gewone kattendingen.</string>
     <string name="BlackCat_Desc">Dit is een zwarte kat</string>
     <string name="BlackCat_Gender">feminine</string>
+    <string name="BlackCat_Name">Zwarte kat</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
     <string name="BlackCat_Phrases_1">Miauw...</string>
     <string name="BlackCat_Phrases_2">Miauw!</string>
@@ -1034,6 +1035,7 @@
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
     <string name="Mushroom_Eat_Message">Die paddenstoel smaakt raar!</string>
     <string name="MysteryMeat_Info">Eet op eigen risico!</string>
+    <string name="MysteryMeat_Info1">Het is heet!</string>
     <string name="MysteryMeat_Info2">Je kunt je benen niet voelen!</string>
     <string name="MysteryMeat_Info3">Je voelt je niet goed.</string>
     <string name="MysteryMeat_Message">Dat eten smaakte... vreemd.</string>
@@ -2358,6 +2360,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
