@@ -739,6 +739,7 @@
     <string name="HeroSubClass_NameGuardian">bewaker</string>
     <string name="HeroSubClass_NameLich">Lich</string>
     <string name="HeroSubClass_NameNone">geen</string>
+    <string name="HeroSubClass_NameScout">verkenner</string>
     <string name="HeroSubClass_NameShaman">sjamaan</string>
     <string name="HeroSubClass_NameSnip">sluipschutter</string>
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
@@ -1330,6 +1331,7 @@
     <string name="RubyBow_Info">Alleen de grootste bogenschutters kunnen deze robijnboog gebruiken. Bijna elke pijl doorboort de vijand, een groot gat in zijn lichaam achterlatend, maar extreme kracht is nodig om de boogteef te spannen.</string>
     <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">Dit dodelijke wapen is werkelijk een meesterwerk van dwergentechniek.</string>
+    <string name="RubyCrossbow_Name">Robijnen kruisboog</string>
     <string name="Rudolph_Info">Wat is er feestelijker dan een gloeiende rode neus? Samen met een gewei, natuurlijk.</string>
     <string name="RunicSkull_Desc">Voor iets kunstmatig gemaakts lijkt deze schedel te veel op een echte. Je ziet ook een zwakke gloed om het heen.</string>
     <string name="RunicSkull_Gender">masculine</string>
@@ -2354,6 +2356,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

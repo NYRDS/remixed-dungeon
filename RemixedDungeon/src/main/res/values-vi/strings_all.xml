@@ -620,6 +620,7 @@
     <string name="HeartOfDarkness_Name">Trái tim của bóng tối</string>
     <string name="Hedgehog_ImLate">Tôi đến muộn, tôi đến muộn kinh khủng...</string>
     <string name="Hedgehog_Info1">Cậu có đang tìm chú Gấu không?</string>
+    <string name="Hedgehog_Info2">Con ngựa thế nào, ở đó, trong sương mù?</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
     <string name="HeroClass_Doctor">Bác Sĩ Dịch Hạch</string>
     <string name="HeroClass_Elf">yêu tinh</string>
@@ -2016,6 +2017,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
