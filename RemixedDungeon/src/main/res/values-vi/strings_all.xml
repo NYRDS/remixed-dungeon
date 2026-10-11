@@ -729,6 +729,7 @@
     <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name">thiên thần băng giá</string>
     <string name="IceGuardian_Name_Objective">vệ binh băng</string>
+    <string name="IceKey_Info">Chìa khóa này có vẻ như làm từ băng, nhưng nó cứng như thép.</string>
     <string name="IceKey_Name">chìa khóa băng</string>
     <string name="Ignite_Info">Đốt ô được chọn. Có thể dùng để đốt cỏ, nhân vật và vật thể.</string>
     <string name="Ignite_Name">Đốt Cháy</string>
@@ -1426,6 +1427,7 @@
     <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">nhện hổ phách</string>
     <string name="SpiderMindAmber_Name_Objective">nhện hổ phách</string>
+    <string name="SpiderMind_Desc">Những con nhện có vẻ mong manh này sở hữu khả năng tinh thần độc đáo, cho phép chúng điều khiển cả đàn. Nhện Psi có thể điều khiển bất kỳ sinh vật nào, nhưng nó khá nhút nhát.</string>
     <string name="SpiderMind_Gender">masculine</string>
     <string name="SpiderMind_Name">Nhện Tâm Linh</string>
     <string name="SpiderMind_Name_Objective">Nhện Tâm Linh</string>
@@ -2024,6 +2026,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
