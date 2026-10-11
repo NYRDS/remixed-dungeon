@@ -1848,6 +1848,7 @@
     <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">giun</string>
     <string name="Worm_Name_Objective">giun</string>
+    <string name="Wraith_Defense">né tránh</string>
     <string name="Wraith_Desc">Một oan hồn là linh hồn oán giận của một kẻ có tội, mộ hoặc lăng mộ của họ bị quấy rối. Là một thực thể phi vật chất, rất khó đánh trúng chúng bằng vũ khí thông thường.</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">oan hồn</string>
@@ -2029,6 +2030,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
