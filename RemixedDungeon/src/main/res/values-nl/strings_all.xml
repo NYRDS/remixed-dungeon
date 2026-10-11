@@ -1510,6 +1510,7 @@
     <string name="SoulShard_Name">zielenscherf</string>
     <string name="Spear_Gender">neuter</string>
     <string name="Spear_Info">Een slank houten stafje met een gescherpt ijzeren punt.</string>
+    <string name="SpeedBuff_Info">Levenskracht en energie straalt uit het lichaam, en bewegingen voelen sneller dan normaal.</string>
     <string name="SpeedBuff_Name">Snelheid</string>
     <string name="SpellBook_Info">Het lijkt meer op een verzameling van verschillende pagina\'s die aan elkaar zijn genaaid, dan op een echt boek. Je zou er misschien iets van kunnen maken als je er genoeg aandacht aan besteedt.</string>
     <string name="SpellBook_Info_Identified">In deze pagina\'s heb je de volledige tekst van een \&quot;%1$s\&quot; spreuk ontdekt.\n\&quot; %2$s \&quot;</string>
@@ -1732,6 +1733,7 @@
     <string name="WandOfMagicMissile_Name">Toverstaf van Magische Projectielen</string>
     <string name="WandOfPoison_Info">De giftige uitbarsting van dit krom stuk hout bedekt zijn doelwit met dodelijk gif. Het vergiftigde wezen zal periodieke schade lijden totdat het effect eindigt. De duur van het effect neemt toe met het niveau van de staf.</string>
     <string name="WandOfRegrowth_Info">Wanneer het leven eindigt, begint nieuw leven altijd te groeien... De eeuwige cyclus blijft altijd bestaan!</string>
+    <string name="WandOfRegrowth_Info1">er gebeurde niets</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
     <string name="WandOfShadowbolt_Info">Deze toverstaf straalt donkere, kwaadaardige energie uit.</string>
     <string name="WandOfSlowness_Info">Deze toverstaf zorgt ervoor dat een wezen met de helft van zijn normale snelheid beweegt en aanvalt, totdat het effect afloopt.</string>
@@ -2084,6 +2086,7 @@
     <string name="town_deco_dungeon_door_name">Ingang</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_entrance_name">ingang</string>
+    <string name="town_deco_exit_desc">Het is onbekend wat je te wachten staat als je deze trap afdaalt.</string>
     <string name="town_deco_fence_desc">Een houten hekwerk bedekt met sneeuw.</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
     <string name="town_deco_fireplace_desc">Uitstekend om je mee op te warmen in zo\'n koude plek als deze.</string>
@@ -2371,6 +2374,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
