@@ -717,6 +717,7 @@
     <string name="HeroClass_NecromancerPerks_1">Necromanten gebruiken mana om Doodsspreuken te spreken.</string>
     <string name="HeroClass_NecromancerPerks_2">Necromanten beginnen met een uniek Necromantengewaad, dat 1 manapunt geeft voor elk verslagen wezen.</string>
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
+    <string name="HeroClass_NecromancerPerks_4">Geneesdrankjes worden vanaf het begin geïdentificeerd.</string>
     <string name="HeroClass_None">gewoon burger</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Plagedokters lijden aan grote accuraatheidsstraffen zonder hun geliefde Beenzaag in de hand en kunnen geen afstandswapens gebruiken.</string>
     <string name="HeroClass_Priest">priester</string>
@@ -2369,6 +2370,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
