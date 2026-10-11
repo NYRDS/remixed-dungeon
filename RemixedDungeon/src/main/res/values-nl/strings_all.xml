@@ -909,6 +909,7 @@
     <string name="Level_TileDescLockedDoor">Deze deur is op slot, je hebt een passende sleutel nodig om hem te openen.</string>
     <string name="Level_TileDescLockedExit">Zware tralies blokkeren de trap naar beneden.</string>
     <string name="Level_TileDescPedestal">Een kleine sokkel.</string>
+    <string name="Level_TileDescPileOfStones">Een stapel extreem zware stenen, lijkt niet verplaatsbaar.</string>
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
     <string name="Level_TileDescWater">Als je in brand staat, stap in het water om het vuur te doven.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
@@ -1849,6 +1850,7 @@
     <string name="WndHero_SkillLevel">Vaardigheidsniveau</string>
     <string name="WndHero_StaCatalogus">Catalogi</string>
     <string name="WndHero_StaJournal">Dagboek</string>
+    <string name="WndHero_StaTitle">Niveau %1$d %2$s</string>
     <string name="WndHero_Stealth">Sluipkunst</string>
     <string name="WndHero_Str">Kracht</string>
     <string name="WndImp_Message">Oh ja! Je bent mijn held!\nWat je beloning betreft, ik heb geen contant geld bij me, maar ik heb iets beters voor je. Dit is mijn familie-erfstukring: mijn opa haalde het van een dode paladijn af.</string>
@@ -2367,6 +2369,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
