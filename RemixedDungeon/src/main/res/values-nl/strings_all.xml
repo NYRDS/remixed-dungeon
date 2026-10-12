@@ -980,6 +980,7 @@
     <string name="Mana_Title">Mana</string>
     <string name="MedicineMask_Name">Chirurgisch masker</string>
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
+    <string name="MeleeWeapon_Info1a">Dit %1$s is een %2$s niveau-%3$d wapen voor dichtbijgevecht.</string>
     <string name="MeleeWeapon_Info1c">een opgewaardeerd</string>
     <string name="MeleeWeapon_Info1d">een verslechterd</string>
     <string name="MeleeWeapon_Info2a">De gemiddelde schade is %d punten per slag.</string>
@@ -2383,6 +2384,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
