@@ -289,6 +289,7 @@
     <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
     <string name="Carcass_SelectItem">Selecteer een voorwerp</string>
     <string name="Carcass_TooFarToDissect">Je moet dichterbij zijn om de karkas te ontleden.</string>
+    <string name="Caves_TileDescBookshelf">Wie zou er een boekenkast nodig hebben in een grot?</string>
     <string name="Caves_TileDescEntrance">De ladder leidt omhoog naar het bovenste deel.</string>
     <string name="Caves_TileDescHighGrass">Reuze paddenstoelen blokkeren het zicht.</string>
     <string name="Caves_TileGrass">fluorescent mos</string>
@@ -1387,6 +1388,7 @@
     <string name="ScrollOfRecharging_Info2">een energiegolf stroomt door je rugzak, maar er gebeurt niets</string>
     <string name="ScrollOfRemoveCurse_Info">De bezwering op deze rol zal onmiddellijk alle kwaadaardige betoveringen van het wapen, pantser, ringen en voorwerpen van de lezer verwijderen die het dragen ervan zouden kunnen verhinderen.</string>
     <string name="ScrollOfRemoveCurse_Name">Schrift van Vervloeking Verwijderen</string>
+    <string name="ScrollOfRemoveCurse_NoProced">Je rugzak straalt met een reinigend licht, maar er gebeurt niets.</string>
     <string name="ScrollOfRemoveCurse_Proced">Je zak gloeit met een reinigend licht, en een kwaadaardige energie verdwijnt.</string>
     <string name="ScrollOfSummoning_Info">Bij voorlezen zal deze rol een van de monsters uit het huidige kerker-niveau oproepen. En als de wil van het monster zwak genoeg is, zal het je dienaar worden.</string>
     <string name="ScrollOfSummoning_Info_2">Het monster heeft je oproep beantwoord!</string>
@@ -2377,6 +2379,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
