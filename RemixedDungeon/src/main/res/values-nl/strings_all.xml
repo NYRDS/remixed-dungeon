@@ -631,6 +631,7 @@
     <string name="GasImmuneBuff_Name">Gasimmuniteit</string>
     <string name="Ghost_Defense">ontweek</string>
     <string name="Ghost_Desc">De geest is nauwelijks zichtbaar. Het lijkt op een vormloze vlek van zwak licht met een droevig gezicht.</string>
+    <string name="Ghost_Name">droevige geest</string>
     <string name="Ghost_Name_Objective">geest</string>
     <string name="Ghost_Rat1">Hallo avonturier... Ik was ooit als jij - sterk en vol vertrouwen... En nu ben ik dood... Maar ik kan deze plek niet verlaten... Niet voordat ik mijn wraak heb... Dood de _stinkende rat_, die mijn leven heeft genomen...</string>
     <string name="Ghost_Rose1">Hallo avonturier... Eens was ik als jij - sterk en zelfverzekerd... En nu ben ik dood... Maar ik kan deze plek niet verlaten... Niet voordat ik mijn _gedroogde roos_ terugheb... Het is heel belangrijk voor me... Sommige monsters hebben het van mijn lichaam gestolen...</string>
@@ -1646,6 +1647,7 @@
     <string name="TitleScene_InternalStorageLow">Niet genoeg ruimte\n in interne opslag\n Je voortgang kan verloren gaan!</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Spelen</string>
+    <string name="TomeOfKnowledge_Info">Deze oude tome is gevuld met arcane raadsels en mysteries! Het kan moeilijk zijn om te lezen, maar als je het doorstaat, zul je zeker je magische krachten vergroten.</string>
     <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
     <string name="TomeOfMastery_Info">Dit versleten leerboek is niet zo dik, maar je hebt het gevoel dat je er veel uit kunt halen. Onthoud er wel dat het lezen van deze tome enige tijd in beslag kan nemen.</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
@@ -2390,6 +2392,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
