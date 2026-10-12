@@ -465,6 +465,7 @@
     <string name="Drunkard_Phrase_3">Cái bia này có vị như đất</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_NoTips">Chữ viết không thể đọc được...</string>
+    <string name="Dungeon_Tips_10">Pixel-Mart. Tiêu tiền. Sống lâu hơn.</string>
     <string name="Dungeon_Tips_12">Nếu bạn đang cháy và đang bay, bạn không thể dập lửa trong nước.</string>
     <string name="Dungeon_Tips_14">NGUY HIỂM! Máy móc nặng có thể gây thương tích, mất chi hoặc tử vong!</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
@@ -1336,6 +1337,7 @@
     <string name="ServantNPC_Name_Objective">nhân viên khách sạn</string>
     <string name="ServiceManNPC_Desc">Một công nhân thông thường của các cơ sở địa phương.</string>
     <string name="ServiceManNPC_Gender">masculine</string>
+    <string name="ServiceManNPC_Limit_Reached">Tôi thành thật xin lỗi, nhưng bạn đã đạt giới hạn hiện tại. Nhưng bạn sẽ có thể sử dụng dịch vụ của chúng tôi lại cho mỗi cấp độ anh hùng bạn nhận được!</string>
     <string name="ServiceManNPC_Name">nhân viên</string>
     <string name="ServiceManNPC_Name_Objective">nhân viên</string>
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
@@ -2034,6 +2036,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

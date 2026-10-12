@@ -1305,6 +1305,7 @@
     <string name="RingOfPower_Info">Je toverstokken worden krachtiger in het energieveld dat vanuit deze ring straalt. Beschadigde ringen van kracht zullen je toverstokken in plaats daarvan verzwakken.</string>
     <string name="RingOfSatiety_Name">Ring van Voldoening</string>
     <string name="RingOfShadows_Info">Vijanden zullen je minder snel opmerken als je deze ring draagt. Aangetaste ringen van schaduwen zullen vijanden waarschuwen die je anders misschien niet hadden opgemerkt.</string>
+    <string name="RingOfShadows_Name">Ring van Schaduwen</string>
     <string name="RingOfStoneWalking_ImmuredInStone">Je bent in steen gemetseld. Voor altijd.</string>
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="RingOfThorns_Name">Ring der Doornen</string>
@@ -1859,6 +1860,7 @@
     <string name="WndHero_StaCatalogus">Catalogi</string>
     <string name="WndHero_StaJournal">Dagboek</string>
     <string name="WndHero_StaTitle">Niveau %1$d %2$s</string>
+    <string name="WndHero_Stats">Statistieken</string>
     <string name="WndHero_Stealth">Sluipkunst</string>
     <string name="WndHero_Str">Kracht</string>
     <string name="WndImp_Message">Oh ja! Je bent mijn held!\nWat je beloning betreft, ik heb geen contant geld bij me, maar ik heb iets beters voor je. Dit is mijn familie-erfstukring: mijn opa haalde het van een dode paladijn af.</string>
@@ -2379,6 +2381,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
