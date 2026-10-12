@@ -1079,6 +1079,7 @@
     <string name="Nightcap_Name">Slaapmuts</string>
     <string name="Nightmare_Desc">Een grotesk schepsel dat lijkt op een bundel vleesachtige tentakels. Nachtmerries zijn de belichaming van de sinistere gedachten van de Oude God.</string>
     <string name="Nightmare_Gender">masculine</string>
+    <string name="Nightmare_Name">nachtmerrie</string>
     <string name="Nightmare_Name_Objective">nachtmerrie</string>
     <string name="No_Valid_Cell">Er is geen geschikte cel in de buurt.</string>
     <string name="OozeBuff_Info">Bijtende slijm vreet het vlees weg!</string>
@@ -1267,6 +1268,7 @@
     <string name="RatKing_Info1">Ik slaap niet!</string>
     <string name="RatKing_Info2">Wat is dit? Ik heb geen tijd voor deze onzin. Mijn koninkrijk regeert zichzelf niet!</string>
     <string name="RatKing_Name">rattenkoning</string>
+    <string name="RatKing_Name_Objective">rattenkoning</string>
     <string name="RatSkullBuff_Name">Ratverdelger</string>
     <string name="RatSkull_Info">Het zou een mooie jagdtrofee kunnen zijn, maar het ruikt te slecht om het aan de muur te hangen.</string>
     <string name="RatSkull_Info2">Aan de andere kant bewijst het dat de eigenaar in staat is om ratten te doden, zelfs grote en stinkende.</string>
@@ -2381,6 +2383,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
