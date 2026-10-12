@@ -1718,6 +1718,7 @@
     <string name="WndHero_StaJournal">Nhật ký</string>
     <string name="WndImp_Message">Ồ đúng rồi! Bạn là anh hùng của tôi!\nVề phần thưởng, tôi không có tiền mặt ngay bây giờ, nhưng tôi có thứ tốt hơn. Đây là chiếc nhẫn gia truyền của tôi: ông tôi đã lấy nó từ ngón tay của một paladin đã chết.</string>
     <string name="WndImp_Reward">Nhận chiếc nhẫn</string>
+    <string name="WndInfoItem_CrystalChest">Rương pha lê</string>
     <string name="WndInfoItem_Inside">Bạn có thể thấy %s bên trong, nhưng để mở rương bạn cần một chìa khóa vàng.</string>
     <string name="WndInfoItem_LockedChest">Rương bị khóa</string>
     <string name="WndInfoItem_NeedKey">Nhưng để mở nó, bạn cần một chìa khóa vàng.</string>
@@ -2030,6 +2031,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

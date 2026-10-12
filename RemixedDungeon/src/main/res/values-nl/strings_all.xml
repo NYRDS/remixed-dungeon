@@ -570,6 +570,7 @@
     <string name="Exhumation_NoGrave">Hier is geen graf om een Exhumatie uit te voeren.</string>
     <string name="Exhumation_Ok">Ik zal u gehoorzamen.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
+    <string name="ExplodingSkull_Name">ontploffende schedel</string>
     <string name="Eye_Desc">Een van de andere namen van deze demon is \&quot;orb of hatred\&quot;, omdat wanneer hij een vijand ziet, hij zijn doodsblik onbeschoft gebruikt, vaak de bondgenoten negerend en ze verwondend.</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">De doodskijk van %s heeft je gedood...</string>
@@ -1413,6 +1414,7 @@
     <string name="Scroll_Runes_4">GYFU</string>
     <string name="Scroll_Runes_5">RAIDO</string>
     <string name="Scroll_Runes_7">MANNAZ</string>
+    <string name="Scroll_Runes_8">NAUDIZ</string>
     <string name="Scroll_Runes_9">BERKANAN</string>
     <string name="SeedPouch_Info">Deze kleine fluweelzakje stelt je in staat om elk aantal zaden in op te slaan. Erg handig.</string>
     <string name="SeedPouch_Name">zaadzakje</string>
@@ -2374,6 +2376,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
