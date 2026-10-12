@@ -606,6 +606,7 @@
     <string name="FreezeGlobe_Info">Bevriest het geselecteerde personage, waardoor het korte tijd geen acties kan uitvoeren.</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FrostArrow_Gender">feminine</string>
+    <string name="FrostArrow_Info">Je voelt een ijskoude aura uit de pijlpunt komen.</string>
     <string name="FrostAuraBuff_Info">Vorst omringt het lichaam, wat alles in de buurt vertraagt.</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FrostBuff_Name">Bevroren</string>
@@ -1775,6 +1776,7 @@
     <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">%s\'s schaduwbliksem heeft je gedood...</string>
     <string name="Warlock_Name_Objective">dwerg heksemeester</string>
+    <string name="WarriorArmor_ACSpecial">HELDHAFTIGE SPRONG</string>
     <string name="WarriorArmor_Desc">Hoewel dit pantser zwaar lijkt, stelt het een krijger in staat om een heldhaftige sprong naar een doelwit te maken, waarbij hij neerkomt en alle naburige vijanden verdooft.</string>
     <string name="WarriorArmor_Name">krijgspak</string>
     <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
@@ -2387,6 +2389,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

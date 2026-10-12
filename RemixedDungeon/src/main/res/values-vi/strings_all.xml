@@ -1578,6 +1578,7 @@
     <string name="Using_Failed_Because_Blind">Bạn không thể sử dụng \\&quot;%s\\&quot; khi đang bị mù.</string>
     <string name="Using_Failed_Because_Magic">Một phép thuật mạnh mẽ ngăn cản bạn sử dụng \&quot;%s\&quot;.</string>
     <string name="VertigoBuff_Info">Cảm giác choáng váng khiến đi thẳng trở nên khó khăn!</string>
+    <string name="VertigoBuff_Name">Chóng mặt</string>
     <string name="View_Distance">Tầm nhìn</string>
     <string name="VileEssence_Info">Một tinh chất đậm đặc của sự hư hỏng thu hoạch từ kẻ thù đã bị đánh bại. Chất tối đen này đập nhịp với năng lượng độc ác và rất có giá trị trong các quá trình giả kim.</string>
     <string name="WandHolster_Info">Bao đựng mảnh mai này làm từ da của một con vật kỳ lạ. Nó cho phép mang gọn gàng tối đa %d gậy.</string>
@@ -2039,6 +2040,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
