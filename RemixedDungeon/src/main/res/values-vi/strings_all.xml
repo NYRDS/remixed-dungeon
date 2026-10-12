@@ -519,6 +519,7 @@
     <string name="Facilitations_Names_1">Cơ thể khỉ lợn</string>
     <string name="Facilitations_Names_2">Linh hồn thần đèn</string>
     <string name="Facilitations_Names_3">Sức mạnh khổng lồ</string>
+    <string name="Fadeleaf_Desc">Chạm vào Fadeleaf sẽ dịch chuyển bất kỳ sinh vật nào đến một vị trí ngẫu nhiên trên cấp hiện tại.</string>
     <string name="Fadeleaf_Name">Lá Mờ</string>
     <string name="FetidRat_Desc">Loài chuột túi này lớn hơn nhiều so với chuột thường. Nó bị bao quanh bởi một đám mây hôi thối.</string>
     <string name="FetidRat_Gender">feminine</string>
@@ -2038,6 +2039,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

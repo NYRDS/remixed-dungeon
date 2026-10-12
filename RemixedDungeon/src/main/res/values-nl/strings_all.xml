@@ -672,6 +672,7 @@
     <string name="Halberd_Info">Een stokwapen met een bijl aan het uiteinde van de stok.</string>
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileDescStatue">De paal is gemaakt van echte menselijke schedels. Geweldig.</string>
+    <string name="Halls_TileHighGrass">Emberpaddenstoel</string>
     <string name="Halls_TileStatue">Pilaar</string>
     <string name="Haste_Name">Extreme Haast</string>
     <string name="Heal_Cast">%s is genezen.</string>
@@ -1436,6 +1437,7 @@
     <string name="ServiceManNPC_Desc">Een gewone werknemer van de lokale vestigingen.</string>
     <string name="ServiceManNPC_Gender">masculine</string>
     <string name="ServiceManNPC_Limit">Het spijt me, maar elke nieuwe avonturier kan in totaal slechts %d films bekijken.</string>
+    <string name="ServiceManNPC_Limit_Reached">Mijn excuses, maar je hebt je huidige limiet bereikt. Maar je kunt onze dienst opnieuw gebruiken voor elk heldenniveau dat je bereikt!</string>
     <string name="ServiceManNPC_Name">bediende</string>
     <string name="ServiceManNPC_Name_Objective">medewerker</string>
     <string name="ServiceManNPC_NoConnection">Het spijt me, u kunt onze dienst nu niet gebruiken. (Internetverbinding vereist)</string>
@@ -2020,6 +2022,7 @@
     <string name="Yog_Desc">Yog-Dzewa is een Oude God, een machtige entiteit uit de rijken van chaos. Een eeuw geleden wonnen de oude dwergen ternauwernood de oorlog tegen zijn leger van demonen, maar waren niet in staat de god zelf te doden. In plaats daarvan sloten ze hem op in de zalen onder hun stad, overtuigd dat hij te zwak was om ooit weer op te staan.</string>
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
+    <string name="Yog_Info2">Hoop is een illusie...</string>
     <string name="YogsBrain_Desc">Brein van Yog-Dzewa. Bron van al het kwaad dat ooit uit de kerker kwam.</string>
     <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">Yog\'s hersenen</string>
@@ -2384,6 +2387,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
