@@ -828,6 +828,7 @@
     <string name="ResultDescriptions_Unknown">مات في ظروف غامضة في المستوى %d</string>
     <string name="ResultDescriptions_Wand">قُتل بعصاك %1$s في المستوى %2$d</string>
     <string name="RingOfDetection_Info">ارتداء هذه الخاتم سيمكنك من ملاحظة الأسرار المخفية - الفخاخ والأبواب السرية - دون الحاجة لأخذ وقت للبحث. الخواتم المتدهورة من الكشف ستبلد حواسك، مما يجعل ملاحظة الأسرار أصعب حتى عند البحث عنها بفعالية.</string>
+    <string name="RingOfDetection_Name">حلقة الاكتشاف</string>
     <string name="RingOfElements_Info">يوفر هذا الخاتم مقاومة للعناصر المختلفة مثل النار والكهرباء والغازات وغيرها. كما أنه يقلل من مدة الآثار السلبية.</string>
     <string name="RingOfElements_Name">خاتم العناصر</string>
     <string name="RingOfEvasion_Info">هذا الخاتم يزيد من فرصتك في تفادي هجمات الأعداء.</string>
@@ -1362,6 +1363,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

@@ -58,6 +58,7 @@
     <string name="Anesthesia_Name">Anesthesie</string>
     <string name="Ankh_Info">Dit oude symbool van onsterfelijkheid geeft de mogelijkheid om na de dood tot leven terug te keren. Bij de opstanding gaan alle niet-uitgeruste voorwerpen verloren.</string>
     <string name="Ankh_Name">Ankh</string>
+    <string name="AntiEntropy_Txt">%s van anti-entropie</string>
     <string name="ArmorKit_ACAplly">TOEPASSSEN</string>
     <string name="ArmorKit_Info">Met deze set gereedschappen en materialen kan iedereen elk harnas veranderen in een \&quot;episch harnas\&quot;, dat alle eigenschappen van het originele harnas behoudt, maar de drager ook een speciale vaardigheid biedt afhankelijk van zijn klasse. Geen vaardigheden in kleermakerij, leerbewerking of smederij vereist.</string>
     <string name="ArmorKit_Name">rustingset</string>
@@ -2376,6 +2377,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
