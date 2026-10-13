@@ -31,6 +31,7 @@
     <string name="AirElemental_Name">luchtelementaal</string>
     <string name="AirElemental_Name_Objective">luchtelementaal</string>
     <string name="AlarmTrap_Desc">De val laat een doordringend geluid horen dat door de hele dungeon weergalmt!</string>
+    <string name="Albino_Desc">Buidelratten zijn agressief, maar eerder zwakke bewoners van de riolen. Ze kunnen alleen in grote aantallen gevaarlijk zijn. Deze specifieke rat lijkt een albino te zijn. Hij heeft ook abnormaal scherpe tanden.</string>
     <string name="Albino_Gender">masculine</string>
     <string name="Albino_Name">albino rat</string>
     <string name="Albino_Name_Objective">albino rat</string>
@@ -807,6 +808,7 @@
     <string name="IceGuardianCoreModule_Name">IJs Wachter Kern</string>
     <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name_Objective">ijswachter</string>
+    <string name="IceGuardian_Desc">IJswachters werden gecreëerd door de oude kobolds om hun grotten te beschermen. Zolang de kern van de Wachter voldoende energie bevat, kan hij zichzelf midden in de strijd herstellen.</string>
     <string name="IceGuardian_Gender">masculine</string>
     <string name="IceGuardian_Name_Objective">ijsbewaker</string>
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
@@ -2189,6 +2191,7 @@
     <string name="town_deco_snowman_name">Sneeuwpop</string>
     <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
     <string name="town_deco_sofa_desc">Lijkt erop dat deze bioscoop echt probeert de beste zitplaatsen voor haar klanten te bieden.</string>
+    <string name="town_deco_stakes_desc">Deze geslepen palen zien er angstaanjagend uit, maar in feite zijn ze op zichzelf vrij nutteloos.</string>
     <string name="town_deco_stakes_name">Palissaden</string>
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
     <string name="town_deco_statue_water_desc">Een majestueuze standbeeld van een engel die een kom met water vasthoudt.</string>
@@ -2412,6 +2415,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
