@@ -115,6 +115,7 @@
     <string name="Badges_GamesPlayed5">5000 spellen gespeeld</string>
     <string name="Badges_GnollUnlocked">Gnoll ontgrendeld</string>
     <string name="Badges_GoldColleted2">500 goud verzameld</string>
+    <string name="Badges_GoldColleted3">2500 goud verzameld</string>
     <string name="Badges_GoldColleted4">7500 goud verzameld</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Badges_HappyEnd">Goede afloop</string>
@@ -480,6 +481,7 @@
     <string name="DarkSacrifice_Self">Voor de Plaag!</string>
     <string name="DarkVeilBuff_Info">Een sluier van duisternis omringt de eigenaar en roept telkens een geest op wanneer schade wordt opgelopen.</string>
     <string name="Dart_Gender">masculine</string>
+    <string name="Dart_Info">Deze eenvoudige metalen spikes zijn perfect gewogen om hun prooi nauwkeurig te doorboren.</string>
     <string name="Dart_Name">dart</string>
     <string name="DashSpell_Info">Das naar een aangewezen richting terwijl je met vijanden botst, schade toebrengend en verstommeling veroorzakend.</string>
     <string name="DashSpell_Name">Das</string>
@@ -2405,6 +2407,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
