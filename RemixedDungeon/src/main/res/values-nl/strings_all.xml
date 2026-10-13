@@ -1954,6 +1954,7 @@
     <string name="WndRanking_StaDuration">Spelduur</string>
     <string name="WndRanking_StaEnemies">Monsters Gedood</string>
     <string name="WndRanking_StaFood">Gegeten voedsel</string>
+    <string name="WndRanking_StaGold">Verzameld Goud</string>
     <string name="WndRanking_StaHealth">Gezondheid</string>
     <string name="WndRanking_StaStr">Kracht</string>
     <string name="WndRanking_StaTitle">Level %1 %2</string>
@@ -2399,6 +2400,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
