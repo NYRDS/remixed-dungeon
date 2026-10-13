@@ -1815,6 +1815,7 @@
     <string name="Welcome_Text_32">    remix.32\n\n    - Gameplay:\n\n    -- Mobs en Huisdieren krijgen nu ervaring en niveaus\n\n    -- Chaos Schild\n\n    -- Kampioenen\n\n    -- Yog strijd opnieuw gebalanceerd\n\n    -- Balans aanpassingen\n\n    - UX:\n\n    -- Gedetailleerde Held en Mobs statistieken\n\n    -- Beter Aanpassingen interface\n\n    -- Soepele camera\n\n    - Modding:\n\n    -- Aangepaste animaties\n\n    -- Aangepaste Scripts voor ingebouwde Mobs\n\n    -- Gloed voor Mobs\n\n    - Bugs opgelost\n    </string>
     <string name="Welcome_Text_32_1">    remix.32.1\n\n    - Gameplay:\n\n    -- Pesten Dokter questlijn\n\n    -- Lichamen van monsters nu enigszins bruikbare items\n\n    -- Betere huisdierenbesturing\n\n    - UX:\n\n    -- Verbeterd beheer van saves\n\n    - Modding:\n\n    -- Lokale mod installatiemethoden\n\n    -- Aangepaste items kunnen nu acties uitvoeren terwijl ze in stapels liggen\n\n    - Bugs opgelost\n\n    </string>
     <string name="Welcome_Title">Welkom!</string>
+    <string name="WindGust_Name">Windvlaag</string>
     <string name="WizardHat_Name">Toverhoed</string>
     <string name="WndBag_BuySubtitle">(Je hebt %dg)</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
@@ -2030,6 +2031,7 @@
     <string name="Wraith_Desc">Een wraith is de wraakzuchtige geest van een zondaar, wiens graf of grafkelder werd verstoord. Als een etherische entiteit is het zeer lastig te raken met een gewoon wapen.</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="Wraith_Name">wraith</string>
+    <string name="Wraith_Name_Objective">wraith</string>
     <string name="WrnExperimental_hint">Als deze vreemde en verwrongen wereld te hard voor je is, schakel deze opties uit via\nStartscherm-&gt;Opties-&gt;Gameplay\nmenu en start een nieuw spel of laad een andere save.</string>
     <string name="WrnExperimental_moveTimeout">Beweegtijd ingesteld op %d milliseconden, denk snel!</string>
     <string name="WrnExperimental_realtime">De real-time modus is geactiveerd: dit is nu een real-time roguelike, tik snel of sterf.\nWil je je inventaris controleren?\nVeel succes daarbij terwijl de rioolkrab je ingewanden bekijkt.</string>
@@ -2403,6 +2405,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

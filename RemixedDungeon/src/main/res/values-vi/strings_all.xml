@@ -957,6 +957,7 @@
     <string name="Mob_StaFleeingStatus">%s đang bỏ chạy</string>
     <string name="Mob_StaFleeingStatus2">Cái %1$s này đang chạy trốn khỏi %2$s</string>
     <string name="Mob_StaHuntingStatus">Đây %s đang săn bắn</string>
+    <string name="Mob_StaHuntingStatus2">%1$s đang săn %2$s</string>
     <string name="Mob_StaPassiveStatus">%s đang thụ động</string>
     <string name="Mob_StaSleepingStatus">%s này đang ngủ</string>
     <string name="Mob_StaTerrorStatus2">%1 này kinh hoàng trước %2</string>
@@ -2054,6 +2055,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
