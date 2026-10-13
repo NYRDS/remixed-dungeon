@@ -1921,6 +1921,7 @@
     <string name="town_deco_bell_tower_name">Tháp chuông</string>
     <string name="town_deco_blue_carpet_name">thảm</string>
     <string name="town_deco_book_desc">Cuốn sách này trông như ai đó vô tình để quên</string>
+    <string name="town_deco_book_name">Sách</string>
     <string name="town_deco_broken_roof_desc">Các viên ngói trên mái nhà này bị nứt và cần được thay thế.</string>
     <string name="town_deco_broken_roof_name">Mái nhà vỡ</string>
     <string name="town_deco_broken_wall_name">Bức tường vỡ</string>
@@ -2058,6 +2059,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

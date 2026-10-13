@@ -1404,6 +1404,7 @@
     <string name="Mob_CantDoIt">我做不到。我的手太小了。</string>
     <string name="Mob_Desc">真正的说明即将到来！</string>
     <string name="Mob_Died">远处传来死亡的声音。</string>
+    <string name="Mob_FollowMe">跟随你！</string>
     <string name="Mob_GoingTo">已经在路上了！</string>
     <string name="Mob_ItemUse">%1$s 使用 %2$s</string>
     <string name="Mob_ReadyForOrder">%s已准备执行你的命令</string>
@@ -3061,6 +3062,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
