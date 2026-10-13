@@ -1596,6 +1596,7 @@
     <string name="StoneBloodBuff_Name">Stenen bloed</string>
     <string name="StrongShield_desc">Dit rechthoekige schild is bekleed met koperen platen en versierd met gekleurde stof. Het is aanzienlijk zwaarder, maar kan veel meer binnenkomende schade blokkeren.</string>
     <string name="StunBuff_Info">Verdoofd!</string>
+    <string name="StunBuff_Name">Verdoofd</string>
     <string name="Stylus_ACInscribe">Inschrijven</string>
     <string name="Stylus_Info">Deze arcanische stylus is gemaakt van een donkere, zeer harde steen. Je kunt er een glyph of rune mee graveren, maar je kunt niet kiezen welke er wordt gegraveerd; de stylus beslist voor je.</string>
     <string name="Stylus_Inscribed">je hebt de %1$s op je %2$s gegraveerd</string>
@@ -2392,6 +2393,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

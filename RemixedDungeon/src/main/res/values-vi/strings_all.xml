@@ -883,6 +883,7 @@
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Name">kiếm dài</string>
+    <string name="Luck_Name_0">May mắn %s</string>
     <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">Phần đầu sắt của vũ khí này gây sát thương đáng kể.</string>
     <string name="Mace_Name">chùy</string>
@@ -2042,6 +2043,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
