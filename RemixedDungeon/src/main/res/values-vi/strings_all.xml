@@ -927,6 +927,7 @@
     <string name="MeleeWeapon_Info5">Nó đã được phù phép.</string>
     <string name="MeleeWeapon_Info6b">Do sức mạnh dư thừa, sát thương tấn công của bạn với %s này được tăng lên.</string>
     <string name="MeleeWeapon_Info7a">Bạn cầm %1 sẵn sàng%2.</string>
+    <string name="MercenaryNPC_Desc">Một người đàn ông vạm vỡ.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">lính thuê</string>
     <string name="MercenaryNPC_Name_Objective">lính đánh thuê</string>
@@ -2059,6 +2060,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

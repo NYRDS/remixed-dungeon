@@ -470,6 +470,7 @@
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
     <string name="DM300_Info2">Missie mislukt. Uitschakelen.</string>
     <string name="DM300_Info3">Ongeautoriseerd personeel gedetecteerd.</string>
+    <string name="DM300_Name_Objective">DM-300</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Een eenvoudige ijzeren dolk met een goed versleten houten handvat.</string>
     <string name="Dagger_Name">dolk</string>
@@ -564,6 +565,7 @@
     <string name="EncumbranceBuff_CharAct_1">Ik ben niet sterk genoeg om %s goed te hanteren.</string>
     <string name="EncumbranceBuff_CharAct_2">Deze %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EncumbranceBuff_CharAct_4">Mij ontbreekt de kracht om %s optimaal te benutten.</string>
+    <string name="EncumbranceBuff_Info">Niet genoeg kracht om %s effectief te gebruiken.</string>
     <string name="EncumbranceBuff_Name">Last</string>
     <string name="EnslavedSoul_Desc">Je kunt bijna door deze spookachtige verschijning heen kijken. En hoewel het op een schedel lijkt, verschijnt er soms voor een fractie van een seconde een gezicht, vol pijn en lijden.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
@@ -2410,6 +2412,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
