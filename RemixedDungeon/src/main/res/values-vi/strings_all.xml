@@ -386,6 +386,7 @@
     <string name="CompoundBow_Name">cung ghép</string>
     <string name="ConcreteBlock_Description">Có vẻ khối này cần %d điểm sức mạnh để đẩy</string>
     <string name="CorpseDustBuff_Info">Các đòn tấn công tăng mạnh đối với những kẻ đầy khát máu, khiến chúng đặc biệt nguy hiểm.</string>
+    <string name="CorpseDustBuff_Name">Khát máu</string>
     <string name="CorpseDust_Info">Quả bóng bụi xác chết không khác gì quả bóng bụi thường về bề ngoài. Tuy nhiên, bằng cách nào đó bạn biết rằng tốt nhất nên loại bỏ nó càng sớm càng tốt.</string>
     <string name="CorpseDust_Info2">Có lẽ vì chỉ cầm nó trong tay thôi đã khiến bạn cảm thấy lo lắng và giận dữ.</string>
     <string name="CorpseDust_Name">bụi xác</string>
@@ -995,6 +996,7 @@
     <string name="Necrotism_Death">Bạn đã chết vì hoại tử...</string>
     <string name="NekoEars_Name">Tai Mèo</string>
     <string name="NeutralKing_Hostile">Nhà Vua quay lại tấn công bạn!</string>
+    <string name="Nightcap_Name">Mũ ngủ</string>
     <string name="Nightmare_Desc">Một sinh vật quái dị trông giống như một bó xúc tu làm bằng thịt. Ác mộng là hiện thân của những suy nghĩ đen tối của Thần Cổ Đại.</string>
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">ác mộng</string>
@@ -2026,6 +2028,7 @@
     <string name="town_deco_wall_brazier_name">Bát lửa</string>
     <string name="town_deco_wall_candles_desc">Những ngọn nến đã tắt, nhưng hương thơm dễ chịu vẫn còn lan tỏa.</string>
     <string name="town_deco_wall_candles_name">Nến</string>
+    <string name="town_deco_wall_desc">Một bức tường đơn giản làm từ gỗ.</string>
     <string name="town_deco_wall_name">Bức tường</string>
     <string name="town_deco_wallpaper_desc">Một giải pháp trang trí tuyệt vời cho một nơi như thế này.</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
@@ -2043,6 +2046,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

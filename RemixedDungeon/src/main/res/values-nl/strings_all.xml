@@ -943,6 +943,7 @@
     <string name="LibrarianNPC_Desc">Een heel verlegen persoon, die een ongemakkelijk uitziend vest en een dikke bril draagt.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-hallo. Welkom in de bibliotheek. Hier vind je informatie over allerlei dingen die in de kerker te vinden zijn... eigenlijk kunnen we alleen kennis verstrekken die door avonturiers is ontdekt. Het... het is wat gênant. Dus elke keer dat je ons bezoekt, staat er waarschijnlijk iets nieuws te lezen.</string>
+    <string name="LibrarianNPC_Message_Not_Ready">Ik... ik... het spijt me, de bibliotheek is nog niet open...</string>
     <string name="LibrarianNPC_Name_Objective">bibliothecaris</string>
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
     <string name="Lich_Gender">masculine</string>
@@ -1133,6 +1134,7 @@
     <string name="PirateSet_Name">Piraten Set</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
     <string name="PlagueDoctorMask_Info">Dit… dit is geen gewone masker. Het is… een barrière. Een schild tegen de krachten van verval waar de Pestmeester onvermoeid tegen vecht. Gemaakt van het fijnste ebenhout, kunstvol ingesneden met het gezicht van een gierige schedel. De holle oogkasjes zijn gevuld met schitterende amethisten die zwak pulseren, als uitgaande kolen van een vuur. Elke adem die je neemt, elk woord dat je spreekt, wordt gefilterd door een labyrintachtig netwerk van buizen en filters. Een mengsel van krachtige kruiden en exotische specerijen vult de lucht binnenin, het stank van de dood maskerend dat als een lijkhemd om je heen hangt.</string>
+    <string name="PlagueDoctorMask_Name">Masker van de Pestdokter</string>
     <string name="PlagueDoctorNPC_After_Quest">Ik zal het hun laten zien, ik zal het ze allemaal laten zien!</string>
     <string name="PlagueDoctorNPC_After_Quest_2">Ben je er nog steeds? Hier! Neem dit.</string>
     <string name="PlagueDoctorNPC_Desc">Het hele lichaam van deze gebukte persoon is verborgen onder een leer overall. Van hem komt een bittere geur van medicijnen en... knoflook?</string>
@@ -2393,6 +2395,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
