@@ -500,6 +500,7 @@
     <string name="EncumbranceBuff_Name">Gánh nặng</string>
     <string name="EnslavedSoul_Desc">Bạn gần như có thể nhìn xuyên qua bóng ma này. Và mặc dù nó trông giống một chiếc hộp sọ, đôi khi trong tích tắc một khuôn mặt hiện ra, ngập tràn đau đớn và khổ sở.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
+    <string name="EnslavedSoul_Name_Objective">linh hồn bị nô lệ</string>
     <string name="Entanglement_Txt">%s vướng víu</string>
     <string name="EquipableItem_ACUnequip">THÁO TRANG BỊ</string>
     <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
@@ -1417,6 +1418,7 @@
     <string name="SpeedBuff_Info">Sức sống và năng lượng tỏa ra từ cơ thể, và chuyển động cảm thấy nhanh hơn bình thường.</string>
     <string name="SpeedBuff_Name">Tốc độ</string>
     <string name="SpellBook_Info_Identified">Trong những trang này bạn đã tìm thấy toàn bộ nội dung của phép thuật \&quot;%1$s\&quot;.\n\&quot; %2$s \&quot;</string>
+    <string name="SpellBook_Name">Sách Phép Thuật</string>
     <string name="Spell_SelectACell">Chọn một ô mục tiêu.</string>
     <string name="Spell_SelectAChar">Chọn một mục tiêu.</string>
     <string name="Spells_NotEnoughSP">Bạn không đủ mana để thi triển phép \&quot;%1$s\&quot;.</string>
@@ -2046,6 +2048,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

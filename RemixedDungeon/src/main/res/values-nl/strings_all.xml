@@ -1039,6 +1039,7 @@
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
     <string name="Mob_StaWanderingStatus">Deze %s dwaalt rond.</string>
+    <string name="Mods_AuthorSite">Auteurswebsite:</string>
     <string name="Mods_CreatedBy">Gemaakt door:</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
     <string name="Mods_RestartRequired">Herstart vereist</string>
@@ -2038,6 +2039,7 @@
     <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">oog van Yog</string>
     <string name="YogsEye_Name_Objective">Oog van Yog</string>
+    <string name="YogsHeart_Desc">Al eeuwen geloven mensen dat alleen werkelijk harteloze wezens in staat zijn tot puur kwaad. En toch is het er: een enorm kloppend hart voor je, dat toebehoort aan de Oude God zelf.</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name_Objective">hart van Yog</string>
     <string name="YogsTeeth_Gender">masculine</string>
@@ -2395,6 +2397,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
