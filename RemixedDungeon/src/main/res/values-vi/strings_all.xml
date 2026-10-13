@@ -712,6 +712,7 @@
     <string name="HungerBuff_Name1">Đói</string>
     <string name="Hunger_Death">Bạn đã chết vì đói...</string>
     <string name="Hunger_Hungry_0">Bạn đang đói.</string>
+    <string name="Hunger_Hungry_1">Bạn đang đói.</string>
     <string name="Hunger_Starving_0">Bạn đang chết đói!</string>
     <string name="Hunger_Starving_1">Bạn đang chết đói!</string>
     <string name="Hunger_Starving_2">Bạn đang chết đói!</string>
@@ -1593,6 +1594,7 @@
     <string name="WandMaker_Dust1">Ôi, thật bất ngờ dễ chịu khi gặp được một người đàng hoàng ở nơi này! Tôi đến đây để tìm một nguyên liệu hiếm - _bụi xác chết_. Nó có thể thu thập từ những bộ xương, và trong dungeon có rất nhiều. Là một pháp sư, tôi hoàn toàn có thể tự vệ trước quái vật nơi đây, nhưng tôi lạc mất chỉ trong chốc lát — thật xấu hổ. Có lẽ bạn có thể giúp tôi? Tôi sẽ vui lòng trả công cho bạn bằng một trong những cây đũa phép tốt nhất của mình.</string>
     <string name="WandMaker_Dust2">Có tin gì về bụi xác chết, %s? Những đống xương là nơi dễ tìm nhất.</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
+    <string name="WandMaker_RotberryInfo">Hạt giống phát ra tiếng gầm vang khắp hầm ngục!</string>
     <string name="WandOfAvalanche_Info">Khi một xung điện của que này trúng vào tường (hoặc bất kỳ chướng ngại vật rắn nào khác), nó gây ra một trận băng tuyết đá, gây sát thương và choáng tất cả sinh vật trong khu vực bị ảnh hưởng.</string>
     <string name="WandOfAvalanche_Info1">Bạn đã nghiền nát chính mình bằng Gậy Bão Tuyết của chính mình...</string>
     <string name="WandOfAvalanche_Name">Đũa phép Tuyết lở</string>
@@ -1714,6 +1716,7 @@
     <string name="WndGame_Exit">Thoát Remixed Dungeon</string>
     <string name="WndGame_Load">Tải</string>
     <string name="WndGame_Ranking">Bảng xếp hạng</string>
+    <string name="WndGame_Return">Quay lại trò chơi</string>
     <string name="WndGame_Save">Lưu</string>
     <string name="WndGame_Start">Bắt đầu trò chơi mới</string>
     <string name="WndGame_menu">Menu chính</string>
@@ -2048,6 +2051,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 

@@ -1337,6 +1337,7 @@
     <string name="RootSpell_Info">Bevestigt de geselecteerde karakter met wortels, waardoor hij voor korte tijd niet kan bewegen.</string>
     <string name="RootsBuff_Name">Geworteld</string>
     <string name="RottenFish_Info">Rotte vis, ruikt vreselijk</string>
+    <string name="RottenFish_Name">rotte vis</string>
     <string name="RottenFish_Taste">Walgelijk!</string>
     <string name="RottenFood_Message">Walging!</string>
     <string name="RottenMeat_Name">bedorven vlees</string>
@@ -1761,6 +1762,7 @@
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_Damage">Wanneer deze toverstok als slagwapen wordt gebruikt, is de gemiddelde schade %d punten per slag.</string>
+    <string name="Wand_Fizzles">je toverstaf knettert; de ladingen zijn waarschijnlijk op</string>
     <string name="Wand_Name">%s toverstaf</string>
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
@@ -2397,6 +2399,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
