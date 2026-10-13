@@ -341,6 +341,7 @@
     <string name="ChaosStaff_Name">chaosstaf</string>
     <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Name">chaoszwaard</string>
+    <string name="CharAction_Charm">betoveren</string>
     <string name="CharAction_Give">geven</string>
     <string name="CharAction_Hit">slaan</string>
     <string name="CharAction_PetInventory">inventaris</string>
@@ -467,6 +468,7 @@
     <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
     <string name="DM300_Info2">Missie mislukt. Uitschakelen.</string>
+    <string name="DM300_Info3">Ongeautoriseerd personeel gedetecteerd.</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Een eenvoudige ijzeren dolk met een goed versleten houten handvat.</string>
     <string name="Dagger_Name">dolk</string>
@@ -1187,6 +1189,7 @@
     <string name="Possess_Name">Bezetting</string>
     <string name="Possess_Possessed">%s wacht op jouw bevelen</string>
     <string name="Possess_PossessionFailed">Wil van %s is te sterk</string>
+    <string name="Potential_Txt">%s potentieel</string>
     <string name="PotionBelt_Info">Deze sterke leren riem kan al je drankjes bevatten en beschermt ze tegen het breken door vorst.</string>
     <string name="PotionOfExperience_Info">De belevenissen van talloze veldslagen, herleid tot vloeibare vorm; deze drank verhoogt onmiddellijk je ervaringsniveau.</string>
     <string name="PotionOfFrost_Info">Bij blootstelling aan open lucht zal deze stof verdampen tot een vriezende wolk, waardoor elk wezen dat ermee in contact komt op zijn plek bevriest, onbeweeglijk en onmachtig.</string>
@@ -2400,6 +2403,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

@@ -470,6 +470,7 @@
     <string name="Dungeon_Tips_10">Pixel-Mart. Tiêu tiền. Sống lâu hơn.</string>
     <string name="Dungeon_Tips_12">Nếu bạn đang cháy và đang bay, bạn không thể dập lửa trong nước.</string>
     <string name="Dungeon_Tips_14">NGUY HIỂM! Máy móc nặng có thể gây thương tích, mất chi hoặc tử vong!</string>
+    <string name="Dungeon_Tips_15">Pixel-Mart. Cuộc sống an toàn hơn trong ngục tối.</string>
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
     <string name="Dungeon_Tips_17">Giếng Chuyển Hóa có thể ban cho bạn một vật phẩm không thể có được bằng cách khác.</string>
     <string name="Dungeon_Tips_18">Cách duy nhất để phù phép vũ khí là nâng cấp nó bằng cuộn giấy Nâng cấp vũ khí.</string>
@@ -942,6 +943,7 @@
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MissileWeapon_Info1">\n\nSát thương trung bình của vũ khí này bằng %d điểm mỗi lần đánh.</string>
     <string name="MissileWeapon_Info2">Vì thể lực không đủ, độ chính xác và tốc độ tấn công của bạn với %1$s này bị giảm.</string>
+    <string name="MissileWeapon_Info4">\n\nBạn giữ %s sẵn sàng.</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
     <string name="MissileWeapon_No">Không, tôi đã đổi ý rồi</string>
     <string name="MissileWeapon_Sure">Bạn có thực sự muốn trang bị nó như vũ khí cận chiến không?</string>
@@ -2052,6 +2054,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
