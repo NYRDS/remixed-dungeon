@@ -81,6 +81,7 @@
     <string name="AttackDelay_Increased">Kan de %1$s niet zo hanteren. Langzame slagen, zware ademhaling...</string>
     <string name="Attack_Range">Aanvalsbereik</string>
     <string name="AwarenessBuff_Info">De zintuigen zijn verscherpt, wat meer bewustzijn van de omgeving geeft.</string>
+    <string name="AzuterronNPC_Desc">Een mysterieuze figuur gehuld in zwarte mist.</string>
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">Vreemdeling</string>
     <string name="AzuterronNPC_Name_Objective">vreemdeling</string>
@@ -826,6 +827,7 @@
     <string name="Imp_Golems2">Hoe gaat het met je golem-safari?</string>
     <string name="Imp_Hey">Psst, %1$s!</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
+    <string name="Imp_Monks2">Oh, je leeft nog! Ik wist dat jouw kung-fu sterker is ;) Vergeet alleen niet om deze monnikentekens te pakken.</string>
     <string name="Imp_Name">ambitieus duiveltje</string>
     <string name="IncendiaryDart_Gender">masculine</string>
     <string name="IncendiaryDart_Name">brandpijl</string>
@@ -2125,6 +2127,7 @@
     <string name="town_deco_covered_table_name">Tafel</string>
     <string name="town_deco_crate_bottles_name">Bierkrat</string>
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
+    <string name="town_deco_crate_name">Kist</string>
     <string name="town_deco_crate_scrolls_name">Kist met rollen</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
     <string name="town_deco_cross_name">Kruis</string>
@@ -2426,6 +2429,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

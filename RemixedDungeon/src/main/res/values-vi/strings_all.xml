@@ -139,6 +139,7 @@
     <string name="Badges_Yog_Slain">Yog-Dzewa đã bị tiêu diệt</string>
     <string name="Bag_ACOpen">MỞ</string>
     <string name="Bandit_Gender">masculine</string>
+    <string name="Bandit_Name">tên cướp điên</string>
     <string name="BardNPC_Desc">Nhạc sĩ thị trấn đang chơi đàn luýt của mình.</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">bard</string>
@@ -845,6 +846,7 @@
     <string name="Level_TileAlarmTrap">bẫy báo động</string>
     <string name="Level_TileAlchemy">nồialchemy</string>
     <string name="Level_TileBarricade">Chướng ngại vật</string>
+    <string name="Level_TileBookshelf">Giá sách</string>
     <string name="Level_TileChasm">Vực thẳm</string>
     <string name="Level_TileClosedDoor">Cửa đóng</string>
     <string name="Level_TileDefault">\?\?\?</string>
@@ -1968,6 +1970,7 @@
     <string name="town_deco_emptyboard_desc">Giá tiêu chuẩn nhất để trưng bày đồ vật.</string>
     <string name="town_deco_emptyboard_name">Kệ đựng</string>
     <string name="town_deco_entrance_name">cổng vào</string>
+    <string name="town_deco_exit_name">Lối ra</string>
     <string name="town_deco_fireplace_desc">Rất thích hợp để sưởi ấm ở một nơi lạnh như thế này.</string>
     <string name="town_deco_fireplace_name">Lò sưởi</string>
     <string name="town_deco_firewood_desc">Vật dụng thiết yếu trong những đợt rét khắc nghiệt như thế này.</string>
@@ -2070,6 +2073,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
