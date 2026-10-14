@@ -1336,6 +1336,7 @@
     <string name="Ring_BuffKnown">Dit is een %1$s</string>
     <string name="Ring_Gems_0">diamant</string>
     <string name="Ring_Gems_1">opaal</string>
+    <string name="Ring_Gems_10">kwarts</string>
     <string name="Ring_Gems_11">agaat</string>
     <string name="Ring_Gems_3">robijn</string>
     <string name="Ring_Gems_4">amethist</string>
@@ -2423,6 +2424,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
