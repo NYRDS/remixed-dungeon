@@ -650,6 +650,7 @@
     <string name="HeroClass_HunPerks_3">Các Nữ Thợ Săn hồi phục nhiều máu hơn từ giọt sương.</string>
     <string name="HeroClass_HunPerks_4">Các Nữ Săn Bắt có thể cảm nhận quái vật lân cận ngay cả khi chúng bị che khuất bởi chướng ngại vật.</string>
     <string name="HeroClass_Mag">pháp sư</string>
+    <string name="HeroClass_MagPerks_0">Pháp sư bắt đầu với Đũa Phép Tên Lửa độc đáo. Đũa này sau đó có thể được \&quot;phân giải\&quot; để nâng cấp đũa khác.</string>
     <string name="HeroClass_MagPerks_1">Pháp sư nạp lại gậy nhanh hơn.</string>
     <string name="HeroClass_MagPerks_2">Khi ăn, bất kỳ món ăn nào cũng khôi phục 1 sạc cho tất cả cây gậy phép trong túi đồ.</string>
     <string name="HeroClass_MagPerks_4">Pháp sư sử dụng mana để thi triển các phép thuật nguyên tố.</string>
@@ -2061,6 +2062,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

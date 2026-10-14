@@ -775,6 +775,7 @@
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
     <string name="Hero_StaCharm">Je bent betoverd!</string>
     <string name="Hero_StaFurious">furieus</string>
+    <string name="Hero_StaFury">Je wordt woedend!</string>
     <string name="Hero_StaOoze">Bijtend slijm vreet aan je vlees. Was het weg!</string>
     <string name="Hero_StaParalysis">Je bent gelamd!</string>
     <string name="Hero_StaPoison">Je bent vergiftigd!</string>
@@ -2059,6 +2060,7 @@
     <string name="YogsHeart_Desc">Al eeuwen geloven mensen dat alleen werkelijk harteloze wezens in staat zijn tot puur kwaad. En toch is het er: een enorm kloppend hart voor je, dat toebehoort aan de Oude God zelf.</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name_Objective">hart van Yog</string>
+    <string name="YogsTeeth_Desc">Enorme mond van de Oude God, gevuld met vlijmscherpe tanden. Een zeer passende manifestatie van zijn drang om alle wezens te vernietigen en te verslinden.</string>
     <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">Tanden van Yog</string>
     <string name="ZombieGnoll_Desc">Het verwrongen, gebroken lichaam van een gnoll-zombie lijkt niet meer op een mensachtige of een hyena. Al wat overblijft is een hoop rottend vlees en beenderen, vervuld van een kwaadaardige drang om te doden en te verslinden.</string>
@@ -2415,6 +2417,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
