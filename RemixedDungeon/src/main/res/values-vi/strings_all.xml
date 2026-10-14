@@ -992,6 +992,7 @@
     <string name="NecromancerArmor_Info">Bộ giáp này cho phép Pháp sư Hắc huyết triệu hồi tối đa hai Deathling, mỗi thứ tốn 5 linh hồn. Những tôi tớ bất tử này sẽ theo chủ và tấn công kẻ thù. Deathling sẽ trở nên mạnh hơn theo cấp độ anh hùng.</string>
     <string name="NecromancerArmor_Info2">Mặc bộ giáp này cho phép pháp sư tử thi sử dụng khả năng \&quot;Necrotism\&quot;, lan truyền một dịch hạch phép thuật có thể lây nhiễm bất kỳ sinh vật nào trong khu vực, sống hoặc chết.</string>
     <string name="NecromancerArmor_Name">Áo giáp xương</string>
+    <string name="NecromancerArmor_NotNecromancer">Chỉ pháp sư gọi hồn mới có thể sử dụng giáp này!</string>
     <string name="NecromancerNPC_Desc">Người đàn ông trung niên này có vẻ hơi khó chịu và phấn khích cùng lúc. Ông mặc một bộ giáp tổng hợp làm từ các mảnh xương được ghép lại.</string>
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
@@ -1530,6 +1531,7 @@
     <string name="Tamahawk_Name">rìu tomahawk</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info1">Cuối cùng cũng tự do...</string>
+    <string name="Tengu_Info2">Bắt được rồi, %s!</string>
     <string name="Tengu_Info3">Bắt được rồi, %s!</string>
     <string name="Tengu_Name_Objective">Tengu</string>
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
@@ -2073,6 +2075,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
