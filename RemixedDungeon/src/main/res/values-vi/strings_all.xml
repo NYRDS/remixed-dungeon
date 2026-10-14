@@ -374,6 +374,7 @@
     <string name="Codex_Story_7">Ký tự Mùi Hôi - Anh hùng sẽ phát ra một đám mây khí độc khi bị đánh trúng.</string>
     <string name="Codex_Story_8">Glyph Độ Nhớt - Anh hùng sẽ nhận debuff đau bị trì hoãn, khiến Anh hùng nhận 1 sát thương mỗi lượt, thay vì nhận toàn bộ một lần.</string>
     <string name="Codex_Story_9">Glyph Dịch Chuyển - Mỗi khi Anh Hùng trúng đòn, có khả năng Anh Hùng sẽ được dịch chuyển đến một ô ngẫu nhiên trong tầm nhìn. Glyph này không hoạt động ở các cấp độ Trùm.</string>
+    <string name="ColdSpirit_Desc">Tinh thể lạnh là hiện thân của băng giá, ở dạng tinh khiết nhất. Là một khối năng lượng ma thuật vô tri, nó tuân theo ý chí của pháp sư đã triệu hồi hoặc hành động theo bản năng cơ bản.</string>
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ComboBuff_Name">Liên hoàn</string>
     <string name="Combo_Combo">%d combo đánh trúng!</string>
@@ -2069,6 +2070,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

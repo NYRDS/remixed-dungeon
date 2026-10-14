@@ -1990,6 +1990,7 @@
     <string name="WndSadGhost_Wepon">Geest zijn wapen</string>
     <string name="WndSaveSlotSelect_Delete_Title">Weet je zeker dat je deze opslagstatus wilt verwijderen?</string>
     <string name="WndSaveSlotSelect_Delete_Yes">Ja, verwijder het!</string>
+    <string name="WndSaveSlotSelect_dontLike">Hou je niet van advertenties? Doe een donatie, en ze verdwijnen. Voor altijd.</string>
     <string name="WndSelectLanguage_ImproveTranslation">Help alsjebliept de vertalingen van Remixed Dungeon te verbeteren</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
     <string name="WndSettingsInGame_GameLog">Spellog</string>
@@ -2425,6 +2426,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
