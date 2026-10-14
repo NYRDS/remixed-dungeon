@@ -301,6 +301,7 @@
     <string name="CharAction_Expel">đuổi ra</string>
     <string name="CharAction_Give">đưa</string>
     <string name="CharAction_Hit">đánh</string>
+    <string name="CharAction_Order">ra lệnh</string>
     <string name="CharAction_PetInventory">kho đồ</string>
     <string name="CharAction_Push">đẩy</string>
     <string name="CharAction_Scare">hù dọa</string>
@@ -2062,6 +2063,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
