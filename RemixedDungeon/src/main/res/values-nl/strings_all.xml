@@ -931,6 +931,7 @@
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
     <string name="Level_TileDescWater">Als je in brand staat, stap in het water om het vuur te doven.</string>
     <string name="Level_TileDescWell">Een mysterieuze put. Je kunt de magische kracht voelen die eruit straalt.</string>
+    <string name="Level_TileEmbers">Gloeiende kolen</string>
     <string name="Level_TileEmptyWell">Lege put</string>
     <string name="Level_TileEntrance">Diepte-ingang</string>
     <string name="Level_TileExit">Diepte-uitgang</string>
@@ -1085,6 +1086,7 @@
     <string name="Necromancy_BecameALich">Je bent een Lich geworden! Je krachten groeien en je zielcapaciteit is verdubbeld! Maar je hebt %1 krachtspunten verloren.</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_SoulsCountLabel">Zielen</string>
+    <string name="Necromancy_SummonDeathlingName">Doodling oproepen</string>
     <string name="Necromancy_Title">Necromantie</string>
     <string name="NecrotismBuff_Info">Het teken van de dood zelf, de stank waarvan degenen in de buurt beïnvloedt en hen dwingt hetzelfde lot te delen.</string>
     <string name="Necrotism_ACSpecial">NECROTISME</string>
@@ -2418,6 +2420,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
