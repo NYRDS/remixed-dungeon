@@ -524,6 +524,7 @@
     <string name="DriedRoseCursedBuff_Info">De roos ziet er mooi uit, maar niet erg charmant.</string>
     <string name="DriedRoseCursedBuff_Name">Verliefd</string>
     <string name="DriedRose_Name">gedroogde roos</string>
+    <string name="Drink_ACDrink">DRINKEN</string>
     <string name="Drink_Message">Die drank was verfrissend!</string>
     <string name="DrunkardNPC_Desc">Vaste klant van de herberg in natuurlijke staat.</string>
     <string name="DrunkardNPC_Gender">masculine</string>
@@ -2424,6 +2425,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

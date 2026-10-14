@@ -477,6 +477,7 @@
     <string name="Dungeon_Tips_16">Khi bạn nâng cấp vũ khí được tặng phép, có khả năng phá hủy phép tặng đó.</string>
     <string name="Dungeon_Tips_17">Giếng Chuyển Hóa có thể ban cho bạn một vật phẩm không thể có được bằng cách khác.</string>
     <string name="Dungeon_Tips_18">Cách duy nhất để phù phép vũ khí là nâng cấp nó bằng cuộn giấy Nâng cấp vũ khí.</string>
+    <string name="Dungeon_Tips_19">Không được mang vũ khí trước mặt Đức Vua!</string>
     <string name="Dungeon_Tips_20">Pixel-Mart. Giá đặc biệt cho những người săn quỷ!</string>
     <string name="Dungeon_Tips_21">Văn bản được viết bằng ngôn ngữ của quỷ.</string>
     <string name="Dungeon_Tips_23">Văn bản được viết bằng ngôn ngữ quỷ dữ.</string>
@@ -2068,6 +2069,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
