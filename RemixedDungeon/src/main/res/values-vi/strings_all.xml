@@ -1553,6 +1553,7 @@
     <string name="Torch_ACLight">THÁP</string>
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
     <string name="Torch_Info2">Đây là vật phẩm không thể thiếu trong hầm ngục, vốn nổi tiếng là thiếu ánh sáng.</string>
+    <string name="Torch_Name">ngọn đuốc</string>
     <string name="ToughShield_desc">Chiếc khiên được gia cố bằng da này trông chắc chắn hơn loại gỗ. Chắc chắn nó có thể đỡ được nhiều sát thương hơn.</string>
     <string name="ToughShield_name">Khiên Da Cường Hóa</string>
     <string name="TownGuardNPC_Desc">Một vệ sĩ thành phố bình thường</string>
@@ -2075,6 +2076,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

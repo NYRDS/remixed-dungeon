@@ -478,6 +478,7 @@
     <string name="Dagger_Name">dolk</string>
     <string name="Damage_Reduction">Schadevermindering</string>
     <string name="DarkGold_Name">donker gouderts</string>
+    <string name="DarkSacrifice_Hint">Selecteer je trouwe dienaar om te offeren!</string>
     <string name="DarkSacrifice_Info">Offer je trouwe dienaar op om een explosie te veroorzaken. Het gebied dat door de explosie wordt bedekt, hangt af van de resterende gezondheid van de dienaar en je vaardigheidsniveau.</string>
     <string name="DarkSacrifice_Ok">Mijn leven is van jou!</string>
     <string name="DarkSacrifice_Resist">Je hebt geen macht over mij!</string>
@@ -2075,6 +2076,7 @@
     <string name="YogsTeeth_Name">Tanden van Yog</string>
     <string name="ZombieGnoll_Desc">Het verwrongen, gebroken lichaam van een gnoll-zombie lijkt niet meer op een mensachtige of een hyena. Al wat overblijft is een hoop rottend vlees en beenderen, vervuld van een kwaadaardige drang om te doden en te verslinden.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
+    <string name="ZombieGnoll_Name">gnoll-zombie</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name_Objective">zombie</string>
@@ -2430,6 +2432,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
