@@ -1409,6 +1409,7 @@
     <string name="ScrollOfMagicMapping_Name">Scroll van Magische Kaartvorming</string>
     <string name="ScrollOfMirrorImage_Name">Spiegelbeeldrol</string>
     <string name="ScrollOfPsionicBlast_Info">Deze scroll bevat vernietigende energie, die psionisch kan worden gekanaliseerd om massale schade toe te brengen aan alle wezens binnen het gezichtsveld. Een begeleidende lichtflits zal tijdelijk iedereen in het effectgebied verblinden, inclusief de lezer van de scroll.</string>
+    <string name="ScrollOfPsionicBlast_Name">Rol van Psionische Schok</string>
     <string name="ScrollOfRecharging_Info">De rauwe magische kracht gebonden in dit perkament zal, bij vrijgave, alle toverstokken van de lezer volledig opladen.</string>
     <string name="ScrollOfRecharging_Info1b">een golf van energie stroomt door je rugzak en laadt je toverstokken op</string>
     <string name="ScrollOfRecharging_Info2">een energiegolf stroomt door je rugzak, maar er gebeurt niets</string>
@@ -2212,6 +2213,7 @@
     <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_stove_name">Stenen kookplaats</string>
     <string name="town_deco_trapdoor_desc">Waar zou dit toch naartoe leiden?</string>
+    <string name="town_deco_trapdoor_name">Valdeur</string>
     <string name="town_deco_urn_desc">Kleien, misschien met as van iemand.</string>
     <string name="town_deco_urn_name">urn</string>
     <string name="town_deco_vat_desc">Deze stenen vat is tot de rand gevuld met heilig water.</string>
@@ -2420,6 +2422,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
