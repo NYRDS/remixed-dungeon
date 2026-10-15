@@ -555,6 +555,7 @@
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">người xem bói</string>
     <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
+    <string name="FriedFish_Taste">Ngon!</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Bạn có thể cảm nhận một luồng khí lạnh toát ra từ mũi tên.</string>
     <string name="FrostAuraBuff_Name">Hơi sương băng</string>
@@ -1780,6 +1781,7 @@
     <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
     <string name="WndLibrary_Codex_Btn">Truyện kể</string>
+    <string name="WndLibrary_Items_Btn">Vật phẩm</string>
     <string name="WndLibrary_Levels_Btn">Hầm ngục</string>
     <string name="WndLibrary_Mobs_Btn">Quái vật</string>
     <string name="WndLocalModInstall_pick">Chọn thư mục mod</string>
@@ -2083,6 +2085,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

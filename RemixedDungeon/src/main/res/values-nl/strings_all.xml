@@ -1059,6 +1059,7 @@
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
     <string name="Mob_StaWanderingStatus">Deze %s dwaalt rond.</string>
+    <string name="ModsButton_SelectMod">Selecteer een mod</string>
     <string name="Mods_AuthorSite">Auteurswebsite:</string>
     <string name="Mods_CreatedBy">Gemaakt door:</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
@@ -1768,6 +1769,7 @@
     <string name="WandOfFlock_SheepBaa_1">Bèè?</string>
     <string name="WandOfFlock_SheepBaa_3">Baa...</string>
     <string name="WandOfFlock_SheepBaa_4">Bee...</string>
+    <string name="WandOfFlock_SheepBaa_5">Bèè...</string>
     <string name="WandOfIcebolt_Info">Deze toverstaf lanceert een ijsbout, die lichte schade toebrengt aan het doelwit. Er is ook een kans om de vijand te vertragen of zelfs te bevriezen.</string>
     <string name="WandOfIcebolt_Info1">Je hebt jezelf gedood met je eigen IJsbout...</string>
     <string name="WandOfIcebolt_Name">IJsbultstaf</string>
@@ -2440,6 +2442,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
