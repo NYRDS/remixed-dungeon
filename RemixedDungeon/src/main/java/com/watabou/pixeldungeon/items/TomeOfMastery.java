@@ -38,6 +38,7 @@ public class TomeOfMastery extends MasteryItem {
 			case NECROMANCER:
 			case GNOLL:
 			case DOCTOR:
+			case PRIEST:
 				return false;
 			default:
 				return true;

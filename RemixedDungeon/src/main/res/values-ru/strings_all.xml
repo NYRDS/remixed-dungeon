@@ -7,6 +7,7 @@
     <string name="Abilities_Default">Мастерство</string>
     <string name="Abilities_Elemental">Стихийные Заклинания</string>
     <string name="Abilities_Necromancy">Некромантия</string>
+    <string name="Abilities_Priest">Божественные Заклинания</string>
     <string name="AboutScene_Code">Программирование:</string>
     <string name="AboutScene_Email_Us">Напишите нам:</string>
     <string name="AboutScene_Graphics">Графика:</string>
@@ -246,6 +247,14 @@
     <string name="Bishop_lesser_bless">Малое благословение - %d g</string>
     <string name="Bishop_no_money">Ты не можешь заплатить за это.</string>
     <string name="Bishop_not_interested">Уйти</string>
+    <string name="Bishop_QuestCompleted">Класс «Священник» разблокирован</string>
+    <string name="Bishop_quest_accept">Я упокою их</string>
+    <string name="Bishop_quest_done">Дело Господне свершено! С этого дня ты можешь встать на путь священника. Прими моё благословение и эти пожертвования, дитя моё — ты их заслужил.</string>
+    <string name="Bishop_quest_given">Благословляю тебя, дитя моё. Ступай с Богом.</string>
+    <string name="Bishop_quest_not_now">Не сейчас</string>
+    <string name="Bishop_quest_progress">Ты упокоил %d из %d нежити, дитя моё. Продолжай.</string>
+    <string name="Bishop_quest_text">Мёртвые не желают упокоиться, дитя моё. Кости ходят по тюремным коридорам, а гниль ползёт из некрополя. Упокой 15 нежитей, и я посвящу тебя в тайны священства.</string>
+    <string name="Bishop_quest_title">Епископ</string>
     <string name="Bishop_remove_curse">Снять проклятье - %d g</string>
     <string name="Bishop_text">Дни и ночи я молюсь о твоей душе, дитя моё.</string>
     <string name="Bishop_title">Епископ</string>
@@ -309,6 +318,9 @@
     <string name="BodyArmorSpell_Name">Тело-щит</string>
     <string name="BoneSaw_Info">Хирургическая пила тонкой работы, созданная для быстрого вскрытия. Её урон и скорость атаки растут с мастерством Чумного доктора. Критические удары выбивают дополнительные собираемые части, безжалостно эффективна против парализованных врагов.</string>
     <string name="BoneSaw_Name">Костяная пила</string>
+    <string name="BlessingSpell_Cast">%s получает благословение.</string>
+    <string name="BlessingSpell_Info">Тихая молитва, окутывающая священника благодатью: на некоторое время улучшаются атака и защита.</string>
+    <string name="BlessingSpell_Name">Благословение</string>
     <string name="BoneShard_Info">Острый осколок кости, добытый из побеждённого врага. Эти осколки удивительно прочны и полезны в изготовлении.</string>
     <string name="BoneShard_Name">Осколок кости</string>
     <string name="Boomerang_Gender">masculine</string>
@@ -762,6 +774,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Exhumation_Name">Эксгумация</string>
     <string name="Exhumation_NoGrave">Здесь нет могилы чтобы её вскрыть.</string>
     <string name="Exhumation_Ok">Я подчиняюсь.</string>
+    <string name="Exorcism_Info">Слово силы, изгоняющее нечисть. Наносит тяжёлый святой урон одной цели — удвоенный по нежити, которая вдобавок замедляется.</string>
+    <string name="Exorcism_Name">Экзорцизм</string>
     <string name="ExplodingSkull_Desc">Это парящий, пылающий череп выглядит весьма хрупким, создаётся впечатление, что он готов разлетится на куски в любой момент.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">взрывающийся череп</string>
@@ -988,6 +1002,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_PlagueDoctorPerks_3">Зелья [yellow:Исцеления], [yellow:Парализующего газа] и [yellow:Токсичного газа] опознаны изначально.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Чумные доктора получают большой штраф к меткости без своей любимой Костяной пилы в руке и не могут использовать дальнобойное оружие.</string>
     <string name="HeroClass_Priest">Священник</string>
+    <string name="HeroClass_PriestPerks_0">Священники начинают игру с 12 очками Силы и боевым посохом.</string>
+    <string name="HeroClass_PriestPerks_1">Священники наносят на 25% больше урона нежити и получают от её атак на 25% меньше урона.</string>
+    <string name="HeroClass_PriestPerks_2">Священники используют ману для Божественных заклинаний: Благословение, Святая Вода, Экзорцизм и Отпевание.</string>
+    <string name="HeroClass_PriestPerks_3">Боевые облачения священника позволяют совершить Освящение: святая вспышка сжигает нежить поблизости и благословляет носителя.</string>
+    <string name="HeroClass_PriestPerks_4">Свитки Снятия Проклятья известны с самого начала.</string>
+    <string name="HeroClass_PriestPerks_5">Священники начинают игру с 12 очками маны.</string>
     <string name="HeroClass_Rog">вор</string>
     <string name="HeroClass_RogPerks_0">Воры начинают с Кольцом Теней+1.</string>
     <string name="HeroClass_RogPerks_1">Воры узнают тип кольца при его надевании.</string>
@@ -1057,6 +1077,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HideInGrassSpell_Info">Твоё искусство игры в прятки совершенно.</string>
     <string name="HideInGrassSpell_Name">Прятки</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Даже я не могу спрятаться на пустом месте.</string>
+    <string name="HolyWater_Info">Омовение святой водой. Ошпаривает и замедляет нежить на выбранной клетке и вокруг неё.</string>
+    <string name="HolyWater_Name">Святая Вода</string>
     <string name="Horror_Name_0">Жуткое %s</string>
     <string name="Horror_Name_1">Жуткий %s</string>
     <string name="Horror_Name_2">Жуткая %s</string>
@@ -1287,6 +1309,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Level_TileWell">Источник</string>
     <string name="LevitationBuff_Info">Тело парит над землей, позволяя избежать ловушек и других земных опасностей.</string>
     <string name="LevitationBuff_Name">Левитирующий</string>
+    <string name="LastRites_Info">Заупокойная служба, отслуженная над местом. Вся нежить в двух клетках от него сгорает и лишается сил.</string>
+    <string name="LastRites_Name">Отпевание</string>
     <string name="LibrarianNPC_Desc">Весьма стеснительная персона, одетая в неуклюжего вида свитер и носящая очки с очень толстыми стёклами.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">З-здравствуйте. Добро пожаловать в библиотеку. Здесь вы можете найти информацию о самых разных диковинах, которые могут быть найдены в подземелье... н-на самом деле мы можем предоставить лишь те знания, которые нам принесли сами герои. Да... даже немного стыдно в этом признаваться. Но зато, с каждым вашим визитом, у нас будут появляться новые записи, я надеюсь...</string>
@@ -1728,6 +1752,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">Посох из твёрдого дерева, его концы окованы железом.</string>
     <string name="Quarterstaff_Name">боевой посох</string>
+    <string name="PriestArmor_ACSpecial">ОСВЯЩЕНИЕ</string>
+    <string name="PriestArmor_Desc">Эти боевые облачения священства позволяют совершить Освящение: вся нежить рядом со священником сгорает в святом свете, а сам он получает благословение.</string>
+    <string name="PriestArmor_NotPriest">Только священники могут использовать эту броню!</string>
     <string name="QuickSlot_SelectSlot">Выберете слот для этого</string>
     <string name="QuickSlot_SelectedItem">Выбери предмет для быстрой ячейки</string>
     <string name="Quiver_Gender">masculine</string>
@@ -2205,6 +2232,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="StartScene_Really">Вы точно хотите начать новую игру?</string>
     <string name="StartScene_Unlock">Чтобы открыть этот класс персонажа, убейте босса ДМ-300 любым другим классом</string>
     <string name="StartScene_UnlockDoctor">Чтобы открыть Чумного Доктора - выполните задание старого Чумного Доктора</string>
+    <string name="StartScene_UnlockPriest">Чтобы открыть Священника - выполните задание Епископа в Церкви</string>
     <string name="StartScene_UnlockElf">Чтобы открыть этот класс персонажа, убейте босса Царь Дворфов любым другим классом</string>
     <string name="StartScene_UnlockGnoll">Чтобы разблокировать этот класс, вам нужно убедить городского священика подлатать Гнолла-Громилу</string>
     <string name="StartScene_UnlockNecromancer">Чтобы открыть этот класс, убейте Лича любым другим классом.</string>

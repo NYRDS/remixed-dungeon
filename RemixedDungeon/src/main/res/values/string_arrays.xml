@@ -187,13 +187,14 @@
     <item>@string/HeroClass_ElfPerks_4</item>
     <item>@string/HeroClass_ElfPerks_5</item>
   </string-array>
-  <!--string-array name="HeroClass_PriestPerks">
+  <string-array name="HeroClass_PriestPerks">
     <item>@string/HeroClass_PriestPerks_0</item>
     <item>@string/HeroClass_PriestPerks_1</item>
     <item>@string/HeroClass_PriestPerks_2</item>
     <item>@string/HeroClass_PriestPerks_3</item>
     <item>@string/HeroClass_PriestPerks_4</item>
-  </string-array-->
+    <item>@string/HeroClass_PriestPerks_5</item>
+  </string-array>
   <string-array name="HeroClass_PlagueDoctorPerks">
     <item>@string/HeroClass_PlagueDoctorPerks_0</item>
     <item>@string/HeroClass_PlagueDoctorPerks_1</item>

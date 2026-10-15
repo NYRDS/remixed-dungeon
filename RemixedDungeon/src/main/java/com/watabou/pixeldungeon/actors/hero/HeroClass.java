@@ -256,6 +256,8 @@ public enum HeroClass implements CharModifier, NamedEntityKind {
                 return StringsManager.getVars(R.array.HeroClass_NecromancerPerks);
             case GNOLL:
                 return StringsManager.getVars(R.array.HeroClass_GnollPerks);
+            case PRIEST:
+                return StringsManager.getVars(R.array.HeroClass_PriestPerks);
             case DOCTOR:
                 return StringsManager.getVars(R.array.HeroClass_PlagueDoctorPerks);
         }
@@ -350,11 +352,25 @@ public enum HeroClass implements CharModifier, NamedEntityKind {
 
     @Override
     public int attackProc(Char attacker, Char defender, int damage) {
+        switch (this) {
+            case PRIEST:
+                if (defender.undead && !attacker.friendly(defender)) {
+                    return damage + Math.max(1, damage / 4);
+                }
+                break;
+        }
         return damage;
     }
 
     @Override
     public int charGotDamage(int damage, NamedEntityKind src, Char target) {
+        switch (this) {
+            case PRIEST:
+                if (src instanceof Char && ((Char) src).undead) {
+                    return damage - damage / 4;
+                }
+                break;
+        }
         return damage;
     }
 

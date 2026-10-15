@@ -39,6 +39,7 @@ public class SpellHelper {
         affinityToIcon.put("Witchcraft", 17);
         affinityToIcon.put("Huntress", 18);
         affinityToIcon.put("Elf", 19);
+        affinityToIcon.put("Priest", 20);
     }
 
     public static int iconIdByAffinity(String affinity) {

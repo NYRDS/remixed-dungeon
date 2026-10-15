@@ -186,6 +186,7 @@ public class Badges {
 		MASTERY_NECROMANCER, VICTORY_NECROMANCER, BOSS_SLAIN_1_NECROMANCER, BOSS_SLAIN_3_LICH, VICTORY_GNOLL, BOSS_SLAIN_1_GNOLL,
 		GNOLL_UNLOCKED(R.string.Badges_GnollUnlocked,72, true),
 		DOCTOR_QUEST_COMPLETED(R.string.MedicineMask_Obtained,81),
+		PRIEST_QUEST_COMPLETED(R.string.Bishop_QuestCompleted,83),
 		MASTERY_GNOLL,
 		THIS_IS_SPARTA(R.string.Badges_ThisIsSparta, 82),
 		MASTERY_PRIEST, MASTERY_DOCTOR,
@@ -638,6 +639,12 @@ public class Badges {
 				case GNOLL:
 					badge = Badge.BOSS_SLAIN_1_GNOLL;
 					break;
+				case PRIEST:
+					badge = Badge.BOSS_1_SLAIN_PRIEST;
+					break;
+				case DOCTOR:
+					badge = Badge.BOSS_SLAIN_1_DOCTOR;
+					break;
 			}
 			local.add(badge);
 			if (!global.contains(badge)) {
@@ -855,6 +862,12 @@ public class Badges {
 			case GNOLL:
 				badge = Badge.VICTORY_GNOLL;
 				break;
+			case PRIEST:
+				badge = Badge.VICTORY_PRIEST;
+				break;
+			case DOCTOR:
+				badge = Badge.VICTORY_DOCTOR;
+				break;
 		}
 		local.add(badge);
 		if (!global.contains(badge)) {
@@ -944,6 +957,7 @@ public class Badges {
 		displayBadge(Badge.CHAMPION);
 	}
 
+	@LuaInterface
 	public static void displayBadge(Badge badge) {
 
 		if (badge == null) {

@@ -8,6 +8,7 @@
     <string name="Abilities_Default">Mastery</string>
     <string name="Abilities_Elemental">Elemental Spells</string>
     <string name="Abilities_Necromancy">Necromancy</string>
+    <string name="Abilities_Priest">Divine Spells</string>
     <string name="AboutScene_Code">Code:</string>
     <string name="AboutScene_Email_Us">E-Mail us:</string>
     <string name="AboutScene_Graphics">Graphics:</string>
@@ -246,6 +247,14 @@
     <string name="Bishop_lesser_bless">Lesser bless - %d g</string>
     <string name="Bishop_no_money">You can\'t pay for it.</string>
     <string name="Bishop_not_interested">Leave</string>
+    <string name="Bishop_QuestCompleted">Priest class unlocked</string>
+    <string name="Bishop_quest_accept">I will lay them to rest</string>
+    <string name="Bishop_quest_done">The Lord\'s work is done! From this day you may walk the path of a priest. Take this blessing and these alms, my child — you have earned them.</string>
+    <string name="Bishop_quest_given">Bless you, my child. Go with God.</string>
+    <string name="Bishop_quest_not_now">Not now</string>
+    <string name="Bishop_quest_progress">You have laid %d of %d undead to rest, my child. Keep going.</string>
+    <string name="Bishop_quest_text">The dead refuse to rest, my child. Bones walk the prison halls and rotten things crawl out of the necropolis. Put 15 of the undead to rest, and I will pass the mysteries of the priesthood on to you.</string>
+    <string name="Bishop_quest_title">Bishop</string>
     <string name="Bishop_remove_curse">Remove curse - %d g</string>
     <string name="Bishop_text">Days and nights I pray for you my child.</string>
     <string name="Bishop_title">Bishop</string>
@@ -310,6 +319,9 @@
     <string name="BoneSaw_Info">A precision-engineered surgical saw designed for rapid dissection. Its damage and attack speed grow deadlier with the Plague Doctor’s skill. Critical hits carve extra harvestable parts from enemies, and it strikes with ruthless efficiency against paralyzed foes.</string>
 
     <string name="BoneSaw_Name">Bone Saw</string>
+    <string name="BlessingSpell_Cast">%s is blessed.</string>
+    <string name="BlessingSpell_Info">A quiet prayer that wraps the priest in grace: attack and defense are improved for a while.</string>
+    <string name="BlessingSpell_Name">Blessing</string>
     <string name="BoneShard_Info">A sharp shard of bone harvested from a defeated enemy. These shards are surprisingly durable and useful in crafting.</string>
     <string name="BoneShard_Name">Bone Shard</string>
     <string name="Boomerang_Gender">masculine</string>
@@ -762,6 +774,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Exhumation_Name">Exhumation</string>
     <string name="Exhumation_NoGrave">There is no grave here to perform an Exhumation.</string>
     <string name="Exhumation_Ok">I will obey you.</string>
+    <string name="Exorcism_Info">A banishing word of power. It deals heavy holy damage to a single foe — doubled against the undead, who are also slowed by it.</string>
+    <string name="Exorcism_Name">Exorcism</string>
     <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, and looks like it\'s going to burst into pieces at any second.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">exploding skull</string>
@@ -989,6 +1003,12 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_PlagueDoctorPerks_4">Plague Doctors suffer great accuracy penalties without beloved Bone Saw in hand and cannot use ranged weapons.</string>
 
     <string name="HeroClass_Priest">Priest</string>
+    <string name="HeroClass_PriestPerks_0">Priests start with 12 points of Strength and a quarterstaff.</string>
+    <string name="HeroClass_PriestPerks_1">Priests deal 25% bonus damage to the undead and take 25% less damage from their attacks.</string>
+    <string name="HeroClass_PriestPerks_2">Priests use mana to cast Divine spells: Blessing, Holy Water, Exorcism and Last Rites.</string>
+    <string name="HeroClass_PriestPerks_3">Priest\'s battle vestments can be called upon to Sanctify: a holy burst that burns the undead nearby and blesses the wearer.</string>
+    <string name="HeroClass_PriestPerks_4">Scrolls of Remove Curse are identified from the beginning.</string>
+    <string name="HeroClass_PriestPerks_5">Priests start with 12 mana points.</string>
     <string name="HeroClass_Rog">rogue</string>
     <string name="HeroClass_RogPerks_0">Rogues start with a Ring of Shadows+1.</string>
     <string name="HeroClass_RogPerks_1">Rogues identify the type of a ring on equipping it.</string>
@@ -1058,6 +1078,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HideInGrassSpell_Info">You perfected your Hide-and-seek mastery.</string>
     <string name="HideInGrassSpell_Name">Hide-In-Grass</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Even I can\'t hide in plain sight.</string>
+    <string name="HolyWater_Info">A splash of consecrated water. It scalds and slows the undead on and around the target cell.</string>
+    <string name="HolyWater_Name">Holy Water</string>
     <string name="Horror_Name_0">Eldritch %s</string>
     <string name="Horror_Name_1">Eldritch %s</string>
     <string name="Horror_Name_2">Eldritch %s</string>
@@ -1304,6 +1326,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Level_TileWell">Well</string>
     <string name="LevitationBuff_Info">The body hovers above the ground, avoiding traps and other earthly dangers.</string>
     <string name="LevitationBuff_Name">Levitating</string>
+    <string name="LastRites_Info">A funeral service held over a place. All undead within two cells of it are burned and crippled.</string>
+    <string name="LastRites_Name">Last Rites</string>
     <string name="LibrarianNPC_Desc">A very shy person, wearing an awkward looking sweater and a thick pair of glasses.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-hello. Welcome to the Library. Here you can find the information about all sort of things, that can be found in the dungeon... actually we can only provide knowledge that was discovered by adventurers. It... it\'s kind of embarrassing. So each time you visit us, probably, there will be new things to read.</string>
@@ -1729,6 +1753,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">A staff of hardwood, its ends are shod with iron.</string>
     <string name="Quarterstaff_Name">quarterstaff</string>
+    <string name="PriestArmor_ACSpecial">SANCTIFY</string>
+    <string name="PriestArmor_Desc">These battle vestments of the priesthood can be called upon to Sanctify: all undead near the wearer are burned by holy light, while the priest receives a blessing.</string>
+    <string name="PriestArmor_NotPriest">Only priests can use this armor!</string>
     <string name="QuickSlot_SelectSlot">Select quick slot for it</string>
     <string name="QuickSlot_SelectedItem">Select an item for the quickslot</string>
     <string name="Quiver_Gender">masculine</string>
@@ -2195,6 +2222,7 @@ Your opinion matters!</string>
     <string name="StartScene_Really">Do you really want to start new game?</string>
     <string name="StartScene_Unlock">To unlock this character class, slay the DM-300 boss with any other class</string>
     <string name="StartScene_UnlockDoctor">To unlock Plague Doctor - complete quest of old Plague Doctor</string>
+    <string name="StartScene_UnlockPriest">To unlock Priest - complete the Bishop\'s quest in the Church</string>
 
     <string name="StartScene_UnlockElf">To unlock this character class, slay the King boss with any other class</string>
     <string name="StartScene_UnlockGnoll">To unlock this class you must persuade the town priest to heal the Gnoll Brute</string>

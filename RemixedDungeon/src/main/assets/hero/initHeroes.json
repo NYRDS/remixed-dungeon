@@ -213,12 +213,24 @@
     ]
   },
   "PRIEST": {
+    "weapon": {
+      "kind": "Quarterstaff",
+      "identified": true
+    },
+    "quickslot": [
+      {
+        "spell": "Blessing"
+      }
+    ],
     "knownItems": [
       {
         "kind": "ScrollOfRemoveCurse"
       }
       ],
-    "magicAffinity": "Priest"
+    "maxSp": 12,
+    "sp": 12,
+    "magicAffinity": "Priest",
+    "str": 12
   },
   "DOCTOR": {
     "weapon": {

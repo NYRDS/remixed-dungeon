@@ -8,12 +8,39 @@ local RPD = require "scripts/lib/commonClasses"
 
 local mob = require"scripts/lib/mob"
 
+local quest = require"scripts/lib/quest"
+
 local npc
 local client
 
 local lesserPrice
 local greatPrice
 local removeCursePrice
+
+local questName = "BishopUndeadQuest"
+local targetKills = 15
+local undeadKinds = {"Skeleton","Zombie","Wraith","Undead","EnslavedSoul","ExplodingSkull","DeathKnight","DreadKnight","JarOfSouls"}
+
+local undeadSlain = function()
+    local state = quest.state(questName)
+    if not state then
+        return 0
+    end
+    local total = 0
+    for _, kind in pairs(undeadKinds) do
+        total = total + ((state.kills or {})[kind] or 0)
+    end
+    return total
+end
+
+local questOfferDialog = function(index)
+    if index == 0 then
+        quest.give(questName, client, {kills = undeadKinds})
+        npc:say("Bishop_quest_given")
+    else
+        npc:say("Bishop_bye")
+    end
+end
 
 local dialog = function(index)
     if index == 0 then
@@ -61,6 +88,36 @@ return mob.init({
     interact = function(self, chr)
         client = chr
         npc = self
+
+        if not RPD.checkBadge("PRIEST_QUEST_COMPLETED") then
+            if not quest.isGiven(questName) then
+                RPD.chooseOption( questOfferDialog,
+                        "Bishop_quest_title",
+                        "Bishop_quest_text",
+                        "Bishop_quest_accept",
+                        "Bishop_quest_not_now"
+                )
+                return
+            end
+
+            if not quest.isCompleted(questName) then
+                local slain = undeadSlain()
+
+                if slain >= targetKills then
+                    quest.complete(questName)
+                    RPD.Badges:displayBadge(RPD.Badges.Badge:valueOf("PRIEST_QUEST_COMPLETED"))
+
+                    RPD.affectBuff(chr, RPD.Buffs.Blessed, 500)
+                    chr:heal(chr:ht(), self)
+                    chr:collectAnimated(RPD.item("Gold", 300))
+
+                    RPD.showQuestWindow(self, "Bishop_quest_done")
+                else
+                    RPD.showQuestWindow(self, RPD.textById("Bishop_quest_progress"):format(slain, targetKills))
+                end
+                return
+            end
+        end
 
         local priceFactor = RPD.RemixedDungeon:getDifficultyFactor() * math.pow( 1.05, (client:lvl()-1))
 
