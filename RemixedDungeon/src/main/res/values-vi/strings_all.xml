@@ -254,6 +254,7 @@
     <string name="Carcass_Necromancy">Bạn đã hồi sinh thi thể của %s!</string>
     <string name="Carcass_Necromancy_Failed">Việc hồi sinh thi thể của %s đã thất bại!</string>
     <string name="Carcass_SelectItem">Chọn một vật phẩm</string>
+    <string name="Caves_TileDescExit">Cầu thang dẫn xuống tầng sâu hơn.</string>
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
     <string name="Caves_TileHighGrass">Nấm phát sáng</string>
     <string name="Caves_TileWater">Nước lạnh buốt.</string>
@@ -2080,6 +2081,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

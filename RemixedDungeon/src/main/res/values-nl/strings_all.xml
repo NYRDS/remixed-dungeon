@@ -539,6 +539,7 @@
     <string name="Dungeon_NoTips">De tekst is onleesbaar...</string>
     <string name="Dungeon_Tips_0">Overschat je kracht niet, gebruik wapens en uitrusting die je aankunt.</string>
     <string name="Dungeon_Tips_1">Niet alle deuren in de kerker zijn meteen zichtbaar. Als je vastzit, zoek naar verborgen deuren.</string>
+    <string name="Dungeon_Tips_11">Als je door meerdere monsters tegelijk wordt aangevallen, probeer dan achter een deur terug te trekken.</string>
     <string name="Dungeon_Tips_12">Als je brandt en zweeft, kun je het vuur niet in water uithassen.</string>
     <string name="Dungeon_Tips_13">Het heeft geen zin om meer dan één Ankh tegelijk te bezitten, omdat je ze bij wederopstanding verliest.</string>
     <string name="Dungeon_Tips_14">GEVAAR! Zware machines kunnen letsel, verlies van ledematen of de dood veroorzaken!</string>
@@ -2076,6 +2077,7 @@
     <string name="YogsTeeth_Desc">Enorme mond van de Oude God, gevuld met vlijmscherpe tanden. Een zeer passende manifestatie van zijn drang om alle wezens te vernietigen en te verslinden.</string>
     <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name">Tanden van Yog</string>
+    <string name="YogsTeeth_Name_Objective">tanden van Yog</string>
     <string name="ZombieGnoll_Desc">Het verwrongen, gebroken lichaam van een gnoll-zombie lijkt niet meer op een mensachtige of een hyena. Al wat overblijft is een hoop rottend vlees en beenderen, vervuld van een kwaadaardige drang om te doden en te verslinden.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
@@ -2436,6 +2438,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
