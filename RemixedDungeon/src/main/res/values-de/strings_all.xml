@@ -1541,6 +1541,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="PetInventory_ACTakeFromPet">VOM TIER NEHMEN</string>
     <string name="PetInventory_CantGiveEquipped">Kann angelegtes Item nicht geben</string>
     <string name="PetInventory_GaveItem">%1$s an %2$s gegeben</string>
+    <string name="PetInventory_GiveAll">Alles geben</string>
     <string name="PetInventory_GiveN">Geben %d</string>
     <string name="PetInventory_GiveToPet">An Tier geben</string>
     <string name="PetInventory_HeroBackpackFull">Dein Rucksack ist voll</string>
@@ -3069,6 +3070,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
