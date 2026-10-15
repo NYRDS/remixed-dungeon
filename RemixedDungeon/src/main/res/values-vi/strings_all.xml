@@ -1507,6 +1507,7 @@
     <string name="Stench_Txt">%s hôi thối</string>
     <string name="StoneBloodBuff_Info">Máu hóa đá, dung nhập với các bức tường gần đó và khiến việc đi xuyên qua chúng dễ dàng hơn nhiều, nhưng phải trả giá bằng cái gì?</string>
     <string name="StoneBloodBuff_Name">Máu đá</string>
+    <string name="Str_lose">-1 sức mạnh</string>
     <string name="StrongShield_desc">Chiếc khiên hình chữ nhật này được mạ tấm đồng và trang trí vải màu. Nó nặng hơn đáng kể, nhưng có thể chặn được nhiều sát thương hơn.</string>
     <string name="StrongShield_name">Khiên Mạ Đồng</string>
     <string name="StunBuff_Name">Choáng</string>
@@ -2085,6 +2086,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

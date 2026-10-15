@@ -768,6 +768,7 @@
     <string name="HeroSubClass_NameScout">verkenner</string>
     <string name="HeroSubClass_NameShaman">sjamaan</string>
     <string name="HeroSubClass_NameSnip">sluipschutter</string>
+    <string name="HeroSubClass_NameWarL">warlock</string>
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
     <string name="Hero_AnotherTry">Je bent gestorven.\n Wil je het opnieuw proberen?</string>
     <string name="Hero_LevelUp">niveau omhoog!</string>
@@ -2442,6 +2443,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
