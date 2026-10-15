@@ -44,10 +44,23 @@ async function boot(browser, url, wantScene, maxPolls) {
     // mod-loader's intentionally-failing first lua compile probe, and the
     // caught JSONObject.optInt default-path error on NUL-containing save
     // bundle values (game falls back to the default; scene stays GameScene)
-    const benign = e => e.msg === 'Error: null'
+    // Plus first-boot optional-file reads that TeaVM surfaces through
+    // $rt_wrapException even though Java catches them (present identically
+    // since the 0.15.0 merge): badges.dat/badges_backup.dat/ModDataFor
+    // (absent until first write), the empty optional-file JSONObject parse,
+    // and the town level save probe of the ep=newgame start-descend
+    // (deleteGame ran first, so the FileNotFound -> fresh generation is the
+    // normal path; phase 2 keeps it fatal - there the file must exist).
+    const benignBase = e => e.msg === 'Error: null'
         || (e.msg || '').includes('unexpected symbol')
-        || (e.msg || '').includes('is not a valid number');
-    const fatal1 = d1.jsErr.filter(e => !benign(e));
+        || (e.msg || '').includes('is not a valid number')
+        || e.msg === 'badges.dat'
+        || e.msg === 'badges_backup.dat'
+        || (e.msg || '').startsWith('ModDataFor_')
+        || (e.msg || '').includes("A JSONObject text must begin with '{'");
+    const benign = (e, phase) => benignBase(e)
+        || (phase === 1 && /^PredesignedLevel_.*\.dat$/.test(e.msg || ''));
+    const fatal1 = d1.jsErr.filter(e => !benign(e, 1));
     if (fatal1.length) failures.push('phase1: fatal jsErr: ' + JSON.stringify(fatal1).slice(0, 600));
     const fightDone = all1.some(l => l.includes('fight: finished'));
     console.log('phase1 logs (EP2 tail):');
@@ -59,7 +72,7 @@ async function boot(browser, url, wantScene, maxPolls) {
     const p2 = await boot(browser, 'http://127.0.0.1:8081/?ep=continue&nosound=1', 'GameScene', 70);
     if (p2.scene !== 'GameScene') failures.push('phase2: continue never reached GameScene (scene=' + p2.scene + ')');
     const d2 = await p2.page.evaluate(() => ({ jsErr: (window.__jsErrLog || []).slice(-10) }));
-    const fatal2 = d2.jsErr.filter(e => !benign(e));
+    const fatal2 = d2.jsErr.filter(e => !benign(e, 2));
     if (fatal2.length) failures.push('phase2: fatal jsErr: ' + JSON.stringify(fatal2).slice(0, 600));
     const contOk = p2.logs.some(l => l.includes('continue: loading'));
     console.log('phase2 continue loading marker: ' + contOk + '  scene: ' + p2.scene);
