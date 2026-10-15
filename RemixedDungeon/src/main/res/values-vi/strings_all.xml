@@ -951,6 +951,7 @@
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimik</string>
     <string name="MimicPie_Name_Objective">mimik</string>
+    <string name="Mimic_Desc">Mimic là những sinh vật ma thuật có thể biến thành bất kỳ hình dạng nào. Trong hầm ngục, chúng gần như luôn chọn hình dạng rương kho báu, vì chúng biết cách thu hút nhà thám hiểm.</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="MindVisionBuff_Name">Tầm nhìn tâm trí</string>
     <string name="MirrorImage_Desc">Ảo ảnh này mang sự tương đồng rất lớn với bạn, nhưng nó nhợt nhạt hơn và run rẩy một chút.</string>
@@ -2086,6 +2087,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

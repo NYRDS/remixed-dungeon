@@ -191,6 +191,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">미친 강도</string>
     <string name="Bandit_Name_Objective">미친 강도</string>
+    <string name="BardNPC_Desc">마을의 바드는 류트를 연주하고 있습니다.</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">바드</string>
     <string name="BardNPC_Name_Objective">bard</string>
@@ -3054,6 +3055,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

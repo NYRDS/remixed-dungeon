@@ -1095,6 +1095,7 @@
     <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
     <string name="Necromancy_BecameALich">Je bent een Lich geworden! Je krachten groeien en je zielcapaciteit is verdubbeld! Maar je hebt %1 krachtspunten verloren.</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
+    <string name="Necromancy_ReincarnationTriggered">Je krachten verwerpen de dood zelf! Maar je verloor alle verzamelde zielen en bezittingen.</string>
     <string name="Necromancy_SoulsCountLabel">Zielen</string>
     <string name="Necromancy_SummonDeathlingName">Doodling oproepen</string>
     <string name="Necromancy_Title">Necromantie</string>
@@ -2443,6 +2444,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
