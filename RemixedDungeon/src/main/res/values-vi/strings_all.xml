@@ -144,6 +144,7 @@
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">bard</string>
     <string name="BardNPC_Name_Objective">nhạc sĩ</string>
+    <string name="BarkskinBuff_Info">Cơ thể được bao phủ bởi vỏ cây giúp chặn một phần sát thương nhận phải.</string>
     <string name="Barrel_Name">thùng gỗ</string>
     <string name="Barrel_Pumpkin_Name">bí ngô</string>
     <string name="Bat_Desc">Những cư dân nhanh nhẹn và bền bỉ của các vòm hang này có thể đánh bại đối thủ lớn hơn nhiều bằng cách hồi phục sức khỏe sau mỗi đòn tấn công thành công.</string>
@@ -472,6 +473,7 @@
     <string name="Drunkard_Phrase_3">Cái bia này có vị như đất</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_NoTips">Chữ viết không thể đọc được...</string>
+    <string name="Dungeon_Tips_1">Không phải tất cả các cánh cửa trong hầm ngục đều có thể nhìn thấy ngay từ đầu. Nếu bạn bị kẹt, hãy tìm các cánh cửa ẩn.</string>
     <string name="Dungeon_Tips_10">Pixel-Mart. Tiêu tiền. Sống lâu hơn.</string>
     <string name="Dungeon_Tips_12">Nếu bạn đang cháy và đang bay, bạn không thể dập lửa trong nước.</string>
     <string name="Dungeon_Tips_14">NGUY HIỂM! Máy móc nặng có thể gây thương tích, mất chi hoặc tử vong!</string>
@@ -2076,6 +2078,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
