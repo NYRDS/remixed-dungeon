@@ -8,6 +8,7 @@
     <string name="Abilities_Default">Mastery</string>
     <string name="Abilities_Elemental">Elemental Spells</string>
     <string name="Abilities_Necromancy">Necromancy</string>
+    <string name="Abilities_Priest">Divine Spells</string>
     <string name="AboutScene_Code">Code:</string>
     <string name="AboutScene_Email_Us">E-Mail us:</string>
     <string name="AboutScene_Graphics">Graphics:</string>
@@ -336,6 +337,9 @@
     <string name="BoneSaw_Info">A precision-engineered surgical saw designed for rapid dissection. Its damage and attack speed grow deadlier with the Plague Doctor’s skill. Critical hits carve extra harvestable parts from enemies, and it strikes with ruthless efficiency against paralyzed foes.</string>
 
     <string name="BoneSaw_Name">Bone Saw</string>
+    <string name="BlessingSpell_Cast">%s is blessed.</string>
+    <string name="BlessingSpell_Info">A quiet prayer that wraps the priest in grace: attack and defense are improved for a while.</string>
+    <string name="BlessingSpell_Name">Blessing</string>
     <string name="BoneShard_Info">A sharp shard of bone harvested from a defeated enemy. These shards are surprisingly durable and useful in crafting.</string>
     <string name="BoneShard_Name">Bone Shard</string>
     <string name="Boomerang_Gender">masculine</string>
@@ -788,6 +792,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Exhumation_Name">Exhumation</string>
     <string name="Exhumation_NoGrave">There is no grave here to perform an Exhumation.</string>
     <string name="Exhumation_Ok">I will obey you.</string>
+    <string name="Exorcism_Info">A banishing word of power. It deals heavy holy damage to a single foe — doubled against the undead, who are also slowed by it.</string>
+    <string name="Exorcism_Name">Exorcism</string>
     <string name="ExplodingSkull_Desc">This floating, burning skull seems extremely fragile, and looks like it\'s going to burst into pieces at any second.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">exploding skull</string>
@@ -1090,6 +1096,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HideInGrassSpell_Info">You perfected your Hide-and-seek mastery.</string>
     <string name="HideInGrassSpell_Name">Hide-In-Grass</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Even I can\'t hide in plain sight.</string>
+    <string name="HolyWater_Info">A splash of consecrated water. It scalds and slows the undead on and around the target cell.</string>
+    <string name="HolyWater_Name">Holy Water</string>
     <string name="Horror_Name_0">Eldritch %s</string>
     <string name="Horror_Name_1">Eldritch %s</string>
     <string name="Horror_Name_2">Eldritch %s</string>
@@ -1336,6 +1344,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Level_TileWell">Well</string>
     <string name="LevitationBuff_Info">The body hovers above the ground, avoiding traps and other earthly dangers.</string>
     <string name="LevitationBuff_Name">Levitating</string>
+    <string name="LastRites_Info">A funeral service held over a place. All undead within two cells of it are burned and crippled.</string>
+    <string name="LastRites_Name">Last Rites</string>
     <string name="LibrarianNPC_Desc">A very shy person, wearing an awkward looking sweater and a thick pair of glasses.</string>
     <string name="LibrarianNPC_Gender">masculine</string>
     <string name="LibrarianNPC_Message_Instruction">H-hello. Welcome to the Library. Here you can find the information about all sort of things, that can be found in the dungeon... actually we can only provide knowledge that was discovered by adventurers. It... it\'s kind of embarrassing. So each time you visit us, probably, there will be new things to read.</string>
@@ -1761,6 +1771,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quarterstaff_Info">A staff of hardwood, its ends are shod with iron.</string>
     <string name="Quarterstaff_Name">quarterstaff</string>
+    <string name="PriestArmor_ACSpecial">SANCTIFY</string>
+    <string name="PriestArmor_Desc">These battle vestments of the priesthood can be called upon to Sanctify: all undead near the wearer are burned by holy light, while the priest receives a blessing.</string>
+    <string name="PriestArmor_NotPriest">Only priests can use this armor!</string>
     <string name="QuickSlot_SelectSlot">Select quick slot for it</string>
     <string name="QuickSlot_SelectedItem">Select an item for the quickslot</string>
     <string name="Quiver_Gender">masculine</string>
@@ -2227,6 +2240,7 @@ Your opinion matters!</string>
     <string name="StartScene_Really">Do you really want to start new game?</string>
     <string name="StartScene_Unlock">To unlock this character class, slay the DM-300 boss with any other class</string>
     <string name="StartScene_UnlockDoctor">To unlock Plague Doctor - complete quest of old Plague Doctor</string>
+    <string name="StartScene_UnlockPriest">To unlock Priest - complete the Bishop\'s quest in the Church</string>
 
     <string name="StartScene_UnlockElf">To unlock this character class, slay the King boss with any other class</string>
     <string name="StartScene_UnlockGnoll">To unlock this class you must persuade the town priest to heal the Gnoll Brute</string>

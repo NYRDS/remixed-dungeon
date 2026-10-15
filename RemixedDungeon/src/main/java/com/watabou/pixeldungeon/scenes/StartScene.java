@@ -66,6 +66,7 @@ public class StartScene extends PixelScene {
     private boolean elfUnlocked;
     private boolean gnollUnlocked;
     private boolean doctorUnlocked;
+    private boolean priestUnlocked;
 
     private float width, height, bottom;
 
@@ -216,6 +217,7 @@ public class StartScene extends PixelScene {
         elfUnlocked = Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_4) || (GamePreferences.donated() >= 2);
         gnollUnlocked = Badges.isUnlocked(Badges.Badge.GNOLL_UNLOCKED) || (GamePreferences.donated() >= 3);
         doctorUnlocked = Badges.isUnlocked(Badges.Badge.DOCTOR_QUEST_COMPLETED) || (GamePreferences.donated() >= 3);
+        priestUnlocked = Badges.isUnlocked(Badges.Badge.PRIEST_QUEST_COMPLETED) || (GamePreferences.donated() >= 3);
 
         ExitButton btnExit = new ExitButton();
         btnExit.setPos(Camera.main.width - btnExit.width(), 0);
@@ -310,8 +312,8 @@ public class StartScene extends PixelScene {
                 return;
             }
 
-            if(curShield.cl == HeroClass.PRIEST ) {
-                updateUnlockLabel(StringsManager.getVar(R.string.StartScene_ComingSoon));
+            if(curShield.cl == HeroClass.PRIEST && !priestUnlocked ) {
+                updateUnlockLabel(StringsManager.getVar(R.string.StartScene_UnlockPriest));
                 return;
             }
         }
