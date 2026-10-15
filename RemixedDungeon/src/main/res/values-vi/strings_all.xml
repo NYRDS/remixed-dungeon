@@ -500,6 +500,7 @@
     <string name="ElfArmor_ACSpecial">TIẾNG GỌI CỦA THIÊN NHIÊN</string>
     <string name="ElfArmor_Desc">Với sự giúp đỡ của chiếc áo choàng này, yêu tinh có thể triệu hồi lực lượng của chính thiên nhiên. Cỏ cao sẽ mọc trong chớp mắt ngay cả qua đá cứng, làm bất động tất cả kẻ thù trong tầm nhìn.</string>
     <string name="ElvenBow_Gender">masculine</string>
+    <string name="ElvenBow_Info">Một ví dụ xuất sắc về nghệ thuật chế tạo của người elf. Rõ ràng nó hiệu quả và chính xác hơn một cây cung gỗ thông thường.</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Name">dao gỗ yêu tinh</string>
     <string name="EncumbranceBuff_CharAct_1">Tôi không đủ sức để sử dụng %s đúng cách.</string>
@@ -2081,6 +2082,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

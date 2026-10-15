@@ -2106,6 +2106,7 @@
     <string name="town_deco_bell_tower_desc">Traditioneel worden kerkklokken in hoge torens geïnstalleerd zodat het gelui over grotere afstand te horen is.</string>
     <string name="town_deco_blue_carpet_desc">Een luxe blauwe tapijt, versierd met paarse ornamenten.</string>
     <string name="town_deco_blue_carpet_name">kleedje</string>
+    <string name="town_deco_book_name">Boek</string>
     <string name="town_deco_broken_roof_desc">De dakpannen op dit dak zijn gebarsten en moeten vervangen worden.</string>
     <string name="town_deco_broken_roof_name">kapot dak</string>
     <string name="town_deco_broken_wall_desc">De balken in deze muur zijn al lang verrot en hebben hun gewone weerstandskracht verloren.</string>
@@ -2438,6 +2439,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
