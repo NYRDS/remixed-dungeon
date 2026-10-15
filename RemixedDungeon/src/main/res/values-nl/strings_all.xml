@@ -953,6 +953,7 @@
     <string name="Level_TileLockedExit">Vergrendelde uitgang naar de diepte</string>
     <string name="Level_TileOpenDoor">Open deur</string>
     <string name="Level_TilePedestal">Voetstuk</string>
+    <string name="Level_TilePileOfStones">Een stapel stenen</string>
     <string name="Level_TilePoisonTrap">Gifpijl-val</string>
     <string name="Level_TileStatue">Standbeeld</string>
     <string name="Level_TileSummoningTrap">Oproepval</string>
@@ -2444,6 +2445,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

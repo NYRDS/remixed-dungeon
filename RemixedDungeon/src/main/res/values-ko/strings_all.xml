@@ -1397,6 +1397,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_StaControlledStatus">이 %s는 사악한 존재에게 정신을 지배당하고 있습니다.</string>
     <string name="Mob_StaFleeingStatus">이 %s 은/는 혼비백산하고 있습니다.</string>
     <string name="Mob_StaFleeingStatus2">이 %1$s은/는 %2$s으로부터 달아나고 있습니다</string>
+    <string name="Mob_StaGuardStatus">%s이/가 경비 중</string>
     <string name="Mob_StaHuntingStatus">이 %s 은/는 사냥중 입니다</string>
     <string name="Mob_StaHuntingStatus2">이 %1$s은/는 %2$s을/를 쫒고 있습니다</string>
     <string name="Mob_StaPassiveStatus">이 %s 은/는 소극적입니다</string>
@@ -3055,6 +3056,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
