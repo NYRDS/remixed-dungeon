@@ -1538,6 +1538,7 @@ Parede
     <string name="PetInventory_GiveToPet">Dar ao pet</string>
     <string name="PetInventory_HeroBackpackFull">Sua mochila está cheia</string>
     <string name="PetInventory_PetBackpackFull">A mochila do pet está cheia</string>
+    <string name="PetInventory_TakeAll">Pegar todos</string>
     <string name="PetInventory_TakeFromPet">Pegar do pet</string>
     <string name="PetInventory_TakeN">Pegar %d</string>
     <string name="PetInventory_Title">Inventário do pet</string>
@@ -3089,6 +3090,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

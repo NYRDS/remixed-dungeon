@@ -121,6 +121,7 @@
     <string name="Badges_GoldColleted4">7500 goud verzameld</string>
     <string name="Badges_GrimWepon">Monster gedood door een Grim-wapen</string>
     <string name="Badges_HappyEnd">Goede afloop</string>
+    <string name="Badges_Ice_Guardian_Slain">IJswacht verslagen</string>
     <string name="Badges_Immured">Dood door inmuring</string>
     <string name="Badges_Info1">Insigne behaald: %s</string>
     <string name="Badges_Info2">Nieuwe superbadge: %s</string>
@@ -2445,6 +2446,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

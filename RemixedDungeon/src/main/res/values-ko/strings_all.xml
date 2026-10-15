@@ -313,6 +313,7 @@
     <string name="Brute_Name_Objective">놀 정예병</string>
     <string name="Brute_StaEnraged">격분</string>
     <string name="BuffParam_Cooldown">쿨다운: %.2f</string>
+    <string name="BurningBuff_Info">몸이 맹렬한 불길에 휩싸였습니다!</string>
     <string name="BurningBuff_Name">불타는</string>
     <string name="BurningFist_Desc">고대 신의 불타는 주먹</string>
     <string name="BurningFist_Gender">masculine</string>
@@ -3056,6 +3057,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
