@@ -1792,6 +1792,7 @@
     <string name="Wand_Name">%s toverstaf</string>
     <string name="Wand_Prompt">Kies een richting om te zappen</string>
     <string name="Wand_SelfTarget">Je kunt jezelf niet als doelwit selecteren</string>
+    <string name="Wand_Weapon">Je kunt deze toverstok als een melee-wapen gebruiken.</string>
     <string name="Wand_Wood">Deze dunne %s toverstaf voelt warm aan. Wie weet wat hij doet als je hem gebruikt?</string>
     <string name="Wand_Wood_Types_0">hulst</string>
     <string name="Wand_Wood_Types_1">taxus</string>
@@ -2439,6 +2440,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

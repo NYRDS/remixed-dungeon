@@ -1998,6 +1998,7 @@
     <string name="town_deco_inn_bed_name">Giường</string>
     <string name="town_deco_library_books_desc">Vẫn còn tốt hơn sách từ ngục.</string>
     <string name="town_deco_library_books_name">Vật liệu đọc</string>
+    <string name="town_deco_locked_door_desc">Có điều gì phía sau cánh cửa đó nhỉ?</string>
     <string name="town_deco_locked_door_name">Cửa khóa</string>
     <string name="town_deco_magenta_carpet_desc">Tông màu đỏ tươi của thảm này gợi nhớ đến rượu vang địa phương.</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
@@ -2082,6 +2083,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
