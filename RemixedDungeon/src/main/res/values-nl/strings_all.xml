@@ -1063,6 +1063,7 @@
     <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
     <string name="Mob_StaWanderingStatus">Deze %s dwaalt rond.</string>
     <string name="ModsButton_SelectMod">Selecteer een mod</string>
+    <string name="Mods_AuthorEmail">E-mail auteur:</string>
     <string name="Mods_AuthorSite">Auteurswebsite:</string>
     <string name="Mods_CreatedBy">Gemaakt door:</string>
     <string name="Mods_Disclaimer">Mods worden gemaakt door spelers voor spelers.\nMods veranderen soms de gameplay op onvoorspelbare of vreemde manier, je bent gewaarschuwd!\nHet NYRDS-team is op geen enkele manier verantwoordelijk voor mod-inhoud, kwaliteit of stabiliteit.\nDownload ze op eigen risico en veel plezier!\n</string>
@@ -1780,6 +1781,7 @@
     <string name="WandOfIcebolt_Info1">Je hebt jezelf gedood met je eigen IJsbout...</string>
     <string name="WandOfIcebolt_Name">IJsbultstaf</string>
     <string name="WandOfLightning_Info">Deze toverstaf roept dodelijke bogen van elektriciteit op, die schade toebrengen aan verschillende wezens die dicht bij elkaar staan.</string>
+    <string name="WandOfLightning_Name">Staf van Bliksem</string>
     <string name="WandOfMagicMissile_ACDisenchant">ONTDOEN</string>
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
     <string name="WandOfMagicMissile_Info">Deze staf lanceert missiles van zuivere magische energie, wat matige schade aan een doelwit toebrengt.</string>
@@ -2448,6 +2450,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

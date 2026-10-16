@@ -426,6 +426,7 @@
     <string name="Dart_Info">Những chiếc gai kim loại đơn giản này được cân trọng lượng lý tưởng để đâm xuyên con mồi một cách chính xác.</string>
     <string name="Dart_Name">đĩa</string>
     <string name="DashSpell_Info">Lao tới một hướng chỉ định trong khi va chạm với kẻ địch, gây sát thương và làm què.</string>
+    <string name="DashSpell_Name">Lao tới</string>
     <string name="DashSpell_OnSelf">Tôi không thể lướt tại chỗ.</string>
     <string name="DeathKnight_Desc">Ban đầu, đây là một chiến binh mạnh mẽ trong bộ giáp nặng, và chỉ có một nụ cười chết chóc mới tiết lộ bản chất của hắn. Kỵ sĩ tử thần là sự hiện thân của linh hồn một kỵ sĩ đã thất bại trong việc giữ lời thề. Và trong trạng thái bị nguyền rủa, hắn sẽ mãi mãi lang thang tìm kiếm sự thanh tẩy qua chiến đấu, giết người vô tội, không thể nhớ ra hắn đã thề bảo vệ ai.</string>
     <string name="DeathKnight_Gender">masculine</string>
@@ -984,6 +985,7 @@
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">tu sĩ lùn</string>
     <string name="Monk_Name_Objective">tu sĩ lùn</string>
+    <string name="MoongraceBuff_Info">Không khí xung quanh trở nên bão hòa hơn, cho phép tập trung tốt hơn và hồi phục năng lượng ma thuật.</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
     <string name="Moongrace_Name">Ánh Trăng</string>
     <string name="Multiplicity_Txt">%s của tính đa dạng</string>
@@ -2091,6 +2093,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
