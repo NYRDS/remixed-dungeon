@@ -1089,6 +1089,7 @@
     <string name="PlagueDoctorQuest_1_2_InProgress">Mười ốc sên, mười thì thầm từ vực thẳm! Chất nhầy của chúng sẽ được phân tích, bản chất của chúng sẽ được thẩm định. Những bí mật chúng chứa đựng đã gần trong tầm tay.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Ho khan dữ dội* Hắt xì!\n Những con ốc... chúng trườn. Chúng tiết nhờn. Và chúng thì thầm bí mật của một thời đại bị lãng quên. Tôi cần chúng, _mười_ con, vỏ vẫn còn nguyên vẹn. Bạn nghĩ _năm mươi đồng vàng_ có đủ cho tri thức quý giá như vậy không?\n Ba! Không quan trọng. Thông tin chúng giữ có thể là chìa khóa để dừng dịch bệnh này. Hoặc... nó có thể dẫn chúng ta đến thứ gì đó còn kinh khủng hơn. Bạn quyết định.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_Thiên Hương_… minh chứng cho phép thuật vần vò thế giới này. Ta đã học được nhiều từ bản chất của chúng, nhưng phần thưởng của ngươi… tại ha, đã được chuẩn bị tận tâm. *Hàng cho anh hùng một bình _Mana Potion_ lấp lánh* Nguyện sức mạnh nó dẫn dắt ngươi vượt qua những hiểm nguy phía trước.</string>
+    <string name="PlagueDoctorQuest_2_1_InProgress">Tìm kiếm _moongrace_, nơi bóng tối gặp ánh trăng mờ nhạt nhất. _Hai hạt giống_, bản chất của chúng, sẽ tiết lộ những bí mật ẩn giấu.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Hãy mang cho tôi một con _dơi ma cà rồng_, còn sống và nguyên vẹn! Máu của nó, đôi cánh của nó… chúng chứa những bí mật mà tôi phải khám phá!</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">Một _Kỵ Sĩ Cửu U_! *Giọng nói nứt nẻ vì hứng thú, ngón tay xương khô run rẩy khi nắm chặt bình thuốc bủa bọt đầy hỗn hợp mờ tối, chói lòa*. Một sinh vật như vậy… một ngọn đèn hiệu của cái chết! Bắt được một con, còn sống… đó sẽ là… một kỳ quan. Hãy tưởng tượng những bí mật chúng ta có thể khai phá! Sức mạnh chảy trong những mạch xương khô đó! Đúng, một _Kỵ Sĩ Cửu U_! Nó quan trọng cho nghiên cứu của ta! Vì nó sẽ cho phép chúng ta đi sâu hơn… vào những bí ẩn của sự sống… và cái chết bản thân!</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Tuyệt vời! Các _Dwarf Warlocks_, bản chất của chúng giờ là của tôi để khám phá! Phép thuật méo mó, đen tối đó... thật hấp dẫn. *Anh ta giơ một lọ thủy tinh lấp lánh chứa chất lỏng đỏ sẫm, sền sệt.* Đây là dành cho bạn: một _Potion of Might_! Hãy uống sức mạnh đó, và bạn sẽ cảm nhận sức mạnh của núi non chảy qua huyết quản! Hãy nhớ rằng kiến thức từ những hy sinh này cuối cùng sẽ phục vụ một mục đích cao cả hơn... có lẽ sẽ cứu tất cả chúng ta khỏi một số phận tồi tệ hơn cái chết.</string>
@@ -2090,6 +2091,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

@@ -1197,6 +1197,7 @@
     <string name="Plant_Seed">zaadje van %s</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Name">giftige pijl</string>
+    <string name="PoisonBuff_Info">Het lichaam wordt langzaam gedood door het gif!</string>
     <string name="Poison_Death">Je stierf door vergif...</string>
     <string name="Poison_Name_1">Giftig %s</string>
     <string name="Poison_Name_2">Vergiftigde %s</string>
@@ -2447,6 +2448,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
