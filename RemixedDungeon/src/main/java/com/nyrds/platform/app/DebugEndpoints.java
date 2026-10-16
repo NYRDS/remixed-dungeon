@@ -5146,4 +5146,60 @@ public class DebugEndpoints {
             String.format("{\"success\":true,\"result\":\"%s\"}", result[0] == null ? "nil" : result[0].replace("\"", "'").replace("\n", "\\n")));
     }
 
+    // End-to-end check of luajava.createProxy: build a WndBag$Listener proxy
+    // from lua exactly like published mods do, then fire onSelect from the java
+    // side exactly like WndBag does, and report whether the closure ran.
+    public static NanoHTTPD.Response handleDebugProxyRoundtrip(NanoHTTPD.IHTTPSession session) {
+        final String[] result = new String[1];
+        final String[] error = new String[1];
+
+        // proxy creation and dispatch touch the lua engine - game thread
+        CountDownLatch latch = new CountDownLatch(1);
+        GameLoop.pushUiTask(() -> {
+            try {
+                LuaValue chunk = LuaEngine.getGlobals().load(
+                        new java.io.ByteArrayInputStream((
+                                "_G.proxyRoundtripHits = nil\n"
+                                + "_G.proxyRoundtripProxy = luajava.createProxy("
+                                + "\"com.watabou.pixeldungeon.windows.WndBag$Listener\", "
+                                + "{ onSelect = function(item, sel) _G.proxyRoundtripHits = (_G.proxyRoundtripHits or 0) + 1 end })\n"
+                                + "return type(_G.proxyRoundtripProxy)").getBytes()),
+                        "=debug_proxy_roundtrip", "t", LuaEngine.getGlobals());
+                String proxyType = chunk.call().tojstring();
+
+                Object proxyObj = LuaEngine.getGlobals().get("proxyRoundtripProxy").checkuserdata();
+                if (!(proxyObj instanceof WndBag.Listener)) {
+                    error[0] = "proxy is not a WndBag.Listener: " + proxyObj.getClass().getName();
+                    return;
+                }
+                ((WndBag.Listener) proxyObj).onSelect(null, null);
+
+                int hits = LuaEngine.getGlobals().get("proxyRoundtripHits").optint(0);
+                result[0] = String.format("proxy=%s javaDispatchHits=%d", proxyType, hits);
+            } catch (Exception e) {
+                error[0] = e.getMessage();
+            } finally {
+                latch.countDown();
+            }
+        });
+
+        try {
+            if (!latch.await(10, TimeUnit.SECONDS)) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"Timeout waiting for proxy roundtrip\"}");
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                "{\"error\":\"Interrupted\"}");
+        }
+
+        if (error[0] != null) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                String.format("{\"error\":\"%s\"}", error[0].replace("\"", "'")));
+        }
+
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+            String.format("{\"success\":true,\"result\":\"%s\"}", result[0]));
+    }
 }
