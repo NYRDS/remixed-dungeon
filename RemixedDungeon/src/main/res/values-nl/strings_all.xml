@@ -2170,6 +2170,7 @@
     <string name="town_deco_floor_name">Vloer</string>
     <string name="town_deco_flowerinthepot_desc">Decoratieve bloem met een zoete smaak</string>
     <string name="town_deco_flowerinthepot_name">Bloem in een pot</string>
+    <string name="town_deco_furnace_name">Oven</string>
     <string name="town_deco_glass_desc">Dit is breder dan de anderen en laat zeker meer licht door.</string>
     <string name="town_deco_glass_name">Breed Raam</string>
     <string name="town_deco_glass_stained_desc">De maker van dit glas heeft er waarschijnlijk veel moeite in gestoken.</string>
@@ -2189,6 +2190,7 @@
     <string name="town_deco_magenta_carpet_desc">De magenta kleur van dit tapijt doet denken aan lokale wijn.</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_misc_desc">Een hoop rommel en snuisterijen.</string>
+    <string name="town_deco_movies_door_desc">Deze deur lijkt buitengewoon goed gemaakt. Hij leidt waarschijnlijk naar iets ongelooflijks.</string>
     <string name="town_deco_mud_desc">Ontdooide grond in dit permafrostgebied.</string>
     <string name="town_deco_mud_name">modder</string>
     <string name="town_deco_painting_desc">Een prachtig stuk kunst.</string>
@@ -2202,7 +2204,9 @@
     <string name="town_deco_poster_desc">Flyers voor de aankondiging van komende filmvoorstellingen.</string>
     <string name="town_deco_poster_name">Poster</string>
     <string name="town_deco_potions_desc">Een soort drankjes op de plank.</string>
+    <string name="town_deco_projector_desc">Een oud apparaat om films af te spelen en mensen te vermaken.</string>
     <string name="town_deco_red_carpet_name">Tapijt</string>
+    <string name="town_deco_roof_name">Dak</string>
     <string name="town_deco_rope_desc">Met de hand gedraaid touw.</string>
     <string name="town_deco_rope_name">touw</string>
     <string name="town_deco_rug_name">kleed</string>
@@ -2453,6 +2457,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

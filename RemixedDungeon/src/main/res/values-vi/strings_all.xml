@@ -2054,6 +2054,7 @@
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_snowdrift_desc">Đó là một đống tuyết khá lớn và rõ ràng không ai định dọn nó.</string>
+    <string name="town_deco_snowy_plate_desc">Tấm đá cổ xưa này bị phủ đầy tuyết</string>
     <string name="town_deco_sofa_name">Ghế sofa ấm áp</string>
     <string name="town_deco_stakes_desc">Những khúc gỗ nhọn này trông thật đáng sợ, nhưng thực ra chúng hoàn toàn vô dụng.</string>
     <string name="town_deco_stakes_name">Cọc</string>
@@ -2096,6 +2097,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
