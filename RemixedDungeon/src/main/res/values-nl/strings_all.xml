@@ -1573,6 +1573,7 @@
     <string name="Spells_SummonLimitReached">%1: oproeplimiet bereikt (huidig maximum: %2)!</string>
     <string name="SpiderArmor_Gender">feminine</string>
     <string name="SpiderArmor_Info">Deze pantser is gemaakt van oude spinnep chitine en een soort kleding. Wat verrassend is, lijkt het nog steeds werkende spinnepklieren te bevatten. Als je de platen hard genoeg indrukt, schieten ze web uit. En getande zolen laten je vrij bewegen op dergelijke web.</string>
+    <string name="SpiderArmor_Name">spinnenpantser</string>
     <string name="SpiderCharm_Info">Deze exotische snuisterij is gehuld in een aura van mysterie. Wie weet wat er gebeurt met degene die hem draagt?</string>
     <string name="SpiderCharm_Use">GEBRUIKEN</string>
     <string name="SpiderEgg_Gender">neuter</string>
@@ -2451,6 +2452,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
