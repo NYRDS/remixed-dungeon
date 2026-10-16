@@ -1328,6 +1328,7 @@
     <string name="ResultDescriptions_Poison">Gestorven aan vergiftiging op niveau %d</string>
     <string name="ResultDescriptions_Trap">Gedood door ontlading van %1 op niveau %2</string>
     <string name="ResultDescriptions_Unknown">Stierf onder mysterieuze omstandigheden op niveau %d</string>
+    <string name="RingOfAccuracy_Name">Ring van Nauwkeurigheid</string>
     <string name="RingOfDetection_Info">Als je deze ring draagt, merk je verborgen geheimen - vallen en geheime deuren - op zonder tijd aan zoeken te besteden. Versleten detectieringen verdoven je zinnen, waardoor het moeilijker wordt om geheimen op te merken, zelfs als je er actief naar zoekt.</string>
     <string name="RingOfElements_Name">Ring der Elementen</string>
     <string name="RingOfEvasion_Info">Deze ring vergroot je kans om een aanval van een vijand te ontwijken.</string>
@@ -2446,6 +2447,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
