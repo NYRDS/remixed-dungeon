@@ -1529,6 +1529,7 @@
     <string name="PetInventory_ACTakeFromPet">ΠΑΡΕ ΑΠΟ ΤΟ ΠΕΤ</string>
     <string name="PetInventory_CantGiveEquipped">Δεν μπορείς να δώσεις εξοπλισμένο αντικείμενο</string>
     <string name="PetInventory_GaveItem">Έδωσες %1$s στο %2$s</string>
+    <string name="PetInventory_GiveAll">Δώσε όλα</string>
     <string name="PetInventory_GiveN">Δώσε %d</string>
     <string name="PetInventory_GiveToPet">Δώσε στο πετ</string>
     <string name="PetInventory_HeroBackpackFull">Η σάκος σου είναι γεμάτη</string>
@@ -3094,6 +3095,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

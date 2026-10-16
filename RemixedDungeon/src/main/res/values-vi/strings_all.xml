@@ -204,6 +204,7 @@
     <string name="Bleeding_Death">Bạn đã chết vì mất máu...</string>
     <string name="BlessedBuff_Info">Cầu mong sự chính xác và né tránh sẽ đến với những ai được chúc phước!</string>
     <string name="BlessedBuff_Name">Được Chúc Phước</string>
+    <string name="BloodTransfusion_FullHP">Máu của bạn đã đầy.</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="BodyArmorBuff_Info">Giáp được tăng nhưng phải hy sinh tốc độ di chuyển.</string>
     <string name="BodyArmorBuff_Name">Giáp Cơ Thể</string>
@@ -2097,6 +2098,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

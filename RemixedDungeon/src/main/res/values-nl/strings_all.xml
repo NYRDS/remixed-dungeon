@@ -242,6 +242,7 @@
     <string name="BlindnessBuff_Info">Volledig verblind, alleen de geluiden om je heen kunnen worden gehoord.</string>
     <string name="BlindnessBuff_Name">Verblind</string>
     <string name="BloodTransfusion_Drained">De levensessentie vloeit van je huisdier naar jou.</string>
+    <string name="BloodTransfusion_FullHP">Je bloed heeft al de maximale capaciteit.</string>
     <string name="BloodTransfusion_Name">Bloedtransfusie</string>
     <string name="BloodTransfusion_WontAgreed">Het slachtoffer weerst het onttrekken van zijn levensessentie.</string>
     <string name="BodyArmorBuff_Info">De pantser wordt verhoogd ten koste van bewegingssnelheid.</string>
@@ -1690,6 +1691,7 @@
     <string name="TomeOfKnowledge_Info">Deze oude tome is gevuld met arcane raadsels en mysteries! Het kan moeilijk zijn om te lezen, maar als je het doorstaat, zul je zeker je magische krachten vergroten.</string>
     <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
     <string name="TomeOfMastery_Info">Dit versleten leerboek is niet zo dik, maar je hebt het gevoel dat je er veel uit kunt halen. Onthoud er wel dat het lezen van deze tome enige tijd in beslag kan nemen.</string>
+    <string name="TomeOfMastery_Name">Boek der Meesterschap</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="Toolbar_Info1">Je weet niet wat er is.</string>
     <string name="Torch_ACLight">AANSTEKEN</string>
@@ -2457,6 +2459,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
