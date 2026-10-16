@@ -1095,6 +1095,7 @@
     <string name="NecromancerNPC_Name">nekromant</string>
     <string name="NecromancerRobe_Info">Dit gewaad stelt de Nekromant in staat om een Doodsling op te roepen ten koste van 5 zielen. De Doodsling is een ondode dienaar die sterker wordt samen met zijn meester.</string>
     <string name="NecromancerRobe_Info2">Deze robes is bedekt met donkere magie en zal de Nekromant in staat stellen de zielen van gevallen monsters te consumeren.</string>
+    <string name="NecromancerRobe_PetLimitReached">Necromantie: oproep limiet bereikt (Huidige max: %d)!</string>
     <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
     <string name="Necromancy_BecameALich">Je bent een Lich geworden! Je krachten groeien en je zielcapaciteit is verdubbeld! Maar je hebt %1 krachtspunten verloren.</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
@@ -2452,6 +2453,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
