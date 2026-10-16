@@ -945,6 +945,7 @@
     <string name="MeleeWeapon_Info5">Nó đã được phù phép.</string>
     <string name="MeleeWeapon_Info6b">Do sức mạnh dư thừa, sát thương tấn công của bạn với %s này được tăng lên.</string>
     <string name="MeleeWeapon_Info7a">Bạn cầm %1 sẵn sàng%2.</string>
+    <string name="MeleeWeapon_Info7b">, và vì nó bị nguyền, bạn không thể buông nó ra</string>
     <string name="MercenaryNPC_Desc">Một người đàn ông vạm vỡ.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">lính thuê</string>
@@ -1971,6 +1972,7 @@
     <string name="town_deco_carpet_desc">Đệm đỏ xa xỉ dành cho khách đặc biệt.</string>
     <string name="town_deco_charcoal_carpet_desc">Nhằm mang lại sự thoải mái cho khách, ban quản lý rạp chiếu phim đã chọn những tấm thảm chất lượng cao nhất có màu than đen.</string>
     <string name="town_deco_charcoal_carpet_name">Thảm</string>
+    <string name="town_deco_chest_desc">Một món đồ nội thất tiện lợi để chứa nhiều đồ và đồ trang sức.</string>
     <string name="town_deco_chest_name">Rương</string>
     <string name="town_deco_chimney_desc">Ống khói đá - người bạn đồng hành đúng đắn cho mọi ngôi nhà, được xây dựng ở nơi thời tiết băng giá thường xuyên ghé thăm.</string>
     <string name="town_deco_church_sign_desc">Có vẻ như bên trong tòa nhà này có một nhà thờ.</string>
@@ -2100,6 +2102,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

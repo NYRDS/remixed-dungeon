@@ -561,6 +561,7 @@
     <string name="Dungeon_Tips_8">Verrassingsaanvallen hebben een grotere kans om te raken. Bijvoorbeeld: je kunt een vijand bij een gesloten deur in een hinderlaag lokken als je weet dat hij nadert.</string>
     <string name="Dungeon_Tips_9">Laat de Tengu niet vrij!</string>
     <string name="Dungeon_saveIoError">Bij het proberen een opslagbestand aan te maken:</string>
+    <string name="DwarfToken_Info">Veel dwergen en sommige van hun grotere creaties dragen deze kleine metalen stukjes van onbekend doel. Misschien zijn het sieraden of misschien een soort ID. Dwergen zijn vreemde mensen.</string>
     <string name="DwarfToken_Name">dwerg-teken</string>
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">aarde-elementaal</string>
@@ -1956,6 +1957,7 @@
     <string name="WndModInstall_InstallingMod">Mod installeren</string>
     <string name="WndModInstall_PleaseUpdate">Gelieve Remixed Dungeon te updaten voordat u deze mod installeert</string>
     <string name="WndModInstall_Version">versie</string>
+    <string name="WndModSelect_ReallyDelete">Echt verwijderen?</string>
     <string name="WndModsDisclaimer_install">Lokale mod installeren</string>
     <string name="WndModsDisclaimer_manage">Mod-lijst beheren</string>
     <string name="WndModsDisclaimer_title">Mods</string>
@@ -2462,6 +2464,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
