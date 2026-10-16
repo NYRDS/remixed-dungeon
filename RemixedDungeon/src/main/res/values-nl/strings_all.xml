@@ -1875,6 +1875,7 @@
     <string name="WndDonate_gold">goud</string>
     <string name="WndDonate_goldDonateText">Dank voor uw hulp</string>
     <string name="WndDonate_royal">koninklijk</string>
+    <string name="WndDonate_royalDonate">koninklijke donatie</string>
     <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
     <string name="WndDonate_royalDonateText2">Daarnaast ontvang je elke hoed uit de in-app winkel! Zowel als elke hoed die ooit nog uitgegeven gaat worden.</string>
     <string name="WndDonate_ruby">robijn</string>
@@ -2450,6 +2451,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
