@@ -1944,6 +1944,7 @@
     <string name="gdpr_agree">Có, tôi đồng ý</string>
     <string name="gdpr_title">Cá nhân hóa trải nghiệm quảng cáo của bạn</string>
     <string name="town_deco_armoronhanger_desc">Loại giáp nào đó trên móc treo.</string>
+    <string name="town_deco_armorstand_leather_name">Áo giáp da</string>
     <string name="town_deco_armorstand_plate_desc">Theo người buôn, bộ giáp tấm nặng nề này từng thuộc về một chiến binh vĩ đại.</string>
     <string name="town_deco_armorstand_scale_desc">Những tấm thép mạ vàng của bộ giáp vảy này trông như mới tinh.</string>
     <string name="town_deco_armorstand_scale_name">Giáp vảy</string>
@@ -2099,6 +2100,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
