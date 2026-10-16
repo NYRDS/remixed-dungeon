@@ -104,6 +104,7 @@
     <string name="Badges_DeathFire">Dood door vuur</string>
     <string name="Badges_DeathGas">Dood door giftig gas</string>
     <string name="Badges_DeathGlyph">Dood door een glyph</string>
+    <string name="Badges_DeathHunger">Dood door honger</string>
     <string name="Badges_DeathNecrotism">Dood door necrotisme</string>
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
     <string name="Badges_FoodEaten1">10 stukken voedsel gegeten</string>
@@ -1154,6 +1155,7 @@
     <string name="PetInventory_ViewManage">Beheren</string>
     <string name="Pickaxe_ACMine">DELVEN</string>
     <string name="Pickaxe_Gender">feminine</string>
+    <string name="Pickaxe_Info">Dit is een groot en stevig gereedschap om rotsen te breken. Het kan waarschijnlijk ook als wapen worden gebruikt.</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te delven!</string>
     <string name="Pickaxe_Name">houweel</string>
     <string name="Pickaxe_NothingToMine">Hier is niets om te delven!</string>
@@ -2459,6 +2461,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
