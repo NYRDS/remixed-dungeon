@@ -1533,6 +1533,7 @@
     <string name="PetInventory_GiveToPet">Δώσε στο πετ</string>
     <string name="PetInventory_HeroBackpackFull">Η σάκος σου είναι γεμάτη</string>
     <string name="PetInventory_PetBackpackFull">Η σάκος του πετ είναι γεμάτη</string>
+    <string name="PetInventory_TakeAll">Πάρτε όλα</string>
     <string name="PetInventory_TakeFromPet">Πάρε από το πετ</string>
     <string name="PetInventory_TakeN">Πάρε %d</string>
     <string name="PetInventory_Title">Αποθήκη πετ</string>
@@ -3093,6 +3094,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

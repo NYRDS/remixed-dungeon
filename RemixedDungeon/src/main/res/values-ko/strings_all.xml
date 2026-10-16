@@ -1514,6 +1514,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="PetInventory_ACTakeFromPet">펫에게서 받기</string>
     <string name="PetInventory_CantGiveEquipped">장착 중인 아이템은 줄 수 없습니다</string>
     <string name="PetInventory_GaveItem">%1$s을(를) %2$s에게 주었습니다</string>
+    <string name="PetInventory_GiveAll">모두 주기</string>
     <string name="PetInventory_GiveN">주기 %d</string>
     <string name="PetInventory_GiveToPet">펫에게 주기</string>
     <string name="PetInventory_HeroBackpackFull">배낭이 가득 찼습니다</string>
@@ -3057,6 +3058,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
