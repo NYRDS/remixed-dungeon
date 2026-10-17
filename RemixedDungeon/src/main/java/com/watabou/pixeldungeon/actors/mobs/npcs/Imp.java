@@ -32,6 +32,8 @@ public class Imp extends NPC {
 
 	public Imp() {
 		spriteClass = "spritesDesc/Imp.json";
+
+		demon = true;
 	}
 
 	private boolean seenBefore = false;

@@ -43,9 +43,12 @@ public class PriestArmor extends ClassArmor {
         int damage = 5 + user.lvl();
 
         for (Mob mob : level.getCopyOfMobsArray()) {
-            if (mob.undead && !user.friendly(mob) && level.distance(mob.getPos(), user.getPos()) <= SANCTIFY_RADIUS) {
-                mob.getSprite().emitter().start(ShaftParticle.FACTORY, 0.1f, 5);
-                mob.damage(damage, user);
+            if (!user.friendly(mob) && level.distance(mob.getPos(), user.getPos()) <= SANCTIFY_RADIUS) {
+                int dmg = mob.undead ? damage : (mob.demon ? Math.max(1, damage / 2) : 0);
+                if (dmg > 0) {
+                    mob.getSprite().emitter().start(ShaftParticle.FACTORY, 0.1f, 5);
+                    mob.damage(dmg, user);
+                }
             }
         }
 

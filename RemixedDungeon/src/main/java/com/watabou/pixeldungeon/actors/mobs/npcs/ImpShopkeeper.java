@@ -9,6 +9,7 @@ public class ImpShopkeeper extends Shopkeeper {
 
     {
         spriteClass = "spritesDesc/Imp.json";
+        demon = true;
     }
 
     private boolean seenBefore = false;

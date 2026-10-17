@@ -45,6 +45,8 @@ public class Eye extends Mob {
         addResistance(Leech.class);
 
         addImmunity(Terror.class);
+
+        demon = true;
     }
 
     @Override

@@ -552,6 +552,10 @@ public abstract class Mob extends Char {
             }
         }
 
+        if(mobDesc.has("demon")) {
+            demon = mobDesc.getBoolean("demon");
+        }
+
         getBelongings().setupFromJson(mobDesc);
 
         if (this instanceof IDepthAdjustable) {

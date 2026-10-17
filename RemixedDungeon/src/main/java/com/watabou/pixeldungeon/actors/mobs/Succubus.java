@@ -37,6 +37,8 @@ public class Succubus extends Mob {
 
 		addResistance(Leech.class);
 		addImmunity(Sleep.class);
+
+		demon = true;
 	}
 
 	@Override

@@ -3065,7 +3065,7 @@ public class DebugEndpoints {
             "{\"error\":\"Screenshot not supported on this platform\"}");
     }
 
-    // caveman: /debug/char_flags?id= (id may be "hero") - undead/naturalUndead/hasBodyParts probe
+    // caveman: /debug/char_flags?id= (id may be "hero") - undead/naturalUndead/demon/hasBodyParts probe
     public static NanoHTTPD.Response handleDebugCharFlags(NanoHTTPD.IHTTPSession session) {
         try {
             String id = "hero";
@@ -3110,8 +3110,8 @@ public class DebugEndpoints {
 
             Char ch = target[0];
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"id\":%d,\"kind\":\"%s\",\"undead\":%b,\"naturalUndead\":%b,\"hasBodyParts\":%b}",
-                    ch.getId(), ch.getEntityKind(), ch.undead, ch.naturalUndead, ch.hasBodyParts()));
+                String.format("{\"success\":true,\"id\":%d,\"kind\":\"%s\",\"undead\":%b,\"naturalUndead\":%b,\"demon\":%b,\"hasBodyParts\":%b}",
+                    ch.getId(), ch.getEntityKind(), ch.undead, ch.naturalUndead, ch.demon, ch.hasBodyParts()));
         } catch (Exception e) {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse(e.getMessage()).toString());

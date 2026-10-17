@@ -1004,9 +1004,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
     <string name="HeroClass_Priest">Priest</string>
     <string name="HeroClass_PriestPerks_0">Priests start with 12 points of Strength and a quarterstaff.</string>
-    <string name="HeroClass_PriestPerks_1">Priests deal 25% bonus damage to the undead and take 25% less damage from their attacks.</string>
+    <string name="HeroClass_PriestPerks_1">Priests deal 25% bonus damage to the undead and take 25% less damage from their attacks. Against demons these bonuses are halved.</string>
     <string name="HeroClass_PriestPerks_2">Priests use mana to cast Divine spells: Blessing, Holy Water, Exorcism and Last Rites.</string>
-    <string name="HeroClass_PriestPerks_3">Priest\'s battle vestments can be called upon to Sanctify: a holy burst that burns the undead nearby and blesses the wearer.</string>
+    <string name="HeroClass_PriestPerks_3">Priest\'s battle vestments can be called upon to Sanctify: a holy burst that burns the undead nearby (demons take half damage) and blesses the wearer.</string>
     <string name="HeroClass_PriestPerks_4">Scrolls of Remove Curse are identified from the beginning.</string>
     <string name="HeroClass_PriestPerks_5">Priests start with 12 mana points.</string>
     <string name="HeroClass_Rog">rogue</string>

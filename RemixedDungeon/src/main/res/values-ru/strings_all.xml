@@ -1003,9 +1003,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_PlagueDoctorPerks_4">Чумные доктора получают большой штраф к меткости без своей любимой Костяной пилы в руке и не могут использовать дальнобойное оружие.</string>
     <string name="HeroClass_Priest">Священник</string>
     <string name="HeroClass_PriestPerks_0">Священники начинают игру с 12 очками Силы и боевым посохом.</string>
-    <string name="HeroClass_PriestPerks_1">Священники наносят на 25% больше урона нежити и получают от её атак на 25% меньше урона.</string>
+    <string name="HeroClass_PriestPerks_1">Священники наносят на 25% больше урона нежити и получают от её атак на 25% меньше урона. Против демонов эти бонусы вдвое слабее.</string>
     <string name="HeroClass_PriestPerks_2">Священники используют ману для Божественных заклинаний: Благословение, Святая Вода, Экзорцизм и Отпевание.</string>
-    <string name="HeroClass_PriestPerks_3">Боевые облачения священника позволяют совершить Освящение: святая вспышка сжигает нежить поблизости и благословляет носителя.</string>
+    <string name="HeroClass_PriestPerks_3">Боевые облачения священника позволяют совершить Освящение: святая вспышка сжигает нежить поблизости (демоны получают половинный урон) и благословляет носителя.</string>
     <string name="HeroClass_PriestPerks_4">Свитки Снятия Проклятья известны с самого начала.</string>
     <string name="HeroClass_PriestPerks_5">Священники начинают игру с 12 очками маны.</string>
     <string name="HeroClass_Rog">вор</string>

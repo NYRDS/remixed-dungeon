@@ -39,6 +39,8 @@ public class Scorpio extends Mob implements IZapper {
 
 		addResistance( Leech.class );
 		addResistance( Poison.class );
+
+		demon = true;
 	}
 
 	@Override
