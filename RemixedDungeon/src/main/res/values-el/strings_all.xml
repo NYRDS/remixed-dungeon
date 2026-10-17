@@ -2057,6 +2057,7 @@
     <string name="Shuriken_Gender">neuter</string>
     <string name="Shuriken_Info">Μεταλλικά αστεράκια με κοφτερές λεπίδες που προκαλούν ουσιώδη ζημιά στους στόχους τους. Μπορούν να πεταχτούν με πολύ μεγάλη ταχύτητα.</string>
     <string name="Shuriken_Name">σούρικεν</string>
+    <string name="Sign_CantRead">Δεν μπορείς να διαβάσεις.</string>
     <string name="SkeletonKey_Info">Αυτό είναι κλειδί, όχι αστεία: το κεφάλι του είναι σχηματισμένο σαν κρανίο. Ίσως να ανοίγει κάποια πολύ σημαντική πόρτα.</string>
     <string name="SkeletonKey_Name">σκελετικό κλειδί</string>
     <string name="Skeleton_Defense">απέκρουσε</string>
@@ -3095,6 +3096,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

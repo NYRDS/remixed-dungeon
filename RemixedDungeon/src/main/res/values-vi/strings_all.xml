@@ -1735,6 +1735,7 @@
     <string name="WndCryptoDonate_openWallet">Mở Ví</string>
     <string name="WndCryptoDonate_supportDev">Ủng hộ nhà phát triển</string>
     <string name="WndCryptoDonate_ton">TON</string>
+    <string name="WndCryptoDonate_tron">TRON</string>
     <string name="WndCryptoDonate_walletAddress">Địa chỉ ví</string>
     <string name="WndCryptoDonate_warningText">CẢNH BÁO: Luôn xác minh địa chỉ trước khi gửi tiền. Các giao dịch tiền điện tử không thể đảo ngược!</string>
     <string name="WndCustomizations_Title">Tùy chỉnh</string>
@@ -2111,6 +2112,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

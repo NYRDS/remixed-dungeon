@@ -1192,6 +1192,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Kobold_Name">코볼트</string>
     <string name="Kobold_Name_Objective">코볼트</string>
     <string name="KrampusHead_Info">Kepala Krampus.</string>
+    <string name="KrampusHead_Name">크람푸스의 머리</string>
     <string name="KunaiThrow_Info">この致死性のクナイ投擲は非常に高速で行われ、目標を選択することすらできません。\n\n真の達人だけが一度に複数のクナイを投げることができます。</string>
     <string name="KunaiThrow_Name">Melempar kunai</string>
     <string name="Kusarigama_Gender">feminine</string>
@@ -3063,6 +3064,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
