@@ -2926,6 +2926,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_inn_bed_desc">매우 편안해 보이는 침대다.</string>
     <string name="town_deco_inn_bed_name">침대</string>
     <string name="town_deco_ladder_desc">Tangga kayu.</string>
+    <string name="town_deco_ladder_name">사다리</string>
     <string name="town_deco_library_books_desc">던전의 책들보다 여전히 낫다.</string>
     <string name="town_deco_library_books_name">Rak buku</string>
     <string name="town_deco_library_sign_desc">이 안에 도서관이 있는 것 같다.</string>
@@ -3060,6 +3061,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

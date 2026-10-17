@@ -2231,6 +2231,7 @@
     <string name="town_deco_skullboard_name">trofeerek</string>
     <string name="town_deco_skulls_name">Schedels</string>
     <string name="town_deco_slush_desc">Deze sneeuw begon te smelten, waardoor de omgeving in modder veranderde.</string>
+    <string name="town_deco_snow_desc">Ondanks de bekendheid van deze plek onder avonturiers, ligt hier verrassend veel sneeuw. Het lijkt erop dat maar weinig mensen door deze straten lopen.</string>
     <string name="town_deco_snow_name">Sneeuw</string>
     <string name="town_deco_snowdrift_desc">Het is een vrij grote sneeuwhoop en blijkbaar gaat niemand het opruimen.</string>
     <string name="town_deco_snowman_name">Sneeuwpop</string>
@@ -2464,6 +2465,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
