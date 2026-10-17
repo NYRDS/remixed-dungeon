@@ -433,6 +433,7 @@
     <string name="Codex_Story_24">Dit boek is geschreven in het Elfs</string>
     <string name="Codex_Story_25">Zij stak, bevroren, voor de zware eikenen deur, en keek naar het licht dat uit de deurranden doordrong. Uit een verwaarloosd hoekje van haar geest kwam herkenning.\n\&quot;Zonlicht..\&quot; mompelde ze tegen zichzelf. Hoe lang was het geweest? In de eeuwige duisternis van de Kelder had ze lang geleden opgehouden de dagen te tellen. Het licht verlichtte vergeten herinneringen. Ze herinnerde haar training, lange dagen van zware oefening met boomerang en zwaard, van logboek bijhouden en kaarten maken. Ze herinnerde de mantra\'s en disciplines die bedoeld waren om haar een schijn van gezond verstand te laten behouden terwijl ze de onbekende diepgang verkennde. Wat ze niet herinnerde, niet kon herinneren, waren mensen.\nZe herinnerde hun stemmen, hun bevelen en hun waarschuwingen, maar niet hun gezichten, noch hun aanraking.\nPijn had haar getraind. Onthoud de gevaren, altijd de gevaren. Tollende dieren, onoversterven, onzinnige bendes en slimme ninja\'s waren voor haar gevallen. Ze had gesneden, gebrand, gestoken en vergiftigd haar weg gebaan door afschuwelijke wezens, demonen, klokwerk-afschuwelijkheden en onzinnige necromanten. Zelfs goden waren voor haar gevallen.\nZe had Yog gevolgd door Hemel en Hel, voordat ze zijn corrumpterende fluisteringen voor altijd stilte. Toch was er nog werk te doen. Yog was een dienaar van iemand nog meer occulte en krachtigere dan hijzelf.\nZo dook ze verder, dieper. Het dagboek van de oude tovenaar, nog steeds stralend van kracht, had haar de weg getoond. Met de magie in zijn bladen reisde ze naar een woud nieuw land, een klein dorpje verborgen in een machtig bos. Daar voltooide ze ten slotte het kwaad tot zijn doolhof-achtige bron, en versloeg allen die voor haar stonden.\nNu, in het felle daglicht, onderzocht ze zichzelf in een kuil grotwater. Haar lichaam was door magie bijna onherkenbaar vervormd. Haar huid, bleek tot het punt van doorschijnend, was bedekt met vuil, slijk en roet. Haar ketting met ringen kon een koningsgeld waard zijn, en haar wapenhouder met staven bevatte genoeg magische energie om legers te verwoesten. Ze greep haar wapens, letterlijk fijn genoeg om de goden zelf neer te hakken. Werkelijk, ze was meester geworden van dit donkere rijk, deze woestijn van wanhoop.\nZe had het kwaad gejaagd tot in de verre hoeken van het multiversum, maar nu was ze bevroren van angst. Wat als ze haar verwerpte? Wat als ze dat niet deed? Hoe kon ze nog ooit met deze mensen omgaan? Hel, ze had de keren dat de dood haar had geëist, en weer was weggehaald uit zijn ijzergreep, niet meer geteld.\nNee, er was geen plek voor haar in het licht, niet meer. Ze keerde zich af van het mager licht, en daalde in het donker, misschien voor de laatste keer.\n\n\n\tby drazool from reddit</string>
     <string name="Codex_Story_3">Anti-entropie Glif - De Held wordt verlicht en vangt brand, en de vijand wordt bevroren.</string>
+    <string name="Codex_Story_4">Glyf van Vermenigvuldiging - Dit effect zorgt ervoor dat de Held een spiegelbeeld maakt maar schade oploopt. Dit kan de Held doden.</string>
     <string name="Codex_Story_5">Potentieel Glyph - Dit ontketent een bliksem-achtige explosie die de vijand die de speler aanviel zal beschadigen en de Held gemiddeld ongeveer de helft van de schade aan de vijand zal toebrengen.</string>
     <string name="Codex_Story_6">Metabolisme Glief - De Held wordt gedeeltelijk genezen voordat de schade van de vijand wordt toegepast, maar de honger zal aanzienlijk toenemen. Werkt alleen als je niet verhongerd bent.</string>
     <string name="Codex_Story_7">Stankglyf - De Held laat een wolk van giftige gas vrij wanneer hij geraakt wordt.</string>
@@ -723,6 +724,7 @@
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
     <string name="HeroClass_ElfPerks_1">Elfen zijn immuun voor verstrikking.</string>
     <string name="HeroClass_ElfPerks_2">Elven beginnen met een verbeterde houten boog en een hoop pijlen.</string>
+    <string name="HeroClass_ElfPerks_4">Elfen krijgen veel meer gezondheid van dauwdruppels.</string>
     <string name="HeroClass_ElfPerks_5">Elfen zijn minder bedreven met naiwapens.</string>
     <string name="HeroClass_GnollPerks_1">Gnollen starten met 5 levenspunten</string>
     <string name="HeroClass_GnollPerks_2">Gnollen beginnen zonder enige pantser maar met een unieke tomahawk</string>
@@ -1365,6 +1367,7 @@
     <string name="Ring_Gems_11">agaat</string>
     <string name="Ring_Gems_3">robijn</string>
     <string name="Ring_Gems_4">amethist</string>
+    <string name="Ring_Gems_5">topaas</string>
     <string name="Ring_Gems_6">onyx</string>
     <string name="Ring_Gems_8">smaragd</string>
     <string name="Ring_Identify">je bent nu vertrouwd genoeg met je %1 om het te identificeren. Het is %2.</string>
@@ -2470,6 +2473,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
