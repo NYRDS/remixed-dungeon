@@ -1539,6 +1539,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="PetInventory_ACTakeFromPet">QUITAR DE MASCOTA</string>
     <string name="PetInventory_CantGiveEquipped">No se puede dar objeto equipado</string>
     <string name="PetInventory_GaveItem">Diste %1$s a %2$s</string>
+    <string name="PetInventory_GiveAll">Dar todo</string>
     <string name="PetInventory_GiveN">Dar %d</string>
     <string name="PetInventory_GiveToPet">Dar a mascota</string>
     <string name="PetInventory_HeroBackpackFull">Tu mochila está llena</string>
@@ -3080,6 +3081,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
