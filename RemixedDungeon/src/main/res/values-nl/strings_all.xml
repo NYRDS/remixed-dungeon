@@ -715,6 +715,7 @@
     <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Het zwart pulserende hart van de Bedrieglijke Geest.</string>
     <string name="HeartOfDarkness_Name">Hart van de duisternis</string>
+    <string name="Hedgehog_Desc">Die egel lijkt nerveus.</string>
     <string name="Hedgehog_ImLate">Ik ben laat, ik ben vreselijk laat...</string>
     <string name="Hedgehog_Info1">Zoek jij ook naar Beer?</string>
     <string name="Hedgehog_Info3">Hou je van thee met frambozenjam?</string>
@@ -2171,6 +2172,7 @@
     <string name="town_deco_crossroad_desc">Een ruwe houten paal met pijlvormige bordjes, de tekst waarop vervaagd is door de harde weersomstandigheden.</string>
     <string name="town_deco_curtains_desc">Houdt al het onnodige licht tegen en dient ook als een geweldige decoratie.</string>
     <string name="town_deco_curtains_name">Gordijnen</string>
+    <string name="town_deco_door_desc">Een eenvoudige houten deur.</string>
     <string name="town_deco_dungeon_door_desc">De ingang van de kerker.</string>
     <string name="town_deco_dungeon_door_name">Ingang</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
@@ -2473,6 +2475,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

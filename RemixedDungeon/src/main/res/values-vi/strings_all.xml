@@ -552,6 +552,7 @@
     <string name="FireElemental_Name">nguyên tố lửa</string>
     <string name="FireElemental_Name_Objective">nguyên tố lửa</string>
     <string name="Fire_Info">Đây có một đám cháy đang bùng nổ.</string>
+    <string name="Fire_Name_0">Rực cháy %s</string>
     <string name="Fire_Name_1">Đang cháy %s</string>
     <string name="Firebloom_Name">Hoa Lửa</string>
     <string name="Foliage_Info">Các tia sáng chọc xuyên màn sương của khu vườn ngầm.</string>
@@ -1161,6 +1162,7 @@
     <string name="Potion_Colors_2">xanh ngọc bích</string>
     <string name="Potion_Colors_3">ngọc bích</string>
     <string name="Potion_Colors_4">vàng kim</string>
+    <string name="Potion_Colors_5">hồng cánh sen</string>
     <string name="Potion_Colors_6">than chì</string>
     <string name="Potion_Colors_7">ngà</string>
     <string name="Potion_Colors_8">hổ phách</string>
@@ -2108,6 +2110,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 
