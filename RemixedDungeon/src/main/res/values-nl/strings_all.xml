@@ -1052,6 +1052,7 @@
     <string name="MissileWeapon_No">Nee, ik heb het me anders beslist</string>
     <string name="MissileWeapon_Sure">Weet je zeker dat je het wilt uitrusten als een wapen voor gevechten op korte afstand?</string>
     <string name="MissileWeapon_Yes">Ja, ik weet wat ik doe</string>
+    <string name="MobAi_status">Deze %1$s is %2$s</string>
     <string name="Mob_Attacking">Reken deze %s als dood!</string>
     <string name="Mob_CantDoIt">Ik kan het niet. Ik heb kleine pootjes.</string>
     <string name="Mob_Desc">Een echte beschrijving komt binnenkort!</string>
@@ -2466,6 +2467,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

@@ -1125,6 +1125,7 @@
     <string name="PortalGate_Used">Ngươi chạm vào cổng và... không có gì xảy ra.</string>
     <string name="Possess_CantPossessSelf">Bạn không thể chiếm hữu chính mình</string>
     <string name="Possess_Info">Nghệ thuật đen tối của kiểm soát tâm trí cho phép người thi phép cong vẹo ý chí của hầu hết các sinh vật.</string>
+    <string name="Possess_Name">Ám</string>
     <string name="Potential_Txt">%s của tiềm năng</string>
     <string name="PotionBelt_Info">Chiếc đai da chắc chắn này có thể đựng tất cả bình thuốc của bạn, đồng thời bảo vệ chúng không bị vỡ do giá lạnh.</string>
     <string name="PotionOfExperience_Info">Kinh nghiệm từ vô số trận chiến được giảm thành dạng lỏng, loại thuốc này sẽ ngay lập tức nâng cấp độ kinh nghiệm của bạn.</string>
@@ -2104,6 +2105,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
