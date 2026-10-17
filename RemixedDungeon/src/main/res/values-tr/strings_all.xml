@@ -1537,6 +1537,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="PetInventory_ACTakeFromPet">EVÇİL HAYVANDAN AL</string>
     <string name="PetInventory_CantGiveEquipped">Ekipmanlı öğe verilemez</string>
     <string name="PetInventory_GaveItem">%1$s, %2$s\'ye verildi</string>
+    <string name="PetInventory_GiveAll">Hepsini ver</string>
     <string name="PetInventory_GiveN">Ver %d</string>
     <string name="PetInventory_GiveToPet">Evcil hayvana ver</string>
     <string name="PetInventory_HeroBackpackFull">Çantan dolu</string>
@@ -3099,6 +3100,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
