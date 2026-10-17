@@ -1444,6 +1444,7 @@
     <string name="Mob_StaControlledStatus">Цей %s під нечестивим контролем</string>
     <string name="Mob_StaFleeingStatus">%s рятується</string>
     <string name="Mob_StaFleeingStatus2">Цей %1$s рятується від %2$s</string>
+    <string name="Mob_StaGuardStatus">Цей %s на варті</string>
     <string name="Mob_StaHuntingStatus">%s полює</string>
     <string name="Mob_StaHuntingStatus2">Цей %1$s полює на %2$s</string>
     <string name="Mob_StaPassiveStatus">%s байдикує</string>
@@ -3102,6 +3103,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

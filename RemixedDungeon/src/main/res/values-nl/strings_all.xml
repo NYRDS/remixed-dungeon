@@ -1347,6 +1347,7 @@
     <string name="RingOfHaggler_Name">Ring van de Handelaar</string>
     <string name="RingOfHaste_Name">Ring van Snelheid</string>
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
+    <string name="RingOfHerbalism_Name">Ring van Kruidkunde</string>
     <string name="RingOfMending_Info">Deze ring verhoogt de regeneratieve eigenschappen van het lichaam, waardoor men verloren gezondheid kan herstellen met een versnelde snelheid. Verslechterde ringen zullen de natuurlijke regeneratie verminderen of zelfs stopzetten.</string>
     <string name="RingOfMending_Name">Ring der Genezing</string>
     <string name="RingOfPower_Info">Je toverstokken worden krachtiger in het energieveld dat vanuit deze ring straalt. Beschadigde ringen van kracht zullen je toverstokken in plaats daarvan verzwakken.</string>
@@ -2467,6 +2468,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

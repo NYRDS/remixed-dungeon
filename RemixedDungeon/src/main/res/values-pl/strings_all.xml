@@ -1540,6 +1540,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="PetInventory_ACTakeFromPet">WEŹ OD KOMPANA</string>
     <string name="PetInventory_CantGiveEquipped">Nie możesz dać wyposażonego przedmiotu</string>
     <string name="PetInventory_GaveItem">Dałeś %1$s towarzyszowi %2$s</string>
+    <string name="PetInventory_GiveAll">Oddaj wszystko</string>
     <string name="PetInventory_GiveN">Daj %d</string>
     <string name="PetInventory_GiveToPet">Daj towarzyszowi</string>
     <string name="PetInventory_HeroBackpackFull">Twój plecak jest pełny</string>
@@ -3106,6 +3107,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
