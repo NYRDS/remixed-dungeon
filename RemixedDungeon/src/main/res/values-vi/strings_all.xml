@@ -1219,6 +1219,7 @@
     <string name="RawFish_Name">cá sống</string>
     <string name="RawFish_Taste">Vị cá!</string>
     <string name="RegenerationBuff_Info">Chức năng hồi phục tự nhiên được thể hiện dưới dạng buff để làm cho mọi thứ dễ dàng hơn.</string>
+    <string name="RegenerationBuff_Name">Tái tạo tự nhiên</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Trò chơi của chúng tôi đã bị lỗi...\n Xin lỗi.\nVui lòng gửi báo cáo lỗi để giúp chúng tôi khắc phục.</string>
     <string name="ResultDescriptions_Burning">Bị thiêu rụi trên cấp độ %d</string>
     <string name="ResultDescriptions_Gas">Chết vì khí độc ở tầng %d</string>
@@ -2110,6 +2111,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

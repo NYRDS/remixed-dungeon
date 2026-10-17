@@ -1550,6 +1550,7 @@
     <string name="Skeleton_Name">skelet</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
+    <string name="SlowBuff_Info">Het trage gevoel maakt iemand langzamer dan gewoonlijk.</string>
     <string name="SlowBuff_Name">Vertraagd</string>
     <string name="Slow_Name_0">Chilling %s</string>
     <string name="Slow_Name_1">Verkoelende %s</string>
@@ -2475,6 +2476,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
