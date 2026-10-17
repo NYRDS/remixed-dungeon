@@ -1735,6 +1735,7 @@
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
     <string name="TownsfolkSilentNPC_Message1">Hm!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
+    <string name="TownsfolkSilentNPC_Message3">Hmm...</string>
     <string name="TownsfolkSilentNPC_Name">stadbewoner</string>
     <string name="TownsfolkSilentNPC_Name_Objective">stadbewoner</string>
     <string name="ToxicGas_Info">Hier zweeft een groenachtige wolk van giftig gas.</string>
@@ -2469,6 +2470,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
