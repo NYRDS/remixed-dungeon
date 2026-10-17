@@ -2881,6 +2881,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_crate_bottles_name">맥주 상자</string>
     <string name="town_deco_crate_desc">비밀을 품은 단단한 나무 상자.</string>
     <string name="town_deco_crate_name">상자</string>
+    <string name="town_deco_crate_scrolls_desc">이 상자에는 비밀 지식이 가득 차 있습니다.</string>
     <string name="town_deco_crate_scrolls_name">스크롤이 든 상자</string>
     <string name="town_deco_cross_desc">토착 종교 \&quot;심연의 군주 산타의 증인들\&quot;의 상징인 은 십자가입니다. </string>
     <string name="town_deco_cross_name">십자가</string>
@@ -3062,6 +3063,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
