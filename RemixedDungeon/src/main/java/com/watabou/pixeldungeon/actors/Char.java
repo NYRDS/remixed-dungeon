@@ -242,6 +242,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     @Packable(defaultValue = "false")
     public boolean naturalUndead;
 
+    @Packable(defaultValue = "false")
+    public boolean demon;
+
     @Getter
     private int buffsUpdatedCount;
 
@@ -2522,6 +2525,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @LuaInterface
+    public boolean isDemon() {
+        return demon;
+    }
+
     public void setUndead(boolean flag) {
         undead = flag;
         if (undead) {

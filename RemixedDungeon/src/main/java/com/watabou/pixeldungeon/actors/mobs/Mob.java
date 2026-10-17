@@ -921,6 +921,10 @@ public class Mob extends Char implements IZapper {
             }
         }
 
+        if(mobDesc.has("demon")) {
+            demon = mobDesc.getBoolean("demon");
+        }
+
         getBelongings().setupFromJson(mobDesc);
 
         if (this instanceof IDepthAdjustable) {

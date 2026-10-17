@@ -352,11 +352,35 @@ public enum HeroClass implements CharModifier, NamedEntityKind {
 
     @Override
     public int attackProc(Char attacker, Char defender, int damage) {
+        switch (this) {
+            case PRIEST:
+                if (!attacker.friendly(defender)) {
+                    if (defender.undead) {
+                        return damage + Math.max(1, damage / 4);
+                    }
+                    if (defender.demon) {
+                        return damage + Math.max(1, damage / 8);
+                    }
+                }
+                break;
+        }
         return damage;
     }
 
     @Override
     public int charGotDamage(int damage, NamedEntityKind src, Char target) {
+        switch (this) {
+            case PRIEST:
+                if (src instanceof Char) {
+                    if (((Char) src).undead) {
+                        return damage - damage / 4;
+                    }
+                    if (((Char) src).demon) {
+                        return damage - damage / 8;
+                    }
+                }
+                break;
+        }
         return damage;
     }
 
