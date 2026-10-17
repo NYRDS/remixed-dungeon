@@ -1536,6 +1536,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="PetInventory_ACTakeFromPet">PRENDRE À L\'ANIMAL</string>
     <string name="PetInventory_CantGiveEquipped">Impossible de donner un objet équipé</string>
     <string name="PetInventory_GaveItem">Donné %1$s à %2$s</string>
+    <string name="PetInventory_GiveAll">Tout donner</string>
     <string name="PetInventory_GiveN">Donner %d</string>
     <string name="PetInventory_GiveToPet">Donner à l\'animal</string>
     <string name="PetInventory_HeroBackpackFull">Votre sac est plein</string>
@@ -3092,6 +3093,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
