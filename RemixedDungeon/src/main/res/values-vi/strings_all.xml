@@ -846,6 +846,7 @@
     <string name="LastLevel_TileDescWater">Nó trông giống như nham thạch, nhưng lạnh và có lẽ an toàn để chạm.</string>
     <string name="LastLevel_TileGrass">Rêu than</string>
     <string name="LastLevel_TileStatue">Cột trụ</string>
+    <string name="LastLevel_TileWater">Dung nham lạnh</string>
     <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
     <string name="LastShopLevel_TileDescExit">Một con dốc dẫn xuống địa ngục.</string>
     <string name="LastShopLevel_TileHighGrass">Hoa nở rộ cao</string>
@@ -2105,6 +2106,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 

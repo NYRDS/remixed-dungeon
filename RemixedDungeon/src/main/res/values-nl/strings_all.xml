@@ -569,6 +569,7 @@
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="Earthroot_Desc">Wanneer een wezen een aardewortel aanraakt, vormen de wortels een soort natuurlijk pantser eromheen.</string>
     <string name="ElfArmor_ACSpecial">ROEP VAN DE NATUUR</string>
+    <string name="ElfArmor_Name">Elfenmantel</string>
     <string name="ElfArmor_NotElf">Alleen elfen kunnen deze pantser gebruiken!</string>
     <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Een uitzonderlijk voorbeeld van elvenvakmanschap. Het is duidelijk effectiever en nauwkeuriger dan een gewone houten boog.</string>
@@ -2468,6 +2469,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

@@ -1541,6 +1541,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="PetInventory_GiveToPet">Donner à l\'animal</string>
     <string name="PetInventory_HeroBackpackFull">Votre sac est plein</string>
     <string name="PetInventory_PetBackpackFull">Le sac de l\'animal est plein</string>
+    <string name="PetInventory_TakeAll">Tout prendre</string>
     <string name="PetInventory_TakeFromPet">Prendre à l\'animal</string>
     <string name="PetInventory_TakeN">Prendre %d</string>
     <string name="PetInventory_Title">Inventaire de l\'animal</string>
@@ -3093,6 +3094,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
