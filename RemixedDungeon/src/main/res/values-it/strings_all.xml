@@ -1532,6 +1532,7 @@ Potrebbe bruciare?</string>
     <string name="PetInventory_ACTakeFromPet">PRENDI DAL PET</string>
     <string name="PetInventory_CantGiveEquipped">Impossibile dare oggetto equipaggiato</string>
     <string name="PetInventory_GaveItem">Hai dato %1$s a %2$s</string>
+    <string name="PetInventory_GiveAll">Dai tutto</string>
     <string name="PetInventory_GiveN">Dai %d</string>
     <string name="PetInventory_GiveToPet">Dai al pet</string>
     <string name="PetInventory_HeroBackpackFull">Il tuo zaino è pieno</string>
@@ -3073,6 +3074,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
