@@ -1410,6 +1410,7 @@
     <string name="Mob_GoingTo">Έφυγα!</string>
     <string name="Mob_Guarding">Φρουρώ αυτό το μέρος!</string>
     <string name="Mob_ItemUse">%1$s χρησιμοποιεί %2$s</string>
+    <string name="Mob_PetDied">Το κατοικίδιό σου πέθανε: %s</string>
     <string name="Mob_ReadyForOrder">%s, στις διαταγές σου.</string>
     <string name="Mob_StaAmokStatus">- %1$s σε αμόκ</string>
     <string name="Mob_StaControlledStatus">- %s υπό ανίερη κατοχή</string>
@@ -3098,6 +3099,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 
