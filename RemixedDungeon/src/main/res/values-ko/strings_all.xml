@@ -2994,6 +2994,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_deco_skullboard_desc">이 두개골은 예상치 못한 공포의 순간을 완벽하게 담아냈다.</string>
     <string name="town_deco_skullboard_name">트로피 진열대</string>
     <string name="town_deco_skulls_desc">광물에서 온 생물들의 연마된 두개골.</string>
+    <string name="town_deco_skulls_name">해골</string>
     <string name="town_deco_slush_desc">이 눈이 녹기 시작하여 주변이 진흙으로 변했습니다.</string>
     <string name="town_deco_slush_name">흐물</string>
     <string name="town_deco_snow_desc">모험가들에 대한 이곳의 저명함에도 불구하고, 마치 어떤 외부인도 발을 들이지 않은 것처럼 많은 눈이 쌓여 있다.</string>
@@ -3070,6 +3071,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

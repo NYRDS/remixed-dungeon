@@ -1534,6 +1534,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="PetInventory_ACTakeFromPet">ペットから受け取る</string>
     <string name="PetInventory_CantGiveEquipped">装備中のアイテムは渡せません</string>
     <string name="PetInventory_GaveItem">%1$sを%2$sに渡しました</string>
+    <string name="PetInventory_GiveAll">すべて渡す</string>
     <string name="PetInventory_GiveN">渡す %d</string>
     <string name="PetInventory_GiveToPet">ペットに渡す</string>
     <string name="PetInventory_HeroBackpackFull">バックパックがいっぱいです</string>
@@ -3104,6 +3105,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
