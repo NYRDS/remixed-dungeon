@@ -1222,6 +1222,7 @@
     <string name="WndSettings_Sound">المؤثرات الصوتية</string>
     <string name="WndSettings_ThirdQuickslot">الفتحة السريعة الثالثة</string>
     <string name="WndSettings_UiScale">مقياس واجهة المستخدم</string>
+    <string name="WndSettings_UiSettings">إعدادات الواجهة</string>
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
     <string name="WndStory_Caves">الكهوف الممتدة تحت السجن المهجور قليلة السكان. تقع في عمق كبير جدًا بحيث لا تستطيع المدينة استغلالها، وهي فقيرة جدًا بالمعادن لإثارة اهتمام الأقزام. في الماضي، كانت هناك نقطة تجارية هنا على الطريق بين هاتين الدولتين، لكنها اندثرت منذ تراجع عاصمة الأقزام. لم يسكنها الآن سوى بنات آوى المتواجدين في كل مكان والحيوانات تحت الأرض.</string>
@@ -1365,6 +1366,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

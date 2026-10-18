@@ -1420,6 +1420,7 @@
     <string name="Mob_StaControlledStatus">この%sは既に不浄なものに精神を支配されている</string>
     <string name="Mob_StaFleeingStatus">%s は逃げている</string>
     <string name="Mob_StaFleeingStatus2">%1$sは %2$sから逃げている</string>
+    <string name="Mob_StaGuardStatus">%s は警戒中</string>
     <string name="Mob_StaHuntingStatus">%s は狩りをしている</string>
     <string name="Mob_StaHuntingStatus2">%1$sは %2$sを狩っている</string>
     <string name="Mob_StaPassiveStatus">%s は消極的だ</string>
@@ -3105,6 +3106,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

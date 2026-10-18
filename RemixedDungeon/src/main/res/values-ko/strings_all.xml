@@ -997,6 +997,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroSubClass_DescBers">부상이 심하면, _광전사_는 광분 상태가 되며 공격력이 크게 상승한다.</string>
     <string name="HeroSubClass_DescFreR">_프리러너_는 대부분의 몬스터보다 거의 두 배 가까이 빠르게 달릴 수 있습니다. 프리러너가 달리는 중에는 회피율이 크게 증가하지만, 그 조건으로 힘에 맞는 장비를 착용 중이며 굶주린 상태가 아니어야 합니다.</string>
     <string name="HeroSubClass_DescGlad">근접 무기를 이용한 공격에 성공하면 _검투사_는 연타를 시작하고, 다음 공격이 성공할 때마다 추가로 데미지를 입힌다.</string>
+    <string name="HeroSubClass_DescGuardian">숙련된 방어 지식 덕분에 _수호자_는 방패로 반격할 수 있으며, 이 걸어 다니는 요새를 공격하는 자에게 무시무시한 적이 됩니다.</string>
     <string name="HeroSubClass_DescNone"/>
     <string name="HeroSubClass_DescScout">엘프 _정찰병_은 은신의 달인립니다. 높게 자란 풀 위에 올라서면 잠시 동안 은신 상태가 됩니다. 또한 평범한 엘프보다 날랩니다.</string>
     <string name="HeroSubClass_DescShaman">엘프 _주술사_는 마법 막대를 근접 무기로 사용할 수 있습니다. 공격에 성공하면 마법 막대의 능력을 충전량을 사용하지 않고 대상에게 가할 확률이 있습니다.</string>
@@ -3071,6 +3072,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
