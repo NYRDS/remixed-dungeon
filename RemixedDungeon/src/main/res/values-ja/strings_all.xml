@@ -2065,6 +2065,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">カミソリのような鋭い刃を持つ星形の金属片で、標的に大きなダメージを与える。非常に高い速度で投げることができる。</string>
     <string name="Shuriken_Name">手裏剣</string>
+    <string name="Sign_CantRead">読めない。</string>
     <string name="SkeletonKey_Info">これは厳粛な鍵だ: 頭がドクロの形をしている。おそらく、何か重大なドアを開けることができるのだろう。</string>
     <string name="SkeletonKey_Name">骸骨の鍵</string>
     <string name="Skeleton_Defense">ブロックした</string>
@@ -3107,6 +3108,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

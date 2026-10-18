@@ -1613,6 +1613,7 @@
     <string name="SpiderQueenCarapace_Name">Spinnenkoninginnenpantser</string>
     <string name="SpiderQueen_DieInfo">De Spinnenkoningin is verslagen! Nu moet ik terug naar niveau 5 en mijn reis naar de Diepten voortzetten.</string>
     <string name="SpiderQueen_Gender">feminine</string>
+    <string name="SpiderQueen_Name_Objective">spinnenkoningin</string>
     <string name="SpiderServant_Desc">Soldaten vormen de talrijkste eenheden van het spinnenhol. Ze zijn erop geboren om hun territorium te beschermen. De cheliceren van soldaten hebben gifklieren ontwikkeld om hun vijanden te vergiftigen.</string>
     <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
@@ -2480,6 +2481,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

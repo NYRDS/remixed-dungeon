@@ -1249,6 +1249,7 @@
     <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">دودة</string>
     <string name="Worm_Name_Objective">دودة</string>
+    <string name="Wraith_Desc">الشبح هو الروح الانتقامية لذنب، الذي تم إزعاج قبره أو ضريحه. كونه كيانًا أثيريًا، من الصعب جدًا إصابته بسلاح عادي.</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="WrnExperimental_realtime">تم تفعيل وضع الوقت الفعلي! هذه الآن لعبة روجلايك في الوقت الفعلي، اضغط بسرعة أو مت.\nهل تريد التحقق من المخزون؟\nحظاً سعيداً في القيام بذلك بينما يتحقق سرطان المجاري من أحشائك.</string>
     <string name="WrnExperimental_title">تم تفعيل الخيارات التجريبية!</string>
@@ -1366,6 +1367,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 
