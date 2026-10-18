@@ -1406,6 +1406,7 @@
     <string name="Mob_CantDoIt">Δεν μπορώ να το κάνω αυτό.</string>
     <string name="Mob_Desc">Η περιγραφή θα προστεθεί σύντομα!</string>
     <string name="Mob_Died">Άκουσες κάτι να πεθαίνει στο βάθος</string>
+    <string name="Mob_FollowMe">Σε ακολουθώ!</string>
     <string name="Mob_GoingTo">Έφυγα!</string>
     <string name="Mob_Guarding">Φρουρώ αυτό το μέρος!</string>
     <string name="Mob_ItemUse">%1$s χρησιμοποιεί %2$s</string>
@@ -3097,6 +3098,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 
