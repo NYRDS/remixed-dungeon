@@ -2232,6 +2232,7 @@
     <string name="town_deco_rug_name">kleed</string>
     <string name="town_deco_screen_desc">Dit mysterieuze doek heet een \&quot;scherm\&quot; en kan bewegende beelden tonen</string>
     <string name="town_deco_screen_name">Scherm</string>
+    <string name="town_deco_scrolls_name">Scrollen</string>
     <string name="town_deco_shelf_desc">Lege planken.</string>
     <string name="town_deco_shelf_full_desc">Op deze plank staan allerlei snuisterijen.</string>
     <string name="town_deco_shelf_name">Planken</string>
@@ -2478,6 +2479,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

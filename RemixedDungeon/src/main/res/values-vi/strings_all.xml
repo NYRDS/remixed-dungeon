@@ -420,6 +420,7 @@
     <string name="Damage_Reduction">Giảm sát thương</string>
     <string name="DarkGold_Name">quặng vàng tối</string>
     <string name="DarkSacrifice_Hint">Chọn một người phục vụ trung thành của bạn để hy sinh!</string>
+    <string name="DarkSacrifice_Info">Hy sinh kẻ phục vụ trung thành của bạn để tạo ra một vụ nổ. Diện tích bao phủ bởi vụ nổ sẽ phụ thuộc vào sức khỏe còn lại của kẻ phục vụ và trình độ kỹ năng của bạn.</string>
     <string name="DarkSacrifice_Name">Hy Sinh Tối Tăm</string>
     <string name="DarkSacrifice_Resist">Ngươi không có quyền lực nào trên ta!</string>
     <string name="DarkSacrifice_Self">Vì Tai Ương!</string>
@@ -906,6 +907,7 @@
     <string name="LloidsBeacon_ACSet">ĐẶT</string>
     <string name="LloidsBeacon_Info">Đèn hiệu của Lloyd là một thiết bị phép thuật phức tạp, cho phép bạn quay lại nơi mà bạn đã từng đến.</string>
     <string name="LloidsBeacon_Preventing">Một loại halo ma thuật mạnh mẽ hiện diện ở đây ngăn cản bạn sử dụng cột đèn của Lloyd!</string>
+    <string name="LloidsBeacon_Return">Đèn hiệu của Lloyd đã được đặt thành công tại vị trí hiện tại của bạn, giờ bạn có thể trở lại đây bất cứ lúc nào.</string>
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
     <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Name">kiếm dài</string>
@@ -2113,6 +2115,8 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
 
 
 

@@ -2272,6 +2272,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="TownGuardNPC_Gender">masculine</string>
     <string name="TownGuardNPC_Message1">비켜주세요.</string>
     <string name="TownGuardNPC_Message2">당신같은 모험가들에게 감사합니다. 여기는 정말 평화로워 졌어요.</string>
+    <string name="TownGuardNPC_Message3">이 마을에 경비원이 너무 많다고 생각하나요? 그건 이 마을만이 거대한 괴물로 가득 찬 던전이 있는 유일한 마을이기 때문이죠, 그렇지 않나요?</string>
     <string name="TownGuardNPC_Name">마을 경비병</string>
     <string name="TownGuardNPC_Name_Objective">마을 경비병</string>
     <string name="TownPortal_Info">이 주문을 사용하면 즉시 안전한 곳으로 돌아갈 수 있습니다. 하지만 강력한 마법 원천이 근처에 있으면 의도한 대로 작동하지 않을 수 있습니다.</string>
@@ -3068,6 +3069,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
