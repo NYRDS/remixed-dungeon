@@ -1652,6 +1652,7 @@
     <string name="WandOfFlock_SheepBaa_2">Bê.</string>
     <string name="WandOfIcebolt_Info">Cây gậy này phóng ra một tia băng, gây sát thương nhẹ cho mục tiêu. Cũng có khả năng làm chậm hoặc thậm chí đóng băng kẻ địch.</string>
     <string name="WandOfIcebolt_Info1">Bạn đã tự giết mình bằng Đũa phép Băng đạn của chính mình...</string>
+    <string name="WandOfIcebolt_Name">Gậy Băng Tiễn</string>
     <string name="WandOfLightning_Name">Gậy Sét</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfMagicMissile_Info">Cây gậy này phóng ra các tên lửa năng lượng ma thuật thuần khiết, gây sát thương trung bình cho mục tiêu.</string>
@@ -2112,6 +2113,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
