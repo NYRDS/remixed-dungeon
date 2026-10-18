@@ -297,6 +297,7 @@
     <string name="BodyArmorBuff_Name">바디 아머</string>
     <string name="BodyArmorSpell_Info">예비 근육의 힘을 활성화하여 일시적으로 더 강하게 만들고, 이동 속도를 희생하여 방어력을 크게 증가시킵니다.</string>
     <string name="BodyArmorSpell_Name">보디 아머</string>
+    <string name="BoneSaw_Info">정밀하게 제작된 수술용 톱으로 빠른 해부를 위해 설계되었습니다. 역병 의사의 기술과 함께 피해와 공격 속도가 더욱 치명적으로 증가합니다. 치명타는 적에게서 추가 수확 가능한 부위를 자르며, 마비된 적에게는 무자비한 효율로 공격합니다.</string>
     <string name="BoneSaw_Name">뼈톱</string>
     <string name="BoneShard_Info">패배한 적으로부터 얻은 날카로운 뼈 조각이다. 이 조각들은 놀랍도록 견고하며 제작에 유용하게 쓰인다.</string>
     <string name="BoneShard_Name">뼈 조각</string>
@@ -3064,6 +3065,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

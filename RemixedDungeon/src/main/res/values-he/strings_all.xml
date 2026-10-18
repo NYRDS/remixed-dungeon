@@ -1165,6 +1165,7 @@
     <string name="WndLibrary_Codex_Btn">סיפורים</string>
     <string name="WndLibrary_Items_Btn">פריטים</string>
     <string name="WndLibrary_Mobs_Btn">מפלצות</string>
+    <string name="WndLocalModInstall_text">בחר תיקייה להתקנת מוד ממנה.</string>
     <string name="WndLocalModInstall_title">התקן מוד ממחלקה מקומית</string>
     <string name="WndModInstall_Version">גרסה</string>
     <string name="WndMovieTheatre_Instruction_2">צפית %1$d מתוך %2$d פעמים. תקבל הזדמנות נוספת לצפות בסרטון עבור כל רמה חדשה שתשיג.</string>
@@ -1672,6 +1673,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
