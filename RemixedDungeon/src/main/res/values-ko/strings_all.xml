@@ -2051,6 +2051,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">목표에 명중 할 때 높은 확률로 별모양 금속과 날카로운 칼날이 상당한피해를 입힌다.</string>
     <string name="Shuriken_Name">수리검</string>
+    <string name="Sign_CantRead">읽을 수 없습니다.</string>
     <string name="SkeletonKey_Info">이 열쇠는 중요해 보입니다. 열쇠 머리 부분이 해골 모양입니다. 아마도 중요한 문을 열 수 있을 것 같습니다.</string>
     <string name="SkeletonKey_Name">해골 열쇠</string>
     <string name="Skeleton_Defense">막음</string>
@@ -3073,6 +3074,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

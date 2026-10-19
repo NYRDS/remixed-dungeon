@@ -548,6 +548,7 @@
     <string name="FilteredMask_Info">Khẩu trang lọc là thiết bị được thiết kế để bảo vệ người đeo không hít phải không khí độc hại, bao gồm khói, hơi, khí và bụi bẩn cũng như vi sinh vật trong không khí.\n\nTuy nhiên chiếc mặt nạ này chỉ phục vụ mục đích trang trí.</string>
     <string name="FilteredMask_Name">Khẩu trang N95</string>
     <string name="FireArrow_Gender">feminine</string>
+    <string name="FireArrow_Info">Mũi tên này trông giống như một mũi tên bình thường, chỉ khác là một ánh sáng đỏ ấm tỏa ra từ đầu mũi tên.</string>
     <string name="FireArrow_Name">mũi tên lửa</string>
     <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">nguyên tố lửa</string>
@@ -2116,6 +2117,7 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
 
 
 
