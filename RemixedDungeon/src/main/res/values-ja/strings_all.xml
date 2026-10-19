@@ -1415,6 +1415,7 @@
     <string name="Mob_Died">あなたは何かが死ぬ音を聞いた</string>
     <string name="Mob_FollowMe">あなたについてきている！</string>
     <string name="Mob_GoingTo">もう行っている!</string>
+    <string name="Mob_Guarding">この場所を守っている！</string>
     <string name="Mob_ItemUse">%1$sが%2$sを使用</string>
     <string name="Mob_ReadyForOrder">%sは命令を待っている。</string>
     <string name="Mob_StaAmokStatus">%1$sが暴走している</string>
@@ -3109,6 +3110,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

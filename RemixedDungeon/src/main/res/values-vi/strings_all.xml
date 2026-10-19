@@ -1401,6 +1401,7 @@
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
     <string name="Sewer_TileWater">nước đục</string>
+    <string name="Shades_Info">Có người nói hầm ngục quá tối để đeo kính râm. Và bạn nói rằng những người đó chỉ không đủ ngầu mà thôi.</string>
     <string name="Shades_Name">Kính râm</string>
     <string name="ShadowLord_Death">Không...</string>
     <string name="ShadowLord_Desc">Sinh vật này được tạo thành từ sự ác độc thuần khiết và bóng tối không thể thâm nhập. Nhiều người tin rằng chính hắn là Thần Cổ xưa, khi xem xét sức mạnh của hắn. Trong khi những người khác cho rằng hắn chỉ là người gác cửa phòng của Thần Cổ.</string>
@@ -2754,6 +2755,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

@@ -1057,6 +1057,7 @@
     <string name="Mimic_Name">mimic</string>
     <string name="Mimic_Name_Objective">mimic</string>
     <string name="MindVisionBuff_Info">De innerlijke visie laat duidelijk de beweging van alle levende wezens op de verdieping zien.</string>
+    <string name="MindVisionBuff_Name">Geestelijk zicht</string>
     <string name="MirrorImage_Desc">Deze illusie lijkt sterk op jou, maar is bleker en trilt een beetje.</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">spiegelbeeld</string>
@@ -2496,6 +2497,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
