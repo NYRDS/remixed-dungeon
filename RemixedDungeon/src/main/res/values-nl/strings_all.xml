@@ -515,6 +515,7 @@
     <string name="DewVial_Info">Je kunt overtollige dauw in dit kleine vat bewaren om het later te drinken. Als het flesje vol is, wordt de dauw op een moment van dodelijk gevaar automatisch verbruikt.</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DieHardBuff_Name">Die Hard</string>
+    <string name="DieHardSpell_Info">Zal tijdelijk je regeneratie verhogen, waardoor je een echte Die Hard wordt.</string>
     <string name="Displacement_Txt">%s van verplaatsing</string>
     <string name="DoctorArmor_Info">Deze pantser van de pestdokter maakt gebruik mogelijk van de \&quot;Miasma Wolk\&quot; vaardigheid, die een giftige gas vrijlaat dat vijanden vergiftigt, verzwakt en desorienteert. De dokter, beschermd door hun masker, is immuun voor deze effecten.</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
@@ -825,6 +826,7 @@
     <string name="IceCaves_TileGrass">Bevroren gras.</string>
     <string name="IceCaves_TileHighGrass">Bevroren hoog gras</string>
     <string name="IceElemental_Gender">masculine</string>
+    <string name="IceElemental_Name_Objective">ijselementaal</string>
     <string name="IceGuardianCoreModule_Name">IJs Wachter Kern</string>
     <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name_Objective">ijswachter</string>
@@ -1172,6 +1174,7 @@
     <string name="Piercing_Name_2">Doorborende %s</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">reuzepiranha</string>
+    <string name="Piranha_Name_Objective">reuzenpiranha</string>
     <string name="PirateSet_Name">Piraten Set</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
     <string name="PlagueDoctorMask_Info">Dit… dit is geen gewone masker. Het is… een barrière. Een schild tegen de krachten van verval waar de Pestmeester onvermoeid tegen vecht. Gemaakt van het fijnste ebenhout, kunstvol ingesneden met het gezicht van een gierige schedel. De holle oogkasjes zijn gevuld met schitterende amethisten die zwak pulseren, als uitgaande kolen van een vuur. Elke adem die je neemt, elk woord dat je spreekt, wordt gefilterd door een labyrintachtig netwerk van buizen en filters. Een mengsel van krachtige kruiden en exotische specerijen vult de lucht binnenin, het stank van de dood maskerend dat als een lijkhemd om je heen hangt.</string>
@@ -2481,6 +2484,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

@@ -44,6 +44,7 @@
     <string name="AmokDart_Info">Dung dịch trên mũi tên này sẽ biến bất kỳ ai thành một kẻ điên cuồng tàn bạo không trí tuệ.</string>
     <string name="AmokDart_Name">Đũa Amok</string>
     <string name="AmuletScene_Stay">Tôi chưa xong đâu</string>
+    <string name="Amulet_ACEnd">KẾT THÚC TRÒ CHƠI</string>
     <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
     <string name="Anesthesia_Cast">%s rơi vào một giấc ngủ sâu, không mộng.</string>
@@ -174,6 +175,7 @@
     <string name="Bishop_great_bless">Chúc phúc vĩ đại - %d g</string>
     <string name="Bishop_lesser_bless">Chúc phúc nhỏ - %d g</string>
     <string name="Bishop_not_interested">Rời đi</string>
+    <string name="Bishop_remove_curse">Gỡ lời nguyền - %d g</string>
     <string name="Bishop_text">Ngày đêm con cầu nguyện cho ngươi, đứa trẻ của ta.</string>
     <string name="Bishop_title">Giám mục</string>
     <string name="BlackCat_Desc">Đây là một con mèo đen</string>
@@ -1888,6 +1890,7 @@
     <string name="WndSettings_ThirdQuickslot">Khoản truy cập nhanh thứ ba</string>
     <string name="WndSettings_UiScale">Tỷ lệ giao diện</string>
     <string name="WndSettings_UiSettings">Cài đặt giao diện</string>
+    <string name="WndSettings_ZoomDef">Thu phóng mặc định</string>
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
     <string name="WndSettings_moveTimeout">Thời gian chờ di chuyển: %s</string>
@@ -2117,6 +2120,9 @@
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
+
+
+
 
 
 
