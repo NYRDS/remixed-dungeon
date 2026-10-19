@@ -138,6 +138,12 @@ class GameClient:
         """Get recent log messages."""
         return self._get("/debug/get_recent_logs")
 
+    def run_lua(self, code: str) -> Dict[str, Any]:
+        """Run a lua chunk on the game thread, return {"success":bool,"result":str}."""
+        import urllib.parse
+
+        return self._get(f"/debug/run_lua?code={urllib.parse.quote(code)}")
+
     def set_hero_stat(self, stat: str, value: int) -> Dict[str, Any]:
         """Set a hero stat value."""
         return self._get(f"/debug/set_hero_stat?stat={stat}&value={value}")

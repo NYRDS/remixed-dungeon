@@ -4123,6 +4123,41 @@ public class DebugEndpoints {
         }
     }
 
+    // test endpoint: /debug/interact?id=<mobId> - drives the real tap-a-mob
+    // Interact action (hero must be adjacent, else the action only starts
+    // walking) - the way to drive NPC quest dialogs over HTTP
+    public static NanoHTTPD.Response handleDebugInteract(NanoHTTPD.IHTTPSession session) {
+        try {
+            int id = -1;
+            String query = session.getQueryParameterString();
+            if (query != null) {
+                for (String param : query.split("&")) {
+                    if (param.startsWith("id=")) {
+                        id = Integer.parseInt(param.substring(3));
+                    }
+                }
+            }
+
+            Mob npc = findMobById(id);
+            if (npc == null || Dungeon.hero == null || Dungeon.level == null) {
+                return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.BAD_REQUEST, "application/json",
+                    createErrorResponse("need id, game running").toString());
+            }
+
+            final Mob finalNpc = npc;
+            final boolean[] adjacent = {false};
+            GameLoop.pushUiTaskAndWait(() -> new Interact(finalNpc).act(Dungeon.hero));
+            adjacent[0] = Dungeon.hero.adjacent(finalNpc);
+
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                String.format("{\"success\":true,\"adjacent\":%b,\"npc\":\"%s\"}",
+                    adjacent[0], finalNpc.getEntityKind()));
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse(e.getMessage()).toString());
+        }
+    }
+
     // test endpoint: /debug/test_damage?id=<mob>&dmg=<n>&src=buff|srcid=<mobId> -
     // damages a mob with a non-Char source (Burning buff, like a DoT tick) or with
     // another mob as the source, returns the resulting AI state - used to check
