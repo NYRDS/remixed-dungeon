@@ -1035,6 +1035,7 @@
     <string name="Necromancy_SummonDeathlingName">Triệu hồi Tử vong</string>
     <string name="NecrotismBuff_Info">Dấu ấn của chính cái chết, mùi hôi từ đó ảnh hưởng đến những người gần đó và khiến họ chia sẻ chung một định mệnh.</string>
     <string name="NecrotismBuff_Name">Hoại tử</string>
+    <string name="Necrotism_ACSpecial">HOẠI TỬ</string>
     <string name="Necrotism_Death">Bạn đã chết vì hoại tử...</string>
     <string name="NekoEars_Name">Tai Mèo</string>
     <string name="NeutralKing_Hostile">Nhà Vua quay lại tấn công bạn!</string>
@@ -2753,6 +2754,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
