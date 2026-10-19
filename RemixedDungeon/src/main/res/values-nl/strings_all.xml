@@ -860,6 +860,7 @@
     <string name="InnServant_Phrase_3">Het ziet er schoon uit voor mij</string>
     <string name="InnServant_Phrase_4">Oh jee, zoveel gasten vandaag!</string>
     <string name="Instability_Name_2">Instabiel %s</string>
+    <string name="InterLevelScene_ErrorGeneric">Er ging iets mis...</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
     <string name="InterLevelScene_Returning">Terugkeren...</string>
@@ -1596,6 +1597,7 @@
     <string name="SpiderArmor_Info">Deze pantser is gemaakt van oude spinnep chitine en een soort kleding. Wat verrassend is, lijkt het nog steeds werkende spinnepklieren te bevatten. Als je de platen hard genoeg indrukt, schieten ze web uit. En getande zolen laten je vrij bewegen op dergelijke web.</string>
     <string name="SpiderArmor_Name">spinnenpantser</string>
     <string name="SpiderCharm_Info">Deze exotische snuisterij is gehuld in een aura van mysterie. Wie weet wat er gebeurt met degene die hem draagt?</string>
+    <string name="SpiderCharm_Name">Spinnenamuleet</string>
     <string name="SpiderCharm_Use">GEBRUIKEN</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
@@ -1856,6 +1858,7 @@
     <string name="WaterElemental_Name_Objective">waterelementair</string>
     <string name="WaterOfAwareness_Info">De kracht van kennis straalt vanuit het water van deze bron. Neem een slok om alle geheimen van je uitrusting te onthullen.</string>
     <string name="WaterOfHealth_Info">De kracht van gezondheid straalt uit het water van deze put. Neem een slok om je wonden te helen en je honger te stillen.</string>
+    <string name="WaterOfHealth_Procced">Wanneer je een slok neemt, voel je dat je wonden volledig genezen.</string>
     <string name="WaterOfTransmutation_Info">Kracht van verandering straalt uit van het water van deze put. Gooi een item in de put om het in iets anders te veranderen.</string>
     <string name="WeaknessBuff_Info">Zwakheid omhult het lichaam, waardoor men een makkelijker doelwit wordt.</string>
     <string name="WeaknessBuff_Name">Verzwakt</string>
@@ -2487,6 +2490,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
