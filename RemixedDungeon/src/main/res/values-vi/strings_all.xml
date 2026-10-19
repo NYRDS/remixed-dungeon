@@ -2079,6 +2079,7 @@
     <string name="town_deco_skulls_name">Đầu lâu</string>
     <string name="town_deco_slush_desc">Đống tuyết này bắt đầu tan chảy, biến nơi xung quanh nó thành bùn nhão.</string>
     <string name="town_deco_slush_name">Bùn lầy</string>
+    <string name="town_deco_snow_name">Tuyết</string>
     <string name="town_deco_snowdrift_desc">Đó là một đống tuyết khá lớn và rõ ràng không ai định dọn nó.</string>
     <string name="town_deco_snowy_plate_desc">Tấm đá cổ xưa này bị phủ đầy tuyết</string>
     <string name="town_deco_sofa_name">Ghế sofa ấm áp</string>
@@ -2748,6 +2749,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

@@ -985,6 +985,7 @@
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
+    <string name="LightBuff_Name">Verlicht</string>
     <string name="LightningBolt_Info">Een spreuk die wordt gedeeld onder oude schamanen, die je vijanden tweemaal zo effectief schokt, vooral als ze genoeg dwazen zijn om op water te staan.</string>
     <string name="LightningBolt_Name">Bliksemschicht</string>
     <string name="LightningTrap_Desc">Je bent gedood door een ontlading van een bliksemval...</string>
@@ -2490,6 +2491,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
