@@ -1867,6 +1867,7 @@
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_StaTitle">Cấp %1 %2</string>
     <string name="WndRanking_Stats">Thống kê</string>
+    <string name="WndResurrect_Message">Bạn đã chết, nhưng bạn được trao thêm một cơ hội để đánh bại hầm ngục này. Bạn có chấp nhận không?</string>
     <string name="WndResurrect_Yes">Có, tôi sẽ chiến đấu!</string>
     <string name="WndSadGhostNecro_No">Không, để nó nói.</string>
     <string name="WndSadGhostNecro_Persuaded">Linh hồn buồn đã bị chi phối!</string>
@@ -2752,6 +2753,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

@@ -1033,6 +1033,7 @@
     <string name="MeleeWeapon_Info3c">langzaam</string>
     <string name="MeleeWeapon_Info3d">en</string>
     <string name="MeleeWeapon_Info3e">maar</string>
+    <string name="MeleeWeapon_Info3f">nauwkeurig</string>
     <string name="MeleeWeapon_Info3g">onnauwkeurig</string>
     <string name="MeleeWeapon_Info4a">Het was uitgebalanceerd om het sneller te maken.</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
@@ -2494,6 +2495,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
