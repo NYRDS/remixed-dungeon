@@ -1576,6 +1576,7 @@
     <string name="Snail_Desc">Deze kleine weekdier is behoorlijk gegroeid door te voeden met rioolwater, maar hij is nog steeds heel traag, wat hem een makkelijke tegenstander maakt.</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">slak</string>
+    <string name="Snail_Name_Objective">slak</string>
     <string name="SnipersMarkBuff_Name">Teken van de sluipschutter</string>
     <string name="SociologistNPC_AlreadyTaken">Je hebt al deelgenomen aan deze enquête, kom later terug</string>
     <string name="SociologistNPC_Desc">Deze socioloog is op een heilige zoektocht om publieke meningen te verzamelen</string>
@@ -2497,6 +2498,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

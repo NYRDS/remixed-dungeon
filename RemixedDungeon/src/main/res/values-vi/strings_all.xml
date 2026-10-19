@@ -517,6 +517,7 @@
     <string name="EncumbranceBuff_CharAct_2">Cái %s này quá nặng để tôi có thể sử dụng hiệu quả.</string>
     <string name="EncumbranceBuff_CharAct_3">Tôi cần rèn luyện sức mạnh trước khi có thể sử dụng %s.</string>
     <string name="EncumbranceBuff_CharAct_4">Tôi thiếu sức mạnh để sử dụng %s với đầy đủ tiềm năng của nó.</string>
+    <string name="EncumbranceBuff_CharAct_5">%s quá sức tôi, tôi không thể xử lý ngay bây giờ.</string>
     <string name="EncumbranceBuff_Info">Không đủ sức để sử dụng %s hiệu quả.</string>
     <string name="EncumbranceBuff_Name">Gánh nặng</string>
     <string name="EnslavedSoul_Desc">Bạn gần như có thể nhìn xuyên qua bóng ma này. Và mặc dù nó trông giống một chiếc hộp sọ, đôi khi trong tích tắc một khuôn mặt hiện ra, ngập tràn đau đớn và khổ sở.</string>
@@ -2755,6 +2756,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
