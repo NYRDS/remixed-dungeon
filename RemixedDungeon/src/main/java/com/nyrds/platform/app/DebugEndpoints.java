@@ -4344,6 +4344,9 @@ public class DebugEndpoints {
         }
     }
 
+    // test endpoint: /debug/interact?id=<mobId> - drives the real tap-a-mob
+    // Interact action (hero must be adjacent, else the action only starts
+    // walking) - the way to drive NPC quest dialogs over HTTP
     public static NanoHTTPD.Response handleDebugInteract(NanoHTTPD.IHTTPSession session) {
         try {
             int id = -1;
