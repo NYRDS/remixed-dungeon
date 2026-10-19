@@ -273,6 +273,7 @@
     <string name="Challenges_Names_1">Niềm tin là giáp trụ của tôi</string>
     <string name="Challenges_Names_4">Trí tuệ bầy đàn</string>
     <string name="Challenges_Names_5">Vào bóng tối</string>
+    <string name="Challenges_Names_6">Cổ ngữ bị cấm</string>
     <string name="Challenges_Names_7">Chủ nghĩa hòa bình</string>
     <string name="ChampionOfAirBuff_Info">Đặc tính này ban tặng cho sinh vật bản chất của gió, nâng cao sự nhanh nhẹn và khả năng chiến đấu. Võ sĩ Bậc Thầy Khí trở thành đối thủ đáng gờm, có thể tung ra những đòn tấn công nhanh chóng và tàn phá có thể thay đổi nhanh chóng cục diện trận chiến.</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
@@ -1125,6 +1126,7 @@
     <string name="Poison_Name_0">Độc %s</string>
     <string name="Poison_Name_2">Độc %s</string>
     <string name="PortalExit_Desc">Cổng dịch chuyển này sẽ đưa bạn đến tầng đầu tiên của %s.</string>
+    <string name="PortalExit_Desc_IceCaves">Hang băng</string>
     <string name="PortalExit_Desc_SpiderNest">Hang động nhện</string>
     <string name="PortalGate_Activated">Cổng cổ đại đã thức tỉnh!</string>
     <string name="PortalGate_Desc">Những đường khắc trên bề mặt cổng dịch chuyển này tạo thành một hoa văn kỳ lạ. Nó trông giống như một đường hầm khổng lồ dẫn về phía xa. Nhưng nhìn từ bên cạnh, ta thấy rõ bề mặt của nó gần như phẳng lì.</string>
@@ -2741,6 +2743,10 @@
 
 
 
+
+
+
+    <string name="town_table_fortune_name">Bàn</string>
 
 
 </resources>

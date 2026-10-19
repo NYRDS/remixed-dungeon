@@ -315,6 +315,7 @@
     <string name="Challenges_Names_3">Woestijn</string>
     <string name="Challenges_Names_4">Zwermintelligentie</string>
     <string name="Challenges_Names_5">In de duisternis</string>
+    <string name="Challenges_Names_6">Verboden Runen</string>
     <string name="Challenges_Names_7">Pacifisme</string>
     <string name="Challenges_Names_8">Geen stad</string>
     <string name="ChampionOfAirBuff_Info">Deze eigenschap schenkt het wezen de essentie van de winden, wat zijn beweeglijkheid en strijdvaardigheid versterkt. De Kampioen van de Lucht wordt een vijandige tegenstander, in staat om snelle en verwoestende aanvallen los te laten die het verloop van de strijd snel kunnen veranderen.</string>
@@ -826,6 +827,7 @@
     <string name="IceCaves_TileGrass">Bevroren gras.</string>
     <string name="IceCaves_TileHighGrass">Bevroren hoog gras</string>
     <string name="IceElemental_Gender">masculine</string>
+    <string name="IceElemental_Name">ijs-elementaal</string>
     <string name="IceElemental_Name_Objective">ijselementaal</string>
     <string name="IceGuardianCoreModule_Name">IJs Wachter Kern</string>
     <string name="IceGuardianCore_Gender">masculine</string>
@@ -1628,6 +1630,7 @@
     <string name="SpiritOfPain_Name">geest van pijn</string>
     <string name="SpiritOfPain_Name_Objective">geest van pijn</string>
     <string name="Sprout_Info">Weak de slapende zaden.\nEr moet echter wat groen op de grond zijn om de toverspreuk te laten slagen.</string>
+    <string name="StartScene_ChooseFromSlot">Kies uit een opslagslot</string>
     <string name="StartScene_ComingSoon">Binnenkort</string>
     <string name="StartScene_ContinueLatest">Ga verder met je laatste spel of kies een opslagplek</string>
     <string name="StartScene_Depth">Diepte: %1$d\nNiveau: %2$d</string>
@@ -2484,6 +2487,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
