@@ -567,6 +567,7 @@
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">người xem bói</string>
     <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
+    <string name="FriedFish_Name">cá chiên</string>
     <string name="FriedFish_Taste">Ngon!</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Bạn có thể cảm nhận một luồng khí lạnh toát ra từ mũi tên.</string>
@@ -2751,6 +2752,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

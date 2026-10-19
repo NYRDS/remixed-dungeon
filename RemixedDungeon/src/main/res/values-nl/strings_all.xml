@@ -1177,6 +1177,7 @@
     <string name="Pickaxe_NothingToMine">Hier is niets om te delven!</string>
     <string name="Piercing_Name_0">Doorborend %s</string>
     <string name="Piercing_Name_2">Doorborende %s</string>
+    <string name="Piranha_Desc">Deze vleesetende vissen zijn geen natuurlijke bewoners van ondergrondse poelen. Ze werden speciaal gekweekt om overstroomde schatkamers te beschermen.</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">reuzepiranha</string>
     <string name="Piranha_Name_Objective">reuzenpiranha</string>
@@ -2493,6 +2494,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
