@@ -527,6 +527,7 @@
     <string name="DonateButton_thanks">Bedankt voor je steun!</string>
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name">angstridder</string>
+    <string name="DreadKnight_Name_Objective">angstridder</string>
     <string name="Dreamweed_Desc">Bij aanraking scheidt een Dreamweed een glitterend wolkje verwarrend gas uit.</string>
     <string name="DriedRoseBuff_Info">De roos ziet er heel aantrekkelijk uit.</string>
     <string name="DriedRoseBuff_Name">Charmant</string>
@@ -2492,6 +2493,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

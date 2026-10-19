@@ -1401,6 +1401,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Mob_GoingTo">Menuju</string>
     <string name="Mob_Guarding">이 곳을 지키고 있습니다!</string>
     <string name="Mob_ItemUse">%1$s가 %2$s을(를) 사용함</string>
+    <string name="Mob_PetDied">당신의 애완동물이 죽었습니다: %s</string>
     <string name="Mob_ReadyForOrder">%s이(가) 명령을 받기를 기다리고 있습니다.</string>
     <string name="Mob_StaAmokStatus">이 %1$s은/는 광란에 빠졌습니다</string>
     <string name="Mob_StaControlledStatus">이 %s는 사악한 존재에게 정신을 지배당하고 있습니다.</string>
@@ -3074,6 +3075,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

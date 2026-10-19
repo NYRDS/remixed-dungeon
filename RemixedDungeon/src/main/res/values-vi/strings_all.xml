@@ -499,6 +499,7 @@
     <string name="Dungeon_Tips_4">Cẩn thận Goo!</string>
     <string name="Dungeon_Tips_6">Xác định thuốc và cuộn giấy càng sớm càng tốt. Đừng để đến lúc bạn thực sự cần chúng mới làm.</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
+    <string name="Dungeon_Tips_8">Tấn công bất ngờ có cơ hội trúng đích cao hơn. Ví dụ, bạn có thể phục kích kẻ thù phía sau cánh cửa đóng khi biết nó đang tiến lại.</string>
     <string name="DwarfToken_Name">huy hiệu người lùn</string>
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">nguyên tố đất</string>
@@ -2750,6 +2751,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
