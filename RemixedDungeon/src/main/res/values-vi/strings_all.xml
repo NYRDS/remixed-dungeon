@@ -722,6 +722,7 @@
     <string name="Hero_StaFurious">cuồng nộ</string>
     <string name="Hero_StaFury">Ngươi trở nên cuồng bạo!</string>
     <string name="Hero_StaOoze">Bùn ăn mòn ăn mòn cơ thể bạn. Rửa sạch nó đi!</string>
+    <string name="Hero_StaParalysis">Bạn bị tê liệt!</string>
     <string name="Hero_StaPoison">Bạn bị trúng độc!</string>
     <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
     <string name="Hero_StaVertigo">Mọi thứ đang quay xoay quanh bạn!</string>
@@ -2749,6 +2750,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

@@ -1528,6 +1528,7 @@
     <string name="PetInventory_ACTakeFromPet">从宠物拿取</string>
     <string name="PetInventory_CantGiveEquipped">无法给予已装备的物品</string>
     <string name="PetInventory_GaveItem">给了 %1$s 给 %2$s</string>
+    <string name="PetInventory_GiveAll">全部给予</string>
     <string name="PetInventory_GiveN">给予 %d</string>
     <string name="PetInventory_GiveToPet">给宠物</string>
     <string name="PetInventory_HeroBackpackFull">你的背包已满了</string>
@@ -3063,6 +3064,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
