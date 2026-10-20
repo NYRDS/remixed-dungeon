@@ -134,6 +134,7 @@
     <string name="Badges_ItemLvl4">Item van niveau 12 verkregen</string>
     <string name="Badges_ItemLvl5">Item van niveau 15 verkregen</string>
     <string name="Badges_LevelReached1">Niveau 6 bereikt</string>
+    <string name="Badges_LevelReached2">Niveau 12 bereikt</string>
     <string name="Badges_LevelReached3">Niveau 18 bereikt</string>
     <string name="Badges_LevelReached5">Niveau 30 bereikt</string>
     <string name="Badges_Lich_Slain">Lich gedood</string>
@@ -574,6 +575,7 @@
     <string name="EarthElemental_Name_Objective">aardelementaal</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
     <string name="Earthroot_Desc">Wanneer een wezen een aardewortel aanraakt, vormen de wortels een soort natuurlijk pantser eromheen.</string>
+    <string name="Earthroot_Name">Aardewortel</string>
     <string name="ElfArmor_ACSpecial">ROEP VAN DE NATUUR</string>
     <string name="ElfArmor_Name">Elfenmantel</string>
     <string name="ElfArmor_NotElf">Alleen elfen kunnen deze pantser gebruiken!</string>
@@ -2506,6 +2508,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

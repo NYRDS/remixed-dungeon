@@ -1134,6 +1134,7 @@
     <string name="Poison_Name_2">Độc %s</string>
     <string name="PortalExit_Desc">Cổng dịch chuyển này sẽ đưa bạn đến tầng đầu tiên của %s.</string>
     <string name="PortalExit_Desc_IceCaves">Hang băng</string>
+    <string name="PortalExit_Desc_Necropolis">Nghĩa địa</string>
     <string name="PortalExit_Desc_SpiderNest">Hang động nhện</string>
     <string name="PortalGate_Activated">Cổng cổ đại đã thức tỉnh!</string>
     <string name="PortalGate_Desc">Những đường khắc trên bề mặt cổng dịch chuyển này tạo thành một hoa văn kỳ lạ. Nó trông giống như một đường hầm khổng lồ dẫn về phía xa. Nhưng nhìn từ bên cạnh, ta thấy rõ bề mặt của nó gần như phẳng lì.</string>
@@ -2762,6 +2763,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
