@@ -328,6 +328,7 @@
     <string name="ChampionOfFireBuff_Name">Kampioen van Vuur</string>
     <string name="ChampionOfWaterBuff_Info">De Kampioen van Water belichaamt de onwankelbare kracht van de oceanen en versterkt de veerkracht en standvastigheid van het wezen. Zo wordt het een onbuigzame tegenstander, in staat om een meedogenloze barrage van aanvallen te weerstaan en als een onwankelbare beschermer stand te houden tegenover tegenspoed.</string>
     <string name="ChaosArmor_Info">Deze pantser bestaat uit bloedrode platen die samen zijn genaaid met donkerrode ketens. Ze stralen chaotische energie uit wanneer je ze aanraakt.</string>
+    <string name="ChaosArmor_Name">Chaos-pantser</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Een eenhandig zwaard van pure chaos. Het groeit met gevechten zoals zijn tweehandige broer, maar langzamer en tot een lager potentieel — waardoor je linkerhand vrij blijft voor een schild.</string>
     <string name="ChaosBlade_Name">chaoszwaard</string>
@@ -979,6 +980,7 @@
     <string name="Level_TileStatue">Standbeeld</string>
     <string name="Level_TileSummoningTrap">Oproepval</string>
     <string name="Level_TileToxicTrap">Giftig gas val</string>
+    <string name="Level_TileUnlockedExit">Ontgrendelde uitgang naar diepte</string>
     <string name="Level_TileWall">Muur</string>
     <string name="Level_TileWell">put</string>
     <string name="LevitationBuff_Info">Het lichaam zweeft boven de grond en vermijdt vallen en andere gevaren op de grond.</string>
@@ -2508,6 +2510,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

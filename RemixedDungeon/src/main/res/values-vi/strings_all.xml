@@ -74,6 +74,7 @@
     <string name="AzuterronNPC_Quest_Reminder">Giúp tôi và tôi sẽ giúp bạn.</string>
     <string name="Backstab_Aware">Nạn nhân không nên nhận ra bạn để thực hiện đâm lén tốt.</string>
     <string name="Backstab_Name">đâm lén</string>
+    <string name="Backstab_TooFar">Nạn nhân quá xa để tấn công thành công.</string>
     <string name="BadgesScene_Title">Huy hiệu của bạn</string>
     <string name="Badges_AllBags">Đã mua tất cả túi</string>
     <string name="Badges_AllItems">Đã nhận dạng tất cả thuốc, cuốn, nhẫn &amp;amp; gậy</string>
@@ -1700,6 +1701,7 @@
     <string name="Wand_Wood_Types_2">gỗ mun</string>
     <string name="Wand_Wood_Types_3">anh đào</string>
     <string name="Wand_Wood_Types_4">gỗ tếch</string>
+    <string name="Wand_Wood_Types_5">thanh tùng</string>
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
     <string name="Wand_Wood_Types_9">gỗ tím</string>
     <string name="WarHammer_Gender">masculine</string>
@@ -2763,6 +2765,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
