@@ -74,6 +74,7 @@
     <string name="AzuterronNPC_Quest_End">Tuyệt vời. Đây, uống bình thuốc này đi, chắc chắn nó sẽ có ích cho bạn.</string>
     <string name="AzuterronNPC_Quest_Reminder">Giúp tôi và tôi sẽ giúp bạn.</string>
     <string name="Backstab_Aware">Nạn nhân không nên nhận ra bạn để thực hiện đâm lén tốt.</string>
+    <string name="Backstab_Info">Đòn đánh lén từ phía sau. Không trung thực, nhưng cực kỳ hiệu quả, sát thương đâm lưng sẽ tăng theo trình độ người thực hiện.\n\nĐòn đâm lưng thành công sẽ hoàn toàn bỏ qua giáp hoặc khả năng phòng thủ đặc biệt của nạn nhân.</string>
     <string name="Backstab_Name">đâm lén</string>
     <string name="Backstab_TooFar">Nạn nhân quá xa để tấn công thành công.</string>
     <string name="BadgesScene_Title">Huy hiệu của bạn</string>
@@ -2768,6 +2769,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

@@ -342,6 +342,7 @@
     <string name="ChaosCrystal_Name_2">Chaos Kristal</string>
     <string name="ChaosCrystal_ScrollFused">Kristal geabsorbeerd door rune op rol gegraveerd, en nu is het een %s</string>
     <string name="ChaosCrystal_ShieldFused">De kristal smolt met jouw schild en nam de chaosvorm aan.</string>
+    <string name="ChaosCrystal_StaffFused">Kristal absorbeert je toverstok en nam de vorm van een Staf aan</string>
     <string name="ChaosCrystal_SwordFused">De kristal absorbeert je wapen en neemt de vorm aan van een Zwaard</string>
     <string name="ChaosCrystal_Use">GEBRUIK</string>
     <string name="ChaosHelmet_Name">Chaos Helm</string>
@@ -2335,6 +2336,7 @@
     <string name="town_deco_wooden_stairs_name">trappen</string>
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
+    <string name="town_table_fortune_ball_desc">Kristallen bol, met een mysterieuze nevel binnen.</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
 
@@ -2513,6 +2515,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
