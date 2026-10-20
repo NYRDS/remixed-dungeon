@@ -294,6 +294,7 @@
     <string name="ChaosCrystal_Fuse">DUNG HỢP</string>
     <string name="ChaosCrystal_Info_1">Sức mạnh hỗn loạn chảy qua viên tinh thể này. Có lẽ nó có ích.</string>
     <string name="ChaosCrystal_Name">Huyền Tinh Kỳ Lạ</string>
+    <string name="ChaosCrystal_Name_1">Tinh Thể Hỗn Loạn</string>
     <string name="ChaosCrystal_Name_2">Viên Ngọc Hỗn Mang</string>
     <string name="ChaosCrystal_SelectForFuse">Chọn vật phẩm để hợp nhất Tinh thể Hỗn loạn</string>
     <string name="ChaosCrystal_StaffFused">Viên ngọc hấp thụ cây đũa phép của bạn và biến thành hình dạng một Cây Gậy</string>
@@ -772,6 +773,7 @@
     <string name="IceKey_Name">chìa khóa băng</string>
     <string name="Ignite_Info">Đốt ô được chọn. Có thể dùng để đốt cỏ, nhân vật và vật thể.</string>
     <string name="Ignite_Name">Đốt Cháy</string>
+    <string name="ImpShopkeeper_Desc">Quỷ nhỏ là những loài quỷ thấp kém. Chúng không nổi bật về sức mạnh hay tài năng phép thuật. Nhưng chúng khá thông minh và hòa đồng, và nhiều quỷ nhỏ thích sống và kinh doanh cùng những người không phải quỷ.</string>
     <string name="ImpShopkeeper_Greetings">Xin chào, bạn!</string>
     <string name="ImpShopkeeper_Name">imp tham vọng</string>
     <string name="Imp_Cya">Hẹn gặp lại, %s!</string>
@@ -2765,6 +2767,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

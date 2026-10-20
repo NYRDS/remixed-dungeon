@@ -1835,6 +1835,7 @@
     <string name="WandOfMagicMissile_Info">Deze staf lanceert missiles van zuivere magische energie, wat matige schade aan een doelwit toebrengt.</string>
     <string name="WandOfMagicMissile_Name">Toverstaf van Magische Projectielen</string>
     <string name="WandOfPoison_Info">De giftige uitbarsting van dit krom stuk hout bedekt zijn doelwit met dodelijk gif. Het vergiftigde wezen zal periodieke schade lijden totdat het effect eindigt. De duur van het effect neemt toe met het niveau van de staf.</string>
+    <string name="WandOfPoison_Name">Giftige Staf</string>
     <string name="WandOfRegrowth_Info">Wanneer het leven eindigt, begint nieuw leven altijd te groeien... De eeuwige cyclus blijft altijd bestaan!</string>
     <string name="WandOfRegrowth_Info1">er gebeurde niets</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
@@ -2146,6 +2147,7 @@
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="Zombie_Gender">masculine</string>
+    <string name="Zombie_Name">zombie</string>
     <string name="Zombie_Name_Objective">zombie</string>
     <string name="deco_candle_desc">Grote kaars</string>
     <string name="deco_candle_name">Kaars</string>
@@ -2510,6 +2512,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
