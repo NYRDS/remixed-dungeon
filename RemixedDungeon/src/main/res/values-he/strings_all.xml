@@ -322,6 +322,7 @@
     <string name="DeferedDamage_Killed_Txt">%s הרג אותך...</string>
     <string name="DevourBuff_Name">טריפה</string>
     <string name="DewVial_Full">בקבוק הטל שלך מלא!</string>
+    <string name="DewVial_Info">ניתן לאחסן טל מיותר בבקבוקון קטנטן זה כדי לשתות אותו מאוחר יותר. אם הבקבוק מלא, ברגע של סכנת מוות הטל ייצרך אוטומטית.</string>
     <string name="DieHardSpell_Name">למות קשה</string>
     <string name="Displacement_Txt">%s של היעתקות</string>
     <string name="DoctorArmor_Name">גלימת רופא</string>
@@ -1673,6 +1674,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
