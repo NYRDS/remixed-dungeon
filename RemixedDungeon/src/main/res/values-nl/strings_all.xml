@@ -1025,6 +1025,7 @@
     <string name="MailArmor_Name">maliënkolder</string>
     <string name="ManaPotion_Info">Deze drank herstelt je spirituele energie.</string>
     <string name="ManaPotion_Name">Mana Drankje</string>
+    <string name="ManaRegenerationBuff_Info">De functie voor manaregeneratie is als buff vormgegeven om alles gemakkelijker te maken.</string>
     <string name="ManaRegenerationBuff_Name">Mana regeneratie</string>
     <string name="ManaShieldBuff_Name">Magisch Schild</string>
     <string name="Mana_Cost">Manakosten: </string>
@@ -2512,6 +2513,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
