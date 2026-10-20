@@ -274,6 +274,7 @@
     <string name="BurningFist_Name">brandende vuist</string>
     <string name="BurningFist_Name_Objective">brandende vuist</string>
     <string name="Burning_Death">Je bent verbrand...</string>
+    <string name="CagedKobold_Desc">Een kobold, in een kooi.</string>
     <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Hé... Hé! Jij bent die avonturier, toch? Help me eens, maat, die verdomme militaristen hebben me hier opgesloten! Ze willen een oud wapen heractiveren om de mensen op het oppervlak te veroveren! Maar gezien hoe gevaarlijk het is, was ik het er niet mee eens, dus hebben ze me gewoon buiten gezet en in een kooi gesloten! Ik bid je de sleutel van de cel te vinden, en als dank zal ik je helpen waar ik kan.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
@@ -878,6 +879,7 @@
     <string name="InvisibilityBuff_Info">Volledig onzichtbaar, wat kan helpen gevaren te vermijden of er een te worden.</string>
     <string name="InvisibilityBuff_Name">Onzichtbaar</string>
     <string name="IronKey_FromDepth">ijzeren sleutel van diepte %d</string>
+    <string name="IronKey_Info">De inkepingen op deze oude ijzeren sleutel zijn goed versleten; het leren riempje is door de leeftijd versleten. Welke deur zou deze openen?</string>
     <string name="IronKey_Name">ijzeren sleutel</string>
     <string name="Item_ACDrop">LATEN VALLEN</string>
     <string name="Item_ACPickup">Oppakken</string>
@@ -1407,6 +1409,7 @@
     <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naartoe te springen</string>
     <string name="RootSpell_Info">Bevestigt de geselecteerde karakter met wortels, waardoor hij voor korte tijd niet kan bewegen.</string>
+    <string name="RootSpell_Name">Wortel</string>
     <string name="RootsBuff_Name">Geworteld</string>
     <string name="RottenFish_Info">Rotte vis, ruikt vreselijk</string>
     <string name="RottenFish_Name">rotte vis</string>
@@ -2515,6 +2518,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

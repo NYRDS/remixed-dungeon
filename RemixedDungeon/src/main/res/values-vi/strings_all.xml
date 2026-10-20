@@ -1563,6 +1563,7 @@
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SummonBeast_Name">Gọi Thú</string>
+    <string name="SungrassBuff_Info">Rễ đã mọc từ mặt đất, cung cấp các loại thảo dược chữa bệnh.</string>
     <string name="SungrassBuff_Name">Chữa lành thảo dược</string>
     <string name="Sungrass_Desc">Cỏ mặt trời nổi tiếng nhờ nhựa cây có tác dụng chữa lành.</string>
     <string name="Sungrass_Name">cỏ mặt trời</string>
@@ -1874,6 +1875,7 @@
     <string name="WndRanking_Badges">Huy hiệu</string>
     <string name="WndRanking_Items">Vật phẩm</string>
     <string name="WndRanking_StaAlchemy">Thuốc đã nấu</string>
+    <string name="WndRanking_StaAnkhs">Ankhs Đã Dùng</string>
     <string name="WndRanking_StaDepth">Độ sâu tối đa</string>
     <string name="WndRanking_StaDuration">Thời gian chơi</string>
     <string name="WndRanking_StaEnemies">Quái vật bị tiêu diệt</string>
@@ -2769,6 +2771,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
