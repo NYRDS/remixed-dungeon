@@ -1392,6 +1392,7 @@
     <string name="Ring_Gems_6">onyx</string>
     <string name="Ring_Gems_8">smaragd</string>
     <string name="Ring_Identify">je bent nu vertrouwd genoeg met je %1 om het te identificeren. Het is %2.</string>
+    <string name="Ring_Info">Deze metalen band is versierd met een grote %s edelsteen die glinstert in de duisternis. Wie weet welk effect het heeft als het wordt gedragen?</string>
     <string name="Ring_Info1">Je kunt slechts 2 ringen tegelijk dragen.</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
     <string name="Ring_Name">%s ring</string>
@@ -2505,6 +2506,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

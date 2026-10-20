@@ -1665,6 +1665,7 @@
     <string name="WandOfBlink_Name">Gậy phép thuật nháy mắt</string>
     <string name="WandOfDisintegration_Info">Cây gậy này phát ra một tia năng lượng hủy diệt, xuyên thủng tất cả sinh vật trên đường đi. Càng nhiều mục tiêu bị trúng, càng nhiều sát thương nó gây ra cho mỗi mục tiêu.</string>
     <string name="WandOfDisintegration_Name">Đũa phép Phân rã</string>
+    <string name="WandOfFirebolt_Info">Cây đũa này phóng ra những đợt lửa ma thuật. Nó sẽ đốt cháy địa hình dễ cháy, và sẽ gây sát thương và đốt cháy sinh vật bị trúng.</string>
     <string name="WandOfFirebolt_Info1">Bạn tự đốt cháy mình bằng Cây Trượng Lửa...</string>
     <string name="WandOfFlock_Info">Một cái vẩy đũa này triệu hồi một đàn cừu ma thuật, tạo ra một chướng ngại vật tạm thời không thể vượt qua.</string>
     <string name="WandOfFlock_SheepBaa_2">Bê.</string>
@@ -2761,6 +2762,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
