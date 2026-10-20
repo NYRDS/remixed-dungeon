@@ -375,6 +375,7 @@
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaCrippled">verlamd</string>
     <string name="Char_StaDizzy">duizelig</string>
+    <string name="Char_StaDodged_0">ontweken</string>
     <string name="Char_StaDodged_2">ontweek</string>
     <string name="Char_StaFrightened">verschrikt</string>
     <string name="Char_StaInvisible">onzichtbaar</string>
@@ -2518,6 +2519,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

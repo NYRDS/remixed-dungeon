@@ -2523,6 +2523,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="WndCryptoDonate_walletAddress">지갑 주소</string>
     <string name="WndCryptoDonate_warningText">경고: 자금을 보내기 전에 주소를 항상 확인하세요. 암호화폐 거래는 되돌릴 수 없습니다!</string>
     <string name="WndCustomizations_Title">커스터마이징</string>
+    <string name="WndDonate_commonDonateText">Remixed Dungeon - 누구에게나 무료이며 항상 그럴 것입니다.\n\n하지만 더 나은 게임을 만드는 데 도움을 주실 수 있습니다.\n\n진심 어린 감사의 말씀과 함께 몇 가지 외형적 개선이 제공됩니다.</string>
     <string name="WndDonate_donate">기부하세요:</string>
     <string name="WndDonate_gold">금화</string>
     <string name="WndDonate_goldDonate">금 기부</string>
@@ -3077,6 +3078,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

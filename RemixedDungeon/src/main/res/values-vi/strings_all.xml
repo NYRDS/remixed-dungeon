@@ -1978,6 +1978,7 @@
     <string name="YogsTeeth_Name_Objective">răng của Yog</string>
     <string name="ZombieGnoll_Desc">Cơ thể biến dạng, gãy đổ của gnoll zombie không còn giống người hay linh chó nữa. Còn lại chỉ là một đống thịt thối và xương, đầy lòng thù ghét khao khát giết chóc và nhấn nhá.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
+    <string name="ZombieMask_Name">Mặt nạ Zombie</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="Zombie_Name_Objective">kẻ sống chết</string>
@@ -2771,6 +2772,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
