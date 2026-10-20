@@ -1221,6 +1221,7 @@
     <string name="RatKing_Name">vua chuột</string>
     <string name="RatSkullBuff_Info">Mùi hôi nồng nặc khiến tất cả các loài gặm nhấm xung quanh khiếp sợ, làm chúng phải bỏ chạy khỏi người mang chiếc sọ này.</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
+    <string name="RatSkull_Name">hộp sọ chuột khổng lồ</string>
     <string name="Rat_Desc">Chuột túi hung hãn nhưng khá yếu, thường sống trong cống rãnh. Chúng chỉ nguy hiểm khi số lượng lớn.</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">chuột túi</string>
@@ -1956,6 +1957,7 @@
     <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">mắt của Yog</string>
     <string name="YogsEye_Name_Objective">Mắt của Yog</string>
+    <string name="YogsHeart_Desc">Trong nhiều thế kỷ, người ta tin rằng chỉ những sinh vật thực sự vô tâm mới có khả năng thực hiện những hành động độc ác thuần túy. Nhưng đây, trước mặt bạn là một trái tim khổng lồ đang đập thuộc về chính Thần Cổ Đại.</string>
     <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">trái tim của Yog</string>
     <string name="YogsHeart_Name_Objective">trái tim Yog</string>
@@ -2756,6 +2758,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

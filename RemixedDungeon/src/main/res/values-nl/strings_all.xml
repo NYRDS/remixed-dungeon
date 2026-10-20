@@ -694,6 +694,7 @@
     <string name="Goo_Name_Objective">Goo</string>
     <string name="GothicArmor_Info">Een gotische pantser is de hoogtepunt van de kunst van pantser smeden.</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
+    <string name="Guts_TileDescExit">Gapend gat in de vloer leidt naar de lagere niveaus.</string>
     <string name="Guts_TileGrass">Droge struik</string>
     <string name="Guts_TileWater">Vreemde slijmerige vloeistof</string>
     <string name="Halberd_Gender">feminine</string>
@@ -1539,6 +1540,7 @@
     <string name="ShieldBuffNotReady_Name">Schild is niet klaar</string>
     <string name="ShieldBuffReady_Info">Je schild is klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
+    <string name="ShieldWeaponInfo">Wanneer gebruikt als wapen zal dit schild gemiddeld %1$d schade toebrengen.</string>
     <string name="Shielded_Desc">Bruten zijn de grootste, sterkste en taaiste van alle gnolls. Bij ernstige verwonding worden ze razend en richten ze nog meer schade aan. Deze brute draagt een gigantisch schild!</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">schildgedrocht</string>
@@ -2498,6 +2500,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
