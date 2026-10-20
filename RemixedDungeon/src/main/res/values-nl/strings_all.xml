@@ -985,6 +985,7 @@
     <string name="LibrarianNPC_Message_Instruction">H-hallo. Welkom in de bibliotheek. Hier vind je informatie over allerlei dingen die in de kerker te vinden zijn... eigenlijk kunnen we alleen kennis verstrekken die door avonturiers is ontdekt. Het... het is wat gênant. Dus elke keer dat je ons bezoekt, staat er waarschijnlijk iets nieuws te lezen.</string>
     <string name="LibrarianNPC_Message_Not_Ready">Ik... ik... het spijt me, de bibliotheek is nog niet open...</string>
     <string name="LibrarianNPC_Name_Objective">bibliothecaris</string>
+    <string name="LibraryBook_Name">Bibliotheekboek</string>
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
@@ -1285,6 +1286,7 @@
     <string name="Potion_Colors_6">anthraciet</string>
     <string name="Potion_Colors_7">ivoor</string>
     <string name="Potion_Colors_8">amber</string>
+    <string name="Potion_Info">Deze fles bevat een wervelende %s vloeistof. Wie weet wat er gebeurt als het gedronken of gegooid wordt?</string>
     <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
     <string name="Potion_MoistenUseless">Het lijkt erop dat je dit drankje net hebt verspild.</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
@@ -2500,6 +2502,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
