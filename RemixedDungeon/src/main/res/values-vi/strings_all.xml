@@ -1243,6 +1243,7 @@
     <string name="ResultDescriptions_Immured">Bị vùi kín trong đá ở tầng %d</string>
     <string name="ResultDescriptions_Mob">Bị giết bởi %1$s ở tầng %2$d</string>
     <string name="ResultDescriptions_Necromancy">Hết sức lực khi cố gắng hồi sinh xác ở tầng %d</string>
+    <string name="ResultDescriptions_Ooze">Bị giết bởi một chất nhầy ăn mòn ở cấp %d</string>
     <string name="ResultDescriptions_Poison">Chết vì nhiễm độc ở cấp độ %d</string>
     <string name="ResultDescriptions_Trap">Bị giết bởi bẫy %1$s ở cấp độ %2$d</string>
     <string name="ResultDescriptions_Unknown">Chết dưới hoàn cảnh bí ẩn ở tầng %d</string>
@@ -2760,6 +2761,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
