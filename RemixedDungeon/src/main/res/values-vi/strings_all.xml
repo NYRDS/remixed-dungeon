@@ -654,6 +654,7 @@
     <string name="HealerNPC_Message2">Quay lại bất cứ khi nào bạn cảm thấy ốm hoặc đói nhé!</string>
     <string name="HealerNPC_Message3">Tôi tự hỏi tại sao nhà thờ không cho phép chúng tôi đội mũ... trời lạnh lắm ngoài này.</string>
     <string name="HealerNPC_Name">lính tế thành phố</string>
+    <string name="Healing_Info">Phép này rất quan trọng cho bất kỳ nhà thám hiểm nào. Nó sẽ phục hồi 1/3 lượng HP tối đa của người niệm.</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Đầu mũi tên này được phủ bởi thuốc hồi máu.</string>
     <string name="HealthDart_Gender">masculine</string>
@@ -2111,6 +2112,7 @@
     <string name="town_deco_snowdrift_desc">Đó là một đống tuyết khá lớn và rõ ràng không ai định dọn nó.</string>
     <string name="town_deco_snowman_desc">Người tuyết là một vật trang trí truyền thống trong thị trấn cho mùa lễ hội, được đặt ở đây đặc biệt để kỷ niệm \&quot;Dungeonmas\&quot; - ngày mà quái vật xâm chiếm ngục.</string>
     <string name="town_deco_snowy_plate_desc">Tấm đá cổ xưa này bị phủ đầy tuyết</string>
+    <string name="town_deco_sofa_desc">Có vẻ như rạp chiếu phim này thực sự cố gắng cung cấp chỗ ngồi tốt nhất cho khách hàng.</string>
     <string name="town_deco_sofa_name">Ghế sofa ấm áp</string>
     <string name="town_deco_stakes_desc">Những khúc gỗ nhọn này trông thật đáng sợ, nhưng thực ra chúng hoàn toàn vô dụng.</string>
     <string name="town_deco_stakes_name">Cọc</string>
@@ -2778,6 +2780,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

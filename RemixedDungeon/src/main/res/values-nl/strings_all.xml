@@ -292,6 +292,7 @@
     <string name="Candy_Warning_1">Je had dat snoepje niet moeten eten. Je had beloofd het aan iemand anders te geven. Het lijkt je op geen enkele manier te hebben beïnvloed, je honger zal niet verdwijnen, het is tenslotte maar snoep.</string>
     <string name="Candy_Warning_2">Nu heb je echt te veel gegeten. Je buik doet pijn omdat je te veel snoep hebt gegeten.</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
+    <string name="Carcass_Devoured">Je hebt het lichaam van %s verslonden!</string>
     <string name="Carcass_DissectResult_Many">Uit %1$s krijg je %2$d voorwerpen.</string>
     <string name="Carcass_DissectResult_One">Uit %1$s krijg je één voorwerp.</string>
     <string name="Carcass_Info">restanten van een volledig dode %s.</string>
@@ -721,7 +722,7 @@
     <string name="HealerNPC_Message1">Gratis behandeling voor elke avonturier!</string>
     <string name="HealerNPC_Message3">Ik vraag me af waarom de kerk ons verbodt petten te dragen... het is echt koud hier buiten.</string>
     <string name="HealerNPC_Name_Objective">stadspriester</string>
-    <string name="Healing_Info">Deze spreuk is essentieel voor elke avonturier. Het herstelt 1/3 van de maximale hoeveelheid van de gezondheid van de werper.</string>
+    <string name="Healing_Info">Deze spreuk is cruciaal voor elke avonturier. Het zal 1/3 van de maximale hoeveelheid HP van de tovenaar herstellen.</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">De punt van deze pijl is bedekt met een genezende drank.</string>
     <string name="HealthDart_Gender">masculine</string>
@@ -1649,6 +1650,7 @@
     <string name="SpiderMind_Name_Objective">Psi-Spin</string>
     <string name="SpiderNest_Desc">Deze cocon is gemaakt van het fijnste zijde en verbergt iets levends.</string>
     <string name="SpiderNest_Gender">neuter</string>
+    <string name="SpiderQueenCarapace_Info">Een scherf van het pantser van de Spinnenkoningin. Je kunt een stukje van een spinnenklier erin zien, bijna alsof het leeft.</string>
     <string name="SpiderQueenCarapace_Name">Spinnenkoninginnenpantser</string>
     <string name="SpiderQueen_DieInfo">De Spinnenkoningin is verslagen! Nu moet ik terug naar niveau 5 en mijn reis naar de Diepten voortzetten.</string>
     <string name="SpiderQueen_Gender">feminine</string>
@@ -2527,6 +2529,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
