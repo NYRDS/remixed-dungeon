@@ -413,6 +413,7 @@
     <string name="ClassArmor_NotEquipped">Je moet dit pantser dragen om zijn speciale kracht te gebruiken!</string>
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
+    <string name="Claymore_Name">Claymore</string>
     <string name="CloakBuff_Info">Een donkere mantel verhult je in de schaduw, waardoor je minder zichtbaar bent voor vijanden.</string>
     <string name="CloakBuff_Name">Verguld</string>
     <string name="CloakSpell_EnemiesNearby">Je kunt niet in de schaduwen stappen terwijl er vijanden in de buurt zijn.</string>
@@ -1716,6 +1717,7 @@
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Verdachte rat schokt hevig.</string>
     <string name="SuspiciousRat_Name">Verdachtige rat</string>
+    <string name="Swarm_Defense">ontweken</string>
     <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">vliegenzwerm</string>
     <string name="Swarm_Name_Objective">vliegenzwerm</string>
@@ -2529,6 +2531,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
