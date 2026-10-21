@@ -487,6 +487,7 @@
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">người say xỉn</string>
     <string name="Drunkard_Phrase_1">CHO ANH XIN THÊM RƯỢU!</string>
+    <string name="Drunkard_Phrase_2">Ai cần nước khi có bia</string>
     <string name="Drunkard_Phrase_3">Cái bia này có vị như đất</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
     <string name="Dungeon_NoTips">Chữ viết không thể đọc được...</string>
@@ -1439,6 +1440,7 @@
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">cừu</string>
     <string name="ShieldBuffNotReady_Info">Khiên của bạn chưa sẵn sàng để chặn đòn tấn công tiếp theo.</string>
+    <string name="ShieldBuffReady_Info">Khiên của bạn đã sẵn sàng để chặn đòn tấn công tiếp theo.</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
     <string name="ShieldStrTemplate">Người đeo khiên cần có ít nhất %1$d điểm Sức mạnh để sử dụng nó đúng cách.</string>
     <string name="ShieldWeaponInfo">Khi sử dụng như vũ khí, khiên này sẽ gây trung bình %1 sát thương.</string>
@@ -2784,6 +2786,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

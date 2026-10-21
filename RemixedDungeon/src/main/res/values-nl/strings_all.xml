@@ -1533,6 +1533,7 @@
     <string name="ServiceManNPC_Name">bediende</string>
     <string name="ServiceManNPC_Name_Objective">medewerker</string>
     <string name="ServiceManNPC_NoConnection">Het spijt me, u kunt onze dienst nu niet gebruiken. (Internetverbinding vereist)</string>
+    <string name="ServiceManNPC_NotReady">Sorry, de film is nog niet klaar, je kunt over een paar minuten opnieuw proberen.</string>
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
     <string name="Sewer_TileDescBookshelf">De boekenkast staat vol met goedkope, nutteloze boeken. Zou het branden?</string>
     <string name="Sewer_TileWater">Troebel water</string>
@@ -2165,6 +2166,7 @@
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
+    <string name="ZombieMask_Info">Heb je ooit willen lijken op een ondode held, die zijn zoektocht steeds opnieuw faalde? Hier is je kans.</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">zombie</string>
     <string name="Zombie_Name_Objective">zombie</string>
@@ -2532,6 +2534,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
