@@ -219,6 +219,7 @@
     <string name="BlackSkullOfMastery_BecomeLichDesc">De _Lich_ is een necromant die de piek van zijn capaciteiten bereikte. Bestaande tussen leven en dood, is de _Lich_ uitstekend in necromantie, maar zijn gevechtsvaardigheden zijn veel lager dan die van een gewoon persoon.</string>
     <string name="BlackSkullOfMastery_Lich">Word een Lich</string>
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Of als je de spreuk _verbreekt_, kun je dit artefact gebruiken zoals bedoeld.</string>
     <string name="BlackSkull_Activated">De Zwarte Schedel is ontwaakt!</string>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Een kleine schedel van obsidiaan. Het was de bron van de krachten van de Necropolis, maar na de nederlaag van de Lich lijkt het al zijn krachten verloren te hebben. Maar wanneer je het in je handen houdt, gaat er een vreemde gedachte door je heen: \&quot;Het Hongert\&quot;.</string>
@@ -2534,6 +2535,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

@@ -428,6 +428,7 @@
     <string name="Dagger_Info">Một cây khăn sắt đơn giản với tay cầm gỗ mòn.</string>
     <string name="Dagger_Name">dao găm</string>
     <string name="Damage_Reduction">Giảm sát thương</string>
+    <string name="DarkGold_Info">Kim loại này được gọi là tối không phải vì màu sắc (nó không khác vàng thường), mà vì nó tan chảy dưới ánh sáng ban ngày, khiến nó vô dụng trên bề mặt.</string>
     <string name="DarkGold_Name">quặng vàng tối</string>
     <string name="DarkSacrifice_Hint">Chọn một người phục vụ trung thành của bạn để hy sinh!</string>
     <string name="DarkSacrifice_Info">Hy sinh kẻ phục vụ trung thành của bạn để tạo ra một vụ nổ. Diện tích bao phủ bởi vụ nổ sẽ phụ thuộc vào sức khỏe còn lại của kẻ phục vụ và trình độ kỹ năng của bạn.</string>
@@ -2786,6 +2787,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
