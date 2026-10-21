@@ -2019,6 +2019,7 @@
     <string name="WndPlayGames_RestoreProgress">Spelvoortgang herstellen</string>
     <string name="WndPlayGames_Show_Badges">Toon insignes</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
+    <string name="WndPlayGames_Show_Leaderboards">Toon klassementen</string>
     <string name="WndPlayGames_Show_Ok">Gelukt!</string>
     <string name="WndPlayGames_Title">Google Play Games</string>
     <string name="WndPortal_Info">Dit portaal stelt je in staat om terug te keren naar de stad. Het lijkt nogal instabiel en zal waarschijnlijk niet lang actief blijven.\nWil je het gebruiken?</string>
@@ -2519,6 +2520,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

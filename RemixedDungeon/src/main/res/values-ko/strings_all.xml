@@ -974,6 +974,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_NecromancerPerks_2">강령술사는 7레벨 스켈레톤 키를 지니고 시작합니다.</string>
     <string name="HeroClass_NecromancerPerks_3">회복의 물약이 처음부터 식별되어 있습니다.</string>
     <string name="HeroClass_NecromancerPerks_4">회복의 물약이 처음부터 식별되어 있습니다.</string>
+    <string name="HeroClass_None">평민</string>
     <string name="HeroClass_PlagueDoctorPerks_0">역병 의사는 처치한 적들로부터 [yellow:독성 선], [yellow:부패한 장기], [yellow:뼈 조각]을 수확합니다.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">역병 의사는 연금술의 대가로 독특한 제조법을 사용할 수 있습니다.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">[yellow:역병 마스크](모든 가스에 면역) 와 [yellow:뼈 톱] 을 가지고 시작합니다. 치명타는 추가 부품을 떨어뜨리며, 톱은 마비된 적에게 x1.5 배의 피해를 입힙니다.</string>
@@ -3078,6 +3079,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 
