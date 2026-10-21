@@ -375,6 +375,7 @@
     <string name="Codex_Blinded">Bạn không thể đọc khi bị mù</string>
     <string name="Codex_Info">Một trong nhiều cuốn sách có thể tìm thấy ở bất kỳ thư viện nào</string>
     <string name="Codex_Story_10">Glyph Entangle - Anh hùng có thể nhận được giáp thảo mộc, nhưng đồng thời cũng có thể bị rễ cây trói chân.</string>
+    <string name="Codex_Story_11">Vũ khí tàn nhẫn - Khi trúng đòn thành công, có thể giết mục tiêu ngay lập tức (hoặc gây đến 2x sát thương cho boss).</string>
     <string name="Codex_Story_12">Vũ khí rực lửa - Khi đánh trúng, gây thêm sát thương cho mục tiêu và có thể đốt nó.</string>
     <string name="Codex_Story_15">Vũ khí hút máu - Khi đánh trúng, có thể hồi máu cho Anh Hùng một phần sát thương gây ra cho kẻ địch.</string>
     <string name="Codex_Story_16">Vũ khí may mắn - gần như hoàn toàn bỏ qua giáp địch, và gây nhiều sát thương hơn đáng kể.</string>
@@ -2777,6 +2778,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
