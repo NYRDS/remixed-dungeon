@@ -418,6 +418,7 @@
     <string name="Crystal_Gender">masculine</string>
     <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">Những mũi phi tiêu nhỏ độc ác này không gây nhiều sát thương, nhưng có thể làm tê liệt mục tiêu khiến nó bất lực và bất động trong một thời gian.</string>
+    <string name="DM300_Desc">Cỗ máy này được người Lùn tạo ra từ nhiều thế kỷ trước. Sau đó, người Lùn bắt đầu thay thế máy móc bằng golem, nguyên tố và thậm chí là quỷ. Cuối cùng điều đó đã dẫn đến sự suy tàn của nền văn minh của họ. DM-300 và những cỗ máy tương tự thường được sử dụng cho xây dựng và khai mỏ, và trong một số trường hợp, cho phòng thủ thành phố.</string>
     <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 tự sửa chữa!</string>
     <string name="DM300_Info2">Nhiệm vụ thất bại. Đang tắt máy.</string>
@@ -2053,6 +2054,7 @@
     <string name="town_deco_fireplace_name">Lò sưởi</string>
     <string name="town_deco_firewood_desc">Vật dụng thiết yếu trong những đợt rét khắc nghiệt như thế này.</string>
     <string name="town_deco_floor_desc">Sàn này làm từ ván gỗ đơn giản. Bạn đang tìm kiếm điều gì?</string>
+    <string name="town_deco_floor_name">Sàn</string>
     <string name="town_deco_flowerinthepot_desc">Hoa trang trí với hương vị ngọt ngào</string>
     <string name="town_deco_flowerinthepot_name">Hoa trong chậu</string>
     <string name="town_deco_furnace_name">Lò nung</string>
@@ -2782,6 +2784,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
