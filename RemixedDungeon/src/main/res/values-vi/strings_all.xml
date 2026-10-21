@@ -1686,6 +1686,7 @@
     <string name="WandOfFirebolt_Info">Cây đũa này phóng ra những đợt lửa ma thuật. Nó sẽ đốt cháy địa hình dễ cháy, và sẽ gây sát thương và đốt cháy sinh vật bị trúng.</string>
     <string name="WandOfFirebolt_Info1">Bạn tự đốt cháy mình bằng Cây Trượng Lửa...</string>
     <string name="WandOfFlock_Info">Một cái vẩy đũa này triệu hồi một đàn cừu ma thuật, tạo ra một chướng ngại vật tạm thời không thể vượt qua.</string>
+    <string name="WandOfFlock_SheepBaa_1">Bêê?</string>
     <string name="WandOfFlock_SheepBaa_2">Bê.</string>
     <string name="WandOfIcebolt_Info">Cây gậy này phóng ra một tia băng, gây sát thương nhẹ cho mục tiêu. Cũng có khả năng làm chậm hoặc thậm chí đóng băng kẻ địch.</string>
     <string name="WandOfIcebolt_Info1">Bạn đã tự giết mình bằng Đũa phép Băng đạn của chính mình...</string>
@@ -1971,6 +1972,7 @@
     <string name="WrnExperimental_realtime">Chế độ thời gian thực đã được kích hoạt: đây giờ là một roguelike thời gian thực, nhấn nhanh hoặc chết.\nBạn muốn kiểm tra túi đồ?\nChúc may mắn với việc đó trong khi con cua rạch kiểm tra ruột gan bạn.</string>
     <string name="WrnExperimental_title">Các tùy chọn thực nghiệm đã được bật!</string>
     <string name="Yog_Gender">masculine</string>
+    <string name="Yog_Info2">Hy vọng chỉ là ảo tưởng...</string>
     <string name="Yog_Name">Yog-Dzewa</string>
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">Bộ não của Yog-Dzewa. Nguồn gốc của mọi điều ác từng xuất hiện từ ngục dưới đất.</string>
@@ -2787,6 +2789,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

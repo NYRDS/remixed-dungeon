@@ -148,6 +148,7 @@
     <string name="Badges_Piranhas">6 piranha\'s gedood</string>
     <string name="Badges_PotionsCooked2">6 drankjes gebrouwen</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
+    <string name="Badges_PotionsCooked4">12 drankjes gebrouwen</string>
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
     <string name="Badges_RareAll">Alle zeldzame monsters verslagen</string>
     <string name="Badges_RingHaggler">Ring der Handelaar verkregen</string>
@@ -617,6 +618,7 @@
     <string name="Facilitations_Names_0">Geen honger</string>
     <string name="Facilitations_Names_1">Trollichaam</string>
     <string name="Facilitations_Names_2">Djinngeest</string>
+    <string name="Facilitations_Names_3">Reuzenkracht</string>
     <string name="Fadeleaf_Desc">Het aanraken van een Fadeleaf teleporteert elk wezen naar een willekeurige plek op het huidige niveau.</string>
     <string name="Fadeleaf_Name">Verdwaand Blad</string>
     <string name="FetidRat_Gender">feminine</string>
@@ -2535,6 +2537,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
