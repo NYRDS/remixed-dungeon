@@ -234,6 +234,13 @@ local function processLose()
     gameInProgress = false
 end
 
+-- caveman: board is a sunfish string frame, engineCell = 0-based index.
+-- must stay ABOVE processWin: it is called there (crash 4191bbf9: the
+-- reference below the definition read a nil global and killed the game loop).
+local function getPiece(board, engineCell)
+    return string.sub(board, engineCell+1, engineCell + 1)
+end
+
 local function processWin()
     RPD.glog("chess: processWin ENTER")
     restorePets()
@@ -365,10 +372,6 @@ local checkFlashTimer = 0  -- caveman: flash timer for king-in-check visual.
 local aiMoveAt = 0
 local allowedMoves = {}
 local halfmoveClock = 0 -- caveman: plies since last pawn move / capture (50-move rule; 100 = draw)
-
-local function getPiece(board, engineCell)
-    return string.sub(board, engineCell+1, engineCell + 1)
-end
 
 -- caveman: 50-move rule. a move resets the clock if it is a pawn move (incl.
 -- en passant / promotion) or a capture. `board` is the PRE-move board, standard frame.
