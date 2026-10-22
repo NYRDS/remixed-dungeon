@@ -178,7 +178,8 @@ public class IapAdapter implements PurchasesUpdatedListener, ConsumeResponseList
 
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                     mIsServiceConnected = true;
-                    for (Runnable runnable : mRequests) {
+                    // drain: a replayed request would re-fire launchBillingFlow
+                    for (Runnable runnable = mRequests.poll(); runnable != null; runnable = mRequests.poll()) {
                         getExecutor().execute(runnable);
                     }
                 } else {
