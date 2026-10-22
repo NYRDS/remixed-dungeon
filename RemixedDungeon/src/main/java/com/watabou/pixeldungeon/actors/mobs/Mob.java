@@ -96,6 +96,51 @@ public abstract class Mob extends Char {
     protected int dr = 0;
     protected boolean isBoss = false;
 
+    @LuaInterface
+    public void setDmgMax(int value) {
+        dmgMax = value;
+    }
+
+    @LuaInterface
+    public int getDmgMin() {
+        return dmgMin;
+    }
+
+    @LuaInterface
+    public int getDmgMax() {
+        return dmgMax;
+    }
+
+    @LuaInterface
+    public void setDmgMin(int value) {
+        dmgMin = value;
+    }
+
+    @LuaInterface
+    public void setDr(int value) {
+        dr = value;
+    }
+
+    @LuaInterface
+    public void setExpForKill(int value) {
+        expForKill = value;
+    }
+
+    @LuaInterface
+    public int getExpForKill() {
+        return expForKill;
+    }
+
+    @LuaInterface
+    public void setMaxLvl(int value) {
+        maxLvl = value;
+    }
+
+    @LuaInterface
+    public int getMaxLvl() {
+        return maxLvl;
+    }
+
     private Carcass carcassRef;
 
     // visual hint for MobSprite: a carcass replaced the corpse, fade it quicker

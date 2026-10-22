@@ -673,6 +673,7 @@ public class Belongings implements Iterable<Item>, Bundlable {
         }
     }
 
+    @LuaInterface
     public boolean isBackpackEmpty() {
         for (Item item : backpack) {
             if (item.quantity() > 0) {

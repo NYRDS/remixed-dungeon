@@ -184,6 +184,20 @@ local Sfx = {
 local Badges = luajava.bindClass("com.watabou.pixeldungeon.Badges")
 local ItemUtils = luajava.bindClass("com.nyrds.pixeldungeon.items.ItemUtils")
 
+local MobSpawner = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobSpawner")
+local CharSprite      = luajava.bindClass("com.watabou.pixeldungeon.sprites.CharSprite")
+local WandOfBlink     = luajava.bindClass("com.watabou.pixeldungeon.items.wands.WandOfBlink")
+local ScrollOfMagicMapping = luajava.bindClass("com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping")
+local Statistics = luajava.bindClass("com.watabou.pixeldungeon.Statistics")
+local Random = luajava.bindClass("com.watabou.utils.Random")
+local TerrainFlags = luajava.bindClass("com.watabou.pixeldungeon.levels.TerrainFlags")
+local LevelTools = luajava.bindClass("com.nyrds.pixeldungeon.levels.LevelTools")
+local SimpleWand = luajava.bindClass("com.watabou.pixeldungeon.items.wands.SimpleWand")
+local ChaosCommon = luajava.bindClass("com.nyrds.pixeldungeon.items.chaos.ChaosCommon")
+local Utils = luajava.bindClass("com.watabou.pixeldungeon.utils.Utils")
+local ResultDescriptions = luajava.bindClass("com.watabou.pixeldungeon.ResultDescriptions")
+local ResultReason = luajava.bindClass("com.watabou.pixeldungeon.ResultDescriptions$Reason")
+
 local RPD = {
     RemixedDungeon = RemixedDungeon,
     GameLoop = GameLoop,
@@ -230,6 +244,24 @@ local RPD = {
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
     Heap  = luajava.bindClass("com.watabou.pixeldungeon.items.Heap"),
+    Slot  = luajava.bindClass("com.watabou.pixeldungeon.actors.hero.Belongings$Slot"),
+
+    MobSpawner = MobSpawner,
+    CharSprite = CharSprite,
+    WandOfBlink = WandOfBlink,
+    ScrollOfMagicMapping = ScrollOfMagicMapping,
+    Statistics = Statistics,
+    Random = Random,
+    TerrainFlags = TerrainFlags,
+    LevelTools = LevelTools,
+    SimpleWand = SimpleWand,
+    ChaosCommon = ChaosCommon,
+    StringsManager = StringsManager,
+    -- RPD.Utils is LuaUtils; java watabou Utils rides under JavaUtils
+    JavaUtils = Utils,
+    ResultDescriptions = ResultDescriptions,
+    ResultReason = ResultReason,
+    Devour = luajava.bindClass("com.nyrds.pixeldungeon.effects.Devour"),
 
     Ballistica = Ballistica,
     Challenges = Challenges,

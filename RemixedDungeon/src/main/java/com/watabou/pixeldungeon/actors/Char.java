@@ -186,6 +186,26 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     protected int baseAttackSkill = 0;
     protected int baseDefenseSkill = 0;
 
+    @LuaInterface
+    public void setBaseAttackSkill(int value) {
+        baseAttackSkill = value;
+    }
+
+    @LuaInterface
+    public void setBaseDefenseSkill(int value) {
+        baseDefenseSkill = value;
+    }
+
+    @LuaInterface
+    public int getBaseAttackSkill() {
+        return baseAttackSkill;
+    }
+
+    @LuaInterface
+    public int getBaseDefenseSkill() {
+        return baseDefenseSkill;
+    }
+
     @Setter
     public Fraction fraction = Fraction.DUNGEON;
 
@@ -206,7 +226,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     protected boolean flying = false;
     public int invisible = 0;
 
-    @Setter
+    @LuaInterface
+    public void setViewDistance(int viewDistance) {
+        this.viewDistance = viewDistance;
+    }
+
     private int viewDistance = 8;
 
     protected final Set<String> immunities = new HashSet<>();
