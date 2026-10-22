@@ -2106,6 +2106,7 @@
     <string name="town_deco_rug_name">Thảm</string>
     <string name="town_deco_screen_desc">Tấm vải bí ẩn này được gọi là \&quot;màn hình\&quot; và nó có thể hiển thị những hình ảnh chuyển động</string>
     <string name="town_deco_scrolls_name">Cuộn</string>
+    <string name="town_deco_shelf_full_desc">Nhiều đồ trang trí nhỏ được đặt trên kệ này.</string>
     <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_shelf_name">Các kệ sách</string>
     <string name="town_deco_shieldboard_desc">Các loại khiên treo trên bảng. Chưa được bán.</string>
@@ -2789,6 +2790,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
