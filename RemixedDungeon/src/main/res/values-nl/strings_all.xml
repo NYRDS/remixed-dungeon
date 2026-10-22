@@ -338,6 +338,7 @@
     <string name="ChaosBlade_Info">Een eenhandig zwaard van pure chaos. Het groeit met gevechten zoals zijn tweehandige broer, maar langzamer en tot een lager potentieel — waardoor je linkerhand vrij blijft voor een schild.</string>
     <string name="ChaosBlade_Name">chaoszwaard</string>
     <string name="ChaosBow_Gender">masculine</string>
+    <string name="ChaosBow_Info">Een vreselijke boog gevuld met de kracht van Chaos. Elke pijl die hij afschiet, draagt een stukje chaotische energie in zich. Maar als je mist...</string>
     <string name="ChaosBow_Name">chaosboog</string>
     <string name="ChaosCrystal_BladeFused">Het kristal absorber je wapen, en nam de vorm van een zwaard aan</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
@@ -1649,6 +1650,7 @@
     <string name="SpiderGuard_Desc">Net als soldaten hebben spinnenwachters een eed afgelegd om hun koninkrijk te beschermen. Het gif van de wachter wordt gebruikt om zijn doelwit te verlammen, waardoor verlamming ontstaat en het een makkelijke prooi wordt.</string>
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">spinnenwachter</string>
+    <string name="SpiderGuard_Name_Objective">spinnenbewaker</string>
     <string name="SpiderMindAmber_Gender">masculine</string>
     <string name="SpiderMindAmber_Name">amber spin</string>
     <string name="SpiderMindAmber_Name_Objective">amber spin</string>
@@ -2538,6 +2540,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
