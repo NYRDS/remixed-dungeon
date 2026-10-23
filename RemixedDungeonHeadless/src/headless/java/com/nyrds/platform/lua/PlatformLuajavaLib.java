@@ -111,8 +111,16 @@ public class PlatformLuajavaLib extends LuajavaLib {
 				for (int i = 0; i < n; i++)
 					v[i] = CoerceJavaToLua.coerce(margs[i]);
 			}
-			LuaValue result = func.invoke(v).arg1();
-			return CoerceLuaToJava.coerce(result, method.getReturnType());
+			// caveman: mod callback bugs (RemixedRPG v28 selectAmmo passes a string where
+			// WndBag.Mode belongs) must not kill the frame thread - Crashlytics 723df8c1.
+			// Report as mod error and treat as missing callback; void methods tolerate null.
+			try {
+				LuaValue result = func.invoke(v).arg1();
+				return CoerceLuaToJava.coerce(result, method.getReturnType());
+			} catch (LuaError e) {
+				ModError.doReport("proxy callback " + name, e);
+				return null;
+			}
 		}
 	}
 

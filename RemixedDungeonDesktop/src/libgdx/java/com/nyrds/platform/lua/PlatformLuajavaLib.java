@@ -3,7 +3,12 @@ package com.nyrds.platform.lua;
 import com.nyrds.lua.LuaSandbox;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingBase;
-
+import java.lang.reflect.Array;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+import java.util.HashMap;
+import java.util.Map;
 import org.luaj.vm2.LuaError;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.Varargs;
@@ -11,13 +16,6 @@ import org.luaj.vm2.lib.VarArgFunction;
 import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 import org.luaj.vm2.lib.jse.CoerceLuaToJava;
 import org.luaj.vm2.lib.jse.LuajavaLib;
-
-import java.lang.reflect.Array;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by mike on 01.11.2017.
@@ -111,8 +109,16 @@ public class PlatformLuajavaLib extends LuajavaLib {
 				for (int i = 0; i < n; i++)
 					v[i] = CoerceJavaToLua.coerce(margs[i]);
 			}
-			LuaValue result = func.invoke(v).arg1();
-			return CoerceLuaToJava.coerce(result, method.getReturnType());
+			// caveman: mod callback bugs (RemixedRPG v28 selectAmmo passes a string where
+			// WndBag.Mode belongs) must not kill the frame thread - Crashlytics 723df8c1.
+			// Report as mod error and treat as missing callback; void methods tolerate null.
+			try {
+				LuaValue result = func.invoke(v).arg1();
+				return CoerceLuaToJava.coerce(result, method.getReturnType());
+			} catch (LuaError e) {
+				ModError.doReport("proxy callback " + name, e);
+				return null;
+			}
 		}
 	}
 
