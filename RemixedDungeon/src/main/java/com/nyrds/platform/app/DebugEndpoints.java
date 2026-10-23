@@ -5153,6 +5153,7 @@ public class DebugEndpoints {
     // from lua exactly like published mods do, then fire onSelect from the java
     // side exactly like WndBag does, and report whether the closure ran.
     public static NanoHTTPD.Response handleDebugProxyRoundtrip(NanoHTTPD.IHTTPSession session) {
+        boolean throwInCallback = session.getParameters().containsKey("throw");
         final String[] result = new String[1];
         final String[] error = new String[1];
 
@@ -5160,12 +5161,15 @@ public class DebugEndpoints {
         CountDownLatch latch = new CountDownLatch(1);
         GameLoop.pushUiTask(() -> {
             try {
+                String callbackBody = throwInCallback
+                    ? "error('boom-proxy-test')"
+                    : "_G.proxyRoundtripHits = (_G.proxyRoundtripHits or 0) + 1";
                 LuaValue chunk = LuaEngine.getGlobals().load(
                         new java.io.ByteArrayInputStream((
                                 "_G.proxyRoundtripHits = nil\n"
                                 + "_G.proxyRoundtripProxy = luajava.createProxy("
                                 + "\"com.watabou.pixeldungeon.windows.WndBag$Listener\", "
-                                + "{ onSelect = function(item, sel) _G.proxyRoundtripHits = (_G.proxyRoundtripHits or 0) + 1 end })\n"
+                                + "{ onSelect = function(item, sel) " + callbackBody + " end })\n"
                                 + "return type(_G.proxyRoundtripProxy)").getBytes()),
                         "=debug_proxy_roundtrip", "t", LuaEngine.getGlobals());
                 String proxyType = chunk.call().tojstring();
@@ -5178,7 +5182,8 @@ public class DebugEndpoints {
                 ((WndBag.Listener) proxyObj).onSelect(null, null);
 
                 int hits = LuaEngine.getGlobals().get("proxyRoundtripHits").optint(0);
-                result[0] = String.format("proxy=%s javaDispatchHits=%d", proxyType, hits);
+                result[0] = String.format("proxy=%s javaDispatchHits=%d throw=%s dispatchSurvived=true",
+                        proxyType, hits, throwInCallback);
             } catch (Exception e) {
                 error[0] = e.getMessage();
             } finally {
