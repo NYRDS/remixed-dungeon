@@ -183,7 +183,12 @@ public class GameScene extends PixelScene {
         Hero hero = Dungeon.hero;
 
         if (hero.invalid()) {
-            throw new TrackedRuntimeException("Trying to create GameScene when hero is invalid!");
+            // caveman: Crashlytics c212c8b3, chronic since 31.1 - restore sometimes leaves
+            // hero DummyChar/INVALID_ID; crashing here kills the app on every launch, title
+            // screen keeps the save reachable and the run restartable
+            EventCollector.logException(new TrackedRuntimeException("Trying to create GameScene when hero is invalid!"));
+            GameLoop.switchScene(TitleScene.class);
+            return;
         }
 
         createGameScene(level, hero);
