@@ -993,12 +993,14 @@ public class Badges {
 
 	@LuaInterface
 	public static boolean isUnlocked(Badge badge) {
-		return global.contains(badge);
+		// caveman: global stays null until loadGlobal - mods query badges
+		// before any game started (Bishop quest-line gate)
+		return global != null && global.contains(badge);
 	}
 
 	@LuaInterface
 	public static boolean isUnlockedInThisGame(Badge badge) {
-		return local.contains(badge);
+		return local != null && local.contains(badge);
 	}
 
 	public static List<Badge> filtered(boolean global) {
