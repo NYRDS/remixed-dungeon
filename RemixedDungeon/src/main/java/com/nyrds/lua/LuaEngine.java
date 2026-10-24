@@ -47,7 +47,14 @@ public class LuaEngine implements ResourceFinder {
 
 			String errMsg = args.arg1() + "\n" + globals.debuglib.traceback(1);
 			if(stp!=null) {
-				errMsg  += DetailsSeparator + stp.get("stacktrace").call();
+				// caveman: STP walks the live stack mid-error - if it throws we
+				// must still surface the original message instead of luaj's
+				// opaque "error in error handling"
+				try {
+					errMsg += DetailsSeparator + stp.get("stacktrace").call();
+				} catch (Throwable t) {
+					errMsg += DetailsSeparator + "(stacktrace failed: " + t + ")";
+				}
 			}
 			GLog.toFile("\n%s\n",errMsg);
 

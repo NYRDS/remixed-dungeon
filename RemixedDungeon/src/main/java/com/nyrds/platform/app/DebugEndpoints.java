@@ -4707,11 +4707,14 @@ public class DebugEndpoints {
 
         if (error[0] != null) {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
-                String.format("{\"error\":\"%s\"}", error[0].replace("\"", "'")));
+                createErrorResponse(error[0]).toString());
         }
 
+        Map<String, Object> ok = new HashMap<>();
+        ok.put("success", true);
+        ok.put("result", result[0] == null ? "nil" : result[0]);
         return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-            String.format("{\"success\":true,\"result\":\"%s\"}", result[0] == null ? "nil" : result[0].replace("\"", "'").replace("\n", "\\n")));
+            new JSONObject(ok).toString());
     }
 
     // End-to-end check of luajava.createProxy: build a WndBag$Listener proxy
