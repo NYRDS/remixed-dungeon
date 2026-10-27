@@ -715,6 +715,7 @@
     <string name="Guts_TileWater">Vreemde slijmerige vloeistof</string>
     <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Een stokwapen met een bijl aan het uiteinde van de stok.</string>
+    <string name="Halberd_Name">Helbaard</string>
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileDescStatue">De paal is gemaakt van echte menselijke schedels. Geweldig.</string>
     <string name="Halls_TileGrass">Gloeiend mos</string>
@@ -1869,6 +1870,7 @@
     <string name="WandOfSlowness_Name">Toverstaf van Vertraging</string>
     <string name="WandOfTelekinesis_Name">Staff van Telekinese</string>
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
+    <string name="WandOfTeleportation_Name">Toverstaf der Teleportatie</string>
     <string name="Wand_ACZap">ZAP</string>
     <string name="Wand_Damage">Wanneer deze toverstok als slagwapen wordt gebruikt, is de gemiddelde schade %d punten per slag.</string>
     <string name="Wand_Fizzles">je toverstaf knettert; de ladingen zijn waarschijnlijk op</string>
@@ -2540,6 +2542,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

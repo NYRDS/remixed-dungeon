@@ -720,6 +720,7 @@
     <string name="HeroSubClass_NameNone">không</string>
     <string name="HeroSubClass_NameShaman">pháp sư</string>
     <string name="HeroSubClass_NameSnip">xạ thủ</string>
+    <string name="HeroSubClass_NameWarL">pháp sư</string>
     <string name="HeroSubClass_NameWard">trùm phu</string>
     <string name="HeroSubClass_NameWitchdoctor">thầy pháp</string>
     <string name="Hero_AnotherTry">Bạn đã chết.\n Bạn có muốn thử lại không?</string>
@@ -2792,6 +2793,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
