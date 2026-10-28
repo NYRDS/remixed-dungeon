@@ -403,6 +403,7 @@
     <string name="CompoundBow_Info">Các mũi tên bắn từ cây cung hợp kim này gây sát thương lớn và có độ chính xác tốt hơn cung gỗ, đổi lại là phần nào chậm hơn.</string>
     <string name="CompoundBow_Name">cung ghép</string>
     <string name="ConcreteBlock_Description">Có vẻ khối này cần %d điểm sức mạnh để đẩy</string>
+    <string name="ConfusionGas_Info">Một đám mây khí gây nhầm lẫn đang xoáy ở đây.</string>
     <string name="CorpseDustBuff_Info">Các đòn tấn công tăng mạnh đối với những kẻ đầy khát máu, khiến chúng đặc biệt nguy hiểm.</string>
     <string name="CorpseDustBuff_Name">Khát máu</string>
     <string name="CorpseDust_Info">Quả bóng bụi xác chết không khác gì quả bóng bụi thường về bề ngoài. Tuy nhiên, bằng cách nào đó bạn biết rằng tốt nhất nên loại bỏ nó càng sớm càng tốt.</string>
@@ -2793,6 +2794,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

@@ -1104,6 +1104,7 @@
     <string name="Mob_StaAmokStatus">%1$s loopt amok</string>
     <string name="Mob_StaFleeingStatus">Deze %s vlucht</string>
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
+    <string name="Mob_StaGuardStatus">Deze %s bewaakt</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
     <string name="Mob_StaWanderingStatus">Deze %s dwaalt rond.</string>
@@ -2542,6 +2543,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
