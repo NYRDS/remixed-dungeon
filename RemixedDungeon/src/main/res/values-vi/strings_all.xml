@@ -1816,6 +1816,7 @@
     <string name="WndGame_Start">Bắt đầu trò chơi mới</string>
     <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_BackButton">Quay lại</string>
+    <string name="WndHats_EquipButton">Trang bị</string>
     <string name="WndHats_InfoButton">Xem xét</string>
     <string name="WndHats_ListTitle">Danh sách Phụ kiện</string>
     <string name="WndHats_SlotTitle">Đã trang bị</string>
@@ -1826,6 +1827,7 @@
     <string name="WndHero_DefenceSkill">Kỹ năng phòng thủ</string>
     <string name="WndHero_Depth">Độ sâu tối đa</string>
     <string name="WndHero_Exp">Kinh nghiệm</string>
+    <string name="WndHero_Info">Thông tin</string>
     <string name="WndHero_Satiety">Độ no</string>
     <string name="WndHero_StaCatalogus">Danh mục</string>
     <string name="WndHero_StaJournal">Nhật ký</string>
@@ -2800,6 +2802,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
