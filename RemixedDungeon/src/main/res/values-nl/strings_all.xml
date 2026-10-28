@@ -851,6 +851,7 @@
     <string name="IceCaves_TileDescStatue">Weer een afschuwelijk standbeeld... Oh wacht, dat is een bevroren gnol.</string>
     <string name="IceCaves_TileGrass">Bevroren gras.</string>
     <string name="IceCaves_TileHighGrass">Bevroren hoog gras</string>
+    <string name="IceCaves_TileStatue">Bevroren Gnoll</string>
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">ijs-elementaal</string>
     <string name="IceElemental_Name_Objective">ijselementaal</string>
@@ -2191,6 +2192,7 @@
     <string name="deco_candle_desc">Grote kaars</string>
     <string name="deco_candle_name">Kaars</string>
     <string name="gdpr_agree">Ja, ik ga akkoord</string>
+    <string name="gdpr_choose">Maak uw keuze</string>
     <string name="gdpr_title">Personaliseer uw advertentie-ervaring</string>
     <string name="town_deco_armoronhanger_desc">Iets wat lijkt op pantser op een hanger.</string>
     <string name="town_deco_armoronhanger_name">Pantser</string>
@@ -2552,6 +2554,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

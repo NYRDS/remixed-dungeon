@@ -1486,6 +1486,7 @@
     <string name="Snail_Name">ốc sên</string>
     <string name="SnipersMarkBuff_Info">Dấu ấn này được tạo ra bởi một xạ thủ.</string>
     <string name="SnipersMarkBuff_Name">Dấu ấn xạ thủ</string>
+    <string name="SociologistNPC_AlreadyTaken">Bạn đã tham gia khảo sát này, vui lòng quay lại sau</string>
     <string name="SociologistNPC_Desc">Nhà xã hội học này đang trên một nhiệm vụ thiêng liêng thu thập ý kiến công chúng</string>
     <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
@@ -2802,6 +2803,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
