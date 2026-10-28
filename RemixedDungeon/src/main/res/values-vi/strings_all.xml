@@ -919,6 +919,7 @@
     <string name="LibrarianNPC_Message_Not_Ready">T... Tôi xin lỗi, th-thư viện chưa mở... đợi chút.</string>
     <string name="LibrarianNPC_Name">thủ thư</string>
     <string name="LibrarianNPC_Name_Objective">thủ thư</string>
+    <string name="Lich_Desc">Pháp sư tử thần đã gặp cái chết của mình trong sâu thẳm của nghĩa địa, và dần dần, những thế lực tà ác chảy vào cơ thể đã biến hắn thành một Lich. Một pháp sư tử vong, một con rối vô ý chí, bị điều khiển bởi những thế lực độc ác...</string>
     <string name="Lich_Gender">masculine</string>
     <string name="LightBuff_Info">Ánh sáng phát ra từ cơ thể, soi sáng mọi thứ xung quanh.</string>
     <string name="LightBuff_Name">Được chiếu sáng</string>
@@ -1057,6 +1058,7 @@
     <string name="Necrotism_Death">Bạn đã chết vì hoại tử...</string>
     <string name="NekoEars_Name">Tai Mèo</string>
     <string name="NeutralKing_Hostile">Nhà Vua quay lại tấn công bạn!</string>
+    <string name="Nightcap_Info">Chinh phục hầm ngục vào ban đêm chắc hẳn là rất mệt mỏi. Hãy đội chiếc mũ ấm áp, dễ chịu này và thư giãn — để cả thế giới đợi chờ.</string>
     <string name="Nightcap_Name">Mũ ngủ</string>
     <string name="Nightmare_Desc">Một sinh vật quái dị trông giống như một bó xúc tu làm bằng thịt. Ác mộng là hiện thân của những suy nghĩ đen tối của Thần Cổ Đại.</string>
     <string name="Nightmare_Gender">masculine</string>
@@ -2796,6 +2798,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

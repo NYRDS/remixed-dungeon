@@ -594,6 +594,7 @@
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="EncumbranceBuff_CharAct_1">Ik ben niet sterk genoeg om %s goed te hanteren.</string>
     <string name="EncumbranceBuff_CharAct_2">Deze %s is te zwaar voor mij om effectief te gebruiken.</string>
+    <string name="EncumbranceBuff_CharAct_3">Ik moet aan mijn kracht werken voordat ik %s kan gebruiken.</string>
     <string name="EncumbranceBuff_CharAct_4">Mij ontbreekt de kracht om %s optimaal te benutten.</string>
     <string name="EncumbranceBuff_Info">Niet genoeg kracht om %s effectief te gebruiken.</string>
     <string name="EncumbranceBuff_Name">Last</string>
@@ -1276,6 +1277,7 @@
     <string name="PotionOfFrost_Info">Bij blootstelling aan open lucht zal deze stof verdampen tot een vriezende wolk, waardoor elk wezen dat ermee in contact komt op zijn plek bevriest, onbeweeglijk en onmachtig.</string>
     <string name="PotionOfFrost_Name">Vorstdrank</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
+    <string name="PotionOfHealing_Info">Een elixer dat je onmiddellijk tot volledige gezondheid herstelt en vergiftiging geneest.</string>
     <string name="PotionOfInvisibility_Apply">Je ziet je handen onzichtbaar worden!</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
     <string name="PotionOfLevitation_Info">Het drinken van deze merkwaardige vloeistof zorgt ervoor dat je in de lucht zweeft, moeiteloos over valstrikken glijdt. Vlammen en gassen vullen echter de lucht en kunnen niet worden ontweken terwijl je zweeft.</string>
@@ -2103,6 +2105,7 @@
     <string name="WndSettings_Music">Muziek</string>
     <string name="WndSettings_Quickslots">Sneltoetsen</string>
     <string name="WndSettings_RecordVideo">Video-opname</string>
+    <string name="WndSettings_ScaleUp">UI vergroten</string>
     <string name="WndSettings_SecondQuickslot">Tweede sneltoets</string>
     <string name="WndSettings_SelectLanguage">Selecteer taal</string>
     <string name="WndSettings_Sound">Geluidseffecten</string>
@@ -2545,6 +2548,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
