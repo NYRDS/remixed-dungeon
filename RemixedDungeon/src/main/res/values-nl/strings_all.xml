@@ -1386,6 +1386,7 @@
     <string name="ResultDescriptions_Burning">Verbrand op niveau %d</string>
     <string name="ResultDescriptions_Fall">Ter dood gevallen op niveau %d</string>
     <string name="ResultDescriptions_Gas">Gestorven door giftig gas op niveau %d</string>
+    <string name="ResultDescriptions_Hunger">Verhongerd op niveau %d</string>
     <string name="ResultDescriptions_Immured">Ingemureerd in steen op niveau %d</string>
     <string name="ResultDescriptions_Mob">Gedood door %1 op niveau %2</string>
     <string name="ResultDescriptions_Necromancy">Uitgeput van levenskracht tijdens het proberen een lijk te animeren op niveau %d</string>
@@ -2556,6 +2557,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
