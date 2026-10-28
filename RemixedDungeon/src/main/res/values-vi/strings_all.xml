@@ -1539,6 +1539,7 @@
     <string name="SpiderServant_Desc">Chiến binh là những đơn vị đông đảo nhất trong hang nhện. Chúng sinh ra để bảo vệ lãnh thổ. Kìm của chiến binh đã phát triển các tuyến độc để đầu độc kẻ thù của chúng.</string>
     <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">nhện lính</string>
+    <string name="SpiderServant_Name_Objective">lính nhện</string>
     <string name="Spinner_Gender">masculine</string>
     <string name="SpiritOfPain_Desc">Một mảnh vỡ của bóng tối sống.</string>
     <string name="SpiritOfPain_Gender">masculine</string>
@@ -2799,6 +2800,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
