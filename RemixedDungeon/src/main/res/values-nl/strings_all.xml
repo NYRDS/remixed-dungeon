@@ -858,6 +858,7 @@
     <string name="IceElemental_Name">ijs-elementaal</string>
     <string name="IceElemental_Name_Objective">ijselementaal</string>
     <string name="IceGuardianCoreModule_Name">IJs Wachter Kern</string>
+    <string name="IceGuardianCore_DieInfo">Het is hier zo koud, ik kan beter teruggaan naar niveau 14 en proberen een weg te vinden naar een warmere plek.</string>
     <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name_Objective">ijswachter</string>
     <string name="IceGuardian_Desc">IJswachters werden gecreëerd door de oude kobolds om hun grotten te beschermen. Zolang de kern van de Wachter voldoende energie bevat, kan hij zichzelf midden in de strijd herstellen.</string>
@@ -2559,6 +2560,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
