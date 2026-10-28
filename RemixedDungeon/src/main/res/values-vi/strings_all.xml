@@ -1817,6 +1817,7 @@
     <string name="WndGame_Start">Bắt đầu trò chơi mới</string>
     <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_BackButton">Quay lại</string>
+    <string name="WndHats_BuyButton">Mua</string>
     <string name="WndHats_EquipButton">Trang bị</string>
     <string name="WndHats_InfoButton">Xem xét</string>
     <string name="WndHats_ListTitle">Danh sách Phụ kiện</string>
@@ -2133,6 +2134,7 @@
     <string name="town_deco_slush_name">Bùn lầy</string>
     <string name="town_deco_snow_name">Tuyết</string>
     <string name="town_deco_snowdrift_desc">Đó là một đống tuyết khá lớn và rõ ràng không ai định dọn nó.</string>
+    <string name="town_deco_snowdrift_name">Tuyết trôi</string>
     <string name="town_deco_snowman_desc">Người tuyết là một vật trang trí truyền thống trong thị trấn cho mùa lễ hội, được đặt ở đây đặc biệt để kỷ niệm \&quot;Dungeonmas\&quot; - ngày mà quái vật xâm chiếm ngục.</string>
     <string name="town_deco_snowy_plate_desc">Tấm đá cổ xưa này bị phủ đầy tuyết</string>
     <string name="town_deco_sofa_desc">Có vẻ như rạp chiếu phim này thực sự cố gắng cung cấp chỗ ngồi tốt nhất cho khách hàng.</string>
@@ -2803,6 +2805,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

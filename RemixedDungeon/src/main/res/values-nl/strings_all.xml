@@ -870,6 +870,7 @@
     <string name="Imp_Cya">Tot ziens, %s!</string>
     <string name="Imp_Defense">ontweek</string>
     <string name="Imp_Desc">Imps zijn mindere demonen. Ze zijn niet bekend om hun kracht of hun magisch talent, maar ze zijn behoorlijk slim en gezellig. Veel imps wonen liever tussen niet-demonen.</string>
+    <string name="Imp_Golems1">Ben jij een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als iets gedood moet worden. Heb ik gelijk? Voor een beloning natuurlijk ;)\nIn mijn geval zijn het _golems_ die gedood moeten worden. Zie je, ik ga hier een klein zaakje beginnen, maar deze stomme golems zijn slecht voor zaken! Het is erg moeilijk om met wandelende granieten klompen te onderhandelen, vervloekt ze! Dus alsjeblieft, dood... laten we zeggen _6 van hen_ en de beloning is van jou.</string>
     <string name="Imp_Golems2">Hoe gaat het met je golem-safari?</string>
     <string name="Imp_Hey">Psst, %1$s!</string>
     <string name="Imp_Monks1">Ben je een avonturier? Ik hou van avonturiers! Je kunt altijd op hen rekenen als er iets gedood moet worden. Heb ik gelijk? Voor een beloning, natuurlijk ;)\nIn mijn geval zijn het _monken_ die gedood moeten worden. Je ziet, ik wil hier een klein zakje beginnen, maar deze gekken kopen zelf niets en schrikken andere klanten weg. Dus alsjeblieft, dood... laten we zeggen _8 van hen_ en de beloning is van jou.</string>
@@ -2331,6 +2332,7 @@
     <string name="town_deco_statue_water_desc">Een majestueuze standbeeld van een engel die een kom met water vasthoudt.</string>
     <string name="town_deco_statue_water_name">Engelenstandbeeld</string>
     <string name="town_deco_stock_name">voorraad</string>
+    <string name="town_deco_stone_wall_broken_desc">Oude stenen muur, in slechte staat</string>
     <string name="town_deco_stone_wall_broken_name">Kapotte muur</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
     <string name="town_deco_stones_desc">Gewoon een stapel stenen.</string>
@@ -2554,6 +2556,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
