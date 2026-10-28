@@ -592,6 +592,7 @@
     <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Een uitzonderlijk voorbeeld van elvenvakmanschap. Het is duidelijk effectiever en nauwkeuriger dan een gewone houten boog.</string>
     <string name="ElvenDagger_Gender">masculine</string>
+    <string name="ElvenDagger_Name">elfen dolk</string>
     <string name="EncumbranceBuff_CharAct_1">Ik ben niet sterk genoeg om %s goed te hanteren.</string>
     <string name="EncumbranceBuff_CharAct_2">Deze %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EncumbranceBuff_CharAct_3">Ik moet aan mijn kracht werken voordat ik %s kan gebruiken.</string>
@@ -2548,6 +2549,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

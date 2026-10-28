@@ -658,6 +658,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Dewdrop_Name">이슬</string>
     <string name="DieHardBuff_Info">Tidak mati mudah.</string>
     <string name="DieHardBuff_Name">죽을 때까지</string>
+    <string name="DieHardSpell_Info">일시적으로 재생을 증가시켜 진정한 다이 하드로 만들어 줍니다.</string>
     <string name="DieHardSpell_Name">다이 하드</string>
     <string name="Displacement_Txt">이동의 %s</string>
     <string name="DoctorArmor_Info">Perlindungan dokter.</string>
@@ -3079,6 +3080,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

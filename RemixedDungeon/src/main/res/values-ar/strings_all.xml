@@ -523,6 +523,7 @@
     <string name="IceGuardianCore_Name">حارس الجليد</string>
     <string name="IceGuardian_Desc">تم إنشاء حراس الجليد من قبل الكوبولدز القديمة لحماية كهوفهم. طالما أن قلب الحارس يحتوي على طاقة كافية، فهو قادر على إعادة بناء نفسه حتى في خضم المعركة.</string>
     <string name="IceGuardian_Gender">masculine</string>
+    <string name="IceGuardian_Name_Objective">حارس الجليد</string>
     <string name="IceKey_Name">مفتاح جليدي</string>
     <string name="Icecap_Name">قلنسوة جليدية</string>
     <string name="Ignite_Info">يشعل الخلية المحددة. يمكن استخدامه لإشعال العشب، الشخصيات والأشياء.</string>
@@ -1367,6 +1368,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

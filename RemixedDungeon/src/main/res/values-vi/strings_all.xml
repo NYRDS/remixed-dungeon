@@ -2057,6 +2057,7 @@
     <string name="town_deco_crossroad_name">Biển chỉ đường ngã tư</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
     <string name="town_deco_curtains_name">Bức rèm</string>
+    <string name="town_deco_door_desc">Một cánh cửa gỗ đơn giản.</string>
     <string name="town_deco_dungeon_door_desc">lối vào hang động.</string>
     <string name="town_deco_dungeon_door_name">cửa hang</string>
     <string name="town_deco_emptyboard_desc">Giá tiêu chuẩn nhất để trưng bày đồ vật.</string>
@@ -2798,6 +2799,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
