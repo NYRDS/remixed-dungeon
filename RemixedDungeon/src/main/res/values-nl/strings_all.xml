@@ -671,6 +671,7 @@
     <string name="GameScene_Grass">De geur van vegetatie hangt zwaar in de lucht.</string>
     <string name="GameScene_NightMode">Wees voorzichtig, de kerker is \'s nachts nog gevaarlijker!</string>
     <string name="GameScene_Secrets">De atmosfeer suggereert dat deze verdieping veel geheimen verbergt.</string>
+    <string name="GameScene_Water">Je hoort het water om je heen spatten.</string>
     <string name="GameScene_Welcome">Welkom op niveau %d van Remixed Dungeon!</string>
     <string name="GameScene_WelcomeBack">Welkom terug op niveau %d van Remixed Dungeon!</string>
     <string name="GasImmuneBuff_Info">Immuun voor alle gassen.</string>
@@ -860,6 +861,7 @@
     <string name="IceElemental_Name">ijs-elementaal</string>
     <string name="IceElemental_Name_Objective">ijselementaal</string>
     <string name="IceGuardianCoreModule_Name">IJs Wachter Kern</string>
+    <string name="IceGuardianCore_Desc">Ijswachters werden gemaakt door oude kobolden om hun grotten te beschermen. De kracht die in de kern is opgeslagen, stelt de ijswachter in staat zichzelf te herstellen zolang hij genoeg energie heeft.</string>
     <string name="IceGuardianCore_DieInfo">Het is hier zo koud, ik kan beter teruggaan naar niveau 14 en proberen een weg te vinden naar een warmere plek.</string>
     <string name="IceGuardianCore_Gender">masculine</string>
     <string name="IceGuardianCore_Name_Objective">ijswachter</string>
@@ -2563,6 +2565,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
