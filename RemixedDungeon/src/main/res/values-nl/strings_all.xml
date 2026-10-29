@@ -1139,6 +1139,7 @@
     <string name="Monk_Name">dwerg monnik</string>
     <string name="Monk_Name_Objective">dwerg monnik</string>
     <string name="MoongraceBuff_Info">De lucht eromheen wordt meer verzadigd, wat een betere concentratie en het herstel van magische reserves mogelijk maakt.</string>
+    <string name="MoongraceBuff_Name">Hemelse manna</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
     <string name="Mushroom_Eat_Message">Die paddenstoel smaakt raar!</string>
@@ -2571,6 +2572,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

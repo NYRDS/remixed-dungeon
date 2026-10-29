@@ -942,6 +942,7 @@
     <string name="Longsword_Gender">masculine</string>
     <string name="Longsword_Name">kiếm dài</string>
     <string name="Luck_Name_0">May mắn %s</string>
+    <string name="Luck_Name_1">May mắn %s</string>
     <string name="Mace_Gender">feminine</string>
     <string name="Mace_Info">Phần đầu sắt của vũ khí này gây sát thương đáng kể.</string>
     <string name="Mace_Name">chùy</string>
@@ -2817,6 +2818,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
