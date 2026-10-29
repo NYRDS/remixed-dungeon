@@ -2090,6 +2090,7 @@
     <string name="town_deco_glass_stained_desc">Người làm chiếc kính màu này có lẽ đã rất chăm chỉ.</string>
     <string name="town_deco_glass_stained_name">Kính màu</string>
     <string name="town_deco_grandclock_desc">Một cơ chế khá cũ nhưng vẫn hoạt động.</string>
+    <string name="town_deco_grandclock_name">Đồng hồ lớn</string>
     <string name="town_deco_hay_desc">Một đống rơm nhỏ thơm thơm.</string>
     <string name="town_deco_hay_name">Cỏ khô</string>
     <string name="town_deco_identifier_sign_desc">Có vẻ như có một thầy bói bên trong tòa nhà đó.</string>
@@ -2155,6 +2156,7 @@
     <string name="town_deco_statue_water_name">Tượng thiên thần</string>
     <string name="town_deco_stock_desc">Thực phẩm được cất giữ ở đây, cùng với một đống đồ linh tinh đủ loại và màu sắc.</string>
     <string name="town_deco_stock_name">kho</string>
+    <string name="town_deco_stone_wall_broken_desc">Bức tường đá cũ, trong tình trạng tồi tệ</string>
     <string name="town_deco_stone_wall_desc">Không hiểu sao bức tường này lại tỏa ra hơi ấm và có vẻ hơi ẩm.</string>
     <string name="town_deco_stones_desc">Chỉ là một đống đá.</string>
     <string name="town_deco_stones_name">Đá</string>
@@ -2815,6 +2817,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

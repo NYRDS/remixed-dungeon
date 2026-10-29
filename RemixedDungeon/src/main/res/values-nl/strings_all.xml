@@ -651,12 +651,14 @@
     <string name="FortuneTellerNPC_Name_Objective">waarzegster</string>
     <string name="FreezeGlobe_Info">Bevriest het geselecteerde personage, waardoor het korte tijd geen acties kan uitvoeren.</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
+    <string name="FriedFish_Taste">Lekker!</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Je voelt een ijskoude aura uit de pijlpunt komen.</string>
     <string name="FrostAuraBuff_Info">Vorst omringt het lichaam, wat alles in de buurt vertraagt.</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FrostBuff_Name">Bevroren</string>
     <string name="Frost_Shatter">De koude doet %s barsten!</string>
+    <string name="Froth_ArrowInKnee">Ik was vroeger ook een avonturier net als jij,\nMaar toen kreeg ik een pijl in mijn knie...</string>
     <string name="FrozenCarpaccio_Info">Het is een stuk bevroren rauw vlees. De enige manier om het te eten is door dunne plakjes af te snijden. En op die manier is het verrassend goed.</string>
     <string name="FrozenCarpaccio_Info1">Je ziet je handen onzichtbaar worden!</string>
     <string name="FrozenCarpaccio_Info2">Je voelt je verharden!</string>
@@ -1117,6 +1119,7 @@
     <string name="Mob_PetDied">Je huisdier is gestorven: %s</string>
     <string name="Mob_ReadyForOrder">%s klaar voor je order.</string>
     <string name="Mob_StaAmokStatus">%1$s loopt amok</string>
+    <string name="Mob_StaControlledStatus">Deze %s is onder onheilige bezetenheid</string>
     <string name="Mob_StaFleeingStatus">Deze %s vlucht</string>
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
     <string name="Mob_StaGuardStatus">Deze %s bewaakt</string>
@@ -2568,6 +2571,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
