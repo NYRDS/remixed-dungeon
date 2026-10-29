@@ -352,6 +352,7 @@
     <string name="ChaosCrystal_StaffFused">Kristal absorbeert je toverstok en nam de vorm van een Staf aan</string>
     <string name="ChaosCrystal_SwordFused">De kristal absorbeert je wapen en neemt de vorm aan van een Zwaard</string>
     <string name="ChaosCrystal_Use">GEBRUIK</string>
+    <string name="ChaosHelmet_Info">Een bloedrode helm is een essentieel symbool van een chaosstrijder.</string>
     <string name="ChaosHelmet_Name">Chaos Helm</string>
     <string name="ChaosShield_desc">Het Chaos Schild ontstaat door het samensmelten van een Chaos Kristal met een gewoon schild, waardoor het bij elke succesvolle blokkade willekeurige chaotische effecten vertoont.</string>
     <string name="ChaosShield_name">Chaos Schild</string>
@@ -543,6 +544,7 @@
     <string name="DreadKnight_Name">angstridder</string>
     <string name="DreadKnight_Name_Objective">angstridder</string>
     <string name="Dreamweed_Desc">Bij aanraking scheidt een Dreamweed een glitterend wolkje verwarrend gas uit.</string>
+    <string name="Dreamweed_Name">Droomkruid</string>
     <string name="DriedRoseBuff_Info">De roos ziet er heel aantrekkelijk uit.</string>
     <string name="DriedRoseBuff_Name">Charmant</string>
     <string name="DriedRoseCursedBuff_Info">De roos ziet er mooi uit, maar niet erg charmant.</string>
@@ -1015,6 +1017,7 @@
     <string name="LibrarianNPC_Message_Not_Ready">Ik... ik... het spijt me, de bibliotheek is nog niet open...</string>
     <string name="LibrarianNPC_Name_Objective">bibliothecaris</string>
     <string name="LibraryBook_Name">Bibliotheekboek</string>
+    <string name="Lich_Desc">De necromancer heeft zijn dood gevonden in de diepten van de necropolis, en geleidelijk veranderden de kwade krachten die in zijn lichaam stroomden hem in een Lich. Een doodsmagiër, een willoze marionet, bestuurd door kwaadaardige krachten...</string>
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
@@ -2560,6 +2563,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
