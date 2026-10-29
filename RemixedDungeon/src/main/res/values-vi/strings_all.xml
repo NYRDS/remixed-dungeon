@@ -2065,6 +2065,7 @@
     <string name="town_deco_crate_name">Thùng</string>
     <string name="town_deco_crate_scrolls_name">Thùng đựng cuộn giấy</string>
     <string name="town_deco_cross_desc">Một chiếc thập giá bạc nguyên khối, biểu tượng của tôn giáo địa phương - \&quot;Các Nhân chứng của Santa Chúa Tể Vực Sâu\&quot;.</string>
+    <string name="town_deco_cross_name">Thập tự</string>
     <string name="town_deco_crossroad_desc">Trụ gỗ thô sơ với các tấm biển hình mũi tên, chữ trên đó đã phai màu từ lâu có lẽ do thời tiết khắc nghiệt.</string>
     <string name="town_deco_crossroad_name">Biển chỉ đường ngã tư</string>
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
@@ -2812,6 +2813,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

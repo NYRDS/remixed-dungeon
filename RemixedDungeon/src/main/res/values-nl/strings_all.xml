@@ -1794,6 +1794,7 @@
     <string name="TownGuardNPC_Message2">Dankzij avonturiers zoals jij, werd het hierboven echt heel vredig.</string>
     <string name="TownGuardNPC_Message3">Je denkt dat er te veel bewakers in deze stad zijn? Nou, dat is omdat dit de enige stad is met een gigantische monster-geïnfesteerde dungeon, niet waar?</string>
     <string name="TownGuardNPC_Name">stadswacht</string>
+    <string name="TownPortal_Info">Deze spreuk stelt je in staat om direct terug te keren naar veiligheid. Echter, krachtige magische bronnen in de buurt kunnen voorkomen dat het werkt zoals bedoeld.</string>
     <string name="TownPortal_Name">Stadsportaal</string>
     <string name="TownScript_NeedWeapon">Ik ga niet wapenloos de dungeon in!\nMisschien is het de moeite waard om eerst de stads winkel te bezoeken?</string>
     <string name="TownShopkeeper_Desc">Deze kerel is een typische winkelier. Je ziet meteen dat hij je prijs al kent.</string>
@@ -2565,6 +2566,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
