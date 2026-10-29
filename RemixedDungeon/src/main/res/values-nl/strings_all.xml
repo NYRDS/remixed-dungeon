@@ -488,6 +488,7 @@
     <string name="Crystal_Name">zwevend kristal</string>
     <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">Deze kwaadaardige kleine dartpijlen doen niet veel schade, maar kunnen het doelwit verlammen, waardoor het voor enige tijd hulpeloos en onbeweeglijk blijft.</string>
+    <string name="CurareDart_Name">curare pijl</string>
     <string name="DM300_Desc">Deze machine werd enkele eeuwen geleden door de Dwergen gemaakt. Later begonnen de Dwergen machines te vervangen door golems, elementalen en zelfs demonen. Uiteindelijk leidde dit tot het verval van hun beschaving. De DM-300 en vergelijkbare machines werden doorgaans gebruikt voor bouw en mijnbouw, en in sommige gevallen voor stadsverdediging.</string>
     <string name="DM300_Gender">masculine</string>
     <string name="DM300_Info1">DM-300 herstelt zichzelf!</string>
@@ -1023,6 +1024,7 @@
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
+    <string name="LightBuff_Info">Licht straalt uit het lichaam en verlicht alles eromheen.</string>
     <string name="LightBuff_Name">Verlicht</string>
     <string name="LightningBolt_Info">Een spreuk die wordt gedeeld onder oude schamanen, die je vijanden tweemaal zo effectief schokt, vooral als ze genoeg dwazen zijn om op water te staan.</string>
     <string name="LightningBolt_Name">Bliksemschicht</string>
@@ -2566,6 +2568,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
