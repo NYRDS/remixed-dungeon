@@ -1018,6 +1018,7 @@
     <string name="Mob_StaHuntingStatus2">%1$s đang săn %2$s</string>
     <string name="Mob_StaPassiveStatus">%s đang thụ động</string>
     <string name="Mob_StaSleepingStatus">%s này đang ngủ</string>
+    <string name="Mob_StaTerrorStatus">%1 đang kinh hoàng</string>
     <string name="Mob_StaTerrorStatus2">%1 này kinh hoàng trước %2</string>
     <string name="Mob_StaWanderingStatus">%s đang lang thang</string>
     <string name="Mods_AuthorSite">Trang tác giả:</string>
@@ -2818,6 +2819,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

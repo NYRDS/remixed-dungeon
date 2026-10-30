@@ -741,6 +741,7 @@
     <string name="HealerNPC_Message3">Ik vraag me af waarom de kerk ons verbodt petten te dragen... het is echt koud hier buiten.</string>
     <string name="HealerNPC_Name_Objective">stadspriester</string>
     <string name="Healing_Info">Deze spreuk is cruciaal voor elke avonturier. Het zal 1/3 van de maximale hoeveelheid HP van de tovenaar herstellen.</string>
+    <string name="Healing_Name">Genezing</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">De punt van deze pijl is bedekt met een genezende drank.</string>
     <string name="HealthDart_Gender">masculine</string>
@@ -2572,6 +2573,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
