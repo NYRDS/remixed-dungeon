@@ -4423,8 +4423,13 @@ public class DebugEndpoints {
                     createErrorResponse(error[0]).toString());
             }
 
+            // caveman: JSONObject, not hand-rolled - lua errors carry raw
+            // newlines (tracebacks) that break naive string escaping
+            Map<String, Object> ok = new HashMap<>();
+            ok.put("success", true);
+            ok.put("result", result[0] == null ? "nil" : result[0]);
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
-                String.format("{\"success\":true,\"result\":\"%s\"}", result[0] == null ? "nil" : result[0].replace("\"", "\\\"")));
+                new JSONObject(ok).toString());
         } catch (Exception e) {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse(e.getMessage()).toString());
