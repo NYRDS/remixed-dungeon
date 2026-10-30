@@ -497,6 +497,7 @@
     <string name="Dungeon_NoTips">Chữ viết không thể đọc được...</string>
     <string name="Dungeon_Tips_1">Không phải tất cả các cánh cửa trong hầm ngục đều có thể nhìn thấy ngay từ đầu. Nếu bạn bị kẹt, hãy tìm các cánh cửa ẩn.</string>
     <string name="Dungeon_Tips_10">Pixel-Mart. Tiêu tiền. Sống lâu hơn.</string>
+    <string name="Dungeon_Tips_11">Khi bạn bị nhiều quái vật tấn công cùng lúc, hãy cố rút lui sau một cánh cửa.</string>
     <string name="Dungeon_Tips_12">Nếu bạn đang cháy và đang bay, bạn không thể dập lửa trong nước.</string>
     <string name="Dungeon_Tips_14">NGUY HIỂM! Máy móc nặng có thể gây thương tích, mất chi hoặc tử vong!</string>
     <string name="Dungeon_Tips_15">Pixel-Mart. Cuộc sống an toàn hơn trong ngục tối.</string>
@@ -2824,6 +2825,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
