@@ -1124,6 +1124,7 @@
     <string name="Piranha_Desc">Những loài cá ăn thịt này không phải là cư dân tự nhiên của các hồ dưới lòng đất. Chúng được lai tạo đặc biệt để bảo vệ các kho báu bị ngập.</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">piranha khổng lồ</string>
+    <string name="PirateSet_Info">Arr! Bạn có gan tham gia cùng chúng tôi không!? Hay chỉ là một con chuột đất? Mong rằng không, vì thứ này chỉ dành cho cướp biển thôi, ừ, ý tôi là... Arr!</string>
     <string name="PirateSet_Name">Bộ Cướp Biển</string>
     <string name="PlagueDoctorMaskHood_Name">Mặt nạ Bác Sĩ Chúm với mũ che đầu</string>
     <string name="PlagueDoctorMask_Info">Đây... đây không phải là một chiếc mặt nạ bình thường. Nó là... một lá chắn. Khiên chống lại các thế lực của sự phân hủy mà Bác sĩ Dịch hằng ngày kiên trì chiến đấu. Được chế tác từ gỗ ebony tốt nhất, được chạm khắc công phu thành hình một cái sọ tham ăn. Những hốc mắt rỗng được lấp đầy bởi những viên đá quý tím amethyst lấp lánh, nhẹ nhàng đập động như những than hồng sắp tắt của đống lửa. Mỗi hơi thở, mỗi lời nói của bạn đều đi qua một mạng lưới ống dẫn và bộ lọc như mê cung. Hỗn hợp các loại thảo mộc mạnh và gia vị kỳ lạ thấm vào không khí bên trong, che giấu mùi tử khí bám vào bạn như một tấm vải liệm.</string>
@@ -1461,6 +1462,7 @@
     <string name="Sheep_Desc">Đây là một con cừu ma thuật. Điều gì làm nó trở nên ma thuật? Bạn không thể giết nó. Nó sẽ đứng yên tại chỗ cho đến khi nó biến mất bằng phép thuật, trong khi vẫn nhai cỏ với ánh mắt trống rỗng.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">cừu</string>
+    <string name="Sheep_Name_Objective">cừu</string>
     <string name="ShieldBuffNotReady_Info">Khiên của bạn chưa sẵn sàng để chặn đòn tấn công tiếp theo.</string>
     <string name="ShieldBuffReady_Info">Khiên của bạn đã sẵn sàng để chặn đòn tấn công tiếp theo.</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
@@ -1579,6 +1581,7 @@
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
     <string name="StartScene_UnlockNecromancer">Để mở khóa lớp nhân vật này, hãy tiêu diệt Lich bằng bất kỳ lớp nào khác.</string>
+    <string name="StartScene_Warning">Tiến trình trò chơi hiện tại sẽ bị xóa.</string>
     <string name="StartScene_WinGame">Để mở khóa \&quot;Thử thách\&quot;, hãy thắng trò chơi với bất kỳ lớp nhân vật nào.</string>
     <string name="StartScene_Yes">Có, bắt đầu trò chơi mới</string>
     <string name="Statue_Gender">feminine</string>
@@ -2831,6 +2834,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 
