@@ -23,5 +23,6 @@
    "resistances"   : ["Leech", "Poison"],
    "canBePet"      : true,
    "friendly"      : false,
+   "demon"        : true,
    "fraction"      : "DUNGEON"
 }

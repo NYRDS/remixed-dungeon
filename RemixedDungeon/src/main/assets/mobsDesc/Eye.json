@@ -23,5 +23,6 @@
   "resistances"   : ["WandOfDisintegration", "Death", "Leech"],
   "immunities"    : ["Terror"],
   "friendly"      : false,
+  "demon"        : true,
   "fraction"      : "DUNGEON"
 }

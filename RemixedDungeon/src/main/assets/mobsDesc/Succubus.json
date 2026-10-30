@@ -27,5 +27,6 @@
    "scriptFile"    : "scripts/mobs/Succubus",
    "canBePet"      : true,
    "friendly"      : false,
+   "demon"        : true,
    "fraction"      : "DUNGEON"
 }

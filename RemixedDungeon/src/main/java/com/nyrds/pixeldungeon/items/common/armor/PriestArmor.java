@@ -6,7 +6,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Blessed;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -52,7 +52,8 @@ public class PriestArmor extends ClassArmor {
             }
         }
 
-        Buff.affect(user, Blessed.class, BLESSED_DURATION).level(1 + user.lvl() / 5);
+        // Blessed is a lua buff on master (batch 19-2b) - string-kind affect
+        Buff.affect(user, BuffFactory.BLESSED, BLESSED_DURATION).level(1 + user.lvl() / 5);
         user.getSprite().emitter().start(ShaftParticle.FACTORY, 0.1f, 8);
 
         user.doOperate(Actor.TICK);

@@ -5,6 +5,7 @@
    "friendly"      :true,
    "movable"       :false,
    "aiState"       :"Passive",
+   "demon"        : true,
    "fraction"      :"NEUTRAL",
    "npc"           :true,
    "isHumanoid"    :true,
