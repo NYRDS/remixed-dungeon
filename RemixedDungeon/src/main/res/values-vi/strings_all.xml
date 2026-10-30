@@ -1309,6 +1309,7 @@
     <string name="Ring_Gems_7">tourmalin</string>
     <string name="Ring_Gems_9">lam ngọc</string>
     <string name="Ring_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
+    <string name="Ring_Info">Chiếc nhẫn kim loại này được trang trí bằng một viên đá quý lớn %s lấp lánh trong bóng tối. Ai biết nó sẽ có tác dụng gì khi đeo?</string>
     <string name="Ring_Info1">Bạn chỉ có thể đeo tối đa 2 nhẫn cùng lúc</string>
     <string name="Ring_Info2">Chiếc %1$s của bạn siết chặt vào ngón tay đau đớn</string>
     <string name="Ring_Info3b">, và vì nó bị nguyền rủa, bạn không có cách nào tháo nó ra.</string>
@@ -1863,6 +1864,7 @@
     <string name="WndItemAlchemy_Title">Công thức luyện đan với %s</string>
     <string name="WndItemAlchemy_Transmute">Chuyển hóa</string>
     <string name="WndJournal_Levels">Cấp độ</string>
+    <string name="WndJournal_Logbook">Nhật ký</string>
     <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
     <string name="WndLibrary_Codex_Btn">Truyện kể</string>
@@ -2821,6 +2823,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

@@ -306,6 +306,7 @@
     <string name="Carcass_TooFarToDissect">Je moet dichterbij zijn om de karkas te ontleden.</string>
     <string name="Caves_TileDescBookshelf">Wie zou er een boekenkast nodig hebben in een grot?</string>
     <string name="Caves_TileDescEntrance">De ladder leidt omhoog naar het bovenste deel.</string>
+    <string name="Caves_TileDescExit">De ladder leidt naar beneden, naar een diepere verdieping.</string>
     <string name="Caves_TileDescHighGrass">Reuze paddenstoelen blokkeren het zicht.</string>
     <string name="Caves_TileGrass">fluorescent mos</string>
     <string name="Caves_TileHighGrass">Fluorescerende paddenstoelen</string>
@@ -737,6 +738,7 @@
     <string name="Heal_Cast">%s is genezen.</string>
     <string name="Heal_Info">Een behoorlijk nuttige spreuk in de Dungeon, toch?</string>
     <string name="Heal_Name">Genezing</string>
+    <string name="HealerNPC_Desc">Een oude man, op de een of andere manier lijkt hij op iemand die toverstaven zou maken.</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Gratis behandeling voor elke avonturier!</string>
     <string name="HealerNPC_Message3">Ik vraag me af waarom de kerk ons verbodt petten te dragen... het is echt koud hier buiten.</string>
@@ -2576,6 +2578,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
