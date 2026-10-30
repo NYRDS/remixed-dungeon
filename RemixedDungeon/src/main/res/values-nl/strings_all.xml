@@ -539,6 +539,7 @@
     <string name="Displacement_Txt">%s van verplaatsing</string>
     <string name="DoctorArmor_Info">Deze pantser van de pestdokter maakt gebruik mogelijk van de \&quot;Miasma Wolk\&quot; vaardigheid, die een giftige gas vrijlaat dat vijanden vergiftigt, verzwakt en desorienteert. De dokter, beschermd door hun masker, is immuun voor deze effecten.</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
+    <string name="DoctorArmor_NotDoctor">Alleen pestdokters kunnen dit harnas dragen!</string>
     <string name="DoctorSpecial">Miasma Wolk</string>
     <string name="DogeMask_Info">Heb je ooit als de beroemde Doge willen vermommen? Nu is je kans! Zo\'n masker! Veel vermomming! Wauw!</string>
     <string name="DogeMask_Name">Doge-mask</string>
@@ -1297,6 +1298,7 @@
     <string name="Possess_PossessionFailed">Wil van %s is te sterk</string>
     <string name="Potential_Txt">%s potentieel</string>
     <string name="PotionBelt_Info">Deze sterke leren riem kan al je drankjes bevatten en beschermt ze tegen het breken door vorst.</string>
+    <string name="PotionBelt_Name">drankgordel</string>
     <string name="PotionOfExperience_Info">De belevenissen van talloze veldslagen, herleid tot vloeibare vorm; deze drank verhoogt onmiddellijk je ervaringsniveau.</string>
     <string name="PotionOfFrost_Info">Bij blootstelling aan open lucht zal deze stof verdampen tot een vriezende wolk, waardoor elk wezen dat ermee in contact komt op zijn plek bevriest, onbeweeglijk en onmachtig.</string>
     <string name="PotionOfFrost_Name">Vorstdrank</string>
@@ -2582,6 +2584,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

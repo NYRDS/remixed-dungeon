@@ -494,6 +494,7 @@
     <string name="Drunkard_Phrase_2">Ai cần nước khi có bia</string>
     <string name="Drunkard_Phrase_3">Cái bia này có vị như đất</string>
     <string name="Drunkard_Phrase_4">Zzzzzz...</string>
+    <string name="Dungeon_DeadEnd">Bạn đang làm gì ở đây?!</string>
     <string name="Dungeon_NoTips">Chữ viết không thể đọc được...</string>
     <string name="Dungeon_Tips_1">Không phải tất cả các cánh cửa trong hầm ngục đều có thể nhìn thấy ngay từ đầu. Nếu bạn bị kẹt, hãy tìm các cánh cửa ẩn.</string>
     <string name="Dungeon_Tips_10">Pixel-Mart. Tiêu tiền. Sống lâu hơn.</string>
@@ -1073,6 +1074,7 @@
     <string name="Nightmare_Gender">masculine</string>
     <string name="Nightmare_Name_Objective">ác mộng</string>
     <string name="No_Valid_Cell">Không có ô phù hợp nào gần đây.</string>
+    <string name="OozeBuff_Name">Chất nhầy ăn mòn</string>
     <string name="Ooze_Death">%s nuốt chửng bạn...</string>
     <string name="Order_Info">Với sự tập trung thích hợp, các mệnh lệnh của bạn gần như không thể chối cãi.</string>
     <string name="Order_Name">Mệnh lệnh</string>
@@ -2827,6 +2829,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
