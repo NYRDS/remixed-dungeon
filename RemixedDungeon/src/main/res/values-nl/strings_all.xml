@@ -233,6 +233,7 @@
     <string name="Blacksmith_GetLost">Ik heb het druk. Wegwezen!</string>
     <string name="Blacksmith_Gold1">Hey mens! Wil je nuttig zijn, hé? Pak die houweel en ontgin voor me wat _donker gouderts_, _15 stukken_ zou genoeg moeten zijn. Wat bedoel je, hoe ga ik betalen? Je gierige...\nOké, oké, ik heb geen geld om te betalen, maar ik kan wat smeden voor je. Reken je gelukkig, ik ben de enige smid in de buurt.</string>
     <string name="Blacksmith_LooksBetter">je %s ziet er nu zeker beter uit</string>
+    <string name="Blacksmith_Name">trol-smid</string>
     <string name="Blacksmith_Txt2">Maak je me voor gek? Waar is mijn pikhouweel?!</string>
     <string name="Blacksmith_Txt4">Ik zei dat ik vleermuisbloed op de houweel nodig heb. Chop chop!</string>
     <string name="Blacksmith_Verify3">Ik moet weten waarmee ik werk, identificeer ze eerst!</string>
@@ -1618,6 +1619,7 @@
     <string name="Shuriken_Name">shuriken</string>
     <string name="Sign_CantRead">Je kunt het niet lezen.</string>
     <string name="SkeletonKey_Info">Deze sleutel ziet er serieus uit: het kopje is vormgegeven als een schedel. Waarschijnlijk kan hij een serieuze deur openen.</string>
+    <string name="Skeleton_Defense">geblokkeerd</string>
     <string name="Skeleton_Desc">Skeletten zijn samengesteld uit botten van ongelukkige avonturiers en bewoners van de dungeon, tot leven gewekt door uitstralingen van het kwaad uit de diepte. Zodra ze genoeg beschadigd zijn, vallen ze uiteen in een ontploffing van botten.</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">Je bent gedood door de ontploffing van botten...</string>
@@ -1983,6 +1985,7 @@
     <string name="WndDonate_royalDonateText">Ik wil niet raar klingen, maar door dit te doen, voed je de developers letterlijk.</string>
     <string name="WndDonate_royalDonateText2">Daarnaast ontvang je elke hoed uit de in-app winkel! Zowel als elke hoed die ooit nog uitgegeven gaat worden.</string>
     <string name="WndDonate_ruby">robijn</string>
+    <string name="WndDonate_rubyDonateText">Uw vrijgevigheid helpt ons Remixed Dungeon verder te verbeteren!</string>
     <string name="WndDonate_silver">zilver</string>
     <string name="WndDonate_silverDonate">zilverdonatie</string>
     <string name="WndDonate_silverDonateText">Elke donatie helpt de ontwikkeling van het project</string>
@@ -2573,6 +2576,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
