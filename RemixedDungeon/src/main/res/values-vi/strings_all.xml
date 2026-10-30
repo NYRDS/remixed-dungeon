@@ -314,6 +314,7 @@
     <string name="ChaosSword_Gender">masculine</string>
     <string name="ChaosSword_Info">Lưỡi của thanh kiếm này được tạo nên từ hỗn loạn thuần khiết và thỉnh thoảng lại rung nhẹ. Sức mạnh vĩ đại ẩn chứa trong vũ khí này có thể chém đôi gần như mọi thứ. Tuy nhiên, cần kỹ năng phi thường mới có thể khuất phục được sức mạnh hùng hậu của nó.</string>
     <string name="ChaosSword_Name">kiếm hỗn loạn</string>
+    <string name="CharAction_Charm">quyến rũ</string>
     <string name="CharAction_Expel">đuổi ra</string>
     <string name="CharAction_Give">đưa</string>
     <string name="CharAction_Hit">đánh</string>
@@ -1234,6 +1235,7 @@
     <string name="Quarterstaff_Gender">masculine</string>
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Ống đựng tên bằng da phù hợp để chứa bất kỳ số lượng mũi tên nào</string>
+    <string name="Quiver_Name">ống tên</string>
     <string name="RabbitEars_Info">Có quan niệm rằng thỏ sinh ra đã mang may mắn, và người sở hữu một phần cơ thể của nó sẽ được thú cưng ấy ban cho vận may. Nghĩ kỹ lại, bị giết chỉ vì đôi tai của bạn – thứ sẽ dùng để làm đồ trang sức – nghe có vẻ không mấy may mắn.</string>
     <string name="RabbitEars_Name">Tai thỏ</string>
     <string name="RaiseDead_Name">Hồi sinh người chết</string>
@@ -2829,6 +2831,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

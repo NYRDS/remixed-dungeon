@@ -1120,6 +1120,7 @@
     <string name="Mob_CantDoIt">Ik kan het niet. Ik heb kleine pootjes.</string>
     <string name="Mob_Desc">Een echte beschrijving komt binnenkort!</string>
     <string name="Mob_Died">Je hoort iets in de verte sterven</string>
+    <string name="Mob_FollowMe">Volg je!</string>
     <string name="Mob_GoingTo">Al onderweg!</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
     <string name="Mob_PetDied">Je huisdier is gestorven: %s</string>
@@ -2015,6 +2016,7 @@
     <string name="WndHats_InfoButton">Bekijken</string>
     <string name="WndHats_ListTitle">Lijst van accessoires</string>
     <string name="WndHats_Purchased">Geregeld!</string>
+    <string name="WndHero_AttackSkill">Aanvalsvaardigheid</string>
     <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndHero_Buffs">Effecten</string>
     <string name="WndHero_DefenceSkill">Verdedigingsvaardigheid</string>
@@ -2584,6 +2586,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
