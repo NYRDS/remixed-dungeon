@@ -1623,6 +1623,7 @@
     <string name="Thief_Desc">Các tầng sâu của hầm ngục luôn là nơi trốn tránh cho mọi loại tội phạm. Không phải ai cũng giữ được tinh thần rõ ràng khi xa ánh sáng mặt trời lâu ngày. Lâu lắm rồi, những tên trộm cướp điên khùng này đã quên mất họ là ai và tại sao chúng trộm cướp.</string>
     <string name="Thief_Gender">masculine</string>
     <string name="Thief_Name">tên trộm điên</string>
+    <string name="TitleScene_Badges">Huy hiệu</string>
     <string name="TitleScene_Highscores">Bảng xếp hạng</string>
     <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Chơi</string>
@@ -2823,6 +2824,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
