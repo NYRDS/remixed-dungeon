@@ -1302,6 +1302,7 @@
     <string name="PotionBelt_Info">Deze sterke leren riem kan al je drankjes bevatten en beschermt ze tegen het breken door vorst.</string>
     <string name="PotionBelt_Name">drankgordel</string>
     <string name="PotionOfExperience_Info">De belevenissen van talloze veldslagen, herleid tot vloeibare vorm; deze drank verhoogt onmiddellijk je ervaringsniveau.</string>
+    <string name="PotionOfExperience_Name">Drankje van Ervaring</string>
     <string name="PotionOfFrost_Info">Bij blootstelling aan open lucht zal deze stof verdampen tot een vriezende wolk, waardoor elk wezen dat ermee in contact komt op zijn plek bevriest, onbeweeglijk en onmachtig.</string>
     <string name="PotionOfFrost_Name">Vorstdrank</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
@@ -1606,6 +1607,7 @@
     <string name="ShieldBuffNotReady_Info">Je schild is nog niet klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldBuffNotReady_Name">Schild is niet klaar</string>
     <string name="ShieldBuffReady_Info">Je schild is klaar om de volgende aanval te blokkeren.</string>
+    <string name="ShieldInfoTemplate">Dit schild blokkeert tot %1$d inkomende schade. Met %2$d %% kans. Het duurt %3$3.1f seconden om te herstellen na een succesvolle blokkering.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="ShieldWeaponInfo">Wanneer gebruikt als wapen zal dit schild gemiddeld %1$d schade toebrengen.</string>
     <string name="Shielded_Desc">Bruten zijn de grootste, sterkste en taaiste van alle gnolls. Bij ernstige verwonding worden ze razend en richten ze nog meer schade aan. Deze brute draagt een gigantisch schild!</string>
@@ -2589,6 +2591,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
