@@ -1485,6 +1485,7 @@
     <string name="Shuriken_Name">shuriken</string>
     <string name="SkeletonKey_Info">Cái chìa khóa này trông rất nghiêm trọng: đầu nó được đúc hình cái sọ. Có lẽ nó có thể mở được cánh cửa quan trọng nào đó.</string>
     <string name="SkeletonKey_Name">chìa khóa xương</string>
+    <string name="Skeleton_Desc">Bộ xương được tạo thành từ xương của những nhà thám hiểm và cư dân không may của hầm ngục, được hồi sinh bởi luồng ma thuật ác từ sâu bên dưới. Khi bị tổn thương đủ nhiều, chúng sẽ tan rã thành một vụ nổ xương.</string>
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">Bạn đã bị giết bởi vụ nổ xương...</string>
     <string name="Skeleton_Name_Objective">bộ xương</string>
@@ -1630,6 +1631,7 @@
     <string name="TitleScene_Play">Chơi</string>
     <string name="TitleScene_PlayOnPC">Chơi trên PC</string>
     <string name="TomeOfKnowledge_Name">Sách Kiến Thức</string>
+    <string name="TomeOfMastery_ACRead">ĐỌC</string>
     <string name="TomeOfMastery_Blinded">Bạn không thể đọc khi bị mù.</string>
     <string name="TomeOfMastery_Info">Cuốn sách da cũ này không quá dày, nhưng bạn cảm thấy có thể học được rất nhiều điều từ nó. Hãy nhớ rằng việc đọc bộ sách này có thể mất một chút thời gian.</string>
     <string name="Toolbar_Info1">Bạn không biết đó có gì.</string>
@@ -2825,6 +2827,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

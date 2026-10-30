@@ -100,6 +100,7 @@
     <string name="Badges_AllScrolls">Alle scrolls geïdentificeerd</string>
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_BossSlain1">De Goo is gedood</string>
+    <string name="Badges_BossSlain3All">DM-300 is verslagen door alle subklassen</string>
     <string name="Badges_Champion">Uitdaging gewonnen</string>
     <string name="Badges_DeathFalling">Dood door vallen</string>
     <string name="Badges_DeathFire">Dood door vuur</string>
@@ -2231,6 +2232,7 @@
     <string name="town_deco_barrel_desc">Een gewoon vat, ook niet meer in de beste staat.</string>
     <string name="town_deco_barrel_name">vat</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
+    <string name="town_deco_barrel_wine_name">Wijnvat</string>
     <string name="town_deco_beige_carpet_name">tapijt</string>
     <string name="town_deco_bell_desc">Een typische kerkklok. Het lijkt erop dat niemand hem al lange tijd heeft geluid en zelfs het touw ontbreekt.</string>
     <string name="town_deco_bell_name">Bel</string>
@@ -2580,6 +2582,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
