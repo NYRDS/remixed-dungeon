@@ -804,6 +804,7 @@
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
     <string name="HeroSubClass_DescGlad">Een succesvolle aanval met een melee-wapen stelt de _Gladiator_ in staat een combo te starten, waarbij elke volgende treffer meer schade aanricht.</string>
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
+    <string name="HeroSubClass_DescScout">Elven _Verkenners_ zijn meesters in sluipen. Het vertrappen van hoog gras geeft hen een tijdelijke onzichtbaarheidsboost. Ook zijn ze nog sneller dan gewone Elfen.</string>
     <string name="HeroSubClass_DescSnip">_Sluipschutters_ zijn in staat om zwakke punten in de bepantsering van een vijand te ontdekken, waardoor ze deze effectief negeren bij het gebruik van een afstandswapen.</string>
     <string name="HeroSubClass_DescWarL">Na het doden van een vijand consumeert de _Heksenaar_ zijn ziel. Het geneest zijn wonden en stilt zijn honger.</string>
     <string name="HeroSubClass_DescWard">Een sterke verbinding met de natuurkrachten geeft _Wachters_ het vermogen om dauwdruppels en zaden van planten te verzamelen. Ook geeft het vertrappen van hoog gras hen een tijdelijke pantserbonus.</string>
@@ -1459,6 +1460,7 @@
     <string name="RogueArmor_Prompt">Kies een locatie om naartoe te springen</string>
     <string name="RootSpell_Info">Bevestigt de geselecteerde karakter met wortels, waardoor hij voor korte tijd niet kan bewegen.</string>
     <string name="RootSpell_Name">Wortel</string>
+    <string name="RootsBuff_Info">Wortels die uit de grond groeien verstrikken het lichaam, zodat geen enkele stap mogelijk is.</string>
     <string name="RootsBuff_Name">Geworteld</string>
     <string name="RottenFish_Info">Rotte vis, ruikt vreselijk</string>
     <string name="RottenFish_Name">rotte vis</string>
@@ -2587,6 +2589,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

@@ -1586,6 +1586,7 @@
     <string name="StartScene_Yes">Có, bắt đầu trò chơi mới</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">tượng sống</string>
+    <string name="Statue_Name_Objective">tượng động</string>
     <string name="Stench_Txt">%s hôi thối</string>
     <string name="StoneBloodBuff_Info">Máu hóa đá, dung nhập với các bức tường gần đó và khiến việc đi xuyên qua chúng dễ dàng hơn nhiều, nhưng phải trả giá bằng cái gì?</string>
     <string name="StoneBloodBuff_Name">Máu đá</string>
@@ -1958,6 +1959,7 @@
     <string name="WndSettings_Music">Nhạc</string>
     <string name="WndSettings_Quickslots">Khe truy cập nhanh</string>
     <string name="WndSettings_RecordVideo">Quay video</string>
+    <string name="WndSettings_ScaleUp">Phóng to giao diện</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="WndSettings_SelectLanguage">Chọn ngôn ngữ</string>
     <string name="WndSettings_ThirdQuickslot">Khoản truy cập nhanh thứ ba</string>
@@ -2834,6 +2836,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
