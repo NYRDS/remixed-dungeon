@@ -122,7 +122,13 @@ public abstract class BaseWebServer extends NanoHTTPD {
         debugEndpoints.put("/debug/interact", DebugEndpoints::handleDebugInteract);
         debugEndpoints.put("/debug/test_damage", DebugEndpoints::handleDebugTestDamage);
         debugEndpoints.put("/debug/test_equip", DebugEndpoints::handleDebugTestEquip);
+        // sprite editor support: live sprite list + in-game texture reload
+        debugEndpoints.put("/api/sprites/list", DebugEndpoints::handleApiSpritesList);
+        debugEndpoints.put("/debug/reload_textures", DebugEndpoints::handleDebugReloadTextures);
     }
+
+    // embedded web apps served from mod assets web/<app>/ (pixelcraft, mob-viewer)
+    private static final String[] WEB_APPS = {"pixelcraft", "mob-viewer"};
 
     public static boolean isRunning() {
         return instance != null && instance.started;
@@ -150,6 +156,15 @@ public abstract class BaseWebServer extends NanoHTTPD {
             }
         }
         return true;
+    }
+
+    // caveman: absolute-path containment, no canonicalization - dev rundirs
+    // keep the active mod as a symlink farm into the repo assets, so the
+    // canonical path of a legit mod file resolves OUTSIDE the mods root.
+    // Path traversal itself is already blocked by isSafeResourcePath.
+    protected static boolean isInsideStorageRootAbs(File file) {
+        String root = FileSystem.getExternalStorageFile("").getAbsolutePath();
+        return file.getAbsolutePath().startsWith(root + File.separator);
     }
 
     // caveman: resolved file must stay inside external storage root.
@@ -1085,48 +1100,11 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 return serveFs(file);
             }
 
-            // Handle PixelCraft editor requests
-            if(uri.startsWith("/web/pixelcraft/")) {
-                // Extract the specific file path after /web/pixelcraft/
-                String file = uri.substring("/web/pixelcraft/".length());
-                if (file.isEmpty()) {
-                    file = "index.html"; // Default to index.html if no specific file requested
-                }
-
-                if (!isSafeResourcePath(file)) {
-                    GLog.w("Blocked path traversal attempt on /web/pixelcraft/: " + file);
-                    return forbiddenPath();
-                }
-
-                try {
-                    // Try to get the file from assets/web/pixelcraft/
-                    InputStream fis = ModdingMode.getInputStream("web/pixelcraft/" + file);
-
-                    // Determine the content type based on file extension
-                    String mimeType = "application/octet-stream";
-                    if (file.endsWith(".html")) {
-                        mimeType = "text/html";
-                    } else if (file.endsWith(".css")) {
-                        mimeType = "text/css";
-                    } else if (file.endsWith(".js")) {
-                        mimeType = "application/javascript";
-                    } else if (file.endsWith(".png")) {
-                        mimeType = "image/png";
-                    } else if (file.endsWith(".jpg") || file.endsWith(".jpeg")) {
-                        mimeType = "image/jpeg";
-                    } else if (file.endsWith(".gif")) {
-                        mimeType = "image/gif";
-                    } else if (file.endsWith(".json")) {
-                        mimeType = "application/json";
-                    } else if (file.endsWith(".txt")) {
-                        mimeType = "text/plain";
-                    }
-
-                    Response response = newChunkedResponse(Response.Status.OK, mimeType, fis);
-                    return response;
-                } catch (Exception e) {
-                    GLog.w("Error serving PixelCraft file " + file + ": " + e.getMessage());
-                    return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", serveNotFound());
+            // Handle embedded web app requests (/web/pixelcraft/, /web/mob-viewer/)
+            for (String app : WEB_APPS) {
+                String prefix = "/web/" + app + "/";
+                if (uri.startsWith(prefix)) {
+                    return serveWebAppFile(app, uri.substring(prefix.length()));
                 }
             }
 
@@ -1139,7 +1117,9 @@ public abstract class BaseWebServer extends NanoHTTPD {
                 }
                 try {
                     InputStream fis = ModdingMode.getInputStream(file);
-                    Response response = newChunkedResponse(Response.Status.OK, "application/octet-stream", fis);
+                    // caveman: image mime for image extensions - <img>/<canvas>
+                    // workflows need a real content type, not a download blob
+                    Response response = newChunkedResponse(Response.Status.OK, mimeForFile(file), fis);
                     return response;
                 } catch (Exception e) {
                     GLog.w("Error serving raw file " + file + ": " + e.getMessage());
@@ -1172,6 +1152,10 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             if (postResponse == null && uri.equals("/api/save_texture")) {
                 postResponse = handleTextureSave(session);
+            }
+
+            if (postResponse == null && uri.equals("/api/save_sprite")) {
+                postResponse = handleSpriteSave(session);
             }
 
             if (postResponse != null) {
@@ -1212,6 +1196,148 @@ public abstract class BaseWebServer extends NanoHTTPD {
     protected abstract byte[] base64Decode(String data);
 
     protected abstract String base64Encode(byte[] data);
+
+    /**
+     * Whether the sprite editor may overwrite files of the main Remixed mod.
+     * Dev platforms (desktop, headless) run straight off the repo assets, so
+     * editing them is the point; shipped android builds keep the block.
+     */
+    protected boolean canWriteMainMod() {
+        return false;
+    }
+
+    private static String mimeForFile(String file) {
+        String lower = file.toLowerCase();
+        if (lower.endsWith(".html") || lower.endsWith(".htm")) {
+            return "text/html";
+        }
+        if (lower.endsWith(".css")) {
+            return "text/css";
+        }
+        if (lower.endsWith(".js")) {
+            return "application/javascript";
+        }
+        if (lower.endsWith(".png")) {
+            return "image/png";
+        }
+        if (lower.endsWith(".jpg") || lower.endsWith(".jpeg")) {
+            return "image/jpeg";
+        }
+        if (lower.endsWith(".gif")) {
+            return "image/gif";
+        }
+        if (lower.endsWith(".webp")) {
+            return "image/webp";
+        }
+        if (lower.endsWith(".json")) {
+            return "application/json";
+        }
+        if (lower.endsWith(".txt")) {
+            return "text/plain";
+        }
+        return "application/octet-stream";
+    }
+
+    /**
+     * Serve a file of an embedded web app (assets web/<app>/...).
+     */
+    private Response serveWebAppFile(String app, String file) {
+        if (file.isEmpty()) {
+            file = "index.html";
+        }
+
+        if (!isSafeResourcePath(file)) {
+            GLog.w("Blocked path traversal attempt on /web/" + app + "/: " + file);
+            return forbiddenPath();
+        }
+
+        try {
+            InputStream fis = ModdingMode.getInputStream("web/" + app + "/" + file);
+            Response response = newChunkedResponse(Response.Status.OK, mimeForFile(file), fis);
+            return response;
+        } catch (Exception e) {
+            GLog.w("Error serving /web/" + app + "/ file " + file + ": " + e.getMessage());
+            return newFixedLengthResponse(Response.Status.NOT_FOUND, "text/html", serveNotFound());
+        }
+    }
+
+    /**
+     * Sprite editor save: full PNG sprite sheet (base64) written into the
+     * active mod directory. PNG-only, magic-byte checked, and the main
+     * Remixed mod is only writable on dev platforms.
+     */
+    protected Response handleSpriteSave(IHTTPSession session) {
+        try {
+            String jsonString = readPostBody(session);
+
+            if (jsonString == null || jsonString.isEmpty()) {
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Empty request body\"}");
+            }
+
+            JSONObject jsonData = new JSONObject(jsonString);
+            String filename = jsonData.getString("file");
+            String base64Content = jsonData.getString("image");
+
+            if (ModdingMode.activeMod().equals(ModdingMode.REMIXED) && !canWriteMainMod()) {
+                GLog.debug("Sprite save blocked - main mod write on this platform: " + filename);
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Overwriting main mod sprites is disabled on this build.\"}");
+            }
+
+            if (!isSafeResourcePath(filename)) {
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Directory traversal is not allowed.\"}");
+            }
+
+            if (!filename.toLowerCase().endsWith(".png")) {
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Only .png sprite sheets are accepted.\"}");
+            }
+
+            byte[] imageBytes = base64Decode(base64Content);
+
+            // caveman: real PNG or nothing - the bytes land in game assets
+            if (imageBytes.length < 8 || (imageBytes[0] & 0xFF) != 0x89 || imageBytes[1] != 'P'
+                || imageBytes[2] != 'N' || imageBytes[3] != 'G') {
+                return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                    "{\"error\":\"Not a PNG payload.\"}");
+            }
+
+            String fullPath = ModdingMode.activeMod() + "/" + filename;
+            File destFile = FileSystem.getExternalStorageFile(fullPath);
+
+            // dev rundirs symlink the mod dir into the repo assets - absolute
+            // containment, canonical would reject the farm's own files
+            if (!isInsideStorageRootAbs(destFile)) {
+                GLog.w("Blocked sprite save outside storage root: " + fullPath);
+                return newFixedLengthResponse(Response.Status.FORBIDDEN, "application/json",
+                    "{\"error\":\"Destination outside mod storage.\"}");
+            }
+
+            File destDir = destFile.getParentFile();
+            if (destDir != null && !destDir.exists()) {
+                destDir.mkdirs();
+            }
+
+            try (FileOutputStream fos = new FileOutputStream(destFile)) {
+                fos.write(imageBytes);
+            }
+
+            GLog.debug("Sprite sheet saved: " + fullPath + " (" + imageBytes.length + " bytes)");
+            return newFixedLengthResponse(Response.Status.OK, "application/json",
+                "{\"success\":true, \"message\":\"Saved " + fullPath + "\"}");
+
+        } catch (JSONException e) {
+            return newFixedLengthResponse(Response.Status.BAD_REQUEST, "application/json",
+                "{\"error\":\"Invalid JSON format in request: " + e.getMessage() + "\"}");
+        } catch (Exception e) {
+            GLog.debug("Sprite save failed: " + e.getMessage());
+            e.printStackTrace();
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "application/json",
+                "{\"error\":\"Failed to save sprite file: " + e.getMessage() + "\"}");
+        }
+    }
 
     /**
      * Serve image preview page

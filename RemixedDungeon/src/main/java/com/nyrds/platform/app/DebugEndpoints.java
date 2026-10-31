@@ -31,6 +31,7 @@ import com.nyrds.pixeldungeon.windows.WndPetInventoryOptions;
 import com.nyrds.pixeldungeon.windows.WndPetSelect;
 import com.nyrds.platform.compatibility.RectF;
 import com.nyrds.platform.storage.SaveUtils;
+import com.nyrds.util.ModdingMode;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.Dungeon;
@@ -4210,6 +4211,52 @@ public class DebugEndpoints {
             return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
                 createErrorResponse(e.getMessage()).toString());
         }
+    }
+
+    // sprite editor support: live spritesDesc listing + texture cache reload
+
+    public static NanoHTTPD.Response handleApiSpritesList(NanoHTTPD.IHTTPSession session) {
+        try {
+            List<String> resources = ModdingMode.listResources("spritesDesc",
+                    (dir, name) -> name.endsWith(".json"));
+
+            List<String> sprites = new ArrayList<>();
+            for (String resource : resources) {
+                if (resource.contains("/")) {
+                    continue; // flat listing, same as the fs browser
+                }
+                sprites.add(resource.substring(0, resource.length() - ".json".length()));
+            }
+            java.util.Collections.sort(sprites);
+
+            JSONObject response = new JSONObject();
+            response.put("sprites", new JSONArray(sprites));
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                    response.toString());
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"" + e.getMessage() + "\"}");
+        }
+    }
+
+    public static NanoHTTPD.Response handleDebugReloadTextures(NanoHTTPD.IHTTPSession session) {
+        final String[] error = new String[1];
+        GameLoop.pushUiTaskAndWait(() -> {
+            try {
+                // cleared cache re-binds sheets from (possibly edited) mod files
+                // on the next draw - live sprite iteration without a restart
+                com.watabou.gltextures.TextureCache.clear();
+            } catch (Throwable t) {
+                error[0] = t.toString();
+            }
+        });
+
+        if (error[0] != null) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"" + error[0] + "\"}");
+        }
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                "{\"success\":true}");
     }
 
     // test endpoint: /debug/test_equip?id=<mob>&item=<ItemFactory name>&level=<n> -
