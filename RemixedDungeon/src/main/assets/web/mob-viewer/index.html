@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RPD Mob Viewer</title>
+<style>
+:root {
+    --bg: #1a1a2e;
+    --bg2: #16213e;
+    --panel: #0f3460;
+    --accent: #e94560;
+    --ok: #4ecca3;
+    --text: #eaeaea;
+    --muted: #9aa0b0;
+    --border: #2a3a5c;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 14px/1.4 system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 14px;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+header h1 { font-size: 16px; margin: 0 12px 0 0; color: var(--ok); }
+select, button, input[type="text"] {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 5px 8px;
+    font: inherit;
+}
+button { cursor: pointer; }
+button:hover { border-color: var(--ok); }
+button.active { background: var(--ok); color: #10221c; border-color: var(--ok); }
+button:disabled { opacity: 0.45; cursor: default; }
+#layout { display: flex; flex: 1; min-height: 0; }
+aside {
+    width: 240px;
+    background: var(--bg2);
+    border-right: 1px solid var(--border);
+    padding: 10px;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+aside label, .field label { display: block; margin: 10px 0 3px; color: var(--muted); font-size: 12px; }
+aside input[type="text"] { width: 100%; }
+.mob-list { list-style: none; margin: 8px 0 0; padding: 0; }
+.mob-list li {
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mob-list li:hover { background: var(--panel); }
+.mob-list li.selected { background: var(--accent); color: #fff; }
+main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+#stage { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; min-height: 0; }
+#viewerCanvas {
+    image-rendering: pixelated;
+    background:
+        repeating-conic-gradient(#20203a 0% 25%, #26264a 0% 50%) 0 0 / 32px 32px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    max-width: 92%;
+    max-height: 92%;
+}
+#controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+#controls label { color: var(--muted); font-size: 12px; }
+input[type="range"] { width: 110px; }
+#animInfo {
+    display: none;
+    padding: 6px 14px;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--muted);
+}
+#animInfo b { color: var(--text); }
+#animInfo span { margin-right: 18px; display: inline-block; }
+#loading {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    z-index: 50;
+    font-size: 18px;
+    color: var(--ok);
+}
+
+/* ---- sprite editor overlay ---- */
+#editorOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+#editorPanel {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    max-width: 96vw;
+    max-height: 94vh;
+}
+#editorFrameBox {
+    overflow: auto;
+    background: #141428;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    max-width: 62vw;
+    max-height: 78vh;
+}
+#editorFrame { display: block; image-rendering: pixelated; }
+#editorSide { display: flex; flex-direction: column; gap: 8px; width: 280px; }
+#editorSide h3 { margin: 0; font-size: 14px; color: var(--ok); display: flex; justify-content: space-between; align-items: center; }
+.ed-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.ed-row .lbl { color: var(--muted); font-size: 12px; }
+#editorSheetNav { image-rendering: pixelated; border: 1px solid var(--border); border-radius: 3px; cursor: crosshair; max-width: 100%; }
+#editorPalette { display: flex; flex-wrap: wrap; gap: 3px; }
+.swatch {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0;
+    cursor: pointer;
+}
+.swatch.active { outline: 2px solid var(--accent); }
+#editorPickColor { width: 42px; height: 28px; padding: 0; border: 1px solid var(--border); background: none; cursor: pointer; }
+#heroSection { display: none; }
+</style>
+</head>
+<body>
+<div id="loading">Loading…</div>
+
+<header>
+    <h1>RPD Mob Viewer</h1>
+    <select id="dataSourceSelect" title="Where sprites load from">
+        <option value="local">Local</option>
+        <option value="github">GitHub master</option>
+    </select>
+    <button id="modeMobBtn" class="active">Mob</button>
+    <button id="modeHeroBtn">Hero</button>
+</header>
+
+<div id="layout">
+    <aside>
+        <div id="mobSection">
+            <label for="searchBox">Search</label>
+            <input type="text" id="searchBox" placeholder="mob name…" autocomplete="off">
+            <ul id="mobList" class="mob-list"></ul>
+        </div>
+        <div id="heroSection">
+            <div class="field">
+                <label for="heroStyleSelect">Style</label>
+                <select id="heroStyleSelect">
+                    <option value="modern">Modern</option>
+                    <option value="retro">Retro</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="heroClassSelect">Class</label>
+                <select id="heroClassSelect"></select>
+            </div>
+            <div class="field">
+                <label for="heroSubclassSelect">Subclass</label>
+                <select id="heroSubclassSelect"></select>
+            </div>
+            <div class="field">
+                <label for="heroArmorSelect">Armor</label>
+                <select id="heroArmorSelect"></select>
+            </div>
+            <div class="field">
+                <label for="heroWeaponSelect">Weapon (right)</label>
+                <select id="heroWeaponSelect"></select>
+            </div>
+            <div class="field">
+                <label for="heroLeftWeaponSelect">Weapon (left)</label>
+                <select id="heroLeftWeaponSelect"></select>
+            </div>
+            <button id="applyHeroBtn" style="margin-top:12px; width:100%;">Apply</button>
+        </div>
+    </aside>
+
+    <main>
+        <div id="stage">
+            <canvas id="viewerCanvas" width="480" height="480"></canvas>
+        </div>
+        <div id="controls">
+            <button id="playBtn" title="Play">&#9654;</button>
+            <button id="pauseBtn" title="Pause">&#10074;&#10074;</button>
+            <button id="loopBtn" title="Toggle looping">&#128257; Loop: ON</button>
+            <select id="animationSelect" title="Animation"></select>
+            <label>Scale <input type="range" id="scaleSlider" min="1" max="8" value="4"><span id="scaleValue">4x</span></label>
+            <label>Speed <input type="range" id="speedSlider" min="0.25" max="4" step="0.25" value="1"><span id="speedValue">1x</span></label>
+            <button id="editSpriteBtn" title="Open the sprite editor on this sheet">&#128397; Edit sprite</button>
+            <select id="editLayerSelect" style="display:none;" title="Hero layer to edit"></select>
+        </div>
+        <div id="animInfo">
+            <span><b id="infoName"></b></span>
+            <span>size <b id="infoSize"></b></span>
+            <span>texture <b id="infoTexture"></b></span>
+            <span>anims <b id="infoAnims"></b></span>
+            <span id="layersRow">layers <b id="infoLayers"></b></span>
+        </div>
+    </main>
+</div>
+
+<!-- ---- sprite editor overlay ---- -->
+<div id="editorOverlay">
+    <div id="editorPanel">
+        <div id="editorFrameBox">
+            <canvas id="editorFrame"></canvas>
+        </div>
+        <div id="editorSide">
+            <h3><span>Sprite editor</span><button id="editorCloseBtn" title="Close">&#10005;</button></h3>
+            <div class="ed-row">
+                <button id="toolPencil" class="active" title="Pencil (b)">&#9999;&#65039; Pencil</button>
+                <button id="toolEraser" title="Eraser (e)">&#129529; Erase</button>
+                <button id="toolPicker" title="Color picker (i)">&#127482; Pick</button>
+                <button id="toolFill" title="Flood fill (f)">&#129683; Fill</button>
+            </div>
+            <div class="ed-row">
+                <button id="editorZoomOut" title="Zoom out">&#10134;</button>
+                <span id="editorZoomLabel">16x</span>
+                <button id="editorZoomIn" title="Zoom in">&#10133;</button>
+                <span class="lbl">color</span>
+                <input type="color" id="editorPickColor" value="#e94560">
+                <span class="lbl">alpha</span>
+                <input type="range" id="editorAlpha" min="0" max="255" value="255" style="width:70px;">
+            </div>
+            <div class="ed-row">
+                <button id="editorUndoBtn" title="Undo (Ctrl+Z)">&#8630;</button>
+                <button id="editorRedoBtn" title="Redo (Ctrl+Y)">&#8631;</button>
+                <button id="editorSaveBtn" style="margin-left:auto;">&#128190; Save to game</button>
+            </div>
+            <div class="ed-row"><span class="lbl">palette (frame)</span></div>
+            <div id="editorPalette"></div>
+            <div class="ed-row"><span class="lbl">sheet - click a cell to edit that frame (green = current animation)</span></div>
+            <canvas id="editorSheetNav" width="260" height="180"></canvas>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

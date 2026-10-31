@@ -43,6 +43,13 @@ public class WebServer extends BaseWebServer {
         // Desktop server started without special handling needed
     }
 
+    // desktop runs off the repo assets (rundir/mods/Remixed symlink) -
+    // editing the main mod sprites is the sprite editor's whole point here
+    @Override
+    protected boolean canWriteMainMod() {
+        return true;
+    }
+
     @Override
     protected byte[] base64Decode(String data) {
         return Base64.getDecoder().decode(data);

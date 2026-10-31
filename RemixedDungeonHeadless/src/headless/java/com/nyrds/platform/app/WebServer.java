@@ -28,6 +28,13 @@ public class WebServer extends BaseWebServer {
     protected void onServerStarted() {
     }
 
+    // headless runs off the repo rundir symlink farm - editing the main mod
+    // assets is the sprite editor's whole point here
+    @Override
+    protected boolean canWriteMainMod() {
+        return true;
+    }
+
     @Override
     protected byte[] base64Decode(String data) {
         return Base64.getDecoder().decode(data);
