@@ -996,6 +996,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HeroClass_PlagueDoctorPerks_3">Las pociones de [yellow:Gas Paralizante] y [yellow:Gas Tóxico] están pre-identificadas.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Los médicos de la peste sufren grandes penalizaciones de precisión sin su querida Sierra Ósea en la mano y no pueden usar armas a distancia.</string>
     <string name="HeroClass_Priest">Sacerdote</string>
+    <string name="HeroClass_PriestPerks_2">Los sacerdotes usan maná para lanzar hechizos divinos: Bendición, Agua Bendita, Exorcismo y Últimos Ritos.</string>
     <string name="HeroClass_Rog">granuja</string>
     <string name="HeroClass_RogPerks_0">Los granujas empiezan con un Anillo de las Sombras +1.</string>
     <string name="HeroClass_RogPerks_1">Los granujas identifican un tipo de anillo al equiparlo.</string>
@@ -3083,6 +3084,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

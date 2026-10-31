@@ -1069,6 +1069,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HideInGrassSpell_Info">Du hast deine Versteck-Künste gemeistert.</string>
     <string name="HideInGrassSpell_Name">Im Gras verstecken</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Nicht einmal ich kann mich bei voller Sichtbarkeit verstecken.</string>
+    <string name="HolyWater_Name">Heiliges Wasser</string>
     <string name="Horror_Name_0">Gespenstischer %s</string>
     <string name="Horror_Name_1">Gespenstischer %s</string>
     <string name="Horror_Name_2">Gespenstischer %s</string>
@@ -3072,6 +3073,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

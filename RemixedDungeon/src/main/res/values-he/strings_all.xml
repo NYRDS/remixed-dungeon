@@ -1130,6 +1130,7 @@
     <string name="WndCatalogus_Title">קטלוגים</string>
     <string name="WndCryptoDonate_copyAddress">העתק כתובת</string>
     <string name="WndCryptoDonate_openWallet">פתח ארנק</string>
+    <string name="WndCryptoDonate_ton">TON</string>
     <string name="WndCryptoDonate_warningText">אזהרה: תמיד אמת את הכתובת לפני שליחת כספים. עסקאות מטבעות קריפטוגרפיים אינן הפיכות!</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - חינמי לכולם ויישאר כך תמיד.\n\nעם זאת, אתה יכול לעזור לנו לשפר את המשחק עוד יותר.\n\nבנוסף לתודתנו הכנה תקבל כמה שיפורים קוסמטיים.</string>
     <string name="WndDonate_goldDonateText">תודה על עזרתך</string>
@@ -1674,6 +1675,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

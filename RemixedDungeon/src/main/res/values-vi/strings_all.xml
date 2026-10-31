@@ -153,6 +153,8 @@
     <string name="BardNPC_Name">bard</string>
     <string name="BardNPC_Name_Objective">nhạc sĩ</string>
     <string name="BarkskinBuff_Info">Cơ thể được bao phủ bởi vỏ cây giúp chặn một phần sát thương nhận phải.</string>
+    <string name="BarkskinBuff_Name">Vỏ cây</string>
+    <string name="Barrel_Desc">Trông như một thùng gỗ đơn giản. Nhưng khi bạn tiến gần hơn, bạn có thể ngửi thấy một chút mùi dầu nhẹ. Thùng có vẻ khá nhẹ, bạn có thể đẩy nó được.</string>
     <string name="Barrel_Name">thùng gỗ</string>
     <string name="Barrel_Pumpkin_Name">bí ngô</string>
     <string name="Bat_Desc">Những cư dân nhanh nhẹn và bền bỉ của các vòm hang này có thể đánh bại đối thủ lớn hơn nhiều bằng cách hồi phục sức khỏe sau mỗi đòn tấn công thành công.</string>
@@ -624,6 +626,7 @@
     <string name="GnollArmor_Name">áo giáp thiếu úy gnoll</string>
     <string name="GnollArmor_NotGnoll">Chỉ gnoll mới có thể trang bị Áo Giáp Gnoll!</string>
     <string name="GnollCostume_Info">Một bộ trang phục ấm áp và bồng bềnh cực kỳ. Ai mặc bộ trang phục này sẽ trông như... người đang cố gắng cải trang thành gnoll. Nhưng gnoll sẽ không bị lừa, chúng vẫn sẽ tấn công bạn.</string>
+    <string name="GnollCostume_Name">Trang phục Gnoll</string>
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Một chiếc Rìu Tomahawk truyền thống được tạo ra bởi các bậc thầy Gnoll, nơi mỗi bộ lạc có thiết kế độc đáo riêng. Chiếc Rìu này nhẹ hơn một chút so với các đối thủ của nó.</string>
     <string name="Gnoll_Desc">Gnoll là những nhân loại giống linh cẩu. Chúng sống trong cống và ngục tối, thỉnh thoảng lên bề mặt để cướp phá. Trinh sát Gnoll là thành viên bình thường của bầy, không mạnh mẽ như kẻ cục súc và không thông minh như pháp sư.</string>
@@ -1038,6 +1041,7 @@
     <string name="Monk_Name">tu sĩ lùn</string>
     <string name="Monk_Name_Objective">tu sĩ lùn</string>
     <string name="MoongraceBuff_Info">Không khí xung quanh trở nên bão hòa hơn, cho phép tập trung tốt hơn và hồi phục năng lượng ma thuật.</string>
+    <string name="MoongraceBuff_Name">Manna thiên đường</string>
     <string name="Moongrace_Desc">Những loài cây này mọc ít ỏi và được biết đến như một nguồn phép thuật tự nhiên.</string>
     <string name="Moongrace_Name">Ánh Trăng</string>
     <string name="Multiplicity_Txt">%s của tính đa dạng</string>
@@ -2844,6 +2848,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 

@@ -249,6 +249,7 @@
     <string name="Bleeding_Death">Je bent doodgebloed...</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
     <string name="BlessedBuff_Name">Gezegend</string>
+    <string name="BlessingSpell_Name">Zegen</string>
     <string name="BlindnessBuff_Info">Volledig verblind, alleen de geluiden om je heen kunnen worden gehoord.</string>
     <string name="BlindnessBuff_Name">Verblind</string>
     <string name="BloodTransfusion_Drained">De levensessentie vloeit van je huisdier naar jou.</string>
@@ -939,6 +940,7 @@
     <string name="Journal_Troll">Trol-smeder</string>
     <string name="Journal_Wandmaker">Oude toverstafmaker</string>
     <string name="Journal_WellAwareness">Bron van Bewustzijn</string>
+    <string name="Journal_WellTransmut">Put van Transmutatie</string>
     <string name="Keyring_Info">Dit is een koperen sleutelring waarmee je al je sleutels apart van de rest van je bezittingen kunt bewaren.</string>
     <string name="Keyring_Name">sleutelring</string>
     <string name="KindOfBow_ChooseArrows">PIJLEN KIEZEN</string>
@@ -2086,6 +2088,7 @@
     <string name="WndMovieTheatre_Thank_You">Dank u voor uw deelname!</string>
     <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
     <string name="WndPetSelect_Title">Selecteer huisdier</string>
+    <string name="WndPlayGames_Connecting">Verbinden met Google Play Games, even geduld a.u.b.</string>
     <string name="WndPlayGames_RestoreProgress">Spelvoortgang herstellen</string>
     <string name="WndPlayGames_Show_Badges">Toon insignes</string>
     <string name="WndPlayGames_Show_Error">Bewerking mislukt. Er is iets fout gegaan...</string>
@@ -2597,6 +2600,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
