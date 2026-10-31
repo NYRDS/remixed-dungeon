@@ -366,6 +366,7 @@
     <string name="City_TileDescEmptySP">Một tấm thảm dày phủ kín sàn.</string>
     <string name="City_TileDescEntrance">Một lối dốc dẫn lên tầng trên.</string>
     <string name="City_TileWater">Nước có màu đáng nghi</string>
+    <string name="ClassArmor_LowHealt">Sức khỏe của bạn quá thấp!</string>
     <string name="ClassArmor_LowMana">Không đủ mana!</string>
     <string name="ClassArmor_NotEquipped">Bạn cần mặc bộ giáp này để sử dụng sức mạnh đặc biệt của nó!</string>
     <string name="Claymore_Gender">masculine</string>
@@ -699,6 +700,7 @@
     <string name="HeroClass_MagPerks_4">Pháp sư sử dụng mana để thi triển các phép thuật nguyên tố.</string>
     <string name="HeroClass_MagPerks_5">Cuộn giấy Nhận diện đã được nhận diện ngay từ đầu.</string>
     <string name="HeroClass_Necromancer">pháp sư</string>
+    <string name="HeroClass_NecromancerPerks_0">Necromancer bắt đầu với 15 điểm Sức khỏe.</string>
     <string name="HeroClass_NecromancerPerks_3">Pháp sư gọi hồn bắt đầu với một chiếc chìa khóa xương cấp 7.</string>
     <string name="HeroClass_None">thường dân</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Bác sĩ dịch là bậc thầy giả kim và có thể sử dụng công thức độc đáo.</string>
@@ -2840,6 +2842,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

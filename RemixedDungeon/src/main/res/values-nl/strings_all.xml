@@ -163,6 +163,7 @@
     <string name="Badges_Supporter">Bedankt voor je steun!</string>
     <string name="Badges_ThisIsSparta">Dit is Sparta!!!</string>
     <string name="Badges_VictoryAll">Amulet van Yendor verkregen door alle klassen</string>
+    <string name="Badges_Yasd">Dood door vuur, gif, giftig gas &amp;amp; honger</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa verslagen</string>
     <string name="Bag_ACOpen">OPENEN</string>
     <string name="Bandit_Desc">De diepere verdiepingen van de dungeon hebben altijd een schuilplaats geboden voor allerlei criminelen. Niet iedereen kon gezond van verstand blijven tijdens hun lange verblijf ver van het daglicht. Lange geleden zijn deze dolle dieven en bandieten vergeten wie ze zijn en waarom ze stelen. Deze bandiet lijkt zijn dolk met iets te hebben bestreken!</string>
@@ -1737,6 +1738,7 @@
     <string name="StartScene_UnlockDoctor">Om de Plague Doctor te ontgrendelen - voltooi de opdracht van de oude Plague Doctor</string>
     <string name="StartScene_UnlockElf">Om deze klasse te ontgrendelen, versla de Koning-baas met een andere klasse</string>
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
+    <string name="StartScene_UnlockPriest">Om Priester te ontgrendelen - voltooi de quest van de Bisschop in de Kerk</string>
     <string name="Statue_Desc">Je zou denken dat het gewoon nog zo\'n lelijke standbeeld van deze kerker is, maar de rood oplichtende ogen verraden hem. Hoewel het standbeeld zelf van steen is gemaakt, ziet het wapen, de _%s_, er echt uit.</string>
     <string name="Statue_Gender">feminine</string>
     <string name="Statue_Name">levend standbeeld</string>
@@ -2593,6 +2595,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
