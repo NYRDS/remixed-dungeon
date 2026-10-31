@@ -244,6 +244,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Bischof</string>
     <string name="BishopNPC_Name_Objective">Bischof</string>
+    <string name="BishopQuest_5_1_Epilogue">Das Werk des Herrn ist vollbracht! Von diesem Tag an magst du den Pfad eines Priesters beschreiten. Nimm diesen Segen und diese Almosen, mein Kind — du hast sie dir verdient.</string>
     <string name="Bishop_bye">Ich werde für dich beten, mein Kind.</string>
     <string name="Bishop_great_bless">Großer Segen - %d g</string>
     <string name="Bishop_lesser_bless">Kleiner Segen - %d g</string>
@@ -3070,6 +3071,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

@@ -918,6 +918,7 @@
     <string name="IronKey_FromDepth">ijzeren sleutel van diepte %d</string>
     <string name="IronKey_Info">De inkepingen op deze oude ijzeren sleutel zijn goed versleten; het leren riempje is door de leeftijd versleten. Welke deur zou deze openen?</string>
     <string name="IronKey_Name">ijzeren sleutel</string>
+    <string name="ItemSprite_Info1">laat vallen: %1$.1f %2$.1f</string>
     <string name="Item_ACDrop">LATEN VALLEN</string>
     <string name="Item_ACPickup">Oppakken</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
@@ -2595,6 +2596,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

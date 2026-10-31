@@ -1711,6 +1711,7 @@
     <string name="WandMaker_Dust2">Có tin gì về bụi xác chết, %s? Những đống xương là nơi dễ tìm nhất.</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
     <string name="WandMaker_RotberryInfo">Hạt giống phát ra tiếng gầm vang khắp hầm ngục!</string>
+    <string name="WandMaker_RotberryName">Quả thối</string>
     <string name="WandOfAmok_Info">Ánh sáng tím từ cây gậy này sẽ khiến mục tiêu phát điên, tấn công các sinh vật ngẫu nhiên xung quanh.</string>
     <string name="WandOfAmok_Name">Trượng Amok</string>
     <string name="WandOfAvalanche_Info">Khi một xung điện của que này trúng vào tường (hoặc bất kỳ chướng ngại vật rắn nào khác), nó gây ra một trận băng tuyết đá, gây sát thương và choáng tất cả sinh vật trong khu vực bị ảnh hưởng.</string>
@@ -2842,6 +2843,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
