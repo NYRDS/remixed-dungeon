@@ -1938,6 +1938,20 @@ public abstract class Level implements Bundlable {
 		return oneCellFrom(candidates);
 	}
 
+	// caveman: bounded arena-spawn pick. Plain do/while rejection over
+	// Random.Int(getLength()) accepts nothing once hero FOV covers every
+	// candidate cell (chasm fall lands you mid-arena — levelsTest ice5 hang
+	// 2026-11-02) and spins the update thread forever. getRandomTerrain scans
+	// the whole map instead; the relaxed condition drops the strict tier's
+	// invisibility requirement, INVALID_CELL means even that matched nothing.
+	public int randomCell(cellCondition strict, cellCondition relaxed) {
+		int cell = getRandomTerrain(strict);
+		if (cell == INVALID_CELL) {
+			cell = getRandomTerrain(relaxed);
+		}
+		return cell;
+	}
+
 
 	public int getNearestTerrain(int cell, cellCondition condition) {
 		if(!cellValid(cell)) {

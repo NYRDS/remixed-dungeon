@@ -4,6 +4,7 @@ package com.watabou.pixeldungeon.levels;
 import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.Sign;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
@@ -147,19 +148,22 @@ public class CavesBossLevel extends BossLevel {
 	protected void pressHero(int cell, Hero hero) {
 		
 		super.pressHero( cell, hero );
-		
+
 		if (!enteredArena && outsideEntranceRoom( cell ) && hero == Dungeon.hero) {
-			
+
 			enteredArena = true;
 
-			int pos;
+			// caveman: bounded pick — the old do/while could accept nothing
+			// (hero FOV over the whole arena, e.g. after a chasm fall) and
+			// spin the update thread forever (levelsTest ice5 hang 2026-11-02)
+			int pos = randomCell(
+					(lvl, c) -> lvl.passable[c] && outsideEntranceRoom(c) && !Dungeon.isCellVisible(c),
+					(lvl, c) -> lvl.passable[c] && outsideEntranceRoom(c));
 
-			do {
-				pos = Random.Int(getLength());
-			} while (
-					!passable[pos] ||
-					!outsideEntranceRoom(pos ) ||
-					Dungeon.isCellVisible(pos));
+			if (pos == INVALID_CELL) {
+				EventCollector.logException("CavesBossLevel: no passable arena cell for the boss");
+				return;
+			}
 
 			spawnBoss(pos);
 
