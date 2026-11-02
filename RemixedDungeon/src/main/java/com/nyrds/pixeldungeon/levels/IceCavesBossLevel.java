@@ -5,6 +5,7 @@ import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -114,13 +115,18 @@ public class IceCavesBossLevel extends BossLevel {
 
 			for (int i = 0; i < 2; i++){
 				mob.setState(MobAi.getStateByClass(Hunting.class));
-				int mobPos;
-				do {
-					mobPos = Random.Int( getLength() );
-				} while (
-						!passable[mobPos] ||
-								!outsideEntranceRoom(mobPos) ||
-								Dungeon.isCellVisible(mobPos));
+
+				// caveman: bounded pick — the old do/while could accept nothing
+				// (chasm fall lands the hero mid-arena, whole hall in FOV) and
+				// spin the update thread forever (levelsTest ice5 hang 2026-11-02)
+				int mobPos = randomCell(
+						(lvl, c) -> lvl.passable[c] && outsideEntranceRoom(c) && !Dungeon.isCellVisible(c),
+						(lvl, c) -> lvl.passable[c] && outsideEntranceRoom(c));
+
+				if (mobPos == INVALID_CELL) {
+					EventCollector.logException("IceCavesBossLevel: no passable arena cell for " + mob.getEntityKind());
+					continue;
+				}
 
 				mob.setPos(mobPos);
 				spawnMob(mob);

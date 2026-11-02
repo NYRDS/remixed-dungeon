@@ -10,6 +10,7 @@ import com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.ItemsList;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -429,20 +430,26 @@ public class CityBossLevel extends BossLevel {
 				return;
 			}
 
-			int pos;
-
 			// caveman: boss must spawn in the throne hall itself (cols within hall
 			// bounds) — NOT in the sealed loot rooms, where he'd be stuck behind
 			// a door and the fight would look like it never started.
+			// Bounded pick (randomCell) — the old do/while could accept nothing
+			// once hero FOV covered the hall and spin forever (levelsTest ice5
+			// hang 2026-11-02); relaxed tier drops only the invisibility rule.
 			int hallL = _Left() + 1, hallR = _Left() + HALL_WIDTH - 2; // interior cols
-			do {
-				pos = Random.Int(getLength());
-			} while (
-					!passable[pos] ||
-							!outsideEntranceRoom(pos) ||
-							Dungeon.isCellVisible(pos) ||
-							cellX(pos) < hallL || cellX(pos) > hallR ||
-							getTopLevelObject(pos) != null); // no spawning on pedestals/statues
+			int pos = randomCell(
+					(lvl, c) -> lvl.passable[c] && outsideEntranceRoom(c)
+							&& !Dungeon.isCellVisible(c)
+							&& cellX(c) >= hallL && cellX(c) <= hallR
+							&& getTopLevelObject(c) == null,
+					(lvl, c) -> lvl.passable[c] && outsideEntranceRoom(c)
+							&& cellX(c) >= hallL && cellX(c) <= hallR
+							&& getTopLevelObject(c) == null); // no spawning on pedestals/statues
+
+			if (pos == INVALID_CELL) {
+				EventCollector.logException("CityBossLevel: no throne hall spawn cell for the King");
+				return;
+			}
 
 			spawnBoss(pos);
 			callServantsToKing();

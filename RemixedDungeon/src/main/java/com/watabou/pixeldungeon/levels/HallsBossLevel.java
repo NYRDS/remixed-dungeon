@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
@@ -115,11 +116,21 @@ public class HallsBossLevel extends BossLevel {
 			// YogsEye is data now (batch 17d-2) - the eye's own lua spawn
 			// hook places its organs; kind must never resolve to java.
 			var boss = MobFactory.mobByName(MobFactory.YOGS_EYE);
-			do {
-				boss.setPos(Random.Int( getLength() ));
-			} while (
-				!passable[boss.getPos()] || !passable[boss.getPos() - getWidth()] ||
-				Dungeon.isCellVisible(boss.getPos()));
+
+			// caveman: bounded pick — the old do/while could accept nothing
+			// (hero FOV over the whole hall) and spin the update thread forever
+			// (levelsTest ice5 hang 2026-11-02); also indexes the row above
+			// only when it exists.
+			int pos = randomCell(
+					(lvl, c) -> c >= getWidth() && lvl.passable[c] && lvl.passable[c - getWidth()] && !Dungeon.isCellVisible(c),
+					(lvl, c) -> c >= getWidth() && lvl.passable[c] && lvl.passable[c - getWidth()]);
+
+			if (pos == INVALID_CELL) {
+				EventCollector.logException("HallsBossLevel: no spawn cell for YogsEye");
+				return;
+			}
+
+			boss.setPos(pos);
 			spawnMob(boss);
 		}
 	}
