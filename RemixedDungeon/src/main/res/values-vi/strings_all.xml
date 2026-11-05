@@ -72,6 +72,7 @@
     <string name="AttackDelay_Increased">Không thể vung %s theo cách này. Những nhát chém chậm chạp, hơi thở nặng nề…</string>
     <string name="Attack_Range">Tầm tấn công</string>
     <string name="AzuterronNPC_Gender">masculine</string>
+    <string name="AzuterronNPC_Name">Người lạ</string>
     <string name="AzuterronNPC_Name_Objective">người lạ</string>
     <string name="AzuterronNPC_Quest_End">Tuyệt vời. Đây, uống bình thuốc này đi, chắc chắn nó sẽ có ích cho bạn.</string>
     <string name="AzuterronNPC_Quest_Reminder">Giúp tôi và tôi sẽ giúp bạn.</string>
@@ -927,6 +928,7 @@
     <string name="Level_TilePedestal">Bệ đá</string>
     <string name="Level_TilePileOfStones">Đống đá</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
+    <string name="Level_TileSign">Biển hiệu</string>
     <string name="Level_TileSummoningTrap">Bẫy triệu hồi</string>
     <string name="Level_TileToxicTrap">Bẫy khí độc</string>
     <string name="Level_TileWater">Nước</string>
@@ -1894,6 +1896,7 @@
     <string name="WndJournal_Logbook">Nhật ký</string>
     <string name="WndJournal_Title">Nhật Ký</string>
     <string name="WndLibrary_Catalogue_Instruction">Vui lòng chọn một trong các danh mục dưới đây.</string>
+    <string name="WndLibrary_Catalogue_Title">Thư viện</string>
     <string name="WndLibrary_Codex_Btn">Truyện kể</string>
     <string name="WndLibrary_Items_Btn">Vật phẩm</string>
     <string name="WndLibrary_Levels_Btn">Hầm ngục</string>
@@ -2853,6 +2856,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

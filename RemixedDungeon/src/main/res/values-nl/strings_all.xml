@@ -249,6 +249,7 @@
     <string name="Bleeding_Death">Je bent doodgebloed...</string>
     <string name="BlessedBuff_Info">Moge precisie en ontwijken komen voor hen die door de zegen zijn geraakt!</string>
     <string name="BlessedBuff_Name">Gezegend</string>
+    <string name="BlessingSpell_Info">Een stil gebed dat de priester in genade hult: aanval en verdediging worden even verbeterd.</string>
     <string name="BlessingSpell_Name">Zegen</string>
     <string name="BlindnessBuff_Info">Volledig verblind, alleen de geluiden om je heen kunnen worden gehoord.</string>
     <string name="BlindnessBuff_Name">Verblind</string>
@@ -449,6 +450,7 @@
     <string name="Codex_Story_16">Gelukkig wapen - negeert bijna volledig de pantser van de vijand, en doet veel meer schade.</string>
     <string name="Codex_Story_17">Verstikkend wapen - Bij succesvolle treffer kan het doelwit verlamd raken.</string>
     <string name="Codex_Story_18">Doorborend wapen - Bij een succesvolle treffer kan het schade toebrengen aan alle vijanden in een rechte lijn achter het doelwit.</string>
+    <string name="Codex_Story_19">Vergiftigd wapen - Bij een succesvolle treffer kan het doelwit vergiftigd raken.</string>
     <string name="Codex_Story_2">Betoverings Glief - De vijand wordt enkele beurten betoverd, terwijl de Held ook enkele beurten betoverd wordt, maar nooit langer dan de vijand.</string>
     <string name="Codex_Story_20">Vrieswapen - Een succesvolle treffer kan het doel vertragen en voorkomen dat het in brand vliegt.</string>
     <string name="Codex_Story_22">Dit boek is geschreven in de taal der demonen</string>
@@ -1168,6 +1170,7 @@
     <string name="NatureArmorSpell_Info">Elven kunnen ook hard zijn, vooral als ze beschermd worden door Moeder Natuur zelf.</string>
     <string name="NecromancerArmor_Info">Deze pantser stelt de Nekromant in staat om maximaal twee Doodskinderen te bezweren tegen een kostprijs van 5 zielen per stuk. Deze ondoorloepige dienaars zullen hun meester volgen en zijn vijanden aanvallen. De Doodskinderen worden sterker met elk heldenniveau.</string>
     <string name="NecromancerArmor_Info2">Het dragen van deze pantser stelt de necromancer in staat de \&quot;Necrotism\&quot; vaardigheid te gebruiken, die een magische pest verspreidt die elk wezen in de buurt kan besmetten, dood of levend.</string>
+    <string name="NecromancerArmor_NotNecromancer">Alleen necromanten kunnen dit harnas gebruiken!</string>
     <string name="NecromancerNPC_Desc">Deze man van middelbare leeftijd lijkt zowel licht geïrriteerd als enthousiast te zijn. Hij draagt een samengesteld pantser van aan elkaar gehouden botfragmenten.</string>
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
@@ -1242,6 +1245,7 @@
     <string name="Pickaxe_Name">houweel</string>
     <string name="Pickaxe_NothingToMine">Hier is niets om te delven!</string>
     <string name="Piercing_Name_0">Doorborend %s</string>
+    <string name="Piercing_Name_1">Doorborende %s</string>
     <string name="Piercing_Name_2">Doorborende %s</string>
     <string name="Piranha_Desc">Deze vleesetende vissen zijn geen natuurlijke bewoners van ondergrondse poelen. Ze werden speciaal gekweekt om overstroomde schatkamers te beschermen.</string>
     <string name="Piranha_Gender">feminine</string>
@@ -2605,6 +2609,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

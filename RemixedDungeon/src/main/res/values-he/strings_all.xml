@@ -378,6 +378,7 @@
     <string name="Facilitations_Names_3">כוח ענק</string>
     <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name_Objective">עכברוש מצחין</string>
+    <string name="Fez_Info">זהו כיסוי ראש בצורת חרוט קטום העשוי מבד אדום, עם גדיל המחובר לראשו. ולא, זה לא הופך את העולם לתלת-ממדי.</string>
     <string name="FireArrow_Gender">masculine</string>
     <string name="FireElemental_Desc">אלמנטלי אש נודדים הם תוצר לוואי של זימון ישויות גדולות. הם יותר מדי כאוטיים באופיים כדי להיות נשלטים אפילו על ידי הדמונולוג החזק ביותר.</string>
     <string name="FireElemental_Gender">masculine</string>
@@ -1678,6 +1679,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
