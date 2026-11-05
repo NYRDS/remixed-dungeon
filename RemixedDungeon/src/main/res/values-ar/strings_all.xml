@@ -434,7 +434,10 @@
     <string name="Gold_Name">الذهب</string>
     <string name="GoldenKey_Info">الشقوق الموجودة على هذا المفتاح الذهبي دقيقة ومعقدة. ربما يستطيع فتح قفل صندوق ما؟</string>
     <string name="GoldenKey_Name">المفتاح الذهبي</string>
+    <string name="GoldenStatue_Desc">من الصعب تصديق ذلك، لكن هذا التمثال المهيب ليس مجرد زينة، بل هو كائن خبيث ينتظر مغامراً غافلاً. للوهلة الأولى، كنت ستحلف أن _%s_ كان مجرد جزء من ذراعه.</string>
     <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenStatue_Name">تمثال ذهبي</string>
+    <string name="GoldenStatue_Name_Objective">تمثال ذهبي</string>
     <string name="GoldenSword_Gender">masculine</string>
     <string name="Golem_Desc">حاول القزم دمج معرفتهم بالآليات مع قوتهم المكتشفة حديثاً في ربط العناصر. استخدموا أرواح الأرض كـ \&quot;روح\&quot; لأجساد الغوليم الميكانيكية، والتي كان يُعتقد أنها الأكثر قابلية للسيطرة. على الرغم من ذلك، فإن أصغر خطأ في الطقوس قد يتسبب في اندلاع.</string>
     <string name="Golem_Gender">masculine</string>
@@ -1357,6 +1360,7 @@
     <string name="town_deco_vat_name">حوض</string>
     <string name="town_deco_wall_brazier_name">مجمرة</string>
     <string name="town_deco_wall_desc">جدار بسيط مصنوع من جذوع الخشب.</string>
+    <string name="town_deco_wallpaper_desc">حل تزييني ممتاز لمثل هذا المكان.</string>
     <string name="town_deco_wallpaper_name">ورق الجدران</string>
     <string name="town_deco_wardrobe_desc">خزانة خشبية كبيرة.</string>
     <string name="town_deco_window_name">نافذة</string>
@@ -1370,6 +1374,10 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
 
 
 

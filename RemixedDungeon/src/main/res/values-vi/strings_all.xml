@@ -487,6 +487,7 @@
     <string name="Dreamweed_Desc">Khi chạm vào Dreamweed, nó tiết ra một đám mây khí phát sáng gây nhầm lẫn.</string>
     <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
     <string name="DriedRoseBuff_Name">Quyến rũ</string>
+    <string name="DriedRoseCursedBuff_Info">Bông hồng trông đẹp nhưng không quá quyến rũ.</string>
     <string name="DriedRoseCursedBuff_Name">Say đắm</string>
     <string name="DriedRose_Info">Bông hồng này đã khô héo từ lâu, nhưng cách nào đó nó vẫn giữ nguyên tất cả cánh hoa.</string>
     <string name="DriedRose_Info2"> Và nó vẫn chưa mất đi sự quyến rũ của mình. Nó trông đẹp đến mức bạn muốn giữ nó mãi mãi.</string>
@@ -1716,6 +1717,7 @@
     <string name="WandMaker_Desc">Người đàn ông già nua nhưng vẫn khỏe mạnh này mang vẻ bối rối nhẹ. Anh ta được bảo vệ bởi một khiên phép thuật.</string>
     <string name="WandMaker_Dust1">Ôi, thật bất ngờ dễ chịu khi gặp được một người đàng hoàng ở nơi này! Tôi đến đây để tìm một nguyên liệu hiếm - _bụi xác chết_. Nó có thể thu thập từ những bộ xương, và trong dungeon có rất nhiều. Là một pháp sư, tôi hoàn toàn có thể tự vệ trước quái vật nơi đây, nhưng tôi lạc mất chỉ trong chốc lát — thật xấu hổ. Có lẽ bạn có thể giúp tôi? Tôi sẽ vui lòng trả công cho bạn bằng một trong những cây đũa phép tốt nhất của mình.</string>
     <string name="WandMaker_Dust2">Có tin gì về bụi xác chết, %s? Những đống xương là nơi dễ tìm nhất.</string>
+    <string name="WandMaker_Name">người làm gậy phép già</string>
     <string name="WandMaker_RotberryDesc">Quả mọng trên bụi này có vị ngọt ngào, ngọt ngào như cái chết.</string>
     <string name="WandMaker_RotberryInfo">Hạt giống phát ra tiếng gầm vang khắp hầm ngục!</string>
     <string name="WandMaker_RotberryName">Quả thối</string>
@@ -2076,6 +2078,7 @@
     <string name="town_deco_brown_carpet_desc">Chiếc thảm nâu này đã bị đạp nát bởi nhiều phiêu lưu gia, người lang thang và người đi đường.</string>
     <string name="town_deco_brown_carpet_name">Thảm</string>
     <string name="town_deco_cabinet_desc">Một tủ đồ rộng rãi với nhiều cánh cửa và ngăn kệ.</string>
+    <string name="town_deco_cabinet_name">Tủ</string>
     <string name="town_deco_canvas_desc">Một mảnh vải dày treo trên tường.</string>
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_carpet_desc">Đệm đỏ xa xỉ dành cho khách đặc biệt.</string>
@@ -2850,6 +2853,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

@@ -852,6 +852,7 @@
     <string name="RottingFist_Name">אגרוף מרקיב</string>
     <string name="RottingFist_Name_Objective">אגרוף נרקב</string>
     <string name="RubyBow_Gender">masculine</string>
+    <string name="RubyBow_Name">קשת אודם</string>
     <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">כלי הנשק הקטלני הזה הוא באמת יצירת מופת של ההנדסה הגמדית.</string>
     <string name="Rudolph_Info">מה יכול להיות יותר חגיגי מאף אדום זוהר? יחד עם זוג קרניים, כמובן.</string>
@@ -1677,6 +1678,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

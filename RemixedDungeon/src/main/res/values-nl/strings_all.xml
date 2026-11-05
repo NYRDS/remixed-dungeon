@@ -405,6 +405,7 @@
     <string name="ChargrilledMeat_Name">gegrild vlees</string>
     <string name="CharmBuff_Info">Geest en lichaam waren betoverd!</string>
     <string name="CharmSpell_Cast">%s is betoverd.</string>
+    <string name="CharmSpell_Info">Iedereen verdient een beetje liefde, toch?</string>
     <string name="CharmSpell_Name">Charme</string>
     <string name="Chasm_Chasm">Afgrond</string>
     <string name="Chasm_Info">Je viel naar je dood...</string>
@@ -1548,6 +1549,7 @@
     <string name="ScrollOfTeleportation_Teleport2">In een oogwenk werd %s geteleporteerd naar een andere locatie in het niveau.</string>
     <string name="ScrollOfTerror_Info1">De perkamentrol flitst met een fel rood licht</string>
     <string name="ScrollOfTerror_Info3">De rol zendt een felle flits van rood licht uit en de monsters vluchten!</string>
+    <string name="ScrollOfTerror_Name">Scroll van Schrik</string>
     <string name="ScrollOfUpgrade_InvTitle">Kies een voorwerp om te upgraden</string>
     <string name="ScrollOfUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="ScrollOfWeaponUpgrade_Info">Deze rol zal een wapen voor nabijgevecht upgraden, de kwaliteit verbeterend. In tegenstelling tot een gewone Upgrade Scroll, zal deze gespecialiseerde versie nooit een begoocheling op een wapen vernietigen. Integendeel, het kan een onbetoverde wapen een willekeurige begoocheling geven.</string>
@@ -2141,6 +2143,7 @@
     <string name="WndSadGhost_Armor">Pantser van de geest</string>
     <string name="WndSadGhost_Rat">Ja! Het lelijke wezen is gedood en ik kan eindelijk rusten... Neem alsjeblieft een van deze voorwerpen, misschien zijn ze nuttig voor je op je reis...</string>
     <string name="WndSadGhost_Wepon">Geest zijn wapen</string>
+    <string name="WndSaveSlotSelect_Delete_No">Nee</string>
     <string name="WndSaveSlotSelect_Delete_Title">Weet je zeker dat je deze opslagstatus wilt verwijderen?</string>
     <string name="WndSaveSlotSelect_Delete_Yes">Ja, verwijder het!</string>
     <string name="WndSaveSlotSelect_dontLike">Hou je niet van advertenties? Doe een donatie, en ze verdwijnen. Voor altijd.</string>
@@ -2602,6 +2605,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
