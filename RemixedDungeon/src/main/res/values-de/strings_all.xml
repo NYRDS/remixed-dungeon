@@ -775,6 +775,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Exhumation_Name">Exhumierung</string>
     <string name="Exhumation_NoGrave">Hier ist kein Grab um eine Exhumierung durchzuführen.</string>
     <string name="Exhumation_Ok">Ich werde dir gehorchen.</string>
+    <string name="Exorcism_Info">Ein verbannendes Machtwort. Es fügt einem einzelnen Gegner schweren heiligen Schaden zu — verdoppelt gegen Untote, die dadurch auch verlangsamt werden.</string>
     <string name="ExplodingSkull_Desc">Dieser schwebende, brennende Schädel scheint extrem zerbrechlich zu sein, es sieht so aus, als ob er jede Sekunde bersten könnte.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">Explodierender Schädel</string>
@@ -3075,6 +3076,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

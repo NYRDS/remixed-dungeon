@@ -1067,6 +1067,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HideInGrassSpell_Info">Has perfeccionado tu dominio del escondite.</string>
     <string name="HideInGrassSpell_Name">Esconderse-en-la-hierba</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Ni siquiera yo puedo esconderme a la vista.</string>
+    <string name="HolyWater_Info">Una salpicadura de agua consagrada. Quema y ralentiza a los no-muertos en la casilla objetivo y sus alrededores.</string>
     <string name="Horror_Name_0">%s aterradora</string>
     <string name="Horror_Name_1">%s aterradora</string>
     <string name="Horror_Name_2">%s aterradora</string>
@@ -3085,6 +3086,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

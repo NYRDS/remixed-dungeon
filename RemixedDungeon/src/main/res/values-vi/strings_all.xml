@@ -198,6 +198,7 @@
     <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Một chiếc hộp sọ nhỏ bằng đá obsidian. Nó từng là nguồn sức mạnh của Thành Phố Người Chết, nhưng sau thất bại của Lich, dường như nó đã mất đi toàn bộ sức mạnh. Tuy nhiên, khi bạn cầm nó trong tay, một suy nghĩ kỳ lạ thoáng qua đầu bạn: \&quot;Nó đang đói\&quot;.</string>
     <string name="BlackSkull_Name">đầu lâu đen</string>
+    <string name="BlackSkull_Name_Awakened">sọ đen thức tỉnh</string>
     <string name="BlackSkull_Ressurrect">Đỉnh Đen Đã Hồi Sinh Quái Vật Chết Để Phục Vụ Bạn!</string>
     <string name="Blacksmith_Blood1">Này, con người! Muốn giúp đỡ à? Cầm lấy cái cuốc này và _giết một con dơi_ bằng nó, ta cần máu nó trên đầu. Ý ngươi là sao, ta sẽ trả thế nào? Đồ tham lam...\nĐược rồi, được rồi, ta không có tiền, nhưng ta có thể rèn cho ngươi. Hãy coi mình may mắn, ta là thợ rèn duy nhất quanh đây.</string>
     <string name="Blacksmith_GetLost">Tôi đang bận. Cút đi!</string>
@@ -1345,6 +1346,7 @@
     <string name="RootsBuff_Name">Bám rễ</string>
     <string name="RottenFish_Info">Cá thối, bốc mùi khủng khiếp</string>
     <string name="RottenFish_Name">cá thối</string>
+    <string name="RottenFish_Taste">Khủng khiếp!</string>
     <string name="RottenFood_Message">Ghét quá!</string>
     <string name="RottenMeat_Info">Một miếng thịt thối</string>
     <string name="RottenMeat_Name">thịt thối</string>
@@ -1908,6 +1910,7 @@
     <string name="WndModInstall_Version">phiên bản</string>
     <string name="WndModSelect_AreYouSure">Đang xóa mod: %s, bạn có chắc không?</string>
     <string name="WndModSelect_ReallyDelete">Thực sự xóa?</string>
+    <string name="WndModsDisclaimer_install">Cài đặt mod cục bộ</string>
     <string name="WndModsDisclaimer_manage">Quản lý mod</string>
     <string name="WndModsDisclaimer_title">Bản sửa đổi</string>
     <string name="WndMovieTheatre_Bye">Hãy quay lại bất cứ lúc nào, chúng tôi luôn hoan nghênh bạn!</string>
@@ -2120,6 +2123,7 @@
     <string name="town_deco_fireplace_desc">Rất thích hợp để sưởi ấm ở một nơi lạnh như thế này.</string>
     <string name="town_deco_fireplace_name">Lò sưởi</string>
     <string name="town_deco_firewood_desc">Vật dụng thiết yếu trong những đợt rét khắc nghiệt như thế này.</string>
+    <string name="town_deco_firewood_name">Gỗ cháy</string>
     <string name="town_deco_floor_desc">Sàn này làm từ ván gỗ đơn giản. Bạn đang tìm kiếm điều gì?</string>
     <string name="town_deco_floor_name">Sàn</string>
     <string name="town_deco_flowerinthepot_desc">Hoa trang trí với hương vị ngọt ngào</string>
@@ -2856,6 +2860,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
