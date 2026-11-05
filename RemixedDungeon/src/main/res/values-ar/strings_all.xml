@@ -135,6 +135,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name_Objective">الأسقف</string>
     <string name="Bishop_text">أدعو لك ليلًا ونهارًا يا بنتي.</string>
+    <string name="BlackCat_AiStatus">هذه القطة تفعل أشياء قطط عادية</string>
     <string name="BlackCat_Desc">هذا قطة سوداء</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Phrases_1">مياؤو...</string>
@@ -958,6 +959,7 @@
     <string name="Skeleton_Gender">masculine</string>
     <string name="Skeleton_Killed">قُتلت بانفجار العظام...</string>
     <string name="Skeleton_Name">هيكل عظمي</string>
+    <string name="SleepBuff_Name">نائم</string>
     <string name="SlowBuff_Info">الشعور بالخمول يجعل المرء أبطأ من المعتاد.</string>
     <string name="Slow_Name_1">مُثَلّج %s</string>
     <string name="SmashSpell_NeedWeapon">أحتاج إلى سلاح لهذه الحركة.</string>
@@ -1368,6 +1370,8 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
 
 
 

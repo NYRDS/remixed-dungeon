@@ -556,6 +556,7 @@
     <string name="DriedRoseBuff_Name">Charmant</string>
     <string name="DriedRoseCursedBuff_Info">De roos ziet er mooi uit, maar niet erg charmant.</string>
     <string name="DriedRoseCursedBuff_Name">Verliefd</string>
+    <string name="DriedRose_Info2">En het heeft zijn sfeer niet verloren. Het ziet er zo mooi uit dat je het voor altijd wilt bewaren.</string>
     <string name="DriedRose_Name">gedroogde roos</string>
     <string name="Drink_ACDrink">DRINKEN</string>
     <string name="Drink_Message">Die drank was verfrissend!</string>
@@ -920,6 +921,7 @@
     <string name="IronKey_Info">De inkepingen op deze oude ijzeren sleutel zijn goed versleten; het leren riempje is door de leeftijd versleten. Welke deur zou deze openen?</string>
     <string name="IronKey_Name">ijzeren sleutel</string>
     <string name="ItemSprite_Info1">laat vallen: %1$.1f %2$.1f</string>
+    <string name="Item_ACAlchemy">ALCHEMIE</string>
     <string name="Item_ACDrop">LATEN VALLEN</string>
     <string name="Item_ACPickup">Oppakken</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
@@ -2600,6 +2602,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

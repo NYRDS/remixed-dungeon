@@ -607,6 +607,7 @@
     <string name="FuryBuff_Info">Đôi mắt đỏ máu vì cơn giận dữ bên trong.</string>
     <string name="FuryBuff_Name">Cuồng Nộ</string>
     <string name="GameScene_Chasm">Bước chân của bạn vang vọng khắp hầm ngục.</string>
+    <string name="GameScene_Grass">Mùi rau cỏ dày đặc trong không khí.</string>
     <string name="GameScene_NightMode">Hãy cẩn thận, hầm ngục còn nguy hiểm hơn vào ban đêm!</string>
     <string name="GameScene_Secrets">Bầu không khí gợi ý rằng tầng này ẩn chứa nhiều bí mật.</string>
     <string name="GameScene_Water">Bạn nghe thấy tiếng nước vỗ quanh bạn.</string>
@@ -901,6 +902,7 @@
     <string name="Level_TileChasm">Vực thẳm</string>
     <string name="Level_TileClosedDoor">Cửa đóng</string>
     <string name="Level_TileDefault">\?\?\?</string>
+    <string name="Level_TileDescAlchemy">Thả vài hạt giống vào đây để nấu thuốc.</string>
     <string name="Level_TileDescChasm">Ngươi không thấy đáy.</string>
     <string name="Level_TileDescEmbers">Than hồng phủ đầy sàn.</string>
     <string name="Level_TileDescEmptyWell">Cái giếng đã cạn khô.</string>
@@ -2848,6 +2850,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
