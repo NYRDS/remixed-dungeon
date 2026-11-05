@@ -1250,6 +1250,7 @@
     <string name="Pumpkin_Info">Ngày xưa, Người Dług Bửng là một dân tộc hãnh diện và thịnh vượng. Nhưng mọi thứ thay đổi sau khi loài người xuất hiện, chỉ còn lại những đống tàn tích. Và những chiếc đầu bị chặt và khắc của các bộ tộc Dług Bửng đã khuất vẫn còn là lời nhắc nhở về những sự kiện khủng khiếp ấy.</string>
     <string name="Pumpkin_Name">Bí ngô</string>
     <string name="Quarterstaff_Gender">masculine</string>
+    <string name="QuickSlot_SelectedItem">Chọn một vật phẩm cho khe truy cập nhanh</string>
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Ống đựng tên bằng da phù hợp để chứa bất kỳ số lượng mũi tên nào</string>
     <string name="Quiver_Name">ống tên</string>
@@ -1554,6 +1555,7 @@
     <string name="SpiderElite_Name">vệ binh nhện tinh nhuệ</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
     <string name="SpiderExploding_Gender">masculine</string>
+    <string name="SpiderGuard_Desc">Cũng như lính, nhện canh gác thề bảo vệ vương quốc của chúng. Nọc độc của vệ binh được dùng để làm tê liệt mục tiêu, khiến chúng trở thành con mồi dễ dàng.</string>
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">nhện canh gác</string>
     <string name="SpiderGuard_Name_Objective">vệ binh nhện</string>
@@ -2860,6 +2862,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

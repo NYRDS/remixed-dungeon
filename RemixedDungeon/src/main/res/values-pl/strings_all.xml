@@ -770,6 +770,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Exhumation_Name">Wygrzebanie zwłok.</string>
     <string name="Exhumation_NoGrave">Nie ma tu żadnego grobu z którego można by wygrzebać zwłoki.</string>
     <string name="Exhumation_Ok">Będę ci posłuszny.</string>
+    <string name="Exorcism_Info">Słowo mocy wypędzające. Zadaje ciężkie obrażenia święte pojedynczemu wrogowi — podwojone przeciw nieumarłym, którzy są również spowolnieni.</string>
     <string name="ExplodingSkull_Desc">Ta unosząca się w powietrzu płonąca czaszka sprawia wrażenie niezwykle kruchej, sprawiając wrażenie mogącej eksplodować odłamkami w każdej chwili.</string>
     <string name="ExplodingSkull_Gender">feminine</string>
     <string name="ExplodingSkull_Name">wybuchająca czaszka</string>
@@ -3108,6 +3109,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
