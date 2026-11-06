@@ -119,7 +119,7 @@ class DokuWikiLinter:
                 page_name = page_part[namespace_pos + 1:]
 
                 # Standard namespaces in Remixed Dungeon wiki
-                standard_namespaces = ['rpd', 'ru', 'cn', 'es', 'pt', 'code', 'playground', 'doku', 'wiki', 'wp', 'en', 'zh', 'fr', 'de', 'it', 'ja', 'ko', 'pl', 'uk', 'hu', 'tr', 'in', 'ms', 'el']
+                standard_namespaces = ['rpd', 'ru', 'cn', 'es', 'pt', 'pt-rBR', 'code', 'playground', 'doku', 'wiki', 'wp', 'en', 'zh', 'fr', 'de', 'it', 'ja', 'ko', 'pl', 'uk', 'hu', 'tr', 'in', 'ms', 'el', 'ar', 'nl', 'vi', 'he', 'id']
                 is_standard = (namespace in standard_namespaces or
                               namespace.startswith('mr') or
                               (namespace == 'en' and page_name.startswith('rpd:')))
