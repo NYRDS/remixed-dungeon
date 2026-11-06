@@ -7,6 +7,7 @@
     <string name="Abilities_Default">Spécialisation </string>
     <string name="Abilities_Elemental">Sorts d\'élémentaires</string>
     <string name="Abilities_Necromancy">Nécromancie </string>
+    <string name="Abilities_Priest">Sorts divins</string>
     <string name="AboutScene_Code">Code :</string>
     <string name="AboutScene_Email_Us">Contactez-nous :</string>
     <string name="AboutScene_Graphics">Graphismes : </string>
@@ -3103,6 +3104,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

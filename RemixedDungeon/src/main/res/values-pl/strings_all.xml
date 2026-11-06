@@ -245,6 +245,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Biskup</string>
     <string name="BishopNPC_Name_Objective">Biskup</string>
+    <string name="BishopQuest_1_1_InProgress">Upokoiłeś %d z %d nieumarłych, dziecko moje. Kontynuuj.</string>
     <string name="BishopQuest_3_1_Epilogue">Ostatnie pominy zostały wypowiedziane, a posłuszny zombie rozpada się w spokojny pył. Teraz spoczywa naprawdę. Twoje miłosierdzie cię honoruje, dziecko moje — weź ten zwój, będziesz go potrzebować tam, gdzie idziesz.</string>
     <string name="BishopQuest_5_1_Epilogue">Dzień Pański się zakończył! Od tego dnia możesz pójść ścieżką kapłana. Przyjmij to błogosławieństwo i te jałmużny, dziecko moje — zasłużyłeś na nie.</string>
     <string name="Bishop_bye">Będę się za ciebie modlił moje dziecko.</string>
@@ -3113,6 +3114,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
