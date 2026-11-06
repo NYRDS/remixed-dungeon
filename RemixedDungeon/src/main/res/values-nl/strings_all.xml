@@ -1947,6 +1947,7 @@
     <string name="Wand_Wood">Deze dunne %s toverstaf voelt warm aan. Wie weet wat hij doet als je hem gebruikt?</string>
     <string name="Wand_Wood_Types_0">hulst</string>
     <string name="Wand_Wood_Types_1">taxus</string>
+    <string name="Wand_Wood_Types_10">eiken</string>
     <string name="Wand_Wood_Types_11">berk</string>
     <string name="Wand_Wood_Types_2">ebbenhout</string>
     <string name="Wand_Wood_Types_3">kersenhout</string>
@@ -2618,6 +2619,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

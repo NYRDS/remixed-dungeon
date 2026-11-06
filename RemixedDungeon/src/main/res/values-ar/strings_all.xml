@@ -652,6 +652,7 @@
     <string name="MeleeWeapon_Info3c">بطيء</string>
     <string name="MeleeWeapon_Info3d">و</string>
     <string name="MeleeWeapon_Info3e">لكن</string>
+    <string name="MeleeWeapon_Info3g">غير دقيق</string>
     <string name="MeleeWeapon_Info4a">تم تعديل توازنه لجعله أسرع.</string>
     <string name="MeleeWeapon_Info6b">بسبب قوتك الزائدة، تم زيادة ضرر هجومك بهذا %s.</string>
     <string name="MeleeWeapon_Info7a">تمسك %1 جاهزاً %2.</string>
@@ -1375,6 +1376,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

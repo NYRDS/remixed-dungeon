@@ -242,6 +242,7 @@
     <string name="BishopNPC_Name_Objective">Évêque</string>
     <string name="BishopQuest_2_2_Prologue">Le rite d\'initiation requiert de l\'encens béni par la lune, mon enfant. Apporte-moi _trois graines de moongrace_, cueillies là où la lumière de la lune persiste dans les profondeurs.</string>
     <string name="BishopQuest_4_2_Epilogue">Les cloches de l\'église ont sonné toutes seules quand le dernier est passé — un bon signe, mon enfant. Prends cette potion de puissance ; l\'épreuve finale t\'en demandera beaucoup.</string>
+    <string name="BishopQuest_4_2_InProgress">Vous avez libéré %1 sur %2 âmes asservies. Qu\'elles ne servent plus jamais.</string>
     <string name="Bishop_bye">Je prierai pour vous, mon enfant.</string>
     <string name="Bishop_great_bless">Grande bénédiction - %d pièces</string>
     <string name="Bishop_lesser_bless">Petite bénédiction - %d pièces</string>
@@ -3099,6 +3100,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 

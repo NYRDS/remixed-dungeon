@@ -301,6 +301,7 @@
     <string name="Bleeding_Death">Te has desangrado hasta morir...</string>
     <string name="BlessedBuff_Info">¡Que la precisión y la evasión vengan para los tocados por la bendición!</string>
     <string name="BlessedBuff_Name">Bendecido</string>
+    <string name="BlessingSpell_Name">Bendición</string>
     <string name="BlindnessBuff_Info">Completamente cegado, sólo se oyen los sonidos de alrededor.</string>
     <string name="BlindnessBuff_Name">Cegado</string>
     <string name="BloodTransfusion_Drained">Agotado</string>
@@ -3086,6 +3087,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

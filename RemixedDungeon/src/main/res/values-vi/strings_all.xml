@@ -943,6 +943,7 @@
     <string name="LibrarianNPC_Name_Objective">thủ thư</string>
     <string name="Lich_Desc">Pháp sư tử thần đã gặp cái chết của mình trong sâu thẳm của nghĩa địa, và dần dần, những thế lực tà ác chảy vào cơ thể đã biến hắn thành một Lich. Một pháp sư tử vong, một con rối vô ý chí, bị điều khiển bởi những thế lực độc ác...</string>
     <string name="Lich_Gender">masculine</string>
+    <string name="Lich_Name">lich</string>
     <string name="LightBuff_Info">Ánh sáng phát ra từ cơ thể, soi sáng mọi thứ xung quanh.</string>
     <string name="LightBuff_Name">Được chiếu sáng</string>
     <string name="LightningBolt_Info">Phép thuật được lưu truyền giữa các pháp sư cổ, khiến kẻ thù của bạn bị choáng gấp đôi hiệu quả, đặc biệt nếu chúng ngu ngốc đến mức đứng trên mặt nước.</string>
@@ -2863,6 +2864,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

@@ -797,6 +797,7 @@
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">אשפת עור המתאימה להחזיק כל כמות של חיצים</string>
     <string name="RaiseDead_Info">ניסיון להחיות את היצור האחרון שנהרג (הטקס דורש חומר טרי למדי). בעת שימוש באמנות האפלה הזו, זכור: כמעט כל יצור יכול לקום לתחייה, אך לא תמיד קל לכופף את רצונו.</string>
+    <string name="RaiseDead_NoKill">עליך להרוג מישהו לפני שתנסה להחיות אותו.</string>
     <string name="RankingsScene_NoGames">עדיין לא שיחקת שום משחק.</string>
     <string name="RankingsScene_NoInfo">אין מידע נוסף</string>
     <string name="RatArmor_Info">שריון עור העשוי מעור עכברוש. כנראה שזה לא מדבק...</string>
@@ -1681,6 +1682,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
