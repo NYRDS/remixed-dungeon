@@ -1709,6 +1709,7 @@ Potrebbe bruciare?</string>
     <string name="Potion_SureDrink">Sei sicuro di volerla bere? Nella maggior parte dei casi dovresti buttare queste pozioni contro i nemici.</string>
     <string name="Potion_SureThrow">Sei sicuro di voler buttare? Nella maggior parte dei casi ha senso bere.</string>
     <string name="Potion_Yes">Sì, so quello che faccio</string>
+    <string name="PriestArmor_NotPriest">Solo i sacerdoti possono usare questa armatura!</string>
     <string name="Prison_TileDescBookshelf">Questo è probabilmente un residuo di una biblioteca carceraria. Potrebbe bruciare?</string>
     <string name="Prison_TileDescDeco">Ci sono vecchie macchie di sangue sul pavimento.</string>
     <string name="Prison_TileWater">Acqua scura fredda</string>
@@ -3076,6 +3077,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

@@ -661,6 +661,7 @@
     <string name="Guts_TileHighGrass">Bụi cây khô cao</string>
     <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Một vũ khí cột bao gồm một cái rìu ở cuối một thanh cột.</string>
+    <string name="Halberd_Name">Thương cśli</string>
     <string name="Halls_TileDescStatue">Trụ được làm từ những hộp sọ người thật. Tuyệt vời.</string>
     <string name="Halls_TileDescWater">Nó trông như dung nham, nhưng nó lạnh và có thể an toàn để chạm.</string>
     <string name="Halls_TileHighGrass">Nấm than hồng</string>
@@ -2871,6 +2872,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

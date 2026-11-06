@@ -1235,6 +1235,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="LastLevel_TileHighGrass">Hongobrasa</string>
     <string name="LastLevel_TileStatue">Columna</string>
     <string name="LastLevel_TileWater">Lava fría</string>
+    <string name="LastRites_Info">Un servicio funerario celebrado en un lugar. Todos los no-muertos a dos casillas de él son quemados y debilitados.</string>
     <string name="LastShopLevel_TileDescDeco">Faltan varias baldosas aquí.</string>
     <string name="LastShopLevel_TileDescEmptySP">Una gruesa alfombra cubre el suelo.</string>
     <string name="LastShopLevel_TileDescEntrance">Una rampa lleva a la profundidad superior</string>
@@ -3089,6 +3090,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
