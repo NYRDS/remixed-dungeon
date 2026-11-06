@@ -999,6 +999,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="HeroClass_PlagueDoctorPerks_3">Mikstury [yellow:Gaz Paraliżujący] i [yellow:Gaz Toksyczny] są wstępnie zidentyfikowane.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Lekarz plagi traci na  celności podczas używania każdej broni oprócz piły chirurgicznej i nie może używać broni dystansowej.</string>
     <string name="HeroClass_Priest">Kapłan</string>
+    <string name="HeroClass_PriestPerks_2">Kapłani używają many do rzucania zaklęć boskich: Błogosławieństwo, Święta Woda, Ekskorcyzm i Ostatnie Olejenia.</string>
     <string name="HeroClass_Rog">łotrzyk</string>
     <string name="HeroClass_RogPerks_0">Łotrzyki zaczynają z Pierścieniem Cieni+1</string>
     <string name="HeroClass_RogPerks_1">Łotrzyki identyfikują pierścień natychmiast po założeniu.</string>
@@ -3112,6 +3113,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

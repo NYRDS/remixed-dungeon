@@ -1008,6 +1008,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroClass_PlagueDoctorPerks_3">Tränke von [yellow:Lähmungsgas] und [yellow:Giftgas] sind vorher identifiziert.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Pestärzte leiden unter starken Genauigkeitsstrafen, wenn sie nicht ihre geliebte Knochensäge in der Hand halten, und können keine Fernkampfwaffen benutzen.</string>
     <string name="HeroClass_Priest">Priester</string>
+    <string name="HeroClass_PriestPerks_0">Priester beginnen mit 12 Stärkepunkten und einem Kampfstab.</string>
     <string name="HeroClass_PriestPerks_1">Priester verursachen 25% Bonusschaden gegen Untote und erleiden 25% weniger Schaden durch deren Angriffe. Gegen Dämonen werden diese Boni halbiert.</string>
     <string name="HeroClass_Rog">Schurke</string>
     <string name="HeroClass_RogPerks_0">Schurken beginnen mit einem Schattenring+1.</string>
@@ -3082,6 +3083,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
