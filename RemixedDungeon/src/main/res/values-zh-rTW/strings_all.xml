@@ -1000,6 +1000,7 @@
     <string name="HeroClass_PlagueDoctorPerks_3">[yellow:麻痹氣體]和[yellow:毒氣]藥水已預先識別。</string>
     <string name="HeroClass_PlagueDoctorPerks_4">瘟疫醫生在沒有心愛的骨鋸在手的情況下會遭受嚴重的命中懲罰，並且無法使用遠程武器。</string>
     <string name="HeroClass_Priest">神父</string>
+    <string name="HeroClass_PriestPerks_3">牧師的戰鬥法衣可施展聖化：神聖爆發燃燒附近的不死生物（惡魔受到一半傷害）並祝福穿著者。</string>
     <string name="HeroClass_Rog">盜賊</string>
     <string name="HeroClass_RogPerks_0">盜賊起始擁有一枚+1的暗影指環。</string>
     <string name="HeroClass_RogPerks_1">盜賊在裝備指環時能自動鑒定其類型。</string>
@@ -3086,6 +3087,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

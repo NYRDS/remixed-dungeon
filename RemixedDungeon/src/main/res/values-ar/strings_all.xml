@@ -29,6 +29,7 @@
     <string name="Albino_Name_Objective">فأر ألبينو</string>
     <string name="AllowStatisticsCollectionScene_Allow">السماح</string>
     <string name="AllowStatisticsCollectionScene_Deny">رفض</string>
+    <string name="AllowStatisticsCollectionScene_Request">إذا سمحت، ستقوم Remixed Dungeon بجمع إحصائيات الاستخدام. سيتم استخدام هذه البيانات من أجل:\n\n    - رصد وإصلاح الأخطاء البسيطة المختلفة ( في حالة حدوث خطأ حرج، ستطلب اللعبة صراحةً إرسال تقرير )\n\n    - تحسين توازن اللعبة\n\n    - إصلاح مشاكل الأداء الخاصة بالأجهزة\n\n    - نشر حقائق إحصائية مضحكة من وقت لآخر\n\n    يمكنك تغيير قرارك في أي وقت (انقر على أيقونة المخططات في شاشة العنوان )</string>
     <string name="AllowStatisticsCollectionScene_Title">جمع إحصائيات الاستخدام</string>
     <string name="AmokArrow_Gender">feminine</string>
     <string name="AmokArrow_Info">الحل الموجود على رأس هذا السهم سيحول أي شخص إلى محارب بربري لا يرحم.</string>
@@ -1376,6 +1377,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

@@ -644,6 +644,7 @@
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">מימיק</string>
     <string name="MimicPie_Name_Objective">מימיק</string>
+    <string name="Mimic_Desc">מימיקס הם יצורים קסומים שיכולים לקבל כל צורה שהם רוצים. במבוכים הם כמעט תמיד בוחרים בצורת תיבת אוצר, כי הם יודעים איך למשוך הרפתקן.</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MirrorImage_Name">תמונת ראי</string>
@@ -1682,6 +1683,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
