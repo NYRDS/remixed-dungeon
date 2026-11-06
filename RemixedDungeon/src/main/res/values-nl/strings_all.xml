@@ -807,6 +807,7 @@
     <string name="HeroClass_RogPerks_4">Schurken kunnen langer zonder voedsel.</string>
     <string name="HeroClass_War">krijger</string>
     <string name="HeroClass_WarPerks_0">Krijgers beginnen met 11 punten Kracht.</string>
+    <string name="HeroClass_WarPerks_2">Krijgers zijn minder vaardig met afstandwapens.</string>
     <string name="HeroClass_WarPerks_4">Krachtpotionen zijn van het begin bekend.</string>
     <string name="HeroSubClass_DescAssa">Bij het uitvoeren van een verrassingsaanval, richt de _Meuchelmoorder_ extra schade aan bij zijn doelwit.</string>
     <string name="HeroSubClass_DescBatM">Wanneer hij vecht met een toverstaf in zijn handen, richt de _Strijdmagiër_ extra schade aan afhankelijk van het huidige aantal ladingen. Elke succesvolle treffer herstelt 1 lading van deze toverstaf.</string>
@@ -1513,6 +1514,7 @@
     <string name="SantaHat_Name">Hoed van Santa</string>
     <string name="ScaleArmor_Desc">De metalen schubben op een leren vest zorgen voor een flexibel, maar beschermend pantser.</string>
     <string name="ScaleArmor_Name">schubpantser</string>
+    <string name="ScarecrowNPC_Desc">Er is geen twijfel... dit vogelscheuwer kijkt naar al je bewegingen. Zijn rode gloeiende ogen boren zich door je heen, maar verrassend genoeg voel je je niet bedreigd door het.</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name">schrikkelaar</string>
     <string name="ScarecrowNPC_Name_Objective">vogelverschrikker</string>
@@ -1661,6 +1663,7 @@
     <string name="Skeleton_Name">skelet</string>
     <string name="Skeleton_Name_Objective">skelet</string>
     <string name="SleepBuff_Info">Volledig in slaap</string>
+    <string name="SleepBuff_Name">Slaap</string>
     <string name="SlowBuff_Info">Het trage gevoel maakt iemand langzamer dan gewoonlijk.</string>
     <string name="SlowBuff_Name">Vertraagd</string>
     <string name="Slow_Name_0">Chilling %s</string>
@@ -2619,6 +2622,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
