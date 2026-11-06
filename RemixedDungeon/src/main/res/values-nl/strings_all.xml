@@ -983,6 +983,7 @@
     <string name="LastLevel_TileDescWater">Het lijkt op lava, maar het is koud en waarschijnlijk veilig om aan te raken.</string>
     <string name="LastLevel_TileGrass">Embermos</string>
     <string name="LastLevel_TileStatue">Pilaar</string>
+    <string name="LastRites_Name">Laatste Olieringen</string>
     <string name="LastShopLevel_TileDescDeco">Hier ontbreken verschillende tegels.</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
     <string name="LastShopLevel_TileDescExit">Een helling leidt naar beneden in de hel.</string>
@@ -2617,6 +2618,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

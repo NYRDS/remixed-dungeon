@@ -1719,6 +1719,7 @@
     <string name="Potion_SureDrink">你真的確認你想要喝這瓶藥水嗎？在大多數情況下你應該將這種藥水扔向你的敵人。</string>
     <string name="Potion_SureThrow">你真的想要投擲這瓶藥水嗎？在大多數情況下把它喝下去會更有用。</string>
     <string name="Potion_Yes">是的，我知道我在做什麼</string>
+    <string name="PriestArmor_Desc">這些神職人員的戰鬥法衣可被呼喚以進行聖化：穿著者附近的所有不死生物將被聖光燃燒，而牧師將獲得祝福。</string>
     <string name="Prison_TileDescBookshelf">這個書架可能是監獄圖書館的殘留物。燒掉怎麼樣？</string>
     <string name="Prison_TileDescDeco">這裏的地板上有幹涸的血跡。</string>
     <string name="Prison_TileWater">又黑又冷的水</string>
@@ -3085,6 +3086,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

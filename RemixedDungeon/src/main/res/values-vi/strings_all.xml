@@ -2121,6 +2121,7 @@
     <string name="town_deco_emptyboard_desc">Giá tiêu chuẩn nhất để trưng bày đồ vật.</string>
     <string name="town_deco_emptyboard_name">Kệ đựng</string>
     <string name="town_deco_entrance_name">cổng vào</string>
+    <string name="town_deco_exit_desc">Không ai biết điều gì đang chờ đón bạn nếu bạn bước xuống những bậc thang này.</string>
     <string name="town_deco_exit_name">Lối ra</string>
     <string name="town_deco_fireplace_desc">Rất thích hợp để sưởi ấm ở một nơi lạnh như thế này.</string>
     <string name="town_deco_fireplace_name">Lò sưởi</string>
@@ -2862,6 +2863,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

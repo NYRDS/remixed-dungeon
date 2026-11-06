@@ -247,6 +247,7 @@
     <string name="Char_Stole_2">%1$s גנב את %2$s של %3$s!</string>
     <string name="CharmSpell_Info">כולם ראויים למעט אהבה, נכון?</string>
     <string name="CharmSpell_Name">הקסמה</string>
+    <string name="Chasm_Chasm">תהום</string>
     <string name="Chasm_Info">נפלת אל מותך...</string>
     <string name="Chasm_Jump">האם אתה באמת רוצה לקפוץ לתהום? אתה עלול למות.</string>
     <string name="Chess_Stalemate">פט! המלך עוזב את הלוח ומאפשר לך לעבור.</string>
@@ -1680,6 +1681,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
