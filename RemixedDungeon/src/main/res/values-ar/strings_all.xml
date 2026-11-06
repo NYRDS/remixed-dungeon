@@ -1359,6 +1359,7 @@
     <string name="town_deco_stone_wall_broken_name">جدار مكسور</string>
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
     <string name="town_deco_stone_wall_name">جدار حجري</string>
+    <string name="town_deco_stool_broken_desc">هذا الكرسي قد مر بأيام أفضل.</string>
     <string name="town_deco_trapdoor_desc">إلى أين قد يؤدي هذا؟</string>
     <string name="town_deco_vat_name">حوض</string>
     <string name="town_deco_wall_brazier_name">مجمرة</string>
@@ -1377,6 +1378,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

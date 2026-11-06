@@ -1295,6 +1295,7 @@
     <string name="RegenerationBuff_Name">Tái tạo tự nhiên</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Trò chơi của chúng tôi đã bị lỗi...\n Xin lỗi.\nVui lòng gửi báo cáo lỗi để giúp chúng tôi khắc phục.</string>
     <string name="ResultDescriptions_Burning">Bị thiêu rụi trên cấp độ %d</string>
+    <string name="ResultDescriptions_Fall">Ngã chết ở cấp %d</string>
     <string name="ResultDescriptions_Gas">Chết vì khí độc ở tầng %d</string>
     <string name="ResultDescriptions_Glyph">Bị giết bởi %1 ở tầng %2</string>
     <string name="ResultDescriptions_Hunger">Chết đói trên tầng %d</string>
@@ -2872,6 +2873,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

@@ -247,6 +247,7 @@
     <string name="BishopNPC_Name_Objective">obispo</string>
     <string name="BishopQuest_2_1_Prologue">Antes de transmitirte los misterios del sacerdocio, el altar debe prepararse. Tráeme _tres semillas de girasol_ — su esencia dorada hace el mejor incienso.</string>
     <string name="BishopQuest_3_2_InProgress">Tráeme un _murciélago_ domesticado, hijo mío. No asustes a la pobre criatura.</string>
+    <string name="BishopQuest_4_1_Epilogue">Las legiones tambalean como marionetas con hilos cortados — puedo sentirlo incluso desde aquí. Su amo no perdonará esto. Toma esta poción de fuerza, hijo mío; necesitarás tu fuerza.</string>
     <string name="BishopQuest_4_1_Prologue">Has dado descanso a la infantería — ahora toca con sus amos. Los _caballeros de la muerte_ mandan las legiones de los muertos, y su voluntad ata los huesos a su marcha. Destruye a _dos caballeros de la muerte_, hijo mío.</string>
     <string name="BishopQuest_5_1_InProgress">Destierra a _dos súcubos_, hijo mío — %d de %d desterrados. Guarda tu alma; sus susurros son dulce veneno.</string>
     <string name="Bishop_bye">Rezaré por ti mi hijo.</string>
@@ -3093,6 +3094,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

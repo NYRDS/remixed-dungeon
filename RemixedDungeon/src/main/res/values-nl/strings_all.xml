@@ -1833,6 +1833,7 @@
     <string name="TomeOfMastery_Name">Boek der Meesterschap</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
     <string name="Toolbar_Info1">Je weet niet wat er is.</string>
+    <string name="Toolbar_Info2">Selecteer een cel om te onderzoeken</string>
     <string name="Torch_ACLight">AANSTEKEN</string>
     <string name="Torch_Info">Het is een onmisbaar item in De Demonenzalen, die berucht zijn om hun slechte verlichting.</string>
     <string name="Torch_Info2">Het is een onmisbaar item in de kerker, berucht om zijn slechte verlichting.</string>
@@ -2627,6 +2628,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
