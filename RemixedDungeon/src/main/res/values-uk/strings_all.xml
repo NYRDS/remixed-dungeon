@@ -253,6 +253,7 @@
     <string name="BishopNPC_Name_Objective">Єпископа</string>
     <string name="BishopQuest_2_1_InProgress">Принеси мені _три насіння соняшника_, дитя моє. Олитар чекає.</string>
     <string name="BishopQuest_2_2_InProgress">Принеси мені _три насіння благолунки_, дитя моє. Алтар очікує.</string>
+    <string name="BishopQuest_4_1_InProgress">Ти знищив %1$d з %2$d лицарів смерті. Зламай їхню волю, і легіони спіткнуться.</string>
     <string name="BishopQuest_AllDone">Ти пройшов довгий шлях, дитя моє, і церква не забуває цього. Мої двері завжди відкриті для тебе.</string>
     <string name="Bishop_bye">Я буду молитися за тебе, моя дитино.</string>
     <string name="Bishop_great_bless">Велике благословіння - %d g</string>
@@ -3107,6 +3108,8 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
+
 
 
 

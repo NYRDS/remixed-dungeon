@@ -1717,6 +1717,7 @@ Kendi sorumluluğunuz altında indirin ve tadını çıkarın!\n
     <string name="Potion_SureDrink">İçmek istediğine emin misin? Genellikle bu tarz iksirleri düşmanlarına fırlatmalısın.</string>
     <string name="Potion_SureThrow">Fırlatmat istedğine emin misin? Genelde bu iksirleri içmek daha mantıklıdır.</string>
     <string name="Potion_Yes">Evet, ne yaptığımı biliyorum</string>
+    <string name="PriestArmor_ACSpecial">KUTLA</string>
     <string name="Prison_TileDescBookshelf">Muhtelemen Bir hapishane kütüphanesinin kalıntıları acaba Yanabilir mi ?</string>
     <string name="Prison_TileDescDeco">yerde eski kan lekeleri var.</string>
     <string name="Prison_TileWater">Karanlık soğuk su.</string>
@@ -3103,6 +3104,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 
