@@ -451,6 +451,7 @@
     <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Name">حربة</string>
     <string name="Halls_TileDescBookshelf">كتب بلغات قديمة تشتعل ببطء في رف الكتب.</string>
+    <string name="Halls_TileDescStatue">هذا العمود مصنوع من جماجم بشرية حقيقية. رائع.</string>
     <string name="Halls_TileDescWater">يبدو مثل الحمم البركانية، لكنه بارد ومن المحتمل أن يكون آمناً للمس.</string>
     <string name="Halls_TileStatue">عمود</string>
     <string name="Halls_TileWater">لावा باردة</string>
@@ -1027,6 +1028,7 @@
     <string name="Succubus_Desc">الشياطين المارقة هي شياطين تبدو كفتاة غواية (بطريقة قوطية قليلاً). باستخدام سحرها، تستطيع الساحرة أن تسحر البطل، الذي يصبح غير قادر على مهاجمة أي شيء حتى يزول تأثير السحر.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="SummonBeast_AtYourCommand">يأتي الوحش بأمرك!</string>
+    <string name="SummonBeast_Info">محاولة استدعاء حشد من الوحوش الجبارة تحت أمرك.\nقد تختلف النتائج الفعلية.</string>
     <string name="SummonBeast_Name">نداء الوحش</string>
     <string name="SummonDeathling_Info">يستدعي تابعاً من الأموات. تزداد قوة سمرتة وصلابته مع مستوى البطل. \n\nحد الاستدعاء: %1$d (+1 لكل مستوى سحر)</string>
     <string name="SummonDeathling_Name">استدعاء سمرتة</string>
@@ -1378,6 +1380,8 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
 
 
 

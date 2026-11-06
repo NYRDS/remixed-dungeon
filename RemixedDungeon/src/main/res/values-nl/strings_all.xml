@@ -1732,6 +1732,7 @@
     <string name="SpiderNest_Gender">neuter</string>
     <string name="SpiderQueenCarapace_Info">Een scherf van het pantser van de Spinnenkoningin. Je kunt een stukje van een spinnenklier erin zien, bijna alsof het leeft.</string>
     <string name="SpiderQueenCarapace_Name">Spinnenkoninginnenpantser</string>
+    <string name="SpiderQueen_Desc">Een lichaam van een mooie vrouw gekruist met een gruwelijke spin. Elk levend wezen in deze gouw is haar dienaar. Een ontmoeting met deze buitengewone dame kan dodelijk uitpakken. Want je bent een indringer!</string>
     <string name="SpiderQueen_DieInfo">De Spinnenkoningin is verslagen! Nu moet ik terug naar niveau 5 en mijn reis naar de Diepten voortzetten.</string>
     <string name="SpiderQueen_Gender">feminine</string>
     <string name="SpiderQueen_Name_Objective">spinnenkoningin</string>
@@ -2628,6 +2629,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

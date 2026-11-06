@@ -243,6 +243,7 @@
     <string name="BishopNPC_Name_Objective">Évêque</string>
     <string name="BishopQuest_2_1_InProgress">Apporte-moi _trois graines de tournesol_, mon enfant. L\'autel attend.</string>
     <string name="BishopQuest_2_2_Epilogue">La lune dans une graine... comme la grâce elle-même. L\'église sentira l\'argent ce soir. Prends cette potion pour ta dévotion, mon enfant.</string>
+    <string name="BishopQuest_2_2_InProgress">Apporte-moi _trois graines de bénilune_, mon enfant. L\'autel attend.</string>
     <string name="BishopQuest_2_2_Prologue">Le rite d\'initiation requiert de l\'encens béni par la lune, mon enfant. Apporte-moi _trois graines de moongrace_, cueillies là où la lumière de la lune persiste dans les profondeurs.</string>
     <string name="BishopQuest_3_2_Epilogue">L\'évêque asperge d\'eau bénite la chauve-souris indignée, marmonnant une bénédiction. Elle s\'envole, d\'une manière quelque peu digne. Prends ce parchemin pour ta patience, mon enfant.</string>
     <string name="BishopQuest_3_2_Prologue">Même les bêtes des ténèbres méritent une bénédiction, mon enfant. Apporte-moi une _chauve-souris_ que tu as apprivoisée, et je la consacrerai à la lumière.</string>
@@ -3107,6 +3108,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
