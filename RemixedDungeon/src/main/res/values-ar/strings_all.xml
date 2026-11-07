@@ -931,6 +931,7 @@
     <string name="Shades_Info">يقول بعض الناس إن الزنزانات مظلمة جداً لارتداء النظارات الشمسية. وتقول إن هؤلاء الناس ليسوا باريدين بما فيه الكفاية.</string>
     <string name="Shades_Name">نظارات شمسية</string>
     <string name="Shades_Name_Objective">نظارات شمسية</string>
+    <string name="ShadowLord_Death">لااااا...</string>
     <string name="ShadowLord_Desc">هذا المخلوق مصنوع من شر خالص وظلام لا يُخترق. يعتقد الكثيرون أنه الإله القديم نفسه، نظراً لمدى قوته. بينما يفترض آخرون أنه مجرد حارس لأروقة الإله القديم.</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Name">سيد الظلال</string>
@@ -1380,6 +1381,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

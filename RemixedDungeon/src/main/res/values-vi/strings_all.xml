@@ -91,6 +91,7 @@
     <string name="Badges_BossSlain2">Tengu đã bị tiêu diệt</string>
     <string name="Badges_BossSlain3">DM-300 đã bị tiêu diệt</string>
     <string name="Badges_BossSlain3All">DM-300 đã bị tiêu diệt bởi tất cả các phân lớp</string>
+    <string name="Badges_BossSlain4">Vua đã bị tiêu diệt</string>
     <string name="Badges_Champion">Thử thách đã hoàn thành</string>
     <string name="Badges_DeathFalling">Tử vong do rơi xuống</string>
     <string name="Badges_DeathGas">Chết do khí độc</string>
@@ -157,6 +158,7 @@
     <string name="BarkskinBuff_Name">Vỏ cây</string>
     <string name="Barrel_Desc">Trông như một thùng gỗ đơn giản. Nhưng khi bạn tiến gần hơn, bạn có thể ngửi thấy một chút mùi dầu nhẹ. Thùng có vẻ khá nhẹ, bạn có thể đẩy nó được.</string>
     <string name="Barrel_Name">thùng gỗ</string>
+    <string name="Barrel_Pumpkin_Desc">Rất kỳ lạ và hơi đáng sợ khi thấy một quả bí ngô khắc hình nằm trên sàn ngục. Bạn cảm thấy rõ ràng nguy hiểm từ nó. Nhưng bạn luôn có thể đẩy nó đi, phải không?</string>
     <string name="Barrel_Pumpkin_Name">bí ngô</string>
     <string name="Bat_Desc">Những cư dân nhanh nhẹn và bền bỉ của các vòm hang này có thể đánh bại đối thủ lớn hơn nhiều bằng cách hồi phục sức khỏe sau mỗi đòn tấn công thành công.</string>
     <string name="Bat_Gender">masculine</string>
@@ -1495,6 +1497,7 @@
     <string name="ShieldBuffNotReady_Info">Khiên của bạn chưa sẵn sàng để chặn đòn tấn công tiếp theo.</string>
     <string name="ShieldBuffReady_Info">Khiên của bạn đã sẵn sàng để chặn đòn tấn công tiếp theo.</string>
     <string name="ShieldBuffReady_Name">Khiên đã sẵn sàng</string>
+    <string name="ShieldInfoTemplate">Chiếc khiên này sẽ chặn tới %1$d sát thương đến. Với cơ hội %2$d %%. Sẽ mất %3$3.1f giây để hồi phục sau khi chặn thành công.</string>
     <string name="ShieldStrTemplate">Người đeo khiên cần có ít nhất %1$d điểm Sức mạnh để sử dụng nó đúng cách.</string>
     <string name="ShieldWeaponInfo">Khi sử dụng như vũ khí, khiên này sẽ gây trung bình %1 sát thương.</string>
     <string name="Shielded_Desc">Quái vật lớn nhất, mạnh nhất và kiên cường nhất trong số tất cả các gnoll. Khi bị thương nặng, chúng sẽ điên cuồng, gây thiệt hại lớn hơn cho kẻ thù. Quái vật này đang khiêng một khiên khổng lồ!</string>
@@ -2877,6 +2880,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

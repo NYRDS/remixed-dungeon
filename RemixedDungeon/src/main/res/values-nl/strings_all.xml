@@ -718,6 +718,7 @@
     <string name="Gnoll_Name">gnol verkenner</string>
     <string name="Gnoll_Name_Objective">gnol verkenner</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
+    <string name="Gold_Info1">Een gouden munt.</string>
     <string name="Gold_Name">goud</string>
     <string name="GoldenKey_Info">De inkepingen op deze gouden sleutel zijn klein en ingewikkeld. Misschien kan hij een kistslot openen?</string>
     <string name="GoldenKey_Name">Gouden sleutel</string>
@@ -1484,6 +1485,7 @@
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="Roar_Name">Brul</string>
     <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
+    <string name="RogueArmor_Name">schurkenkleding</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naartoe te springen</string>
     <string name="RootSpell_Info">Bevestigt de geselecteerde karakter met wortels, waardoor hij voor korte tijd niet kan bewegen.</string>
     <string name="RootSpell_Name">Wortel</string>
@@ -2395,6 +2397,7 @@
     <string name="town_deco_skullboard_name">trofeerek</string>
     <string name="town_deco_skulls_name">Schedels</string>
     <string name="town_deco_slush_desc">Deze sneeuw begon te smelten, waardoor de omgeving in modder veranderde.</string>
+    <string name="town_deco_slush_name">mats</string>
     <string name="town_deco_snow_desc">Ondanks de bekendheid van deze plek onder avonturiers, ligt hier verrassend veel sneeuw. Het lijkt erop dat maar weinig mensen door deze straten lopen.</string>
     <string name="town_deco_snow_name">Sneeuw</string>
     <string name="town_deco_snowdrift_desc">Het is een vrij grote sneeuwhoop en blijkbaar gaat niemand het opruimen.</string>
@@ -2631,6 +2634,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
