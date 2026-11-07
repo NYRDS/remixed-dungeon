@@ -950,6 +950,7 @@
     <string name="LibrarianNPC_Message_Not_Ready">T... Tôi xin lỗi, th-thư viện chưa mở... đợi chút.</string>
     <string name="LibrarianNPC_Name">thủ thư</string>
     <string name="LibrarianNPC_Name_Objective">thủ thư</string>
+    <string name="LibraryBook_Description">Cuốn sách này thực sự khổng lồ. Nó chứa đựng tất cả kiến thức mà các phiêu lưu gia đã khám phá và mang về từ ngục tối.</string>
     <string name="Lich_Desc">Pháp sư tử thần đã gặp cái chết của mình trong sâu thẳm của nghĩa địa, và dần dần, những thế lực tà ác chảy vào cơ thể đã biến hắn thành một Lich. Một pháp sư tử vong, một con rối vô ý chí, bị điều khiển bởi những thế lực độc ác...</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
@@ -2884,6 +2885,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
