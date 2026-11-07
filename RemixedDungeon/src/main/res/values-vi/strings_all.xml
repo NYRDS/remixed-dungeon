@@ -1692,6 +1692,7 @@
     <string name="TownGuardNPC_Name_Objective">vệ sĩ thành phố</string>
     <string name="TownPortal_Info">Phép thuật này cho phép bạn quay về nơi an toàn ngay lập tức. Tuy nhiên, các nguồn sức mạnh phép thuật gần đó có thể ngăn nó hoạt động như mong muốn.</string>
     <string name="TownPortal_Name">Cổng Thần Thoại</string>
+    <string name="TownShopkeeper_Desc">Anh ta là một chủ cửa hàng điển hình. Rõ ràng anh ta đã biết giá của bạn rồi.</string>
     <string name="TownShopkeeper_Objective">người bán hàng</string>
     <string name="TownsfolkMovieNPC_Desc">Một người dân địa phương. Dù rõ ràng chỉ là thường dân, bộ quần áo của hắn lại trông rất đắt tiền.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
@@ -2115,6 +2116,7 @@
     <string name="town_deco_chimney_name">Ống khói</string>
     <string name="town_deco_church_sign_desc">Có vẻ như bên trong tòa nhà này có một nhà thờ.</string>
     <string name="town_deco_church_sign_name">Biển hiệu nhà thờ</string>
+    <string name="town_deco_cinema_sign_desc">Có vẻ như có một rạp chiếu phim bên trong tòa nhà đó.</string>
     <string name="town_deco_clock_name">Đồng hồ</string>
     <string name="town_deco_common_bed_desc">Giường bình thường.</string>
     <string name="town_deco_common_bed_name">Giường</string>
@@ -2880,6 +2882,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
