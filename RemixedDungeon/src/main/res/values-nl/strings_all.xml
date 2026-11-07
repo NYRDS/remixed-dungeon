@@ -267,6 +267,7 @@
     <string name="BoneShard_Info">Een scherpe botfragment geoogst uit een verslagen vijand. Deze fragmenten zijn verrassend duurzaam en nuttig voor ambacht.</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
+    <string name="Boomerang_Name">boemerang</string>
     <string name="Bounce_Txt">%s van stuiteren</string>
     <string name="Bow_Info1">Dit is een afstandswapen. Het is nutteloos voor iedereen behalve elfen op zeer korte afstand. Met een boog uitgerust kun je pijlen afschieten.\n\n</string>
     <string name="Bowknot_Info">Een mooie, roze, glinsterende strik vastgemaakt in een knoop aan een haarspeld.</string>
@@ -988,6 +989,7 @@
     <string name="Larva_Name">larve van de god</string>
     <string name="LastLevel_TileDescWater">Het lijkt op lava, maar het is koud en waarschijnlijk veilig om aan te raken.</string>
     <string name="LastLevel_TileGrass">Embermos</string>
+    <string name="LastLevel_TileHighGrass">Gloeipaddenstoelen</string>
     <string name="LastLevel_TileStatue">Pilaar</string>
     <string name="LastRites_Name">Laatste Olieringen</string>
     <string name="LastShopLevel_TileDescDeco">Hier ontbreken verschillende tegels.</string>
@@ -2636,6 +2638,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

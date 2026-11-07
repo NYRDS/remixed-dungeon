@@ -297,6 +297,7 @@
     <string name="Bleeding_Death">Você sangrou até a morte ...</string>
     <string name="BlessedBuff_Info">Que venha a precisão e a evasão para àqueles tocados pela bênção!</string>
     <string name="BlessedBuff_Name">Abençoado</string>
+    <string name="BlessingSpell_Info">Uma prece silenciosa que envolve o sacerdote em graça: ataque e defesa são melhorados por um tempo.</string>
     <string name="BlindnessBuff_Info">Completamente cego, apenas os sons ao redor podem ser ouvidos.</string>
     <string name="BlindnessBuff_Name">Cego</string>
     <string name="BloodTransfusion_Drained">O essência da vida flui do seu animal de estimação para você.</string>
@@ -3096,6 +3097,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

@@ -307,6 +307,7 @@
     <string name="Bleeding_Death">Te has desangrado hasta morir...</string>
     <string name="BlessedBuff_Info">¡Que la precisión y la evasión vengan para los tocados por la bendición!</string>
     <string name="BlessedBuff_Name">Bendecido</string>
+    <string name="BlessingSpell_Cast">%s recibe bendición.</string>
     <string name="BlessingSpell_Name">Bendición</string>
     <string name="BlindnessBuff_Info">Completamente cegado, sólo se oyen los sonidos de alrededor.</string>
     <string name="BlindnessBuff_Name">Cegado</string>
@@ -778,6 +779,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Exhumation_Name">Exhumar</string>
     <string name="Exhumation_NoGrave">No hay una tumba aquí para exhumar.</string>
     <string name="Exhumation_Ok">Te obedeceré.</string>
+    <string name="Exorcism_Name">Exorcismo</string>
     <string name="ExplodingSkull_Desc">Este cráneo flotante y llameante parece extremadamente frágil, como si fuera a estallar en cualquier momento.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">craneo explosivo</string>
@@ -3096,6 +3098,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

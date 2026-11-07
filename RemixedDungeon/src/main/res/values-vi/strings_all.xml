@@ -88,6 +88,7 @@
     <string name="Badges_AllScrolls">Đã nhận dạng tất cả cuốn</string>
     <string name="Badges_AllWands">Đã nhận dạng tất cả gậy</string>
     <string name="Badges_BossSlain1">Goo đã bị tiêu diệt</string>
+    <string name="Badges_BossSlain1All">Goo đã bị tiêu diệt bởi tất cả các phân lớp</string>
     <string name="Badges_BossSlain2">Tengu đã bị tiêu diệt</string>
     <string name="Badges_BossSlain3">DM-300 đã bị tiêu diệt</string>
     <string name="Badges_BossSlain3All">DM-300 đã bị tiêu diệt bởi tất cả các phân lớp</string>
@@ -1774,6 +1775,7 @@
     <string name="WandOfSlowness_Info">Cây gậy này khiến sinh vật bị trúng di chuyển và tấn công chậm hơn một nửa cho đến khi hiệu ứng kết thúc.</string>
     <string name="WandOfSlowness_Info1">Không có gì xảy ra.</string>
     <string name="WandOfSlowness_Name">Gậy Làm Chậm</string>
+    <string name="WandOfTelekinesis_Info">Sóng lực phép thuật từ cây gậy này sẽ tác động lên tất cả các ô trên đường đi, kích hoạt bẫy, giẫm nát cây cối cao, mở cửa đóng và đóng cửa mở. Chúng cũng đẩy lùi quái vật.</string>
     <string name="WandOfTelekinesis_Name">Gậy Thôi Miên</string>
     <string name="WandOfTeleportation_Info2">không có gì xảy ra</string>
     <string name="WandOfTeleportation_Name">Đũa phép Dịch chuyển</string>
@@ -2882,6 +2884,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
