@@ -80,6 +80,7 @@
     <string name="ArmoredStatue_Name_Objective">geanimeerde standbeeld</string>
     <string name="Artifact_Limit">Je kunt maar 2 artefacten tegelijk dragen.</string>
     <string name="AttackDelay_Increased">Kan de %1$s niet zo hanteren. Langzame slagen, zware ademhaling...</string>
+    <string name="Attack_Cooldown">Aanvalvertraging</string>
     <string name="Attack_Range">Aanvalsbereik</string>
     <string name="AwarenessBuff_Info">De zintuigen zijn verscherpt, wat meer bewustzijn van de omgeving geeft.</string>
     <string name="AzuterronNPC_Desc">Een mysterieuze figuur gehuld in zwarte mist.</string>
@@ -710,6 +711,7 @@
     <string name="GnollCostume_Info">Een ongelooflijk warm en fluffy kostuum. Wie dit kostuum aantrekt zal eruitzien als... iemand die zich probeert te vermommen als een gnoll. Maar gnolls trappen daar niet in, ze vallen je nog steeds aan.</string>
     <string name="GnollCostume_Name">Gnoll-kostuum</string>
     <string name="GnollTamahawk_Gender">masculine</string>
+    <string name="GnollTamahawk_Info">Een traditionele Tomahawk gemaakt door Gnoll-meesters, waarbij elk clan zijn eigen unieke ontwerp heeft. Deze Tomahawk is iets lichter dan zijn tegenhangers.</string>
     <string name="Gnoll_BecomeGuardianDesc">Word een Wachter</string>
     <string name="Gnoll_Desc">Gnollen zijn hyena-achtige humanoïden. Ze wonen in riolen en kerkers, en trekken soms op naar het oppervlak om te plunderen. Gnol-verkenners zijn gewone leden van hun roedel, ze zijn niet zo sterk als bruten en niet zo intelligent als sjamanen.</string>
     <string name="Gnoll_Gender">masculine</string>
@@ -2629,6 +2631,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

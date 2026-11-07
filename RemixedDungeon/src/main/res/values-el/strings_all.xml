@@ -1709,6 +1709,7 @@
     <string name="Potion_SureDrink">Θέλεις σίγουρα να το πιεις; Τις περισσότερες φορές είναι λογικότερο να το πετάξεις στους εχθρούς.</string>
     <string name="Potion_SureThrow">Θέλεις σίγουρα να το πετάξεις; Τις περισσότερες φορές είναι λογικότερο να το πιεις.</string>
     <string name="Potion_Yes">Ναι, ξέρω τι κάνω</string>
+    <string name="PriestArmor_Desc">Αυτές οι πολεμικές στολές του ιερατεύματος μπορούν να ενεργοποιήσουν την Αγίαση: όλα τα νεκρά πλάσματα κοντά στον φορέα καίγονται από το άγιο φως, ενώ ο ιερέας λαμβάνει ευλογία.</string>
     <string name="Prison_TileDescBookshelf">Λογικά, ένα απομεινάρι από τη βιβλιοθήκη της φυλακής. Μήπως μπορεί να κατακαεί;</string>
     <string name="Prison_TileDescDeco">Παλιοί λεκέδες από αίμα κοσμούν το πάτωμα.</string>
     <string name="Prison_TileWater">Σκοτεινό κρύο νερό</string>
@@ -3101,6 +3102,7 @@ remix.32\n
     <string name="town_table_fortune_ball_name">Κρυστάλλινη σφαίρα</string>
     <string name="town_table_fortune_desc">Το τραπέζι είναι καλυμμένο με μεταξωτό ύφασμα. Διακρίνεις διάφορες κάρτες ταρώ αραδιασμένες με περίεργο τρόπο.</string>
     <string name="town_table_fortune_name">Τραπέζι</string>
+
 
 
 

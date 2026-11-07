@@ -1058,6 +1058,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="HideInGrassSpell_Info">Anda telah menyempurnakan penguasaan sorok-sorok anda.</string>
     <string name="HideInGrassSpell_Name">Sembunyi-Dalam-Rumput</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Saya pun tidak dapat bersembunyi di tempat terbuka.</string>
+    <string name="HolyWater_Info">Semburan air suci. Ia membakar dan memperlambat mayat hidup di petak sasaran dan sekelilingnya.</string>
     <string name="Horror_Name_0">Eldritch %s</string>
     <string name="Horror_Name_1">Eldritch %s</string>
     <string name="Horror_Name_2">Eldritch %s</string>
@@ -3046,6 +3047,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

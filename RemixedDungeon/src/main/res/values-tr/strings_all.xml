@@ -1067,6 +1067,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="HideInGrassSpell_Info">Saklambaç ustalığını mükemmelleştirdin.</string>
     <string name="HideInGrassSpell_Name">Çimenlerde-saklan</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Ben bile göz önünde saklanamam.</string>
+    <string name="HolyWater_Info">Kutsal su damlası. Hedef hücredeki ve çevresindeki ölümsüzleri yakar ve yavaşlatır.</string>
     <string name="Horror_Name_0">Korkunç %s</string>
     <string name="Horror_Name_1">Korkunç %s</string>
     <string name="Horror_Name_2">Korkunç %s</string>
@@ -3105,6 +3106,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

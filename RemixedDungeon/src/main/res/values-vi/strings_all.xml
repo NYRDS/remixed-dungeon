@@ -775,6 +775,7 @@
     <string name="HungerBuff_Info1">Bạn đang đói!</string>
     <string name="HungerBuff_Info2">Bạn đang chết đói! Bạn cần ăn!</string>
     <string name="HungerBuff_Name1">Đói</string>
+    <string name="HungerBuff_Name2">Chết đói</string>
     <string name="Hunger_Death">Bạn đã chết vì đói...</string>
     <string name="Hunger_Hungry_0">Bạn đang đói.</string>
     <string name="Hunger_Hungry_1">Bạn đang đói.</string>
@@ -1797,6 +1798,7 @@
     <string name="WarriorArmor_Prompt">Chọn hướng để nhảy</string>
     <string name="WaterElemental_Desc">Thủy nguyên tố có thể tìm thấy gần các khối nước lớn. Thông thường, những làn sóng được liên kết bằng phép thuật chỉ lang thang xung quanh.</string>
     <string name="WaterElemental_Gender">masculine</string>
+    <string name="WaterElemental_Name">nguyên tố nước</string>
     <string name="WaterElemental_Name_Objective">nguyên tố nước</string>
     <string name="WaterOfAwareness_Procced">Khi bạn nhấp một ngụm, bạn cảm thấy kiến thức tràn vào tâm trí. Bạn giờ biết mọi thứ về các vật phẩm đang trang bị. Ngoài ra, bạn cảm nhận được tất cả vật phẩm trên tầng và biết tất cả bí mật của nó.</string>
     <string name="WaterOfHealth_Info">Sức mạnh của sức khỏe tỏa ra từ nước của giếng này. Hãy nhấp một ngụm để chữa lành vết thương và thỏa mãn cơn đói.</string>
@@ -2875,6 +2877,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

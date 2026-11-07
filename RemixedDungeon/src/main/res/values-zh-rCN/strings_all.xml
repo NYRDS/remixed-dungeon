@@ -1226,6 +1226,7 @@
     <string name="LastLevel_TileHighGrass">灰烬真菌</string>
     <string name="LastLevel_TileStatue">台柱</string>
     <string name="LastLevel_TileWater">冷岩浆</string>
+    <string name="LastRites_Info">于一处地点举行葬礼仪式。周围两格内的所有亡灵将被烧毁并致残。</string>
     <string name="LastShopLevel_TileDescDeco">这里的地面少了几块地砖。</string>
     <string name="LastShopLevel_TileDescEmptySP">厚重的地毯遮盖了地板</string>
     <string name="LastShopLevel_TileDescEntrance">通向上一层的斜坡。</string>
@@ -3070,6 +3071,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

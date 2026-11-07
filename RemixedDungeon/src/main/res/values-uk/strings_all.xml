@@ -1570,6 +1570,7 @@
     <string name="PetInventory_GiveToPet">Дати улюбленцю</string>
     <string name="PetInventory_HeroBackpackFull">Ваш рюкзак повний</string>
     <string name="PetInventory_PetBackpackFull">Рюкзак улюбленця повний</string>
+    <string name="PetInventory_TakeAll">Забрати все</string>
     <string name="PetInventory_TakeFromPet">Забрати у улюбленця</string>
     <string name="PetInventory_TakeN">Забрати %d</string>
     <string name="PetInventory_Title">Інвентар улюбленця</string>
@@ -3109,6 +3110,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
