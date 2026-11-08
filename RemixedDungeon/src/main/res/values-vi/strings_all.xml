@@ -786,6 +786,7 @@
     <string name="Hunger_Starving_1">Bạn đang chết đói!</string>
     <string name="Hunger_Starving_2">Bạn đang chết đói!</string>
     <string name="HuntressArmor_Desc">Một thợ săn trong chiếc áo choàng này có thể tạo ra một quạt các lưỡi kiếm linh hồn. Mỗi lưỡi kiếm sẽ nhắm vào một kẻ thù duy nhất trong tầm nhìn của thợ săn, gây sát thương tùy thuộc vào vũ khí cận chiến hiện tại của cô ấy.</string>
+    <string name="HuntressArmor_Name">áo choàng nữ săn bắn</string>
     <string name="HuntressArmor_NoEnemies">Không có kẻ thù nào trong tầm nhìn</string>
     <string name="HuntressArmor_NotHuntress">Chỉ thợ săn mới có thể sử dụng giáp này!</string>
     <string name="IceCaves_TileDescDeco">Con gnoll này đã bị đóng băng khi còn sống. Có vẻ như nó đã ở đó khá lâu rồi.</string>
@@ -2885,6 +2886,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

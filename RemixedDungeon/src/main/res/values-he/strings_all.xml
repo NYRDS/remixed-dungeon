@@ -514,6 +514,7 @@
     <string name="Hunger_Hungry_0">אתה רעב.</string>
     <string name="Hunger_Starving_0">אתה גווע ברעב!</string>
     <string name="Hunger_Starving_1">אתה גווע ברעב!</string>
+    <string name="Hunger_Starving_2">את גוועת ברעב!</string>
     <string name="HuntressArmor_NoEnemies">אין אויבים בטווח ראייה</string>
     <string name="HuntressArmor_NotHuntress">רק ציידות יכולות להשתמש בשריון זה!</string>
     <string name="IceCaves_TileDescDeco">הגנול הזה הוקפא חי. כנראה שהוא נמצא שם כבר הרבה זמן.</string>
@@ -1688,6 +1689,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

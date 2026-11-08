@@ -648,6 +648,7 @@
     <string name="MageArmor_Name">رداء الساحر</string>
     <string name="MailArmor_Name">درع حلقي</string>
     <string name="MeleeWeapon_Info1c">مُحسَّن</string>
+    <string name="MeleeWeapon_Info1d">مُوهَن</string>
     <string name="MeleeWeapon_Info2a">متوسط ضرره %d نقطة لكل ضربة.</string>
     <string name="MeleeWeapon_Info2b">متوسط ضرره المعتاد هو %1$d نقطة لكل ضربة وعادة ما يتطلب %2$d نقطة قوة.</string>
     <string name="MeleeWeapon_Info2c">هذا السلاح ربما ثقيل جداً عليك.</string>
@@ -1382,6 +1383,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

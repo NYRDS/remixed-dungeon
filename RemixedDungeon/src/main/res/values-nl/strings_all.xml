@@ -1693,6 +1693,7 @@
     <string name="SociologistNPC_Desc">Deze socioloog is op een heilige zoektocht om publieke meningen te verzamelen</string>
     <string name="SociologistNPC_DownloadError">Sorry, er is iets misgegaan, probeer het later opnieuw.</string>
     <string name="SociologistNPC_Gender">masculine</string>
+    <string name="SociologistNPC_Hi">Hallo!\nWil je deelnemen aan onze enquête?(Internettoegang is vereist)\nJouw mening telt!</string>
     <string name="SociologistNPC_InternetRequired">Sorry, maar zonder internettoegang kun je onze enquête niet invullen</string>
     <string name="SociologistNPC_Name">Socioloog</string>
     <string name="SociologistNPC_Name_Objective">Socioloog</string>
@@ -2639,6 +2640,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
