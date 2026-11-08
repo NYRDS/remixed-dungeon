@@ -9,6 +9,8 @@ import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.ScrollableList;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.pixeldungeon.windows.WndHelper;
+import com.nyrds.platform.app.WebServer;
+import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.storage.SaveUtils;
@@ -134,6 +136,25 @@ public class WndModSelect extends Window implements DownloadStateListener.IDownl
 		}
 
 		pos+= 4*GAP;
+
+		// built-in mod editor web app - needs the embedded web server
+		// (desktop: --webserver flag, android release: AboutScene 4-tap)
+		RedButton editorBtn = new RedButton("Mod editor") {
+			@Override
+			protected void onClick() {
+				if (WebServer.isRunning()) {
+					Game.openUrl("Mod editor", WebServer.getServerAddress() + "/web/mod-editor/");
+					return;
+				}
+				GameLoop.addToScene(new WndMessage(
+					"Start the built-in web server first:\n" +
+					"desktop: --webserver=8080 launch flag\n" +
+					"android: 4-tap the version text in About"));
+			}
+		};
+		editorBtn.setSize(width - GAP * 2, BUTTON_HEIGHT);
+		modsListContainer.add(editorBtn);
+		pos += BUTTON_HEIGHT + GAP;
 
 		modsListContainer.setSize(width, pos);
 		list.content().add(modsListContainer);

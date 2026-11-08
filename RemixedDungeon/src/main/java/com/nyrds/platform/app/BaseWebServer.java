@@ -136,10 +136,17 @@ public abstract class BaseWebServer extends NanoHTTPD {
         // sprite editor support: live sprite list + in-game texture reload
         debugEndpoints.put("/api/sprites/list", DebugEndpoints::handleApiSpritesList);
         debugEndpoints.put("/debug/reload_textures", DebugEndpoints::handleDebugReloadTextures);
+        // mod editor: mod-scoped GET API (POST side routes via the chain)
+        debugEndpoints.put("/api/mods/list", ModEditorEndpoints::handleModsList);
+        debugEndpoints.put("/api/mods/files", ModEditorEndpoints::handleModsFiles);
+        debugEndpoints.put("/api/mods/read", ModEditorEndpoints::handleModsRead);
+        debugEndpoints.put("/api/mods/raw", ModEditorEndpoints::handleModsRaw);
+        debugEndpoints.put("/api/mods/export", ModEditorEndpoints::handleModsExport);
+        debugEndpoints.put("/api/mods/terrain", ModEditorEndpoints::handleTerrain);
     }
 
-    // embedded web apps served from mod assets web/<app>/ (pixelcraft, mob-viewer)
-    private static final String[] WEB_APPS = {"pixelcraft", "mob-viewer"};
+    // embedded web apps served from mod assets web/<app>/ (pixelcraft, mob-viewer, mod-editor)
+    private static final String[] WEB_APPS = {"pixelcraft", "mob-viewer", "mod-editor"};
 
     public static boolean isRunning() {
         return instance != null && instance.started;
@@ -1167,6 +1174,11 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
             if (postResponse == null && uri.equals("/api/save_sprite")) {
                 postResponse = handleSpriteSave(session);
+            }
+
+            // mod editor POST API (create/duplicate/delete/save/select/...)
+            if (postResponse == null && uri.startsWith("/api/mods/")) {
+                postResponse = ModEditorEndpoints.handlePost(uri, session);
             }
 
             if (postResponse != null) {

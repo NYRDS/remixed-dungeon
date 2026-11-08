@@ -1,0 +1,20 @@
+{
+   "defenseSkill"  :2,
+   "attackSkill"   :8,
+   "exp"           :1,
+   "maxLvl"        :5,
+   "dmgMin"        :1,
+   "dmgMax"        :3,
+   "dr"            :0,
+   "baseSpeed"     :1,
+   "attackDelay"   :1,
+   "ht"            :8,
+   "viewDistance"  :4,
+   "lootChance"    :0,
+   "name"          :"ExampleMob_Name",
+   "name_objective":"ExampleMob_Name_Objective",
+   "description"   :"ExampleMob_Desc",
+   "gender"        :"neuter",
+   "spriteDesc"    :"spritesDesc/Rat.json",
+   "walkingType"   :"NORMAL"
+}
