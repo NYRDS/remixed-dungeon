@@ -163,6 +163,7 @@
     <string name="BleedingBuff_Name">نزيف</string>
     <string name="Bleeding_Death">نَزَفتَ حتى الموت...</string>
     <string name="BlessedBuff_Name">مبارك</string>
+    <string name="BlessingSpell_Name">بركة</string>
     <string name="BlindnessBuff_Info">عمى تام، لا يُسمع سوى الأصوات المحيطة.</string>
     <string name="BlindnessBuff_Name">مُعمّى</string>
     <string name="BloodTransfusion_Drained">تتدفق جوهر الحياة من حيوانك الأليف إليك.</string>
@@ -1381,6 +1382,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 
