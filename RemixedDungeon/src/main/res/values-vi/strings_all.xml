@@ -438,6 +438,7 @@
     <string name="DM300_Info1">DM-300 tự sửa chữa!</string>
     <string name="DM300_Info2">Nhiệm vụ thất bại. Đang tắt máy.</string>
     <string name="DM300_Info3">Phát hiện nhân viên không được phép.</string>
+    <string name="DM300_Name">DM-300</string>
     <string name="DM300_Name_Objective">DM-300</string>
     <string name="Dagger_Gender">masculine</string>
     <string name="Dagger_Info">Một cây khăn sắt đơn giản với tay cầm gỗ mòn.</string>
@@ -2893,6 +2894,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

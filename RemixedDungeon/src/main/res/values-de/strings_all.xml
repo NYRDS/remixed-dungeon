@@ -244,6 +244,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Bischof</string>
     <string name="BishopNPC_Name_Objective">Bischof</string>
+    <string name="BishopQuest_1_1_InProgress">Du hast %1$d von %2$d Untoten zur Ruhe gebettet, mein Kind. Geh weiter.</string>
     <string name="BishopQuest_2_1_InProgress">Bring mir _drei Sonnengras-Samen_, mein Kind. Der Altar wartet.</string>
     <string name="BishopQuest_2_1_Prologue">Bevor ich dir die Geheimnisse des Priestertums anvertrauen darf, muss der Altar vorbereitet werden. Bring mir _drei Sonnengrassamen_ — ihre goldene Essenz ergibt den feinsten Weihrauch.</string>
     <string name="BishopQuest_2_2_InProgress">Bring mir _drei Moongrace-Samen_, mein Kind. Der Altar wartet.</string>
@@ -3095,6 +3096,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

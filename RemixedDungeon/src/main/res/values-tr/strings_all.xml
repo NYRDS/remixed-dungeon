@@ -245,6 +245,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BishopNPC_Name_Objective">Piskopos</string>
     <string name="BishopQuest_1_1_Prologue">Ölüler dinlenmeyi reddediyor, çocuklarım. Kemikler hapishane koridorlarında dolaşıyor, ve çürümuş şeyler nekropolden çıkıyor. On ölümsüzleri dinlendir, o zaman imanın gerçek olduğunu bileceğim.</string>
     <string name="BishopQuest_2_2_Prologue">Başlangıç ayini ayla kutsanmış kadan gerektirir, çocuklarım. Bana _üç ay lütfu tohumu_ getir, derinlerde ay ışığı süren yerlerde toplanmış.</string>
+    <string name="BishopQuest_3_1_InProgress">Bana eğitilmiş bir _zombi_ getir, çocuğum. Onu nazikçe davran — ne yaptığını bilmiyor.</string>
     <string name="BishopQuest_3_2_InProgress">Bana yavru bir _yarasa_ getir, çocuklarım. Yavru canavarı korkutma.</string>
     <string name="BishopQuest_5_1_Prologue">Bir sınav kaldı, hepsinin en zoru. Cehennem işlerinizi fark etti, çocuklarım, ve kızlarını gönderdi. _Sükübler_ derin salonlarda dolaşıyor, ve fısıltıları tatlı zehir. _İki sükübü_ kovun, ve sizlere keşişliğin gizemlerini aktaracağım.</string>
     <string name="Bishop_bye">Senin için dua edeceğim evladım.</string>
@@ -3108,6 +3109,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

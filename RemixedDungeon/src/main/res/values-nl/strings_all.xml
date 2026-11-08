@@ -102,6 +102,7 @@
     <string name="Badges_AllWands">Alle staven geïdentificeerd</string>
     <string name="Badges_BossSlain1">De Goo is gedood</string>
     <string name="Badges_BossSlain1All">De Goo is verslagen door alle klassen</string>
+    <string name="Badges_BossSlain3">DM-300 is verslagen</string>
     <string name="Badges_BossSlain3All">DM-300 is verslagen door alle subklassen</string>
     <string name="Badges_Champion">Uitdaging gewonnen</string>
     <string name="Badges_DeathFalling">Dood door vallen</string>
@@ -2647,6 +2648,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

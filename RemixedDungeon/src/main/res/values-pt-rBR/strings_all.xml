@@ -997,6 +997,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HeroClass_PlagueDoctorPerks_4">Médicos da Peste sofrem grandes penalidades de precisão sem sua amada Serra de Osso em mãos e não podem usar armas à distância.</string>
     <string name="HeroClass_Priest">Sacerdote</string>
     <string name="HeroClass_PriestPerks_0">Sacerdotes começam com 12 pontos de Força e um cajado.</string>
+    <string name="HeroClass_PriestPerks_4">Pergaminhos de Remover Maldição são identificados desde o início.</string>
     <string name="HeroClass_Rog">ladrão</string>
     <string name="HeroClass_RogPerks_0">Ladrões começam com um Anel de Sombras +1.</string>
     <string name="HeroClass_RogPerks_1">Ladrões podem identificar um anel ao equipa-lo.</string>
@@ -3098,6 +3099,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
