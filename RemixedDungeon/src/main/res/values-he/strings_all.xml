@@ -844,6 +844,7 @@
     <string name="Ring_Info2">ה-%1$s שלך מתהדק סביב האצבע שלך בכאב</string>
     <string name="Roar_Name">שאגה</string>
     <string name="RogueArmor_ACSpecial">פצצת עשן</string>
+    <string name="RogueArmor_NotRogue">רק נוכלים יכולים להשתמש בשריון זה!</string>
     <string name="RogueArmor_Prompt">בחר מיקום לקפוץ אליו</string>
     <string name="RootSpell_Info">משריש את הדמות הנבחרת, ומונע ממנה לזוז לפרק זמן קצר.</string>
     <string name="RootsBuff_Name">שורש</string>
@@ -1689,6 +1690,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

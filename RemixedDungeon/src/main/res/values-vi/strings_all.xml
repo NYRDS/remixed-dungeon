@@ -1507,6 +1507,7 @@
     <string name="ShieldInfoTemplate">Chiếc khiên này sẽ chặn tới %1$d sát thương đến. Với cơ hội %2$d %%. Sẽ mất %3$3.1f giây để hồi phục sau khi chặn thành công.</string>
     <string name="ShieldStrTemplate">Người đeo khiên cần có ít nhất %1$d điểm Sức mạnh để sử dụng nó đúng cách.</string>
     <string name="ShieldWeaponInfo">Khi sử dụng như vũ khí, khiên này sẽ gây trung bình %1 sát thương.</string>
+    <string name="Shielded_Defense">đã chặn</string>
     <string name="Shielded_Desc">Quái vật lớn nhất, mạnh nhất và kiên cường nhất trong số tất cả các gnoll. Khi bị thương nặng, chúng sẽ điên cuồng, gây thiệt hại lớn hơn cho kẻ thù. Quái vật này đang khiêng một khiên khổng lồ!</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">côn đồ khiên thủ</string>
@@ -2890,6 +2891,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
