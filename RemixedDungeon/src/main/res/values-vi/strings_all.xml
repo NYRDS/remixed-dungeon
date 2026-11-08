@@ -471,12 +471,14 @@
     <string name="DeepSnail_Gender">masculine</string>
     <string name="DeepSnail_Name_Objective">ốc sên sâu</string>
     <string name="DeferedDamageBuff_Info">Cơn đau đã biến thành cơn đau chậm, làm giảm sát thương nhận được một lần.\nSát thương còn lại để nhận %d</string>
+    <string name="DeferedDamageBuff_Name">Sát thương hoãn lại (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s đã giết bạn...</string>
     <string name="DewVial_Collected">Bạn đã nhặt một giọt sương vào lọ sương.</string>
     <string name="DewVial_Full">Lọ hơi sương đã đầy!</string>
     <string name="DewVial_Name">lọ sương</string>
     <string name="Dewdrop_Info">Một giọt sương trong vắt.</string>
     <string name="DieHardBuff_Info">Tốc độ hồi phục tăng lên.</string>
+    <string name="DieHardBuff_Name">Khó Chết</string>
     <string name="DieHardSpell_Info">Tạm thời tăng khả năng hồi phục khiến bạn trở thành một Die Hard thực thụ.</string>
     <string name="DieHardSpell_Name">Chết Cứng</string>
     <string name="Displacement_Txt">%s الخدمة</string>
@@ -640,6 +642,7 @@
     <string name="GnollTamahawk_Info">Một chiếc Rìu Tomahawk truyền thống được tạo ra bởi các bậc thầy Gnoll, nơi mỗi bộ lạc có thiết kế độc đáo riêng. Chiếc Rìu này nhẹ hơn một chút so với các đối thủ của nó.</string>
     <string name="Gnoll_Desc">Gnoll là những nhân loại giống linh cẩu. Chúng sống trong cống và ngục tối, thỉnh thoảng lên bề mặt để cướp phá. Trinh sát Gnoll là thành viên bình thường của bầy, không mạnh mẽ như kẻ cục súc và không thông minh như pháp sư.</string>
     <string name="Gnoll_Gender">masculine</string>
+    <string name="Gnoll_Name">gnoll trinh sát</string>
     <string name="Gold_Collect">Thu thập đồng xu vàng để chi tiêu sau đó tại cửa hàng.</string>
     <string name="Gold_Name">vàng</string>
     <string name="GoldenKey_Info">Những khía trên chiếc chìa khóa vàng này rất nhỏ và tinh xảo. Có lẽ nó có thể mở ổ khóa của một chiếc rương nào đó?</string>
@@ -1337,6 +1340,7 @@
     <string name="RingOfShadows_Info">Kẻ thù sẽ khó nhận ra bạn hơn khi bạn đeo nhẫn này. Nhẫn Bóng Tối xuống cấp sẽ báo động cho kẻ thù mà lẽ ra chúng không hề để ý đến sự hiện diện của bạn.</string>
     <string name="RingOfStoneWalking_Info">Chiếc nhẫn kỳ lạ này được làm từ đá chắc chắn. Thứ bạn nghĩ là ruby thực ra là máu lỏng đang được giữ tại chỗ! Bên trong là một mũi tên chỉ về thứ gì đó giống bức tường, cùng với một trái tim tan vỡ... Nó có thể làm gì?</string>
     <string name="Ring_BuffKnown">Đây là %s</string>
+    <string name="Ring_Gems_0">kim cương</string>
     <string name="Ring_Gems_1">opal</string>
     <string name="Ring_Gems_10">thạch anh</string>
     <string name="Ring_Gems_11">mã não</string>
@@ -2886,6 +2890,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
