@@ -869,6 +869,7 @@
     <string name="Journal_Troll">Thợ rèn Troll</string>
     <string name="Journal_Wandmaker">Thợ chế tạo đũa phép cũ</string>
     <string name="Journal_WellAwareness">Giếng Nhận Thức</string>
+    <string name="Journal_WellHealt">Giếng Sức Khỏe</string>
     <string name="Journal_WellTransmut">Giếng Chuyển Hóa</string>
     <string name="KindOfBow_ChooseArrows">CHỌN MŨI TÊN</string>
     <string name="KindOfBow_SelectArrowKind">Tôi nên dùng loại tên nào?</string>
@@ -2892,6 +2893,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

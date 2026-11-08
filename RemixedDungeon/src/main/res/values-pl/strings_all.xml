@@ -252,6 +252,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BishopQuest_2_2_Epilogue">Księżycowe światło w nasieniu... jak sama łaska. Dziś noc kościół będzie pachnieć srebrem. Weź to eliksir za swoją oddaność, dziecko moje.</string>
     <string name="BishopQuest_3_1_Epilogue">Ostatnie pominy zostały wypowiedziane, a posłuszny zombie rozpada się w spokojny pył. Teraz spoczywa naprawdę. Twoje miłosierdzie cię honoruje, dziecko moje — weź ten zwój, będziesz go potrzebować tam, gdzie idziesz.</string>
     <string name="BishopQuest_3_2_InProgress">Przynieś mi _oswojonego nietoperza_, moje dziecko. Nie przerażaj biednego stworzenia.</string>
+    <string name="BishopQuest_4_1_Epilogue">Legiony chwieją się jak marionetki z przeciętymi nitkami — czuję to nawet stąd. Ich pan tego nie wybaczy. Weź ten eliksir siły, dziecko moje; będziesz potrzebować swojej siły.</string>
     <string name="BishopQuest_5_1_Epilogue">Dzień Pański się zakończył! Od tego dnia możesz pójść ścieżką kapłana. Przyjmij to błogosławieństwo i te jałmużny, dziecko moje — zasłużyłeś na nie.</string>
     <string name="BishopQuest_5_1_InProgress">Wypędź _dwie sukkuby_, dziecko moje — %1$d z %2$d wypędzonych. Pilnuj swojej duszy; ich szepoty to słodkie jad.</string>
     <string name="Bishop_QuestCompleted">Klasa Kapłan odblokowana</string>
@@ -3121,6 +3122,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

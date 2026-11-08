@@ -1912,6 +1912,7 @@
     <string name="VileEssence_Name">Verachtelijke Essentie</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
     <string name="WandHolster_Info">Deze slanke houder is gemaakt van leer van een exotisch dier. Het maakt het mogelijk om tot %d toverstaven compact bij je te dragen.</string>
+    <string name="WandHolster_Name">wandhouder</string>
     <string name="WandMaker_Berry1">Oh, wat een aangename verrassing een fatsoenlijk persoon te ontmoeten op zo\'n plek! Ik kwam hier voor een zeldzaam ingrediënt - een _Rotberry-zaad_. Omdat ik een magiër ben, kan ik mezelf goed verdedigen tegen lokale monsters, maar ik verdwaal altijd in no-time, het is erg gênant. Zou je me kunnen helpen? Ik zou je graag betalen met een van mijn beste toverstokken.</string>
     <string name="WandMaker_Berry2">Iemand geluk met een Gniestoel zaadje, %s? Nee? Maak je geen zorgen, ik heb het niet eilig.</string>
     <string name="WandMaker_Defense">geabsorbeerd</string>
@@ -2646,6 +2647,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
