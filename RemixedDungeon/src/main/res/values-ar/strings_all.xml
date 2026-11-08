@@ -384,6 +384,7 @@
     <string name="Exhumation_Name">نبش القبر</string>
     <string name="ExplodingSkull_Desc">يبدو هذا الجمجمة الطافية المحترقة هشة للغاية، ويبدو أنها ستنفجر إلى قطع في أي لحظة.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
+    <string name="ExplodingSkull_Name_Objective">جمجمة متفجرة</string>
     <string name="Eye_Gender">neuter</string>
     <string name="Eye_Kill">نظر الموت من %s قتلك...</string>
     <string name="Eye_Name">العين الشريرة</string>
@@ -1383,6 +1384,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

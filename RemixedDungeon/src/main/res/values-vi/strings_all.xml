@@ -1155,6 +1155,7 @@
     <string name="Piranha_Desc">Những loài cá ăn thịt này không phải là cư dân tự nhiên của các hồ dưới lòng đất. Chúng được lai tạo đặc biệt để bảo vệ các kho báu bị ngập.</string>
     <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">piranha khổng lồ</string>
+    <string name="Piranha_Name_Objective">con piranha khổng lồ</string>
     <string name="PirateSet_Info">Arr! Bạn có gan tham gia cùng chúng tôi không!? Hay chỉ là một con chuột đất? Mong rằng không, vì thứ này chỉ dành cho cướp biển thôi, ừ, ý tôi là... Arr!</string>
     <string name="PirateSet_Name">Bộ Cướp Biển</string>
     <string name="PlagueDoctorMaskHood_Name">Mặt nạ Bác Sĩ Chúm với mũ che đầu</string>
@@ -2891,6 +2892,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

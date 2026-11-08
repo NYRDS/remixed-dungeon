@@ -2331,6 +2331,7 @@
     <string name="town_deco_crate_bottles_name">Bierkrat</string>
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
     <string name="town_deco_crate_name">Kist</string>
+    <string name="town_deco_crate_scrolls_desc">Deze krat is randvol met geheime kennis.</string>
     <string name="town_deco_crate_scrolls_name">Kist met rollen</string>
     <string name="town_deco_cross_desc">Een massief zilveren kruis, symbool van de lokale religie - \&quot;De Getuigen van Santa de Heer der Diepten\&quot;.</string>
     <string name="town_deco_cross_name">Kruis</string>
@@ -2645,6 +2646,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

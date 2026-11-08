@@ -1742,6 +1742,7 @@ Lade sie auf eigene Gefahr herunter und habe Spaß!\n </string>
     <string name="Potion_SureDrink">Bist du sicher, dass du das trinken möchtest? In den meisten Fällen solltest du solche Tränke auf deine Feinde werfen.</string>
     <string name="Potion_SureThrow">Bist du sicher, dass du es werfen möchtest? In den meisten Fällen ist es sinnvoll, es zu trinken.</string>
     <string name="Potion_Yes">Ja, ich weiß, was ich tue</string>
+    <string name="PriestArmor_Desc">Diese Kampfgewänder des Priestertums können zur Weihung aufgerufen werden: alle Untoten in der Nähe des Trägers werden von heiligem Licht verbrannt, während der Priester einen Segen erhält.</string>
     <string name="Prison_TileDescBookshelf">Dies ist möglicherweise das Überbleibsel einer Gefängnisbibliothek. Ob sie brennbar ist?</string>
     <string name="Prison_TileDescDeco">Da sind alte Blutflecken auf dem Boden.</string>
     <string name="Prison_TileWater">Dunkles, kaltes Wasser.</string>
@@ -3093,6 +3094,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

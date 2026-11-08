@@ -779,6 +779,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Exhumation_Name">Exhumar</string>
     <string name="Exhumation_NoGrave">No hay una tumba aquí para exhumar.</string>
     <string name="Exhumation_Ok">Te obedeceré.</string>
+    <string name="Exorcism_Info">Una palabra de poder de destierro. Inflige un grave daño sagrado a un solo enemigo — duplicado contra los no-muertos, que además son ralentizados por ello.</string>
     <string name="Exorcism_Name">Exorcismo</string>
     <string name="ExplodingSkull_Desc">Este cráneo flotante y llameante parece extremadamente frágil, como si fuera a estallar en cualquier momento.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
@@ -3098,6 +3099,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

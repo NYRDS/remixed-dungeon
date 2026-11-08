@@ -477,6 +477,7 @@
     <string name="HeroClass_None">אזרח פשוט</string>
     <string name="HeroClass_PlagueDoctorPerks_4">רופאי הדבר סובלים מקנסות דיוק חמורים ללא המסור העצמות האהוב ביד, ואינם יכולים להשתמש בנשק מטווח.</string>
     <string name="HeroClass_Priest">כומר</string>
+    <string name="HeroClass_PriestPerks_5">כהנים מתחילים עם 12 נקודות מאנה.</string>
     <string name="HeroClass_Rog">נוכל</string>
     <string name="HeroClass_WarPerks_2">לוחמים פחות מיומנים בנשק טווח.</string>
     <string name="HeroClass_WarPerks_3">כל פריט מזון משחזר מעט בריאות כאשר נאכל.</string>
@@ -1690,6 +1691,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
