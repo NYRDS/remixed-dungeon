@@ -1733,6 +1733,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Potion_SureDrink">¿Seguro que quieres beberla? En la mayoría de casos deberías lanzar estas pociones a tus enemigos.</string>
     <string name="Potion_SureThrow">¿Seguro que quieres tirarla? Tendría mas sentido bebértela.</string>
     <string name="Potion_Yes">Sí, sé lo que estoy haciendo</string>
+    <string name="PriestArmor_Desc">Estas vestiduras de batalla del sacerdocio pueden invocarse para Santificar: todos los no-muertos cerca del portador son quemados por la luz sagrada, mientras que el sacerdote recibe una bendición.</string>
     <string name="Prison_TileDescBookshelf">Esto probablemente sean los restos de la biblioteca de la prisión. ¿Arderá?</string>
     <string name="Prison_TileDescDeco">Hay viejas manchas de sangre en el suelo.</string>
     <string name="Prison_TileWater">Agua fría y oscura.</string>
@@ -3100,6 +3101,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

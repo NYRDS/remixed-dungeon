@@ -1446,6 +1446,7 @@
     <string name="Mob_Died">Ти чуєш, що щось померло в далечі</string>
     <string name="Mob_FollowMe">Йду за тобою!</string>
     <string name="Mob_GoingTo">Вже біжу!</string>
+    <string name="Mob_Guarding">Охороню це місце!</string>
     <string name="Mob_ItemUse">%1$s використовує %2$s</string>
     <string name="Mob_ReadyForOrder">%s готовий до ваших наказів.</string>
     <string name="Mob_StaAmokStatus">%1$s поводиться несамовито</string>
@@ -3112,6 +3113,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

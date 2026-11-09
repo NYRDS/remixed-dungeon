@@ -237,6 +237,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">主教</string>
     <string name="BishopNPC_Name_Objective">主教</string>
+    <string name="BishopQuest_1_1_InProgress">你已让 %d 具亡灵安息，共 %d 具，吾儿。继续努力。</string>
     <string name="BishopQuest_3_1_InProgress">给我带来一只驯服的_僵尸_，我的孩子。温柔对待它——它不知道自己在做什么。</string>
     <string name="BishopQuest_4_1_Epilogue">军团像断了线的木偶一样踉跄——我甚至能从这里感受到。他们的主人不会饶恕这一点。拿去这瓶力量药水吧，孩子；你将需要你的力量。</string>
     <string name="BishopQuest_4_2_Epilogue">当最后一个逝去时，教堂的钟声自行敲响——这是个好兆头，吾儿。拿去这瓶力量药水；最终的试炼将向你索取许多。</string>
@@ -3073,6 +3074,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 
