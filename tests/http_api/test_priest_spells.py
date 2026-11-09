@@ -181,7 +181,7 @@ def test_available_spells(tester: PriestSpellTester) -> bool:
     spells = result.get("spells", [])
     print(f"Total spells available: {len(spells)}")
 
-    priest_spells = ["Blessing", "HolyWater", "Exorcism", "LastRites", "Heal"]
+    priest_spells = ["Blessing", "HolyWater", "Exorcism", "LastRites", "Heal", "GodWrath", "Anathema"]
 
     success = True
     for spell in priest_spells:
@@ -196,32 +196,64 @@ def test_available_spells(tester: PriestSpellTester) -> bool:
 
 def _hero_buffs(tester: PriestSpellTester):
     hero = tester.get_hero_info()
-    return [b.get("__className", "") for b in hero.get("buffs", [])]
+    # lua buffs all report the generic CustomBuff className - the kind lives in entityKind
+    return [b.get("entityKind") or b.get("__className", "") for b in hero.get("buffs", [])]
 
 
 def test_blessing(tester: PriestSpellTester) -> bool:
     print("\n" + "=" * 60)
-    print("TEST: Blessing Spell (self-target, Blessed buff)")
+    print("TEST: Blessing Spell (any-char target: grace on the pure, Slow on the unholy)")
     print("=" * 60)
 
     tester.top_up_skill_points()
 
-    # self-target spell: the plain cast endpoint routes TARGET_SELF to cast(caster)
-    result = tester.client.cast_spell("Blessing")
+    # self-bless: castOnTarget(hero, hero) - hero is not undead -> grace branch
+    # (castOnTarget returns void; assert the buff in the same chunk)
+    r = tester.client.run_lua(
+        'local RPD = require "scripts/lib/commonClasses"\n'
+        'local sp = RPD.SpellFactory:getSpellByName("Blessing")\n'
+        'sp:castOnTarget(RPD.Dungeon.hero, RPD.Dungeon.hero)\n'
+        'return tostring(RPD.Dungeon.hero:hasBuff("Blessed") ~= nil)'
+    )
     time.sleep(1)
-
-    if not result.get("success"):
-        print(f"✗ Failed to cast spell: {result.get('message', result.get('error'))}")
+    if r.get("result") != "true":
+        print(f"✗ Self-cast failed (no Blessed on hero): {r}")
         return False
-    print("✓ Spell cast executed")
 
     buffs = _hero_buffs(tester)
-    if any("Blessed" in b for b in buffs):
-        print("✓ Blessed buff active on hero")
-        return True
+    if not any("Blessed" in b for b in buffs):
+        print(f"✗ Blessed buff not found on hero (buffs: {buffs})")
+        return False
+    print("✓ Self-cast grants Blessed on hero")
 
-    print(f"✗ Blessed buff not found on hero (buffs: {buffs})")
-    return False
+    # rebuke branch: a zombie cannot receive grace -> Slow, no Blessed
+    spawned = tester.create_mob("Zombie")
+    if "id" not in spawned:
+        print(f"✗ Failed to create Zombie: {spawned.get('error', spawned)}")
+        return False
+    time.sleep(0.5)
+
+    r = tester.client.run_lua(
+        'local RPD = require "scripts/lib/commonClasses"\n'
+        'local sp = RPD.SpellFactory:getSpellByName("Blessing")\n'
+        'local mobs = RPD.Dungeon.level:getCopyOfMobsArray()\n'
+        'local out = "no-zombie"\n'
+        'for i=1,#mobs do\n'
+        '  local m = mobs[i]\n'
+        '  if m:getEntityKind() == "Zombie" then\n'
+        '    sp:castOnTarget(RPD.Dungeon.hero, m)\n'
+        '    out = "slow=" .. tostring(m:hasBuff("Slow")) .. " blessed=" .. tostring(m:hasBuff("Blessed"))\n'
+        '  end\n'
+        'end\n'
+        'return out'
+    )
+    tester.kill_mob(spawned["id"])
+
+    if r.get("result") != "slow=true blessed=false":
+        print(f"✗ Rebuke branch wrong: {r}")
+        return False
+    print("✓ Undead target gets Slow, no Blessed")
+    return True
 
 
 def _damage_a_zombie(tester: PriestSpellTester, spell: str, min_expected: int) -> bool:
@@ -285,6 +317,70 @@ def test_last_rites(tester: PriestSpellTester) -> bool:
     return _damage_a_zombie(tester, "LastRites", 5)
 
 
+def test_gods_wrath(tester: PriestSpellTester) -> bool:
+    print("\n" + "=" * 60)
+    print("TEST: GodWrath Spell (universal holy bolt)")
+    print("=" * 60)
+
+    # 10 + 5*skill universal damage, skill 1 -> at least 10
+    return _damage_a_zombie(tester, "GodWrath", 10)
+
+
+def test_anathema(tester: PriestSpellTester) -> bool:
+    print("\n" + "=" * 60)
+    print("TEST: Anathema Spell (+50% damage taken mark)")
+    print("=" * 60)
+
+    tester.top_up_skill_points()
+
+    def _probe_drop(mob_id: int) -> int:
+        """Real Char.damage(4) (Burning-kind source, like a DoT) through the debug
+        endpoint; returns hp drop. NOTE: test_damage without a source is a no-op."""
+        before = tester.char_status(mob_id).get("hp")
+        tester.client._get(f"/debug/test_damage?id={mob_id}&dmg=4&src=buff")
+        time.sleep(0.5)
+        after = tester.char_status(mob_id).get("hp")
+        return before - after if before is not None and after is not None else -1
+
+    # unmarked baseline: 4 damage passes through unchanged
+    spawned = tester.create_mob("Zombie")
+    if "id" not in spawned:
+        print(f"✗ Failed to create baseline Zombie: {spawned.get('error', spawned)}")
+        return False
+    time.sleep(0.5)
+    base_drop = _probe_drop(spawned["id"])
+    tester.kill_mob(spawned["id"])
+    if base_drop != 4:
+        print(f"✗ Unmarked drop {base_drop} (expected 4)")
+        return False
+    print("✓ Unmarked probe drop: 4")
+
+    # marked: the same 4 damage must land as 6 (+50%)
+    spawned = tester.create_mob("Zombie")
+    if "id" not in spawned:
+        print(f"✗ Failed to create marked Zombie: {spawned.get('error', spawned)}")
+        return False
+    mob_id = spawned["id"]
+    time.sleep(0.5)
+
+    result = tester.cast_spell_on_mob("Anathema", "Zombie")
+    time.sleep(0.5)
+    if not result.get("success"):
+        print(f"✗ Failed to cast Anathema: {result.get('message', result.get('error'))}")
+        tester.kill_mob(mob_id)
+        return False
+    print("✓ Anathema cast executed")
+
+    marked_drop = _probe_drop(mob_id)
+    tester.kill_mob(mob_id)
+
+    if marked_drop != base_drop + base_drop / 2:
+        print(f"✗ Marked drop {marked_drop} (expected {base_drop + base_drop / 2})")
+        return False
+    print(f"✓ Marked probe drop: {marked_drop} (+50% amplification works)")
+    return True
+
+
 def run_all_tests(tester: PriestSpellTester) -> Dict[str, bool]:
     results = {}
 
@@ -304,6 +400,8 @@ def run_all_tests(tester: PriestSpellTester) -> Dict[str, bool]:
     results["holy_water"] = test_holy_water(tester)
     results["exorcism"] = test_exorcism(tester)
     results["last_rites"] = test_last_rites(tester)
+    results["gods_wrath"] = test_gods_wrath(tester)
+    results["anathema"] = test_anathema(tester)
 
     return results
 
