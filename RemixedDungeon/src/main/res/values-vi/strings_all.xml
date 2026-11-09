@@ -2179,6 +2179,7 @@
     <string name="town_deco_locked_door_desc">Có điều gì phía sau cánh cửa đó nhỉ?</string>
     <string name="town_deco_locked_door_name">Cửa khóa</string>
     <string name="town_deco_magenta_carpet_desc">Tông màu đỏ tươi của thảm này gợi nhớ đến rượu vang địa phương.</string>
+    <string name="town_deco_magenta_carpet_name">Thảm</string>
     <string name="town_deco_medicine_desc">Các lọ thuốc và nguyên liệu y tế khác được đặt cẩn thận trên các kệ này.</string>
     <string name="town_deco_misc_name">Rác</string>
     <string name="town_deco_movies_door_desc">Cánh cửa này trông đặc biệt chắc chắn. Nó có thể dẫn đến điều gì đó tuyệt vời.</string>
@@ -2895,6 +2896,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

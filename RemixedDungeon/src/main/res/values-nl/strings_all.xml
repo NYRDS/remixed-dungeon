@@ -2363,6 +2363,7 @@
     <string name="town_deco_glass_stained_name">Glas in lood</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
     <string name="town_deco_hay_name">hooi</string>
+    <string name="town_deco_identifier_sign_desc">Het lijkt erop dat er een waarzegster in dat gebouw woont.</string>
     <string name="town_deco_inn_bed_desc">Ziet eruit als een heel comfortabel bed.</string>
     <string name="town_deco_inn_bed_name">Bed</string>
     <string name="town_deco_ladder_desc">Een oude ladder, onbetrouwbaar van uiterlijk.</string>
@@ -2649,6 +2650,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

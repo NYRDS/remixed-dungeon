@@ -2179,6 +2179,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="StartScene_UnlockElf">Untuk membuka kelas watak ini, bunuh bos Raja dengan mana-mana kelas lain</string>
     <string name="StartScene_UnlockGnoll">Untuk membuka kelas ini anda mesti pujuk paderi pekan supaya sembuhkan Gnoll Ganas.</string>
     <string name="StartScene_UnlockNecromancer">Untuk membuka kelas karakter ini, bunuh Lich dengan lain-lain kelas.</string>
+    <string name="StartScene_UnlockPriest">Untuk membuka Paderi - selesaikan misi Uskup di Gereja</string>
     <string name="StartScene_Warning">Kemajuan permainan semasa anda akan dipadamkan.</string>
     <string name="StartScene_WinGame">Untuk membuka \&quot;Cabaran\&quot;, menangi permainan dengan mana-mana kelas watak.</string>
     <string name="StartScene_Yes">Ya, mulakan permainan baharu</string>
@@ -3047,6 +3048,7 @@ Pedulikan semua itu, tiada lagi syurga di atas sana, Maka, beliau berpatah balik
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilitupi dengan kain sutera. Anda dapati pelbagai jenis kad tarot diletak dalam susunan yang tersendiri.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

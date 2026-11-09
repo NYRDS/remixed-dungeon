@@ -238,6 +238,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">司教</string>
     <string name="BishopNPC_Name_Objective">司教</string>
+    <string name="BishopQuest_4_1_Epilogue">軍勢は糸を切られた操り人形のようによろめく —— ここからでも感じ取れる。主はこれを許さぬじゃろう。この強靭のポーションを受け取れ、我が子よ；お前には力が必要じゃ。</string>
     <string name="BishopQuest_4_2_Prologue">歩く骸骨だけでなく、縛られた死者もおる、我が子よ。_奴隷の魂_ —— 自由を奪われ、生者を憎みつつ、終わりなき奉仕に鎖で繋がれた哀れな魂たちじゃ。彼らの悲しみこそが武器となる。_4人の奴隷の魂_を解き放ってやるのじゃ。</string>
     <string name="Bishop_bye">あなたのために祈りましょう。</string>
     <string name="Bishop_great_bless">大いなる祝福 - %dg</string>
@@ -3112,6 +3113,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 

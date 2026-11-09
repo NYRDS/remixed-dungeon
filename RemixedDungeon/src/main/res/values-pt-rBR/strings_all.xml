@@ -1068,6 +1068,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="HideInGrassSpell_Info">Você aperfeiçoou seu domínio do esconde-esconde.</string>
     <string name="HideInGrassSpell_Name">Esconder na Grama</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Mesmo eu não posso me esconder à vista de todos.</string>
+    <string name="HolyWater_Name">Água Santa</string>
     <string name="Horror_Name_0">%s Sobrenatural</string>
     <string name="Horror_Name_1">%s Sobrenatural</string>
     <string name="Horror_Name_2">%s Sobrenatural</string>
@@ -3100,6 +3101,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

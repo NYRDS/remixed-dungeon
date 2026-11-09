@@ -1748,6 +1748,7 @@
     <string name="Potion_SureDrink">Ви впевнені, що хочете випити це? Зазвичай такі зілля кидають в своїх ворогів.</string>
     <string name="Potion_SureThrow">Ви впевнені, що хочете кинути це зілля? Зазвичай такі зілля випивають.</string>
     <string name="Potion_Yes">Так, я знаю що роблю.</string>
+    <string name="PriestArmor_Desc">Ці бойові обладунки священства можуть викликати Освячення: вся нежить поруч з носієм спалюється святим світлом, а сам священник отримує благословення.</string>
     <string name="Prison_TileDescBookshelf">Схоже на залишки тюремної бібліотеки. Цікаво, загориться?</string>
     <string name="Prison_TileDescDeco">Навколо підлога заляпана старою кров\'ю.</string>
     <string name="Prison_TileWater">Темна холодна вода.</string>
@@ -3113,6 +3114,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

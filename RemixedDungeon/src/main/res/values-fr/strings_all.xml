@@ -1732,6 +1732,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Potion_SureDrink">Etes vous sûr de vouloir la boire ? En général, on jette ce genre de potions vers les ennemis.</string>
     <string name="Potion_SureThrow">Etes vous sûr de vouloir la jeter ? En général, c\'est plus logique de la boire.</string>
     <string name="Potion_Yes">Oui, je sais ce que je fais </string>
+    <string name="PriestArmor_ACSpecial">SANCTIFICATION</string>
     <string name="PriestArmor_Desc">Ces vêtements de bataille du sacerdoce peuvent être invoqués pour Sanctifier : tous les morts-vivants près du porteur sont brûlés par la lumière sacrée, tandis que le prêtre reçoit une bénédiction.</string>
     <string name="Prison_TileDescBookshelf">C\'est probablement les restes d\'une librairie de prison. Pourraient-ils brûler ?</string>
     <string name="Prison_TileDescDeco">Il y a des traces de sang séché sur le sol.</string>
@@ -3114,6 +3115,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
