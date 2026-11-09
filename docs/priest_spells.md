@@ -132,7 +132,7 @@ planned, the icon slot is ready (empty tiles 5–31) and the binding needs one c
 | mod_compat_sweep.sh | PASS 7/7 mods, 1138 kinds, 0 ctor fails |
 | memory_leak_check.sh | PASS ×2 (sheet widening, f1/f3 rework) — 0 MB floor spread both runs |
 | L10n | en + ru source XML updated, LanguageTool-clean; generated `strings_*.json` regen via `make_json.py` |
-| Commit | **uncommitted** — awaiting Mike's approval (icon drafts f4/f5 included); push only on final word |
+| Commit | **pushed a688d67a1** (2026-11-09) |
 
 Open proposals from the balance review (separate round, Mike's call): Holy Water universal
 splash, Exorcism demon clause, Last Rites universal ring, Heal divine identity fix, Blessing
