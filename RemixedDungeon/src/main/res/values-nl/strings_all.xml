@@ -2378,6 +2378,7 @@
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_misc_desc">Een hoop rommel en snuisterijen.</string>
     <string name="town_deco_movies_door_desc">Deze deur lijkt buitengewoon goed gemaakt. Hij leidt waarschijnlijk naar iets ongelooflijks.</string>
+    <string name="town_deco_movies_door_name">Deur</string>
     <string name="town_deco_mud_desc">Ontdooide grond in dit permafrostgebied.</string>
     <string name="town_deco_mud_name">modder</string>
     <string name="town_deco_painting_desc">Een prachtig stuk kunst.</string>
@@ -2650,6 +2651,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

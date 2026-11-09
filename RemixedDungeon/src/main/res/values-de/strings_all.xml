@@ -254,6 +254,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BishopQuest_3_1_Prologue">Selbst die wandelnden Toten verdienen Gnade, mein Kind. Bring mir einen _Zombie_, den du gezähmt hast — ich werde ihn mit ordentlichen Riten zur Ruhe betten, und sein Leiden wird ein Ende haben.</string>
     <string name="BishopQuest_3_2_Prologue">Auch die Tiere der Dunkelheit verdienen einen Segen, mein Kind. Bringe mir eine _Fledermaus_, die du gezähmt hast, und ich werde sie dem Licht weihen.</string>
     <string name="BishopQuest_4_1_Epilogue">Die Legionen taumeln wie Marionetten mit zerschnittenen Fäden — ich spüre es sogar von hier. Ihr Meister wird dies nicht vergeben. Nimm diesen Trank der Macht, mein Kind; du wirst deine Stärke brauchen.</string>
+    <string name="BishopQuest_4_1_InProgress">Du hast %1$d von %2$d Todesrittern vernichtet. Brich ihren Willen, und die Legionen werden straucheln.</string>
     <string name="BishopQuest_4_1_Prologue">Du hast die Fußsoldaten zur Ruhe gebettet — nun sind ihre Herren an der Reihe. _Todesritter_ befehligen die Legionen der Toten, und ihr Wille bindet die Knochen an ihren Marsch. Vernichte _zwei Todesritter_, mein Kind.</string>
     <string name="BishopQuest_4_2_InProgress">Du hast %1$d von %2$d versklavten Seelen befreit. Lass sie nicht mehr dienen.</string>
     <string name="BishopQuest_5_1_Epilogue">Das Werk des Herrn ist vollbracht! Von diesem Tag an magst du den Pfad eines Priesters beschreiten. Nimm diesen Segen und diese Almosen, mein Kind — du hast sie dir verdient.</string>
@@ -3099,6 +3100,9 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
+
 
 
 

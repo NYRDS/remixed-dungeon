@@ -2204,6 +2204,7 @@
     <string name="town_deco_red_carpet_name">Thảm đỏ</string>
     <string name="town_deco_roof_desc">Một mái ngói đơn giản.</string>
     <string name="town_deco_roof_name">Mái nhà</string>
+    <string name="town_deco_rope_desc">Dây rối thủ công.</string>
     <string name="town_deco_rope_name">dây thừng</string>
     <string name="town_deco_rug_desc">Được thiết kế với phong cách tinh tế.</string>
     <string name="town_deco_rug_name">Thảm</string>
@@ -2896,6 +2897,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

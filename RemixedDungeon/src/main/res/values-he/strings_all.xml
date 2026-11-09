@@ -1155,6 +1155,7 @@
     <string name="WndDonate_silverDonateText">כל תרומה תעזור לפיתוח הפרויקט</string>
     <string name="WndDontLikeAds_NotThisTime">לא הפעם</string>
     <string name="WndFortuneTeller_IdentifyAll">הכל</string>
+    <string name="WndFortuneTeller_Instruction">אני יכול לגלות סודות מאחורי פריטים שברשותך.\nזיהוי אחד יעלה לך %d מטבעות.</string>
     <string name="WndFortuneTeller_No_Item">היזהר, אתה לא רוצה לבזבז את הכסף שלך לחינם, נכון? אין פריטים לא מזוהים במלאי שלך.</string>
     <string name="WndFortuneTeller_Title">מגדת עתידות.</string>
     <string name="WndGame_Exit">צא מ-Remixed Dungeon</string>
@@ -1691,6 +1692,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

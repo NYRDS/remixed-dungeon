@@ -246,6 +246,7 @@
     <string name="BishopNPC_Name">obispo</string>
     <string name="BishopNPC_Name_Objective">obispo</string>
     <string name="BishopQuest_1_1_Epilogue">Te bendigo, hijo mío — los muertos inquietos duermen tranquilos esta noche gracias a ti. Pero la plaga de la no-muerte es más profunda que los huesos. Vuelve cuando estés listo para la próxima prueba, y toma esta poción para tus heridas.</string>
+    <string name="BishopQuest_2_1_InProgress">Tráeme _tres semillas de sungrass_, hijo mío. El altar espera.</string>
     <string name="BishopQuest_2_1_Prologue">Antes de transmitirte los misterios del sacerdocio, el altar debe prepararse. Tráeme _tres semillas de girasol_ — su esencia dorada hace el mejor incienso.</string>
     <string name="BishopQuest_3_1_InProgress">Tráeme un _zombie_ domesticado, hijo mío. Trátalo con dulzura — no sabe lo que hace.</string>
     <string name="BishopQuest_3_2_Epilogue">El obispo rocía agua bendita sobre el murciélago indignado, mascullando una bendición. Se aleja volando, de alguna manera digno. Toma este pergamino por tu paciencia, hijo mío.</string>
@@ -3103,6 +3104,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
