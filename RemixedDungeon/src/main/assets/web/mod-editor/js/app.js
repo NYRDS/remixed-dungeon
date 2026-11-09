@@ -143,32 +143,35 @@ async function openWorkspace(modName) {
   crumbs.textContent = modName;
   content.innerHTML = '<p class="hint">loading…</p>';
 
-  // sidebar: file tree
+  // sidebar: file tree (renderTree clears its container, so re-rendering refreshes)
   sidebar.innerHTML = '';
   const treeBox = document.createElement('div');
   sidebar.appendChild(treeBox);
 
-  renderTree(treeBox, {
-    mod: modName,
-    onOpen: file => openFile(modName, file),
-    onNewFile: async dir => {
-      const name = window.prompt('New file name (relative to ' + (dir || 'mod root') + ')');
-      if (!name) { return; }
-      const path = dir ? dir + '/' + name : name;
-      try {
-        await api.saveModFile(modName, path, '');
-        openFile(modName, path);
-        location.reload(); // cheapest way to refresh the lazy tree
-      } catch (e) { alert(e.message); }
-    },
-    onDelete: async path => {
-      if (!window.confirm('Delete ' + path + '?')) { return; }
-      try {
-        await api.deleteModFile(modName, path);
-        location.reload();
-      } catch (e) { alert(e.message); }
-    }
-  });
+  function refreshTree() {
+    renderTree(treeBox, {
+      mod: modName,
+      onOpen: file => openFile(modName, file),
+      onNewFile: async dir => {
+        const name = window.prompt('New file name (relative to ' + (dir || 'mod root') + ')');
+        if (!name) { return; }
+        const path = dir ? dir + '/' + name : name;
+        try {
+          await api.saveModFile(modName, path, '');
+          refreshTree();
+          openFile(modName, path);
+        } catch (e) { alert(e.message); }
+      },
+      onDelete: async path => {
+        if (!window.confirm('Delete ' + path + '?')) { return; }
+        try {
+          await api.deleteModFile(modName, path);
+          refreshTree();
+        } catch (e) { alert(e.message); }
+      }
+    });
+  }
+  refreshTree();
 
   // actions: validate / export / play (select+restart)
   actions.innerHTML = '';
@@ -260,15 +263,24 @@ async function openFile(modName, file) {
   if (!confirmDirty()) { return; }
   const lower = file.toLowerCase();
 
-  // structured editors load their own data
-  if (lower.startsWith('mobsdesc/') && lower.endsWith('.json')) {
-    content.innerHTML = '';
-    mobEditor(content, { mod: modName, file, api, onSaved: () => {} });
-    return;
-  }
-  if (lower.startsWith('levelsdesc/') && lower.endsWith('.json') && !file.endsWith('Dungeon.json')) {
-    content.innerHTML = '';
-    levelEditor(content, { mod: modName, file, api, onSaved: () => {} });
+  // structured editors load their own data and report dirtiness themselves
+  try {
+    if (lower.startsWith('mobsdesc/') && lower.endsWith('.json')) {
+      content.innerHTML = '';
+      const ed = await mobEditor(content, { mod: modName, file, api, onSaved: () => {} });
+      currentEditorDirty = ed ? ed.isDirty : null;
+      return;
+    }
+    if (lower.startsWith('levelsdesc/') && lower.endsWith('.json') && !file.endsWith('Dungeon.json')) {
+      content.innerHTML = '';
+      const ed = await levelEditor(content, { mod: modName, file, api, onSaved: () => {} });
+      currentEditorDirty = ed ? ed.isDirty : null;
+      return;
+    }
+  } catch (e) {
+    // a half-rendered editor must not die silently (e.g. readonly IDL property crash)
+    content.textContent = 'Editor failed: ' + e.message;
+    currentEditorDirty = null;
     return;
   }
 

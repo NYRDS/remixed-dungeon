@@ -62,7 +62,13 @@ export async function mobEditor(content, ctx) {
     label.textContent = labelText;
     const input = document.createElement('input');
     input.value = value === undefined ? '' : value;
-    if (attrs) { Object.assign(input, attrs); }
+    if (attrs) {
+      for (const [attr, v] of Object.entries(attrs)) {
+        // input.list is a readonly IDL property - the content attribute is what matters
+        if (attr === 'list') { input.setAttribute('list', v); }
+        else { input[attr] = v; }
+      }
+    }
     inputs[key] = input;
     grid.appendChild(label);
     grid.appendChild(input);
@@ -197,32 +203,47 @@ export async function mobEditor(content, ctx) {
   } catch (e) { /* optional */ }
 
   // --- save ----------------------------------------------------------------
+  // Start from the parsed file and only touch the known form keys:
+  // unknown json keys (drops arrays, tags, custom props) must survive a save.
+  let dirty = false;
+  for (const input of Object.values(inputs)) {
+    input.addEventListener('input', () => { dirty = true; });
+    input.addEventListener('change', () => { dirty = true; });
+  }
+
   save.addEventListener('click', async () => {
-    const out = {};
+    const out = mob;
     for (const [key, input] of Object.entries(inputs)) {
       if (input.type === 'checkbox') {
         if (input.checked) { out[key] = true; }
+        else if (out[key] === true) { out[key] = false; }
         continue;
       }
       const v = input.value.trim();
-      if (v === '') { continue; }
-      if (input.type === 'number') {
-        out[key] = Number(v);
-      } else {
-        out[key] = v;
+      if (key === 'loot') {
+        if (v === '') {
+          delete out.loot;
+        } else if (out.loot && typeof out.loot === 'object' && !Array.isArray(out.loot)) {
+          out.loot.kind = v; // keep companion keys (chance, count...)
+        } else {
+          out.loot = { kind: v };
+        }
+        continue;
       }
-    }
-    if (out.loot !== undefined) {
-      out.loot = { kind: out.loot };
+      if (v === '') { delete out[key]; continue; }
+      out[key] = input.type === 'number' ? Number(v) : v;
     }
     try {
       await api.saveModFile(ctx.mod, ctx.file, JSON.stringify(out, null, 3) + '\n');
       status.className = 'status-ok';
       status.textContent = 'saved';
+      dirty = false;
       ctx.onSaved && ctx.onSaved();
     } catch (e) {
       status.className = 'status-err';
       status.textContent = e.message;
     }
   });
+
+  return { isDirty: () => dirty };
 }

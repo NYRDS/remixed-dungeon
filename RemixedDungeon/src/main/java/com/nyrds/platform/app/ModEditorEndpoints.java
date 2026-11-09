@@ -919,7 +919,7 @@ public class ModEditorEndpoints {
         // lua: compile everything in one shot on the game thread
         if (!luaFiles.isEmpty()) {
             final List<String> luaErrors = new ArrayList<>();
-            GameLoop.pushUiTaskAndWait(() -> {
+            boolean ran = GameLoop.pushUiTaskAndWait(() -> {
                 for (File file : luaFiles) {
                     String rel = relativeTo(modDir(modName), file);
                     try {
@@ -931,7 +931,12 @@ public class ModEditorEndpoints {
                     }
                 }
             });
-            errors.addAll(luaErrors);
+            if (!ran) {
+                // never report success over files we could not check
+                errors.add("game thread busy - " + luaFiles.size() + " lua file(s) NOT validated, try again");
+            } else {
+                errors.addAll(luaErrors);
+            }
         }
 
         validateMobChains(modName, errors);

@@ -136,6 +136,19 @@ export async function levelEditor(content, ctx) {
   layerSelect.addEventListener('change', () => { varLayer = layerSelect.value; });
   toolRow('var layer', layerSelect);
 
+  // picking a tile always yields >= 0, so clearing needs its own affordance
+  const varClearBtn = document.createElement('button');
+  varClearBtn.textContent = 'pick -1 (clear)';
+  varClearBtn.addEventListener('click', () => {
+    varIndex = -1;
+    tool = 'var';
+    toolSelect.value = 'var';
+    updateToolHint();
+    drawTileset();
+    tileHover.textContent = 'picked ' + varLayer + ' index -1 - painting now resets cells';
+  });
+  toolRow('var pick', varClearBtn);
+
   const zoomSelect = document.createElement('select');
   for (const z of [12, 18, 24, 32]) {
     const o = document.createElement('option');
