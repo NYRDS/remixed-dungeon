@@ -939,6 +939,7 @@
     <string name="Level_TileFireTrap">Bẫy lửa</string>
     <string name="Level_TileFloor">Sàn</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
+    <string name="Level_TileLightningTrap">bẫy sét</string>
     <string name="Level_TileLockedExit">Lối thoát bị khóa</string>
     <string name="Level_TileOpenDoor">Cửa mở</string>
     <string name="Level_TileParalyticTrap">Bẫy khí gây tê liệt</string>
@@ -1359,6 +1360,7 @@
     <string name="Ring_Info">Chiếc nhẫn kim loại này được trang trí bằng một viên đá quý lớn %s lấp lánh trong bóng tối. Ai biết nó sẽ có tác dụng gì khi đeo?</string>
     <string name="Ring_Info1">Bạn chỉ có thể đeo tối đa 2 nhẫn cùng lúc</string>
     <string name="Ring_Info2">Chiếc %1$s của bạn siết chặt vào ngón tay đau đớn</string>
+    <string name="Ring_Info3a">%1$s\n\n%2$s đang ở trên ngón tay của bạn%3$s</string>
     <string name="Ring_Info3b">, và vì nó bị nguyền rủa, bạn không có cách nào tháo nó ra.</string>
     <string name="Ring_Info4">%1$s\n\nBạn có thể cảm thấy một phép thuật độc ác ẩn mình bên trong %2$s.</string>
     <string name="Ring_Name">%s nhẫn</string>
@@ -2897,6 +2899,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

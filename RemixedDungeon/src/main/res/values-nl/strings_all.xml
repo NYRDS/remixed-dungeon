@@ -709,6 +709,7 @@
     <string name="Glaive_Name">gleve</string>
     <string name="GnollArmor_ACSpecial">DOMINEREN</string>
     <string name="GnollArmor_Info">Draagsters van het Gnome-Luitenant-kostuum zijn bekend om hun vermogen om zelfs de woestste monsters te overtuigen tot loyale dienaren van de Kroon.</string>
+    <string name="GnollArmor_Name">gnol-luitenantpak</string>
     <string name="GnollArmor_NotGnoll">Alleen gnollen kunnen de Gnoll Armor uitrusten!</string>
     <string name="GnollCostume_Info">Een ongelooflijk warm en fluffy kostuum. Wie dit kostuum aantrekt zal eruitzien als... iemand die zich probeert te vermommen als een gnoll. Maar gnolls trappen daar niet in, ze vallen je nog steeds aan.</string>
     <string name="GnollCostume_Name">Gnoll-kostuum</string>
@@ -2130,6 +2131,7 @@
     <string name="WndMovieTheatre_Thank_You">Dank u voor uw deelname!</string>
     <string name="WndPetSelect_HP">HP: %1$d/%2$d</string>
     <string name="WndPetSelect_Title">Selecteer huisdier</string>
+    <string name="WndPlayGames_BackupProgress">Spelvoortgang back-uppen</string>
     <string name="WndPlayGames_Connecting">Verbinden met Google Play Games, even geduld a.u.b.</string>
     <string name="WndPlayGames_RestoreProgress">Spelvoortgang herstellen</string>
     <string name="WndPlayGames_Show_Badges">Toon insignes</string>
@@ -2651,6 +2653,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
