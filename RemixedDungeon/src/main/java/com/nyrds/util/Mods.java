@@ -72,7 +72,7 @@ public class Mods {
     }
 
     @NotNull
-    static private Map<String, ModDesc> getInstalledModsList() throws JSONException {
+    static public Map<String, ModDesc> getInstalledModsList() throws JSONException {
         Map<String, ModDesc> installedMods = new HashMap<>();
 
         File[] extList = FileSystem.listExternalStorage();

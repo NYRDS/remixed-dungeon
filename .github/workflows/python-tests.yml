@@ -75,3 +75,7 @@ jobs:
       - name: Run Alchemy Tests
         run: python3 tests/http_api/test_alchemy.py
         timeout-minutes: 15
+
+      - name: Run Mod Editor Tests
+        run: python3 tests/http_api/test_mod_editor.py
+        timeout-minutes: 15

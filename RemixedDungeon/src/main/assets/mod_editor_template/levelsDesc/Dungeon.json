@@ -1,0 +1,14 @@
+{
+   "Levels":{
+      "0":{"kind":"SewerLevel", "depth":0, "size":[0,0]},
+      "start":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Start.json", "isSafe":true},
+      "1":{"kind":"SewerLevel", "depth":1, "size":[24,24], "music":"ost_sewer"}
+   },
+
+   "Graph":{
+    "0":[["start"],[]],
+    "start":[["1"],["0"]],
+    "1":[[],["start"]]
+   },
+   "Entrance":"0"
+}
