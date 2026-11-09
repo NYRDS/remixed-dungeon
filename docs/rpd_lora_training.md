@@ -1,0 +1,124 @@
+# Training a "Remixed Dungeon style" LoRA
+
+Plan + state for training a style LoRA on the game's own pixel art, so
+generated images (icons, promo, banners) inherit the game's flat colors,
+bold outlines and chunky pixel grid instead of drifting amber/grey.
+Started 2026-11-09 after the AI icon experiments (see the icon-pipeline
+notes) kept drifting from the family style.
+
+All work lives in `/media/mike/hdd_maxi1/play/ai/rpd_lora/` (local disk;
+ComfyUI + RTX 4090 run on this same box).
+
+## Two tracks
+
+| | Track A: z_image (fast) | Track B: qwen-image-2.1 (main) |
+|---|---|---|
+| Base | `z_image_turbo_bf16` (6B, local) | `Qwen/Qwen-Image-2.1` (31GB, **downloaded 2026-11-10**) |
+| TE / VAE | `qwen_3_4b` / flux `ae` (local) | `qwen3vl_8b` / 64ch **RGBA** VAE (in the download) |
+| Trainer | musubi-tuner (`zimage_train_network.py`) | ai-toolkit (explicit 2.1 support) |
+| Why | all pieces local, training tonight | native transparency + the engine we used for icon probes |
+| Status | training 2026-11-10 (see below) | chained to auto-start after Track A |
+
+Track A first (zero download), Track B when the base lands. The z-image
+Turbo model is distilled - musubi's docs call turbo-direct training
+unstable; conservative LR + the fallback `zimage_turbo_training_adapter_v2`
+(ostris, 324MB, `--base_weights`) if the first samples smear.
+
+**2026-11-10 run state:** Track A venv was missing musubi's own deps
+(watchdog only installed ai-toolkit's): added `voluptuous` + `easydict`,
+upgraded `lycoris-lora` 1.8.3→4.1.3 (musubi needs
+`create_network_from_weights`, added in 3.x). `datasets` is NOT in
+requirements_base.txt and unused by this train - do not install it (its
+pyarrow pin drags a numpy 2 upgrade; numpy lives in the shared
+symlinked stack). `run_train.sh` venv path fixed to `rpd_lora/venv`.
+Chain: `/tmp/priest_icons/chain_b.sh` waits for `ZPIPE_DONE` in
+`ztrain5.log` + ComfyUI :8188 re-bind, then fires `run_train.sh`
+(→ `trainB.log`). Step-400 samples already show family golds + bold
+outlines; pixel grid not locked in yet - judge at 1600
+(`output/zimg_rpd/compare_0_vs_400.png`).
+
+## Dataset
+
+202 captioned sprites, 16px game art upscaled x32 NEAREST onto white,
+512x512 (`rpd_lora/dataset/`):
+
+- `items.png` all tiles - captions from `ItemSpriteSheet.java` constants
+  (nearest named anchor at-or-below the tile index: "a boomerang game
+  item icon, ...")
+- `spellsIcons/*` all frames - spell names resolved from each spell
+  script's `name` strings key through `values/strings_all.xml`
+- `levelObjects/candle.png` frames (rites prop)
+
+Caption template: `{name} game item icon, remixed dungeon pixel art
+style, chunky pixels, flat solid colors, bold dark outline, white
+background`. No trigger word - the style words are the binding.
+
+Builder: `/tmp/priest_icons/build_dataset.py` (transient path - recreate
+from this doc if wiped). Extension ideas: mob sprites via
+`tools/sprite_tool.py` (grids come from `spritesDesc/*.json`, NOT the
+png), tilesets, more levelObjects - only if v1 samples look starved.
+
+## Track A recipe (z_image, musubi-tuner)
+
+```
+accelerate launch --mixed_precision bf16 src/musubi_tuner/zimage_train_network.py \
+  --dit .../models/diffusion_models/z_image_turbo_bf16.safetensors \
+  --vae .../models/vae/ae.safetensors \
+  --text_encoder .../models/text_encoders/qwen_3_4b.safetensors \
+  --fp8_base --fp8_scaled --fp8_llm --gradient_checkpointing \
+  --timestep_sampling shift --weighting_scheme none --discrete_flow_shift 2.0 \
+  --optimizer_type adamw8bit --learning_rate 5e-5 \
+  --network_module networks.lora_zimage --network_dim 32 \
+  --max_train_steps 1600 --save_every_n_steps 400 --seed 42 \
+  --sample_prompts zimg_samples.txt --sample_every_n_steps 400 \
+  --output_dir output/zimg_rpd --output_name rpd_style_zimg
+```
+
+- dataset toml: `zimg_dataset.toml` (num_repeats 8 -> 1600 steps = 1 epoch)
+- lr 5e-5 = turbo-conservative (doc example 1e-4 assumes the base model)
+- caches: `zimage_cache_latents.py` + `zimage_cache_text_encoder_outputs.py`
+- ComfyUI must be stopped for training (holds 16GB VRAM); relaunch line:
+  `cd .../play/ComfyUI && setsid nohup ./.venv/bin/python main.py --lowvram
+  --listen <ygg-addr> --port 8188`
+- LoRA -> ComfyUI: `networks/convert_lora.py --input ... --output ...
+  --target other`
+
+## Track B recipe (qwen-image-2.1, ai-toolkit)
+
+Config `rpd_style_v1.yaml`: rank 16, lr 1e-4, 2000 steps, bs 1,
+`cache_text_embeddings: true`, `quantize: true` + `qtype_te: qfloat8`,
+`low_vram: true` (the 24GB example recipe), resolution [512] only,
+same 4 icon sample prompts every 250 steps. Local base path
+(`base/Qwen-Image-2.1/`, diffusers layout from HF).
+
+## Evaluation
+
+Every 400 steps the sample prompts render the 4 priest icons (cross /
+candle / sun / flask). Accept when: family golds instead of amber, dark
+outline instead of maroon-grey mush, grid-aligned pixel look, and the
+icon reads at 16px after BOX downscale. Compare against the hand-drawn
+set in `spellsIcons/priest.png`. Then produce the real icon set through
+the existing ref-based pipeline (fibo/qwen edit with our icons as refs)
+and check set consistency.
+
+## Gotchas learned while setting this up
+
+- The proxy (192.168.55.75:3128) is injected into every shell - unset
+  all proxy vars for direct fetches; pip needs `PIP_CONFIG_FILE=/dev/null`
+  (the global pip.conf carries a dead NGC extra-index that stalls it).
+- The pipe throttles hard in the evening (~550KB/s, sometimes 66KB/s);
+  `aria2c -x8 -s8 -c --file-allocation=none` is the only downloader that
+  survives big HF files (plain requests/xet/curl all stall ~500MB).
+  `curl -4 -s speed.cloudflare.com/__down?bytes=N` = ground truth for
+  "is it the pipe or the route".
+- pip installing a **git-pinned diffusers** stalls forever (internal
+  clone, no retry) - fetch the commit tarball from codeload.github.com
+  and install locally, then neutralize the pin line.
+- `pkill/pgrep -f` self-match killed the working shell five times - the
+  pattern string appears in your own cmdline. Use exact pids from a
+  separate command.
+- hf_transfer is deprecated (hub >= 1.x uses Xet; `HF_XET_HIGH_PERFORMANCE`
+  is the new knob).
+- ComfyUI's venv already holds torch+nvidia+triton (~8GB) - symlink
+  those site-packages dirs into a fresh training venv instead of
+  downloading torch again on the throttled pipe.
