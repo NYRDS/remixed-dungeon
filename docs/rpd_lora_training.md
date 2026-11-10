@@ -85,6 +85,71 @@ from this doc if wiped). Extension ideas: mob sprites via
 `tools/sprite_tool.py` (grids come from `spritesDesc/*.json`, NOT the
 png), tilesets, more levelObjects - only if v1 samples look starved.
 
+## Dataset v1.1 (2026-11-10 full review, Mike-approved rules)
+
+**139 images, 133 distinct captions** - builder
+`/tmp/priest_icons/build_dataset_v11.py` (v1 builder retired):
+
+- **items (110):** only tiles referenced by an item class - exact names.
+  Handler-array pairings give per-item names: Scroll.java images[] order
+  (SCROLL_KAUNAN=identify, ...), Ring.java (RING_DIAMOND=mending, ...),
+  Potion.java static block `images[i]=32+i` into **items/potions.png**
+  (13 labeled potions the v1 set entirely missed - their items.png
+  tiles are unreferenced legacy copies). Multi-claimant constants
+  resolve to the class whose name matches the constant;
+  render-borrower classes (Heap.java borrowing CHEST/TOMB sprites)
+  lose; if a borrower is the ONLY claimant the constant itself names
+  the tile (crystal chest, tomb). Wand wood-variants stay generic
+  "wand" (no per-wood names exist; appearance is run-random).
+- **spells (27):** only frames bound by scripts/spells/*.lua with the
+  script's `name` resolved via strings_all.xml. **Deprecated/32px
+  sheets and the priest.png draft set are EXCLUDED (Mike: priest icons
+  are extra-low-quality drafts).**
+- **candle (2):** first two levelObjects frames.
+- **alpha binarized at 128** before white-composite - v1's
+  white-compositing of semi-alpha sprites (128/131 item images had
+  soft-alpha px; elemental_all frame 5 = 587 = a full grey aura) baked
+  grey/pale halo blocks into the style; the trained model painted
+  halos behind icons. All sources NEAREST x32 onto white 512px.
+- caption tail is neutral ("chunky pixels, flat solid colors, white
+  background") - no "bold dark outline" claim (the family mixes bold
+  items and pale spell idioms; the claim made the model average them).
+- Tamahawk.java's class spelling corrected to "tomahawk" in captions.
+
+## Track A results (v1 dataset)
+
+1600 steps done, ~20 min. Base z_image turbo is painterly-soft amber;
+family golds + bold outlines arrive by 800, **grid-aligned pixel look
+locks in at 1200** (`output/zimg_rpd/progress_all.png`). LoRA:
+`output/zimg_rpd/rpd_style_zimg_comfy.safetensors`. Caveat from the
+16px check: generated blocks drift half-steps off the 32px grid so
+BOX/32 downscale aliases - the hand-drawn priest.png icons (light
+idiom) are crisper at 16px. z_image = dev track; the real fix rides
+on track B.
+
+## Track B results (v1 dataset)
+
+2000 steps, 1.4it/s, ~25 min. Base qwen-2.1 already renders clean
+grid-aligned pixel icons; LoRA peak is **steps 250-500** (family
+golds + bold outlines), then overfit: spellsIcons' soft-edge pixels
+bled in as halos (grey blob behind the candle, pale glow around the
+flask) and the two dataset idioms blended (pale cross). Sheets:
+`output/rpd_style_v1_OLDV1DS/progress_b_full.png` +
+`b16_check.png` (16px-per-checkpoint comparison vs priest.png).
+
+**ai-toolkit auto-resume trap:** relaunching a job whose
+`output/<name>/` still holds `<name>.safetensors` + `optimizer.pt`
+loads them and resumes at 2000/2000 - exits 0 in minutes with NO
+training. Archive/rename the output dir when the dataset changes
+(bit us on the v1.1 relaunch).
+
+## Retrain status
+
+v1.1 dataset retrain 2026-11-10 evening: track A running
+(`ztrain6.log`), track B chained after it (`trainB7.log`) via
+`/tmp/priest_icons/chain_b2.sh`. Old-run checkpoints kept for
+comparison. Judge checkpoints 250-500 first.
+
 ## Track A recipe (z_image, musubi-tuner)
 
 ```
