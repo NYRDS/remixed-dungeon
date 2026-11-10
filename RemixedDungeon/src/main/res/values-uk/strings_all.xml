@@ -1257,6 +1257,7 @@
     <string name="LastLevel_TileHighGrass">Вугле-гриб</string>
     <string name="LastLevel_TileStatue">Стовп</string>
     <string name="LastLevel_TileWater">Холодна лава</string>
+    <string name="LastRites_Name">Панухида</string>
     <string name="LastShopLevel_TileDescDeco">Тут не вистачає кількох плиток.</string>
     <string name="LastShopLevel_TileDescEmptySP">Підлогу вкрито щільним килимом.</string>
     <string name="LastShopLevel_TileDescEntrance">Рампа, що веде догори.</string>
@@ -3116,6 +3117,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

@@ -183,6 +183,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Giám mục</string>
     <string name="BishopNPC_Name_Objective">giám mục</string>
+    <string name="BishopQuest_3_2_Prologue">Ngay cả những sinh vật bóng tối cũng xứng đáng được ban phước, con ơi. Hãy mang cho ta một con _dơi_ đã thuần phục, và ta sẽ thánh hiến nó cho ánh sáng.</string>
     <string name="Bishop_great_bless">Chúc phúc vĩ đại - %d g</string>
     <string name="Bishop_lesser_bless">Chúc phúc nhỏ - %d g</string>
     <string name="Bishop_not_interested">Rời đi</string>
@@ -1634,6 +1635,7 @@
     <string name="StartScene_DifficultyNormalWithSaves">Bình thường với lưu (và quảng cáo)</string>
     <string name="StartScene_DifficultyNormalWithSavesNoAds">bình thường có lưu</string>
     <string name="StartScene_DifficultySelect">Chọn số phận của bạn</string>
+    <string name="StartScene_Erase">Xóa trò chơi hiện tại</string>
     <string name="StartScene_New">Trò chơi mới</string>
     <string name="StartScene_No">Không, quay về menu chính</string>
     <string name="StartScene_Really">Bạn có thực sự muốn bắt đầu một trò chơi mới không?</string>
@@ -2910,6 +2912,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

@@ -240,6 +240,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Bispo</string>
     <string name="BishopNPC_Name_Objective">Bispo</string>
+    <string name="BishopQuest_1_1_Epilogue">Abençoo você, meu filho — os mortos inquietos dormem tranquilos esta noite por sua causa. Mas a praga da não-morte vai mais fundo que os ossos. Volte a mim quando estiver pronto para a próxima prova, e pegue esta poção para seus ferimentos.</string>
     <string name="BishopQuest_2_1_InProgress">Traga-me _três sementes de grama-solar_, meu filho. O altar aguarda.</string>
     <string name="BishopQuest_2_2_InProgress">Traga-me _três sementes de graça lunar_, meu filho. O altar aguarda.</string>
     <string name="BishopQuest_3_1_Epilogue">Os últimos ritos são ditos, e o zumbi dócil colapsa em poeira pacífica. Agora ele descansa, verdadeiramente. Sua compaixão o honra, meu filho — pegue este pergaminho, você vai precisar dele para onde vai.</string>
@@ -3103,6 +3104,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

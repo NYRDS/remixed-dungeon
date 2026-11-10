@@ -305,6 +305,7 @@
     <string name="Bleeding_Death">Hai sanguinato a morte...</string>
     <string name="BlessedBuff_Info">Che precisione e scatto vengano per coloro che sono toccati dalla benedizione!</string>
     <string name="BlessedBuff_Name">Benedetto</string>
+    <string name="BlessingSpell_Cast">%s è benedetto.</string>
     <string name="BlindnessBuff_Info">Completamente accecato, si possono solo sentire i suoni intorno.</string>
     <string name="BlindnessBuff_Name">Accecato </string>
     <string name="BloodTransfusion_Drained">L\'essenza vitale fluisce dal tuo animale domestico in te.</string>
@@ -3086,6 +3087,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 
