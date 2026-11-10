@@ -87,7 +87,8 @@ png), tilesets, more levelObjects - only if v1 samples look starved.
 
 ## Dataset v1.1 (2026-11-10 full review, Mike-approved rules)
 
-**138 images, 137 distinct captions** - builder
+**137 images** (town portal frame dropped - common.png is a 32px-layout
+sheet, its "16px frame" was a quadrant) - builder
 `/tmp/priest_icons/build_dataset_v11.py` (v1 builder retired):
 
 - **items (109):** only tiles referenced by an item class. Names are
@@ -115,6 +116,14 @@ png), tilesets, more levelObjects - only if v1 samples look starved.
   soft-alpha px; elemental_all frame 5 = 587 = a full grey aura) baked
   grey/pale halo blocks into the style; the trained model painted
   halos behind icons. All sources NEAREST x32 onto white 512px.
+- **captions carry the visual content** (Mike rule): game name + what
+  is actually on the sprite, sometimes metaphorical - e.g. "a bones
+  game item icon, a human skull resting on a sprawled skeletal arm,
+  like a macabre coat of arms", "a lloyds beacon game item icon, a
+  battered brown field radio with an antenna and glowing dials". Map:
+  `/tmp/priest_icons/visual_desc.json` (transient; regenerate from
+  zoomed contact sheets), builder composes
+  `<name> <icon-kind>, <visual>, <style tail>`.
 - caption tail is neutral ("chunky pixels, flat solid colors, white
   background") - no "bold dark outline" claim (the family mixes bold
   items and pale spell idioms; the claim made the model average them).
