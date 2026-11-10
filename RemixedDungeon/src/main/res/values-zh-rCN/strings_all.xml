@@ -1066,6 +1066,7 @@
     <string name="HideInGrassSpell_Info">你精通捉迷藏。</string>
     <string name="HideInGrassSpell_Name">隐——于——草</string>
     <string name="HideInGrassSpell_NeedGrassToHide">即使是我也不能躲在明处。</string>
+    <string name="HolyWater_Name">圣水</string>
     <string name="Horror_Name_0">恐惧%s</string>
     <string name="Horror_Name_1">恐惧%s</string>
     <string name="Horror_Name_2">恐惧%s</string>
@@ -3076,6 +3077,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

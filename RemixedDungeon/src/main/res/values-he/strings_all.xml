@@ -292,6 +292,7 @@
     <string name="CompositeCrossbow_Name">קשת מורכבת</string>
     <string name="CompoundBow_Gender">masculine</string>
     <string name="ConcreteBlock_Description">נראה שהבלוק הזה דורש %d נקודות כוח כדי לדחוף</string>
+    <string name="ConfusionGas_Info">ענן של גז בלבול מסתחרר כאן.</string>
     <string name="CorpseDustBuff_Info">התקפות מתגברות מאוד עבור אלו שמלאים בצמא דם, מה שהופך אותם למסוכנים במיוחד.</string>
     <string name="CorpseDust_Info">כדור אבק הגופות לא נראה שונה מכדור אבק רגיל. עם זאת, אתה יודע איכשהו שעדיף להיפטר ממנו בהקדם האפשרי.</string>
     <string name="CorpseExplosion_Name">פיצוץ גופה</string>
@@ -1233,6 +1234,7 @@
     <string name="WndSettings_TextScaleDefault">גופן ברירת מחדל</string>
     <string name="WndSettings_ThirdQuickslot">חריץ שלישי</string>
     <string name="WndSettings_UiScale">קנה מידה של ממשק המשתמש</string>
+    <string name="WndSettings_UiSettings">הגדרות ממשק</string>
     <string name="WndSettings_ZoomDef">זום ברירת מחדל</string>
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
@@ -1692,6 +1694,8 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
 
 
 

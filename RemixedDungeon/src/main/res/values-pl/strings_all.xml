@@ -897,6 +897,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll zwiadowca</string>
     <string name="Gnoll_Name_Objective">gnoll zwiadowca</string>
+    <string name="GodWrath_Name">Gniew Boga</string>
     <string name="Gold_Collect">Zbieraj złoto by potem móc wydać je w sklepie.</string>
     <string name="Gold_Info">Stos %d złotych monet</string>
     <string name="Gold_Info1">Jedna złota moneta.</string>
@@ -3128,6 +3129,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

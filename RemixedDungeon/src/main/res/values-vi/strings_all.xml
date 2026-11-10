@@ -1038,6 +1038,7 @@
     <string name="MirrorImage_Gender">masculine</string>
     <string name="MissileWeapon_Info1">\n\nSát thương trung bình của vũ khí này bằng %d điểm mỗi lần đánh.</string>
     <string name="MissileWeapon_Info2">Vì thể lực không đủ, độ chính xác và tốc độ tấn công của bạn với %1$s này bị giảm.</string>
+    <string name="MissileWeapon_Info3">Do sức mạnh thừa của bạn, sát thương của đòn tấn công với %s này bị tăng lên.</string>
     <string name="MissileWeapon_Info4">\n\nBạn giữ %s sẵn sàng.</string>
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
     <string name="MissileWeapon_No">Không, tôi đã đổi ý rồi</string>
@@ -2900,6 +2901,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

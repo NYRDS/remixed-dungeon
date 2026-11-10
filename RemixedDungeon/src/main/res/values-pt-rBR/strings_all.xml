@@ -2203,6 +2203,7 @@ outro local do nível.</string>
     <string name="StartScene_UnlockElf">Para desbloquear esta classe de personagem, mate o chefe Rei com qualquer outra classe</string>
     <string name="StartScene_UnlockGnoll">Para desbloquear esta classe você deve persuadir o padre da cidade a curar o Gnoll Brutamonte</string>
     <string name="StartScene_UnlockNecromancer">Para desbloquear esta classe, mate o Lich com qualquer classe.</string>
+    <string name="StartScene_UnlockPriest">Para desbloquear Sacerdote - complete a missão do Bispo na Igreja</string>
     <string name="StartScene_Warning">O seu progresso no jogo atual será apagado.</string>
     <string name="StartScene_WinGame">Para desbloquear \&quot;Desafios\&quot;, ganhe o jogo com pelo menus uma classe de jogador.</string>
     <string name="StartScene_Yes">Sim, iniciar novo jogo</string>
@@ -3102,6 +3103,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

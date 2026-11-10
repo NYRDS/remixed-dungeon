@@ -995,6 +995,7 @@
     <string name="LastLevel_TileGrass">Embermos</string>
     <string name="LastLevel_TileHighGrass">Gloeipaddenstoelen</string>
     <string name="LastLevel_TileStatue">Pilaar</string>
+    <string name="LastLevel_TileWater">Koude lava</string>
     <string name="LastRites_Name">Laatste Olieringen</string>
     <string name="LastShopLevel_TileDescDeco">Hier ontbreken verschillende tegels.</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
@@ -2654,6 +2655,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

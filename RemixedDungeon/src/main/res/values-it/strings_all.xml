@@ -247,6 +247,7 @@
     <string name="BishopQuest_1_1_Epilogue">Ti benedico, figlio mio — stanotte i morti inquieti dormono tranquilli grazie a te. Ma la piaga della non-morte è più profonda delle ossa. Torna da me quando sarai pronto per la prossima prova, e prendi questa pozione per le tue ferite.</string>
     <string name="BishopQuest_2_2_Epilogue">Chiaro di luna in un seme... come la grazia stessa. Stanotte la chiesa profumerà d\'argento. Prendi questa pozione per la tua devozione, figlio mio.</string>
     <string name="BishopQuest_3_1_Epilogue">Gli ultimi riti sono stati detti, e il docile zombie crolla in polvere pacifica. Ora riposa davvero. La tua compassione ti onora, figlio mio — prendi questo rotolo, ti servirà dove stai andando.</string>
+    <string name="BishopQuest_3_2_Prologue">Anche le bestie delle tenebre meritano una benedizione, figlio mio. Portami un _pipistrello_ che hai addomesticato, e lo consacrerò alla luce.</string>
     <string name="BishopQuest_4_1_InProgress">Hai distrutto %1$d su %2$d cavalieri della morte. Spezza la loro volontà, e le legioni vacilleranno.</string>
     <string name="BishopQuest_4_2_Epilogue">Le campane della chiesa suonarono da sole quando l\'ultimo spirò — un buon segno, figlio mio. Prendi questa pozione di forza; la prova finale richiederà molto da te.</string>
     <string name="Bishop_bye">Pregherò per te, figlio mio.</string>
@@ -3084,6 +3085,7 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
 
 
 

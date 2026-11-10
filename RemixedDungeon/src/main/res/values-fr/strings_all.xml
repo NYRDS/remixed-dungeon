@@ -63,6 +63,7 @@
     <string name="Amulet_ACEnd">FIN DU JEU</string>
     <string name="Amulet_Info">L\'amulette de Yendor est le plus puissant des artefacts d\'origine inconnue. On dit que l\'amulette est capable de satisfaire tous les souhaits si la volonté de son porteur est suffisante pour la \&quot;persuader\&quot; de le faire.</string>
     <string name="Amulet_Name">Amulette de Yendor</string>
+    <string name="Anathema_Name">Anathème</string>
     <string name="AnesthesiaBuff_Info">Ne sent pas la douleur et ne se réveille pas des attaques, mais subit quand même des dégâts.</string>
     <string name="AnesthesiaBuff_Name">Anesthésie</string>
     <string name="Anesthesia_Cast">%s plonge dans un profond sommeil sans rêves.</string>
@@ -3115,6 +3116,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 
