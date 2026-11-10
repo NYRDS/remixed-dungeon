@@ -87,20 +87,24 @@ png), tilesets, more levelObjects - only if v1 samples look starved.
 
 ## Dataset v1.1 (2026-11-10 full review, Mike-approved rules)
 
-**139 images, 133 distinct captions** - builder
+**138 images, 137 distinct captions** - builder
 `/tmp/priest_icons/build_dataset_v11.py` (v1 builder retired):
 
-- **items (110):** only tiles referenced by an item class - exact names.
-  Handler-array pairings give per-item names: Scroll.java images[] order
-  (SCROLL_KAUNAN=identify, ...), Ring.java (RING_DIAMOND=mending, ...),
-  Potion.java static block `images[i]=32+i` into **items/potions.png**
-  (13 labeled potions the v1 set entirely missed - their items.png
-  tiles are unreferenced legacy copies). Multi-claimant constants
-  resolve to the class whose name matches the constant;
-  render-borrower classes (Heap.java borrowing CHEST/TOMB sprites)
-  lose; if a borrower is the ONLY claimant the constant itself names
-  the tile (crystal chest, tomb). Wand wood-variants stay generic
-  "wand" (no per-wood names exist; appearance is run-random).
+- **items (109):** only tiles referenced by an item class. Names are
+  EXACT via item classes, with one overriding rule (Mike): **the four
+  run-randomized categories are captioned by APPEARANCE ONLY** - the
+  appearance<->function mapping is reshuffled every run, so function
+  names would teach a false binding:
+  potions by color (Potion_Colors array: turquoise, crimson, azure,
+  jade, ... - the game's own color naming for potions.png tiles
+  32+i), wands by wood (WAND_HOLLY..WAND_BIRCH; the shared
+  WAND_MAGIC_MISSILE tile = "wooden wand"), scrolls by rune
+  (SCROLL_KAUNAN -> "kaunan rune scroll"; 16 runes + blank), rings by
+  gem (RING_DIAMOND -> "diamond ring", 12 gems). RING_OF_STONE_WALKING
+  (distinct tile 133, no gem name) dropped. Multi-claimant constants
+  resolve to the class matching the constant; render-borrowers
+  (Heap.java borrowing CHEST/TOMB sprites) lose; borrower-only claims
+  name the tile from the constant (crystal chest, tomb).
 - **spells (27):** only frames bound by scripts/spells/*.lua with the
   script's `name` resolved via strings_all.xml. **Deprecated/32px
   sheets and the priest.png draft set are EXCLUDED (Mike: priest icons
