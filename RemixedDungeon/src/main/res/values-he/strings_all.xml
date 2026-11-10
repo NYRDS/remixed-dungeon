@@ -1057,6 +1057,7 @@
     <string name="TownGuardNPC_Message2">תודות להרפתקנים כמוך, המקום הזה הפך לשקט במיוחד</string>
     <string name="TownGuardNPC_Message3">אתה חושב שיש יותר מדי שומרים בעיר הזאת? ובכן, זה בגלל שזאת העיר היחידה עם מבוך ענק מלא מפלצות, לא?</string>
     <string name="TownGuardNPC_Name">שומר</string>
+    <string name="TownGuardNPC_Name_Objective">שומר העיר</string>
     <string name="TownPortal_Info">הלחש הזה מאפשר לך לחזור לבטחה באופן מיידי. עם זאת, מקורות קסם חזקים בקרבת מקום עלולים למנוע ממנו לפעול כמתוכנן.</string>
     <string name="TownPortal_Name">פורטל עירוני</string>
     <string name="TownScript_NeedWeapon">אני לא אלך לצינוק בידיים ריקות!\nאולי כדאי לבקר בחנות העירונית קודם?</string>
@@ -1694,6 +1695,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

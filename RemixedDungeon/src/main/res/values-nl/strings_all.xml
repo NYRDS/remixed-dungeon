@@ -1371,6 +1371,7 @@
     <string name="Potion_Colors_1">karmozijn</string>
     <string name="Potion_Colors_10">indigo</string>
     <string name="Potion_Colors_12">epidoot</string>
+    <string name="Potion_Colors_13">kwarts</string>
     <string name="Potion_Colors_14">onyx</string>
     <string name="Potion_Colors_15">parelmoer</string>
     <string name="Potion_Colors_2">azuurblauw</string>
@@ -2655,6 +2656,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

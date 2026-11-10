@@ -749,6 +749,7 @@
     <string name="HeroSubClass_NameAssa">sát thủ</string>
     <string name="HeroSubClass_NameBers">cuồng chiến binh</string>
     <string name="HeroSubClass_NameFreR">kẻ chạy tự do</string>
+    <string name="HeroSubClass_NameGlad">giác đấu sĩ</string>
     <string name="HeroSubClass_NameGuardian">thủ vệ</string>
     <string name="HeroSubClass_NameLich">Lich</string>
     <string name="HeroSubClass_NameNone">không</string>
@@ -2901,6 +2902,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
