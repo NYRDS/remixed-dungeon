@@ -240,6 +240,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">主教</string>
     <string name="BishopNPC_Name_Objective">主教</string>
+    <string name="BishopQuest_2_1_Prologue">在我將神職奧秘傳授給你之前，祭壇必須先準備妥當。給我帶來_三顆太陽草種子_——它們的金色精華能製成最好的香料。</string>
     <string name="BishopQuest_4_1_InProgress">你已擊敗 %1$d 名死亡騎士，共 %2$d 名。打破他們的意志，軍團便會動搖。</string>
     <string name="BishopQuest_4_1_Prologue">你已讓步兵安息——現在輪到他們的主人了。_死亡騎士_統率亡者軍團，他們的意志驅使枯骨行進。消滅_兩名死亡騎士_，吾兒。</string>
     <string name="BishopQuest_5_1_Epilogue">主的工作完成了！從今天起你可以走上牧師之路。接受這份祝福和這些施捨，吾兒——你已經賺得了它們。</string>
@@ -3090,6 +3091,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

@@ -615,6 +615,7 @@
     <string name="Level_TileEntrance">مدخل العمق</string>
     <string name="Level_TileExit">مخرج العمق</string>
     <string name="Level_TileFireTrap">فخ حريق</string>
+    <string name="Level_TileInactiveTrap">فخ مُفعّل</string>
     <string name="Level_TileLockedDoor">باب مقفل</string>
     <string name="Level_TileLockedExit">مخرج سفلي مغلق</string>
     <string name="Level_TileParalyticTrap">فخ غاز مشل</string>
@@ -1387,6 +1388,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

@@ -431,6 +431,7 @@
     <string name="CrippleBuff_Name">Tàn tật</string>
     <string name="Crystal_Desc">Hòn đá lớn lấp lánh bay giữa không trung. Có vẻ như nó chứa đựng phép thuật mạnh mẽ.</string>
     <string name="Crystal_Gender">masculine</string>
+    <string name="Crystal_Name">ngọc thạch bay</string>
     <string name="CurareDart_Gender">masculine</string>
     <string name="CurareDart_Info">Những mũi phi tiêu nhỏ độc ác này không gây nhiều sát thương, nhưng có thể làm tê liệt mục tiêu khiến nó bất lực và bất động trong một thời gian.</string>
     <string name="DM300_Desc">Cỗ máy này được người Lùn tạo ra từ nhiều thế kỷ trước. Sau đó, người Lùn bắt đầu thay thế máy móc bằng golem, nguyên tố và thậm chí là quỷ. Cuối cùng điều đó đã dẫn đến sự suy tàn của nền văn minh của họ. DM-300 và những cỗ máy tương tự thường được sử dụng cho xây dựng và khai mỏ, và trong một số trường hợp, cho phòng thủ thành phố.</string>
@@ -2899,6 +2900,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

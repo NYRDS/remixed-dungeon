@@ -2181,6 +2181,7 @@
     <string name="WndSadGhostNecro_Text">Deze geest lijkt te worstelen met zijn vloek. Het lijkt alsof hij me om iets wil vragen. Met behulp van necromantie, kon ik hem ervan overtuigen dat de vraag vervuld is. Het zal me tijd besparen. Maar is het de moeite waard?</string>
     <string name="WndSadGhostNecro_Yes">Ja, dwing je wil op</string>
     <string name="WndSadGhost_Armor">Pantser van de geest</string>
+    <string name="WndSadGhost_Farewell">Vaarwel, avonturier!</string>
     <string name="WndSadGhost_Rat">Ja! Het lelijke wezen is gedood en ik kan eindelijk rusten... Neem alsjeblieft een van deze voorwerpen, misschien zijn ze nuttig voor je op je reis...</string>
     <string name="WndSadGhost_Wepon">Geest zijn wapen</string>
     <string name="WndSaveSlotSelect_Delete_No">Nee</string>
@@ -2653,6 +2654,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
