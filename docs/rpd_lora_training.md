@@ -87,7 +87,8 @@ png), tilesets, more levelObjects - only if v1 samples look starved.
 
 ## Dataset v1.1 (2026-11-10 full review, Mike-approved rules)
 
-**187 images** - builder
+**187 images, TRANSPARENT RGBA** (Mike 2026-11-10: "let make it on
+transparent background") - builder
 `/tmp/priest_icons/build_dataset_v11.py` (v1 builder retired):
 
 - **items (109):** only tiles referenced by an item class. Names are
@@ -132,8 +133,14 @@ png), tilesets, more levelObjects - only if v1 samples look starved.
   `/tmp/priest_icons/visual_desc.json` (transient; regenerate from
   zoomed contact sheets), builder composes
   `<name> <icon-kind>, <visual>, <style tail>`.
-- caption tail is neutral ("chunky pixels, flat solid colors, white
-  background") - no "bold dark outline" claim (the family mixes bold
+- **transparent background**: main `dataset/` = RGBA masters with true
+  alpha (no compositing; qwen-2.1's VAE is RGBA-native, enabled by
+  `model_kwargs: {rgba: true}` in the yaml - the dataloader keeps alpha
+  end-to-end and samples decode with it). Caption tail says
+  "transparent background". `dataset_white/` = binarized white
+  composites for the RGB-only z_image track (its toml points there).
+- caption tail is neutral ("chunky pixels, flat solid colors,
+  transparent background") - no "bold dark outline" claim (the family mixes bold
   items and pale spell idioms; the claim made the model average them).
 - Tamahawk.java's class spelling corrected to "tomahawk" in captions.
 
