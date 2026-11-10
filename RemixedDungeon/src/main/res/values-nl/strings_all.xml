@@ -122,6 +122,7 @@
     <string name="Badges_GamesPlayed4">2000 spellen gespeeld</string>
     <string name="Badges_GamesPlayed5">5000 spellen gespeeld</string>
     <string name="Badges_GnollUnlocked">Gnoll ontgrendeld</string>
+    <string name="Badges_GoldCollected5">35000 goud verzameld</string>
     <string name="Badges_GoldColleted2">500 goud verzameld</string>
     <string name="Badges_GoldColleted3">2500 goud verzameld</string>
     <string name="Badges_GoldColleted4">7500 goud verzameld</string>
@@ -179,6 +180,7 @@
     <string name="BardSong_1">Mijn vrouw en ik wonen helemaal alleen,\nIn een klein blokhutje, dat we ons eigen noemen.\nZij hield van jenever, en ik hield van rum.\nIk zeg je, we hadden veel plezier.</string>
     <string name="BarkskinBuff_Info">Het lichaam is bedekt met schors die een deel van de opgelopen schade blokkeert.</string>
     <string name="BarkskinBuff_Name">Schorshuid</string>
+    <string name="Barrel_Desc">Het lijkt op een simpele houten vat. Maar naarmate je er dichterbij komt, ruik je een vage hint van olie. Het vat lijkt redelijk licht, je zou het wellicht kunnen duwen.</string>
     <string name="Barrel_Name">vat</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
     <string name="Bat_Defense">ontweken</string>
@@ -2662,6 +2664,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
