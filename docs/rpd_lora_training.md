@@ -87,8 +87,7 @@ png), tilesets, more levelObjects - only if v1 samples look starved.
 
 ## Dataset v1.1 (2026-11-10 full review, Mike-approved rules)
 
-**137 images** (town portal frame dropped - common.png is a 32px-layout
-sheet, its "16px frame" was a quadrant) - builder
+**187 images** - builder
 `/tmp/priest_icons/build_dataset_v11.py` (v1 builder retired):
 
 - **items (109):** only tiles referenced by an item class. Names are
@@ -106,7 +105,16 @@ sheet, its "16px frame" was a quadrant) - builder
   resolve to the class matching the constant; render-borrowers
   (Heap.java borrowing CHEST/TOMB sprites) lose; borrower-only claims
   name the tile from the constant (crystal chest, tomb).
-- **spells (27):** only frames bound by scripts/spells/*.lua with the
+- **other item sheets (50):** bindings inherited from base classes
+  (Armor.java holds `imageFile = "items/armor.png"`, subclasses hold
+  `image = N`) + lua items: 23 armor tiers (armor.png is ONE ROW 640x16
+  - tile x = tile*16, the 16-col grid math drops half of them!), 6
+  darts, 4 shields, 4 fish, hooked dagger, kusarigama, gnoll tomahawk,
+  tengu liver, toxic gland, rotten organ, bone shard, bone saw, dew
+  vial, chaos shield, plague doctor mask + 2 items.png strays (vile
+  essence, second pickaxe). Darts/armor are NOT run-randomized -
+  function names safe.
+- **spells (26):** only frames bound by scripts/spells/*.lua with the
   script's `name` resolved via strings_all.xml. **Deprecated/32px
   sheets and the priest.png draft set are EXCLUDED (Mike: priest icons
   are extra-low-quality drafts).**
