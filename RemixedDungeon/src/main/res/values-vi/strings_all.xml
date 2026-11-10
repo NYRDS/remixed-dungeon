@@ -1382,6 +1382,7 @@
     <string name="RogueArmor_Prompt">Chọn một vị trí để nhảy đến</string>
     <string name="RootSpell_Info">Gây rễ nhân vật được chọn, khiến hắn không thể di chuyển trong một khoảng thời gian ngắn.</string>
     <string name="RootSpell_Name">Rễ</string>
+    <string name="RootsBuff_Info">Rễ mọc từ mặt đất quấn quanh cơ thể, không cho phép di chuyển một bước nào.</string>
     <string name="RootsBuff_Name">Bám rễ</string>
     <string name="RottenFish_Info">Cá thối, bốc mùi khủng khiếp</string>
     <string name="RottenFish_Name">cá thối</string>
@@ -2912,6 +2913,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

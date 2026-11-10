@@ -1392,6 +1392,7 @@
     <string name="Potion_SelectForMoisten">Selecteer een item om te bevochtigen</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
     <string name="Potion_Yes">Ja, ik weet wat ik doe</string>
+    <string name="PriestArmor_NotPriest">Alleen priesters kunnen deze armor gebruiken!</string>
     <string name="Prison_TileDescBookshelf">Dit is waarschijnlijk een overblijfsel van een gevangenisbibliotheek. Zou het branden?</string>
     <string name="Prison_TileDescDeco">Er zijn oude bloedvlekken op de vloer.</string>
     <string name="PseudoPasty_Info">Dit is een authentiek Cornish pasty met de traditionele vulling van rundvlees en aardappelen.</string>
@@ -2667,6 +2668,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

@@ -1027,6 +1027,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="HeroClass_PriestPerks_1">Priester verursachen 25% Bonusschaden gegen Untote und erleiden 25% weniger Schaden durch deren Angriffe. Gegen Dämonen werden diese Boni halbiert.</string>
     <string name="HeroClass_PriestPerks_2">Priester nutzen Mana, um göttliche Zauber zu wirken: Segen, Heiliges Wasser, Exorzismus und Letzte Ölung.</string>
     <string name="HeroClass_PriestPerks_3">Die Kampfgewänder des Priesters können zum Heiligen Wirken aufgerufen werden: ein heiliger Ausbruch, der Untote in der Nähe verbrennt (Dämonen erleiden halben Schaden) und den Träger segnet.</string>
+    <string name="HeroClass_PriestPerks_4">Rollen des Fluchentfernens sind von Anfang an identifiziert.</string>
     <string name="HeroClass_PriestPerks_5">Priester beginnen mit 12 Manapunkten.</string>
     <string name="HeroClass_Rog">Schurke</string>
     <string name="HeroClass_RogPerks_0">Schurken beginnen mit einem Schattenring+1.</string>
@@ -3105,6 +3106,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
