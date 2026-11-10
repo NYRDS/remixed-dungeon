@@ -31,11 +31,38 @@ upgraded `lycoris-lora` 1.8.3→4.1.3 (musubi needs
 requirements_base.txt and unused by this train - do not install it (its
 pyarrow pin drags a numpy 2 upgrade; numpy lives in the shared
 symlinked stack). `run_train.sh` venv path fixed to `rpd_lora/venv`.
-Chain: `/tmp/priest_icons/chain_b.sh` waits for `ZPIPE_DONE` in
-`ztrain5.log` + ComfyUI :8188 re-bind, then fires `run_train.sh`
-(→ `trainB.log`). Step-400 samples already show family golds + bold
-outlines; pixel grid not locked in yet - judge at 1600
-(`output/zimg_rpd/compare_0_vs_400.png`).
+
+**Track A DONE 2026-11-10 03:00:** 1600 steps, 1.5it/s, loss 0.10→0.07,
+~20 min wall. Progression: base model painterly-soft amber → family
+golds + bold outlines by 800 → **grid-aligned pixel look locks in at
+1200** (`output/zimg_rpd/progress_all.png`). Converted LoRA:
+`output/zimg_rpd/rpd_style_zimg_comfy.safetensors`. CAVEAT found in the
+16px acceptance check (`final_vs_ref.png`): hand-drawn `priest.png`
+icons use a light idiom (1px outline, pale fills), and the generated
+512px icons drift half-blocks off the 32px grid → BOX ÷32 downscale
+aliases to mush. 512px style direction right; 16px-clean needs grid
+snap (post-process quantize-to-32px-grid, or more steps) - z_image is
+the dev track, judge the real fix on track B.
+
+**Track B fixes before it trained (4 failures):** hub got bumped to
+2.4.0 (lycoris 4.x side effect) breaking transformers 5.5.3 → pin back
+`huggingface_hub==1.23.0`; yaml `arch: "qwen_image"` (original) →
+**`arch: "qwen_image_2"`** (ai-toolkit id, class `QwenImage2Model`);
+then meta-tensor crash in `quantize_module`: the vendored
+`QwenImage21Transformer2DModel` natively uses comfy's FUSED
+`img_mlp.gate_up`, the HF diffusers snapshot ships split
+`gate_layer`/`proj`, and `convert_state_dict_on_load` (which fuses
+them) only runs on the single-file path - directory loads went through
+diffusers `from_pretrained`, leaving 32 `gate_up` linears on meta and
+silently dropping the keys. PATCHED (local, in
+`ai-toolkit/extensions_built_in/diffusion_models/qwen_image_2/src/transformer.py`):
+override `aitk_from_pretrained` to route local-dir shard loads through
+`load_from_state_dict`. Verified 0 meta params + fused [24576,4096]
+bf16. Note: ai-toolkit's diffusers pin `c9438378` = the PR-13432
+tarball we already installed (identical sha256); no native
+`QwenImage21` in diffusers - the vendored class is the only support.
+Training 2000 steps @1.4it/s in `trainB4.log`, samples every 250 to
+`output/rpd_style_v1/samples/`.
 
 ## Dataset
 
