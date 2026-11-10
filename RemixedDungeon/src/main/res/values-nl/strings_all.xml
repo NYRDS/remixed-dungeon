@@ -1517,6 +1517,7 @@
     <string name="RottingFist_Name">verrotte vuist</string>
     <string name="RottingFist_Name_Objective">vergaande vuist</string>
     <string name="RoyalShield_desc">Een volledig metalen schild. Ja, het is zwaar, maar alleen dit kan je de beste bescherming bieden.</string>
+    <string name="RoyalShield_name">Koninklijke Schild</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Alleen de grootste bogenschutters kunnen deze robijnboog gebruiken. Bijna elke pijl doorboort de vijand, een groot gat in zijn lichaam achterlatend, maar extreme kracht is nodig om de boogteef te spannen.</string>
     <string name="RubyCrossbow_Gender">masculine</string>
@@ -1660,6 +1661,7 @@
     <string name="ShootInEye_Name">Schiet in het Oog</string>
     <string name="Shopkeeper_Buy">Selecteer item om te kopen</string>
     <string name="Shopkeeper_BuyPrompt">Laat me je inventaris zien</string>
+    <string name="Shopkeeper_Desc">Deze gevestigde man past beter in een handelswijk van een grote stad dan in een kerker. Zijn prijzen verklaren waarom hij er zo graag zakendoet.</string>
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="Shopkeeper_Sell">Selecteer een item om te verkopen</string>
     <string name="Shopkeeper_SellPrompt">Ik heb spullen te verkopen</string>
@@ -2370,6 +2372,7 @@
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
     <string name="town_deco_hay_name">hooi</string>
     <string name="town_deco_identifier_sign_desc">Het lijkt erop dat er een waarzegster in dat gebouw woont.</string>
+    <string name="town_deco_identifier_sign_name">Magische Balbord</string>
     <string name="town_deco_inn_bed_desc">Ziet eruit als een heel comfortabel bed.</string>
     <string name="town_deco_inn_bed_name">Bed</string>
     <string name="town_deco_ladder_desc">Een oude ladder, onbetrouwbaar van uiterlijk.</string>
@@ -2657,6 +2660,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

@@ -273,6 +273,7 @@
     <string name="Carcass_Necromancy">Bạn đã hồi sinh thi thể của %s!</string>
     <string name="Carcass_Necromancy_Failed">Việc hồi sinh thi thể của %s đã thất bại!</string>
     <string name="Carcass_SelectItem">Chọn một vật phẩm</string>
+    <string name="Caves_TileDescDeco">Một mạch quặng nào đó nhìn thấy được trên tường. Vàng?</string>
     <string name="Caves_TileDescExit">Cầu thang dẫn xuống tầng sâu hơn.</string>
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
     <string name="Caves_TileHighGrass">Nấm phát sáng</string>
@@ -310,6 +311,7 @@
     <string name="ChaosCrystal_Name">Huyền Tinh Kỳ Lạ</string>
     <string name="ChaosCrystal_Name_1">Tinh Thể Hỗn Loạn</string>
     <string name="ChaosCrystal_Name_2">Viên Ngọc Hỗn Mang</string>
+    <string name="ChaosCrystal_ScrollFused">Runa khắc trên cuốn sách đã hấp thụ tinh thể, và bây giờ nó là một %s</string>
     <string name="ChaosCrystal_SelectForFuse">Chọn vật phẩm để hợp nhất Tinh thể Hỗn loạn</string>
     <string name="ChaosCrystal_StaffFused">Viên ngọc hấp thụ cây đũa phép của bạn và biến thành hình dạng một Cây Gậy</string>
     <string name="ChaosCrystal_SwordFused">Kính hấp thụ vũ khí của bạn và biến thành một Chiếc Kiếm</string>
@@ -727,6 +729,7 @@
     <string name="HeroClass_None">thường dân</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Bác sĩ dịch là bậc thầy giả kim và có thể sử dụng công thức độc đáo.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Bắt đầu với [yellow:Mặt Nạ Dịch Hạch] (miễn nhiễm với mọi khí độc) và [yellow:Cưa Xương]. Đòn chí mạng rơi thêm bộ phận, và Cưa gây x2 sát thương lên kẻ địch bị tê liệt.</string>
+    <string name="HeroClass_PlagueDoctorPerks_3">Các loại thuốc [yellow:Chữa lành], [yellow:Khí Gây Tê Liệt] và [yellow:Khí Độc] được nhận diện sẵn.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Bác sĩ dịch bệnh bị trừng phạt lớn về độ chính xác nếu không cầm Cưa Xương thân yêu trên tay và không thể dùng vũ khí tầm xa.</string>
     <string name="HeroClass_Rog">kẻ lừa đảo</string>
     <string name="HeroClass_RogPerks_0">Kẻ lừa đảo bắt đầu với Nhẫn Bóng Tối+1.</string>
@@ -2903,6 +2906,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 
