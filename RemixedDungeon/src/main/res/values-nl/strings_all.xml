@@ -2185,6 +2185,7 @@
     <string name="WndSadGhost_Armor">Pantser van de geest</string>
     <string name="WndSadGhost_Farewell">Vaarwel, avonturier!</string>
     <string name="WndSadGhost_Rat">Ja! Het lelijke wezen is gedood en ik kan eindelijk rusten... Neem alsjeblieft een van deze voorwerpen, misschien zijn ze nuttig voor je op je reis...</string>
+    <string name="WndSadGhost_Rose">Ja! Ja!!! Dit is het! Alsjeblieft, geef het aan mij! En je mag een van deze voorwerpen nemen, misschien zijn ze nuttig voor je op je reis...</string>
     <string name="WndSadGhost_Wepon">Geest zijn wapen</string>
     <string name="WndSaveSlotSelect_Delete_No">Nee</string>
     <string name="WndSaveSlotSelect_Delete_Title">Weet je zeker dat je deze opslagstatus wilt verwijderen?</string>
@@ -2656,6 +2657,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

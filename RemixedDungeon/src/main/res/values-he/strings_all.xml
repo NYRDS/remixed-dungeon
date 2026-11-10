@@ -205,6 +205,7 @@
     <string name="ChampionOfFireBuff_Info">\&quot;שרוי בזעם הלהבות, מאפיין זה מגביר את האכזריות ואת כוח הלחימה של היצור. אלוף האש צץ כיריב מאיים, המשחרר מתקפות הרסניות שיכולות לעטוף את אויביו בלהבות צורבות, מטיל אימה בכל מי שמעז להתנגד לו.</string>
     <string name="ChampionOfFireBuff_Name">אלוף האש</string>
     <string name="ChampionOfWaterBuff_Info">אלוף המים מגלם את כוח האוקיינוסים הבלתי מתפשר, ומשפר את החוסן והעוז של היצור. כתוצאה מכך, הוא הופך ליריב איתן, המסוגל לעמוד במתקפה בלתי פוסקת של התקפות ולעמוד כשומר בלתי מתפשר מול המצוקות.</string>
+    <string name="ChaosArmor_Info">שריון זה מורכב מלוחות אדומים כדם התפורים יחד בשרשראות אדומות כהות. הם מקרינים אנרגיה כאוטית כאשר אתה נוגע בהם.</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">להב חד-ידני של כאוס טהור. הוא גדל עם קרבות כמו בן דודו הדו-ידני, אבל לאט יותר ולפוטנציאל נמוך יותר — ומשאיר את היד השנייה חופשית למגן.</string>
     <string name="ChaosBlade_Name">להב כאוס</string>
@@ -1695,6 +1696,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
