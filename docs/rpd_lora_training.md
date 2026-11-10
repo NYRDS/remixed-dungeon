@@ -87,7 +87,7 @@ png), tilesets, more levelObjects - only if v1 samples look starved.
 
 ## Dataset v1.1 (2026-11-10 full review, Mike-approved rules)
 
-**187 images, TRANSPARENT RGBA** (Mike 2026-11-10: "let make it on
+**332 images, TRANSPARENT RGBA** (Mike 2026-11-10: "let make it on
 transparent background") - builder
 `/tmp/priest_icons/build_dataset_v11.py` (v1 builder retired):
 
@@ -115,6 +115,16 @@ transparent background") - builder
   vial, chaos shield, plague doctor mask + 2 items.png strays (vile
   essence, second pickaxe). Darts/armor are NOT run-randomized -
   function names safe.
+- **mobs (145 idle frames, 87 unique):** from spritesDesc/*.json where
+  the frame fits 16x16 (width,height <= 16). Idle frames contiguous
+  (x=(idx*w)%sheetW, y=(idx*w)//sheetW - NOT a 16-col grid), bottom-center
+  padded on a 16x16 canvas then x32. Variant kinds share one texture and
+  are runtime tints (Albino/BlackRat/FetidRat all = rat.png) - dedupe by
+  TEXTURE keeping the preferred kind's name. Near-identical idle twins
+  dropped (<6% differing px). Names from scripts/mobs/<Kind>.lua name key
+  via strings_all.xml, fallback humanized stem minus NPC suffix. Captions:
+  "a <name> game character sprite, <visual>, ...". Descs map:
+  `/tmp/priest_icons/mobs_visual.json` keyed `mob:<Kind>:<0|1>`.
 - **spells (26):** only frames bound by scripts/spells/*.lua with the
   script's `name` resolved via strings_all.xml. **Deprecated/32px
   sheets and the priest.png draft set are EXCLUDED (Mike: priest icons
