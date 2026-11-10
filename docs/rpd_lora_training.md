@@ -143,12 +143,17 @@ loads them and resumes at 2000/2000 - exits 0 in minutes with NO
 training. Archive/rename the output dir when the dataset changes
 (bit us on the v1.1 relaunch).
 
-## Retrain status
+## Retrain results (v1.1 dataset, 2026-11-10 evening)
 
-v1.1 dataset retrain 2026-11-10 evening: track A running
-(`ztrain6.log`), track B chained after it (`trainB7.log`) via
-`/tmp/priest_icons/chain_b2.sh`. Old-run checkpoints kept for
-comparison. Judge checkpoints 250-500 first.
+Both tracks retrained clean. Track A (`progress_v11.png`): same style
+arc, **no grey halos**, still needs a 32px grid-snap for true 16px use.
+Track B (`progress_v11_b.png`): overfit cliff GONE - family golds +
+bold outline hold through step 2000, no idiom blend, no halo; minor
+stray dark outline bits appear 1250+. **16px BOX downscale reads
+crisp** (`b16_check_v11.png`): cross/candle/sun all legible with dark
+outline and family colors. Track B is the deliverable; checkpoints
+250-1000 all usable, final at
+`output/rpd_style_v1/rpd_style_v1.safetensors`.
 
 ## Track A recipe (z_image, musubi-tuner)
 
