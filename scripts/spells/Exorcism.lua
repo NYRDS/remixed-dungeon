@@ -31,7 +31,7 @@ return spell.init{
             RPD.affectBuff(target, RPD.Buffs.Slow, 5)
         end
 
-        target:getSprite():emitter():burst(RPD.Sfx.ShadowParticle.UP, 6)
+        target:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.GOLD_FACTORY, 8)
         target:damage(damage, caster)
         RPD.playSound("snd_ghost")
         return true

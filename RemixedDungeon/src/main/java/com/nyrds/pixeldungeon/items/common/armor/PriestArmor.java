@@ -46,14 +46,14 @@ public class PriestArmor extends ClassArmor {
             if (!user.friendly(mob) && level.distance(mob.getPos(), user.getPos()) <= SANCTIFY_RADIUS) {
                 int dmg = mob.undead ? damage : (mob.demon ? Math.max(1, damage / 2) : 0);
                 if (dmg > 0) {
-                    mob.getSprite().emitter().start(ShaftParticle.FACTORY, 0.1f, 5);
+                    mob.getSprite().emitter().start(ShaftParticle.GOLD_FACTORY, 0.1f, 5);
                     mob.damage(dmg, user);
                 }
             }
         }
 
         Buff.affect(user, Blessed.class, BLESSED_DURATION).level(1 + user.lvl() / 5);
-        user.getSprite().emitter().start(ShaftParticle.FACTORY, 0.1f, 8);
+        user.getSprite().emitter().start(ShaftParticle.GOLD_FACTORY, 0.1f, 8);
 
         user.doOperate(Actor.TICK);
         Sample.INSTANCE.play(Assets.SND_LEVELUP);

@@ -27,7 +27,7 @@ return spell.init{
         local buff = RPD.affectBuff(caster, RPD.Buffs.Blessed, 20 + 10 * skill)
         buff:level(1 + math.floor(skill / 3))
 
-        caster:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.FACTORY, 6)
+        caster:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.GOLD_FACTORY, 6)
         RPD.playSound("snd_ray")
         RPD.glogp("BlessingSpell_Cast", caster:getName())
         return true

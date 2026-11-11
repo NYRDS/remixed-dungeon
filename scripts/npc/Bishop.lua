@@ -127,7 +127,7 @@ local dialog = function(index)
     if index == 0 then
         if client:gold() >= lesserPrice then
             client:spendGold(lesserPrice)
-            client:getSprite():emitter():burst( RPD.Sfx.ShaftParticle.FACTORY, 2 );
+            client:getSprite():emitter():burst( RPD.Sfx.ShaftParticle.GOLD_FACTORY, 2 );
             RPD.affectBuff(client,RPD.Buffs.Blessed,100)
             return
         end
@@ -137,7 +137,7 @@ local dialog = function(index)
     if index == 1 then
         if client:gold() >= greatPrice then
             client:spendGold(greatPrice)
-            client:getSprite():emitter():burst( RPD.Sfx.ShaftParticle.FACTORY, 5 );
+            client:getSprite():emitter():burst( RPD.Sfx.ShaftParticle.GOLD_FACTORY, 5 );
             RPD.affectBuff(client,RPD.Buffs.Blessed,500)
             RPD.affectBuff(client,RPD.Buffs.Blessed,500)
             return

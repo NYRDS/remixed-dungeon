@@ -37,7 +37,7 @@ return spell.init{
             if mob:isUndead() and not caster:friendly(mob) and level:distance(mob:getPos(), cell) <= 2 then
                 mob:damage(damage, caster)
                 RPD.affectBuff(mob, RPD.Buffs.Cripple, 5)
-                mob:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.FACTORY, 4)
+                mob:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.GOLD_FACTORY, 4)
             end
         end
 
