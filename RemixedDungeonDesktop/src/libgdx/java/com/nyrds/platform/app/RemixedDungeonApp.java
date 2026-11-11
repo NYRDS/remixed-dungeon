@@ -221,6 +221,18 @@ public class RemixedDungeonApp {
 
             PUtil.slog("app", "Restarting application with command: " + String.join(" ", command));
 
+            // free the webserver port BEFORE exec: the successor process boots
+            // while this one still lives and would die with BindException on
+            // :8080 (bd 6tw). Retry-bind in BaseWebServer.start() is the net
+            // for the wrappers we cannot stop here.
+            try {
+                if (BaseWebServer.instance != null) {
+                    BaseWebServer.instance.shutdown();
+                }
+            } catch (Exception e) {
+                PUtil.slog("app", "webserver shutdown on restart: " + e);
+            }
+
             // Execute the command
             Process process = runtime.exec(command.toArray(new String[0]));
 

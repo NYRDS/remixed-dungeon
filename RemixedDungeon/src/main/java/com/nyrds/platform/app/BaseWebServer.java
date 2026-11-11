@@ -14,7 +14,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.NetworkInterface;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.net.SocketException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -37,6 +40,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
     protected static BaseWebServer instance = null;
     protected String serverAddress = null;
     protected boolean started = false;
+    private final int configuredPort;
 
     // Debug endpoint routing map
     private static final Map<String, Function<NanoHTTPD.IHTTPSession, NanoHTTPD.Response>> debugEndpoints = new HashMap<>();
@@ -216,6 +220,7 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
     public BaseWebServer(int port) {
         super(port);
+        configuredPort = port;
         instance = this;
 
         // Try to get the IP address
@@ -247,10 +252,72 @@ public abstract class BaseWebServer extends NanoHTTPD {
 
     @Override
     public void start() throws IOException {
-        if (!started) {
-            super.start();
-            started = true;
-            onServerStarted();
+        if (started) {
+            return;
+        }
+        // a restarting app spawns its successor before exiting - the port can
+        // still be held when the new process gets here. NanoHTTPD 2.3.1 binds
+        // on its listener thread and dies SILENTLY on failure, so: wait for
+        // the port to become bindable, then verify the listener came up.
+        // ~4.5s total: covers the restart overlap, stays under the android
+        // input-dispatch ANR threshold (bd 6tw).
+        IOException bindFailure = null;
+        for (int attempt = 0; attempt < 18; attempt++) {
+            try (ServerSocket probe = new ServerSocket()) {
+                probe.setReuseAddress(true);
+                probe.bind(new InetSocketAddress(configuredPort));
+                bindFailure = null;
+                break;
+            } catch (IOException e) {
+                bindFailure = e;
+                GLog.debug("WebServer port busy, waiting %d/18: %s", attempt + 1, e.getMessage());
+                try {
+                    Thread.sleep(250);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                    return;
+                }
+            }
+        }
+        if (bindFailure != null) {
+            throw bindFailure;
+        }
+
+        super.start();
+
+        // silent-death check: the runnable gives up on bind without telling us
+        long deadline = System.currentTimeMillis() + 2000;
+        while (System.currentTimeMillis() < deadline) {
+            if (serverAcceptsConnections()) {
+                started = true;
+                onServerStarted();
+                return;
+            }
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+                return;
+            }
+        }
+        stop();
+        throw new IOException("WebServer listener on port " + configuredPort + " never came up");
+    }
+
+    private boolean serverAcceptsConnections() {
+        try (Socket socket = new Socket()) {
+            socket.connect(new InetSocketAddress(InetAddress.getLoopbackAddress(), configuredPort), 500);
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
+    // bd 6tw: free the port before a restart execs the successor process
+    public void shutdown() {
+        if (started) {
+            stop();
+            started = false;
         }
     }
 

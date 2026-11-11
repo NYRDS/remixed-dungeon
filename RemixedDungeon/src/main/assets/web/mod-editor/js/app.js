@@ -199,7 +199,7 @@ async function openWorkspace(modName) {
       content.innerHTML = '<p>Game restarting into <b>' + modName + '</b>… ' +
         '<span class="hint">(the page will reconnect when the server is back)</span></p>';
       if (!result.restarting && !result.alreadyActive) { return; }
-      setTimeout(() => { window.location.reload(); }, 4000);
+      waitServerBack(90);
     } catch (e) { alert(e.message); }
   });
   actions.appendChild(play);
@@ -217,6 +217,23 @@ async function openWorkspace(modName) {
   content.appendChild(hint);
 
   await runValidate(modName, true);
+}
+
+// bd 6tw: the restarted server comes back whenever the successor process
+// wins the port (retry-bind window) - poll for it instead of one delayed
+// reload that lands on a dead port
+function waitServerBack(timeoutS) {
+  const deadline = Date.now() + timeoutS * 1000;
+  (function probe() {
+    if (Date.now() > deadline) {
+      content.innerHTML = '<p class="status-err">Server did not come back within '
+        + timeoutS + 's - reload the page manually.</p>';
+      return;
+    }
+    fetch('/api/mods/list', { cache: 'no-store' })
+      .then(r => { if (r.ok) { window.location.reload(); } else { throw 0; } })
+      .catch(() => setTimeout(probe, 1000));
+  })();
 }
 
 async function runValidate(modName, quiet) {

@@ -6,15 +6,22 @@ export function onBusy(cb) { busyCb = cb; }
 
 async function request(url, options) {
   if (busyCb) { busyCb(true); }
+  // a hung keep-alive connection must not wedge the page forever
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 30000);
   try {
-    const resp = await fetch(url, options);
+    const resp = await fetch(url, Object.assign({ signal: ctrl.signal }, options));
     let data = null;
     try { data = await resp.json(); } catch (e) { /* non-json */ }
     if (!resp.ok) {
       throw new Error((data && data.error) || `HTTP ${resp.status}`);
     }
     return data;
+  } catch (e) {
+    if (e.name === 'AbortError') { throw new Error('request timeout: ' + url); }
+    throw e;
   } finally {
+    clearTimeout(timer);
     if (busyCb) { busyCb(false); }
   }
 }
