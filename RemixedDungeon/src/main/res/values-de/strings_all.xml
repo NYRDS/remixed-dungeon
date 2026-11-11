@@ -258,6 +258,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BishopQuest_4_1_Epilogue">Die Legionen taumeln wie Marionetten mit zerschnittenen Fäden — ich spüre es sogar von hier. Ihr Meister wird dies nicht vergeben. Nimm diesen Trank der Macht, mein Kind; du wirst deine Stärke brauchen.</string>
     <string name="BishopQuest_4_1_InProgress">Du hast %1$d von %2$d Todesrittern vernichtet. Brich ihren Willen, und die Legionen werden straucheln.</string>
     <string name="BishopQuest_4_1_Prologue">Du hast die Fußsoldaten zur Ruhe gebettet — nun sind ihre Herren an der Reihe. _Todesritter_ befehligen die Legionen der Toten, und ihr Wille bindet die Knochen an ihren Marsch. Vernichte _zwei Todesritter_, mein Kind.</string>
+    <string name="BishopQuest_4_2_Epilogue">Die Kirchenglocken läuteten von selbst, als der letzte verging — ein gutes Zeichen, mein Kind. Nimm diesen Trank der Kraft; die letzte Prüfung wird viel von dir verlangen.</string>
     <string name="BishopQuest_4_2_InProgress">Du hast %1$d von %2$d versklavten Seelen befreit. Lass sie nicht mehr dienen.</string>
     <string name="BishopQuest_4_2_Prologue">Es gibt nicht nur wandelnde Knochen, mein Kind. _Versklavte Seelen_ — arme Seelen in Ketten ewiger Knechtschaft, die die Lebenden hassen für die verlorene Freiheit. Ihre Trauer ist eine Waffe. Befreie _vier versklavte Seelen_ davon.</string>
     <string name="BishopQuest_5_1_Epilogue">Das Werk des Herrn ist vollbracht! Von diesem Tag an magst du den Pfad eines Priesters beschreiten. Nimm diesen Segen und diese Almosen, mein Kind — du hast sie dir verdient.</string>
@@ -3107,6 +3108,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

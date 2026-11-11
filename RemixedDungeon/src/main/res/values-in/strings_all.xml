@@ -244,6 +244,7 @@ Kamu bisa mengubah keputusan kapan saja ( klik icon grafik di menu utama )</stri
     <string name="BishopNPC_Name">Uskup</string>
     <string name="BishopNPC_Name_Objective">Uskup</string>
     <string name="BishopQuest_3_2_InProgress">Bawakan seekor kelelawar yang jinak, anakku. Jangan menakut-nakuti makhluk malang itu.</string>
+    <string name="BishopQuest_3_2_Prologue">Bahkan binatang kegelapan pun layak mendapat berkah, anakku. Bawalah kelelawar yang telah kamu jinakkan, dan aku akan menguduskannya untuk cahaya.</string>
     <string name="BishopQuest_4_1_InProgress">Anda telah membunuh %1 dari %2 Ksatria Kematian. Hancurkan keinginan mereka, dan legion akan goyah.</string>
     <string name="Bishop_bye">Akan kudoakan kau anakku</string>
     <string name="Bishop_great_bless">Berkat besar - %d g</string>
@@ -3084,6 +3085,7 @@ _Kobold Icemancers_! Makhluk-makhluk menyedihkan itu, bersembunyi di dalam gua-g
     <string name="town_table_fortune_ball_name">Bola kristal</string>
     <string name="town_table_fortune_desc">Meja ini dilapisi kain sutra. Anda dapat melihat berbagai kartu tarot ditata dalam urutan yang aneh.</string>
     <string name="town_table_fortune_name">Meja</string>
+
 
 
 

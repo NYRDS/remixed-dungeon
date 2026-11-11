@@ -1092,6 +1092,7 @@
     <string name="HideInGrassSpell_Info">You perfected your Hide-and-seek mastery.</string>
     <string name="HideInGrassSpell_Name">Сховатися в траві</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Навіть я не можу сховатися на видному місці.</string>
+    <string name="HolyWater_Info">Крапля освяченої води. Вона опікає і сповільнює нежить на цільовій клітинці та навколо неї.</string>
     <string name="Horror_Name_0">Жахливе %s</string>
     <string name="Horror_Name_1">Жахливий %s</string>
     <string name="Horror_Name_2">Жахлива %s</string>
@@ -3118,6 +3119,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

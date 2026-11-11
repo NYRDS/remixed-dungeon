@@ -309,6 +309,7 @@
     <string name="DarkGold_Name">עפרת זהב אפלה</string>
     <string name="DarkSacrifice_Ok">חַיַּי שֶׁלְּךָ!</string>
     <string name="DarkVeilBuff_Info">מסך של חושך מקיף את הבעלים, ומזמן רוח בכל פעם שמתקבל נזק.</string>
+    <string name="Darkness_Info">נראה כמו חלקים של אפלה נצחית مרחפים באוויר</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">חודים מתכתיים פשוטים אלו מאוזנים בצורה אידיאלית כדי לחדור במדויק את טרפם.</string>
 
@@ -1226,6 +1227,7 @@
     <string name="WndSettings_FpsLimit">הגבלת FPS</string>
     <string name="WndSettings_GameplaySettings">משחקיות</string>
     <string name="WndSettings_Handedness">יד דומיננטית</string>
+    <string name="WndSettings_Immersive">מצב סוחף</string>
     <string name="WndSettings_ImmersiveMode">מצב סוחף</string>
     <string name="WndSettings_InGameUiSettings">הגדרות ממשק</string>
     <string name="WndSettings_Music">מוזיקה</string>
@@ -1311,6 +1313,7 @@
     <string name="town_deco_filmtape_name">סרט</string>
     <string name="town_deco_fireplace_desc">מצוין לחימום במקום קר כמו זה.</string>
     <string name="town_deco_firewood_desc">פריט חיוני בקור כזה.</string>
+    <string name="town_deco_firewood_name">עצי הסקה</string>
     <string name="town_deco_glass_name">חלון רחב</string>
     <string name="town_deco_glass_stained_desc">יוצר הזכוכית הזו כנראה השקיע בה מאמץ רב.</string>
     <string name="town_deco_glass_stained_name">זכוכית משובצת</string>
@@ -1696,6 +1699,9 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
+
 
 
 

@@ -50,6 +50,7 @@
     <string name="Ankh_Name">عنخ</string>
     <string name="ArmorKit_ACAplly">تطبيق</string>
     <string name="ArmorKit_Name">مجموعة دروع</string>
+    <string name="ArmorKit_SelectArmor">اختر درعًا لترقيته</string>
     <string name="ArmorKit_Upgraded">لقد قمت بتطبيق مجموعة الدروع لترقية %s</string>
     <string name="Armor_Incompatible">تفاعل أنواع مختلفة من السحر محا الرموز السحرية على هذه الدروع!</string>
     <string name="Armor_Info3">\n\nنظراً لأن قوتك غير كافية، فإن ارتداء هذه الدروع سيقلل من سرعة حركتك ومهاراتك الدفاعية.</string>
@@ -463,6 +464,7 @@
     <string name="Heal_Name">شفاء</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">علاج مجاني لكل مغامر!</string>
+    <string name="HealerNPC_Message2">عد في أي وقت تشعر فيه بالمرض أو الجوع!</string>
     <string name="HealerNPC_Name_Objective">كاهن البلدة</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">طرف هذه السهم مغطى بجرعة الشفاء.</string>
@@ -557,6 +559,7 @@
     <string name="InterLevelScene_FileNotFound">لم يتم العثور على الملف. لسبب ما...</string>
     <string name="InterLevelScene_Loading">جاري التحميل...</string>
     <string name="InterLevelScene_Returning">عودة...</string>
+    <string name="IntroScene_Txt">سعى العديد من الأبطال من جميع الأنواع إلى المغامرة في الزنزانة قبلك. عاد بعضهم بالكنوز والتحف السحرية، لكن معظمهم لم يُسمع عنهم منذ ذلك الحين. لكن لم ينجح أحد في استعادة تميمة يندور، التي يُقال إنها مخبأة في أعماق الزنزانة.\n\nأنت تعتبر نفسك جاهزًا للتحدي، والأهم من ذلك، تشعر أن الحظ يبتسم لك. حان الوقت لبدء مغامرتك الخاصة!</string>
     <string name="InventoryScroll_No">لا، غيّرت رأيي</string>
     <string name="InvisibilityBuff_Info">مخفي تماماً، مما قد يساعد في تجنب الأخطار أو أن تصبح خطراً بحد ذاته.</string>
     <string name="Item_ACDrop">إسقاط</string>
@@ -813,6 +816,7 @@
     <string name="Quarterstaff_Info">عصا من خشب صلب، أطرافها مغطاة بالحديد.</string>
     <string name="Quest_DarkGoldOre_full_name">خام الذهب الداكن</string>
     <string name="Quiver_Gender">masculine</string>
+    <string name="RabbitEars_Info">يُعتقد أن الأرانب تولد محظوظة، وأن من يحصل على جزء منها سيرافقه الحظ. لكن عند التفكير مرة أخرى، أن تُقتل من أجل أذنيك، ليُصنع منهما زينة، لا يبدو محظوظًا بشكل خاص.</string>
     <string name="RabbitEars_Name">آذان أرنب</string>
     <string name="RaiseDead_NoSpace">فشل إحياء الموتى لأن لا يوجد مكان حر في الجوار.</string>
     <string name="RankingsScene_NoGames">لم يتم لعب أي ألعاب بعد.</string>
@@ -1102,6 +1106,7 @@
     <string name="VileEssence_Info">جوهر مركز من الفساد تم حصاده من عدو مهزوم. ينبض هذا الجوهر المظلم بطاقة خبيثة ويُقدّر كثيرًا في العمليات الكيميائية.</string>
     <string name="Viscosity_Txt">%s من اللزوجة</string>
     <string name="WandHolster_Info">حامل رفيع هذا مصنوع من جلد حيوان غريب. يسمح بحمل ما يصل إلى %d عصا بشكل مضغوط.</string>
+    <string name="WandHolster_Name">حافظة العصي</string>
     <string name="WandMaker_Defense">امتص</string>
     <string name="WandMaker_Desc">هذا الشيخ الوقور لكنه قوي البنية يبدو عليه الارتباك الطفيف. إنه محمي بدرع سحري.</string>
     <string name="WandMaker_Dust1">يا لها من مفاجأة سارة أن ألتقي بشخص لائق في مثل هذا المكان! جئت إلى هنا بحثاً عن مكون نادر - _غبار الجثث_. يمكن جمعه من الهياكل العظمية المتوفرة بكثرة في الزنزانة. بصفتي مستخدماً للسحر، أستطيع الدفاع عن نفسي ضد الوحوش المحلية، لكنني أضيع بسهولة بالغة، وهذا محرج جداً. هل يمكن أن تساعدني؟ سأكون سعيداً بدفع أجر خدمتك بإحدى أفضل عصاي السحرية.</string>
@@ -1389,6 +1394,11 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
 
 
 

@@ -1434,6 +1434,7 @@
     <string name="ScrollOfChallenge_Name">Cuộn giấy Khiêu chiến</string>
     <string name="ScrollOfCurse_Info">Cuộn giấy này được tạo ra đặc biệt để trừng phạt những tên trộm đủ ngu ngốc để cố gắng sử dụng phép thuật mà chúng không thể hiểu. Pháp thuật của cuộn giấy hoàn toàn vô dụng thậm chí có hại cho phiêu lưu gia thông thường, nhưng được các thương nhân trân trọng rất cao.</string>
     <string name="ScrollOfCurse_Name">Cuộn Giấy Nguyền Rủa</string>
+    <string name="ScrollOfDomination_Info">Cuộn này sẽ khuất phục ý chí của một sinh vật trong tầm nhìn của bạn. Sinh vật đó sẽ chiến đấu cho bạn đến chết.</string>
     <string name="ScrollOfDomination_Name">Cuộn sách Chiếm hữu</string>
     <string name="ScrollOfIdentify_Info">Vĩnh viễn tiết lộ tất cả bí mật của một vật phẩm duy nhất.</string>
     <string name="ScrollOfIdentify_InvTitle">Chọn một vật phẩm để nhận diện</string>
@@ -2916,6 +2917,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
