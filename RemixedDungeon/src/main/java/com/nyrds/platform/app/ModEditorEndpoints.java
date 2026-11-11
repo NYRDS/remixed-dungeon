@@ -272,12 +272,17 @@ public class ModEditorEndpoints {
                 }
             }
 
+            // buffer the bytes before building the response: NanoHTTPD reads
+            // the stream lazily at serve time, so a try-with-resources stream
+            // is already closed when it gets handed over (0-byte body)
+            byte[] data;
             try (InputStream in = ModdingMode.getInputStream(file)) {
-                return NanoHTTPD.newChunkedResponse(NanoHTTPD.Response.Status.OK,
-                    mimeFor(file), in);
+                data = readStream(in);
             } catch (Exception e) {
                 return err(NanoHTTPD.Response.Status.NOT_FOUND, "Not found: " + file);
             }
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK,
+                mimeFor(file), new ByteArrayInputStream(data), data.length);
         } catch (Exception e) {
             return err(NanoHTTPD.Response.Status.INTERNAL_ERROR, e.getMessage());
         }

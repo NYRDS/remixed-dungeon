@@ -159,6 +159,17 @@ def main():
         r = HTTP.get(api + "read", params={"mod": MOD, "file": "version.json"}, timeout=10)
         check(r.ok and r.json()["content"].find("QA Mod") > 0, "read version.json")
 
+        # -- raw bytes (builtin fallback must not be a closed-stream 0-byte 200)
+        r = HTTP.get(api + "raw", params={"mod": MOD, "file": "rat.png"}, timeout=10)
+        check(r.ok and len(r.content) > 8 and r.content[:4] == b"\x89PNG",
+              "raw builtin fallback returns png bytes (%d)" % len(r.content))
+        r = HTTP.get(api + "raw", params={"mod": MOD, "file": "tilesets/tiles_sewers_xyz.png"},
+                     timeout=10)
+        check(r.ok and len(r.content) > 8 and r.content[:4] == b"\x89PNG",
+              "raw builtin tileset returns png bytes (%d)" % len(r.content))
+        r = HTTP.get(api + "raw", params={"mod": MOD, "file": "no_such_file.png"}, timeout=10)
+        check(r.status_code == 404, "raw missing file -> 404")
+
         # -- save + validate ---------------------------------------------
         mob = HTTP.get(api + "read", params={"mod": MOD, "file": "mobsDesc/ExampleMob.json"},
                            timeout=10).json()["content"]
