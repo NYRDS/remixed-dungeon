@@ -29,7 +29,7 @@ return spell.init{
         if target:isUndead() or target:isDemon() then
             -- the unholy cannot receive grace
             RPD.affectBuff(target, RPD.Buffs.Slow, 3)
-            target:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.FACTORY, 6)
+            target:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.GOLD_FACTORY, 6)
             RPD.playSound("snd_ray")
             return true
         end
@@ -37,7 +37,7 @@ return spell.init{
         local buff = RPD.affectBuff(target, RPD.Buffs.Blessed, 20 + 10 * skill)
         buff:level(1 + math.floor(skill / 3))
 
-        target:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.FACTORY, 6)
+        target:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.GOLD_FACTORY, 6)
         RPD.playSound("snd_ray")
         RPD.glogp("BlessingSpell_Cast", target:getName())
         return true

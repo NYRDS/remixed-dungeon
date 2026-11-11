@@ -10,10 +10,31 @@ import com.watabou.utils.Random;
 @LuaInterface
 public class ShaftParticle extends PixelParticle {
 	
-	public static final Emitter.Factory FACTORY = new Factory() {	
+	// the white factory pins the color on every emit: emitters recycle pooled
+	// instances, an unpinned color would leak a gold tint from a GOLD_FACTORY
+	// emitter sharing the same ShaftParticle instances
+	public static final Emitter.Factory FACTORY = new Factory() {
 		@Override
 		public void emit( Emitter emitter, int index, float x, float y ) {
-			((ShaftParticle)emitter.recycle( ShaftParticle.class )).reset( x, y );
+			ShaftParticle particle = (ShaftParticle)emitter.recycle( ShaftParticle.class );
+			particle.reset( x, y );
+			particle.color( 0xFFFFFF );
+		}
+		@Override
+		public boolean lightMode() {
+			return true;
+		}
+	};
+
+	// gold of the priest spell-icon family (spellsIcons/priest.png)
+	public static final int GOLD = 0xFFE200;
+
+	public static final Emitter.Factory GOLD_FACTORY = new Factory() {
+		@Override
+		public void emit( Emitter emitter, int index, float x, float y ) {
+			ShaftParticle particle = (ShaftParticle)emitter.recycle( ShaftParticle.class );
+			particle.reset( x, y );
+			particle.color( GOLD );
 		}
 		@Override
 		public boolean lightMode() {

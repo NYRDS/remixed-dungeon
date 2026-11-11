@@ -32,11 +32,15 @@ ClericArmor layer art.
 ![composites](priest_graphics_review/5_composite.png)
 ![priest vs cleric](priest_graphics_review/9_cross_and_cleric.png)
 
-### [P3] Affinity 12px cross lacks the dark outline
+### [P3] Affinity 12px cross lacks the dark outline — RESOLVED 2026-11-11
 `ui/ui_icons12x12.png` frame 20 (Priest mastery icon, `WndHeroSpells`): flat yellow
 (229,229,69 + 191,169,57 shade), no dark outline, while the neighboring affinity icons
 (f18 Elf, f19 Huntress) carry a dark outline and the 16px spell cross has one. May wash out on
 the light window chrome. Symmetry verified by pixel grid — correct.
+**Fixed by Mike's delivered rework** (RustDesk transfer 2026-11-11): f20 is now an outlined
+gold ankh cross; `ui_icons6x6.png` f20 reworked to a solid gold cross in the same pass
+(alpha-0 junk pixels in rows 7–11 cleaned). Both verified live in the toolbar (Tiny and Std
+toolStyles) on 2026-11-11.
 
 ### [P3] Bishop face reads mask-like
 `mobs/town_bishop3.png` (the BishopNPC texture, 4 frames): silhouette and mitre are fine, but
@@ -95,7 +99,8 @@ Harmless extras: `boots/PriestArmor_woman|gnoll|lich.png` exist, but the priest 
 
 1. **P1** Erase the stray cluster in `Quarterstaff_right.png` f0.
 2. **P2** Rework the modern vestment layer (cream/gold to match the class identity).
-3. **P3** Add the dark outline to the 12px affinity cross.
+3. ~~**P3** Add the dark outline to the 12px affinity cross.~~ **DONE 2026-11-11** (Mike's
+   delivered rework, applied).
 4. **P3** Bishop face touch-up, donor: town_bishop2 face.
 5. Housekeeping: bd issue for the dead-asset cleanup; do not delete ClericArmor art before the
    P2 decision (it is the reference art).

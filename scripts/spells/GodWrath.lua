@@ -33,7 +33,7 @@ return spell.init{
         -- bolt visual only (damage 0): the smite itself is holy, applied below
         RPD.CharUtils:lightningProc(caster, target:getPos(), 0)
 
-        target:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.FACTORY, 6)
+        target:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.GOLD_FACTORY, 6)
         target:damage(damage, caster)
         RPD.playSound("snd_lightning")
         return true

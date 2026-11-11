@@ -37,16 +37,20 @@ CustomSpellsList, not from the spell's own desc. Its icon is on the witchcraft s
 - **Blessing** — Blessed buff for `20 + 10 × skill` turns; buff level `1 + skill/3` (each buff
   level = +1 attack and defense skill). Cast on any char (allies/self get the grace; Mike's
   2026-11-09 ruling) — **undead and demons cannot receive it: they get Slow 3 instead** (the
-  unholy rebuke branch, no damage). Shaft particles, snd_ray.
+  unholy rebuke branch, no damage). Gold shaft particles, snd_ray.
 - **Heal** — heals `target.ht / 5 × skill` (min 1). No affinity gate, friendly or self.
 - **Holy Water** — 3×3 splash around the target cell; undead take `4 + 3 × skill` and Slow 3.
   Nothing happens to non-undead (steam particles still show). snd_water.
-- **Exorcism** — `6 + 4 × skill` damage; doubled vs undead, which also get Slow 5. snd_ghost.
+- **Exorcism** — `6 + 4 × skill` damage; doubled vs undead, which also get Slow 5. Gold shaft
+  burst on the target (2026-11-12: was ShadowParticle.UP, whose dark wisps contradicted the
+  sunburst icon). snd_ghost — the expelled spirit.
 - **Last Rites** — every undead within distance 2 of the cell takes `5 + 5 × skill` and
-  Cripple 5. snd_bones. Largest AoE, highest cost and cast time.
+  Cripple 5. Gold shafts on each hit mob, LIGHT flash at the cell. snd_bones. Largest AoE,
+  highest cost and cast time.
 - **God's Wrath** — `10 + 5 × skill` damage to any single foe, **universal** (no undead/demon
   bonus — that stays Exorcism's identity). Bolt visual via `CharUtils:lightningProc` with 0
-  damage, then the holy hit is applied directly; friendly targets are refused. snd_lightning.
+  damage, then the holy hit is applied directly with a gold shaft burst; friendly targets are
+  refused. snd_lightning.
 - **Anathema** — marks the target with the Anathema lua buff (`scripts/buffs/Anathema.lua`,
   auto-discovered): it takes **+50% damage from every source** for `10 + 5 × skill` turns
   (`15 + 5 × skill` vs undead/demons). Buff icon reuses BuffIndicator.MARK (27). Shadow
@@ -133,6 +137,20 @@ planned, the icon slot is ready (empty tiles 5–31) and the binding needs one c
 | memory_leak_check.sh | PASS ×2 (sheet widening, f1/f3 rework) — 0 MB floor spread both runs |
 | L10n | en + ru source XML updated, LanguageTool-clean; generated `strings_*.json` regen via `make_json.py` |
 | Commit | **pushed a688d67a1** (2026-11-09) |
+
+## 2026-11-12 addendum — gold shafts
+
+Mike delivered reworked affinity icons (ui_icons12x12 f20 outlined gold ankh, ui_icons6x6 f20
+solid gold cross, applied from the RustDesk transfer) and a full bespoke rework of
+`spellsIcons/priest.png` (pending transfer). Icon-vs-effect audit found one mismatch: Exorcism
+(sunburst icon) burst ShadowParticle.UP — the dark-curse language — fixed to the light-shaft
+family, then Mike ruled the school's shafts **gold**: `ShaftParticle.GOLD_FACTORY`
+(color 0xFFE200 = icon gold; the white FACTORY now pins 0xFFFFFF per emit so pooled particles
+can't leak a tint across emitters). Gold users: Blessing (both branches), Exorcism, Last Rites
+(per-mob), God's Wrath, Sanctify (`PriestArmor`), Bishop blessing services. White by design:
+Moongrace, Sungrass, Foliage, WaterOfHealth, DewVial, Health buff, SpiderMind. Suite 10/10 +
+sweep 7/7 rerun on the fresh jar; gold render pixel-verified live on desktop (sewer, zombie
+target, additive gold ≈ 226,206,51 on stone).
 
 Open proposals from the balance review (separate round, Mike's call): Holy Water universal
 splash, Exorcism demon clause, Last Rites universal ring, Heal divine identity fix, Blessing
