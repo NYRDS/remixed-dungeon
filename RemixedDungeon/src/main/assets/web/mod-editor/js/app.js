@@ -62,6 +62,34 @@ async function openDashboard() {
   content.innerHTML = '';
   content.appendChild(h);
 
+  const listStatus = document.createElement('div');
+  content.appendChild(listStatus);
+
+  async function refresh() {
+    await openDashboard();
+  }
+
+  function switchMod(name) {
+    return async () => {
+      if (!window.confirm('Switch the game to ' + name + ' and restart it?')) { return; }
+      try {
+        const result = await api.selectMod(name);
+        if (!result.restarting && !result.alreadyActive) { return; }
+        if (result.alreadyActive) {
+          listStatus.className = 'status-ok';
+          listStatus.textContent = name + ' is already active';
+          return;
+        }
+        content.innerHTML = '<p>Game restarting into <b>' + name + '</b>… ' +
+          '<span class="hint">(the page will reconnect when the server is back)</span></p>';
+        waitServerBack(90);
+      } catch (e) {
+        listStatus.className = 'status-err';
+        listStatus.textContent = e.message;
+      }
+    };
+  }
+
   const ul = document.createElement('ul');
   ul.className = 'mod-list';
   for (const mod of data.mods) {
@@ -85,6 +113,51 @@ async function openDashboard() {
       edit.textContent = 'Edit';
       edit.addEventListener('click', () => { location.hash = '#/mod/' + mod.installDir; });
       li.appendChild(edit);
+    }
+
+    // every row (builtin included) can be made active - the only way back
+    // to Remixed from the editor is here
+    const play = document.createElement('button');
+    play.textContent = mod.active ? 'Restart' : 'Play';
+    play.addEventListener('click', switchMod(mod.installDir));
+    li.appendChild(play);
+
+    if (!mod.builtin) {
+      const dup = document.createElement('button');
+      dup.textContent = 'Duplicate';
+      dup.addEventListener('click', async () => {
+        const to = window.prompt('Copy ' + mod.installDir + ' to mod name:', mod.installDir + '_copy');
+        if (!to) { return; }
+        try {
+          await api.duplicateMod(mod.installDir, to.trim());
+          await refresh();
+        } catch (e) {
+          listStatus.className = 'status-err';
+          listStatus.textContent = e.message;
+        }
+      });
+      li.appendChild(dup);
+
+      const del = document.createElement('button');
+      del.className = 'danger';
+      del.textContent = 'Delete';
+      del.addEventListener('click', async () => {
+        if (!window.confirm('Delete mod ' + mod.installDir + '? Its saves go with it.')) { return; }
+        try {
+          await api.deleteMod(mod.installDir);
+          if (mod.active) {
+            waitServerBack(90); // active-mod delete restarts the game
+            return;
+          }
+          // deletion runs on the game thread after the response - give it a
+          // beat before re-fetching the list
+          setTimeout(refresh, 800);
+        } catch (e) {
+          listStatus.className = 'status-err';
+          listStatus.textContent = e.message;
+        }
+      });
+      li.appendChild(del);
     }
     ul.appendChild(li);
   }
@@ -117,7 +190,6 @@ async function openDashboard() {
   const create = document.createElement('button');
   create.className = 'primary';
   create.textContent = 'Create from template';
-  const status = document.createElement('span');
   create.addEventListener('click', async () => {
     try {
       await api.createMod({
@@ -128,12 +200,11 @@ async function openDashboard() {
       });
       location.hash = '#/mod/' + inputs.name.value.trim();
     } catch (e) {
-      status.className = 'status-err';
-      status.textContent = e.message;
+      listStatus.className = 'status-err';
+      listStatus.textContent = e.message;
     }
   });
   panel.appendChild(create);
-  panel.appendChild(status);
   content.appendChild(panel);
 }
 
@@ -172,6 +243,17 @@ async function openWorkspace(modName) {
           await api.deleteModFile(modName, path);
           refreshTree();
         } catch (e) { alert(e.message); }
+      },
+      onRename: async path => {
+        const name = path.split('/').pop();
+        const to = window.prompt('Rename ' + name + ' to:', name);
+        if (!to || to === name) { return; }
+        const newPath = path.slice(0, path.length - name.length) + to;
+        try {
+          await api.renameModFile(modName, path, newPath);
+          refreshTree();
+          openFile(modName, newPath);
+        } catch (e) { alert(e.message); }
       }
     });
   }
@@ -188,7 +270,14 @@ async function openWorkspace(modName) {
   const exportBtn = document.createElement('button');
   exportBtn.textContent = 'Export .zip';
   exportBtn.addEventListener('click', () => {
-    window.open(api.exportUrl(modName), '_blank');
+    // hidden <a download> - window.open is silently eaten by popup blockers
+    // and embedded browsers (observed live in IAB)
+    const a = document.createElement('a');
+    a.href = api.exportUrl(modName);
+    a.download = modName + '.zip';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
   });
   actions.appendChild(exportBtn);
 

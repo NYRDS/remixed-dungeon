@@ -136,6 +136,28 @@ public class ModEditorEndpoints {
 
             mods.sort((a, b) -> a.optString("installDir").compareTo(b.optString("installDir")));
 
+            // the built-in mod is content, not an installed dir - synthesize a
+            // row so the dashboard can show/switch back to it (WndModSelect
+            // parity), unless a dev install already listed it
+            boolean hasBuiltin = false;
+            for (JSONObject m : mods) {
+                if (ModdingBase.REMIXED.equals(m.optString("installDir"))) {
+                    hasBuiltin = true;
+                    break;
+                }
+            }
+            if (!hasBuiltin) {
+                JSONObject m = new JSONObject();
+                m.put("installDir", ModdingBase.REMIXED);
+                m.put("name", "Remixed Dungeon");
+                m.put("author", "NYRDS");
+                m.put("description", "built-in");
+                m.put("hrVersion", "");
+                m.put("active", ModdingBase.REMIXED.equals(active));
+                m.put("builtin", true);
+                mods.add(0, m);
+            }
+
             JSONObject result = new JSONObject();
             result.put("mods", new JSONArray(mods));
             result.put("activeMod", active);

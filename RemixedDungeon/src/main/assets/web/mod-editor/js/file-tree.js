@@ -69,6 +69,18 @@ export function renderTree(container, opts) {
     li.appendChild(label);
 
     if (opts.onRename || opts.onDelete) {
+      if (opts.onRename) {
+        const ren = document.createElement('span');
+        ren.textContent = ' ✎';
+        ren.style.color = '#aa8';
+        ren.style.cursor = 'pointer';
+        ren.title = 'rename';
+        ren.addEventListener('click', e => {
+          e.stopPropagation();
+          opts.onRename(filePath);
+        });
+        li.appendChild(ren);
+      }
       const x = document.createElement('span');
       x.textContent = ' ×';
       x.style.color = '#a55';
