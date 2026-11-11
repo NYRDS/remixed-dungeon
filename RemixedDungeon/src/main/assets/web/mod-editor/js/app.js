@@ -354,7 +354,22 @@ async function runValidate(modName, quiet) {
         ul.appendChild(li);
       }
       box.appendChild(ul);
-    } else if (!quiet) {
+    }
+    if (result.warnings && result.warnings.length) {
+      const wtitle = document.createElement('p');
+      wtitle.className = 'hint';
+      wtitle.textContent = 'warnings:';
+      box.appendChild(wtitle);
+      const ul = document.createElement('ul');
+      ul.className = 'error-list';
+      for (const w of result.warnings.slice(0, 30)) {
+        const li = document.createElement('li');
+        li.textContent = w;
+        ul.appendChild(li);
+      }
+      box.appendChild(ul);
+    }
+    if (!result.errors.length && (!result.warnings || !result.warnings.length) && !quiet) {
       const ok = document.createElement('p');
       ok.className = 'status-ok';
       ok.textContent = 'no problems found';

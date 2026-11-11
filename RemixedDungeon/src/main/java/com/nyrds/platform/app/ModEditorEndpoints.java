@@ -966,7 +966,7 @@ public class ModEditorEndpoints {
             }
         }
 
-        validateMobChains(modName, errors);
+        validateMobChains(modName, errors, warnings);
         validateLevels(modName, errors, warnings);
 
         JSONObject result = new JSONObject();
@@ -997,7 +997,7 @@ public class ModEditorEndpoints {
     }
 
     // mobsDesc/<Kind>.json -> spritesDesc/<Kind>.json -> texture png chain
-    private static void validateMobChains(String modName, List<String> errors) {
+    private static void validateMobChains(String modName, List<String> errors, List<String> warnings) {
         File mobsDir = modFile(modName, "mobsDesc");
         File[] files = mobsDir.listFiles();
         if (files == null) {
@@ -1018,6 +1018,11 @@ public class ModEditorEndpoints {
                     errors.add(rel + ": spriteDesc not found: " + spriteDesc);
                     continue;
                 }
+                // a mob silently wearing a builtin sprite is the #1 new-modder
+                // confusion (their custom mob looks like a rat out of the box)
+                if (!modFileExists(modName, spriteDesc)) {
+                    warnings.add(rel + ": spriteDesc resolves to a builtin sprite (" + spriteDesc + ") - the mob will reuse existing art");
+                }
                 JSONObject sprite = JsonHelper.readJsonFromStream(
                     new ByteArrayInputStream(readModResource(modName, spriteDesc)), spriteDesc);
                 String texture = sprite.optString("texture", "");
@@ -1034,6 +1039,10 @@ public class ModEditorEndpoints {
         }
     }
 
+    private static boolean modFileExists(String modName, String path) {
+        return FileSystem.getExternalStorageFile(modName + "/" + path).isFile();
+    }
+
     private static void validateLevels(String modName, List<String> errors, List<String> warnings) {
         File dungeonJson = modFile(modName, "levelsDesc/Dungeon.json");
         if (!dungeonJson.isFile()) {
@@ -1047,6 +1056,7 @@ public class ModEditorEndpoints {
                 return;
             }
             JSONObject levels = campaign.getJSONObject("Levels");
+            java.util.Set<String> referencedFiles = new java.util.HashSet<>();
             // keys(), not keySet(): android's org.json gains keySet only at
             // API 26, the minSdk is 23
             for (java.util.Iterator<String> it = levels.keys(); it.hasNext(); ) {
@@ -1066,6 +1076,7 @@ public class ModEditorEndpoints {
                     }
                     continue;
                 }
+                referencedFiles.add(file);
                 if (!modResourceExists(modName, file)) {
                     errors.add("level " + levelId + ": file not found: " + file);
                     continue;
@@ -1083,12 +1094,81 @@ public class ModEditorEndpoints {
                     if (expected != actual) {
                         errors.add(file + ": map length " + actual + " != width*height " + expected);
                     }
+                    validateLevelLinks(file, map, w, h, errors, warnings);
                 } catch (Exception e) {
                     errors.add("level " + levelId + " (" + file + "): " + e.getMessage());
                 }
             }
+            warnOrphanLevels(modName, referencedFiles, warnings);
         } catch (Exception e) {
             errors.add("levelsDesc/Dungeon.json: " + e.getMessage());
+        }
+    }
+
+    // entrance/multiexit must be in bounds and not buried in wall/chasm -
+    // the template pattern has proper ENTRANCE/EXIT terrain under them
+    private static void validateLevelLinks(String file, JSONObject map, int w, int h, List<String> errors, List<String> warnings) {
+        try {
+            JSONArray mapArr = map.getJSONArray("map");
+            if (map.has("entrance")) {
+                checkLinkPos(file, "entrance", map.getJSONArray("entrance"), w, h, mapArr, warnings);
+            }
+            if (map.has("exit")) {
+                checkLinkPos(file, "exit", map.getJSONArray("exit"), w, h, mapArr, warnings);
+            }
+            if (map.has("multiexit")) {
+                JSONArray multiexit = map.getJSONArray("multiexit");
+                for (int i = 0; i < multiexit.length(); i++) {
+                    checkLinkPos(file, "multiexit[" + i + "]", multiexit.getJSONArray(i), w, h, mapArr, warnings);
+                }
+            }
+        } catch (Exception ignored) {
+            // malformed json shape is reported by the map length check above
+        }
+    }
+
+    private static void checkLinkPos(String file, String what, JSONArray pos, int w, int h, JSONArray mapArr, List<String> warnings) throws JSONException {
+        int x = pos.getInt(0);
+        int y = pos.getInt(1);
+        if (x < 0 || y < 0 || x >= w || y >= h) {
+            warnings.add(file + ": " + what + " [" + x + "," + y + "] is outside the map");
+            return;
+        }
+        int terrain = mapArr.optInt(y * w + x, -1);
+        if (terrain == Terrain.WALL || terrain == Terrain.CHASM || terrain == Terrain.SECRET_DOOR) {
+            warnings.add(file + ": " + what + " [" + x + "," + y + "] sits on " + terrainName(terrain) + " - put a floor/exit tile under it");
+        }
+    }
+
+    private static String terrainName(int value) {
+        try {
+            for (Field field : Terrain.class.getFields()) {
+                if (field.getType() == int.class && field.getInt(null) == value) {
+                    return field.getName();
+                }
+            }
+        } catch (IllegalAccessException ignored) {
+        }
+        return String.valueOf(value);
+    }
+
+    // level files nothing references can never be reached - classic leftover
+    // after renaming or after wiring a new level into the campaign by hand
+    private static void warnOrphanLevels(String modName, java.util.Set<String> referencedFiles, List<String> warnings) {
+        File levelsDir = modFile(modName, "levelsDesc");
+        File[] files = levelsDir.listFiles();
+        if (files == null) {
+            return;
+        }
+        for (File file : files) {
+            String name = file.getName();
+            if (!name.toLowerCase().endsWith(".json") || name.equals("Dungeon.json")) {
+                continue;
+            }
+            String rel = "levelsDesc/" + name;
+            if (!referencedFiles.contains(rel)) {
+                warnings.add(rel + " is not referenced from Dungeon.json Levels (unreachable)");
+            }
         }
     }
 

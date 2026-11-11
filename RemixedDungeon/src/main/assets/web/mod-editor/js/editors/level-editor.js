@@ -181,6 +181,60 @@ export async function levelEditor(content, ctx) {
   const toolHint = document.createElement('span');
   toolHint.className = 'hint';
   toolPanel.appendChild(toolHint);
+
+  // wire this level into levelsDesc/Dungeon.json: Levels entry + Graph edge
+  // from an existing level (the manual json dance the live test called the
+  // biggest UX gap)
+  const campaignBtn = document.createElement('button');
+  campaignBtn.textContent = 'Add to campaign (Dungeon.json)';
+  campaignBtn.addEventListener('click', async () => {
+    try {
+      const base = ctx.file.split('/').pop().replace(/\.json$/, '');
+      const defaultId = base.charAt(0).toLowerCase() + base.slice(1);
+      const d = await api.readModFile(ctx.mod, 'levelsDesc/Dungeon.json');
+      const campaign = JSON.parse(d.content);
+      campaign.Levels = campaign.Levels || {};
+      campaign.Graph = campaign.Graph || {};
+
+      const id = (window.prompt('Level id in Dungeon.json:', defaultId) || '').trim();
+      if (!id) { return; }
+      if (campaign.Levels[id]) {
+        status.className = 'status-err';
+        status.textContent = 'level id already exists: ' + id;
+        return;
+      }
+      const fromIds = Object.keys(campaign.Levels);
+      const from = (window.prompt('Connect an exit FROM which level id?',
+        fromIds.includes('start') ? 'start' : (fromIds[0] || '')) || '').trim();
+      if (!from || !campaign.Levels[from]) {
+        status.className = 'status-err';
+        status.textContent = 'unknown source level: ' + from;
+        return;
+      }
+      let depth = 1;
+      const fromDepth = Number(campaign.Levels[from].depth);
+      if (Number.isFinite(fromDepth)) { depth = fromDepth + 1; }
+      const dt = window.prompt('Depth (difficulty scale):', String(depth));
+      if (dt === null) { return; }
+
+      campaign.Levels[id] = {
+        kind: 'PredesignedLevel',
+        depth: Number(dt) || depth,
+        file: ctx.file
+      };
+      if (!campaign.Graph[from]) { campaign.Graph[from] = [[], []]; }
+      if (!campaign.Graph[from][0].includes(id)) { campaign.Graph[from][0].push(id); }
+      campaign.Graph[id] = [[], [from]];
+
+      await api.saveModFile(ctx.mod, 'levelsDesc/Dungeon.json', JSON.stringify(campaign, null, 3) + '\n');
+      status.className = 'status-ok';
+      status.textContent = 'campaign: ' + from + ' -> ' + id + ' wired, depth ' + (Number(dt) || depth);
+    } catch (e) {
+      status.className = 'status-err';
+      status.textContent = e.message;
+    }
+  });
+  toolPanel.appendChild(campaignBtn);
   function updateToolHint() {
     const hints = {
       terrain: 'drag to paint the selected terrain value',
