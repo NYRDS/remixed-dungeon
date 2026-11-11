@@ -7,6 +7,7 @@ import { renderTree } from './file-tree.js';
 import { pickEditor } from './editors/text-editors.js';
 import { mobEditor } from './editors/mob-editor.js';
 import { levelEditor } from './editors/level-editor.js';
+import { spriteEditor } from './editors/sprite-editor.js';
 
 const sidebar = document.getElementById('sidebar');
 const content = document.getElementById('content');
@@ -212,7 +213,7 @@ async function openWorkspace(modName) {
   const hint = document.createElement('p');
   hint.className = 'hint';
   hint.textContent = 'Pick a file on the left, or use the actions above. ' +
-    'mobsDesc/*.json get a form editor; levelsDesc/*.json open the level editor; ' +
+    'mobsDesc/*.json and spritesDesc/*.json get form editors; levelsDesc/*.json open the level editor; ' +
     'everything else opens a text editor. "Play this mod" activates it and restarts the game.';
   content.appendChild(hint);
 
@@ -285,6 +286,12 @@ async function openFile(modName, file) {
     if (lower.startsWith('mobsdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
       const ed = await mobEditor(content, { mod: modName, file, api, onSaved: () => {} });
+      currentEditorDirty = ed ? ed.isDirty : null;
+      return;
+    }
+    if (lower.startsWith('spritesdesc/') && lower.endsWith('.json')) {
+      content.innerHTML = '';
+      const ed = await spriteEditor(content, { mod: modName, file, api, onSaved: () => {} });
       currentEditorDirty = ed ? ed.isDirty : null;
       return;
     }
