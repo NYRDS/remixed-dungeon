@@ -181,6 +181,32 @@ loads them and resumes at 2000/2000 - exits 0 in minutes with NO
 training. Archive/rename the output dir when the dataset changes
 (bit us on the v1.1 relaunch).
 
+## RGBA round results (2026-11-11, 332-image transparent dataset)
+
+- **soft-alpha RGBA run** (`output/rpd_style_v1_softalpha/`): transparency
+  works, but preserved semi-alpha pixels taught the model translucent
+  SHADOW BLOBS and glows (grey blob behind the cross at 1750+, smoke
+  wisps on the candle) - the v1 halo problem reborn in the alpha
+  dimension. Progression: `rpd_style_v1_softalpha/progress_rgba.png`.
+- FIX: alpha BINARIZED in the transparent dataset too. Retrained:
+  **steps 250-1000 fully clean** (true transparency, crisp icons, family
+  golds); at 1250+ some prompts invent opaque backdrop plates/shrines -
+  the usual overfit signature. Deliverable: use checkpoint
+  `rpd_style_v1_000001000.safetensors` (or 500). Progression:
+  `output/rpd_style_v1/progress_binrgba.png`.
+- appearance-prompt test on the new LoRA: all 12 prompts render in
+  style (gold pile, pink/blue potions, chest, skull, horned helm,
+  shield, garnet ring, fehu-rune scroll...); color/gem/rune tokens
+  steer appearance as intended. Sheet:
+  `output/rpd_style_v1/test_items_rgba.png` (flattened jpg previews -
+  test yaml predates the rgba flag, asset pipeline still gets RGBA).
+- track A (z_image, white 332-img set): grid locks 1200-1600, no
+  halos, still needs a 32px grid-snap for pixel-exact 16px use.
+  `output/zimg_rpd/progress_v12.png`.
+- TRAP: `sed s/.../.../ file > file` self-truncates - run_train.sh was
+  0 bytes for a stretch, silently no-op'ing two launches (bash of an
+  empty script exits 0 with an empty log).
+
 ## Retrain results (v1.1 dataset, 2026-11-10 evening)
 
 Both tracks retrained clean. Track A (`progress_v11.png`): same style
