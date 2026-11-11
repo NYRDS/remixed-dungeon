@@ -8,6 +8,8 @@ import { pickEditor } from './editors/text-editors.js';
 import { mobEditor } from './editors/mob-editor.js';
 import { levelEditor } from './editors/level-editor.js';
 import { spriteEditor } from './editors/sprite-editor.js';
+import { itemEditor } from './editors/item-editor.js';
+import { templateFor } from './editors/templates.js';
 
 const sidebar = document.getElementById('sidebar');
 const content = document.getElementById('content');
@@ -157,8 +159,9 @@ async function openWorkspace(modName) {
         const name = window.prompt('New file name (relative to ' + (dir || 'mod root') + ')');
         if (!name) { return; }
         const path = dir ? dir + '/' + name : name;
+        const template = templateFor(path);
         try {
-          await api.saveModFile(modName, path, '');
+          await api.saveModFile(modName, path, template ? template.content : '');
           refreshTree();
           openFile(modName, path);
         } catch (e) { alert(e.message); }
@@ -292,6 +295,13 @@ async function openFile(modName, file) {
     if (lower.startsWith('spritesdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
       const ed = await spriteEditor(content, { mod: modName, file, api, onSaved: () => {} });
+      currentEditorDirty = ed ? ed.isDirty : null;
+      return;
+    }
+    if (lower.startsWith('scripts/items/') && lower.endsWith('.lua')) {
+      content.innerHTML = '';
+      // falls back to the lua text editor internally for non-standard shapes
+      const ed = await itemEditor(content, { mod: modName, file, api, onSaved: () => {} });
       currentEditorDirty = ed ? ed.isDirty : null;
       return;
     }

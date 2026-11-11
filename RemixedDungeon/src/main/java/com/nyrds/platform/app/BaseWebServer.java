@@ -1344,6 +1344,9 @@ public abstract class BaseWebServer extends NanoHTTPD {
         try {
             InputStream fis = ModdingMode.getInputStream("web/" + app + "/" + file);
             Response response = newChunkedResponse(Response.Status.OK, mimeForFile(file), fis);
+            // the editor UI ships with the game and changes under the browser's
+            // feet (restart flows reload the same URL) - make it revalidate
+            response.addHeader("Cache-Control", "no-cache");
             return response;
         } catch (Exception e) {
             GLog.w("Error serving /web/" + app + "/ file " + file + ": " + e.getMessage());

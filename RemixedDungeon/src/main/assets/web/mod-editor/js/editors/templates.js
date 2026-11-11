@@ -69,8 +69,36 @@ return ai.init({
     end
 })
 `
+  },
+  'levelsDesc/': {
+    hint: 'predesigned level (wire it into Dungeon.json Levels+Graph)',
+    content: levelTemplate()
   }
 };
+
+function levelTemplate() {
+  const w = 15, h = 15;
+  const rows = [];
+  for (let y = 0; y < h; y++) {
+    const row = [];
+    for (let x = 0; x < w; x++) {
+      row.push(y === 0 || y === h - 1 || x === 0 || x === w - 1 ? 4 : 1);
+    }
+    rows.push(row);
+  }
+  // entrance bottom center, exit top center (terrain 7/8 under them)
+  rows[13][7] = 7;
+  rows[1][7] = 8;
+  const level = {
+    entrance: [7, 13],
+    height: h,
+    map: [].concat(...rows),
+    multiexit: [[7, 1]],
+    tiles: 'tilesets/tiles_sewers_xyz.png',
+    width: w
+  };
+  return JSON.stringify(level, null, 1) + '\n';
+}
 
 export function templateFor(path) {
   for (const prefix of Object.keys(TEMPLATES)) {
