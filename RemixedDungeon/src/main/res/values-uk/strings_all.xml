@@ -7,6 +7,7 @@
     <string name="Abilities_Default">Майстерність</string>
     <string name="Abilities_Elemental">Стихійні закляття</string>
     <string name="Abilities_Necromancy">Некромантія</string>
+    <string name="Abilities_Priest">Божественні заклинання</string>
     <string name="AboutScene_Code">Код:</string>
     <string name="AboutScene_Email_Us">Наша пошта:</string>
     <string name="AboutScene_Graphics">Графіка:</string>
@@ -3117,6 +3118,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

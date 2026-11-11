@@ -1581,6 +1581,7 @@
     <string name="ScrollOfSummoning_Info">Bij voorlezen zal deze rol een van de monsters uit het huidige kerker-niveau oproepen. En als de wil van het monster zwak genoeg is, zal het je dienaar worden.</string>
     <string name="ScrollOfSummoning_Info_2">Het monster heeft je oproep beantwoord!</string>
     <string name="ScrollOfSummoning_Name">Oproeprol</string>
+    <string name="ScrollOfTeleportation_Info">De toverspreuk op dit perkament teleporteert de lezer onmiddellijk naar een willekeurige locatie op het verdiepingsniveau. Het kan gebruikt worden om een gevaarlijke situatie te ontvluchten, maar de ongelukkige lezer kan zich in een nog gevaarlijkere plaats terugvinden.</string>
     <string name="ScrollOfTeleportation_Name">Teleportatiescroll</string>
     <string name="ScrollOfTeleportation_NoTeleport">De sterke magische aura van deze plek verhindert dat je teleporteert!</string>
     <string name="ScrollOfTeleportation_NoTeleport2">Sterke magische aura van deze plek voorkomt dat %s teleporteert!</string>
@@ -1765,6 +1766,7 @@
     <string name="SpiderServant_Gender">masculine</string>
     <string name="SpiderServant_Name">spinnen soldaat</string>
     <string name="SpiderServant_Name_Objective">spinnen soldaat</string>
+    <string name="Spinner_Desc">Deze groenachtige, behare grotspinnen proberen direct gevecht te vermijden, liever wachten ze op afstand terwijl hun slachtoffer, verstrengeld in de door de spinner uitgezondene spinnewweb, langzaam sterft aan hun giftige beet.</string>
     <string name="Spinner_Gender">masculine</string>
     <string name="Spinner_Name_Objective">grotspin</string>
     <string name="SpiritOfPain_Desc">Een splinter van levende duisternis.</string>
@@ -2150,6 +2152,7 @@
     <string name="WndPlayGames_Show_Leaderboards">Toon klassementen</string>
     <string name="WndPlayGames_Show_Ok">Gelukt!</string>
     <string name="WndPlayGames_Title">Google Play Games</string>
+    <string name="WndPlayGames_Use">Google Play Games gebruiken</string>
     <string name="WndPortal_Info">Dit portaal stelt je in staat om terug te keren naar de stad. Het lijkt nogal instabiel en zal waarschijnlijk niet lang actief blijven.\nWil je het gebruiken?</string>
     <string name="WndPortal_Info_Return">Deze portal brengt je terug naar de dungeon.\nWil je hem gebruiken?</string>
     <string name="WndPortal_Title">Portaal</string>
@@ -2668,6 +2671,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

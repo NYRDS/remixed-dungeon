@@ -7,6 +7,7 @@
     <string name="Abilities_Default">精通</string>
     <string name="Abilities_Elemental">元素咒语</string>
     <string name="Abilities_Necromancy">死灵法术</string>
+    <string name="Abilities_Priest">神圣法术</string>
     <string name="AboutScene_Code">源码：</string>
     <string name="AboutScene_Email_Us">给我们发邮件：</string>
     <string name="AboutScene_Graphics">图画：</string>
@@ -3077,6 +3078,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

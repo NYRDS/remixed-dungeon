@@ -259,6 +259,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BishopQuest_4_1_InProgress">Zniszczyłeś %d z %d rycerzy śmierci. Złam ich wolę, a legiony spotkną się.</string>
     <string name="BishopQuest_4_1_Prologue">Upokoiłeś pieszych — teraz czas na ich panów. _Rycerze śmierci_ wodzą legionyumarłych, a ich wola napędza kości w marsz. Zniszcz _dwóch rycerzy śmierci_, moje dziecko.</string>
     <string name="BishopQuest_4_2_Epilogue">Kościołowe dzwony zadzwiały same, gdy ostatni z nich odszedł — dobry znak, dziecko moje. Weź ten eliksir siły; ostatnia próba będzie od ciebie wymagać wielu rzeczy.</string>
+    <string name="BishopQuest_4_2_Prologue">Oprócz chodzących kości są też związani zmarli, dziecko moje. _Uwięzione dusze_ — biedne dusze w łańcuchach wiecznej służby, nienawidzące żywych za utraconą wolność. Ich żal jest bronią. Uwolnij _cztery uwięzione dusze_ z niego.</string>
     <string name="BishopQuest_5_1_Epilogue">Dzień Pański się zakończył! Od tego dnia możesz pójść ścieżką kapłana. Przyjmij to błogosławieństwo i te jałmużny, dziecko moje — zasłużyłeś na nie.</string>
     <string name="BishopQuest_5_1_InProgress">Wypędź _dwie sukkuby_, dziecko moje — %1$d z %2$d wypędzonych. Pilnuj swojej duszy; ich szepoty to słodkie jad.</string>
     <string name="Bishop_QuestCompleted">Klasa Kapłan odblokowana</string>
@@ -3131,6 +3132,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

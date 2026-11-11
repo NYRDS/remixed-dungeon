@@ -1625,6 +1625,7 @@
     <string name="SpiritOfPain_Desc">Một mảnh vỡ của bóng tối sống.</string>
     <string name="SpiritOfPain_Gender">masculine</string>
     <string name="SpiritOfPain_Name">linh hồn đau đớn</string>
+    <string name="SpiritOfPain_Name_Objective">thần linh nỗi đau</string>
     <string name="Sprout_Info">Đánh thức các hạt giống ngủ.\nTuy nhiên, cần có cây cỏ trên mặt đất để phép thuật này thành công.</string>
     <string name="Sprout_Name">Mầm Non</string>
     <string name="StartScene_ComingSoon">Sắp ra mắt</string>
@@ -2180,6 +2181,7 @@
     <string name="town_deco_flowerinthepot_desc">Hoa trang trí với hương vị ngọt ngào</string>
     <string name="town_deco_flowerinthepot_name">Hoa trong chậu</string>
     <string name="town_deco_furnace_name">Lò nung</string>
+    <string name="town_deco_glass_name">Cửa sổ rộng</string>
     <string name="town_deco_glass_stained_desc">Người làm chiếc kính màu này có lẽ đã rất chăm chỉ.</string>
     <string name="town_deco_glass_stained_name">Kính màu</string>
     <string name="town_deco_grandclock_desc">Một cơ chế khá cũ nhưng vẫn hoạt động.</string>
@@ -2190,6 +2192,7 @@
     <string name="town_deco_identifier_sign_name">Biển hiệu Quả Cầu Phép Thuật</string>
     <string name="town_deco_inn_bed_desc">Trông có vẻ là một chiếc giường rất thoải mái.</string>
     <string name="town_deco_inn_bed_name">Giường</string>
+    <string name="town_deco_ladder_desc">Một chiếc thang cũ, trông không đáng tin cậy.</string>
     <string name="town_deco_library_books_desc">Vẫn còn tốt hơn sách từ ngục.</string>
     <string name="town_deco_library_books_name">Vật liệu đọc</string>
     <string name="town_deco_locked_door_desc">Có điều gì phía sau cánh cửa đó nhỉ?</string>
@@ -2913,6 +2916,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

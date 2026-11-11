@@ -888,6 +888,7 @@
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">豺狼斥候</string>
     <string name="Gnoll_Name_Objective">豺狼斥候</string>
+    <string name="GodWrath_Info">一道神聖審判的閃電。對單一敵人造成沉重神聖傷害 — 無論平凡生物或怪物，都無法逃脫天譴的憤怒。</string>
     <string name="Gold_Collect">收集的金幣能在商店裏消費</string>
     <string name="Gold_Info">一堆共計%d金幣</string>
     <string name="Gold_Info1">一個金幣</string>
@@ -3092,6 +3093,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

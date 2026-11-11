@@ -234,6 +234,7 @@
     <string name="BishopNPC_Name">성직자</string>
     <string name="BishopNPC_Name_Objective">성직자</string>
     <string name="BishopQuest_2_2_InProgress">_월광초 씨앗 세 알_을 가져오너라. 제단이 기다리고 있다.</string>
+    <string name="BishopQuest_4_1_Prologue">너는 보병들을 안식시켰으니 — 이제 그들의 주인차례다. _데스 나이트_가 죽은 자들의 군단을 지휘하며, 그들의 의지가 뼈들을 행진하게 묶는다. _데스 나이트 둘_을 처치해라, 내 아이야.</string>
     <string name="Bishop_bye">산타께서 당신의 앞길을 비추시기를.</string>
     <string name="Bishop_great_bless">굉장한 축복 - %d 골드</string>
     <string name="Bishop_lesser_bless">작은 축복 - %d 골드</string>
@@ -3083,6 +3084,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

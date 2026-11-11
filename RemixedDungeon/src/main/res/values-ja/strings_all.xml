@@ -1066,6 +1066,7 @@
     <string name="HideInGrassSpell_Info">君はかくれんぼの達人だ。</string>
     <string name="HideInGrassSpell_Name">ハイド・イン・グラス</string>
     <string name="HideInGrassSpell_NeedGrassToHide">私でさえ、人目につくところに隠れることはできない。</string>
+    <string name="HolyWater_Name">聖水</string>
     <string name="Horror_Name_0">不気味な %s</string>
     <string name="Horror_Name_1">不気味な %s</string>
     <string name="Horror_Name_2">不気味な %s</string>
@@ -3113,6 +3114,7 @@ NYRDSチームはMODの内容、品質、安定性に関して一切責任を負
     <string name="town_table_fortune_ball_name">水晶玉</string>
     <string name="town_table_fortune_desc">このテーブルにはシルクの布がかけられている。様々なタロットカードが独特の順序で並べられているのが見える。</string>
     <string name="town_table_fortune_name">テーブル</string>
+
 
 
 
