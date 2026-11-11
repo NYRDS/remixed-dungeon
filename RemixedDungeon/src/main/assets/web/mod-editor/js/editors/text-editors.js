@@ -3,6 +3,7 @@
 // the client only pretty-prints json it can parse itself.
 
 import * as api from '../api.js';
+import { uploadPng } from '../upload.js';
 
 function bar(content, crumbs) {
   const barEl = document.createElement('div');
@@ -143,7 +144,8 @@ export function stringsEditor(content, ctx) {
   });
 }
 
-// png (and other images): preview + link to the mob-viewer sprite editor
+// png (and other images): preview + replace via upload + link to the
+// mob-viewer sprite editor for pixel work
 export function imageEditor(content, ctx) {
   const wrap = document.createElement('div');
   const img = document.createElement('img');
@@ -157,6 +159,20 @@ export function imageEditor(content, ctx) {
   };
   wrap.appendChild(img);
   content.appendChild(wrap);
+
+  const replace = document.createElement('button');
+  replace.textContent = 'Replace with upload…';
+  const status = document.createElement('span');
+  replace.addEventListener('click', async () => {
+    const path = await uploadPng(ctx.mod, ctx.file);
+    if (path) {
+      img.src = api.rawUrl(ctx.mod, ctx.file, Date.now());
+      status.className = 'status-ok';
+      status.textContent = 'replaced';
+    }
+  });
+  content.appendChild(replace);
+  content.appendChild(status);
 
   const hint = document.createElement('p');
   hint.className = 'hint';

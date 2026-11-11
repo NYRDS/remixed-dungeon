@@ -353,6 +353,7 @@ export async function levelEditor(content, ctx) {
   const tilesInput = document.createElement('input');
   tilesInput.value = level.tiles || '';
   tilesInput.placeholder = 'tilesets/tiles_sewers_xyz.png';
+  tilesInput.setAttribute('list', 'tilesetList');
   function tileLabel(text, node) {
     const label = document.createElement('label');
     label.textContent = text;
@@ -360,6 +361,48 @@ export async function levelEditor(content, ctx) {
     tileGrid.appendChild(node);
   }
   tileLabel('tiles', tilesInput);
+
+  // datalist: builtin tilesets + any tilesets shipped in the mod
+  const tilesetList = document.createElement('datalist');
+  tilesetList.id = 'tilesetList';
+  tileGrid.appendChild(tilesetList);
+  for (const builtin of [true, false]) {
+    api.modFiles(ctx.mod, 'tilesets', builtin).then(list => {
+      for (const entry of list.entries) {
+        if (entry.dir || !entry.name.toLowerCase().endsWith('.png')) { continue; }
+        const o = document.createElement('option');
+        o.value = 'tilesets/' + entry.name;
+        tilesetList.appendChild(o);
+      }
+    }).catch(() => { /* free text still works */ });
+  }
+
+  // copy the referenced tileset into the mod: the exported zip then carries
+  // its own tiles, and the mod does not silently depend on builtin assets
+  const copyTilesBtn = document.createElement('button');
+  copyTilesBtn.textContent = 'Copy tileset into mod';
+  copyTilesBtn.addEventListener('click', async () => {
+    const src = tilesInput.value.trim();
+    if (!src) { return; }
+    try {
+      const resp = await fetch(api.rawUrl(ctx.mod, src));
+      if (!resp.ok) { throw new Error('HTTP ' + resp.status + ' fetching ' + src); }
+      const buffer = await resp.arrayBuffer();
+      const bytes = new Uint8Array(buffer);
+      let binary = '';
+      for (let i = 0; i < bytes.length; i += 0x8000) {
+        binary += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+      }
+      await api.saveBinary(ctx.mod, src, btoa(binary));
+      status.className = 'status-ok';
+      status.textContent = 'copied ' + src + ' into the mod (' + bytes.length + ' bytes)';
+      loadTileset();
+    } catch (e) {
+      status.className = 'status-err';
+      status.textContent = e.message;
+    }
+  });
+  tileGrid.parentElement.appendChild(copyTilesBtn);
 
   const tileCanvas = document.createElement('canvas');
   tileCanvas.className = 'sprite-preview';
