@@ -201,6 +201,14 @@ public class Treasury {
     }
 
     public Item random() {
+        if(probs.isEmpty()) {
+            // a treasury without categoryChance entries (or with an empty
+            // probabilities block) cannot roll a category - mint gold instead
+            // of crashing on Random.chances over an empty array
+            // (Crashlytics a9c92c38: Shopkeeper interact -> generateNewItem)
+            ModError.doReport("Treasury", new Exception("no category chances in the treasury json, every roll yields gold"));
+            return ItemFactory.itemByName(ItemFactory.GOLD);
+        }
         int categoryIndex = Random.chances(probs);
         String categoryName = names.get(categoryIndex);
 
@@ -250,7 +258,9 @@ public class Treasury {
 
         for(int i = 0;i<names.size();++i) {
             if(names.get(i).equals(categoryOrItem)) {
-                probs.set(i,probs.get(i)/decayFactor);
+                if(decayFactor > 0) { // a missing/zero decayFactor must not NaN the probs out
+                    probs.set(i,probs.get(i)/decayFactor);
+                }
                 CategoryItems category = items.get(i);
 
                 if(category.probs.isEmpty()) {
