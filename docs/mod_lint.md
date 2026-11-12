@@ -67,6 +67,24 @@ merged into one document.
   `strings_*` + engine `strings_all.xml` (INFO-level; engine lookup has
   fallbacks).
 - Level maps: `width * height == len(map)`, entrance/exit in bounds.
+- **Treasury jsons** (`levelsDesc/*`, both formats) are shape-checked —
+  malformed treasuries crash the engine at load or at Shopkeeper restock
+  (Crashlytics a9c92c38, fixed in engine 32.4.beta.18 with a gold fallback):
+  - v0 (categories only, **no** `version` key): at least one
+    `categoryChance` must exist anywhere (HARD — without it `random()` has
+    no category probabilities); non-numeric weights or `categoryChance`
+    (HARD — `getDouble` throws at load); explicit `"version": 0` or any
+    version ≥ 2 (HARD — 0 is iterated as a category, unknown versions raise
+    ModError); a category with no positive-weight items (INFO: its rolls
+    yield gold).
+  - v1 (`"version": 1`): missing `settings` or `settings.probabilities`
+    (HARD — `getJSONObject` throws at load); non-numeric category weights
+    (HARD); missing `decayFactor` (INFO — engine reads NaN via single-arg
+    `optDouble`, guarded since 32.4.beta.18); probabilities for unknown
+    categories, no positive probability at all (INFO).
+  - Detection: v0 = every dict-valued key is a flat scalar map (keeps
+    bestiary-style depth-2 dicts out); level jsons (`map`/`height` keys) are
+    never treated as treasuries.
 - Duplicate JSON keys (both parsers silently keep the last), stringified
   booleans (`"noFogOfWar":"true"`), `version.json` sanity, junk/backup files
   (`* (1).*`, `*.bak`, `luac.out`, `Thumbs.db`), non-UTF-8 text files.
