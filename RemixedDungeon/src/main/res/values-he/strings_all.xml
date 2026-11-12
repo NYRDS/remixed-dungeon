@@ -759,6 +759,7 @@
     <string name="PlateArmor_Name">שריון לוחות</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Info">טיפת רעל קטלני נוצצת על ראש החץ הזה.</string>
+    <string name="Poison_Name_1">ארסי %s</string>
     <string name="PortalExit_Desc_SpiderNest">מאורת עכבישים</string>
     <string name="PortalGate_Activated">השער העתיק התעורר!</string>
     <string name="PortalGate_Desc">החריטות על פני השער יוצרות דפוס מוזר. נראה כאילו זהו מנהרה ענקית המובילה למרחק. אבל כשמסתכלים מהצד, מתברר שהפני כמעט שטוחה.</string>
@@ -1700,6 +1701,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

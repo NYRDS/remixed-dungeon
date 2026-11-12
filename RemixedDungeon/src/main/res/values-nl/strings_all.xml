@@ -547,6 +547,7 @@
     <string name="DeferedDamageBuff_Info">De pijn is omgezet in vertraagde pijn, wat de schade die op een keer wordt opgelopen vermindert.\nOvergebleven schade om te ontvangen %d</string>
     <string name="DeferedDamage_Killed_Txt">%s heeft je gedood...</string>
     <string name="DewVial_ACDRINK">DRINK</string>
+    <string name="DewVial_AutoDrink">De douwfles is leeggedronken om uw wonden te genezen.</string>
     <string name="DewVial_Collected">Je verzamelde een dauwdruppel in je dauwflesje.</string>
     <string name="DewVial_Full">Je dauwflesje is vol!</string>
     <string name="DewVial_Info">Je kunt overtollige dauw in dit kleine vat bewaren om het later te drinken. Als het flesje vol is, wordt de dauw op een moment van dodelijk gevaar automatisch verbruikt.</string>
@@ -1501,6 +1502,7 @@
     <string name="Ring_Gems_5">topaas</string>
     <string name="Ring_Gems_6">onyx</string>
     <string name="Ring_Gems_8">smaragd</string>
+    <string name="Ring_Gems_9">saffier</string>
     <string name="Ring_Identify">je bent nu vertrouwd genoeg met je %1 om het te identificeren. Het is %2.</string>
     <string name="Ring_Info">Deze metalen band is versierd met een grote %s edelsteen die glinstert in de duisternis. Wie weet welk effect het heeft als het wordt gedragen?</string>
     <string name="Ring_Info1">Je kunt slechts 2 ringen tegelijk dragen.</string>
@@ -2691,6 +2693,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

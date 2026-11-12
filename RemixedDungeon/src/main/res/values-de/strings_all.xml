@@ -322,6 +322,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BlessedBuff_Info">Mögen Präzision und Ausweichmanöver denjenigen zuteil werden, die von diesem Segen berührt werden!</string>
     <string name="BlessedBuff_Name">Gesegnet</string>
     <string name="BlessingSpell_Cast">%s wird gesegnet.</string>
+    <string name="BlessingSpell_Info">Ein stilles Gebet, das jede Seele in Gnade hüllt: Angriff und Verteidigung werden für eine Weile verbessert. Das Unheilige kann es nicht empfangen — Untote und Dämonen werden stattdessen vom heiligen Wort niedergedrückt.</string>
     <string name="BlessingSpell_Name">Segen</string>
     <string name="BlindnessBuff_Info">Vollständig blind, nur Geräusche können gehört werden.</string>
     <string name="BlindnessBuff_Name">Geblendet</string>
@@ -3109,6 +3110,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

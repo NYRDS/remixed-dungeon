@@ -253,6 +253,7 @@
     <string name="BishopQuest_3_1_InProgress">Tráeme un _zombie_ domesticado, hijo mío. Trátalo con dulzura — no sabe lo que hace.</string>
     <string name="BishopQuest_3_2_Epilogue">El obispo rocía agua bendita sobre el murciélago indignado, mascullando una bendición. Se aleja volando, de alguna manera digno. Toma este pergamino por tu paciencia, hijo mío.</string>
     <string name="BishopQuest_3_2_InProgress">Tráeme un _murciélago_ domesticado, hijo mío. No asustes a la pobre criatura.</string>
+    <string name="BishopQuest_3_2_Prologue">Incluso las bestias de la oscuridad merecen una bendición, hijo mío. Tráeme un _murciélago_ que hayas domesticado, y lo consagraré a la luz.</string>
     <string name="BishopQuest_4_1_Epilogue">Las legiones tambalean como marionetas con hilos cortados — puedo sentirlo incluso desde aquí. Su amo no perdonará esto. Toma esta poción de fuerza, hijo mío; necesitarás tu fuerza.</string>
     <string name="BishopQuest_4_1_Prologue">Has dado descanso a la infantería — ahora toca con sus amos. Los _caballeros de la muerte_ mandan las legiones de los muertos, y su voluntad ata los huesos a su marcha. Destruye a _dos caballeros de la muerte_, hijo mío.</string>
     <string name="BishopQuest_4_2_Epilogue">Las campanas de la iglesia repicaron solas cuando el último pasó — una buena señal, hijo mío. Toma esta poción de poder; la prueba final te exigirá mucho.</string>
@@ -3108,6 +3109,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

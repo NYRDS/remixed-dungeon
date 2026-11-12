@@ -1445,6 +1445,7 @@
     <string name="ScrollOfDomination_Info">Cuộn này sẽ khuất phục ý chí của một sinh vật trong tầm nhìn của bạn. Sinh vật đó sẽ chiến đấu cho bạn đến chết.</string>
     <string name="ScrollOfDomination_Name">Cuộn sách Chiếm hữu</string>
     <string name="ScrollOfIdentify_Info">Vĩnh viễn tiết lộ tất cả bí mật của một vật phẩm duy nhất.</string>
+    <string name="ScrollOfIdentify_Info1">Đó là %s</string>
     <string name="ScrollOfIdentify_InvTitle">Chọn một vật phẩm để nhận diện</string>
     <string name="ScrollOfIdentify_Name">cuộn nhận diện</string>
     <string name="ScrollOfLullaby_Info">Một giai điệu êm dịu sẽ đưa tất cả sinh vật trong tầm nhìn của bạn vào giấc ngủ sâu, cho bạn cơ hội trốn thoát hoặc tấn công bất ngờ.</string>
@@ -2198,6 +2199,7 @@
     <string name="town_deco_floor_name">Sàn</string>
     <string name="town_deco_flowerinthepot_desc">Hoa trang trí với hương vị ngọt ngào</string>
     <string name="town_deco_flowerinthepot_name">Hoa trong chậu</string>
+    <string name="town_deco_furnace_desc">Một lò nướng đáng tin cậy, được lắp ráp theo các bản vẽ truyền thống.</string>
     <string name="town_deco_furnace_name">Lò nung</string>
     <string name="town_deco_glass_name">Cửa sổ rộng</string>
     <string name="town_deco_glass_stained_desc">Người làm chiếc kính màu này có lẽ đã rất chăm chỉ.</string>
@@ -2935,6 +2937,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
