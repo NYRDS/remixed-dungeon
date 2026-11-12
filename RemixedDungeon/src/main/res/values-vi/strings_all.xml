@@ -343,7 +343,7 @@
     <string name="CharAction_Steal">trộm</string>
     <string name="CharAction_Take">Nhặt lấy</string>
     <string name="CharAction_Taunt">khiêu khích</string>
-    <string name="CharInfo_Level">Đây là %2 cấp %1.</string>
+    <string name="CharInfo_Level">Đây là %2$s cấp %1$d.</string>
     <string name="Char_Defeat_0">%1 đã đánh bại %2</string>
     <string name="Char_Defeat_2">%1 đã đánh bại %2</string>
     <string name="Char_Hit_1">%1$s đánh %2$s</string>
