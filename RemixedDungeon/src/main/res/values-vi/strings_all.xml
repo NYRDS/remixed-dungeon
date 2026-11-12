@@ -343,6 +343,7 @@
     <string name="CharAction_Steal">trộm</string>
     <string name="CharAction_Take">Nhặt lấy</string>
     <string name="CharAction_Taunt">khiêu khích</string>
+    <string name="CharInfo_Level">Đây là %2 cấp %1.</string>
     <string name="Char_Defeat_0">%1 đã đánh bại %2</string>
     <string name="Char_Defeat_2">%1 đã đánh bại %2</string>
     <string name="Char_Hit_1">%1$s đánh %2$s</string>
@@ -1882,6 +1883,7 @@
 - Mod:
 -- Các đối tượng mức có thể mod
 - Đã sửa lỗi</string>
+    <string name="Welcome_Text_32_1">    remix.32.1\n\n    - Cách chơi:\n\n    -- Dòng nhiệm vụ Bác sĩ Chết Chóc\n\n    -- Xác quái hiện thành vật phẩm có thể dùng được\n\n    -- Điều khiển thú cưng tốt hơn\n\n    - UX:\n\n    -- Quản lý lưu trò chơi cải tiến\n\n    - Modding:\n\n    -- Cài đặt mod cục bộ\n\n    -- Vật phẩm tùy chỉnh giờ có thể thực hiện hành động khi ở trong đống\n\n    - Sửa lỗi\n</string>
     <string name="Welcome_Title">Chào mừng!</string>
     <string name="WindGust_Info">Triệu hồi một cơn gió giật, đẩy nhân vật được chọn ra xa.</string>
     <string name="WindGust_Name">Gió giật</string>
@@ -1981,6 +1983,7 @@
     <string name="WndLocalModInstall_text">Chọn thư mục để cài đặt bản mod từ.</string>
     <string name="WndLocalModInstall_title">Cài đặt mod từ thư mục cục bộ</string>
     <string name="WndModInstall_InstallingMod">Đang cài đặt bản mod</string>
+    <string name="WndModInstall_PleaseUpdate">Vui lòng cập nhật Remixed Dungeon trước khi cài đặt mod này</string>
     <string name="WndModInstall_Version">phiên bản</string>
     <string name="WndModSelect_AreYouSure">Đang xóa mod: %s, bạn có chắc không?</string>
     <string name="WndModSelect_ReallyDelete">Thực sự xóa?</string>
@@ -2947,6 +2950,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

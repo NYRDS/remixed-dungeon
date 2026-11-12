@@ -556,6 +556,7 @@
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DieHardSpell_Info">Zal tijdelijk je regeneratie verhogen, waardoor je een echte Die Hard wordt.</string>
+    <string name="DieHardSpell_Name">Doodzeker</string>
     <string name="Displacement_Txt">%s van verplaatsing</string>
     <string name="DoctorArmor_Info">Deze pantser van de pestdokter maakt gebruik mogelijk van de \&quot;Miasma Wolk\&quot; vaardigheid, die een giftige gas vrijlaat dat vijanden vergiftigt, verzwakt en desorienteert. De dokter, beschermd door hun masker, is immuun voor deze effecten.</string>
     <string name="DoctorArmor_Name">Doktersgewaad</string>
@@ -1266,6 +1267,7 @@
     <string name="Paralysis_Name_2">Verstomming %s</string>
     <string name="ParalyticGas_Info">Een wolk van verlammend gas wervelt hier.</string>
     <string name="Pasty_Info">Dit is een authentieke Cornish pasty met de traditionele vulling van rundvlees en aardappel.</string>
+    <string name="PetInventory_ACGiveToPet">GEEF AAN HUISDIER</string>
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
     <string name="PetInventory_GaveItem">Gaf %1 aan %2</string>
     <string name="PetInventory_GiveToPet">Aan huisdier geven</string>
@@ -1985,6 +1987,7 @@
     <string name="WandOfMagicMissile_Info">Deze staf lanceert missiles van zuivere magische energie, wat matige schade aan een doelwit toebrengt.</string>
     <string name="WandOfMagicMissile_Name">Toverstaf van Magische Projectielen</string>
     <string name="WandOfPoison_Info">De giftige uitbarsting van dit krom stuk hout bedekt zijn doelwit met dodelijk gif. Het vergiftigde wezen zal periodieke schade lijden totdat het effect eindigt. De duur van het effect neemt toe met het niveau van de staf.</string>
+    <string name="WandOfPoison_Info1">er gebeurde niets</string>
     <string name="WandOfPoison_Name">Giftige Staf</string>
     <string name="WandOfRegrowth_Info">Wanneer het leven eindigt, begint nieuw leven altijd te groeien... De eeuwige cyclus blijft altijd bestaan!</string>
     <string name="WandOfRegrowth_Info1">er gebeurde niets</string>
@@ -2705,6 +2708,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

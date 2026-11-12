@@ -63,6 +63,7 @@
     <string name="Amulet_ACEnd">TERMINAR EL JUEGO</string>
     <string name="Amulet_Info">El Amuleto de Yendor es el artefacto de origen desconocido más poderoso que existe. Se dice que el amuleto es capaz de cumplir cualquier deseo si la fuerza de voluntad del dueño es suficiente para \&quot;persuadirlo\&quot; de que lo haga.</string>
     <string name="Amulet_Name">Amuleto de Yendor </string>
+    <string name="Anathema_Info">Una palabra de excomuni\u00f3n. El enemigo marcado recibe una vez y media el da\u00f1o de cualquier fuente \u2014 los no-muertos y demonios permanecen marcados m\u00e1s tiempo.</string>
     <string name="AnesthesiaBuff_Info">No siente dolor y no se despierta con los ataques, pero aún recibe daño.</string>
     <string name="AnesthesiaBuff_Name">Anestesia</string>
     <string name="Anesthesia_Cast">%s cae en un sueño profundo y sin sueños.</string>
@@ -3112,6 +3113,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
