@@ -1012,6 +1012,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="HeroClass_PlagueDoctorPerks_3">Les potions de [yellow:Gaz Paralysant] et de [yellow:Gaz Toxique] sont pré-identifiées.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Les médecins pestiférés subissent de grandes pénalités de précision sans leur bien-aimée Scie en Os en main et ne peuvent pas utiliser d\'armes à distance.</string>
     <string name="HeroClass_Priest">Prêtre</string>
+    <string name="HeroClass_PriestPerks_0">Les prêtres commencent avec 12 points de Force et un bâton à deux bouts.</string>
     <string name="HeroClass_PriestPerks_1">Les prêtres infligent 25 % de dégâts supplémentaires aux morts-vivants et subissent 25 % de dégâts en moins de leurs attaques. Contre les démons, ces bonus sont réduits de moitié.</string>
     <string name="HeroClass_PriestPerks_2">Les prêtres utilisent le mana pour lancer des sorts divins : Bénédiction, Eau bénite, Exorcisme, Extrême-onction, Colère divine et Anathème.</string>
     <string name="HeroClass_PriestPerks_3">Les habits de combat du prêtre peuvent être invoqués pour Sanctifier : une explosion sacrée qui brûle les morts-vivants à proximité (les démons subissent la moitié des dégâts) et bénit le porteur.</string>
@@ -3123,6 +3124,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

@@ -1477,6 +1477,7 @@
     <string name="ResultDescriptions_Unknown">Stierf onder mysterieuze omstandigheden op niveau %d</string>
     <string name="ResultDescriptions_Wand">Gedood door je eigen %1 op niveau %2</string>
     <string name="ResultDescriptions_Win">Het Amulet van Yendor verkregen</string>
+    <string name="RingOfAccuracy_Info">Deze ring verhoogt je kans om de vijand te raken.</string>
     <string name="RingOfAccuracy_Name">Ring van Nauwkeurigheid</string>
     <string name="RingOfDetection_Info">Als je deze ring draagt, merk je verborgen geheimen - vallen en geheime deuren - op zonder tijd aan zoeken te besteden. Versleten detectieringen verdoven je zinnen, waardoor het moeilijker wordt om geheimen op te merken, zelfs als je er actief naar zoekt.</string>
     <string name="RingOfElements_Info">Deze ring biedt weerstand tegen verschillende elementen, zoals vuur, elektriciteit, gassen, etc. Ook vermindert hij de duur van negatieve effecten.</string>
@@ -1653,6 +1654,7 @@
     <string name="Shades_Info">Sommige mensen zeggen dat kerkers te donker zijn om die te dragen. En jij zegt dat die mensen gewoon niet cool genoeg zijn.</string>
     <string name="Shades_Name">Zonnebril</string>
     <string name="ShadowLord_Death">Neeeee...</string>
+    <string name="ShadowLord_Desc">Dit wezen is gemaakt van puur kwaad en ondoordringbare duisternis. Velen geloven dat hij de Oude God zelf is, gezien hoe machtig hij is. Terwijl anderen aannemen dat hij slechts een bewaker is van de kamers van de Oude God.</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Intro">Bereid je voor!</string>
     <string name="ShadowLord_Name">schaduwheer</string>
@@ -2708,6 +2710,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
