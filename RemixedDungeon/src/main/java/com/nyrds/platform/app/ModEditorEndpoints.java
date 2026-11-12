@@ -60,13 +60,31 @@ public class ModEditorEndpoints {
 
     private static final String TEMPLATE_DIR = "mod_editor_template";
 
-    // caveman: mod dirs become file names and zip entry roots - keep the
+    // caveman: NEW mod dirs become file names and zip entry roots - keep the
     // charset tight, no dots (kills ".."), no separators, no spaces
     private static boolean isValidModName(String name) {
         return name != null && !name.isEmpty() && name.length() <= 64
             && name.matches("[A-Za-z0-9_-]+")
             && !name.equals(ModdingBase.REMIXED)
             && !name.equals("tmp");
+    }
+
+    // an INSTALLED mod dir, addressed by its real on-disk name. Downloaded
+    // mods unzip to whatever the packager named the root dir ("Remixed RPG",
+    // "D.U.N.G.E.O.N") - the game lists and runs those, so the editor must
+    // too. Accept any single path segment (no separators, no "..", no
+    // absolute names) that resolves to a dir inside the storage root;
+    // traversal is already dead here, containment is the belt-and-braces.
+    private static boolean isInstalledModDir(String name) {
+        if (name == null || name.isEmpty() || name.length() > 64
+            || name.equals("..") || name.equals(".")
+            || name.indexOf('/') >= 0 || name.indexOf('\\') >= 0
+            || name.indexOf('\0') >= 0
+            || new File(name).isAbsolute()) {
+            return false;
+        }
+        File dir = modDir(name);
+        return containedInMod(dir) && dir.isDirectory();
     }
 
     private static NanoHTTPD.Response ok(JSONObject body) {
@@ -195,7 +213,7 @@ public class ModEditorEndpoints {
                     entries.put(e);
                 }
             } else {
-                if (!isValidModName(modName) || !modExists(modName)) {
+                if (!isInstalledModDir(modName)) {
                     return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + modName);
                 }
                 File dir = modFile(modName, path);
@@ -238,7 +256,7 @@ public class ModEditorEndpoints {
             byte[] data = null;
             String source = null;
 
-            if (!builtin && isValidModName(modName) && modExists(modName)) {
+            if (!builtin && isInstalledModDir(modName)) {
                 File f = modFile(modName, file);
                 if (containedInMod(f) && f.isFile()) {
                     data = readFile(f);
@@ -286,7 +304,7 @@ public class ModEditorEndpoints {
                 return BaseWebServer.forbiddenPath();
             }
 
-            if (!builtin && isValidModName(modName) && modExists(modName)) {
+            if (!builtin && isInstalledModDir(modName)) {
                 File f = modFile(modName, file);
                 if (containedInMod(f) && f.isFile()) {
                     return NanoHTTPD.newChunkedResponse(NanoHTTPD.Response.Status.OK,
@@ -321,7 +339,64 @@ public class ModEditorEndpoints {
         if (lower.endsWith(".json")) {
             return "application/json";
         }
+        if (lower.endsWith(".lua")) {
+            return "text/plain";
+        }
+        if (lower.endsWith(".mp3")) {
+            return "audio/mpeg";
+        }
+        if (lower.endsWith(".ogg")) {
+            return "audio/ogg";
+        }
+        if (lower.endsWith(".wav")) {
+            return "audio/wav";
+        }
         return "application/octet-stream";
+    }
+
+    // binary assets a mod may carry: sprite/item/effect sheets and the
+    // sound files mods ship in sound/
+    private static boolean isBinaryAssetName(String file) {
+        String lower = file.toLowerCase();
+        return lower.endsWith(".png") || lower.endsWith(".ogg")
+            || lower.endsWith(".mp3") || lower.endsWith(".wav");
+    }
+
+    // null = payload matches its extension. Sniffed, not trusted - the
+    // extension only picks WHICH magic we expect.
+    private static String binaryMagicProblem(String file, byte[] bytes) {
+        String lower = file.toLowerCase();
+        if (bytes.length < 4) {
+            return "Payload too small to be a valid asset";
+        }
+        if (lower.endsWith(".png")) {
+            if ((bytes[0] & 0xFF) != 0x89 || bytes[1] != 'P' || bytes[2] != 'N' || bytes[3] != 'G') {
+                return "Not a PNG payload";
+            }
+            return null;
+        }
+        if (lower.endsWith(".ogg")) {
+            if (bytes[0] != 'O' || bytes[1] != 'g' || bytes[2] != 'g' || bytes[3] != 'S') {
+                return "Not an OGG payload";
+            }
+            return null;
+        }
+        if (lower.endsWith(".wav")) {
+            if (bytes[0] != 'R' || bytes[1] != 'I' || bytes[2] != 'F' || bytes[3] != 'F') {
+                return "Not a RIFF/WAV payload";
+            }
+            return null;
+        }
+        if (lower.endsWith(".mp3")) {
+            // ID3v2 tag or a bare MPEG frame sync (0xFFEx)
+            boolean id3 = bytes[0] == 'I' && bytes[1] == 'D' && bytes[2] == '3';
+            boolean sync = (bytes[0] & 0xFF) == 0xFF && (bytes[1] & 0xE0) == 0xE0;
+            if (!id3 && !sync) {
+                return "Not an MP3 payload";
+            }
+            return null;
+        }
+        return "Unsupported binary asset: " + file;
     }
 
     // zip with a top-level <modName>/ dir - exactly what UnzipTask expects,
@@ -330,11 +405,11 @@ public class ModEditorEndpoints {
         try {
             String modName = BaseWebServer.queryParam(session, "mod");
 
-            if (!isValidModName(modName) || !modExists(modName)) {
-                return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + modName);
-            }
+        if (!isInstalledModDir(modName)) {
+            return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + modName);
+        }
 
-            ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
             try (ZipOutputStream zip = new ZipOutputStream(buffer)) {
                 zipDir(modDir(modName), modName, zip, new int[]{0});
             }
@@ -426,6 +501,8 @@ public class ModEditorEndpoints {
                     return handleCreate(session);
                 case "duplicate":
                     return handleDuplicate(session);
+                case "clone_builtin":
+                    return handleCloneBuiltin(session);
                 case "delete":
                     return handleDelete(session);
                 case "save":
@@ -530,7 +607,7 @@ public class ModEditorEndpoints {
         String from = payload.optString("from", "");
         String to = payload.optString("to", "");
 
-        if (!isValidModName(from) || !modExists(from)) {
+        if (!isInstalledModDir(from)) {
             return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + from);
         }
         if (!isValidModName(to)) {
@@ -546,6 +623,147 @@ public class ModEditorEndpoints {
         result.put("success", true);
         result.put("mod", to);
         return ok(result);
+    }
+
+    // game-content roots of the builtin tree. The editor web apps
+    // (web/), their template dir and the platform bootstrap assets
+    // (html/, d_assets fonts, l10ns) are infrastructure, not moddable
+    // content - a clone stays out of them by construction, which also
+    // keeps the walk off the desktop/headless extra resource roots.
+    private static final String[] CLONE_DIRS = {
+        "effects", "hero", "hero_modern", "items", "levelObjects",
+        "levelsDesc", "mobs", "mobsDesc", "plantsDesc", "scripts",
+        "sound", "spellsIcons", "spritesDesc", "tilemapDesc", "tilesets",
+        "ui",
+    };
+
+    // Copy the built-in game content into a new editable mod dir - "start
+    // from the full game" instead of the minimal template. Walks the same
+    // resource overlay the game reads (builtin + active-mod overrides), so
+    // with Remixed active it is exactly the builtin tree.
+    private static NanoHTTPD.Response handleCloneBuiltin(NanoHTTPD.IHTTPSession session) throws Exception {
+        JSONObject payload = body(session);
+        String to = payload.optString("to", "");
+        String title = payload.optString("title", to);
+        String author = payload.optString("author", "Unknown");
+
+        if (!isValidModName(to)) {
+            return err(NanoHTTPD.Response.Status.BAD_REQUEST, "Bad target name: " + to);
+        }
+        if (modExists(to)) {
+            return err(NanoHTTPD.Response.Status.CONFLICT, "Mod already exists: " + to);
+        }
+
+        File target = modDir(to);
+        if (!target.mkdirs() && !target.exists()) {
+            return err(NanoHTTPD.Response.Status.INTERNAL_ERROR, "Cannot create mod dir");
+        }
+
+        int[] files = {0};
+        long[] bytes = {0};
+        try {
+            for (String dir : CLONE_DIRS) {
+                cloneResourceDir(dir, target, files, bytes, 0);
+            }
+            // loose root sheets: the classic mob textures and tile/water
+            // pngs referenced as "rat.png" and friends. Accept-all listing
+            // first (a REJECTING filter makes ModdingMode descend into the
+            // rejected dirs - on headless that would walk ./mods, i.e. this
+            // very clone), png filtering happens here on direct children.
+            for (String name : ModdingMode.listResources("", (dir, name) -> true)) {
+                if (name.isEmpty() || name.indexOf('/') >= 0 || name.indexOf('\\') >= 0
+                    || !name.toLowerCase().endsWith(".png")) {
+                    continue;
+                }
+                if (!BaseWebServer.isSafeResourcePath(name)) {
+                    continue;
+                }
+                File dest = new File(target, name);
+                if (!BaseWebServer.isInsideStorageRootAbs(dest)) {
+                    continue;
+                }
+                byte[] data;
+                try (InputStream in = ModdingMode.getInputStream(name)) {
+                    data = readStream(in);
+                } catch (Exception ignored) {
+                    continue;
+                }
+                try (FileOutputStream out = new FileOutputStream(dest)) {
+                    out.write(data);
+                }
+                files[0]++;
+                bytes[0] += data.length;
+            }
+        } catch (IOException e) {
+            FileSystem.deleteRecursive(target);
+            return err(NanoHTTPD.Response.Status.INTERNAL_ERROR, "Clone failed: " + e.getMessage());
+        }
+
+        // fresh manifest, like handleCreate - never copied from assets
+        JSONObject version = new JSONObject();
+        version.put("version", 1);
+        version.put("name", title);
+        version.put("author", author);
+        version.put("description", "Cloned from built-in Remixed content");
+        version.put("url", "");
+        version.put("hr_version", "1");
+        version.put("rpd_version", GameLoop.versionCode % 2000);
+        try (FileOutputStream out = new FileOutputStream(modFile(to, "version.json"))) {
+            out.write(version.toString(2).getBytes(StandardCharsets.UTF_8));
+        }
+
+        JSONObject result = new JSONObject();
+        result.put("success", true);
+        result.put("mod", to);
+        result.put("files", files[0]);
+        result.put("bytes", bytes[0]);
+        return ok(result);
+    }
+
+    // recursive walk: listResources returns bare child names; a name that
+    // opens as a stream is a file, anything else is a dir to recurse into.
+    // Depth cap + budgets are the loop breakers (dev rundirs keep the
+    // builtin tree as a symlink farm - no cycle may wedge the clone).
+    private static void cloneResourceDir(String path, File targetDir, int[] files, long[] bytes, int depth) throws IOException {
+        if (depth > 16 || files[0] > 5000 || bytes[0] > 128L * 1024 * 1024) {
+            throw new IOException("builtin content too large to clone (budget exceeded)");
+        }
+        List<String> names = ModdingMode.listResources(path, (dir, name) -> true);
+        for (String name : names) {
+            if (name.isEmpty() || name.equals(".") || name.equals("..")) {
+                continue;
+            }
+            String rel = path.isEmpty() ? name : path + "/" + name;
+            if (!BaseWebServer.isSafeResourcePath(rel)) {
+                continue;
+            }
+            File dest = new File(targetDir, rel);
+            if (!BaseWebServer.isInsideStorageRootAbs(dest)) {
+                continue;
+            }
+
+            byte[] data = null;
+            try (InputStream in = ModdingMode.getInputStream(rel)) {
+                data = readStream(in);
+            } catch (Exception notAFile) {
+                // dirs (and unreadable entries) fall through to recursion;
+                // recursion on a real file lists nothing and stops there
+            }
+
+            if (data != null) {
+                File parent = dest.getParentFile();
+                if (parent != null && !parent.exists() && !parent.mkdirs()) {
+                    throw new IOException("cannot create dir " + parent);
+                }
+                try (FileOutputStream out = new FileOutputStream(dest)) {
+                    out.write(data);
+                }
+                files[0]++;
+                bytes[0] += data.length;
+            } else {
+                cloneResourceDir(rel, targetDir, files, bytes, depth + 1);
+            }
+        }
     }
 
     private static void copyTree(File from, File to, int[] count) throws IOException {
@@ -578,11 +796,11 @@ public class ModEditorEndpoints {
         JSONObject payload = body(session);
         String name = payload.optString("name", "");
 
-        if (!isValidModName(name) || !modExists(name)) {
-            return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + name);
-        }
         if (name.equals(ModdingBase.REMIXED)) {
             return err(NanoHTTPD.Response.Status.FORBIDDEN, "The built-in mod cannot be deleted");
+        }
+        if (!isInstalledModDir(name)) {
+            return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + name);
         }
 
         // mirrors WndModSelect.onDelete: if the mod is active its saves go
@@ -618,11 +836,11 @@ public class ModEditorEndpoints {
 
         // main-mod check first: on non-dev builds mods/Remixed does not even
         // exist on disk, and "read-only" beats "unknown" as the error
-        if (!isValidModName(modName) || !writableMod(modName)) {
+        if (modName.equals(ModdingBase.REMIXED) && !writableMod(modName)) {
             return err(NanoHTTPD.Response.Status.FORBIDDEN,
                 "The built-in mod is read-only on this build");
         }
-        if (!modExists(modName)) {
+        if (!isInstalledModDir(modName)) {
             return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + modName);
         }
         if (!BaseWebServer.isSafeResourcePath(file) || file.isEmpty()) {
@@ -733,30 +951,34 @@ public class ModEditorEndpoints {
         JSONObject payload = body(session);
         String modName = payload.optString("mod", "");
         String file = payload.getString("file");
-        String base64 = payload.getString("image");
+        // "image" is the legacy key from the png-only days; "data" is the
+        // honest name now that audio rides the same endpoint
+        String base64 = payload.has("data") ? payload.getString("data") : payload.getString("image");
 
         // main-mod check first: on non-dev builds mods/Remixed does not even
         // exist on disk, and "read-only" beats "unknown" as the error
-        if (!isValidModName(modName) || !writableMod(modName)) {
+        if (modName.equals(ModdingBase.REMIXED) && !writableMod(modName)) {
             return err(NanoHTTPD.Response.Status.FORBIDDEN,
                 "The built-in mod is read-only on this build");
         }
-        if (!modExists(modName)) {
+        if (!isInstalledModDir(modName)) {
             return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + modName);
         }
         if (!BaseWebServer.isSafeResourcePath(file) || file.isEmpty()) {
             return BaseWebServer.forbiddenPath();
         }
-        if (!file.toLowerCase().endsWith(".png")) {
-            return err(NanoHTTPD.Response.Status.BAD_REQUEST, "Only .png files are accepted");
+        if (!isBinaryAssetName(file)) {
+            return err(NanoHTTPD.Response.Status.BAD_REQUEST,
+                "Only .png, .ogg, .mp3 and .wav files are accepted");
         }
 
         byte[] bytes = BaseWebServer.instance.base64Decode(base64);
 
-        // caveman: real PNG or nothing - same magic check as sprite saves
-        if (bytes.length < 8 || (bytes[0] & 0xFF) != 0x89 || bytes[1] != 'P'
-            || bytes[2] != 'N' || bytes[3] != 'G') {
-            return err(NanoHTTPD.Response.Status.BAD_REQUEST, "Not a PNG payload");
+        // caveman: real magic bytes or nothing - same checks as sprite saves,
+        // extended to the audio formats mods ship in sound/
+        String magic = binaryMagicProblem(file, bytes);
+        if (magic != null) {
+            return err(NanoHTTPD.Response.Status.BAD_REQUEST, magic);
         }
 
         File dest = modFile(modName, file);
@@ -786,11 +1008,11 @@ public class ModEditorEndpoints {
 
         // main-mod check first: on non-dev builds mods/Remixed does not even
         // exist on disk, and "read-only" beats "unknown" as the error
-        if (!isValidModName(modName) || !writableMod(modName)) {
+        if (modName.equals(ModdingBase.REMIXED) && !writableMod(modName)) {
             return err(NanoHTTPD.Response.Status.FORBIDDEN,
                 "The built-in mod is read-only on this build");
         }
-        if (!modExists(modName)) {
+        if (!isInstalledModDir(modName)) {
             return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + modName);
         }
         if (!BaseWebServer.isSafeResourcePath(file) || file.isEmpty()) {
@@ -820,11 +1042,11 @@ public class ModEditorEndpoints {
 
         // main-mod check first: on non-dev builds mods/Remixed does not even
         // exist on disk, and "read-only" beats "unknown" as the error
-        if (!isValidModName(modName) || !writableMod(modName)) {
+        if (modName.equals(ModdingBase.REMIXED) && !writableMod(modName)) {
             return err(NanoHTTPD.Response.Status.FORBIDDEN,
                 "The built-in mod is read-only on this build");
         }
-        if (!modExists(modName)) {
+        if (!isInstalledModDir(modName)) {
             return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + modName);
         }
         if (!BaseWebServer.isSafeResourcePath(from) || from.isEmpty()
@@ -865,8 +1087,7 @@ public class ModEditorEndpoints {
         JSONObject payload = body(session);
         final String name = payload.optString("name", "");
 
-        boolean known = name.equals(ModdingBase.REMIXED)
-            || (isValidModName(name) && modExists(name));
+        boolean known = name.equals(ModdingBase.REMIXED) || isInstalledModDir(name);
         if (!known) {
             return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + name);
         }
@@ -908,7 +1129,7 @@ public class ModEditorEndpoints {
         JSONObject payload = body(session);
         String modName = payload.optString("name", "");
 
-        if (!isValidModName(modName) || !modExists(modName)) {
+        if (!isInstalledModDir(modName)) {
             return err(NanoHTTPD.Response.Status.NOT_FOUND, "Unknown mod: " + modName);
         }
 
@@ -1015,7 +1236,16 @@ public class ModEditorEndpoints {
                 }
                 String spriteDesc = mob.optString("spriteDesc", "spritesDesc/" + file.getName());
                 if (!modResourceExists(modName, spriteDesc)) {
-                    errors.add(rel + ": spriteDesc not found: " + spriteDesc);
+                    if (mob.has("spriteDesc")) {
+                        // the author pointed at a file that is not there
+                        errors.add(rel + ": spriteDesc not found: " + spriteDesc);
+                    } else {
+                        // no authored spriteDesc and no default file either -
+                        // builtin mobs like ArmoredStatue/Yog live with this
+                        // (the engine supplies a java-side sprite)
+                        warnings.add(rel + ": no spriteDesc and no spritesDesc/" + file.getName()
+                            + " - the engine will use its fallback sprite (built-in mobs like Yog ship this way)");
+                    }
                     continue;
                 }
                 // a mob silently wearing a builtin sprite is the #1 new-modder

@@ -195,6 +195,94 @@ def main():
         # (headless/desktop) mods/Remixed usually has no installed dir -> 404.
         # Either way the write must NOT succeed.
         check(r.status_code in (403, 404), "main-mod write blocked (%d)" % r.status_code)
+        # mod-name traversal must not resolve anywhere
+        for bad in ["..", "a/b", "../" + MOD]:
+            r = HTTP.get(api + "files", params={"mod": bad}, timeout=10)
+            check(r.status_code == 404, "bad mod name '%s' -> 404" % bad)
+
+        # -- downloaded-mod dir names (bd b4i) ----------------------------
+        # mods from the server install under their packaged root dir name -
+        # spaces and dots included. The editor must address them like the
+        # game does. Plant one the way the unzip installer would.
+        downloaded = "My Downloaded.Mod"
+        ddir = os.path.join(game_dir, "mods", downloaded)
+        os.makedirs(os.path.join(ddir, "mobsDesc"), exist_ok=True)
+        with open(os.path.join(ddir, "version.json"), "w") as f:
+            f.write('{"version":1,"name":"Downloaded QA","author":"QA",'
+                    '"description":"","hr_version":"1","rpd_version":1}')
+        with open(os.path.join(ddir, "mobsDesc", "QaMob.json"), "w") as f:
+            f.write('{"ht":10,"name":"QaMob_Name","spriteDesc":"spritesDesc/Rat.json"}')
+
+        r = HTTP.get(api + "list", timeout=10)
+        check(any(m["installDir"] == downloaded for m in r.json()["mods"]),
+              "downloaded-style mod listed")
+        r = HTTP.get(api + "files", params={"mod": downloaded}, timeout=10)
+        names = [e["name"] for e in r.json()["entries"]]
+        check(r.ok and "mobsDesc" in names, "files listing works for space+dot name")
+        r = HTTP.get(api + "read", params={"mod": downloaded, "file": "mobsDesc/QaMob.json"},
+                     timeout=10)
+        check(r.ok and "QaMob" in r.json()["content"], "read works for space+dot name")
+        r = HTTP.post(api + "save", json={"mod": downloaded, "file": "mobsDesc/QaMob.json",
+                                          "content": '{"ht":11,"name":"QaMob_Name",'
+                                                     '"spriteDesc":"spritesDesc/Rat.json"}'},
+                      timeout=10)
+        check(r.ok, "save works for space+dot name")
+        r = HTTP.post(api + "validate", json={"name": downloaded}, timeout=30)
+        check(r.ok, "validate accepts space+dot name")
+        r = HTTP.get(api + "export", params={"mod": downloaded}, timeout=30)
+        check(r.ok, "export works for space+dot name")
+        zf = zipfile.ZipFile(io.BytesIO(r.content))
+        check(downloaded + "/version.json" in zf.namelist(), "zip root = space+dot dir name")
+        r = HTTP.post(api + "duplicate", json={"from": downloaded, "to": "DownloadedCopy"},
+                      timeout=10)
+        check(r.ok, "duplicate from space+dot name to strict name")
+        r = HTTP.post(api + "delete", json={"name": "DownloadedCopy"}, timeout=10)
+        check(r.ok, "delete the duplicate")
+        time.sleep(2)
+
+        # -- audio binaries (bd b4i) --------------------------------------
+        ogg = b"OggS\x00\x02" + b"\x00" * 64
+        import base64
+        r = HTTP.post(api + "save_binary", json={"mod": MOD, "file": "sound/test.ogg",
+                                                 "data": base64.b64encode(ogg).decode()},
+                      timeout=10)
+        check(r.ok, "save_binary accepts ogg payload")
+        r = HTTP.get(api + "raw", params={"mod": MOD, "file": "sound/test.ogg"}, timeout=10)
+        check(r.ok and r.content[:4] == b"OggS"
+              and r.headers.get("Content-Type", "").startswith("audio/ogg"),
+              "raw serves saved ogg with audio mime")
+        r = HTTP.post(api + "save_binary", json={"mod": MOD, "file": "sound/fake.ogg",
+                                                 "data": base64.b64encode(b"\x89PNG\r\n\x1a\n" + b"x" * 32).decode()},
+                      timeout=10)
+        check(r.status_code == 400, "png bytes named .ogg bounce (magic mismatch)")
+        r = HTTP.post(api + "save_binary", json={"mod": MOD, "file": "sound/evil.exe",
+                                                 "data": base64.b64encode(b"MZ" + b"\x00" * 64).decode()},
+                      timeout=10)
+        check(r.status_code == 400, "non-asset extension bounces")
+        r = HTTP.post(api + "delete_file", json={"mod": MOD, "file": "sound/test.ogg"},
+                      timeout=10)
+        check(r.ok, "delete saved ogg")
+
+        # -- clone builtin (bd b4i) ----------------------------------------
+        # while Remixed is active, so the clone is the pure builtin view
+        r = HTTP.post(api + "clone_builtin", json={"to": "FullClone", "title": "Full Clone"},
+                      timeout=120)
+        check(r.ok and r.json().get("success"), "clone_builtin")
+        cloned_files = r.json().get("files", 0)
+        check(cloned_files > 100, "clone copied substantial content (%d files)" % cloned_files)
+        r = HTTP.get(api + "read", params={"mod": "FullClone", "file": "mobsDesc/Rat.json"},
+                     timeout=10)
+        check(r.ok and "spriteDesc" in r.json()["content"], "cloned mob json readable")
+        r = HTTP.get(api + "files", params={"mod": "FullClone"}, timeout=10)
+        top = [e["name"] for e in r.json()["entries"]]
+        check("web" not in top and "html" not in top, "clone skips web apps and bootstrap")
+        check("scripts" in top and "sound" in top, "clone carries scripts and sound")
+        r = HTTP.get(api + "read", params={"mod": "FullClone", "file": "version.json"},
+                     timeout=10)
+        check(r.ok and "Full Clone" in r.json()["content"], "clone gets a fresh manifest")
+        r = HTTP.post(api + "validate", json={"name": "FullClone"}, timeout=120)
+        check(r.ok and r.json().get("success"), "cloned mod validates: %s"
+              % r.json().get("errors", [])[:3])
 
         # -- export ------------------------------------------------------
         r = HTTP.get(api + "export", params={"mod": MOD}, timeout=30)
@@ -221,6 +309,10 @@ def main():
 
         # -- switch back, delete -----------------------------------------
         select_and_restart("Remixed")
+        r = HTTP.post(api + "delete", json={"name": "FullClone"}, timeout=10)
+        check(r.ok, "delete cloned mod")
+        r = HTTP.post(api + "delete", json={"name": downloaded}, timeout=10)
+        check(r.ok, "delete downloaded-style mod")
         r = HTTP.post(api + "delete", json={"name": MOD}, timeout=10)
         check(r.ok, "delete mod")
         time.sleep(3)

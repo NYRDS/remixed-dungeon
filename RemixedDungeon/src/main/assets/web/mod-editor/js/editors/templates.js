@@ -70,9 +70,156 @@ return ai.init({
 })
 `
   },
+  'scripts/spells/': {
+    hint: 'custom spell (scripts/lib/spell)',
+    content: `local RPD   = require "scripts/lib/commonClasses"
+local spell = require "scripts/lib/spell"
+
+return spell.init{
+    desc  = function()
+        return {
+            image         = 0,
+            imageFile     = "spellsIcons/common.png",
+            name          = "MySpell_Name",
+            info          = "MySpell_Info",
+            magicAffinity = "Common",
+            targetingType = "self",
+            level         = 1,
+            castTime      = 1,
+            spellCost     = 5,
+            cooldown      = 10
+        }
+    end,
+
+    cast = function(self, spell, chr)
+        RPD.glog("Nothing happens... yet.")
+        return true
+    end
+}
+`
+  },
+  'scripts/traps/': {
+    hint: 'custom trap (scripts/lib/trap)',
+    content: `local RPD  = require "scripts/lib/commonClasses"
+local trap = require "scripts/lib/trap"
+
+return trap.init(
+    function(cell, char, data)
+        local level = RPD.Dungeon.level
+        local pos = level:getEmptyCellNextTo(cell)
+        RPD.placeBlob(RPD.Blobs.Fire, pos, 5)
+    end
+)
+`
+  },
+  'scripts/objects/': {
+    hint: 'level object behavior (scripts/lib/object)',
+    content: `local RPD    = require "scripts/lib/commonClasses"
+local object = require "scripts/lib/object"
+
+return object.init{
+    bump = function(self, object, presser)
+        RPD.glog("Bumped!")
+        return true
+    end
+}
+`
+  },
+  'scripts/npc/': {
+    hint: 'npc behavior (scripts/lib/mob + RPD.setAi "NpcDefault")',
+    content: `local RPD = require "scripts/lib/commonClasses"
+local mob = require "scripts/lib/mob"
+
+return mob.init{
+    spawn = function(self, level)
+        RPD.setAi(self, "NpcDefault")
+    end,
+
+    interact = function(self, chr)
+        RPD.glog("Hello, traveler!")
+    end
+}
+`
+  },
+  'scripts/actors/': {
+    hint: 'custom actor (scripts/lib/actor)',
+    content: `local RPD   = require "scripts/lib/commonClasses"
+local actor = require "scripts/lib/actor"
+
+return actor.init{
+    act = function()
+        return true
+    end,
+    actionTime = function()
+        return 1
+    end
+}
+`
+  },
   'levelsDesc/': {
     hint: 'predesigned level (wire it into Dungeon.json Levels+Graph)',
     content: levelTemplate()
+  },
+  'mobsDesc/': {
+    hint: 'mob descriptor (stats + spriteDesc + optional scriptFile)',
+    content: JSON.stringify({
+      defenseSkill: 10,
+      attackSkill: 14,
+      exp: 2,
+      maxLvl: 10,
+      dmgMin: 1,
+      dmgMax: 3,
+      dr: 1,
+      baseSpeed: 1,
+      attackDelay: 1,
+      ht: 25,
+      viewDistance: 6,
+      lootChance: 0,
+      name: 'MyMob_Name',
+      name_objective: 'MyMob_Name_Objective',
+      description: 'MyMob_Desc',
+      gender: 'MyMob_Gender',
+      spriteDesc: 'spritesDesc/MyMob.json',
+      scriptFile: 'scripts/mobs/MyMob',
+      walkingType: 'NORMAL',
+      aiState: 'Wandering',
+      canBePet: false,
+      flying: false,
+      friendly: false
+    }, null, 3) + '\n'
+  },
+  'spritesDesc/': {
+    hint: 'sprite descriptor (texture + animations; pair with a png sheet)',
+    content: JSON.stringify({
+      texture: 'mobs/my_mob.png',
+      width: 16,
+      height: 16,
+      idle: { fps: 2, looped: true, frames: [0, 1] },
+      run: { fps: 14, looped: true, frames: [2, 3] },
+      attack: { fps: 11, looped: false, frames: [4, 5, 6] },
+      die: { fps: 11, looped: false, frames: [7, 8, 9] }
+    }, null, 3) + '\n'
+  },
+  'levelObjects/': {
+    hint: 'level object descriptor (pair with scripts/objects/)',
+    content: JSON.stringify({
+      kind: 'CustomObject',
+      script: 'my_object',
+      layer: 0,
+      appearance: {
+        desc: { name: 'MyObject_Name', desc: 'MyObject_Desc', nonPassable: true },
+        sprite: { textureFile: 'levelObjects/objects.png', imageIndex: 0 }
+      }
+    }, null, 3) + '\n'
+  },
+  'effects/': {
+    hint: 'animated effect (texture + frame size + anim)',
+    content: JSON.stringify({
+      texture: 'effects/my_effect.png',
+      width: 16,
+      height: 16,
+      anim: { fps: 15, looped: true, frames: [0, 1, 2, 3] }
+    }, null, 3) + '\n'
   }
 };
 

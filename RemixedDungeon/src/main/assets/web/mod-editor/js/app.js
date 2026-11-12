@@ -9,16 +9,30 @@ import { mobEditor } from './editors/mob-editor.js';
 import { levelEditor } from './editors/level-editor.js';
 import { spriteEditor } from './editors/sprite-editor.js';
 import { itemEditor } from './editors/item-editor.js';
+import { spellEditor } from './editors/spell-editor.js';
+import { buffEditor } from './editors/buff-editor.js';
+import { objectEditor } from './editors/object-editor.js';
+import { effectEditor } from './editors/effect-editor.js';
 import { templateFor } from './editors/templates.js';
+import { uploadFile } from './upload.js';
 
 const sidebar = document.getElementById('sidebar');
 const content = document.getElementById('content');
 const crumbs = document.getElementById('crumbs');
 const actions = document.getElementById('actions');
 
-api.onBusy(b => { document.getElementById('busy').hidden = !b; });
+api.onBusy(b => { document.getElementById('busy').hidden = b; });
 
 let currentEditorDirty = null; // () => boolean, set by open editors
+let currentEditorDispose = null; // () => void, e.g. the effect editor's anim timer
+
+function resetEditor() {
+  if (currentEditorDispose) {
+    try { currentEditorDispose(); } catch (e) { /* already gone */ }
+  }
+  currentEditorDirty = null;
+  currentEditorDispose = null;
+}
 
 window.addEventListener('beforeunload', e => {
   if (currentEditorDirty && currentEditorDirty()) {
@@ -36,9 +50,11 @@ function confirmDirty() {
 
 function route() {
   const hash = location.hash || '#/';
-  const modMatch = hash.match(/^#\/mod\/([A-Za-z0-9_-]+)$/);
+  // mod dir names are real on-disk names - downloaded mods can carry
+  // spaces, dots and worse, so match loosely and decode
+  const modMatch = hash.match(/^#\/mod\/(.+)$/);
   if (modMatch) {
-    openWorkspace(modMatch[1]);
+    openWorkspace(decodeURIComponent(modMatch[1]));
   } else {
     openDashboard();
   }
@@ -50,7 +66,7 @@ window.addEventListener('hashchange', () => { if (confirmDirty()) { route(); } }
 // ---------------------------------------------------------------------
 
 async function openDashboard() {
-  currentEditorDirty = null;
+  resetEditor();
   crumbs.textContent = 'mods';
   actions.innerHTML = '';
   sidebar.innerHTML = '';
@@ -111,8 +127,28 @@ async function openDashboard() {
       const edit = document.createElement('button');
       edit.className = 'primary';
       edit.textContent = 'Edit';
-      edit.addEventListener('click', () => { location.hash = '#/mod/' + mod.installDir; });
+      edit.addEventListener('click', () => { location.hash = '#/mod/' + encodeURIComponent(mod.installDir); });
       li.appendChild(edit);
+    } else {
+      // start editing from the full game content instead of the minimal
+      // template - the whole builtin tree copied into a new writable mod
+      const clone = document.createElement('button');
+      clone.textContent = 'Clone as editable mod';
+      clone.addEventListener('click', async () => {
+        const to = window.prompt('Copy the built-in game content to mod name:', 'MyRemix');
+        if (!to) { return; }
+        try {
+          const result = await api.cloneBuiltin(to.trim(), to.trim(), 'Unknown');
+          listStatus.className = 'status-ok';
+          listStatus.textContent = 'cloned ' + result.files + ' files ('
+            + Math.round(result.bytes / 1024) + ' KB)';
+          setTimeout(refresh, 300);
+        } catch (e) {
+          listStatus.className = 'status-err';
+          listStatus.textContent = e.message;
+        }
+      });
+      li.appendChild(clone);
     }
 
     // every row (builtin included) can be made active - the only way back
@@ -198,7 +234,7 @@ async function openDashboard() {
         author: inputs.author.value.trim() || 'Unknown',
         description: inputs.description.value.trim()
       });
-      location.hash = '#/mod/' + inputs.name.value.trim();
+      location.hash = '#/mod/' + encodeURIComponent(inputs.name.value.trim());
     } catch (e) {
       listStatus.className = 'status-err';
       listStatus.textContent = e.message;
@@ -213,7 +249,7 @@ async function openDashboard() {
 // ---------------------------------------------------------------------
 
 async function openWorkspace(modName) {
-  currentEditorDirty = null;
+  resetEditor();
   crumbs.textContent = modName;
   content.innerHTML = '<p class="hint">loading…</p>';
 
@@ -236,6 +272,22 @@ async function openWorkspace(modName) {
           refreshTree();
           openFile(modName, path);
         } catch (e) { alert(e.message); }
+      },
+      onUpload: async dir => {
+        // binary assets (png sheets, sound files) - picked locally, stored
+        // verbatim; the picker's own file name becomes the mod file name
+        const path = await uploadFile(modName, null, '*/*', ['.png', '.ogg', '.mp3', '.wav']);
+        if (path) {
+          // upload without a suggested name saved under the picker's name at
+          // mod root - move it into the target dir when one is open
+          if (dir) {
+            const base = path.split('/').pop();
+            try {
+              await api.renameModFile(modName, path, dir + '/' + base);
+            } catch (e) { alert(e.message); }
+          }
+          refreshTree();
+        }
       },
       onDelete: async path => {
         if (!window.confirm('Delete ' + path + '?')) { return; }
@@ -304,9 +356,10 @@ async function openWorkspace(modName) {
   content.appendChild(h);
   const hint = document.createElement('p');
   hint.className = 'hint';
-  hint.textContent = 'Pick a file on the left, or use the actions above. ' +
-    'mobsDesc/*.json and spritesDesc/*.json get form editors; levelsDesc/*.json open the level editor; ' +
-    'everything else opens a text editor. "Play this mod" activates it and restarts the game.';
+  hint.textContent = 'Pick a file on the left, or use the actions above. Form editors: mobsDesc, ' +
+    'spritesDesc, levelObjects, effects, scripts/items, scripts/spells, scripts/buffs; levelsDesc maps ' +
+    'open the level painter; strings files open the pairs editor; everything else is a validated text ' +
+    'editor. "Play this mod" activates it and restarts the game.';
   content.appendChild(hint);
 
   await runValidate(modName, true);
@@ -384,41 +437,64 @@ async function runValidate(modName, quiet) {
 // file editors
 // ---------------------------------------------------------------------
 
+// adopt a structured editor's dirty/dispose hooks; null ed = the editor
+// rendered its own fallback (text editor) and manages itself
+function adoptEditor(ed) {
+  currentEditorDirty = ed && ed.isDirty ? ed.isDirty : null;
+  currentEditorDispose = ed && ed.dispose ? ed.dispose : null;
+}
+
 async function openFile(modName, file) {
   if (!confirmDirty()) { return; }
+  resetEditor();
   const lower = file.toLowerCase();
 
-  // structured editors load their own data and report dirtiness themselves
+  // structured editors load their own data, fall back to text editors
+  // internally for shapes they do not model, and report dirtiness themselves
   try {
     if (lower.startsWith('mobsdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      const ed = await mobEditor(content, { mod: modName, file, api, onSaved: () => {} });
-      currentEditorDirty = ed ? ed.isDirty : null;
+      adoptEditor(await mobEditor(content, { mod: modName, file, api, onSaved: () => {} }));
       return;
     }
     if (lower.startsWith('spritesdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      const ed = await spriteEditor(content, { mod: modName, file, api, onSaved: () => {} });
-      currentEditorDirty = ed ? ed.isDirty : null;
+      adoptEditor(await spriteEditor(content, { mod: modName, file, api, onSaved: () => {} }));
       return;
     }
     if (lower.startsWith('scripts/items/') && lower.endsWith('.lua')) {
       content.innerHTML = '';
-      // falls back to the lua text editor internally for non-standard shapes
-      const ed = await itemEditor(content, { mod: modName, file, api, onSaved: () => {} });
-      currentEditorDirty = ed ? ed.isDirty : null;
+      adoptEditor(await itemEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      return;
+    }
+    if (lower.startsWith('scripts/spells/') && lower.endsWith('.lua')) {
+      content.innerHTML = '';
+      adoptEditor(await spellEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      return;
+    }
+    if (lower.startsWith('scripts/buffs/') && lower.endsWith('.lua')) {
+      content.innerHTML = '';
+      adoptEditor(await buffEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      return;
+    }
+    if (lower.startsWith('levelobjects/') && lower.endsWith('.json')) {
+      content.innerHTML = '';
+      adoptEditor(await objectEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      return;
+    }
+    if (lower.startsWith('effects/') && lower.endsWith('.json')) {
+      content.innerHTML = '';
+      adoptEditor(await effectEditor(content, { mod: modName, file, api, onSaved: () => {} }));
       return;
     }
     if (lower.startsWith('levelsdesc/') && lower.endsWith('.json') && !file.endsWith('Dungeon.json')) {
       content.innerHTML = '';
-      const ed = await levelEditor(content, { mod: modName, file, api, onSaved: () => {} });
-      currentEditorDirty = ed ? ed.isDirty : null;
+      adoptEditor(await levelEditor(content, { mod: modName, file, api, onSaved: () => {} }));
       return;
     }
   } catch (e) {
     // a half-rendered editor must not die silently (e.g. readonly IDL property crash)
     content.textContent = 'Editor failed: ' + e.message;
-    currentEditorDirty = null;
     return;
   }
 

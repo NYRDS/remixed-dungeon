@@ -1,9 +1,10 @@
-// Shared png upload helper: picks a local file, stores it in the mod via
-// save_binary (magic-checked server-side, png only). Bytes pass through
-// unchanged - no canvas re-encode, so uploaded sheets keep their layout.
+// Shared binary upload helper: picks a local file, stores it in the mod via
+// save_binary (magic-checked server-side). Bytes pass through unchanged -
+// no re-encode, so uploaded sheets/audio keep their exact layout.
 //
-// uploadPng(mod, suggestedName) -> Promise<path string | null>
-// (resolves null when the user cancels the file picker)
+// uploadPng(mod, suggestedName)      -> Promise<path string | null>
+// uploadFile(mod, suggestedName, acceptMime, exts) -> Promise<path | null>
+// (both resolve null when the user cancels the file picker)
 
 import * as api from './api.js';
 
@@ -17,16 +18,21 @@ function arrayBufferToBase64(buffer) {
   return btoa(binary);
 }
 
-export function uploadPng(mod, suggestedName) {
+export function uploadFile(mod, suggestedName, accept, exts) {
   return new Promise(resolve => {
     const input = document.createElement('input');
     input.type = 'file';
-    input.accept = 'image/png';
+    input.accept = accept;
     input.addEventListener('change', async () => {
       const file = input.files && input.files[0];
       if (!file) { resolve(null); return; }
       let name = suggestedName || file.name;
-      if (!name.toLowerCase().endsWith('.png')) { name += '.png'; }
+      if (exts && !exts.some(ext => name.toLowerCase().endsWith(ext))) {
+        // pick the extension from what was actually picked - the server
+        // magic-checks against the extension, so a mismatched one bounces
+        const picked = exts.find(ext => file.name.toLowerCase().endsWith(ext));
+        name += picked || exts[0];
+      }
       try {
         const buffer = await file.arrayBuffer();
         await api.saveBinary(mod, name, arrayBufferToBase64(buffer));
@@ -41,4 +47,8 @@ export function uploadPng(mod, suggestedName) {
     // for their use cases (button click handlers)
     input.click();
   });
+}
+
+export function uploadPng(mod, suggestedName) {
+  return uploadFile(mod, suggestedName, 'image/png', ['.png']);
 }

@@ -3,7 +3,7 @@
 // the client only pretty-prints json it can parse itself.
 
 import * as api from '../api.js';
-import { uploadPng } from '../upload.js';
+import { uploadPng, uploadFile } from '../upload.js';
 
 function bar(content, crumbs) {
   const barEl = document.createElement('div');
@@ -187,6 +187,36 @@ export function imageEditor(content, ctx) {
   content.appendChild(hint);
 }
 
+// sound files a mod ships in sound/: preview via <audio>, replace by upload
+export function audioEditor(content, ctx) {
+  const wrap = document.createElement('div');
+  const audio = document.createElement('audio');
+  audio.controls = true;
+  audio.src = api.rawUrl(ctx.mod, ctx.file, Date.now());
+  wrap.appendChild(audio);
+  content.appendChild(wrap);
+
+  const replace = document.createElement('button');
+  replace.textContent = 'Replace with upload…';
+  const status = document.createElement('span');
+  replace.addEventListener('click', async () => {
+    const path = await uploadFile(ctx.mod, ctx.file, 'audio/*', ['.ogg', '.mp3', '.wav']);
+    if (path) {
+      audio.src = api.rawUrl(ctx.mod, ctx.file, Date.now());
+      status.className = 'status-ok';
+      status.textContent = 'replaced';
+    }
+  });
+  content.appendChild(replace);
+  content.appendChild(status);
+
+  const hint = document.createElement('p');
+  hint.className = 'hint';
+  hint.textContent = 'Referenced from lua as RPD.playSound("snd_name") - the game ' +
+    'looks the name up in the resource overlay (mod first, then built-in).';
+  content.appendChild(hint);
+}
+
 export function pickEditor(file) {
   const lower = file.toLowerCase();
   if (lower.startsWith('strings_') && lower.endsWith('.json')) {
@@ -195,5 +225,8 @@ export function pickEditor(file) {
   if (lower.endsWith('.json')) { return jsonEditor; }
   if (lower.endsWith('.lua')) { return luaEditor; }
   if (lower.endsWith('.png') || lower.endsWith('.jpg')) { return imageEditor; }
+  if (lower.endsWith('.mp3') || lower.endsWith('.ogg') || lower.endsWith('.wav')) {
+    return audioEditor;
+  }
   return textFileEditor;
 }

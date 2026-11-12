@@ -52,10 +52,11 @@ export function readModFile(mod, file, builtin) {
 
 export function createMod(payload) { return post('create', payload); }
 export function duplicateMod(from, to) { return post('duplicate', { from, to }); }
+export function cloneBuiltin(to, title, author) { return post('clone_builtin', { to, title, author }); }
 export function deleteMod(name) { return post('delete', { name }); }
 export function selectMod(name) { return post('select', { name }); }
 export function saveModFile(mod, file, content) { return post('save', { mod, file, content }); }
-export function saveBinary(mod, file, base64) { return post('save_binary', { mod, file, image: base64 }); }
+export function saveBinary(mod, file, base64) { return post('save_binary', { mod, file, data: base64 }); }
 export function deleteModFile(mod, file) { return post('delete_file', { mod, file }); }
 export function renameModFile(mod, from, to) { return post('rename_file', { mod, from, to }); }
 export function validateMod(name) { return post('validate', { name }); }

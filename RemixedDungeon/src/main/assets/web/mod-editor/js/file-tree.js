@@ -2,7 +2,8 @@
 
 import * as api from './api.js';
 
-// opts: { mod, onOpen(file), onNewFile(dir), onRename(entryPath), onDelete(entryPath) }
+// opts: { mod, onOpen(file), onNewFile(dir), onUpload(dir),
+//         onRename(entryPath), onDelete(entryPath) }
 export function renderTree(container, opts) {
   container.innerHTML = '';
   const root = document.createElement('ul');
@@ -51,6 +52,14 @@ export function renderTree(container, opts) {
     newFile.textContent = '+ new file';
     newFile.addEventListener('click', () => opts.onNewFile(dirPath));
     actions.appendChild(newFile);
+    if (opts.onUpload) {
+      const upload = document.createElement('span');
+      upload.className = 'label';
+      upload.textContent = '⇧ upload file';
+      upload.style.color = '#8aa';
+      upload.addEventListener('click', () => opts.onUpload(dirPath));
+      actions.appendChild(upload);
+    }
     ul.appendChild(actions);
   }
 

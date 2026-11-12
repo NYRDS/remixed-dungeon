@@ -202,3 +202,31 @@ test_mod_editor.py ALL PASS (raw checks + 2 restart cycles).
 test_path_traversal.py: cannot initialize its gradlew GL-desktop server
 in this environment (pre-existing); mod-scoped traversal guards covered
 by test_mod_editor.
+
+## Round 3 (bd b4i, 2026-11-12)
+
+Scope: edit downloaded mods under their real dir names, clone builtin
+content, sound assets, object/effect/spell/buff editors, design doc
+(`mod_editor_design.md`).
+
+| item | outcome |
+|---|---|
+| downloaded mods un-editable | `isValidModName` rejected every installed dir with spaces/dots ("Remixed RPG", "D.U.N.G.E.O.N") - list/files/save/export/duplicate all 404'd. Split: existing mods addressed by real dir name (single path segment inside storage root), strict charset kept for NEW names only |
+| hash routing | `#/mod/Space%20Mod` encode/decode; crumbs/tree/edit/save verified live in IAB |
+| mod-name traversal | `..`, `a/b`, `../Mod` → 404 (tested) |
+| clone builtin | POST `clone_builtin`: whitelisted content dirs + root pngs (~1557 files, 6.6 MB), web apps/bootstrap excluded, fresh manifest, clone validates clean; budgets (depth 16 / 5000 files / 128 MB) + partial-failure cleanup |
+| listResources trap | a REJECTING FilenameFilter makes ModdingMode DESCEND into rejected dirs (walked `./mods` = the clone itself on headless/desktop). Clone uses accept-all listings + client-side filtering only |
+| builtin mobs with dangling spriteDesc | ArmoredStatue/Yog/MirrorImage ship NO spriteDesc and no default file - clone-validate flagged them. Rule now: explicit spriteDesc missing = error; unauthored + missing = warning (engine fallback sprite) |
+| sound assets | save_binary accepts png/ogg/mp3/wav magic-sniffed; audio editor (playback + replace); tree "⇧ upload file" per dir; raw serves audio/* mime |
+| spell editor | form over `desc()` table (shared lua-desc-table module with item editor); datalists (16 icon sheets, affinities, targeting); save round-trip verified live (cooldown rewrite, cast fn intact) |
+| buff editor | desc-table form (icon/name/info) |
+| object editor | levelObjects json form + click-to-pick sprite sheet preview + script/texture datalists; unknown keys preserved |
+| effect editor | effects json form + live animated preview (frame stepping verified via canvas readback) |
+| templates | + spells, traps, objects, npc, actors, levelObjects, effects, mobsDesc, spritesDesc |
+| P1 found live (pre-existing disk drift) | file-tree.js had uncommitted `'../api.js'` import (HEAD has `'./api.js'`) - the whole app failed to load; node --check can't catch specifier resolution, only a real browser pass does |
+| IAB page reloads between evaluates | each browser check must be atomic (goto + one evaluate); hash changes inside evaluate break the inspection context |
+
+Gates: test_mod_editor.py ALL PASS (incl. new sections); android fdroid
+compile GREEN; test_path_traversal.py PASS this round (its earlier
+gradlew-GL wedge did not recur); LanguageTool pass on new UI strings
+(2 "builtin"→"built-in" fixes, rest identifier false positives).
