@@ -252,6 +252,7 @@
     <string name="BishopQuest_2_1_InProgress">Tráeme _tres semillas de sungrass_, hijo mío. El altar espera.</string>
     <string name="BishopQuest_2_1_Prologue">Antes de transmitirte los misterios del sacerdocio, el altar debe prepararse. Tráeme _tres semillas de girasol_ — su esencia dorada hace el mejor incienso.</string>
     <string name="BishopQuest_2_2_Epilogue">Luz de luna en una semilla... como la gracia misma. La iglesia olerá a plata esta noche. Toma esta poción por tu devoción, hijo mío.</string>
+    <string name="BishopQuest_2_2_Prologue">El rito de iniciación requiere incienso bendecido por la luna, hijo mío. Tráeme _tres semillas de lunagrade_, recolectadas donde la luz de la luna perdura en lo profundo.</string>
     <string name="BishopQuest_3_1_Epilogue">Se pronuncian los últimos ritos, y el dócil zombi colapsa en polvo pacífico. Ahora descansa, verdaderamente. Tu compasión te honra, hijo mío — toma este pergamino, lo necesitarás adonde vayas.</string>
     <string name="BishopQuest_3_1_InProgress">Tráeme un _zombie_ domesticado, hijo mío. Trátalo con dulzura — no sabe lo que hace.</string>
     <string name="BishopQuest_3_2_Epilogue">El obispo rocía agua bendita sobre el murciélago indignado, mascullando una bendición. Se aleja volando, de alguna manera digno. Toma este pergamino por tu paciencia, hijo mío.</string>
@@ -3116,6 +3117,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

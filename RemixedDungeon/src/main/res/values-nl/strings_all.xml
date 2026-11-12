@@ -183,6 +183,7 @@
     <string name="BarkskinBuff_Name">Schorshuid</string>
     <string name="Barrel_Desc">Het lijkt op een simpele houten vat. Maar naarmate je er dichterbij komt, ruik je een vage hint van olie. Het vat lijkt redelijk licht, je zou het wellicht kunnen duwen.</string>
     <string name="Barrel_Name">vat</string>
+    <string name="Barrel_Pumpkin_Desc">Het is heel vreemd en best wel griezelig om een gesneden pompoen op de dungeonvloer te zien liggen. Je voelt duidelijk gevaar van het object afkomen. Maar je kunt het altijd wegduwen, toch?</string>
     <string name="Barrel_Pumpkin_Name">pompoen</string>
     <string name="Bat_Defense">ontweken</string>
     <string name="Bat_Desc">Deze kwieke en taaie bewoners van grotkoepels kunnen grotere tegenstanders verslaan door bij elke succesvolle aanval hun gezondheid aan te vullen.</string>
@@ -397,6 +398,7 @@
     <string name="Char_Kill_0">%s heeft je gedood...</string>
     <string name="Char_Kill_1">%s heeft je gedood...</string>
     <string name="Char_Name">wezen</string>
+    <string name="Char_SmbMissed">%1$s %2$s de aanval van %3$s</string>
     <string name="Char_StaAmok">amok</string>
     <string name="Char_StaBleeding">bloeding</string>
     <string name="Char_StaCrippled">verlamd</string>
@@ -1123,6 +1125,7 @@
     <string name="MedicineMask_Name">Chirurgisch masker</string>
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
     <string name="MeleeWeapon_Info1a">Dit %1$s is een %2$s niveau-%3$d wapen voor dichtbijgevecht.</string>
+    <string name="MeleeWeapon_Info1b">een</string>
     <string name="MeleeWeapon_Info1c">een opgewaardeerd</string>
     <string name="MeleeWeapon_Info1d">een verslechterd</string>
     <string name="MeleeWeapon_Info2a">De gemiddelde schade is %d punten per slag.</string>
@@ -1263,6 +1266,7 @@
     <string name="PalaceServant_Warlock_3">Het geduld van de Koning is niet eindeloos.</string>
     <string name="PalaceServants_Hostile">De palijdienaren keren zich tegen je!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
+    <string name="ParalysisArrow_Info">Deze pijl is bestreken met curare.</string>
     <string name="ParalysisArrow_Name">verlamende pijl</string>
     <string name="ParalysisBuff_Name">Verlamd</string>
     <string name="Paralysis_Name_0">Verdovende %s</string>
@@ -2057,6 +2061,17 @@
     <string name="Weightstone_WndChoice">Hoe wil je je %s balanceren?</string>
     <string name="Weightstone_WndSpeed">Voor snelheid</string>
     <string name="Welcome_Ok">Oké!</string>
+    <string name="Welcome_Text_31_0">remix.31.0
+
+- Gameplay:
+
+-- Optionele Isometrische Modus!
+
+- Modden:
+
+-- Aanpasbare Level-objecten
+
+- Bugs opgelost</string>
     <string name="Welcome_Text_32">    remix.32\n\n    - Gameplay:\n\n    -- Mobs en Huisdieren krijgen nu ervaring en niveaus\n\n    -- Chaos Schild\n\n    -- Kampioenen\n\n    -- Yog strijd opnieuw gebalanceerd\n\n    -- Balans aanpassingen\n\n    - UX:\n\n    -- Gedetailleerde Held en Mobs statistieken\n\n    -- Beter Aanpassingen interface\n\n    -- Soepele camera\n\n    - Modding:\n\n    -- Aangepaste animaties\n\n    -- Aangepaste Scripts voor ingebouwde Mobs\n\n    -- Gloed voor Mobs\n\n    - Bugs opgelost\n    </string>
     <string name="Welcome_Text_32_1">    remix.32.1\n\n    - Gameplay:\n\n    -- Pesten Dokter questlijn\n\n    -- Lichamen van monsters nu enigszins bruikbare items\n\n    -- Betere huisdierenbesturing\n\n    - UX:\n\n    -- Verbeterd beheer van saves\n\n    - Modding:\n\n    -- Lokale mod installatiemethoden\n\n    -- Aangepaste items kunnen nu acties uitvoeren terwijl ze in stapels liggen\n\n    - Bugs opgelost\n\n    </string>
     <string name="Welcome_Title">Welkom!</string>
@@ -2116,6 +2131,7 @@
     <string name="WndHats_ListTitle">Lijst van accessoires</string>
     <string name="WndHats_NoConnectionMsg">Kan geen verbinding maken met Google Play.</string>
     <string name="WndHats_Purchased">Geregeld!</string>
+    <string name="WndHats_SlotTitle">Uitgerust</string>
     <string name="WndHero_AttackSkill">Aanvalsvaardigheid</string>
     <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndHero_Buffs">Effecten</string>
@@ -2279,6 +2295,7 @@
     <string name="WndTradeItem_SellAll">Alles verkopen voor %dg</string>
     <string name="WndTradeItem_SellN">Verkoop %1$d voor %2$dg</string>
     <string name="WndWandmaker_Battle">Gevechtsstaf</string>
+    <string name="WndWandmaker_Message">Oh, ik zie dat je geslaagd bent! Ik hoop dat het je niet te veel moeite heeft gekost. Zoals beloofd, mag je een van mijn hoogwaardige staven kiezen.</string>
     <string name="WndWandmaker_NonBattle">Hulpsstaf</string>
     <string name="Wnd_Button_Back">Terug</string>
     <string name="Wnd_Button_Cancel">Annuleren</string>
@@ -2714,6 +2731,13 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
+
 
 
 
