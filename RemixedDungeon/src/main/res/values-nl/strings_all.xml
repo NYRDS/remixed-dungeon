@@ -519,6 +519,7 @@
     <string name="DarkGold_Name">donker gouderts</string>
     <string name="DarkSacrifice_Hint">Selecteer je trouwe dienaar om te offeren!</string>
     <string name="DarkSacrifice_Info">Offer je trouwe dienaar op om een explosie te veroorzaken. Het gebied dat door de explosie wordt bedekt, hangt af van de resterende gezondheid van de dienaar en je vaardigheidsniveau.</string>
+    <string name="DarkSacrifice_Name">Donkere Offerande</string>
     <string name="DarkSacrifice_Ok">Mijn leven is van jou!</string>
     <string name="DarkSacrifice_Resist">Je hebt geen macht over mij!</string>
     <string name="DarkSacrifice_Self">Voor de Plaag!</string>
@@ -869,6 +870,7 @@
     <string name="Hero_StaVertigo">Alles draait om je heen!</string>
     <string name="Hero_StaWeakness">Je voelt je verzwakt!</string>
     <string name="Hero_Wait">...</string>
+    <string name="Hero_YouNowHave">Je hebt nu %s</string>
     <string name="HideInGrassSpell_Info">Je hebt je verstoppertje-meesterschap geperfectioneerd.</string>
     <string name="HideInGrassSpell_Name">Verberg-in-Gras</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Zelfs ik kan me niet in het zicht verstoppen.</string>
@@ -1465,6 +1467,7 @@
     <string name="ResultDescriptions_Win">Het Amulet van Yendor verkregen</string>
     <string name="RingOfAccuracy_Name">Ring van Nauwkeurigheid</string>
     <string name="RingOfDetection_Info">Als je deze ring draagt, merk je verborgen geheimen - vallen en geheime deuren - op zonder tijd aan zoeken te besteden. Versleten detectieringen verdoven je zinnen, waardoor het moeilijker wordt om geheimen op te merken, zelfs als je er actief naar zoekt.</string>
+    <string name="RingOfElements_Info">Deze ring biedt weerstand tegen verschillende elementen, zoals vuur, elektriciteit, gassen, etc. Ook vermindert hij de duur van negatieve effecten.</string>
     <string name="RingOfElements_Name">Ring der Elementen</string>
     <string name="RingOfEvasion_Info">Deze ring vergroot je kans om een aanval van een vijand te ontwijken.</string>
     <string name="RingOfEvasion_Name">Ring van Ontwijking</string>
@@ -1498,6 +1501,7 @@
     <string name="Ring_Info">Deze metalen band is versierd met een grote %s edelsteen die glinstert in de duisternis. Wie weet welk effect het heeft als het wordt gedragen?</string>
     <string name="Ring_Info1">Je kunt slechts 2 ringen tegelijk dragen.</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
+    <string name="Ring_Info4">%1\n\nJe kunt een kwaadaardige magie voelen die in de %2 schuilt.</string>
     <string name="Ring_Name">%s ring</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="Roar_Name">Brul</string>
@@ -1647,6 +1651,7 @@
     <string name="ShadowsBuff_Name">samengesmoren met de schaduw</string>
     <string name="ShamanElder_Desc">Deze specifieke gnol ziet er veel ouder uit dan andere schamanen en heeft zeker een hogere status in de stam. Een vreemde aura vormt zich langzaam om hem heen, die alles wat het raakt lijkt te reflecteren.</string>
     <string name="ShamanElder_Gender">masculine</string>
+    <string name="ShamanElder_Name">ouderman-sjamaan</string>
     <string name="ShamanElder_Name_Objective">oudere sjamaan</string>
     <string name="Shaman_Desc">De intelligentste gnolls kunnen sjamanistische magie beheersen. Gnoll-sjamanen geven de voorkeur aan gevechtsmagie om hun gebrek aan kracht te compenseren, zonder te aarzelen om deze te gebruiken op degenen die hun status in de stam betwisten.</string>
     <string name="Shaman_Gender">masculine</string>
@@ -1840,6 +1845,7 @@
     <string name="Tamahawk_Info">Hoewel deze werpbijl niet zo zwaar is, vereist hij toch behoorlijk wat kracht om effectief te kunnen gebruiken.</string>
     <string name="Tamahawk_Name">tomahawk</string>
     <string name="TenguLiver_Info">Deze lever behoort aan een machtige vijand. Alleen door ernaar te kijken, nemen je instincten de overhand, en voel je de drang om het te consumeren.</string>
+    <string name="TenguLiver_Name">Tengu Lever</string>
     <string name="Tengu_Desc">Tengu zijn leden van de oude moordenaarsclan, die ook Tengu heet. Deze moordenaars zijn bekend om hun uitgebreide gebruik van shurikens en vallen.</string>
     <string name="Tengu_Gender">masculine</string>
     <string name="Tengu_Info2">Gepakt, %s!</string>
@@ -1859,6 +1865,7 @@
     <string name="TitleScene_Play">Spelen</string>
     <string name="TomeOfKnowledge_Info">Deze oude tome is gevuld met arcane raadsels en mysteries! Het kan moeilijk zijn om te lezen, maar als je het doorstaat, zul je zeker je magische krachten vergroten.</string>
     <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
+    <string name="TomeOfMastery_Blinded">Je kunt niet lezen terwijl je geblind bent</string>
     <string name="TomeOfMastery_Info">Dit versleten leerboek is niet zo dik, maar je hebt het gevoel dat je er veel uit kunt halen. Onthoud er wel dat het lezen van deze tome enige tijd in beslag kan nemen.</string>
     <string name="TomeOfMastery_Name">Boek der Meesterschap</string>
     <string name="TomeOfMastery_WayAlreadyChosen">Je kunt je gekozen pad niet meer veranderen!</string>
@@ -2293,6 +2300,7 @@
     <string name="YogsTeeth_Name_Objective">tanden van Yog</string>
     <string name="ZombieGnoll_Desc">Het verwrongen, gebroken lichaam van een gnoll-zombie lijkt niet meer op een mensachtige of een hyena. Al wat overblijft is een hoop rottend vlees en beenderen, vervuld van een kwaadaardige drang om te doden en te verslinden.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
+    <string name="ZombieGnoll_Info">De gnol-zombie is herrezen uit de doden!</string>
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="ZombieMask_Info">Heb je ooit willen lijken op een ondode held, die zijn zoektocht steeds opnieuw faalde? Hier is je kans.</string>
@@ -2363,6 +2371,7 @@
     <string name="town_deco_curtains_desc">Houdt al het onnodige licht tegen en dient ook als een geweldige decoratie.</string>
     <string name="town_deco_curtains_name">Gordijnen</string>
     <string name="town_deco_door_desc">Een eenvoudige houten deur.</string>
+    <string name="town_deco_door_name">Deur</string>
     <string name="town_deco_dungeon_door_desc">De ingang van de kerker.</string>
     <string name="town_deco_dungeon_door_name">Ingang</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
@@ -2673,6 +2682,15 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
+
+
+
 
 
 

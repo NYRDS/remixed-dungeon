@@ -48,6 +48,7 @@
     <string name="Amulet_ACEnd">KẾT THÚC TRÒ CHƠI</string>
     <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
+    <string name="Anathema_Info">Lời tuyên phạt. Kẻ địch bị đánh dấu nhận gấp một nửa sát thương từ mọi nguồn — xác sống và quỷ bị đánh dấu lâu hơn.</string>
     <string name="Anesthesia_Cast">%s rơi vào một giấc ngủ sâu, không mộng.</string>
     <string name="Anesthesia_Info">Gây ra giấc ngủ sâu, phi tự nhiên cho mục tiêu. Ngay cả những đòn tấn công tàn bạo nhất cũng không đánh thức được chúng khỏi giấc ngủ này.</string>
     <string name="Anesthesia_Name">Gây mê</string>
@@ -183,6 +184,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Giám mục</string>
     <string name="BishopNPC_Name_Objective">giám mục</string>
+    <string name="BishopQuest_3_1_Epilogue">Lễ chầu biệt cuối cùng được đọc, và xác sống tùy tùng tan thành bụi bình yên. Hắn đã an nghỉ thực sự. Lòng trắc ẩn làm vinh dự cho con — hãy lấy cuộn này, con sẽ cần nó nơi con đi.</string>
     <string name="BishopQuest_3_2_Prologue">Ngay cả những sinh vật bóng tối cũng xứng đáng được ban phước, con ơi. Hãy mang cho ta một con _dơi_ đã thuần phục, và ta sẽ thánh hiến nó cho ánh sáng.</string>
     <string name="Bishop_great_bless">Chúc phúc vĩ đại - %d g</string>
     <string name="Bishop_lesser_bless">Chúc phúc nhỏ - %d g</string>
@@ -659,6 +661,7 @@
     <string name="GoldenStatue_Name">tượng vàng</string>
     <string name="GoldenStatue_Name_Objective">bức tượng vàng</string>
     <string name="GoldenSword_Gender">masculine</string>
+    <string name="GoldenSword_Name">kiếm vàng</string>
     <string name="Golem_Defense">đã chặn</string>
     <string name="Golem_Desc">Người lùn đã cố gắng kết hợp kiến thức cơ khí của họ với sức mạnh mới tìm thấy được của việc ràng buộc nguyên tố. Họ sử dụng linh hồn của đất làm \&quot;linh hồn\&quot; cho thân thể cơ khí của golem, được cho là dễ kiểm soát nhất trong tất cả. Mặc dù vậy, sai sót nhỏ nhất trong nghi thức cũng có thể gây ra bùng nổ.</string>
     <string name="Golem_Gender">masculine</string>
@@ -1040,6 +1043,7 @@
     <string name="MimicPie_Name_Objective">mimik</string>
     <string name="Mimic_Desc">Mimic là những sinh vật ma thuật có thể biến thành bất kỳ hình dạng nào. Trong hầm ngục, chúng gần như luôn chọn hình dạng rương kho báu, vì chúng biết cách thu hút nhà thám hiểm.</string>
     <string name="Mimic_Gender">masculine</string>
+    <string name="Mimic_Name">quái giả dạng</string>
     <string name="MindVisionBuff_Name">Tầm nhìn tâm trí</string>
     <string name="MirrorImage_Desc">Ảo ảnh này mang sự tương đồng rất lớn với bạn, nhưng nó nhợt nhạt hơn và run rẩy một chút.</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -1057,6 +1061,7 @@
     <string name="Mob_ItemUse">%1$s sử dụng %2$s</string>
     <string name="Mob_PetDied">Thú cưng của bạn đã chết: %s</string>
     <string name="Mob_ReadyForOrder">%s sẵn sàng cho lệnh của bạn.</string>
+    <string name="Mob_StaAmokStatus">%1$s đang điên loạn</string>
     <string name="Mob_StaControlledStatus">%s này đang bị ám bởi ma quỷ</string>
     <string name="Mob_StaFleeingStatus">%s đang bỏ chạy</string>
     <string name="Mob_StaFleeingStatus2">Cái %1$s này đang chạy trốn khỏi %2$s</string>
@@ -1264,6 +1269,7 @@
     <string name="Potion_Colors_6">than chì</string>
     <string name="Potion_Colors_7">ngà</string>
     <string name="Potion_Colors_8">hổ phách</string>
+    <string name="Potion_Colors_9">nâu đen</string>
     <string name="Potion_Info">Bình này chứa chất lỏng xoáy màu %s. Ai biết nó sẽ làm gì khi uống hoặc ném?</string>
     <string name="Potion_ItemFliesAway">%s vừa bay vụt khỏi tay bạn.</string>
     <string name="Potion_MoistenUseless">Có vẻ bạn vừa lãng phí bình thuốc này.</string>
@@ -1597,6 +1603,7 @@
     <string name="SpiderElite_Name">vệ binh nhện tinh nhuệ</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
     <string name="SpiderExploding_Gender">masculine</string>
+    <string name="SpiderExploding_Name">nhện công nhân</string>
     <string name="SpiderGuard_Desc">Cũng như lính, nhện canh gác thề bảo vệ vương quốc của chúng. Nọc độc của vệ binh được dùng để làm tê liệt mục tiêu, khiến chúng trở thành con mồi dễ dàng.</string>
     <string name="SpiderGuard_Gender">masculine</string>
     <string name="SpiderGuard_Name">nhện canh gác</string>
@@ -1790,6 +1797,7 @@
     <string name="WandOfIcebolt_Info">Cây gậy này phóng ra một tia băng, gây sát thương nhẹ cho mục tiêu. Cũng có khả năng làm chậm hoặc thậm chí đóng băng kẻ địch.</string>
     <string name="WandOfIcebolt_Info1">Bạn đã tự giết mình bằng Đũa phép Băng đạn của chính mình...</string>
     <string name="WandOfIcebolt_Name">Gậy Băng Tiễn</string>
+    <string name="WandOfLightning_Info1">Bạn đã bị sét đánh bởi Cây Gậy Sét của chính mình...</string>
     <string name="WandOfLightning_Name">Gậy Sét</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
     <string name="WandOfMagicMissile_Info">Cây gậy này phóng ra các tên lửa năng lượng ma thuật thuần khiết, gây sát thương trung bình cho mục tiêu.</string>
@@ -2109,6 +2117,7 @@
     <string name="deco_candle_desc">Nến lớn</string>
     <string name="deco_candle_name">Nến</string>
     <string name="gdpr_agree">Có, tôi đồng ý</string>
+    <string name="gdpr_disagree">Không, cảm ơn</string>
     <string name="gdpr_title">Cá nhân hóa trải nghiệm quảng cáo của bạn</string>
     <string name="town_deco_armoronhanger_desc">Loại giáp nào đó trên móc treo.</string>
     <string name="town_deco_armorstand_leather_name">Áo giáp da</string>
@@ -2917,6 +2926,16 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
