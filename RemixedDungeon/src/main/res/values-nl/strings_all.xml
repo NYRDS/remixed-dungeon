@@ -517,6 +517,7 @@
     <string name="Dagger_Info">Een eenvoudige ijzeren dolk met een goed versleten houten handvat.</string>
     <string name="Dagger_Name">dolk</string>
     <string name="Damage_Reduction">Schadevermindering</string>
+    <string name="DarkGold_Info">Dit metaal heet donker niet vanwege zijn kleur (het verschilt niet van normaal goud), maar omdat het smelt in het daglicht, waardoor het op de oppervlakte nutteloos is.</string>
     <string name="DarkGold_Name">donker gouderts</string>
     <string name="DarkSacrifice_Hint">Selecteer je trouwe dienaar om te offeren!</string>
     <string name="DarkSacrifice_Info">Offer je trouwe dienaar op om een explosie te veroorzaken. Het gebied dat door de explosie wordt bedekt, hangt af van de resterende gezondheid van de dienaar en je vaardigheidsniveau.</string>
@@ -1008,6 +1009,7 @@
     <string name="LastRites_Name">Laatste Olieringen</string>
     <string name="LastShopLevel_TileDescDeco">Hier ontbreken verschillende tegels.</string>
     <string name="LastShopLevel_TileDescEmptySP">Dik tapijt bedekt de vloer.</string>
+    <string name="LastShopLevel_TileDescEntrance">Een helling leidt omhoog naar de bovenste verdieping.</string>
     <string name="LastShopLevel_TileDescExit">Een helling leidt naar beneden in de hel.</string>
     <string name="LastShopLevel_TileHighGrass">Hoge bloeiende bloemen</string>
     <string name="LastShopLevel_TileWater">Verdacht gekleurd water</string>
@@ -1820,6 +1822,7 @@
     <string name="Succubus_Desc">Succubi zijn demonen die eruitzien als verleidelijke (op een licht gotische manier) meisjes. Met haar magie kan de succubus een held betoveren, die niet meer kan aanvallen totdat de betovering voorbij is.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succubus</string>
+    <string name="Succubus_Name_Objective">succubus</string>
     <string name="SummonBeast_AtYourCommand">Op uw bevel!</string>
     <string name="SummonBeast_Info">Poging om een horde machtige beesten te roepen tot uw bevel.\nResultaten kunnen verschillen.</string>
     <string name="SummonBeast_Name">Beestenroep</string>
@@ -2509,6 +2512,7 @@
     <string name="town_deco_wooden_table_desc">Dit is een goed gemaakte houten tafel.</string>
     <string name="town_deco_wooden_table_name">Houten tafel</string>
     <string name="town_table_fortune_ball_desc">Kristallen bol, met een mysterieuze nevel binnen.</string>
+    <string name="town_table_fortune_ball_name">Kristallen bal</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
 
@@ -2687,6 +2691,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
