@@ -209,6 +209,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Bisschop</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
+    <string name="BishopQuest_2_1_InProgress">Breng me _drie zonnegraszaadjes_, mijn kind. De altaar wacht.</string>
     <string name="Bishop_bye">Ik zal voor je bidden, mijn kind.</string>
     <string name="Bishop_great_bless">Grote zegen - %d g</string>
     <string name="Bishop_lesser_bless">Klein zegening - %d g</string>
@@ -1976,6 +1977,7 @@
     <string name="WandOfRegrowth_Info1">er gebeurde niets</string>
     <string name="WandOfRegrowth_Name">Staf van Herstel</string>
     <string name="WandOfShadowbolt_Info">Deze toverstaf straalt donkere, kwaadaardige energie uit.</string>
+    <string name="WandOfShadowbolt_Name">staf van schaduwpijl</string>
     <string name="WandOfSlowness_Info">Deze toverstaf zorgt ervoor dat een wezen met de helft van zijn normale snelheid beweegt en aanvalt, totdat het effect afloopt.</string>
     <string name="WandOfSlowness_Info1">Er gebeurde niets.</string>
     <string name="WandOfSlowness_Name">Toverstaf van Vertraging</string>
@@ -2304,6 +2306,7 @@
     <string name="ZombieGnoll_Name">gnoll-zombie</string>
     <string name="ZombieGnoll_Name_Objective">gnol-zombie</string>
     <string name="ZombieMask_Info">Heb je ooit willen lijken op een ondode held, die zijn zoektocht steeds opnieuw faalde? Hier is je kans.</string>
+    <string name="Zombie_Desc">De dungeon was van oudsher al een gevaarlijke plek en veel avonturiers vonden hier hun ondergang. Maar de levens van de ongelukkigste eindigden in de Necropolis, en nu zijn ze gedoemd om in deze hallen te dwalen in de vorm van rottende lichamen.</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">zombie</string>
     <string name="Zombie_Name_Objective">zombie</string>
@@ -2682,6 +2685,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
