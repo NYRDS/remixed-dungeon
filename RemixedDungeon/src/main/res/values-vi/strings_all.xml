@@ -116,6 +116,7 @@
     <string name="Badges_GrimWepon">Quái vật bị giết bởi vũ khí Grim</string>
     <string name="Badges_HappyEnd">Kết thúc có hậu</string>
     <string name="Badges_Immured">Tử vong do bị tường kín sống</string>
+    <string name="Badges_Info1">Huy hiệu đạt được: %s</string>
     <string name="Badges_Info2">Huy hiệu siêu mới: %s</string>
     <string name="Badges_Info3">Huy hiệu mới: %s</string>
     <string name="Badges_ItemLvl1">Đã thu được vật phẩm cấp 3</string>
@@ -738,6 +739,7 @@
     <string name="HeroClass_NecromancerPerks_0">Necromancer bắt đầu với 15 điểm Sức khỏe.</string>
     <string name="HeroClass_NecromancerPerks_3">Pháp sư gọi hồn bắt đầu với một chiếc chìa khóa xương cấp 7.</string>
     <string name="HeroClass_None">thường dân</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">Bác sĩ dịch hạch thu hoạch [yellow:Tuyến độc], [yellow:Cơ quan thối rữa], [yellow:Mảnh xương] từ kẻ thù bị giết.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Bác sĩ dịch là bậc thầy giả kim và có thể sử dụng công thức độc đáo.</string>
     <string name="HeroClass_PlagueDoctorPerks_2">Bắt đầu với [yellow:Mặt Nạ Dịch Hạch] (miễn nhiễm với mọi khí độc) và [yellow:Cưa Xương]. Đòn chí mạng rơi thêm bộ phận, và Cưa gây x2 sát thương lên kẻ địch bị tê liệt.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Các loại thuốc [yellow:Chữa lành], [yellow:Khí Gây Tê Liệt] và [yellow:Khí Độc] được nhận diện sẵn.</string>
@@ -1683,6 +1685,7 @@
     <string name="Succubus_Desc">Succubus là những con quỷ trông giống những cô gái quyến rũ (theo phong cách gothic nhẹ). Bằng ma thuật của mình, succubus có thể mê hoặc anh hùng, khiến anh ta không thể tấn công cho đến khi hiệu ứng biến mất.</string>
     <string name="Succubus_Gender">masculine</string>
     <string name="Succubus_Name">succubus</string>
+    <string name="Succubus_Name_Objective">succubus</string>
     <string name="SummonBeast_AtYourCommand">Theo lệnh của bạn!</string>
     <string name="SummonBeast_Info">Cố gắng triệu hồi một bầy thú dữ dội phục vụ cho mệnh lệnh của bạn.\nKết quả thực tế có thể khác biệt.</string>
     <string name="SummonBeast_Name">Gọi Thú</string>
@@ -2944,6 +2947,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

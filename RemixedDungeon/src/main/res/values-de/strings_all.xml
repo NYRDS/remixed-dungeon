@@ -7,6 +7,7 @@
     <string name="Abilities_Default">Meisterschaft</string>
     <string name="Abilities_Elemental">Elementare Zaubersprüche</string>
     <string name="Abilities_Necromancy">Nekromantie</string>
+    <string name="Abilities_Priest">Göttliche Zauber</string>
     <string name="AboutScene_Code">Programmierung:</string>
     <string name="AboutScene_Email_Us">Kontaktiert uns:</string>
     <string name="AboutScene_Graphics">Grafik:</string>
@@ -911,6 +912,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="Gnoll_Name">Gnollspäher</string>
     <string name="Gnoll_Name_Objective">Gnollspäher</string>
     <string name="GodWrath_Info">Ein Blitz göttlichen Gerichts. Er verursacht schweren heiligen Schaden an einem einzelnen Feind — keine Kreatur, ob weltlich oder monströs, entkommt dem Zorn des Himmels.</string>
+    <string name="GodWrath_Name">Gottes Zorn</string>
     <string name="Gold_Collect">Sammle Goldmünzen, um sie später bei einem Händler auszugeben.</string>
     <string name="Gold_Info">Ein Haufen von %d Goldmünzen.</string>
     <string name="Gold_Info1">Eine Goldmünze.</string>
@@ -3111,6 +3113,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

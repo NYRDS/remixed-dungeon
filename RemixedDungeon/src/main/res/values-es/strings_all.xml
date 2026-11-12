@@ -1015,6 +1015,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HeroClass_PlagueDoctorPerks_3">Las pociones de [yellow:Gas Paralizante] y [yellow:Gas Tóxico] están pre-identificadas.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Los médicos de la peste sufren grandes penalizaciones de precisión sin su querida Sierra Ósea en la mano y no pueden usar armas a distancia.</string>
     <string name="HeroClass_Priest">Sacerdote</string>
+    <string name="HeroClass_PriestPerks_0">Los sacerdotes comienzan con 12 puntos de Fuerza y un báculo.</string>
     <string name="HeroClass_PriestPerks_2">Los sacerdotes usan maná para lanzar hechizos divinos: Bendición, Agua Bendita, Exorcismo y Últimos Ritos.</string>
     <string name="HeroClass_PriestPerks_3">Las vestiduras de batalla del sacerdote pueden invocarse para Santificar: una explosión sagrada que quema a los no-muertos cercanos (los demonios reciben la mitad de daño) y bendice al portador.</string>
     <string name="HeroClass_PriestPerks_5">Los sacerdotes empiezan con 12 puntos de maná.</string>
@@ -1742,6 +1743,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Potion_SureDrink">¿Seguro que quieres beberla? En la mayoría de casos deberías lanzar estas pociones a tus enemigos.</string>
     <string name="Potion_SureThrow">¿Seguro que quieres tirarla? Tendría mas sentido bebértela.</string>
     <string name="Potion_Yes">Sí, sé lo que estoy haciendo</string>
+    <string name="PriestArmor_ACSpecial">SANTIFICAR</string>
     <string name="PriestArmor_Desc">Estas vestiduras de batalla del sacerdocio pueden invocarse para Santificar: todos los no-muertos cerca del portador son quemados por la luz sagrada, mientras que el sacerdote recibe una bendición.</string>
     <string name="Prison_TileDescBookshelf">Esto probablemente sean los restos de la biblioteca de la prisión. ¿Arderá?</string>
     <string name="Prison_TileDescDeco">Hay viejas manchas de sangre en el suelo.</string>
@@ -3110,6 +3112,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
