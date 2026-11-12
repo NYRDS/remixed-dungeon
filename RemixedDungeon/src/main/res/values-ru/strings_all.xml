@@ -62,6 +62,8 @@
     <string name="Amulet_ACEnd">ЗАВЕРШИТЬ ИГРУ</string>
     <string name="Amulet_Info">Амулет Эндора, могущественнейший артефакт, неведомого происхождения. Считается, что он может исполнить любое желание, если воля его обладателя достаточно сильна, для того чтобы \&quot;убедить\&quot; амулет.</string>
     <string name="Amulet_Name">Амулет Эндора</string>
+    <string name="Anathema_Info">Слово отлучения. Помеченный враг принимает в полтора раза больше урона от любого источника — нежить и демоны остаются помеченными дольше.</string>
+    <string name="Anathema_Name">Анафема</string>
     <string name="AnesthesiaBuff_Info">Не чувствует боли и не просыпается от атак, но всё ещё получает урон.</string>
     <string name="AnesthesiaBuff_Name">Анестезия</string>
     <string name="Anesthesia_Cast">%s погружается в глубокий сон без сновидений.</string>
@@ -337,7 +339,7 @@
     <string name="BoneSaw_Info">Хирургическая пила тонкой работы, созданная для быстрого вскрытия. Её урон и скорость атаки растут с мастерством Чумного доктора. Критические удары выбивают дополнительные собираемые части, безжалостно эффективна против парализованных врагов.</string>
     <string name="BoneSaw_Name">Костяная пила</string>
     <string name="BlessingSpell_Cast">%s получает благословение.</string>
-    <string name="BlessingSpell_Info">Тихая молитва, окутывающая священника благодатью: на некоторое время улучшаются атака и защита.</string>
+    <string name="BlessingSpell_Info">Тихая молитва, окутывающая любую душу благодатью: на некоторое время улучшаются атака и защита. Нечисть не вместит её — нежить и демоны вместо этого отягощаются святым словом.</string>
     <string name="BlessingSpell_Name">Благословение</string>
     <string name="BoneShard_Info">Острый осколок кости, добытый из побеждённого врага. Эти осколки удивительно прочны и полезны в изготовлении.</string>
     <string name="BoneShard_Name">Осколок кости</string>
@@ -904,6 +906,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">гнолл-следопыт</string>
     <string name="Gnoll_Name_Objective">гнолла</string>
+    <string name="GodWrath_Info">Святое пламя божественного суда. Наносит тяжёлый святой урон одной цели — ни земная тварь, ни порождение тьмы не избегнут гнева небес.</string>
+    <string name="GodWrath_Name">Гнев Божий</string>
     <string name="Gold_Collect">Собирай золотые монеты, чтобы позже торговать в магазине.</string>
     <string name="Gold_Info">Горсть из %d золотых монет.</string>
     <string name="Gold_Info1">Одна золотая монетка.</string>
@@ -1022,7 +1026,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_Priest">Священник</string>
     <string name="HeroClass_PriestPerks_0">Священники начинают игру с 12 очками Силы и боевым посохом.</string>
     <string name="HeroClass_PriestPerks_1">Священники наносят на 25% больше урона нежити и получают от её атак на 25% меньше урона. Против демонов эти бонусы вдвое слабее.</string>
-    <string name="HeroClass_PriestPerks_2">Священники используют ману для Божественных заклинаний: Благословение, Святая Вода, Экзорцизм и Отпевание.</string>
+    <string name="HeroClass_PriestPerks_2">Священники используют ману для Божественных заклинаний: Благословение, Святая Вода, Экзорцизм, Отпевание, Гнев Божий и Анафема.</string>
     <string name="HeroClass_PriestPerks_3">Боевые облачения священника позволяют совершить Освящение: святая вспышка сжигает нежить поблизости (демоны получают половинный урон) и благословляет носителя.</string>
     <string name="HeroClass_PriestPerks_4">Свитки Снятия Проклятья известны с самого начала.</string>
     <string name="HeroClass_PriestPerks_5">Священники начинают игру с 12 очками маны.</string>

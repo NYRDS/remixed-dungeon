@@ -1,5 +1,6 @@
 --
--- Orthodox blessing: grants the Blessed buff to the caster
+-- Orthodox blessing: grace for any soul - but the unholy cannot receive it,
+-- undead and demons are instead weighed down by the holy word
 --
 
 local RPD = require "scripts/lib/commonClasses"
@@ -14,7 +15,7 @@ return spell.init{
             name          = "BlessingSpell_Name",
             info          = "BlessingSpell_Info",
             magicAffinity = "Priest",
-            targetingType = "self",
+            targetingType = "char",
             level         = 1,
             castTime      = 0.5,
             spellCost     = 4,
@@ -22,14 +23,23 @@ return spell.init{
         }
     end,
 
-    cast = function(self, spell, caster)
+    castOnChar = function(self, spell, caster, target)
         local skill = caster:skillLevel()
-        local buff = RPD.affectBuff(caster, RPD.Buffs.Blessed, 20 + 10 * skill)
+
+        if target:isUndead() or target:isDemon() then
+            -- the unholy cannot receive grace
+            RPD.affectBuff(target, RPD.Buffs.Slow, 3)
+            target:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.GOLD_FACTORY, 6)
+            RPD.playSound("snd_ray")
+            return true
+        end
+
+        local buff = RPD.affectBuff(target, RPD.Buffs.Blessed, 20 + 10 * skill)
         buff:level(1 + math.floor(skill / 3))
 
-        caster:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.GOLD_FACTORY, 6)
+        target:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.GOLD_FACTORY, 6)
         RPD.playSound("snd_ray")
-        RPD.glogp("BlessingSpell_Cast", caster:getName())
+        RPD.glogp("BlessingSpell_Cast", target:getName())
         return true
     end
 }

@@ -13,7 +13,7 @@ spells["Rogue"] = {"Cloak","Backstab","KunaiThrow","Haste"}
 spells["Witchcraft"] = {"Roar","LightningBolt","Heal","Order"}
 spells["Huntress"] = {"Calm","Charm","ShootInEye","SummonBeast"}
 spells["Elf"] = {"MagicArrow","Sprout","HideInGrass","NatureArmor"}
-spells["Priest"] = {"Heal","Blessing","HolyWater","Exorcism","LastRites"}
+spells["Priest"] = {"Heal","Blessing","HolyWater","Exorcism","LastRites","GodWrath","Anathema"}
 spells["PlagueDoctor"] = {"Anesthesia","Heal","BloodTransfusion","CorpseExplosion"}
 
 spells["Dev"] = {"TestSpell", "CurseItem"}

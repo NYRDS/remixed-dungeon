@@ -65,6 +65,8 @@
     <string name="Amulet_ACEnd">END THE GAME</string>
     <string name="Amulet_Info">The Amulet of Yendor is the most powerful known artifact of unknown origin. It is said that the amulet is able to fulfill any wish if its owner\'s will-power is strong enough to \&quot;persuade\&quot; it to do it.</string>
     <string name="Amulet_Name">Amulet of Yendor</string>
+    <string name="Anathema_Info">A word of excommunication. The marked foe takes half again as much damage from every source — the undead and demons stay marked longer.</string>
+    <string name="Anathema_Name">Anathema</string>
     <string name="AnesthesiaBuff_Info">Feels no pain and won\'t wake up from attacks, but still takes damage.</string>
     <string name="AnesthesiaBuff_Name">Anesthesia</string>
     <string name="Anesthesia_Cast">%s falls into a deep, dreamless sleep.</string>
@@ -338,7 +340,7 @@
 
     <string name="BoneSaw_Name">Bone Saw</string>
     <string name="BlessingSpell_Cast">%s is blessed.</string>
-    <string name="BlessingSpell_Info">A quiet prayer that wraps the priest in grace: attack and defense are improved for a while.</string>
+    <string name="BlessingSpell_Info">A quiet prayer that wraps any soul in grace: attack and defense are improved for a while. The unholy cannot receive it — undead and demons are instead weighed down by the holy word.</string>
     <string name="BlessingSpell_Name">Blessing</string>
     <string name="BoneShard_Info">A sharp shard of bone harvested from a defeated enemy. These shards are surprisingly durable and useful in crafting.</string>
     <string name="BoneShard_Name">Bone Shard</string>
@@ -904,6 +906,8 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll scout</string>
     <string name="Gnoll_Name_Objective">gnoll scout</string>
+    <string name="GodWrath_Info">Holy fire of divine judgment. It deals heavy holy damage to a single foe — no creature, mundane or monstrous, escapes the wrath of heaven.</string>
+    <string name="GodWrath_Name">God\'s Wrath</string>
     <string name="Gold_Collect">Collect gold coins to spend them later in a shop.</string>
     <string name="Gold_Info">A pile of %d gold coins.</string>
     <string name="Gold_Info1">One gold coin.</string>
@@ -1023,7 +1027,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_Priest">Priest</string>
     <string name="HeroClass_PriestPerks_0">Priests start with 12 points of Strength and a quarterstaff.</string>
     <string name="HeroClass_PriestPerks_1">Priests deal 25% bonus damage to the undead and take 25% less damage from their attacks. Against demons these bonuses are halved.</string>
-    <string name="HeroClass_PriestPerks_2">Priests use mana to cast Divine spells: Blessing, Holy Water, Exorcism and Last Rites.</string>
+    <string name="HeroClass_PriestPerks_2">Priests use mana to cast Divine spells: Blessing, Holy Water, Exorcism, Last Rites, God\'s Wrath and Anathema.</string>
     <string name="HeroClass_PriestPerks_3">Priest\'s battle vestments can be called upon to Sanctify: a holy burst that burns the undead nearby (demons take half damage) and blesses the wearer.</string>
     <string name="HeroClass_PriestPerks_4">Scrolls of Remove Curse are identified from the beginning.</string>
     <string name="HeroClass_PriestPerks_5">Priests start with 12 mana points.</string>
