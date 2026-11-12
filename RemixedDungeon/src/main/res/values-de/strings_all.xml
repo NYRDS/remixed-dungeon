@@ -1274,6 +1274,7 @@ Du kannst durch diese geisterhafte Erscheinung sehen. Auch wenn es wie ein Schä
     <string name="LastLevel_TileStatue">Säule</string>
     <string name="LastLevel_TileWater">Erkaltete Lava</string>
     <string name="LastRites_Info">Eine Totenmesse an einem Ort. Alle Untoten in zwei Feldern Entfernung werden verbrannt und gelähmt.</string>
+    <string name="LastRites_Name">Letzte Ölung</string>
     <string name="LastShopLevel_TileDescDeco">Mehrere Bodenplatten fehlen.</string>
     <string name="LastShopLevel_TileDescEmptySP">Dicker Teppich bedeckt den Boden.</string>
     <string name="LastShopLevel_TileDescEntrance">Eine Rampe führt auf die obere Ebene.</string>
@@ -3117,6 +3118,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 

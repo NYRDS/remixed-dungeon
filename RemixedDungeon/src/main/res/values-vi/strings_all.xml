@@ -1447,6 +1447,7 @@
     <string name="Scorpio_Name">bò cạp</string>
     <string name="Scorpio_Name_Objective">bọ cạp</string>
     <string name="ScrollHolder_Info">Bạn có thể đặt bất kỳ số lượng cuộn giấy nào vào chiếc hộp hình ống này. Nó tiết kiệm chỗ trong ba lô của bạn và bảo vệ các cuộn giấy khỏi lửa.</string>
+    <string name="ScrollHolder_Name">hộp đựng cuốn</string>
     <string name="ScrollOfChallenge_Info">Khi đọc to, cuộn sách này sẽ giải phóng một tiếng gầm thách thức đánh thức tất cả quái vật và cảnh báo chúng về vị trí của người đọc.</string>
     <string name="ScrollOfChallenge_Info1">Cuộn giấy phát ra tiếng gầm thách thức vang dội khắp hầm ngục!</string>
     <string name="ScrollOfChallenge_Name">Cuộn giấy Khiêu chiến</string>
@@ -2954,6 +2955,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
