@@ -682,6 +682,7 @@
     <string name="FrostArrow_Info">Je voelt een ijskoude aura uit de pijlpunt komen.</string>
     <string name="FrostAuraBuff_Info">Vorst omringt het lichaam, wat alles in de buurt vertraagt.</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
+    <string name="FrostBuff_Info">Vastbevroren, waardoor geen enkele actie mogelijk is.</string>
     <string name="FrostBuff_Name">Bevroren</string>
     <string name="Frost_Shatter">De koude doet %s barsten!</string>
     <string name="Froth_ArrowInKnee">Ik was vroeger ook een avonturier net als jij,\nMaar toen kreeg ik een pijl in mijn knie...</string>
@@ -2400,6 +2401,7 @@
     <string name="town_deco_glass_name">Breed Raam</string>
     <string name="town_deco_glass_stained_desc">De maker van dit glas heeft er waarschijnlijk veel moeite in gestoken.</string>
     <string name="town_deco_glass_stained_name">Glas in lood</string>
+    <string name="town_deco_grave_desc">Een standaard graafsteen, met een uitgezone inscriptie.</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
     <string name="town_deco_hay_name">hooi</string>
     <string name="town_deco_identifier_sign_desc">Het lijkt erop dat er een waarzegster in dat gebouw woont.</string>
@@ -2470,6 +2472,7 @@
     <string name="town_deco_stone_wall_broken_desc">Oude stenen muur, in slechte staat</string>
     <string name="town_deco_stone_wall_broken_name">Kapotte muur</string>
     <string name="town_deco_stone_wall_desc">Op de een of andere manier straalt deze muur warmte uit en lijkt een beetje nat.</string>
+    <string name="town_deco_stone_wall_name">Steenmuur</string>
     <string name="town_deco_stones_desc">Gewoon een stapel stenen.</string>
     <string name="town_deco_stones_name">Stenen</string>
     <string name="town_deco_stool_broken_desc">Deze kruk heeft betere dagen gekend.</string>
@@ -2693,6 +2696,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

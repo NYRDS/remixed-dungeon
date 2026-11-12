@@ -482,6 +482,7 @@
     <string name="DeferedDamageBuff_Info">Cơn đau đã biến thành cơn đau chậm, làm giảm sát thương nhận được một lần.\nSát thương còn lại để nhận %d</string>
     <string name="DeferedDamageBuff_Name">Sát thương hoãn lại (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s đã giết bạn...</string>
+    <string name="DewVial_ACDRINK">UỐNG</string>
     <string name="DewVial_Collected">Bạn đã nhặt một giọt sương vào lọ sương.</string>
     <string name="DewVial_Full">Lọ hơi sương đã đầy!</string>
     <string name="DewVial_Name">lọ sương</string>
@@ -711,6 +712,7 @@
     <string name="Hedgehog_Info1">Cậu có đang tìm chú Gấu không?</string>
     <string name="Hedgehog_Info2">Con ngựa thế nào, ở đó, trong sương mù?</string>
     <string name="Hedgehog_Info3">Bạn có thích trà với mứt mâm xôi không?</string>
+    <string name="Hedgehog_Name">nhím</string>
     <string name="HeroClass_Doctor">Bác Sĩ Dịch Hạch</string>
     <string name="HeroClass_Elf">yêu tinh</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
@@ -1257,6 +1259,7 @@
     <string name="PotionOfStrength_Apply">Sức mạnh mới mẻ tràn ngập cơ thể bạn.</string>
     <string name="PotionOfStrength_Name">Thuốc sức mạnh</string>
     <string name="PotionOfStrength_StaApply">+1 sức mạnh</string>
+    <string name="PotionOfToxicGas_Name">Chai thuốc Khí Độc</string>
     <string name="Potion_ACMoisten">LÀM ẨM</string>
     <string name="Potion_Beneficial">Chai thuốc có lợi</string>
     <string name="Potion_Colors_0">ngọc lam</string>
@@ -2937,6 +2940,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

@@ -257,6 +257,7 @@
     <string name="BishopQuest_4_1_Epilogue">Las legiones tambalean como marionetas con hilos cortados — puedo sentirlo incluso desde aquí. Su amo no perdonará esto. Toma esta poción de fuerza, hijo mío; necesitarás tu fuerza.</string>
     <string name="BishopQuest_4_1_Prologue">Has dado descanso a la infantería — ahora toca con sus amos. Los _caballeros de la muerte_ mandan las legiones de los muertos, y su voluntad ata los huesos a su marcha. Destruye a _dos caballeros de la muerte_, hijo mío.</string>
     <string name="BishopQuest_4_2_Epilogue">Las campanas de la iglesia repicaron solas cuando el último pasó — una buena señal, hijo mío. Toma esta poción de poder; la prueba final te exigirá mucho.</string>
+    <string name="BishopQuest_5_1_Epilogue">¡La obra del Señor está hecha! Desde este día puedes caminar el camino de un sacerdote. Toma esta bendición y estas limosnas, hijo mío — te las has ganado.</string>
     <string name="BishopQuest_5_1_InProgress">Destierra a _dos súcubos_, hijo mío — %d de %d desterrados. Guarda tu alma; sus susurros son dulce veneno.</string>
     <string name="BishopQuest_5_1_Prologue">Queda una prueba, la más dura de todas. El Infierno ha notado tu labor, hijo mío, y ha enviado a sus hijas. _Súcubos_ caminan por los salones profundos, y sus susurros son dulce veneno. Destierra a _dos súcubos_, y te transmitiré los misterios del sacerdocio.</string>
     <string name="Bishop_bye">Rezaré por ti mi hijo.</string>
@@ -3109,6 +3110,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
