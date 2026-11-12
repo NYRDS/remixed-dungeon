@@ -562,6 +562,7 @@
     <string name="IntroScene_Txt">سعى العديد من الأبطال من جميع الأنواع إلى المغامرة في الزنزانة قبلك. عاد بعضهم بالكنوز والتحف السحرية، لكن معظمهم لم يُسمع عنهم منذ ذلك الحين. لكن لم ينجح أحد في استعادة تميمة يندور، التي يُقال إنها مخبأة في أعماق الزنزانة.\n\nأنت تعتبر نفسك جاهزًا للتحدي، والأهم من ذلك، تشعر أن الحظ يبتسم لك. حان الوقت لبدء مغامرتك الخاصة!</string>
     <string name="InventoryScroll_No">لا، غيّرت رأيي</string>
     <string name="InvisibilityBuff_Info">مخفي تماماً، مما قد يساعد في تجنب الأخطار أو أن تصبح خطراً بحد ذاته.</string>
+    <string name="IronKey_Info">النقرات على هذه المفتاح الحديدي العتيق مهترئة جيدًا؛ وحبلها الجلدي بالي من القدم. أي باب قد تفتح؟</string>
     <string name="Item_ACDrop">إسقاط</string>
     <string name="Item_DirThrow">اختر اتجاه الرمي</string>
     <string name="Item_Info">شيء</string>
@@ -1394,6 +1395,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

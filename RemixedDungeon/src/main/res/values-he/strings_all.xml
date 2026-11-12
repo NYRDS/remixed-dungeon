@@ -616,6 +616,7 @@
     <string name="Lich_Name_Objective">ליץ\'</string>
     <string name="LightningBolt_Name">ברק</string>
     <string name="LightningTrap_Name">מלכודת ברק</string>
+    <string name="LloidsBeacon_ACReturn">חזור</string>
     <string name="LloidsBeacon_ACSet">להציב</string>
     <string name="LloidsBeacon_Preventing">אאורה קסומה חזקה הנמצאת כאן מונעת ממך להשתמש במגדלור של לויד!</string>
     <string name="LloidsBeacon_Set">\n\nמאור זה הוגדר אי שם ברמה %d של Remixed Dungeon.</string>
@@ -1699,6 +1700,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

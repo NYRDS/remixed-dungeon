@@ -981,6 +981,7 @@
     <string name="King_Name">Koning der Dwergen</string>
     <string name="King_Name_Objective">Koning der Dwergen</string>
     <string name="Knuckles_Gender">masculine</string>
+    <string name="Knuckles_Info">Een stuk ijzer gevormd om om de knokkels te passen.</string>
     <string name="Knuckles_Name">boksbeugel</string>
     <string name="KoboldIcemancer_Desc">Kobold IJsbezweerders waren de elite van de samenleving. Vooraanstaande krijgers, tovenaars en bovenal wetenschappers. Oude ijsmesters grepen de kunst van het bevelen over ijs, en creëerden complexe mechanismen versterkt met speciale spreuken.</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
@@ -2481,6 +2482,7 @@
     <string name="town_deco_vat_name">vat</string>
     <string name="town_deco_wall_beam_desc">Dient als een betrouwbare steun voor deze constructie.</string>
     <string name="town_deco_wall_beam_name">Balk</string>
+    <string name="town_deco_wall_brazier_desc">De damp die van de tlevende kolen komt, vult de kamer met aangename geuren.</string>
     <string name="town_deco_wall_brazier_name">Vuurkorf</string>
     <string name="town_deco_wall_candles_desc">Uitgedoofde kaarsen, waaruit nog steeds een aangename geur uitstreelt.</string>
     <string name="town_deco_wall_candles_name">Kaarsen</string>
@@ -2685,6 +2687,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

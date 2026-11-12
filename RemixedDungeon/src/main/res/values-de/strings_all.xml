@@ -2241,6 +2241,7 @@ Seine Preise erklären warum er lieber hier sein Geschäft betreibt.</string>
     <string name="StartScene_UnlockElf">Um diesen Charakter freizuschalten, besiege den König-Boss mit einer anderen Klasse.</string>
     <string name="StartScene_UnlockGnoll">Um diese Klasses freizuschalten musst du den Stadt-Heiler davon überzeugen den Gnoll-Schläger zu heilen</string>
     <string name="StartScene_UnlockNecromancer">Um diesen Charakter freizuschalten musst du den Lich mit irgendeiner anderen Klasse besiegen.</string>
+    <string name="StartScene_UnlockPriest">Um Priester freizuschalten - schließe die Quest des Bischofs in der Kirche ab</string>
     <string name="StartScene_Warning">Dein aktueller Spielfortschritt wird gelöscht.</string>
     <string name="StartScene_WinGame">Um »Herausforderungen« freizuschalten, gewinne das Spiel mit einer beliebigen Klasse.</string>
     <string name="StartScene_Yes">Ja, starte ein neues Spiel</string>
@@ -3108,6 +3109,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
