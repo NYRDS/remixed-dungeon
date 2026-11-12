@@ -906,7 +906,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll scout</string>
     <string name="Gnoll_Name_Objective">gnoll scout</string>
-    <string name="GodWrath_Info">A bolt of divine judgment. It deals heavy holy damage to a single foe — no creature, mundane or monstrous, escapes the wrath of heaven.</string>
+    <string name="GodWrath_Info">Holy fire of divine judgment. It deals heavy holy damage to a single foe — no creature, mundane or monstrous, escapes the wrath of heaven.</string>
     <string name="GodWrath_Name">God\'s Wrath</string>
     <string name="Gold_Collect">Collect gold coins to spend them later in a shop.</string>
     <string name="Gold_Info">A pile of %d gold coins.</string>

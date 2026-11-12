@@ -906,7 +906,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">гнолл-следопыт</string>
     <string name="Gnoll_Name_Objective">гнолла</string>
-    <string name="GodWrath_Info">Молния божественного суда. Наносит тяжёлый святой урон одной цели — ни земная тварь, ни порождение тьмы не избегнут гнева небес.</string>
+    <string name="GodWrath_Info">Святое пламя божественного суда. Наносит тяжёлый святой урон одной цели — ни земная тварь, ни порождение тьмы не избегнут гнева небес.</string>
     <string name="GodWrath_Name">Гнев Божий</string>
     <string name="Gold_Collect">Собирай золотые монеты, чтобы позже торговать в магазине.</string>
     <string name="Gold_Info">Горсть из %d золотых монет.</string>

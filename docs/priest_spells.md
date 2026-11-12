@@ -10,23 +10,27 @@ Seven spells are grouped under the Priest affinity — `scripts/spells/CustomSpe
 
 | Spell | Lv | SP cost | Cast time | Cooldown | Targeting | Icon | Script |
 |---|---|---|---|---|---|---|---|
-| Blessing | 1 | 4 | 0.5 | 15 | char (any, incl. self) | `spellsIcons/priest.png` f0 (cross) | `scripts/spells/Blessing.lua` |
+| Blessing | 1 | 4 | 0.5 | 15 | char (any, incl. self) | `spellsIcons/priest.png` f0 (cross in mandorla glow) | `scripts/spells/Blessing.lua` |
 | Heal | 2 | 5 | 1.0 | 3 | char (any, incl. self) | `spellsIcons/witchcraft.png` f2 | `scripts/spells/Heal.lua` |
-| Holy Water | 2 | 5 | 1.0 | 3 | cell | `spellsIcons/priest.png` f1 (crucifer flask) | `scripts/spells/HolyWater.lua` |
-| Exorcism | 3 | 7 | 1.0 | 6 | char, not self | `spellsIcons/priest.png` f2 (sunburst) | `scripts/spells/Exorcism.lua` |
-| Last Rites | 4 | 10 | 2.0 | 12 | cell | `spellsIcons/priest.png` f3 (candle in holder + rays) | `scripts/spells/LastRites.lua` |
-| God's Wrath | 4 | 9 | 1.5 | 15 | char, not self | `spellsIcons/priest.png` f4 (bolt) | `scripts/spells/GodWrath.lua` |
-| Anathema | 3 | 7 | 1.0 | 20 | char, not self | `spellsIcons/priest.png` f5 (violet seal) | `scripts/spells/Anathema.lua` |
+| Holy Water | 2 | 5 | 1.0 | 3 | cell | `spellsIcons/priest.png` f1 (gold crucifer flask) | `scripts/spells/HolyWater.lua` |
+| Exorcism | 3 | 7 | 1.0 | 6 | char, not self | `spellsIcons/priest.png` f2 (holy glow) | `scripts/spells/Exorcism.lua` |
+| Last Rites | 4 | 10 | 2.0 | 12 | cell | `spellsIcons/priest.png` f3 (praying saint, halo) | `scripts/spells/LastRites.lua` |
+| God's Wrath | 4 | 9 | 1.5 | 15 | char, not self | `spellsIcons/priest.png` f4 (golden flame) | `scripts/spells/GodWrath.lua` |
+| Anathema | 3 | 7 | 1.0 | 20 | char, not self | `spellsIcons/priest.png` f5 (violet cross seal) | `scripts/spells/Anathema.lua` |
 
 The icon sheet is fully bespoke and fully consumed — six frames, one spell each, in sheet
-order: cross → crucifer flask → sunburst → candle-in-holder → bolt → violet seal.
+order: cross-in-mandorla → crucifer flask → holy glow → praying saint → golden flame →
+violet cross seal.
 
 ![spell sheet](priest_graphics_review/11_spell_sheet_final.png)
 
-2026-11-09 changes (this round): the wrath school (God's Wrath, Anathema) added; Blessing
-retargeted from self to any char with an unholy rebuke branch; f1/f3 de-duplicated from the
-in-game items they were copied from (f1 was a restyle of the `items.png:56` potion, f3 was a
-byte-exact copy of the Mind Vision candle, `items/candle.png:0`).
+2026-11-12: full bespoke rework of all six frames delivered by Mike (see the 2026-11-12
+addendum for the matching effect changes — God's Wrath is now holy fire, not a bolt).
+
+2026-11-09 changes: the wrath school (God's Wrath, Anathema) added; Blessing retargeted from
+self to any char with an unholy rebuke branch; f1/f3 de-duplicated from the in-game items they
+were copied from (f1 was a restyle of the `items.png:56` potion, f3 was a byte-exact copy of
+the Mind Vision candle, `items/candle.png:0`).
 
 Note: Heal.lua declares `magicAffinity = "Witchcraft"` — the Priest grouping comes solely from
 CustomSpellsList, not from the spell's own desc. Its icon is on the witchcraft sheet, not
@@ -48,9 +52,10 @@ CustomSpellsList, not from the spell's own desc. Its icon is on the witchcraft s
   Cripple 5. Gold shafts on each hit mob, LIGHT flash at the cell. snd_bones. Largest AoE,
   highest cost and cast time.
 - **God's Wrath** — `10 + 5 × skill` damage to any single foe, **universal** (no undead/demon
-  bonus — that stays Exorcism's identity). Bolt visual via `CharUtils:lightningProc` with 0
-  damage, then the holy hit is applied directly with a gold shaft burst; friendly targets are
-  refused. snd_lightning.
+  bonus — that stays Exorcism's identity). Pillar of holy fire: FlameParticle burst + gold
+  shaft burst on the target, then the holy hit is applied directly; friendly targets are
+  refused. snd_burning. (2026-11-12: was a `CharUtils:lightningProc` bolt + snd_lightning —
+  reworked to match the flame icon.)
 - **Anathema** — marks the target with the Anathema lua buff (`scripts/buffs/Anathema.lua`,
   auto-discovered): it takes **+50% damage from every source** for `10 + 5 × skill` turns
   (`15 + 5 × skill` vs undead/demons). Buff icon reuses BuffIndicator.MARK (27). Shadow

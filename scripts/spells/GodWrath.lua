@@ -1,5 +1,5 @@
 --
--- God's Wrath: a bolt of divine judgement - heavy holy damage to any single target
+-- God's Wrath: holy fire of divine judgement - heavy holy damage to any single target
 --
 
 local RPD = require "scripts/lib/commonClasses"
@@ -30,12 +30,12 @@ return spell.init{
         local skill = caster:skillLevel()
         local damage = 10 + 5 * skill
 
-        -- bolt visual only (damage 0): the smite itself is holy, applied below
-        RPD.CharUtils:lightningProc(caster, target:getPos(), 0)
-
+        -- pillar of holy fire: flames wreath the target, gold light on top;
+        -- the smite itself is applied below
+        target:getSprite():emitter():burst(RPD.Sfx.FlameParticle.FACTORY, 8)
         target:getSprite():emitter():burst(RPD.Sfx.ShaftParticle.GOLD_FACTORY, 6)
         target:damage(damage, caster)
-        RPD.playSound("snd_lightning")
+        RPD.playSound("snd_burning")
         return true
     end
 }
