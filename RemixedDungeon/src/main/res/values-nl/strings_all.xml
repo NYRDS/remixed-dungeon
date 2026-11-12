@@ -157,6 +157,7 @@
     <string name="Badges_PotionsCooked5">25 drankjes gebrouwen</string>
     <string name="Badges_RareAll">Alle zeldzame monsters verslagen</string>
     <string name="Badges_RingHaggler">Ring der Handelaar verkregen</string>
+    <string name="Badges_RingThorns">Ring van Doornen verkregen</string>
     <string name="Badges_ShadowLord_Slain">Schaduwheer verslagen</string>
     <string name="Badges_SpiderQueen_Slain">Spinnenkoningin verslagen</string>
     <string name="Badges_StrengthAttained1">13 punten Kracht bereikt</string>
@@ -763,6 +764,7 @@
     <string name="Halls_TileGrass">Gloeiend mos</string>
     <string name="Halls_TileHighGrass">Emberpaddenstoel</string>
     <string name="Halls_TileStatue">Pilaar</string>
+    <string name="Halls_TileWater">Koude lava</string>
     <string name="Haste_Name">Extreme Haast</string>
     <string name="Heal_Cast">%s is genezen.</string>
     <string name="Heal_Info">Een behoorlijk nuttige spreuk in de Dungeon, toch?</string>
@@ -1949,6 +1951,7 @@
     <string name="WandMaker_Berry2">Iemand geluk met een Gniestoel zaadje, %s? Nee? Maak je geen zorgen, ik heb het niet eilig.</string>
     <string name="WandMaker_Defense">geabsorbeerd</string>
     <string name="WandMaker_Desc">Deze oude maar kerngezonde heer draagt een lichtelijk verwarde uitdrukking. Hij wordt beschermd door een magisch schild.</string>
+    <string name="WandMaker_Dust1">Oh, wat een aangename verrassing om een fatsoenlijk mens te ontmoeten in zo\'n plaats! Ik ben hier gekomen voor een zeldzame ingrediënt - _lijkenstof_. Die kan verzameld worden van skeletten en er is er overvloed in de kerker. Als tovenaar kan ik me redelijk verweeren tegen de lokale monsters, maar ik loop me in geen tijd verdwaald, het is heel embarrassant. Zou je me kunnen helpen? Ik betaal je graag met een van mijn beste staven.</string>
     <string name="WandMaker_Dust2">Enig geluk met lijkstof, %s? Botstapels zijn de meest voor de hand liggende plekken om te doorzoeken.</string>
     <string name="WandMaker_RotberryDesc">De bessen van deze struik smaken naar een zoete, zoete dood.</string>
     <string name="WandMaker_RotberryInfo">Het zaad stoot een brul uit die door het hele kerker weerklinkt!</string>
@@ -2145,6 +2148,7 @@
     <string name="WndLibrary_Catalogue_Title">Bibliotheek</string>
     <string name="WndLibrary_Codex_Btn">Verhalen</string>
     <string name="WndLibrary_Items_Btn">Voorwerpen</string>
+    <string name="WndLibrary_Levels_Btn">Kerker</string>
     <string name="WndLibrary_Mobs_Btn">Monsters</string>
     <string name="WndLocalModInstall_title">Mod installeren vanuit lokale map</string>
     <string name="WndModInstall_InstallingMod">Mod installeren</string>
@@ -2188,6 +2192,7 @@
     <string name="WndPremiumSettings_toolbar">Selecteer werkbalkmateriaal</string>
     <string name="WndPriest_Heal">genezen - %d goud</string>
     <string name="WndPriest_Heal_Minions">Genees al je volgelingen - Slechts %d goud!</string>
+    <string name="WndPriest_Instruction2">Als je hulp zoekt, kan ik genezing bieden voor slechts %d gouden munten!\nAls je op zoek bent naar een heilige Zegen, of, de Heer behoud ons, vervloekt was, ontmoet dan de Bisschop in onze nederige kerk.</string>
     <string name="WndPriest_Instruction2_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
     <string name="WndPriest_Instruction_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa, de Heer der Diepten! Helaas kan ik je nu niet doorlaten, want het gebouw wordt gerenoveerd. Maar als je hulp zoekt, kan ik genezing en voedsel aanbieden voor slechts %d gouden munten!</string>
     <string name="WndPriest_Title">Stadsprediker</string>
@@ -2261,6 +2266,7 @@
     <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
     <string name="WndTradeItem_Sell1">Verkoop 1 voor %dg</string>
     <string name="WndTradeItem_SellAll">Alles verkopen voor %dg</string>
+    <string name="WndTradeItem_SellN">Verkoop %1$d voor %2$dg</string>
     <string name="WndWandmaker_Battle">Gevechtsstaf</string>
     <string name="WndWandmaker_NonBattle">Hulpsstaf</string>
     <string name="Wnd_Button_Back">Terug</string>
@@ -2696,6 +2702,12 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
 
 
 
