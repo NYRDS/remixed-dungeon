@@ -1016,6 +1016,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="HeroClass_PriestPerks_1">Les prêtres infligent 25 % de dégâts supplémentaires aux morts-vivants et subissent 25 % de dégâts en moins de leurs attaques. Contre les démons, ces bonus sont réduits de moitié.</string>
     <string name="HeroClass_PriestPerks_2">Les prêtres utilisent le mana pour lancer des sorts divins : Bénédiction, Eau bénite, Exorcisme, Extrême-onction, Colère divine et Anathème.</string>
     <string name="HeroClass_PriestPerks_3">Les habits de combat du prêtre peuvent être invoqués pour Sanctifier : une explosion sacrée qui brûle les morts-vivants à proximité (les démons subissent la moitié des dégâts) et bénit le porteur.</string>
+    <string name="HeroClass_PriestPerks_4">Les parchemins de Dissipation de malédiction sont identifiés dès le début.</string>
     <string name="HeroClass_Rog">voleur</string>
     <string name="HeroClass_RogPerks_0">Les voleurs commencent avec un anneau des ténèbres +1.</string>
     <string name="HeroClass_RogPerks_1">Les voleurs identifient le type d\'un anneau en l\'équipant.</string>
@@ -1743,6 +1744,7 @@ Vous maintenez le %s prête à l\'emploi.</string>
     <string name="Potion_Yes">Oui, je sais ce que je fais </string>
     <string name="PriestArmor_ACSpecial">SANCTIFICATION</string>
     <string name="PriestArmor_Desc">Ces vêtements de bataille du sacerdoce peuvent être invoqués pour Sanctifier : tous les morts-vivants près du porteur sont brûlés par la lumière sacrée, tandis que le prêtre reçoit une bénédiction.</string>
+    <string name="PriestArmor_NotPriest">Seuls les prêtres peuvent utiliser cette armure !</string>
     <string name="Prison_TileDescBookshelf">C\'est probablement les restes d\'une librairie de prison. Pourraient-ils brûler ?</string>
     <string name="Prison_TileDescDeco">Il y a des traces de sang séché sur le sol.</string>
     <string name="Prison_TileWater">Eau froide et sombre.</string>
@@ -3124,6 +3126,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 

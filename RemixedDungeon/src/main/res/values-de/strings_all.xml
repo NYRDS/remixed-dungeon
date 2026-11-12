@@ -246,11 +246,13 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Bischof</string>
     <string name="BishopNPC_Name_Objective">Bischof</string>
+    <string name="BishopQuest_1_1_Epilogue">Segne dich, mein Kind — die ruhelosen Toten schlafen heute Nacht friedlich dank dir. Doch die Seuche der Untoten reicht tiefer als Knochen. Kehre zurück, wenn du bereit für die nächste Prüfung bist, und nimm diesen Trank für deine Wunden.</string>
     <string name="BishopQuest_1_1_InProgress">Du hast %1$d von %2$d Untoten zur Ruhe gebettet, mein Kind. Geh weiter.</string>
     <string name="BishopQuest_1_1_Prologue">Die Toten weigern sich zu ruhen, mein Kind. Knochen wandeln durch die Gefängniskorridore, und faule Dinge kriechen aus der Nekropole hervor. Lege zehn Untote zur Ruhe, und ich werde wissen, dass dein Glaube wahr ist.</string>
     <string name="BishopQuest_2_1_Epilogue">Ah, die Essenz der Sonne selbst... Der Weihrauch wird die Luft dieser Kirche wieder versüßen. Deine Hingabe wärmt das Herz eines alten Mannes. Nimm diesen Trank — ich habe ihn selbst gebraut.</string>
     <string name="BishopQuest_2_1_InProgress">Bring mir _drei Sonnengras-Samen_, mein Kind. Der Altar wartet.</string>
     <string name="BishopQuest_2_1_Prologue">Bevor ich dir die Geheimnisse des Priestertums anvertrauen darf, muss der Altar vorbereitet werden. Bring mir _drei Sonnengrassamen_ — ihre goldene Essenz ergibt den feinsten Weihrauch.</string>
+    <string name="BishopQuest_2_2_Epilogue">Mondlicht in einem Samenkorn... wie die Gnade selbst. Die Kirche wird heute Nacht nach Silber riechen. Nimm diesen Trank für deine Hingabe, mein Kind.</string>
     <string name="BishopQuest_2_2_InProgress">Bring mir _drei Moongrace-Samen_, mein Kind. Der Altar wartet.</string>
     <string name="BishopQuest_2_2_Prologue">Der Initiationsritus erfordert mondgesegneten Weihrauch, mein Kind. Bring mir _drei Mondgracensamen_, gesammelt dort, wo das Mondlicht in der Tiefe verweilt.</string>
     <string name="BishopQuest_3_1_Epilogue">Die letzte Ölung ist gesprochen, und der gefügige Zombie zerfällt zu friedlichem Staub. Er ruht nun wirklich. Dein Mitgefühl ehrt dich, mein Kind — nimm diese Schriftrolle, du wirst sie brauchen, wohin du auch gehst.</string>
@@ -265,7 +267,7 @@ Es sind nicht nur die rot glühenden Augen, sondern auch die Tatsache, dass niem
     <string name="BishopQuest_4_2_InProgress">Du hast %1$d von %2$d versklavten Seelen befreit. Lass sie nicht mehr dienen.</string>
     <string name="BishopQuest_4_2_Prologue">Es gibt nicht nur wandelnde Knochen, mein Kind. _Versklavte Seelen_ — arme Seelen in Ketten ewiger Knechtschaft, die die Lebenden hassen für die verlorene Freiheit. Ihre Trauer ist eine Waffe. Befreie _vier versklavte Seelen_ davon.</string>
     <string name="BishopQuest_5_1_Epilogue">Das Werk des Herrn ist vollbracht! Von diesem Tag an magst du den Pfad eines Priesters beschreiten. Nimm diesen Segen und diese Almosen, mein Kind — du hast sie dir verdient.</string>
-    <string name="BishopQuest_5_1_InProgress">Verbanne _zwei Sukkuben_, mein Kind — %d von %d verbannt. Hüte deine Seele; ihr Flüstern ist süßes Gift.</string>
+    <string name="BishopQuest_5_1_InProgress">Verbanne _zwei Sukkuben_, mein Kind — %1$d von %2$d verbannt. Hüte deine Seele; ihr Flüstern ist süßes Gift.</string>
     <string name="BishopQuest_5_1_Prologue">Eine Prüfung bleibt, die härteste von allen. Die Hölle hat deine Arbeit bemerkt, mein Kind, und ihre Töchter gesandt. _Succubi_ wandeln in den tiefen Hallen, und ihre Flüstern sind süßes Gift. Verbane _zwei Succubi_, und ich werde dir die Mysterien des Priestertums übergeben.</string>
     <string name="BishopQuest_AllDone">Du hast den langen Weg gegangen, mein Kind, und die Kirche vergisst nicht. Meine Tür steht dir immer offen.</string>
     <string name="Bishop_QuestCompleted">Priester-Klasse freigeschaltet</string>
@@ -3115,6 +3117,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

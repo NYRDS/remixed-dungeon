@@ -660,6 +660,7 @@
     <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">stinkende rat</string>
     <string name="FetidRat_Name_Objective">stinkende rat</string>
+    <string name="Fez_Info">Het is een hoofddeksel in de vorm van een afgeknotte kegel gemaakt van rood stof, met een kwast aan de top. En nee, het maakt de wereld niet driedimensionaal.</string>
     <string name="Fez_Name">Fez</string>
     <string name="FilteredMask_Name">N95-masker</string>
     <string name="FireArrow_Gender">feminine</string>
@@ -984,6 +985,7 @@
     <string name="King_Desc">De laatste koning van de dwergen stond bekend om zijn diepe kennis van de processen van leven en dood. Hij had leden van zijn hof overtuigd om deel te nemen aan een ritueel, dat hen eeuwige jeugdigheid zou moeten schenken. Uiteindelijk was hij de enige die het kreeg - en een leger ondoden als bonus.</string>
     <string name="King_Gender">masculine</string>
     <string name="King_Info1">Je kunt me niet doden, %s... Ik ben... onsterfelijk...</string>
+    <string name="King_Info2">Opstaan, slaven!</string>
     <string name="King_Info3">Hoe durf je!</string>
     <string name="King_Name">Koning der Dwergen</string>
     <string name="King_Name_Objective">Koning der Dwergen</string>
@@ -2384,6 +2386,7 @@
     <string name="town_deco_counter_name">Toonbank</string>
     <string name="town_deco_covered_table_desc">Houten tafel met een effen wit tafelkleed.</string>
     <string name="town_deco_covered_table_name">Tafel</string>
+    <string name="town_deco_crate_bottles_desc">Het bottelen van bier is een zeer populair tijdverdrijf onder herbergiers geworden.</string>
     <string name="town_deco_crate_bottles_name">Bierkrat</string>
     <string name="town_deco_crate_desc">Een stevige houten kist die zijn geheimen van binnen bewaart.</string>
     <string name="town_deco_crate_name">Kist</string>
@@ -2710,6 +2713,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

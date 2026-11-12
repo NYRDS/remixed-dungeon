@@ -246,7 +246,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Biskup</string>
     <string name="BishopNPC_Name_Objective">Biskup</string>
-    <string name="BishopQuest_1_1_InProgress">Upokoiłeś %d z %d nieumarłych, dziecko moje. Kontynuuj.</string>
+    <string name="BishopQuest_1_1_InProgress">Upokoiłeś %1$d z %2$d nieumarłych, dziecko moje. Kontynuuj.</string>
     <string name="BishopQuest_1_1_Prologue">Umarly odmierzają odpocząć, dziecko moje. Kości chodzą po korytarzach więzienia, a gnijące rzeczy wylezają z nekropoli. Upokój dziesięć nieumarłych, a poznasz, że twoja wiara jest prawdziwa.</string>
     <string name="BishopQuest_2_1_InProgress">Przynieś mi _trzy nasiona słonecznika_, moje dziecko. Ołtarz czeka.</string>
     <string name="BishopQuest_2_1_Prologue">Zanim przekażę ci tajemnice kapłaństwa, ołtarz musi zostać przygotowany. Przynieś mi _trzy nasiona słońca_ — ich złota esencja czyni najlepszy kadzidło.</string>
@@ -256,7 +256,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BishopQuest_3_2_InProgress">Przynieś mi _oswojonego nietoperza_, moje dziecko. Nie przerażaj biednego stworzenia.</string>
     <string name="BishopQuest_3_2_Prologue">Nawet bestie ciemności zasługują na błogosławieństwo, dziecko moje. Przynieś mi _nietoperza_, którego oswoiłeś, a ja poświęcę go światłu.</string>
     <string name="BishopQuest_4_1_Epilogue">Legiony chwieją się jak marionetki z przeciętymi nitkami — czuję to nawet stąd. Ich pan tego nie wybaczy. Weź ten eliksir siły, dziecko moje; będziesz potrzebować swojej siły.</string>
-    <string name="BishopQuest_4_1_InProgress">Zniszczyłeś %d z %d rycerzy śmierci. Złam ich wolę, a legiony spotkną się.</string>
+    <string name="BishopQuest_4_1_InProgress">Zniszczyłeś %1$d z %2$d rycerzy śmierci. Złam ich wolę, a legiony spotkną się.</string>
     <string name="BishopQuest_4_1_Prologue">Upokoiłeś pieszych — teraz czas na ich panów. _Rycerze śmierci_ wodzą legionyumarłych, a ich wola napędza kości w marsz. Zniszcz _dwóch rycerzy śmierci_, moje dziecko.</string>
     <string name="BishopQuest_4_2_Epilogue">Kościołowe dzwony zadzwiały same, gdy ostatni z nich odszedł — dobry znak, dziecko moje. Weź ten eliksir siły; ostatnia próba będzie od ciebie wymagać wielu rzeczy.</string>
     <string name="BishopQuest_4_2_Prologue">Oprócz chodzących kości są też związani zmarli, dziecko moje. _Uwięzione dusze_ — biedne dusze w łańcuchach wiecznej służby, nienawidzące żywych za utraconą wolność. Ich żal jest bronią. Uwolnij _cztery uwięzione dusze_ z niego.</string>

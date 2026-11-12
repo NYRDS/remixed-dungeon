@@ -228,6 +228,7 @@
     <string name="BlessedBuff_Name">Được Chúc Phước</string>
     <string name="BloodTransfusion_FullHP">Máu của bạn đã đầy.</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
+    <string name="BloodTransfusion_WontAgreed">Đối tượng kháng cự việc trích xuất tinh huyết của mình.</string>
     <string name="BodyArmorBuff_Info">Giáp được tăng nhưng phải hy sinh tốc độ di chuyển.</string>
     <string name="BodyArmorBuff_Name">Giáp Cơ Thể</string>
     <string name="BodyArmorSpell_Info">Kích hoạt sức mạnh cơ bắp dự trữ, làm cho chúng tạm thời mạnh hơn, từ đó tăng đáng kể giáp của bạn nhưng đánh đổi tốc độ di chuyển.</string>
@@ -1043,6 +1044,7 @@
     <string name="MercenaryNPC_Name">lính thuê</string>
     <string name="MercenaryNPC_Name_Objective">lính đánh thuê</string>
     <string name="Metabolism_Txt">%s của trao đổi chất</string>
+    <string name="MiasmaGas_Info">Một loại khí độc hại gây ngộ độc, làm yếu và gây rối loạn cảm giác cho những người hít phải nó.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name_Objective">mô phỏng</string>
     <string name="MimicPie_Desc">Mimics là những sinh vật phép thuật có thể biến hình thành bất kỳ hình dạng nào chúng muốn. Con này trông như một chiếc bánh ngon to lớn.</string>
@@ -2047,6 +2049,7 @@
     <string name="WndSelectLanguage_ImproveTranslation">Vui lòng giúp cải thiện bản dịch Remixed Dungeon</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Nhấn vào đây để tham gia đội dịch Remixed Dungeon</string>
     <string name="WndSettingsInGame_GameLog">Nhật ký trò chơi</string>
+    <string name="WndSettingsInGame_IsometricTiles">Các ô Isometric</string>
     <string name="WndSettings_ActionButtonSize">Kích thước nút hành động</string>
     <string name="WndSettings_Brightness">Độ sáng</string>
     <string name="WndSettings_ClassicFont">Font Classic</string>
@@ -2951,6 +2954,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

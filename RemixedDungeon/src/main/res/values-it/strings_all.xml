@@ -252,7 +252,7 @@
     <string name="BishopQuest_3_2_Prologue">Anche le bestie delle tenebre meritano una benedizione, figlio mio. Portami un _pipistrello_ che hai addomesticato, e lo consacrerò alla luce.</string>
     <string name="BishopQuest_4_1_InProgress">Hai distrutto %1$d su %2$d cavalieri della morte. Spezza la loro volontà, e le legioni vacilleranno.</string>
     <string name="BishopQuest_4_2_Epilogue">Le campane della chiesa suonarono da sole quando l\'ultimo spirò — un buon segno, figlio mio. Prendi questa pozione di forza; la prova finale richiederà molto da te.</string>
-    <string name="BishopQuest_5_1_InProgress">Bandisci _due succubi_, figlio mio — %d di %d bandite. Custodisci la tua anima; i loro sussurri sono un dolce veleno.</string>
+    <string name="BishopQuest_5_1_InProgress">Bandisci _due succubi_, figlio mio — %1$d di %2$d bandite. Custodisci la tua anima; i loro sussurri sono un dolce veleno.</string>
     <string name="Bishop_bye">Pregherò per te, figlio mio.</string>
     <string name="Bishop_great_bless">Grande benedizione %d g</string>
     <string name="Bishop_lesser_bless">Benedizione minore - %d g</string>
