@@ -48,7 +48,10 @@ local Buffs  = {
     Barkskin     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Barkskin"),
     Sleep        = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Sleep"),
     Slow         = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Slow"),
-    Blindness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blindness")
+    Blindness    = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blindness"),
+    -- kind-string API parity for mods written against 32.5 (RPD.Buffs.<Kind>)
+    Bleeding     = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Bleeding"),
+    Shadows      = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Shadows")
 }
 
 local Blobs = {
