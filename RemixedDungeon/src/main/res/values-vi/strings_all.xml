@@ -1817,6 +1817,7 @@
     <string name="WandOfFirebolt_Info">Cây đũa này phóng ra những đợt lửa ma thuật. Nó sẽ đốt cháy địa hình dễ cháy, và sẽ gây sát thương và đốt cháy sinh vật bị trúng.</string>
     <string name="WandOfFirebolt_Info1">Bạn tự đốt cháy mình bằng Cây Trượng Lửa...</string>
     <string name="WandOfFlock_Info">Một cái vẩy đũa này triệu hồi một đàn cừu ma thuật, tạo ra một chướng ngại vật tạm thời không thể vượt qua.</string>
+    <string name="WandOfFlock_Name">Đũa phép Bầy Cừu</string>
     <string name="WandOfFlock_SheepBaa_1">Bêê?</string>
     <string name="WandOfFlock_SheepBaa_2">Bê.</string>
     <string name="WandOfIcebolt_Info">Cây gậy này phóng ra một tia băng, gây sát thương nhẹ cho mục tiêu. Cũng có khả năng làm chậm hoặc thậm chí đóng băng kẻ địch.</string>
@@ -2962,6 +2963,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

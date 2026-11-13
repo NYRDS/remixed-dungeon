@@ -251,6 +251,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BishopQuest_2_1_InProgress">Przynieś mi _trzy nasiona słonecznika_, moje dziecko. Ołtarz czeka.</string>
     <string name="BishopQuest_2_1_Prologue">Zanim przekażę ci tajemnice kapłaństwa, ołtarz musi zostać przygotowany. Przynieś mi _trzy nasiona słońca_ — ich złota esencja czyni najlepszy kadzidło.</string>
     <string name="BishopQuest_2_2_Epilogue">Księżycowe światło w nasieniu... jak sama łaska. Dziś noc kościół będzie pachnieć srebrem. Weź to eliksir za swoją oddaność, dziecko moje.</string>
+    <string name="BishopQuest_2_2_InProgress">Przynieś mi _trzy nasiona Księżycowego Wdzięku_, moje dziecko. Ołtarz czeka.</string>
     <string name="BishopQuest_3_1_Epilogue">Ostatnie pominy zostały wypowiedziane, a posłuszny zombie rozpada się w spokojny pył. Teraz spoczywa naprawdę. Twoje miłosierdzie cię honoruje, dziecko moje — weź ten zwój, będziesz go potrzebować tam, gdzie idziesz.</string>
     <string name="BishopQuest_3_1_InProgress">Przynieś mi _oswojonego zombie_, dziecko moje. Traktuj go z delikatnością — nie wie, co robi.</string>
     <string name="BishopQuest_3_2_InProgress">Przynieś mi _oswojonego nietoperza_, moje dziecko. Nie przerażaj biednego stworzenia.</string>
@@ -3135,6 +3136,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
