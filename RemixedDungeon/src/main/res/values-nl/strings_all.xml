@@ -483,6 +483,7 @@
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="ColdSpirit_Name_Objective">koude geest</string>
     <string name="ComboBuff_Info">De volgende aanval zal een combo-aanval zijn.</string>
+    <string name="ComboBuff_Name">Combo</string>
     <string name="Combo_Combo">%d treffer combo!</string>
     <string name="CommonArrow_Gender">feminine</string>
     <string name="CommonArrow_Info">Gewone houten pijl met een ijzeren punt.</string>
@@ -2168,6 +2169,7 @@
     <string name="WndInfoItem_Skeleton">Skelettenresten</string>
     <string name="WndInfoItem_Tomb">Graf</string>
     <string name="WndInstallingMod_copying_file">Kopiëren van %s naar Remixed Dungeon opslag</string>
+    <string name="WndInstallingMod_deleting_file">Verwijderen %s</string>
     <string name="WndInstallingMod_please_wait">Mod wordt geïnstalleerd, even geduld...</string>
     <string name="WndInstallingMod_skipping_file">Overslaan %s</string>
     <string name="WndItemAlchemy_ExecuteRecipe">Recept uitvoeren</string>
@@ -2297,6 +2299,7 @@
     <string name="WndTradeItem_BuyAll">Koop alles voor %dg</string>
     <string name="WndTradeItem_BuyN">Koop %1$d voor %2$dg</string>
     <string name="WndTradeItem_Cancel">Vergeet het</string>
+    <string name="WndTradeItem_Sale">TE KOOP: %1$s - %2$dg</string>
     <string name="WndTradeItem_Sell">Verkopen voor %dg</string>
     <string name="WndTradeItem_Sell1">Verkoop 1 voor %dg</string>
     <string name="WndTradeItem_SellAll">Alles verkopen voor %dg</string>
@@ -2742,6 +2745,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
