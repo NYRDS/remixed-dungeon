@@ -1570,6 +1570,7 @@
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name_Objective">runische schedel</string>
     <string name="SacrificialSword_Gender">masculine</string>
+    <string name="SacrificialSword_Info">Op het eerste gezicht ziet deze verouderde bronsen zwaard, bedekt met patinavlekken, volledig nutteloos uit. Maar er sluimert een soort oude, archaïsche kracht in. Die kracht kan bijna elk wezen omtoveren tot een wil-loze slaaf. Men moet alleen de juiste manier vinden om ze te wekken...</string>
     <string name="SantaHat_Info">Niets zet je zo in de \&quot;Dungeoning\&quot; stemming als de rode zijden hoed van Santa, Heer van de Diepten.</string>
     <string name="SantaHat_Name">Hoed van Santa</string>
     <string name="ScaleArmor_Desc">De metalen schubben op een leren vest zorgen voor een flexibel, maar beschermend pantser.</string>
@@ -2748,6 +2749,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

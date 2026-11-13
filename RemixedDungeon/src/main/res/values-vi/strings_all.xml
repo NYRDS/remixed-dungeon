@@ -1975,6 +1975,7 @@
     <string name="WndHero_Satiety">Độ no</string>
     <string name="WndHero_StaCatalogus">Danh mục</string>
     <string name="WndHero_StaJournal">Nhật ký</string>
+    <string name="WndHero_Stats">Chỉ số</string>
     <string name="WndHero_Stealth">Sự khéo léo</string>
     <string name="WndImp_Message">Ồ đúng rồi! Bạn là anh hùng của tôi!\nVề phần thưởng, tôi không có tiền mặt ngay bây giờ, nhưng tôi có thứ tốt hơn. Đây là chiếc nhẫn gia truyền của tôi: ông tôi đã lấy nó từ ngón tay của một paladin đã chết.</string>
     <string name="WndImp_Reward">Nhận chiếc nhẫn</string>
@@ -2978,6 +2979,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
