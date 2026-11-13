@@ -940,7 +940,7 @@
     <string name="Sheep_Desc">זוהי כבשה קסומה. מה קסום בה? אינך יכול להרוג אותה. היא תעמוד במקום עד שתיעלם בקסם, בזמן שהיא לועסת גרה במבט ריק.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">כבשה</string>
-    <string name="ShieldInfoTemplate">מגן זה יחסום עד %1 נזק נכנס. עם סיכוי של %2 %%. ייקח %3.1f שניות להתאושש לאחר חסימה מוצלחת.</string>
+    <string name="ShieldInfoTemplate">מגן זה יחסום עד %1$d נזק נכנס. עם סיכוי של %2$d %%. ייקח %3$3.1f שניות להתאושש לאחר חסימה מוצלחת.</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="ShootInEye_Name">ירי בעין</string>
     <string name="Shopkeeper_Buy">בחר פריט לקנייה</string>
