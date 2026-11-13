@@ -242,6 +242,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Évêque</string>
     <string name="BishopNPC_Name_Objective">Évêque</string>
+    <string name="BishopQuest_1_1_Epilogue">Que la bénédiction soit sur toi, mon enfant — les morts agités dorment paisiblement ce soir grâce à toi. Mais la peste de la non-mort est plus profonde que les os. Reviens me voir quand tu seras prêt pour la prochaine épreuve, et prends cette potion pour tes blessures.</string>
     <string name="BishopQuest_1_1_InProgress">Tu as mis au repos %1 sur %2 morts-vivants, mon enfant. Continue.</string>
     <string name="BishopQuest_1_1_Prologue">Les morts refusent de se reposer, mon enfant. Des ossements arpentent les couloirs de la prison, et des choses pourries s\'échappent de la Nécropole. Accorde le repos à dix morts-vivants, et je saurai que ta foi est sincère.</string>
     <string name="BishopQuest_2_1_Epilogue">Ah, l\'essence même du soleil... L\'encens parfumera à nouveau l\'air de cette église. Votre dévotion réchauffe le cœur d\'un vieillard. Prenez cette potion — je l\'ai brassée moi-même.</string>
@@ -3127,6 +3128,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

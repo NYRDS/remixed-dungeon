@@ -986,6 +986,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="HeroClass_PlagueDoctorPerks_4">역병 의사는 사랑하는 뼈 톱을 손에 들고 있지 않으면 큰 정확도 페널티를 받으며 원거리 무기를 사용할 수 없습니다.</string>
     <string name="HeroClass_Priest">사제</string>
     <string name="HeroClass_PriestPerks_2">사제는 마나를 사용하여 신성 주문을 시전합니다: 축복, 성수, 구마, 최후의 의식.</string>
+    <string name="HeroClass_PriestPerks_3">사제의 전투 법의는 성화(Sanctify)를 위해 소환될 수 있습니다: 근처의 언데드를 태우는 신성한 폭발 (악마는 절반 피해) 그리고 착용자를 축복합니다.</string>
     <string name="HeroClass_Rog">도적</string>
     <string name="HeroClass_RogPerks_0">도적은 그림자의 반지+1을 가지고 시작한다.</string>
     <string name="HeroClass_RogPerks_1">도적은 반지를 착용하자마자 그 반지의 종류를 알아낼 수 있다.</string>
@@ -3084,6 +3085,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="town_table_fortune_ball_name">수정구슬</string>
     <string name="town_table_fortune_desc">비단 담요로 덮인 탁자입니다. 당신은 다양한 타로 카드가 특이한 순서로 놓여져 있는 것을 볼 수 있습니다.</string>
     <string name="town_table_fortune_name">탁자</string>
+
 
 
 

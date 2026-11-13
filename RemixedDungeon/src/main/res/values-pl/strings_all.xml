@@ -264,6 +264,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BishopQuest_4_2_Prologue">Oprócz chodzących kości są też związani zmarli, dziecko moje. _Uwięzione dusze_ — biedne dusze w łańcuchach wiecznej służby, nienawidzące żywych za utraconą wolność. Ich żal jest bronią. Uwolnij _cztery uwięzione dusze_ z niego.</string>
     <string name="BishopQuest_5_1_Epilogue">Dzień Pański się zakończył! Od tego dnia możesz pójść ścieżką kapłana. Przyjmij to błogosławieństwo i te jałmużny, dziecko moje — zasłużyłeś na nie.</string>
     <string name="BishopQuest_5_1_InProgress">Wypędź _dwie sukkuby_, dziecko moje — %1$d z %2$d wypędzonych. Pilnuj swojej duszy; ich szepoty to słodkie jad.</string>
+    <string name="BishopQuest_AllDone">Przeszedłeś długą drogę, dziecko moje, i kościół tego nie zapomni. Moje drzwi zawsze są dla ciebie otwarte.</string>
     <string name="Bishop_QuestCompleted">Klasa Kapłan odblokowana</string>
     <string name="Bishop_bye">Będę się za ciebie modlił moje dziecko.</string>
     <string name="Bishop_great_bless">Wielkie Błogosławieństwo -  %d złota.</string>
@@ -3138,6 +3139,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

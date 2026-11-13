@@ -311,6 +311,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BlessedBuff_Info">Kutsamanın dokunduğu kişiler için hassasiyet ve kaçınma gelsin!</string>
     <string name="BlessedBuff_Name">Kutsanmış</string>
     <string name="BlessingSpell_Info">Rahibi lütufle saran sessiz bir dua: bir süre için saldırı ve savunma artar.</string>
+    <string name="BlessingSpell_Name">Bereket</string>
     <string name="BlindnessBuff_Info">Tamamen kör, sadece etraftaki sesler duyulabilir.</string>
     <string name="BlindnessBuff_Name">Kör oldun</string>
     <string name="BloodTransfusion_Drained">Yaşam özü evcil hayvanınızdan size akıyor.</string>
@@ -3119,6 +3120,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

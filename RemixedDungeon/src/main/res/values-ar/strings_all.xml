@@ -478,6 +478,7 @@
     <string name="HeroClass_ElfPerks_5">الجان أقل مهارة في استخدام أسلحة القتال القريب.</string>
     <string name="HeroClass_GnollPerks_2">يبدأ الغنول بدون أي درع ولكن مع فأس حربية فريدة</string>
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
+    <string name="HeroClass_GnollPerks_4">الغنول لا يهاجم غنول آخر إلا عند الاستفزاز</string>
     <string name="HeroClass_Hun">الصيادة</string>
     <string name="HeroClass_HunPerks_1">تبدأ الصيادات ببوميرانغ فريد قابل للترقية.</string>
     <string name="HeroClass_HunPerks_4">تستطيع الصيادات الإحساس بالوحوش المجاورة حتى لو كانت مختبئة خلف العوائق.</string>
@@ -1395,6 +1396,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 
