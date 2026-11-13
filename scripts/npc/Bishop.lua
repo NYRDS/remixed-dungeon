@@ -203,7 +203,22 @@ return mob.init({
             end
 
             local questIndex_ = data["questIndex"]
-            local stageQuest = questList[questIndex_][data["questVariant"]]
+
+            -- a save can carry stage/variant written by an older script version;
+            -- re-offer the quest instead of crashing on nil stageQuest
+            local stage = questList[questIndex_]
+            local stageQuest = stage and stage[data["questVariant"]]
+
+            if stageQuest == nil then
+                if stage == nil then
+                    questIndex_ = math.max(1, math.min(questIndex_, #questList))
+                    data["questIndex"] = questIndex_
+                end
+                data["questInProgress"] = false
+                data["questVariant"] = nil
+                mob.storeData(self, data)
+                return self:interact(chr)
+            end
 
             local function giveReward()
                 local rewardItem = stageQuest.reward.item
