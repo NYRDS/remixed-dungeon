@@ -1531,6 +1531,7 @@
     <string name="ServiceManNPC_Limit_Reached">Tôi thành thật xin lỗi, nhưng bạn đã đạt giới hạn hiện tại. Nhưng bạn sẽ có thể sử dụng dịch vụ của chúng tôi lại cho mỗi cấp độ anh hùng bạn nhận được!</string>
     <string name="ServiceManNPC_Name">nhân viên</string>
     <string name="ServiceManNPC_Name_Objective">nhân viên</string>
+    <string name="ServiceManNPC_NotReady">Xin lỗi, nhưng bộ phim chưa sẵn sàng, bạn có thể thử lại sau vài phút.</string>
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
     <string name="Sewer_TileWater">nước đục</string>
@@ -1730,6 +1731,7 @@
     <string name="Tengu_Info1">Cuối cùng cũng tự do...</string>
     <string name="Tengu_Info2">Bắt được rồi, %s!</string>
     <string name="Tengu_Info3">Bắt được rồi, %s!</string>
+    <string name="Tengu_Name">Tengu</string>
     <string name="Tengu_Name_Objective">Tengu</string>
     <string name="TerrorBuff_Info">Có vẻ như ai đó rất sợ hãi.</string>
     <string name="TerrorBuff_Name">Sợ hãi</string>
@@ -1947,6 +1949,7 @@
     <string name="WndFortuneTeller_Instruction">Tôi có thể tiết lộ những bí mật đằng sau các vật phẩm mà bạn sở hữu.\nMột lần nhận diện sẽ tốn %d đồng tiền.</string>
     <string name="WndFortuneTeller_No_Item">Cẩn thận, bạn chắc không muốn tiêu tiền oan, phải không? Trong túi đồ của bạn không có vật phẩm chưa định danh.</string>
     <string name="WndFortuneTeller_Title">Người soi đồn.</string>
+    <string name="WndGame_Challenges">Thử thách</string>
     <string name="WndGame_Customizations">Tùy chỉnh</string>
     <string name="WndGame_Exit">Thoát Remixed Dungeon</string>
     <string name="WndGame_Load">Tải</string>
@@ -2975,6 +2978,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

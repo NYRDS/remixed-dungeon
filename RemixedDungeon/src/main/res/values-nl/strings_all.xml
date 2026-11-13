@@ -481,6 +481,7 @@
     <string name="Codex_Story_9">Verplaatsing Glief - Wanneer de Held wordt geraakt, bestaat de kans dat de Held naar een willekeurige zichtbare tegel wordt geteleporteerd. Deze glief werkt niet op baasniveaus.</string>
     <string name="ColdSpirit_Desc">De koude geest is de uitvlucht van vorst, in zijn zuiverste vorm. Als een gedachtenloze klomp magische energie gehoorzaamt hij de wil van de magiër die hem oproept, of handelt volgens basisinstincten.</string>
     <string name="ColdSpirit_Gender">masculine</string>
+    <string name="ColdSpirit_Name">koude geest</string>
     <string name="ColdSpirit_Name_Objective">koude geest</string>
     <string name="ComboBuff_Info">De volgende aanval zal een combo-aanval zijn.</string>
     <string name="ComboBuff_Name">Combo</string>
@@ -629,6 +630,7 @@
     <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Een uitzonderlijk voorbeeld van elvenvakmanschap. Het is duidelijk effectiever en nauwkeuriger dan een gewone houten boog.</string>
     <string name="ElvenDagger_Gender">masculine</string>
+    <string name="ElvenDagger_Info">Dit wapen is gemaakt van een speciaal metalen legering, wat het veel lichter maakt in vergelijking met een gewone dolk.</string>
     <string name="ElvenDagger_Name">elfen dolk</string>
     <string name="EncumbranceBuff_CharAct_1">Ik ben niet sterk genoeg om %s goed te hanteren.</string>
     <string name="EncumbranceBuff_CharAct_2">Deze %s is te zwaar voor mij om effectief te gebruiken.</string>
@@ -1416,6 +1418,7 @@
     <string name="Potion_MoistenUseless">Het lijkt erop dat je dit drankje net hebt verspild.</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SelectForMoisten">Selecteer een item om te bevochtigen</string>
+    <string name="Potion_SureDrink">Weet je zeker dat je het wilt drinken? In de meeste gevallen moet je dergelijke drankjes op je vijanden werpen.</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
     <string name="Potion_Yes">Ja, ik weet wat ik doe</string>
     <string name="PriestArmor_NotPriest">Alleen priesters kunnen deze armor gebruiken!</string>
@@ -2745,6 +2748,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
