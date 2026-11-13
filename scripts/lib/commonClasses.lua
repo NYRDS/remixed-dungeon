@@ -578,6 +578,11 @@ local RPD = {
 
         fmt = StringsManager:maybeId(fmt)
 
+        -- undo StringsManager auto-quote wrapping of printf specs (3af2952a1):
+        -- quoted "%1$d" specs and the %"% d"-style artifacts the quoting regex
+        -- leaves when it crosses a literal %% pair (shields.lua invalid option '%"')
+        fmt = fmt:gsub('"(%%[%d%$]*[-+ #0%d.,()]*[doxXfFeEgGaA])"', '%1')
+
         fmt = fmt:gsub('%%(%d+)%$', function(i)
             table.insert(order, args[tonumber(i)])
             return '%'
