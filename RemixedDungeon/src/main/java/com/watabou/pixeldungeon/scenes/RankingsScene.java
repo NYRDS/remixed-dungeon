@@ -10,6 +10,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Button;
@@ -323,11 +324,15 @@ public class RankingsScene extends PixelScene {
 
         @Override
         protected void onClick() {
+            Group parent = getParent();
+            if (parent == null) {
+                return; // touch hit a record detached from the scene
+            }
             Dungeon.reset();
             if (!rec.gameFile.isEmpty()) {
-                getParent().add(new WndRanking(rec.gameFile));
+                parent.add(new WndRanking(rec.gameFile));
             } else {
-                getParent().add(new WndError(StringsManager.getVar(R.string.RankingsScene_NoInfo)));
+                parent.add(new WndError(StringsManager.getVar(R.string.RankingsScene_NoInfo)));
             }
         }
     }
