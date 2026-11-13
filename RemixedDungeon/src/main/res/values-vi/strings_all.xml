@@ -63,6 +63,7 @@
     <string name="Armor_Incompatible">Tương tác của các loại ma thuật khác nhau đã xóa glyph trên bộ giáp này!</string>
     <string name="Armor_Info1">%1$s cung cấp khả năng hấp thụ sát thương tối đa \&quot;%2$d\&quot; điểm mỗi đòn tấn công.</string>
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
+    <string name="Armor_Info4">\n\nĐiển hình %1 cung cấp khả năng hấp thụ sát thương lên đến %2 điểm mỗi lần tấn công và yêu cầu %3 điểm sức mạnh.</string>
     <string name="Armor_Info6">Nó được khắc chữ.</string>
     <string name="Armor_Info7b">và vì nó bị nguyền rủa, bạn không thể cởi nó ra</string>
     <string name="Armor_ToString">%1 :%2</string>
@@ -536,6 +537,7 @@
     <string name="Dungeon_Tips_17">Giếng Chuyển Hóa có thể ban cho bạn một vật phẩm không thể có được bằng cách khác.</string>
     <string name="Dungeon_Tips_18">Cách duy nhất để phù phép vũ khí là nâng cấp nó bằng cuộn giấy Nâng cấp vũ khí.</string>
     <string name="Dungeon_Tips_19">Không được mang vũ khí trước mặt Đức Vua!</string>
+    <string name="Dungeon_Tips_2">Hãy nhớ rằng tăng sức mạnh không phải là cách duy nhất để sử dụng trang bị tốt hơn, bạn có thể đi theo cách khác bằng cách giảm yêu cầu sức mạnh của vật phẩm bằng Cuộn Nâng Cấp.</string>
     <string name="Dungeon_Tips_20">Pixel-Mart. Giá đặc biệt cho những người săn quỷ!</string>
     <string name="Dungeon_Tips_21">Văn bản được viết bằng ngôn ngữ của quỷ.</string>
     <string name="Dungeon_Tips_23">Văn bản được viết bằng ngôn ngữ quỷ dữ.</string>
@@ -601,6 +603,7 @@
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Mũi tên này trông giống như một mũi tên bình thường, chỉ khác là một ánh sáng đỏ ấm tỏa ra từ đầu mũi tên.</string>
     <string name="FireArrow_Name">mũi tên lửa</string>
+    <string name="FireElemental_Desc">Các yếu tố lửa lang thang là sản phẩm phụ của việc triệu hồi các thực thể vĩ đại. Chúng quá hỗn loạn trong bản chất để có thể bị kiểm soát bởi ngay cả những demonologist mạnh nhất.</string>
     <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">nguyên tố lửa</string>
     <string name="FireElemental_Name_Objective">nguyên tố lửa</string>
@@ -873,6 +876,7 @@
     <string name="IronKey_FromDepth">chìa khóa sắt từ độ sâu %d</string>
     <string name="IronKey_Info">Các rãnh trên chiếc chìa khóa sắt cổ xưa này đã mòn; dây đeo da của nó đã hư hỏng bởi thời gian. Nó có thể mở cánh cửa nào?</string>
     <string name="IronKey_Name">chìa khóa sắt</string>
+    <string name="ItemSprite_Info1">thả bên cạnh: %1$.1f %2$.1f</string>
     <string name="Item_ACAlchemy">GIẢ KIM THUẬT</string>
     <string name="Item_ACDrop">THẢ</string>
     <string name="Item_DirThrow">Chọn hướng ném</string>
@@ -1293,6 +1297,7 @@
     <string name="Potion_SureDrink">Bạn có chắc chắn muốn uống nó không? Trong hầu hết các trường hợp, bạn nên ném loại thuốc này vào kẻ thù của mình.</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
     <string name="Potion_Yes">Vâng, tôi biết tôi đang làm gì</string>
+    <string name="PriestArmor_NotPriest">Chỉ các linh mục mới có thể sử dụng bộ giáp này!</string>
     <string name="Prison_TileDescBookshelf">Đây có lẽ là dấu tích của một thư viện nhà tù. Liệu nó có cháy không?</string>
     <string name="Prison_TileWater">Nước lạnh tối màu.</string>
     <string name="PseudoPasty_Info">Đây là chiếc bánh nhân Cornwall chính hiệu với nhân truyền thống là thịt bò và khoai tây.</string>
@@ -2083,6 +2088,7 @@
     <string name="WndStory_Guts">Thần Cổ bị đánh bại, vỡ vụn thành trăm mảnh nhưng chưa bị tiêu diệt hoàn toàn, đã bị phong ấn tại những tầng sâu nhất của hầm ngục. Nhưng gần đây con dấu đã bị phá vỡ, mở toang lối đi đến tổ của quỷ dữ. Những con quái vật ác mộng mà Thần Cổ tạo ra trong giấc ngủ của ngài đông đến mức chẳng còn lối thoát, chúng buộc phải hợp nhất với nhau tạo nên những đại sảnh kỳ dị này. Và khi bạn bước trên lớp thịt sống của chúng, bạn có thể cảm nhận nhịp đập trái tim của Thần Cổ vang vọng khắp nơi.</string>
     <string name="WndStory_Halls">Trong quá khứ những tầng này là vùng ngoại ô của Metropolis. Sau chiến thắng đắt giá trong cuộc chiến với vị thần cũ, người lùn quá suy yếu để dọn sạch những con quỷ còn sót lại. Dần dần quỷ đã thắt chặt quyền kiểm soát nơi này và giờ nó được gọi là Sảnh Quỷ.\n\nRất ít nhà thám hiểm từng xuống xa đến vậy...</string>
     <string name="WndStory_Metropolis">Thành phố Lục phủ Mat người lùn từng là lớn nhất trong các thành bang của người lùn. Vào thời kỳ thịnh vượng, quân đội cơ giới của người lùn đã đẩy lùi thành công cuộc xâm lược của vị thần cổ xưa và quân đoàn quỷ của ngài. Người ta nói rằng, các chiến binh trở về đã mang theo những hạt giống của sự tàn phá, và chiến thắng đó là khởi đầu của sự chấm dứt cho vương quốc dưới đất.</string>
+    <string name="WndStory_Spiders">Nhiều, rất nhiều năm về trước, ở đây từng có một mỏ giàu có, đầy ắp đá ma thuật. Nhưng khi các mạch khoáng sản cạn kiệt, những người khai thác đã rời đi, để lại một mạng lưới hầm đường rộng lớn. Cuối cùng, nơi này được chiếm đóng bởi bọ cạp. Nhưng ngay cả những sinh vật nguy hiểm này, trốn trong bóng tối, cũng không đủ để khiến những kẻ dũng cảm và điên khùng khao khát kho báu có thể tìm thấy trong mỏ mà lùi bước. Vì mức độ nguy hiểm luôn tỷ lệ thuận với số lượng tin đồn về các hiện vật ma thuật. Có một lần, một phù thủy xấu xa đã đi lạc vào hầm mỏ để trốn khỏi những kẻ truy lùng. Nhưng những người mê tín không dám bước vào bóng tối. Vì vậy họ quyết định chờ đợi. Nhưng cô ấy không bao giờ xuất hiện. Có lẽ phù thủy đã tìm được lối thoát khác, có lẽ cô ấy đã lén lút vượt qua các vệ sĩ... hoặc cô ấy đã chết chóc, bị bao quanh bởi tiếng xào xạc của những sinh vật bóng tối.</string>
     <string name="WndTilesKind_ClassicLook">Giao diện cổ điển</string>
     <string name="WndTilesKind_NewLook">Giao diện mới</string>
     <string name="WndTilesKind_Title">Chỉ còn một điều nữa:</string>
@@ -2963,6 +2969,12 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
+
 
 
 

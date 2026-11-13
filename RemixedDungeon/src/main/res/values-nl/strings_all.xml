@@ -213,6 +213,7 @@
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="BishopQuest_2_1_InProgress">Breng me _drie zonnegraszaadjes_, mijn kind. De altaar wacht.</string>
     <string name="BishopQuest_4_1_InProgress">Je hebt %1$d van de %2$d doodsritters vernietigd. Breek hun wil, en de legers zullen struikelen.</string>
+    <string name="BishopQuest_4_2_Epilogue">De kerklokken luidden van zich af toen de laatste voorbijging — een goed teken, mijn kind. Neem deze drank van kracht; de laatste toets zal veel van je vragen.</string>
     <string name="BishopQuest_5_1_Epilogue">Des Heren werk is voltooid! Vanaf deze dag mag je de weg van een priester bewandelen. Neem deze zegen en deze almoezen, mijn kind — je hebt ze verdiend.</string>
     <string name="Bishop_bye">Ik zal voor je bidden, mijn kind.</string>
     <string name="Bishop_great_bless">Grote zegen - %d g</string>
@@ -539,6 +540,7 @@
     <string name="DashSpell_OnSelf">Ik kan niet ter plekke een sprint maken.</string>
     <string name="DashSpell_TooFar">Ik kan niet zo ver dasen.</string>
     <string name="DeathKnight_Gender">masculine</string>
+    <string name="DeathKnight_Name_Objective">doodridder</string>
     <string name="Death_Name_1">Grim %s</string>
     <string name="Death_Name_2">Grimmige %s</string>
     <string name="Deathling_Desc">De Doodsling is de ziel van een gevallen held die ongelukkig genoeg werd opgeroepen door een mede-avonturier die necromancie beoefent.</string>
@@ -1367,6 +1369,7 @@
     <string name="PotionOfFrost_Name">Vorstdrank</string>
     <string name="PotionOfHealing_Apply">Je wonden genezen volledig.</string>
     <string name="PotionOfHealing_Info">Een elixer dat je onmiddellijk tot volledige gezondheid herstelt en vergiftiging geneest.</string>
+    <string name="PotionOfHealing_Name">Drank van Genezing</string>
     <string name="PotionOfInvisibility_Apply">Je ziet je handen onzichtbaar worden!</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
     <string name="PotionOfLevitation_Info">Het drinken van deze merkwaardige vloeistof zorgt ervoor dat je in de lucht zweeft, moeiteloos over valstrikken glijdt. Vlammen en gassen vullen echter de lucht en kunnen niet worden ontweken terwijl je zweeft.</string>
@@ -1474,6 +1477,7 @@
     <string name="ResultDescriptions_Burning">Verbrand op niveau %d</string>
     <string name="ResultDescriptions_Fall">Ter dood gevallen op niveau %d</string>
     <string name="ResultDescriptions_Gas">Gestorven door giftig gas op niveau %d</string>
+    <string name="ResultDescriptions_Glyph">Gedood door de %1$s op niveau %2$d</string>
     <string name="ResultDescriptions_Hunger">Verhongerd op niveau %d</string>
     <string name="ResultDescriptions_Immured">Ingemureerd in steen op niveau %d</string>
     <string name="ResultDescriptions_Mob">Gedood door %1 op niveau %2</string>
@@ -2385,6 +2389,7 @@
     <string name="town_deco_brown_carpet_desc">Deze bruine tapijt is onder voet getrapt door veel avonturiers, zwervers en toeschouwers.</string>
     <string name="town_deco_brown_carpet_name">Tapijt</string>
     <string name="town_deco_cabinet_desc">Een ruime kast met veel deuren en planken.</string>
+    <string name="town_deco_cabinet_name">Kastje</string>
     <string name="town_deco_canvas_desc">Een dik stuk stof hangt aan de muur.</string>
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_carpet_desc">Prachtig rode tapijt gereserveerd voor speciale gasten.</string>
@@ -2479,6 +2484,7 @@
     <string name="town_deco_rug_name">kleed</string>
     <string name="town_deco_screen_desc">Dit mysterieuze doek heet een \&quot;scherm\&quot; en kan bewegende beelden tonen</string>
     <string name="town_deco_screen_name">Scherm</string>
+    <string name="town_deco_scrolls_desc">Dit stoffige plankje is vol met allerlei soorten rollen en boeken.</string>
     <string name="town_deco_scrolls_name">Scrollen</string>
     <string name="town_deco_shelf_desc">Lege planken.</string>
     <string name="town_deco_shelf_full_desc">Op deze plank staan allerlei snuisterijen.</string>
@@ -2732,6 +2738,13 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
+
 
 
 
