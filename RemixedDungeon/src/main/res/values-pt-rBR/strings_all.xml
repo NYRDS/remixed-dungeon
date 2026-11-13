@@ -247,6 +247,7 @@
     <string name="BishopQuest_3_1_Prologue">Até os mortos-vivos merecem misericórdia, meu filho. Traga-me um _zumbi_ que você domou — eu o porei para descansar com os ritos apropriados, e seu tormento acabará.</string>
     <string name="BishopQuest_3_2_Prologue">Até as bestas das trevas merecem uma bênção, meu filho. Traga-me um _morcego_ que você tenha domado, e eu o consagrarei à luz.</string>
     <string name="BishopQuest_4_2_Prologue">Há mortos acorrentados assim como ossos andantes, meu filho. _Almas escravizadas_ — pobres almas acorrentadas em servidão eterna, odiando os vivos pela liberdade que perderam. A tristeza delas é uma arma. Liberte _quatro almas escravizadas_ disso.</string>
+    <string name="Bishop_QuestCompleted">Classe Sacerdote desbloqueada</string>
     <string name="Bishop_bye">Eu rezarei por você, meu filho.</string>
     <string name="Bishop_great_bless">Bênção grande - %dg</string>
     <string name="Bishop_lesser_bless">Bênção pequena - %dg</string>
@@ -3105,6 +3106,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

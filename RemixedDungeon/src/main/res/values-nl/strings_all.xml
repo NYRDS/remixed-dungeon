@@ -851,6 +851,7 @@
     <string name="HeroSubClass_DescWard">Een sterke verbinding met de natuurkrachten geeft _Wachters_ het vermogen om dauwdruppels en zaden van planten te verzamelen. Ook geeft het vertrappen van hoog gras hen een tijdelijke pantserbonus.</string>
     <string name="HeroSubClass_DescWitchdoctor">Toveren verliest de _Heksenmeester_ een magisch schild dat hem volledig beschermt tegen inkomende schade.</string>
     <string name="HeroSubClass_NameAssa">meuchelmoorder</string>
+    <string name="HeroSubClass_NameBatM">gevechtsmagus</string>
     <string name="HeroSubClass_NameBers">berserker</string>
     <string name="HeroSubClass_NameFreR">freerunner</string>
     <string name="HeroSubClass_NameGlad">gladiator</string>
@@ -1605,6 +1606,7 @@
     <string name="ScrollOfRecharging_Info">De rauwe magische kracht gebonden in dit perkament zal, bij vrijgave, alle toverstokken van de lezer volledig opladen.</string>
     <string name="ScrollOfRecharging_Info1b">een golf van energie stroomt door je rugzak en laadt je toverstokken op</string>
     <string name="ScrollOfRecharging_Info2">een energiegolf stroomt door je rugzak, maar er gebeurt niets</string>
+    <string name="ScrollOfRecharging_Name">Pergament van Herladen</string>
     <string name="ScrollOfRemoveCurse_Info">De bezwering op deze rol zal onmiddellijk alle kwaadaardige betoveringen van het wapen, pantser, ringen en voorwerpen van de lezer verwijderen die het dragen ervan zouden kunnen verhinderen.</string>
     <string name="ScrollOfRemoveCurse_Name">Schrift van Vervloeking Verwijderen</string>
     <string name="ScrollOfRemoveCurse_NoProced">Je rugzak straalt met een reinigend licht, maar er gebeurt niets.</string>
@@ -2300,6 +2302,7 @@
     <string name="WndTradeItem_SellAll">Alles verkopen voor %dg</string>
     <string name="WndTradeItem_SellN">Verkoop %1$d voor %2$dg</string>
     <string name="WndWandmaker_Battle">Gevechtsstaf</string>
+    <string name="WndWandmaker_Farawell">Veel succes in je zoektocht, %s!</string>
     <string name="WndWandmaker_Message">Oh, ik zie dat je geslaagd bent! Ik hoop dat het je niet te veel moeite heeft gekost. Zoals beloofd, mag je een van mijn hoogwaardige staven kiezen.</string>
     <string name="WndWandmaker_NonBattle">Hulpsstaf</string>
     <string name="Wnd_Button_Back">Terug</string>
@@ -2469,6 +2472,7 @@
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_pedestal_desc">Voetstuk met een heilig boek erop.</string>
     <string name="town_deco_pedestal_name">Postament</string>
+    <string name="town_deco_pillar_desc">Vroeger diende deze pilaar als een uitstekende steun en decoratie.</string>
     <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
     <string name="town_deco_pole_name">Paaltje</string>
     <string name="town_deco_porch_name">Veranda</string>
@@ -2738,6 +2742,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

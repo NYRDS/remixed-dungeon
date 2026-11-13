@@ -796,6 +796,7 @@
     <string name="Exhumation_Name">Ексгумація</string>
     <string name="Exhumation_NoGrave">Тут немає могил для ексгумації.</string>
     <string name="Exhumation_Ok">Я корюсь тобі.</string>
+    <string name="Exorcism_Info">Слово влади, що виганяє. Наносить важкий свійський урон одиночному ворогу — подвоєний проти нежиті, які також сповільнюються.</string>
     <string name="ExplodingSkull_Desc">Цей череп, що палає та висить в повітрі, виглядає досить крихким, здається що він розпадеться на шматки в будь який момент.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">череп-камікадзе</string>
@@ -3119,6 +3120,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 
