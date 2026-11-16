@@ -98,7 +98,7 @@ jobs:
           if-no-files-found: error
 
       - name: Publish to Google Play (beta)
-        uses: r0adkll/upload-google-play@v2
+        uses: r0adkll/upload-google-play@v1.1.5
         with:
           serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
           packageName: com.nyrds.pixeldungeon.ml
