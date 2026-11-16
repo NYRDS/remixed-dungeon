@@ -7,6 +7,10 @@ zip shape, select-and-restart, and that a mod created by the editor is
 actually playable (start_game lands in the template Start level with
 the ExampleMob present).
 
+Round 4 adds: rename_file, subdir/builtin listing modes, terrain table,
+treasury/bestiary validation rules, initHeroes/plantsDesc/strings save
+round-trips, and the api-reference.md sync check.
+
 Run: RPD_HEADLESS_JAR=<jar> python3 test_mod_editor.py
 """
 
@@ -97,6 +101,16 @@ def main():
     tmp = tempfile.mkdtemp(prefix="rd_modeditor_test_")
     game_dir = build_game_dir(jar, tmp)
     print("game dir: " + game_dir)
+
+    # the editor's API reference is a vendored copy of docs/modding.md -
+    # drift means the pane silently serves stale docs
+    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    with open(os.path.join(root, "docs/modding.md"), "rb") as f:
+        source_doc = f.read()
+    with open(os.path.join(root, "RemixedDungeon/src/main/assets/web/mod-editor/api-reference.md"),
+              "rb") as f:
+        vendored_doc = f.read()
+    check(source_doc == vendored_doc, "api-reference.md in sync with docs/modding.md")
 
     # -Duser.home: headless prefs persist to ~/.local/share/remixed-dungeon -
     # isolate them so the test never touches the developer's global prefs.
@@ -283,6 +297,147 @@ def main():
         r = HTTP.post(api + "validate", json={"name": "FullClone"}, timeout=120)
         check(r.ok and r.json().get("success"), "cloned mod validates: %s"
               % r.json().get("errors", [])[:3])
+
+        # -- round 4: rename/subdir/builtin listing, structured tables -----
+        # rename_file round-trip + collision guard
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "mobsDesc/Renamed.json",
+                                          "content": '{"ht":9,"name":"QaMob_Name",'
+                                                     '"spriteDesc":"spritesDesc/Rat.json"}'}, timeout=10)
+        check(r.ok, "save file to rename")
+        r = HTTP.post(api + "rename_file", json={"mod": MOD, "from": "mobsDesc/Renamed.json",
+                                                 "to": "mobsDesc/Renamed2.json"}, timeout=10)
+        check(r.ok, "rename_file")
+        r = HTTP.get(api + "read", params={"mod": MOD, "file": "mobsDesc/Renamed2.json"}, timeout=10)
+        check(r.ok and "QaMob_Name" in r.json()["content"], "renamed file readable")
+        r = HTTP.get(api + "read", params={"mod": MOD, "file": "mobsDesc/Renamed.json"}, timeout=10)
+        check(r.status_code == 404, "old name gone after rename")
+        r = HTTP.post(api + "rename_file", json={"mod": MOD, "from": "mobsDesc/Renamed2.json",
+                                                 "to": "mobsDesc/ExampleMob.json"}, timeout=10)
+        check(r.status_code == 409, "rename onto existing file -> 409")
+        r = HTTP.post(api + "delete_file", json={"mod": MOD, "file": "mobsDesc/Renamed2.json"},
+                      timeout=10)
+        check(r.ok, "delete renamed file")
+
+        # subdir listing + builtin reference mode
+        r = HTTP.get(api + "files", params={"mod": MOD, "path": "mobsDesc"}, timeout=10)
+        names = [e["name"] for e in r.json()["entries"]]
+        check(r.ok and "ExampleMob.json" in names, "files?path= subdirectory listing")
+        r = HTTP.get(api + "files", params={"mod": MOD, "path": "tilesets", "builtin": 1},
+                     timeout=10)
+        names = [e["name"] for e in r.json()["entries"]]
+        check(r.ok and any("tiles_sewers" in n for n in names),
+              "files?builtin=1 lists builtin tilesets")
+        r = HTTP.get(api + "read", params={"mod": MOD, "file": "levelsDesc/Dungeon.json",
+                                           "builtin": 1}, timeout=10)
+        check(r.ok and "Graph" in r.json()["content"], "read?builtin=1 falls back to builtin")
+        check(r.json().get("source") == "builtin", "builtin read reports source")
+
+        # terrain table for the level editor
+        r = HTTP.get(api + "terrain", timeout=10)
+        t = r.json()
+        wall = [x for x in t.get("terrain", []) if x["name"] == "WALL"]
+        check(r.ok and wall and wall[0]["value"] == 4 and t.get("tileSize") == 16,
+              "terrain table (WALL=4, 16px tiles)")
+
+        # treasury: valid v1 table validates; bad shapes surface in validate
+        good_treasury = ('{"version":1,"settings":{"decayFactor":1,'
+                         '"probabilities":{"POTION":50,"GOLD":50}},'
+                         '"categories":{"POTION":{"PotionOfHealing":1},"GOLD":{"Gold":1}}}')
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/QaTreasury.json",
+                                          "content": good_treasury}, timeout=10)
+        check(r.ok, "save valid v1 treasury")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        check(r.ok and r.json().get("success"), "valid treasury validates: %s"
+              % r.json().get("errors"))
+
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/QaTreasury.json",
+                                          "content": '{"version":1,"settings":{"decayFactor":1e999,'
+                                                     '"probabilities":{"POTION":50}},'
+                                                     '"categories":{"POTION":{"PotionOfHealing":"lots"}}}'},
+                      timeout=10)
+        check(r.ok, "save broken treasury (valid json, invalid weights)")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        errs = " | ".join(r.json().get("errors", []))
+        check(not r.json().get("success") and "decayFactor" in errs and "weight" in errs,
+              "treasury validate catches decayFactor + string weight: %s" % errs)
+
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/QaTreasury.json",
+                                          "content": '{"WEAPON":{"Dagger":1}}'}, timeout=10)
+        check(r.ok, "save v0 treasury without categoryChance")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        warns = " | ".join(r.json().get("warnings", []))
+        check(r.json().get("success") and "categoryChance" in warns,
+              "v0 without categoryChance warns (misaligned rolls): %s" % warns)
+
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/QaTreasury.json",
+                                          "content": good_treasury.replace('"GOLD":50', '"GOLD":0')},
+                      timeout=10)
+        check(r.ok, "save v1 treasury with zero probability")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        warns = " | ".join(r.json().get("warnings", []))
+        check(r.json().get("success") and "never rolls" in warns,
+              "zero probability category warns as never-rolling: %s" % warns)
+        r = HTTP.post(api + "delete_file", json={"mod": MOD, "file": "levelsDesc/QaTreasury.json"},
+                      timeout=10)
+        check(r.ok, "delete treasury file")
+
+        # bestiary: valid table ok; bad weight errors, unknown kind warns
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Bestiary.json",
+                                          "content": '{"SewerLevel":{"any":{"Rat":1}},'
+                                                     '"Feelings":{"Chance":0.2,'
+                                                     '"WATER":{"WaterElemental":1}}}'}, timeout=10)
+        check(r.ok, "save valid bestiary")
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Bestiary.json",
+                                          "content": '{"SewerLevel":{"any":{"Rat":"many"}}}'},
+                      timeout=10)
+        check(r.ok, "save bestiary with string weight")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        errs = " | ".join(r.json().get("errors", []))
+        check(not r.json().get("success") and "weight" in errs,
+              "bestiary validate catches string weight: %s" % errs)
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Bestiary.json",
+                                          "content": '{"SewerLevel":{"any":{"Rat":1,"ZorgMob":1}}}'},
+                      timeout=10)
+        check(r.ok, "save bestiary with unknown mob kind")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        warns = " | ".join(r.json().get("warnings", []))
+        check(r.json().get("success") and "ZorgMob" in warns,
+              "unknown mob kind warns: %s" % warns)
+        r = HTTP.post(api + "delete_file", json={"mod": MOD, "file": "levelsDesc/Bestiary.json"},
+                      timeout=10)
+        check(r.ok, "delete bestiary file")
+
+        # initHeroes + plantsDesc save round-trips (deleted before play test
+        # so the template campaign stays deterministic)
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "hero/initHeroes.json",
+                                          "content": '{"common":{"str":10,"hp":20,'
+                                                     '"items":[{"kind":"Gold","quantity":50}]}}'},
+                      timeout=10)
+        check(r.ok, "save initHeroes.json")
+        r = HTTP.get(api + "read", params={"mod": MOD, "file": "hero/initHeroes.json"}, timeout=10)
+        check(r.ok and '"Gold"' in r.json()["content"], "initHeroes round-trip")
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "plantsDesc/QaPlant.json",
+                                          "content": '{"imageIndex":2}'}, timeout=10)
+        check(r.ok, "save plantsDesc entry")
+        r = HTTP.post(api + "delete_file", json={"mod": MOD, "file": "hero/initHeroes.json"},
+                      timeout=10)
+        check(r.ok, "delete initHeroes")
+        r = HTTP.post(api + "delete_file", json={"mod": MOD, "file": "plantsDesc/QaPlant.json"},
+                      timeout=10)
+        check(r.ok, "delete plantsDesc entry")
+
+        # strings: pairs format round-trip + malformed pair bounce + new file
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "strings_ru.json",
+                                          "content": '["ExampleMob_Name","Пример"]\n'
+                                                     '["ExampleMob_Desc","Тестовый моб"]\n'}, timeout=10)
+        check(r.ok, "save strings_ru.json pairs")
+        r = HTTP.get(api + "read", params={"mod": MOD, "file": "strings_ru.json"}, timeout=10)
+        check(r.ok and "Пример" in r.json()["content"], "strings round-trip")
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "strings_ru.json",
+                                          "content": '["ok"]\n'}, timeout=10)
+        check(r.status_code == 400, "malformed strings pair -> 400")
+        r = HTTP.post(api + "delete_file", json={"mod": MOD, "file": "strings_ru.json"}, timeout=10)
+        check(r.ok, "delete strings_ru.json")
 
         # -- export ------------------------------------------------------
         r = HTTP.get(api + "export", params={"mod": MOD}, timeout=30)

@@ -13,6 +13,10 @@ import { spellEditor } from './editors/spell-editor.js';
 import { buffEditor } from './editors/buff-editor.js';
 import { objectEditor } from './editors/object-editor.js';
 import { effectEditor } from './editors/effect-editor.js';
+import { treasuryEditor } from './editors/treasury-editor.js';
+import { initHeroesEditor } from './editors/init-heroes-editor.js';
+import { plantsEditor } from './editors/plants-editor.js';
+import { bestiaryEditor } from './editors/bestiary-editor.js';
 import { templateFor } from './editors/templates.js';
 import { uploadFile } from './upload.js';
 
@@ -20,6 +24,15 @@ const sidebar = document.getElementById('sidebar');
 const content = document.getElementById('content');
 const crumbs = document.getElementById('crumbs');
 const actions = document.getElementById('actions');
+
+// workspace-local bridge: in-editor widgets (strings manager language table)
+// ask to open another file of the same mod without owning the routing
+let currentMod = null;
+window.addEventListener('mod-editor:open-file', e => {
+  if (currentMod && typeof e.detail === 'string') {
+    openFile(currentMod, e.detail);
+  }
+});
 
 api.onBusy(b => { document.getElementById('busy').hidden = b; });
 
@@ -67,6 +80,7 @@ window.addEventListener('hashchange', () => { if (confirmDirty()) { route(); } }
 
 async function openDashboard() {
   resetEditor();
+  currentMod = null;
   crumbs.textContent = 'mods';
   actions.innerHTML = '';
   sidebar.innerHTML = '';
@@ -250,6 +264,7 @@ async function openDashboard() {
 
 async function openWorkspace(modName) {
   resetEditor();
+  currentMod = modName;
   crumbs.textContent = modName;
   content.innerHTML = '<p class="hint">loading…</p>';
 
@@ -357,9 +372,11 @@ async function openWorkspace(modName) {
   const hint = document.createElement('p');
   hint.className = 'hint';
   hint.textContent = 'Pick a file on the left, or use the actions above. Form editors: mobsDesc, ' +
-    'spritesDesc, levelObjects, effects, scripts/items, scripts/spells, scripts/buffs; levelsDesc maps ' +
-    'open the level painter; strings files open the pairs editor; everything else is a validated text ' +
-    'editor. "Play this mod" activates it and restarts the game.';
+    'spritesDesc, levelObjects, effects, plantsDesc, scripts/items, scripts/spells, scripts/buffs; ' +
+    'levelsDesc maps open the level painter, *Treasury.json the loot editor, Bestiary.json the spawn ' +
+    'table; hero/initHeroes opens the class loadout editor; strings files open the pairs editor with ' +
+    'a per-language manager; lua files get snippet + API-reference help; everything else is a ' +
+    'validated text editor. "Play this mod" activates it and restarts the game.';
   content.appendChild(hint);
 
   await runValidate(modName, true);
@@ -485,6 +502,29 @@ async function openFile(modName, file) {
     if (lower.startsWith('effects/') && lower.endsWith('.json')) {
       content.innerHTML = '';
       adoptEditor(await effectEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      return;
+    }
+    if (lower.startsWith('plantsdesc/') && lower.endsWith('.json')) {
+      content.innerHTML = '';
+      adoptEditor(await plantsEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      return;
+    }
+    // hero loadouts (hero/initHeroes.json, hero/initHeroesDebug.json)
+    if (lower.startsWith('hero/initheroes') && lower.endsWith('.json')) {
+      content.innerHTML = '';
+      adoptEditor(await initHeroesEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      return;
+    }
+    // loot tables and spawn tables are structured files that only wear a
+    // levelsDesc/ address - match them before the level painter
+    if (lower.startsWith('levelsdesc/') && /treasury\.json$/.test(lower)) {
+      content.innerHTML = '';
+      adoptEditor(await treasuryEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      return;
+    }
+    if (lower === 'levelsdesc/bestiary.json') {
+      content.innerHTML = '';
+      adoptEditor(await bestiaryEditor(content, { mod: modName, file, api, onSaved: () => {} }));
       return;
     }
     if (lower.startsWith('levelsdesc/') && lower.endsWith('.json') && !file.endsWith('Dungeon.json')) {

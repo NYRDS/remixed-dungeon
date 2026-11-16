@@ -1,6 +1,6 @@
 # Mod editor — design document
 
-Status: round 3 (bd b4i), 2026-11-12. Companion user guide: `mod_editor.md`
+Status: round 4 (bd remixed-dungeon-its), 2026-11-16. Companion user guide: `mod_editor.md`
 (what it does, how to open it). This document is the design: scope,
 architecture, API contract, security model, and the coverage matrix for
 every moddable aspect of the game.
@@ -82,8 +82,8 @@ libs. This is the complete map and what the editor does for each:
 | Aspect | Files | Editor |
 |---|---|---|
 | Mobs | `mobsDesc/*.json` | **form**: stats, strings keys, gender, walking type, aiState, loot, spriteDesc picker, scriptFile picker; unknown keys preserved |
-| Mob behavior | `scripts/mobs/*.lua` | text editor (lua-compile-validated) + new-file template |
-| AI states | `scripts/ai/*.lua` | text editor + template |
+| Mob behavior | `scripts/mobs/*.lua` | text editor (lua-compile-validated) + new-file template + snippet insert + API reference pane |
+| AI states | `scripts/ai/*.lua` | text editor + template + snippets + API reference |
 | Sprites | `spritesDesc/*.json` | **form**: texture, frame size, per-anim fps/loop/frames, extras; animated preview |
 | Textures / sheets | `*.png` anywhere (`mobs/`, `items/`, root, …) | image editor (preview + upload replace), tree upload, "copy tileset into mod" from the level editor |
 | Items | `scripts/items/*.lua` | **form** over the `desc()` table (icon picker, price, stackable…); rest of the script untouched |
@@ -91,23 +91,43 @@ libs. This is the complete map and what the editor does for each:
 | Buffs | `scripts/buffs/*.lua` | **form** over the `desc()` table (icon, name, info) + template |
 | Traps | `scripts/traps/*.lua` | text editor + template |
 | Level objects | `levelObjects/*.json` + `scripts/objects/*.lua` | **form**: kind, script, layer, appearance desc/sprite with clickable sheet preview; unknown keys preserved; template for both halves |
-| Effects | `effects/*.json` | **form**: texture, frame size, anim fps/loop/frames; live animated preview; template |
-| Levels | `levelsDesc/*.json` maps | **level painter**: terrain palette from `Terrain.java`, resize, entrance/exit/multiexit, mob placement, tile-var painting; unknown keys preserved |
+| Effects | `effects/*.json` | **form**: texture, frame size, anim fps/loop/frames; live animated preview; template; anim-without-fps falls back to text (never saves fps:0) |
+| Levels | `levelsDesc/*.json` maps | **level painter**: terrain palette from `Terrain.java`, resize, entrance/exit/multiexit, mob placement, tile-var painting, `customTiles` toggle; unknown keys preserved; **WYSIWYG tiles view** (see below) |
 | Campaign | `levelsDesc/Dungeon.json` (Levels + Graph) | text editor + "add to campaign" action from the level editor |
 | Tilesets | `tilesets/*.png` | tileset picker in the level editor + copy-into-mod; image editor |
-| Strings / l10n | `strings_*.json` | **pairs editor** (per-line `[key, value]`) |
+| Strings / l10n | `strings_*.json` | **pairs editor** (per-line `[key, value]`) + **per-language manager**: coverage vs the mod's/builtin english, add-language seeding |
 | Sound | `sound/*.mp3/ogg/wav` | audio editor (playback + upload replace); tree upload; magic-checked saves |
 | Hero customization | `hero/`, `hero_modern/` pngs | image editor / upload; clone builtin for a full set |
-| Plants | `plantsDesc/*.json` | validated text editor |
-| Treasury (shop pools) | `*.json` treasury files | validated text editor |
-| Hero init | `initHeroes.json`, `initHeroesDebug.json` | validated text editor |
+| Plants | `plantsDesc/*.json` | **form**: imageIndex with clickable plants.png sheet preview; unknown keys preserved; template |
+| Treasury (loot tables) | `levelsDesc/*Treasury.json` | **form**: v0 and v1 (categories + item weights, categoryChance / settings.probabilities + decayFactor); non-numeric weights refuse to save; template |
+| Spawn tables | `levelsDesc/Bestiary.json` | **form**: per-level-kind depth tables (mob kinds + weights) + Feelings (Chance + terrain groups); mob-kind datalist; template |
+| Hero init | `hero/initHeroes.json`, `hero/initHeroesDebug.json` | **form**: per-class sections (stats, equipment slots, item/quickslot entries with inline-json extras, keyword lists), `common`/`non_expert`; unknown keys preserved |
 | Actors | `scripts/actors/*.lua` | text editor + template |
 | NPCs | `scripts/npc/*.lua` | text editor + template |
 | Painters | `scripts/painters/*.lua` | text editor |
-| Custom libs | `scripts/lib/*.lua`, `scripts/userServices/` | text editor (advanced users) |
+| Custom libs | `scripts/lib/*.lua`, `scripts/userServices/` | text editor (advanced users) + snippets + API reference |
 | Tilemap descriptors | `tilemapDesc/` | validated text editor |
 | UI art | `ui/*.png` | image editor / upload |
 | Mod manifest | `version.json` | validated text editor (name/author/description/rpd_version) |
+
+Everything is also reachable as a raw text/binary editor, so no aspect
+is *blocked* — the forms are the sugar. Items are deliberately lua-form
+(not json): the "items mountain" migration is a separate long-term
+effort and the editor follows the game's data model, not the other way
+round.
+
+**WYSIWYG level rendering** (round 4): the level painter has a
+`tiles (WYSIWYG)` view next to the color-coded one. For `customTiles`
+levels it renders the painted `baseTileVar`/`decoTileVar`/`deco2TileVar`
+layers straight from the tileset sheet (the `CustomLayerTilemap` path;
+cells with no authored frame show a dimmed terrain color so the map
+stays readable). Otherwise it reproduces the engine's auto-tiling:
+`tilemapDesc/<tiles>.json` (fallback `tiles_x_default.json`) per-terrain
+`base`+`deco` frame lists with `cell % frames.length` variation, the
+water-border frame shift for `WATER_TILES..WATER`, and the
+`SECRET_*_TRAP` mapping — a faithful port of `XTilemapConfiguration`.
+xyz (isometric) sheets are not modeled and stay color-coded with a
+notice.
 
 Everything is also reachable as a raw text/binary editor, so no aspect
 is *blocked* — the forms are the sugar. Items are deliberately lua-form
@@ -177,6 +197,11 @@ Errors:
   spriteDesc's `texture` missing; `scriptFile` missing
 - campaign: level `file` missing; `map.length != width*height`;
   `PredesignedLevel`/`RandomLevel` without `file`
+- treasury: non-numeric item weight or `categoryChance`; v1 without
+  `categories`/`settings` objects; non-numeric `decayFactor` or category
+  probability; unknown version (the numeric-weight rules mirror the live
+  Crashlytics `getDouble`/NaN family)
+- bestiary: non-object section/depth table; non-numeric mob weight
 
 Warnings:
 
@@ -186,6 +211,10 @@ Warnings:
   mobs like Yog ship this way; engine uses its fallback sprite)
 - entrance/exit/multiexit outside the map or buried in wall/chasm
 - level files not referenced from `Dungeon.json` (unreachable)
+- treasury: category with no `settings.probabilities` entry or with
+  probability 0 (never rolls); every item weight 0 (dead category); v0
+  category without `categoryChance` (misaligns the roll lists)
+- bestiary: unknown mob kind (the game falls back to a rat)
 
 ## 8. Testing
 
@@ -203,14 +232,13 @@ Warnings:
 
 ## 9. Roadmap (not yet in scope)
 
-- WYSIWYG level rendering (auto-tiling preview) — today the painter is
-  color-coded terrain; the game tiles at render time
-- Treasury / initHeroes / plantsDesc forms (text editors today)
-- Lua authoring help beyond templates (snippet insert, API reference
-  pane mirroring `docs/modding.md`)
 - Mod publishing (upload to ru.nyrds.net) — export zip covers sharing
-  for now
+  for now; needs server-side upload/auth design
 - Items as json (the "items mountain") — editor will follow the data
   model when that lands
-- Per-language strings management (which keys are missing in which
-  `strings_xx.json` vs the mod's source language)
+- WYSIWYG for xyz (isometric) tilesets — standard sheets render as real
+  tiles since round 4; the 3-layer xyz layout is not modeled
+
+Shipped in round 4 (2026-11-16, from this list): WYSIWYG level
+rendering, Treasury/initHeroes/plantsDesc/Bestiary forms, per-language
+strings management, lua authoring help (snippets + API reference pane).

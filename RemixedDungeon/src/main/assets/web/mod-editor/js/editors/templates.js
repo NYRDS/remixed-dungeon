@@ -220,7 +220,36 @@ return actor.init{
       height: 16,
       anim: { fps: 15, looped: true, frames: [0, 1, 2, 3] }
     }, null, 3) + '\n'
+  },
+  'plantsDesc/': {
+    hint: 'plant sprite-frame override (behavior goes to scripts/plants/)',
+    content: JSON.stringify({ imageIndex: 0 }, null, 3) + '\n'
   }
+};
+
+// treasury files wear a levelsDesc/ address but are loot tables, not maps
+const TREASURY_TEMPLATE = {
+  hint: 'loot table (v1: categories + settings)',
+  content: JSON.stringify({
+    version: 1,
+    settings: {
+      decayFactor: 1,
+      probabilities: { POTION: 50, GOLD: 50 }
+    },
+    categories: {
+      POTION: { PotionOfHealing: 1 },
+      GOLD: { Gold: 1 }
+    }
+  }, null, 3) + '\n'
+};
+
+const BESTIARY_TEMPLATE = {
+  hint: 'spawn table (level kind -> depth -> mob weights)',
+  content: JSON.stringify({
+    SewerLevel: {
+      any: { Rat: 1 }
+    }
+  }, null, 3) + '\n'
 };
 
 function levelTemplate() {
@@ -248,6 +277,10 @@ function levelTemplate() {
 }
 
 export function templateFor(path) {
+  // name-aware picks first: these files share a directory with level maps
+  // but are structured tables
+  if (/^levelsDesc\/.*[Tt]reasury\.json$/.test(path)) { return TREASURY_TEMPLATE; }
+  if (/^levelsDesc\/Bestiary\.json$/.test(path)) { return BESTIARY_TEMPLATE; }
   for (const prefix of Object.keys(TEMPLATES)) {
     if (path.startsWith(prefix)) {
       return TEMPLATES[prefix];

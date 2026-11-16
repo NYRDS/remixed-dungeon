@@ -1,7 +1,15 @@
 // Level map editor for levelsDesc/<X>.json predesigned levels.
 //
-// v1 renders terrain as a color-coded grid (editor view, not WYSIWYG -
-// the game's auto-tiling lives in VariativeDungeonTilemap). Painting:
+// Two render modes:
+//  - "colors": terrain as a color-coded grid (editor view)
+//  - "tiles": WYSIWYG - real tiles from the level's tileset sheet.
+//    customTiles:true levels render the painted baseTileVar/decoTileVar/
+//    deco2TileVar layers (CustomLayerTilemap path); otherwise the engine's
+//    auto-tiling is reproduced from tilemapDesc/<tiles>.json
+//    (VariativeDungeonTilemap + XTilemapConfiguration: per-terrain base+deco
+//    frame lists, cell-indexed variation, water border shift, secret traps).
+//    xyz (isometric) sheets are not modeled - the view stays colors.
+// Painting:
 //  - terrain palette -> map[]
 //  - "entrance"/"exit" tools -> entrance / multiexit
 //  - mob tool -> click places the picked mob kind
@@ -9,6 +17,9 @@
 // Unknown json keys are preserved on save.
 
 import * as api from '../api.js';
+
+const TILE_SIZE = 16; // DungeonTilemap.SIZE
+const DEFAULT_SHEET = 'tiles0.png'; // Assets.TILES_SEWERS
 
 const TERRAIN_COLORS = {
   CHASM: '#0a0a12', EMPTY: '#3a3a30', GRASS: '#3a5a30', EMPTY_WELL: '#3a3a38',
@@ -51,6 +62,7 @@ export async function levelEditor(content, ctx) {
   let mobKind = '';
   let zoom = 18;
   let dirty = false;
+  let view = 'colors';
 
   const barEl = document.createElement('div');
   barEl.className = 'editor-bar';
@@ -159,6 +171,179 @@ export async function levelEditor(content, ctx) {
   zoomSelect.value = zoom;
   zoomSelect.addEventListener('change', () => { zoom = Number(zoomSelect.value); drawGrid(); });
   toolRow('zoom', zoomSelect);
+
+  // ---- WYSIWYG view -------------------------------------------------
+  const viewSelect = document.createElement('select');
+  for (const [v, label] of [['colors', 'colors (editor)'], ['tiles', 'tiles (WYSIWYG)']]) {
+    const o = document.createElement('option');
+    o.value = v;
+    o.textContent = label;
+    viewSelect.appendChild(o);
+  }
+  viewSelect.value = view;
+  viewSelect.addEventListener('change', async () => {
+    view = viewSelect.value;
+    if (view === 'tiles') { await ensureTileAssets(); }
+    drawGrid();
+  });
+  toolRow('view', viewSelect);
+
+  const viewNote = document.createElement('span');
+  viewNote.className = 'hint';
+  toolPanel.appendChild(viewNote);
+
+  function sheetName() {
+    return (level.tiles || '').trim() || DEFAULT_SHEET;
+  }
+  function isXyzSheet() {
+    const s = sheetName().toLowerCase();
+    return s.includes('xyz') || Boolean(level.tiles_xyz);
+  }
+
+  // sheet image + tilemapDesc for the WYSIWYG renderer, cached per name
+  let sheetImage = null;
+  let sheetCacheName = null;
+  let tileDesc = null; // terrainValue -> {base:[], deco:[]}
+
+  function loadImage(src) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = () => reject(new Error('failed to load ' + src));
+      img.src = api.rawUrl(ctx.mod, src, Date.now());
+    });
+  }
+
+  async function ensureTileAssets() {
+    if (isXyzSheet()) {
+      viewNote.textContent = 'xyz (isometric) sheets are not rendered - staying color-coded';
+      view = 'colors';
+      viewSelect.value = 'colors';
+      return;
+    }
+    viewNote.textContent = '';
+    const sheet = sheetName();
+    if (sheetCacheName !== sheet || !sheetImage) {
+      try {
+        sheetImage = await loadImage(sheet);
+        sheetCacheName = sheet;
+      } catch (e) {
+        viewNote.textContent = 'tile sheet failed to load: ' + e.message;
+        view = 'colors';
+        viewSelect.value = 'colors';
+        return;
+      }
+    }
+    if (!tileDesc) {
+      tileDesc = await loadTileDesc(sheet);
+    }
+  }
+
+  // port of XTilemapConfiguration.readConfig: per-terrain base/deco frames
+  // from tilemapDesc/<tiles>.json (fallback: the default config), with the
+  // water border shift (WATER_TILES..WATER reuse WATER_TILES frames offset
+  // by the terrain distance) and SECRET_*_TRAP mapping to SECRET_TRAP
+  async function loadTileDesc(sheet) {
+    const byName = {};
+    for (const t of terrain.terrain) { byName[t.name] = t.value; }
+    const terrainNames = new Set(Object.keys(byName));
+
+    let text = null;
+    const descName = 'tilemapDesc/' + sheet.replace(/\.png$/i, '') + '.json';
+    try {
+      text = (await api.readModFile(ctx.mod, descName)).content;
+    } catch (e) { /* per-level desc missing is normal */ }
+    if (text == null) {
+      try {
+        text = (await api.readModFile(ctx.mod, 'tilemapDesc/tiles_x_default.json')).content;
+      } catch (e) {
+        viewNote.textContent = 'tilemapDesc missing - WYSIWYG falls back to colors per cell';
+        return new Map();
+      }
+    }
+    let raw;
+    try {
+      raw = JSON.parse(text);
+    } catch (e) {
+      viewNote.textContent = 'tilemapDesc unparseable - WYSIWYG falls back to colors per cell';
+      return new Map();
+    }
+
+    const desc = new Map();
+    function entryFor(key) {
+      const d = raw[key];
+      if (!d || !Array.isArray(d.base) || !Array.isArray(d.deco)) { return null; }
+      return { base: d.base, deco: d.deco };
+    }
+    for (const key of Object.keys(raw)) {
+      if (terrainNames.has(key) && key !== 'WATER_TILES') {
+        const e = entryFor(key);
+        if (e) { desc.set(byName[key], e); }
+      }
+    }
+    // secret traps all render like SECRET_TRAP (Terrain.SECRET_TRAPS)
+    const secret = entryFor('SECRET_TRAP');
+    if (secret) {
+      for (const name of terrainNames) {
+        if (/^SECRET_.*_TRAP$/.test(name)) { desc.set(byName[name], secret); }
+      }
+    }
+    // water border pieces: WATER_TILES frames shifted per water terrain value
+    const water = entryFor('WATER_TILES');
+    if (water && Number.isFinite(byName.WATER_TILES) && Number.isFinite(byName.WATER)
+      && byName.WATER >= byName.WATER_TILES) {
+      for (let v = byName.WATER_TILES; v <= byName.WATER; v++) {
+        desc.set(v, {
+          base: water.base.map(f => f + v - byName.WATER_TILES),
+          deco: water.deco
+        });
+      }
+    }
+    return desc;
+  }
+
+  // frame index -> {sx, sy} on the sheet (row-major TILE_SIZE frames)
+  function framePos(idx) {
+    const cols = Math.max(1, Math.floor(sheetImage.naturalWidth / TILE_SIZE));
+    return { sx: (idx % cols) * TILE_SIZE, sy: Math.floor(idx / cols) * TILE_SIZE };
+  }
+
+  // WYSIWYG cell painter: returns false when the sheet cannot model the cell
+  function drawTileCell(g, cell, x, y) {
+    if (!sheetImage) { return false; }
+    const px = x * zoom, py = y * zoom;
+    if (level.customTiles) {
+      // CustomLayerTilemap path: explicit per-cell frames; -1 = not drawn
+      let drew = false;
+      for (const layer of LAYERS) {
+        const idx = level[layer] ? level[layer][cell] : -1;
+        if (idx === undefined || idx < 0) { continue; }
+        const { sx, sy } = framePos(idx);
+        g.imageSmoothingEnabled = false;
+        g.drawImage(sheetImage, sx, sy, TILE_SIZE, TILE_SIZE, px, py, zoom, zoom);
+        drew = true;
+      }
+      if (!drew) {
+        // nothing authored for this cell - show the terrain dimmed so the
+        // map stays readable (the game would draw nothing here)
+        const name = terrainByValue[level.map[cell]] || '';
+        g.fillStyle = TERRAIN_COLORS[name] || '#30181a';
+        g.globalAlpha = 0.45;
+        g.fillRect(px, py, zoom, zoom);
+        g.globalAlpha = 1;
+      }
+      return true;
+    }
+    // auto-tiling port (XTilemapConfiguration)
+    const entry = tileDesc && tileDesc.get(level.map[cell]);
+    if (!entry || !entry.base.length || !entry.deco.length) { return false; }
+    const { sx: bsx, sy: bsy } = framePos(entry.base[cell % entry.base.length]);
+    const { sx: dsx, sy: dsy } = framePos(entry.deco[cell % entry.deco.length]);
+    g.imageSmoothingEnabled = false;
+    g.drawImage(sheetImage, bsx, bsy, TILE_SIZE, TILE_SIZE, px, py, zoom, zoom);
+    g.drawImage(sheetImage, dsx, dsy, TILE_SIZE, TILE_SIZE, px, py, zoom, zoom);
+    return true;
+  }
 
   const sizeRow = document.createElement('div');
   const wInput = document.createElement('input');
@@ -274,9 +459,17 @@ export async function levelEditor(content, ctx) {
       for (let x = 0; x < level.width; x++) {
         const cell = y * level.width + x;
         const t = level.map[cell];
-        const name = terrainByValue[t] || '';
-        g.fillStyle = TERRAIN_COLORS[name] || (t === undefined ? '#000' : '#803030');
-        g.fillRect(x * zoom, y * zoom, zoom, zoom);
+        let tileDrawn = false;
+        if (view === 'tiles') {
+          try {
+            tileDrawn = drawTileCell(g, cell, x, y);
+          } catch (e) { /* sheet edge cases fall back to colors */ }
+        }
+        if (!tileDrawn) {
+          const name = terrainByValue[t] || '';
+          g.fillStyle = TERRAIN_COLORS[name] || (t === undefined ? '#000' : '#803030');
+          g.fillRect(x * zoom, y * zoom, zoom, zoom);
+        }
         // var overlay marker
         if (level[varLayer] && level[varLayer][cell] >= 0) {
           g.fillStyle = 'rgba(255,255,255,0.25)';
@@ -489,6 +682,11 @@ export async function levelEditor(content, ctx) {
   }
 
   function loadTileset() {
+    // the WYSIWYG view shares the sheet - drop caches when it changes
+    sheetImage = null;
+    sheetCacheName = null;
+    tileDesc = null;
+    if (view === 'tiles') { ensureTileAssets().then(drawGrid); }
     const src = tilesInput.value.trim();
     if (!src) { tileCanvas.width = 0; return; }
     tileImage = new Image();
@@ -539,6 +737,22 @@ export async function levelEditor(content, ctx) {
     metaGrid.appendChild(label);
     metaGrid.appendChild(input);
   }
+  // customTiles decides whether the game renders the painted var layers at
+  // all (PredesignedLevel.readLevelParams -> customTiles()) - without it the
+  // var tool paints arrays the engine never looks at
+  const customLabel = document.createElement('label');
+  customLabel.textContent = 'customTiles';
+  const customBox = document.createElement('input');
+  customBox.type = 'checkbox';
+  customBox.checked = level.customTiles === true;
+  customBox.addEventListener('change', () => {
+    if (customBox.checked) { level.customTiles = true; }
+    else { delete level.customTiles; }
+    dirty = true;
+    drawGrid();
+  });
+  metaGrid.appendChild(customLabel);
+  metaGrid.appendChild(customBox);
   tilePanel.appendChild(document.createElement('hr'));
   tilePanel.appendChild(metaGrid);
 

@@ -123,3 +123,12 @@ table.pairs input { width: 100%; }
 .warn-list { list-style: none; padding: 0; color: #e8c56b; }
 
 img.sprite-preview { image-rendering: pixelated; background: #0d0c0b; border: 1px solid #33302a; }
+
+/* lua authoring help: collapsed by default, readable when opened */
+details.lua-help { padding: 8px 12px; }
+details.lua-help summary { cursor: pointer; color: #e8c56b; }
+details.lua-help button { margin-left: 6px; }
+.api-ref { font-size: 13px; max-height: 480px; overflow-y: auto; }
+.api-ref pre { background: #0d0c0b; border: 1px solid #33302a; padding: 8px; overflow-x: auto; }
+.api-ref code { background: #0d0c0b; padding: 0 4px; border-radius: 3px; }
+.api-ref h2, .api-ref h3, .api-ref h4, .api-ref h5 { color: #e8c56b; margin: 12px 0 4px; }

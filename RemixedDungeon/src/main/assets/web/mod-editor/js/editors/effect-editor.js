@@ -14,7 +14,20 @@ export async function effectEditor(content, ctx) {
     await jsonEditor(content, Object.assign({}, ctx, { content: data.content }));
     return null;
   }
-  if (obj == null || typeof obj !== 'object' || Array.isArray(obj) || !obj.anim) {
+  // form gate: anim with missing/zero fps or empty frames can only be made
+  // worse by the form (Save would inject fps:0 = frozen anim; the engine's
+  // getDouble("fps") throws on it anyway) - edit those as text instead,
+  // same scalar-gate rule as lua-desc-table
+  const animOk = obj != null && typeof obj === 'object' && !Array.isArray(obj)
+    && obj.anim && typeof obj.anim === 'object' && !Array.isArray(obj.anim)
+    && Number(obj.anim.fps) > 0
+    && (obj.anim.looped === undefined || typeof obj.anim.looped === 'boolean')
+    && Array.isArray(obj.anim.frames) && obj.anim.frames.length > 0
+    && obj.anim.frames.every(f => Number.isFinite(f))
+    && (obj.texture === undefined || typeof obj.texture === 'string')
+    && (obj.width === undefined || Number.isFinite(obj.width))
+    && (obj.height === undefined || Number.isFinite(obj.height));
+  if (!animOk) {
     const { jsonEditor } = await import('./text-editors.js');
     await jsonEditor(content, Object.assign({}, ctx, { content: data.content }));
     return null;
@@ -181,14 +194,23 @@ export async function effectEditor(content, ctx) {
   restartAnim();
 
   save.addEventListener('click', async () => {
+    // refuse to write a broken anim (fps 0 / no frames) - the engine throws
+    // on getDouble("fps") and the effect freezes; never save it silently
+    const fpsVal = Number(inputs['anim.fps'].value);
+    const seq = frames();
+    if (!(fpsVal > 0) || !seq.length) {
+      status.className = 'status-err';
+      status.textContent = 'anim needs fps > 0 and at least one frame index';
+      return;
+    }
     const out = obj;
     out.texture = inputs.texture.value.trim();
     out.width = Number(inputs.width.value) || 0;
     out.height = Number(inputs.height.value) || 0;
     out.anim = out.anim || {};
-    out.anim.fps = Number(inputs['anim.fps'].value) || 0;
+    out.anim.fps = fpsVal;
     out.anim.looped = inputs['anim.looped'].checked;
-    out.anim.frames = frames();
+    out.anim.frames = seq;
     try {
       await api.saveModFile(ctx.mod, ctx.file, JSON.stringify(out, null, 3) + '\n');
       status.className = 'status-ok';

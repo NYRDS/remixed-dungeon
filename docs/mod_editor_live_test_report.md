@@ -230,3 +230,31 @@ Gates: test_mod_editor.py ALL PASS (incl. new sections); android fdroid
 compile GREEN; test_path_traversal.py PASS this round (its earlier
 gradlew-GL wedge did not recur); LanguageTool pass on new UI strings
 (2 "builtin"→"built-in" fixes, rest identifier false positives).
+
+## Round 4 (bd remixed-dungeon-its, 2026-11-16)
+
+Scope: WYSIWYG level rendering, Treasury/initHeroes/plants/Bestiary
+forms, per-language strings manager, lua authoring help, effect-editor
+fps gate (the round-3 P3), test coverage for rename_file/terrain/
+subdir+builtin listing.
+
+| item | outcome |
+|---|---|
+| effect-editor fps gate | anim without fps/frames now falls back to the text editor (load-time shape gate) and Save refuses fps<=0 / empty frames - `fps:0` frozen anims can no longer be written. Verified live: `effects/broken.json` (no fps) opened as text, `effects/good.json` rendered the form + animated preview |
+| WYSIWYG level view | `tiles (WYSIWYG)` mode beside the color view. Auto-tile path: faithful port of `XTilemapConfiguration` (tilemapDesc base+deco with `cell % frames` variation, WATER_TILES..WATER border shift, SECRET_*_TRAP mapping); `customTiles` levels render the painted var layers (`CustomLayerTilemap` path) with a dimmed terrain underlay for un-authored cells. Canvas readbacks: colors mode 15 distinct colors → tiles mode 56 on the same level; xyz sheet stays colors with a notice. Screenshot artifact saved for Mike |
+| customTiles toggle | the level editor now exposes `customTiles` - without it the var-painted layers were never rendered by the engine (PredesignedLevel.customTiles()) |
+| Treasury form | `levelsDesc/*Treasury.json` v0+v1 form (categories/weights, categoryChance vs settings.probabilities + decayFactor); unknown keys preserved; live round-trip verified (weight + decayFactor edits persisted, version + other categories kept). Non-numeric weights refuse to save client-side AND error in validate |
+| initHeroes form | `hero/initHeroes*.json` per-class sections (stats, equipment slots with identified/level, item/quickslot entries with kind-vs-spell select and inline-json extras, keyword lists); live round-trip (str edit persisted; quantity/spell/identified extras kept); **in-game proof**: select+restart → start_game → WARRIOR str=12 (the edit), hp=20, gold=100 (editor-authored common loadout) |
+| Bestiary form | levels/depths/mob-weights + Feelings (Chance + terrain groups) form with mob-kind datalist; live round-trip; validate errors non-numeric weights, warns unknown kinds (ZorgMob → rat fallback); **in-game proof**: descend to level 1 → SewerLevel spawned 6 mobs from the editor-authored table |
+| Treasury in-game | `QaTreasury.json` wired via campaign level property `treasury`; in-game rolls return only authored kinds with the authored 7:2 skew (bistre/epidot potions) |
+| strings manager | languages table per strings_*.json (pair counts, missing-key diff vs mod's/builtin en: ru showed "1 missing vs strings_en.json"); `+ language` seeds strings_de.json with every en key + empty values (prompt auto-dismiss in IAB worked around with a shim); pairs save round-trip |
+| lua help | collapsible pane in every lua editor: 9 skeleton snippet buttons (insert at cursor - `mob.init` verified inserted + saves through the compile gate), full API reference rendered from the vendored `api-reference.md` (19 headings, code blocks, links); a python test keeps the vendored copy in sync with `docs/modding.md` |
+| templates | + plantsDesc, treasury (v1), bestiary; name-aware template pick (`*Treasury.json`/`Bestiary.json` no longer get the level template) |
+| test coverage | + rename_file round-trip + 409 collision, `files?path=` subdir, `files?builtin=1`, `read?builtin=1` (+source=builtin), terrain table (WALL=4, 16px), treasury validate rules (decayFactor 1e999, string weight, v0 missing categoryChance warning, probability-0 warning), bestiary validate rules, initHeroes/plants/strings save round-trips, api-reference sync check |
+| mojibake red herring | Cyrillic edited through IAB evaluate arrived as U+FFFD - transport-layer artifact of the test tooling, NOT the editor: the python E2E strings round-trip (file-based, no transport) passes clean UTF-8 |
+
+Gates: test_mod_editor.py ALL PASS (74 checks incl. round-4 sections);
+android fdroid compile GREEN; CI-parity suites (blood_transfusion,
+level_navigation, doctor_spells, all_spells, alchemy) all pass; real
+browser pass over every new editor (atomic goto+evaluate recipe);
+LanguageTool on new UI strings.

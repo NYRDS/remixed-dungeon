@@ -3,6 +3,7 @@ package com.nyrds.platform.app;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.ModDesc;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.storage.FileSystem;
@@ -1189,6 +1190,8 @@ public class ModEditorEndpoints {
 
         validateMobChains(modName, errors, warnings);
         validateLevels(modName, errors, warnings);
+        validateTreasury(modName, errors, warnings);
+        validateBestiary(modName, errors, warnings);
 
         JSONObject result = new JSONObject();
         result.put("success", errors.isEmpty());
@@ -1400,6 +1403,156 @@ public class ModEditorEndpoints {
                 warnings.add(rel + " is not referenced from Dungeon.json Levels (unreachable)");
             }
         }
+    }
+
+    // loot tables (levelsDesc/*Treasury.json, v0 and v1): non-numeric weights
+    // crash the engine's getDouble and NaN decay/probabilities were a live
+    // Crashlytics family - errors, while dead categories and v0 tables whose
+    // categories lack categoryChance (misaligns the roll lists) warn
+    private static void validateTreasury(String modName, List<String> errors, List<String> warnings) {
+        File levelsDir = modFile(modName, "levelsDesc");
+        File[] files = levelsDir.listFiles();
+        if (files == null) {
+            return;
+        }
+        for (File file : files) {
+            String name = file.getName();
+            if (!name.toLowerCase().endsWith("treasury.json")) {
+                continue;
+            }
+            String rel = "levelsDesc/" + name;
+            try {
+                JSONObject treasury = JsonHelper.readJsonFromStream(new FileInputStream(file), rel);
+                if (treasury.length() == 0) {
+                    continue;
+                }
+                int version = treasury.optInt("version", 0);
+                if (version == 1) {
+                    JSONObject categories = treasury.optJSONObject("categories");
+                    JSONObject settings = treasury.optJSONObject("settings");
+                    if (categories == null || settings == null) {
+                        errors.add(rel + ": v1 needs \"categories\" and \"settings\" objects");
+                        continue;
+                    }
+                    if (settings.has("decayFactor") && !isFiniteNumber(settings.opt("decayFactor"))) {
+                        errors.add(rel + ": settings.decayFactor is not a number");
+                    }
+                    JSONObject probabilities = settings.optJSONObject("probabilities");
+                    for (java.util.Iterator<String> it = categories.keys(); it.hasNext(); ) {
+                        String category = it.next();
+                        JSONObject items = categories.optJSONObject(category);
+                        if (items == null) {
+                            errors.add(rel + ": category " + category + " is not an object");
+                            continue;
+                        }
+                        validateWeights(rel + "/" + category, items, errors, warnings);
+                        if (probabilities == null || !probabilities.has(category)) {
+                            warnings.add(rel + ": category " + category + " has no settings.probabilities entry - it never rolls");
+                        } else if (!isFiniteNumber(probabilities.opt(category))) {
+                            errors.add(rel + ": probability of " + category + " is not a number");
+                        } else if (((Number) probabilities.opt(category)).doubleValue() == 0) {
+                            warnings.add(rel + ": category " + category + " has probability 0 - it never rolls");
+                        }
+                    }
+                } else if (version == 0) {
+                    for (java.util.Iterator<String> it = treasury.keys(); it.hasNext(); ) {
+                        String category = it.next();
+                        if (category.equals("version")) {
+                            continue;
+                        }
+                        JSONObject items = treasury.optJSONObject(category);
+                        if (items == null) {
+                            errors.add(rel + ": category " + category + " is not an object");
+                            continue;
+                        }
+                        if (items.has("categoryChance") && !isFiniteNumber(items.opt("categoryChance"))) {
+                            errors.add(rel + "/" + category + ": categoryChance is not a number");
+                        }
+                        if (!items.has("categoryChance")) {
+                            warnings.add(rel + "/" + category + ": v0 without categoryChance misaligns the roll table");
+                        }
+                        validateWeights(rel + "/" + category, items, errors, warnings);
+                    }
+                } else {
+                    errors.add(rel + ": unknown treasury version " + version);
+                }
+            } catch (Exception e) {
+                errors.add(rel + ": " + e.getMessage());
+            }
+        }
+    }
+
+    private static void validateWeights(String where, JSONObject items, List<String> errors, List<String> warnings) {
+        boolean anyPositive = false;
+        for (java.util.Iterator<String> it = items.keys(); it.hasNext(); ) {
+            String item = it.next();
+            if (item.equals("categoryChance")) {
+                continue;
+            }
+            Object weight = items.opt(item);
+            if (weight instanceof Number) {
+                if (((Number) weight).doubleValue() > 0) {
+                    anyPositive = true;
+                }
+            } else {
+                errors.add(where + "/" + item + ": weight is not a number");
+            }
+        }
+        if (!anyPositive && items.length() > (items.has("categoryChance") ? 1 : 0)) {
+            warnings.add(where + ": every weight is 0 - the category never drops anything");
+        }
+    }
+
+    // spawn tables (levelsDesc/Bestiary.json): weights must be numeric and
+    // sections/depth maps must be objects; unknown mob kinds fall back to a
+    // rat in game, so they warn instead of erroring
+    private static void validateBestiary(String modName, List<String> errors, List<String> warnings) {
+        File file = modFile(modName, "levelsDesc/Bestiary.json");
+        if (!file.isFile()) {
+            return;
+        }
+        String rel = "levelsDesc/Bestiary.json";
+        try {
+            JSONObject bestiary = JsonHelper.readJsonFromStream(new FileInputStream(file), rel);
+            for (java.util.Iterator<String> it = bestiary.keys(); it.hasNext(); ) {
+                String section = it.next();
+                JSONObject depths = bestiary.optJSONObject(section);
+                if (depths == null) {
+                    errors.add(rel + ": " + section + " is not an object");
+                    continue;
+                }
+                for (java.util.Iterator<String> dit = depths.keys(); dit.hasNext(); ) {
+                    String depth = dit.next();
+                    JSONObject mobs = depths.optJSONObject(depth);
+                    if (mobs == null) {
+                        if ("Feelings".equals(section) && depths.opt(depth) instanceof Number) {
+                            continue; // Feelings.Chance is a plain number
+                        }
+                        errors.add(rel + ": " + section + "/" + depth + " is not an object");
+                        continue;
+                    }
+                    for (java.util.Iterator<String> mit = mobs.keys(); mit.hasNext(); ) {
+                        String mob = mit.next();
+                        if (!(mobs.opt(mob) instanceof Number)) {
+                            errors.add(rel + ": " + section + "/" + depth + "/" + mob + " weight is not a number");
+                        } else if (!MobFactory.hasMob(mob)) {
+                            warnings.add(rel + ": " + section + "/" + depth + "/" + mob
+                                + " is not a known mob kind - the game falls back to a rat");
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+            errors.add(rel + ": " + e.getMessage());
+        }
+    }
+
+    private static boolean isFiniteNumber(Object value) {
+        if (!(value instanceof Number)) {
+            return false;
+        }
+        double d = ((Number) value).doubleValue();
+        return !Double.isNaN(d) && !Double.isInfinite(d);
     }
 
     // existence: mod dir first, then the builtin/active-mod resource
