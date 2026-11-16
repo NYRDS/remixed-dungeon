@@ -105,4 +105,4 @@ jobs:
           releaseFiles: RemixedDungeon/build/outputs/apk/androidGooglePlay/release/*.apk
           track: beta
           userFraction: '0.2'
-          status: completed
+          status: inProgress
