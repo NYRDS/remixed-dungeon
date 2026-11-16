@@ -2,6 +2,11 @@
 
 import * as api from './api.js';
 
+// expanded dirs survive tree re-renders (refresh after save/rename keeps
+// the user's place); reset when another workspace opens
+let openDirsMod = null;
+const openDirs = new Set();
+
 // opts: { mod, onOpen(file), onNewFile(dir), onUpload(dir),
 //         onRename(entryPath), onDelete(entryPath) }
 export function renderTree(container, opts) {
@@ -11,6 +16,10 @@ export function renderTree(container, opts) {
   container.appendChild(root);
 
   const mod = opts.mod;
+  if (openDirsMod !== mod) {
+    openDirsMod = mod;
+    openDirs.clear();
+  }
 
   function dirNode(parentUl, dirPath, name) {
     const li = document.createElement('li');
@@ -24,14 +33,21 @@ export function renderTree(container, opts) {
     li.appendChild(children);
 
     let loaded = false;
-    label.addEventListener('click', async () => {
-      const open = li.classList.toggle('open');
+    async function setOpen(open) {
+      li.classList.toggle('open', open);
       children.style.display = open ? '' : 'none';
-      if (open && !loaded) {
-        loaded = true;
-        await fillDir(children, dirPath);
+      if (open) {
+        openDirs.add(dirPath);
+        if (!loaded) {
+          loaded = true;
+          await fillDir(children, dirPath);
+        }
+      } else {
+        openDirs.delete(dirPath);
       }
-    });
+    }
+    label.addEventListener('click', () => setOpen(!li.classList.contains('open')));
+    if (openDirs.has(dirPath)) { setOpen(true); }
     parentUl.appendChild(li);
     return { children, dirPath };
   }

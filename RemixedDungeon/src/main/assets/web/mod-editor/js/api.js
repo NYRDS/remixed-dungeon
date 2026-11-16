@@ -4,11 +4,11 @@
 let busyCb = null;
 export function onBusy(cb) { busyCb = cb; }
 
-async function request(url, options) {
+async function request(url, options, timeoutMs) {
   if (busyCb) { busyCb(true); }
   // a hung keep-alive connection must not wedge the page forever
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 30000);
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs || 30000);
   try {
     const resp = await fetch(url, Object.assign({ signal: ctrl.signal }, options));
     let data = null;
@@ -26,12 +26,12 @@ async function request(url, options) {
   }
 }
 
-function post(action, payload) {
+function post(action, payload, timeoutMs) {
   return request('/api/mods/' + action, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
-  });
+  }, timeoutMs);
 }
 
 export function listMods() {
@@ -52,7 +52,8 @@ export function readModFile(mod, file, builtin) {
 
 export function createMod(payload) { return post('create', payload); }
 export function duplicateMod(from, to) { return post('duplicate', { from, to }); }
-export function cloneBuiltin(to, title, author) { return post('clone_builtin', { to, title, author }); }
+// copies ~1500 files server-side - allow well over the default 30 s for slow storage
+export function cloneBuiltin(to, title, author) { return post('clone_builtin', { to, title, author }, 120000); }
 export function deleteMod(name) { return post('delete', { name }); }
 export function selectMod(name) { return post('select', { name }); }
 export function saveModFile(mod, file, content) { return post('save', { mod, file, content }); }

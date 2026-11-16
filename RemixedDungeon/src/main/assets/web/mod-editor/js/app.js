@@ -408,6 +408,27 @@ async function runValidate(modName, quiet) {
     content.prepend(box);
   }
   box.innerHTML = '<h3>Validation</h3><p class="hint">running…</p>';
+  // messages start with the offending file ("levelsDesc/X.json: ..."); entries
+  // naming a file become clickable and open it in an editor. Path segments
+  // must not match spaces - otherwise the whole sentence is swallowed.
+  const fileRef = msg => {
+    const m = msg.match(/(?:[\w.-]+\/)*[\w.-]+\.(?:json|lua|png|jpg|ogg|mp3|wav)/i);
+    return m ? m[0] : null;
+  };
+  const entryLi = (msg, isErr) => {
+    const li = document.createElement('li');
+    const file = fileRef(msg);
+    if (file) {
+      li.textContent = msg;
+      li.title = 'click to open ' + file;
+      li.classList.add('clickable-entry');
+      li.addEventListener('click', () => openFile(modName, file));
+    } else {
+      li.textContent = msg;
+    }
+    if (!isErr && file) { li.classList.add('warn-entry'); } // styling hook
+    return li;
+  };
   try {
     const result = await api.validateMod(modName);
     box.innerHTML = '<h3>Validation</h3>';
@@ -419,9 +440,7 @@ async function runValidate(modName, quiet) {
       const ul = document.createElement('ul');
       ul.className = 'error-list';
       for (const e of result.errors.slice(0, 30)) {
-        const li = document.createElement('li');
-        li.textContent = e;
-        ul.appendChild(li);
+        ul.appendChild(entryLi(e, true));
       }
       box.appendChild(ul);
     }
@@ -433,9 +452,7 @@ async function runValidate(modName, quiet) {
       const ul = document.createElement('ul');
       ul.className = 'error-list';
       for (const w of result.warnings.slice(0, 30)) {
-        const li = document.createElement('li');
-        li.textContent = w;
-        ul.appendChild(li);
+        ul.appendChild(entryLi(w, false));
       }
       box.appendChild(ul);
     }
@@ -471,65 +488,65 @@ async function openFile(modName, file) {
   try {
     if (lower.startsWith('mobsdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await mobEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await mobEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     if (lower.startsWith('spritesdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await spriteEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await spriteEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     if (lower.startsWith('scripts/items/') && lower.endsWith('.lua')) {
       content.innerHTML = '';
-      adoptEditor(await itemEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await itemEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     if (lower.startsWith('scripts/spells/') && lower.endsWith('.lua')) {
       content.innerHTML = '';
-      adoptEditor(await spellEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await spellEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     if (lower.startsWith('scripts/buffs/') && lower.endsWith('.lua')) {
       content.innerHTML = '';
-      adoptEditor(await buffEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await buffEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     if (lower.startsWith('levelobjects/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await objectEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await objectEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     if (lower.startsWith('effects/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await effectEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await effectEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     if (lower.startsWith('plantsdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await plantsEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await plantsEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     // hero loadouts (hero/initHeroes.json, hero/initHeroesDebug.json)
     if (lower.startsWith('hero/initheroes') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await initHeroesEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await initHeroesEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     // loot tables and spawn tables are structured files that only wear a
     // levelsDesc/ address - match them before the level painter
     if (lower.startsWith('levelsdesc/') && /treasury\.json$/.test(lower)) {
       content.innerHTML = '';
-      adoptEditor(await treasuryEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await treasuryEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     if (lower === 'levelsdesc/bestiary.json') {
       content.innerHTML = '';
-      adoptEditor(await bestiaryEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await bestiaryEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
     if (lower.startsWith('levelsdesc/') && lower.endsWith('.json') && !file.endsWith('Dungeon.json')) {
       content.innerHTML = '';
-      adoptEditor(await levelEditor(content, { mod: modName, file, api, onSaved: () => {} }));
+      adoptEditor(await levelEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
       return;
     }
   } catch (e) {

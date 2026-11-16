@@ -142,6 +142,16 @@ export async function initHeroesEditor(content, ctx) {
       grid.appendChild(wrap);
     }
     panelEl.appendChild(grid);
+    // engine truth: isSpellUser is never read from the loadout - Hero
+    // derives it from magicAffinity (Hero.isSpellUser). The key round-trips
+    // untouched but has no effect today.
+    if (CHECKS.some(([k]) => k === 'isSpellUser')) {
+      const note = document.createElement('p');
+      note.className = 'hint';
+      note.textContent = 'isSpellUser is not read by the engine - spellcasting ' +
+        'follows the magicAffinity value above; the checkbox only round-trips the key.';
+      panelEl.appendChild(note);
+    }
 
     // equipment slots: kind · identified · level (empty kind drops the slot);
     // any other slot fields round-trip untouched

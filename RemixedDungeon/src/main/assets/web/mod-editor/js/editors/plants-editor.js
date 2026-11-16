@@ -78,6 +78,11 @@ export async function plantsEditor(content, ctx) {
     onPicked: markDirty
   });
 
+  // API reference pane (form has no textarea - reference only); the behavior
+  // template lives in templates.js and is offered by "+ new file" in scripts/plants/
+  const { renderLuaHelp } = await import('./text-editors.js');
+  renderLuaHelp(content, ctx, { snippets: false });
+
   save.addEventListener('click', async () => {
     const v = input.value.trim();
     if (v !== '') {

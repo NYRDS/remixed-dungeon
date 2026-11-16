@@ -727,8 +727,7 @@ export async function levelEditor(content, ctx) {
   const metaGrid = document.createElement('div');
   metaGrid.className = 'field-grid';
   const metaInputs = {};
-  for (const key of ['water', 'music', 'decoName']) {
-    if (key === 'decoName') { continue; } // per-cell arrays - edit as json
+  for (const key of ['water', 'music']) {
     const label = document.createElement('label');
     label.textContent = key;
     const input = document.createElement('input');

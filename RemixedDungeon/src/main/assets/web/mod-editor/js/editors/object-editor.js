@@ -176,6 +176,10 @@ export async function objectEditor(content, ctx) {
     onPicked: markDirty
   });
 
+  // API reference pane (form has no textarea - reference only)
+  const { renderLuaHelp } = await import('./text-editors.js');
+  renderLuaHelp(content, ctx, { snippets: false });
+
   save.addEventListener('click', async () => {
     const out = obj;
     for (const [dotted] of TEXT_FIELDS) {

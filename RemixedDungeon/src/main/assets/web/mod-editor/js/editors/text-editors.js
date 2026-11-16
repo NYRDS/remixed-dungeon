@@ -76,7 +76,9 @@ export function luaEditor(content, ctx) {
 const SNIPPET_KEYS = ['scripts/items/', 'scripts/buffs/', 'scripts/mobs/', 'scripts/ai/',
   'scripts/spells/', 'scripts/traps/', 'scripts/objects/', 'scripts/npc/', 'scripts/actors/'];
 
-function renderLuaHelp(content, ctx) {
+// snippets + API reference pane. opts.snippets=false renders the reference
+// only (form editors have no textarea to insert skeletons into)
+export function renderLuaHelp(content, ctx, opts) {
   const details = document.createElement('details');
   details.className = 'panel lua-help';
 
@@ -84,27 +86,29 @@ function renderLuaHelp(content, ctx) {
   summary.textContent = 'Lua authoring help - snippets & API reference';
   details.appendChild(summary);
 
-  const snippetBox = document.createElement('div');
-  snippetBox.className = 'hint';
-  snippetBox.textContent = 'insert a working skeleton at the cursor: ';
-  details.appendChild(snippetBox);
-  for (const key of SNIPPET_KEYS) {
-    const t = TEMPLATES[key];
-    if (!t) { continue; }
-    const b = document.createElement('button');
-    b.textContent = key.split('/')[1];
-    b.title = t.hint;
-    b.addEventListener('click', () => {
-      const textarea = content.querySelector('textarea.code');
-      if (!textarea) { return; }
-      const at = textarea.selectionStart;
-      const before = textarea.value.slice(0, at);
-      const after = textarea.value.slice(textarea.selectionEnd);
-      const pad = before && !before.endsWith('\n') ? '\n\n' : '';
-      textarea.value = before + pad + t.content.trimEnd() + '\n' + after;
-      textarea.dispatchEvent(new Event('input', { bubbles: true }));
-    });
-    snippetBox.appendChild(b);
+  if (!opts || opts.snippets !== false) {
+    const snippetBox = document.createElement('div');
+    snippetBox.className = 'hint';
+    snippetBox.textContent = 'insert a working skeleton at the cursor: ';
+    details.appendChild(snippetBox);
+    for (const key of SNIPPET_KEYS) {
+      const t = TEMPLATES[key];
+      if (!t) { continue; }
+      const b = document.createElement('button');
+      b.textContent = key.split('/')[1];
+      b.title = t.hint;
+      b.addEventListener('click', () => {
+        const textarea = content.querySelector('textarea.code');
+        if (!textarea) { return; }
+        const at = textarea.selectionStart;
+        const before = textarea.value.slice(0, at);
+        const after = textarea.value.slice(textarea.selectionEnd);
+        const pad = before && !before.endsWith('\n') ? '\n\n' : '';
+        textarea.value = before + pad + t.content.trimEnd() + '\n' + after;
+        textarea.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+      snippetBox.appendChild(b);
+    }
   }
 
   const refBox = document.createElement('div');
@@ -247,6 +251,25 @@ async function renderStringsManager(content, ctx) {
         window.dispatchEvent(new CustomEvent('mod-editor:open-file', { detail: name }));
       });
       openCell.appendChild(open);
+      const del = document.createElement('button');
+      del.textContent = '×';
+      del.title = 'delete ' + name;
+      del.style.color = '#a55';
+      del.style.marginLeft = '6px';
+      del.addEventListener('click', async () => {
+        if (!window.confirm('Delete ' + name + '? The file is removed from the mod.')) { return; }
+        try {
+          await api.deleteModFile(ctx.mod, name);
+          statusEl.className = 'status-ok';
+          statusEl.textContent = 'deleted ' + name;
+          // re-render the manager by reopening the current file
+          window.dispatchEvent(new CustomEvent('mod-editor:open-file', { detail: ctx.file }));
+        } catch (e) {
+          statusEl.className = 'status-err';
+          statusEl.textContent = e.message;
+        }
+      });
+      openCell.appendChild(del);
     }
     tr.appendChild(nameCell);
     tr.appendChild(countCell);

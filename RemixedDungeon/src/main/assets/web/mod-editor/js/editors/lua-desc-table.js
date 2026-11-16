@@ -235,6 +235,10 @@ export async function descTableEditor(content, ctx, cfg) {
     iconPicker(content, ctx, inputs, Object.assign({ onPicked: () => { dirty = true; } }, cfg.icon));
   }
 
+  // API reference pane - form editors have no textarea, so reference only
+  const { renderLuaHelp } = await import('./text-editors.js');
+  renderLuaHelp(content, ctx, { snippets: false });
+
   save.addEventListener('click', async () => {
     const out = Object.assign({}, parsed.values);
     for (const [key, , type] of cfg.fields) {

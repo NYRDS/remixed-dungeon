@@ -70,6 +70,21 @@ return ai.init({
 })
 `
   },
+  'scripts/plants/': {
+    hint: 'plant behavior (scripts/lib/plant; sprite frame goes to plantsDesc/<Name>.json)',
+    content: `local RPD   = require "scripts/lib/commonClasses"
+local plant = require "scripts/lib/plant"
+
+return plant.init{
+    effect = function(self, plantObject, pos, presser, activator)
+        -- the char (or null) that stepped on the seed
+        if presser ~= nil and RPD.CharUtils:isChar(presser) then
+            -- e.g. RPD.CharUtils:buff(presser, RPD.Buffs.Poison, 5)
+        end
+    end
+}
+`
+  },
   'scripts/spells/': {
     hint: 'custom spell (scripts/lib/spell)',
     content: `local RPD   = require "scripts/lib/commonClasses"

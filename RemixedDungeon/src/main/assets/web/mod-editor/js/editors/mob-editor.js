@@ -6,6 +6,9 @@ import * as api from '../api.js';
 const WALKING_TYPES = ['NORMAL', 'WALL', 'WATER', 'ABSOLUTE'];
 const AI_STATES = ['Wandering', 'Sleeping', 'Hunting', 'Passive', 'Kite'];
 const GENDERS = ['neuter', 'feminine', 'masculine'];
+// Fraction is parsed with Enum.valueOf - a garbage string crashes mob load,
+// so this stays a closed select, not free text
+const FRACTIONS = ['DUNGEON', 'NEUTRAL', 'HEROES', 'ANY'];
 
 const NUMBER_FIELDS = [
   ['ht', 'HP'], ['defenseSkill', 'defense'], ['attackSkill', 'attack'],
@@ -127,6 +130,23 @@ export async function mobEditor(content, ctx) {
   selectField(statsGrid, 'walking type', 'walkingType', mob.walkingType, WALKING_TYPES);
   selectField(statsGrid, 'ai state', 'aiState', mob.aiState, AI_STATES);
   field(statsGrid, 'loot item kind', 'loot', mob.loot && mob.loot.kind, { placeholder: 'Gold' });
+  field(statsGrid, 'loot category (treasury roll)', 'lootCategory', mob.loot && mob.loot.category, { placeholder: 'POTION' });
+
+  // --- gameplay ------------------------------------------------------------
+  // engine keys from Mob.fillMobStats the stats panel does not cover
+  const gameGrid = panel('Gameplay');
+  selectField(gameGrid, 'fraction', 'fraction', mob.fraction, FRACTIONS);
+  field(gameGrid, 'attack range', 'attackRange', mob.attackRange, { type: 'number', step: 'any' });
+  field(gameGrid, 'carcass chance', 'carcassChance', mob.carcassChance, { type: 'number', step: 'any' });
+  field(gameGrid, 'sprite layer', 'spriteLayer', mob.spriteLayer, { placeholder: 'MOB' });
+  field(gameGrid, 'battle music', 'battleMusic', mob.battleMusic, { placeholder: 'sound/battle.mp3' });
+  field(gameGrid, 'battle music fallback', 'battleMusicFallback', mob.battleMusicFallback, {});
+  for (const [key, labelText] of [
+    ['isBoss', 'is boss'], ['npc', 'npc'], ['movable', 'movable'],
+    ['immortal', 'immortal'], ['pacified', 'pacified'], ['isHumanoid', 'humanoid'],
+  ]) {
+    checkField(gameGrid, labelText, key, mob[key]);
+  }
 
   // --- sprite --------------------------------------------------------------
   const spriteGrid = panel('Sprite');
@@ -227,6 +247,16 @@ export async function mobEditor(content, ctx) {
           out.loot.kind = v; // keep companion keys (chance, count...)
         } else {
           out.loot = { kind: v };
+        }
+        continue;
+      }
+      if (key === 'lootCategory') {
+        if (v === '') {
+          if (out.loot && typeof out.loot === 'object') { delete out.loot.category; }
+        } else if (out.loot && typeof out.loot === 'object' && !Array.isArray(out.loot)) {
+          out.loot.category = v; // keep companion keys (kind, chance...)
+        } else {
+          out.loot = { category: v };
         }
         continue;
       }

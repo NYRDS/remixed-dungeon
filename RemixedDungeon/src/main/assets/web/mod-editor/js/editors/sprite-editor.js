@@ -91,7 +91,7 @@ export async function spriteEditor(content, ctx) {
   const dataList = document.createElement('datalist');
   dataList.id = 'textureList';
   texGrid.appendChild(dataList);
-  for (const dir of ['', 'mobs/', 'items/']) {
+  function fillTextureList(dir) {
     Promise.all([
       api.modFiles(ctx.mod, dir),
       api.modFiles(ctx.mod, dir, true)
@@ -110,6 +110,16 @@ export async function spriteEditor(content, ctx) {
         dataList.appendChild(o);
       }
     }).catch(() => { /* datalist stays partial, free text works */ });
+  }
+  // every dir the mod exposes (builtin overlay included) - textures are not
+  // limited to mobs/ and items/
+  api.modFiles(ctx.mod, '').then(root => {
+    for (const entry of root.entries) {
+      if (entry.dir) { fillTextureList(entry.name + '/'); }
+    }
+  }).catch(() => { /* root listing unavailable - keep the builtin dirs */ });
+  for (const dir of ['', 'mobs/', 'items/']) {
+    fillTextureList(dir);
   }
 
   field(texGrid, 'frame width', 'width', sprite.width, { type: 'number', min: 1, step: 1 });
