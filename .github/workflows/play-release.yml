@@ -1,5 +1,7 @@
-# Publish tag builds to Google Play (alpha track).
-# Replaces the bitrise.yml `deploy` workflow (tag -> google-play-deploy).
+# Publish tag builds to Google Play (beta track, 0.2 staged rollout).
+# Replaces the Bitrise `fix` tag workflow - its real config (server-side)
+# deploys with track=beta, user_fraction=0.2 (verified on beta.18 build 4222),
+# NOT the alpha/fix-track logic in the checked-in bitrise.yml.
 # Only runs on tag pushes; the tag must point at a commit on this branch.
 #
 # Required repo secrets (Settings -> Secrets and variables -> Actions):
@@ -24,7 +26,7 @@ permissions:
 
 jobs:
   play:
-    name: Publish to Google Play (alpha)
+    name: Publish to Google Play (beta, 0.2 rollout)
     runs-on: ubuntu-latest
     env:
       # lowercase names are what RemixedDungeon/build.gradle signingConfigs reads
@@ -95,11 +97,12 @@ jobs:
           path: RemixedDungeon/build/outputs/apk/androidGooglePlay/release/*.apk
           if-no-files-found: error
 
-      - name: Publish to Google Play (alpha)
+      - name: Publish to Google Play (beta)
         uses: r0adkll/upload-google-play@v2
         with:
           serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
           packageName: com.nyrds.pixeldungeon.ml
           releaseFiles: RemixedDungeon/build/outputs/apk/androidGooglePlay/release/*.apk
-          track: alpha
+          track: beta
+          userFraction: '0.2'
           status: completed
