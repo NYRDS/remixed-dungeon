@@ -88,7 +88,7 @@ data loss — they are reachability/UX gaps only (generic text editor always wor
 | Validation output is plain text (capped at 30 entries) — no click-to-navigate to the offending file | P3 | app.js:421,435 |
 | No file copy/duplicate-file UI; no new-directory affordance (dirs appear implicitly on save) | P3 | file-tree.js:80-103 |
 | Upload is single-file per picker; no directory upload | P3 | upload.js:21-50 |
-| 30 s client abort on every request — `clone_builtin` (~1.5k files) can exceed it client-side while the server finishes fine | P3 | api.js:11 |
+| 30 s client abort on every request — `clone_builtin` measured 0.12 s for 1557 files locally, so this bites only on slow storage; demoted to P4 | P4 | api.js:11 |
 | `onSaved` callbacks are no-ops — file tree doesn't refresh after saves that add/rename files; `files` size field never rendered | P4 | app.js:474, file-tree.js:66-105 |
 | Strings manager: no language delete (tree delete works), no side-by-side two-language view, no "insert missing key" action | P4 | text-editors.js:200-285 |
 | `raw?builtin=1` param supported but never sent by the UI (harmless; handler falls back anyway) | P4 | ModEditorEndpoints.java:302 |
@@ -120,3 +120,63 @@ data loss — they are reachability/UX gaps only (generic text editor always wor
    cross-file search; autosave-or-explicit-dirty-badges; file copy UI; hero sprite descriptor
    route fix + shape gate for spritesDesc/items.json; fonts/jpg in save_binary allowlist
    (magic-sniff woff/ttf/jpg).
+
+## 7. Continuation round (same day): wild-mod quantification + regression pass
+
+Two more evidence passes, both against HEAD master.
+
+### 7a. What real mods actually use (8 mirror mods, 92 mob files, 185 level files, 527 campaign entries)
+
+Scanned the local mod mirror (`~/StudioProjects/remixed-dungeon-mods`, 8 published mods).
+This re-ranks the gaps by real-world impact:
+
+**Mob json (92 files)** — engine keys the form does not expose, files using them:
+`fraction` 24/92 (26%!), `attackRange` 20/92, `battleMusic` 9/92, `movable` 5/92,
+`immortal` 5/92, `battleMusicFallback` 4/92. `isBoss`/`npc`/`immunities`/`resistances`/
+`carcassChance`/`loot.category` — 0 uses in the wild (still worth exposing, but P3).
+The form's missing `fraction` alone silently affects a quarter of all published mob files.
+
+**levelsDesc (185 files)** — `items[]` 95 files (51%!), `objects[]` 70 (38%),
+`customTiles` 66, `baseTileVar` 57, `decoTileVar` 56, `deco2TileVar` 31. The round-4
+WYSIWYG bet (customTiles + var layers) was exactly where the data is; the missing
+object/item placement tools (c0i) cover the two most-used unmodeled keys.
+
+**Dungeon.json Levels[] (7 mods, 527 entries)** — properties per entry:
+`kind` 526, `depth` 525, `file` 377, `size` 343, **`music` 320, `script` 258,
+`isSafe` 235, `nMobs` 187, `noBuild` 77, `noFogOfWar` 60**, `feeling` 25,
+`maxBrightness` 23, `isStatic` 11, `viewDistance` 10, `tiles` 10, `objectsKind` 10,
+`fallbackMusic` 10, `treasury` 9, `water` 1. The report's earlier campaign-property list
+undercounted: add `nMobs`, `noBuild`, `feeling`, `isStatic`, `viewDistance`, `objectsKind`,
+`fallbackMusic` to what a per-level campaign editor must expose (all beyond the
+kind/depth/file that "Add to campaign" writes).
+
+**initHeroes (8 files, per class sections)** — `knownItems` 16, `quickslot` 13,
+`isSpellUser` 9, `immunities` 6, `forbiddenActions` 3, `left_hand` 2, `friendlyMobs` 2,
+`startingSp` 1, `allies` 0. Note: **`isSpellUser` is authored by 3 mods but the engine
+never reads it from the loadout** — `Hero.isSpellUser()` derives from
+`magicAffinity` (Hero.java:1211), `Char` hardcodes true (Char.java:2398). The form's
+checkbox is a no-op field today: either honor it engine-side or mark it as such in the form.
+
+**Content presence (mods shipping it, /8):** `sound/` 7, `strings_ru.json` 7,
+`levelObjects/` 5, `effects/` 4, `spritesDesc/items.json` 3, spells/buffs/actors/traps 3
+each, `scripts/startup/` 2, `hero/spritesDesc/` 1. **Alchemy recipes, plantsDesc,
+scripts/plants, painters, services, fonts, custom tilemapDesc: 0 mods ship any** — the
+alchemy/quest editor gaps (5gh) are about lowering the barrier for future mods, not about
+existing content; the sprite/items-map gaps (a3u) have live data behind them.
+
+### 7b. Regression pass over the round-1..3 editors (shared code changed in round 4)
+
+| Editor | Result |
+|---|---|
+| Mob form | PASS — 21 inputs, walkingType select; ht 9→11 round-trip; `fraction`/`isBoss`/`battleMusic`/`movable` all preserved (not shown in form — gap 71a confirmed live) |
+| Sprite form | PASS — texture prefilled from json, 2 canvases (preview + sheet) |
+| Object editor | PASS — script field parsed, sheet preview canvas renders `levelObjects/barrels.png` frame |
+| Effect editor | PASS — fps:10 + frames parsed, animated preview canvas |
+| Spell form | PASS — 10 fields parsed from lua (name, cooldown 5, image…) |
+| Buff form | PASS — 3 fields parsed |
+| Rename via file-tree UI | Works server-side (409/round-trip already in E2E); **the tree does not re-render the new name after rename** — stale until next refresh (P4 evidence for the onSaved no-op gap) |
+| "+ new file" name-aware templates | PASS — a new `levelsDesc/QaTimingTreasury.json` gets the treasury template and opens directly in the treasury form (v1 shape, 7 inputs) |
+
+New live-test trap: `dirNode` lis carry no `dataset.path` (only file lis do), so UI-locator
+tests must target dir labels by their `name + '/'` text.
+
