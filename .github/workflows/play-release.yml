@@ -1,0 +1,105 @@
+# Publish tag builds to Google Play (alpha track).
+# Replaces the bitrise.yml `deploy` workflow (tag -> google-play-deploy).
+# Only runs on tag pushes; the tag must point at a commit on this branch.
+#
+# Required repo secrets (Settings -> Secrets and variables -> Actions):
+#   PLAY_SERVICE_ACCOUNT_JSON - Google Play Console API service account key (whole json file)
+#   PLAY_KEYSTORE_BASE64      - release keystore .jks, base64-encoded (base64 -w0 file.jks)
+#   JKS_KEY_ALIAS             - release keystore key alias
+#   JKS_KEY_PASSWORD          - release keystore key password
+#   JKS_STORE_PASSWORD        - release keystore store password
+#   GOOGLE_SERVICES_JSON      - prod google-services.json (the committed one is a placeholder)
+#   API_SIGNATURES_XML        - prod strings_api_signature.xml (real iapKey / ad unit ids;
+#                               empty iapKey = all purchases fail)
+# The build step overwrites the committed test keystore and templates in the workspace.
+
+name: play-release
+
+on:
+  push:
+    tags: ['*']
+
+permissions:
+  contents: read
+
+jobs:
+  play:
+    name: Publish to Google Play (alpha)
+    runs-on: ubuntu-latest
+    env:
+      # lowercase names are what RemixedDungeon/build.gradle signingConfigs reads
+      jks_keyAlias: ${{ secrets.JKS_KEY_ALIAS }}
+      jks_keyPassword: ${{ secrets.JKS_KEY_PASSWORD }}
+      jks_storePassword: ${{ secrets.JKS_STORE_PASSWORD }}
+    steps:
+      - name: Verify publish secrets are configured
+        env:
+          SVC_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          KEYSTORE: ${{ secrets.PLAY_KEYSTORE_BASE64 }}
+          ALIAS: ${{ secrets.JKS_KEY_ALIAS }}
+          KEY_PASS: ${{ secrets.JKS_KEY_PASSWORD }}
+          STORE_PASS: ${{ secrets.JKS_STORE_PASSWORD }}
+          GSERVICES: ${{ secrets.GOOGLE_SERVICES_JSON }}
+          API_SIG: ${{ secrets.API_SIGNATURES_XML }}
+        run: |
+          missing=()
+          [ -z "$SVC_JSON" ]   && missing+=("PLAY_SERVICE_ACCOUNT_JSON")
+          [ -z "$KEYSTORE" ]   && missing+=("PLAY_KEYSTORE_BASE64")
+          [ -z "$ALIAS" ]      && missing+=("JKS_KEY_ALIAS")
+          [ -z "$KEY_PASS" ]   && missing+=("JKS_KEY_PASSWORD")
+          [ -z "$STORE_PASS" ] && missing+=("JKS_STORE_PASSWORD")
+          [ -z "$GSERVICES" ]  && missing+=("GOOGLE_SERVICES_JSON")
+          [ -z "$API_SIG" ]    && missing+=("API_SIGNATURES_XML")
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "::error::Missing repo secrets: ${missing[*]} (see play-release.yml header)"
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: '${{ github.ref }}'
+          submodules: true
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: gradle
+
+      - name: Inject prod config and release keystore
+        env:
+          KEYSTORE: ${{ secrets.PLAY_KEYSTORE_BASE64 }}
+          STORE_PASS: ${{ secrets.JKS_STORE_PASSWORD }}
+          ALIAS: ${{ secrets.JKS_KEY_ALIAS }}
+          GSERVICES: ${{ secrets.GOOGLE_SERVICES_JSON }}
+          API_SIG: ${{ secrets.API_SIGNATURES_XML }}
+        run: |
+          printf '%s' "$GSERVICES" > RemixedDungeon/google-services.json
+          printf '%s' "$API_SIG" > RemixedDungeon/src/main/res/values/strings_api_signature.xml
+          printf '%s' "$KEYSTORE" | base64 -d > RemixedDungeon/testKey/test.jks
+          # fail before a 10-minute build if the decode or credentials are bad
+          keytool -list -keystore RemixedDungeon/testKey/test.jks \
+            -storepass "$STORE_PASS" -alias "$ALIAS" > /dev/null
+
+      - name: Build androidGooglePlay release
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleAndroidGooglePlayRelease -c settings.android.gradle
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: googlePlay-apk
+          path: RemixedDungeon/build/outputs/apk/androidGooglePlay/release/*.apk
+          if-no-files-found: error
+
+      - name: Publish to Google Play (alpha)
+        uses: r0adkll/upload-google-play@v2
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: com.nyrds.pixeldungeon.ml
+          releaseFiles: RemixedDungeon/build/outputs/apk/androidGooglePlay/release/*.apk
+          track: alpha
+          status: completed
