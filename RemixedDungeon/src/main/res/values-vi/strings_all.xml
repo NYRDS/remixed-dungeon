@@ -512,6 +512,7 @@
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DreadKnight_Name_Objective">hiệp sĩ đáng sợ</string>
     <string name="Dreamweed_Desc">Khi chạm vào Dreamweed, nó tiết ra một đám mây khí phát sáng gây nhầm lẫn.</string>
+    <string name="Dreamweed_Name">Cỏ Mơ</string>
     <string name="DriedRoseBuff_Info">Bông hồng trông rất quyến rũ.</string>
     <string name="DriedRoseBuff_Name">Quyến rũ</string>
     <string name="DriedRoseCursedBuff_Info">Bông hồng trông đẹp nhưng không quá quyến rũ.</string>
@@ -805,6 +806,7 @@
     <string name="Hero_Wait">...</string>
     <string name="HideInGrassSpell_Name">Ẩn Trong Cỏ</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Ngay cả tôi cũng không thể ẩn nấp ngay trước mũi.</string>
+    <string name="HolyWater_Name">Nước Thánh</string>
     <string name="Horror_Name_0">Quái dị %s</string>
     <string name="Horror_Name_1">%s rùng rợn</string>
     <string name="Horror_Name_2">%s rùng rợn</string>
@@ -939,6 +941,7 @@
     <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
     <string name="LastShopLevel_TileDescExit">Một con dốc dẫn xuống địa ngục.</string>
     <string name="LastShopLevel_TileHighGrass">Hoa nở rộ cao</string>
+    <string name="LastShopLevel_TileWater">Nước có màu đáng ngờ</string>
     <string name="LeatherArmor_Desc">Áo giáp làm từ da thú đã thuộc. Không nhẹ như áo giáp vải, nhưng cho khả năng bảo vệ tốt hơn.</string>
     <string name="Leech_Name_0">Hút máu %s</string>
     <string name="Leech_Name_1">Hút máu %s</string>
@@ -1078,6 +1081,7 @@
     <string name="MobAi_status">Con %1$s này đang %2$s</string>
     <string name="Mob_Attacking">Hãy coi %s này như đã chết!</string>
     <string name="Mob_Cannot_Be_Pet">Ý chí của \&quot;%s\&quot; quá mạnh để kiểm soát!</string>
+    <string name="Mob_CantDoIt">Tôi không thể làm được. Tôi chỉ có đôi bàn chân nhỏ.</string>
     <string name="Mob_Died">Bạn nghe thấy thứ gì đó đã chết ở phía xa</string>
     <string name="Mob_GoingTo">Đang đi rồi!</string>
     <string name="Mob_ItemUse">%1$s sử dụng %2$s</string>
@@ -1923,6 +1927,7 @@
     <string name="WndCatalogus_Title">Danh mục</string>
     <string name="WndChallenges_Title">Thử thách</string>
     <string name="WndChooseWay_Cancel">Tôi sẽ quyết định sau</string>
+    <string name="WndClass_Mastery">Thành Thạo</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Sao chép địa chỉ</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
@@ -2986,6 +2991,11 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
 
 
 
