@@ -30,6 +30,9 @@ const NODE_W = 158;
 const NODE_H = 46;
 const ANCHOR_R = 6;
 
+// touch canvas interactions need chunkier draw + hit geometry
+const coarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+
 // gate: can the graph view model this campaign at all? exotic Graph shapes
 // (hand-edited, legacy 3-tuples) fall back to the raw json editor
 function campaignShape(obj) {
@@ -446,7 +449,7 @@ export async function campaignEditor(content, ctx) {
 
       // out-anchor: drag from here to another node to wire an exit
       g.beginPath();
-      g.arc(x + NODE_W, y + NODE_H / 2, ANCHOR_R, 0, Math.PI * 2);
+      g.arc(x + NODE_W, y + NODE_H / 2, ANCHOR_R + (coarsePointer ? 4 : 0), 0, Math.PI * 2);
       g.fillStyle = drag && drag.mode === 'connect' && drag.id === id ? '#40c0ff' : '#3a4252';
       g.fill();
       g.strokeStyle = '#8a93a8';
@@ -493,10 +496,11 @@ export async function campaignEditor(content, ctx) {
   }
 
   function hitAnchor(p) {
+    const r = ANCHOR_R + (coarsePointer ? 16 : 4); // fingers need a real target
     for (const id of nodeIds()) {
       const [x, y] = layout[id] || [-999, -999];
       const ax = x + NODE_W, ay = y + NODE_H / 2;
-      if ((p.x - ax) * (p.x - ax) + (p.y - ay) * (p.y - ay) <= (ANCHOR_R + 4) * (ANCHOR_R + 4)) {
+      if ((p.x - ax) * (p.x - ax) + (p.y - ay) * (p.y - ay) <= r * r) {
         return id;
       }
     }
@@ -517,7 +521,7 @@ export async function campaignEditor(content, ctx) {
     return best;
   }
 
-  // ---- canvas events ------------------------------------------------------
+  // ---- canvas events (pointer events: mouse + touch + pen, bd a5d) --------
   const canvasPos = e => {
     const rect = canvas.getBoundingClientRect();
     // normalize to canvas pixels - correct even under CSS scaling
@@ -526,7 +530,26 @@ export async function campaignEditor(content, ctx) {
     return { x: (e.clientX - rect.left) * sx, y: (e.clientY - rect.top) * sy };
   };
 
-  canvas.addEventListener('mousedown', e => {
+  // double-click (mouse) and double-tap (touch) both land here
+  function openLevelFile(node) {
+    const level = campaign.Levels[node];
+    if (level && level.file) {
+      // app.js owns the routing - ask it to open the level painter
+      window.dispatchEvent(new CustomEvent('mod-editor:open-file', { detail: level.file }));
+    } else {
+      status.className = 'hint';
+      status.textContent = node + ' has no level file (procedurally generated or missing)';
+    }
+  }
+
+  let lastTap = null; // { id, t } - second tap on the same node opens its map
+  let activePointer = null; // one gesture at a time (palm rejection)
+
+  canvas.addEventListener('pointerdown', e => {
+    if (activePointer !== null || e.button > 0) { return; }
+    activePointer = e.pointerId;
+    e.preventDefault(); // no synthetic mouse events, no text selection
+    try { canvas.setPointerCapture(e.pointerId); } catch (err) { /* capture is best-effort */ }
     const p = canvasPos(e);
     const anchor = hitAnchor(p);
     if (anchor) {
@@ -546,15 +569,20 @@ export async function campaignEditor(content, ctx) {
       selEdge = edge; sel = null;
       status.className = 'hint';
       status.textContent = 'edge ' + edge.from + ' -> ' + edge.to
-        + ' (exit #' + edge.idx + ') selected - Delete key removes it';
+        + ' (exit #' + edge.idx + ') selected - the panel button (or Delete key) removes it';
       renderPanel(); draw();
     } else {
       sel = null; selEdge = null;
       renderPanel(); draw();
+      // touch has no scrollbars: dragging empty canvas pans the graph
+      if (e.pointerType !== 'mouse') {
+        drag = { mode: 'pan', sx: e.clientX, sy: e.clientY, sl: scroll.scrollLeft, st: scroll.scrollTop };
+      }
     }
   });
 
-  canvas.addEventListener('mousemove', e => {
+  canvas.addEventListener('pointermove', e => {
+    if (activePointer !== null && e.pointerId !== activePointer) { return; }
     const p = canvasPos(e);
     if (drag && drag.mode === 'move') {
       const nx = Math.max(0, Math.min(16000 - NODE_W, drag.orig[0] + p.x - drag.start.x));
@@ -571,6 +599,12 @@ export async function campaignEditor(content, ctx) {
       draw();
       return;
     }
+    if (drag && drag.mode === 'pan') {
+      scroll.scrollLeft = drag.sl - (e.clientX - drag.sx);
+      scroll.scrollTop = drag.st - (e.clientY - drag.sy);
+      return;
+    }
+    if (e.pointerType !== 'mouse') { return; } // hover text is a mouse thing
     const node = hitNode(p);
     if (node) {
       const level = campaign.Levels[node];
@@ -584,7 +618,9 @@ export async function campaignEditor(content, ctx) {
     }
   });
 
-  window.addEventListener('mouseup', e => {
+  function pointerEnd(e) {
+    if (activePointer !== null && e.pointerId !== activePointer) { return; }
+    activePointer = null;
     if (!drag) { return; }
     if (drag.mode === 'connect') {
       const p = canvasPos(e);
@@ -595,24 +631,35 @@ export async function campaignEditor(content, ctx) {
         status.className = 'hint';
         status.textContent = 'cannot connect a level to itself';
       }
-    } else if (drag.mode === 'move' && drag.moved) {
-      saveLayout(); // position only - content is not dirty
+    } else if (drag.mode === 'move') {
+      if (drag.moved) {
+        saveLayout(); // position only - content is not dirty
+      } else {
+        // tap without a drag: second tap on the same node opens its map
+        const now = Date.now();
+        if (lastTap && lastTap.id === drag.id && now - lastTap.t < 400) {
+          lastTap = null;
+          openLevelFile(drag.id);
+        } else {
+          lastTap = { id: drag.id, t: now };
+        }
+      }
     }
+    drag = null;
+    draw();
+  }
+  canvas.addEventListener('pointerup', pointerEnd);
+  window.addEventListener('pointerup', pointerEnd); // capture-failure fallback
+  canvas.addEventListener('pointercancel', e => {
+    if (activePointer !== null && e.pointerId !== activePointer) { return; }
+    activePointer = null;
     drag = null;
     draw();
   });
 
   canvas.addEventListener('dblclick', e => {
     const node = hitNode(canvasPos(e));
-    if (!node) { return; }
-    const level = campaign.Levels[node];
-    if (level && level.file) {
-      // app.js owns the routing - ask it to open the level painter
-      window.dispatchEvent(new CustomEvent('mod-editor:open-file', { detail: level.file }));
-    } else {
-      status.className = 'hint';
-      status.textContent = node + ' has no level file (procedurally generated or missing)';
-    }
+    if (node) { openLevelFile(node); }
   });
 
   // ---- side panel: per-level campaign properties --------------------------
@@ -683,10 +730,36 @@ export async function campaignEditor(content, ctx) {
 
   function renderPanel() {
     clearPanel();
+    // a canvas-tapped edge gets its own mini panel - Delete-key parity for
+    // touch users (bd a5d)
+    if (selEdge) {
+      const h = document.createElement('h3');
+      h.textContent = 'Edge ' + selEdge.from + ' → ' + selEdge.to;
+      panel.appendChild(h);
+      const p = document.createElement('p');
+      p.className = 'hint';
+      p.textContent = 'Exit #' + selEdge.idx + ' of ' + selEdge.from + ' leads to '
+        + selEdge.to + '. Deleting it also drops the mirrored entrance entry.';
+      panel.appendChild(p);
+      const row = document.createElement('div');
+      row.className = 'btn-row';
+      const del = document.createElement('button');
+      del.className = 'danger';
+      del.textContent = 'Delete edge';
+      del.addEventListener('click', () => removeEdge(selEdge.from, selEdge.idx));
+      row.appendChild(del);
+      const clear = document.createElement('button');
+      clear.textContent = 'Select nothing';
+      clear.addEventListener('click', () => { selEdge = null; renderPanel(); draw(); });
+      row.appendChild(clear);
+      panel.appendChild(row);
+      return;
+    }
     if (!sel) {
       const p = document.createElement('p');
       p.className = 'hint';
-      p.textContent = 'Select a level node to edit its campaign entry, or drag an anchor to wire an exit.';
+      p.textContent = 'Select a level node to edit its campaign entry, or drag an anchor to wire an exit.'
+        + (coarsePointer ? ' Drag empty space to pan the graph; double-tap a node to open its map.' : '');
       panel.appendChild(p);
       return;
     }
@@ -769,6 +842,14 @@ export async function campaignEditor(content, ctx) {
       status.textContent = 'removed ' + sel + ' from Levels and Graph';
     });
     rowBtns.appendChild(delBtn);
+
+    // touch-visible alternative to double-click/double-tap (bd a5d)
+    if (level.file) {
+      const openBtn = document.createElement('button');
+      openBtn.textContent = 'Open level file';
+      openBtn.addEventListener('click', () => openLevelFile(sel));
+      rowBtns.appendChild(openBtn);
+    }
     panel.appendChild(rowBtns);
 
     const grid = document.createElement('div');

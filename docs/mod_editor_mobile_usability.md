@@ -1,5 +1,16 @@
 # Mod editor: mobile usability review (2026-11-17)
 
+> **STATUS 2026-11-17 (later same day): FIXED — both P1s and the P2/P3
+> batch below are implemented (bd a5d + bd mrb).** Pointer events +
+> `touch-action` on all drag canvases, responsive shell (files drawer under
+> 700px), topbar-derived main height, coarse-pointer targets, wrap toggle,
+> edge-delete panel button, double-tap + "Open level file" for map opening,
+> pan tool in the painter, one-finger graph pan. Live-verified at 390x844 in
+> the IAB: tap-select, node drag (persisted), anchor wiring, edge tap →
+> panel delete, double-tap → level painter, touch paint stroke (saved +
+> re-read), pan; desktop 1280px unchanged; editor E2E suite ALL PASS.
+> The findings below are kept as the historical review record.
+
 Scope: `RemixedDungeon/src/main/assets/web/mod-editor/` as shipped on master
 (55949db54, rounds 1-6). Method: static code review of all 22 js/css files +
 live walkthrough at a 390x844 phone viewport against the desktop debug web

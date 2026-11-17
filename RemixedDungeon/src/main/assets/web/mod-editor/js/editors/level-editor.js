@@ -33,7 +33,7 @@ const TERRAIN_COLORS = {
   WATER_TILES: '#204050', WATER: '#2050a0'
 };
 
-const TOOLS = ['terrain', 'entrance', 'exit', 'mob', 'erase-mob', 'var'];
+const TOOLS = ['terrain', 'entrance', 'exit', 'mob', 'erase-mob', 'var', 'pan'];
 const LAYERS = ['baseTileVar', 'decoTileVar', 'deco2TileVar'];
 
 export async function levelEditor(content, ctx) {
@@ -97,7 +97,7 @@ export async function levelEditor(content, ctx) {
     o.textContent = t;
     toolSelect.appendChild(o);
   }
-  toolSelect.addEventListener('change', () => { tool = toolSelect.value; updateToolHint(); });
+  toolSelect.addEventListener('change', () => { tool = toolSelect.value; updateToolHint(); updateTouchAction(); });
   toolRow('tool', toolSelect);
 
   const terrainSelect = document.createElement('select');
@@ -156,6 +156,7 @@ export async function levelEditor(content, ctx) {
     tool = 'var';
     toolSelect.value = 'var';
     updateToolHint();
+    updateTouchAction();
     drawTileset();
     tileHover.textContent = 'picked ' + varLayer + ' index -1 - painting now resets cells';
   });
@@ -435,7 +436,8 @@ export async function levelEditor(content, ctx) {
       exit: 'click to toggle an exit tile (multiexit)',
       mob: 'click to place the selected mob kind',
       'erase-mob': 'click a mob to remove it',
-      var: 'click to paint the picked tile index onto the selected var layer (-1 clears)'
+      var: 'click to paint the picked tile index onto the selected var layer (-1 clears)',
+      pan: 'drag the map to scroll (paint gestures are off while this tool is active)'
     };
     toolHint.textContent = hints[tool] || '';
   }
@@ -449,12 +451,32 @@ export async function levelEditor(content, ctx) {
   hover.className = 'hint';
   content.appendChild(hover);
 
+  // painting gestures own the canvas (touch-action none); the pan tool hands
+  // the gesture back to the browser so one finger can scroll big maps
+  function updateTouchAction() {
+    canvas.style.touchAction = tool === 'pan' ? 'auto' : 'none';
+  }
+  updateTouchAction();
+
   function cellAt(event) {
     const rect = canvas.getBoundingClientRect();
     const x = Math.floor((event.clientX - rect.left) / zoom);
     const y = Math.floor((event.clientY - rect.top) / zoom);
     if (x < 0 || y < 0 || x >= level.width || y >= level.height) { return null; }
     return { x, y, cell: y * level.width + x };
+  }
+
+  // coordinate/terrain readout under the map - shown on hover (mouse) and on
+  // every paint touch (phones have no hover, bd a5d)
+  function updateHover(pos) {
+    const name = terrainByValue[level.map[pos.cell]] || '?';
+    let extra = '';
+    if (level[varLayer] && level[varLayer][pos.cell] >= 0) {
+      extra += ' ' + varLayer + '=' + level[varLayer][pos.cell];
+    }
+    const mob = level.mobs.find(m => m.x === pos.x && m.y === pos.y);
+    if (mob) { extra += ' mob=' + mob.kind; }
+    hover.textContent = `x=${pos.x} y=${pos.y} cell=${pos.cell} terrain=${level.map[pos.cell]} (${name})${extra}`;
   }
 
   function drawGrid() {
@@ -540,26 +562,34 @@ export async function levelEditor(content, ctx) {
   }
 
   let painting = false;
-  canvas.addEventListener('mousedown', e => {
+  let paintPointer = null; // one pointer paints; a second finger is ignored
+  canvas.addEventListener('pointerdown', e => {
+    if (tool === 'pan') { return; } // browser scrolls (touch-action auto)
+    if (paintPointer !== null || e.button > 0) { return; }
     const pos = cellAt(e);
     if (!pos) { return; }
+    e.preventDefault(); // no synthetic mouse events / no page scroll
+    paintPointer = e.pointerId;
+    try { canvas.setPointerCapture(e.pointerId); } catch (err) { /* best-effort */ }
     painting = true;
     applyTool(pos);
+    updateHover(pos);
   });
-  canvas.addEventListener('mousemove', e => {
+  canvas.addEventListener('pointermove', e => {
     const pos = cellAt(e);
     if (!pos) { return; }
-    const name = terrainByValue[level.map[pos.cell]] || '?';
-    let extra = '';
-    if (level[varLayer] && level[varLayer][pos.cell] >= 0) {
-      extra += ' ' + varLayer + '=' + level[varLayer][pos.cell];
-    }
-    const mob = level.mobs.find(m => m.x === pos.x && m.y === pos.y);
-    if (mob) { extra += ' mob=' + mob.kind; }
-    hover.textContent = `x=${pos.x} y=${pos.y} cell=${pos.cell} terrain=${level.map[pos.cell]} (${name})${extra}`;
-    if (painting && (tool === 'terrain' || tool === 'var')) { applyTool(pos); }
+    if (e.pointerType === 'mouse' || painting) { updateHover(pos); }
+    if (painting && e.pointerId === paintPointer
+        && (tool === 'terrain' || tool === 'var')) { applyTool(pos); }
   });
-  window.addEventListener('mouseup', () => { painting = false; });
+  function endPaint(e) {
+    if (paintPointer !== null && e.pointerId !== paintPointer) { return; }
+    painting = false;
+    paintPointer = null;
+  }
+  canvas.addEventListener('pointerup', endPaint);
+  window.addEventListener('pointerup', endPaint); // capture-failure fallback
+  canvas.addEventListener('pointercancel', endPaint);
 
   function resize(w, h) {
     if (w <= 0 || h <= 0 || w > 200 || h > 200) {
@@ -661,6 +691,7 @@ export async function levelEditor(content, ctx) {
 
   const tileCanvas = document.createElement('canvas');
   tileCanvas.className = 'sprite-preview';
+  tileCanvas.style.touchAction = 'manipulation'; // click-picked, no drag gesture
   tilePanel.appendChild(tileCanvas);
 
   let tileImage = null;
@@ -718,6 +749,7 @@ export async function levelEditor(content, ctx) {
     tool = 'var';
     toolSelect.value = 'var';
     updateToolHint();
+    updateTouchAction();
     drawTileset();
     tileHover.textContent = 'picked ' + varLayer + ' index ' + varIndex + ' - now paint on the map';
   });

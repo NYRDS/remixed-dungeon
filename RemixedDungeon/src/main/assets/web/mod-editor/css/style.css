@@ -10,6 +10,11 @@ html, body {
   font: 14px/1.45 "DejaVu Sans Mono", "Liberation Mono", Menlo, Consolas, monospace;
 }
 
+/* topbar height must never be a pixel assumption: the shell is a flex column
+   so main fills whatever is left (a wrapped 3-row topbar used to clip 49px
+   of content at phone widths) */
+body { display: flex; flex-direction: column; }
+
 #topbar {
   display: flex;
   align-items: center;
@@ -28,10 +33,13 @@ html, body {
 #crumbs { color: #8f8677; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 #actions { display: flex; gap: 8px; flex-wrap: wrap; }
 
+/* files drawer toggle - only ever visible under the narrow layout */
+#sidebar-toggle { display: none; }
+
 #busy {
   position: fixed;
   right: 12px;
-  top: 44px;
+  bottom: 12px;
   background: #4a3f21;
   color: #e8c56b;
   padding: 4px 10px;
@@ -39,7 +47,7 @@ html, body {
   z-index: 10;
 }
 
-main { display: flex; height: calc(100% - 41px); }
+main { display: flex; flex: 1; min-height: 0; }
 
 #sidebar {
   width: 260px;
@@ -80,6 +88,8 @@ textarea.code {
   white-space: pre;
   tab-size: 3;
 }
+/* soft-wrap toggle for long lua/json lines on phones */
+textarea.code.wrapped { white-space: pre-wrap; overflow-wrap: anywhere; }
 input.bad, textarea.bad { border-color: #a33; }
 
 table.pairs { border-collapse: collapse; width: 100%; }
@@ -95,6 +105,7 @@ table.pairs input { width: 100%; }
   border: 1px solid #33302a;
   border-radius: 6px;
   margin-bottom: 6px;
+  flex-wrap: wrap; /* action buttons wrap under the info on narrow screens */
 }
 .mod-list .title { color: #e8c56b; }
 .mod-list .meta { color: #8f8677; font-size: 12px; }
@@ -110,6 +121,9 @@ table.pairs input { width: 100%; }
 .tree .file > .label::before { content: "· "; color: #6d6558; }
 .tree .dir > .label::before { content: "▸ "; color: #6d6558; }
 .tree .dir.open > .label::before { content: "▾ "; }
+/* rename/delete glyphs: padded so the tap target is a real hit area, not a
+   14px glyph */
+.tree .tree-act { cursor: pointer; padding: 8px 5px; margin: 0 -2px; }
 
 .editor-bar { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; flex-wrap: wrap; }
 .status-ok { color: #9ecf7a; }
@@ -117,7 +131,7 @@ table.pairs input { width: 100%; }
 .hint { color: #8f8677; font-size: 12px; }
 .panel { background: #1c1a17; border: 1px solid #33302a; border-radius: 6px; padding: 12px; margin-bottom: 12px; }
 .panel h3 { margin: 0 0 8px; color: #e8c56b; }
-.field-grid { display: grid; grid-template-columns: max-content 1fr; gap: 6px 10px; align-items: center; }
+.field-grid { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 10px; align-items: center; }
 .field-grid label { color: #8f8677; }
 .error-list { list-style: none; padding: 0; color: #ff9a9a; }
 .warn-list { list-style: none; padding: 0; color: #e8c56b; }
@@ -139,10 +153,12 @@ details.lua-help button { margin-left: 6px; }
 .warn-entry { color: inherit; }
 
 /* campaign graph editor: scrollable node canvas + properties panel */
-.campaign-wrap { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 8px; }
+.campaign-wrap { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 8px;
+  flex-wrap: wrap; /* panel drops under the canvas when they cannot share a row */ }
 .campaign-scroll { flex: 0 1 auto; overflow: auto; max-width: 100%; max-height: 72vh;
   border: 1px solid #33302a; border-radius: 6px; }
-.campaign-canvas { display: block; background: #14161c; cursor: default; }
+.campaign-canvas { display: block; background: #14161c; cursor: default;
+  touch-action: none; /* node drag / anchor wiring / one-finger pan are ours */ }
 .campaign-panel { flex: 1 1 320px; min-width: 280px; max-width: 480px; }
 .campaign-panel h3 { margin: 0 0 8px; color: #e8c56b; word-break: break-all; }
 .campaign-panel h4 { margin: 10px 0 4px; color: #e8c56b; }
@@ -153,3 +169,46 @@ details.lua-help button { margin-left: 6px; }
 .check-label { color: #8f8677; white-space: nowrap; }
 .campaign-panel pre { background: #0d0c0b; border: 1px solid #33302a; padding: 8px;
   font-size: 12px; overflow-x: auto; }
+
+/* ---- touch ---- */
+
+/* double-tap zoom has no value in a tool UI - kill the 300ms delay and the
+   accidental zoom everywhere except where canvases own the gesture */
+button, .btn, select, label, .label, .clickable-entry, summary { touch-action: manipulation; }
+
+/* phones: coarse pointers need 40px-ish targets and 16px inputs (iOS Safari
+   auto-zooms into anything smaller on focus) */
+@media (pointer: coarse) {
+  button, .btn { min-height: 40px; }
+  input, textarea, select { font-size: 16px; }
+  .tree .label { padding: 7px 2px; }
+}
+
+/* ---- narrow layout (bd mrb): the 260px sidebar stops being a permanent
+   left column; it becomes a drawer toggled from the topbar ---- */
+@media (max-width: 700px) {
+  #sidebar-toggle { display: inline-block; }
+
+  main { flex-direction: column; }
+
+  #sidebar {
+    display: none;
+    width: auto;
+    min-width: 0;
+    max-height: 45vh;
+    border-right: 0;
+    border-bottom: 1px solid #3a362e;
+  }
+  body.sidebar-open #sidebar { display: block; }
+
+  #content { padding: 10px; }
+
+  .campaign-scroll { max-height: 55vh; }
+  .campaign-panel { flex: 1 1 100%; min-width: 0; max-width: none; }
+}
+
+/* very narrow: form labels stack above their inputs */
+@media (max-width: 480px) {
+  .field-grid { grid-template-columns: 1fr; gap: 2px 10px; }
+  .field-grid label { margin-top: 8px; }
+}

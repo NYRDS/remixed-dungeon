@@ -26,6 +26,14 @@ const content = document.getElementById('content');
 const crumbs = document.getElementById('crumbs');
 const actions = document.getElementById('actions');
 
+// narrow layout: the file tree is a drawer (bd mrb) - the toggle lives in
+// the topbar, picking a file closes it so the editor gets the full screen
+const sidebarToggle = document.getElementById('sidebar-toggle');
+if (sidebarToggle) {
+  sidebarToggle.addEventListener('click', () => document.body.classList.toggle('sidebar-open'));
+}
+function closeSidebarDrawer() { document.body.classList.remove('sidebar-open'); }
+
 // workspace-local bridge: in-editor widgets (strings manager language table)
 // ask to open another file of the same mod without owning the routing
 let currentMod = null;
@@ -497,6 +505,7 @@ function adoptTextFallback(content) {
 async function openFile(modName, file) {
   if (!confirmDirty()) { return; }
   resetEditor();
+  closeSidebarDrawer(); // phone: the drawer must not cover the editor
   const lower = file.toLowerCase();
 
   // structured editors load their own data, fall back to text editors

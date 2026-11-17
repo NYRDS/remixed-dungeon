@@ -36,6 +36,18 @@ function textEditor(content, ctx, { mode }) {
   textarea.value = ctx.content;
   content.appendChild(textarea);
 
+  // long lua/json lines are horizontal-scroll-only by default; a wrap toggle
+  // makes the text editor readable on phones (bd a5d review, P3)
+  const wrapBtn = document.createElement('button');
+  wrapBtn.textContent = 'wrap ⏎';
+  wrapBtn.title = 'toggle soft wrap';
+  wrapBtn.addEventListener('click', () => {
+    textarea.classList.toggle('wrapped');
+    wrapBtn.textContent = textarea.classList.contains('wrapped') ? 'unwrap ⏎' : 'wrap ⏎';
+  });
+  const editorBar = content.querySelector('.editor-bar');
+  if (editorBar) { editorBar.appendChild(wrapBtn); }
+
   const status = statusLine(content);
 
   save.addEventListener('click', async () => {

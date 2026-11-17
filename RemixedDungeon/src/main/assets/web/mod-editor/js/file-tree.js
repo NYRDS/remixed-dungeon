@@ -97,8 +97,8 @@ export function renderTree(container, opts) {
       if (opts.onRename) {
         const ren = document.createElement('span');
         ren.textContent = ' ✎';
+        ren.className = 'tree-act';
         ren.style.color = '#aa8';
-        ren.style.cursor = 'pointer';
         ren.title = 'rename';
         ren.addEventListener('click', e => {
           e.stopPropagation();
@@ -108,8 +108,8 @@ export function renderTree(container, opts) {
       }
       const x = document.createElement('span');
       x.textContent = ' ×';
+      x.className = 'tree-act';
       x.style.color = '#a55';
-      x.style.cursor = 'pointer';
       x.title = 'delete';
       x.addEventListener('click', e => {
         e.stopPropagation();

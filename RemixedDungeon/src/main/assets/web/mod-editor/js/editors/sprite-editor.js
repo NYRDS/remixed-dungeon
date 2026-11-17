@@ -327,8 +327,8 @@ export async function spriteEditor(content, ctx) {
     }
   }
 
-  sheetCanvas.addEventListener('mousemove', e => {
-    if (!sheetImage) { return; }
+  // frame-id readout: hover for mouse, tap for touch (bd a5d)
+  function frameAt(e) {
     const rect = sheetCanvas.getBoundingClientRect();
     const w = Number(inputs.width.value) || 1;
     const h = Number(inputs.height.value) || 1;
@@ -337,7 +337,16 @@ export async function spriteEditor(content, ctx) {
     const col = Math.floor((e.clientX - rect.left) * scaleX / w);
     const row = Math.floor((e.clientY - rect.top) * scaleY / h);
     const cols = Math.max(1, Math.floor(sheetImage.naturalWidth / w));
-    sheetHover.textContent = 'frame id ' + (row * cols + col);
+    return row * cols + col;
+  }
+  sheetCanvas.style.touchAction = 'manipulation';
+  sheetCanvas.addEventListener('mousemove', e => {
+    if (!sheetImage) { return; }
+    sheetHover.textContent = 'frame id ' + frameAt(e);
+  });
+  sheetCanvas.addEventListener('click', e => {
+    if (!sheetImage) { return; }
+    sheetHover.textContent = 'frame id ' + frameAt(e);
   });
 
   function startPreview() {
