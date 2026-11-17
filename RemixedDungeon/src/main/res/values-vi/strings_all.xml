@@ -938,6 +938,7 @@
     <string name="LastLevel_TileGrass">Rêu than</string>
     <string name="LastLevel_TileStatue">Cột trụ</string>
     <string name="LastLevel_TileWater">Dung nham lạnh</string>
+    <string name="LastRites_Info">Một lễ an táng được tổ chức tại một nơi. Tất cả quỷ trong vòng hai ô từ nó bị thiêu đốt và suy yếu.</string>
     <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
     <string name="LastShopLevel_TileDescExit">Một con dốc dẫn xuống địa ngục.</string>
     <string name="LastShopLevel_TileHighGrass">Hoa nở rộ cao</string>
@@ -1068,6 +1069,7 @@
     <string name="Mimic_Desc">Mimic là những sinh vật ma thuật có thể biến thành bất kỳ hình dạng nào. Trong hầm ngục, chúng gần như luôn chọn hình dạng rương kho báu, vì chúng biết cách thu hút nhà thám hiểm.</string>
     <string name="Mimic_Gender">masculine</string>
     <string name="Mimic_Name">quái giả dạng</string>
+    <string name="Mimic_Name_Objective">quái giả dạng</string>
     <string name="MindVisionBuff_Name">Tầm nhìn tâm trí</string>
     <string name="MirrorImage_Desc">Ảo ảnh này mang sự tương đồng rất lớn với bạn, nhưng nó nhợt nhạt hơn và run rẩy một chút.</string>
     <string name="MirrorImage_Gender">masculine</string>
@@ -1230,6 +1232,7 @@
     <string name="PlagueDoctorQuest_4_1_Epilogue">Tuyệt vời! Các _Dwarf Warlocks_, bản chất của chúng giờ là của tôi để khám phá! Phép thuật méo mó, đen tối đó... thật hấp dẫn. *Anh ta giơ một lọ thủy tinh lấp lánh chứa chất lỏng đỏ sẫm, sền sệt.* Đây là dành cho bạn: một _Potion of Might_! Hãy uống sức mạnh đó, và bạn sẽ cảm nhận sức mạnh của núi non chảy qua huyết quản! Hãy nhớ rằng kiến thức từ những hy sinh này cuối cùng sẽ phục vụ một mục đích cao cả hơn... có lẽ sẽ cứu tất cả chúng ta khỏi một số phận tồi tệ hơn cái chết.</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Người lùn! Những cư dân dưới lòng đất bướng bỉnh, bị ám ảnh bởi đá quý và vàng. Nhưng chính những _Pháp sư Lùn_ mà tôi khao khát… ma thuật méo mó của họ, được nuôi dưỡng bởi chính những vực sâu mà họ cư trú. Năm, tôi cần năm linh hồn héo úa đó! Cơ thể của họ chứa đựng chìa khóa để hiểu một… hiện tượng nào đó. Một điều gì đó về việc dẫn năng lượng huyền bí qua chính trái đất. Tôi tin rằng mình sắp đạt được đột phá, nhưng tôi cần bản chất của họ, ma thuật bị tha hóa của họ! *Anh ho dữ dội vào khăn tay, một vết bẩn sẫm lan rộng trên tấm vải mỏng manh*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Tuyệt vời! Năm _Kobold Icemancers_, bản chất băng giá của chúng giờ là của ta để khám phá! Sự kết nối của chúng với những vùng đất đóng băng... thực sự thú vị. Cách chúng thao túng chính nước... thực sự phi thường. *Người ta đưa cho bạn một chai lấp lánh chứa một chất lỏng đỏ rực* Đây, cho nỗ lực dũng cảm của bạn: một _Potion of Might_! Uống xuống và cảm nhận sức mạnh của mười chiến binh tràn qua mạch máu bạn! Hãy nhớ, kiến thức là sức mạnh... và sức mạnh là vũ khí duy nhất chúng ta có chống lại bóng tối ngày càng xâm lấn. Bây giờ... hãy phẫu thây những linh hồn băng giá này và khám phá những bí mật khiến người ta run rùng của chúng!</string>
+    <string name="PlagueDoctorQuest_4_2_InProgress">Thu thập năm xác _Kobold Icemancer_ chết! Xác đóng băng của chúng giữ chìa khóa để mở ra bí mật của phép thuật lạnh lẽo của chúng!</string>
     <string name="PlagueDoctorQuest_4_2_Prologue">*Ngón xương khô của hắn gõ nhịp nhàng vào nồi nước sôi sùng sục, không khí quanh hắn dày đặc bởi mùi hôi chua gay của lưu huỳnh và sự phân giải*\n_Kobold Pháp Sư Băng_! Những sinh vật thảm hại kia, trùm mình trong hang động đóng băng, nguội ngút chăm chăm vào phép thuật băng giá của chúng.\nTa cần năm con, xác đóng băng của chúng sẽ... soi sáng sự việc.\nSự thành thạo băng giá của chúng, nó... kỳ lạ.\nTa tin rằng chúng khai thác một năng lượng nguyên thủy, một sức mạnh ngủ quên dưới bề mặt của chính thế giới này.</string>
     <string name="PlagueDoctorQuest_5_1_InProgress">*Tâm trí anh ấy lang thang khi nói, giọng nói càng lúc càng nhỏ, chỉ còn là thì thầm.* Mang cho ta hai *súc quyên*... sống. Quyền năng của chúng... mê hoặc.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hắn ấp úng, giọng khàn khàn như cành cây khô giòn*. A-a, _súc quy_! Hai... có, hai, còn sống! Nó là... hem... cho nghiên cứu của ta! Các ngươi thấy... pheromone của chúng... nó quan trọng để hiểu cái cân bằng tinh tế của... a... *Hắn ngập ngừng, bàn tay xương cốt đưa lên gõ nghiến mặt nạ, ánh mắt chớm chớp nhìn về phía các ngươi với cường độ sốt ruột.* Cái... bản chất của chúng... nó là một câu đố... một câu đố đẹp đẽ, bí ẩn! *Hắn ho khan gắt gao, cố gắng lấy lại bình tĩnh.* Ta hứa, vì mang cho ta hai con... quái vật này... các ngươi sẽ có lòng biết ơn vĩnh cửu của ta. Hãy coi đó như một... một ơn huệ cho tri thức! Đúng! Vì tri thức!</string>
@@ -1502,6 +1505,7 @@
     <string name="ScrollOfTeleportation_NoTeleport2">Aura ma thuật mạnh mẽ ở nơi này ngăn %s\n    không thể dịch chuyển!</string>
     <string name="ScrollOfTeleportation_Teleport">Trong nháy mắt, bạn đã được dịch chuyển đến một vị trí khác trên cấp độ này.</string>
     <string name="ScrollOfTeleportation_Teleport2">Chỉ trong một nháy mắt %s đã bị dịch chuyển đến một vị trí khác của tầng.</string>
+    <string name="ScrollOfTerror_Info1">Cuốn sách toả ra một luồng ánh sáng đỏ chói lòa</string>
     <string name="ScrollOfTerror_Info2">Cuộn giấy bắn ra một tia chớp đỏ rực và %s bỏ chạy!</string>
     <string name="ScrollOfTerror_Info3">Cuộn giấy phát ra một tia sáng đỏ rực và lũ quái vật bỏ chạy!</string>
     <string name="ScrollOfUpgrade_Info">Cuộn giấy này sẽ nâng cấp một vật phẩm duy nhất, cải thiện chất lượng của nó. Một cây đũa phép sẽ tăng sức mạnh và số lượng điện tích; một vũ khí sẽ gây thêm sát thương hoặc tìm điểm yếu thường xuyên hơn; một bộ giáp sẽ đỡ thêm nhiều đòn; hiệu quả của chiếc nhẫn lên người đeo sẽ được tăng cường. Vũ khí và giáp cũng sẽ yêu cầu ít sức mạnh hơn để sử dụng, và mọi lời nguyền trên vật phẩm sẽ được hóa giải.</string>
@@ -2991,6 +2995,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 

@@ -300,6 +300,7 @@
     <string name="CagedKobold_Gender">masculine</string>
     <string name="CagedKobold_Intro">Hé... Hé! Jij bent die avonturier, toch? Help me eens, maat, die verdomme militaristen hebben me hier opgesloten! Ze willen een oud wapen heractiveren om de mensen op het oppervlak te veroveren! Maar gezien hoe gevaarlijk het is, was ik het er niet mee eens, dus hebben ze me gewoon buiten gezet en in een kooi gesloten! Ik bid je de sleutel van de cel te vinden, en als dank zal ik je helpen waar ik kan.</string>
     <string name="CagedKobold_Message1">Alstublieft...</string>
+    <string name="CagedKobold_Message2">Je moet me helpen, vriend</string>
     <string name="CagedKobold_Message3">Ik haat alles aan deze kooi</string>
     <string name="CagedKobold_Name">gekooide kobold</string>
     <string name="CagedKobold_Name_Objective">opgesloten kobold</string>
@@ -504,6 +505,7 @@
     <string name="CorpseExplosion_Name">Lijk Explosie</string>
     <string name="CorpseExplosion_NoCorpse">Er is geen lijk op die plek.</string>
     <string name="Crab_Defense">gepareerd</string>
+    <string name="Crab_Desc">Deze reuzekrabben staan aan de top van de voedselketen in de riolen. Ze zijn extreem snel en hun dikke exoskelet kan zware slagen weerstaan.</string>
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">rioolkrab</string>
     <string name="Crab_Name_Objective">rioolkrab</string>
@@ -2448,6 +2450,7 @@
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_entrance_name">ingang</string>
     <string name="town_deco_exit_desc">Het is onbekend wat je te wachten staat als je deze trap afdaalt.</string>
+    <string name="town_deco_exit_name">uitgang</string>
     <string name="town_deco_fence_desc">Een houten hekwerk bedekt met sneeuw.</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
     <string name="town_deco_fireplace_desc">Uitstekend om je mee op te warmen in zo\'n koude plek als deze.</string>
@@ -2478,6 +2481,7 @@
     <string name="town_deco_locked_door_desc">Wat ter wereld zou er achter die deur kunnen zitten?</string>
     <string name="town_deco_locked_door_name">Gesloten deur</string>
     <string name="town_deco_magenta_carpet_desc">De magenta kleur van dit tapijt doet denken aan lokale wijn.</string>
+    <string name="town_deco_magenta_carpet_name">tapijt</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
     <string name="town_deco_misc_desc">Een hoop rommel en snuisterijen.</string>
     <string name="town_deco_movies_door_desc">Deze deur lijkt buitengewoon goed gemaakt. Hij leidt waarschijnlijk naar iets ongelooflijks.</string>
@@ -2760,6 +2764,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
