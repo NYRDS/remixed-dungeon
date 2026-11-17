@@ -230,8 +230,30 @@ public abstract class SystemTextBase extends Text {
                         currentLineWidth = 0;
                     }
 
-                    currentLine.add(new ColoredSegment(word, segment.color));
-                    currentLineWidth += wordWidth;
+                    if (wordWidth <= maxWidth) {
+                        currentLine.add(new ColoredSegment(word, segment.color));
+                        currentLineWidth += wordWidth;
+                        continue;
+                    }
+
+                    // Word is wider than a whole line (spaceless CJK text, long URLs):
+                    // fall back to char-level wrapping, otherwise it would just overflow.
+                    for (int i = 0; i < word.length(); ) {
+                        int cp = word.codePointAt(i);
+                        int next = i + Character.charCount(cp);
+                        String piece = word.substring(i, next);
+                        float pieceWidth = measureTextWidth(piece);
+
+                        if (!currentLine.isEmpty() && currentLineWidth + pieceWidth > maxWidth) {
+                            linesOfSegments.add(currentLine);
+                            currentLine = new ArrayList<>();
+                            currentLineWidth = 0;
+                        }
+
+                        currentLine.add(new ColoredSegment(piece, segment.color));
+                        currentLineWidth += pieceWidth;
+                        i = next;
+                    }
                 }
 
                 if (p < paragraphs.length - 1) { // This was a newline character
