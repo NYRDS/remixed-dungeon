@@ -153,6 +153,47 @@ legacy 3-tuples. Traps this round: coordinate predictions must re-derive after a
 depth edit (auto-layout recomputes); a lingering `window.confirm=true` shim from an
 earlier cell auto-approves later Delete-key node deletions.
 
+## 9. Round 8 (2026-11-17): mobile-first creation workflow live test
+
+Walked the **from-scratch creation journey** at a 390x844 phone viewport (ZCode IAB,
+fresh headless jar): dashboard create-form → new mob (json + sprite + png + strings) →
+new level (touch-painted, mob placed) → campaign wiring → validate → fix loop →
+"Play this mod" → in-game boot + level walk. Every save disk-verified; the game
+booted the touch-built mod (hero town→start, l2 loads with TestMob at the placed
+cell, authored HT 30, name string resolving). E2E suite ALL PASS on the same jar
+before the manual pass.
+
+**Works flawlessly on touch (all verified live):** create-from-template form; tree
+tap-expand; root-level "+ new file" with full paths; mob form 4× edit+save
+round-trips; painter touch strokes (disk-verified at exact cells), terrain/zoom/tool
+selects, mob placement by tap (exact cell); campaign graph tap-select at predicted
+auto-layout coords, "+ level" auto-wiring, per-node file datalist, save round-trip;
+strings "+ pair"; sprite form with animation scaffolding; validation → in-form fix
+loop (scriptFile cleared via form, key removed from json); Play-this-mod restart +
+active-mod switch.
+
+### New findings
+
+| # | Finding | Priority | Evidence |
+|---|---|---|---|
+| M1 | **"+ new file" silently double-nests path-shaped names**: `onNewFile` prepends the dir unconditionally (`path = dir + '/' + name`, app.js) although the mob form's status line ("Not found: spritesDesc/MyMob.json") pushes users toward exactly such names. Typing `spritesDesc/TestMob.json` inside `mobsDesc/` created `mobsDesc/spritesDesc/TestMob.json` (empty file, mob form for a sprite path). Live-verified on two dirs. Fix: honor names that already begin with a known mod-dir prefix | **P2** | live + app.js |
+| M2 | **New-mob template hardcodes `MyMob` into 6 fields** regardless of file name: name/name_objective/description/gender keys, `spriteDesc: spritesDesc/MyMob.json`, `scriptFile: scripts/mobs/MyMob`. Consequences (all live): fresh mobs ship a validation ERROR (scriptFile not found), in-game description shows the raw key `MyMob_Desc`, sprite preview fails (`mobs/my_mob.png`), gender is a junk key. templates.js already computes `kind` for placeholders — derive all six from it | **P2** | live + char_desc + validate |
+| M3 | **Campaign "+ level" wires a logical exit with no physical door; validation blind**: template Start.json ships 1 exit cell; after "+ level" the graph has 2 exits. `get_exits` returns both, but the only physical cell leads to exits[0] — the new level is unreachable in-game while validate stays clean (validator checks exit-cell bounds only, never graph-exits vs physical-cell count). Minimum fix: warn "graph exit #N of <level> has no physical exit cell (paint one with the exit tool)" | **P2** | live: get_exits `[1, l2]` vs 1 cell; ModEditorEndpoints:1390-1408 |
+| M4 | **"+ language" seeds from a stale snapshot**: `refMap` is fetched once at editor open (text-editors.js:224), so pairs saved earlier in the same session are missing from the seeded file. Live: en had 4 pairs at click time, strings_ru.json seeded with 3 — the new mob's name key silently absent → untranslated raw key in-game. Fix: re-fetch at click, or track added keys | P3 | live disk diff |
+| M5 | Painter zoom select caps at 25px/cell (default 18) — a 15x15 map is 270px on a 390px phone, bigger maps need the pan tool; fingers want ≥32px options. Also the landing hint is a 9-line wall naming every editor (pushes the workflow below the fold on phones) and the `working…` chip overlaps content at the bottom | P4 | live |
+
+### IAB automation traps added this round
+
+- The IAB reloads the page **between evaluate calls and sporadically mid-evaluate**
+  (module state, armed shims, drawer state all die). Every interaction step must be
+  one atomic evaluate with sync shim+click blocks; shim-verify immediately before
+  clicking (`if (!/X/.test(String(window.prompt))) return retry`).
+- A real `prompt()` left pending wedges the dialog bridge progressively: first
+  `getJsDialog()` still works (but **misreports prompts as type "confirm"** —
+  accept-with-text never runs), then handleDialog itself times out. Recovery =
+  close the tab and open a fresh one. A pending dialog can also get auto-answered
+  with the last accepted text, re-running the file-creation handler later.
+
 ## 7. Continuation round (same day): wild-mod quantification + regression pass
 
 Two more evidence passes, both against HEAD master.
