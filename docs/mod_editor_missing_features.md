@@ -74,7 +74,7 @@ data loss — they are reachability/UX gaps only (generic text editor always wor
 |---|---|---|
 | **Mob json**: form covers 12 stats + 3 checks + loot.kind only. Engine also reads `isBoss`, `npc`, `fraction`, `immunities`/`resistances` (arrays), `battleMusic`/`battleMusicFallback`, `attackRange`, `spriteLayer`, `isHumanoid`, `movable`, `immortal`, `pacified`, `carcassChance`, `var`, `hasBodyParts`, `loot.category` (treasury roll), `undead`/`demon`, `level` depth-scaling — all only reachable via raw json | **P2** | Mob.java:954-1043, :897-935 |
 | **Level editor**: no tools for per-cell `objects[]` (PredesignedLevel.java:89-97) or per-cell `items[]` (:181-196), no `compassTarget` (:119-127) — spawn placement is mobs-only today | **P2** |
-| **Campaign entries**: "Add to campaign" writes only kind/depth/file (level-editor.js:405-409); per-level properties `noFogOfWar`, `isSafe`, `music`, `script`, `maxBrightness`, `treasury`, `size` need raw Dungeon.json editing | **P2** | levelsDesc/Dungeon.json:3-15 |
+| ~~Campaign entries~~ **CLOSED 2026-11-17 (round 6)**: `levelsDesc/Dungeon.json` now opens a visual campaign graph editor — nodes auto-laid out by depth (draggable, layout in localStorage), anchor-drag wires exits + mirrored entrances with exit-index badges, Delete-key removes edges/nodes, full per-level property form (all keys from §7a incl. nMobs/noBuild/feeling/isStatic/viewDistance/objectsKind/fallbackMusic), rename id rewrites every Graph reference, "+ level" auto-wires from the selection, per-node level-file creation from template, Entrance select, double-click opens the level painter, live graph-issue mirror + new server-side graph validation (dangling refs = error, one-way edges deliberately NOT flagged — calibrated on builtin + published mods) | closed | campaign-editor.js, ModEditorEndpoints.validateCampaignGraph |
 | InitHeroes: form omits `allies` (starting pets), `left_hand` slot, `lvl`, `sl`, `startingSp`, `resistances`; conversely the form's `isSpellUser` checkbox is not consumed by the initHeroes loader (computed at runtime elsewhere) | P3 | HeroClass.java:120-197, Belongings.java:527-581 |
 | Sprite editor texture datalist only lists ``/`mobs/`/`items/` — textures in other mod dirs (e.g. `plants/`, `fonts/`, custom dirs) not pickable | P3 | sprite-editor.js:94 |
 
@@ -89,7 +89,7 @@ data loss — they are reachability/UX gaps only (generic text editor always wor
 | No file copy/duplicate-file UI; no new-directory affordance (dirs appear implicitly on save) | P3 | file-tree.js:80-103 |
 | Upload is single-file per picker; no directory upload | P3 | upload.js:21-50 |
 | 30 s client abort on every request — `clone_builtin` measured 0.12 s for 1557 files locally, so this bites only on slow storage; demoted to P4 | P4 | api.js:11 |
-| `onSaved` callbacks are no-ops — file tree doesn't refresh after saves that add/rename files; `files` size field never rendered | P4 | app.js:474, file-tree.js:66-105 |
+| ~~`onSaved` callbacks are no-ops~~ **FIXED 2026-11-17**: they were worse than no-ops — every editor's `onSaved: () => refreshTree()` threw `ReferenceError` AFTER a successful save (openFile is module-scoped, refreshTree lives in openWorkspace), so the status line showed an error for a save that actually landed and the tree never refreshed. Now a module-level `currentRefreshTree` hook registered by the workspace; also gives structured editors' text-fallbacks dirty tracking (`adoptTextFallback`) | fixed | app.js |
 | Strings manager: no language delete (tree delete works), no side-by-side two-language view, no "insert missing key" action | P4 | text-editors.js:200-285 |
 | `raw?builtin=1` param supported but never sent by the UI (harmless; handler falls back anyway) | P4 | ModEditorEndpoints.java:302 |
 | level-editor meta key list includes `decoName` then skips it (dead entry) | P4 | level-editor.js:730-731 |
@@ -113,13 +113,45 @@ data loss — they are reachability/UX gaps only (generic text editor always wor
 1. **Round 5a (small, high value):** alchemy-recipes form + template; quests template +
    snippet; plants lua template (fix the stale hint); lua-help pane on desc-table editors;
    validation entries click-to-navigate; clone_builtin client timeout raise.
+   *(shipped 2026-11-17 in 8407dfe39 except alchemy/quests — see 5gh)*
 2. **Round 5b (forms):** mob form second panel (gameplay keys: isBoss/npc/fraction/
    immunities/resistances/battleMusic/attackRange/loot.category); level editor object/item
    placement tools; campaign per-level property editor.
+   *(fraction/attackRange/carcassChance/spriteLayer/battleMusic/checks shipped 8407dfe39;
+   campaign property editor + graph shipped round 6; open: immunities/resistances arrays,
+   object/item placement)*
 3. **Round 5c (infrastructure):** undo/redo for the level painter (snapshot stack is enough);
    cross-file search; autosave-or-explicit-dirty-badges; file copy UI; hero sprite descriptor
    route fix + shape gate for spritesDesc/items.json; fonts/jpg in save_binary allowlist
    (magic-sniff woff/ttf/jpg).
+
+## 8. Round 6 (2026-11-17): campaign graph editor — live test ALL PASS
+
+`levelsDesc/Dungeon.json` (and Dungeon_*.json variants) now routes to
+`campaign-editor.js` — the "visual node editor" option from the round-5 report.
+Live IAB pass against a seeded mod, all verified server-side after each step:
+
+| Interaction | Result |
+|---|---|
+| Auto-layout by depth (nodes at predicted pixel coords), entrance styling, edge exit-index badges | PASS (canvas pixel readback) |
+| Node select → property panel (kind select, depth, file datalist 39 opts, music datalist 61 opts, checks, size, exits/entered-from lists, Entrance select) | PASS |
+| Property edit + save round-trip (depth/music/nMobs; isSafe + unknown keys preserved) | PASS (disk verify) |
+| Anchor drag-connect (0→start, 1→start, start→new level) — exits + mirrored entrances written | PASS (disk verify) |
+| Edge select via badge + Delete key → both halves removed (mirror dropped only when no parallel exit) | PASS |
+| "+ level" (prompt shim) auto-connects from the selected parent | PASS |
+| Rename id — Levels key order kept, all Graph refs + Entrance rewritten | PASS |
+| "New level file for this node" — levelsDesc template file created + `file` key set | PASS |
+| Double-click node → level painter; painter's "Open campaign graph" round-trips back | PASS |
+| Node drag → localStorage layout → survives full page reload (pixel-verified) | PASS |
+| Legacy 3-tuple Graph → bounces to json text editor (with dirty tracking via adoptTextFallback) | PASS |
+| New E2E: campaign save round-trips + graph validation (dangling = error, graph-less level = warning, one-way = silent) | PASS (suite ALL PASS ×2) |
+
+Found and fixed along the way: the round-5 `onSaved: refreshTree()` ReferenceError
+(all editors — save succeeded but status lied and tree never refreshed), stale status
+after edge delete, arrowheads painted under target nodes, and the shape gate missing
+legacy 3-tuples. Traps this round: coordinate predictions must re-derive after any
+depth edit (auto-layout recomputes); a lingering `window.confirm=true` shim from an
+earlier cell auto-approves later Delete-key node deletions.
 
 ## 7. Continuation round (same day): wild-mod quantification + regression pass
 

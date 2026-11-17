@@ -137,3 +137,19 @@ details.lua-help button { margin-left: 6px; }
 .clickable-entry { cursor: pointer; text-decoration: underline dotted; }
 .clickable-entry:hover { color: #fff; }
 .warn-entry { color: inherit; }
+
+/* campaign graph editor: scrollable node canvas + properties panel */
+.campaign-wrap { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 8px; }
+.campaign-scroll { flex: 0 1 auto; overflow: auto; max-width: 100%; max-height: 72vh;
+  border: 1px solid #33302a; border-radius: 6px; }
+.campaign-canvas { display: block; background: #14161c; cursor: default; }
+.campaign-panel { flex: 1 1 320px; min-width: 280px; max-width: 480px; }
+.campaign-panel h3 { margin: 0 0 8px; color: #e8c56b; word-break: break-all; }
+.campaign-panel h4 { margin: 10px 0 4px; color: #e8c56b; }
+.campaign-panel .field-grid { margin-bottom: 8px; }
+.btn-row { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; }
+.btn-row .grow { flex: 1; }
+.check-row { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.check-label { color: #8f8677; white-space: nowrap; }
+.campaign-panel pre { background: #0d0c0b; border: 1px solid #33302a; padding: 8px;
+  font-size: 12px; overflow-x: auto; }

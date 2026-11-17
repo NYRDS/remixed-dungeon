@@ -16,6 +16,7 @@ Run: RPD_HEADLESS_JAR=<jar> python3 test_mod_editor.py
 
 import argparse
 import io
+import json
 import os
 import subprocess
 import sys
@@ -406,6 +407,75 @@ def main():
         r = HTTP.post(api + "delete_file", json={"mod": MOD, "file": "levelsDesc/Bestiary.json"},
                       timeout=10)
         check(r.ok, "delete bestiary file")
+
+        # campaign graph (Dungeon.json): dangling refs are errors, one-way
+        # edges and graph-less levels are warnings - calibrated on builtin
+        # (10s->6s is a shipped one-way exit) and published mods 2026-11-17
+        template_campaign = HTTP.get(api + "read", params={"mod": MOD,
+                                                           "file": "levelsDesc/Dungeon.json"},
+                                     timeout=10).json()["content"]
+
+        def campaign(**levels_graph):
+            base = {
+                "Levels": {
+                    "0": {"kind": "SewerLevel", "depth": 0, "size": [0, 0]},
+                    "start": {"kind": "PredesignedLevel", "depth": 0,
+                              "file": "levelsDesc/Start.json", "isSafe": True},
+                    "1": {"kind": "SewerLevel", "depth": 1, "size": [24, 24]},
+                },
+                "Graph": {
+                    "0": [["start"], []],
+                    "start": [["1"], ["0"]],
+                    "1": [[], ["start"]],
+                },
+                "Entrance": "0",
+            }
+            base.update(levels_graph)
+            return json.dumps(base, indent=3)
+
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Dungeon.json",
+                                          "content": campaign()}, timeout=10)
+        check(r.ok, "save clean campaign")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        check(r.ok and r.json().get("success"), "clean campaign validates: %s"
+              % r.json().get("errors", [])[:3])
+
+        broken = json.loads(campaign())
+        broken["Graph"]["ghost"] = [[], []]
+        broken["Graph"]["1"] = [["2"], ["start"]]
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Dungeon.json",
+                                          "content": json.dumps(broken, indent=3)}, timeout=10)
+        check(r.ok, "save campaign with dangling graph refs")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        errs = " | ".join(r.json().get("errors", []))
+        check(not r.json().get("success") and "Graph entry ghost" in errs
+              and "exit 1 -> 2" in errs,
+              "graph validate catches dangling entries: %s" % errs)
+
+        lonely = json.loads(campaign())
+        lonely["Levels"]["lonely"] = {"kind": "SewerLevel", "depth": 5, "size": [24, 24]}
+        oneway = json.loads(campaign())
+        oneway["Graph"]["1"] = [[], []]  # start -> 1 exit keeps flying one-way
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Dungeon.json",
+                                          "content": json.dumps(lonely, indent=3)}, timeout=10)
+        check(r.ok, "save campaign with graph-less level")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        warns = " | ".join(r.json().get("warnings", []))
+        check(r.json().get("success") and "lonely" in warns and "Graph entry" in warns,
+              "graph-less level warns: %s" % warns)
+
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Dungeon.json",
+                                          "content": json.dumps(oneway, indent=3)}, timeout=10)
+        check(r.ok, "save campaign with one-way edge")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        warns = " | ".join(r.json().get("warnings", []))
+        check(r.json().get("success") and "one-way" not in warns and "ascend" not in warns,
+              "one-way edge does not warn (design tool): %s" % warns)
+
+        # restore the template campaign - the play test below lands in Start
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Dungeon.json",
+                                          "content": template_campaign}, timeout=10)
+        check(r.ok, "restore template campaign")
 
         # initHeroes + plantsDesc save round-trips (deleted before play test
         # so the template campaign stays deterministic)

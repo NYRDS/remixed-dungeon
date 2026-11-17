@@ -17,6 +17,7 @@ import { treasuryEditor } from './editors/treasury-editor.js';
 import { initHeroesEditor } from './editors/init-heroes-editor.js';
 import { plantsEditor } from './editors/plants-editor.js';
 import { bestiaryEditor } from './editors/bestiary-editor.js';
+import { campaignEditor } from './editors/campaign-editor.js';
 import { templateFor } from './editors/templates.js';
 import { uploadFile } from './upload.js';
 
@@ -28,6 +29,9 @@ const actions = document.getElementById('actions');
 // workspace-local bridge: in-editor widgets (strings manager language table)
 // ask to open another file of the same mod without owning the routing
 let currentMod = null;
+// openFile runs at module scope but onSaved must refresh the workspace tree -
+// the live openWorkspace instance registers itself here
+let currentRefreshTree = null;
 window.addEventListener('mod-editor:open-file', e => {
   if (currentMod && typeof e.detail === 'string') {
     openFile(currentMod, e.detail);
@@ -81,6 +85,7 @@ window.addEventListener('hashchange', () => { if (confirmDirty()) { route(); } }
 async function openDashboard() {
   resetEditor();
   currentMod = null;
+  currentRefreshTree = null;
   crumbs.textContent = 'mods';
   actions.innerHTML = '';
   sidebar.innerHTML = '';
@@ -373,7 +378,8 @@ async function openWorkspace(modName) {
   hint.className = 'hint';
   hint.textContent = 'Pick a file on the left, or use the actions above. Form editors: mobsDesc, ' +
     'spritesDesc, levelObjects, effects, plantsDesc, scripts/items, scripts/spells, scripts/buffs; ' +
-    'levelsDesc maps open the level painter, *Treasury.json the loot editor, Bestiary.json the spawn ' +
+    'levelsDesc maps open the level painter, Dungeon.json the campaign graph editor, ' +
+    '*Treasury.json the loot editor, Bestiary.json the spawn ' +
     'table; hero/initHeroes opens the class loadout editor; strings files open the pairs editor with ' +
     'a per-language manager; lua files get snippet + API-reference help; everything else is a ' +
     'validated text editor. "Play this mod" activates it and restarts the game.';
@@ -478,6 +484,16 @@ function adoptEditor(ed) {
   currentEditorDispose = ed && ed.dispose ? ed.dispose : null;
 }
 
+// a structured editor that bounced to its internal text editor has no
+// dirty hooks of its own - fall back to the generic input listener so
+// unsaved text edits still get the discard confirm
+function adoptTextFallback(content) {
+  let dirty = false;
+  content.addEventListener('input', () => { dirty = true; }, { once: true });
+  currentEditorDirty = () => dirty;
+  currentEditorDispose = null;
+}
+
 async function openFile(modName, file) {
   if (!confirmDirty()) { return; }
   resetEditor();
@@ -488,65 +504,79 @@ async function openFile(modName, file) {
   try {
     if (lower.startsWith('mobsdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await mobEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await mobEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     if (lower.startsWith('spritesdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await spriteEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await spriteEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     if (lower.startsWith('scripts/items/') && lower.endsWith('.lua')) {
       content.innerHTML = '';
-      adoptEditor(await itemEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await itemEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     if (lower.startsWith('scripts/spells/') && lower.endsWith('.lua')) {
       content.innerHTML = '';
-      adoptEditor(await spellEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await spellEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     if (lower.startsWith('scripts/buffs/') && lower.endsWith('.lua')) {
       content.innerHTML = '';
-      adoptEditor(await buffEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await buffEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     if (lower.startsWith('levelobjects/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await objectEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await objectEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     if (lower.startsWith('effects/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await effectEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await effectEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     if (lower.startsWith('plantsdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await plantsEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await plantsEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     // hero loadouts (hero/initHeroes.json, hero/initHeroesDebug.json)
     if (lower.startsWith('hero/initheroes') && lower.endsWith('.json')) {
       content.innerHTML = '';
-      adoptEditor(await initHeroesEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await initHeroesEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     // loot tables and spawn tables are structured files that only wear a
     // levelsDesc/ address - match them before the level painter
     if (lower.startsWith('levelsdesc/') && /treasury\.json$/.test(lower)) {
       content.innerHTML = '';
-      adoptEditor(await treasuryEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await treasuryEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     if (lower === 'levelsdesc/bestiary.json') {
       content.innerHTML = '';
-      adoptEditor(await bestiaryEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await bestiaryEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
+      return;
+    }
+    // the campaign graph (Dungeon.json and its variants) is a node editor,
+    // not a map painter; exotic shapes fall back to the json editor inside
+    if (/^levelsdesc\/dungeon[\w.-]*\.json$/.test(lower)) {
+      content.innerHTML = '';
+      const ed = await campaignEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() });
+      if (ed) {
+        adoptEditor(ed);
+      } else {
+        // the editor fell back to its internal text editor - give it the
+        // same dirty tracking the plain text path has
+        adoptTextFallback(content);
+      }
       return;
     }
     if (lower.startsWith('levelsdesc/') && lower.endsWith('.json') && !file.endsWith('Dungeon.json')) {
       content.innerHTML = '';
-      adoptEditor(await levelEditor(content, { mod: modName, file, api, onSaved: () => refreshTree() }));
+      adoptEditor(await levelEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
   } catch (e) {

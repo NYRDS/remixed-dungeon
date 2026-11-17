@@ -369,7 +369,15 @@ export async function levelEditor(content, ctx) {
 
   // wire this level into levelsDesc/Dungeon.json: Levels entry + Graph edge
   // from an existing level (the manual json dance the live test called the
-  // biggest UX gap)
+  // biggest UX gap); the graph editor itself is one click away for anything
+  // more involved than a single parent -> child wire
+  const graphBtn = document.createElement('button');
+  graphBtn.textContent = 'Open campaign graph';
+  graphBtn.addEventListener('click', () => {
+    window.dispatchEvent(new CustomEvent('mod-editor:open-file', { detail: 'levelsDesc/Dungeon.json' }));
+  });
+  toolPanel.appendChild(graphBtn);
+
   const campaignBtn = document.createElement('button');
   campaignBtn.textContent = 'Add to campaign (Dungeon.json)';
   campaignBtn.addEventListener('click', async () => {

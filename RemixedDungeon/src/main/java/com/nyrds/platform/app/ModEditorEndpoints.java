@@ -29,6 +29,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipEntry;
@@ -1333,8 +1334,53 @@ public class ModEditorEndpoints {
                 }
             }
             warnOrphanLevels(modName, referencedFiles, warnings);
+            validateCampaignGraph(levels, campaign.optJSONObject("Graph"), errors, warnings);
         } catch (Exception e) {
             errors.add("levelsDesc/Dungeon.json: " + e.getMessage());
+        }
+    }
+
+    // Graph wiring: dead ids and dangling edges dead-end navigation in play
+    // (DungeonGenerator.descendOrAscend reports "There is no level X" and
+    // leaves the player where they were). One-way edges - an exit without a
+    // matching entered-from entry - are a legit design tool (builtin 10s->6s,
+    // necro5->necro1) and are NOT flagged. Calibrated against builtin +
+    // published mods 2026-11-17.
+    private static void validateCampaignGraph(JSONObject levels, JSONObject graph, List<String> errors, List<String> warnings) {
+        if (graph == null) {
+            warnings.add("levelsDesc/Dungeon.json has no Graph table - no level can be reached by stairs");
+            return;
+        }
+        for (Iterator<String> it = graph.keys(); it.hasNext(); ) {
+            String id = it.next();
+            if (!levels.has(id)) {
+                errors.add("levelsDesc/Dungeon.json: Graph entry " + id + " is not defined in Levels");
+                continue;
+            }
+            JSONArray pair = graph.optJSONArray(id);
+            if (pair == null || pair.length() < 2) {
+                errors.add("levelsDesc/Dungeon.json: Graph entry " + id + " must be [[exits],[entered from]]");
+                continue;
+            }
+            for (int side = 0; side < 2; side++) {
+                JSONArray targets = pair.optJSONArray(side);
+                if (targets == null) {
+                    continue;
+                }
+                for (int i = 0; i < targets.length(); i++) {
+                    String target = targets.optString(i, "");
+                    if (!target.isEmpty() && !levels.has(target)) {
+                        errors.add("levelsDesc/Dungeon.json: Graph " + (side == 0 ? "exit" : "ascend")
+                            + " " + id + " -> " + target + " points at a level that is not defined in Levels");
+                    }
+                }
+            }
+        }
+        for (Iterator<String> it = levels.keys(); it.hasNext(); ) {
+            String id = it.next();
+            if (!graph.has(id)) {
+                warnings.add("levelsDesc/Dungeon.json: level " + id + " has no Graph entry - its stairs are undefined (script-only access)");
+            }
         }
     }
 
