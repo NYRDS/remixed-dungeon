@@ -482,6 +482,7 @@
     <string name="DeathKnight_Name_Objective">kỵ sĩ tử thần</string>
     <string name="Death_Name_0">Quỷ %s</string>
     <string name="Death_Name_1">%s tử thần</string>
+    <string name="Death_Name_2">Tử thần %s</string>
     <string name="Deathling_Desc">Doodsling là linh hồn của một người hùng đã ngã xuống, kém may mắn khi bị triệu hồi bởi một đồng đội phiêu lưu đang thực hành thuật gọi hồn.</string>
     <string name="Deathling_Gender">masculine</string>
     <string name="Deathling_Name">nhóc tử thần</string>
@@ -1398,6 +1399,7 @@
     <string name="RingOfSatiety_Name">Nhẫn No Đủ</string>
     <string name="RingOfShadows_Info">Kẻ thù sẽ khó nhận ra bạn hơn khi bạn đeo nhẫn này. Nhẫn Bóng Tối xuống cấp sẽ báo động cho kẻ thù mà lẽ ra chúng không hề để ý đến sự hiện diện của bạn.</string>
     <string name="RingOfStoneWalking_Info">Chiếc nhẫn kỳ lạ này được làm từ đá chắc chắn. Thứ bạn nghĩ là ruby thực ra là máu lỏng đang được giữ tại chỗ! Bên trong là một mũi tên chỉ về thứ gì đó giống bức tường, cùng với một trái tim tan vỡ... Nó có thể làm gì?</string>
+    <string name="RingOfStoneWalking_Name">Nhẫn Máu Đá</string>
     <string name="Ring_BuffKnown">Đây là %s</string>
     <string name="Ring_Gems_0">kim cương</string>
     <string name="Ring_Gems_1">opal</string>
@@ -2032,6 +2034,7 @@
     <string name="WndModsDisclaimer_manage">Quản lý mod</string>
     <string name="WndModsDisclaimer_title">Bản sửa đổi</string>
     <string name="WndMovieTheatre_Bye">Hãy quay lại bất cứ lúc nào, chúng tôi luôn hoan nghênh bạn!</string>
+    <string name="WndMovieTheatre_Sorry">Đã có lỗi xảy ra và chúng tôi không thể gửi phần thưởng cho bạn...</string>
     <string name="WndMovieTheatre_Thank_You">Cảm ơn bạn đã tham gia!</string>
     <string name="WndMovieTheatre_Title">Rạp Phim</string>
     <string name="WndMovieTheatre_Watch">xem quảng cáo</string>
@@ -2174,6 +2177,7 @@
     <string name="YogsTeeth_Name_Objective">răng của Yog</string>
     <string name="ZombieGnoll_Desc">Cơ thể biến dạng, gãy đổ của gnoll zombie không còn giống người hay linh chó nữa. Còn lại chỉ là một đống thịt thối và xương, đầy lòng thù ghét khao khát giết chóc và nhấn nhá.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
+    <string name="ZombieGnoll_Info">Gnoll-zombie đã trỗi dậy từ cõi chết!</string>
     <string name="ZombieMask_Name">Mặt nạ Zombie</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
@@ -2293,6 +2297,7 @@
     <string name="town_deco_pillar_name">Trụ</string>
     <string name="town_deco_pole_desc">Một cột cao được thiết kế để căng dây.</string>
     <string name="town_deco_porch_desc">Hiên làm bằng gỗ.</string>
+    <string name="town_deco_poster_desc">Các tờ rơi quảng cáo các buổi chiếu sắp tới tại rạp.</string>
     <string name="town_deco_poster_name">Áp phích</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
     <string name="town_deco_potions_name">Thuốc</string>
@@ -2996,6 +3001,11 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
 
 
 

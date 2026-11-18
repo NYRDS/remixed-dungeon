@@ -22,6 +22,7 @@
     <string name="Accuracy_Decreased">Waarom dacht ik dat ik dit %s kon gebruiken? Verkeerd gereedschap, verkeerde handen!</string>
     <string name="Accuracy_DecreasedDoctor">Elke slag met deze %s verspreidt onvolkomenheden. Mijn botenzaag geneest... dit besmet.</string>
     <string name="Accuracy_DecreasedDoctorBareHands">Blote handen besmetten mijn techniek. Zonder de zuivere snede van de Zaag verziekt mijn richtkunst tot chaos.</string>
+    <string name="Acidic_Desc">Deze enorme spinachtige demonische wezens vermijden naastenbijgevecht op alle manieren, door uit lange afstand verlamende gezagde spieken af te vuuren.</string>
     <string name="Acidic_Gender">masculine</string>
     <string name="Acidic_Name">zure schorpioen</string>
     <string name="Acidic_Name_Objective">zure schorpioen</string>
@@ -834,6 +835,7 @@
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Geneesdrankjes worden vanaf het begin geïdentificeerd.</string>
     <string name="HeroClass_None">gewoon burger</string>
+    <string name="HeroClass_PlagueDoctorPerks_1">Pestmeesters zijn meesters in alchemie en kunnen unieke recepten gebruiken.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Plagedokters lijden aan grote accuraatheidsstraffen zonder hun geliefde Beenzaag in de hand en kunnen geen afstandswapens gebruiken.</string>
     <string name="HeroClass_Priest">priester</string>
     <string name="HeroClass_PriestPerks_5">Priesters beginnen met 12 manapunten.</string>
@@ -990,6 +992,7 @@
     <string name="Journal_Troll">Trol-smeder</string>
     <string name="Journal_Wandmaker">Oude toverstafmaker</string>
     <string name="Journal_WellAwareness">Bron van Bewustzijn</string>
+    <string name="Journal_WellHealt">Bron van Gezondheid</string>
     <string name="Journal_WellTransmut">Put van Transmutatie</string>
     <string name="Keyring_Info">Dit is een koperen sleutelring waarmee je al je sleutels apart van de rest van je bezittingen kunt bewaren.</string>
     <string name="Keyring_Name">sleutelring</string>
@@ -1724,6 +1727,7 @@
     <string name="Shopkeeper_Name">winkelier</string>
     <string name="Shopkeeper_Sell">Selecteer een item om te verkopen</string>
     <string name="Shopkeeper_SellPrompt">Ik heb spullen te verkopen</string>
+    <string name="Shopkeeper_text">Welkom bij de lokale Pixel-Mart-filiaal.\nHoe kan ik u helpen?</string>
     <string name="Shopkeeper_title">Winkel</string>
     <string name="ShortSword_ACReforge">HERKASTEN</string>
     <string name="ShortSword_Gender">masculine</string>
@@ -2485,6 +2489,7 @@
     <string name="town_deco_magenta_carpet_desc">De magenta kleur van dit tapijt doet denken aan lokale wijn.</string>
     <string name="town_deco_magenta_carpet_name">tapijt</string>
     <string name="town_deco_medicine_desc">Flessen en andere medische ingrediënten staan zorgvuldig op deze planken.</string>
+    <string name="town_deco_medicine_name">Medicijn</string>
     <string name="town_deco_misc_desc">Een hoop rommel en snuisterijen.</string>
     <string name="town_deco_movies_door_desc">Deze deur lijkt buitengewoon goed gemaakt. Hij leidt waarschijnlijk naar iets ongelooflijks.</string>
     <string name="town_deco_movies_door_name">Deur</string>
@@ -2766,6 +2771,11 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
 
 
 
