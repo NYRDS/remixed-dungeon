@@ -212,6 +212,7 @@
     <string name="BishopNPC_Name">Bisschop</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="BishopQuest_2_1_InProgress">Breng me _drie zonnegraszaadjes_, mijn kind. De altaar wacht.</string>
+    <string name="BishopQuest_2_2_InProgress">Breng me _drie maangraszaden_, mijn kind. De altaar wacht.</string>
     <string name="BishopQuest_4_1_InProgress">Je hebt %1$d van de %2$d doodsritters vernietigd. Breek hun wil, en de legers zullen struikelen.</string>
     <string name="BishopQuest_4_2_Epilogue">De kerklokken luidden van zich af toen de laatste voorbijging — een goed teken, mijn kind. Neem deze drank van kracht; de laatste toets zal veel van je vragen.</string>
     <string name="BishopQuest_5_1_Epilogue">Des Heren werk is voltooid! Vanaf deze dag mag je de weg van een priester bewandelen. Neem deze zegen en deze almoezen, mijn kind — je hebt ze verdiend.</string>
@@ -870,6 +871,7 @@
     <string name="HeroSubClass_NameWarL">warlock</string>
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
     <string name="Hero_AnotherTry">Je bent gestorven.\n Wil je het opnieuw proberen?</string>
+    <string name="Hero_Leave">Je kunt Remixed Dungeon niet zomaar verlaten.</string>
     <string name="Hero_LevelUp">niveau omhoog!</string>
     <string name="Hero_LockedChest">Deze kist is op slot en je hebt geen passende sleutel</string>
     <string name="Hero_LockedDoor">Je hebt geen bijpassende sleutel</string>
@@ -2764,6 +2766,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

@@ -244,6 +244,7 @@
     <string name="BishopQuest_1_1_InProgress">你已让 %1$d 具亡灵安息，共 %2$d 具，吾儿。继续努力。</string>
     <string name="BishopQuest_2_2_Epilogue">种子中的月光……多像恩典本身。今夜教堂将弥漫银色的香气。孩子，因你的虔诚，请收下这瓶药水。</string>
     <string name="BishopQuest_3_1_InProgress">给我带来一只驯服的_僵尸_，我的孩子。温柔对待它——它不知道自己在做什么。</string>
+    <string name="BishopQuest_3_2_Epilogue">主教向愤怒的蝙蝠洒圣水，低声念着祝福。它扇动翅膀飞走，不知为何显得颇有尊严。拿着这卷轴作为你耐心的回报，孩子。</string>
     <string name="BishopQuest_4_1_Epilogue">军团像断了线的木偶一样踉跄——我甚至能从这里感受到。他们的主人不会饶恕这一点。拿去这瓶力量药水吧，孩子；你将需要你的力量。</string>
     <string name="BishopQuest_4_2_Epilogue">当最后一个逝去时，教堂的钟声自行敲响——这是个好兆头，吾儿。拿去这瓶力量药水；最终的试炼将向你索取许多。</string>
     <string name="BishopQuest_5_1_Epilogue">主的工已完成！从今日起，你可踏上祭司之路。接受这祝福与赏赐吧，吾儿 —— 你已赢得它们。</string>
@@ -3082,6 +3083,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">你留意到数张塔罗牌在有丝巾铺垫的桌子上以一特殊顺序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

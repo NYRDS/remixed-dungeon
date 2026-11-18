@@ -889,6 +889,7 @@
     <string name="RottingFist_Name">قبضة متعفّنة</string>
     <string name="RottingFist_Name_Objective">قبضة متعفنة</string>
     <string name="RubyBow_Gender">masculine</string>
+    <string name="RubyBow_Info">لا يستطيع استخدام هذا القوس الياقوتي سوى أعظم الرماة. تخترق كل سهم تقريباً جسد العدو، تاركة ثقباً هائلاً، لكن قوة هائلة مطلوبة لسحب الوتر.</string>
     <string name="RubyCrossbow_Gender">masculine</string>
     <string name="Rudolph_Info">ما يمكن أن يكون أكثر احتفالية من أنف أحمر متوهج؟ مع زوج من قرون الأيل، بالطبع.</string>
     <string name="Rudolph_Name">أنف أحمر وقرون</string>
@@ -1396,6 +1397,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

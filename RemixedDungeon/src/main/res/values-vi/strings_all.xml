@@ -150,6 +150,7 @@
     <string name="Badges_StrengthAttained5">Đạt 21 điểm Sức mạnh</string>
     <string name="Badges_Supporter">Cảm ơn sự hỗ trợ của bạn!</string>
     <string name="Badges_ThisIsSparta">Đây là Sparta!!!</string>
+    <string name="Badges_Victory">Đã thu được Bùa Yendor</string>
     <string name="Badges_VictoryAll">Bùa Yendor thu được bởi tất cả các lớp nhân vật</string>
     <string name="Badges_Yasd">Chết vì lửa, độc, khí độc &amp;amp; đói</string>
     <string name="Badges_Yog_Slain">Yog-Dzewa đã bị tiêu diệt</string>
@@ -2995,6 +2996,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
