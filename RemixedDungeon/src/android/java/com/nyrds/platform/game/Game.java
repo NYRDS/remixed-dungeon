@@ -317,6 +317,12 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
         SystemText.invalidate();
         TextureCache.clear();
 
+        // caveman: a new EGL context means every GL id is dead - the scene must be
+        // rebuilt before the next draw or stale holders re-bind deleted textures and
+        // render black. Don't depend on onSurfaceChanged firing (bd 3tf); the flag is
+        // idempotent and the restart's own clear is sequential on this GL thread.
+        GameLoop.setNeedSceneRestart();
+
         paused = false;
 
         if (gameLoop.scene != null) {
