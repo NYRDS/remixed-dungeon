@@ -506,6 +506,7 @@
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
     <string name="CorpseDust_Info2">Misschien omdat het er maar aan vast te houden je al ongerust en boos maakt.</string>
     <string name="CorpseDust_Name">lijkenstof</string>
+    <string name="CorpseExplosion_Info">Vervangt een lijk in een dodelijke wolk giftig gas, die ziekte en vergiftiging verspreidt naar alle nabijgelegen vijanden.</string>
     <string name="CorpseExplosion_Name">Lijk Explosie</string>
     <string name="CorpseExplosion_NoCorpse">Er is geen lijk op die plek.</string>
     <string name="Crab_Defense">gepareerd</string>
@@ -2777,6 +2778,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

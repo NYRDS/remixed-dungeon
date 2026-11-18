@@ -325,6 +325,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BlessedBuff_Name">Pobłogosławiony</string>
     <string name="BlessingSpell_Cast">%s otrzymuje błogosławieństwo.</string>
     <string name="BlessingSpell_Info">Cicha modlitwa, która owija każdą duszę łaską: atak i obrona są poprawiane na pewien czas. Nieczystość nie może jej przyjąć — nieumarli i demony zamiast tego są obciążone świętym słowem.</string>
+    <string name="BlessingSpell_Name">Błogosławieństwo</string>
     <string name="BlindnessBuff_Info">Kompletnie oślepiony, jedyne co odczuwasz to dźwięki otoczenia.</string>
     <string name="BlindnessBuff_Name">Oślepiony</string>
     <string name="BloodTransfusion_Drained">Сила жизни перетекает из твоего питомца в тебя.</string>
@@ -3141,6 +3142,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
