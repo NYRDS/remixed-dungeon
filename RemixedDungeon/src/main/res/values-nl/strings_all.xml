@@ -1357,6 +1357,7 @@
     <string name="Plant_ACPlant">PLANT</string>
     <string name="Plant_Info">Worp deze zaad naar de plaats waar je %1$s wilt laten groeien.\n\n%2$s</string>
     <string name="Plant_Seed">zaadje van %s</string>
+    <string name="PlateArmor_Desc">Grote metalen platen zijn samengevoegd tot een pak dat ongekende bescherming biedt aan elke avonturier die sterk genoeg is om het zware gewicht te dragen.</string>
     <string name="PoisonArrow_Gender">feminine</string>
     <string name="PoisonArrow_Name">giftige pijl</string>
     <string name="PoisonBuff_Info">Het lichaam wordt langzaam gedood door het gif!</string>
@@ -1840,6 +1841,7 @@
     <string name="StartScene_DifficultyEasyNoAds">makkelijk</string>
     <string name="StartScene_DifficultyExpert">Expert</string>
     <string name="StartScene_DifficultyNormal">Normaal</string>
+    <string name="StartScene_DifficultyNormalWithSaves">Normaal met opslaan (en reclame)</string>
     <string name="StartScene_DifficultyNormalWithSavesNoAds">normaal met opslaan</string>
     <string name="StartScene_DifficultySelect">Kies je lot</string>
     <string name="StartScene_Load">Spel laden</string>
@@ -2289,6 +2291,7 @@
     <string name="WndSelectLanguage_ImproveTranslation">Help alsjebliept de vertalingen van Remixed Dungeon te verbeteren</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
     <string name="WndSettingsInGame_GameLog">Spellog</string>
+    <string name="WndSettingsInGame_IsometricTiles">Isometrische Tegels</string>
     <string name="WndSettings_ActionButtonSize">Grootte van actieknoppen</string>
     <string name="WndSettings_Brightness">Helderheid</string>
     <string name="WndSettings_ClassicFont">Klassiek lettertype</string>
@@ -2774,6 +2777,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

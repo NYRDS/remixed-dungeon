@@ -1598,6 +1598,7 @@
     <string name="ShortSword_Name">kiếm ngắn</string>
     <string name="ShortSword_NotBoomerang">bạn không thể nâng cấp bumerang theo cách này</string>
     <string name="ShortSword_Reforged">bạn đã rèn lại thanh kiếm ngắn để nâng cấp %s của bạn</string>
+    <string name="ShortSword_Select">Chọn một vũ khí để nâng cấp</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Những mảnh kim loại hình sao với lưỡi dao sắc bén gây sát thương lớn cho mục tiêu. Chúng có thể được ném với tốc độ rất cao.</string>
     <string name="Shuriken_Name">shuriken</string>
@@ -1613,6 +1614,7 @@
     <string name="Slow_Name_0">Làm lạnh %s</string>
     <string name="Slow_Name_1">Lạnh giá %s</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
+    <string name="SmashSpell_NeedWeapon">Tôi cần một vũ khí cho đòn đánh này.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">ốc sên</string>
@@ -2365,6 +2367,7 @@
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_weaponboard_name">Vũ khí</string>
+    <string name="town_deco_weaponrack_desc">Trên giá này có những vũ khí mà rõ ràng quá đắt tiền đối với bạn.</string>
     <string name="town_deco_window_desc">Cửa sổ kính thông thường, không có gì đặc biệt.</string>
     <string name="town_deco_window_name">Cửa sổ</string>
     <string name="town_deco_wood_wall_desc">Một bức tường gỗ trông chắc chắn.</string>
@@ -3003,6 +3006,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 
