@@ -161,6 +161,7 @@
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">bard</string>
     <string name="BardNPC_Name_Objective">nhạc sĩ</string>
+    <string name="BardSong_1">Vợ chồng tôi sống một mình,\nTrong ngọn nhà gỗ nhỏ, chúng tôi gọi là nhà\nCô ấy yêu gin, tôi yêu rum\nTôi nói cho bạn biết chúng tôi vui lắm.</string>
     <string name="BarkskinBuff_Info">Cơ thể được bao phủ bởi vỏ cây giúp chặn một phần sát thương nhận phải.</string>
     <string name="BarkskinBuff_Name">Vỏ cây</string>
     <string name="Barrel_Desc">Trông như một thùng gỗ đơn giản. Nhưng khi bạn tiến gần hơn, bạn có thể ngửi thấy một chút mùi dầu nhẹ. Thùng có vẻ khá nhẹ, bạn có thể đẩy nó được.</string>
@@ -860,6 +861,7 @@
     <string name="Imp_Defense">đã né</string>
     <string name="Imp_Desc">Imp là những con quỷ cấp thấp. Chúng không nổi bật về sức mạnh hay tài năng phép thuật, nhưng lại khá thông minh và dễ gần. Nhiều imp thích sống giữa những người không phải quỷ.</string>
     <string name="Imp_Golems1">Bạn có phải là một nhà thám hiểm không? Tôi thích các nhà thám hiểm! Bạn luôn có thể tin vào họ nếu cần giết thứ gì đó. Tôi nói đúng không? Vì tiền thưởng đấy ;)\nTrong trường hợp của tôi thì _golem_ là thứ cần bị giết. Bạn thấy đấy, tôi sẽ bắt đầu một công việc nhỏ ở đây, nhưng những con golem ngu ngốc này thật tệ cho việc làm ăn! Rất khó để đàm phán với những đống đá lang thang, chết tiệt chúng! Vì vậy, xin hãy giết... nói rằng _6 con_ và phần thưởng sẽ là của bạn.</string>
+    <string name="Imp_Hey">Pst, %s!</string>
     <string name="Imp_Monks1">Bạn có phải là phiêu lưu gia? Tôi yêu thích những phiêu lưu gia! Bạn luôn có thể dựa vào họ khi cần giết cái gì đó. Đúng không? Dĩ nhiên là phải trả tiền ;)\nTrong trường hợp của tôi là _mönk_ cần bị tiêu diệt. Các bạn thấy, tôi định mở một chút kinh doanh ở đây, nhưng những kẻ điên khùng này không mua gì cả và sẽ làm hoảng sợ khách khác. Vậy hãy giúp tôi tiêu diệt... nói là _8 người_ và phần thưởng sẽ thuộc về bạn.</string>
     <string name="Imp_Monks2">Ôi, bạn vẫn còn sống! Tôi biết rằng kung-fu của bạn mạnh hơn ;) Chỉ đừng quên nhặt những tín chỉ của các nhà sư này.</string>
     <string name="Imp_Name">imp tham vọng</string>
@@ -987,6 +989,7 @@
     <string name="Level_TilePileOfStones">Đống đá</string>
     <string name="Level_TilePoisonTrap">Bẫy tên độc</string>
     <string name="Level_TileSign">Biển hiệu</string>
+    <string name="Level_TileStatue">Tượng</string>
     <string name="Level_TileSummoningTrap">Bẫy triệu hồi</string>
     <string name="Level_TileToxicTrap">Bẫy khí độc</string>
     <string name="Level_TileWall">Tường</string>
@@ -1329,6 +1332,7 @@
     <string name="PseudoRat_Gender">feminine</string>
     <string name="PseudoRat_Name">chuột giả</string>
     <string name="PseudoRat_Name_Objective">chuột giả</string>
+    <string name="PumpkinPie_Info">Một chiếc bánh bí ngô ngon, giống như mẹ bạn từng nướng.</string>
     <string name="PumpkinPie_Name">Bánh bí ngô</string>
     <string name="Pumpkin_Info">Ngày xưa, Người Dług Bửng là một dân tộc hãnh diện và thịnh vượng. Nhưng mọi thứ thay đổi sau khi loài người xuất hiện, chỉ còn lại những đống tàn tích. Và những chiếc đầu bị chặt và khắc của các bộ tộc Dług Bửng đã khuất vẫn còn là lời nhắc nhở về những sự kiện khủng khiếp ấy.</string>
     <string name="Pumpkin_Name">Bí ngô</string>
@@ -1352,6 +1356,7 @@
     <string name="RatHide_Name">da chuột</string>
     <string name="RatKingCrownBuff_Name">Chuột tính</string>
     <string name="RatKingCrown_Name">Mũ Vua Chuột</string>
+    <string name="RatKing_Desc">Con chuột này hơi lớn hơn chuột túi thông thường và nó đang đội một chiếc vương miện nhỏ trên đầu.</string>
     <string name="RatKing_Died">Vua đã chết. Chúc Vua vạn tuế!</string>
     <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Ta không ngủ!</string>
@@ -3013,6 +3018,11 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
 
 
 

@@ -1167,6 +1167,7 @@
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
     <string name="MeleeWeapon_Info6b">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
     <string name="MeleeWeapon_Info7a">Je houdt de %1$s gereed%2$s.</string>
+    <string name="MeleeWeapon_Info7c">Je kunt een kwaadaardige magie voelen die in %s sluipert.</string>
     <string name="MercenaryNPC_Desc">Een stevig mannetje.</string>
     <string name="MercenaryNPC_Gender">masculine</string>
     <string name="MercenaryNPC_Name">huurling</string>
@@ -1438,6 +1439,7 @@
     <string name="Potion_Info">Deze fles bevat een wervelende %s vloeistof. Wie weet wat er gebeurt als het gedronken of gegooid wordt?</string>
     <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
     <string name="Potion_MoistenUseless">Het lijkt erop dat je dit drankje net hebt verspild.</string>
+    <string name="Potion_No">Nee, ik heb mijn gedachten gewijzigd</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SelectForMoisten">Selecteer een item om te bevochtigen</string>
     <string name="Potion_Shatter">De fles barst en de %1$s vloeistof spat onschadelijk</string>
@@ -1750,6 +1752,7 @@
     <string name="Shuriken_Name">shuriken</string>
     <string name="Sign_CantRead">Je kunt het niet lezen.</string>
     <string name="SkeletonKey_Info">Deze sleutel ziet er serieus uit: het kopje is vormgegeven als een schedel. Waarschijnlijk kan hij een serieuze deur openen.</string>
+    <string name="SkeletonKey_Name">skeletsleutel</string>
     <string name="Skeleton_Defense">geblokkeerd</string>
     <string name="Skeleton_Desc">Skeletten zijn samengesteld uit botten van ongelukkige avonturiers en bewoners van de dungeon, tot leven gewekt door uitstralingen van het kwaad uit de diepte. Zodra ze genoeg beschadigd zijn, vallen ze uiteen in een ontploffing van botten.</string>
     <string name="Skeleton_Gender">masculine</string>
@@ -1852,6 +1855,7 @@
     <string name="StartScene_DifficultyNormalWithSaves">Normaal met opslaan (en reclame)</string>
     <string name="StartScene_DifficultyNormalWithSavesNoAds">normaal met opslaan</string>
     <string name="StartScene_DifficultySelect">Kies je lot</string>
+    <string name="StartScene_Erase">Huidig spel wissen</string>
     <string name="StartScene_Load">Spel laden</string>
     <string name="StartScene_New">Nieuw spel</string>
     <string name="StartScene_No">Nee, terug naar hoofdmenu</string>
@@ -2117,6 +2121,7 @@
     <string name="Welcome_Text_32_1">    remix.32.1\n\n    - Gameplay:\n\n    -- Pesten Dokter questlijn\n\n    -- Lichamen van monsters nu enigszins bruikbare items\n\n    -- Betere huisdierenbesturing\n\n    - UX:\n\n    -- Verbeterd beheer van saves\n\n    - Modding:\n\n    -- Lokale mod installatiemethoden\n\n    -- Aangepaste items kunnen nu acties uitvoeren terwijl ze in stapels liggen\n\n    - Bugs opgelost\n\n    </string>
     <string name="Welcome_Title">Welkom!</string>
     <string name="WindGust_Name">Windvlaag</string>
+    <string name="WizardHat_Info">Een prachtige zijden hoed versierd met sterornamenten. In oude tijden geloofden sommigen dat de grootste tovenaars speciaal gemaakte kleding droegen die hun magische krachten versterkten. Deze hoed verhoogt echter niet daadwerkelijk je magische vaardigheden, maar voelt alsof hij dat wel doet wanneer je hem draagt.</string>
     <string name="WizardHat_Name">Toverhoed</string>
     <string name="WndBag_BuySubtitle">(Je hebt %dg)</string>
     <string name="WndBlacksmith_Reforge">Hersmelt ze</string>
@@ -2785,6 +2790,11 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
 
 
 
