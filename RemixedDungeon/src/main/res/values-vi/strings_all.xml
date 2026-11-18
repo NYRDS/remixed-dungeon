@@ -229,6 +229,7 @@
     <string name="Bleeding_Death">Bạn đã chết vì mất máu...</string>
     <string name="BlessedBuff_Info">Cầu mong sự chính xác và né tránh sẽ đến với những ai được chúc phước!</string>
     <string name="BlessedBuff_Name">Được Chúc Phước</string>
+    <string name="BlindnessBuff_Name">Mù</string>
     <string name="BloodTransfusion_FullHP">Máu của bạn đã đầy.</string>
     <string name="BloodTransfusion_Name">Truyền máu</string>
     <string name="BloodTransfusion_WontAgreed">Đối tượng kháng cự việc trích xuất tinh huyết của mình.</string>
@@ -603,6 +604,7 @@
     <string name="FetidRat_Gender">feminine</string>
     <string name="FetidRat_Name">chuột hôi</string>
     <string name="FetidRat_Name_Objective">chuột hôi</string>
+    <string name="Fez_Info">Đây là một loại mũ hình nón cụt làm từ vải đỏ, có một cái chùm ở đỉnh. Và không, nó không làm cho thế giới trở nên 3 chiều.</string>
     <string name="Fez_Name">Mũ Fez</string>
     <string name="FilteredMask_Info">Khẩu trang lọc là thiết bị được thiết kế để bảo vệ người đeo không hít phải không khí độc hại, bao gồm khói, hơi, khí và bụi bẩn cũng như vi sinh vật trong không khí.\n\nTuy nhiên chiếc mặt nạ này chỉ phục vụ mục đích trang trí.</string>
     <string name="FilteredMask_Name">Khẩu trang N95</string>
@@ -655,6 +657,7 @@
     <string name="Ghost_Desc">Ma gần như không thể nhìn thấy. Nó trông như một đốm ánh sáng mờ vô hình với một khuôn mặt buồn bã.</string>
     <string name="Ghost_Name">ma buồn</string>
     <string name="Ghost_Name_Objective">ma</string>
+    <string name="Ghost_Rat2">Làm ơn... Giúp tôi... Tiêu diệt quái vật kia...</string>
     <string name="Ghost_Rose1">Chào bạn phiêu lưu gia... Một thời tôi giống như bạn - mạnh mẽ và tự tin... Và bây giờ tôi đã chết... Nhưng tôi không thể rời khỏi nơi này... Cho đến khi tôi tìm được _bông hồng khô_ của tôi... Nó rất quan trọng với tôi... Một vài quái vật đã cướp nó từ thi thể của tôi...</string>
     <string name="Ghost_Rose2">Làm ơn... Giúp tôi... Tìm đóa hồng...</string>
     <string name="Glaive_Gender">feminine</string>
@@ -1141,6 +1144,7 @@
     <string name="NecromancerRobe_PetLimitReached">Necromancy: giới hạn triệu hồi đã đạt đến (Hiện tại tối đa: %d)!</string>
     <string name="Necromancer_ACSpecial">THUẬT HỒI SINH</string>
     <string name="Necromancy_BecameALich">Bạn đã trở thành Lich! Sức mạnh của bạn tăng lên và dung lượng linh hồn đã được gấp đôi! Nhưng bạn đã mất %1$d điểm sức mạnh.</string>
+    <string name="Necromancy_Death">Bạn đã cạn kiệt toàn bộ sinh lực khi thực hành thuật hồi sinh.</string>
     <string name="Necromancy_NotEnoughSouls">Bạn không đủ linh hồn để thi triển phép thuật \&quot;%1$s\&quot;.</string>
     <string name="Necromancy_ReincarnationName">Luân hồi</string>
     <string name="Necromancy_SoulsCountLabel">Linh hồn</string>
@@ -2086,6 +2090,7 @@
     <string name="WndSadGhostNecro_No">Không, để nó nói.</string>
     <string name="WndSadGhostNecro_Persuaded">Linh hồn buồn đã bị chi phối!</string>
     <string name="WndSadGhostNecro_Text">Thần linh này dường như đang vật lộn trong lời nguyền của nó. Trông như thể nó muốn hỏi tôi điều gì. Với sự trợ giúp của thuật hồi sinh, tôi có thể thuyết phục nó rằng lời yêu cầu đã được thực hiện. Nó sẽ giúp tôi tiết kiệm thời gian. Nhưng có đáng giá để làm như vậy không?</string>
+    <string name="WndSadGhost_Armor">Giáp của ma</string>
     <string name="WndSadGhost_Farewell">Tạm biệt, nhà thám hiểm! Chúc may mắn!</string>
     <string name="WndSadGhost_Rat">Vâng! Con quái vật xấu xí đã bị tiêu diệt và cuối cùng tôi có thể yên nghỉ... Xin hãy nhận lấy một trong những vật phẩm này, biết đâu chúng sẽ hữu ích cho bạn trên hành trình...</string>
     <string name="WndSadGhost_Rose">Đúng rồi! Đúng rồi!!! Chính là nó! Xin hãy đưa nó cho tôi! Và bạn có thể lấy một trong những món đồ này, biết đâu chúng sẽ hữu ích cho bạn trên hành trình...</string>
@@ -2136,6 +2141,7 @@
     <string name="WndWandmaker_Battle">Gậy chiến đấu</string>
     <string name="WndWandmaker_Farawell">Chúc may mắn trong hành trình của bạn, %s!</string>
     <string name="WndWandmaker_Message">Ồ, tôi thấy bạn đã thành công! Tôi hy vọng điều đó không gây phiền cho bạn quá nhiều. Như đã hứa, bạn có thể chọn một trong những cây đũa phép chất lượng cao của tôi.</string>
+    <string name="WndWandmaker_NonBattle">Gậy phép tiện ích</string>
     <string name="Wnd_Button_Back">Quay lại</string>
     <string name="Wnd_Button_Cancel">Hủy</string>
     <string name="Wnd_Button_Close">Đóng</string>
@@ -3007,6 +3013,12 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
+
 
 
 

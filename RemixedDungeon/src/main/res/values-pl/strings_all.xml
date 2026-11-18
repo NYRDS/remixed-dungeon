@@ -66,6 +66,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="Amulet_ACEnd">SKOŃCZ GRĘ</string>
     <string name="Amulet_Info">Amulet Yendora to najpotężniejszy znany artefakt niewiadomego pochodzenia. Mówi się, że amulet może spełnić każde życzenie jego właściciela, oczywiście jeśli jego siła woli jest na tyle potężna by \&quot;przekonać\&quot; artefakt do współpracy.</string>
     <string name="Amulet_Name">Amulet Yendora</string>
+    <string name="Anathema_Info">Słowo ekskomunikacji. Oznaczony wróg otrzymuje o połowę więcej obrażeń z każdego źródła — nieumarli i demony pozostają oznaczeni dłużej.</string>
     <string name="Anathema_Name">Anatema</string>
     <string name="AnesthesiaBuff_Info">Nie odczuwa bólu i nie obudzi się od ataków, ale nadal otrzymuje obrażenia.</string>
     <string name="AnesthesiaBuff_Name">Anestezja</string>
@@ -254,6 +255,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BishopQuest_2_1_Prologue">Zanim przekażę ci tajemnice kapłaństwa, ołtarz musi zostać przygotowany. Przynieś mi _trzy nasiona słońca_ — ich złota esencja czyni najlepszy kadzidło.</string>
     <string name="BishopQuest_2_2_Epilogue">Księżycowe światło w nasieniu... jak sama łaska. Dziś noc kościół będzie pachnieć srebrem. Weź to eliksir za swoją oddaność, dziecko moje.</string>
     <string name="BishopQuest_2_2_InProgress">Przynieś mi _trzy nasiona Księżycowego Wdzięku_, moje dziecko. Ołtarz czeka.</string>
+    <string name="BishopQuest_2_2_Prologue">Rytuał wtajemniczenia wymaga kadzidła pobłogosławionego przez księżyc, dziecko moje. Przynieś mi _trzy nasiona błogosławienia księżyca_, zebrane tam, gdzie w głębinach panuje blask księżyca.</string>
     <string name="BishopQuest_3_1_Epilogue">Ostatnie pominy zostały wypowiedziane, a posłuszny zombie rozpada się w spokojny pył. Teraz spoczywa naprawdę. Twoje miłosierdzie cię honoruje, dziecko moje — weź ten zwój, będziesz go potrzebować tam, gdzie idziesz.</string>
     <string name="BishopQuest_3_1_InProgress">Przynieś mi _oswojonego zombie_, dziecko moje. Traktuj go z delikatnością — nie wie, co robi.</string>
     <string name="BishopQuest_3_2_InProgress">Przynieś mi _oswojonego nietoperza_, moje dziecko. Nie przerażaj biednego stworzenia.</string>
@@ -3142,6 +3144,8 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
 
 
 

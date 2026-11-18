@@ -779,6 +779,7 @@
     <string name="Exhumation_Name">控靈</string>
     <string name="Exhumation_NoGrave">這裏沒有墳墓可以進行施法。</string>
     <string name="Exhumation_Ok">我會服從於你。</string>
+    <string name="Exorcism_Info">一個驅魔的力量之語。它對單一敵人造成沉重的神聖傷害——對不死生物傷害加倍，並使其減速。</string>
     <string name="ExplodingSkull_Desc">這個漂浮的燃燒頭骨看起來相當脆弱，仿佛每一秒都有爆炸的危險。</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">爆炸頭骨</string>
@@ -1008,6 +1009,7 @@
     <string name="HeroClass_Priest">神父</string>
     <string name="HeroClass_PriestPerks_2">牧師使用魔力施展神聖法術：祝福、聖水、驅魔、臨終聖禮、上帝之憤和詛咒。</string>
     <string name="HeroClass_PriestPerks_3">牧師的戰鬥法衣可施展聖化：神聖爆發燃燒附近的不死生物（惡魔受到一半傷害）並祝福穿著者。</string>
+    <string name="HeroClass_PriestPerks_5">牧師初始擁有 12 點法力值。</string>
     <string name="HeroClass_Rog">盜賊</string>
     <string name="HeroClass_RogPerks_0">盜賊起始擁有一枚+1的暗影指環。</string>
     <string name="HeroClass_RogPerks_1">盜賊在裝備指環時能自動鑒定其類型。</string>
@@ -3094,6 +3096,8 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
+
 
 
 

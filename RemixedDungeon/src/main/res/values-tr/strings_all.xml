@@ -255,6 +255,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BishopQuest_3_2_Prologue">Hatta karanlık yaratıklar da bir bereket layık, yavrum. Bana bir _yarasa_ getir ki sen yetiştirdin, ben onu nurlandırırım.</string>
     <string name="BishopQuest_4_1_InProgress">%1$d / %2$d ölüm şövalyesini yok ettin. İradelerini kırt, leğenler tökezlesin.</string>
     <string name="BishopQuest_4_1_Prologue">Piyadeleri dinlendirdin — şimdi sıra efendilerinde. _Ölüm şövalyeleri_ ölülerin leğenlerini komuta eder ve onlar istekleri kemikleri yürütür. _İki ölüm şövalyesi_ yok et, çocukluğum.</string>
+    <string name="BishopQuest_5_1_Epilogue">Tanrının işi tamamlandı! Bugünden itibaren bir rahip yolu üzerinde yürüyebilirsin. Bu bereketi ve bu sadakaları al, çocuğum — sen bunları hak ettin.</string>
     <string name="BishopQuest_5_1_Prologue">Bir sınav kaldı, hepsinin en zoru. Cehennem işlerinizi fark etti, çocuklarım, ve kızlarını gönderdi. _Sükübler_ derin salonlarda dolaşıyor, ve fısıltıları tatlı zehir. _İki sükübü_ kovun, ve sizlere keşişliğin gizemlerini aktaracağım.</string>
     <string name="Bishop_bye">Senin için dua edeceğim evladım.</string>
     <string name="Bishop_great_bless">Büyük kutsama - %d altın</string>
@@ -894,6 +895,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">izci gnoll</string>
     <string name="Gnoll_Name_Objective">gnoll izci</string>
+    <string name="GodWrath_Info">İlahi hükmün kutsal ateşi. Tek bir düşmana ağır kutsal hasar verir — ne yeryüzü yaratığı ne de karanlık yaratıcı göklerin gazabından kaçamaz.</string>
     <string name="Gold_Collect">Daha sonra dükkanda harcamak için altınları topla.</string>
     <string name="Gold_Info">%d adet altın.</string>
     <string name="Gold_Info1">Bir adet altın sikke.</string>
@@ -3122,6 +3124,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 

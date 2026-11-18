@@ -217,6 +217,7 @@
     <string name="BishopQuest_2_2_InProgress">Breng me _drie maangraszaden_, mijn kind. De altaar wacht.</string>
     <string name="BishopQuest_4_1_InProgress">Je hebt %1$d van de %2$d doodsritters vernietigd. Breek hun wil, en de legers zullen struikelen.</string>
     <string name="BishopQuest_4_2_Epilogue">De kerklokken luidden van zich af toen de laatste voorbijging — een goed teken, mijn kind. Neem deze drank van kracht; de laatste toets zal veel van je vragen.</string>
+    <string name="BishopQuest_4_2_InProgress">Je hebt %1$d van de %2$d geketende zielen bevrijd. Laat ze niet langer dienen.</string>
     <string name="BishopQuest_5_1_Epilogue">Des Heren werk is voltooid! Vanaf deze dag mag je de weg van een priester bewandelen. Neem deze zegen en deze almoezen, mijn kind — je hebt ze verdiend.</string>
     <string name="Bishop_bye">Ik zal voor je bidden, mijn kind.</string>
     <string name="Bishop_great_bless">Grote zegen - %d g</string>
@@ -279,6 +280,7 @@
     <string name="BoneSaw_Info">Een precisie-geengineerde chirurgische zaag ontworpen voor snelle ontleding. De schade en aanvalsnelheid worden dodelijker met de vaardigheid van de Pestdokter. Critische treffers snijden extra oogstbare delen van vijanden, en het slaat met ruthloze efficiëntie tegen gelamde vijanden.</string>
     <string name="BoneSaw_Name">botenzaag</string>
     <string name="BoneShard_Info">Een scherpe botfragment geoogst uit een verslagen vijand. Deze fragmenten zijn verrassend duurzaam en nuttig voor ambacht.</string>
+    <string name="BoneShard_Name">Botscherf</string>
     <string name="Boomerang_Gender">masculine</string>
     <string name="Boomerang_Info">Wanneer gegooid naar de vijand, zal deze platte, gebogen, houten projectile terugkeren naar de handen van de werper.</string>
     <string name="Boomerang_Name">boemerang</string>
@@ -324,6 +326,7 @@
     <string name="Carcass_DissectResult_One">Uit %1$s krijg je één voorwerp.</string>
     <string name="Carcass_Info">restanten van een volledig dode %s.</string>
     <string name="Carcass_Kick">Deze %s is volledig dood, geen reden om het te schoppen.</string>
+    <string name="Carcass_Name">resten van %1$s</string>
     <string name="Carcass_Necromancy">Je hebt het lijk van %s opgewekt!</string>
     <string name="Carcass_SelectItem">Selecteer een voorwerp</string>
     <string name="Carcass_TooFarToDissect">Je moet dichterbij zijn om de karkas te ontleden.</string>
@@ -749,6 +752,7 @@
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnol verkenner</string>
     <string name="Gnoll_Name_Objective">gnol verkenner</string>
+    <string name="GodWrath_Info">Heilig vuur van goddelijke oordeel. Het richt zware heilige schade aan op een enkele vijand — geen wezen, noch gewoon noch monstrueus, ontgaat de wraak van de hemel.</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="Gold_Info1">Een gouden munt.</string>
     <string name="Gold_Name">goud</string>
@@ -923,6 +927,7 @@
     <string name="IceCaves_TileGrass">Bevroren gras.</string>
     <string name="IceCaves_TileHighGrass">Bevroren hoog gras</string>
     <string name="IceCaves_TileStatue">Bevroren Gnoll</string>
+    <string name="IceElemental_Desc">Onder alle elementalen die in de kerker bestaan, kunnen ijs-elementalen nauwelijks als krachtig worden beschouwd, maar ze kunnen terecht worden genoemd een van de meest gevaarlijke. De vrosaura die van hun lichamen afkomt, kan elke vijand vertragen.</string>
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">ijs-elementaal</string>
     <string name="IceElemental_Name_Objective">ijselementaal</string>
@@ -964,6 +969,7 @@
     <string name="InterLevelScene_ErrorGeneric">Er ging iets mis...</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
+    <string name="InterLevelScene_Resurrecting">Opstaan...</string>
     <string name="InterLevelScene_Returning">Terugkeren...</string>
     <string name="InventoryScroll_No">Nee, ik heb mijn keuze veranderd</string>
     <string name="InventoryScroll_Title">Selecteer een voorwerp</string>
@@ -1764,6 +1770,7 @@
     <string name="Snail_Gender">masculine</string>
     <string name="Snail_Name">slak</string>
     <string name="Snail_Name_Objective">slak</string>
+    <string name="SnipersMarkBuff_Info">De markering is aangebracht door een sniper.</string>
     <string name="SnipersMarkBuff_Name">Teken van de sluipschutter</string>
     <string name="SociologistNPC_AlreadyTaken">Je hebt al deelgenomen aan deze enquête, kom later terug</string>
     <string name="SociologistNPC_Desc">Deze socioloog is op een heilige zoektocht om publieke meningen te verzamelen</string>
@@ -2778,6 +2785,13 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
+
 
 
 
