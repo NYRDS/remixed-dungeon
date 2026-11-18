@@ -10,6 +10,16 @@ const GENDERS = ['neuter', 'feminine', 'masculine'];
 // so this stays a closed select, not free text
 const FRACTIONS = ['DUNGEON', 'NEUTRAL', 'HEROES', 'ANY'];
 
+// NamedEntityKind names the engine matches immunities()/resistances() against
+// (Char.resist) - the union of what builtin mob descs use. Free text still
+// works: mod-defined kinds are valid too.
+const DEFENSE_KINDS = [
+  'Amok', 'Bleeding', 'Blindness', 'Burning', 'Charm', 'ConfusionGas', 'Death',
+  'Electricity', 'Fire', 'Frost', 'Leech', 'Paralysis', 'Poison', 'Regeneration',
+  'Roots', 'ScrollOfPsionicBlast', 'Sleep', 'Stun', 'Terror', 'ToxicGas',
+  'WandOfDisintegration', 'WandOfFirebolt',
+];
+
 const NUMBER_FIELDS = [
   ['ht', 'HP'], ['defenseSkill', 'defense'], ['attackSkill', 'attack'],
   ['dmgMin', 'dmg min'], ['dmgMax', 'dmg max'], ['dr', 'armor'],
@@ -46,6 +56,7 @@ export async function mobEditor(content, ctx) {
   content.appendChild(status);
 
   const inputs = {};
+  const listKeys = new Set(); // comma-list fields saved as string arrays
 
   function panel(name) {
     const p = document.createElement('div');
@@ -112,6 +123,32 @@ export async function mobEditor(content, ctx) {
     grid.appendChild(wrap);
   }
 
+  // string-array keys (immunities/resistances) as a comma-separated list -
+  // one text input stays phone-friendly where a chip editor would not
+  function listField(grid, labelText, key, value, suggestions) {
+    const label = document.createElement('label');
+    label.textContent = labelText;
+    const input = document.createElement('input');
+    input.value = Array.isArray(value) ? value.join(', ') : '';
+    input.setAttribute('list', key + 'List');
+    input.placeholder = 'Poison, Sleep';
+    inputs[key] = input;
+    listKeys.add(key);
+    grid.appendChild(label);
+    grid.appendChild(input);
+    if (suggestions) {
+      const dataList = document.createElement('datalist');
+      dataList.id = key + 'List';
+      for (const s of suggestions) {
+        const o = document.createElement('option');
+        o.value = s;
+        dataList.appendChild(o);
+      }
+      grid.parentElement.appendChild(dataList);
+    }
+    return input;
+  }
+
   // --- strings -----------------------------------------------------------
   const stringsGrid = panel('Names (strings keys from strings_en.json, or plain text)');
   field(stringsGrid, 'name key', 'name', mob.name, { placeholder: kind + '_Name' });
@@ -144,9 +181,16 @@ export async function mobEditor(content, ctx) {
   for (const [key, labelText] of [
     ['isBoss', 'is boss'], ['npc', 'npc'], ['movable', 'movable'],
     ['immortal', 'immortal'], ['pacified', 'pacified'], ['isHumanoid', 'humanoid'],
+    ['undead', 'undead'], ['demon', 'demon'],
   ]) {
     checkField(gameGrid, labelText, key, mob[key]);
   }
+  field(gameGrid, 'level (depth scaling)', 'level', mob.level, { type: 'number', step: 1 });
+
+  // --- defenses ------------------------------------------------------------
+  const defGrid = panel('Immunities & resistances (kind names, comma-separated)');
+  listField(defGrid, 'immune to', 'immunities', mob.immunities, DEFENSE_KINDS);
+  listField(defGrid, 'resistant to', 'resistances', mob.resistances, DEFENSE_KINDS);
 
   // --- sprite --------------------------------------------------------------
   const spriteGrid = panel('Sprite');
@@ -240,6 +284,11 @@ export async function mobEditor(content, ctx) {
         continue;
       }
       const v = input.value.trim();
+      if (listKeys.has(key)) {
+        const items = v.split(',').map(s => s.trim()).filter(Boolean);
+        if (items.length) { out[key] = items; } else { delete out[key]; }
+        continue;
+      }
       if (key === 'loot') {
         if (v === '') {
           delete out.loot;

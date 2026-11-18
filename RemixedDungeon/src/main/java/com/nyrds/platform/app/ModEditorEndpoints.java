@@ -1291,6 +1291,8 @@ public class ModEditorEndpoints {
             }
             JSONObject levels = campaign.getJSONObject("Levels");
             java.util.Set<String> referencedFiles = new java.util.HashSet<>();
+            // exit cells per level id - the graph check needs them (bd igf)
+            java.util.Map<String, Integer> exitCells = new java.util.HashMap<>();
             // keys(), not keySet(): android's org.json gains keySet only at
             // API 26, the minSdk is 23
             for (java.util.Iterator<String> it = levels.keys(); it.hasNext(); ) {
@@ -1328,13 +1330,20 @@ public class ModEditorEndpoints {
                     if (expected != actual) {
                         errors.add(file + ": map length " + actual + " != width*height " + expected);
                     }
+                    // physical linking capacity: exit i of the graph needs
+                    // exit-cell i (exit + multiexit[]) in the map
+                    int cells = map.has("exit") ? 1 : 0;
+                    if (map.has("multiexit")) {
+                        cells += map.getJSONArray("multiexit").length();
+                    }
+                    exitCells.put(levelId, cells);
                     validateLevelLinks(file, map, w, h, errors, warnings);
                 } catch (Exception e) {
                     errors.add("level " + levelId + " (" + file + "): " + e.getMessage());
                 }
             }
             warnOrphanLevels(modName, referencedFiles, warnings);
-            validateCampaignGraph(levels, campaign.optJSONObject("Graph"), errors, warnings);
+            validateCampaignGraph(levels, campaign.optJSONObject("Graph"), exitCells, errors, warnings);
         } catch (Exception e) {
             errors.add("levelsDesc/Dungeon.json: " + e.getMessage());
         }
@@ -1346,7 +1355,8 @@ public class ModEditorEndpoints {
     // matching entered-from entry - are a legit design tool (builtin 10s->6s,
     // necro5->necro1) and are NOT flagged. Calibrated against builtin +
     // published mods 2026-11-17.
-    private static void validateCampaignGraph(JSONObject levels, JSONObject graph, List<String> errors, List<String> warnings) {
+    private static void validateCampaignGraph(JSONObject levels, JSONObject graph,
+            java.util.Map<String, Integer> exitCells, List<String> errors, List<String> warnings) {
         if (graph == null) {
             warnings.add("levelsDesc/Dungeon.json has no Graph table - no level can be reached by stairs");
             return;
@@ -1361,6 +1371,16 @@ public class ModEditorEndpoints {
             if (pair == null || pair.length() < 2) {
                 errors.add("levelsDesc/Dungeon.json: Graph entry " + id + " must be [[exits],[entered from]]");
                 continue;
+            }
+            // more exits than physical exit cells: the single physical door
+            // leads to exits[0], the rest are unreachable for players (bd igf).
+            // Levels without a read map (random levels place their own exits)
+            // are not in exitCells and skip this check.
+            JSONArray graphExits = pair.optJSONArray(0);
+            Integer cells = exitCells.get(id);
+            if (graphExits != null && cells != null && graphExits.length() > cells) {
+                warnings.add("levelsDesc/Dungeon.json: level " + id + " has " + graphExits.length()
+                    + " graph exit(s) but only " + cells + " physical exit cell(s) in its file - the extra exits are unreachable (paint more multiexit cells)");
             }
             for (int side = 0; side < 2; side++) {
                 JSONArray targets = pair.optJSONArray(side);

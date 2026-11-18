@@ -163,7 +163,9 @@ export async function levelEditor(content, ctx) {
   toolRow('var pick', varClearBtn);
 
   const zoomSelect = document.createElement('select');
-  for (const z of [12, 18, 24, 32]) {
+  // 40/48 exist for touch: a 15×15 map needs ~34px/cell to fill a 390px-wide
+  // phone screen edge to edge, bigger maps need the pan tool otherwise (bd 33n)
+  for (const z of [12, 18, 24, 32, 40, 48]) {
     const o = document.createElement('option');
     o.value = z;
     o.textContent = z + 'px';

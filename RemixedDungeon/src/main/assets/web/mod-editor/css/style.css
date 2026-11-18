@@ -203,6 +203,16 @@ button, .btn, select, label, .label, .clickable-entry, summary { touch-action: m
 
   #content { padding: 10px; }
 
+  /* the fixed bottom-right "working..." chip covers content on narrow
+     screens (bd 33n) - in flow it becomes a full-bleed strip under the
+     topbar (which itself wraps to variable height, so no fixed top works) */
+  #busy {
+    position: static;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+  }
+
   .campaign-scroll { max-height: 55vh; }
   .campaign-panel { flex: 1 1 100%; min-width: 0; max-width: none; }
 }

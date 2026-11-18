@@ -521,6 +521,34 @@ if quest.isCompleted("rat_hunt") then
 end
 ```
 
+A full quest-giver NPC skeleton lives in the mod editor's snippet list
+(`scripts/quests/`), modeled on `scripts/npc/QuestGiverDemo.lua`.
+
+## Alchemy Recipes
+
+### Purpose
+Define what the alchemy pot crafts from ingredient items.
+
+### Data file
+`scripts/alchemy_recipes.json` - a `recipes` array; every entry lists
+`input` ingredients and `outputs` products as `{name, count}` pairs, where
+`name` is an item kind (the mod editor ships a form editor for this file):
+
+```json
+{
+  "recipes": [
+    {
+      "input":   [ {"name": "RottenMeat", "count": 3},
+                   {"name": "VileEssence", "count": 1} ],
+      "outputs": [ {"name": "PotionOfToxicGas", "count": 1} ]
+    }
+  ]
+}
+```
+
+Mob resurrection recipes (5 carcasses + VileEssence -> the mob) are generated
+by the engine for every resurrectable mob - do not duplicate them here.
+
 ## Item Selection
 
 ### Purpose

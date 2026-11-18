@@ -7,7 +7,8 @@ import { renderTree } from './file-tree.js';
 import { pickEditor } from './editors/text-editors.js';
 import { mobEditor } from './editors/mob-editor.js';
 import { levelEditor } from './editors/level-editor.js';
-import { spriteEditor } from './editors/sprite-editor.js';
+import { spriteEditor, itemSpritesEditor } from './editors/sprite-editor.js';
+import { alchemyEditor } from './editors/alchemy-editor.js';
 import { itemEditor } from './editors/item-editor.js';
 import { spellEditor } from './editors/spell-editor.js';
 import { buffEditor } from './editors/buff-editor.js';
@@ -291,9 +292,15 @@ async function openWorkspace(modName) {
       mod: modName,
       onOpen: file => openFile(modName, file),
       onNewFile: async dir => {
-        const name = window.prompt('New file name (relative to ' + (dir || 'mod root') + ')');
+        const name = window.prompt('New file name (relative to ' + (dir || 'mod root') + '):');
         if (!name) { return; }
-        const path = dir ? dir + '/' + name : name;
+        // a path-shaped name ("spritesDesc/X.json") is mod-root-relative on
+        // purpose - the mob form's placeholder suggests exactly that shape,
+        // and prepending the open dir silently double-nests it (bd dv5)
+        let path = name.trim().replace(/^\.?\/+/, '');
+        if (!path.includes('/')) {
+          path = dir ? dir + '/' + path : path;
+        }
         const template = templateFor(path);
         try {
           await api.saveModFile(modName, path, template ? template.content : '');
@@ -382,16 +389,36 @@ async function openWorkspace(modName) {
   const h = document.createElement('h2');
   h.textContent = modName;
   content.appendChild(h);
+  // phone-first: the old 9-line paragraph pushed the actual workflow below
+  // the fold - a 4-step checklist leads, the full editor map collapses (bd 33n)
+  const steps = document.createElement('ol');
+  for (const s of [
+    'Create files with "+ file" in a folder on the left - templates fill them in.',
+    'Edit: mobs/stats get forms, maps get a painter, Dungeon.json gets the campaign graph.',
+    'Validate checks everything; click a message to jump to the file.',
+    '"Play this mod" activates it and restarts the game.',
+  ]) {
+    const li = document.createElement('li');
+    li.textContent = s;
+    steps.appendChild(li);
+  }
+  content.appendChild(steps);
+  const details = document.createElement('details');
+  const summary = document.createElement('summary');
+  summary.className = 'hint';
+  summary.textContent = 'which editor opens which file?';
+  details.appendChild(summary);
   const hint = document.createElement('p');
   hint.className = 'hint';
-  hint.textContent = 'Pick a file on the left, or use the actions above. Form editors: mobsDesc, ' +
-    'spritesDesc, levelObjects, effects, plantsDesc, scripts/items, scripts/spells, scripts/buffs; ' +
+  hint.textContent = 'Form editors: mobsDesc, spritesDesc (and hero/spritesDesc), levelObjects, ' +
+    'effects, plantsDesc, scripts/items, scripts/spells, scripts/buffs, scripts/alchemy_recipes.json; ' +
     'levelsDesc maps open the level painter, Dungeon.json the campaign graph editor, ' +
     '*Treasury.json the loot editor, Bestiary.json the spawn ' +
     'table; hero/initHeroes opens the class loadout editor; strings files open the pairs editor with ' +
     'a per-language manager; lua files get snippet + API-reference help; everything else is a ' +
-    'validated text editor. "Play this mod" activates it and restarts the game.';
-  content.appendChild(hint);
+    'validated text editor.';
+  details.appendChild(hint);
+  content.appendChild(details);
 
   await runValidate(modName, true);
 }
@@ -518,7 +545,26 @@ async function openFile(modName, file) {
     }
     if (lower.startsWith('spritesdesc/') && lower.endsWith('.json')) {
       content.innerHTML = '';
+      // spritesDesc/items.json is a per-item map (imageFile/imageIndex), not a
+      // sheet descriptor - its own form, never the animation editor (bd a3u);
+      // sheet-shaped content falls back to the json text editor
+      if (lower === 'spritesdesc/items.json') {
+        const ed = await itemSpritesEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() });
+        if (ed) { adoptEditor(ed); } else { adoptTextFallback(content); }
+      } else {
+        adoptEditor(await spriteEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
+      }
+      return;
+    }
+    // hero sprite descriptors are the same sheet shape (RetroHeroSpriteDef)
+    if (lower.startsWith('hero/spritesdesc/') && lower.endsWith('.json')) {
+      content.innerHTML = '';
       adoptEditor(await spriteEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
+      return;
+    }
+    if (lower === 'scripts/alchemy_recipes.json') {
+      content.innerHTML = '';
+      adoptEditor(await alchemyEditor(content, { mod: modName, file, api, onSaved: () => currentRefreshTree && currentRefreshTree() }));
       return;
     }
     if (lower.startsWith('scripts/items/') && lower.endsWith('.lua')) {

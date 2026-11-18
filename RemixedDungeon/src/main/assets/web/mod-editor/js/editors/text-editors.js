@@ -86,7 +86,8 @@ export function luaEditor(content, ctx) {
 // ---- lua authoring help: snippet inserts + API reference pane ----------
 
 const SNIPPET_KEYS = ['scripts/items/', 'scripts/buffs/', 'scripts/mobs/', 'scripts/ai/',
-  'scripts/spells/', 'scripts/traps/', 'scripts/objects/', 'scripts/npc/', 'scripts/actors/'];
+  'scripts/spells/', 'scripts/traps/', 'scripts/objects/', 'scripts/npc/', 'scripts/actors/',
+  'scripts/quests/'];
 
 // snippets + API reference pane. opts.snippets=false renders the reference
 // only (form editors have no textarea to insert skeletons into)
@@ -229,6 +230,27 @@ async function renderStringsManager(content, ctx) {
     } catch (e) { /* no reference - coverage column just shows - */ }
   }
 
+  // reference pairs as of NOW: the disk state (covers pairs saved since this
+  // view rendered) plus unsaved rows when the english file itself is open here
+  async function freshReferencePairs() {
+    let map = null;
+    try {
+      if (langFiles.some(f => f.toLowerCase() === 'strings_en.json')) {
+        map = parsePairs((await api.readModFile(ctx.mod, 'strings_en.json')).content);
+      } else {
+        map = parsePairs((await api.readModFile(ctx.mod, 'strings_en.json', true)).content);
+      }
+    } catch (e) { /* no reference available at all */ }
+    if (ctx.file.toLowerCase() === 'strings_en.json') {
+      map = map || new Map();
+      for (const tr of content.querySelectorAll('table.pairs tr')) {
+        const [keyInput, valInput] = tr.querySelectorAll('input');
+        if (keyInput && keyInput.value) { map.set(keyInput.value, valInput ? valInput.value : ''); }
+      }
+    }
+    return map;
+  }
+
   const table = document.createElement('table');
   table.className = 'pairs';
   panelEl.appendChild(table);
@@ -301,16 +323,21 @@ async function renderStringsManager(content, ctx) {
       statusEl.textContent = file + ' already exists';
       return;
     }
+    // re-read the reference NOW: pairs saved since this view rendered must
+    // seed the new language too - a render-time refMap snapshot silently
+    // missed same-session keys (bd mvn)
+    const seedMap = await freshReferencePairs();
     // seed with every reference key and an empty value to translate into
     const out = [];
-    if (refMap) {
-      for (const k of refMap.keys()) { out.push(JSON.stringify([k, ''])); }
+    if (seedMap) {
+      for (const k of seedMap.keys()) { out.push(JSON.stringify([k, ''])); }
     }
     try {
       await api.saveModFile(ctx.mod, file, out.length ? out.join('\n') + '\n' : '');
       statusEl.className = 'status-ok';
       statusEl.textContent = 'created ' + file + ' with ' + out.length +
-        ' empty pairs - open it from the languages table or the file tree';
+        (seedMap ? ' empty pairs' : ' pairs') +
+        ' - open it from the languages table or the file tree';
       window.dispatchEvent(new CustomEvent('mod-editor:open-file', { detail: file }));
     } catch (e) {
       statusEl.className = 'status-err';

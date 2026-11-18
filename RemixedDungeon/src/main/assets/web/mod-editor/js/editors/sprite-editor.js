@@ -12,6 +12,154 @@ import { uploadPng } from '../upload.js';
 
 const STANDARD_ANIMS = ['idle', 'run', 'attack', 'die', 'zap'];
 
+// {ItemKind: {file, index, fliesStraight, fliesFastRotating}} - the
+// spritesDesc/items.json shape (ItemSpritesDescription)
+function looksLikeItemMap(obj) {
+  const values = Object.values(obj);
+  return values.length > 0 && values.some(v =>
+    v && typeof v === 'object' && !Array.isArray(v) &&
+    ('file' in v || 'index' in v || 'fliesStraight' in v || 'fliesFastRotating' in v));
+}
+
+// form editor for spritesDesc/items.json: one row per item kind
+// (file/index/fliesStraight/fliesFastRotating mirror the engine defaults)
+export async function itemSpritesEditor(content, ctx) {
+  let raw = '{}';
+  let items = {};
+  try {
+    const data = await api.readModFile(ctx.mod, ctx.file);
+    raw = data.content;
+    items = JSON.parse(raw);
+    if (typeof items !== 'object' || Array.isArray(items) || !items) { throw new Error('not an object'); }
+  } catch (e) {
+    items = {};
+  }
+  // a sheet descriptor under this name (texture key) is not an item map -
+  // editing it as text is safer than mis-rendering it in the per-item form
+  if (items.texture !== undefined) {
+    const { jsonEditor } = await import('./text-editors.js');
+    await jsonEditor(content, Object.assign({}, ctx, { content: raw }));
+    return null;
+  }
+
+  const barEl = document.createElement('div');
+  barEl.className = 'editor-bar';
+  const title = document.createElement('strong');
+  title.textContent = 'Item sprites (per-item overrides)';
+  const save = document.createElement('button');
+  save.className = 'primary';
+  save.textContent = 'Save';
+  barEl.appendChild(title);
+  barEl.appendChild(save);
+  content.appendChild(barEl);
+
+  const status = document.createElement('div');
+  content.appendChild(status);
+
+  const panelEl = document.createElement('div');
+  panelEl.className = 'panel';
+  const hint = document.createElement('p');
+  hint.className = 'hint';
+  hint.textContent = 'Overrides how an item kind renders when thrown/flown: sprite file + frame index. ' +
+    'Item kinds without an entry fall back to their own desc.';
+  panelEl.appendChild(hint);
+  const table = document.createElement('table');
+  table.className = 'pairs';
+  panelEl.appendChild(table);
+  content.appendChild(panelEl);
+
+  const rows = [];
+  function itemRow(kind, desc) {
+    desc = desc || {};
+    const tr = document.createElement('tr');
+    const cells = [];
+    for (let i = 0; i < 4; i++) { cells.push(document.createElement('td')); tr.appendChild(cells[i]); }
+    const kindInput = document.createElement('input');
+    kindInput.value = kind;
+    kindInput.placeholder = 'ItemKind (e.g. Dart)';
+    cells[0].appendChild(kindInput);
+    const fileInput = document.createElement('input');
+    fileInput.value = desc.file !== undefined ? desc.file : '';
+    fileInput.placeholder = 'items.png';
+    cells[1].appendChild(fileInput);
+    const indexInput = document.createElement('input');
+    indexInput.type = 'number';
+    indexInput.step = 1;
+    indexInput.value = desc.index !== undefined ? desc.index : 0;
+    indexInput.style.width = '5em';
+    cells[2].appendChild(indexInput);
+    const checks = document.createElement('div');
+    const straight = document.createElement('input');
+    straight.type = 'checkbox';
+    straight.checked = desc.fliesStraight === true;
+    const straightLabel = document.createElement('label');
+    straightLabel.textContent = 'straight ';
+    straightLabel.style.marginLeft = '4px';
+    const rotating = document.createElement('input');
+    rotating.type = 'checkbox';
+    rotating.checked = desc.fliesFastRotating === true;
+    const rotatingLabel = document.createElement('label');
+    rotatingLabel.textContent = 'spin';
+    rotatingLabel.style.marginLeft = '4px';
+    checks.appendChild(straight); checks.appendChild(straightLabel);
+    checks.appendChild(rotating); checks.appendChild(rotatingLabel);
+    cells[3].appendChild(checks);
+    const delCell = document.createElement('td');
+    const del = document.createElement('button');
+    del.textContent = '×';
+    del.addEventListener('click', () => { tr.remove(); });
+    delCell.appendChild(del);
+    tr.appendChild(delCell);
+    table.appendChild(tr);
+    rows.push({ tr, kindInput, fileInput, indexInput, straight, rotating });
+  }
+
+  for (const kind of Object.keys(items)) {
+    if (items[kind] && typeof items[kind] === 'object' && !Array.isArray(items[kind])) {
+      itemRow(kind, items[kind]);
+    }
+  }
+
+  const add = document.createElement('button');
+  add.textContent = '+ item override';
+  add.addEventListener('click', () => itemRow('', {}));
+  panelEl.appendChild(add);
+
+  let dirty = false;
+  const markDirty = () => { dirty = true; };
+  table.addEventListener('input', markDirty);
+  table.addEventListener('change', markDirty);
+
+  save.addEventListener('click', async () => {
+    const out = {};
+    for (const row of rows) {
+      if (!row.tr.isConnected) { continue; }
+      const kind = row.kindInput.value.trim();
+      if (!kind) { continue; }
+      const entry = {};
+      const file = row.fileInput.value.trim();
+      if (file) { entry.file = file; }
+      const index = parseInt(row.indexInput.value, 10);
+      if (Number.isFinite(index) && index !== 0) { entry.index = index; }
+      if (row.straight.checked) { entry.fliesStraight = true; }
+      if (row.rotating.checked) { entry.fliesFastRotating = true; }
+      out[kind] = entry;
+    }
+    try {
+      await api.saveModFile(ctx.mod, ctx.file, JSON.stringify(out, null, 3) + '\n');
+      status.className = 'status-ok';
+      status.textContent = 'saved (' + Object.keys(out).length + ' items)';
+      dirty = false;
+      ctx.onSaved && ctx.onSaved();
+    } catch (e) {
+      status.className = 'status-err';
+      status.textContent = e.message;
+    }
+  });
+
+  return { isDirty: () => dirty };
+}
+
 export async function spriteEditor(content, ctx) {
   const kind = ctx.file.split('/').pop().replace(/\.json$/, '');
 
@@ -29,6 +177,13 @@ export async function spriteEditor(content, ctx) {
   }
   if (typeof sprite !== 'object' || Array.isArray(sprite) || !sprite) {
     content.textContent = ctx.file + ' is not a sprite descriptor object - editing as text is safer.';
+    return;
+  }
+  // per-item sprite maps (spritesDesc/items.json shape) have no sheet fields
+  // of their own - the animation form would inject texture/width/height junk
+  // (bd a3u). The named file gets its own form; other map shapes fall back.
+  if (sprite.texture === undefined && looksLikeItemMap(sprite)) {
+    content.textContent = ctx.file + ' is a per-item sprite map, not a sheet descriptor - editing as text is safer.';
     return;
   }
 

@@ -253,3 +253,27 @@ existing content; the sprite/items-map gaps (a3u) have live data behind them.
 New live-test trap: `dirNode` lis carry no `dataset.path` (only file lis do), so UI-locator
 tests must target dir labels by their `name + '/'` text.
 
+
+## 10. Round 9 (2026-11-18): gap-fill — all P2/P3 findings closed
+
+Mobile-first round: every finding from sections 9/3 fixed and live-verified on the
+headless server via browser GUI + API reads. bd dv5/53c/igf/mvn/71a/a3u/5gh/33n closed.
+
+| Fix | Verification |
+|---|---|
+| dv5 "+ new file" double-nesting: path-shaped names (`spritesDesc/X.json`) typed inside a dir are now mod-root-relative | GUI: created from mobsDesc/ → landed at root spritesDesc/, sprite form opened |
+| 53c mob template: all authored keys derive from the file base name; `scriptFile` and junk `gender` dropped | GUI + API: fresh QaMob.json validates without scriptFile error; fields QaMob_Name/…_Desc/spritesDesc/QaMob.json |
+| 71a remainder: immunities/resistances comma-list fields (datalist of builtin kind names) + undead/demon checks + level | GUI + API round-trip: `immunities: [Poison, Sleep]`, `resistances: [Fire]`, `undead: true` |
+| igf unreachable exits: validate warns when Graph exits > physical exit/multiexit cells; campaign panel shows "N graph exit(s) · M physical exit cell(s)" | E2E both directions; GUI-built over-exit campaign (start: 2 exits, 1 cell) warns verbatim |
+| a3u: `hero/spritesDesc/` opens the sprite form; `spritesDesc/items.json` gets a per-item form ({kind: {file, index, fliesStraight}}) + sheet-shape gates both ways | GUI: hero sprite form opens; items round-trip `QaDart: {file: items.png, index: 3, fliesStraight: true}` |
+| 5gh: alchemy_recipes.json form editor (collapsible recipes, input/output stacks) + `scripts/quests/` quest-giver snippet (modeled on QuestGiverDemo.lua) + modding.md §Alchemy | GUI: 2 recipes round-trip; snippet + zoom served |
+| mvn stale refMap: "+ language" re-reads strings_en.json at click time (+ merges unsaved rows when en itself is open) | GUI: pair added+saved, same-session +language seeded all 4 keys |
+| 33n: painter zoom 40/48px, landing hint = 4-step checklist + collapsible editor map, busy chip in-flow under topbar on narrow screens | GUI snapshot (landing, zoom via served asset); busy chip CSS-only |
+
+Round-9 trap found while testing: `spritesDesc/items.json` initially received the
+*sheet* template (prefix match) and the items form mis-rendered its anim objects as
+item rows — fixed with exact-name template picks before prefix matching + a
+`texture`-key gate that bounces sheet-shaped items.json to the json text editor.
+
+Still open from section 3-4 (bd 5dr): undo/redo, cross-file search, autosave, file
+copy UI, fonts/jpg save_binary allowlist, strings side-by-side view.

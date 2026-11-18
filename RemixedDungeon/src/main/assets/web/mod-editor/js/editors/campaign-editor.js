@@ -1071,7 +1071,7 @@ export async function campaignEditor(content, ctx) {
       row.appendChild(label);
 
       const up = document.createElement('button');
-      up.textContent = '\u2191';
+      up.textContent = '↑';
       up.title = 'swap with the previous exit (multiexit cell order)';
       up.disabled = idx === 0;
       up.addEventListener('click', () => {
@@ -1084,12 +1084,29 @@ export async function campaignEditor(content, ctx) {
       row.appendChild(up);
 
       const del = document.createElement('button');
-      del.textContent = '\u2715';
+      del.textContent = '✕';
       del.title = 'remove this exit (and its mirrored entrance)';
       del.addEventListener('click', () => removeEdge(sel, idx));
       row.appendChild(del);
       box.appendChild(row);
     });
+    // physical reality check: exit i needs exit-cell i in the level file -
+    // more Graph exits than exit+multiexit cells leaves the extras
+    // unreachable (bd igf; validate warns too)
+    const phys = document.createElement('p');
+    phys.className = 'hint';
+    box.appendChild(phys);
+    if (level && level.file) {
+      api.readModFile(ctx.mod, level.file).then(data => {
+        if (!phys.isConnected) { return; } // panel re-rendered meanwhile
+        const map = JSON.parse(data.content);
+        const cells = (map.exit ? 1 : 0) + (Array.isArray(map.multiexit) ? map.multiexit.length : 0);
+        phys.textContent = exits.length + ' graph exit(s) · ' + cells +
+          ' physical exit cell(s) in ' + level.file.split('/').pop() +
+          (exits.length > cells ? ' - paint more multiexit cells or the extra exits stay unreachable' : '');
+        if (exits.length > cells) { phys.className = 'status-err'; }
+      }).catch(() => { phys.remove(); });
+    }
     // entered-from: informational + manual one-way surgery
     const enters = pair ? pair[1] : [];
     if (enters.length) {

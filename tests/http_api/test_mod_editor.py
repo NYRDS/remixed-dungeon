@@ -472,6 +472,40 @@ def main():
         check(r.json().get("success") and "one-way" not in warns and "ascend" not in warns,
               "one-way edge does not warn (design tool): %s" % warns)
 
+        # bd igf: graph exits with no physical exit cell to carry them are
+        # unreachable in play - count the template Start.json cells, then
+        # wire one exit more than that and demand the warning
+        start_map = json.loads(HTTP.get(api + "read", params={
+            "mod": MOD, "file": "levelsDesc/Start.json"}, timeout=10).json()["content"])
+        start_cells = (1 if start_map.get("exit") else 0) + len(start_map.get("multiexit") or [])
+        check(start_cells >= 1, "template Start.json has at least one exit cell")
+        overexit = json.loads(campaign())
+        for extra in range(start_cells + 1):
+            lid = "x%d" % extra
+            overexit["Levels"][lid] = {"kind": "SewerLevel", "depth": 9 + extra, "size": [24, 24]}
+        overexit["Graph"]["start"] = [[
+            "1"] + ["x%d" % e for e in range(start_cells + 1)], ["0"]]
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Dungeon.json",
+                                          "content": json.dumps(overexit, indent=3)}, timeout=10)
+        check(r.ok, "save campaign with more graph exits than exit cells")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        warns = " | ".join(r.json().get("warnings", []))
+        check(r.json().get("success") and "physical exit cell" in warns
+              and "start" in warns,
+              "over-exited level warns unreachable exits: %s" % warns)
+        # exactly as many exits as cells stays quiet
+        exactexit = json.loads(campaign())
+        exactexit["Graph"]["start"] = [["1"] + ["x0"][:max(0, start_cells - 1)], ["0"]]
+        if start_cells > 1:
+            exactexit["Levels"]["x0"] = {"kind": "SewerLevel", "depth": 9, "size": [24, 24]}
+        r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Dungeon.json",
+                                          "content": json.dumps(exactexit, indent=3)}, timeout=10)
+        check(r.ok, "save campaign with exactly matching exit count")
+        r = HTTP.post(api + "validate", json={"name": MOD}, timeout=30)
+        warns = " | ".join(r.json().get("warnings", []))
+        check(r.json().get("success") and "physical exit cell" not in warns,
+              "matching exit count does not warn: %s" % warns)
+
         # restore the template campaign - the play test below lands in Start
         r = HTTP.post(api + "save", json={"mod": MOD, "file": "levelsDesc/Dungeon.json",
                                           "content": template_campaign}, timeout=10)
