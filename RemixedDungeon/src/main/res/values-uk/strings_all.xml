@@ -1023,6 +1023,7 @@
     <string name="HeroClass_PlagueDoctorPerks_3">Зілля [yellow:Паралізуючого газу] та [yellow:Токсичного газу] ідентифіковані з самого початку.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Чумні доктори зазнають великих штрафів до влучності без улюбленої Кісткової пили в руках і не можуть використовувати дистанційну зброю.</string>
     <string name="HeroClass_Priest">Жрець</string>
+    <string name="HeroClass_PriestPerks_2">Священники використовують ману для кастування Божеських заклинань: Благословення, Свята Вода, Екзорцизм, Останні обряди, Гнів Божий та Анафема.</string>
     <string name="HeroClass_PriestPerks_4">Свитки Зняття Прокляття відомі з самого початку.</string>
     <string name="HeroClass_Rog">крадій</string>
     <string name="HeroClass_RogPerks_0">Крадії починають з кільцем тіней +1.</string>
@@ -3121,6 +3122,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

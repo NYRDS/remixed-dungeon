@@ -616,6 +616,7 @@
     <string name="Fire_Info">Đây có một đám cháy đang bùng nổ.</string>
     <string name="Fire_Name_0">Rực cháy %s</string>
     <string name="Fire_Name_1">Đang cháy %s</string>
+    <string name="Firebloom_Desc">Khi thứ gì chạm vào Hoa Lửa, nó bùng lên trong ngọn lửa.</string>
     <string name="Firebloom_Name">Hoa Lửa</string>
     <string name="Foliage_Info">Các tia sáng chọc xuyên màn sương của khu vườn ngầm.</string>
     <string name="Food_ACEat">ĂN</string>
@@ -1140,6 +1141,7 @@
     <string name="Necromancer_ACSpecial">THUẬT HỒI SINH</string>
     <string name="Necromancy_BecameALich">Bạn đã trở thành Lich! Sức mạnh của bạn tăng lên và dung lượng linh hồn đã được gấp đôi! Nhưng bạn đã mất %1$d điểm sức mạnh.</string>
     <string name="Necromancy_NotEnoughSouls">Bạn không đủ linh hồn để thi triển phép thuật \&quot;%1$s\&quot;.</string>
+    <string name="Necromancy_ReincarnationName">Luân hồi</string>
     <string name="Necromancy_SoulsCountLabel">Linh hồn</string>
     <string name="Necromancy_SummonDeathlingName">Triệu hồi Tử vong</string>
     <string name="NecrotismBuff_Info">Dấu ấn của chính cái chết, mùi hôi từ đó ảnh hưởng đến những người gần đó và khiến họ chia sẻ chung một định mệnh.</string>
@@ -3001,6 +3003,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

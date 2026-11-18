@@ -54,6 +54,7 @@
     <string name="AmuletScene_Txt">Eindelijk houd je het in je handen, het Amulet van Yendor. Met zijn kracht kun je de wereld veroveren of vrede en voorspoed brengen of wat dan ook. In ieder geval zal je leven voor altijd veranderen en dit spel eindigt hier. Of je kunt nog even een gewone sterfelijke blijven.</string>
     <string name="Amulet_ACEnd">SPEL BEËINDIGEN</string>
     <string name="Amulet_Name">Amulet van Yendor</string>
+    <string name="Anathema_Name">Anafema</string>
     <string name="AnesthesiaBuff_Info">Voelt geen pijn en wakert niet op bij aanvallen, maar krijgt nog steeds schade.</string>
     <string name="AnesthesiaBuff_Name">Narcose</string>
     <string name="Anesthesia_Cast">%s valt in een diepe, droomloze slaap.</string>
@@ -306,6 +307,7 @@
     <string name="CagedKobold_Message3">Ik haat alles aan deze kooi</string>
     <string name="CagedKobold_Name">gekooide kobold</string>
     <string name="CagedKobold_Name_Objective">opgesloten kobold</string>
+    <string name="CagedKobold_Quest_End">Oh, dank je wel, heel erg bedankt! Hoe heb je de sleutel weten te vinden? Je... je hebt het wapen vernield?! Dat is ongelooflijk! Weet je wat, ik zei dat ik je zou helpen, en ik denk dat ik de beste manier weet. Ik blijf even bij je. * De gekooide kobold is omgezet in een kaars</string>
     <string name="Calm_Cast">%s kalmeert.</string>
     <string name="Calm_Name">Kalmte</string>
     <string name="CandleOfMindVision_Info">Lijkt op een gewone kaars, niet iets wat je zou verwachten in een gevaarlijk duistere kelder. Raar genoeg is hij vrij warm aan de kant, ondanks dat hij nog niet was aangebrand.</string>
@@ -1430,6 +1432,7 @@
     <string name="Potion_MoistenUseless">Het lijkt erop dat je dit drankje net hebt verspild.</string>
     <string name="Potion_RuneDissaperaed">Rune verdwenen van %s.</string>
     <string name="Potion_SelectForMoisten">Selecteer een item om te bevochtigen</string>
+    <string name="Potion_Shatter">De fles barst en de %1$s vloeistof spat onschadelijk</string>
     <string name="Potion_SureDrink">Weet je zeker dat je het wilt drinken? In de meeste gevallen moet je dergelijke drankjes op je vijanden werpen.</string>
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
     <string name="Potion_Yes">Ja, ik weet wat ik doe</string>
@@ -2771,6 +2774,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
