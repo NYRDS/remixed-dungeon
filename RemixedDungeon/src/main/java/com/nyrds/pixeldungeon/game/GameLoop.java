@@ -222,7 +222,15 @@ public class GameLoop {
         SystemTime.updateLastActionTime();
 
         SystemText.invalidate();
-        TextureCache.clear();
+        // caveman: no TextureCache.clear() here. clear() is destructive since the
+        // leak rounds (delete + releaseBitmapData per entry) - running it mid-scene
+        // makes every stale SmartTexture holder re-bind a regenerated EMPTY texture,
+        // which renders black (incomplete texture). The UI thread racing the GL
+        // thread's onSurfaceCreated clear + scene restart on android resume left
+        // fresh scene textures deleted with no further restart -> "black screen
+        // patches, only restart helps" (bd 3tf). GL context loss is healed by the
+        // scene restart that follows onSurfaceCreated/onSurfaceChanged, not by this.
+
 
         MusicManager.INSTANCE.enable(GamePreferences.music() && !GamePreferences.noSound);
         MusicManager.INSTANCE.resume();
