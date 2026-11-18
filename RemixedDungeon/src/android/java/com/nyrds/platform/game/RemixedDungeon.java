@@ -8,9 +8,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
 import com.nyrds.LuaInterface;
 import com.nyrds.market.MarketOptions;
 import com.nyrds.pixeldungeon.game.GameLoop;
@@ -201,16 +204,34 @@ public class RemixedDungeon extends Game {
 	@SuppressLint("NewApi")
 	public static void updateImmersiveMode() {
 		if (instance() != null) {
-			instance().getWindow()
-					.getDecorView()
-					.setSystemUiVisibility(
-							GamePreferences.immersed() ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-									| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-									| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-									| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-									| View.SYSTEM_UI_FLAG_FULLSCREEN
-									| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-									: 0);
+			boolean immersed = GamePreferences.immersed();
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+				// caveman: SYSTEM_UI_FLAG_* are dead no-ops on Android 15+ (API 35
+				// enforces edge-to-edge, targetSdk 36) - the nav bar drew over the
+				// game and the "immersed" pref did nothing (bd 02x). The controller
+				// path is the supported way from API 30 on; transient bars by swipe
+				// keeps the classic immersive UX.
+				WindowInsetsController controller = instance().getWindow().getDecorView().getWindowInsetsController();
+				if (controller != null) {
+					if (immersed) {
+						controller.setSystemBarsBehavior(WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+						controller.hide(WindowInsets.Type.systemBars());
+					} else {
+						controller.show(WindowInsets.Type.systemBars());
+					}
+				}
+			} else {
+				instance().getWindow()
+						.getDecorView()
+						.setSystemUiVisibility(
+								immersed ? View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+										| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+										| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+										| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+										| View.SYSTEM_UI_FLAG_FULLSCREEN
+										| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+										: 0);
+			}
 		}
 	}
 

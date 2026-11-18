@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.PixmapPacker;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator.FreeTypeFontParameter;
+import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.storage.FileSystem;
 import com.nyrds.platform.util.StringsManager;
@@ -315,7 +316,21 @@ public class SystemText extends SystemTextBase {
                 // packer-made fonts own no textures (ownsTexture=false), dispose here
                 // so the GL ids leave gdx's managed-registry cleanly
                 for (TextureRegion region : font.getRegions()) {
-                    region.getTexture().dispose();
+                    try {
+                        region.getTexture().dispose();
+                    } catch (GdxRuntimeException e) {
+                        // caveman: gdx's packer page texture overrides dispose() to
+                        // also dispose the page pixmap, but font build already
+                        // disposed the page pixmaps (leak round 3 - "pixels are in
+                        // the page textures now"). The override runs super.dispose()
+                        // (GL id released) BEFORE the pixmap re-dispose throws, so
+                        // catching here leaves the GL registry clean and the pixmap
+                        // freed exactly once - previously the throw aborted
+                        // invalidate() mid-loop and killed every real resume().
+                        if (!"Pixmap already disposed!".equals(e.getMessage())) {
+                            throw e;
+                        }
+                    }
                 }
             }
             fontCache.clear();
