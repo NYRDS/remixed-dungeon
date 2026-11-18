@@ -4735,7 +4735,19 @@ public class DebugEndpoints {
                 LuaValue ret = chunk.call();
                 result[0] = ret.tojstring();
             } catch (Exception e) {
-                error[0] = e.getMessage();
+                // caveman: lua-side vm errors carry their message but lose the java
+                // frames - append the whole cause chain so /debug/run_lua can root
+                // cause java-level failures (e.g. GdxRuntimeException deep inside a
+                // callback) without a rebuild
+                StringBuilder msg = new StringBuilder(e.getMessage() == null ? e.toString() : e.getMessage());
+                Throwable cause = e.getCause();
+                while (cause != null) {
+                    java.io.StringWriter sw = new java.io.StringWriter();
+                    cause.printStackTrace(new java.io.PrintWriter(sw));
+                    msg.append("\n--- java cause: ").append(sw);
+                    cause = cause.getCause();
+                }
+                error[0] = msg.toString();
             } finally {
                 latch.countDown();
             }
