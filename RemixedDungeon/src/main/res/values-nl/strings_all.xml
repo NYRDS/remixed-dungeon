@@ -448,6 +448,7 @@
     <string name="City_TileDescBookshelf">De planken zijn gevuld met boeken over verschillende disciplines.</string>
     <string name="City_TileDescDeco">Er missen hier verschillende tegels.</string>
     <string name="City_TileDescEmptySP">Een dik tapijt bedekt de vloer.</string>
+    <string name="City_TileDescEntrance">Een helling leidt omhoog naar de bovenste verdieping.</string>
     <string name="City_TileWater">Verdacht gekleurd water</string>
     <string name="ClassArmor_Desc">Het ding ziet er geweldig uit!</string>
     <string name="ClassArmor_LowHealt">Je gezondheid is te laag!</string>
@@ -804,6 +805,7 @@
     <string name="Healing_Name">Genezing</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">De punt van deze pijl is bedekt met een genezende drank.</string>
+    <string name="HealthArrow_Name">Genezende pijl</string>
     <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Name">Genezing dart</string>
     <string name="Heap_Mimic">Dit is een mimic!</string>
@@ -2805,6 +2807,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

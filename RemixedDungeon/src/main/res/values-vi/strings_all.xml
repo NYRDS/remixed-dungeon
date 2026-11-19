@@ -1583,6 +1583,7 @@
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">bóng ma</string>
     <string name="ShadowsBuff_Info">Khó phát hiện thứ gì đó giữa bóng tối.</string>
+    <string name="ShadowsBuff_Name">Hòa vào bóng tối</string>
     <string name="ShamanElder_Gender">masculine</string>
     <string name="Shaman_Desc">Những gnoll thông minh nhất có thể làm chủ phép thuật shaman. Các shaman gnoll ưa thích các phép chiến đấu để bù đắp cho sự thiếu sức mạnh, không ngần ngại sử dụng chúng với những kẻ nghi ngờ vị trí của họ trong bộ tộc.</string>
     <string name="Shaman_Gender">masculine</string>
@@ -1951,6 +1952,7 @@
     <string name="Welcome_Title">Chào mừng!</string>
     <string name="WindGust_Info">Triệu hồi một cơn gió giật, đẩy nhân vật được chọn ra xa.</string>
     <string name="WindGust_Name">Gió giật</string>
+    <string name="WizardHat_Info">Một chiếc mũ lụa đẹp mắt được trang trí bằng các đồ đạc hình ngôi sao. Xưa kia, người ta tin rằng các pháp sư vĩ đại nhất mặc trang phục đặc chế giúp tăng cường sức mạnh phép thuật. Cái mũ này tuy không thực sự tăng khả năng phép thuật của bạn, nhưng khi đội lên nó, bạn chắc chắn sẽ cảm thấy như thể nó làm được điều đó.</string>
     <string name="WizardHat_Name">Nón Phép Thuật</string>
     <string name="WndBag_BuySubtitle">(Bạn có %dg)</string>
     <string name="WndBlacksmith_Prompt">Được, lời đã nói không thể lấy lại, đây là điều tôi có thể làm cho bạn: Tôi có thể luyện lại 2 vật phẩm và biến chúng thành 1 vật phẩm chất lượng tốt hơn.</string>
@@ -3033,6 +3035,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
