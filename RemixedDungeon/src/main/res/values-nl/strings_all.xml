@@ -1567,6 +1567,7 @@
     <string name="Ring_Info">Deze metalen band is versierd met een grote %s edelsteen die glinstert in de duisternis. Wie weet welk effect het heeft als het wordt gedragen?</string>
     <string name="Ring_Info1">Je kunt slechts 2 ringen tegelijk dragen.</string>
     <string name="Ring_Info2">Je %1$s knelt zich pijnlijk om je vinger heen</string>
+    <string name="Ring_Info3a">%1$s\n\nDe %2$s zit aan je vinger%3$s</string>
     <string name="Ring_Info4">%1\n\nJe kunt een kwaadaardige magie voelen die in de %2 schuilt.</string>
     <string name="Ring_Name">%s ring</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
@@ -2419,6 +2420,7 @@
     <string name="gdpr_agree">Ja, ik ga akkoord</string>
     <string name="gdpr_choose">Maak uw keuze</string>
     <string name="gdpr_title">Personaliseer uw advertentie-ervaring</string>
+    <string name="town_deco_INN_sign_desc">Het lijkt erop dat er een herberg in dat gebouw zit.</string>
     <string name="town_deco_armoronhanger_desc">Iets wat lijkt op pantser op een hanger.</string>
     <string name="town_deco_armoronhanger_name">Pantser</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
@@ -2803,6 +2805,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

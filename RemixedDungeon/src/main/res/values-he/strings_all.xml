@@ -735,6 +735,7 @@
     <string name="Piranha_Gender">feminine</string>
     <string name="PirateSet_Info">אַרְרְ! יש לך אומץ להצטרף לחבר\'ה שלנו !? או שאתה סתם עוד עכבר יבשה? אני מקווה שלא, כי הדבר הזה מיועד רק לפיראטים אחרי הכל, אה, אני מתכוון... אַרְרְ!</string>
     <string name="PlagueDoctorMaskHood_Name">מסכת רופא מגפה עם ברדס</string>
+    <string name="PlagueDoctorMask_Name">מסיכת רופא דבר</string>
     <string name="PlagueDoctorNPC_After_Quest_2">אתה עדיין כאן? הנה! קח את זה.</string>
     <string name="PlagueDoctorNPC_Desc">כל גופו של אדם גיבן זה מוסתר מתחת לחליפת עור. ממנו עולה ריח מר של תרופות ו... שום?</string>
     <string name="PlagueDoctorNPC_Gender">masculine</string>
@@ -1702,6 +1703,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
