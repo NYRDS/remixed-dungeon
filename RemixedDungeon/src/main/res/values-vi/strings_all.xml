@@ -24,6 +24,7 @@
     <string name="Acidic_Name">bọ cạp axit</string>
     <string name="Acidic_Name_Objective">bọ cạp axit</string>
     <string name="Actions_Speed">Cấp tốc hành</string>
+    <string name="Affection_Txt">%s của sự yêu thương</string>
     <string name="AirElemental_Desc">Yếu tố không khí là những sinh vật phép thuật bay được tạo thành từ không khí sống.</string>
     <string name="AirElemental_Gender">masculine</string>
     <string name="AirElemental_Name">nguyên tố không khí</string>
@@ -185,6 +186,7 @@
     <string name="BellaNPC_Desc">Một cô gái trông rất sang trọng. Toàn bộ vẻ ngoài của cô ấy nói với bạn: \&quot;Tôi quá tốt cho mọi người.\&quot;</string>
     <string name="BellaNPC_Gender">feminine</string>
     <string name="BellaNPC_Message">Tôi không quan tâm đến những kẻ phàm nhân như bạn!</string>
+    <string name="BellaNPC_Name">Bella</string>
     <string name="BellaNPC_Yes_End_Game">Chắc chắn rồi (Kết thúc trò chơi)</string>
     <string name="Belongings_Name">ba lô</string>
     <string name="BishopNPC_Desc">Giám mục của Giáo hội Thánh của Santa Chúa Sâu</string>
@@ -1526,6 +1528,7 @@
     <string name="ScrollOfTeleportation_NoTeleport2">Aura ma thuật mạnh mẽ ở nơi này ngăn %s\n    không thể dịch chuyển!</string>
     <string name="ScrollOfTeleportation_Teleport">Trong nháy mắt, bạn đã được dịch chuyển đến một vị trí khác trên cấp độ này.</string>
     <string name="ScrollOfTeleportation_Teleport2">Chỉ trong một nháy mắt %s đã bị dịch chuyển đến một vị trí khác của tầng.</string>
+    <string name="ScrollOfTerror_Info">Một nhát chớp ánh sáng đỏ sẽ bao phủ tất cả sinh vật trong tầm nhìn của bạn với nỗi sợ hãi, khiến chúng quay lưng chạy trốn. Tấn công một kẻ thù đang bỏ chạy sẽ xóa bỏ hiệu ứng này.</string>
     <string name="ScrollOfTerror_Info1">Cuốn sách toả ra một luồng ánh sáng đỏ chói lòa</string>
     <string name="ScrollOfTerror_Info2">Cuộn giấy bắn ra một tia chớp đỏ rực và %s bỏ chạy!</string>
     <string name="ScrollOfTerror_Info3">Cuộn giấy phát ra một tia sáng đỏ rực và lũ quái vật bỏ chạy!</string>
@@ -2093,6 +2096,7 @@
     <string name="WndRanking_StaDuration">Thời gian chơi</string>
     <string name="WndRanking_StaEnemies">Quái vật bị tiêu diệt</string>
     <string name="WndRanking_StaFood">Thức ăn đã ăn</string>
+    <string name="WndRanking_StaGold">Vàng Đã Thu Thập</string>
     <string name="WndRanking_StaHealth">Máu</string>
     <string name="WndRanking_StaStr">Sức mạnh</string>
     <string name="WndRanking_StaTitle">Cấp %1 %2</string>
@@ -3027,6 +3031,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
