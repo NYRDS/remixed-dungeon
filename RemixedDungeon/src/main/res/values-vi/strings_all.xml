@@ -193,6 +193,7 @@
     <string name="BishopNPC_Name_Objective">giám mục</string>
     <string name="BishopQuest_2_2_Epilogue">Ánh trăng trong một hạt giống... như chính ân điển. Đêm nay nhà thờ sẽ có mùi bạc. Hãy nhận thuốc này cho sự tận tụy của con, con ơi.</string>
     <string name="BishopQuest_3_1_Epilogue">Lễ chầu biệt cuối cùng được đọc, và xác sống tùy tùng tan thành bụi bình yên. Hắn đã an nghỉ thực sự. Lòng trắc ẩn làm vinh dự cho con — hãy lấy cuộn này, con sẽ cần nó nơi con đi.</string>
+    <string name="BishopQuest_3_2_InProgress">Mang cho ta một con _dơi_ đã được thuần dưỡng, con ạ. Đừng làm sợ con vật đáng thương ấy.</string>
     <string name="BishopQuest_3_2_Prologue">Ngay cả những sinh vật bóng tối cũng xứng đáng được ban phước, con ơi. Hãy mang cho ta một con _dơi_ đã thuần phục, và ta sẽ thánh hiến nó cho ánh sáng.</string>
     <string name="Bishop_great_bless">Chúc phúc vĩ đại - %d g</string>
     <string name="Bishop_lesser_bless">Chúc phúc nhỏ - %d g</string>
@@ -419,6 +420,7 @@
     <string name="Codex_Story_2">Bùa Tình Cảm - Kẻ địch sẽ bị mê hoặc vài lượt, còn Anh Hùng cũng bị mê hoặc vài lượt nhưng không bao giờ lâu hơn kẻ địch.</string>
     <string name="Codex_Story_21">Vũ khí hoang dã - Khi đánh trúng, có thể gây sát thương cho tất cả kẻ địch liền kề mục tiêu.</string>
     <string name="Codex_Story_22">Cuốn sách này được viết bằng ngôn ngữ quỷ</string>
+    <string name="Codex_Story_23">Cuốn sách này được viết bằng tiếng lùn</string>
     <string name="Codex_Story_3">Ký tự Chống-entropi - Anh hùng sẽ được chiếu sáng và bốc cháy, và kẻ thù sẽ bị đóng băng.</string>
     <string name="Codex_Story_4">Glyph Nhân Bản - Hiệu ứng này khiến Anh Hùng tạo ra một bản sao nhưng bị tổn thương. Điều này có thể giết chết Anh Hùng.</string>
     <string name="Codex_Story_7">Ký tự Mùi Hôi - Anh hùng sẽ phát ra một đám mây khí độc khi bị đánh trúng.</string>
@@ -1666,6 +1668,7 @@
     <string name="SpiderElite_Desc">Cũng như lính, nhện canh gác thề bảo vệ vương quốc của chúng. Nọc độc của vệ binh tinh nhuệ được dùng để làm mất phương hướng mục tiêu.</string>
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">vệ binh nhện tinh nhuệ</string>
+    <string name="SpiderElite_Name_Objective">bảo vệ tinh anh nhện</string>
     <string name="SpiderExploding_Desc">Trong thời bình, những sinh vật này là những người làm việc chăm chỉ, nhưng chúng sẽ không ngần ngại lao vào kẻ thù và hái lấy cây đầu tiên chúng gặp phải, biến mình thành những quả bom sống.</string>
     <string name="SpiderExploding_Gender">masculine</string>
     <string name="SpiderExploding_Name">nhện công nhân</string>
@@ -3024,6 +3027,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 
