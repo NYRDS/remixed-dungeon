@@ -1361,6 +1361,7 @@
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Hij gooit zijn hoofd naar achteren en lacht giechelend, het geluid weergalmt door zijn modderige laboratorium* Prachtig! Een _Death Knight_, staand voor ons! De kracht die van zijn wezen uitstraalt... berusend! *Hij keert zich naar je, ogen glimmend van koortsachtige intensiteit* En voor jou, een beloning waardig je dapperheid: een _Potion of Strength_! Moge het je de kracht geven om elke vijand te overwinnen! Nu... laten we ons onderwerp bestuderen. Zijn wezen houdt geheimen die de wetten van het leven kunnen herschrijven! *Hij naderet de _Death Knight_ met een maniake glimlach, een fles bubbelend groen vloeistof wervend*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Dit is geen enkel beest! Het is een levend getuigenis van nekromantische kracht! Vang er eentje, levend en onbeschadigd! Deze _Doodsridder_… hij is de sleutel!</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">Een _Doodsridder_! *Zijn stem kraakt van opwinding, zijn botten vingers trillen terwijl hij een borrelende fles houdt gevuld met een troebel, fosforeerend vloeistof*. Zo\'n wezen… een baoon van onsterfelijkheid! Er een levend gevangen nemen… het zou… monumentaal zijn. Stel je de geheimen voor die we zouden ontrafelen! De kracht die door zijn skeletale aderen vloeit! Ja, een _Doodsridder_! Het is cruciaal voor mijn onderzoek! Want het zal ons toestaan dieper… in de mysteries van het leven… en de dood zelf te duiken!</string>
+    <string name="PlagueDoctorQuest_4_1_InProgress">Haal vijf _Dwerg Warlocks_ op, hun lichamen nog steeds pulserend van de zwakke echo van donkere magie! Lever ze bij mij af, en ik beloon je met een drank van ongeëvenaarde kracht – een _Drankje van Kracht_ die je de kracht van tien mannen zal geven!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Dwergen! Die koppige, ondergrondse bewoners, geobsedeerd door edelstenen en goud. Maar het zijn de _Dwerg Warlocks_ waar ik naar verlang... hun verwrongen magie, gevoed door de diepten die ze bewonen. Vijf, ik heb vijf van die verschrompelde zielen nodig! Hun lichamen bevatten de sleutel tot het begrijpen van een bepaald... fenomeen. Iets over het kanaliseren van arcane energieën door de aarde zelf. Ik geloof dat ik dichtbij een doorbraak ben, maar ik heb hun essentie nodig, hun bedorven magie! *Hij hoest gewelddadig in zijn zakdoek, een donkere vlek verspreidt zich over de fijne stof*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Schitterend! Vijf _Kobold Ijsmagiers_, hun ijzige essentie nu van mij om te onderzoeken! Hun verbinding met de bevroren woestenijen, het is werkelijk fascinerend. De manier waarop ze water zelf manipuleren… werkelijk opmerkelijk. *Hij overhandigt je een flonkerende fiool gevuld met een levendige karmozijnrode vloeistof* Dit, is voor je dappere inspanningen: een _Drankje van Kracht_! Drink diep en voel de kracht van tien krijgers door je aderen stromen! Onthoud, kennis is macht… en macht is het enige wapen dat we hebben tegen de naderende duisternis. Nu… laten we deze ijzige zielen ontleden en hun ijzige geheimen onthullen!</string>
     <string name="PlagueDoctorQuest_4_2_InProgress">Haal vijf dode _Kobold Ijsbezweerders_ op! Hun bevroren lichamen bevatten de sleutel tot het ontrafelen van de geheimen van hun ijzige magie!</string>
@@ -1409,6 +1410,7 @@
     <string name="PotionOfHealing_Name">Drank van Genezing</string>
     <string name="PotionOfInvisibility_Apply">Je ziet je handen onzichtbaar worden!</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
+    <string name="PotionOfInvisibility_Name">Drankje van Onzichtbaarheid</string>
     <string name="PotionOfLevitation_Info">Het drinken van deze merkwaardige vloeistof zorgt ervoor dat je in de lucht zweeft, moeiteloos over valstrikken glijdt. Vlammen en gassen vullen echter de lucht en kunnen niet worden ontweken terwijl je zweeft.</string>
     <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
     <string name="PotionOfLiquidFlame_Name">Drankje van Vloeibare Vlam</string>
@@ -1559,10 +1561,12 @@
     <string name="Ring_Gems_1">opaal</string>
     <string name="Ring_Gems_10">kwarts</string>
     <string name="Ring_Gems_11">agaat</string>
+    <string name="Ring_Gems_2">granaat</string>
     <string name="Ring_Gems_3">robijn</string>
     <string name="Ring_Gems_4">amethist</string>
     <string name="Ring_Gems_5">topaas</string>
     <string name="Ring_Gems_6">onyx</string>
+    <string name="Ring_Gems_7">toermalijn</string>
     <string name="Ring_Gems_8">smaragd</string>
     <string name="Ring_Gems_9">saffier</string>
     <string name="Ring_Identify">je bent nu vertrouwd genoeg met je %1 om het te identificeren. Het is %2.</string>
@@ -2807,6 +2811,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

@@ -761,6 +761,7 @@
     <string name="HeroClass_MagPerks_5">Cuộn giấy Nhận diện đã được nhận diện ngay từ đầu.</string>
     <string name="HeroClass_Necromancer">pháp sư</string>
     <string name="HeroClass_NecromancerPerks_0">Necromancer bắt đầu với 15 điểm Sức khỏe.</string>
+    <string name="HeroClass_NecromancerPerks_2">Pháp sư gọi hồn bắt đầu với một chiếc áo choàng độc đáo, cấp 1 điểm mana cho mỗi sinh vật bị tiêu diệt.</string>
     <string name="HeroClass_NecromancerPerks_3">Pháp sư gọi hồn bắt đầu với một chiếc chìa khóa xương cấp 7.</string>
     <string name="HeroClass_None">thường dân</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Bác sĩ dịch hạch thu hoạch [yellow:Tuyến độc], [yellow:Cơ quan thối rữa], [yellow:Mảnh xương] từ kẻ thù bị giết.</string>
@@ -2081,7 +2082,10 @@
     <string name="WndPortal_Warning_Info">Bạn chưa sử dụng cổng trên tầng này. Sau khi rời đi, bạn sẽ không thể sử dụng cổng này nữa!\nBạn có chắc muốn rời đi không?</string>
     <string name="WndPremiumSettings_banners">Chọn chất liệu cờ</string>
     <string name="WndPremiumSettings_chrome">Chọn vật liệu giao diện</string>
+    <string name="WndPremiumSettings_gold">vàng</string>
+    <string name="WndPremiumSettings_marble">marble</string>
     <string name="WndPremiumSettings_notAvailbale">Tùy chọn này chưa có sẵn</string>
+    <string name="WndPremiumSettings_royal">hoàng gia</string>
     <string name="WndPremiumSettings_ruby">hồng ngọc</string>
     <string name="WndPremiumSettings_silver">bạc</string>
     <string name="WndPremiumSettings_status">Chọn chất liệu thanh trạng thái</string>
@@ -2394,6 +2398,7 @@
     <string name="town_deco_wall_name">Bức tường</string>
     <string name="town_deco_wallpaper_desc">Một giải pháp trang trí tuyệt vời cho một nơi như thế này.</string>
     <string name="town_deco_wallpaper_name">giấy dán tường</string>
+    <string name="town_deco_wardrobe_name">Tủ áo gỗ</string>
     <string name="town_deco_weaponboard_desc">Một loại vũ khí treo trên bảng.</string>
     <string name="town_deco_weaponboard_name">Vũ khí</string>
     <string name="town_deco_weaponrack_desc">Trên giá này có những vũ khí mà rõ ràng quá đắt tiền đối với bạn.</string>
@@ -3035,6 +3040,11 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
 
 
 
