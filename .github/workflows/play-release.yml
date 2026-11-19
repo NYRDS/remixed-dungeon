@@ -1,4 +1,5 @@
-# Publish tag builds to Google Play (beta track, 0.2 staged rollout).
+# Publish tag builds to Google Play (beta track, 0.2 staged rollout) and upload
+# the same APK to RuStore as a draft.
 # Replaces the Bitrise `fix` tag workflow - its real config (server-side)
 # deploys with track=beta, user_fraction=0.2 (verified on beta.18 build 4222),
 # NOT the alpha/fix-track logic in the checked-in bitrise.yml.
@@ -18,13 +19,19 @@
 #                               downloaded file; a raw -----BEGIN ... PEM also works)
 # The build step overwrites the committed test keystore and templates in the workspace.
 #
-# The `rustore` job builds the ruStore flavor and uploads the APK as a DRAFT via
-# the RuStore Public API (https://www.rustore.ru/help/work-with-rustore-api/
-# api-upload-publication-app). It never submits for moderation; the draft has
+# Job layout: `build` builds the androidGooglePlay release ONCE (artifact
+# googlePlay-apk), then `play` and `rustore` publish it independently - a failure
+# in either store upload doesn't affect the other.
+#
+# The `rustore` job uploads the googlePlay APK (NOT the ruStore flavor: its
+# IapAdapter is a stub and its billing strings are placeholders) to RuStore as a
+# DRAFT via the RuStore Public API (https://www.rustore.ru/help/work-with-rustore-api/
+# api-upload-publication-app). CI never submits for moderation; the draft has
 # publishType=MANUAL, so nothing publishes until Mike submits/publishes manually
 # in console.rustore.ru. RuStore keeps one draft per app: a new upload replaces
-# the previous draft. Note: the API refuses versionCode <= the currently active
-# one, so the tagged version must be ahead of the last PUBLISHED RuStore version.
+# the previous draft. The API refuses versionCode <= the currently PUBLISHED one;
+# the googlePlay APK carries base+10000 (11290+), so it outranks any base-scheme
+# version still active on RuStore.
 
 name: play-release
 
@@ -36,8 +43,8 @@ permissions:
   contents: read
 
 jobs:
-  play:
-    name: Publish to Google Play (beta, 0.2 rollout)
+  build:
+    name: Build androidGooglePlay release
     runs-on: ubuntu-latest
     env:
       # lowercase names are what RemixedDungeon/build.gradle signingConfigs reads
@@ -108,6 +115,23 @@ jobs:
           path: RemixedDungeon/build/outputs/apk/androidGooglePlay/release/*.apk
           if-no-files-found: error
 
+  play:
+    name: Publish to Google Play (beta, 0.2 rollout)
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify publish secrets are configured
+        env:
+          SVC_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          [ -n "$SVC_JSON" ] || { echo "::error::Missing secret PLAY_SERVICE_ACCOUNT_JSON"; exit 1; }
+
+      - name: Download built APK
+        uses: actions/download-artifact@v4
+        with:
+          name: googlePlay-apk
+          path: RemixedDungeon/build/outputs/apk/androidGooglePlay/release
+
       - name: Publish to Google Play (beta)
         uses: r0adkll/upload-google-play@v1.1.5
         with:
@@ -120,73 +144,27 @@ jobs:
 
   rustore:
     name: Upload RuStore draft (manual publish)
+    needs: build
     runs-on: ubuntu-latest
-    env:
-      # lowercase names are what RemixedDungeon/build.gradle signingConfigs reads
-      jks_keyAlias: ${{ secrets.JKS_KEY_ALIAS }}
-      jks_keyPassword: ${{ secrets.JKS_KEY_PASSWORD }}
-      jks_storePassword: ${{ secrets.JKS_STORE_PASSWORD }}
     steps:
       - name: Verify publish secrets are configured
         env:
           RUSTORE_KEY: ${{ secrets.RUSTORE_KEY_ID }}
           RUSTORE_PRIV: ${{ secrets.RUSTORE_PRIVATE_KEY_BASE64 }}
-          KEYSTORE: ${{ secrets.PLAY_KEYSTORE_BASE64 }}
-          ALIAS: ${{ secrets.JKS_KEY_ALIAS }}
-          KEY_PASS: ${{ secrets.JKS_KEY_PASSWORD }}
-          STORE_PASS: ${{ secrets.JKS_STORE_PASSWORD }}
-          API_SIG: ${{ secrets.API_SIGNATURES_XML }}
         run: |
           missing=()
           [ -z "$RUSTORE_KEY" ]  && missing+=("RUSTORE_KEY_ID")
           [ -z "$RUSTORE_PRIV" ] && missing+=("RUSTORE_PRIVATE_KEY_BASE64")
-          [ -z "$KEYSTORE" ]     && missing+=("PLAY_KEYSTORE_BASE64")
-          [ -z "$ALIAS" ]        && missing+=("JKS_KEY_ALIAS")
-          [ -z "$KEY_PASS" ]     && missing+=("JKS_KEY_PASSWORD")
-          [ -z "$STORE_PASS" ]   && missing+=("JKS_STORE_PASSWORD")
-          [ -z "$API_SIG" ]      && missing+=("API_SIGNATURES_XML")
           if [ ${#missing[@]} -gt 0 ]; then
             echo "::error::Missing repo secrets: ${missing[*]} (see play-release.yml header)"
             exit 1
           fi
 
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Download built APK
+        uses: actions/download-artifact@v4
         with:
-          ref: '${{ github.ref }}'
-          submodules: true
-
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: 17
-          cache: gradle
-
-      - name: Inject prod config and release keystore
-        env:
-          KEYSTORE: ${{ secrets.PLAY_KEYSTORE_BASE64 }}
-          STORE_PASS: ${{ secrets.JKS_STORE_PASSWORD }}
-          ALIAS: ${{ secrets.JKS_KEY_ALIAS }}
-          API_SIG: ${{ secrets.API_SIGNATURES_XML }}
-        run: |
-          # no google-services.json here: firebase plugins only apply to GooglePlay tasks
-          printf '%s' "$API_SIG" > RemixedDungeon/src/main/res/values/strings_api_signature.xml
-          printf '%s' "$KEYSTORE" | base64 -d > RemixedDungeon/testKey/test.jks
-          keytool -list -keystore RemixedDungeon/testKey/test.jks \
-            -storepass "$STORE_PASS" -alias "$ALIAS" > /dev/null
-
-      - name: Build androidRuStore release
-        run: |
-          chmod +x gradlew
-          ./gradlew assembleAndroidRuStoreRelease -c settings.android.gradle
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ruStore-apk
-          path: RemixedDungeon/build/outputs/apk/androidRuStore/release/*.apk
-          if-no-files-found: error
+          name: googlePlay-apk
+          path: RemixedDungeon/build/outputs/apk/androidGooglePlay/release
 
       - name: Upload APK to RuStore as draft
         env:
@@ -242,7 +220,7 @@ jobs:
             echo "::error::no versionId in draft response: $DRAFT"; exit 1
           fi
 
-          APK=$(ls RemixedDungeon/build/outputs/apk/androidRuStore/release/*.apk | head -n1)
+          APK=$(ls RemixedDungeon/build/outputs/apk/androidGooglePlay/release/*.apk | head -n1)
           echo "Uploading $(basename "$APK") ($(du -h "$APK" | cut -f1)) to draft $VERSION_ID"
           UPLOAD=$(curl -sS -X POST \
             "https://public-api-m.rustore.ru/public/v1/application/${PKG}/version/${VERSION_ID}/apk?isMainApk=true&servicesType=Unknown" \
