@@ -13,7 +13,18 @@
 #   GOOGLE_SERVICES_JSON      - prod google-services.json (the committed one is a placeholder)
 #   API_SIGNATURES_XML        - prod strings_api_signature.xml (real iapKey / ad unit ids;
 #                               empty iapKey = all purchases fail)
+#   RUSTORE_KEY_ID            - RuStore Public API key id (console.rustore.ru -> API-ключи)
+#   RUSTORE_PRIVATE_KEY_BASE64 - private key of the same API key (the base64 body of the
+#                               downloaded file; a raw -----BEGIN ... PEM also works)
 # The build step overwrites the committed test keystore and templates in the workspace.
+#
+# The `rustore` job builds the ruStore flavor and uploads the APK as a DRAFT via
+# the RuStore Public API (https://www.rustore.ru/help/work-with-rustore-api/
+# api-upload-publication-app). It never submits for moderation; the draft has
+# publishType=MANUAL, so nothing publishes until Mike submits/publishes manually
+# in console.rustore.ru. RuStore keeps one draft per app: a new upload replaces
+# the previous draft. Note: the API refuses versionCode <= the currently active
+# one, so the tagged version must be ahead of the last PUBLISHED RuStore version.
 
 name: play-release
 
@@ -106,3 +117,141 @@ jobs:
           track: beta
           userFraction: '0.2'
           status: inProgress
+
+  rustore:
+    name: Upload RuStore draft (manual publish)
+    runs-on: ubuntu-latest
+    env:
+      # lowercase names are what RemixedDungeon/build.gradle signingConfigs reads
+      jks_keyAlias: ${{ secrets.JKS_KEY_ALIAS }}
+      jks_keyPassword: ${{ secrets.JKS_KEY_PASSWORD }}
+      jks_storePassword: ${{ secrets.JKS_STORE_PASSWORD }}
+    steps:
+      - name: Verify publish secrets are configured
+        env:
+          RUSTORE_KEY: ${{ secrets.RUSTORE_KEY_ID }}
+          RUSTORE_PRIV: ${{ secrets.RUSTORE_PRIVATE_KEY_BASE64 }}
+          KEYSTORE: ${{ secrets.PLAY_KEYSTORE_BASE64 }}
+          ALIAS: ${{ secrets.JKS_KEY_ALIAS }}
+          KEY_PASS: ${{ secrets.JKS_KEY_PASSWORD }}
+          STORE_PASS: ${{ secrets.JKS_STORE_PASSWORD }}
+          API_SIG: ${{ secrets.API_SIGNATURES_XML }}
+        run: |
+          missing=()
+          [ -z "$RUSTORE_KEY" ]  && missing+=("RUSTORE_KEY_ID")
+          [ -z "$RUSTORE_PRIV" ] && missing+=("RUSTORE_PRIVATE_KEY_BASE64")
+          [ -z "$KEYSTORE" ]     && missing+=("PLAY_KEYSTORE_BASE64")
+          [ -z "$ALIAS" ]        && missing+=("JKS_KEY_ALIAS")
+          [ -z "$KEY_PASS" ]     && missing+=("JKS_KEY_PASSWORD")
+          [ -z "$STORE_PASS" ]   && missing+=("JKS_STORE_PASSWORD")
+          [ -z "$API_SIG" ]      && missing+=("API_SIGNATURES_XML")
+          if [ ${#missing[@]} -gt 0 ]; then
+            echo "::error::Missing repo secrets: ${missing[*]} (see play-release.yml header)"
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: '${{ github.ref }}'
+          submodules: true
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: gradle
+
+      - name: Inject prod config and release keystore
+        env:
+          KEYSTORE: ${{ secrets.PLAY_KEYSTORE_BASE64 }}
+          STORE_PASS: ${{ secrets.JKS_STORE_PASSWORD }}
+          ALIAS: ${{ secrets.JKS_KEY_ALIAS }}
+          API_SIG: ${{ secrets.API_SIGNATURES_XML }}
+        run: |
+          # no google-services.json here: firebase plugins only apply to GooglePlay tasks
+          printf '%s' "$API_SIG" > RemixedDungeon/src/main/res/values/strings_api_signature.xml
+          printf '%s' "$KEYSTORE" | base64 -d > RemixedDungeon/testKey/test.jks
+          keytool -list -keystore RemixedDungeon/testKey/test.jks \
+            -storepass "$STORE_PASS" -alias "$ALIAS" > /dev/null
+
+      - name: Build androidRuStore release
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleAndroidRuStoreRelease -c settings.android.gradle
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ruStore-apk
+          path: RemixedDungeon/build/outputs/apk/androidRuStore/release/*.apk
+          if-no-files-found: error
+
+      - name: Upload APK to RuStore as draft
+        env:
+          RUSTORE_KEY_ID: ${{ secrets.RUSTORE_KEY_ID }}
+          RUSTORE_PRIVATE_KEY_BASE64: ${{ secrets.RUSTORE_PRIVATE_KEY_BASE64 }}
+        run: |
+          set -euo pipefail
+          PKG=com.nyrds.pixeldungeon.ml
+          TMP=$(mktemp -d)
+          trap 'rm -rf "$TMP"' EXIT
+
+          # private key: raw PEM, or the base64 body the console download gives
+          printf '%s' "$RUSTORE_PRIVATE_KEY_BASE64" > "$TMP/key.in"
+          if head -c 5 "$TMP/key.in" | grep -q -- '-----'; then
+            cp "$TMP/key.in" "$TMP/key.pem"
+          else
+            base64 -d "$TMP/key.in" > "$TMP/key.pem"
+          fi
+          openssl pkey -in "$TMP/key.pem" -noout
+
+          # auth: SHA512withRSA (PKCS#1 v1.5) over keyId+timestamp, base64;
+          # timestamp must be within +-60s of server time, token ttl 900s
+          TS=$(date -u +"%Y-%m-%dT%H:%M:%S.%3N+00:00")
+          SIG=$(printf '%s%s' "$RUSTORE_KEY_ID" "$TS" \
+            | openssl dgst -sha512 -sign "$TMP/key.pem" | base64 -w0)
+          AUTH=$(curl -sS -X POST 'https://public-api-m.rustore.ru/public/auth' \
+            -H 'Content-Type: application/json' \
+            -d "$(jq -n --arg k "$RUSTORE_KEY_ID" --arg t "$TS" --arg s "$SIG" \
+              '{keyId:$k,timestamp:$t,signature:$s}')")
+          echo "$AUTH" | jq '{code, ttl: .body.ttl}'
+          if [ "$(echo "$AUTH" | jq -r '.code // "error"')" != OK ]; then
+            echo "::error::RuStore auth failed: $AUTH"; exit 1
+          fi
+          TOKEN=$(echo "$AUTH" | jq -r '.body.jwe')
+          if [ -z "$TOKEN" ] || [ "$TOKEN" = null ]; then
+            echo "::error::RuStore auth returned no jwe token"; exit 1
+          fi
+
+          # RuStore keeps ONE draft per app: a new create replaces the previous
+          # draft. publishType=MANUAL -> stays draft; submitting for moderation
+          # (and publishing) remain manual console steps - the CI never does them.
+          DRAFT=$(curl -sS -X POST \
+            "https://public-api-m.rustore.ru/public/v1/application/${PKG}/version" \
+            -H "Public-Token: ${TOKEN}" -H 'Content-Type: application/json' \
+            -d '{"publishType":"MANUAL"}')
+          echo "$DRAFT"
+          if [ "$(echo "$DRAFT" | jq -r '.code // "error"')" != OK ]; then
+            echo "::error::RuStore draft creation failed: $DRAFT"; exit 1
+          fi
+          VERSION_ID=$(echo "$DRAFT" | jq -r \
+            'try (.body.versionId) // try (.content.versionId) // (if (.body|type)=="number" then (.body|tostring) else empty end)')
+          if [ -z "$VERSION_ID" ]; then
+            echo "::error::no versionId in draft response: $DRAFT"; exit 1
+          fi
+
+          APK=$(ls RemixedDungeon/build/outputs/apk/androidRuStore/release/*.apk | head -n1)
+          echo "Uploading $(basename "$APK") ($(du -h "$APK" | cut -f1)) to draft $VERSION_ID"
+          UPLOAD=$(curl -sS -X POST \
+            "https://public-api-m.rustore.ru/public/v1/application/${PKG}/version/${VERSION_ID}/apk?isMainApk=true&servicesType=Unknown" \
+            -H "Public-Token: ${TOKEN}" \
+            -F "file=@${APK}")
+          echo "$UPLOAD"
+          if [ "$(echo "$UPLOAD" | jq -r '.code // "error"')" != OK ]; then
+            echo "::error::RuStore APK upload failed: $UPLOAD"; exit 1
+          fi
+
+          echo "RuStore draft $VERSION_ID created (publishType=MANUAL, no moderation submitted)."
+          echo "Next step is manual: review + Submit for Moderation in https://console.rustore.ru/apps/1813367487/versions"
