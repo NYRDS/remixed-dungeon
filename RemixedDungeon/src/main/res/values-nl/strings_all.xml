@@ -349,6 +349,7 @@
     <string name="Challenges_Descriptions_7">Je bent gewend geraakt aan het feit dat bezit en gebruik van wapens moreel niet juist is, maar wat kan je anders beschermen tegen de wezens die daar beneden ronddwalen?</string>
     <string name="Challenges_Descriptions_8">Je reis begint in de donkere en gevaarlijke rioleringen van de stad, met de enige weg naar de oppervlakte geblokkeerd. Om het erger te maken, kun je alleen uitrusting gebruiken die je in de kelder vindt. Met beperkte middelen en uitrusting hangt je overleving af van je vaardigheden en strategie.</string>
     <string name="Challenges_Descriptions_9">Het nieuwste \'medicijn\' van de Pestdokter heeft je ruimtelijk geheugen gewist. Je kunt niets meer onthouden dat buiten je directe zicht is.</string>
+    <string name="Challenges_Names_0">Op dieet</string>
     <string name="Challenges_Names_1">Geloof is mijn pantser</string>
     <string name="Challenges_Names_2">Farmacofobie</string>
     <string name="Challenges_Names_3">Woestijn</string>
@@ -998,6 +999,7 @@
     <string name="JarOfSouls_Name">zielenkruik</string>
     <string name="JarOfSouls_Name_Objective">pot met zielen</string>
     <string name="Javelin_Gender">neuter</string>
+    <string name="Javelin_Info">Deze metaalstaaf is uitgebalanceerd om de punt voorop te houden terwijl hij door de lucht vliegt naar zijn slachtoffer</string>
     <string name="Journal_Alchemy">Alchemieketel</string>
     <string name="Journal_Azuterron">Onbekende</string>
     <string name="Journal_Caged_Kobold">Kobold in een kooi</string>
@@ -2811,6 +2813,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

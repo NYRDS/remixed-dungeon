@@ -233,6 +233,7 @@
     <string name="CharAction_Push">לדחוף</string>
     <string name="CharAction_Steal">לגנוב</string>
     <string name="CharAction_Take">לקחת</string>
+    <string name="CharInfo_Level">זהו %2$s ברמה %1$d.</string>
     <string name="Char_Hit_0">%1 היכה את %2</string>
     <string name="Char_Hit_1">%1$s היכה את %2$s</string>
     <string name="Char_Hit_2">%1$s היכה את %2$s</string>
@@ -334,6 +335,7 @@
     <string name="DoctorArmor_Name">גלימת רופא</string>
     <string name="DogeMask_Info">אי פעם רציתם להתחפש לדוג\'י המפורסם? עכשיו זו ההזדמנות שלכם!\nמסכה כזאת! הרבה הסוואה! ואו!</string>
     <string name="DonateButton_thanks">תודה על תמיכתך!</string>
+    <string name="DreadKnight_Desc">האביר הנורא הוא לוחם עתיק שבימי חייו לא הכיר לא טוב ולא צדק. על חטאיו הוא נידון לנדודים נצחיים בגוף המוות השבור הזה. וכל רגע מקיומו המיוסר מלא בכאב וסבל, בדומה למה שהסב לקורבנותיו.</string>
     <string name="DreadKnight_Gender">masculine</string>
     <string name="DriedRoseBuff_Info">הוורד נראה מקסים מאוד.</string>
     <string name="DriedRoseBuff_Name">מקסים</string>
@@ -1703,6 +1705,8 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
 
 
 

@@ -709,6 +709,7 @@
     <string name="Halberd_Gender">feminine</string>
     <string name="Halberd_Info">Một vũ khí cột bao gồm một cái rìu ở cuối một thanh cột.</string>
     <string name="Halberd_Name">Thương cśli</string>
+    <string name="Halls_TileDescBookshelf">Những cuốn sách bằng ngôn ngữ cổ xưa đang than khói trong kệ sách.</string>
     <string name="Halls_TileDescStatue">Trụ được làm từ những hộp sọ người thật. Tuyệt vời.</string>
     <string name="Halls_TileDescWater">Nó trông như dung nham, nhưng nó lạnh và có thể an toàn để chạm.</string>
     <string name="Halls_TileHighGrass">Nấm than hồng</string>
@@ -749,6 +750,7 @@
     <string name="HeroClass_GnollPerks_1">Gnoll bắt đầu với 5 điểm sức khỏe</string>
     <string name="HeroClass_GnollPerks_2">Gnoll bắt đầu không có giáp nào nhưng có một cái rìu tomahawk độc nhất</string>
     <string name="HeroClass_GnollPerks_3">Gnoll không thể đọc hoặc viết.</string>
+    <string name="HeroClass_GnollPerks_4">Gnoll không tấn công Gnoll khác trừ khi bị khiêu khích</string>
     <string name="HeroClass_HunPerks_0">Thợ săn bắt đầu với 15 điểm Sức khỏe.</string>
     <string name="HeroClass_HunPerks_1">Các Nữ Thợ Săn bắt đầu với một bumerang độc đáo có thể nâng cấp.</string>
     <string name="HeroClass_HunPerks_3">Các Nữ Thợ Săn hồi phục nhiều máu hơn từ giọt sương.</string>
@@ -3040,6 +3042,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
