@@ -213,6 +213,7 @@
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Bisschop</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
+    <string name="BishopQuest_1_1_Epilogue">Zegen u, mijn kind — de onrustige doden slapen vanavond rustig dankzij u. Maar de plaag van de onsterfelijkheid gaat dieper dan botten. Keer terug naar mij als u gereed bent voor de volgende proef, en neem deze drank voor uw wonden.</string>
     <string name="BishopQuest_2_1_InProgress">Breng me _drie zonnegraszaadjes_, mijn kind. De altaar wacht.</string>
     <string name="BishopQuest_2_2_InProgress">Breng me _drie maangraszaden_, mijn kind. De altaar wacht.</string>
     <string name="BishopQuest_4_1_InProgress">Je hebt %1$d van de %2$d doodsritters vernietigd. Breek hun wil, en de legers zullen struikelen.</string>
@@ -889,6 +890,7 @@
     <string name="Hero_NewLevel">Welkom op niveau %d! Je bent nu gezonder en scherper. Het is makkelijker geworden om vijanden te raken en hun aanvallen te ontwijken.</string>
     <string name="Hero_NoticedSmth">Je hebt iets opgemerkt</string>
     <string name="Hero_Search">zoeken</string>
+    <string name="Hero_SomethingElse">Er is nog iets anders hier</string>
     <string name="Hero_StaBleeding">Je bent aan het bloeden!</string>
     <string name="Hero_StaBurning">Je vliegt in brand!</string>
     <string name="Hero_StaCharm">Je bent betoverd!</string>
@@ -1096,6 +1098,7 @@
     <string name="Level_TileToxicTrap">Giftig gas val</string>
     <string name="Level_TileUnlockedExit">Ontgrendelde uitgang naar diepte</string>
     <string name="Level_TileWall">Muur</string>
+    <string name="Level_TileWater">Water</string>
     <string name="Level_TileWell">put</string>
     <string name="LevitationBuff_Info">Het lichaam zweeft boven de grond en vermijdt vallen en andere gevaren op de grond.</string>
     <string name="LevitationBuff_Name">Zwevend</string>
@@ -1308,6 +1311,7 @@
     <string name="PetInventory_GiveToPet">Aan huisdier geven</string>
     <string name="PetInventory_HeroBackpackFull">Je rugzak is vol</string>
     <string name="PetInventory_PetBackpackFull">De rugzak van het huisdier is vol</string>
+    <string name="PetInventory_TakeAll">Alles nemen</string>
     <string name="PetInventory_TakeFromPet">Nemen van huisdier</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
     <string name="PetInventory_TookItem">%1$s genomen van %2$s</string>
@@ -2017,6 +2021,7 @@
     <string name="WandOfAmok_Info">Het paarse licht van deze staaf zal het slachtoffer in woede brengen, waarna het willekeurige wezens in de buurt aanvalt.</string>
     <string name="WandOfAmok_Info1">er gebeurde niets</string>
     <string name="WandOfAmok_Name">Toverstaf van Amok</string>
+    <string name="WandOfAvalanche_Info">Wanneer een ontlading van deze toverstaf een muur raakt (of elk ander vast obstakel) veroorzaakt het een lawine van stenen, die alle wezens in het betrokken gebied schadelt en verlamt.</string>
     <string name="WandOfAvalanche_Info1">Je verpletterde jezelf met je eigen Toverstaf van Lawine...</string>
     <string name="WandOfAvalanche_Name">Toverstaf van Lawine</string>
     <string name="WandOfBlink_Info">Deze toverstaf stelt je in staat om je te teleporteren in de gekozen richting. Wezens en levenloze obstakels blokkeren de teleportatie.</string>
@@ -2574,6 +2579,7 @@
     <string name="town_deco_stool_sturdy_desc">Een gewone kruk van resistent hout.</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
     <string name="town_deco_stove_name">Stenen kookplaats</string>
+    <string name="town_deco_tile_desc">Deze tegels zijn behoorlijk versleten door de tijd.</string>
     <string name="town_deco_trapdoor_desc">Waar zou dit toch naartoe leiden?</string>
     <string name="town_deco_trapdoor_name">Valdeur</string>
     <string name="town_deco_tree_desc">Een vreemd gevoel ontstaat bij het bekijken van deze levende en zo vredige boom. Tenslotte, niet zo ver weg ligt een kerker vol verschrikkingen en dood.</string>
@@ -2790,6 +2796,12 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
 
 
 

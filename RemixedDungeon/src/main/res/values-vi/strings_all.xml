@@ -139,6 +139,7 @@
     <string name="Badges_Piranhas">Săn được 6 cá ăn thịt người</string>
     <string name="Badges_PotionsCooked1">3 bình thuốc đã nấu</string>
     <string name="Badges_PotionsCooked3">9 thuốc đã nấu</string>
+    <string name="Badges_PotionsCooked4">Đã chế biến 12 bình thuốc</string>
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
     <string name="Badges_RareAll">Đã tiêu diệt tất cả quái vật hiếm</string>
     <string name="Badges_ShadowLord_Slain">Chúa Tể Bóng Tối đã bị tiêu diệt</string>
@@ -224,6 +225,7 @@
     <string name="Blacksmith_Verify5">Đây chỉ là đồ rác, chất lượng quá kém!</string>
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
     <string name="BlankScroll_Info">Chỉ là một cuộn giấy trắng. Có lẽ thứ gì đó có thể viết lên nó?</string>
+    <string name="BlankScroll_Name">Cuộn trống</string>
     <string name="BlankScroll_ReallyBlank">Cuộn giấy này trống không</string>
     <string name="BleedingBuff_Info">Các vết thương đang chảy máu nhanh chóng.</string>
     <string name="BleedingBuff_Name">Đang chảy máu</string>
@@ -248,6 +250,7 @@
     <string name="Bowknot_Info">Một dải ruy-băng hồng lấp lánh xinh xắn, được thắt thành nơ và gắn vào một chiếc kẹp tóc.</string>
     <string name="Bowknot_Name">Nơ</string>
     <string name="Brute_Desc">Quái nhân là những kẻ to lớn, mạnh mẽ và cứng rắn nhất trong tất cả các gnoll. Khi bị thương nặng, chúng phát cuồng và gây sát thương lớn hơn cho kẻ thù.</string>
+    <string name="Brute_Enraged">%s trở nên điên cuồng!</string>
     <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">gnoll hung bạo</string>
     <string name="Brute_Name_Objective">gnoll brute</string>
@@ -761,6 +764,7 @@
     <string name="HeroClass_PlagueDoctorPerks_2">Bắt đầu với [yellow:Mặt Nạ Dịch Hạch] (miễn nhiễm với mọi khí độc) và [yellow:Cưa Xương]. Đòn chí mạng rơi thêm bộ phận, và Cưa gây x2 sát thương lên kẻ địch bị tê liệt.</string>
     <string name="HeroClass_PlagueDoctorPerks_3">Các loại thuốc [yellow:Chữa lành], [yellow:Khí Gây Tê Liệt] và [yellow:Khí Độc] được nhận diện sẵn.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Bác sĩ dịch bệnh bị trừng phạt lớn về độ chính xác nếu không cầm Cưa Xương thân yêu trên tay và không thể dùng vũ khí tầm xa.</string>
+    <string name="HeroClass_PriestPerks_4">Các cuộn Gỡ nguyền được nhận diện từ đầu.</string>
     <string name="HeroClass_Rog">kẻ lừa đảo</string>
     <string name="HeroClass_RogPerks_0">Kẻ lừa đảo bắt đầu với Nhẫn Bóng Tối+1.</string>
     <string name="HeroClass_RogPerks_1">Kẻ lừa đảo nhận diện loại nhẫn ngay khi đeo nó.</string>
@@ -2121,6 +2125,7 @@
     <string name="WndSettings_ScaleUp">Phóng to giao diện</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="WndSettings_SelectLanguage">Chọn ngôn ngữ</string>
+    <string name="WndSettings_TextScaleDefault">Phông chữ mặc định</string>
     <string name="WndSettings_ThirdQuickslot">Khoản truy cập nhanh thứ ba</string>
     <string name="WndSettings_UiScale">Tỷ lệ giao diện</string>
     <string name="WndSettings_UiSettings">Cài đặt giao diện</string>
@@ -2346,6 +2351,7 @@
     <string name="town_deco_snowdrift_name">Tuyết trôi</string>
     <string name="town_deco_snowman_desc">Người tuyết là một vật trang trí truyền thống trong thị trấn cho mùa lễ hội, được đặt ở đây đặc biệt để kỷ niệm \&quot;Dungeonmas\&quot; - ngày mà quái vật xâm chiếm ngục.</string>
     <string name="town_deco_snowy_plate_desc">Tấm đá cổ xưa này bị phủ đầy tuyết</string>
+    <string name="town_deco_snowy_plate_name">Đĩa phủ tuyết</string>
     <string name="town_deco_sofa_desc">Có vẻ như rạp chiếu phim này thực sự cố gắng cung cấp chỗ ngồi tốt nhất cho khách hàng.</string>
     <string name="town_deco_sofa_name">Ghế sofa ấm áp</string>
     <string name="town_deco_stakes_desc">Những khúc gỗ nhọn này trông thật đáng sợ, nhưng thực ra chúng hoàn toàn vô dụng.</string>
@@ -3018,6 +3024,12 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
+
 
 
 
