@@ -11,6 +11,10 @@
 
     <uses-feature android:glEsVersion="0x00020000"/>
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <!-- not essential: explicit required=false overrides implied requirements from ad SDK activities and ACCESS_WIFI_STATE -->
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
 
 
     <supports-screens
