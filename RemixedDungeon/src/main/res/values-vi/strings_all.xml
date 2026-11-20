@@ -1023,6 +1023,7 @@
     <string name="Lich_Desc">Pháp sư tử thần đã gặp cái chết của mình trong sâu thẳm của nghĩa địa, và dần dần, những thế lực tà ác chảy vào cơ thể đã biến hắn thành một Lich. Một pháp sư tử vong, một con rối vô ý chí, bị điều khiển bởi những thế lực độc ác...</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
+    <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">Ánh sáng phát ra từ cơ thể, soi sáng mọi thứ xung quanh.</string>
     <string name="LightBuff_Name">Được chiếu sáng</string>
     <string name="LightningBolt_Info">Phép thuật được lưu truyền giữa các pháp sư cổ, khiến kẻ thù của bạn bị choáng gấp đôi hiệu quả, đặc biệt nếu chúng ngu ngốc đến mức đứng trên mặt nước.</string>
@@ -1255,6 +1256,7 @@
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Ho khan dữ dội* Hắt xì!\n Những con ốc... chúng trườn. Chúng tiết nhờn. Và chúng thì thầm bí mật của một thời đại bị lãng quên. Tôi cần chúng, _mười_ con, vỏ vẫn còn nguyên vẹn. Bạn nghĩ _năm mươi đồng vàng_ có đủ cho tri thức quý giá như vậy không?\n Ba! Không quan trọng. Thông tin chúng giữ có thể là chìa khóa để dừng dịch bệnh này. Hoặc... nó có thể dẫn chúng ta đến thứ gì đó còn kinh khủng hơn. Bạn quyết định.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_Thiên Hương_… minh chứng cho phép thuật vần vò thế giới này. Ta đã học được nhiều từ bản chất của chúng, nhưng phần thưởng của ngươi… tại ha, đã được chuẩn bị tận tâm. *Hàng cho anh hùng một bình _Mana Potion_ lấp lánh* Nguyện sức mạnh nó dẫn dắt ngươi vượt qua những hiểm nguy phía trước.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Tìm kiếm _moongrace_, nơi bóng tối gặp ánh trăng mờ nhạt nhất. _Hai hạt giống_, bản chất của chúng, sẽ tiết lộ những bí mật ẩn giấu.</string>
+    <string name="PlagueDoctorQuest_2_2_InProgress">_Hai hạt giống sungrass_. Cánh hoa vàng của chúng chứa đựng một sức mạnh tôi muốn hiểu. Hãy tìm chúng, và để bản chất của chúng được tiết lộ!</string>
     <string name="PlagueDoctorQuest_2_2_Prologue"> Ah, _sungrass_! Một bông hoa mảnh mai, cánh hoa tỏa ra sự ấm áp của mặt trời. Tôi tin rằng tinh chất của nó chứa đựng chìa khóa cho... à, tạm quên chi tiết đi. Đủ để nói rằng, nó rất quan trọng cho nghiên cứu của tôi. _Hai hạt giống sungrass_. Lấy chúng về cho tôi, và tôi sẽ thưởng bạn bằng thứ chắc chắn sẽ hữu ích trong cuộc phiêu lưu của bạn - một _Potion of Health_, tràn đầy sức sống của mặt trời.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Anh ấy ôm nhẹ con _dơi_ trong đôi tay có găng, xem xét cơ thể nhỏ bé của nó với một sự mê hoặc đáng sợ* Tuyệt vời! Khả năng định vị bằng tiếng vang của con dơi... nó khác biệt với bất cứ thứ gì tôi từng gặp. Một sự chính xác... một sự... khống chế. *Anh ấy quay về phía bạn, khuôn mặt bị che khuất bởi chiếc mặt nạ* Với nỗ lực của bạn, một _Cuộn Sách Nâng Cấp_. Hãy sử dụng nó khôn ngoan, vì nó nắm giữ tiềm năng để... tinh chế bản chất thực sự của bạn. *Anh ấy đưa cho bạn cuộn sách, giọng nói rơi xuống thành thì thầm khàn khàn* Con _dơi_ này, nó là... một cửa sổ vào một thế giới ẩn giấu. Một thế giới... nơi bóng ma khiêu vũ và bí mật thì thầm.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Hãy mang cho tôi một con _dơi ma cà rồng_, còn sống và nguyên vẹn! Máu của nó, đôi cánh của nó… chúng chứa những bí mật mà tôi phải khám phá!</string>
@@ -2303,6 +2305,7 @@
     <string name="town_deco_exit_desc">Không ai biết điều gì đang chờ đón bạn nếu bạn bước xuống những bậc thang này.</string>
     <string name="town_deco_exit_name">Lối ra</string>
     <string name="town_deco_fence_desc">Một cái rào gỗ bị bạc phết bởi tuyết.</string>
+    <string name="town_deco_filmtape_desc">Thú vị những gì mảnh phim này chứa đựng.</string>
     <string name="town_deco_fireplace_desc">Rất thích hợp để sưởi ấm ở một nơi lạnh như thế này.</string>
     <string name="town_deco_fireplace_name">Lò sưởi</string>
     <string name="town_deco_firewood_desc">Vật dụng thiết yếu trong những đợt rét khắc nghiệt như thế này.</string>
@@ -3055,6 +3058,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

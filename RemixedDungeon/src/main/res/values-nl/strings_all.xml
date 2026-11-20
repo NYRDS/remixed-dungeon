@@ -1127,6 +1127,7 @@
     <string name="Lich_DieInfo">Ik vond deze nekromant nooit leuk. Het is dus tijd om terug te keren naar niveau 7 en een andere weg naar het nieuwe avontuur te vinden.</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
+    <string name="Lich_Name_Objective">lich</string>
     <string name="LightBuff_Info">Licht straalt uit het lichaam en verlicht alles eromheen.</string>
     <string name="LightBuff_Name">Verlicht</string>
     <string name="LightningBolt_Info">Een spreuk die wordt gedeeld onder oude schamanen, die je vijanden tweemaal zo effectief schokt, vooral als ze genoeg dwazen zijn om op water te staan.</string>
@@ -1389,6 +1390,7 @@
     <string name="Plant_Seed">zaadje van %s</string>
     <string name="PlateArmor_Desc">Grote metalen platen zijn samengevoegd tot een pak dat ongekende bescherming biedt aan elke avonturier die sterk genoeg is om het zware gewicht te dragen.</string>
     <string name="PoisonArrow_Gender">feminine</string>
+    <string name="PoisonArrow_Info">Een druppel dodelijke gif schittert op de punt van deze pijl.</string>
     <string name="PoisonArrow_Name">giftige pijl</string>
     <string name="PoisonBuff_Info">Het lichaam wordt langzaam gedood door het gif!</string>
     <string name="PoisonBuff_Name">Vergiftigd</string>
@@ -2826,6 +2828,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

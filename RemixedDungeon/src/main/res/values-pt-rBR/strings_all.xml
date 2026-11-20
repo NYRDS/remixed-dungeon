@@ -1243,6 +1243,8 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="LastLevel_TileHighGrass">\@string/Halls_TileHighGrass</string>
     <string name="LastLevel_TileStatue">\@string/Halls_TileStatue</string>
     <string name="LastLevel_TileWater">\@string/Halls_TileWater</string>
+    <string name="LastRites_Info">Um serviço funerário realizado em um local. Todos os mortos-vivos a duas células dele são queimados e aleijados.</string>
+    <string name="LastRites_Name">Últimos Ritos</string>
     <string name="LastShopLevel_TileDescDeco">\@string/City_TileDescDeco</string>
     <string name="LastShopLevel_TileDescEmptySP">\@string/City_TileDescEmptySP</string>
     <string name="LastShopLevel_TileDescEntrance">\@string/City_TileDescEntrance</string>
@@ -3113,6 +3115,8 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
