@@ -1515,6 +1515,7 @@
     <string name="RatSkull_Info">Het zou een mooie jagdtrofee kunnen zijn, maar het ruikt te slecht om het aan de muur te hangen.</string>
     <string name="RatSkull_Info2">Aan de andere kant bewijst het dat de eigenaar in staat is om ratten te doden, zelfs grote en stinkende.</string>
     <string name="RatSkull_Name">reuzenschedel</string>
+    <string name="Rat_Desc">Buidelratten zijn agressief, maar redelijk zwakke bewoners van de riolering. Ze zijn pas gevaarlijk in grote aantallen.</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">buidelrat</string>
     <string name="Ration_Info">Niets bijzonders: gedroogd vlees, wat koekjes - dat soort dingen.</string>
@@ -2820,6 +2821,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 

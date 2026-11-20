@@ -940,6 +940,7 @@
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Name">שמאן גנול</string>
     <string name="Shaman_Name_Objective">גנול שאמאן</string>
+    <string name="Shaman_ZapMiss">*מקלל בגנולית*</string>
     <string name="Sheep_Desc">זוהי כבשה קסומה. מה קסום בה? אינך יכול להרוג אותה. היא תעמוד במקום עד שתיעלם בקסם, בזמן שהיא לועסת גרה במבט ריק.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">כבשה</string>
@@ -1705,6 +1706,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

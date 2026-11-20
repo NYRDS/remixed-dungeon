@@ -2392,6 +2392,7 @@
     <string name="town_deco_stool_sturdy_name">Ghế đẩu</string>
     <string name="town_deco_stove_desc">Cái lò này mang lại chút ấm áp dễ chịu</string>
     <string name="town_deco_stove_name">Bếp đá</string>
+    <string name="town_deco_tile_desc">Những viên gạch này đã mòn nhiều do thời gian.</string>
     <string name="town_deco_tile_name">Ô gạch</string>
     <string name="town_deco_trapdoor_desc">Liệu cái này có thể dẫn đến đâu?</string>
     <string name="town_deco_trapdoor_name">Cửa sập</string>
@@ -3049,6 +3050,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
