@@ -418,6 +418,7 @@
     <string name="Char_StaCrippled">verlamd</string>
     <string name="Char_StaDizzy">duizelig</string>
     <string name="Char_StaDodged_0">ontweken</string>
+    <string name="Char_StaDodged_1">wichte</string>
     <string name="Char_StaDodged_2">ontweek</string>
     <string name="Char_StaFrightened">verschrikt</string>
     <string name="Char_StaInvisible">onzichtbaar</string>
@@ -825,6 +826,7 @@
     <string name="HeroClass_ElfPerks_0">Elven beginnen met 15 levenspunten en 9 krachtpunten.</string>
     <string name="HeroClass_ElfPerks_1">Elfen zijn immuun voor verstrikking.</string>
     <string name="HeroClass_ElfPerks_2">Elven beginnen met een verbeterde houten boog en een hoop pijlen.</string>
+    <string name="HeroClass_ElfPerks_3">Elfen zijn extreem bekwaam met bogen en zijn vlot.</string>
     <string name="HeroClass_ElfPerks_4">Elfen krijgen veel meer gezondheid van dauwdruppels.</string>
     <string name="HeroClass_ElfPerks_5">Elfen zijn minder bedreven met naiwapens.</string>
     <string name="HeroClass_GnollPerks_1">Gnollen starten met 5 levenspunten</string>
@@ -975,6 +977,7 @@
     <string name="InnServant_Phrase_4">Oh jee, zoveel gasten vandaag!</string>
     <string name="Instability_Name_1">Onstabiel %s</string>
     <string name="Instability_Name_2">Instabiel %s</string>
+    <string name="InterLevelScene_Ascending">Opstijgen...</string>
     <string name="InterLevelScene_ErrorGeneric">Er ging iets mis...</string>
     <string name="InterLevelScene_FileNotFound">Bestand niet gevonden. Vanwege een of andere reden...</string>
     <string name="InterLevelScene_Loading">Laden...</string>
@@ -1223,6 +1226,7 @@
     <string name="Mob_StaGuardStatus">Deze %s bewaakt</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
     <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
+    <string name="Mob_StaTerrorStatus">Deze %1$s is verschrikt</string>
     <string name="Mob_StaWanderingStatus">Deze %s dwaalt rond.</string>
     <string name="ModsButton_SelectMod">Selecteer een mod</string>
     <string name="Mods_AuthorEmail">E-mail auteur:</string>
@@ -2816,6 +2820,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

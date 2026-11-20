@@ -276,6 +276,7 @@
     <string name="CagedKobold_Name_Objective">kobold bị nhốt</string>
     <string name="Calm_Cast">%s bình tĩnh lại.</string>
     <string name="Calm_Info">Có rất nhiều sinh vật đang bị kích động xung quanh, hãy giúp chúng.</string>
+    <string name="Calm_Name">Bình Tĩnh</string>
     <string name="CandleOfMindVision_Info">Trông như một cây nến bình thường, không phải thứ bạn mong đợi tìm thấy trong ngục nguy hiểm. Lạ thay nó khá ấm khi chạm vào, mặc dù nó chưa được thắp.</string>
     <string name="CandleOfMindVision_Info_Exhausted">Cây nến đã hết, nó không còn sáng khi bạn cầm nó. Trông như bạn không thể dùng nó nữa.</string>
     <string name="CandleOfMindVision_Info_Lighted">Ngọn nến sáng lên ngay khi bạn lấy nó ra khỏi ba lô. Ngọn lửa phát ra ánh sáng màu tím nhạt, và khi bạn nhìn xuyên qua nó, tất cả quái vật ở gần sẽ trở nên hiển thị với bạn.</string>
@@ -914,6 +915,7 @@
     <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name_Objective">bình chứa linh hồn</string>
     <string name="Javelin_Gender">neuter</string>
+    <string name="Javelin_Name">phi tiêu</string>
     <string name="Journal_Alchemy">Nồi giả kim thuật</string>
     <string name="Journal_Azuterron">Người lạ</string>
     <string name="Journal_Caged_Kobold">Kobold Bị Giam</string>
@@ -1377,6 +1379,7 @@
     <string name="RatKing_Info1">Ta không ngủ!</string>
     <string name="RatKing_Info2">Cái gì vậy? Tôi không có thời gian cho những điều vô nghĩa này. Vương quốc của tôi không thể tự cai trị!</string>
     <string name="RatKing_Name">vua chuột</string>
+    <string name="RatKing_Name_Objective">vua chuột</string>
     <string name="RatSkullBuff_Info">Mùi hôi nồng nặc khiến tất cả các loài gặm nhấm xung quanh khiếp sợ, làm chúng phải bỏ chạy khỏi người mang chiếc sọ này.</string>
     <string name="RatSkullBuff_Name">Kẻ giết chuột</string>
     <string name="RatSkull_Name">hộp sọ chuột khổng lồ</string>
@@ -1819,6 +1822,7 @@
     <string name="TownsfolkMovieNPC_Desc">Một người dân địa phương. Dù rõ ràng chỉ là thường dân, bộ quần áo của hắn lại trông rất đắt tiền.</string>
     <string name="TownsfolkMovieNPC_Gender">masculine</string>
     <string name="TownsfolkMovieNPC_Message">Bạn có biết về dịch vụ đặc biệt mà \&quot;rạp chiếu phim\&quot; cung cấp không? Thật tiếc họ yêu cầu một thứ kỳ lạ gọi là \&quot;Internet\&quot;, tôi chưa bao giờ nghe nói về điều đó.</string>
+    <string name="TownsfolkMovieNPC_Name">dân phố</string>
     <string name="TownsfolkMovieNPC_Name_Objective">người dân thành phố</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">À! Một phiêu lưu gia khác, thật tuyệt vời! Hãy chắc chắn lấy càng nhiều đồ giá trị càng tốt!</string>
@@ -3045,6 +3049,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
