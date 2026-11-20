@@ -73,6 +73,7 @@
     <string name="Armor_Info2">\n\nDoor onvoldoende kracht zijn je bewegingssnelheid en verdedigingsvaardigheid verminderd.</string>
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Armor_Info4">\n\nTypische %1 biedt schadeabsorptie tot %2 punten per aanval en vereist %3 punten aan kracht.</string>
+    <string name="Armor_Info5">Dit pantser is waarschijnlijk te zwaar voor je.</string>
     <string name="Armor_Info6">Het is gegraveerd.</string>
     <string name="Armor_Info7a">\n\nJe draagt de %1$s%2$s.</string>
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
@@ -1458,6 +1459,7 @@
     <string name="Potion_Colors_6">anthraciet</string>
     <string name="Potion_Colors_7">ivoor</string>
     <string name="Potion_Colors_8">amber</string>
+    <string name="Potion_FoodRefreshed">%s ziet er nu eetbaar uit</string>
     <string name="Potion_Info">Deze fles bevat een wervelende %s vloeistof. Wie weet wat er gebeurt als het gedronken of gegooid wordt?</string>
     <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
     <string name="Potion_MoistenUseless">Het lijkt erop dat je dit drankje net hebt verspild.</string>
@@ -2824,6 +2826,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

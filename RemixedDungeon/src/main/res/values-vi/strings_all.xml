@@ -1127,6 +1127,7 @@
     <string name="Mob_StaTerrorStatus">%1 đang kinh hoàng</string>
     <string name="Mob_StaTerrorStatus2">%1 này kinh hoàng trước %2</string>
     <string name="Mob_StaWanderingStatus">%s đang lang thang</string>
+    <string name="ModsButton_SelectMod">Chọn mod</string>
     <string name="Mods_AuthorSite">Trang tác giả:</string>
     <string name="Mods_CreatedBy">Tạo bởi:</string>
     <string name="Mods_Disclaimer">Mod được tạo ra bởi người chơi cho người chơi.\n\nMod đôi khi thay đổi lối chơi theo cách không thể đoán trước hoặc kỳ lạ, bạn đã được cảnh báo!\n\nĐội ngũ NYRDS không chịu trách nhiệm về nội dung, chất lượng hoặc ổn định của mod.\n\nTải về trên rủi ro của bạn và vui vẻ!</string>
@@ -1380,6 +1381,7 @@
     <string name="RatKing_Gender">masculine</string>
     <string name="RatKing_Info1">Ta không ngủ!</string>
     <string name="RatKing_Info2">Cái gì vậy? Tôi không có thời gian cho những điều vô nghĩa này. Vương quốc của tôi không thể tự cai trị!</string>
+    <string name="RatKing_Info3">Ngươi dám quấy rầy Vua Chuột Của Ta, con vật hèn nhát kia?!</string>
     <string name="RatKing_Name">vua chuột</string>
     <string name="RatKing_Name_Objective">vua chuột</string>
     <string name="RatSkullBuff_Info">Mùi hôi nồng nặc khiến tất cả các loài gặm nhấm xung quanh khiếp sợ, làm chúng phải bỏ chạy khỏi người mang chiếc sọ này.</string>
@@ -3053,6 +3055,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

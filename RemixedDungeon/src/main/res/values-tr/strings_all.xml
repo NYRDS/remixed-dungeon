@@ -790,6 +790,7 @@ Envanterinizdeki eşyaları ölüp dirilmeden hemen önce yere atmayı deneyin!<
     <string name="Exhumation_Name">Mezar Yağmacılığı</string>
     <string name="Exhumation_NoGrave">Mezar Yağmacılığı gerçekleştirebileceğin bir mezar yok.</string>
     <string name="Exhumation_Ok">Sana itaat edeceğim.</string>
+    <string name="Exorcism_Info">Sürgüne gönderen bir güç kelimesi. Tek bir düşmana ağır kutsal hasar verir — ölüler karşıtı iki katına çıkar ve onları da yavaşlatır.</string>
     <string name="ExplodingSkull_Desc">Bu kurukafa her an patlayacakmış gibi gözüküyor</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">patlayan kurukafa</string>
@@ -3130,6 +3131,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

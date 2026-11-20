@@ -1028,6 +1028,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="HeroClass_PlagueDoctorPerks_3">Mikstury [yellow:Gaz Paraliżujący] i [yellow:Gaz Toksyczny] są wstępnie zidentyfikowane.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Lekarz plagi traci na  celności podczas używania każdej broni oprócz piły chirurgicznej i nie może używać broni dystansowej.</string>
     <string name="HeroClass_Priest">Kapłan</string>
+    <string name="HeroClass_PriestPerks_1">Kapłani zadają o 25% więcej obrażeń nieżyci i otrzymują o 25% mniej obrażeń od ich ataków. Przeciwko demonom te bonusy są zmniejszone o połowę.</string>
     <string name="HeroClass_PriestPerks_2">Kapłani używają many do rzucania zaklęć boskich: Błogosławieństwo, Święta Woda, Ekskorcyzm i Ostatnie Olejenia.</string>
     <string name="HeroClass_PriestPerks_3">Bożne szaty sacerdota mogą zostać wzywane do Uświęcenia: święta fala, która spala nieumarłych w pobliżu (demony otrzymują połowę obrażeń) i błogosławi nosiciela.</string>
     <string name="HeroClass_PriestPerks_4">Zwity Usuwania Przekleństwa są znane od samego początku.</string>
@@ -3148,6 +3149,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
