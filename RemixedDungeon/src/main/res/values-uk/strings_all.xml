@@ -255,6 +255,7 @@
     <string name="BishopNPC_Name_Objective">Єпископа</string>
     <string name="BishopQuest_2_1_InProgress">Принеси мені _три насіння соняшника_, дитя моє. Олитар чекає.</string>
     <string name="BishopQuest_2_1_Prologue">Перш ніж я посвячу тебе в таємниці священицтва, олтар має бути приготований. Принеси мені _три насіння сонячнику_ — їх золота сутність дає найкращий кадило.</string>
+    <string name="BishopQuest_2_2_Epilogue">Місячне світло в насінні... наче сама благодать. Цього ночі царква буде пахнути сріблом. Прийми це зілля за твою відданість, дитя моє.</string>
     <string name="BishopQuest_2_2_InProgress">Принеси мені _три насіння благолунки_, дитя моє. Алтар очікує.</string>
     <string name="BishopQuest_3_1_InProgress">Принеси мені прирученого _зомбі_, дитино моя. Ставайся з ним обережно — він не знає, що робить.</string>
     <string name="BishopQuest_4_1_InProgress">Ти знищив %1$d з %2$d лицарів смерті. Зламай їхню волю, і легіони спіткнуться.</string>
@@ -3124,6 +3125,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

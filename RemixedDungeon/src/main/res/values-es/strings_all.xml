@@ -259,6 +259,7 @@
     <string name="BishopQuest_3_2_InProgress">Tráeme un _murciélago_ domesticado, hijo mío. No asustes a la pobre criatura.</string>
     <string name="BishopQuest_3_2_Prologue">Incluso las bestias de la oscuridad merecen una bendición, hijo mío. Tráeme un _murciélago_ que hayas domesticado, y lo consagraré a la luz.</string>
     <string name="BishopQuest_4_1_Epilogue">Las legiones tambalean como marionetas con hilos cortados — puedo sentirlo incluso desde aquí. Su amo no perdonará esto. Toma esta poción de fuerza, hijo mío; necesitarás tu fuerza.</string>
+    <string name="BishopQuest_4_1_InProgress">Has destruido %1$d de %2$d caballeros de la muerte. Rompe su voluntad, y las legiones tropezar\u00e1n.</string>
     <string name="BishopQuest_4_1_Prologue">Has dado descanso a la infantería — ahora toca con sus amos. Los _caballeros de la muerte_ mandan las legiones de los muertos, y su voluntad ata los huesos a su marcha. Destruye a _dos caballeros de la muerte_, hijo mío.</string>
     <string name="BishopQuest_4_2_Epilogue">Las campanas de la iglesia repicaron solas cuando el último pasó — una buena señal, hijo mío. Toma esta poción de poder; la prueba final te exigirá mucho.</string>
     <string name="BishopQuest_4_2_Prologue">Hay muertos atados además de huesos andantes, hijo mío. _Almas esclavizadas_ — pobres almas encadenadas en una servidumbre eterna, odiando a los vivos por la libertad que perdieron. Su dolor es un arma. Libera _cuatro almas esclavizadas_ de ello.</string>
@@ -3119,6 +3120,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

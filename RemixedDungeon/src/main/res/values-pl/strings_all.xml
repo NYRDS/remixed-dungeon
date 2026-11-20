@@ -910,6 +910,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll zwiadowca</string>
     <string name="Gnoll_Name_Objective">gnoll zwiadowca</string>
+    <string name="GodWrath_Info">Święty ogień boskiego sądu. Zadaje ciężkie święte obrażenia pojedynczemu wrogowi — żadna istota, ani pospolita, ani potworna, nie ucieknie gniewowi niebios.</string>
     <string name="GodWrath_Name">Gniew Boga</string>
     <string name="Gold_Collect">Zbieraj złoto by potem móc wydać je w sklepie.</string>
     <string name="Gold_Info">Stos %d złotych monet</string>
@@ -1266,6 +1267,7 @@ Nie, nie było dla niej miejsca w świetle, już nie. Odwróciła się od skromn
     <string name="LastLevel_TileStatue">Kolumna</string>
     <string name="LastLevel_TileWater">Zimna lawa</string>
     <string name="LastRites_Info">Msza żałobna odprawiana nad miejscem. Wszystkie nieumarłe w zasięgu dwóch pól są spalone i osłabione.</string>
+    <string name="LastRites_Name">Ostatnie Olejenia</string>
     <string name="LastShopLevel_TileDescDeco">Na tej ścianie brakuje kilku kafelków.</string>
     <string name="LastShopLevel_TileDescEmptySP">Gruby dywan pokrywa podłogę.</string>
     <string name="LastShopLevel_TileDescEntrance">Rampa wiodąca poziom wyżej.</string>
@@ -3146,6 +3148,8 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
 
 
 

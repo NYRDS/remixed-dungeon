@@ -252,6 +252,7 @@
     <string name="BishopQuest_2_2_Prologue">Le rite d\'initiation requiert de l\'encens béni par la lune, mon enfant. Apporte-moi _trois graines de moongrace_, cueillies là où la lumière de la lune persiste dans les profondeurs.</string>
     <string name="BishopQuest_3_1_Epilogue">Les derniers rites sont prononcés, et le zombie docile s\'effondre en poussière paisible. Il est en paix maintenant, vraiment. Votre compassion vous honore, mon enfant — prenez ce parchemin, vous en aurez besoin là où vous allez.</string>
     <string name="BishopQuest_3_1_InProgress">Apporte-moi un _zombie_ apprivoisé, mon enfant. Traite-le doucement — il ne sait pas ce qu\'il fait.</string>
+    <string name="BishopQuest_3_1_Prologue">M\u00eame les morts qui marchent m\u00e9ritent la mis\u00e9ricorde, mon enfant. Apporte-moi un _zombie_ que tu as apprivois\u00e9 \u2014 je le mettrai en terre avec les rites sacrs, et ses tourments cesseront.</string>
     <string name="BishopQuest_3_2_Epilogue">L\'évêque asperge d\'eau bénite la chauve-souris indignée, marmonnant une bénédiction. Elle s\'envole, d\'une manière quelque peu digne. Prends ce parchemin pour ta patience, mon enfant.</string>
     <string name="BishopQuest_3_2_Prologue">Même les bêtes des ténèbres méritent une bénédiction, mon enfant. Apporte-moi une _chauve-souris_ que tu as apprivoisée, et je la consacrerai à la lumière.</string>
     <string name="BishopQuest_4_1_Epilogue">Les légions chancellent comme des marionnettes aux fils coupés — je le sens même d\'ici. Leur maître ne pardonnera pas cela. Prends cette potion de puissance, mon enfant ; tu auras besoin de ta force.</string>
@@ -3128,6 +3129,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

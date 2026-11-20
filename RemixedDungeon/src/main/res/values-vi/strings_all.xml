@@ -75,6 +75,7 @@
     <string name="Artifact_Limit">Bạn chỉ có thể trang bị 2 hiện vật cùng lúc.</string>
     <string name="AttackDelay_Increased">Không thể vung %s theo cách này. Những nhát chém chậm chạp, hơi thở nặng nề…</string>
     <string name="Attack_Range">Tầm tấn công</string>
+    <string name="AzuterronNPC_Desc">Một nhân vật bí ẩn bị bao quanh bởi sương mù đen.</string>
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">Người lạ</string>
     <string name="AzuterronNPC_Name_Objective">người lạ</string>
@@ -301,6 +302,7 @@
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
     <string name="Caves_TileHighGrass">Nấm phát sáng</string>
     <string name="Caves_TileWater">Nước lạnh buốt.</string>
+    <string name="Challenges_Descriptions_0">Thức ăn và nước đã lâu bị hỏng, khiến mọi phiêu lưu gia phát điên vì suy nghĩ về cái chết do sợ hãi và đói khát. Chế độ ăn uống của bạn có giúp bạn sống sót đủ lâu không?</string>
     <string name="Challenges_Descriptions_1">Tấn công là phòng thủ tốt nhất. Theo những lời dạy này, bạn đi vào hầm ngục, với đức tin là người bảo vệ mạnh mẽ nhất cho cơ thể bạn.</string>
     <string name="Challenges_Descriptions_2">Là một tín徒 của sự hồi phục tự nhiên của cơ thể bình thường, bạn luôn cảnh giác với những loại thuốc có tác dụng chữa bệnh. Thà phòng còn hơn chữa!</string>
     <string name="Challenges_Descriptions_3">Vùng đất xung quanh hầm ngục đã lâu bị ác ý xâm nhiễm, ngăn cản sự nảy mầm của hạt giống cho các loại thảo mộc và thực vật. Ai biết được còn bao lâu nữa cây cối cuối cùng sẽ ngừng tồn tại trên vùng đất hoang tàn này.</string>
@@ -1526,6 +1528,7 @@
     <string name="ScrollOfMirrorImage_Info">Lời chú trên cuộn này sẽ tạo ra những bản sao ảo của người đọc, chúng sẽ đuổi theo kẻ thù.</string>
     <string name="ScrollOfMirrorImage_Name">Cuộn giấy Bản sao Gương</string>
     <string name="ScrollOfPsionicBlast_Info">Cuộn giấy này chứa năng lượng hủy diệt, có thể được kênh tâm linh để gây sát thương cực lớn cho tất cả sinh vật trong tầm nhìn. Một tia chớp ánh sáng đi kèm sẽ tạm thời làm mù tất cả mọi người trong vùng ảnh hưởng, bao gồm cả người đọc cuộn giấy.</string>
+    <string name="ScrollOfRecharging_Info">Năng lượng ma thuật nguyên thủy được nhốt trong cuộn giấy này sẽ, khi được giải phóng, sạc lại toàn bộ năng lượng cho tất cả gậy phép của người đọc.</string>
     <string name="ScrollOfRecharging_Info1a">một luồng năng lượng tràn qua ba lô của bạn, nạp lại phép thuật cho gậy phép thuật của bạn</string>
     <string name="ScrollOfRecharging_Info1b">một dòng năng lượng lan tỏa qua túi đồ của bạn, sạc lại năng lượng cho các gậy phép</string>
     <string name="ScrollOfRecharging_Info2">Một luồng năng lượng tràn qua balo của bạn, nhưng không có gì xảy ra</string>
@@ -3050,6 +3053,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

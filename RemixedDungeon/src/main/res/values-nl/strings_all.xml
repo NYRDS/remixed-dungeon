@@ -74,6 +74,7 @@
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
     <string name="Armor_Info4">\n\nTypische %1 biedt schadeabsorptie tot %2 punten per aanval en vereist %3 punten aan kracht.</string>
     <string name="Armor_Info6">Het is gegraveerd.</string>
+    <string name="Armor_Info7a">\n\nJe draagt de %1$s%2$s.</string>
     <string name="Armor_Info7b">, en omdat het vervloekt is, kun je het niet afdoen</string>
     <string name="Armor_Info8">\n\nJe kunt een kwaadaardige magie voelen die in de %s grijpt.</string>
     <string name="Armor_ToString">%1 :%2</string>
@@ -218,6 +219,7 @@
     <string name="BishopQuest_1_1_Epilogue">Zegen u, mijn kind — de onrustige doden slapen vanavond rustig dankzij u. Maar de plaag van de onsterfelijkheid gaat dieper dan botten. Keer terug naar mij als u gereed bent voor de volgende proef, en neem deze drank voor uw wonden.</string>
     <string name="BishopQuest_2_1_InProgress">Breng me _drie zonnegraszaadjes_, mijn kind. De altaar wacht.</string>
     <string name="BishopQuest_2_2_InProgress">Breng me _drie maangraszaden_, mijn kind. De altaar wacht.</string>
+    <string name="BishopQuest_3_1_InProgress">Breng me een getemd _zombie_, mijn kind. Behandel het zacht \u2014 het weet niet wat het doet.</string>
     <string name="BishopQuest_4_1_InProgress">Je hebt %1$d van de %2$d doodsritters vernietigd. Breek hun wil, en de legers zullen struikelen.</string>
     <string name="BishopQuest_4_2_Epilogue">De kerklokken luidden van zich af toen de laatste voorbijging — een goed teken, mijn kind. Neem deze drank van kracht; de laatste toets zal veel van je vragen.</string>
     <string name="BishopQuest_4_2_InProgress">Je hebt %1$d van de %2$d geketende zielen bevrijd. Laat ze niet langer dienen.</string>
@@ -1720,6 +1722,7 @@
     <string name="ServiceManNPC_NotReady">Sorry, de film is nog niet klaar, je kunt over een paar minuten opnieuw proberen.</string>
     <string name="ServiceManNotReadyNPC_Message">Mijn excuses, maar dit gebouw is nog niet klaar!</string>
     <string name="Sewer_TileDescBookshelf">De boekenkast staat vol met goedkope, nutteloze boeken. Zou het branden?</string>
+    <string name="Sewer_TileDescDeco">Nat geelachtig mos bedekt de vloer.</string>
     <string name="Sewer_TileWater">Troebel water</string>
     <string name="Shades_Info">Sommige mensen zeggen dat kerkers te donker zijn om die te dragen. En jij zegt dat die mensen gewoon niet cool genoeg zijn.</string>
     <string name="Shades_Name">Zonnebril</string>
@@ -2821,6 +2824,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

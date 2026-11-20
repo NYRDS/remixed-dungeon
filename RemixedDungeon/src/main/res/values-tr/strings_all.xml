@@ -246,6 +246,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BishopNPC_Name_Objective">Piskopos</string>
     <string name="BishopQuest_1_1_InProgress">Sen %1\'dan %2 ölüleri dinlendirdin, yavrum. Devam et.</string>
     <string name="BishopQuest_1_1_Prologue">Ölüler dinlenmeyi reddediyor, çocuklarım. Kemikler hapishane koridorlarında dolaşıyor, ve çürümuş şeyler nekropolden çıkıyor. On ölümsüzleri dinlendir, o zaman imanın gerçek olduğunu bileceğim.</string>
+    <string name="BishopQuest_2_1_Epilogue">Ah, g\u00fcne\u015fin kendi \u00f6z\u00fc... L\u00fcle bu kilisenin havas\u0131n\u0131 tekrar tatland\u0131racak. Ba\u011fl\u0131l\u0131\u011f\u0131n ya\u015fl\u0131 bir adam\u0131n kalbini \u0131s\u0131t\u0131yor. Bu iksiri al \u2014 ben kendim haz\u0131rlad\u0131m.</string>
     <string name="BishopQuest_2_1_InProgress">Bana _üç güneş otu tohumu_ getir, çocuğum. Altar bekliyor.</string>
     <string name="BishopQuest_2_2_Epilogue">Bir tohumda ışık... sanki lütuf kendisi gibi. Bu gece kilise gümüşten kokacak. Bu iksiri bağlılığın için al, yavrum.</string>
     <string name="BishopQuest_2_2_InProgress">Bana _üç moongrace tohumu_ getir, yavrum. Tapınak bekliyor.</string>
@@ -259,6 +260,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BishopQuest_4_2_InProgress">Serbest bıraktığın %1$d / %2$d köleleştirilmiş ruh. Onlar artık hizmet etmesin.</string>
     <string name="BishopQuest_5_1_Epilogue">Tanrının işi tamamlandı! Bugünden itibaren bir rahip yolu üzerinde yürüyebilirsin. Bu bereketi ve bu sadakaları al, çocuğum — sen bunları hak ettin.</string>
     <string name="BishopQuest_5_1_Prologue">Bir sınav kaldı, hepsinin en zoru. Cehennem işlerinizi fark etti, çocuklarım, ve kızlarını gönderdi. _Sükübler_ derin salonlarda dolaşıyor, ve fısıltıları tatlı zehir. _İki sükübü_ kovun, ve sizlere keşişliğin gizemlerini aktaracağım.</string>
+    <string name="Bishop_QuestCompleted">Rahip açıldı</string>
     <string name="Bishop_bye">Senin için dua edeceğim evladım.</string>
     <string name="Bishop_great_bless">Büyük kutsama - %d altın</string>
     <string name="Bishop_lesser_bless">Küçük kutsama - %d altın</string>
@@ -3128,6 +3130,8 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
+
 
 
 
