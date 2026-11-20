@@ -170,6 +170,7 @@
     <string name="Barrel_Name">thùng gỗ</string>
     <string name="Barrel_Pumpkin_Desc">Rất kỳ lạ và hơi đáng sợ khi thấy một quả bí ngô khắc hình nằm trên sàn ngục. Bạn cảm thấy rõ ràng nguy hiểm từ nó. Nhưng bạn luôn có thể đẩy nó đi, phải không?</string>
     <string name="Barrel_Pumpkin_Name">bí ngô</string>
+    <string name="Bat_Defense">né tránh</string>
     <string name="Bat_Desc">Những cư dân nhanh nhẹn và bền bỉ của các vòm hang này có thể đánh bại đối thủ lớn hơn nhiều bằng cách hồi phục sức khỏe sau mỗi đòn tấn công thành công.</string>
     <string name="Bat_Gender">masculine</string>
     <string name="Bat_Name">dơi hút máu</string>
@@ -194,6 +195,7 @@
     <string name="BishopNPC_Name">Giám mục</string>
     <string name="BishopNPC_Name_Objective">giám mục</string>
     <string name="BishopQuest_2_2_Epilogue">Ánh trăng trong một hạt giống... như chính ân điển. Đêm nay nhà thờ sẽ có mùi bạc. Hãy nhận thuốc này cho sự tận tụy của con, con ơi.</string>
+    <string name="BishopQuest_2_2_InProgress">Mang cho ta _ba hạt giống hoa mỹ nhân_, con yêu quý của ta. Bàn thờ đang chờ đợi.</string>
     <string name="BishopQuest_3_1_Epilogue">Lễ chầu biệt cuối cùng được đọc, và xác sống tùy tùng tan thành bụi bình yên. Hắn đã an nghỉ thực sự. Lòng trắc ẩn làm vinh dự cho con — hãy lấy cuộn này, con sẽ cần nó nơi con đi.</string>
     <string name="BishopQuest_3_2_InProgress">Mang cho ta một con _dơi_ đã được thuần dưỡng, con ạ. Đừng làm sợ con vật đáng thương ấy.</string>
     <string name="BishopQuest_3_2_Prologue">Ngay cả những sinh vật bóng tối cũng xứng đáng được ban phước, con ơi. Hãy mang cho ta một con _dơi_ đã thuần phục, và ta sẽ thánh hiến nó cho ánh sáng.</string>
@@ -1260,6 +1262,7 @@
     <string name="PlagueDoctorQuest_5_1_InProgress">*Tâm trí anh ấy lang thang khi nói, giọng nói càng lúc càng nhỏ, chỉ còn là thì thầm.* Mang cho ta hai *súc quyên*... sống. Quyền năng của chúng... mê hoặc.</string>
     <string name="PlagueDoctorQuest_5_1_Prologue">*Hắn ấp úng, giọng khàn khàn như cành cây khô giòn*. A-a, _súc quy_! Hai... có, hai, còn sống! Nó là... hem... cho nghiên cứu của ta! Các ngươi thấy... pheromone của chúng... nó quan trọng để hiểu cái cân bằng tinh tế của... a... *Hắn ngập ngừng, bàn tay xương cốt đưa lên gõ nghiến mặt nạ, ánh mắt chớm chớp nhìn về phía các ngươi với cường độ sốt ruột.* Cái... bản chất của chúng... nó là một câu đố... một câu đố đẹp đẽ, bí ẩn! *Hắn ho khan gắt gao, cố gắng lấy lại bình tĩnh.* Ta hứa, vì mang cho ta hai con... quái vật này... các ngươi sẽ có lòng biết ơn vĩnh cửu của ta. Hãy coi đó như một... một ơn huệ cho tri thức! Đúng! Vì tri thức!</string>
     <string name="PlagueDoctorQuest_AllDone">*Hắn bật ra một tràng cười khàn khô.* \&quot;Chiến công của ngươi đã mở khóa những bí mật vô biên! Khối kiến thức thu được… đang dồn dập trong ta, như một bản giao hưởng của khám phá. Nhưng kiến thức,\&quot; hắn nói thêm, giọng hạ xuống thành lời thì thầm đầy mưu mẹo, \&quot;kiến thức là quyền lực. Và quyền lực… à… đó là thứ thuốc tiên say đắm nhất.\&quot; Hắn chăm chú nhìn bạn một lúc, đôi mắt tím hổ phách rực cháy cuồng nhiệt. \&quot;Biết đâu,\&quot; hắn lẩm bẩm, \&quot;đường chúng ta sẽ lại giao nhau. Vì vẫn còn nhiều… bí ẩn… chờ được vén màn.\&quot;</string>
+    <string name="PlagueDoctor_Desc">Cả cơ thể của người gù lưng này bị che giấu dưới một bộ đồ nhảy da. Ngoài ra, từ người ấy tỏa ra mùi thuốc đắng và... tỏi?</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">y sĩ đen</string>
     <string name="Plant_Info">Ném hạt giống này vào nơi bạn muốn trồng %1$s.\n\n%2$s</string>
@@ -3042,6 +3045,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

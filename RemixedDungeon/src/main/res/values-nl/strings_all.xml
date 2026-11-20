@@ -107,6 +107,7 @@
     <string name="Badges_BossSlain1All">De Goo is verslagen door alle klassen</string>
     <string name="Badges_BossSlain3">DM-300 is verslagen</string>
     <string name="Badges_BossSlain3All">DM-300 is verslagen door alle subklassen</string>
+    <string name="Badges_BossSlain4">De Koning is gedood</string>
     <string name="Badges_Champion">Uitdaging gewonnen</string>
     <string name="Badges_DeathFalling">Dood door vallen</string>
     <string name="Badges_DeathFire">Dood door vuur</string>
@@ -851,6 +852,7 @@
     <string name="HeroClass_PlagueDoctorPerks_1">Pestmeesters zijn meesters in alchemie en kunnen unieke recepten gebruiken.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Plagedokters lijden aan grote accuraatheidsstraffen zonder hun geliefde Beenzaag in de hand en kunnen geen afstandswapens gebruiken.</string>
     <string name="HeroClass_Priest">priester</string>
+    <string name="HeroClass_PriestPerks_3">De strijdkleding van de priester kan worden opgeroepen om te Heiligen: een heilige ontlading die de onddoden in de buurt verbrandt (demonen krijgen helft schade) en de drager zegent.</string>
     <string name="HeroClass_PriestPerks_5">Priesters beginnen met 12 manapunten.</string>
     <string name="HeroClass_Rog">schurke</string>
     <string name="HeroClass_RogPerks_1">Schurken identificeren het type van een ring bij het uitrusten ervan.</string>
@@ -1765,6 +1767,7 @@
     <string name="ShortSword_Info">Dit zwaard is inderdaad vrij kort, slechts enkele centimeters langer dan een dolk.</string>
     <string name="ShortSword_Name">kort zwaard</string>
     <string name="ShortSword_Reforged">je hebt de korte zwaard hersmeed om je %s te upgraden</string>
+    <string name="ShortSword_Select">Selecteer een wapen om te verbeteren</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Stervormige metalen stukken met vlijmscherpe messen richten veel schade aan hun doelen aan. Ze kunnen met een zeer hoge snelheid worden geworpen.</string>
     <string name="Shuriken_Name">shuriken</string>
@@ -2813,6 +2816,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

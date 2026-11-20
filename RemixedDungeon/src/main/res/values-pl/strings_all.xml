@@ -248,6 +248,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Biskup</string>
     <string name="BishopNPC_Name_Objective">Biskup</string>
+    <string name="BishopQuest_1_1_Epilogue">Błogosławię cię, dziecko moje — tej nocy niepokojni zmarli spokojnie śpią dzięki tobie. Lecz zaraza nieżyciowicza siada głębiej niż kości. Wróć do mnie, gdy będziesz gotowy na następne przejście, a na razie weź ten napój na swoje rany.</string>
     <string name="BishopQuest_1_1_InProgress">Upokoiłeś %1$d z %2$d nieumarłych, dziecko moje. Kontynuuj.</string>
     <string name="BishopQuest_1_1_Prologue">Umarly odmierzają odpocząć, dziecko moje. Kości chodzą po korytarzach więzienia, a gnijące rzeczy wylezają z nekropoli. Upokój dziesięć nieumarłych, a poznasz, że twoja wiara jest prawdziwa.</string>
     <string name="BishopQuest_2_1_Epilogue">Ach, sama esencja słońca... Kadzidło znowu napełni ten kościół słodkim aromatem. Twoja oddanie ogrzeje serce starego człowieka. Weź ten eliksir — varłem go sam.</string>
@@ -1753,6 +1754,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="Potion_SureDrink">Jesteś pewien, że chcesz to wypić? Najrozsądniej będzie jeśli rzucisz tym we wrogów.</string>
     <string name="Potion_SureThrow">Czy jesteś pewien, że chcesz tym rzucić? Najrozsądniej będzie jeśli to wypijesz.</string>
     <string name="Potion_Yes">Tak, wiem co robię</string>
+    <string name="PriestArmor_ACSpecial">UŚWIĘCENIE</string>
     <string name="PriestArmor_NotPriest">Tylko kapłani mogą używać tego pancerza!</string>
     <string name="Prison_TileDescBookshelf">Prawdopodobnie pozostałości po więziennej bibliotece. Może się spali?</string>
     <string name="Prison_TileDescDeco">Podłogę pokrywają ślady zaschłej krwi.</string>
@@ -3144,6 +3146,8 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
+
 
 
 
