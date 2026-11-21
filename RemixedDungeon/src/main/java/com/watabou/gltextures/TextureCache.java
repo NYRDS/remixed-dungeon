@@ -30,6 +30,11 @@ public class TextureCache {
 			BitmapData bmp = BitmapData.createBitmap(1, 1);
 			bmp.eraseColor(color);
 			SmartTexture tx = new SmartTexture(bmp);
+			tx.setHealSource(() -> {
+				BitmapData healed = BitmapData.createBitmap(1, 1);
+				healed.eraseColor(color);
+				return healed;
+			});
 			all.put(key, tx);
 
 			return tx;
@@ -88,6 +93,11 @@ public class TextureCache {
 
 			BitmapData bmp = ModdingMode.getBitmapData(strSrc);
 			tx = new SmartTexture(bmp);
+			// self-heal (bd 3tf option D): the upload bitmap is released after the
+			// first upload (leak rounds) - keep only the asset key and re-decode on
+			// demand when a rebind finds no pixel data or a dead GL name
+			final String healKey = strSrc;
+			tx.setHealSource(() -> ModdingMode.getBitmapData(healKey));
 		}
 
 		all.put(src, tx);

@@ -4294,14 +4294,18 @@ public class DebugEndpoints {
     // regenerate - permanent blank). Alive owners must never be touched.
     // /debug/texture_evict_repro?forceDead=1 - with forceDead, phase 2 deletes the
     // texture's GL name behind the owner's back (simulating EGL context loss) and
-    // binds again: the first such dead bind fires the Crashlytics bad-bind event
-    // (latched process-wide, so this demonstrates the report exactly once per
-    // process launch). Response carries badBindReported to verify the latch.
+    // binds again: the texture is NOT healable (no heal source), so the first such
+    // dead bind fires the Crashlytics bad-bind event (latched process-wide).
+    // /debug/texture_evict_repro?healDead=1 - same deletion but on a HEALABLE
+    // texture (heal source re-creates the bitmap): bind() self-heals - regenerates
+    // a new GL name and re-decodes the pixels - instead of rendering black
+    // (bd 3tf option D). Response carries badBindReported / healReported.
     public static NanoHTTPD.Response handleDebugTextureEvictRepro(NanoHTTPD.IHTTPSession session) {
         final String[] result = new String[1];
         final String[] error = new String[1];
-        final boolean forceDead = session.getQueryParameterString() != null
-                && session.getQueryParameterString().contains("forceDead=1");
+        final String query = session.getQueryParameterString();
+        final boolean forceDead = query != null && query.contains("forceDead=1");
+        final boolean healDead = query != null && query.contains("healDead=1");
         GameLoop.pushUiTaskAndWait(() -> {
             try {
                 BitmapData bmp = BitmapData.createBitmap(8, 8);
@@ -4331,6 +4335,25 @@ public class DebugEndpoints {
                     json.put("forceDead_aliveBefore", aliveBefore);
                     json.put("forceDead_aliveAfter", Texture.debugGlIsTexture(glId));
                     json.put("badBindReported", Texture.badBindReported());
+                }
+
+                if (healDead) {
+                    SmartTexture healTx = new SmartTexture(BitmapData.createBitmap(8, 8));
+                    healTx.setHealSource(() -> {
+                        BitmapData healed = BitmapData.createBitmap(8, 8);
+                        healed.eraseColor(0xFF00FF00);
+                        return healed;
+                    });
+                    healTx.bind();
+                    int healId = healTx.debugGlId();
+                    boolean aliveBefore = Texture.debugGlIsTexture(healId);
+                    Texture.debugGlDeleteName(healId);
+                    healTx.bind(); // dead name + heal source -> self-heals
+                    json.put("heal_idBefore", healId);
+                    json.put("heal_idAfter", healTx.debugGlId());
+                    json.put("heal_aliveBefore", aliveBefore);
+                    json.put("heal_aliveAfter", Texture.debugGlIsTexture(healTx.debugGlId()));
+                    json.put("healReported", Texture.healReported());
                 }
                 result[0] = json.toString();
             } catch (Throwable t) {
