@@ -833,6 +833,7 @@
     <string name="HeroClass_ElfPerks_3">Elfen zijn extreem bekwaam met bogen en zijn vlot.</string>
     <string name="HeroClass_ElfPerks_4">Elfen krijgen veel meer gezondheid van dauwdruppels.</string>
     <string name="HeroClass_ElfPerks_5">Elfen zijn minder bedreven met naiwapens.</string>
+    <string name="HeroClass_GnollPerks_0">Gnollen starten met 15 krachtpunten</string>
     <string name="HeroClass_GnollPerks_1">Gnollen starten met 5 levenspunten</string>
     <string name="HeroClass_GnollPerks_2">Gnollen beginnen zonder enige pantser maar met een unieke tomahawk</string>
     <string name="HeroClass_GnollPerks_3">Gnollen kunnen niet lezen of schrijven.</string>
@@ -1429,6 +1430,7 @@
     <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
     <string name="PotionOfLiquidFlame_Name">Drankje van Vloeibare Vlam</string>
     <string name="PotionOfMana_Info">Deze drank herstelt je spirituele energie.</string>
+    <string name="PotionOfMana_Name">Mana Drankje</string>
     <string name="PotionOfMight_Apply">Nieuwverkregen kracht stroomt door je lichaam.</string>
     <string name="PotionOfMight_Info">Deze krachtige vloeistof stroomt door je spieren en verhoogt permanent je kracht met één punt en je gezondheid met vijf punten.</string>
     <string name="PotionOfMight_Name">Drankje van Kracht</string>
@@ -1865,6 +1867,7 @@
     <string name="SpiderQueen_Desc">Een lichaam van een mooie vrouw gekruist met een gruwelijke spin. Elk levend wezen in deze gouw is haar dienaar. Een ontmoeting met deze buitengewone dame kan dodelijk uitpakken. Want je bent een indringer!</string>
     <string name="SpiderQueen_DieInfo">De Spinnenkoningin is verslagen! Nu moet ik terug naar niveau 5 en mijn reis naar de Diepten voortzetten.</string>
     <string name="SpiderQueen_Gender">feminine</string>
+    <string name="SpiderQueen_Name">spinnenkoningin</string>
     <string name="SpiderQueen_Name_Objective">spinnenkoningin</string>
     <string name="SpiderServant_Desc">Soldaten vormen de talrijkste eenheden van het spinnenhol. Ze zijn erop geboren om hun territorium te beschermen. De cheliceren van soldaten hebben gifklieren ontwikkeld om hun vijanden te vergiftigen.</string>
     <string name="SpiderServant_Gender">masculine</string>
@@ -2087,6 +2090,7 @@
     <string name="WandOfSlowness_Info">Deze toverstaf zorgt ervoor dat een wezen met de helft van zijn normale snelheid beweegt en aanvalt, totdat het effect afloopt.</string>
     <string name="WandOfSlowness_Info1">Er gebeurde niets.</string>
     <string name="WandOfSlowness_Name">Toverstaf van Vertraging</string>
+    <string name="WandOfTelekinesis_Info">Golven van magische kracht van deze staf beïnvloeden alle cellen op hun weg, ontgrendelen vallen, vertrappen hoge begroeiing, openen gesloten deuren en sluiten open deuren. Ze duwen ook monsters terug.</string>
     <string name="WandOfTelekinesis_Name">Staff van Telekinese</string>
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
     <string name="WandOfTeleportation_Name">Toverstaf der Teleportatie</string>
@@ -2830,6 +2834,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
