@@ -244,6 +244,7 @@
     <string name="BlackCat_Phrases_1">Miauw...</string>
     <string name="BlackCat_Phrases_2">Miauw!</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">De _Lich_ is een necromant die de piek van zijn capaciteiten bereikte. Bestaande tussen leven en dood, is de _Lich_ uitstekend in necromantie, maar zijn gevechtsvaardigheden zijn veel lager dan die van een gewoon persoon.</string>
+    <string name="BlackSkullOfMastery_Info">Het is een oud artefact, gemaakt door de eerste necromanten om de zielen van de gevallenen te verzamelen. Het bewaakte zichzelf met een krachtige toverspreuk toen het je necromantische vaardigheden zauwaarde. Maar aangezien de toverspreuk uit de oude tijden is, is de primitieve structuur vrij makkelijk te doorbreken.</string>
     <string name="BlackSkullOfMastery_Lich">Word een Lich</string>
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
     <string name="BlackSkullOfMastery_RemainHumanDesc">Of als je de spreuk _verbreekt_, kun je dit artefact gebruiken zoals bedoeld.</string>
@@ -635,6 +636,7 @@
     <string name="Dungeon_Tips_17">Een Bron van Transmutatie kan je een voorwerp geven dat je op geen enkele andere manier kunt verkrijgen.</string>
     <string name="Dungeon_Tips_18">De enige manier om een wapen te betoveren is door het te verbeteren met een Schrift van Wapenverbetering.</string>
     <string name="Dungeon_Tips_19">Geen wapens toegestaan in de aanwezigheid van Zijne Majesteit!</string>
+    <string name="Dungeon_Tips_2">Onthoud dat het verhogen van je kracht niet de enige manier is om toegang te krijgen tot betere uitrusting, je kunt de andere kant op gaan door de krachteis te verlagen met Scrolls van Upgrade.</string>
     <string name="Dungeon_Tips_20">Pixel-Mart. Speciale prijzen voor demonenjagers!</string>
     <string name="Dungeon_Tips_22">De tekst is geschreven in de taal van demonen.</string>
     <string name="Dungeon_Tips_23">De tekst is geschreven in een demonische taal.</string>
@@ -1392,6 +1394,7 @@
     <string name="PlagueDoctorQuest_3_2_Epilogue">*Hij gooit zijn hoofd naar achteren en lacht giechelend, het geluid weergalmt door zijn modderige laboratorium* Prachtig! Een _Death Knight_, staand voor ons! De kracht die van zijn wezen uitstraalt... berusend! *Hij keert zich naar je, ogen glimmend van koortsachtige intensiteit* En voor jou, een beloning waardig je dapperheid: een _Potion of Strength_! Moge het je de kracht geven om elke vijand te overwinnen! Nu... laten we ons onderwerp bestuderen. Zijn wezen houdt geheimen die de wetten van het leven kunnen herschrijven! *Hij naderet de _Death Knight_ met een maniake glimlach, een fles bubbelend groen vloeistof wervend*</string>
     <string name="PlagueDoctorQuest_3_2_InProgress">Dit is geen enkel beest! Het is een levend getuigenis van nekromantische kracht! Vang er eentje, levend en onbeschadigd! Deze _Doodsridder_… hij is de sleutel!</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">Een _Doodsridder_! *Zijn stem kraakt van opwinding, zijn botten vingers trillen terwijl hij een borrelende fles houdt gevuld met een troebel, fosforeerend vloeistof*. Zo\'n wezen… een baoon van onsterfelijkheid! Er een levend gevangen nemen… het zou… monumentaal zijn. Stel je de geheimen voor die we zouden ontrafelen! De kracht die door zijn skeletale aderen vloeit! Ja, een _Doodsridder_! Het is cruciaal voor mijn onderzoek! Want het zal ons toestaan dieper… in de mysteries van het leven… en de dood zelf te duiken!</string>
+    <string name="PlagueDoctorQuest_4_1_Epilogue">Prachtig! De _Dwerg Warlocks_, hun essentie nu van mij om te onderzoeken! Zo vervormde, corruptie magie… werkelijk fascinerend. *Hij houdt een schitterend flesje omhoog, gevuld met een viskeuze, karmijnrode vloeistof.* Dit, is voor jou: een _Drankje van Kracht_! Drink de kracht ervan, en je zult de kracht van bergen door je aderen voelen! Onthoud, de kennis verkregen van deze offerandes zal uiteindelijk een hoger doel dienen… misschien zelfs ons allen redden van een lot erger dan de dood.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Haal vijf _Dwerg Warlocks_ op, hun lichamen nog steeds pulserend van de zwakke echo van donkere magie! Lever ze bij mij af, en ik beloon je met een drank van ongeëvenaarde kracht – een _Drankje van Kracht_ die je de kracht van tien mannen zal geven!</string>
     <string name="PlagueDoctorQuest_4_1_Prologue">Achoo! Dwergen! Die koppige, ondergrondse bewoners, geobsedeerd door edelstenen en goud. Maar het zijn de _Dwerg Warlocks_ waar ik naar verlang... hun verwrongen magie, gevoed door de diepten die ze bewonen. Vijf, ik heb vijf van die verschrompelde zielen nodig! Hun lichamen bevatten de sleutel tot het begrijpen van een bepaald... fenomeen. Iets over het kanaliseren van arcane energieën door de aarde zelf. Ik geloof dat ik dichtbij een doorbraak ben, maar ik heb hun essentie nodig, hun bedorven magie! *Hij hoest gewelddadig in zijn zakdoek, een donkere vlek verspreidt zich over de fijne stof*</string>
     <string name="PlagueDoctorQuest_4_2_Epilogue">Schitterend! Vijf _Kobold Ijsmagiers_, hun ijzige essentie nu van mij om te onderzoeken! Hun verbinding met de bevroren woestenijen, het is werkelijk fascinerend. De manier waarop ze water zelf manipuleren… werkelijk opmerkelijk. *Hij overhandigt je een flonkerende fiool gevuld met een levendige karmozijnrode vloeistof* Dit, is voor je dappere inspanningen: een _Drankje van Kracht_! Drink diep en voel de kracht van tien krijgers door je aderen stromen! Onthoud, kennis is macht… en macht is het enige wapen dat we hebben tegen de naderende duisternis. Nu… laten we deze ijzige zielen ontleden en hun ijzige geheimen onthullen!</string>
@@ -2859,6 +2862,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
