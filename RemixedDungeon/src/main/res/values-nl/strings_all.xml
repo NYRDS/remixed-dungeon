@@ -182,6 +182,7 @@
     <string name="Bandit_Gender">masculine</string>
     <string name="Bandit_Name">gekke bandiet</string>
     <string name="Bandit_Name_Objective">gekke bandiet</string>
+    <string name="BardNPC_Desc">De stadspoet speelt op zijn luit.</string>
     <string name="BardNPC_Gender">masculine</string>
     <string name="BardNPC_Name">bard</string>
     <string name="BardNPC_Name_Objective">bard</string>
@@ -1104,6 +1105,7 @@
     <string name="Level_TileEmptyWell">Lege put</string>
     <string name="Level_TileEntrance">Diepte-ingang</string>
     <string name="Level_TileExit">Diepte-uitgang</string>
+    <string name="Level_TileFireTrap">Vuurval</string>
     <string name="Level_TileFloor">Vloer</string>
     <string name="Level_TileGrass">Gras</string>
     <string name="Level_TileGrippingTrap">Klemval</string>
@@ -2503,6 +2505,7 @@
     <string name="town_deco_church_sign_name">Kerkaanwijzer</string>
     <string name="town_deco_cinema_sign_desc">Het lijkt erop dat er een bioscoop in dat gebouw zit.</string>
     <string name="town_deco_cinema_sign_name">Bioscoopbord</string>
+    <string name="town_deco_clock_desc">De wijzers op deze klok zijn al lange tijd in één positie bevroren.</string>
     <string name="town_deco_clock_name">Klok</string>
     <string name="town_deco_common_bed_desc">Gewoon bed.</string>
     <string name="town_deco_common_bed_name">Bed</string>
@@ -2846,6 +2849,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

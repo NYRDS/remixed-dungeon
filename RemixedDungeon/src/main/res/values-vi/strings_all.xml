@@ -202,6 +202,7 @@
     <string name="BishopQuest_3_1_Epilogue">Lễ chầu biệt cuối cùng được đọc, và xác sống tùy tùng tan thành bụi bình yên. Hắn đã an nghỉ thực sự. Lòng trắc ẩn làm vinh dự cho con — hãy lấy cuộn này, con sẽ cần nó nơi con đi.</string>
     <string name="BishopQuest_3_2_InProgress">Mang cho ta một con _dơi_ đã được thuần dưỡng, con ạ. Đừng làm sợ con vật đáng thương ấy.</string>
     <string name="BishopQuest_3_2_Prologue">Ngay cả những sinh vật bóng tối cũng xứng đáng được ban phước, con ơi. Hãy mang cho ta một con _dơi_ đã thuần phục, và ta sẽ thánh hiến nó cho ánh sáng.</string>
+    <string name="Bishop_bye">Tôi sẽ cầu nguyện cho con ơi.</string>
     <string name="Bishop_great_bless">Chúc phúc vĩ đại - %d g</string>
     <string name="Bishop_lesser_bless">Chúc phúc nhỏ - %d g</string>
     <string name="Bishop_not_interested">Rời đi</string>
@@ -392,6 +393,7 @@
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
     <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
     <string name="CharmBuff_Info">Tâm trí và cơ thể đã bị mê hoặc!</string>
+    <string name="CharmSpell_Info">Mọi người đều cần chút tình yêu, phải không?</string>
     <string name="CharmSpell_Name">Mê Hoặc</string>
     <string name="Chasm_Chasm">Vực</string>
     <string name="Chasm_Info">Bạn đã rơi xuống vực chết chóc...</string>
@@ -1321,6 +1323,7 @@
     <string name="PotionOfMana_Name">Bình Mana</string>
     <string name="PotionOfMight_Apply">Sức mạnh mới tràn qua cơ thể bạn.</string>
     <string name="PotionOfMight_Name">Bình Thuốc Mạnh Mẽ</string>
+    <string name="PotionOfMight_StaApply">+1 lực, +5 máu</string>
     <string name="PotionOfMindVision_Apply2">Bạn có thể cảm nhận được rằng bạn là sinh vật sống duy nhất trên tầng này lúc này.</string>
     <string name="PotionOfMindVision_Info">Sau khi uống loại này, trí tuệ của bạn sẽ được điều chỉnh theo dấu hiệu tâm linh của các sinh vật xa xôi, cho phép bạn cảm nhận sự hiện diện của sinh vật qua tường. Ngoài ra, bình thuốc này cũng cho phép bạn nhìn xuyên qua các bức tường và cánh cửa gần đó.</string>
     <string name="PotionOfParalyticGas_Info">Khi tiếp xúc với không khí, chất lỏng trong bình này sẽ bốc hơi thành một làn khói vàng gây tê liệt. Bất kỳ ai hít phải đám mây sẽ ngay lập tức bị tê liệt, không thể di chuyển trong một thời gian sau khi khói tan. Vật phẩm này có thể được ném về phía kẻ địch từ xa để chúng chịu tác động của khí độc.</string>
@@ -3077,6 +3080,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 
