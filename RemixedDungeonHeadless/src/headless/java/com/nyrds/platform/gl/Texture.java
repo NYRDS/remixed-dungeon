@@ -109,6 +109,15 @@ public class Texture {
 		return false;
 	}
 
+	// no-op parity with android/desktop copies (bd 87ag bad-bind telemetry)
+	public static void debugGlDeleteName(int glId) {
+	}
+
+	private static volatile boolean badBindReported = false;
+
+	public static boolean badBindReported() {
+		return badBindReported;
+	}
 	public static String textureHealth() {
 		return "headless: no GL";
 	}
