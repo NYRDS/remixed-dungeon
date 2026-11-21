@@ -1099,6 +1099,7 @@
     <string name="Metabolism_Txt">%s của trao đổi chất</string>
     <string name="MiasmaGas_Info">Một loại khí độc hại gây ngộ độc, làm yếu và gây rối loạn cảm giác cho những người hít phải nó.</string>
     <string name="MimicAmulet_Gender">masculine</string>
+    <string name="MimicAmulet_Name">quái giả dạng</string>
     <string name="MimicAmulet_Name_Objective">mô phỏng</string>
     <string name="MimicPie_Desc">Mimics là những sinh vật phép thuật có thể biến hình thành bất kỳ hình dạng nào chúng muốn. Con này trông như một chiếc bánh ngon to lớn.</string>
     <string name="MimicPie_Gender">masculine</string>
@@ -1111,6 +1112,7 @@
     <string name="MindVisionBuff_Name">Tầm nhìn tâm trí</string>
     <string name="MirrorImage_Desc">Ảo ảnh này mang sự tương đồng rất lớn với bạn, nhưng nó nhợt nhạt hơn và run rẩy một chút.</string>
     <string name="MirrorImage_Gender">masculine</string>
+    <string name="MirrorImage_Name_Objective">hình ảnh gương</string>
     <string name="MissileWeapon_Info1">\n\nSát thương trung bình của vũ khí này bằng %d điểm mỗi lần đánh.</string>
     <string name="MissileWeapon_Info2">Vì thể lực không đủ, độ chính xác và tốc độ tấn công của bạn với %1$s này bị giảm.</string>
     <string name="MissileWeapon_Info3">Do sức mạnh thừa của bạn, sát thương của đòn tấn công với %s này bị tăng lên.</string>
@@ -1225,6 +1227,7 @@
     <string name="PetInventory_GiveToPet">Cho thú cưng</string>
     <string name="PetInventory_HeroBackpackFull">Balo của bạn đã đầy</string>
     <string name="PetInventory_PetBackpackFull">Ba lô của thú cưng đã đầy</string>
+    <string name="PetInventory_TakeAll">Lấy tất cả</string>
     <string name="PetInventory_TakeFromPet">Lấy từ thú cưng</string>
     <string name="PetInventory_TakeN">Lấy %d</string>
     <string name="PetInventory_Title">Kho thú cưng</string>
@@ -1267,6 +1270,7 @@
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Ho khan dữ dội* Hắt xì!\n Những con ốc... chúng trườn. Chúng tiết nhờn. Và chúng thì thầm bí mật của một thời đại bị lãng quên. Tôi cần chúng, _mười_ con, vỏ vẫn còn nguyên vẹn. Bạn nghĩ _năm mươi đồng vàng_ có đủ cho tri thức quý giá như vậy không?\n Ba! Không quan trọng. Thông tin chúng giữ có thể là chìa khóa để dừng dịch bệnh này. Hoặc... nó có thể dẫn chúng ta đến thứ gì đó còn kinh khủng hơn. Bạn quyết định.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">_Thiên Hương_… minh chứng cho phép thuật vần vò thế giới này. Ta đã học được nhiều từ bản chất của chúng, nhưng phần thưởng của ngươi… tại ha, đã được chuẩn bị tận tâm. *Hàng cho anh hùng một bình _Mana Potion_ lấp lánh* Nguyện sức mạnh nó dẫn dắt ngươi vượt qua những hiểm nguy phía trước.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Tìm kiếm _moongrace_, nơi bóng tối gặp ánh trăng mờ nhạt nhất. _Hai hạt giống_, bản chất của chúng, sẽ tiết lộ những bí mật ẩn giấu.</string>
+    <string name="PlagueDoctorQuest_2_2_Epilogue">Tuyệt vời! _Cỏ mặt trời_, bản chất vàng kim của nó rung động với sự sống. Ta đã học được nhiều từ cấu trúc tinh tế của nó. *Ông ta đưa cho ngươi một _Bình hồi máu_, chất lỏng bên trong lấp lánh với một ánh sáng vàng kim nhẹ.* Hãy uống điều này khi thế giới đè nặng lên ngươi, và cảm nhận sự ấm áp của mặt trời hồi sinh tinh thần ngươi.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Hai hạt giống sungrass_. Cánh hoa vàng của chúng chứa đựng một sức mạnh tôi muốn hiểu. Hãy tìm chúng, và để bản chất của chúng được tiết lộ!</string>
     <string name="PlagueDoctorQuest_2_2_Prologue"> Ah, _sungrass_! Một bông hoa mảnh mai, cánh hoa tỏa ra sự ấm áp của mặt trời. Tôi tin rằng tinh chất của nó chứa đựng chìa khóa cho... à, tạm quên chi tiết đi. Đủ để nói rằng, nó rất quan trọng cho nghiên cứu của tôi. _Hai hạt giống sungrass_. Lấy chúng về cho tôi, và tôi sẽ thưởng bạn bằng thứ chắc chắn sẽ hữu ích trong cuộc phiêu lưu của bạn - một _Potion of Health_, tràn đầy sức sống của mặt trời.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Anh ấy ôm nhẹ con _dơi_ trong đôi tay có găng, xem xét cơ thể nhỏ bé của nó với một sự mê hoặc đáng sợ* Tuyệt vời! Khả năng định vị bằng tiếng vang của con dơi... nó khác biệt với bất cứ thứ gì tôi từng gặp. Một sự chính xác... một sự... khống chế. *Anh ấy quay về phía bạn, khuôn mặt bị che khuất bởi chiếc mặt nạ* Với nỗ lực của bạn, một _Cuộn Sách Nâng Cấp_. Hãy sử dụng nó khôn ngoan, vì nó nắm giữ tiềm năng để... tinh chế bản chất thực sự của bạn. *Anh ấy đưa cho bạn cuộn sách, giọng nói rơi xuống thành thì thầm khàn khàn* Con _dơi_ này, nó là... một cửa sổ vào một thế giới ẩn giấu. Một thế giới... nơi bóng ma khiêu vũ và bí mật thì thầm.</string>
@@ -1839,6 +1843,7 @@
     <string name="TownGuardNPC_Name_Objective">vệ sĩ thành phố</string>
     <string name="TownPortal_Info">Phép thuật này cho phép bạn quay về nơi an toàn ngay lập tức. Tuy nhiên, các nguồn sức mạnh phép thuật gần đó có thể ngăn nó hoạt động như mong muốn.</string>
     <string name="TownPortal_Name">Cổng Thần Thoại</string>
+    <string name="TownScript_NeedWeapon">Ta sẽ không vào hầm ngục với tay trắng!\nCó lẽ đáng ghé cửa hàng trấn trước đã?</string>
     <string name="TownShopkeeper_Desc">Anh ta là một chủ cửa hàng điển hình. Rõ ràng anh ta đã biết giá của bạn rồi.</string>
     <string name="TownShopkeeper_Objective">người bán hàng</string>
     <string name="TownsfolkMovieNPC_Desc">Một người dân địa phương. Dù rõ ràng chỉ là thường dân, bộ quần áo của hắn lại trông rất đắt tiền.</string>
@@ -3080,6 +3085,11 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
 
 
 

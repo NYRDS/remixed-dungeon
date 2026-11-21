@@ -333,6 +333,7 @@
     <string name="Candy_Warning_2">Nu heb je echt te veel gegeten. Je buik doet pijn omdat je te veel snoep hebt gegeten.</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
     <string name="Carcass_Devoured">Je hebt het lichaam van %s verslonden!</string>
+    <string name="Carcass_DissectMessage">Je ontleedt de kadaver en verkrijgt een %s.</string>
     <string name="Carcass_DissectResult_Many">Uit %1$s krijg je %2$d voorwerpen.</string>
     <string name="Carcass_DissectResult_One">Uit %1$s krijg je één voorwerp.</string>
     <string name="Carcass_Info">restanten van een volledig dode %s.</string>
@@ -419,6 +420,7 @@
     <string name="Char_Hit_2">%1$s raakte %2$s</string>
     <string name="Char_Kill_0">%s heeft je gedood...</string>
     <string name="Char_Kill_1">%s heeft je gedood...</string>
+    <string name="Char_Kill_2">%s heeft je gedood...</string>
     <string name="Char_Name">wezen</string>
     <string name="Char_SmbMissed">%1$s %2$s de aanval van %3$s</string>
     <string name="Char_StaAmok">amok</string>
@@ -1351,6 +1353,7 @@
     <string name="Pickaxe_Info">Dit is een groot en stevig gereedschap om rotsen te breken. Het kan waarschijnlijk ook als wapen worden gebruikt.</string>
     <string name="Pickaxe_InsufficientStr">Niet genoeg kracht om te delven!</string>
     <string name="Pickaxe_Name">houweel</string>
+    <string name="Pickaxe_NoVein">Er is geen donkergoudader in de buurt om te delven</string>
     <string name="Pickaxe_NothingToMine">Hier is niets om te delven!</string>
     <string name="Piercing_Name_0">Doorborend %s</string>
     <string name="Piercing_Name_1">Doorborende %s</string>
@@ -1914,6 +1917,7 @@
     <string name="StartScene_UnlockElf">Om deze klasse te ontgrendelen, versla de Koning-baas met een andere klasse</string>
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
     <string name="StartScene_UnlockPriest">Om Priester te ontgrendelen - voltooi de quest van de Bisschop in de Kerk</string>
+    <string name="StartScene_Warning">Je huidige spelvoortgang zal gewist worden.</string>
     <string name="StartScene_Yes">Ja, start nieuw spel</string>
     <string name="Statue_Desc">Je zou denken dat het gewoon nog zo\'n lelijke standbeeld van deze kerker is, maar de rood oplichtende ogen verraden hem. Hoewel het standbeeld zelf van steen is gemaakt, ziet het wapen, de _%s_, er echt uit.</string>
     <string name="Statue_Gender">feminine</string>
@@ -2383,6 +2387,7 @@
     <string name="WndSettings_moveTimeout">Zettijdlimiet: %s</string>
     <string name="WndSpells_Level">Magisch niveau: </string>
     <string name="WndStory_Guts">Verslagen, verstrooid in stukken, maar niet volledig vernietigd, werd de Oude God verzegeld in de diepste niveaus van de kerker. Maar onlangs werd het zegel gebroken, waardoor de toegang tot de demonenhoeve wijd open stond. De nachtmerrieachtige monsters, geschapen door de Oude God in zijn slummer, waren zo talrijk dat, zonder een manier om te vluchten, ze gedwongen waren om met elkaar te smelten en deze gruwelijke hallen te vormen. En terwijl je over hun levende vlees loopt, kun je de klop van een Ouds Gods hart door hen heen voelen.</string>
+    <string name="WndStory_Metropolis">De Dwergenmetropol was ooit de grootste van de dwergenstadstaten. In zijn bloeitijd had het gemotoriseerde leger van de dwerfen de invasie van de oude god en zijn demonenleger met succes weerstaan. Maar men zegt, dat de terugkerende krijgers zaden van corruptie meegebracht hadden, en dat die overwinning het begin was van het einde voor het ondergrondse koninkrijk.</string>
     <string name="WndStory_Sewers">Het riool ligt direct onder de stad; de bovenste niveaus vormen feitelijk het rioolsysteem van de stad. Omdat ze formeel deel uitmaken van de stad, zijn deze niveaus niet zo gevaarlijk. Niemand zou ze veilig noemen, maar je hoeft hier in elk geval niet veel kwade magie te verwachten.</string>
     <string name="WndStory_Spiders">Vele, vele jaren geleden was er een rijke mijn, vol magische steen. Maar toen de mineraaladers opdroogden, trokken de mijnwerkers weg, waardoor een breed netwerk van tunnels achterbleef. Uiteindelijk werd deze plek bevolkt door spinnen. Maar zelfs deze gevaarlijke wezens, die in het donker loerden, waren niet genoeg om de dappere en krankzinnige schattenjagers af te schrikken. Want de schaal van gevaar is altijd evenredig met de hoeveelheid geruchten over magische artefacten. Op een dag dwaalde een boze heks de tunnels in, op de vlucht voor vervolgers. Maar bijgelovige mensen durfden de duisternis niet te betreden. Dus besloten ze te wachten. Maar ze kwam nooit meer tevoorschijn. Misschien vond de heks een andere uitweg, misschien slaagde ze erin langs de bewakers te glippen... of ze stierf, omringd door het geruis van de wezens van het duister.</string>
     <string name="WndTilesKind_ClassicLook">Klassiek uiterlijk</string>
@@ -2849,6 +2854,11 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
 
 
 
