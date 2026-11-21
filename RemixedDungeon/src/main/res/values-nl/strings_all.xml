@@ -66,6 +66,7 @@
     <string name="ArmorKit_ACAplly">TOEPASSSEN</string>
     <string name="ArmorKit_Info">Met deze set gereedschappen en materialen kan iedereen elk harnas veranderen in een \&quot;episch harnas\&quot;, dat alle eigenschappen van het originele harnas behoudt, maar de drager ook een speciale vaardigheid biedt afhankelijk van zijn klasse. Geen vaardigheden in kleermakerij, leerbewerking of smederij vereist.</string>
     <string name="ArmorKit_Name">rustingset</string>
+    <string name="ArmorKit_SelectArmor">Selecteer een pantser om te upgraden</string>
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Armor_EquipCursed">je %s knelt pijnlijk rond je</string>
     <string name="Armor_Glyph">glyph</string>
@@ -222,6 +223,7 @@
     <string name="BishopQuest_2_2_InProgress">Breng me _drie maangraszaden_, mijn kind. De altaar wacht.</string>
     <string name="BishopQuest_3_1_InProgress">Breng me een getemd _zombie_, mijn kind. Behandel het zacht \u2014 het weet niet wat het doet.</string>
     <string name="BishopQuest_4_1_InProgress">Je hebt %1$d van de %2$d doodsritters vernietigd. Breek hun wil, en de legers zullen struikelen.</string>
+    <string name="BishopQuest_4_1_Prologue">Je hebt de voetvolk tot rust gelegd — nu zijn hun meesters aan de beurt. _Doodsritters_ bevelen de legers der doden, en hun wil boeit de botten aan hun tocht. Vernietig _twee doodsritters_, mijn kind.</string>
     <string name="BishopQuest_4_2_Epilogue">De kerklokken luidden van zich af toen de laatste voorbijging — een goed teken, mijn kind. Neem deze drank van kracht; de laatste toets zal veel van je vragen.</string>
     <string name="BishopQuest_4_2_InProgress">Je hebt %1$d van de %2$d geketende zielen bevrijd. Laat ze niet langer dienen.</string>
     <string name="BishopQuest_5_1_Epilogue">Des Heren werk is voltooid! Vanaf deze dag mag je de weg van een priester bewandelen. Neem deze zegen en deze almoezen, mijn kind — je hebt ze verdiend.</string>
@@ -760,6 +762,7 @@
     <string name="GnollTamahawk_Gender">masculine</string>
     <string name="GnollTamahawk_Info">Een traditionele Tomahawk gemaakt door Gnoll-meesters, waarbij elk clan zijn eigen unieke ontwerp heeft. Deze Tomahawk is iets lichter dan zijn tegenhangers.</string>
     <string name="Gnoll_BecomeGuardianDesc">Word een Wachter</string>
+    <string name="Gnoll_BecomeWitchdoctorDesc">Word een Heksenmeester</string>
     <string name="Gnoll_Desc">Gnollen zijn hyena-achtige humanoïden. Ze wonen in riolen en kerkers, en trekken soms op naar het oppervlak om te plunderen. Gnol-verkenners zijn gewone leden van hun roedel, ze zijn niet zo sterk als bruten en niet zo intelligent als sjamanen.</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnol verkenner</string>
@@ -923,6 +926,7 @@
     <string name="HideInGrassSpell_Info">Je hebt je verstoppertje-meesterschap geperfectioneerd.</string>
     <string name="HideInGrassSpell_Name">Verberg-in-Gras</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Zelfs ik kan me niet in het zicht verstoppen.</string>
+    <string name="HolyWater_Name">Heilige Water</string>
     <string name="Horror_Name_1">Griezelige %s</string>
     <string name="Horror_Name_2">Griezelige %s</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
@@ -2838,6 +2842,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

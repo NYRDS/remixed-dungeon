@@ -456,6 +456,7 @@
     <string name="CorpseDust_Info">Quả bóng bụi xác chết không khác gì quả bóng bụi thường về bề ngoài. Tuy nhiên, bằng cách nào đó bạn biết rằng tốt nhất nên loại bỏ nó càng sớm càng tốt.</string>
     <string name="CorpseDust_Info2">Có lẽ vì chỉ cầm nó trong tay thôi đã khiến bạn cảm thấy lo lắng và giận dữ.</string>
     <string name="CorpseDust_Name">bụi xác</string>
+    <string name="CorpseExplosion_Info">Biến một xác chết thành một đám mây khí độc chết người, lan truyền bệnh tật và độc tố đến tất cả kẻ thù gần đó.</string>
     <string name="CorpseExplosion_Name">Nổ Xác Chết</string>
     <string name="Crab_Gender">masculine</string>
     <string name="Crab_Name">cua cống</string>
@@ -1334,6 +1335,7 @@
     <string name="Potion_Colors_1">đỏ tươi</string>
     <string name="Potion_Colors_10">chàm</string>
     <string name="Potion_Colors_12">epidot</string>
+    <string name="Potion_Colors_13">thạch anh</string>
     <string name="Potion_Colors_15">ngọc trai</string>
     <string name="Potion_Colors_2">xanh ngọc bích</string>
     <string name="Potion_Colors_3">ngọc bích</string>
@@ -1751,6 +1753,7 @@
     <string name="StartScene_UnlockDoctor">Để mở khóa Bác Sĩ Chúm - hãy hoàn thành nhiệm vụ của Bác Sĩ Chúm cũ</string>
     <string name="StartScene_UnlockGnoll">Để mở khóa lớp này, bạn phải thuyết phục linh mục làng chữa lành cho Gnoll Brute</string>
     <string name="StartScene_UnlockNecromancer">Để mở khóa lớp nhân vật này, hãy tiêu diệt Lich bằng bất kỳ lớp nào khác.</string>
+    <string name="StartScene_UnlockPriest">Để mở khóa Linh Mục - hoàn thành nhiệm vụ của Giám mục trong Nhà thờ</string>
     <string name="StartScene_Warning">Tiến trình trò chơi hiện tại sẽ bị xóa.</string>
     <string name="StartScene_WinGame">Để mở khóa \&quot;Thử thách\&quot;, hãy thắng trò chơi với bất kỳ lớp nhân vật nào.</string>
     <string name="StartScene_Yes">Có, bắt đầu trò chơi mới</string>
@@ -2040,6 +2043,7 @@
     <string name="WndHero_DefenceSkill">Kỹ năng phòng thủ</string>
     <string name="WndHero_Depth">Độ sâu tối đa</string>
     <string name="WndHero_Exp">Kinh nghiệm</string>
+    <string name="WndHero_Gold">Vàng đã thu thập</string>
     <string name="WndHero_Info">Thông tin</string>
     <string name="WndHero_Satiety">Độ no</string>
     <string name="WndHero_StaCatalogus">Danh mục</string>
@@ -3069,6 +3073,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
