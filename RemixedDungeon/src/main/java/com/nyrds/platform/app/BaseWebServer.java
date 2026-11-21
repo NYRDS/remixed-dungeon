@@ -125,6 +125,10 @@ public abstract class BaseWebServer extends NanoHTTPD {
         // sprite editor support: live sprite list + in-game texture reload
         debugEndpoints.put("/api/sprites/list", DebugEndpoints::handleApiSpritesList);
         debugEndpoints.put("/debug/reload_textures", DebugEndpoints::handleDebugReloadTextures);
+        // texture blanking diagnosis: GL-name health scan + deterministic
+        // evict-vs-alive-owner repro (bd 3tf follow-up)
+        debugEndpoints.put("/debug/texture_health", DebugEndpoints::handleDebugTextureHealth);
+        debugEndpoints.put("/debug/texture_evict_repro", DebugEndpoints::handleDebugTextureEvictRepro);
     }
 
     // embedded web apps served from mod assets web/<app>/ (pixelcraft, mob-viewer)

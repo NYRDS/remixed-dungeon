@@ -262,6 +262,22 @@ public class Texture {
 		return false;
 	}
 
+	// no-op parity with android/desktop copies (bd 3tf texture-health diagnostics)
+	public static String glStats() {
+		return "html: no GL";
+	}
+	public int debugGlId() {
+		return -1;
+	}
+
+	public static boolean debugGlIsTexture(int glId) {
+		return false;
+	}
+
+	public static String textureHealth() {
+		return "html: no GL";
+	}
+
 	/**
 	 * Terminal release of the upload bitmap; mirrors the desktop variant.
 	 */
