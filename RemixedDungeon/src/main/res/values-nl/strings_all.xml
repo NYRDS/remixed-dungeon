@@ -582,6 +582,7 @@
     <string name="DewVial_Collected">Je verzamelde een dauwdruppel in je dauwflesje.</string>
     <string name="DewVial_Full">Je dauwflesje is vol!</string>
     <string name="DewVial_Info">Je kunt overtollige dauw in dit kleine vat bewaren om het later te drinken. Als het flesje vol is, wordt de dauw op een moment van dodelijk gevaar automatisch verbruikt.</string>
+    <string name="DewVial_Name">dauwflesje</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DieHardSpell_Info">Zal tijdelijk je regeneratie verhogen, waardoor je een echte Die Hard wordt.</string>
@@ -1193,6 +1194,7 @@
     <string name="MercenaryNPC_Name">huurling</string>
     <string name="MercenaryNPC_Name_Objective">huurling</string>
     <string name="Metabolism_Txt">%s van metabolisme</string>
+    <string name="MiasmaGas_Info">Een giftige miasma die vergiftigt, verzwakt en verward wie hem inademt.</string>
     <string name="MimicAmulet_Desc">Het meest glorieuze moment van je avonturierscarrière bleek een val te zijn.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">mimic</string>
@@ -1265,6 +1267,7 @@
     <string name="NecromancerNPC_Desc">Deze man van middelbare leeftijd lijkt zowel licht geïrriteerd als enthousiast te zijn. Hij draagt een samengesteld pantser van aan elkaar gehouden botfragmenten.</string>
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">Ah! Wat een zeldzaam gezicht! Een mede-avonturier die niet zomaar een levenloos lijk is. Amper te geloven! Oh... excuses, soms word ik te opgewonden. Zie je, ik ben een necromant. En hoewel het bestuderen van de doden en de dood zelf mijn broodwinning is, wordt het uiteindelijk ontzettend vermoeiend om steeds dezelfde dingen te zien. Aan de andere kant, dat is precies waarom ik hier ben. Volgens mijn berekeningen, over een paar weken, ergens in deze kerker, gaat er iets spectaculairs gebeuren. De _Necropolis_, een oude stad van de doden, gaat haar deuren openen. En... ik kan niet veel meer zeggen, ik heb al genoeg tijd verspild. Ik moet me voorbereiden, _kom later terug_.</string>
+    <string name="NecromancerNPC_Intro2">Ah! Een mede-avonturier die niet zomaar een levendeloos lijk is. Moeilijk te geloven! Oh... mijn excuses, soms word ik te opgewonden. Je ziet, ik ben zelf een necromant. En hoewel het bestuderen van dode lichamen en de dood zelf voor ons zeer gewaardeerd is, kan al deze monotonie vroeg of laat iedereen verveelen. Aan de andere kant is dat precies waarom ik hier ben. De andere dag is er iets groots gebeurd! De _Necropolis_, een oude stad van de doden, heeft zijn deuren voor ons geopend. Eerlijk gezegd staan we recht voor deze deuren. En... weet je wat, pak de sleutel en ga eerst, jij houdt van allerlei avonturen, toch? En ik ga erna... moet me alleen even klaarmaken.</string>
     <string name="NecromancerNPC_Message1">Zo weinig tijd, zo weinig tijd...</string>
     <string name="NecromancerNPC_Message2">Ik moet er klaar voor zijn.</string>
     <string name="NecromancerNPC_Message3">Ik hoor de roep van de doden.</string>
@@ -2182,6 +2185,7 @@
     <string name="WndCryptoDonate_tron">Tron</string>
     <string name="WndCryptoDonate_walletAddress">Portefeuille-adres</string>
     <string name="WndCryptoDonate_warningText">WAARSCHUWING: Verifieer altijd het adres voordat je geld stuurt. Cryptocurrency-transacties zijn onomkeerbaar!</string>
+    <string name="WndCustomizations_Title">Aanpassingen</string>
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratis voor iedereen en dat blijft zo.\n\nJe kunt ons echter helpen om het spel nog beter te maken.\n\nNaast onze oprechte dank ontvang je enkele cosmetische verbeteringen.</string>
     <string name="WndDonate_donate">doneren: </string>
     <string name="WndDonate_gold">goud</string>
@@ -2834,6 +2838,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
