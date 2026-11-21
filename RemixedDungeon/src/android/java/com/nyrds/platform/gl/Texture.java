@@ -125,6 +125,24 @@ public class Texture {
         return badBindReported;
     }
 
+    // latched after the first self-heal from a dead GL name (bd 3tf option D):
+    // healing itself keeps working for every texture, only the event is once
+    private static volatile boolean healReported = false;
+
+    public static boolean healReported() {
+        return healReported;
+    }
+
+    // self-heal hooks: SmartTexture overrides them when a heal source is set -
+    // the base class never heals
+    protected boolean canHeal() {
+        return false;
+    }
+
+    protected BitmapData healPixels() {
+        return null;
+    }
+
     // called from bind() when a stale id is about to be bound and the driver no
     // longer knows it - this bind renders black. The exception's stack is the
     // draw path that hit it; textureHealth() in the message tells isolated dead
@@ -145,26 +163,49 @@ public class Texture {
         }
     }
 
-    // on-device blank-texture diagnostic: a GL name the driver no longer knows
-    // (glIsTexture false) while our side still considers it live renders black -
-    // it was deleted behind our back (eviction/context-loss race). GL-thread only.
+    // on-device blank-texture diagnostic: two ways a live-on-our-side texture can
+    // render black - a GL name the driver no longer knows (glIsTexture false,
+    // deleted behind our back / context loss) and a driver-valid name with no
+    // pixel content behind it (never re-uploaded after regeneration). GL-thread only.
     public static String textureHealth() {
         int dead = 0;
+        int incomplete = 0;
         StringBuilder samples = new StringBuilder();
-        for (java.util.Map.Entry<Integer, String> e : liveIds.entrySet()) {
-            if (GLES20.glIsTexture(e.getKey())) {
+        for (java.util.Map.Entry<Integer, java.util.Map.Entry<Texture, String>> e : liveIdsWithOwners()) {
+            int glId = e.getKey();
+            Texture owner = e.getValue().getKey();
+            String meta = e.getValue().getValue();
+            boolean nameDead = !GLES20.glIsTexture(glId);
+            boolean noContent = owner != null && !owner.hasPixels;
+            if (!nameDead && !noContent) {
                 continue;
             }
-            dead++;
-            if (dead <= 8) {
-                java.lang.ref.WeakReference<Texture> ownerRef = owners.get(e.getKey());
-                Texture owner = ownerRef == null ? null : ownerRef.get();
-                samples.append("\n").append(e.getKey()).append(": ")
+            if (nameDead) {
+                dead++;
+            }
+            if (noContent) {
+                incomplete++;
+            }
+            if (dead + incomplete <= 8) {
+                samples.append("\n").append(glId).append(": ")
+                        .append(nameDead ? "DEAD-NAME " : "").append(noContent ? "NO-PIXELS " : "")
                         .append(owner == null ? "DEAD-owner" : owner.getClass().getSimpleName())
-                        .append(' ').append(e.getValue(), 0, Math.min(e.getValue().length(), 160));
+                        .append(' ').append(meta, 0, Math.min(meta.length(), 160));
             }
         }
-        return "live=" + liveIds.size() + " deadNames=" + dead + ";" + samples;
+        return "live=" + liveIds.size() + " deadNames=" + dead + " incomplete=" + incomplete + ";" + samples;
+    }
+
+    private static Iterable<java.util.Map.Entry<Integer, java.util.Map.Entry<Texture, String>>> liveIdsWithOwners() {
+        java.util.List<java.util.Map.Entry<Integer, java.util.Map.Entry<Texture, String>>> out =
+                new java.util.ArrayList<>();
+        for (java.util.Map.Entry<Integer, String> e : liveIds.entrySet()) {
+            java.lang.ref.WeakReference<Texture> ownerRef = owners.get(e.getKey());
+            Texture owner = ownerRef == null ? null : ownerRef.get();
+            out.add(new java.util.AbstractMap.SimpleEntry<>(e.getKey(),
+                    new java.util.AbstractMap.SimpleEntry<>(owner, e.getValue())));
+        }
+        return out;
     }
 
     public static String leakProbe() {
@@ -234,6 +275,10 @@ public class Texture {
     // bad-bind guard may only run after the first successful bind of this id
     private boolean everBound;
 
+    // true once the current GL name has pixel content behind it - false means the
+    // name is driver-valid but empty: samples read black (textureHealth reports it)
+    private boolean hasPixels;
+
 
     private static String captureCreationSite() {
 
@@ -265,6 +310,21 @@ public class Texture {
     public void bind() {
         drainOrphanedIds();
         bindEpoch = cacheClears;
+        if (id != -1 && everBound && !GLES20.glIsTexture(id)) {
+            // dead GL name (EGL context loss or deleted behind our back): with a
+            // heal source, regenerate + re-decode instead of rendering black
+            // (bd 3tf option D); otherwise report the first bad bind (bd k1l0)
+            if (canHeal()) {
+                if (!healReported) {
+                    healReported = true;
+                    EventCollector.logException(new Exception("Texture self-healed from dead GL name "
+                            + id + " " + width + "x" + height + ", " + glStats()), "texture");
+                }
+                delete(); // bookkeeping + id=-1 + dataDirty=true; gen below regenerates, upload re-decodes
+            } else if (!badBindReported) {
+                reportBadBind();
+            }
+        }
         if (id == -1) {
             int[] ids = new int[1];
             GLES20.glGenTextures(1, ids, 0);
@@ -272,6 +332,7 @@ public class Texture {
             genCount++;
             // a reserved name glIsTexture's as false until its first bind
             everBound = false;
+            hasPixels = false;
             StackTraceElement[] st = new Throwable().getStackTrace();
             StringBuilder sb = new StringBuilder();
             for (int i = 1; i < Math.min(st.length, 11); i++) {
@@ -284,13 +345,6 @@ public class Texture {
             if (id == 0) {
                 throw new AssertionError();
             }
-        }
-
-        // a bound-at-least-once id the driver no longer knows means this bind is
-        // about to render black: report the first one via Crashlytics (latched -
-        // the guard stops checking afterwards)
-        if (everBound && !badBindReported && !GLES20.glIsTexture(id)) {
-            reportBadBind();
         }
 
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, id);
@@ -310,6 +364,13 @@ public class Texture {
 
     private void uploadPixelData() {
         if (dataDirty) {
+            if (bitmapData == null && pixels == null && bytePixels == null) {
+                // self-heal: all upload sources consumed or released - re-decode
+                // the pixels from the heal source instead of uploading nothing
+                // (which would render an incomplete, black texture)
+                bitmapData = healPixels();
+            }
+            boolean uploaded = false;
             if (bitmapData != null && bitmapData.bmp != null) {
                 if(bitmapData.bmp==null) {
                     EventCollector.logException();
@@ -319,13 +380,18 @@ public class Texture {
                     bitmapData.dispose(); // Dispose the bitmap data after uploading
                 }
                 bitmapData = null; // Clear the reference to avoid re-uploading
+                uploaded = true;
             } else if (pixels != null) {
                 uploadPixels(pixels, width, height);
                 pixels = null; // Clear the pixel data after uploading
+                uploaded = true;
             } else if (bytePixels != null) {
                 uploadBytes(bytePixels, width, height);
                 bytePixels = null; // Clear the byte pixel data after uploading
+                uploaded = true;
             }
+            // false = this GL name has no content behind it: samples read black
+            hasPixels = uploaded;
             dataDirty = false;
         }
     }

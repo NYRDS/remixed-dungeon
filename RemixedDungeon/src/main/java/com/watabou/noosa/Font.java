@@ -44,7 +44,10 @@ public class Font extends TextureFilm {
 	private boolean invalidated;
 
 	protected Font( String tex_src ) {
-		super( TextureCache.get(ModdingMode.getBitmapData(tex_src)) );
+		// string-keyed: shares the cache entry across Font instances and gets a
+		// self-heal source (re-decode the font page) instead of going dark after a
+		// destructive TextureCache.clear with a live holder (bd 3tf option D)
+		super( TextureCache.get(tex_src) );
 		this.tex_src = tex_src;
 
 		getTexture().filter(Texture.LINEAR,Texture.NEAREST);
@@ -218,7 +221,7 @@ public class Font extends TextureFilm {
 		if(texture!=null && !invalidated) return texture;
 
 		invalidated = false;
-		texture = TextureCache.get(ModdingMode.getBitmapData(tex_src));
+		texture = TextureCache.get(tex_src);
 		return texture;
 	}
 

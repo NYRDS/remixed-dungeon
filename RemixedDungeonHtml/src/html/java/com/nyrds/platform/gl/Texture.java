@@ -274,6 +274,20 @@ public class Texture {
 		return false;
 	}
 
+	// no-op parity with android/desktop copies (bd 3tf option D self-heal hooks)
+	protected boolean canHeal() {
+		return false;
+	}
+
+	protected BitmapData healPixels() {
+		return null;
+	}
+
+	private static volatile boolean healReported = false;
+
+	public static boolean healReported() {
+		return healReported;
+	}
 	// no-op parity with android/desktop copies (bd 87ag bad-bind telemetry)
 	public static void debugGlDeleteName(int glId) {
 	}
