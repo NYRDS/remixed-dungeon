@@ -129,6 +129,7 @@
     <string name="Badges_ItemLvl4">Đã đạt được vật phẩm cấp 12</string>
     <string name="Badges_ItemLvl5">Đã có vật phẩm cấp 15</string>
     <string name="Badges_LevelReached1">Đã đạt cấp độ 6</string>
+    <string name="Badges_LevelReached2">Đã đạt cấp 12</string>
     <string name="Badges_LevelReached3">Đã đạt cấp 18</string>
     <string name="Badges_LevelReached4">Đạt cấp 24</string>
     <string name="Badges_LevelReached5">Đã đạt cấp 30</string>
@@ -739,6 +740,7 @@
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Đầu mũi tên này được phủ bởi thuốc hồi máu.</string>
     <string name="HealthDart_Gender">masculine</string>
+    <string name="HealthDart_Name">Mũi tên chữa trị</string>
     <string name="Heap_Mimic">Đây là một kẻ giả dạng!</string>
     <string name="HeartOfDarkness_Gender">neuter</string>
     <string name="HeartOfDarkness_Info">Trái tim đen nhịp đập của Thần Gian Dối.</string>
@@ -2253,6 +2255,7 @@
     <string name="gdpr_agree">Có, tôi đồng ý</string>
     <string name="gdpr_disagree">Không, cảm ơn</string>
     <string name="gdpr_title">Cá nhân hóa trải nghiệm quảng cáo của bạn</string>
+    <string name="town_deco_INN_sign_desc">Có vẻ như có một khách sạn bên trong tòa nhà đó.</string>
     <string name="town_deco_armoronhanger_desc">Loại giáp nào đó trên móc treo.</string>
     <string name="town_deco_armorstand_leather_name">Áo giáp da</string>
     <string name="town_deco_armorstand_plate_desc">Theo người buôn, bộ giáp tấm nặng nề này từng thuộc về một chiến binh vĩ đại.</string>
@@ -2342,6 +2345,7 @@
     <string name="town_deco_inn_bed_desc">Trông có vẻ là một chiếc giường rất thoải mái.</string>
     <string name="town_deco_inn_bed_name">Giường</string>
     <string name="town_deco_ladder_desc">Một chiếc thang cũ, trông không đáng tin cậy.</string>
+    <string name="town_deco_ladder_name">Cây thang</string>
     <string name="town_deco_library_books_desc">Vẫn còn tốt hơn sách từ ngục.</string>
     <string name="town_deco_library_books_name">Vật liệu đọc</string>
     <string name="town_deco_locked_door_desc">Có điều gì phía sau cánh cửa đó nhỉ?</string>
@@ -3073,6 +3077,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 

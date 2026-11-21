@@ -910,6 +910,7 @@
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">гнолл розвідник</string>
     <string name="Gnoll_Name_Objective">гнола розвідника</string>
+    <string name="GodWrath_Name">Гнів Божий</string>
     <string name="Gold_Collect">Збирай золоті монети, аби пізніше витратити їх в торговця.</string>
     <string name="Gold_Info">Жменя із %d золотих монет.</string>
     <string name="Gold_Info1">Одна золота монета.</string>
@@ -3126,6 +3127,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

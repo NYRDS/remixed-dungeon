@@ -7,6 +7,7 @@
     <string name="Abilities_Default">Uzmanlık</string>
     <string name="Abilities_Elemental">Element Büyüleri</string>
     <string name="Abilities_Necromancy">Ölüçağırma</string>
+    <string name="Abilities_Priest">İlahi Büyüler</string>
     <string name="AboutScene_Code">Kodlama:</string>
     <string name="AboutScene_Email_Us">Bize ulaşın:</string>
     <string name="AboutScene_Graphics">Grafikler:</string>
@@ -3131,6 +3132,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

@@ -788,6 +788,7 @@ Non, il n\'y avait plus de place pour elle sous le soleil. Plus maintenant. Elle
     <string name="Exhumation_NoGrave">Il n\'y a aucune tombe ici pour mener une exhumation.</string>
     <string name="Exhumation_Ok">Je vous obéirai.</string>
     <string name="Exorcism_Info">Un mot de pouvoir bannissant. Il inflige de lourds dégâts sacrés à un seul ennemi — doublés contre les morts-vivants, qui sont également ralentis.</string>
+    <string name="Exorcism_Name">Exorcisme</string>
     <string name="ExplodingSkull_Desc">Ce crâne flottant et brûlant a l\'air extrêmement fragile. On dirait qu\'il est prêt à exploser à n\'importe quel moment. </string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">crâne explosif</string>
@@ -3129,6 +3130,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

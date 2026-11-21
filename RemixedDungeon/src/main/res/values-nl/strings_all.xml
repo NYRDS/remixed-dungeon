@@ -386,6 +386,7 @@
     <string name="ChaosCrystal_Name">Vreemde Kristal</string>
     <string name="ChaosCrystal_Name_1">Chaotisch Kristal</string>
     <string name="ChaosCrystal_Name_2">Chaos Kristal</string>
+    <string name="ChaosCrystal_Prompt">Kies een plek om de Chaos-teken te plaatsen</string>
     <string name="ChaosCrystal_ScrollFused">Kristal geabsorbeerd door rune op rol gegraveerd, en nu is het een %s</string>
     <string name="ChaosCrystal_ShieldFused">De kristal smolt met jouw schild en nam de chaosvorm aan.</string>
     <string name="ChaosCrystal_StaffFused">Kristal absorbeert je toverstok en nam de vorm van een Staf aan</string>
@@ -661,6 +662,7 @@
     <string name="EncumbranceBuff_CharAct_2">Deze %s is te zwaar voor mij om effectief te gebruiken.</string>
     <string name="EncumbranceBuff_CharAct_3">Ik moet aan mijn kracht werken voordat ik %s kan gebruiken.</string>
     <string name="EncumbranceBuff_CharAct_4">Mij ontbreekt de kracht om %s optimaal te benutten.</string>
+    <string name="EncumbranceBuff_CharAct_5">%s is te zwaar voor mij om nu aan te kunnen.</string>
     <string name="EncumbranceBuff_Info">Niet genoeg kracht om %s effectief te gebruiken.</string>
     <string name="EncumbranceBuff_Name">Last</string>
     <string name="EnslavedSoul_Desc">Je kunt bijna door deze spookachtige verschijning heen kijken. En hoewel het op een schedel lijkt, verschijnt er soms voor een fractie van een seconde een gezicht, vol pijn en lijden.</string>
@@ -1333,6 +1335,7 @@
     <string name="PetInventory_ACTakeFromPet">NEEM VAN HUISDIER</string>
     <string name="PetInventory_CantGiveEquipped">Kan uitgerust item niet geven</string>
     <string name="PetInventory_GaveItem">Gaf %1 aan %2</string>
+    <string name="PetInventory_GiveAll">Geef alles</string>
     <string name="PetInventory_GiveToPet">Aan huisdier geven</string>
     <string name="PetInventory_HeroBackpackFull">Je rugzak is vol</string>
     <string name="PetInventory_PetBackpackFull">De rugzak van het huisdier is vol</string>
@@ -2607,6 +2610,7 @@
     <string name="town_deco_snowman_name">Sneeuwpop</string>
     <string name="town_deco_snowy_plate_name">besneeuwde plaat</string>
     <string name="town_deco_sofa_desc">Lijkt erop dat deze bioscoop echt probeert de beste zitplaatsen voor haar klanten te bieden.</string>
+    <string name="town_deco_sofa_name">Comfortabele bank</string>
     <string name="town_deco_stakes_desc">Deze geslepen palen zien er angstaanjagend uit, maar in feite zijn ze op zichzelf vrij nutteloos.</string>
     <string name="town_deco_stakes_name">Palissaden</string>
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
@@ -2842,6 +2846,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
