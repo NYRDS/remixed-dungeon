@@ -2109,6 +2109,7 @@
     <string name="WndPriest_Heal">chữa trị - %d vàng</string>
     <string name="WndPriest_Heal_Minions">Chữa trị tất cả tùy tùng của bạn - Chỉ %d vàng!</string>
     <string name="WndPriest_Instruction2_f">Chào con gái của ta, chào mừng đến với nhà thờ thánh của Santa Thần Sâu vĩ đại!</string>
+    <string name="WndPriest_Instruction2_m">Hoan nghênh con trai tôi, hoan nghênh đến với thánh đường vĩ đại của Santa Chúa Tể Sâu!</string>
     <string name="WndPriest_Instruction_f">Chào con gái của ta, chào mừng đến với nhà thờ thánh của Santa Thần Sâu vĩ đại! Rất tiếc ta không thể cho con đi qua lúc này, vì tòa nhà đang được tu sửa, nhưng nếu con cần giúp đỡ, ta có thể cung cấp dịch vụ chữa lành và thức ăn chỉ với %d vàng!</string>
     <string name="WndPriest_Instruction_m">Chào con, chào mừng đến nhà thờ thánh của đại Santa, Chúa Tể Độ Sâu! Thật tiếc tôi không thể cho con qua ngay lúc này, vì tòa nhà đang được sửa chữa, nhưng nếu con tìm kiếm sự giúp đỡ, tôi có thể cung cấp dịch vụ chữa bệnh và thức ăn chỉ với %d đồng vàng!</string>
     <string name="WndPriest_Title">Linh mục thị trấn</string>
@@ -2365,6 +2366,7 @@
     <string name="town_deco_rug_desc">Được thiết kế với phong cách tinh tế.</string>
     <string name="town_deco_rug_name">Thảm</string>
     <string name="town_deco_screen_desc">Tấm vải bí ẩn này được gọi là \&quot;màn hình\&quot; và nó có thể hiển thị những hình ảnh chuyển động</string>
+    <string name="town_deco_screen_name">Màn hình</string>
     <string name="town_deco_scrolls_name">Cuộn</string>
     <string name="town_deco_shelf_full_desc">Nhiều đồ trang trí nhỏ được đặt trên kệ này.</string>
     <string name="town_deco_shelf_full_name">Kệ sách</string>
@@ -3058,6 +3060,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

@@ -318,6 +318,7 @@
     <string name="CagedKobold_Name_Objective">opgesloten kobold</string>
     <string name="CagedKobold_Quest_End">Oh, dank je wel, heel erg bedankt! Hoe heb je de sleutel weten te vinden? Je... je hebt het wapen vernield?! Dat is ongelooflijk! Weet je wat, ik zei dat ik je zou helpen, en ik denk dat ik de beste manier weet. Ik blijf even bij je. * De gekooide kobold is omgezet in een kaars</string>
     <string name="Calm_Cast">%s kalmeert.</string>
+    <string name="Calm_Info">Er zijn veel geïrriteerde wezens om ons heen, laten we hen helpen.</string>
     <string name="Calm_Name">Kalmte</string>
     <string name="CandleOfMindVision_Info">Lijkt op een gewone kaars, niet iets wat je zou verwachten in een gevaarlijk duistere kelder. Raar genoeg is hij vrij warm aan de kant, ondanks dat hij nog niet was aangebrand.</string>
     <string name="CandleOfMindVision_Info_Exhausted">De kaars is opgebrand, ze brandt niet meer als je hem vasthoudt. Het lijkt erop dat je hem niet meer kunt gebruiken.</string>
@@ -2599,6 +2600,7 @@
     <string name="town_deco_statue_blood_desc">Een majestueuze standbeeld van een engel die een kom bloed vasthoudt.</string>
     <string name="town_deco_statue_water_desc">Een majestueuze standbeeld van een engel die een kom met water vasthoudt.</string>
     <string name="town_deco_statue_water_name">Engelenstandbeeld</string>
+    <string name="town_deco_stock_desc">Hier worden voedselaanvullen bewaard, evenals allerhande rommel van alle soorten en kleuren.</string>
     <string name="town_deco_stock_name">voorraad</string>
     <string name="town_deco_stone_wall_broken_desc">Oude stenen muur, in slechte staat</string>
     <string name="town_deco_stone_wall_broken_name">Kapotte muur</string>
@@ -2828,6 +2830,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
