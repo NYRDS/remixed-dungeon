@@ -384,6 +384,7 @@
     <string name="ChaosBow_Name">chaosboog</string>
     <string name="ChaosCrystal_BladeFused">Het kristal absorber je wapen, en nam de vorm van een zwaard aan</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
+    <string name="ChaosCrystal_Info_1">Chaotische krachten vloeien door deze kristal. Misschien is het wel nuttig.</string>
     <string name="ChaosCrystal_Info_2">Ja! Nu weet je dat je het kunt fuseren met een van je voorwerpen, maar wat komt daarna?</string>
     <string name="ChaosCrystal_Name">Vreemde Kristal</string>
     <string name="ChaosCrystal_Name_1">Chaotisch Kristal</string>
@@ -884,6 +885,7 @@
     <string name="HeroSubClass_DescBers">Wanneer ernstig gewond, raakt de _Berserker_ in een staat van wilde woede, waardoor zijn schade aanzienlijk toeneemt.</string>
     <string name="HeroSubClass_DescFreR">De _Vrijsprinter_ kan zich bijna twee keer zo snel voortbewegen als de meeste monsters. Tijdens het rennen is de Vrijsprinter veel moeilijker te raken. Maar daarvoor moet hij onbelast en niet verhongerd zijn.</string>
     <string name="HeroSubClass_DescGlad">Een succesvolle aanval met een melee-wapen stelt de _Gladiator_ in staat een combo te starten, waarbij elke volgende treffer meer schade aanricht.</string>
+    <string name="HeroSubClass_DescGuardian">Behendige verdedigingskennis laat de _bewaker_ met een schild contrataak voeren, wat hem een geduchte vijand maakt voor wie durft deze wandelende bastion aan te vallen.</string>
     <string name="HeroSubClass_DescNone">NIET GEVONDEN</string>
     <string name="HeroSubClass_DescScout">Elven _Verkenners_ zijn meesters in sluipen. Het vertrappen van hoog gras geeft hen een tijdelijke onzichtbaarheidsboost. Ook zijn ze nog sneller dan gewone Elfen.</string>
     <string name="HeroSubClass_DescSnip">_Sluipschutters_ zijn in staat om zwakke punten in de bepantsering van een vijand te ontdekken, waardoor ze deze effectief negeren bij het gebruik van een afstandswapen.</string>
@@ -1449,6 +1451,7 @@
     <string name="PotionOfMight_Apply">Nieuwverkregen kracht stroomt door je lichaam.</string>
     <string name="PotionOfMight_Info">Deze krachtige vloeistof stroomt door je spieren en verhoogt permanent je kracht met één punt en je gezondheid met vijf punten.</string>
     <string name="PotionOfMight_Name">Drankje van Kracht</string>
+    <string name="PotionOfMight_StaApply">+1 kracht, +5 gezondheid</string>
     <string name="PotionOfMindVision_Apply1">Je kunt op een of andere manier de aanwezigheid van andere wezens\' geesten voelen!</string>
     <string name="PotionOfMindVision_Apply2">Je kunt op de een of andere manier voelen dat je op dit moment alleen bent op dit level.</string>
     <string name="PotionOfMindVision_Info">Na het drinken hiervan wordt je geest afgestemd op de psychische signatuur van verre wezens, waardoor je levende organismen door muren heen kunt voelen. Ook stelt dit drankje je in staat om door nabijgelegen muren en deuren heen te kijken.</string>
@@ -1475,6 +1478,7 @@
     <string name="Potion_Colors_15">parelmoer</string>
     <string name="Potion_Colors_2">azuurblauw</string>
     <string name="Potion_Colors_3">jade</string>
+    <string name="Potion_Colors_4">gouden</string>
     <string name="Potion_Colors_5">magenta</string>
     <string name="Potion_Colors_6">anthraciet</string>
     <string name="Potion_Colors_7">ivoor</string>
@@ -2534,6 +2538,7 @@
     <string name="town_deco_dungeon_door_desc">De ingang van de kerker.</string>
     <string name="town_deco_dungeon_door_name">Ingang</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
+    <string name="town_deco_emptyboard_name">rek</string>
     <string name="town_deco_entrance_name">ingang</string>
     <string name="town_deco_exit_desc">Het is onbekend wat je te wachten staat als je deze trap afdaalt.</string>
     <string name="town_deco_exit_name">uitgang</string>
@@ -2854,6 +2859,11 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
 
 
 

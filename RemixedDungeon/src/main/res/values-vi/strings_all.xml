@@ -104,6 +104,7 @@
     <string name="Badges_DeathGas">Chết do khí độc</string>
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
     <string name="Badges_DeathHunger">Chết vì đói</string>
+    <string name="Badges_DeathPoison">Chết do độc</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Badges_FoodEaten3">30 phần thức ăn đã ăn</string>
     <string name="Badges_FoodEaten4">40 miếng thức ăn đã ăn</string>
@@ -835,6 +836,7 @@
     <string name="Hero_StaPoison">Bạn bị trúng độc!</string>
     <string name="Hero_StaRoots">Bạn không thể di chuyển!</string>
     <string name="Hero_StaVertigo">Mọi thứ đang quay xoay quanh bạn!</string>
+    <string name="Hero_StaWeakness">Bạn cảm thấy suy yếu!</string>
     <string name="Hero_Wait">...</string>
     <string name="HideInGrassSpell_Name">Ẩn Trong Cỏ</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Ngay cả tôi cũng không thể ẩn nấp ngay trước mũi.</string>
@@ -1915,6 +1917,7 @@
     <string name="WandOfIcebolt_Info">Cây gậy này phóng ra một tia băng, gây sát thương nhẹ cho mục tiêu. Cũng có khả năng làm chậm hoặc thậm chí đóng băng kẻ địch.</string>
     <string name="WandOfIcebolt_Info1">Bạn đã tự giết mình bằng Đũa phép Băng đạn của chính mình...</string>
     <string name="WandOfIcebolt_Name">Gậy Băng Tiễn</string>
+    <string name="WandOfLightning_Info">Cây gậy này triệu hồi những cung điện chết người, gây sát thương cho nhiều sinh vật đứng gần nhau.</string>
     <string name="WandOfLightning_Info1">Bạn đã bị sét đánh bởi Cây Gậy Sét của chính mình...</string>
     <string name="WandOfLightning_Name">Gậy Sét</string>
     <string name="WandOfMagicMissile_Desinchanted">bạn đã phá vỡ phép thuật của Gậy Phép Thuật Ten Lửa và dùng bản chất của nó để nâng cấp %s của bạn</string>
@@ -1946,6 +1949,7 @@
     <string name="Wand_Wood_Types_3">anh đào</string>
     <string name="Wand_Wood_Types_4">gỗ tếch</string>
     <string name="Wand_Wood_Types_5">thanh tùng</string>
+    <string name="Wand_Wood_Types_6">liễu</string>
     <string name="Wand_Wood_Types_7">gõ đỏ</string>
     <string name="Wand_Wood_Types_9">gỗ tím</string>
     <string name="WarHammer_Gender">masculine</string>
@@ -2459,6 +2463,7 @@
     <string name="town_deco_wooden_stairs_desc">Chúng khiến bạn cao hơn một chút.</string>
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
+    <string name="town_deco_wooden_table_name">Bàn gỗ</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
 
@@ -3085,6 +3090,11 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
 
 
 
