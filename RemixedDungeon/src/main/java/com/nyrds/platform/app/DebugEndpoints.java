@@ -4570,9 +4570,16 @@ public class DebugEndpoints {
     // switches with the texture still drawn. The old evictIdleIds deleted the GL id
     // behind the alive owner at the 3rd clear (glIsTexture false; rebind cannot
     // regenerate - permanent blank). Alive owners must never be touched.
+    // /debug/texture_evict_repro?forceDead=1 - with forceDead, phase 2 deletes the
+    // texture's GL name behind the owner's back (simulating EGL context loss) and
+    // binds again: the first such dead bind fires the Crashlytics bad-bind event
+    // (latched process-wide, so this demonstrates the report exactly once per
+    // process launch). Response carries badBindReported to verify the latch.
     public static NanoHTTPD.Response handleDebugTextureEvictRepro(NanoHTTPD.IHTTPSession session) {
         final String[] result = new String[1];
         final String[] error = new String[1];
+        final boolean forceDead = session.getQueryParameterString() != null
+                && session.getQueryParameterString().contains("forceDead=1");
         GameLoop.pushUiTaskAndWait(() -> {
             try {
                 BitmapData bmp = BitmapData.createBitmap(8, 8);
@@ -4594,6 +4601,15 @@ public class DebugEndpoints {
                 json.put("statsBefore", statsBefore);
                 json.put("statsAfter", Texture.glStats());
                 json.put("health", Texture.textureHealth());
+
+                if (forceDead) {
+                    boolean aliveBefore = Texture.debugGlIsTexture(glId);
+                    Texture.debugGlDeleteName(glId);
+                    tx.bind(); // bad bind about to happen -> first one reports
+                    json.put("forceDead_aliveBefore", aliveBefore);
+                    json.put("forceDead_aliveAfter", Texture.debugGlIsTexture(glId));
+                    json.put("badBindReported", Texture.badBindReported());
+                }
                 result[0] = json.toString();
             } catch (Throwable t) {
                 error[0] = t.toString();

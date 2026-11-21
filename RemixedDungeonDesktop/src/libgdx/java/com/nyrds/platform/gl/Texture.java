@@ -1,6 +1,7 @@
 package com.nyrds.platform.gl;
 
 import com.badlogic.gdx.Gdx;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.gfx.BitmapData;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -123,6 +124,40 @@ public class Texture {
 		return Gdx.gl20.glIsTexture(glId);
 	}
 
+	// debug helper: delete a GL name behind our back (simulates EGL context loss
+	// or driver-side deletion) - drives the bad-bind report path in tests
+	public static void debugGlDeleteName(int glId) {
+		Gdx.gl20.glDeleteTexture(glId);
+	}
+
+	// latched after the first dead-name bind report: the event goes out once per
+	// process and the per-bind glIsTexture guard stops checking
+	private static volatile boolean badBindReported = false;
+
+	public static boolean badBindReported() {
+		return badBindReported;
+	}
+
+	// called from bind() when a stale id is about to be bound and the driver no
+	// longer knows it - this bind renders black. The exception's stack is the
+	// draw path that hit it; textureHealth() in the message tells isolated dead
+	// name (singular bug) apart from everything-dead (EGL context loss).
+	private void reportBadBind() {
+		badBindReported = true;
+		try {
+			String health = textureHealth();
+			if (health.length() > 600) {
+				health = health.substring(0, 600);
+			}
+			EventCollector.logException(new Exception("Bad texture bind: GL name " + id
+					+ " unknown to the driver (deleted behind our back or EGL context loss), "
+					+ "owner=" + getClass().getSimpleName() + " " + width + "x" + height
+					+ ", " + glStats() + ", " + health), "texture");
+		} catch (Throwable t) {
+			EventCollector.logException(t, "texture bad-bind report failed");
+		}
+	}
+
 	// on-device blank-texture diagnostic: a GL name the driver no longer knows
 	// (glIsTexture false) while our side still considers it live renders black -
 	// it was deleted behind our back (eviction/context-loss race). GL-thread only.
@@ -194,6 +229,11 @@ public class Texture {
 	// owner's id is still being drawn or has gone idle (transiently retained)
 	private int bindEpoch;
 
+	// true once this texture's current GL name has actually been bound - glIsTexture
+	// reports false for a name reserved by glGenTextures but never bound yet, so the
+	// bad-bind guard may only run after the first successful bind of this id
+	private boolean everBound;
+
 	private static String captureCreationSite() {
 		StackTraceElement[] st = new Throwable().getStackTrace();
 		StringBuilder sb = new StringBuilder();
@@ -222,6 +262,8 @@ public class Texture {
 				throw new AssertionError();
 			}
 			genCount++;
+			// a reserved name glIsTexture's as false until its first bind
+			everBound = false;
 			StackTraceElement[] st = new Throwable().getStackTrace();
 			StringBuilder sb = new StringBuilder();
 			for (int i = 1; i < Math.min(st.length, 11); i++) {
@@ -230,6 +272,13 @@ public class Texture {
 			}
 			liveIds.put(id, width + "x" + height + "|" + createdAt + "|" + sb);
 			owners.put(id, new java.lang.ref.WeakReference<>(this));
+		}
+
+		// a bound-at-least-once id the driver no longer knows means this bind is
+		// about to render black: report the first one (latched - the guard stops
+		// checking afterwards)
+		if (everBound && !badBindReported && !Gdx.gl20.glIsTexture(id)) {
+			reportBadBind();
 		}
 
 		if (bound[active] != id) {
@@ -241,6 +290,7 @@ public class Texture {
 			applyParameters();
 			uploadPixelData();
 		}
+		everBound = true;
 	}
 
 	private void applyParameters() {
