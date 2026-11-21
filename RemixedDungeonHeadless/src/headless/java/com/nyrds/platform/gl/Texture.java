@@ -97,6 +97,22 @@ public class Texture {
 		return false;
 	}
 
+	// no-op parity with android/desktop copies (bd 3tf texture-health diagnostics)
+	public static String glStats() {
+		return "headless: no GL";
+	}
+	public int debugGlId() {
+		return -1;
+	}
+
+	public static boolean debugGlIsTexture(int glId) {
+		return false;
+	}
+
+	public static String textureHealth() {
+		return "headless: no GL";
+	}
+
 	public void releaseBitmapData() {
 		if (bitmapData != null) {
 			if (autoDisposeBitmapData) {

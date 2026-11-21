@@ -27,8 +27,8 @@ public class Texture {
     private static volatile int genCount = 0;
     private static volatile int delCount = 0;
 
-    // live GL id -> gen-site stack, insertion(=age)-ordered; leakProbe() dumps
-    // the oldest live ids, which is where a missed delete() shows up first
+    // live GL id -> dims|createdAt|bind-site, insertion(=age)-ordered; leakProbe()
+    // dumps the oldest live ids, which is where a missed delete() shows up first
     private static final java.util.Map<Integer, String> liveIds = new java.util.LinkedHashMap<>();
 
     // id -> owner alive? aggregated in leakProbe(): owners GC'd while their GL
@@ -37,28 +37,34 @@ public class Texture {
     private static final java.util.Map<Integer, java.lang.ref.WeakReference<Texture>> owners =
             new java.util.LinkedHashMap<>();
 
-    // epoch = number of TextureCache.clear() calls; ids stamped with an older
-    // epoch than the current one have survived a full cache clear => leaked
+    // epoch = number of TextureCache.clear() calls; bind() stamps it on the
+    // owner at every call, so a lagging bindEpoch means "not drawn since"
     private static volatile int cacheClears = 0;
 
     public static void noteCacheClear() {
         cacheClears++;
-        evictIdleIds();
+        evictDeadOwnerIds();
     }
 
-    // textures not re-bound for 3 cache-clear epochs are idle orphans (owner
-    // alive but no longer drawing them): delete their GL id. If the owner ever
-    // draws again, bind() regenerates - correctness preserved.
-    private static void evictIdleIds() {
+    // clean up GL ids whose owner object is already garbage: nobody can re-bind
+    // them, so deleting is safe. Alive owners are NEVER touched here - deleting
+    // a live owner's id behind its back left bind() stuck on a dead name (pixel
+    // data is already released at first upload, so regeneration uploads nothing)
+    // and the texture rendered blank forever (bd 3tf option C). Ids of alive
+    // owners are freed by finalize() via the orphan drain when the owner dies.
+    private static void evictDeadOwnerIds() {
         java.util.Iterator<java.util.Map.Entry<Integer, String>> it = liveIds.entrySet().iterator();
         while (it.hasNext()) {
             java.util.Map.Entry<Integer, String> e = it.next();
-            int epoch = Integer.parseInt(e.getValue().substring(0, e.getValue().indexOf('|')));
-            if (cacheClears - epoch >= 3) {
-                GLES20.glDeleteTextures(1, new int[]{e.getKey()}, 0);
-                delCount++;
-                it.remove();
+            java.lang.ref.WeakReference<Texture> ownerRef = owners.get(e.getKey());
+            if (ownerRef != null && ownerRef.get() != null) {
+                continue; // alive owner: may still draw, never delete behind its back
             }
+            int deadId = e.getKey();
+            owners.remove(deadId);
+            it.remove();
+            GLES20.glDeleteTextures(1, new int[]{deadId}, 0);
+            delCount++;
         }
     }
 
@@ -81,6 +87,7 @@ public class Texture {
     private static void drainOrphanedIds() {
         Integer orphan;
         while ((orphan = orphanedIds.poll()) != null) {
+            owners.remove(orphan);
             if (liveIds.remove(orphan) != null) {
                 GLES20.glDeleteTextures(1, new int[]{orphan}, 0);
                 delCount++;
@@ -96,33 +103,69 @@ public class Texture {
         return id != -1;
     }
 
+    public int debugGlId() {
+        return id;
+    }
+
+    public static boolean debugGlIsTexture(int glId) {
+        return GLES20.glIsTexture(glId);
+    }
+
+    // on-device blank-texture diagnostic: a GL name the driver no longer knows
+    // (glIsTexture false) while our side still considers it live renders black -
+    // it was deleted behind our back (eviction/context-loss race). GL-thread only.
+    public static String textureHealth() {
+        int dead = 0;
+        StringBuilder samples = new StringBuilder();
+        for (java.util.Map.Entry<Integer, String> e : liveIds.entrySet()) {
+            if (GLES20.glIsTexture(e.getKey())) {
+                continue;
+            }
+            dead++;
+            if (dead <= 8) {
+                java.lang.ref.WeakReference<Texture> ownerRef = owners.get(e.getKey());
+                Texture owner = ownerRef == null ? null : ownerRef.get();
+                samples.append("\n").append(e.getKey()).append(": ")
+                        .append(owner == null ? "DEAD-owner" : owner.getClass().getSimpleName())
+                        .append(' ').append(e.getValue(), 0, Math.min(e.getValue().length(), 160));
+            }
+        }
+        return "live=" + liveIds.size() + " deadNames=" + dead + ";" + samples;
+    }
+
     public static String leakProbe() {
         java.util.Map<String, Integer> bySite = new java.util.LinkedHashMap<>();
-        int leaked = 0;
+        int deadOwners = 0;
+        int idleOwners = 0;
         for (java.util.Map.Entry<Integer, String> e : liveIds.entrySet()) {
             String entry = e.getValue();
             int sep = entry.indexOf('|');
-            int epoch = Integer.parseInt(entry.substring(0, sep));
-            if (cacheClears - epoch < 3) {
-                continue; // young enough to still be pending normal reuse
-            }
-            leaked++;
+            String dims = entry.substring(0, sep);
             int sep2 = entry.indexOf('|', sep + 1);
-            String dims = entry.substring(sep + 1, sep2);
-            int sep3 = entry.indexOf('|', sep2 + 1);
-
-            String createdAt = entry.substring(sep2 + 1, sep3);
-
-            String site = entry.substring(sep3 + 1);
+            String createdAt = entry.substring(sep + 1, sep2);
+            String bindstack = entry.substring(sep2 + 1);
             java.lang.ref.WeakReference<Texture> ownerRef = owners.get(e.getKey());
             Texture owner = ownerRef == null ? null : ownerRef.get();
-            String key = (owner == null ? "DEAD created-by: " + createdAt : owner.getClass().getSimpleName()) + " "
-                    + dims + " @" + site.substring(0, Math.min(site.length(), 120));
+            String kind;
+            if (owner == null) {
+                deadOwners++;
+                kind = "DEAD created-by: " + createdAt;
+            } else if (cacheClears - owner.bindEpoch >= 3) {
+                // alive but not drawn for 3+ clears: transiently retained, its id
+                // is freed by the orphan drain when the owner dies - NOT deleted
+                // here, deleting behind an alive owner blanks the texture
+                idleOwners++;
+                kind = "IDLE-OWNER " + owner.getClass().getSimpleName() + " created-by: " + createdAt;
+            } else {
+                continue; // healthy: drawn recently
+            }
+            String key = kind + " " + dims + " @" + bindstack.substring(0, Math.min(bindstack.length(), 120));
             Integer c = bySite.get(key);
             bySite.put(key, c == null ? 1 : c + 1);
         }
         StringBuilder sb = new StringBuilder("live=").append(liveIds.size())
-                .append(" leaked=").append(leaked).append(';');
+                .append(" deadOwner=").append(deadOwners)
+                .append(" idleOwner=").append(idleOwners).append(';');
         int n = 0;
         for (java.util.Map.Entry<String, Integer> e : bySite.entrySet()) {
             if (n++ >= 12) break;
@@ -147,6 +190,10 @@ public class Texture {
     // texture whose GL id leaked (string survives the owner's GC)
 
     private final String createdAt = captureCreationSite();
+
+    // cacheClears value at the last bind() - tells leakProbe whether an alive
+    // owner's id is still being drawn or has gone idle (transiently retained)
+    private int bindEpoch;
 
 
     private static String captureCreationSite() {
@@ -178,6 +225,7 @@ public class Texture {
 
     public void bind() {
         drainOrphanedIds();
+        bindEpoch = cacheClears;
         if (id == -1) {
             int[] ids = new int[1];
             GLES20.glGenTextures(1, ids, 0);
@@ -189,7 +237,7 @@ public class Texture {
                 sb.append(st[i].getClassName()).append('.').append(st[i].getMethodName())
                   .append(':').append(st[i].getLineNumber()).append(" <- ");
             }
-            liveIds.put(id, cacheClears + "|" + width + "x" + height + "|" + createdAt + "|" + sb);
+            liveIds.put(id, width + "x" + height + "|" + createdAt + "|" + sb);
             owners.put(id, new java.lang.ref.WeakReference<>(this));
 
             if (id == 0) {

@@ -147,6 +147,10 @@ public abstract class BaseWebServer extends NanoHTTPD {
         debugEndpoints.put("/api/mods/raw", ModEditorEndpoints::handleModsRaw);
         debugEndpoints.put("/api/mods/export", ModEditorEndpoints::handleModsExport);
         debugEndpoints.put("/api/mods/terrain", ModEditorEndpoints::handleTerrain);
+        // texture blanking diagnosis: GL-name health scan + deterministic
+        // evict-vs-alive-owner repro (bd 3tf follow-up)
+        debugEndpoints.put("/debug/texture_health", DebugEndpoints::handleDebugTextureHealth);
+        debugEndpoints.put("/debug/texture_evict_repro", DebugEndpoints::handleDebugTextureEvictRepro);
     }
 
     // embedded web apps served from mod assets web/<app>/ (pixelcraft, mob-viewer, mod-editor)

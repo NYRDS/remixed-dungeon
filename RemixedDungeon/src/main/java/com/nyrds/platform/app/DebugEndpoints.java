@@ -32,8 +32,12 @@ import com.nyrds.pixeldungeon.windows.WndPetBag;
 import com.nyrds.pixeldungeon.windows.WndPetInventoryOptions;
 import com.nyrds.pixeldungeon.windows.WndPetSelect;
 import com.nyrds.platform.compatibility.RectF;
+import com.nyrds.platform.gfx.BitmapData;
+import com.nyrds.platform.gl.Texture;
 import com.nyrds.platform.storage.SaveUtils;
 import com.nyrds.util.ModdingMode;
+import com.watabou.gltextures.SmartTexture;
+import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Scene;
@@ -4535,6 +4539,72 @@ public class DebugEndpoints {
         }
         return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
                 "{\"success\":true}");
+    }
+
+    // /debug/texture_health - GL-thread scan of every live texture id: any name the
+    // driver no longer knows (glIsTexture false) renders black and was deleted
+    // behind our back (eviction/context-loss race). Run this on a device repro
+    // while the blanking is visible - samples name the owner class of each dead id.
+    public static NanoHTTPD.Response handleDebugTextureHealth(NanoHTTPD.IHTTPSession session) {
+        final String[] result = new String[1];
+        final String[] error = new String[1];
+        GameLoop.pushUiTaskAndWait(() -> {
+            try {
+                result[0] = Texture.textureHealth() + " | " + Texture.glStats();
+            } catch (Throwable t) {
+                error[0] = t.toString();
+            }
+        });
+
+        if (error[0] != null) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"" + error[0] + "\"}");
+        }
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json",
+                "{\"result\":\"" + result[0].replace("\n", "\\n").replace("\"", "\\\"") + "\"}");
+    }
+
+    // /debug/texture_evict_repro - deterministic repro of the texture-eviction
+    // blanking class (bd 3tf option C): an UNCACHED SmartTexture is bound (gen at
+    // epoch E), then three TextureCache.clear()+bind() cycles simulate scene
+    // switches with the texture still drawn. The old evictIdleIds deleted the GL id
+    // behind the alive owner at the 3rd clear (glIsTexture false; rebind cannot
+    // regenerate - permanent blank). Alive owners must never be touched.
+    public static NanoHTTPD.Response handleDebugTextureEvictRepro(NanoHTTPD.IHTTPSession session) {
+        final String[] result = new String[1];
+        final String[] error = new String[1];
+        GameLoop.pushUiTaskAndWait(() -> {
+            try {
+                BitmapData bmp = BitmapData.createBitmap(8, 8);
+                bmp.eraseColor(0xFF00FF00);
+                SmartTexture tx = new SmartTexture(bmp);
+                tx.bind();
+                int glId = tx.debugGlId();
+                String statsBefore = Texture.glStats();
+
+                for (int i = 0; i < 3; i++) {
+                    TextureCache.clear();
+                    tx.bind(); // the sprite keeps drawing across scene switches
+                }
+
+                org.json.JSONObject json = new org.json.JSONObject();
+                json.put("glId", glId);
+                json.put("glIsTexture", Texture.debugGlIsTexture(glId));
+                json.put("hasLiveGlId", tx.debugHasLiveGlId());
+                json.put("statsBefore", statsBefore);
+                json.put("statsAfter", Texture.glStats());
+                json.put("health", Texture.textureHealth());
+                result[0] = json.toString();
+            } catch (Throwable t) {
+                error[0] = t.toString();
+            }
+        });
+
+        if (error[0] != null) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                    "{\"error\":\"" + error[0] + "\"}");
+        }
+        return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", result[0]);
     }
 
     // test endpoint: /debug/test_equip?id=<mob>&item=<ItemFactory name>&level=<n> -
