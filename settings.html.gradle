@@ -16,6 +16,11 @@ dependencyResolutionManagement {
         mavenCentral()
         google()
         maven {
+            // RuStore SDK moved here on Oct 1 2026 (vkpartner artifactory no longer
+            // serves ru.rustore.sdk - bd 5tq1 follow-up, broke the CI flavors check)
+            url "https://nexus-external.rustore.ru/repository/maven-rustore-exposed"
+        }
+        maven {
             url "https://artifactory-external.vkpartner.ru/artifactory/maven"
         }
         maven { url "https://artifactory.appodeal.com/appodeal/" }
