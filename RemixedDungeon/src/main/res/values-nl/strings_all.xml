@@ -593,6 +593,7 @@
     <string name="DewVial_Info">Je kunt overtollige dauw in dit kleine vat bewaren om het later te drinken. Als het flesje vol is, wordt de dauw op een moment van dodelijk gevaar automatisch verbruikt.</string>
     <string name="DewVial_Name">dauwflesje</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
+    <string name="Dewdrop_Name">dauwdruppel</string>
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DieHardSpell_Info">Zal tijdelijk je regeneratie verhogen, waardoor je een echte Die Hard wordt.</string>
     <string name="DieHardSpell_Name">Doodzeker</string>
@@ -1503,6 +1504,7 @@
     <string name="PriestArmor_NotPriest">Alleen priesters kunnen deze armor gebruiken!</string>
     <string name="Prison_TileDescBookshelf">Dit is waarschijnlijk een overblijfsel van een gevangenisbibliotheek. Zou het branden?</string>
     <string name="Prison_TileDescDeco">Er zijn oude bloedvlekken op de vloer.</string>
+    <string name="Prison_TileWater">Donker koud water.</string>
     <string name="PseudoPasty_Info">Dit is een authentiek Cornish pasty met de traditionele vulling van rundvlees en aardappelen.</string>
     <string name="PseudoPasty_Name">pasteitje</string>
     <string name="PseudoRat_Desc">Een afschuwelijk beest dat uit het lijk van de rat tevoorschijn kwam, lijkt op geen enkele knaagdier of ander dier dat je ooit zag. Een enorme mond, vol vlijmscherpe tanden, neemt het grootste deel van zijn lichaam in.</string>
@@ -1718,6 +1720,7 @@
     <string name="ScrollOfUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="ScrollOfWeaponUpgrade_Info">Deze rol zal een wapen voor nabijgevecht upgraden, de kwaliteit verbeterend. In tegenstelling tot een gewone Upgrade Scroll, zal deze gespecialiseerde versie nooit een begoocheling op een wapen vernietigen. Integendeel, het kan een onbetoverde wapen een willekeurige begoocheling geven.</string>
     <string name="ScrollOfWeaponUpgrade_InvTitle">Selecteer een wapen om te upgraden</string>
+    <string name="ScrollOfWeaponUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
     <string name="ScrollOfWeaponUpgrade_Name">Wapenverbeteringsscrol</string>
     <string name="Scroll_ACRead">LEZEN</string>
     <string name="Scroll_Blinded">Je kunt geen scroll lezen terwijl je verblind bent</string>
@@ -2239,6 +2242,7 @@
     <string name="WndGame_Load">Laden</string>
     <string name="WndGame_Return">Terug naar spel</string>
     <string name="WndGame_Save">Opslaan</string>
+    <string name="WndGame_Settings">Instellingen</string>
     <string name="WndGame_Start">Nieuw spel starten</string>
     <string name="WndHats_BackButton">Terug</string>
     <string name="WndHats_BuyButton">Kopen</string>
@@ -2869,6 +2873,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

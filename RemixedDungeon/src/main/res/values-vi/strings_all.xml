@@ -202,6 +202,7 @@
     <string name="BishopNPC_Name_Objective">giám mục</string>
     <string name="BishopQuest_2_2_Epilogue">Ánh trăng trong một hạt giống... như chính ân điển. Đêm nay nhà thờ sẽ có mùi bạc. Hãy nhận thuốc này cho sự tận tụy của con, con ơi.</string>
     <string name="BishopQuest_2_2_InProgress">Mang cho ta _ba hạt giống hoa mỹ nhân_, con yêu quý của ta. Bàn thờ đang chờ đợi.</string>
+    <string name="BishopQuest_2_2_Prologue">Lễ nhận đồ cần nhang được ban phước bởi mặt trăng, con ơi. Hãy mang cho ta _ba hạt giống hoa mỹ nhân_, thu hái nơi ánh trăng còn vương vấn trong sâu thẳm.</string>
     <string name="BishopQuest_3_1_Epilogue">Lễ chầu biệt cuối cùng được đọc, và xác sống tùy tùng tan thành bụi bình yên. Hắn đã an nghỉ thực sự. Lòng trắc ẩn làm vinh dự cho con — hãy lấy cuộn này, con sẽ cần nó nơi con đi.</string>
     <string name="BishopQuest_3_2_InProgress">Mang cho ta một con _dơi_ đã được thuần dưỡng, con ạ. Đừng làm sợ con vật đáng thương ấy.</string>
     <string name="BishopQuest_3_2_Prologue">Ngay cả những sinh vật bóng tối cũng xứng đáng được ban phước, con ơi. Hãy mang cho ta một con _dơi_ đã thuần phục, và ta sẽ thánh hiến nó cho ánh sáng.</string>
@@ -330,6 +331,7 @@
     <string name="ChampionOfFireBuff_Name">Nhà Vô Địch Lửa</string>
     <string name="ChampionOfWaterBuff_Name">Vô Địch Nước</string>
     <string name="ChaosArmor_Info">Áo giáp này gồm các tấm màu đỏ máu được khâu lại bằng dây xích đỏ đậm. Chúng phát ra năng lượng hỗn loạn khi bạn chạm vào.</string>
+    <string name="ChaosArmor_Name">áo giáp hỗn loạn</string>
     <string name="ChaosBlade_Gender">masculine</string>
     <string name="ChaosBlade_Info">Mot thanh kiem mot tay cua hon loan than khiet. No phat trien trong chien dau nhu nguoi anh em hai tay cua no, nhung cham hon va tiem nang nho hon — de tay con lai tu do cho khiên.</string>
     <string name="ChaosBlade_Name">kiem hon loan</string>
@@ -1078,6 +1080,9 @@
     <string name="ManaShieldBuff_Name">Khiên phép thuật</string>
     <string name="Mana_Cost">Chi phí mana: </string>
     <string name="Mana_Title">Năng lượng</string>
+    <string name="MedicineMask_Info">Khẩu trang y tế được thiết kế để lọc vi sinh vật trong các giọt dịch và khí aerosol từ miệng và mũi của người đeo.
+
+Đeo khẩu trang nghĩa là bạn quan tâm đến người khác.</string>
     <string name="MedicineMask_Name">Khẩu trang y tế</string>
     <string name="MedicineMask_Obtained">Đã nhận được khẩu trang y tế</string>
     <string name="MeleeWeapon_Info1a">%1 là %2 vũ khí cận chiến cấp-%3.</string>
@@ -1687,6 +1692,7 @@
     <string name="SnipersMarkBuff_Name">Dấu ấn xạ thủ</string>
     <string name="SociologistNPC_AlreadyTaken">Bạn đã tham gia khảo sát này, vui lòng quay lại sau</string>
     <string name="SociologistNPC_Desc">Nhà xã hội học này đang trên một nhiệm vụ thiêng liêng thu thập ý kiến công chúng</string>
+    <string name="SociologistNPC_DownloadError">Xin lỗi, có lỗi xảy ra, vui lòng thử lại sau</string>
     <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_InternetRequired">Xin lỗi, nhưng nếu không có quyền truy cập Internet, bạn không thể tham gia khảo sát của chúng tôi</string>
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
@@ -3099,6 +3105,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
