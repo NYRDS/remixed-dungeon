@@ -933,6 +933,7 @@
     <string name="Item_Name">vật phẩm</string>
     <string name="JarOfSouls_Desc">Cặp mắt sáng lóa của chiếc sọ được vẽ trên cái hũ cũ này, cũng như năng lượng kỳ lạ mà nó tỏa ra, khiến bạn cảm thấy bất an.</string>
     <string name="JarOfSouls_Gender">masculine</string>
+    <string name="JarOfSouls_Name">hũ linh hồn</string>
     <string name="JarOfSouls_Name_Objective">bình chứa linh hồn</string>
     <string name="Javelin_Gender">neuter</string>
     <string name="Javelin_Name">phi tiêu</string>
@@ -1924,6 +1925,7 @@
     <string name="WandOfDisintegration_Name">Đũa phép Phân rã</string>
     <string name="WandOfFirebolt_Info">Cây đũa này phóng ra những đợt lửa ma thuật. Nó sẽ đốt cháy địa hình dễ cháy, và sẽ gây sát thương và đốt cháy sinh vật bị trúng.</string>
     <string name="WandOfFirebolt_Info1">Bạn tự đốt cháy mình bằng Cây Trượng Lửa...</string>
+    <string name="WandOfFirebolt_Name">Gậy Bắn Lửa</string>
     <string name="WandOfFlock_Info">Một cái vẩy đũa này triệu hồi một đàn cừu ma thuật, tạo ra một chướng ngại vật tạm thời không thể vượt qua.</string>
     <string name="WandOfFlock_Name">Đũa phép Bầy Cừu</string>
     <string name="WandOfFlock_SheepBaa_1">Bêê?</string>
@@ -3105,6 +3107,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

@@ -798,6 +798,7 @@
     <string name="Goo_Info3">GLURP-GLURP!</string>
     <string name="Goo_Name">Goo</string>
     <string name="Goo_Name_Objective">Goo</string>
+    <string name="Goo_StaInfo1">!!!</string>
     <string name="GothicArmor_Info">Een gotische pantser is de hoogtepunt van de kunst van pantser smeden.</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
     <string name="Guts_TileDescExit">Gapend gat in de vloer leidt naar de lagere niveaus.</string>
@@ -951,6 +952,7 @@
     <string name="Hunger_Starving_1">Je bent uitgehongerd!</string>
     <string name="Hunger_Starving_2">Je verhongert!</string>
     <string name="HuntressArmor_ACSpecial">SPECTRALE MESSEN</string>
+    <string name="HuntressArmor_Name">jachtsterjas</string>
     <string name="HuntressArmor_NoEnemies">Geen vijanden in zicht</string>
     <string name="HuntressArmor_NotHuntress">Alleen jachtvrouwen kunnen dit pantser gebruiken!</string>
     <string name="IceCaves_TileDescDeco">Deze gnoll is levend bevroren. Blijkbaar was hij al een tijdje daar.</string>
@@ -2873,6 +2875,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

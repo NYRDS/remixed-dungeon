@@ -54,6 +54,7 @@
     <string name="AzuterronNPC_Name_Objective">זר</string>
     <string name="AzuterronNPC_Quest_Reminder">עזור לי ואני אעזור לך.</string>
     <string name="Backstab_Aware">הקורבן לא אמור להיות מודע אליך כדי לבצע דקירה אחורית טובה.</string>
+    <string name="Backstab_Info">מכה שקטה בגב. לא ישר, אבל יעיל ביותר, נזק דקירה בגב יגדל עם רמת המיומנות של המבצע.\n\nדקירה מוצלחת בגב תתעלם לחלוטין משריון או יכולות הגנה מיוחדות של הקורבן.</string>
     <string name="BadgesScene_Title">התגים שלך</string>
     <string name="Badges_AllBags">כל התיקים נקנו</string>
     <string name="Badges_AllItems">כל השיקויים, המגילות, הטבעות והמטות זוהו</string>
@@ -220,6 +221,7 @@
     <string name="ChaosCrystal_Name_2">קריסטל תוהו</string>
     <string name="ChaosCrystal_SwordFused">הגביש סופג את נשקך ולובש צורת חרב</string>
     <string name="ChaosCrystal_Use">השתמש</string>
+    <string name="ChaosHelmet_Info">קסדה אדומה כדם היא סמל חיוני של לוחם כאוס.</string>
     <string name="ChaosHelmet_Name">קסדת הכאוס</string>
     <string name="ChaosShield_desc">מגן הכאוס הוא תוצאה של מיזוג גביש כאוס עם מגן רגיל, מה שגורם לו להפגין השפעות כאוטיות אקראיות בעת חסימה מוצלחת.</string>
     <string name="ChaosShield_name">מגן התוהו</string>
@@ -1706,6 +1708,8 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
+
 
 
 
