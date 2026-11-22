@@ -2,17 +2,20 @@ package com.nyrds.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.support.VKPlayEntitlements;
+import com.nyrds.platform.support.GcAuth;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.SystemRedButton;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
 
 public class WndVkPlayLink extends WndTitledMessage implements VKPlayEntitlements.StatusListener {
 
 	private final SystemRedButton button;
+	private Text statusText;
 
 	public WndVkPlayLink() {
 		super(Icons.get(Icons.VK_PLAY),
@@ -28,25 +31,48 @@ public class WndVkPlayLink extends WndTitledMessage implements VKPlayEntitlement
 
 		float pos = text.getY() + text.height() + GAP;
 
-		statusText = PixelScene.createMultiline(StringsManager.getVar(R.string.VkPlayLink_idle),
-				GuiProperties.regularFontSize());
+		String idleText;
+		boolean desktopFlow = !Utils.isAndroid() && GcAuth.hasTicket();
+		if (!Utils.isAndroid() && !GcAuth.hasTicket()) {
+			idleText = StringsManager.getVar(R.string.VkPlayLink_needGameCenter);
+		} else {
+			idleText = StringsManager.getVar(R.string.VkPlayLink_idle);
+		}
+
+		statusText = PixelScene.createMultiline(idleText, GuiProperties.regularFontSize());
 		statusText.maxWidth(width);
 		statusText.setX(text.getX());
 		statusText.setY(pos);
 		add(statusText);
 		pos += statusText.height() + GAP;
 
-		button = new SystemRedButton(StringsManager.getVar(R.string.VkPlayLink_signIn)) {
-			@Override
-			protected void onClick() {
-				enable(false);
-				VKPlayEntitlements.startLink(WndVkPlayLink.this);
-			}
-		};
-		button.setRect(0, pos, width, BUTTON_HEIGHT);
-		add(button);
+		if (desktopFlow) {
+			button = new SystemRedButton(StringsManager.getVar(R.string.VkPlayLink_signIn)) {
+				@Override
+				protected void onClick() {
+					enable(false);
+					VKPlayEntitlements.desktopLink(GcAuth.persId(), GcAuth.otp(), WndVkPlayLink.this);
+				}
+			};
+		} else if (Utils.isAndroid()) {
+			button = new SystemRedButton(StringsManager.getVar(R.string.VkPlayLink_signIn)) {
+				@Override
+				protected void onClick() {
+					enable(false);
+					VKPlayEntitlements.startLink(WndVkPlayLink.this);
+				}
+			};
+		} else {
+			button = null;
+		}
 
-		resize(width, (int) button.bottom() + GAP);
+		if (button != null) {
+			button.setRect(0, pos, width, BUTTON_HEIGHT);
+			add(button);
+			resize(width, (int) button.bottom() + GAP);
+		} else {
+			resize(width, (int) pos + GAP);
+		}
 	}
 
 	@Override
@@ -63,6 +89,4 @@ public class WndVkPlayLink extends WndTitledMessage implements VKPlayEntitlement
 		}
 		resize(width, (int) pos + GAP);
 	}
-
-	private Text statusText;
 }

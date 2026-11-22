@@ -40,7 +40,9 @@ public class WndSettings extends WndMenuCommon {
 
         boolean adsFlavor = Utils.isAndroid()
                 && (BuildConfig.FLAVOR_market.equals("googlePlay") || BuildConfig.FLAVOR_market.equals("ruStore"));
-        if (adsFlavor && GamePreferences.donated() == 0) {
+        boolean vkPlayDesktop = BuildConfig.FLAVOR_platform.equals("desktop")
+                && BuildConfig.FLAVOR_market.equals("vkplay");
+        if ((adsFlavor || vkPlayDesktop) && GamePreferences.donated() == 0) {
             menuItems.add(new MenuButton(R.string.VkPlayLink_row) {
                 @Override
                 protected void onClick() {

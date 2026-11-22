@@ -3190,7 +3190,7 @@ No, there was no place for her in the light, not anymore. She turned from the me
 
 
 
-    <string name="VkPlayLink_row">VK Play ПК: отключить рекламу</string>
+    <string name="VkPlayLink_row">VK Play: привязать мобильное приложение</string>
     <string name="VkPlayLink_title">ПК-версия VK Play</string>
     <string name="VkPlayLink_desc">Купили Remixed Pixel Dungeon для ПК в VK Play? Войдите через тот же VK ID — и реклама в мобильной версии отключится.</string>
     <string name="VkPlayLink_signIn">Войти через VK ID</string>
@@ -3200,5 +3200,9 @@ No, there was no place for her in the light, not anymore. She turned from the me
     <string name="VkPlayLink_linked">Реклама отключена до %s.</string>
     <string name="VkPlayLink_failed">Не удалось подтвердить покупку. Проверьте интернет и попробуйте снова.</string>
     <string name="VkPlayLink_noConnection">Нет связи с сервисом проверки. Проверьте интернет и попробуйте позже.</string>
+
+    <string name="VkPlayLink_needGameCenter">Запустите игру через приложение VK Play (Game Center) — оно выдаёт билет покупки, который нужен для привязки.</string>
+    <string name="VkPlayLink_notOwned">Для этого аккаунта VK Play покупка Remixed Pixel Dungeon не найдена.</string>
+    <string name="VkPlayLink_doneDesktop">Готово! Аккаунт привязан. Войдите через тот же VK ID в мобильной версии — реклама там отключится.</string>
 
 </resources>

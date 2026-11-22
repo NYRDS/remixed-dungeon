@@ -25,6 +25,23 @@ import javax.swing.JOptionPane;
 public class RemixedDungeonApp {
     private static String[] savedArgs = new String[0];
 
+    // Auth forwarding (VK Play GameCenter): enabled via "Advanced client settings"
+    // in the developer dashboard, see tools/server/rpd_vkplay_service.py docs.
+    private static String gcPersId = "";
+    private static String gcToken = "";
+
+    public static String gcPersId() {
+        return gcPersId;
+    }
+
+    public static String gcToken() {
+        return gcToken;
+    }
+
+    public static boolean hasGcTicket() {
+        return !gcPersId.isEmpty() && !gcToken.isEmpty();
+    }
+
     public static void main(String[] args){
         savedArgs = args;
 
@@ -62,6 +79,14 @@ public class RemixedDungeonApp {
                 if (arg.startsWith("--minimized")) {
                     minimized = true;
                     System.out.println("Minimized mode enabled via command line flag: " + arg);
+                }
+                if (arg.startsWith("--sz_pers_id=")) {
+                    gcPersId = arg.substring("--sz_pers_id=".length());
+                    System.out.println("GameCenter auth forwarding: pers_id received");
+                }
+                if (arg.startsWith("--sz_token=")) {
+                    gcToken = arg.substring("--sz_token=".length());
+                    System.out.println("GameCenter auth forwarding: token received");
                 }
             }
         }

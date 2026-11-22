@@ -3164,7 +3164,7 @@ Your opinion matters!</string>
     <string name="town_table_fortune_desc">This table is covered with a silk cloth. You can see various tarot cards laid out in a peculiar order.</string>
     <string name="town_table_fortune_name">Table</string>
 
-    <string name="VkPlayLink_row">VK Play PC: disable ads</string>
+    <string name="VkPlayLink_row">VK Play: link the mobile app</string>
     <string name="VkPlayLink_title">VK Play PC version</string>
     <string name="VkPlayLink_desc">Bought Remixed Pixel Dungeon for PC on VK Play? Sign in with the same VK ID and ads in this mobile version will be disabled.</string>
     <string name="VkPlayLink_signIn">Sign in via VK ID</string>
@@ -3174,5 +3174,9 @@ Your opinion matters!</string>
     <string name="VkPlayLink_linked">Ads are disabled until %s.</string>
     <string name="VkPlayLink_failed">Could not confirm the purchase. Check your internet connection and try again.</string>
     <string name="VkPlayLink_noConnection">Cannot reach the verification service. Check your internet connection and try again.</string>
+
+    <string name="VkPlayLink_needGameCenter">Launch the game through the VK Play app (Game Center) — it provides the purchase ticket needed for linking.</string>
+    <string name="VkPlayLink_notOwned">The VK Play account has no Remixed Pixel Dungeon purchase.</string>
+    <string name="VkPlayLink_doneDesktop">Done! Account linked. Sign in with the same VK ID in the mobile version to disable ads there.</string>
 
 </resources>

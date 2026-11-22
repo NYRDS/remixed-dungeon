@@ -27,6 +27,7 @@ import html
 import json
 import os
 import secrets
+import sqlite3
 import sys
 import time
 import urllib.parse
@@ -41,6 +42,7 @@ VKPLAY_API_SECRET = os.environ.get("VKPLAY_API_SECRET", "")
 TOKEN_SECRET = os.environ.get("RPD_VKPLAY_TOKEN_SECRET", "")
 TOKEN_TTL_DAYS = int(os.environ.get("RPD_VKPLAY_TOKEN_TTL_DAYS", "30"))
 GAME_PLATFORM_APPID = 2038660  # VK Play platform app id of Remixed Pixel Dungeon
+DB_PATH = os.environ.get("RPD_VKPLAY_DB", "/opt/rpd-vkplay/bindings.db")
 
 REDIRECT_PATH = "/rpd/vkplay/cb"
 DEEP_LINK = "rpd://vkplay-linked"
@@ -50,6 +52,65 @@ DEEP_LINK = "rpd://vkplay-linked"
 # Losing these on restart only means the player taps the button again.
 PENDING_GRANTS = {}
 PENDING_TTL = 900
+
+
+_db = None
+
+def db():
+    global _db
+    if _db is None:
+        _db = sqlite3.connect(DB_PATH)
+        _db.execute(
+            "CREATE TABLE IF NOT EXISTS bindings ("
+            "page_id TEXT PRIMARY KEY, gc_uid TEXT NOT NULL, bound_at INTEGER NOT NULL)"
+        )
+        _db.commit()
+    return _db
+
+
+def bind_page(page_id: str, gc_uid: str):
+    db().execute(
+        "INSERT INTO bindings (page_id, gc_uid, bound_at) VALUES (?, ?, ?) "
+        "ON CONFLICT(page_id) DO UPDATE SET gc_uid=excluded.gc_uid, bound_at=excluded.bound_at",
+        (page_id, gc_uid, int(time.time())),
+    )
+    db().commit()
+
+
+def get_binding(page_id: str):
+    row = db().execute(
+        "SELECT gc_uid FROM bindings WHERE page_id = ?", (page_id,)
+    ).fetchone()
+    return row[0] if row else None
+
+
+# nonce -> (gc_uid, expiry); created by /rpd/vkplay/desktop_link after the GAS
+# ticket check succeeds, consumed by the OAuth callback.
+PENDING_LINKS = {}
+
+
+def gas_validate(gc_uid: str, otp: str, ip: str):
+    """Validate a GameCenter auth ticket (auth forwarding argv) via GAS.
+
+    Returns (ok, errcode_name). status ok == the user is registered AND, for
+    P2P games, has paid (gas_no_payment otherwise).
+    """
+    params = {
+        "uid": gc_uid,
+        "hash": otp,
+        "ip": ip,
+        "appid": VKPLAY_GMRID,
+    }
+    sign_src = "".join(f"{k}={params[k]}" for k in sorted(params)) + VKPLAY_API_SECRET
+    sign = hashlib.md5(sign_src.encode("utf-8")).hexdigest()
+    url = (
+        f"https://vkplay.ru/app/{VKPLAY_GMRID}/gas?"
+        + urllib.parse.urlencode({"uid": gc_uid, "hash": otp, "ip": ip, "sign": sign})
+    )
+    data = http_get(url)
+    if data.get("status") == "ok":
+        return True, None
+    return False, data.get("errmsg", "unknown")
 
 
 def store_grant(nonce: bytes, token: str):
@@ -278,11 +339,53 @@ class Handler(BaseHTTPRequestHandler):
 
         self._json(404, {"ok": False, "error": "not_found"})
 
+    def _client_ip(self):
+        # CF edge sits in front of nyrds.net; ru.nyrds.net is direct.
+        cip = self.headers.get("CF-Connecting-IP")
+        if cip:
+            return cip.strip()
+        xri = self.headers.get("X-Real-IP")
+        if xri:
+            return xri.strip()
+        return self.client_address[0]
+
     def do_POST(self):
         parsed = urllib.parse.urlparse(self.path)
         length = int(self.headers.get("Content-Length", "0") or 0)
         raw = self.rfile.read(min(length, 65536)).decode("utf-8", "replace") if length else ""
         token = ""
+
+        if parsed.path.rstrip("/") == "/rpd/vkplay/desktop_link":
+            try:
+                req = json.loads(raw)
+            except ValueError:
+                self._json(400, {"ok": False, "error": "bad_json"})
+                return
+            uid = str(req.get("uid", ""))
+            otp = str(req.get("otp", ""))
+            nonce = str(req.get("nonce", ""))
+            if not uid.isdigit() or not otp or not nonce:
+                self._json(400, {"ok": False, "error": "bad_params"})
+                return
+            try:
+                ok, errmsg = gas_validate(uid, otp, self._client_ip())
+            except Exception as exc:
+                sys.stderr.write("desktop_link: GAS unreachable: %r\n" % (exc,))
+                self._json(503, {"ok": False, "error": "gas_unreachable"})
+                return
+            if not ok:
+                sys.stderr.write("desktop_link: GAS rejected uid=%s: %s\n" % (uid, errmsg))
+                self._json(403, {"ok": False, "error": errmsg})
+                return
+            try:
+                nonce_bytes = b64url_decode(nonce)
+            except Exception:
+                self._json(400, {"ok": False, "error": "bad_nonce"})
+                return
+            PENDING_LINKS[nonce_bytes] = (uid, int(time.time()) + PENDING_TTL)
+            sys.stderr.write("desktop_link: GAS ok uid=%s nonce stored\n" % uid)
+            self._json(200, {"ok": True})
+            return
 
         if parsed.path.rstrip("/") == "/rpd/vkplay/verify":
             ctype = (self.headers.get("Content-Type") or "").lower()
@@ -350,6 +453,45 @@ class Handler(BaseHTTPRequestHandler):
 
         exp = int(time.time()) + TOKEN_TTL_DAYS * 86400
         token = mint_token(vk_id, exp)
+
+        pending = PENDING_LINKS.pop(raw_state[:12], None)
+        if pending is not None:
+            gc_uid, link_expiry = pending
+            if link_expiry < int(time.time()):
+                fail("Сессия связывания истекла, начните заново.", "Linking session expired, start again.")
+                return
+            try:
+                owned = owns_game(gc_uid)
+            except Exception as exc:
+                sys.stderr.write("cb: ownership re-check failed: %r\n" % (exc,))
+                fail("Сервис VK Play недоступен, попробуйте позже.", "VK Play service unreachable, try later.")
+                return
+            if not owned:
+                fail("Покупка не найдена для аккаунта VK Play.", "Purchase not found for the VK Play account.")
+                return
+            bind_page(vk_id, gc_uid)
+            sys.stderr.write("cb: bound page_id=%s to gc_uid=%s\n" % (vk_id, gc_uid))
+            store_grant(raw_state[:12], token)
+            self._reply(
+                200,
+                render_page(
+                    lang_ok,
+                    "Remixed Dungeon",
+                    "Готово! Аккаунт привязан — реклама в мобильной версии отключена."
+                    if lang_ok
+                    else "Done! Account linked - mobile ads are disabled.",
+                    token,
+                ),
+            )
+            return
+
+        if get_binding(vk_id) is None:
+            fail(
+                "Аккаунт не привязан: войдите так же в ПК-версии игры (через VK Play).",
+                "Account not linked: sign in the same way in the PC version of the game (via VK Play).",
+            )
+            return
+
         store_grant(raw_state[:12], token)
         self._reply(
             200,
@@ -371,8 +513,13 @@ class Handler(BaseHTTPRequestHandler):
         if vk_id is None:
             self._json(403, {"ok": False, "error": "bad_token"})
             return
+        gc_uid = get_binding(vk_id)
+        if gc_uid is None:
+            self._json(403, {"ok": False, "error": "not_linked"})
+            return
         try:
-            owned = owns_game(vk_id)
+            # refund re-check: the GC uid was proven by GAS at bind time
+            owned = owns_game(gc_uid)
         except Exception as exc:
             sys.stderr.write("verify: ownership check failed: %r\n" % (exc,))
             self._json(503, {"ok": False, "error": "vkplay_unreachable"})
