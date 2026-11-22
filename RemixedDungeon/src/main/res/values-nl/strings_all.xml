@@ -1217,6 +1217,7 @@
     <string name="MimicAmulet_Desc">Het meest glorieuze moment van je avonturierscarrière bleek een val te zijn.</string>
     <string name="MimicAmulet_Gender">masculine</string>
     <string name="MimicAmulet_Name">mimic</string>
+    <string name="MimicPie_Desc">Mimics zijn magische wezens die elke vorm kunnen aannemen die ze willen. Deze lijkt op een grote, heerlijke pasty</string>
     <string name="MimicPie_Gender">masculine</string>
     <string name="MimicPie_Name">mimic</string>
     <string name="MimicPie_Name_Objective">mimic</string>
@@ -2220,6 +2221,7 @@
     <string name="WndDonate_commonDonateText">Remixed Dungeon - gratis voor iedereen en dat blijft zo.\n\nJe kunt ons echter helpen om het spel nog beter te maken.\n\nNaast onze oprechte dank ontvang je enkele cosmetische verbeteringen.</string>
     <string name="WndDonate_donate">doneren: </string>
     <string name="WndDonate_gold">goud</string>
+    <string name="WndDonate_goldDonate">gouden donatie</string>
     <string name="WndDonate_goldDonateText">Dank voor uw hulp</string>
     <string name="WndDonate_goldDonateText2">Ontgrendelt ook de elf vanaf het begin.</string>
     <string name="WndDonate_royal">koninklijk</string>
@@ -2337,6 +2339,7 @@
     <string name="WndPremiumSettings_chrome">Selecteer GUI-materiaal</string>
     <string name="WndPremiumSettings_gold">goud</string>
     <string name="WndPremiumSettings_marble">marmer</string>
+    <string name="WndPremiumSettings_notAvailbale">Deze optie is nog niet beschikbaar</string>
     <string name="WndPremiumSettings_royal">koninklijk</string>
     <string name="WndPremiumSettings_ruby">robijn</string>
     <string name="WndPremiumSettings_silver">zilver</string>
@@ -2875,6 +2878,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
