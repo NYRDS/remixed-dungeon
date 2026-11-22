@@ -300,6 +300,7 @@
     <string name="Bowknot_Info">Een mooie, roze, glinsterende strik vastgemaakt in een knoop aan een haarspeld.</string>
     <string name="Bowknot_Name">Lintknoop</string>
     <string name="Brute_Desc">Grommen zijn de grootste, sterkste en hardste van alle gnollen. Wanneer ze zwaar gewond raken, gaan ze in een woede, waardoor ze nog meer schade aan hun vijanden toebrengen.</string>
+    <string name="Brute_Enraged">%s wordt woedend!</string>
     <string name="Brute_Gender">masculine</string>
     <string name="Brute_Name">grom</string>
     <string name="Brute_Name_Objective">grom</string>
@@ -2879,6 +2880,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
