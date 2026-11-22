@@ -9,6 +9,9 @@ Rules:
 
 ---
 
+## Monetization & supporters
+- 2026-11-22 — **Boosty subscription perks mirror the subscription: while subscribed.** Mike's ruling: an active Boosty tier (Серебряный/Золотой/Рубиновый/Королевский → in-game donation levels 1–4) grants the matching donation level only while the subscription is active — entitlement expires at the Boosty `nextPayTime` charge date, and on lapse everything reverts (class unlocks relock — badge paths still unlock them free — and ads return). Not "once paid = forever" (that would undercut the one-time supporter IAPs after month one). Composes with IAP via `max(donated(), boostyLevel())`; composes with the VK Play ad-free entitlement in the ads OR-chain. Design: docs/boosty_supporter_integration.md, bd remixed-dungeon-c90q.
+
 ## Death & revival
 - 2026-09-14 — **Chess duel: checkmate death is final.** Mate kills through the whole revive chain (dew vial auto-drink, LICH resurrect, Ankh are all bypassed). A lost duel is a lost run. (f9fb7f3ce)
 - long-standing — The death revive chain (dew vial → LICH → Ankh) is *global* death behavior. Features must not bypass it without an explicit ruling — chess mate above is the only sanctioned bypass.

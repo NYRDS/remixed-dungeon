@@ -56,22 +56,41 @@ verification step. No account system exists in the game.
 
 ## Integration options for "Boosty → no ads"
 
-**A. Server-verified promo codes (recommended, no Boosty API dependency at game runtime)**
-1. A small service (nyrds.net; the VK-miniapp HMAC backend already exists as home) polls
-   `GET /v1/blog/nyrds/subscribers` daily with the creator token (persist token rotation!).
-2. Every active subscriber gets a personal promo code, delivered by Boosty DM
-   (automated via the dialog endpoints) — Mike can also just DM manually at first.
-3. Game: "Enter promo code" button in `WndDonate` → `nyrds.net` validates code + level →
-   returns donation level 1–4 → `GamePreferences.setDonationLevel()`.
-4. Server invalidates codes when `status != active` or at `nextPayTime` (monthly sub ≠
-   one-time IAP: the ad-free grant should lapse unless renewed; store server-side, not only
-   in `donated()`).
+**DECIDED 2026-11-22 (Mike): option A with full-mirror lapse — entitlement active only while
+the Boosty subscription is active** (expires at `nextPayTime`, everything reverts on lapse;
+ruling recorded in docs/gameplay_design_decisions.md).
 
-> Synergy: the VK Play PC-buyer no-ads round (same day, see memory
-> `vkplay-pc-adfree-entitlement`) already decided the nyrds.net PHP scaffolding
-> (nonce/code store + `/poll` endpoint + `syncAdsState`/`WndSaveSlotSelect`/`MovieRewardTask`
-> gate changes + new link window). The Boosty code-entry flow can ride the same
-> endpoints and gate work — one server, two grant sources.
+Concrete design (rides the VK Play entitlement stack, bd remixed-dungeon-c90q):
+
+1. **Server** `tools/server/rpd_boosty_service.py` (deploy like `rpd-vkplay.service`, secrets in env):
+   - Poller every ~6h: `GET /v1/blog/nyrds/subscribers` (owner Bearer, paged) → snapshot
+     `sub_id → {levelId, status, nextPayTime}`; **persists the rotated refresh-token pair on
+     every refresh** (session dies otherwise).
+   - Level map: 4185194→1, 4185195→2, 4185196→3, 4185197→4.
+   - Codes derived, not stored: `code = base32(HMAC(CODE_SECRET, sub_id))[:10]`.
+   - `POST /rpd/boosty/redeem {code, device}`: status=active + device cap (3/code) → mint
+     the VK Play-style token `v1.b{sub_id}.{exp=nextPayTime}.{hmac}` (game-side `expiryDate()`
+     parser already reads parts[2]).
+   - `POST /rpd/boosty/verify {token}`: signature + expiry + still active in snapshot →
+     startup revalidation + lapse handling.
+   - Code delivery: Boosty DM per subscriber (manual while the list is small;
+     `canSendPaidSubscribers` is already allowed, dialog API can automate it).
+2. **Game** `BoostyEntitlements.java` mirroring `VKPlayEntitlements.java`:
+   - redeem → prefs (`boostyToken`, `boostyNoAds`, `boostyLevel`) → `syncAdsState()`;
+     `revalidate()` wired at startup (VK Play's own revalidate has no call site yet — wire both).
+   - UI: Boosty tab/row in `WndDonate` (code field + Activate + expiry line), `WndVkPlayLink` shape.
+   - Ads gates: `Game.java:183`, `WndSaveSlotSelect.java:329`, `AdsUtilsCommon.java:104/113`
+     get `|| boostyNoAds()`.
+   - Unlocks: `GamePreferences.supporterLevel()` = `max(donated(), boostyLevel())` replaces
+     bare `donated()` reads in `StartScene:216-220` and `Accessory.java:140` (IAP and Boosty compose).
+   - l10n en/ru + LanguageTool. Window lives in main source — fdroid/desktop get class unlocks too
+     (no IAP there, Boosty becomes the only supporter path).
+
+Original options analysis (kept for the record):
+
+**A. Server-verified promo codes** — chosen above.
+**B. In-game Boosty login (OAuth)** — blocked on the undocumented `hasAccessToDevApi` program.
+**C. Manual** — Mike checks subscribers and DMs codes; same game-side UI as A, still needs the server for expiry.
 - Player-side friction: copy a code from the Boosty DM into the game.
 - Server-side friction: token rotation handling, that's it.
 
