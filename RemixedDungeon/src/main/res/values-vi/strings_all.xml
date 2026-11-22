@@ -50,6 +50,7 @@
     <string name="Amulet_Info">Amulet của Yendor là hiện vật mạnh nhất đã biết với nguồn gốc không rõ. Người ta nói rằng amulet có thể hiện thực hóa mọi điều ước nếu ý chí của chủ nhân đủ mạnh để \&quot;thuyết phục\&quot; nó làm như vậy.</string>
     <string name="Amulet_Name">Bùa Yendor</string>
     <string name="Anathema_Info">Lời tuyên phạt. Kẻ địch bị đánh dấu nhận gấp một nửa sát thương từ mọi nguồn — xác sống và quỷ bị đánh dấu lâu hơn.</string>
+    <string name="Anathema_Name">Anathema</string>
     <string name="AnesthesiaBuff_Name">Gây mê</string>
     <string name="Anesthesia_Cast">%s rơi vào một giấc ngủ sâu, không mộng.</string>
     <string name="Anesthesia_Info">Gây ra giấc ngủ sâu, phi tự nhiên cho mục tiêu. Ngay cả những đòn tấn công tàn bạo nhất cũng không đánh thức được chúng khỏi giấc ngủ này.</string>
@@ -335,6 +336,7 @@
     <string name="ChaosBow_Gender">masculine</string>
     <string name="ChaosBow_Info">Một cây cung đáng sợ chứa đầy sức mạnh của Hỗn loạn. Mỗi mũi tên bắn ra sẽ mang theo một phần năng lượng hỗn loạn. Nhưng nếu bạn bắn trượt...</string>
     <string name="ChaosBow_Name">cung hỗn loạn</string>
+    <string name="ChaosCrystal_ArmorFused">Hòn đá đã hòa hợp với giáp của bạn và lấy hình thức hỗn loạn.</string>
     <string name="ChaosCrystal_BladeFused">Vien ngoc hap thu vu khi cua ban va bien thanh hinh dang mot thanh kiem</string>
     <string name="ChaosCrystal_BowFused">Tinh thể hấp thụ cung của bạn và biến thành một cây Cung</string>
     <string name="ChaosCrystal_Fuse">DUNG HỢP</string>
@@ -371,6 +373,7 @@
     <string name="CharInfo_Level">Đây là %2$s cấp %1$d.</string>
     <string name="Char_Defeat_0">%1 đã đánh bại %2</string>
     <string name="Char_Defeat_2">%1 đã đánh bại %2</string>
+    <string name="Char_Hit_0">%1$s đánh trúng %2$s</string>
     <string name="Char_Hit_1">%1$s đánh %2$s</string>
     <string name="Char_Hit_2">%1$s đánh trúng %2$s</string>
     <string name="Char_Kill_1">%s đã giết ngươi...</string>
@@ -743,6 +746,7 @@
     <string name="Healing_Name">Chữa lành</string>
     <string name="HealthArrow_Gender">feminine</string>
     <string name="HealthArrow_Info">Đầu mũi tên này được phủ bởi thuốc hồi máu.</string>
+    <string name="HealthArrow_Name">Mũi tên Chữa lành</string>
     <string name="HealthDart_Gender">masculine</string>
     <string name="HealthDart_Name">Mũi tên chữa trị</string>
     <string name="Heap_Mimic">Đây là một kẻ giả dạng!</string>
@@ -1022,6 +1026,7 @@
     <string name="Level_TileStatue">Tượng</string>
     <string name="Level_TileSummoningTrap">Bẫy triệu hồi</string>
     <string name="Level_TileToxicTrap">Bẫy khí độc</string>
+    <string name="Level_TileUnlockedExit">Lối ra tầng đã mở khóa</string>
     <string name="Level_TileWall">Tường</string>
     <string name="Level_TileWater">Nước</string>
     <string name="Level_TileWell">Giếng</string>
@@ -1174,6 +1179,7 @@
     <string name="NecromancerNPC_Intro2">À! Một bạn đồng hành phiêu lưu không chỉ là một xác chết vô tri. Chẳng thể tin nổi! Ô... xin lỗi, đôi khi tôi hơi quá hứng phấn. Cậu thấy, chính tôi là một pháp sư phục sinh. Dù việc nghiên cứu xác chết và chính cái chết được chúng tôi coi trọng, nhưng sự đơn điệu này sớm muộn cũng khiến ai đó chán nản. Mặt khác đó chính là lý do tôi ở đây. Hôm kia có chuyện lớn xảy ra! _Necropolis_, một thành phố cổ của người chết đã mở cửa cho chúng ta ngắm nhìn. Thực lòng mà nói, chúng ta đang đứng ngay trước cánh cửa ấy. Và... cậu biết sao, hãy lấy chìa khóa và đi trước đi, cậu thích những phiêu lưu, phải không? Còn tôi sẽ theo sau... chỉ cần chuẩn bị chút đã.</string>
     <string name="NecromancerNPC_Message2">Tôi phải sẵn sàng.</string>
     <string name="NecromancerNPC_Message3">Tôi có thể nghe thấy lời kêu gọi của kẻ chết.</string>
+    <string name="NecromancerNPC_Message4">Có thứ gì đó đặc biệt bị giấu bên trong Lăng mộ cổ.</string>
     <string name="NecromancerNPC_Name">pháp sư chết chóc</string>
     <string name="NecromancerNPC_Name_Objective">thầy gọi hồn</string>
     <string name="NecromancerRobe_Info">Chiếc áo choàng này sẽ cho phép Necromancer triệu hồi Deathling với chi phí 5 linh hồn. Deathling là một tỳ phu bất tử sẽ mạnh lên cùng với chủ nhân của nó.</string>
@@ -3093,6 +3099,12 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
+
 
 
 

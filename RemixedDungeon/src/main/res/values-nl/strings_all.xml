@@ -375,6 +375,7 @@
     <string name="ChampionOfFireBuff_Info">\&quot;Doordrenkt met de woede van de vlammen, versterkt deze eigenschap de felheid en gevechtskracht van het wezen. De Kampioen van het Vuur doemt op als een geduchte tegenstander, die verwoestende aanvallen ontketent die zijn vijanden in verzengende vlammen hullen, en angst inboezemt bij allen die het wagen zich tegen hem te verzetten.</string>
     <string name="ChampionOfFireBuff_Name">Kampioen van Vuur</string>
     <string name="ChampionOfWaterBuff_Info">De Kampioen van Water belichaamt de onwankelbare kracht van de oceanen en versterkt de veerkracht en standvastigheid van het wezen. Zo wordt het een onbuigzame tegenstander, in staat om een meedogenloze barrage van aanvallen te weerstaan en als een onwankelbare beschermer stand te houden tegenover tegenspoed.</string>
+    <string name="ChampionOfWaterBuff_Name">Kampioen van Water</string>
     <string name="ChaosArmor_Info">Deze pantser bestaat uit bloedrode platen die samen zijn genaaid met donkerrode ketens. Ze stralen chaotische energie uit wanneer je ze aanraakt.</string>
     <string name="ChaosArmor_Name">Chaos-pantser</string>
     <string name="ChaosBlade_Gender">masculine</string>
@@ -1014,6 +1015,7 @@
     <string name="Item_ACAlchemy">ALCHEMIE</string>
     <string name="Item_ACDrop">LATEN VALLEN</string>
     <string name="Item_ACPickup">Oppakken</string>
+    <string name="Item_ACThrow">GOOI</string>
     <string name="Item_DirThrow">Kies de richting van de worp</string>
     <string name="Item_Info">iets</string>
     <string name="Item_Info2">iets</string>
@@ -1247,6 +1249,7 @@
     <string name="Mob_StaFleeingStatus2">Deze %1$s vlucht voor %2$s</string>
     <string name="Mob_StaGuardStatus">Deze %s bewaakt</string>
     <string name="Mob_StaHuntingStatus">Deze %s jaagt</string>
+    <string name="Mob_StaHuntingStatus2">Deze %1$s jaagt op %2$s</string>
     <string name="Mob_StaSleepingStatus">Deze %s slaapt</string>
     <string name="Mob_StaTerrorStatus">Deze %1$s is verschrikt</string>
     <string name="Mob_StaWanderingStatus">Deze %s dwaalt rond.</string>
@@ -1675,6 +1678,7 @@
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
     <string name="ScrollOfCurse_Info">Deze rol is speciaal gemaakt om dieven te straffen die dom genoeg zijn om magie te gebruiken die ze niet begrijpen. De magie is totaal nutteloos en zelfs schadelijk voor een gewone avonturier, maar wordt door handelaren goed gewaardeerd.</string>
     <string name="ScrollOfCurse_Name">Vloekscrol</string>
+    <string name="ScrollOfDomination_Info">Deze rol vouwt de wil van één wezen in je zicht. Het wezen zal voor je vechten tot de dood.</string>
     <string name="ScrollOfDomination_Name">Scroll van Heerschappij</string>
     <string name="ScrollOfIdentify_Info1">Het is %s</string>
     <string name="ScrollOfIdentify_InvTitle">Kies een voorwerp om te identificeren</string>
@@ -1783,6 +1787,7 @@
     <string name="ShieldBuffNotReady_Info">Je schild is nog niet klaar om de volgende aanval te blokkeren.</string>
     <string name="ShieldBuffNotReady_Name">Schild is niet klaar</string>
     <string name="ShieldBuffReady_Info">Je schild is klaar om de volgende aanval te blokkeren.</string>
+    <string name="ShieldBuffReady_Name">Schild is gereed</string>
     <string name="ShieldInfoTemplate">Dit schild blokkeert tot %1$d inkomende schade. Met %2$d %% kans. Het duurt %3$3.1f seconden om te herstellen na een succesvolle blokkering.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="ShieldWeaponInfo">Wanneer gebruikt als wapen zal dit schild gemiddeld %1$d schade toebrengen.</string>
@@ -1989,6 +1994,7 @@
     <string name="Thief_Stole">%1$s stiel %2$s van je!</string>
     <string name="TitleScene_About">Over</string>
     <string name="TitleScene_Badges">Badges</string>
+    <string name="TitleScene_Highscores">Hoogste scores</string>
     <string name="TitleScene_InternalStorageLow">Niet genoeg ruimte\n in interne opslag\n Je voortgang kan verloren gaan!</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Spelen</string>
@@ -2315,6 +2321,7 @@
     <string name="WndPlayGames_Show_Ok">Gelukt!</string>
     <string name="WndPlayGames_Title">Google Play Games</string>
     <string name="WndPlayGames_Use">Google Play Games gebruiken</string>
+    <string name="WndPlayGames_WorkInCloud">Bezig in de cloud... Even geduld.</string>
     <string name="WndPortal_Info">Dit portaal stelt je in staat om terug te keren naar de stad. Het lijkt nogal instabiel en zal waarschijnlijk niet lang actief blijven.\nWil je het gebruiken?</string>
     <string name="WndPortal_Info_Return">Deze portal brengt je terug naar de dungeon.\nWil je hem gebruiken?</string>
     <string name="WndPortal_Title">Portaal</string>
@@ -2862,6 +2869,13 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
+
 
 
 
