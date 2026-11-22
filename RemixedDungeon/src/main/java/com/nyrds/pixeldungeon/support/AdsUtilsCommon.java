@@ -1,6 +1,7 @@
 package com.nyrds.pixeldungeon.support;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.game.GamePreferences;
 import com.nyrds.platform.EventCollector;
 import com.watabou.noosa.InterstitialPoint;
 import java.util.Map;
@@ -100,12 +101,19 @@ public class AdsUtilsCommon {
     }
 
     public static void displayTopBanner() {
+        if(GamePreferences.vkPlayNoAds()) {
+            return;
+        }
         if(AdsUtils.bannerIndex()<0) {
             tryNextBanner();
         }
     }
 
     public static void showInterstitial(InterstitialPoint retTo) {
+        if(GamePreferences.vkPlayNoAds()) {
+            retTo.returnToWork(true);
+            return;
+        }
         interstitialAttempts = 3;
         tryNextInterstitial(retTo);
     }

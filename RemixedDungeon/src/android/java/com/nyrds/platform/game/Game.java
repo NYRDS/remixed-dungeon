@@ -180,7 +180,7 @@ public class Game extends Activity implements GLSurfaceView.Renderer, View.OnTou
 
     public static void syncAdsState() {
 
-        if(GamePreferences.donated() > 0) {
+        if(GamePreferences.donated() > 0 || GamePreferences.vkPlayNoAds()) {
             Ads.removeEasyModeBanner();
             return;
         }

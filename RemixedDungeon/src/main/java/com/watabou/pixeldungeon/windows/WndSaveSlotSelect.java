@@ -326,7 +326,7 @@ public class WndSaveSlotSelect extends WndTabbed implements InterstitialPoint {
 
         Game.softPaused = true;
 
-        if (GamePreferences.donated() < 1) {
+        if (GamePreferences.donated() < 1 && !GamePreferences.vkPlayNoAds()) {
             Ads.displaySaveAndLoadAd(new ReturnOnlyOnce(this));
         } else {
             returnToWork(true);

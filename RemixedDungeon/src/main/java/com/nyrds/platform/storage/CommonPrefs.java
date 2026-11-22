@@ -20,6 +20,8 @@ public class CommonPrefs {
     public static final String KEY_COLLECT_STATS = "collect_stats";
     public static final String KEY_MOVE_TIMEOUT = "move_timeout";
     public static final String KEY_USE_PLAY_GAMES = "use_play_games";
+    public static final String KEY_VKPLAY_NO_ADS = "vkplay_no_ads";
+    public static final String KEY_VKPLAY_TOKEN = "vkplay_token";
     public static final String KEY_UI_ZOOM = "ui_zoom";
     public static final String KEY_VERSION_STRING = "version_string";
     public static final String KEY_TOOL_STYLE = "tool_style";

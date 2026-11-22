@@ -3,10 +3,13 @@ package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.GamePreferences;
+import com.nyrds.pixeldungeon.ml.BuildConfig;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndGameplaySettings;
 import com.nyrds.pixeldungeon.windows.WndUiSettings;
+import com.nyrds.pixeldungeon.windows.WndVkPlayLink;
 import com.nyrds.platform.util.StringsManager;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSettings extends WndMenuCommon {
 
@@ -34,6 +37,18 @@ public class WndSettings extends WndMenuCommon {
 			}
 		});
 
+
+        boolean adsFlavor = Utils.isAndroid()
+                && (BuildConfig.FLAVOR_market.equals("googlePlay") || BuildConfig.FLAVOR_market.equals("ruStore"));
+        if (adsFlavor && GamePreferences.donated() == 0) {
+            menuItems.add(new MenuButton(R.string.VkPlayLink_row) {
+                @Override
+                protected void onClick() {
+                    super.onClick();
+                    WndSettings.this.add(new WndVkPlayLink());
+                }
+            });
+        }
 
         final String selectLanguage = StringsManager.getVar(R.string.WndSettings_SelectLanguage);
 

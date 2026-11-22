@@ -3164,4 +3164,15 @@ Your opinion matters!</string>
     <string name="town_table_fortune_desc">This table is covered with a silk cloth. You can see various tarot cards laid out in a peculiar order.</string>
     <string name="town_table_fortune_name">Table</string>
 
+    <string name="VkPlayLink_row">VK Play PC: disable ads</string>
+    <string name="VkPlayLink_title">VK Play PC version</string>
+    <string name="VkPlayLink_desc">Bought Remixed Pixel Dungeon for PC on VK Play? Sign in with the same VK ID and ads in this mobile version will be disabled.</string>
+    <string name="VkPlayLink_signIn">Sign in via VK ID</string>
+    <string name="VkPlayLink_idle"></string>
+    <string name="VkPlayLink_waiting">Waiting for the VK ID sign-in. Finish it in the browser; this window updates automatically.</string>
+    <string name="VkPlayLink_done">Done! Ads are disabled until %s.</string>
+    <string name="VkPlayLink_linked">Ads are disabled until %s.</string>
+    <string name="VkPlayLink_failed">Could not confirm the purchase. Check your internet connection and try again.</string>
+    <string name="VkPlayLink_noConnection">Cannot reach the verification service. Check your internet connection and try again.</string>
+
 </resources>

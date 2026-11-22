@@ -49,7 +49,7 @@ public class MovieRewardTask implements Runnable {
                     GLog.n(StringsManager.getVar(R.string.WndMovieTheatre_Sorry));
                 }
 
-                if (GamePreferences.donated() == 0) {
+                if (GamePreferences.donated() == 0 && !GamePreferences.vkPlayNoAds()) {
                     if (GameLoop.getDifficulty() == 0) {
                         Ads.displayEasyModeBanner();
                     }

@@ -88,6 +88,22 @@ public class GamePreferences {
         return Preferences.INSTANCE.getInt(CommonPrefs.KEY_DONATED, 0);
     }
 
+    public static boolean vkPlayNoAds() {
+        return Preferences.INSTANCE.getBoolean(CommonPrefs.KEY_VKPLAY_NO_ADS, false);
+    }
+
+    public static void vkPlayNoAds(boolean value) {
+        Preferences.INSTANCE.put(CommonPrefs.KEY_VKPLAY_NO_ADS, value);
+    }
+
+    public static String vkPlayToken() {
+        return Preferences.INSTANCE.getString(CommonPrefs.KEY_VKPLAY_TOKEN, "");
+    }
+
+    public static void vkPlayToken(String value) {
+        Preferences.INSTANCE.put(CommonPrefs.KEY_VKPLAY_TOKEN, value);
+    }
+
     public static void lastClass(int value) {
         Preferences.INSTANCE.put(CommonPrefs.KEY_LAST_CLASS, value);
     }

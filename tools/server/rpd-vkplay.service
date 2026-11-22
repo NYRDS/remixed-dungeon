@@ -1,0 +1,19 @@
+[Unit]
+Description=Remixed Dungeon VK Play entitlement service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=nyrds
+EnvironmentFile=/etc/default/rpd-vkplay
+ExecStart=/usr/bin/python3 /opt/rpd-vkplay/rpd_vkplay_service.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
