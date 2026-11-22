@@ -279,6 +279,12 @@ public class Texture {
     // name is driver-valid but empty: samples read black (textureHealth reports it)
     private boolean hasPixels;
 
+    // false after a regeneration that had no pixel source yet: the GL name is
+    // valid but empty - draws sample black until the owner re-supplies
+    public boolean hasPixels() {
+    	return hasPixels;
+    }
+
 
     private static String captureCreationSite() {
 

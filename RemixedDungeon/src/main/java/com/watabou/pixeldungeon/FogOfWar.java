@@ -148,7 +148,10 @@ public class FogOfWar extends Image {
 
     @Override
     public void draw() {
-        if (dirty || !Arrays.equals(s_pixels, old_pixels)) {
+        // a regenerated texture (destructive clear, context loss) has no content:
+        // re-supply the retained fog array on the next draw instead of rendering
+        // a black fog until gameplay dirties it (bd 5tq1 self-heal)
+        if (dirty || !Arrays.equals(s_pixels, old_pixels) || !texture.hasPixels()) {
             texture.pixels(pWidth, pHeight, s_pixels);
             System.arraycopy(s_pixels, 0, old_pixels, 0, pixels.length);
         }

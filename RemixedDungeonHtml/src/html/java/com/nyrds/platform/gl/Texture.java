@@ -274,6 +274,11 @@ public class Texture {
 		return false;
 	}
 
+	// no-op parity with android/desktop copies (bd 5tq1 self-heal)
+	public boolean hasPixels() {
+		return true;
+	}
+
 	// no-op parity with android/desktop copies (bd 3tf option D self-heal hooks)
 	protected boolean canHeal() {
 		return false;
