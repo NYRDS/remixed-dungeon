@@ -664,6 +664,7 @@
     <string name="ElfArmor_NotElf">Alleen elfen kunnen deze pantser gebruiken!</string>
     <string name="ElvenBow_Gender">masculine</string>
     <string name="ElvenBow_Info">Een uitzonderlijk voorbeeld van elvenvakmanschap. Het is duidelijk effectiever en nauwkeuriger dan een gewone houten boog.</string>
+    <string name="ElvenBow_Name">elfenboog</string>
     <string name="ElvenDagger_Gender">masculine</string>
     <string name="ElvenDagger_Info">Dit wapen is gemaakt van een speciaal metalen legering, wat het veel lichter maakt in vergelijking met een gewone dolk.</string>
     <string name="ElvenDagger_Name">elfen dolk</string>
@@ -1469,6 +1470,7 @@
     <string name="PotionOfMindVision_Name">Drank van Geestesblik</string>
     <string name="PotionOfParalyticGas_Info">Bij blootstelling aan open lucht verdampt de vloeistof in deze fles tot een benauwende gele nevel. Wie de wolk inademt, wordt onmiddellijk ge paralyseerd, en kan een tijdje niet bewegen nadat de wolk is verdampt. Dit item kan op verafstaande vijanden worden gegooid om hen in het effect van de gas te betrekken.</string>
     <string name="PotionOfParalyticGas_Name">Drankje van verlammend gas</string>
+    <string name="PotionOfPurity_Freshness">Je voelt een ongewone frisheid in de lucht.</string>
     <string name="PotionOfPurity_Info">Dit reagent neutraliseert snel alle schadelijke gassen in het effectgebied. Het drinken ervan geeft je een tijdelijke immuniteit tegen dergelijke gassen.</string>
     <string name="PotionOfPurity_Name">Zuiveringselixer</string>
     <string name="PotionOfPurity_NoSmell">Je ruikt niets meer!</string>
@@ -1638,6 +1640,7 @@
     <string name="RottenFish_Name">rotte vis</string>
     <string name="RottenFish_Taste">Walgelijk!</string>
     <string name="RottenFood_Message">Walging!</string>
+    <string name="RottenMeat_Info">Een stuk bedorven vlees</string>
     <string name="RottenMeat_Name">bedorven vlees</string>
     <string name="RottenOrgan_Info">Een ontbindend orgaan, geoogst van een verslagen vijand. Ondanks zijn verrotte staat bevat het waardevolle stoffen voor alchemistische processen.</string>
     <string name="RottenPasty_Info">Deze pasty ziet er vies uit.</string>
@@ -2193,6 +2196,7 @@
 -- Aanpasbare Level-objecten
 
 - Bugs opgelost</string>
+    <string name="Welcome_Text_31_1">    remix.31.1\n\n    - Gameplay:\n\n    -- Nieuwe aanpassingen!\n\n    -- Nieuwe spinsoort!\n\n    -- Psi-Spin versterkt nu andere spinnen in plaats van de Held te verzwakken.\n\n    - Fouten gecorrigeerd\n</string>
     <string name="Welcome_Text_32">    remix.32\n\n    - Gameplay:\n\n    -- Mobs en Huisdieren krijgen nu ervaring en niveaus\n\n    -- Chaos Schild\n\n    -- Kampioenen\n\n    -- Yog strijd opnieuw gebalanceerd\n\n    -- Balans aanpassingen\n\n    - UX:\n\n    -- Gedetailleerde Held en Mobs statistieken\n\n    -- Beter Aanpassingen interface\n\n    -- Soepele camera\n\n    - Modding:\n\n    -- Aangepaste animaties\n\n    -- Aangepaste Scripts voor ingebouwde Mobs\n\n    -- Gloed voor Mobs\n\n    - Bugs opgelost\n    </string>
     <string name="Welcome_Text_32_1">    remix.32.1\n\n    - Gameplay:\n\n    -- Pesten Dokter questlijn\n\n    -- Lichamen van monsters nu enigszins bruikbare items\n\n    -- Betere huisdierenbesturing\n\n    - UX:\n\n    -- Verbeterd beheer van saves\n\n    - Modding:\n\n    -- Lokale mod installatiemethoden\n\n    -- Aangepaste items kunnen nu acties uitvoeren terwijl ze in stapels liggen\n\n    - Bugs opgelost\n\n    </string>
     <string name="Welcome_Title">Welkom!</string>
@@ -2245,6 +2249,7 @@
     <string name="WndGame_Customizations">Aanpassingen</string>
     <string name="WndGame_Exit">Verlaat Remixed Dungeon</string>
     <string name="WndGame_Load">Laden</string>
+    <string name="WndGame_Ranking">Ranglijsten</string>
     <string name="WndGame_Return">Terug naar spel</string>
     <string name="WndGame_Save">Opslaan</string>
     <string name="WndGame_Settings">Instellingen</string>
@@ -2303,6 +2308,7 @@
     <string name="WndLibrary_Items_Btn">Voorwerpen</string>
     <string name="WndLibrary_Levels_Btn">Kerker</string>
     <string name="WndLibrary_Mobs_Btn">Monsters</string>
+    <string name="WndLocalModInstall_pick">Kies mod-map</string>
     <string name="WndLocalModInstall_title">Mod installeren vanuit lokale map</string>
     <string name="WndModInstall_InstallingMod">Mod installeren</string>
     <string name="WndModInstall_PleaseUpdate">Gelieve Remixed Dungeon te updaten voordat u deze mod installeert</string>
@@ -2560,6 +2566,7 @@
     <string name="town_deco_dungeon_door_name">Ingang</string>
     <string name="town_deco_emptyboard_desc">De meest standaard rek om dingen te tonen.</string>
     <string name="town_deco_emptyboard_name">rek</string>
+    <string name="town_deco_entrance_desc">Deze ingang leidt naar de bovenste verdiepingen van de kerker.</string>
     <string name="town_deco_entrance_name">ingang</string>
     <string name="town_deco_exit_desc">Het is onbekend wat je te wachten staat als je deze trap afdaalt.</string>
     <string name="town_deco_exit_name">uitgang</string>
@@ -2880,6 +2887,13 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
+
 
 
 

@@ -222,6 +222,7 @@
     <string name="BlackCat_Phrases_2">Meo meo!</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
     <string name="BlackSkullOfMastery_Name">Kẻ Mang Linh Hồn</string>
+    <string name="BlackSkullOfMastery_Title">Bạn có thể phá vỡ phép thuật. Hoặc bạn có thể thao túng công thức ma thuật của nó theo một cách nào đó, cho phép bạn hấp thụ sức mạnh của cả phép thuật và chính hiện vật đó, biến bản thân thành một Lich.</string>
     <string name="BlackSkull_Activated">Đầu lâu đen đã thức tỉnh!</string>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Một chiếc hộp sọ nhỏ bằng đá obsidian. Nó từng là nguồn sức mạnh của Thành Phố Người Chết, nhưng sau thất bại của Lich, dường như nó đã mất đi toàn bộ sức mạnh. Tuy nhiên, khi bạn cầm nó trong tay, một suy nghĩ kỳ lạ thoáng qua đầu bạn: \&quot;Nó đang đói\&quot;.</string>
@@ -407,6 +408,7 @@
     <string name="CharmSpell_Name">Mê Hoặc</string>
     <string name="Chasm_Chasm">Vực</string>
     <string name="Chasm_Info">Bạn đã rơi xuống vực chết chóc...</string>
+    <string name="Chasm_Jump">Bạn có thực sự muốn nhảy vào hầm sâu? Bạn có thể sẽ chết.</string>
     <string name="Chess_Stalemate">Bế tắc! Nhà Vua rời bàn cờ và để bạn đi qua.</string>
     <string name="Chess_YouLose">Bạn thua!</string>
     <string name="Chess_YouWin">Bạn thắng!</string>
@@ -818,6 +820,7 @@
     <string name="HeroSubClass_DescWard">Với sự kết nối mạnh mẽ với các lực lượng thiên nhiên, _Kiến Trùm_ có khả năng thu thập giọt sương và hạt giống từ các cây cỏ. Ngoài ra, đi qua bụi cỏ cao cũng ban cho họ một đợt tăng giáp tạm thời.</string>
     <string name="HeroSubClass_DescWitchdoctor">Phép thuật ban cho _Thầy cúng_ một lá chắn ma thuật bảo vệ hoàn toàn khỏi sát thương.</string>
     <string name="HeroSubClass_NameAssa">sát thủ</string>
+    <string name="HeroSubClass_NameBatM">pháp sư chiến đấu</string>
     <string name="HeroSubClass_NameBers">cuồng chiến binh</string>
     <string name="HeroSubClass_NameFreR">kẻ chạy tự do</string>
     <string name="HeroSubClass_NameGlad">giác đấu sĩ</string>
@@ -916,6 +919,7 @@
     <string name="Instability_Name_0">Bất ổn %s</string>
     <string name="Instability_Name_1">Bất ổn %s</string>
     <string name="Instability_Name_2">Bất ổn %s</string>
+    <string name="InterLevelScene_Ascending">Đang lên...</string>
     <string name="InterLevelScene_ErrorGeneric">Đã có lỗi xảy ra...</string>
     <string name="InterLevelScene_Falling">Đang rơi...</string>
     <string name="InterLevelScene_FileNotFound">Không tìm thấy tập tin. Với một số lý do...</string>
@@ -1045,6 +1049,7 @@
     <string name="LibrarianNPC_Name">thủ thư</string>
     <string name="LibrarianNPC_Name_Objective">thủ thư</string>
     <string name="LibraryBook_Description">Cuốn sách này thực sự khổng lồ. Nó chứa đựng tất cả kiến thức mà các phiêu lưu gia đã khám phá và mang về từ ngục tối.</string>
+    <string name="LibraryBook_Name">Sách thư viện</string>
     <string name="Lich_Desc">Pháp sư tử thần đã gặp cái chết của mình trong sâu thẳm của nghĩa địa, và dần dần, những thế lực tà ác chảy vào cơ thể đã biến hắn thành một Lich. Một pháp sư tử vong, một con rối vô ý chí, bị điều khiển bởi những thế lực độc ác...</string>
     <string name="Lich_Gender">masculine</string>
     <string name="Lich_Name">lich</string>
@@ -3112,6 +3117,11 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
 
 
 
