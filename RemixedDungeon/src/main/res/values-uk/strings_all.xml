@@ -2410,6 +2410,7 @@
     <string name="VileEssence_Name">Підла сутність</string>
     <string name="Viscosity_Status">відкладено %d</string>
     <string name="Viscosity_Txt">%s в\'язкості</string>
+    <string name="VkPlayLink_done">Готово! Реклама вимкнена до %s.</string>
     <string name="WandHolster_Info">Це - тонкий пенал зі шкіри екзотичної тварини. Він дозволяє компактно тримати до %d паличок.</string>
     <string name="WandHolster_Name">пенал для паличок</string>
     <string name="WandMaker_Berry1">О, який приємний сюрприз, зустріти гідну людину в такій місцині! Я прийшов сюди в пошуках рідкісного інгредієнту, _насіння Гнилівки_. Як людина, яка знається на магії, я непогано даю ради місцевим монстрам, але заблукати для мене - раз плюнути, от сором, чесне слово. Чи не допоможеш старій людині? Я готовий оплатити твій час однією зі своїх чарівних паличок.</string>
@@ -3127,6 +3128,7 @@
     <string name="town_table_fortune_ball_name">Кришталева куля</string>
     <string name="town_table_fortune_desc">Цей стіл покрито шовковою ковдрою. На ній ви бачите карти таро, розкладені в певному порядку.</string>
     <string name="town_table_fortune_name">Стіл</string>
+
 
 
 

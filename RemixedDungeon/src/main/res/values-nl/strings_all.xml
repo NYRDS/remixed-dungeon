@@ -682,6 +682,7 @@
     <string name="EncumbranceBuff_Name">Last</string>
     <string name="EnslavedSoul_Desc">Je kunt bijna door deze spookachtige verschijning heen kijken. En hoewel het op een schedel lijkt, verschijnt er soms voor een fractie van een seconde een gezicht, vol pijn en lijden.</string>
     <string name="EnslavedSoul_Gender">feminine</string>
+    <string name="EnslavedSoul_Name">geslavernijde ziel</string>
     <string name="EnslavedSoul_Name_Objective">geënslaafde ziel</string>
     <string name="Entanglement_Txt">%s van verstrengeling</string>
     <string name="EquipableItem_ACUnequip">UITRUSTEN</string>
@@ -717,6 +718,7 @@
     <string name="FilteredMask_Name">N95-masker</string>
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Deze pijl lijkt op een gewone, behalve dat het uiteinde een warm rood licht straalt.</string>
+    <string name="FireElemental_Desc">Wandelende vuurelementalen zijn een bijproduct van het oproepen van grotere entiteiten. Van nature zijn ze te chaotisch om te worden beheerst, zelfs niet door de machtigste demonoloog.</string>
     <string name="FireElemental_Gender">masculine</string>
     <string name="FireElemental_Name">vuurelementair</string>
     <string name="FireElemental_Name_Objective">vuurelementair</string>
@@ -1339,6 +1341,7 @@
     <string name="Ooze_Death">%s slikt je op...</string>
     <string name="Order_Info">Met de juiste concentratie zijn jouw bevelen bijna onweerlegbaar.</string>
     <string name="Order_Name">Bevelen</string>
+    <string name="Order_Resist">Hoe durf je?!!</string>
     <string name="OverpricedRation_Info">Het ziet er precies uit als een standaard ratoon, maar kleiner.</string>
     <string name="OverpricedRation_Message">Dat eten smaakte oké.</string>
     <string name="OverpricedRation_Name">te dure voedselratione</string>
@@ -2910,6 +2913,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

@@ -146,6 +146,7 @@
     <string name="Badges_NoMonsterSlain">Hoàn thành cấp độ mà không giết quái vật nào</string>
     <string name="Badges_Piranhas">Săn được 6 cá ăn thịt người</string>
     <string name="Badges_PotionsCooked1">3 bình thuốc đã nấu</string>
+    <string name="Badges_PotionsCooked2">Đã chế biến 6 bình thuốc</string>
     <string name="Badges_PotionsCooked3">9 thuốc đã nấu</string>
     <string name="Badges_PotionsCooked4">Đã chế biến 12 bình thuốc</string>
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
@@ -409,6 +410,7 @@
     <string name="Char_Stole_2">%1$s đã cắp %2$s từ %3$s!</string>
     <string name="ChargrilledMeat_Name">thịt nướng than hoa</string>
     <string name="CharmBuff_Info">Tâm trí và cơ thể đã bị mê hoặc!</string>
+    <string name="CharmSpell_Cast">%s bị quyến rũ.</string>
     <string name="CharmSpell_Info">Mọi người đều cần chút tình yêu, phải không?</string>
     <string name="CharmSpell_Name">Mê Hoặc</string>
     <string name="Chasm_Chasm">Vực</string>
@@ -3139,6 +3141,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

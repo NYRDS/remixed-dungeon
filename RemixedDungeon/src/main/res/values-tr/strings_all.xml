@@ -249,6 +249,7 @@ Bu kararını istediğin zaman değiştirebilirsin (menü ekranındaki çizelge 
     <string name="BishopQuest_1_1_Prologue">Ölüler dinlenmeyi reddediyor, çocuklarım. Kemikler hapishane koridorlarında dolaşıyor, ve çürümuş şeyler nekropolden çıkıyor. On ölümsüzleri dinlendir, o zaman imanın gerçek olduğunu bileceğim.</string>
     <string name="BishopQuest_2_1_Epilogue">Ah, g\u00fcne\u015fin kendi \u00f6z\u00fc... L\u00fcle bu kilisenin havas\u0131n\u0131 tekrar tatland\u0131racak. Ba\u011fl\u0131l\u0131\u011f\u0131n ya\u015fl\u0131 bir adam\u0131n kalbini \u0131s\u0131t\u0131yor. Bu iksiri al \u2014 ben kendim haz\u0131rlad\u0131m.</string>
     <string name="BishopQuest_2_1_InProgress">Bana _üç güneş otu tohumu_ getir, çocuğum. Altar bekliyor.</string>
+    <string name="BishopQuest_2_1_Prologue">Seni kehinlik gizemlerine aktarmadan önce, tapınak tezgahı hazırlanmalı. Bana _üç gün otu tohumu_ getir — onların altın özü en iyi kendini yapar.</string>
     <string name="BishopQuest_2_2_Epilogue">Bir tohumda ışık... sanki lütuf kendisi gibi. Bu gece kilise gümüşten kokacak. Bu iksiri bağlılığın için al, yavrum.</string>
     <string name="BishopQuest_2_2_InProgress">Bana _üç moongrace tohumu_ getir, yavrum. Tapınak bekliyor.</string>
     <string name="BishopQuest_2_2_Prologue">Başlangıç ayini ayla kutsanmış kadan gerektirir, çocuklarım. Bana _üç ay lütfu tohumu_ getir, derinlerde ay ışığı süren yerlerde toplanmış.</string>
@@ -3133,6 +3134,7 @@ Eğer nazar duası istiyorsan ya da lanet kaldırman gerekliyse naçizane kilise
     <string name="town_table_fortune_ball_name">Kristal Top</string>
     <string name="town_table_fortune_desc">Masanın üzerinde ipek bir örtü var. Sıradışı bir şekilde dizilmiş tarot kartlarını görebiliyorsun.</string>
     <string name="town_table_fortune_name">Masa</string>
+
 
 
 

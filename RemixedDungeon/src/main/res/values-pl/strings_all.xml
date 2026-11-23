@@ -260,6 +260,7 @@ W każdym momencie możesz zmienić swoją decyzję. </string>
     <string name="BishopQuest_3_1_Epilogue">Ostatnie pominy zostały wypowiedziane, a posłuszny zombie rozpada się w spokojny pył. Teraz spoczywa naprawdę. Twoje miłosierdzie cię honoruje, dziecko moje — weź ten zwój, będziesz go potrzebować tam, gdzie idziesz.</string>
     <string name="BishopQuest_3_1_InProgress">Przynieś mi _oswojonego zombie_, dziecko moje. Traktuj go z delikatnością — nie wie, co robi.</string>
     <string name="BishopQuest_3_1_Prologue">Nawet idąceumarłe zasługują na miłosierdzie, dziecko moje. Przynieś mi _zombie_, które oswoiłeś — ułożę je do spoczynku z odpowiednimi rytami, a jego cierpienie się skończy.</string>
+    <string name="BishopQuest_3_2_Epilogue">Biskup posypuje świętą wodą oburzonego nietoperza, mrucząc błogosławieństwo. To odlatuje, w jakiś sposób godnie. Weź ten zwój za twoją cierpliwość, dziecko moje.</string>
     <string name="BishopQuest_3_2_InProgress">Przynieś mi _oswojonego nietoperza_, moje dziecko. Nie przerażaj biednego stworzenia.</string>
     <string name="BishopQuest_3_2_Prologue">Nawet bestie ciemności zasługują na błogosławieństwo, dziecko moje. Przynieś mi _nietoperza_, którego oswoiłeś, a ja poświęcę go światłu.</string>
     <string name="BishopQuest_4_1_Epilogue">Legiony chwieją się jak marionetki z przeciętymi nitkami — czuję to nawet stąd. Ich pan tego nie wybaczy. Weź ten eliksir siły, dziecko moje; będziesz potrzebować swojej siły.</string>
@@ -3154,6 +3155,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 
