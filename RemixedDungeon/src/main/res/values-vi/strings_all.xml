@@ -1932,6 +1932,7 @@
     <string name="View_Distance">Tầm nhìn</string>
     <string name="VileEssence_Info">Một tinh chất đậm đặc của sự hư hỏng thu hoạch từ kẻ thù đã bị đánh bại. Chất tối đen này đập nhịp với năng lượng độc ác và rất có giá trị trong các quá trình giả kim.</string>
     <string name="Viscosity_Txt">%s của độ nhớt</string>
+    <string name="VkPlayLink_linked">Quảng cáo bị tắt cho đến %s.</string>
     <string name="WandHolster_Info">Bao đựng mảnh mai này làm từ da của một con vật kỳ lạ. Nó cho phép mang gọn gàng tối đa %d gậy.</string>
     <string name="WandMaker_Defense">đã hấp thụ</string>
     <string name="WandMaker_Desc">Người đàn ông già nua nhưng vẫn khỏe mạnh này mang vẻ bối rối nhẹ. Anh ta được bảo vệ bởi một khiên phép thuật.</string>
@@ -3143,6 +3144,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

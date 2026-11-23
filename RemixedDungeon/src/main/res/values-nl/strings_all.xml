@@ -120,6 +120,7 @@
     <string name="Badges_DeathNecrotism">Dood door necrotisme</string>
     <string name="Badges_DeathPoison">Dood door vergiftiging</string>
     <string name="Badges_FoodEaten1">10 stukken voedsel gegeten</string>
+    <string name="Badges_FoodEaten2">20 porties voedsel gegeten</string>
     <string name="Badges_FoodEaten3">30 stukken voedsel gegeten</string>
     <string name="Badges_FoodEaten4">40 stukken voedsel gegeten</string>
     <string name="Badges_FoodEaten5">60 stuks voedsel gegeten</string>
@@ -2915,6 +2916,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
