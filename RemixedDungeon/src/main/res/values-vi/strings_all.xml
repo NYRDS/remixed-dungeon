@@ -862,6 +862,7 @@
     <string name="Hero_StaVertigo">Mọi thứ đang quay xoay quanh bạn!</string>
     <string name="Hero_StaWeakness">Bạn cảm thấy suy yếu!</string>
     <string name="Hero_Wait">...</string>
+    <string name="Hero_YouNowHave">Bây giờ bạn có %s</string>
     <string name="HideInGrassSpell_Name">Ẩn Trong Cỏ</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Ngay cả tôi cũng không thể ẩn nấp ngay trước mũi.</string>
     <string name="HolyWater_Name">Nước Thánh</string>
@@ -1004,6 +1005,8 @@
     <string name="LastLevel_TileStatue">Cột trụ</string>
     <string name="LastLevel_TileWater">Dung nham lạnh</string>
     <string name="LastRites_Info">Một lễ an táng được tổ chức tại một nơi. Tất cả quỷ trong vòng hai ô từ nó bị thiêu đốt và suy yếu.</string>
+    <string name="LastShopLevel_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
+    <string name="LastShopLevel_TileDescEmptySP">Một tấm thảm dày phủ kín sàn.</string>
     <string name="LastShopLevel_TileDescEntrance">Một lối dẫn lên tầng trên.</string>
     <string name="LastShopLevel_TileDescExit">Một con dốc dẫn xuống địa ngục.</string>
     <string name="LastShopLevel_TileHighGrass">Hoa nở rộ cao</string>
@@ -1840,6 +1843,7 @@
     <string name="SurfaceScene_GameOver">Trò chơi kết thúc</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Con chuột đáng ngờ đang co giật dữ dội.</string>
+    <string name="SuspiciousRat_Name">chuột đáng ngờ</string>
     <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">bầy ruồi</string>
     <string name="Swarm_Name_Objective">bầy ruồi</string>
@@ -3168,6 +3172,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 

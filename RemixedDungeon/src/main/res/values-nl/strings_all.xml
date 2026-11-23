@@ -268,6 +268,7 @@
     <string name="Blacksmith_Txt2">Maak je me voor gek? Waar is mijn pikhouweel?!</string>
     <string name="Blacksmith_Txt3">Donker gouderts. 15 stukken. Echt nu, is dat zo moeilijk?</string>
     <string name="Blacksmith_Txt4">Ik zei dat ik vleermuisbloed op de houweel nodig heb. Chop chop!</string>
+    <string name="Blacksmith_Verify2">Selecteer 2 items van hetzelfde type!</string>
     <string name="Blacksmith_Verify3">Ik moet weten waarmee ik werk, identificeer ze eerst!</string>
     <string name="Blacksmith_Verify4">Ik werk niet met vervloekte items!</string>
     <string name="Blacksmith_Verify5">Het is prullen, de kwaliteit is te slecht!</string>
@@ -602,6 +603,7 @@
     <string name="DewVial_Name">dauwflesje</string>
     <string name="Dewdrop_Info">Een kristalheldere dauwdruppel.</string>
     <string name="Dewdrop_Name">dauwdruppel</string>
+    <string name="DieHardBuff_Info">Regeneratiesnelheid verhoogd</string>
     <string name="DieHardBuff_Name">Die Hard</string>
     <string name="DieHardSpell_Info">Zal tijdelijk je regeneratie verhogen, waardoor je een echte Die Hard wordt.</string>
     <string name="DieHardSpell_Name">Doodzeker</string>
@@ -895,6 +897,7 @@
     <string name="HeroClass_RogPerks_1">Schurken identificeren het type van een ring bij het uitrusten ervan.</string>
     <string name="HeroClass_RogPerks_2">Schurken zijn bedreven in lichte bepantsering en ontwijken aanvallen er beter in.</string>
     <string name="HeroClass_RogPerks_4">Schurken kunnen langer zonder voedsel.</string>
+    <string name="HeroClass_RogPerks_5">Schurken herkennen Scrolls van Magische Kaartvorming vanaf het begin.</string>
     <string name="HeroClass_War">krijger</string>
     <string name="HeroClass_WarPerks_0">Krijgers beginnen met 11 punten Kracht.</string>
     <string name="HeroClass_WarPerks_1">Krijgers beginnen met een uniek kort zwaard. Dit zwaard kan later \&quot;hergeschmied\&quot; worden om een ander wapen voor nabijgevecht te verbeteren.</string>
@@ -2551,6 +2554,7 @@
     <string name="town_deco_bell_tower_name">Klokkentoren</string>
     <string name="town_deco_blue_carpet_desc">Een luxe blauwe tapijt, versierd met paarse ornamenten.</string>
     <string name="town_deco_blue_carpet_name">kleedje</string>
+    <string name="town_deco_book_desc">Het lijkt erop dat iemand dit boek onachtzaam hier heeft achtergelaten</string>
     <string name="town_deco_book_name">Boek</string>
     <string name="town_deco_broken_roof_desc">De dakpannen op dit dak zijn gebarsten en moeten vervangen worden.</string>
     <string name="town_deco_broken_roof_name">kapot dak</string>
@@ -2923,6 +2927,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
