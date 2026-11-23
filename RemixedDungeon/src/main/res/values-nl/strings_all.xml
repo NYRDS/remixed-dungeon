@@ -2028,6 +2028,7 @@
     <string name="TitleScene_InternalStorageLow">Niet genoeg ruimte\n in interne opslag\n Je voortgang kan verloren gaan!</string>
     <string name="TitleScene_Mods">Mods</string>
     <string name="TitleScene_Play">Spelen</string>
+    <string name="TitleScene_PlayOnPC">Op PC spelen</string>
     <string name="TomeOfKnowledge_Info">Deze oude tome is gevuld met arcane raadsels en mysteries! Het kan moeilijk zijn om te lezen, maar als je het doorstaat, zul je zeker je magische krachten vergroten.</string>
     <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
     <string name="TomeOfMastery_Blinded">Je kunt niet lezen terwijl je geblind bent</string>
@@ -2644,6 +2645,7 @@
     <string name="town_deco_pillar_desc">Vroeger diende deze pilaar als een uitstekende steun en decoratie.</string>
     <string name="town_deco_pole_desc">Een hoge paal ontworpen om de touw te spannen.</string>
     <string name="town_deco_pole_name">Paaltje</string>
+    <string name="town_deco_porch_desc">Een voortuin van hout.</string>
     <string name="town_deco_porch_name">Veranda</string>
     <string name="town_deco_poster_desc">Flyers voor de aankondiging van komende filmvoorstellingen.</string>
     <string name="town_deco_poster_name">Poster</string>
@@ -2916,6 +2918,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

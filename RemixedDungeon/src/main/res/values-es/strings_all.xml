@@ -2239,6 +2239,7 @@ otro lugar del nivel.</string>
     <string name="StartScene_UnlockElf">Para desbloquear esta clase de personaje, mata al jefe Rey con cualquier otra clase.</string>
     <string name="StartScene_UnlockGnoll">Para desbloquear esta clase debes obligar al sacerdote a curar al bruto gnoll.</string>
     <string name="StartScene_UnlockNecromancer">Para desbloquear esta clase,  derrota al Lich con cualquier otra clase.</string>
+    <string name="StartScene_UnlockPriest">Para desbloquear al Sacerdote - completa la misión del Obispo en la Iglesia</string>
     <string name="StartScene_Warning">Tu progreso actual será borrado.</string>
     <string name="StartScene_WinGame">Para desbloquear los \&quot;Desafíos\&quot; gana una partida con cualquier personaje.</string>
     <string name="StartScene_Yes">Si, empezar una nueva partida.</string>
@@ -3122,6 +3123,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

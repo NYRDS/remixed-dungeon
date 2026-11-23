@@ -99,6 +99,7 @@
     <string name="AttackDelay_Increased">這樣無法使用%s。揮動緩慢，呼吸沉重…</string>
     <string name="Attack_Cooldown">攻擊冷卻時間</string>
     <string name="Attack_Range">攻擊距離</string>
+    <string name="AwarenessBuff_Info">感官銳化，使對周圍環境的感知更加敏銳。</string>
     <string name="AwarenessBuff_Name">察覺</string>
     <string name="AzuterronNPC_Desc">被黑霧包圍著的神秘人</string>
     <string name="AzuterronNPC_Gender">masculine</string>
@@ -3098,6 +3099,7 @@
     <string name="town_table_fortune_ball_name">水晶球</string>
     <string name="town_table_fortune_desc">您留意到數張塔羅牌在有絲巾鋪墊的桌子上以一特殊順序排列。</string>
     <string name="town_table_fortune_name">桌子</string>
+
 
 
 

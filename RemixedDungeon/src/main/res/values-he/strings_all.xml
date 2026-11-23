@@ -136,6 +136,7 @@
     <string name="Blacksmith_Gold1">היי, בן אדם! רוצה להיות מועיל, אה? קח את המעדר הזה ותחפור לי קצת _עפרת זהב אפלה_, _15 חתיכות_ יספיקו. למה אתה מתכוון, איך אני אשלם? אתה חמדן...\nבסדר, בסדר, אין לי כסף לשלם, אבל אני יכול לעשות עבודת נפחות בשבילך. תחשיב את עצמך בר מזל, אני הנפח היחיד בסביבה.</string>
     <string name="Blacksmith_LooksBetter">ה%s שלך נראה הרבה יותר טוב עכשיו</string>
     <string name="Blacksmith_Txt3">עופרת זהב כהה. 15 חתיכות. ברצינות, זה כזה קשה?</string>
+    <string name="Blacksmith_Verify1">בחר 2 פריטים שונים, לא את אותו פריט פעמיים!</string>
     <string name="Blacksmith_Verify4">אני לא עובד עם פריטים מקוללים!</string>
     <string name="Blacksmith_Verify6">אני לא יכול לשחזר את הפריטים האלה!</string>
     <string name="BlankScroll_Info">סתר לוח ריק. אולי משהו יכול לכתוב עליו?</string>
@@ -1708,6 +1709,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 

@@ -2373,6 +2373,7 @@ outro local do nível.</string>
     <string name="VileEssence_Name">Essência Vil</string>
     <string name="Viscosity_Status">deferido %d</string>
     <string name="Viscosity_Txt">%s de viscosidade</string>
+    <string name="VkPlayLink_noConnection">Não é possível alcançar o serviço de verificação. Verifique sua conexão com a internet e tente novamente.</string>
     <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Ele permite levar de forma compacta até %d varinhas.</string>
     <string name="WandHolster_Name">estojo de varinhas</string>
     <string name="WandMaker_Berry1">Oh, que surpresa agradável encontrar uma pessoa decente em tal lugar! Eu vim aqui para um ingrediente raro - uma _Semente de Rotberry_. Sendo um usuário de magia, eu sou bem capaz de me defender contra os monstros locais, mas eu estou ficando perdido e tenho pouco tempo, é muito constrangedor. Provavelmente, você poderia me ajudar? Eu ficaria feliz em pagar por seu serviço com uma das minhas melhores varinhas.</string>
@@ -3117,6 +3118,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
