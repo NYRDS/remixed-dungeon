@@ -230,6 +230,7 @@
     <string name="BishopQuest_4_2_Epilogue">De kerklokken luidden van zich af toen de laatste voorbijging — een goed teken, mijn kind. Neem deze drank van kracht; de laatste toets zal veel van je vragen.</string>
     <string name="BishopQuest_4_2_InProgress">Je hebt %1$d van de %2$d geketende zielen bevrijd. Laat ze niet langer dienen.</string>
     <string name="BishopQuest_5_1_Epilogue">Des Heren werk is voltooid! Vanaf deze dag mag je de weg van een priester bewandelen. Neem deze zegen en deze almoezen, mijn kind — je hebt ze verdiend.</string>
+    <string name="Bishop_QuestCompleted">Priesterklasse ontgrendeld</string>
     <string name="Bishop_bye">Ik zal voor je bidden, mijn kind.</string>
     <string name="Bishop_great_bless">Grote zegen - %d g</string>
     <string name="Bishop_lesser_bless">Klein zegening - %d g</string>
@@ -2521,6 +2522,7 @@
     <string name="gdpr_disagree">Nee, bedankt</string>
     <string name="gdpr_title">Personaliseer uw advertentie-ervaring</string>
     <string name="town_deco_INN_sign_desc">Het lijkt erop dat er een herberg in dat gebouw zit.</string>
+    <string name="town_deco_INN_sign_name">Herbergsbord</string>
     <string name="town_deco_armoronhanger_desc">Iets wat lijkt op pantser op een hanger.</string>
     <string name="town_deco_armoronhanger_name">Pantser</string>
     <string name="town_deco_armorstand_leather_desc">Betrouwbare leerarmatuur is een geweldige aankoop voordat je de kerker betret.</string>
@@ -2913,6 +2915,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 

@@ -2043,6 +2043,7 @@
     <string name="WizardHat_Name">Nón Phép Thuật</string>
     <string name="WndBag_BuySubtitle">(Bạn có %dg)</string>
     <string name="WndBlacksmith_Prompt">Được, lời đã nói không thể lấy lại, đây là điều tôi có thể làm cho bạn: Tôi có thể luyện lại 2 vật phẩm và biến chúng thành 1 vật phẩm chất lượng tốt hơn.</string>
+    <string name="WndBlacksmith_Reforge">Đúc lại chúng</string>
     <string name="WndCatalogus_Potions">Thuốc</string>
     <string name="WndCatalogus_Scrolls">Cuộn</string>
     <string name="WndCatalogus_Title">Danh mục</string>
@@ -2232,6 +2233,7 @@
     <string name="WndSettings_ScaleUp">Phóng to giao diện</string>
     <string name="WndSettings_SecondQuickslot">Khoản truy cập nhanh thứ hai</string>
     <string name="WndSettings_SelectLanguage">Chọn ngôn ngữ</string>
+    <string name="WndSettings_SwitchLand">Chuyển sang ngang</string>
     <string name="WndSettings_TextScaleDefault">Phông chữ mặc định</string>
     <string name="WndSettings_ThirdQuickslot">Khoản truy cập nhanh thứ ba</string>
     <string name="WndSettings_UiScale">Tỷ lệ giao diện</string>
@@ -3141,6 +3143,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 
