@@ -708,6 +708,7 @@
     <string name="FetidRat_Name_Objective">stinkende rat</string>
     <string name="Fez_Info">Het is een hoofddeksel in de vorm van een afgeknotte kegel gemaakt van rood stof, met een kwast aan de top. En nee, het maakt de wereld niet driedimensionaal.</string>
     <string name="Fez_Name">Fez</string>
+    <string name="FilteredMask_Info">Een ademhalingsmasker is een apparaat ontworpen om de drager te beschermen tegen het inademen van gevaarlijke atmospheres, waaronder rook, dampen, gassen en deeltjes zoals stof en micro-organismen in de lucht. \n\nDit masker dient echter uitsluitend een decoratief doel.</string>
     <string name="FilteredMask_Name">N95-masker</string>
     <string name="FireArrow_Gender">feminine</string>
     <string name="FireArrow_Info">Deze pijl lijkt op een gewone, behalve dat het uiteinde een warm rood licht straalt.</string>
@@ -913,6 +914,7 @@
     <string name="HeroSubClass_NameShaman">sjamaan</string>
     <string name="HeroSubClass_NameSnip">sluipschutter</string>
     <string name="HeroSubClass_NameWarL">warlock</string>
+    <string name="HeroSubClass_NameWard">wachter</string>
     <string name="HeroSubClass_NameWitchdoctor">toverdokter</string>
     <string name="Hero_AnotherTry">Je bent gestorven.\n Wil je het opnieuw proberen?</string>
     <string name="Hero_Leave">Je kunt Remixed Dungeon niet zomaar verlaten.</string>
@@ -1277,6 +1279,7 @@
     <string name="MoongraceBuff_Name">Hemelse manna</string>
     <string name="Moongrace_Desc">Deze planten groeien in kleine aantallen en worden gekend als een bron van natuurlijke magie.</string>
     <string name="Moongrace_Name">Maangras</string>
+    <string name="Movement_Speed">Bewegingssnelheid</string>
     <string name="Multiplicity_Txt">%s van veelvoudigheid</string>
     <string name="Mushroom_Eat_Message">Die paddenstoel smaakt raar!</string>
     <string name="MysteryMeat_Info">Eet op eigen risico!</string>
@@ -2390,6 +2393,7 @@
     <string name="WndSaveSlotSelect_Delete_No">Nee</string>
     <string name="WndSaveSlotSelect_Delete_Title">Weet je zeker dat je deze opslagstatus wilt verwijderen?</string>
     <string name="WndSaveSlotSelect_Delete_Yes">Ja, verwijder het!</string>
+    <string name="WndSaveSlotSelect_SelectSlot">Selecteer een sleuf</string>
     <string name="WndSaveSlotSelect_dontLike">Hou je niet van advertenties? Doe een donatie, en ze verdwijnen. Voor altijd.</string>
     <string name="WndSelectLanguage_ImproveTranslation">Help alsjebliept de vertalingen van Remixed Dungeon te verbeteren</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Klik hier om deel te nemen aan het Remixed Dungeon vertaalteam</string>
@@ -2891,6 +2895,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
