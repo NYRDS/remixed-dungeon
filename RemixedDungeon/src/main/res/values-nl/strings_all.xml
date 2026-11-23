@@ -899,6 +899,7 @@
     <string name="HeroClass_WarPerks_0">Krijgers beginnen met 11 punten Kracht.</string>
     <string name="HeroClass_WarPerks_1">Krijgers beginnen met een uniek kort zwaard. Dit zwaard kan later \&quot;hergeschmied\&quot; worden om een ander wapen voor nabijgevecht te verbeteren.</string>
     <string name="HeroClass_WarPerks_2">Krijgers zijn minder vaardig met afstandwapens.</string>
+    <string name="HeroClass_WarPerks_3">Elk stuk voedsel herstelt iets van gezondheid wanneer gegeten.</string>
     <string name="HeroClass_WarPerks_4">Krachtpotionen zijn van het begin bekend.</string>
     <string name="HeroSubClass_DescAssa">Bij het uitvoeren van een verrassingsaanval, richt de _Meuchelmoorder_ extra schade aan bij zijn doelwit.</string>
     <string name="HeroSubClass_DescBatM">Wanneer hij vecht met een toverstaf in zijn handen, richt de _Strijdmagiër_ extra schade aan afhankelijk van het huidige aantal ladingen. Elke succesvolle treffer herstelt 1 lading van deze toverstaf.</string>
@@ -1579,6 +1580,7 @@
     <string name="Rat_Desc">Buidelratten zijn agressief, maar redelijk zwakke bewoners van de riolering. Ze zijn pas gevaarlijk in grote aantallen.</string>
     <string name="Rat_Gender">feminine</string>
     <string name="Rat_Name">buidelrat</string>
+    <string name="Rat_Name_Objective">buidelrat</string>
     <string name="Ration_Info">Niets bijzonders: gedroogd vlees, wat koekjes - dat soort dingen.</string>
     <string name="RawFish_Info">Rauwe vis, eet op eigen risico</string>
     <string name="RawFish_Name">rauwe vis</string>
@@ -1680,6 +1682,7 @@
     <string name="RubyCrossbow_Info">Dit dodelijke wapen is werkelijk een meesterwerk van dwergentechniek.</string>
     <string name="RubyCrossbow_Name">Robijnen kruisboog</string>
     <string name="Rudolph_Info">Wat is er feestelijker dan een gloeiende rode neus? Samen met een gewei, natuurlijk.</string>
+    <string name="Rudolph_Name">Rode neus en gewei</string>
     <string name="RunicSkull_Desc">Voor iets kunstmatig gemaakts lijkt deze schedel te veel op een echte. Je ziet ook een zwakke gloed om het heen.</string>
     <string name="RunicSkull_Gender">masculine</string>
     <string name="RunicSkull_Name_Objective">runische schedel</string>
@@ -2101,6 +2104,8 @@
     <string name="VileEssence_Info">Een geconcentreerde essentie van corruptie, geoogst van een verslagen vijand. Deze donkere substantie pulseert met kwaadaardige energie en wordt zeer gewaardeerd in alchemistische processen.</string>
     <string name="VileEssence_Name">Verachtelijke Essentie</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
+    <string name="VkPlayLink_linked">Reclames zijn uitgeschakeld tot %s.</string>
+    <string name="VkPlayLink_title">VK Play PC-versie</string>
     <string name="WandHolster_Info">Deze slanke houder is gemaakt van leer van een exotisch dier. Het maakt het mogelijk om tot %d toverstaven compact bij je te dragen.</string>
     <string name="WandHolster_Name">wandhouder</string>
     <string name="WandMaker_Berry1">Oh, wat een aangename verrassing een fatsoenlijk persoon te ontmoeten op zo\'n plek! Ik kwam hier voor een zeldzaam ingrediënt - een _Rotberry-zaad_. Omdat ik een magiër ben, kan ik mezelf goed verdedigen tegen lokale monsters, maar ik verdwaal altijd in no-time, het is erg gênant. Zou je me kunnen helpen? Ik zou je graag betalen met een van mijn beste toverstokken.</string>
@@ -2918,6 +2923,11 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
 
 
 

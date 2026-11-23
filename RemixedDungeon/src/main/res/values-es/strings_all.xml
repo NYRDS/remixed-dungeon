@@ -1027,6 +1027,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="HeroClass_PriestPerks_1">Los sacerdotes infligen un 25% más de daño a los no-muertos y reciben un 25% menos de daño de sus ataques. Contra demonios estos bonos se reducen a la mitad.</string>
     <string name="HeroClass_PriestPerks_2">Los sacerdotes usan maná para lanzar hechizos divinos: Bendición, Agua Bendita, Exorcismo y Últimos Ritos.</string>
     <string name="HeroClass_PriestPerks_3">Las vestiduras de batalla del sacerdote pueden invocarse para Santificar: una explosión sagrada que quema a los no-muertos cercanos (los demonios reciben la mitad de daño) y bendice al portador.</string>
+    <string name="HeroClass_PriestPerks_4">Los Pergaminos de Eliminar Maldición se identifican desde el principio.</string>
     <string name="HeroClass_PriestPerks_5">Los sacerdotes empiezan con 12 puntos de maná.</string>
     <string name="HeroClass_Rog">granuja</string>
     <string name="HeroClass_RogPerks_0">Los granujas empiezan con un Anillo de las Sombras +1.</string>
@@ -2396,6 +2397,7 @@ otro lugar del nivel.</string>
     <string name="VileEssence_Name">Esencia Vil</string>
     <string name="Viscosity_Status">%d diferido</string>
     <string name="Viscosity_Txt">%s de viscosidad</string>
+    <string name="VkPlayLink_title">Versión para PC de VK Play</string>
     <string name="VkPlayLink_waiting">Esperando el inicio de sesión con VK ID. Termínalo en el navegador; esta ventana se actualiza automáticamente.</string>
     <string name="WandHolster_Info">Esta delgada funda está hecha de cuero de un exótico animal. Permite llevar hasta %d varitas.</string>
     <string name="WandHolster_Name">funda para varita</string>
@@ -3123,6 +3125,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 

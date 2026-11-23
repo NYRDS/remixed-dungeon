@@ -246,6 +246,7 @@
     <string name="BishopNPC_Name">Vescovo</string>
     <string name="BishopNPC_Name_Objective">Vescovo</string>
     <string name="BishopQuest_1_1_Epilogue">Ti benedico, figlio mio — stanotte i morti inquieti dormono tranquilli grazie a te. Ma la piaga della non-morte è più profonda delle ossa. Torna da me quando sarai pronto per la prossima prova, e prendi questa pozione per le tue ferite.</string>
+    <string name="BishopQuest_1_1_InProgress">Hai dato riposo a %1$d su %2$d non-morti, figlio mio. Continua così.</string>
     <string name="BishopQuest_1_1_Prologue">I morti si rifiutano di riposare, figlio mio. Le ossa camminano per i corridoi della prigione, e cose marce strisciano fuori dalla necropoli. Fai riposare in pace dieci non-morti, e saprò che la tua fede è sincera.</string>
     <string name="BishopQuest_2_2_Epilogue">Chiaro di luna in un seme... come la grazia stessa. Stanotte la chiesa profumerà d\'argento. Prendi questa pozione per la tua devozione, figlio mio.</string>
     <string name="BishopQuest_2_2_Prologue">Il rito di iniziazione richiede incenso benedetto dalla luna, figlio mio. Portami _tre semi di blissaluna_, raccolti dove il chiarore di luna indugia negli abissi.</string>
@@ -2362,6 +2363,7 @@ Potrebbe bruciare?</string>
     <string name="VileEssence_Name">Vile Essence</string>
     <string name="Viscosity_Status">differito %d</string>
     <string name="Viscosity_Txt">%s della viscosità</string>
+    <string name="VkPlayLink_noConnection">Impossibile raggiungere il servizio di verifica. Controlla la connessione internet e riprova.</string>
     <string name="WandHolster_Info">Questa sottile custodia è fatta di pelle di qualche animale esotico. Ti permette di trasportare compattamente fino a %d bacchette.</string>
     <string name="WandHolster_Name">custodia per bacchette</string>
     <string name="WandMaker_Berry1">Oh, che bella sorpresa incontrare una persona decente in tale luogo! Sono venuto qui per un raro ingrediente - un _Rotberry seed_. Essendo un utente di magia, sono perfettamente in grado di difendermi contro i mostri locali, ma mi sto perso in poco tempo, è molto imbarazzante. Probabilmente potrebbe aiutarmi? Sarei felice di pagare per il vostro servizio con una delle mie migliori bacchette.</string>
@@ -3093,6 +3095,8 @@ Riguardo la tua ricompensa, non ho monete con me al momento, ma ho qualcosa di m
     <string name="town_table_fortune_ball_name">Palla di cristallo</string>
     <string name="town_table_fortune_desc">Questo tavolo è ricoperto da un panno di seta. Puoi vedere varie carte dei tarocchi disposte in un ordine particolare.</string>
     <string name="town_table_fortune_name">Tavolo</string>
+
+
 
 
 

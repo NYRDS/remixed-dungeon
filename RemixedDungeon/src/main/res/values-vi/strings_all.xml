@@ -1494,6 +1494,7 @@
     <string name="RingOfSatiety_Info">Khi đeo nhẫn này, bạn có thể nhịn ăn lâu hơn. Nhẫn no ngưng suy giảm sẽ gây hiệu ứng ngược lại.</string>
     <string name="RingOfSatiety_Name">Nhẫn No Đủ</string>
     <string name="RingOfShadows_Info">Kẻ thù sẽ khó nhận ra bạn hơn khi bạn đeo nhẫn này. Nhẫn Bóng Tối xuống cấp sẽ báo động cho kẻ thù mà lẽ ra chúng không hề để ý đến sự hiện diện của bạn.</string>
+    <string name="RingOfShadows_Name">Nhẫn Bóng Tối</string>
     <string name="RingOfStoneWalking_Info">Chiếc nhẫn kỳ lạ này được làm từ đá chắc chắn. Thứ bạn nghĩ là ruby thực ra là máu lỏng đang được giữ tại chỗ! Bên trong là một mũi tên chỉ về thứ gì đó giống bức tường, cùng với một trái tim tan vỡ... Nó có thể làm gì?</string>
     <string name="RingOfStoneWalking_Name">Nhẫn Máu Đá</string>
     <string name="Ring_BuffKnown">Đây là %s</string>
@@ -2039,6 +2040,24 @@
 -- Các đối tượng mức có thể mod
 - Đã sửa lỗi</string>
     <string name="Welcome_Text_31_1">remix.31.1\n\n- Cách chơi:\n\n-- Tùy chỉnh mới!\n\n-- Loại nhện mới!\n\n-- Psi-Nhện bây giờ sẽ tăng cường nhện khác thay vì làm yếu Nhân vật.\n\n- Sửa lỗi</string>
+    <string name="Welcome_Text_32">
+    remix.32\n
+    - Cách chơi:\n
+    -- Quái và Thú cưng bây giờ nhận được kinh nghiệm và cấp độ\n
+    -- Khiên Hỗn loạn\n
+    -- Anh hùng\n
+    -- Trận chiến Yog được cân bằng lại\n
+    -- Điều chỉnh cân bằng\n
+    - UX:\n
+    -- Chỉ số chi tiết cho Anh hùng và Quái\n
+    -- Giao diện Tùy chỉnh tốt hơn\n
+    -- Camera mượt mà\n
+    - Modding:\n
+    -- Hiệu ứng tùy chỉnh\n
+    -- Script tùy chỉnh cho Quái tích hợp\n
+    -- Hiệu ứng phát sáng cho Quái\n
+    - Sửa lỗi\n
+    </string>
     <string name="Welcome_Text_32_1">    remix.32.1\n\n    - Cách chơi:\n\n    -- Dòng nhiệm vụ Bác sĩ Chết Chóc\n\n    -- Xác quái hiện thành vật phẩm có thể dùng được\n\n    -- Điều khiển thú cưng tốt hơn\n\n    - UX:\n\n    -- Quản lý lưu trò chơi cải tiến\n\n    - Modding:\n\n    -- Cài đặt mod cục bộ\n\n    -- Vật phẩm tùy chỉnh giờ có thể thực hiện hành động khi ở trong đống\n\n    - Sửa lỗi\n</string>
     <string name="Welcome_Title">Chào mừng!</string>
     <string name="WindGust_Info">Triệu hồi một cơn gió giật, đẩy nhân vật được chọn ra xa.</string>
@@ -2250,6 +2269,7 @@
     <string name="WndStory_Guts">Thần Cổ bị đánh bại, vỡ vụn thành trăm mảnh nhưng chưa bị tiêu diệt hoàn toàn, đã bị phong ấn tại những tầng sâu nhất của hầm ngục. Nhưng gần đây con dấu đã bị phá vỡ, mở toang lối đi đến tổ của quỷ dữ. Những con quái vật ác mộng mà Thần Cổ tạo ra trong giấc ngủ của ngài đông đến mức chẳng còn lối thoát, chúng buộc phải hợp nhất với nhau tạo nên những đại sảnh kỳ dị này. Và khi bạn bước trên lớp thịt sống của chúng, bạn có thể cảm nhận nhịp đập trái tim của Thần Cổ vang vọng khắp nơi.</string>
     <string name="WndStory_Halls">Trong quá khứ những tầng này là vùng ngoại ô của Metropolis. Sau chiến thắng đắt giá trong cuộc chiến với vị thần cũ, người lùn quá suy yếu để dọn sạch những con quỷ còn sót lại. Dần dần quỷ đã thắt chặt quyền kiểm soát nơi này và giờ nó được gọi là Sảnh Quỷ.\n\nRất ít nhà thám hiểm từng xuống xa đến vậy...</string>
     <string name="WndStory_Metropolis">Thành phố Lục phủ Mat người lùn từng là lớn nhất trong các thành bang của người lùn. Vào thời kỳ thịnh vượng, quân đội cơ giới của người lùn đã đẩy lùi thành công cuộc xâm lược của vị thần cổ xưa và quân đoàn quỷ của ngài. Người ta nói rằng, các chiến binh trở về đã mang theo những hạt giống của sự tàn phá, và chiến thắng đó là khởi đầu của sự chấm dứt cho vương quốc dưới đất.</string>
+    <string name="WndStory_Sewers">Hầm ngục nằm ngay dưới Thành phố, các tầng trên của nó thực sự tạo nên hệ thống thoát nước của Thành phố. Về mặt danh nghĩa là một phần của Thành phố, các tầng này không quá nguy hiểm. Không ai sẽ gọi đây là nơi an toàn, nhưng ít nhất bạn không phải đối mặt với nhiều phép thuật đen ở đây.</string>
     <string name="WndStory_Spiders">Nhiều, rất nhiều năm về trước, ở đây từng có một mỏ giàu có, đầy ắp đá ma thuật. Nhưng khi các mạch khoáng sản cạn kiệt, những người khai thác đã rời đi, để lại một mạng lưới hầm đường rộng lớn. Cuối cùng, nơi này được chiếm đóng bởi bọ cạp. Nhưng ngay cả những sinh vật nguy hiểm này, trốn trong bóng tối, cũng không đủ để khiến những kẻ dũng cảm và điên khùng khao khát kho báu có thể tìm thấy trong mỏ mà lùi bước. Vì mức độ nguy hiểm luôn tỷ lệ thuận với số lượng tin đồn về các hiện vật ma thuật. Có một lần, một phù thủy xấu xa đã đi lạc vào hầm mỏ để trốn khỏi những kẻ truy lùng. Nhưng những người mê tín không dám bước vào bóng tối. Vì vậy họ quyết định chờ đợi. Nhưng cô ấy không bao giờ xuất hiện. Có lẽ phù thủy đã tìm được lối thoát khác, có lẽ cô ấy đã lén lút vượt qua các vệ sĩ... hoặc cô ấy đã chết chóc, bị bao quanh bởi tiếng xào xạc của những sinh vật bóng tối.</string>
     <string name="WndTilesKind_ClassicLook">Giao diện cổ điển</string>
     <string name="WndTilesKind_NewLook">Giao diện mới</string>
@@ -2315,6 +2335,7 @@
     <string name="ZombieGnoll_Info">Gnoll-zombie đã trỗi dậy từ cõi chết!</string>
     <string name="ZombieGnoll_Name_Objective">gnoll-zombie</string>
     <string name="ZombieMask_Name">Mặt nạ Zombie</string>
+    <string name="Zombie_Desc">Hầm ngục từ đầu đã là một nơi nguy hiểm và nhiều nhà冒險者 đã gặp định mệnh của họ tại đây. Nhưng cuộc đời của những người đen đủi nhất kết thúc ở Lĩnh địa chết chóc, và bây giờ họ bị buộc phải lang thang trong các sảnh này dưới dạng xác thối.</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
     <string name="Zombie_Name_Objective">kẻ sống chết</string>
@@ -3147,6 +3168,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
