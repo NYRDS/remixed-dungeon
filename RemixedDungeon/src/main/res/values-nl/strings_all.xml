@@ -387,6 +387,7 @@
     <string name="ChaosBow_Name">chaosboog</string>
     <string name="ChaosCrystal_BladeFused">Het kristal absorber je wapen, en nam de vorm van een zwaard aan</string>
     <string name="ChaosCrystal_Fuse">SMETEN</string>
+    <string name="ChaosCrystal_Info">Je voelt energiestromen door je handen lopen terwijl je het vasthoudt.</string>
     <string name="ChaosCrystal_Info_1">Chaotische krachten vloeien door deze kristal. Misschien is het wel nuttig.</string>
     <string name="ChaosCrystal_Info_2">Ja! Nu weet je dat je het kunt fuseren met een van je voorwerpen, maar wat komt daarna?</string>
     <string name="ChaosCrystal_Name">Vreemde Kristal</string>
@@ -824,6 +825,7 @@
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Gratis behandeling voor elke avonturier!</string>
     <string name="HealerNPC_Message3">Ik vraag me af waarom de kerk ons verbodt petten te dragen... het is echt koud hier buiten.</string>
+    <string name="HealerNPC_Name">stadspriester</string>
     <string name="HealerNPC_Name_Objective">stadspriester</string>
     <string name="Healing_Info">Deze spreuk is cruciaal voor elke avonturier. Het zal 1/3 van de maximale hoeveelheid HP van de tovenaar herstellen.</string>
     <string name="Healing_Name">Genezing</string>
@@ -2571,6 +2573,7 @@
     <string name="town_deco_exit_desc">Het is onbekend wat je te wachten staat als je deze trap afdaalt.</string>
     <string name="town_deco_exit_name">uitgang</string>
     <string name="town_deco_fence_desc">Een houten hekwerk bedekt met sneeuw.</string>
+    <string name="town_deco_fence_name">Schutting</string>
     <string name="town_deco_filmtape_desc">Interessant wat dit stuk bevat.</string>
     <string name="town_deco_fireplace_desc">Uitstekend om je mee op te warmen in zo\'n koude plek als deze.</string>
     <string name="town_deco_fireplace_name">Open haard</string>
@@ -2623,6 +2626,7 @@
     <string name="town_deco_potions_name">Dranken</string>
     <string name="town_deco_projector_desc">Een oud apparaat om films af te spelen en mensen te vermaken.</string>
     <string name="town_deco_projector_name">Filmprojector</string>
+    <string name="town_deco_red_carpet_desc">Volgens de geruchten versieren vergelijkbare rode tapijten de hallen van de dwergen-metropool.</string>
     <string name="town_deco_red_carpet_name">Tapijt</string>
     <string name="town_deco_roof_name">Dak</string>
     <string name="town_deco_rope_desc">Met de hand gedraaid touw.</string>
@@ -2887,6 +2891,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

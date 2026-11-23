@@ -222,6 +222,7 @@
     <string name="BlackCat_Phrases_2">Meo meo!</string>
     <string name="BlackSkullOfMastery_BecomeLichDesc">Lich là một thuật sư tử thi đã đạt đến đỉnh cao của khả năng mình. Sinh tồn giữa sự sống và cái chết, Lich xuất sắc trong thuật hồi sinh, nhưng kỹ năng chiến đấu của hắn thấp hơn rất nhiều so với người thường.</string>
     <string name="BlackSkullOfMastery_Name">Kẻ Mang Linh Hồn</string>
+    <string name="BlackSkullOfMastery_RemainHumanDesc">Hoặc nếu bạn _phá vỡ chú ngữ_ thì bạn sẽ có thể sử dụng hiện vật này theo đúng mục đích.</string>
     <string name="BlackSkullOfMastery_Title">Bạn có thể phá vỡ phép thuật. Hoặc bạn có thể thao túng công thức ma thuật của nó theo một cách nào đó, cho phép bạn hấp thụ sức mạnh của cả phép thuật và chính hiện vật đó, biến bản thân thành một Lich.</string>
     <string name="BlackSkull_Activated">Đầu lâu đen đã thức tỉnh!</string>
     <string name="BlackSkull_Gender">masculine</string>
@@ -868,6 +869,7 @@
     <string name="Hunger_Starving_0">Bạn đang chết đói!</string>
     <string name="Hunger_Starving_1">Bạn đang chết đói!</string>
     <string name="Hunger_Starving_2">Bạn đang chết đói!</string>
+    <string name="HuntressArmor_ACSpecial">KIẾM HỒNG HOẠNG</string>
     <string name="HuntressArmor_Desc">Một thợ săn trong chiếc áo choàng này có thể tạo ra một quạt các lưỡi kiếm linh hồn. Mỗi lưỡi kiếm sẽ nhắm vào một kẻ thù duy nhất trong tầm nhìn của thợ săn, gây sát thương tùy thuộc vào vũ khí cận chiến hiện tại của cô ấy.</string>
     <string name="HuntressArmor_Name">áo choàng nữ săn bắn</string>
     <string name="HuntressArmor_NoEnemies">Không có kẻ thù nào trong tầm nhìn</string>
@@ -1997,6 +1999,7 @@
     <string name="WeaknessBuff_Name">Yếu</string>
     <string name="Weapon_Identify">Bạn đã đủ quen với %1 để nhận diện nó. Đây là %2.</string>
     <string name="Weapon_Incompatible">Tương tác của các loại ma thuật khác nhau đã làm mất đi bùa chú trên vũ khí này!</string>
+    <string name="Weightstone_ACApply">ÁP DỤNG</string>
     <string name="Weightstone_Accurate">bạn đã cân bằng %s để nó chính xác hơn</string>
     <string name="Weightstone_Fast">bạn đã cân bằng %s để làm nó nhanh hơn</string>
     <string name="Weightstone_Info">Sử dụng đá cân, bạn có thể cân bằng vũ khí cận chiến của mình để tăng tốc độ hoặc độ chính xác.</string>
@@ -2285,6 +2288,7 @@
     <string name="ZombieGnoll_Desc">Cơ thể biến dạng, gãy đổ của gnoll zombie không còn giống người hay linh chó nữa. Còn lại chỉ là một đống thịt thối và xương, đầy lòng thù ghét khao khát giết chóc và nhấn nhá.</string>
     <string name="ZombieGnoll_Gender">masculine</string>
     <string name="ZombieGnoll_Info">Gnoll-zombie đã trỗi dậy từ cõi chết!</string>
+    <string name="ZombieGnoll_Name_Objective">gnoll-zombie</string>
     <string name="ZombieMask_Name">Mặt nạ Zombie</string>
     <string name="Zombie_Gender">masculine</string>
     <string name="Zombie_Name">kẻ sống chết</string>
@@ -3117,6 +3121,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
