@@ -209,6 +209,7 @@
     <string name="BishopQuest_3_1_Epilogue">Lễ chầu biệt cuối cùng được đọc, và xác sống tùy tùng tan thành bụi bình yên. Hắn đã an nghỉ thực sự. Lòng trắc ẩn làm vinh dự cho con — hãy lấy cuộn này, con sẽ cần nó nơi con đi.</string>
     <string name="BishopQuest_3_2_InProgress">Mang cho ta một con _dơi_ đã được thuần dưỡng, con ạ. Đừng làm sợ con vật đáng thương ấy.</string>
     <string name="BishopQuest_3_2_Prologue">Ngay cả những sinh vật bóng tối cũng xứng đáng được ban phước, con ơi. Hãy mang cho ta một con _dơi_ đã thuần phục, và ta sẽ thánh hiến nó cho ánh sáng.</string>
+    <string name="BishopQuest_5_1_Prologue">Một thử thách còn lại, khó khăn nhất trong tất cả. Địa ngục đã để ý đến công việc của con, con yêu, và nó đã phái những con gái của nó. _Succubi_ lang thang ở các sảnh sâu, và tiếng thì thầm của chúng là nốt độc ngọt ngào. Trừ _hai succubi_, và ta sẽ truyền cho con những huyền bí của chức linh mục.</string>
     <string name="Bishop_bye">Tôi sẽ cầu nguyện cho con ơi.</string>
     <string name="Bishop_great_bless">Chúc phúc vĩ đại - %d g</string>
     <string name="Bishop_lesser_bless">Chúc phúc nhỏ - %d g</string>
@@ -930,6 +931,7 @@
     <string name="InterLevelScene_Falling">Đang rơi...</string>
     <string name="InterLevelScene_FileNotFound">Không tìm thấy tập tin. Với một số lý do...</string>
     <string name="InterLevelScene_Loading">Đang tải...</string>
+    <string name="InterLevelScene_Resurrecting">Đang hồi sinh...</string>
     <string name="InterLevelScene_Returning">Đang quay lại...</string>
     <string name="IntroScene_Txt">Nhiều anh hùng đủ mọi loại đã mạo hiểm vào Ngục Trại trước bạn. Một số đã trở về với kho báu và pháp thuật, hầu hết thì không bao giờ được nghe tin tức. Nhưng không ai thành công trong việc lấy được Huyền Chương Yendor, đồ vật được cho là chôn sâu trong lòng Ngục Trại. Bạn cảm thấy mình đã sẵn sàng cho thử thách, và quan trọng hơn, bạn tin rằng may mắn đang mỉm cười với bạn. Đã đến lúc bắt đầu cuộc phiêu lưu của mình!</string>
     <string name="InventoryScroll_No">Không, tôi đã đổi ý</string>
@@ -1088,6 +1090,7 @@
     <string name="MageArmor_NotMage">Chỉ phù thủy mới có thể dùng áo giáp này!</string>
     <string name="MagicArrow_Info">Mũi tên ma thuật cũ, lựa chọn đúng khi hết đạn.</string>
     <string name="MagicArrow_Name">Mũi tên phép thuật</string>
+    <string name="MagicTorch_Info">Một phép thuật tạo ra ánh sáng, để chiếu rọi các tầng tối của ngục.</string>
     <string name="MagicTorch_Name">Ngọn đuốc ma thuật</string>
     <string name="MailArmor_Desc">Các vòng kim loại liên kết tạo nên một bộ giáp cứng cáp nhưng linh hoạt.</string>
     <string name="MailArmor_Name">áo giáp xích</string>
@@ -1251,6 +1254,7 @@
     <string name="ParalysisBuff_Name">Bị tê liệt</string>
     <string name="Paralysis_Name_0">%s choáng váng</string>
     <string name="Paralysis_Name_1">Gây choáng %s</string>
+    <string name="ParalyticGas_Info">Một đám mây khí gây tê liệt đang xoáy ở đây.</string>
     <string name="Pasty_Info">Đây là một chiếc bánh pasty Cornish truyền thống với nhân thịt bò và khoai tây.</string>
     <string name="Pasty_Name">bánh nướng</string>
     <string name="PetInventory_ACGiveToPet">CHO THÚ CƯNG</string>
@@ -3135,5 +3139,9 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 </resources>
