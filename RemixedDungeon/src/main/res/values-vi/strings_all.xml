@@ -150,6 +150,7 @@
     <string name="Badges_PotionsCooked4">Đã chế biến 12 bình thuốc</string>
     <string name="Badges_PotionsCooked5">25 bình thuốc đã nấu</string>
     <string name="Badges_RareAll">Đã tiêu diệt tất cả quái vật hiếm</string>
+    <string name="Badges_RingThorns">Đã nhận được Nhẫn Gai</string>
     <string name="Badges_ShadowLord_Slain">Chúa Tể Bóng Tối đã bị tiêu diệt</string>
     <string name="Badges_SpiderQueen_Slain">Nữ hoàng Nhện đã bị tiêu diệt</string>
     <string name="Badges_StrengthAttained1">Đạt 13 điểm Sức mạnh</string>
@@ -1068,6 +1069,7 @@
     <string name="LightningTrap_Name">bẫy sét</string>
     <string name="LloidsBeacon_ACReturn">TRỞ VỀ</string>
     <string name="LloidsBeacon_ACSet">ĐẶT</string>
+    <string name="LloidsBeacon_Creatures">Khí trường tâm linh của các sinh vật xung quanh không cho phép bạn sử dụng Mayák Lloyd vào lúc này.</string>
     <string name="LloidsBeacon_Info">Đèn hiệu của Lloyd là một thiết bị phép thuật phức tạp, cho phép bạn quay lại nơi mà bạn đã từng đến.</string>
     <string name="LloidsBeacon_Name">Đèn hiệu Lloyd</string>
     <string name="LloidsBeacon_Preventing">Một loại halo ma thuật mạnh mẽ hiện diện ở đây ngăn cản bạn sử dụng cột đèn của Lloyd!</string>
@@ -1230,6 +1232,7 @@
     <string name="Order_Info">Với sự tập trung thích hợp, các mệnh lệnh của bạn gần như không thể chối cãi.</string>
     <string name="Order_Name">Mệnh lệnh</string>
     <string name="Order_Resist">Làm sao dám?!!</string>
+    <string name="OverpricedRation_Info">Nó trông giống hệt như một khẩu phần thức ăn tiêu chuẩn nhưng nhỏ hơn.</string>
     <string name="OverpricedRation_Message">Món ăn này có vị ổn.</string>
     <string name="OverpricedRation_Name">phần thực phẩm giá cao bất hợp lý</string>
     <string name="PalaceServant_Golem_1">...</string>
@@ -1293,6 +1296,7 @@
     <string name="PlagueDoctorNPC_Quest_Reminder">Mang cho tôi %d da chuột.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Female">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
     <string name="PlagueDoctorNPC_Quest_Start_Male">Bah! Bạn có tin được không?! Những kẻ ngốc đó vẫn chưa nhận ra độ nguy hiểm của con hầm thâm nầy! Như thể vệ sĩ và phiêu lưu gia có thể bảo vệ thành phố trước mọi thứ. Ha! Không vũ khí nào có thể ngăn chặn bệnh dịch lan rộng. Nhưng tôi cần bằng chứng, có lẽ bạn có thể giúp? Hãy mang cho tôi %d da chuột, để tôi có thể làm thêm thử nghiệm.</string>
+    <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, bạn đã trở lại! _Năm con chuột chết_, hoàn hảo! Bộ lông của chúng sẽ rất quan trọng cho nghiên cứu của ta. Theo như lời hứa, vì nỗ lực dũng cảm của bạn, ta đã chế tạo cho bạn bộ giáp này từ chính da của chúng. Nó được tẩm dịch một chút dịch bệnh, nhưng đừng lo! Nó được kiểm soát, nó bảo vệ! Đi thôi! Hãy bảo vệ thành phố!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Mang cho ta _năm con chuột chết_! Mỗi con chuột bạn mang đến khiến chúng ta gần hơn với việc hiểu rõ về cơn dịch kinh hoàng này.</string>
     <string name="PlagueDoctorQuest_1_1_Prologue">Achooo!\n Nguyền rủa bệnh dịch địa ngục này! Nó lan khắp thành phố như cháy rừng, mục nát trong xương của dân chúng không chút nghi ngờ! BAH! Các ngươi nghĩ những tên lính canh tồi tệ đó có cơ hội nào chống lại tai ương quỷ quyệt này? Ngươi, kia! Một mẫu vật khỏe mạnh. Có lẽ ngươi có thể giúp ta. Những con _chuột_ cống bẩn thỉu đó... chúng mang nó, ta nói cho ngươi biết, hạt giống của bệnh dịch trong những thân thể nhỏ bé thối rữa của chúng! Hãy mang cho ta _năm_ sinh vật khốn khổ đó, tất nhiên là đã _chết_! Da của chúng sẽ vô giá cho nghiên cứu của ta. Ta sẽ chế tạo cho ngươi một bộ giáp kỳ diệu, một lớp bảo vệ chống lại chính bệnh dịch mà nó bắt nguồn từ đó!</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Aaaa… tuyệt vời! Những _con ốc sên_, bí mật của chúng từ từ hé lộ như những cánh hoa dưới ánh trăng. Quả là một món quà thông tin dồi dào! Nhưng bạn nói đúng, _năm mươi đồng vàng_ chẳng phải là phần thưởng xứng đáng. *Cười man rợ*.</string>
@@ -2178,6 +2182,7 @@
     <string name="WndPriest_Instruction_m">Chào con, chào mừng đến nhà thờ thánh của đại Santa, Chúa Tể Độ Sâu! Thật tiếc tôi không thể cho con qua ngay lúc này, vì tòa nhà đang được sửa chữa, nhưng nếu con tìm kiếm sự giúp đỡ, tôi có thể cung cấp dịch vụ chữa bệnh và thức ăn chỉ với %d đồng vàng!</string>
     <string name="WndPriest_Title">Linh mục thị trấn</string>
     <string name="WndRanking_Badges">Huy hiệu</string>
+    <string name="WndRanking_Error">Không thể tải thông tin bổ sung</string>
     <string name="WndRanking_Items">Vật phẩm</string>
     <string name="WndRanking_StaAlchemy">Thuốc đã nấu</string>
     <string name="WndRanking_StaAnkhs">Ankhs Đã Dùng</string>
@@ -3130,392 +3135,5 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </resources>
