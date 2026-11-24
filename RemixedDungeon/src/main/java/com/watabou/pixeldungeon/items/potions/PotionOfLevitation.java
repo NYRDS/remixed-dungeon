@@ -5,7 +5,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.items.food.RottenFood;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -48,7 +48,7 @@ public class PotionOfLevitation extends UpgradablePotion {
 	}
 	
 	@Override
-	protected void moistenRottenFood(RottenFood rfood, Char owner) {
+	protected void moistenRottenFood(Food rfood, Char owner) {
 		detachMoistenItems(rfood, (int) (1*qualityFactor()));
 
         GLog.i(StringsManager.getVar(R.string.Potion_ItemFliesAway), rfood.name());

@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.items.bags;
 
+import com.nyrds.LuaInterface;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -115,6 +116,7 @@ public class Bag extends Item implements Iterable<Item> {
 		}
 	}
 	
+	@LuaInterface
 	public boolean contains( Item item ) {
 		for (Item i : items) {
 			if (i == item) {
@@ -150,10 +152,12 @@ public class Bag extends Item implements Iterable<Item> {
 
 	@NotNull
 	@Override
+	@LuaInterface
 	public BagIterator iterator() {
 		return new BagIterator();
 	}
 
+	@LuaInterface
 	public int getSize() {
 		return getOwner() instanceof Hero ? Belongings.getBackpackSize() : Belongings.getBackpackSize() + 1;
 	}

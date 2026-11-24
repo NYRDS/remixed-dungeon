@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
@@ -17,7 +18,7 @@ import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.armor.MailArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.ScaleArmor;
-import com.watabou.pixeldungeon.items.food.OverpricedRation;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfExperience;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfMight;
@@ -143,8 +144,8 @@ public class ShopPainter extends Painter {
 		stock( level, shopkeeper, new ScrollOfMagicMapping() );
 		stock( level, shopkeeper, Treasury.getLevelTreasury().random( Treasury.Category.SCROLL ) );
 
-		stock( level, shopkeeper, new OverpricedRation() );
-		stock( level, shopkeeper, new OverpricedRation() );
+		stock( level, shopkeeper, ItemFactory.itemByName(Food.OVERPRICED_RATION) );
+		stock( level, shopkeeper, ItemFactory.itemByName(Food.OVERPRICED_RATION) );
 
 		stock( level, shopkeeper, new Ankh() );
 

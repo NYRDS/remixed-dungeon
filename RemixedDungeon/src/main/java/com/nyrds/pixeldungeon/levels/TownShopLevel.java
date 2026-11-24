@@ -2,6 +2,7 @@ package com.nyrds.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -14,7 +15,7 @@ import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
-import com.watabou.pixeldungeon.items.food.OverpricedRation;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
@@ -76,7 +77,7 @@ public class TownShopLevel extends Level {
 		stock( shopkeeper, new TomeOfKnowledge().identify() );
 
 		for (int i = 0; i <3; i++){
-			stock( shopkeeper, new OverpricedRation() );
+			stock( shopkeeper, ItemFactory.itemByName(Food.OVERPRICED_RATION) );
 			stock( shopkeeper, new Dart(5).identify() );
 			stock( shopkeeper, new CommonArrow(25) );
 			stock( shopkeeper, new Torch().identify() );

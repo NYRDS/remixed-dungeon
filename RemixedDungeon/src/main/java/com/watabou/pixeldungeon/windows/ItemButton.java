@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.food.RottenFood;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
@@ -158,7 +158,7 @@ class ItemButton extends ItemSlot {
                         enableItem=(item instanceof Armor || item instanceof BlankScroll);
                         break;
                     case MOISTABLE:
-                        enableItem=(item instanceof Arrow || item instanceof Scroll || item instanceof RottenFood);
+                        enableItem=(item instanceof Arrow || item instanceof Scroll || (item instanceof Food && ((Food) item).isRotten()));
                         break;
                     case FUSEABLE:
                         enableItem=(item instanceof Scroll || item instanceof MeleeWeapon || item instanceof Armor || item instanceof KindOfBow || item instanceof Wand || item.getEntityKind().contains("Shield"));

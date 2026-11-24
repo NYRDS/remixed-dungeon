@@ -18,13 +18,8 @@ import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerRobe;
 import com.nyrds.pixeldungeon.items.common.armor.PriestArmor;
 import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
-import com.nyrds.pixeldungeon.items.common.debug.CandyOfDeath;
 import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
 import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
-import com.nyrds.pixeldungeon.items.food.Candy;
-import com.nyrds.pixeldungeon.items.food.ChristmasTurkey;
-import com.nyrds.pixeldungeon.items.food.PumpkinPie;
-import com.nyrds.pixeldungeon.items.food.RottenPumpkinPie;
 import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.pixeldungeon.items.guts.PseudoAmulet;
 import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
@@ -91,16 +86,7 @@ import com.watabou.pixeldungeon.items.bags.Quiver;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
-import com.watabou.pixeldungeon.items.food.ChargrilledMeat;
-import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
-import com.watabou.pixeldungeon.items.food.MysteryMeat;
-import com.watabou.pixeldungeon.items.food.OverpricedRation;
-import com.watabou.pixeldungeon.items.food.Pasty;
-import com.watabou.pixeldungeon.items.food.PseudoPasty;
-import com.watabou.pixeldungeon.items.food.Ration;
-import com.watabou.pixeldungeon.items.food.RottenMeat;
-import com.watabou.pixeldungeon.items.food.RottenPasty;
-import com.watabou.pixeldungeon.items.food.RottenRation;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.keys.GoldenKey;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
@@ -212,6 +198,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
@@ -231,12 +218,20 @@ public class ItemFactory {
 
     static private final Map<String, Class<? extends Item>> mItemsList = new HashMap<>();
     static private final Map<Class<? extends Item>, String> mNamesList = new HashMap<>();
+    // data kinds served by a kind-parameterized framework class (Food, ...):
+    // kind string -> constructor taking the kind. Checked before mItemsList so
+    // a framework kind can never fall into the CustomItem tail.
+    static private final Map<String, Function<String, Item>> mKindFactories = new HashMap<>();
 
     static {
         initItemsMap();
 
         for(String itemFile: ModdingMode.listResources("scripts/items", (dir, name) -> name.endsWith(".lua"))) {
-            mItemsList.put(itemFile.replace(".lua", Utils.EMPTY_STRING), CustomItem.class);
+            String kind = itemFile.replace(".lua", Utils.EMPTY_STRING);
+            if (mKindFactories.containsKey(kind)) {
+                continue; // framework kinds carry their scripts/items/<Kind>.lua for Food, not as CustomItems
+            }
+            mItemsList.put(kind, CustomItem.class);
         }
     }
 
@@ -247,6 +242,16 @@ public class ItemFactory {
     private static void registerItemClassByName(Class<? extends Item> itemClass, String name) {
         mItemsList.put(name, itemClass);
         mNamesList.put(itemClass, name);
+    }
+
+    /**
+     * Registers a data kind served by a kind-parameterized framework class
+     * (e.g. Food): the factory receives the kind string and returns the
+     * configured instance. Per-kind data/behavior lives in
+     * scripts/items/<Kind>.lua.
+     */
+    private static void registerItemKind(@NotNull String kind, @NotNull Function<String, Item> factory) {
+        mKindFactories.put(kind, factory);
     }
 
     private static void initItemsMap() {
@@ -263,16 +268,20 @@ public class ItemFactory {
         registerItemClass(TomeOfMastery.class);
         registerItemClass(Torch.class);
         registerItemClass(Weightstone.class);
-        registerItemClass(PseudoPasty.class);
-        registerItemClass(MysteryMeat.class);
-        registerItemClass(FrozenCarpaccio.class);
-        registerItemClass(Ration.class);
-        registerItemClass(Pasty.class);
-        registerItemClass(RottenMeat.class);
-        registerItemClass(RottenRation.class);
-        registerItemClass(RottenPasty.class);
-        registerItemClass(ChargrilledMeat.class);
-        registerItemClass(OverpricedRation.class);
+
+        // data foods: one Food framework + scripts/items/<Kind>.lua each
+        registerItemKind(Food.RATION, Food::new);
+        registerItemKind(Food.OVERPRICED_RATION, Food::new);
+        registerItemKind(Food.PASTY, Food::new);
+        registerItemKind(Food.PSEUDO_PASTY, Food::new);
+        registerItemKind(Food.MYSTERY_MEAT, Food::new);
+        registerItemKind(Food.CHARGRILLED_MEAT, Food::new);
+        registerItemKind(Food.FROZEN_CARPACCIO, Food::new);
+        registerItemKind(Food.ROTTEN_MEAT, Food::new);
+        registerItemKind(Food.ROTTEN_PASTY, Food::new);
+        registerItemKind(Food.ROTTEN_RATION, Food::new);
+        registerItemKind(Food.CANDY_OF_DEATH, Food::new);
+
         registerItemClass(ScrollOfTerror.class);
         registerItemClass(BlankScroll.class);
         registerItemClass(ScrollOfMagicMapping.class);
@@ -409,9 +418,9 @@ public class ItemFactory {
         registerItemClass(SoulShard.class);
         registerItemClass(NecromancerArmor.class);
         registerItemClass(NecromancerRobe.class);
-        registerItemClass(PumpkinPie.class);
-        registerItemClass(RottenPumpkinPie.class);
-        registerItemClass(ChristmasTurkey.class);
+        registerItemKind(Food.PUMPKIN_PIE, Food::new);
+        registerItemKind(Food.ROTTEN_PUMPKIN_PIE, Food::new);
+        registerItemKind(Food.CHRISTMAS_TURKEY, Food::new);
         registerItemClass(WandOfIcebolt.class);
         registerItemClass(IceKey.class);
         registerItemClass(ElvenBow.class);
@@ -451,7 +460,7 @@ public class ItemFactory {
         registerItemClass(SpiderQueenCarapace.class);
         registerItemClass(RingOfFrost.class);
         registerItemClass(WarlockArmor.class);
-        registerItemClass(Candy.class);
+        registerItemKind(Food.CANDY, Food::new);
         registerItemClass(WandOfShadowbolt.class);
         registerItemClass(PseudoAmulet.class);
         registerItemClass(ManaPotion.class);
@@ -466,7 +475,6 @@ public class ItemFactory {
         registerItemClass(AmokDart.class);
         registerItemClass(HealthArrow.class);
         registerItemClass(AmokArrow.class);
-        registerItemClass(CandyOfDeath.class);
         //registerItemClass(TacticalCrossbow.class); // no item pic
 
         //registerItemClass(DummyItem.class);
@@ -479,7 +487,7 @@ public class ItemFactory {
     }
 
     public static boolean isValidItemClass(String itemClass) {
-        return mItemsList.containsKey(itemClass);
+        return mKindFactories.containsKey(itemClass) || mItemsList.containsKey(itemClass);
     }
 
     /**
@@ -488,6 +496,9 @@ public class ItemFactory {
      * {@link #itemByName} - an unknown kind must resolve to null, never Gold.
      */
     public static boolean hasItem(@NotNull String itemClass) {
+        if (mKindFactories.containsKey(itemClass)) {
+            return true;
+        }
         if (isValidItemClass(itemClass)) {
             return true;
         }
@@ -507,6 +518,10 @@ public class ItemFactory {
         }
 
         try {
+            Function<String, Item> kindFactory = mKindFactories.get(itemClass);
+            if (kindFactory != null) {
+                return kindFactory.apply(itemClass);
+            }
             Class<? extends Item> itemJavaClass = mItemsList.get(itemClass);
             if (itemJavaClass != null && itemJavaClass != CustomItem.class) {
                 return itemJavaClass.newInstance();
@@ -525,6 +540,11 @@ public class ItemFactory {
     public static Item  itemByName(@NotNull String selectedItemClass) {
         try {
             {
+                Function<String, Item> kindFactory = mKindFactories.get(selectedItemClass);
+                if (kindFactory != null) {
+                    return kindFactory.apply(selectedItemClass);
+                }
+
                 Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
 
                 if (itemClass != null && itemClass != CustomItem.class) {

@@ -51,7 +51,7 @@ import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Stylus;
-import com.watabou.pixeldungeon.items.food.PseudoPasty;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.features.Chasm;
@@ -636,7 +636,7 @@ public abstract class Level implements Bundlable {
 			}
 
 			if (Random.Int(15) == 0 && Dungeon.depth > 5) {
-				addItemToSpawn(new PseudoPasty());
+				addItemToSpawn(ItemFactory.itemByName(Food.PSEUDO_PASTY));
 			}
 
 			if (Random.Int(2) == 0) {

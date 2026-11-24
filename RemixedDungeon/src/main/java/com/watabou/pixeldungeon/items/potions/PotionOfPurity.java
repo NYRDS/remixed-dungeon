@@ -15,7 +15,7 @@ import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.food.RottenFood;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
 import com.watabou.pixeldungeon.levels.Level;
@@ -112,7 +112,7 @@ public class PotionOfPurity extends UpgradablePotion{
 	}
 
 	@Override
-	protected void moistenRottenFood(RottenFood rfood, Char owner) {
+	protected void moistenRottenFood(Food rfood, Char owner) {
 		detachMoistenItems(rfood, (int) (1*qualityFactor()));
 		moistenEffective(owner);
         GLog.i(StringsManager.getVar(R.string.Potion_FoodRefreshed), rfood.name());

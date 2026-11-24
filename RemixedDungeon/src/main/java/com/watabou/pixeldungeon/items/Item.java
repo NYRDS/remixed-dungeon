@@ -237,6 +237,7 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         chr.selectCell(new Thrower(this));
     }
 
+    @LuaInterface
     public void execute(@NotNull Char chr, @NotNull String action) {
         GLog.debug("%s: %s by %s", getEntityKind(), action, chr.getEntityKind());
         chr.getBelongings().setSelectedItem(this);

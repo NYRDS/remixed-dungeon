@@ -43,7 +43,7 @@ public class RemixedDungeon extends Game {
 
 		// remix 0.5
 		com.watabou.utils.Bundle.addAlias(
-				com.watabou.pixeldungeon.items.food.Ration.class,
+				com.watabou.pixeldungeon.items.food.Food.class,
 				"com.watabou.pixeldungeon.items.food.Food");
 		// remix 23.2.alpha
 		com.watabou.utils.Bundle.addAlias(

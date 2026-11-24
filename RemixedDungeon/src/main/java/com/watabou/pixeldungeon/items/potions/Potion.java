@@ -21,7 +21,7 @@ import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
-import com.watabou.pixeldungeon.items.food.RottenFood;
+import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Level;
@@ -368,8 +368,8 @@ public class Potion extends Item implements UnknownItem {
 				moistenScroll ((Scroll) item, item.getOwner());
 			}
 
-			if(item instanceof RottenFood) {
-				moistenRottenFood((RottenFood) item, item.getOwner());
+			if(item instanceof Food && ((Food) item).isRotten()) {
+				moistenRottenFood((Food) item, item.getOwner());
 			}
 		}
 	};
@@ -404,7 +404,7 @@ public class Potion extends Item implements UnknownItem {
 		return quantity;
 	}
 
-	protected void moistenRottenFood(RottenFood scroll, Char owner) {
+	protected void moistenRottenFood(Food rottenFood, Char owner) {
 		moistenUseless(owner);
 	}
 	
