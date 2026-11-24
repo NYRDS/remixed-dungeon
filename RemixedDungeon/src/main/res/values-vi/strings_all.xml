@@ -242,6 +242,7 @@
     <string name="Blacksmith_Txt2">Bạn đang đùa tôi sao? Cái cuốc của tôi đâu rồi?!</string>
     <string name="Blacksmith_Verify1">Hãy chọn 2 vật phẩm khác nhau, không được chọn cùng một vật phẩm hai lần!</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
+    <string name="Blacksmith_Verify3">Tôi cần biết tôi đang làm việc với thứ gì, hãy nhận diện chúng trước!</string>
     <string name="Blacksmith_Verify4">Tôi không làm việc với vật phẩm bị nguyền rủa!</string>
     <string name="Blacksmith_Verify5">Đây chỉ là đồ rác, chất lượng quá kém!</string>
     <string name="Blacksmith_Verify6">Tôi không thể rèn lại các vật phẩm này!</string>
@@ -2284,6 +2285,7 @@
     <string name="WndTilesKind_NewLook">Giao diện mới</string>
     <string name="WndTilesKind_Title">Chỉ còn một điều nữa:</string>
     <string name="WndTilesKind_text">Bạn sắp bước vào một Hầm ngục bị xâm chiếm bởi ma thuật bóp méo, nhưng bây giờ bạn có thể chọn cách nhìn nó:\n Bạn có muốn dùng dạng giả 3D hiện đại hay dạng phẳng cổ điển không?\nBạn có thể thay đổi sau trong menu tùy chọn trò chơi.</string>
+    <string name="WndTradeItem_Bought">Bạn đã mua %1$s với %2$dg</string>
     <string name="WndTradeItem_Buy">Mua với %d vàng</string>
     <string name="WndTradeItem_BuyAll">Mua tất cả với %d g</string>
     <string name="WndTradeItem_BuyN">Mua %1$d cho %2$dg</string>
@@ -3180,6 +3182,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 

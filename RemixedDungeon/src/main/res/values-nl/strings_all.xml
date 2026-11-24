@@ -819,6 +819,7 @@
     <string name="Goo_Name_Objective">Goo</string>
     <string name="Goo_StaInfo1">!!!</string>
     <string name="GothicArmor_Info">Een gotische pantser is de hoogtepunt van de kunst van pantser smeden.</string>
+    <string name="GothicArmor_Name">Gotisch pantser</string>
     <string name="Guts_TileDescEntrance">Een gapende opening in het plafond leidt naar de bovenverdiepingen</string>
     <string name="Guts_TileDescExit">Gapend gat in de vloer leidt naar de lagere niveaus.</string>
     <string name="Guts_TileGrass">Droge struik</string>
@@ -1595,6 +1596,7 @@
     <string name="RawFish_Name">rauwe vis</string>
     <string name="RawFish_Taste">Visachtig!</string>
     <string name="RegenerationBuff_Info">De functie voor natuurlijke regeneratie is in een buff-vorm om het makkelijker te maken.</string>
+    <string name="RegenerationBuff_Name">Natuurlijke Regeneratie</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Onze game is gecrasht...\n Sorry.\nStuur ons het crashrapport om ons te helpen het te verhelpen.</string>
     <string name="ResultDescriptions_Bleeding">Verstorven op niveau %d</string>
     <string name="ResultDescriptions_Boss">Vermoord door de %1$s op niveau %2$d</string>
@@ -2936,6 +2938,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
