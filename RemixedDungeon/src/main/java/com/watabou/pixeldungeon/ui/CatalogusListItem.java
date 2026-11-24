@@ -1,5 +1,6 @@
 package com.watabou.pixeldungeon.ui;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.platform.EventCollector;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -15,10 +16,14 @@ public class CatalogusListItem extends ListItem {
 	private Item item;
 
 	public CatalogusListItem(Class<? extends Item> cl) {
+		this(cl.getSimpleName());
+	}
+
+	public CatalogusListItem(String kind) {
 		super();
 
 		try {
-			item = cl.newInstance();
+			item = ItemFactory.itemByName(kind);
 			if (clickable = item.isIdentified()) {
 				sprite.copy(new ItemSprite(item));
 				label.text(item.name());

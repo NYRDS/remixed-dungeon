@@ -7,7 +7,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
@@ -23,7 +23,7 @@ public class FirebloomSeed extends Seed {
 		image = 0;
 
 		plantKind = "Firebloom";
-		alchemyClass = PotionOfLiquidFlame.class;
+		alchemyKind = Potion.LIQUID_FLAME;
 	}
 
 	@Override

@@ -14,6 +14,10 @@ import com.watabou.pixeldungeon.windows.WndBag;
 import org.jetbrains.annotations.NotNull;
 
 public class ScrollOfIdentify extends InventoryScroll {
+	public ScrollOfIdentify() {
+		super(IDENTIFY);
+	}
+
 
 	{
         inventoryTitle = StringsManager.getVar(R.string.ScrollOfIdentify_InvTitle);
@@ -31,7 +35,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 
 	@Override
 	protected void onItemSelected(Item item, Char selector) {
-		identify(selector,item);
+		identifyItem(selector, item);
 	}
 
 	@Override

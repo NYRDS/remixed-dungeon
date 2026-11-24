@@ -49,7 +49,7 @@ import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.features.Chasm;
@@ -992,7 +992,7 @@ public class Mob extends Char implements IZapper {
             // java Boss ctor semantics: uncapturable, death/psionic-blast proof
             canBePet = false;
             addResistance(Death.class);
-            addResistance(ScrollOfPsionicBlast.class);
+            addResistanceKind(Scroll.PSIONIC_BLAST);
         }
 
         battleMusic = classDesc.optString("battleMusic", "");

@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.actors.blobs;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
@@ -82,21 +83,17 @@ public class Alchemy extends Blob {
 				} else {
 
 					Seed proto = (Seed) heap.items.get(Random.chances(chances));
-					Class<? extends Item> itemClass = proto.alchemyClass;
+					String itemKind = proto.alchemyKind;
 
 					heap.destroy();
 
 					Statistics.potionsCooked++;
 					Badges.validatePotionsCooked();
 
-					if (itemClass == null) {
+					if (itemKind == null) {
 						result = Treasury.getLevelTreasury().random(Treasury.Category.POTION);
 					} else {
-						try {
-							result = itemClass.newInstance();
-						} catch (Exception e) {
-
-						}
+						result = ItemFactory.itemByName(itemKind);
 					}
 				}
 			}

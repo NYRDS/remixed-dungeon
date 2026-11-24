@@ -35,8 +35,9 @@ public class Seed extends Item {
     protected String plantKind;
     protected String plantName;
 
+    // entity kind of the potion this seed brews in the alchemy pot
     @LuaInterface
-    public Class<? extends Item> alchemyClass;
+    public String alchemyKind;
 
     @Override
     public ArrayList<String> actions(Char hero) {

@@ -14,13 +14,13 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.keys.Key;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -413,11 +413,19 @@ public class Belongings implements Iterable<Item>, Bundlable {
     }
 
     public void uncurseEquipped() {
-        ScrollOfRemoveCurse.uncurse(owner, getItemFromSlot(Slot.ARMOR), getItemFromSlot(Slot.WEAPON), getItemFromSlot(Slot.LEFT_HAND), getItemFromSlot(Slot.ARTIFACT), getItemFromSlot(Slot.LEFT_ARTIFACT));
+        boolean procced = false;
+        for (Slot slot : new Slot[]{Slot.ARMOR, Slot.WEAPON, Slot.LEFT_HAND, Slot.ARTIFACT, Slot.LEFT_ARTIFACT}) {
+            procced = Scroll.uncurseItem(procced, getItemFromSlot(slot));
+        }
+        if (procced) {
+            owner.getSprite().emitter().start(ShadowParticle.UP, 0.05f, 10);
+        }
     }
 
     public void curseEquipped() {
-        ScrollOfCurse.curse(owner, getItemFromSlot(Slot.ARMOR), getItemFromSlot(Slot.WEAPON), getItemFromSlot(Slot.LEFT_HAND), getItemFromSlot(Slot.ARTIFACT), getItemFromSlot(Slot.LEFT_ARTIFACT));
+        for (Slot slot : new Slot[]{Slot.ARMOR, Slot.WEAPON, Slot.LEFT_HAND, Slot.ARTIFACT, Slot.LEFT_ARTIFACT}) {
+            Scroll.curseItem(owner, getItemFromSlot(slot));
+        }
     }
 
     @NotNull

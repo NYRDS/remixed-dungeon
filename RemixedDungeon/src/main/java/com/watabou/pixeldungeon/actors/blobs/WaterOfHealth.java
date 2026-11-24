@@ -14,7 +14,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.utils.GLog;
 
 @LuaInterface
@@ -25,7 +25,7 @@ public class WaterOfHealth extends WellWater {
 		
 		Sample.INSTANCE.play( Assets.SND_DRINK );
 		
-		PotionOfHealing.heal( hero, 1f );
+		Potion.heal( hero, 1f );
 		hero.getBelongings().uncurseEquipped();
 		hero.hunger().satisfy(Hunger.STARVING);
 		

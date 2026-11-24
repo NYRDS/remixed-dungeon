@@ -20,6 +20,7 @@ local Sample           = luajava.bindClass("com.nyrds.platform.audio.Sample")
 local Music            = luajava.bindClass("com.nyrds.platform.audio.MusicManager")
 local StringsManager   = luajava.bindClass("com.nyrds.platform.util.StringsManager")
 local CharUtils        = luajava.bindClass("com.watabou.pixeldungeon.actors.CharUtils")
+local Hero             = luajava.bindClass("com.watabou.pixeldungeon.actors.hero.Hero")
 local ModQuirks        = luajava.bindClass("com.nyrds.pixeldungeon.game.ModQuirks")
 local Util             = luajava.bindClass("com.nyrds.util.Util")
 local ModdingBase      = luajava.bindClass("com.nyrds.util.ModdingBase")
@@ -206,7 +207,6 @@ local Sfx = {
 local CharSprite      = luajava.bindClass("com.watabou.pixeldungeon.sprites.CharSprite")
 local Facilitations   = luajava.bindClass("com.watabou.pixeldungeon.Facilitations")
 local WandOfBlink     = luajava.bindClass("com.watabou.pixeldungeon.items.wands.WandOfBlink")
-local ScrollOfMagicMapping = luajava.bindClass("com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping")
 local Accessory       = luajava.bindClass("com.nyrds.pixeldungeon.items.accessories.Accessory")
 local GameControl     = luajava.bindClass("com.nyrds.pixeldungeon.utils.GameControl")
 local AlchemyPot      = luajava.bindClass("com.watabou.pixeldungeon.levels.features.AlchemyPot")
@@ -235,7 +235,11 @@ local RPD = {
     CharSprite = CharSprite,
     Facilitations = Facilitations,
     WandOfBlink = WandOfBlink,
-    ScrollOfMagicMapping = ScrollOfMagicMapping,
+    -- ScrollOfMagicMapping java class removed (data scroll batch); the
+    -- discover sparkle lives on the Scroll framework now. Old callers used
+    -- RPD.ScrollOfMagicMapping:discover(cell) - RPD.Scroll:discoverStatic(cell)
+    -- is the replacement.
+    Scroll = luajava.bindClass("com.watabou.pixeldungeon.items.scrolls.Scroll"),
     Accessory = Accessory,
     GameControl = GameControl,
     AlchemyPot = AlchemyPot,
@@ -258,6 +262,7 @@ local RPD = {
     CommonActions = CommonActions,
     CharsList = CharsList,
     CharUtils = CharUtils,
+    Hero = Hero,
     MobSpawner = MobSpawner,
     LevelTools = LevelTools,
     SimpleWand = SimpleWand,
@@ -377,6 +382,10 @@ local RPD = {
 
     glog = function (text,...)
         GLog:i(tostring(text),{...})
+    end,
+
+    glogw = function (text,...)
+        GLog:w(tostring(text),{...})
     end,
 
     glogp = function (text,...)

@@ -72,7 +72,6 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.rings.RingOfElements;
 import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -232,7 +231,7 @@ public class CharUtils {
 	// the deleted WndPriest.doHeal for a single patient
 	@LuaInterface
 	public static void healPatient(@NotNull Char patient) {
-		PotionOfHealing.heal(patient, 1.0f);
+		Potion.heal(patient, 1.0f);
 		patient.hunger().satisfy(Hunger.STARVING);
 
 		if (patient instanceof Mob && patient.getEntityKind().equals("Brute")) {
@@ -347,6 +346,7 @@ public class CharUtils {
      * Invisibility.dispel: breaks vanilla invisibility and the Cloak buff,
      * but only while the target is seen by someone.
      */
+    @LuaInterface
     public static void dispelInvisibility(Char tgt) {
         if (tgt.visibleEnemies() > 0) {
             Buff.detach(tgt, BuffFactory.INVISIBILITY);
@@ -479,6 +479,7 @@ public class CharUtils {
         return hit;
     }
 
+    @LuaInterface
     public static void challengeAllMobs(Char ch, String sound) {
 
         if (!ch.isOnStage()) {

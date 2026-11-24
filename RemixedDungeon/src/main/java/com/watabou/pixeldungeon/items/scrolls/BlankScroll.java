@@ -9,6 +9,11 @@ import com.watabou.pixeldungeon.utils.GLog;
 import org.jetbrains.annotations.NotNull;
 
 public class BlankScroll extends Scroll {
+
+	public BlankScroll() {
+		super(BLANK);
+	}
+
 	{
 		image = ItemSpriteSheet.SCROLL_BLANK;
 		stackable = true;

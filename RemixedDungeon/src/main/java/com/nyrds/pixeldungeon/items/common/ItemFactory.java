@@ -90,19 +90,7 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.keys.GoldenKey;
 import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
-import com.watabou.pixeldungeon.items.potions.PotionOfExperience;
-import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
-import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
-import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
-import com.watabou.pixeldungeon.items.potions.PotionOfMana;
-import com.watabou.pixeldungeon.items.potions.PotionOfMight;
-import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
-import com.watabou.pixeldungeon.items.potions.PotionOfParalyticGas;
-import com.watabou.pixeldungeon.items.potions.PotionOfPurity;
-import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.quest.CorpseDust;
 import com.watabou.pixeldungeon.items.quest.DarkGold;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
@@ -123,19 +111,8 @@ import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.items.rings.RingOfThorns;
 import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfChallenge;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfCurse;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfDomination;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfLullaby;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfMirrorImage;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfPsionicBlast;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfSummoning;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfTeleportation;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfTerror;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfAmok;
@@ -269,6 +246,13 @@ public class ItemFactory {
         registerItemClass(Torch.class);
         registerItemClass(Weightstone.class);
 
+        // the framework classes themselves resolve as kinds (name lookup
+        // during Item field init runs before the kind ctor arg lands; bare
+        // instances restore as their canonical kind: ration/healing/identify)
+        registerItemClass(Food.class);
+        registerItemClass(Potion.class);
+        registerItemClass(Scroll.class);
+
         // data foods: one Food framework + scripts/items/<Kind>.lua each
         registerItemKind(Food.RATION, Food::new);
         registerItemKind(Food.OVERPRICED_RATION, Food::new);
@@ -282,32 +266,40 @@ public class ItemFactory {
         registerItemKind(Food.ROTTEN_RATION, Food::new);
         registerItemKind(Food.CANDY_OF_DEATH, Food::new);
 
-        registerItemClass(ScrollOfTerror.class);
+        // data scrolls: one Scroll framework + scripts/items/<Kind>.lua each
+        // (Identify/Upgrade/WeaponUpgrade keep thin java classes - inventory
+        // selection UI; BlankScroll too)
         registerItemClass(BlankScroll.class);
-        registerItemClass(ScrollOfMagicMapping.class);
-        registerItemClass(ScrollOfRecharging.class);
-        registerItemClass(ScrollOfLullaby.class);
-        registerItemClass(ScrollOfCurse.class);
         registerItemClass(ScrollOfWeaponUpgrade.class);
         registerItemClass(ScrollOfIdentify.class);
         registerItemClass(ScrollOfUpgrade.class);
-        registerItemClass(ScrollOfChallenge.class);
-        registerItemClass(ScrollOfMirrorImage.class);
-        registerItemClass(ScrollOfTeleportation.class);
-        registerItemClass(ScrollOfDomination.class);
-        registerItemClass(ScrollOfRemoveCurse.class);
-        registerItemClass(ScrollOfPsionicBlast.class);
-        registerItemClass(PotionOfLevitation.class);
-        registerItemClass(PotionOfStrength.class);
-        registerItemClass(PotionOfMindVision.class);
-        registerItemClass(PotionOfParalyticGas.class);
-        registerItemClass(PotionOfToxicGas.class);
-        registerItemClass(PotionOfHealing.class);
-        registerItemClass(PotionOfPurity.class);
-        registerItemClass(PotionOfLiquidFlame.class);
-        registerItemClass(PotionOfFrost.class);
-        registerItemClass(PotionOfInvisibility.class);
-        registerItemClass(PotionOfExperience.class);
+        registerItemKind(Scroll.MAGIC_MAPPING, Scroll::new);
+        registerItemKind(Scroll.RECHARGING, Scroll::new);
+        registerItemKind(Scroll.REMOVE_CURSE, Scroll::new);
+        registerItemKind(Scroll.TELEPORTATION, Scroll::new);
+        registerItemKind(Scroll.CHALLENGE, Scroll::new);
+        registerItemKind(Scroll.TERROR, Scroll::new);
+        registerItemKind(Scroll.LULLABY, Scroll::new);
+        registerItemKind(Scroll.PSIONIC_BLAST, Scroll::new);
+        registerItemKind(Scroll.MIRROR_IMAGE, Scroll::new);
+        registerItemKind(Scroll.DOMINATION, Scroll::new);
+        registerItemKind(Scroll.SUMMONING, Scroll::new);
+        registerItemKind(Scroll.CURSE, Scroll::new);
+
+        // data potions: one Potion framework + scripts/items/<Kind>.lua each
+        registerItemKind(Potion.HEALING, Potion::new);
+        registerItemKind(Potion.EXPERIENCE, Potion::new);
+        registerItemKind(Potion.TOXIC_GAS, Potion::new);
+        registerItemKind(Potion.LIQUID_FLAME, Potion::new);
+        registerItemKind(Potion.STRENGTH, Potion::new);
+        registerItemKind(Potion.PARALYTIC_GAS, Potion::new);
+        registerItemKind(Potion.LEVITATION, Potion::new);
+        registerItemKind(Potion.MIND_VISION, Potion::new);
+        registerItemKind(Potion.PURITY, Potion::new);
+        registerItemKind(Potion.INVISIBILITY, Potion::new);
+        registerItemKind(Potion.MIGHT, Potion::new);
+        registerItemKind(Potion.FROST, Potion::new);
+        registerItemKind(Potion.MANA, Potion::new);
         registerItemClass(RatSkull.class);
         registerItemClass(ChaosCrystal.class);
         registerItemClass(ChaosBlade.class);
@@ -409,7 +401,6 @@ public class ItemFactory {
         registerItemClass(CompositeCrossbow.class);
         registerItemClass(RubyCrossbow.class);
         registerItemClass(ChaosArmor.class);
-        registerItemClass(PotionOfMight.class);
         registerItemClass(HeartOfDarkness.class);
         registerItemClass(GoldenSword.class);
         registerItemClass(BlackSkull.class);
@@ -466,7 +457,6 @@ public class ItemFactory {
         registerItemClass(ManaPotion.class);
         registerItemClass(TomeOfKnowledge.class);
         registerItemClass(SpellBook.class);
-        registerItemClass(ScrollOfSummoning.class);
 
         registerItemClass(GnollArmor.class);
         registerItemClass(GnollTamahawk.class);
@@ -480,7 +470,6 @@ public class ItemFactory {
         //registerItemClass(DummyItem.class);
         registerItemClass(GuardianArmor.class);
         registerItemClass(WitchdoctorArmor.class);
-        registerItemClass(PotionOfMana.class);
         registerItemClass(DoctorArmor.class);
         registerItemClass(PriestArmor.class);
 

@@ -1754,6 +1754,10 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         resistances.add(buffClass.getSimpleName());
     }
 
+    public void addResistanceKind(String kind) {
+        resistances.add(kind);
+    }
+
     public void removeImmunity(String namedEntity) {
         immunities.remove(namedEntity);
     }
@@ -2475,6 +2479,11 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
 
     public int getSpriteLayer() {
         return 0;
+    }
+
+    @LuaInterface
+    public boolean isHero() {
+        return this instanceof Hero;
     }
 
     @LuaInterface

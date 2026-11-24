@@ -18,7 +18,7 @@ public class UpgradablePotion extends Potion {
 		return true;
 	}
 
-	double qualityFactor() {
+	public double qualityFactor() {
 		return Math.pow(2,level());
 	}
 

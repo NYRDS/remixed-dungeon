@@ -11,6 +11,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfUpgrade extends InventoryScroll {
+	public ScrollOfUpgrade() {
+		super(UPGRADE);
+	}
+
 
 	{
         inventoryTitle = StringsManager.getVar(R.string.ScrollOfUpgrade_InvTitle);
@@ -20,14 +24,14 @@ public class ScrollOfUpgrade extends InventoryScroll {
 	@Override
 	protected void onItemSelected(Item item, Char selector) {
 
-		ScrollOfRemoveCurse.uncurse( selector, item );
+		uncurseAndFx(selector, item);
 		item.upgrade();
 
         GLog.p(StringsManager.getVar(R.string.ScrollOfUpgrade_LooksBetter), item.name() );
 		
 		Badges.validateItemLevelAcquired( item );
 		
-		upgrade( selector );
+		upgradeFx( selector );
 	}
 	
 	public static void upgrade(Char hero ) {

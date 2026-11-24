@@ -11,6 +11,10 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class InventoryScroll extends Scroll {
+	protected InventoryScroll(@NotNull String kind) {
+		super(kind);
+	}
+
 
 	protected String inventoryTitle = StringsManager.getVar(R.string.InventoryScroll_Title);
     protected WndBag.Mode mode = WndBag.Mode.ALL;

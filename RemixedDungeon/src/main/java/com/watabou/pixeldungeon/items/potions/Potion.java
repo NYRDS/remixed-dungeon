@@ -1,9 +1,13 @@
 
 package com.watabou.pixeldungeon.items.potions;
 
+import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.nyrds.platform.audio.Sample;
@@ -12,14 +16,24 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
+import com.watabou.pixeldungeon.actors.blobs.Freezing;
+import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
+import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness;
 import com.watabou.pixeldungeon.actors.blobs.WaterOfHealth;
 import com.watabou.pixeldungeon.actors.blobs.WaterOfTransmutation;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
+import com.watabou.pixeldungeon.items.ItemStatusHandlerKinds;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
@@ -27,45 +41,99 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.PathFinder;
 import java.util.ArrayList;
 import java.util.HashSet;
 import org.jetbrains.annotations.NotNull;
+import org.luaj.vm2.LuaValue;
 
+/**
+ * Data potions: one java kind-parameterized framework, per-kind data and
+ * behavior in scripts/items/<Kind>.lua built with scripts/lib/potion.lua
+ * (was 13 per-potion java classes). Kind == the legacy class simple name, so
+ * name/info resources and old saves resolve unchanged; the identification
+ * handler keeps the legacy "class <pkg>.<Kind>" bundle keys verbatim.
+ *
+ * Lua hooks (all optional, self = the script table, item = the potion):
+ *   desc(self)                 -> { labelIndex, price }   (data, once per kind)
+ *   apply(self, item, chr)     -> drink effect (nil = base shatter fallback)
+ *   shatter(self, item, cell)  -> thrown-break effect (nil = base splash)
+ *   moistenArrow(self, item, arrow, owner)      -> arrow kind string it turns into
+ *   moistenScroll(self, item, scroll, owner)    -> replacement scroll kind string
+ *   moistenRottenFood(self, item, food, owner)  -> "detached" to fly away (truthy)
+ */
 public class Potion extends Item implements UnknownItem {
+
+	public static final String HEALING        = "PotionOfHealing";
+	public static final String EXPERIENCE     = "PotionOfExperience";
+	public static final String TOXIC_GAS      = "PotionOfToxicGas";
+	public static final String LIQUID_FLAME   = "PotionOfLiquidFlame";
+	public static final String STRENGTH       = "PotionOfStrength";
+	public static final String PARALYTIC_GAS  = "PotionOfParalyticGas";
+	public static final String LEVITATION     = "PotionOfLevitation";
+	public static final String MIND_VISION    = "PotionOfMindVision";
+	public static final String PURITY         = "PotionOfPurity";
+	public static final String INVISIBILITY   = "PotionOfInvisibility";
+	public static final String MIGHT          = "PotionOfMight";
+	public static final String FROST          = "PotionOfFrost";
+	public static final String MANA           = "PotionOfMana";
 
 	private static final String AC_MOISTEN = "Potion_ACMoisten";
 	
 	private static final float TIME_TO_DRINK = 1f;
 	private static final float TIME_TO_MOISTEN = 1f;
 
-	protected int labelIndex = -1;
-	
-	private static final Class<?>[] potions = {
-		PotionOfHealing.class, 
-		PotionOfExperience.class, 
-		PotionOfToxicGas.class, 
-		PotionOfLiquidFlame.class,
-		PotionOfStrength.class,
-		PotionOfParalyticGas.class,
-		PotionOfLevitation.class,
-		PotionOfMindVision.class, 
-		PotionOfPurity.class,
-		PotionOfInvisibility.class,
-		PotionOfMight.class,
-		PotionOfFrost.class,
-		PotionOfMana.class
+	private static final int DISTANCE_SWEEP = 2;
+
+	// legacy class package: identification bundle keys keep this exact form so
+	// per-class-era saves and kind-era saves stay interchangeable
+	private static final String LEGACY_PACKAGE = "com.watabou.pixeldungeon.items.potions";
+
+	private static final String[] potions = {
+		HEALING,
+		EXPERIENCE,
+		TOXIC_GAS,
+		LIQUID_FLAME,
+		STRENGTH,
+		PARALYTIC_GAS,
+		LEVITATION,
+		MIND_VISION,
+		PURITY,
+		INVISIBILITY,
+		MIGHT,
+		FROST,
+		MANA
 	};
+
+	// known-harmful when identified: default action is throw, drink asks twice
+	private static final HashSet<String> harmfulKinds = new HashSet<>(
+			java.util.Arrays.asList(LIQUID_FLAME, TOXIC_GAS, PARALYTIC_GAS, FROST));
+
+	// known-beneficial: throwing them away asks twice
+	private static final HashSet<String> beneficialThrowKinds = new HashSet<>(
+			java.util.Arrays.asList(EXPERIENCE, HEALING, LEVITATION, MIND_VISION, STRENGTH,
+					INVISIBILITY, MIGHT, MANA));
 
 	private static final Integer[] images;
 
-	private static ItemStatusHandler<Potion> handler;
+	private static ItemStatusHandlerKinds handler;
 	
 	private final String color;
+
+	protected int labelIndex = -1;
+
+	@NotNull
+	protected final String potionKind;
+
+	// per-instance wrapper around the shared per-kind module (see Food)
+	@NotNull
+	private final LuaScript kindScript;
 
 	static {
 		images = new Integer[13];
@@ -93,28 +161,53 @@ public class Potion extends Item implements UnknownItem {
 	
 	private boolean shattered = false;
 
-	@SuppressWarnings("unchecked")
 	public static void initColors() {
-		handler = new ItemStatusHandler<>((Class<? extends Potion>[]) potions, images);
+		handler = new ItemStatusHandlerKinds(LEGACY_PACKAGE, potions, images);
 	}
 	
 	public static void save( Bundle bundle ) {
 		handler.save( bundle );
 	}
 	
-	@SuppressWarnings("unchecked")
 	public static void restore( Bundle bundle ) {
-		handler = new ItemStatusHandler<>((Class<? extends Potion>[]) potions, images, bundle);
+		handler = new ItemStatusHandlerKinds(LEGACY_PACKAGE, potions, images, bundle);
 	}
 	
+	// restore fallback for the bare legacy tag; plain potions were rations of
+	// the potion world - healing is the canonical one
 	public Potion() {
+		this(HEALING);
+	}
+
+	public Potion(@NotNull String kind) {
+		potionKind = kind;
+		kindScript = new LuaScript("scripts/items/" + kind, this);
 		if (handler != null) {
-			image = handler.index( this );
+			image = handler.index( potionKind );
 		}
 		color = StringsManager.getVars(R.array.Potion_Colors)[ItemStatusHandler.indexByImage(image, images)];
+		applyKind();
 		if(knownHamful()) {
 			setDefaultAction(AC_THROW);
 		}
+	}
+
+	private void applyKind() {
+		// Item's name/info initialize before the kind is known - re-resolve
+		name = getClassParam("Name", StringsManager.getVar(R.string.Item_Name), false);
+		info = getClassParam("Info", StringsManager.getVar(R.string.Item_Info), false);
+
+		if (!kindScript.hasMethod("desc")) {
+			return;
+		}
+		LuaValue desc = kindScript.run("desc").checktable();
+		labelIndex = desc.rawget("labelIndex").optint(-1);
+		kindBasePrice = (float) desc.rawget("price").optdouble(20);
+	}
+
+	@Override
+	public String getEntityKind() {
+		return potionKind;
 	}
 	
 	@Override
@@ -166,25 +259,13 @@ public class Potion extends Item implements UnknownItem {
 	}
 
 	public boolean knownHamful() {
-		return isKnown() && (
-				this instanceof PotionOfLiquidFlame ||
-						this instanceof PotionOfToxicGas ||
-						this instanceof PotionOfParalyticGas ||
-						this instanceof PotionOfFrost);
+		return isKnown() && harmfulKinds.contains(potionKind);
 	}
 
 	@Override
 	public void doThrow(@NotNull final Char chr) {
 
-		if (isKnown() && (
-			this instanceof PotionOfExperience || 
-			this instanceof PotionOfHealing || 
-			this instanceof PotionOfLevitation ||
-			this instanceof PotionOfMindVision ||
-			this instanceof PotionOfStrength ||
-			this instanceof PotionOfInvisibility || 
-			this instanceof PotionOfMight ||
-			this instanceof PotionOfMana)) {
+		if (isKnown() && beneficialThrowKinds.contains(potionKind)) {
 
             GameScene.show(
 				new WndOptions(StringsManager.getVar(R.string.Potion_Beneficial),
@@ -253,6 +334,10 @@ public class Potion extends Item implements UnknownItem {
 	}
 	
 	protected void apply(Char hero ) {
+		if (kindScript.hasMethod("apply")) {
+			kindScript.run("apply", hero);
+			return;
+		}
 		shatter( hero.getPos() );
 	}
 
@@ -265,18 +350,23 @@ public class Potion extends Item implements UnknownItem {
 	}
 
 	public void shatter( int cell ) {
+		if (kindScript.hasMethod("shatter")) {
+			kindScript.run("shatter", cell);
+			return;
+		}
         GLog.i(Utils.format(R.string.Potion_Shatter, color()));
 		Sample.INSTANCE.play( Assets.SND_SHATTER );
 		splash( cell );
 	}
 	
 	public boolean isKnown() {
-		return handler.isKnown( this );
+		return handler.isKnown( potionKind );
 	}
 	
+	@LuaInterface
 	public void setKnown() {
 		if (!isKnown()) {
-			handler.know( this );
+			handler.know( potionKind );
 		}
 		
 		Badges.validateAllPotionsIdentified();
@@ -288,7 +378,8 @@ public class Potion extends Item implements UnknownItem {
 		return this;
 	}
 	
-	protected String color() {
+	@LuaInterface
+	public String color() {
 		return color;
 	}
 	
@@ -312,16 +403,28 @@ public class Potion extends Item implements UnknownItem {
 		return false;
 	}
 	
-	public static HashSet<Class<? extends Potion>> getKnown() {
+	public static HashSet<String> getKnown() {
 		return handler.known();
 	}
 	
-	public static HashSet<Class<? extends Potion>> getUnknown() {
+	public static HashSet<String> getUnknown() {
 		return handler.unknown();
 	}
 	
 	public static boolean allKnown() {
-		return handler.known().size() == potions.length;
+		return handler.allKnown();
+	}
+
+	// the canonical healing-drink effect, kept reachable from java
+	// (ChaosStaff crit heals; was PotionOfHealing.heal)
+	private static final Potion healShim = new Potion(HEALING);
+
+	public static void heal(Char ch, float portion) {
+		ch.heal((int) (ch.ht() * portion), healShim);
+		Buff.detach(ch, BuffFactory.POISON);
+		Buff.detach(ch, BuffFactory.CRIPPLE);
+		Buff.detach(ch, BuffFactory.WEAKNESS);
+		Buff.detach(ch, BuffFactory.BLEEDING);
 	}
 
 	static private final int[] splashColors = new int[13];
@@ -334,7 +437,8 @@ public class Potion extends Item implements UnknownItem {
 			splashColors[i] = bmp.getPixel(col * ItemSprite.SIZE + 8, row * ItemSprite.SIZE + 10);
 		}
 	}
-	protected void splash( int cell ) {
+	@LuaInterface
+	public void splash( int cell ) {
 		if(!GameScene.isSceneReady()) {
 			return;
 		}
@@ -342,8 +446,10 @@ public class Potion extends Item implements UnknownItem {
 		Splash.at( cell, splashColors[ItemStatusHandler.indexByImage(image, images)], 5 );
 	}
 
+	private float kindBasePrice = 20;
+
 	public int basePrice() {
-		return 20;
+		return (int) kindBasePrice;
 	}
 
 	@Override
@@ -374,7 +480,8 @@ public class Potion extends Item implements UnknownItem {
 		}
 	};
 
-	protected int detachMoistenItems(Item item, int maxQuantity) {
+	@LuaInterface
+	public int detachMoistenItems(Item item, int maxQuantity) {
 		setKnown();
 		int quantity = item.quantity();
 		
@@ -393,8 +500,78 @@ public class Potion extends Item implements UnknownItem {
 		return quantity;
 	}
 
-	double qualityFactor() {
+	@LuaInterface
+	public double qualityFactor() {
 		return 1;
+	}
+
+	// PotionOfPurity shatter: clear Toxic/Paralytic/Confusion gas within 2 cells
+	// of the impact (was PotionOfPurity.shatter's pathfinder sweep)
+	@LuaInterface
+	public void purityShatter(int cell) {
+		Level level = getOwner().level();
+		PathFinder.buildDistanceMap(cell, BArray.not(level.losBlocking, null), (int) (DISTANCE_SWEEP * qualityFactor()));
+		boolean procd = false;
+		Blob[] blobs = {
+				level.blobs.get(ToxicGas.class),
+				level.blobs.get(ParalyticGas.class),
+				level.blobs.get(ConfusionGas.class)
+		};
+		for (Blob blob : blobs) {
+			if (blob == null) {
+				continue;
+			}
+			for (int i = 0; i < level.getLength(); i++) {
+				if (PathFinder.distance[i] < Integer.MAX_VALUE) {
+					int value = blob.cur[i];
+					if (value > 0) {
+						blob.cur[i] = 0;
+						blob.setVolume(blob.getVolume() - value);
+						procd = true;
+						CellEmitter.get(i).burst(Speck.factory(Speck.DISCOVER), 1);
+					}
+				}
+			}
+		}
+		boolean heroAffected = PathFinder.distance[Dungeon.hero.getPos()] < Integer.MAX_VALUE;
+
+		if (procd) {
+			splash(cell);
+			Sample.INSTANCE.play(Assets.SND_SHATTER);
+			setKnown();
+			if (heroAffected) {
+				GLog.p(StringsManager.getVar(R.string.PotionOfPurity_Freshness));
+			}
+		} else {
+			shatter(cell); // the base no-hook shatter path is unreachable here (hook present);
+			               // mirror the old super.shatter behavior instead
+			GLog.i(Utils.format(R.string.Potion_Shatter, color()));
+			Sample.INSTANCE.play(Assets.SND_SHATTER);
+			splash(cell);
+			if (heroAffected) {
+				GLog.i(StringsManager.getVar(R.string.PotionOfPurity_Freshness));
+				setKnown();
+			}
+		}
+	}
+
+	// PotionOfFrost shatter: freeze everything within 2 cells of the impact
+	// (was PotionOfFrost.shatter's pathfinder sweep)
+	@LuaInterface
+	public void frostShatter(int cell) {
+		if (!canShatter()) {
+			return;
+		}
+		Level level = Dungeon.level;
+		PathFinder.buildDistanceMap(cell, BArray.not(level.losBlocking, null), (int) (DISTANCE_SWEEP * qualityFactor()));
+		for (int i = 0; i < level.getLength(); i++) {
+			if (PathFinder.distance[i] < Integer.MAX_VALUE) {
+				Freezing.affect(i);
+			}
+		}
+		splash(cell);
+		Sample.INSTANCE.play(Assets.SND_SHATTER);
+		setKnown();
 	}
 
 	protected int reallyMoistArrows(Arrow arrow,Char owner) {
@@ -405,14 +582,41 @@ public class Potion extends Item implements UnknownItem {
 	}
 
 	protected void moistenRottenFood(Food rottenFood, Char owner) {
+		if (kindScript.hasMethod("moistenRottenFood")) {
+			kindScript.run("moistenRottenFood", rottenFood, owner);
+			return;
+		}
 		moistenUseless(owner);
 	}
 	
 	protected void moistenScroll(Scroll scroll, Char owner) {
+		if (kindScript.hasMethod("moistenScroll")) {
+			// truthy lua return = replacement scroll kind string
+			LuaValue ret = kindScript.run("moistenScroll", scroll, owner);
+			if (ret.isstring()) {
+				int quantity = detachMoistenItems(scroll, scroll.quantity());
+				Item replacement = ItemFactory.itemByName(ret.tojstring());
+				replacement.quantity(quantity);
+				owner.collect(replacement);
+				return;
+			}
+			return; // lua handled it (fly-away etc.)
+		}
 		moistenUseless(owner);
 	}
 	
 	protected void moistenArrow(Arrow arrow, Char owner) {
+		if (kindScript.hasMethod("moistenArrow")) {
+			LuaValue ret = kindScript.run("moistenArrow", arrow, owner);
+			if (ret.isstring()) {
+				int quantity = reallyMoistArrows(arrow, owner);
+				Item moistened = ItemFactory.itemByName(ret.tojstring());
+				moistened.quantity(quantity);
+				owner.collect(moistened);
+				return;
+			}
+			return; // lua handled it
+		}
 		moistenUseless(owner);
 	}
 	
@@ -423,7 +627,8 @@ public class Potion extends Item implements UnknownItem {
 		owner.doOperate(TIME_TO_MOISTEN );
 	}
 	
-	protected void moistenEffective(@NotNull Char owner) {
+	@LuaInterface
+	public void moistenEffective(@NotNull Char owner) {
 		detach(owner.getBelongings().backpack );
 		identify();
 		owner.doOperate(TIME_TO_MOISTEN );

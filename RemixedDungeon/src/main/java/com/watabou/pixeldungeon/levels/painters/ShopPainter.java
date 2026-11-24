@@ -19,12 +19,9 @@ import com.watabou.pixeldungeon.items.armor.MailArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
 import com.watabou.pixeldungeon.items.armor.ScaleArmor;
 import com.watabou.pixeldungeon.items.food.Food;
-import com.watabou.pixeldungeon.items.potions.PotionOfExperience;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
-import com.watabou.pixeldungeon.items.potions.PotionOfMight;
+import com.watabou.pixeldungeon.items.potions.Potion;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
 import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
 import com.watabou.pixeldungeon.items.weapon.melee.Longsword;
@@ -128,20 +125,20 @@ public class ShopPainter extends Painter {
 						stock( level, shopkeeper, new GothicArmor().identify() );
 						break;
 				}
-				stock( level, shopkeeper, new PotionOfHealing() );
-				stock( level, shopkeeper, new PotionOfExperience());
-				stock( level, shopkeeper, new PotionOfMight());
+				stock( level, shopkeeper, ItemFactory.itemByName(Potion.HEALING) );
+				stock( level, shopkeeper, ItemFactory.itemByName(Potion.EXPERIENCE));
+				stock( level, shopkeeper, ItemFactory.itemByName(Potion.MIGHT));
 				break;
 		}
 
-		stock( level, shopkeeper, new PotionOfHealing() );
+		stock( level, shopkeeper, ItemFactory.itemByName(Potion.HEALING) );
 		for (int i=0; i < 2; i++) {
 			stock( level, shopkeeper, Treasury.getLevelTreasury().random( Treasury.Category.POTION ) );
 		}
 
 		stock( level, shopkeeper, new ScrollOfIdentify() );
-		stock( level, shopkeeper, new ScrollOfRemoveCurse() );
-		stock( level, shopkeeper, new ScrollOfMagicMapping() );
+		stock( level, shopkeeper, ItemFactory.itemByName(Scroll.REMOVE_CURSE) );
+		stock( level, shopkeeper, ItemFactory.itemByName(Scroll.MAGIC_MAPPING) );
 		stock( level, shopkeeper, Treasury.getLevelTreasury().random( Treasury.Category.SCROLL ) );
 
 		stock( level, shopkeeper, ItemFactory.itemByName(Food.OVERPRICED_RATION) );

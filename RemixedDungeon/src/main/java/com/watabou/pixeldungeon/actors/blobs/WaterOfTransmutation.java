@@ -5,6 +5,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.common.GoldenSword;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.SacrificialSword;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
 import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
@@ -14,8 +15,6 @@ import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
-import com.watabou.pixeldungeon.items.potions.PotionOfMight;
-import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -199,8 +198,8 @@ public class WaterOfTransmutation extends WellWater {
     }
 
     private Item changePotion(Item p) {
-        if (p instanceof PotionOfStrength) {
-            return new PotionOfMight();
+        if (p instanceof Potion && Potion.STRENGTH.equals(((Potion) p).getEntityKind())) {
+            return ItemFactory.itemByName(Potion.MIGHT);
         } else {
             Item n;
             do {

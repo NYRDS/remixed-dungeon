@@ -7,7 +7,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
@@ -22,7 +22,7 @@ public class SorrowmossSeed extends Seed {
 		image = 2;
 
 		plantKind = "Sorrowmoss";
-		alchemyClass = PotionOfToxicGas.class;
+		alchemyKind = Potion.TOXIC_GAS;
 	}
 
 	@Override

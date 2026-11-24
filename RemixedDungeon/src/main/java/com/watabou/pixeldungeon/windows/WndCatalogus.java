@@ -7,7 +7,6 @@ import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.GuiProperties;
 import com.watabou.noosa.Text;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -78,16 +77,16 @@ public class WndCatalogus extends WndTabbed {
 		list.scrollTo(0, 0);
 
 		float pos = 0;
-		for (Class<? extends Item> itemClass : showPotions ? Potion.getKnown() : Scroll.getKnown()) {
-			CatalogusListItem item = new CatalogusListItem(itemClass);
+		for (String kind : showPotions ? Potion.getKnown() : Scroll.getKnown()) {
+			CatalogusListItem item = new CatalogusListItem(kind);
 			item.setRect(0, pos, width, ITEM_HEIGHT);
 			content.add(item);
 
 			pos += item.height();
 		}
 
-		for (Class<? extends Item> itemClass : showPotions ? Potion.getUnknown() : Scroll.getUnknown()) {
-			CatalogusListItem item = new CatalogusListItem(itemClass);
+		for (String kind : showPotions ? Potion.getUnknown() : Scroll.getUnknown()) {
+			CatalogusListItem item = new CatalogusListItem(kind);
 			item.setRect(0, pos, width, ITEM_HEIGHT);
 			content.add(item);
 

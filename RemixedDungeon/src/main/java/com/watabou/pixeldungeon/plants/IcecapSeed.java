@@ -7,7 +7,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
@@ -23,7 +23,7 @@ public class IcecapSeed extends Seed {
 		image = 1;
 
 		plantKind = "Icecap";
-		alchemyClass = PotionOfFrost.class;
+		alchemyKind = Potion.FROST;
 	}
 
 	@Override

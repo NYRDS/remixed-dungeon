@@ -45,9 +45,8 @@ import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.food.Food;
-import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
+import com.watabou.pixeldungeon.items.potions.Potion;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
@@ -346,7 +345,7 @@ public class Hero extends Char {
 
         if (item.announcePickUp()) {
             if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
-                    || (item instanceof PotionOfStrength && ((PotionOfStrength) item).isKnown())) {
+                    || (item instanceof Potion && Potion.STRENGTH.equals(item.getEntityKind()) && ((Potion) item).isKnown())) {
                 itemText = Text.color(item.name(), CharSprite.POSITIVE);
             }
         }
@@ -499,6 +498,7 @@ public class Hero extends Char {
     }
 
     @Override
+    @LuaInterface
     public int expToLevel() {
         if (getDifficulty() != 0) {
             return 5 + lvl() * 5;
@@ -719,14 +719,14 @@ public class Hero extends Char {
                             GameScene.discoverTile(p);
                             level.set(p, Terrain.discover(oldValue));
                             GameScene.updateMapPair(p);
-                            ScrollOfMagicMapping.discover(p);
+                            Scroll.discoverStatic(p);
                             smthFound = true;
                         }
 
                         LevelObject obj = level.getTopLevelObject(p);
                         if (obj != null && obj.secret()) {
                             obj.discover();
-                            ScrollOfMagicMapping.discover(p);
+                            Scroll.discoverStatic(p);
                             smthFound = true;
                         }
                     }
@@ -798,6 +798,7 @@ public class Hero extends Char {
         return sprite;
     }
 
+    @LuaInterface
     public int getExpForLevelUp() {
         return Scrambler.descramble(scrambledExp);
     }
@@ -822,7 +823,7 @@ public class Hero extends Char {
                 break;
             case MAGE:
                 getBelongings().charge(false);
-                ScrollOfRecharging.charge(this);
+                Scroll.chargeFx(this);
                 break;
             default:
                 break;

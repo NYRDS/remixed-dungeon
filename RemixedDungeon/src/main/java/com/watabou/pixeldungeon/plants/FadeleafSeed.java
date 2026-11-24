@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.items.potions.PotionOfMindVision;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
@@ -23,7 +23,7 @@ public class FadeleafSeed extends Seed {
 		image = 6;
 
 		plantKind = "Fadeleaf";
-		alchemyClass = PotionOfMindVision.class;
+		alchemyKind = Potion.MIND_VISION;
 	}
 
 	@Override

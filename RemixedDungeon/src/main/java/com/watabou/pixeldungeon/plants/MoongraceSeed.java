@@ -7,7 +7,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.items.potions.PotionOfMana;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
@@ -23,7 +23,7 @@ public class MoongraceSeed extends Seed {
 		image = 8;
 
 		plantKind = "Moongrace";
-		alchemyClass = PotionOfMana.class;
+		alchemyKind = Potion.MANA;
 	}
 
 	@Override

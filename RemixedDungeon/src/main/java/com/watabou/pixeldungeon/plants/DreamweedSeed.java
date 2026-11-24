@@ -6,7 +6,7 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.utils.Utils;
 import org.jetbrains.annotations.NotNull;
 
@@ -21,7 +21,7 @@ public class DreamweedSeed extends Seed {
 		image = 3;
 
 		plantKind = "Dreamweed";
-		alchemyClass = PotionOfInvisibility.class;
+		alchemyKind = Potion.INVISIBILITY;
 	}
 
 	@Override

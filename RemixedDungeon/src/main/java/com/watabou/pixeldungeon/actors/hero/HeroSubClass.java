@@ -17,7 +17,7 @@ import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.effects.Wound;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
-import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -159,7 +159,7 @@ public enum HeroSubClass implements CharModifier {
                         wand.curCharges(wand.curCharges() + 1);
                         QuickSlot.refresh(attacker);
 
-                        ScrollOfRecharging.charge(attacker);
+                        Scroll.chargeFx(attacker);
                     }
                     damage += wand.curCharges();
                 }

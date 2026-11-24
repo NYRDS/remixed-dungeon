@@ -3,10 +3,11 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.potions.PotionOfLevitation;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -59,7 +60,7 @@ public class TrapsPainter extends Painter {
 			level.drop( prize( level ), pos, Heap.Type.HEAP );
 		}
 		
-		level.addItemToSpawn( new PotionOfLevitation() );
+		level.addItemToSpawn( ItemFactory.itemByName(Potion.LEVITATION) );
 	}
 	
 	private static Item prize( Level level ) {

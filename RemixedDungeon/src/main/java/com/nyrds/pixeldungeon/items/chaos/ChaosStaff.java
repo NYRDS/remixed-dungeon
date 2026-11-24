@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.pixeldungeon.levels.Level;
@@ -97,7 +97,7 @@ public class ChaosStaff extends Wand {
                         WandOfTeleportation.teleport(mob,getOwner());
                         break;
                     case 4:
-                        PotionOfHealing.heal(ch, 1);
+                        Potion.heal(ch, 1);
                         break;
                 }
             }

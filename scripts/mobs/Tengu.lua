@@ -32,7 +32,7 @@ local function rearmTraps(level)
         end
         local trap = traps[math.random(#traps)]
         trap:reactivate("PoisonTrap", 1)
-        RPD.ScrollOfMagicMapping:discover(trap:getPos())
+        RPD.Scroll:discoverStatic(trap:getPos())
     end
 end
 

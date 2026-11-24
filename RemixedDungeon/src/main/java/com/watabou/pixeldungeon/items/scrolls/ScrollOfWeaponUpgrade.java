@@ -12,6 +12,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfWeaponUpgrade extends InventoryScroll {
+	public ScrollOfWeaponUpgrade() {
+		super(WEAPON_UPGRADE);
+	}
+
 
 	{
         inventoryTitle = StringsManager.getVar(R.string.ScrollOfWeaponUpgrade_InvTitle);
@@ -23,7 +27,7 @@ public class ScrollOfWeaponUpgrade extends InventoryScroll {
 		
 		Weapon weapon = (Weapon)item;
 		
-		ScrollOfRemoveCurse.uncurse( selector, weapon );
+		uncurseAndFx(selector, weapon);
 		weapon.upgrade( true );
 
         GLog.p(StringsManager.getVar(R.string.ScrollOfWeaponUpgrade_LooksBetter), weapon.name() );

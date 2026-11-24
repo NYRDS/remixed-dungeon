@@ -2,7 +2,7 @@
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.potions.Potion;
 
 public class HealthArrow extends Arrow {
 
@@ -27,7 +27,7 @@ public class HealthArrow extends Arrow {
 	@Override
 	public void attackProc(Char attacker, Char defender, int damage ) {
 		if(activateSpecial(attacker, defender, damage)) {
-			PotionOfHealing.heal(defender, 0.15f);
+			Potion.heal(defender, 0.15f);
 		}
 
 		super.attackProc( attacker, defender, damage );

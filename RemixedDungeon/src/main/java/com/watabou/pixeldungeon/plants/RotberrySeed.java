@@ -12,7 +12,7 @@ import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
-import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -29,7 +29,7 @@ public class RotberrySeed extends Seed {
 		image = 7;
 
 		plantKind = "Rotberry";
-		alchemyClass = PotionOfStrength.class;
+		alchemyKind = Potion.STRENGTH;
 	}
 
 	@Override

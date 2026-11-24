@@ -358,6 +358,7 @@ public class Badges {
 		return badge;
 	}
 
+	@LuaInterface
 	public static void validateStrengthAttained(Hero hero) {
 		if(hero.getHeroClass() == HeroClass.GNOLL) {
 			return;

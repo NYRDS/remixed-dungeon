@@ -8,7 +8,7 @@ import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Stylus;
-import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -52,7 +52,7 @@ public class Challenges {
 
 		Objects.requireNonNull(forbiddenCategories.get(NO_FOOD)).add(Treasury.Category.FOOD.name());
 		Objects.requireNonNull(forbiddenCategories.get(NO_ARMOR)).add(Treasury.Category.ARMOR.name());
-		Objects.requireNonNull(forbiddenCategories.get(NO_HEALING)).add(PotionOfHealing.class.getSimpleName());
+		Objects.requireNonNull(forbiddenCategories.get(NO_HEALING)).add(Potion.HEALING);
 		Objects.requireNonNull(forbiddenCategories.get(NO_HERBALISM)).add(Treasury.Category.SEED.name());
 		Objects.requireNonNull(forbiddenCategories.get(NO_HERBALISM)).add(Dewdrop.class.getSimpleName());
 		Objects.requireNonNull(forbiddenCategories.get(NO_HERBALISM)).add(DewVial.class.getSimpleName());

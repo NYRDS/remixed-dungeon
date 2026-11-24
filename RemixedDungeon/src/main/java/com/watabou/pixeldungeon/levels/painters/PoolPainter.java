@@ -3,13 +3,14 @@ package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.DummyItem;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -58,7 +59,7 @@ public class PoolPainter extends Painter {
 		level.putLevelObject( LevelObjectsFactory.PEDESTAL, pos);
 
 		
-		level.addItemToSpawn( new PotionOfInvisibility() );
+		level.addItemToSpawn( ItemFactory.itemByName(Potion.INVISIBILITY) );
 		
 		for (int i=0; i < NPIRANHAS; i++) {
 			Mob piranha = MobFactory.mobByName(MobFactory.PIRANHA);
