@@ -2412,6 +2412,7 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="Viscosity_Txt">%s der Zähigkeit</string>
     <string name="VkPlayLink_desc">Hast du Remixed Pixel Dungeon für PC auf VK Play gekauft? Melde dich mit derselben VK ID an, und die Werbung in dieser mobilen Version wird deaktiviert.</string>
     <string name="VkPlayLink_done">Fertig! Werbung ist deaktiviert bis %s.</string>
+    <string name="VkPlayLink_failed">Der Kauf konnte nicht bestätigt werden. Überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.</string>
     <string name="VkPlayLink_idle">NICHT GEFUNDEN</string>
     <string name="VkPlayLink_noConnection">Der Verifizierungsdienst kann nicht erreicht werden. Überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.</string>
     <string name="VkPlayLink_signIn">Mit VK ID anmelden</string>
@@ -3126,6 +3127,7 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
 
 
 
