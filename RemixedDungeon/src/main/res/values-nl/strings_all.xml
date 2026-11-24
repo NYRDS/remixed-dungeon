@@ -222,6 +222,7 @@
     <string name="BishopNPC_Name">Bisschop</string>
     <string name="BishopNPC_Name_Objective">bisschop</string>
     <string name="BishopQuest_1_1_Epilogue">Zegen u, mijn kind — de onrustige doden slapen vanavond rustig dankzij u. Maar de plaag van de onsterfelijkheid gaat dieper dan botten. Keer terug naar mij als u gereed bent voor de volgende proef, en neem deze drank voor uw wonden.</string>
+    <string name="BishopQuest_1_1_InProgress">Je hebt %1$d van de %2$d onsterfelijken gerustgesteld, mijn kind. Ga zo door.</string>
     <string name="BishopQuest_1_1_Prologue">De doden weigeren te rusten, mijn kind. Botten wandelen door de gevangenisgangen, en rotte dingen kruipen uit de necropolis. Leg tien onddoeten te rusten, en ik zal weten dat je geloof waar is.</string>
     <string name="BishopQuest_2_1_InProgress">Breng me _drie zonnegraszaadjes_, mijn kind. De altaar wacht.</string>
     <string name="BishopQuest_2_2_InProgress">Breng me _drie maangraszaden_, mijn kind. De altaar wacht.</string>
@@ -745,6 +746,7 @@
     <string name="FortuneTellerNPC_Name">waarzegster</string>
     <string name="FortuneTellerNPC_Name_Objective">waarzegster</string>
     <string name="FreezeGlobe_Info">Bevriest het geselecteerde personage, waardoor het korte tijd geen acties kan uitvoeren.</string>
+    <string name="FreezeGlobe_Name">Bevriezen</string>
     <string name="FriedFish_Info">Gebakken vis, ziet er lekker uit</string>
     <string name="FriedFish_Taste">Lekker!</string>
     <string name="FrostArrow_Gender">feminine</string>
@@ -1616,6 +1618,7 @@
     <string name="ResultDescriptions_Mob">Gedood door %1 op niveau %2</string>
     <string name="ResultDescriptions_Necromancy">Uitgeput van levenskracht tijdens het proberen een lijk te animeren op niveau %d</string>
     <string name="ResultDescriptions_Necrotism">Gestorven door Necrotisme op niveau %d</string>
+    <string name="ResultDescriptions_Ooze">Gedood door een bijtende slime op niveau %d</string>
     <string name="ResultDescriptions_Poison">Gestorven aan vergiftiging op niveau %d</string>
     <string name="ResultDescriptions_Trap">Gedood door ontlading van %1 op niveau %2</string>
     <string name="ResultDescriptions_Unknown">Stierf onder mysterieuze omstandigheden op niveau %d</string>
@@ -2423,6 +2426,7 @@
     <string name="WndPriest_Heal_Minions">Genees al je volgelingen - Slechts %d goud!</string>
     <string name="WndPriest_Instruction2">Als je hulp zoekt, kan ik genezing bieden voor slechts %d gouden munten!\nAls je op zoek bent naar een heilige Zegen, of, de Heer behoud ons, vervloekt was, ontmoet dan de Bisschop in onze nederige kerk.</string>
     <string name="WndPriest_Instruction2_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
+    <string name="WndPriest_Instruction2_m">Welkom mijn zoon, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
     <string name="WndPriest_Instruction_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa, de Heer der Diepten! Helaas kan ik je nu niet doorlaten, want het gebouw wordt gerenoveerd. Maar als je hulp zoekt, kan ik genezing en voedsel aanbieden voor slechts %d gouden munten!</string>
     <string name="WndPriest_Title">Stadsprediker</string>
     <string name="WndRanking_Badges">Insignes</string>
@@ -2962,6 +2966,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

@@ -455,6 +455,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Codex_Story_17">Vũ khí gây choáng - Khi đánh trúng, có thể khiến mục tiêu bị tê liệt.</string>
     <string name="Codex_Story_19">Vũ khí đính độc - Khi tấn công trúng mục tiêu, có thể gây độc.</string>
     <string name="Codex_Story_2">Bùa Tình Cảm - Kẻ địch sẽ bị mê hoặc vài lượt, còn Anh Hùng cũng bị mê hoặc vài lượt nhưng không bao giờ lâu hơn kẻ địch.</string>
+    <string name="Codex_Story_20">Vũ khí băng giá - Khi đánh trúng, có thể làm chậm mục tiêu và ngăn chặn nó bị thiêu đốt.</string>
     <string name="Codex_Story_21">Vũ khí hoang dã - Khi đánh trúng, có thể gây sát thương cho tất cả kẻ địch liền kề mục tiêu.</string>
     <string name="Codex_Story_22">Cuốn sách này được viết bằng ngôn ngữ quỷ</string>
     <string name="Codex_Story_23">Cuốn sách này được viết bằng tiếng lùn</string>
@@ -1476,6 +1477,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="RegenerationBuff_Info">Chức năng hồi phục tự nhiên được thể hiện dưới dạng buff để làm cho mọi thứ dễ dàng hơn.</string>
     <string name="RegenerationBuff_Name">Tái tạo tự nhiên</string>
     <string name="RemixedPixelDungeonApp_sendCrash">Trò chơi của chúng tôi đã bị lỗi...\n Xin lỗi.\nVui lòng gửi báo cáo lỗi để giúp chúng tôi khắc phục.</string>
+    <string name="ResultDescriptions_Boss">Bị giết bởi boss %1$s ở tầng %2$d</string>
     <string name="ResultDescriptions_Burning">Bị thiêu rụi trên cấp độ %d</string>
     <string name="ResultDescriptions_Fall">Ngã chết ở cấp %d</string>
     <string name="ResultDescriptions_Gas">Chết vì khí độc ở tầng %d</string>
@@ -2095,6 +2097,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="WndClass_Mastery">Thành Thạo</string>
     <string name="WndCryptoDonate_bitcoin">Bitcoin</string>
     <string name="WndCryptoDonate_copyAddress">Sao chép địa chỉ</string>
+    <string name="WndCryptoDonate_currency">Loại tiền tệ</string>
     <string name="WndCryptoDonate_ethereum">Ethereum</string>
     <string name="WndCryptoDonate_infoText">Bạn có thể hỗ trợ phát triển Remixed Dungeon bằng cách gửi quyên góp tiền điện tử đến các địa chỉ bên dưới. Cảm ơn bạn đã ủng hộ hào phóng!</string>
     <string name="WndCryptoDonate_openWallet">Mở Ví</string>
@@ -2463,6 +2466,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_ladder_name">Cây thang</string>
     <string name="town_deco_library_books_desc">Vẫn còn tốt hơn sách từ ngục.</string>
     <string name="town_deco_library_books_name">Vật liệu đọc</string>
+    <string name="town_deco_library_sign_name">Biển thư viện</string>
     <string name="town_deco_locked_door_desc">Có điều gì phía sau cánh cửa đó nhỉ?</string>
     <string name="town_deco_locked_door_name">Cửa khóa</string>
     <string name="town_deco_magenta_carpet_desc">Tông màu đỏ tươi của thảm này gợi nhớ đến rượu vang địa phương.</string>
@@ -3195,6 +3199,10 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
