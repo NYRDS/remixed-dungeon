@@ -2148,6 +2148,7 @@
     <string name="WndInfoItem_NeedKey">Nhưng để mở nó, bạn cần một chìa khóa vàng.</string>
     <string name="WndInfoItem_Owner">Ngòi mộ cổ này có thể chứa vật hữu ích, nhưng chủ sở hữu chắc chắn sẽ phản đối việc kiểm tra.</string>
     <string name="WndInfoItem_Remains">Đây là tất cả những gì còn lại từ một trong những người đi trước bạn. Có thể đáng để kiểm tra xem có vật phẩm quý nào không.</string>
+    <string name="WndInfoItem_Skeleton">Hài cốt</string>
     <string name="WndInfoItem_Tomb">Lăng mộ</string>
     <string name="WndInfoItem_WontKnow">Bạn sẽ không biết bên trong có gì cho đến khi mở nó ra!</string>
     <string name="WndInstallingMod_copying_file">Đang sao chép %s vào bộ nhớ Remixed Dungeon</string>
@@ -3174,6 +3175,7 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 

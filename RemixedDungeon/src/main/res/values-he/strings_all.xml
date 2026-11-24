@@ -220,6 +220,7 @@
     <string name="ChaosCrystal_Info_2">כן! עכשיו אתה יודע שאפשר למזג אותו עם אחד מהפריטים שלך, אבל מה הלאה?</string>
     <string name="ChaosCrystal_Name">גביש מוזר</string>
     <string name="ChaosCrystal_Name_2">קריסטל תוהו</string>
+    <string name="ChaosCrystal_StaffFused">הגביש סופג את שרביטך ולובש צורת מטה</string>
     <string name="ChaosCrystal_SwordFused">הגביש סופג את נשקך ולובש צורת חרב</string>
     <string name="ChaosCrystal_Use">השתמש</string>
     <string name="ChaosHelmet_Info">קסדה אדומה כדם היא סמל חיוני של לוחם כאוס.</string>
@@ -1709,6 +1710,7 @@
 
 
     <string name="town_table_fortune_name">שולחן</string>
+
 
 
 
