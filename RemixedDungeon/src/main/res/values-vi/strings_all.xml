@@ -781,6 +781,7 @@
     <string name="HeroClass_Elf">yêu tinh</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
     <string name="HeroClass_ElfPerks_2">Tiên nữ bắt đầu với một cây cung gỗ được nâng cấp và một lứa tên.</string>
+    <string name="HeroClass_ElfPerks_3">Yêu tinh thành thạo cực kỳ với cung và rất linh hoạt.</string>
     <string name="HeroClass_ElfPerks_4">Yêu tinh hồi phục nhiều máu hơn từ sương mai.</string>
     <string name="HeroClass_ElfPerks_5">Yếu tinh kém thành thạo hơn với vũ khí cận chiến.</string>
     <string name="HeroClass_GnollPerks_0">Gnoll bắt đầu với 15 điểm sức mạnh</string>
@@ -905,6 +906,7 @@
     <string name="IceGuardian_Name_Objective">vệ binh băng</string>
     <string name="IceKey_Info">Chìa khóa này có vẻ như làm từ băng, nhưng nó cứng như thép.</string>
     <string name="IceKey_Name">chìa khóa băng</string>
+    <string name="Icecap_Desc">Khi chạm vào Lédvik, nó tiết ra phấn hoa, đóng băng mọi thứ xung quanh.</string>
     <string name="Ignite_Info">Đốt ô được chọn. Có thể dùng để đốt cỏ, nhân vật và vật thể.</string>
     <string name="Ignite_Name">Đốt Cháy</string>
     <string name="ImpShopkeeper_Desc">Quỷ nhỏ là những loài quỷ thấp kém. Chúng không nổi bật về sức mạnh hay tài năng phép thuật. Nhưng chúng khá thông minh và hòa đồng, và nhiều quỷ nhỏ thích sống và kinh doanh cùng những người không phải quỷ.</string>
@@ -3178,6 +3180,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

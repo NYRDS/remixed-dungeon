@@ -2405,6 +2405,7 @@ Jego ametystowe oczy płonęły gorączkową intensywnością. „Być może” 
     <string name="VkPlayLink_failed">Nie udało się potwierdzić zakupu. Sprawdź połączenie z internetem i spróbuj ponownie.</string>
     <string name="VkPlayLink_linked">Reklamy są wyłączone do %s.</string>
     <string name="VkPlayLink_noConnection">Nie można połączyć się z usługą weryfikacji. Sprawdź połączenie internetowe i spróbuj ponownie.</string>
+    <string name="VkPlayLink_row">VK Play PC: wyłącz reklamy</string>
     <string name="WandHolster_Info">Ten smukły uchwyt jest wykonany ze skóry jakiegoś egzotycznego zwierzęcia. Pozwala na przechowywanie %d kosturów.</string>
     <string name="WandHolster_Name">kabura na kostury</string>
     <string name="WandMaker_Berry1">Och, cóż za miła niespodzianka, spotkać tak obyczajnego człowieka w takim miejscu! Przybyłem tutaj po rzadki składnik - _nasiono Pętjagody_. Ponieważ potrafię używać magii, mogę chronić się przed lokalnymi potworami, zupełnie brakuje mi czasu na takie wyzwania, co jest nieco żenujące. Może mógłbyś mi pomóc? Byłbym szczęśliwy, mogąc ci się odwdzięczyć jednym z mych najlepszych kosturów.</string>
@@ -3158,6 +3159,7 @@ remix.32.1\n
     <string name="town_table_fortune_ball_name">Kryształowa kula</string>
     <string name="town_table_fortune_desc">Ten stół pokryty jest jedwabistym pledem. Możesz na nim dostrzec przeróżne karty tarota leżące w dziwnie nieprzypadkowej kolejności. </string>
     <string name="town_table_fortune_name">Stół</string>
+
 
 
 

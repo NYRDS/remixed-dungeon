@@ -253,6 +253,7 @@
     <string name="BlackSkullOfMastery_Lich">Word een Lich</string>
     <string name="BlackSkullOfMastery_Name">De Zielbrenger</string>
     <string name="BlackSkullOfMastery_RemainHumanDesc">Of als je de spreuk _verbreekt_, kun je dit artefact gebruiken zoals bedoeld.</string>
+    <string name="BlackSkullOfMastery_Title">U kunt de spreuk breken. Of u kunt de magische formule ervan zodanig manipuleren, dat u de krachten van zowel de spreuk als het artefact zelf kunt consumeren, waardoor u zichzelf verandert in een Lich.</string>
     <string name="BlackSkull_Activated">De Zwarte Schedel is ontwaakt!</string>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Een kleine schedel van obsidiaan. Het was de bron van de krachten van de Necropolis, maar na de nederlaag van de Lich lijkt het al zijn krachten verloren te hebben. Maar wanneer je het in je handen houdt, gaat er een vreemde gedachte door je heen: \&quot;Het Hongert\&quot;.</string>
@@ -1133,6 +1134,7 @@
     <string name="Level_TileDescLockedExit">Zware tralies blokkeren de trap naar beneden.</string>
     <string name="Level_TileDescPedestal">Een kleine sokkel.</string>
     <string name="Level_TileDescPileOfStones">Een stapel extreem zware stenen, lijkt niet verplaatsbaar.</string>
+    <string name="Level_TileDescSign">Een houten bord. Er staat iets op geschreven.</string>
     <string name="Level_TileDescStatue">Iemand wilde deze plek versieren, maar is duidelijk mislukt.</string>
     <string name="Level_TileDescTrap">Als je op een verborgen drukplaat stapt, activeer je de val.</string>
     <string name="Level_TileDescWater">Als je in brand staat, stap in het water om het vuur te doven.</string>
@@ -2934,6 +2936,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
