@@ -2414,7 +2414,9 @@ Die Statue ist aus Stein während das _%s_ echt aussieht.</string>
     <string name="VkPlayLink_done">Fertig! Werbung ist deaktiviert bis %s.</string>
     <string name="VkPlayLink_failed">Der Kauf konnte nicht bestätigt werden. Überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.</string>
     <string name="VkPlayLink_idle">NICHT GEFUNDEN</string>
+    <string name="VkPlayLink_linked">Werbung ist deaktiviert bis %s.</string>
     <string name="VkPlayLink_noConnection">Der Verifizierungsdienst kann nicht erreicht werden. Überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.</string>
+    <string name="VkPlayLink_row">VK Play PC: Werbung deaktivieren</string>
     <string name="VkPlayLink_signIn">Mit VK ID anmelden</string>
     <string name="VkPlayLink_title">VK Play PC-Version</string>
     <string name="VkPlayLink_waiting">Warten auf VK-ID-Anmeldung. Schließen Sie sie im Browser ab; dieses Fenster aktualisiert sich automatisch.</string>
@@ -3128,6 +3130,8 @@ Da es sich um ein spirituelle Wesen handelt, ist es sehr schwer sie mit einer ge
     <string name="town_table_fortune_ball_name">Kristallkugel</string>
     <string name="town_table_fortune_desc">Dieser Tisch ist mit einer seidenen Decke bedeckt. Du kannst verschiedene Tarot Karten sehen, die in einer seltsamen Reihenfolge ausliegen.</string>
     <string name="town_table_fortune_name">Tisch</string>
+
+
 
 
 

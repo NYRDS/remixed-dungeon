@@ -262,8 +262,10 @@
     <string name="BishopQuest_4_2_Epilogue">Les cloches de l\'église ont sonné toutes seules quand le dernier est passé — un bon signe, mon enfant. Prends cette potion de puissance ; l\'épreuve finale t\'en demandera beaucoup.</string>
     <string name="BishopQuest_4_2_InProgress">Vous avez libéré %1 sur %2 âmes asservies. Qu\'elles ne servent plus jamais.</string>
     <string name="BishopQuest_4_2_Prologue">Il n\'y a pas que des ossements ambulants, mon enfant. Les _âmes asservies_ — de pauvres âmes enchaînées dans une servitude éternelle, haïssant les vivants pour la liberté qu\'elles ont perdue. Leur chagrin est une arme. Libère _quatre âmes asservies_ de cela.</string>
+    <string name="BishopQuest_5_1_Epilogue">L\'œuvre du Seigneur est accomplie ! Dès ce jour, tu peux emprunter le chemin du prêtre. Accepte cette bénédiction et ces aumônes, mon enfant — tu les as méritées.</string>
     <string name="BishopQuest_5_1_InProgress">Bannis _deux succubes_, mon enfant — %1$d sur %2$d bannis. Garde ton âme ; leurs chuchotements sont un doux poison.</string>
     <string name="BishopQuest_AllDone">Tu as parcouru le long chemin, mon enfant, et l\'église n\'oublie pas. Ma porte t\'est toujours ouverte.</string>
+    <string name="Bishop_QuestCompleted">Prêtre débloqué</string>
     <string name="Bishop_bye">Je prierai pour vous, mon enfant.</string>
     <string name="Bishop_great_bless">Grande bénédiction - %d pièces</string>
     <string name="Bishop_lesser_bless">Petite bénédiction - %d pièces</string>
@@ -3137,6 +3139,8 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
+
 
 
 

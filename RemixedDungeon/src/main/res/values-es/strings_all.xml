@@ -264,6 +264,7 @@
     <string name="BishopQuest_4_1_InProgress">Has destruido %1$d de %2$d caballeros de la muerte. Rompe su voluntad, y las legiones tropezar\u00e1n.</string>
     <string name="BishopQuest_4_1_Prologue">Has dado descanso a la infantería — ahora toca con sus amos. Los _caballeros de la muerte_ mandan las legiones de los muertos, y su voluntad ata los huesos a su marcha. Destruye a _dos caballeros de la muerte_, hijo mío.</string>
     <string name="BishopQuest_4_2_Epilogue">Las campanas de la iglesia repicaron solas cuando el último pasó — una buena señal, hijo mío. Toma esta poción de poder; la prueba final te exigirá mucho.</string>
+    <string name="BishopQuest_4_2_InProgress">Has liberado %1$d de %2$d almas esclavizadas. Que no sirvan m\xe1s.</string>
     <string name="BishopQuest_4_2_Prologue">Hay muertos atados además de huesos andantes, hijo mío. _Almas esclavizadas_ — pobres almas encadenadas en una servidumbre eterna, odiando a los vivos por la libertad que perdieron. Su dolor es un arma. Libera _cuatro almas esclavizadas_ de ello.</string>
     <string name="BishopQuest_5_1_Epilogue">¡La obra del Señor está hecha! Desde este día puedes caminar el camino de un sacerdote. Toma esta bendición y estas limosnas, hijo mío — te las has ganado.</string>
     <string name="BishopQuest_5_1_InProgress">Destierra a _dos súcubos_, hijo mío — %1$d de %2$d desterrados. Guarda tu alma; sus susurros son dulce veneno.</string>
@@ -2399,6 +2400,7 @@ otro lugar del nivel.</string>
     <string name="Viscosity_Status">%d diferido</string>
     <string name="Viscosity_Txt">%s de viscosidad</string>
     <string name="VkPlayLink_done">¡Hecho! Los anuncios están deshabilitados hasta %s.</string>
+    <string name="VkPlayLink_failed">No se puede confirmar la compra. Verifique su conexi\xf3n a internet e int\xe9ntelo de nuevo.</string>
     <string name="VkPlayLink_noConnection">No se puede alcanzar el servicio de verificación. Verifique su conexión a internet e inténtelo de nuevo.</string>
     <string name="VkPlayLink_signIn">Iniciar sesión con VK ID</string>
     <string name="VkPlayLink_title">Versión para PC de VK Play</string>
@@ -3129,6 +3131,8 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
+
 
 
 
