@@ -2397,6 +2397,7 @@ otro lugar del nivel.</string>
     <string name="VileEssence_Name">Esencia Vil</string>
     <string name="Viscosity_Status">%d diferido</string>
     <string name="Viscosity_Txt">%s de viscosidad</string>
+    <string name="VkPlayLink_done">¡Hecho! Los anuncios están deshabilitados hasta %s.</string>
     <string name="VkPlayLink_title">Versión para PC de VK Play</string>
     <string name="VkPlayLink_waiting">Esperando el inicio de sesión con VK ID. Termínalo en el navegador; esta ventana se actualiza automáticamente.</string>
     <string name="WandHolster_Info">Esta delgada funda está hecha de cuero de un exótico animal. Permite llevar hasta %d varitas.</string>
@@ -3125,6 +3126,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

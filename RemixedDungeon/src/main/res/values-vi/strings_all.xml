@@ -1735,6 +1735,7 @@
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
     <string name="SoulShard_Name">mảnh linh hồn</string>
     <string name="Spear_Gender">neuter</string>
+    <string name="Spear_Info">Một gậy gỗ mảnh dài với đầu nhọn bằng sắt.</string>
     <string name="Spear_Name">thương</string>
     <string name="SpeedBuff_Info">Sức sống và năng lượng tỏa ra từ cơ thể, và chuyển động cảm thấy nhanh hơn bình thường.</string>
     <string name="SpeedBuff_Name">Tốc độ</string>
@@ -2431,6 +2432,7 @@
     <string name="town_deco_glass_stained_name">Kính màu</string>
     <string name="town_deco_grandclock_desc">Một cơ chế khá cũ nhưng vẫn hoạt động.</string>
     <string name="town_deco_grandclock_name">Đồng hồ lớn</string>
+    <string name="town_deco_grave_desc">Một bia mộ tiêu chuẩn, với khắc chữ đã bị mòn.</string>
     <string name="town_deco_hay_desc">Một đống rơm nhỏ thơm thơm.</string>
     <string name="town_deco_hay_name">Cỏ khô</string>
     <string name="town_deco_identifier_sign_desc">Có vẻ như có một thầy bói bên trong tòa nhà đó.</string>
@@ -3172,6 +3174,8 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

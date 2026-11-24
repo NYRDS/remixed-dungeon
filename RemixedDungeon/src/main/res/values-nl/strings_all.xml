@@ -534,6 +534,7 @@
     <string name="ConcreteBlock_Description">Het lijkt erop dat voor het duwen van dit blok %d punten kracht nodig zijn.</string>
     <string name="ConcreteBlock_Name">Zwaar betonnen blok</string>
     <string name="ConfusionGas_Info">Hier zweeft een wolk verwarrend gas.</string>
+    <string name="CorpseDustBuff_Info">Aanvallen worden aanzienlijk versterkt voor wie vervuld is met bloedlust, waardoor ze bijzonder gevaarlijk worden.</string>
     <string name="CorpseDust_Info">De bal van lijkstof verschijnt naar buiten hin niet van een gewone stofbal. Je weet echter op een of andere manier dat het beter is om er zo snel mogelijk van af te komen.</string>
     <string name="CorpseDust_Info2">Misschien omdat het er maar aan vast te houden je al ongerust en boos maakt.</string>
     <string name="CorpseDust_Name">lijkenstof</string>
@@ -1844,6 +1845,7 @@
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Info">Dit zwaard is inderdaad vrij kort, slechts enkele centimeters langer dan een dolk.</string>
     <string name="ShortSword_Name">kort zwaard</string>
+    <string name="ShortSword_NotBoomerang">je kunt een boemerang niet op deze manier upgraden</string>
     <string name="ShortSword_Reforged">je hebt de korte zwaard hersmeed om je %s te upgraden</string>
     <string name="ShortSword_Select">Selecteer een wapen om te verbeteren</string>
     <string name="Shuriken_Gender">masculine</string>
@@ -2927,6 +2929,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
