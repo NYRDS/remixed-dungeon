@@ -1432,6 +1432,7 @@
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Hoest hevig* Hatsjoe!\n De slakken... ze glijden. Ze slijmen. En ze fluisteren geheimen van een vergeten eeuw. Ik heb ze nodig, _tien_ van hen, hun schillen nog intact. Denk je dat slechts _vijftig goudmunten_ genoeg is voor zulke kostbare kennis?\n Bah! Maakt niet uit. De informatie die ze bergen kan de sleutel zijn om deze pest te stoppen. Of... het kan ons leiden tot iets nog vreselijker. Jij beslist.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">De _maanegenade_… een getuigenis van de magie die door deze wereld weeft. Ik heb veel geleerd van hun essentie, maar uw beloning… nou, die is met de utterste zorg bereid. *Reikt de held een schitterende _Manadrank_* Moge de kracht u leiden door de gevaren die u wachten.</string>
+    <string name="PlagueDoctorQuest_2_1_Prologue">_MaanGenade zaden_… die etherische bloesems, fluisterend met de magie van de maan zelf. Ik heb wekenlang hun vreemde luminescentie bestudeerd. Er zit een kracht in hun essentie, een verborgen energie die de sleutel kan zijn tot… iets. *Tikt bedachtzaam met een botten vinger tegen zijn kin*\nMaar helaas, ze zijn zeldzaam. Alleen te vinden in de diepste grotten waar maanlicht nauwelijks penetreert. Ik heb er twee nodig. Twee zaden om de geheimen van hun kracht te ontgrendelen. En als tegenprestatie kan ik je iets bieden… een proefje van zuivere, krachtige magie. Een _Mana Trank_, vol met de essentie van de MaanGenade. Het zal je moede ziel opvullen en je laten toveren met vernieuwde kracht.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Geweldig! _Het zonnekruid_, zijn gouden essentie pulseert met vitaliteit. Ik heb al veel geleerd van zijn delicate structuur. *Hij overhandigt je een _Drankje der Gezondheid_, de vloeistof glimt met een zwak, gouden licht.* Drink dit als de wereld zwaar op je drukt, en voel hoe de warmte van de zon je geest doet herleven.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
     <string name="PlagueDoctorQuest_2_2_Prologue">  Ah, _zonnekruid_! Een delicate bloem, haar bloemblaadjes stralen de warmte van de zon uit. Ik geloof dat haar essentie de sleutel bevat tot... ah, vergeet de details voor nu. Het volstaat te zeggen dat het cruciaal is voor mijn onderzoek. _Twee zonnekruidzaden_. Haal ze voor mij, en ik zal je belonen met iets dat zeker van pas zal komen op je avonturen - een _Drankje van Gezondheid_, bruisend van de vitaliteit van de zon.</string>
@@ -1493,6 +1494,7 @@
     <string name="PotionOfInvisibility_Apply">Je ziet je handen onzichtbaar worden!</string>
     <string name="PotionOfInvisibility_Info">Als je deze drank opdrinkt, wordt je tijdelijk onzichtbaar. Terwijl je onzichtbaar bent, kunnen vijanden je niet zien. Een vijand aanvallen, evenals een toverstaf of een rol voor de ogen van een vijand gebruiken, doet het effect verdwijnen.</string>
     <string name="PotionOfInvisibility_Name">Drankje van Onzichtbaarheid</string>
+    <string name="PotionOfLevitation_Apply">Je zweeft in de lucht!</string>
     <string name="PotionOfLevitation_Info">Het drinken van deze merkwaardige vloeistof zorgt ervoor dat je in de lucht zweeft, moeiteloos over valstrikken glijdt. Vlammen en gassen vullen echter de lucht en kunnen niet worden ontweken terwijl je zweeft.</string>
     <string name="PotionOfLiquidFlame_Info">Deze fles bevat een onstabiel mengsel dat heftig in vlammen opgaat bij contact met de open lucht.</string>
     <string name="PotionOfLiquidFlame_Name">Drankje van Vloeibare Vlam</string>
@@ -2154,6 +2156,7 @@
     <string name="WandOfFirebolt_Name">Toverstaf van Vuurpijl</string>
     <string name="WandOfFlock_Info">Een zwaai met deze toverstaf roept een kudde magische schapen op, die een tijdelijk ondoordringbaar obstakel vormen.</string>
     <string name="WandOfFlock_Name">Toverstaf van de Kudde</string>
+    <string name="WandOfFlock_SheepBaa_0">Bee!</string>
     <string name="WandOfFlock_SheepBaa_1">Bèè?</string>
     <string name="WandOfFlock_SheepBaa_3">Baa...</string>
     <string name="WandOfFlock_SheepBaa_4">Bee...</string>
@@ -2662,6 +2665,7 @@
     <string name="town_deco_glass_stained_name">Glas in lood</string>
     <string name="town_deco_grandclock_name">Standklok</string>
     <string name="town_deco_grave_desc">Een standaard graafsteen, met een uitgezone inscriptie.</string>
+    <string name="town_deco_grave_name">Graf</string>
     <string name="town_deco_hay_desc">Een klein hoopje lekker ruikend hooi.</string>
     <string name="town_deco_hay_name">hooi</string>
     <string name="town_deco_identifier_sign_desc">Het lijkt erop dat er een waarzegster in dat gebouw woont.</string>
@@ -2966,6 +2970,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

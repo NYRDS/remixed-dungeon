@@ -674,6 +674,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="FortuneTellerNPC_Gender">feminine</string>
     <string name="FortuneTellerNPC_Name">người xem bói</string>
     <string name="FortuneTellerNPC_Name_Objective">bà giải điềm</string>
+    <string name="FreezeGlobe_Name">Đóng băng</string>
     <string name="FriedFish_Name">cá chiên</string>
     <string name="FriedFish_Taste">Ngon!</string>
     <string name="FrostArrow_Gender">feminine</string>
@@ -1051,6 +1052,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Level_TileFireTrap">Bẫy lửa</string>
     <string name="Level_TileFloor">Sàn</string>
     <string name="Level_TileHighGrass">Cỏ cao</string>
+    <string name="Level_TileInactiveTrap">Bẫy đã kích hoạt</string>
     <string name="Level_TileLightningTrap">bẫy sét</string>
     <string name="Level_TileLockedDoor">Cửa khóa</string>
     <string name="Level_TileLockedExit">Lối thoát bị khóa</string>
@@ -1563,6 +1565,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="RottingFist_Name">nắm đấm thối rữa</string>
     <string name="RottingFist_Name_Objective">nắm đấm thối rữa</string>
     <string name="RoyalShield_desc">Một chiếc khiên kim loại hoàn toàn. Đúng vậy, nó nặng, nhưng chỉ nó mới có thể cung cấp cho bạn sự bảo vệ tốt nhất.</string>
+    <string name="RoyalShield_name">Khiên Hoàng Gia</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Chỉ những cung thủ vĩ đại nhất mới có thể sử dụng cung hồng ngọc này. Hầu hết mọi mũi tên đều xuyên thủng kẻ thù, để lại một lỗ lớn trên cơ thể hắn, nhưng cần sức mạnh cực lớn để kéo dây cung.</string>
     <string name="RubyBow_Name">cung ngọc ruby</string>
@@ -2403,6 +2406,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_canvas_desc">Một mảnh vải dày treo trên tường.</string>
     <string name="town_deco_canvas_name">Canvas</string>
     <string name="town_deco_carpet_desc">Đệm đỏ xa xỉ dành cho khách đặc biệt.</string>
+    <string name="town_deco_carpet_name">Thảm</string>
     <string name="town_deco_charcoal_carpet_desc">Nhằm mang lại sự thoải mái cho khách, ban quản lý rạp chiếu phim đã chọn những tấm thảm chất lượng cao nhất có màu than đen.</string>
     <string name="town_deco_charcoal_carpet_name">Thảm</string>
     <string name="town_deco_chest_desc">Một món đồ nội thất tiện lợi để chứa nhiều đồ và đồ trang sức.</string>
@@ -3199,6 +3203,10 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
