@@ -70,6 +70,9 @@
     <string name="Armor_Info4">\n\nĐiển hình %1 cung cấp khả năng hấp thụ sát thương lên đến %2 điểm mỗi lần tấn công và yêu cầu %3 điểm sức mạnh.</string>
     <string name="Armor_Info6">Nó được khắc chữ.</string>
     <string name="Armor_Info7b">và vì nó bị nguyền rủa, bạn không thể cởi nó ra</string>
+    <string name="Armor_Info8">
+
+Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s.</string>
     <string name="Armor_ToString">%1 :%2</string>
     <string name="ArmoredStatue_Desc">Không ai có thể nghĩ rằng đó chỉ là một bức tượng bình thường. Không chỉ vì đôi mắt phát sáng đỏ, mà còn vì không ai lại đặt một _%s_ thực sự lên một thứ như vậy.</string>
     <string name="ArmoredStatue_Gender">feminine</string>
@@ -108,6 +111,7 @@
     <string name="Badges_DeathGlyph">Chết vì glyph</string>
     <string name="Badges_DeathHunger">Chết vì đói</string>
     <string name="Badges_DeathPoison">Chết do độc</string>
+    <string name="Badges_FoodEaten1">Đã ăn 10 miếng thức ăn</string>
     <string name="Badges_FoodEaten2">Đã ăn 20 phần thức ăn</string>
     <string name="Badges_FoodEaten3">30 phần thức ăn đã ăn</string>
     <string name="Badges_FoodEaten4">40 miếng thức ăn đã ăn</string>
@@ -1504,6 +1508,7 @@
     <string name="RingOfShadows_Name">Nhẫn Bóng Tối</string>
     <string name="RingOfStoneWalking_Info">Chiếc nhẫn kỳ lạ này được làm từ đá chắc chắn. Thứ bạn nghĩ là ruby thực ra là máu lỏng đang được giữ tại chỗ! Bên trong là một mũi tên chỉ về thứ gì đó giống bức tường, cùng với một trái tim tan vỡ... Nó có thể làm gì?</string>
     <string name="RingOfStoneWalking_Name">Nhẫn Máu Đá</string>
+    <string name="RingOfThorns_Info">Dù chiếc nhẫn này không cung cấp gai thật, kẻ thù tấn công bạn sẽ tự bị thương bởi một phần nhỏ của sát thương nó gây ra. Nâng cấp nhẫn này sẽ không mang lại thêm bất kỳ ưu đãi nào.</string>
     <string name="Ring_BuffKnown">Đây là %s</string>
     <string name="Ring_Gems_0">kim cương</string>
     <string name="Ring_Gems_1">opal</string>
@@ -1671,6 +1676,7 @@
     <string name="ShadowsBuff_Info">Khó phát hiện thứ gì đó giữa bóng tối.</string>
     <string name="ShadowsBuff_Name">Hòa vào bóng tối</string>
     <string name="ShamanElder_Gender">masculine</string>
+    <string name="ShamanElder_Name_Objective">lão shaman</string>
     <string name="Shaman_Desc">Những gnoll thông minh nhất có thể làm chủ phép thuật shaman. Các shaman gnoll ưa thích các phép chiến đấu để bù đắp cho sự thiếu sức mạnh, không ngần ngại sử dụng chúng với những kẻ nghi ngờ vị trí của họ trong bộ tộc.</string>
     <string name="Shaman_Gender">masculine</string>
     <string name="Shaman_Killed">Tia sét của %s đã giết bạn...</string>
@@ -3182,6 +3188,10 @@
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
