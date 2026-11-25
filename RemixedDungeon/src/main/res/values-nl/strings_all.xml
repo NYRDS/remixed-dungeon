@@ -345,6 +345,7 @@
     <string name="Candy_Warning_2">Nu heb je echt te veel gegeten. Je buik doet pijn omdat je te veel snoep hebt gegeten.</string>
     <string name="Capotain_Name">Puriteinse hoed</string>
     <string name="Carcass_Devoured">Je hebt het lichaam van %s verslonden!</string>
+    <string name="Carcass_DissectFailed">Je ontleedt de %s maar vindt niets van waarde.</string>
     <string name="Carcass_DissectMessage">Je ontleedt de kadaver en verkrijgt een %s.</string>
     <string name="Carcass_DissectResult_Many">Uit %1$s krijg je %2$d voorwerpen.</string>
     <string name="Carcass_DissectResult_One">Uit %1$s krijg je één voorwerp.</string>
@@ -2189,6 +2190,7 @@
     <string name="WandOfTelekinesis_Info">Golven van magische kracht van deze staf beïnvloeden alle cellen op hun weg, ontgrendelen vallen, vertrappen hoge begroeiing, openen gesloten deuren en sluiten open deuren. Ze duwen ook monsters terug.</string>
     <string name="WandOfTelekinesis_Name">Staff van Telekinese</string>
     <string name="WandOfTelekinesis_YouNowHave">Je hebt %s magisch in je rugzak geteleporteerd</string>
+    <string name="WandOfTeleportation_Info">Een ontlading van deze toverstaf zal een wezen tegen zijn wil naar een willekeurige plek op het huidige niveau teleporteren.</string>
     <string name="WandOfTeleportation_Info2">er is niets gebeurd</string>
     <string name="WandOfTeleportation_Name">Toverstaf der Teleportatie</string>
     <string name="Wand_ACZap">ZAP</string>
@@ -2337,6 +2339,7 @@
     <string name="WndHats_NoConnectionMsg">Kan geen verbinding maken met Google Play.</string>
     <string name="WndHats_Purchased">Geregeld!</string>
     <string name="WndHats_SlotTitle">Uitgerust</string>
+    <string name="WndHats_UnequipButton">Uitrusten</string>
     <string name="WndHero_AttackSkill">Aanvalsvaardigheid</string>
     <string name="WndHero_Awareness">Aandacht</string>
     <string name="WndHero_Buffs">Effecten</string>
@@ -2976,6 +2979,9 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

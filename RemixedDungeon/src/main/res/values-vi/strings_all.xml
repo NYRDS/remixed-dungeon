@@ -985,6 +985,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Journal_WellAwareness">Giếng Nhận Thức</string>
     <string name="Journal_WellHealt">Giếng Sức Khỏe</string>
     <string name="Journal_WellTransmut">Giếng Chuyển Hóa</string>
+    <string name="Keyring_Info">Đây là một vòng khóa đồng, cho phép bạn giữ tất cả chìa khóa riêng biệt khỏi những vật phẩm khác.</string>
     <string name="KindOfBow_ChooseArrows">CHỌN MŨI TÊN</string>
     <string name="KindOfBow_SelectArrowKind">Tôi nên dùng loại tên nào?</string>
     <string name="King_Defense">chặn</string>
@@ -1201,6 +1202,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Mods_AuthorSite">Trang tác giả:</string>
     <string name="Mods_CreatedBy">Tạo bởi:</string>
     <string name="Mods_Disclaimer">Mod được tạo ra bởi người chơi cho người chơi.\n\nMod đôi khi thay đổi lối chơi theo cách không thể đoán trước hoặc kỳ lạ, bạn đã được cảnh báo!\n\nĐội ngũ NYRDS không chịu trách nhiệm về nội dung, chất lượng hoặc ổn định của mod.\n\nTải về trên rủi ro của bạn và vui vẻ!</string>
+    <string name="Monk_Desc">Những nhà sư này là những người cuồng tín, đã dấn thân bảo vệ bí mật của thành phố khỏi kẻ xâm lược. Họ không sử dụng giáp trụ hay vũ khí nào, chỉ dựa vào nghệ thuật chiến đấu tay không.</string>
     <string name="Monk_Disarm">%1$s đã đánh rơi %2$s khỏi tay bạn!</string>
     <string name="Monk_Gender">masculine</string>
     <string name="Monk_Name">tu sĩ lùn</string>
@@ -1899,6 +1901,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="TitleScene_Mods">Mod</string>
     <string name="TitleScene_Play">Chơi</string>
     <string name="TitleScene_PlayOnPC">Chơi trên PC</string>
+    <string name="TomeOfKnowledge_Info">Cuốn sách cổ này đầy ắp những câu đố và bí ẩn huyền bí! Việc đọc nó có thể khó khăn, nhưng nếu bạn kiên trì đọc hết, chắc chắn sẽ tăng sức mạnh phép thuật của bạn.</string>
     <string name="TomeOfKnowledge_Name">Sách Kiến Thức</string>
     <string name="TomeOfMastery_ACRead">ĐỌC</string>
     <string name="TomeOfMastery_Blinded">Bạn không thể đọc khi bị mù.</string>
@@ -3209,6 +3212,9 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

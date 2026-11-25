@@ -2403,6 +2403,7 @@ otro lugar del nivel.</string>
     <string name="VkPlayLink_done">¡Hecho! Los anuncios están deshabilitados hasta %s.</string>
     <string name="VkPlayLink_failed">No se puede confirmar la compra. Verifique su conexi\xf3n a internet e int\xe9ntelo de nuevo.</string>
     <string name="VkPlayLink_noConnection">No se puede alcanzar el servicio de verificación. Verifique su conexión a internet e inténtelo de nuevo.</string>
+    <string name="VkPlayLink_row">VK Play PC: desactivar anuncios</string>
     <string name="VkPlayLink_signIn">Iniciar sesión con VK ID</string>
     <string name="VkPlayLink_title">Versión para PC de VK Play</string>
     <string name="VkPlayLink_waiting">Esperando el inicio de sesión con VK ID. Termínalo en el navegador; esta ventana se actualiza automáticamente.</string>
@@ -3132,6 +3133,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 
