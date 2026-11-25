@@ -250,6 +250,7 @@
     <string name="BishopQuest_1_1_Epilogue">Te bendigo, hijo mío — los muertos inquietos duermen tranquilos esta noche gracias a ti. Pero la plaga de la no-muerte es más profunda que los huesos. Vuelve cuando estés listo para la próxima prueba, y toma esta poción para tus heridas.</string>
     <string name="BishopQuest_1_1_InProgress">Has puesto a descansar a %1$d de %2$d no-muertos, hijo mío. Sigue así.</string>
     <string name="BishopQuest_1_1_Prologue">Los muertos se niegan a descansar, hijo mío. Huesos caminan por los pasillos de la prisión, y cosas podridas salen de la necrópolis. Dale el descanso eterno a diez no-muertos, y sabré que tu fe es verdadera.</string>
+    <string name="BishopQuest_2_1_Epilogue">Ah, la esencia del sol... El incienso volverá a endulzar el aire de esta iglesia. Tu devoción calienta el corazón de un viejo. Toma esta poción — la preparé yo mismo.</string>
     <string name="BishopQuest_2_1_InProgress">Tráeme _tres semillas de sungrass_, hijo mío. El altar espera.</string>
     <string name="BishopQuest_2_1_Prologue">Antes de transmitirte los misterios del sacerdocio, el altar debe prepararse. Tráeme _tres semillas de girasol_ — su esencia dorada hace el mejor incienso.</string>
     <string name="BishopQuest_2_2_Epilogue">Luz de luna en una semilla... como la gracia misma. La iglesia olerá a plata esta noche. Toma esta poción por tu devoción, hijo mío.</string>
@@ -3135,6 +3136,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

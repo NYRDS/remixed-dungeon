@@ -2147,6 +2147,7 @@
     <string name="VileEssence_Name">Verachtelijke Essentie</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
     <string name="VkPlayLink_linked">Reclames zijn uitgeschakeld tot %s.</string>
+    <string name="VkPlayLink_signIn">Aanmelden via VK ID</string>
     <string name="VkPlayLink_title">VK Play PC-versie</string>
     <string name="WandHolster_Info">Deze slanke houder is gemaakt van leer van een exotisch dier. Het maakt het mogelijk om tot %d toverstaven compact bij je te dragen.</string>
     <string name="WandHolster_Name">wandhouder</string>
@@ -2774,6 +2775,7 @@
     <string name="town_deco_stool_broken_name">Gebroken kruk</string>
     <string name="town_deco_stool_sturdy_desc">Een gewone kruk van resistent hout.</string>
     <string name="town_deco_stool_sturdy_name">kruk</string>
+    <string name="town_deco_stove_desc">Deze stoof geeft een aangename warmte</string>
     <string name="town_deco_stove_name">Stenen kookplaats</string>
     <string name="town_deco_tile_desc">Deze tegels zijn behoorlijk versleten door de tijd.</string>
     <string name="town_deco_trapdoor_desc">Waar zou dit toch naartoe leiden?</string>
@@ -2992,6 +2994,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
