@@ -903,6 +903,7 @@
     <string name="HeroClass_PlagueDoctorPerks_1">Pestmeesters zijn meesters in alchemie en kunnen unieke recepten gebruiken.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Plagedokters lijden aan grote accuraatheidsstraffen zonder hun geliefde Beenzaag in de hand en kunnen geen afstandswapens gebruiken.</string>
     <string name="HeroClass_Priest">priester</string>
+    <string name="HeroClass_PriestPerks_0">Priesters beginnen met 12 punten Kracht en een kwartstaf.</string>
     <string name="HeroClass_PriestPerks_3">De strijdkleding van de priester kan worden opgeroepen om te Heiligen: een heilige ontlading die de onddoden in de buurt verbrandt (demonen krijgen helft schade) en de drager zegent.</string>
     <string name="HeroClass_PriestPerks_5">Priesters beginnen met 12 manapunten.</string>
     <string name="HeroClass_Rog">schurke</string>
@@ -1165,6 +1166,7 @@
     <string name="Level_TileLockedDoor">Gesloten deur</string>
     <string name="Level_TileLockedExit">Vergrendelde uitgang naar de diepte</string>
     <string name="Level_TileOpenDoor">Open deur</string>
+    <string name="Level_TileParalyticTrap">Luchtval met paraliyserend gas</string>
     <string name="Level_TilePedestal">Voetstuk</string>
     <string name="Level_TilePileOfStones">Een stapel stenen</string>
     <string name="Level_TilePoisonTrap">Gifpijl-val</string>
@@ -1227,6 +1229,7 @@
     <string name="ManaShieldBuff_Name">Magisch Schild</string>
     <string name="Mana_Cost">Manakosten: </string>
     <string name="Mana_Title">Mana</string>
+    <string name="MedicineMask_Info">Een chirurgisch masker is ontworpen om micro-organismen op te vangen die in vloeistofdruppels en aerosolen uit de mond en neus van de drager vrijkomen.\n\nEen masker dragen betekent dat je om anderen geeft.</string>
     <string name="MedicineMask_Name">Chirurgisch masker</string>
     <string name="MedicineMask_Obtained">Chirurgisch masker verkregen</string>
     <string name="MeleeWeapon_Info1a">Dit %1$s is een %2$s niveau-%3$d wapen voor dichtbijgevecht.</string>
@@ -2065,6 +2068,7 @@
     <string name="TitleScene_PlayOnPC">Op PC spelen</string>
     <string name="TomeOfKnowledge_Info">Deze oude tome is gevuld met arcane raadsels en mysteries! Het kan moeilijk zijn om te lezen, maar als je het doorstaat, zul je zeker je magische krachten vergroten.</string>
     <string name="TomeOfKnowledge_Name">Boek van Kennis</string>
+    <string name="TomeOfMastery_ACRead">LEZEN</string>
     <string name="TomeOfMastery_Blinded">Je kunt niet lezen terwijl je geblind bent</string>
     <string name="TomeOfMastery_Info">Dit versleten leerboek is niet zo dik, maar je hebt het gevoel dat je er veel uit kunt halen. Onthoud er wel dat het lezen van deze tome enige tijd in beslag kan nemen.</string>
     <string name="TomeOfMastery_Name">Boek der Meesterschap</string>
@@ -2979,64 +2983,4 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>

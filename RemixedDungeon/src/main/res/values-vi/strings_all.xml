@@ -423,6 +423,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Chasm_Chasm">Vực</string>
     <string name="Chasm_Info">Bạn đã rơi xuống vực chết chóc...</string>
     <string name="Chasm_Jump">Bạn có thực sự muốn nhảy vào hầm sâu? Bạn có thể sẽ chết.</string>
+    <string name="Chasm_No">Không, tôi đã thay đổi ý định</string>
     <string name="Chess_Stalemate">Bế tắc! Nhà Vua rời bàn cờ và để bạn đi qua.</string>
     <string name="Chess_YouLose">Bạn thua!</string>
     <string name="Chess_YouWin">Bạn thắng!</string>
@@ -980,6 +981,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Journal_Ghost">Hồn ma buồn</string>
     <string name="Journal_Imp">Kẻ quỷ tham lam</string>
     <string name="Journal_PlagueDoctorNPC">Bác sĩ dịch hạch</string>
+    <string name="Journal_ScarecrowNPC">Người gác điền</string>
     <string name="Journal_Troll">Thợ rèn Troll</string>
     <string name="Journal_Wandmaker">Thợ chế tạo đũa phép cũ</string>
     <string name="Journal_WellAwareness">Giếng Nhận Thức</string>
@@ -1645,6 +1647,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="ScrollOfWeaponUpgrade_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="ScrollOfWeaponUpgrade_Name">Cuộn Nâng Cấp Vũ Khí</string>
     <string name="Scroll_ACRead">ĐỌC</string>
+    <string name="Scroll_Info">Cuộn giấy này bị phủ kín bởi những chữ viết không thể giải mã, và mang tiêu đề của chữ runa %s. Ai biết được nó sẽ làm gì khi được đọc to?</string>
     <string name="Scroll_Name">cuộn giấy \&quot;%s\&quot;</string>
     <string name="Scroll_Runes_0">KAUNAN</string>
     <string name="Scroll_Runes_1">SOWILO</string>
@@ -1729,6 +1732,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Info">Những mảnh kim loại hình sao với lưỡi dao sắc bén gây sát thương lớn cho mục tiêu. Chúng có thể được ném với tốc độ rất cao.</string>
     <string name="Shuriken_Name">shuriken</string>
+    <string name="Sign_CantRead">Bạn không biết đọc.</string>
     <string name="SkeletonKey_Info">Cái chìa khóa này trông rất nghiêm trọng: đầu nó được đúc hình cái sọ. Có lẽ nó có thể mở được cánh cửa quan trọng nào đó.</string>
     <string name="SkeletonKey_Name">chìa khóa xương</string>
     <string name="Skeleton_Desc">Bộ xương được tạo thành từ xương của những nhà thám hiểm và cư dân không may của hầm ngục, được hồi sinh bởi luồng ma thuật ác từ sâu bên dưới. Khi bị tổn thương đủ nhiều, chúng sẽ tan rã thành một vụ nổ xương.</string>
@@ -3212,65 +3216,4 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
 
 
     <string name="town_table_fortune_name">Bàn</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </resources>
