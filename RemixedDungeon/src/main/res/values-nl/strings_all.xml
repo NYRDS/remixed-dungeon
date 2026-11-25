@@ -432,6 +432,7 @@
     <string name="CharAction_Taunt">uitdagen</string>
     <string name="CharInfo_Level">Dit is een %2$s op niveau %1$d.</string>
     <string name="Char_Defeat_0">%1$s heeft %2$s verslagen</string>
+    <string name="Char_Defeat_2">%1$s versloeg %2$s</string>
     <string name="Char_Hit_0">%1$s raakte %2$s</string>
     <string name="Char_Hit_1">%1$s raakte %2$s</string>
     <string name="Char_Hit_2">%1$s raakte %2$s</string>
@@ -642,6 +643,7 @@
     <string name="DrunkardNPC_Desc">Vaste klant van de herberg in natuurlijke staat.</string>
     <string name="DrunkardNPC_Gender">masculine</string>
     <string name="DrunkardNPC_Name">dronkaard</string>
+    <string name="DrunkardNPC_Name_Objective">dronkaard</string>
     <string name="Drunkard_Phrase_1">MEER BIER ALSJEBLIEFT!</string>
     <string name="Drunkard_Phrase_2">Wie heeft er water nodig als je bier hebt?</string>
     <string name="Drunkard_Phrase_3">Dit bier smaakt als modder</string>
@@ -2990,6 +2992,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
