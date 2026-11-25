@@ -999,6 +999,7 @@
     <string name="IceElemental_Gender">masculine</string>
     <string name="IceElemental_Name">ijs-elementaal</string>
     <string name="IceElemental_Name_Objective">ijselementaal</string>
+    <string name="IceGuardianCoreModule_Info">Het is een complexe constructie gemaakt van magisch ijs. Een gloeiende steen is geplaatst binnenin dit wonderbaarlijke uitvinding.</string>
     <string name="IceGuardianCoreModule_Name">IJs Wachter Kern</string>
     <string name="IceGuardianCore_Desc">Ijswachters werden gemaakt door oude kobolden om hun grotten te beschermen. De kracht die in de kern is opgeslagen, stelt de ijswachter in staat zichzelf te herstellen zolang hij genoeg energie heeft.</string>
     <string name="IceGuardianCore_DieInfo">Het is hier zo koud, ik kan beter teruggaan naar niveau 14 en proberen een weg te vinden naar een warmere plek.</string>
@@ -1421,6 +1422,7 @@
     <string name="Piranha_Name">reuzepiranha</string>
     <string name="Piranha_Name_Objective">reuzenpiranha</string>
     <string name="PirateSet_Name">Piraten Set</string>
+    <string name="PlagueDoctorMaskHood_Info">Een uitgebeeld ebenen schedel, zijn holle oogkassen gloeiend met de etherische schittering van amethyst-edelstenen. Elke adem die je trekt fluistert door een labyrint van buisjes en filters, draagend de geur van krachtige kruiden en specerijen die de verwesing die aan je kleeft maskeren. Maar het is niet slechts het masker. Een zware kap van midnachts fluweel, verhullend je gezicht en hoofd in schaduwen. De hoed, als een raafsvleugel, stroomt je rug af, de randen getrimd met een franje van botwit kant, een bevroren mooie contrast. Samen scheppen masker en kap een spectraal gezicht, een grim getuigenis van de onophoudelijke strijd tegen de machten van verwesing.</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
     <string name="PlagueDoctorMask_Info">Dit… dit is geen gewone masker. Het is… een barrière. Een schild tegen de krachten van verval waar de Pestmeester onvermoeid tegen vecht. Gemaakt van het fijnste ebenhout, kunstvol ingesneden met het gezicht van een gierige schedel. De holle oogkasjes zijn gevuld met schitterende amethisten die zwak pulseren, als uitgaande kolen van een vuur. Elke adem die je neemt, elk woord dat je spreekt, wordt gefilterd door een labyrintachtig netwerk van buizen en filters. Een mengsel van krachtige kruiden en exotische specerijen vult de lucht binnenin, het stank van de dood maskerend dat als een lijkhemd om je heen hangt.</string>
     <string name="PlagueDoctorMask_Name">Masker van de Pestdokter</string>
@@ -2555,6 +2557,7 @@
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">Hoop is een illusie...</string>
+    <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">Brein van Yog-Dzewa. Bron van al het kwaad dat ooit uit de kerker kwam.</string>
     <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">Yog\'s hersenen</string>
@@ -2983,4 +2986,7 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 </resources>

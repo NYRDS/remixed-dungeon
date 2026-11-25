@@ -210,6 +210,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="BishopNPC_Gender">masculine</string>
     <string name="BishopNPC_Name">Giám mục</string>
     <string name="BishopNPC_Name_Objective">giám mục</string>
+    <string name="BishopQuest_2_1_Prologue">Trước khi ta có thể truyền cho ngươi những bí mật của chức linh, bàn thờ phải được chuẩn bị. Hãy mang cho ta _ba hạt giống sungrass_ — tinh túy vàng của chúng tạo nên loại hương thượng hạng nhất.</string>
     <string name="BishopQuest_2_2_Epilogue">Ánh trăng trong một hạt giống... như chính ân điển. Đêm nay nhà thờ sẽ có mùi bạc. Hãy nhận thuốc này cho sự tận tụy của con, con ơi.</string>
     <string name="BishopQuest_2_2_InProgress">Mang cho ta _ba hạt giống hoa mỹ nhân_, con yêu quý của ta. Bàn thờ đang chờ đợi.</string>
     <string name="BishopQuest_2_2_Prologue">Lễ nhận đồ cần nhang được ban phước bởi mặt trăng, con ơi. Hãy mang cho ta _ba hạt giống hoa mỹ nhân_, thu hái nơi ánh trăng còn vương vấn trong sâu thẳm.</string>
@@ -1124,6 +1125,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="ManaPotion_Name">Bình Mana</string>
     <string name="ManaRegenerationBuff_Info">Chức năng hồi mana được tạo thành một buff để đơn giản hóa.</string>
     <string name="ManaRegenerationBuff_Name">Hồi phục mana</string>
+    <string name="ManaShieldBuff_Info">Một khiên phép thuật đã xuất hiện, hoàn toàn vô hiệu hóa đòn tấn công tiếp theo.</string>
     <string name="ManaShieldBuff_Name">Khiên phép thuật</string>
     <string name="Mana_Cost">Chi phí mana: </string>
     <string name="Mana_Title">Năng lượng</string>
@@ -1521,6 +1523,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="RingOfSatiety_Name">Nhẫn No Đủ</string>
     <string name="RingOfShadows_Info">Kẻ thù sẽ khó nhận ra bạn hơn khi bạn đeo nhẫn này. Nhẫn Bóng Tối xuống cấp sẽ báo động cho kẻ thù mà lẽ ra chúng không hề để ý đến sự hiện diện của bạn.</string>
     <string name="RingOfShadows_Name">Nhẫn Bóng Tối</string>
+    <string name="RingOfStoneWalking_ImmuredInStone">Bạn đã bị vây hãm trong đá. Mãi mãi.</string>
     <string name="RingOfStoneWalking_Info">Chiếc nhẫn kỳ lạ này được làm từ đá chắc chắn. Thứ bạn nghĩ là ruby thực ra là máu lỏng đang được giữ tại chỗ! Bên trong là một mũi tên chỉ về thứ gì đó giống bức tường, cùng với một trái tim tan vỡ... Nó có thể làm gì?</string>
     <string name="RingOfStoneWalking_Name">Nhẫn Máu Đá</string>
     <string name="RingOfThorns_Info">Dù chiếc nhẫn này không cung cấp gai thật, kẻ thù tấn công bạn sẽ tự bị thương bởi một phần nhỏ của sát thương nó gây ra. Nâng cấp nhẫn này sẽ không mang lại thêm bất kỳ ưu đãi nào.</string>
@@ -3216,4 +3219,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 </resources>
