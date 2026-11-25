@@ -1,25 +1,19 @@
 package com.nyrds.pixeldungeon.mechanics.buffs;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.pixeldungeon.items.common.RatKingCrown;
-import com.nyrds.pixeldungeon.items.common.rings.RingOfFrost;
-import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.util.ModError;
 import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.DummyBuff;
+import com.watabou.pixeldungeon.actors.buffs.HeartOfDarknessBuff;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
+import com.watabou.pixeldungeon.actors.buffs.OneWayCursedLoveBuff;
+import com.watabou.pixeldungeon.actors.buffs.OneWayLoveBuff;
+import com.watabou.pixeldungeon.actors.buffs.RatKingAuraBuff;
+import com.watabou.pixeldungeon.actors.buffs.RatterAura;
 import com.watabou.pixeldungeon.items.armor.glyphs.Viscosity;
-import com.watabou.pixeldungeon.items.quest.DriedRose;
-import com.watabou.pixeldungeon.items.quest.RatSkull;
-import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
-import com.watabou.pixeldungeon.items.rings.RingOfDetection;
-import com.watabou.pixeldungeon.items.rings.RingOfElements;
-import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
-import com.watabou.pixeldungeon.items.rings.RingOfPower;
-import com.watabou.pixeldungeon.items.rings.RingOfStoneWalking;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -84,14 +78,19 @@ public class BuffFactory {
     public static final String HEALTH = "Health";
     public static final String ARMOR = "Armor";
 
-    public static final String RING_OF_DETECTION = new RingOfDetection().buff().getEntityKind();
-    public static final String RING_OF_EVASION = new RingOfEvasion().buff().getEntityKind();
-    public static final String RING_OF_ACCURACY = new RingOfAccuracy().buff().getEntityKind();
-    public static final String RING_OF_STONE_WALKING = new RingOfStoneWalking().buff().getEntityKind();
-    public static final String RING_OF_POWER = new RingOfPower().buff().getEntityKind();
-    public static final String RING_OF_ELEMENTS = new RingOfElements().buff().getEntityKind();
+	// ring buff kinds: live KindRingBuff kind strings, stable across the
+	// rings' java -> lua migration (was new RingOfX().buff().getEntityKind())
+	public static final String RING_OF_DETECTION = "artifactBuffDetection";
+	public static final String RING_OF_EVASION = "artifactBuffEvasion";
+	public static final String RING_OF_ACCURACY = "artifactBuffAccuracy";
+	public static final String RING_OF_STONE_WALKING = "artifactBuffStoneWalking";
+	public static final String RING_OF_POWER = "artifactBuffPower";
+	public static final String RING_OF_ELEMENTS = "artifactBuffResistance";
+	public static final String RING_OF_HAGGLING = "artifactBuffHaggling";
+	public static final String RING_OF_SATIETY = "artifactBuffSatiety";
+	public static final String RING_OF_HERBALISM = "artifactBuffHerbalism";
 
-    public static final String RAT_SKULL_RATTER_AURA = new RatSkull().buff().getEntityKind();
+	public static final String RAT_SKULL_RATTER_AURA = "artifactBuffRatterAura";
 
 
     static {
@@ -111,28 +110,19 @@ public class BuffFactory {
         registerBuffClass(Hunger.class);
         //registerBuffClass(Charger.class);
         registerBuffClass(Necrotism.class);
-        registerBuffClass(HeartOfDarkness.HeartOfDarknessBuff.class);
-        registerBuffClass(DriedRose.OneWayCursedLoveBuff.class);
-        registerBuffClass(RatKingCrown.RatKingAuraBuff.class);
-        registerBuffClass(RingOfStoneWalking.StoneWalking.class);
-        registerBuffClass(RingOfFrost.FrostAura.class);
-        registerBuffClass(RatSkull.RatterAura.class);
+        registerBuffClass(HeartOfDarknessBuff.class);
+        registerBuffClass(OneWayCursedLoveBuff.class);
+        registerBuffClass(OneWayLoveBuff.class);
+        registerBuffClass(RatKingAuraBuff.class);
+        registerBuffClass(RatterAura.class);
         registerBuffClass(RageBuff.class);
-        registerBuffClass(DriedRose.OneWayCursedLoveBuff.class);
+        registerBuffClass(OneWayCursedLoveBuff.class);
+        registerBuffClass(OneWayLoveBuff.class);
         // registered for the Moongrace plant, which shares the buff's simple name
         // and cannot import it directly
         registerBuffClass(Moongrace.class);
-        //registerBuffClass(RingOfHaggler.Haggling.class);
-        //registerBuffClass(RingOfPower.Power.class);
-        //registerBuffClass(RingOfSatiety.Satiety.class);
-        //registerBuffClass(RingOfHaste.Haste.class);
-        //registerBuffClass(RingOfMending.Rejuvenation.class);
-        //registerBuffClass(RingOfHerbalism.Herbalism.class);
-        //registerBuffClass(RingOfEvasion.Evasion.class);
-        //registerBuffClass(RingOfThorns.Thorns.class);
-        //registerBuffClass(RingOfDetection.Detection.class);
-        //registerBuffClass(RingOfElements.Resistance.class);
-        //registerBuffClass(RingOfShadows.Shadows.class);
+        // ring buffs (StoneWalking, FrostAura, and the 12 kind buffs) are served
+        // by KindRingBuff via the rings' kind scripts - no class registrations
 
 
     }

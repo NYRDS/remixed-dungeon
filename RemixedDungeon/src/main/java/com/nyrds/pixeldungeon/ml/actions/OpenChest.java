@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.keys.GoldenKey;
 import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -33,7 +32,7 @@ public class OpenChest extends CharAction {
 
                 if (heap.type == Heap.Type.LOCKED_CHEST || heap.type == Heap.Type.CRYSTAL_CHEST) {
 
-                    theKey[0] = hero.getBelongings().getKey(GoldenKey.class, Dungeon.depth, level.levelId);
+                    theKey[0] = hero.getBelongings().getKey("GoldenKey", Dungeon.depth, level.levelId);
 
                     if (theKey[0] == null) {
                         GLog.w(StringsManager.getVar(R.string.Hero_LockedChest));

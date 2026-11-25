@@ -48,7 +48,6 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.levels.features.Chasm;
@@ -326,8 +325,8 @@ public class Mob extends Char implements IZapper {
         }
 
         // java Boss fixup parity: a save predating the key must not brick the stair
-        if (isBoss && !mobClass.equals(MobFactory.SHADOW_LORD) && getBelongings().getItem(SkeletonKey.class) == null) {
-            collect(new SkeletonKey());
+        if (isBoss && !mobClass.equals(MobFactory.SHADOW_LORD) && getBelongings().getItem("SkeletonKey") == null) {
+            collect(ItemFactory.itemByName("SkeletonKey"));
         }
     }
 
@@ -1038,7 +1037,7 @@ public class Mob extends Char implements IZapper {
             if (isBoss && !mobClass.equals(MobFactory.SHADOW_LORD)) {
                 // bosses carry the SkeletonKey that drops with their gear;
                 // ShadowLord never did (java Boss.restoreFromBundle exclusion)
-                collect(new SkeletonKey());
+                collect(ItemFactory.itemByName("SkeletonKey"));
             }
         }
     }

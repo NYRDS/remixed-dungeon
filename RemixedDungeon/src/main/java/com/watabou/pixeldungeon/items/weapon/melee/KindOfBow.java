@@ -9,9 +9,20 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
 import java.util.ArrayList;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import org.jetbrains.annotations.NotNull;
 
-public abstract class KindOfBow extends MeleeWeapon {
+public class KindOfBow extends MeleeWeapon {
+
+	// data-kind surface (was Bow/Crossbow + 9 per-bow classes): the
+	// level-scaling arrow multipliers and the miss hook route to
+	// scripts/items/<Kind>.lua (kindScript/kindWeapon live on MeleeWeapon)
+	public KindOfBow(@NotNull String kind) {
+		super(kind, "scripts/lib/emptykind");
+		kindWeapon = true;
+		animation_class = kindScript.runOptional("anim", "bow");
+	}
+
 
 	{
 		imageFile = "items/ranged.png";
@@ -44,18 +55,31 @@ public abstract class KindOfBow extends MeleeWeapon {
 	}
 	
 	public double acuFactor() {
+		if (kindWeapon) {
+			return kindScript.runOptional("acuFactor", 1.0, level());
+		}
 		return 1;
 	}
 
 	public double dlyFactor() {
-		return 1;
-	}
-	
-	public double dmgFactor() {
+		if (kindWeapon) {
+			return kindScript.runOptional("dlyFactor", 1.0, level());
+		}
 		return 1;
 	}
 
-	public void onMiss(Char user) {}
+	public double dmgFactor() {
+		if (kindWeapon) {
+			return kindScript.runOptional("dmgFactor", 1.0, level());
+		}
+		return 1;
+	}
+
+	public void onMiss(Char user) {
+		if (kindWeapon && kindScript.hasMethod("onMiss")) {
+			kindScript.runOptionalNoRet("onMiss", user);
+		}
+	}
 
 	@Override
 	public boolean goodForMelee() {

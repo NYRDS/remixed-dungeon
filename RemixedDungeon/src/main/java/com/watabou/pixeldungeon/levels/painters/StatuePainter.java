@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.STATUE;
 
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -8,7 +9,6 @@ import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -29,7 +29,7 @@ public class StatuePainter extends Painter {
 		Room.Door door = room.entrance();
 		
 		door.set( Room.Door.Type.LOCKED );
-		level.addItemToSpawn( new IronKey() );
+		level.addItemToSpawn( ItemFactory.itemByName("IronKey") );
 		
 		if (door.x == room.left) {
 			

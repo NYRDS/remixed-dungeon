@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
@@ -112,6 +111,6 @@ public class Seed extends Item {
 
     @Override
     public String bag() {
-        return SeedPouch.class.getSimpleName();
+        return "SeedPouch";
     }
 }

@@ -1,6 +1,6 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.nyrds.pixeldungeon.items.guts.PseudoAmulet;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -80,7 +80,7 @@ public class FakeLastLevel extends Level {
 
 	@Override
 	protected void createItems() {
-		drop( new PseudoAmulet(), pedestal );
+		drop( ItemFactory.itemByName("PseudoAmulet"), pedestal );
 	}
 	
 	@Override

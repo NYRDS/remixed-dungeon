@@ -12,7 +12,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -23,6 +22,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.util.ArrayList;
 import java.util.List;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import org.jetbrains.annotations.NotNull;
 
 public class WndTradeItem extends Window {
@@ -221,14 +221,14 @@ public class WndTradeItem extends Window {
     private int price(@NotNull Item item, boolean buying) {
         if (buying) {
             int price = shopkeeper.priceSell(item);
-            if (Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class) && price >= 2) {
+            if (Dungeon.hero.hasBuff(BuffFactory.RING_OF_HAGGLING) && price >= 2) {
                 price /= 2;
             }
             return price;
         }
 
         int price = shopkeeper.priceBuy(item);
-        if (Dungeon.hero.hasBuff(RingOfHaggler.Haggling.class)) {
+        if (Dungeon.hero.hasBuff(BuffFactory.RING_OF_HAGGLING)) {
             price *= 1.5f;
         }
         return price;

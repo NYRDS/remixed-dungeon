@@ -7,9 +7,7 @@ import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.Key;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -28,9 +26,9 @@ public class Unlock extends CharAction {
             int door = level.map[dst];
 
             if (door == Terrain.LOCKED_DOOR) {
-                theKey = hero.getBelongings().getKey(IronKey.class, Dungeon.depth, level.levelId);
+                theKey = hero.getBelongings().getKey("IronKey", Dungeon.depth, level.levelId);
             } else if (door == Terrain.LOCKED_EXIT) {
-                theKey = hero.getBelongings().getKey(SkeletonKey.class, Dungeon.depth, level.levelId);
+                theKey = hero.getBelongings().getKey("SkeletonKey", Dungeon.depth, level.levelId);
             }
 
             if (theKey != null) {

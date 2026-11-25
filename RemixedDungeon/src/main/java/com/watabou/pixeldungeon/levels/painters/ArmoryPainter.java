@@ -1,11 +1,11 @@
 
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -45,7 +45,7 @@ public class ArmoryPainter extends Painter {
 		}
 		
 		entrance.set( Room.Door.Type.LOCKED );
-		level.addItemToSpawn( new IronKey() );
+		level.addItemToSpawn( ItemFactory.itemByName("IronKey") );
 	}
 	
 	private static Item prize(Level level) {

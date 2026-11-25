@@ -8,7 +8,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
-public abstract class Arrow extends MissileWeapon {
+public class Arrow extends MissileWeapon {
 
 	
 	protected final int COMMON_ARROW_IMAGE    = 7;
@@ -37,6 +37,21 @@ public abstract class Arrow extends MissileWeapon {
 
 	}
 
+	// data kinds (was one java class per arrow): base stats + image + price
+	// unit come from scripts/items/<Kind>.lua
+	public Arrow(@NotNull String kind) {
+		super(kind);
+		setSTR(9);
+		baseDly = kindScript.runOptional("baseDly", 1.0);
+		baseMin = kindScript.runOptional("baseMin", 1.0);
+		baseMax = kindScript.runOptional("baseMax", 1.0);
+		int imageOverride = kindScript.runOptional("image", -1);
+		if (imageOverride >= 0) {
+			image = imageOverride;
+		}
+		updateStatsForInfo();
+	}
+
 	protected void updateStatsForInfo() {
 		MAX = (int) baseMax;
 		MIN = (int) baseMin;
@@ -44,7 +59,7 @@ public abstract class Arrow extends MissileWeapon {
 		DLY = (float) baseDly;
 	}
 
-	protected boolean activateSpecial(Char attacker, Char defender, int damage) {
+	public boolean activateSpecial(Char attacker, Char defender, int damage) {
 		if (firedFrom != null) {
 			return true;
 		}

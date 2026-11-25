@@ -359,8 +359,14 @@ public class Belongings implements Iterable<Item>, Bundlable {
     @SuppressWarnings("unchecked")
     @Nullable
     public <T extends Key> T getKey(Class<T> kind, int depth, @NotNull String levelId) {
+        return getKey(kind.getSimpleName(), depth, levelId);
+    }
+
+    @SuppressWarnings("unchecked")
+    @Nullable
+    public <T extends Key> T getKey(@NotNull String kind, int depth, @NotNull String levelId) {
         for (Item item : backpack) {
-            if (item instanceof Key && item.getClass() == kind) {
+            if (item instanceof Key && kind.equals(item.getEntityKind())) {
                 Key key = (Key) item;
                 if (levelId.equals(key.levelId)
                         || (Utils.UNKNOWN.equals(key.levelId) && key.getDepth() == depth)) {

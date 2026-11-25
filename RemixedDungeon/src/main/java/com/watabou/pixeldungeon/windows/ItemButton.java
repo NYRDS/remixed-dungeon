@@ -18,8 +18,8 @@ import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
-import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.ItemSlot;
@@ -143,7 +143,7 @@ class ItemButton extends ItemSlot {
                         enableItem=(item.price() > 0) && (!item.isEquipped(owner) || !item.isCursed());
                         break;
                     case WEAPON:
-                        enableItem=(!(item instanceof KindOfBow) && (item instanceof MeleeWeapon || item instanceof Boomerang));
+                        enableItem=(!(item instanceof KindOfBow) && (item instanceof MissileWeapon || item instanceof MeleeWeapon));
                         break;
                     case ARMOR:
                         enableItem=(item instanceof Armor);
@@ -164,7 +164,7 @@ class ItemButton extends ItemSlot {
                         enableItem=(item instanceof Scroll || item instanceof MeleeWeapon || item instanceof Armor || item instanceof KindOfBow || item instanceof Wand || item.getEntityKind().contains("Shield"));
                         break;
                     case UPGRADABLE_WEAPON:
-                        enableItem=((item instanceof MeleeWeapon || item instanceof Boomerang) && (item.isUpgradable()));
+                        enableItem=((item instanceof MeleeWeapon || item instanceof MissileWeapon) && (item.isUpgradable()));
                         break;
                     case ARROWS:
                         enableItem=(item instanceof Arrow);

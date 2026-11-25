@@ -1,5 +1,6 @@
 package com.nyrds.pixeldungeon.items.common;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.Carcass;
 import com.nyrds.pixeldungeon.items.CustomItem;
@@ -11,19 +12,12 @@ import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
+import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.nyrds.pixeldungeon.items.artifacts.CandleOfMindVision;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
-import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
 import com.nyrds.pixeldungeon.items.chaos.ChaosCrystal;
 import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
-import com.nyrds.pixeldungeon.items.drinks.ManaPotion;
-import com.nyrds.pixeldungeon.items.guts.HeartOfDarkness;
-import com.nyrds.pixeldungeon.items.guts.PseudoAmulet;
-import com.nyrds.pixeldungeon.items.icecaves.IceKey;
-import com.nyrds.pixeldungeon.items.material.IceGuardianCoreModule;
-import com.nyrds.pixeldungeon.items.material.SoulShard;
-import com.nyrds.pixeldungeon.items.material.SpiderQueenCarapace;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
 import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -37,21 +31,9 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.bags.Keyring;
-import com.watabou.pixeldungeon.items.bags.PotionBelt;
-import com.watabou.pixeldungeon.items.bags.Quiver;
-import com.watabou.pixeldungeon.items.bags.ScrollHolder;
-import com.watabou.pixeldungeon.items.bags.SeedPouch;
-import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.Food;
-import com.watabou.pixeldungeon.items.keys.GoldenKey;
-import com.watabou.pixeldungeon.items.keys.IronKey;
-import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.Potion;
-import com.watabou.pixeldungeon.items.quest.CorpseDust;
-import com.watabou.pixeldungeon.items.quest.DriedRose;
 import com.watabou.pixeldungeon.items.quest.Pickaxe;
-import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.scrolls.BlankScroll;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
@@ -133,6 +115,19 @@ public class ItemFactory {
 
         registerItemClass(Gold.class);
 
+        // data keys and bags: Key/Bag kind ctors, images from scripts
+        registerItemClass(Key.class);
+        registerItemKind("IronKey", Key::new);
+        registerItemKind("GoldenKey", Key::new);
+        registerItemKind("SkeletonKey", Key::new);
+        registerItemClass(Bag.class);
+        registerItemKind("Keyring", Bag::new);
+        registerItemKind("PotionBelt", Bag::new);
+        registerItemKind("Quiver", Bag::new);
+        registerItemKind("ScrollHolder", Bag::new);
+        registerItemKind("SeedPouch", Bag::new);
+        registerItemKind("WandHolster", Bag::new);
+
         // the framework classes themselves resolve as kinds (name lookup
         // during Item field init runs before the kind ctor arg lands; bare
         // instances restore as their canonical kind: ration/healing/identify)
@@ -187,7 +182,6 @@ public class ItemFactory {
         registerItemKind(Potion.MIGHT, Potion::new);
         registerItemKind(Potion.FROST, Potion::new);
         registerItemKind(Potion.MANA, Potion::new);
-        registerItemClass(RatSkull.class);
         // data rings: one Ring framework + scripts/items/<Kind>.lua each
         // (RingOfFrost/RingOfStoneWalking included, always-known kinds)
         registerItemClass(Ring.class);
@@ -204,9 +198,6 @@ public class ItemFactory {
         registerItemKind("RingOfElements", Ring::new);
         registerItemKind("RingOfThorns", Ring::new);
         registerItemKind("RingOfStoneWalking", Ring::new);
-        registerItemClass(CorpseDust.class);
-        registerItemClass(RatKingCrown.class);
-        registerItemClass(DriedRose.class);
         // data wands: one Wand framework + scripts/items/<Kind>.lua each
         // (MagicMissile always-known; Icebolt/Shadowbolt are non-handler kinds;
         // ChaosStaff stays a java subclass with no kind script)
@@ -311,26 +302,10 @@ public class ItemFactory {
         registerItemKind("DoctorArmor", ClassArmor::new);
         registerItemKind("NecromancerArmor", ClassArmor::new);
         registerItemKind("PriestArmor", ClassArmor::new);
-        registerItemClass(PotionBelt.class);
-        registerItemClass(Keyring.class);
-        registerItemClass(WandHolster.class);
-        registerItemClass(SeedPouch.class);
-        registerItemClass(Quiver.class);
-        registerItemClass(ScrollHolder.class);
-        registerItemClass(SkeletonKey.class);
-        registerItemClass(GoldenKey.class);
-        registerItemClass(IronKey.class);
-        registerItemClass(HeartOfDarkness.class);
-        registerItemClass(BlackSkull.class);
-        registerItemClass(SoulShard.class);
         registerItemKind(Food.PUMPKIN_PIE, Food::new);
         registerItemKind(Food.ROTTEN_PUMPKIN_PIE, Food::new);
         registerItemKind(Food.CHRISTMAS_TURKEY, Food::new);
         registerItemKind("WandOfIcebolt", Wand::new);
-        registerItemClass(IceKey.class);
-        registerItemClass(RatHide.class);
-        registerItemClass(BlackSkullOfMastery.class);
-        registerItemClass(CandleOfMindVision.class);
 
         registerItemClassByName(RotberrySeed.class, "Rotberry.Seed");
         registerItemClassByName(EarthrootSeed.class, "Earthroot.Seed");
@@ -357,15 +332,9 @@ public class ItemFactory {
         Bundle.addAlias(FadeleafSeed.class, "com.watabou.pixeldungeon.plants.Fadeleaf$Seed");
         Bundle.addAlias(MoongraceSeed.class, "com.watabou.pixeldungeon.plants.Moongrace$Seed");
 
-        registerItemClass(IceGuardianCoreModule.class);
-        registerItemClass(SpiderQueenCarapace.class);
         registerItemKind("RingOfFrost", Ring::new);
         registerItemKind(Food.CANDY, Food::new);
         registerItemKind("WandOfShadowbolt", Wand::new);
-        registerItemClass(PseudoAmulet.class);
-        registerItemClass(ManaPotion.class);
-        registerItemClass(TomeOfKnowledge.class);
-        registerItemClass(SpellBook.class);
 
 
 

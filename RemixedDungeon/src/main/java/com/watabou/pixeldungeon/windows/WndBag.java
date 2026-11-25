@@ -19,12 +19,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
-import com.watabou.pixeldungeon.items.bags.Keyring;
-import com.watabou.pixeldungeon.items.bags.PotionBelt;
-import com.watabou.pixeldungeon.items.bags.Quiver;
-import com.watabou.pixeldungeon.items.bags.ScrollHolder;
-import com.watabou.pixeldungeon.items.bags.SeedPouch;
-import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
@@ -172,12 +166,12 @@ public class WndBag extends WndTabbed {
 		if(stuff.getOwner() instanceof Hero) {
 			Bag[] bags = {
 					stuff.backpack,
-					stuff.getItem( PotionBelt.class ),
-					stuff.getItem( SeedPouch.class ),
-					stuff.getItem( ScrollHolder.class ),
-					stuff.getItem( WandHolster.class ),
-					stuff.getItem( Keyring.class ),
-					stuff.getItem( Quiver.class ) };
+					(Bag) stuff.getItem( "PotionBelt" ),
+					(Bag) stuff.getItem( "SeedPouch" ),
+					(Bag) stuff.getItem( "ScrollHolder" ),
+					(Bag) stuff.getItem( "WandHolster" ),
+					(Bag) stuff.getItem( "Keyring" ),
+					(Bag) stuff.getItem( "Quiver" ) };
 
 			for (Bag b : bags) {
 				if (b != null) {
@@ -224,13 +218,13 @@ public class WndBag extends WndTabbed {
 		} else {
 			switch (mode) {
 				case WAND:
-					return new WndBag(belongings, belongings.getItem(WandHolster.class), listener, mode, title, entityNames);
+					return new WndBag(belongings, (Bag) belongings.getItem("WandHolster"), listener, mode, title, entityNames);
 
 				case SEED:
-					return new WndBag(belongings, belongings.getItem(SeedPouch.class), listener, mode, title, entityNames);
+					return new WndBag(belongings, (Bag) belongings.getItem("SeedPouch"), listener, mode, title, entityNames);
 
 				case ARROWS:
-					return new WndBag(belongings, belongings.getItem(Quiver.class), listener, mode, title, entityNames);
+					return new WndBag(belongings, (Bag) belongings.getItem("Quiver"), listener, mode, title, entityNames);
 
 				default:
 					return new WndBag(belongings, belongings.backpack, listener, mode, title, entityNames);

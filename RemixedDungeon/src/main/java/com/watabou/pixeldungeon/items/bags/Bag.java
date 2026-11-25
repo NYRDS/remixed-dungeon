@@ -208,8 +208,28 @@ public class Bag extends Item implements Iterable<Item> {
 		}
 	}
 
-	@Override
+	// data kinds (Keyring/PotionBelt/Quiver/ScrollHolder/SeedPouch/WandHolster):
+	// image from scripts/items/<Kind>.lua; the kind string IS the bag() hook
+	// items target, so it must equal the legacy class simple names
+	private String bagKind;
+
+	public Bag() {
+	}
+
+	public Bag(@NotNull String kind) {
+		bagKind = kind;
+		com.nyrds.pixeldungeon.mechanics.LuaScript kindScript =
+				new com.nyrds.pixeldungeon.mechanics.LuaScript("scripts/items/" + kind, "scripts/lib/emptykind", this);
+		int imageOverride = kindScript.runOptional("image", -1);
+		if (imageOverride >= 0) {
+			setImage(imageOverride);
+		}
+	}
+
 	public String getEntityKind() {
+		if (bagKind != null) {
+			return bagKind;
+		}
 		return getClass().getSimpleName();
 	}
 

@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.ui;
 
+import com.watabou.pixeldungeon.items.keys.Key;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
@@ -17,7 +18,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.BloodParticle;
-import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -136,7 +136,7 @@ public class StatusPane extends Component {
         depth.hardlight(0xCACFC2);
         add(depth);
 
-        IronKey.countIronKeys();
+        Key.countIronKeys();
         keys = new BitmapText(PixelScene.getFont1x());
         keys.hardlight(0xCACFC2);
         add(keys);
@@ -287,7 +287,7 @@ public class StatusPane extends Component {
             level.setY(PixelScene.align(27.5f - level.baseLine() / 2));
         }
 
-        int k = IronKey.curDepthQuantity;
+        int k = Key.curDepthQuantity;
         if (k != lastKeys) {
             lastKeys = k;
             keys.text(Integer.toString(lastKeys));

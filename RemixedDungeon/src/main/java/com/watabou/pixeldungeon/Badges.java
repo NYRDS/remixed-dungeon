@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -14,16 +15,8 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.bags.Keyring;
-import com.watabou.pixeldungeon.items.bags.PotionBelt;
-import com.watabou.pixeldungeon.items.bags.Quiver;
-import com.watabou.pixeldungeon.items.bags.ScrollHolder;
-import com.watabou.pixeldungeon.items.bags.SeedPouch;
-import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
-import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
-import com.watabou.pixeldungeon.items.rings.RingOfThorns;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -471,22 +464,22 @@ public class Badges {
 		List<Item> bags = new ArrayList<>();
 
 		if(!local.contains(Badge.BAG_BOUGHT_KEY_RING)) {
-			bags.add(new Keyring());
+			bags.add(ItemFactory.itemByName("Keyring"));
 		}
 		if(!local.contains(Badge.BAG_BOUGHT_SEED_POUCH)) {
-			bags.add(new SeedPouch());
+			bags.add(ItemFactory.itemByName("SeedPouch"));
 		}
 		if (!local.contains(Badge.BAG_BOUGHT_SCROLL_HOLDER)) {
-			bags.add(new ScrollHolder());
+			bags.add(ItemFactory.itemByName("ScrollHolder"));
 		}
 		if(!local.contains(Badge.BAG_BOUGHT_WAND_HOLSTER)) {
-			bags.add(new WandHolster());
+			bags.add(ItemFactory.itemByName("WandHolster"));
 		}
 		if(!local.contains(Badge.BAG_BOUGHT_POTION_BELT)) {
-			bags.add(new PotionBelt());
+			bags.add(ItemFactory.itemByName("PotionBelt"));
 		}
 		if(!local.contains(Badge.BAG_BOUGHT_QUIVER)) {
-			bags.add(new Quiver());
+			bags.add(ItemFactory.itemByName("Quiver"));
 		}
 
 		if(bags.isEmpty()) {
@@ -499,18 +492,25 @@ public class Badges {
 	public static void validateAllBagsBought(Item bag) {
 
 		Badge badge = null;
-		if (bag instanceof SeedPouch) {
-			badge = Badge.BAG_BOUGHT_SEED_POUCH;
-		} else if (bag instanceof ScrollHolder) {
-			badge = Badge.BAG_BOUGHT_SCROLL_HOLDER;
-		} else if (bag instanceof WandHolster) {
-			badge = Badge.BAG_BOUGHT_WAND_HOLSTER;
-		} else if (bag instanceof PotionBelt) {
-			badge = Badge.BAG_BOUGHT_POTION_BELT;
-		} else if (bag instanceof Quiver) {
-			badge = Badge.BAG_BOUGHT_QUIVER;
-		} else if (bag instanceof Keyring) {
-			badge = Badge.BAG_BOUGHT_KEY_RING;
+		switch (bag.getEntityKind()) {
+			case "SeedPouch":
+				badge = Badge.BAG_BOUGHT_SEED_POUCH;
+				break;
+			case "ScrollHolder":
+				badge = Badge.BAG_BOUGHT_SCROLL_HOLDER;
+				break;
+			case "WandHolster":
+				badge = Badge.BAG_BOUGHT_WAND_HOLSTER;
+				break;
+			case "PotionBelt":
+				badge = Badge.BAG_BOUGHT_POTION_BELT;
+				break;
+			case "Quiver":
+				badge = Badge.BAG_BOUGHT_QUIVER;
+				break;
+			case "Keyring":
+				badge = Badge.BAG_BOUGHT_KEY_RING;
+				break;
 		}
 
 		if (badge != null) {
@@ -771,7 +771,7 @@ public class Badges {
 	}
 
 	public static void validateRingOfHaggler() {
-		if (!local.contains(Badge.RING_OF_HAGGLER) && new RingOfHaggler().isKnown()) {
+		if (!local.contains(Badge.RING_OF_HAGGLER) && Ring.isKindKnown("RingOfHaggler")) {
 			Badge badge = Badge.RING_OF_HAGGLER;
 			local.add(badge);
 			displayBadge(badge);
@@ -779,7 +779,7 @@ public class Badges {
 	}
 
 	public static void validateRingOfThorns() {
-		if (!local.contains(Badge.RING_OF_THORNS) && new RingOfThorns().isKnown()) {
+		if (!local.contains(Badge.RING_OF_THORNS) && Ring.isKindKnown("RingOfThorns")) {
 			Badge badge = Badge.RING_OF_THORNS;
 			local.add(badge);
 			displayBadge(badge);

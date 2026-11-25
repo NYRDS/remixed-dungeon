@@ -4,11 +4,7 @@ package com.watabou.pixeldungeon.actors.blobs;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
-import com.nyrds.pixeldungeon.items.common.GoldenSword;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.items.common.SacrificialSword;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
@@ -21,17 +17,7 @@ import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
-import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
-import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
-import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
-import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
-import com.watabou.pixeldungeon.items.weapon.melee.Longsword;
-import com.watabou.pixeldungeon.items.weapon.melee.Mace;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
-import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
-import com.watabou.pixeldungeon.items.weapon.melee.Spear;
-import com.watabou.pixeldungeon.items.weapon.melee.Sword;
-import com.watabou.pixeldungeon.items.weapon.melee.WarHammer;
 import com.watabou.pixeldungeon.plants.Seed;
 
 @LuaInterface
@@ -71,39 +57,31 @@ public class WaterOfTransmutation extends WellWater {
         emitter.start(Speck.factory(Speck.CHANGE), 0.2f, 0);
     }
 
+    private static final String[][] WEAPON_TRANSMUTE_PAIRS = {
+            {"Knuckles", "Dagger"},
+            {"Spear", "Quarterstaff"},
+            {"Sword", "Mace"},
+            {"Longsword", "BattleAxe"},
+            {"Glaive", "WarHammer"},
+            {"Claymore", "Halberd"},
+            {"SacrificialSword", "GoldenSword"},
+    };
+
     private MeleeWeapon changeWeapon(MeleeWeapon w) {
+        String kind = w.getEntityKind();
+        String pairKind = null;
+        for (String[] pair : WEAPON_TRANSMUTE_PAIRS) {
+            if (kind.equals(pair[0])) {
+                pairKind = pair[1];
+                break;
+            }
+            if (kind.equals(pair[1])) {
+                pairKind = pair[0];
+                break;
+            }
+        }
 
-        MeleeWeapon n = null;
-
-        if (w instanceof Knuckles) {
-            n = new Dagger();
-        } else if (w instanceof Dagger) {
-            n = new Knuckles();
-        } else if (w instanceof Spear) {
-            n = new Quarterstaff();
-        } else if (w instanceof Quarterstaff) {
-            n = new Spear();
-        } else if (w instanceof Sword) {
-            n = new Mace();
-        } else if (w instanceof Mace) {
-            n = new Sword();
-        } else if (w instanceof Longsword) {
-            n = new BattleAxe();
-        } else if (w instanceof BattleAxe) {
-            n = new Longsword();
-        } else if (w instanceof Glaive) {
-            n = new WarHammer();
-        } else if (w instanceof WarHammer) {
-            n = new Glaive();
-        } else if (w instanceof Claymore) {
-            n = new Halberd();
-        } else if (w instanceof Halberd) {
-            n = new Claymore();
-        } else if (w instanceof SacrificialSword) {
-	        n = new GoldenSword();
-        } else if (w instanceof GoldenSword) {
-			n = new SacrificialSword();
-		}
+        MeleeWeapon n = pairKind != null ? (MeleeWeapon) ItemFactory.itemByName(pairKind) : null;
 
         if (n != null) {
 
@@ -132,7 +110,7 @@ public class WaterOfTransmutation extends WellWater {
         Item n;
         do {
             n = Treasury.getLevelTreasury().random(Treasury.Category.RING);
-        } while (n.getClass() == r.getClass());
+        } while (n.getEntityKind().equals(r.getEntityKind()));
 
         n.level(0);
 

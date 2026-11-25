@@ -1,17 +1,50 @@
 
 package com.watabou.pixeldungeon.items;
 
+import java.util.ArrayList;
+import com.watabou.pixeldungeon.utils.GLog;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.Packable;
-import com.nyrds.pixeldungeon.items.books.Book;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.windows.WndStory;
 import com.watabou.utils.Random;
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Codex extends Book {
+public class Codex extends Item {
+
+	// Book base inlined (the book family shrank to Codex alone)
+	public static final float TIME_TO_READ = 2f;
+
+	{
+		imageFile = "items/books.png";
+	}
+
+	@Override
+	public ArrayList<String> actions(Char hero ) {
+		ArrayList<String> actions = super.actions( hero );
+		actions.add( CommonActions.AC_READ );
+		return actions;
+	}
+
+	@Override
+	public void _execute(@NotNull Char chr, @NotNull String action ) {
+		if (action.equals( CommonActions.AC_READ )) {
+			if (chr.hasBuff( BuffFactory.BLINDNESS )) {
+				GLog.w(StringsManager.getVar(R.string.Codex_Blinded));
+			} else {
+				doRead(chr);
+			}
+		} else {
+			super._execute(chr, action );
+		}
+	}
+
+
 
 	@Packable(defaultValue = "-1")
 	public int codexId=-1;
@@ -24,7 +57,6 @@ public class Codex extends Book {
 		image     = 4;
 	}
 
-	@Override
 	protected void doRead(Char hero) {
 		if(text != null && !text.isEmpty() && !text.equals("Unknown")) {
 			WndStory.showCustomStory(text);

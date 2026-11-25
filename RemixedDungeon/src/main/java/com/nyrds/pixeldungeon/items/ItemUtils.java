@@ -4,6 +4,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.ColorBlock;
@@ -30,6 +31,7 @@ import com.watabou.pixeldungeon.levels.traps.Electricity;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -725,5 +727,28 @@ public class ItemUtils {
 
 		user.doOperate(Actor.TICK);
 		Sample.INSTANCE.play(Assets.SND_LEVELUP);
+	}
+	// ---- artifact-buff attach bridges (was Artifact.buff() setSource+attach) ----
+
+	/**
+	 * Attach the named buff to target with the item as its source (equipped
+	 * artifact flow: the buff packs/attaches by source and detaches on
+	 * unequip).
+	 */
+	@LuaInterface
+	public static void attachArtifactBuff(@NotNull Char target, @NotNull Item source, @NotNull String buffKind) {
+		Buff buff = BuffFactory.getBuffByName(buffKind);
+		if (buff == null) {
+			EventCollector.logException("attachArtifactBuff: no buff " + buffKind);
+			return;
+		}
+		buff.setSource(source);
+		buff.attachTo(target);
+	}
+
+	/** Detach every buff sourced by the given item (unequip flow). */
+	@LuaInterface
+	public static void detachArtifactBuff(@NotNull Char target, @NotNull Item source) {
+		Buff.detachAllBySource(target, source);
 	}
 }

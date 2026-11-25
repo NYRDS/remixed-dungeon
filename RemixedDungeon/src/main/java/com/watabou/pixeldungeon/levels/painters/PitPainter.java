@@ -2,10 +2,10 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -39,7 +39,7 @@ public class PitPainter extends Painter {
 			remains = room.random(level);
 		}
 		
-		level.drop( new IronKey(), remains, Type.SKELETON);
+		level.drop( ItemFactory.itemByName("IronKey"), remains, Type.SKELETON);
 		
 		if (Random.Int( 5 ) == 0) {
 			level.drop( Treasury.getLevelTreasury().random( Treasury.Category.RING ), remains, Type.HEAP );

@@ -13,7 +13,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.items.rings.RingOfSatiety;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -66,7 +65,7 @@ public class Hunger extends Buff implements Doom {
 				
 			} else {	
 				
-				int bonus = target.buffLevel(RingOfSatiety.Satiety.class);
+				int bonus = target.buffLevel(BuffFactory.RING_OF_SATIETY);
 
 				float delta = Math.max(STEP - bonus, 1);
 

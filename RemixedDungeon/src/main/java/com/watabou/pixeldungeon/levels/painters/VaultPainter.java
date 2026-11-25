@@ -1,13 +1,12 @@
 
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.platform.EventCollector;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.keys.GoldenKey;
-import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -28,7 +27,7 @@ public class VaultPainter extends Painter {
 		
 		case 0:
 			level.drop( prize(level), c, Type.LOCKED_CHEST);
-			level.addItemToSpawn( new GoldenKey() );
+			level.addItemToSpawn( ItemFactory.itemByName("GoldenKey") );
 			break;
 			
 		case 1:
@@ -47,7 +46,7 @@ public class VaultPainter extends Painter {
 			}
 			level.drop( i1, c, Type.CRYSTAL_CHEST);
 			level.drop( i2, c + Level.NEIGHBOURS8[Random.Int( 8 )], Type.CRYSTAL_CHEST);
-			level.addItemToSpawn( new GoldenKey() );
+			level.addItemToSpawn( ItemFactory.itemByName("GoldenKey") );
 			break;
 			
 		case 2:
@@ -57,7 +56,7 @@ public class VaultPainter extends Painter {
 		}
 		
 		room.entrance().set( Room.Door.Type.LOCKED );
-		level.addItemToSpawn( new IronKey() );
+		level.addItemToSpawn( ItemFactory.itemByName("IronKey") );
 	}
 	
 	private static Item prize(Level level) {

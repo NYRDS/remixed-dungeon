@@ -1,25 +1,13 @@
 package com.nyrds.pixeldungeon.levels;
 
+import com.watabou.utils.Random;
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.LeatherArmor;
-import com.watabou.pixeldungeon.items.bags.Keyring;
-import com.watabou.pixeldungeon.items.bags.PotionBelt;
-import com.watabou.pixeldungeon.items.bags.Quiver;
-import com.watabou.pixeldungeon.items.bags.ScrollHolder;
-import com.watabou.pixeldungeon.items.bags.SeedPouch;
-import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.Food;
-import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
-import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
-import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
-import com.watabou.pixeldungeon.items.weapon.melee.Sword;
-import com.watabou.pixeldungeon.items.weapon.missiles.CommonArrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -68,26 +56,28 @@ public class TownShopLevel extends Level {
 
 	static public void fillInventory(Mob shopkeeper)
 	{
-		stock( shopkeeper, new LeatherArmor().identify() );
-		stock( shopkeeper, new Dagger().identify() );
-		stock( shopkeeper, new Knuckles().identify() );
-		stock( shopkeeper, new Sword().identify() );
-		stock( shopkeeper, new Quarterstaff().identify() );
-		stock( shopkeeper, new TomeOfKnowledge().identify() );
+		stock( shopkeeper, kmd1("Dagger") );
+		stock( shopkeeper, kmd1("Knuckles") );
+		stock( shopkeeper, kmd1("Sword") );
+		stock( shopkeeper, kmd1("Quarterstaff") );
 
 		for (int i = 0; i <3; i++){
 			stock( shopkeeper, ItemFactory.itemByName(Food.OVERPRICED_RATION) );
-			stock( shopkeeper, new Dart(5).identify() );
-			stock( shopkeeper, new CommonArrow(25) );
+			Item dart = ItemFactory.itemByName("Dart");
+			dart.quantity(5);
+			stock( shopkeeper, dart.identify() );
+			Item arrows = ItemFactory.itemByName("CommonArrow");
+			arrows.quantity(25);
+			stock( shopkeeper, arrows.identify() );
 			stock( shopkeeper, ItemFactory.itemByName("Torch").identify() );
 		}
 
-		stock( shopkeeper, new Keyring());
-		stock( shopkeeper, new ScrollHolder());
-		stock( shopkeeper, new PotionBelt());
-		stock( shopkeeper, new SeedPouch());
-		stock( shopkeeper, new Quiver());
-		stock( shopkeeper, new WandHolster());
+		stock( shopkeeper, ItemFactory.itemByName("Keyring"));
+		stock( shopkeeper, ItemFactory.itemByName("ScrollHolder"));
+		stock( shopkeeper, ItemFactory.itemByName("PotionBelt"));
+		stock( shopkeeper, ItemFactory.itemByName("SeedPouch"));
+		stock( shopkeeper, ItemFactory.itemByName("Quiver"));
+		stock( shopkeeper, ItemFactory.itemByName("WandHolster"));
 	}
 
 	// the deleted Shopkeeper.collect applied a treasury check on everything it
@@ -114,5 +104,13 @@ public class TownShopLevel extends Level {
 	@Override
 	public int randomRespawnCell() {
 		return INVALID_CELL;
+	}
+
+	private static Item kmd1(String kind) {
+		return com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(kind).identify();
+	}
+
+	private static Item kmd(String a, String b) {
+		return kmd1(Random.Int(2) == 0 ? a : b);
 	}
 }

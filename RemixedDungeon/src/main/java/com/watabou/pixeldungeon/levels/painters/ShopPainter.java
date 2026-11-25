@@ -2,31 +2,15 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.items.books.TomeOfKnowledge;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.items.guts.armor.GothicArmor;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore;
-import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.LeatherArmor;
-import com.watabou.pixeldungeon.items.armor.MailArmor;
-import com.watabou.pixeldungeon.items.armor.PlateArmor;
-import com.watabou.pixeldungeon.items.armor.ScaleArmor;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
-import com.watabou.pixeldungeon.items.weapon.melee.BattleAxe;
-import com.watabou.pixeldungeon.items.weapon.melee.Glaive;
-import com.watabou.pixeldungeon.items.weapon.melee.Longsword;
-import com.watabou.pixeldungeon.items.weapon.melee.Mace;
-import com.watabou.pixeldungeon.items.weapon.melee.Quarterstaff;
-import com.watabou.pixeldungeon.items.weapon.melee.Spear;
-import com.watabou.pixeldungeon.items.weapon.melee.Sword;
-import com.watabou.pixeldungeon.items.weapon.melee.WarHammer;
 import com.watabou.pixeldungeon.levels.LastShopLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
@@ -73,36 +57,29 @@ public class ShopPainter extends Painter {
 		switch (Dungeon.depth) {
 
 			case 6:
-				stock( level, shopkeeper, (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
-				stock( level, shopkeeper, new LeatherArmor().identify() );
+				stock( level, shopkeeper, kmd("Quarterstaff" , "Spear") );
 				stock( level, shopkeeper, ItemFactory.itemByName("Weightstone") );
-				stock( level, shopkeeper, new TomeOfKnowledge().identify() );
 				break;
 
 			case 11:
-				stock( level, shopkeeper, (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
-				stock( level, shopkeeper, new MailArmor().identify() );
+				stock( level, shopkeeper, kmd("Sword", "Mace") );
 				stock( level, shopkeeper, ItemFactory.itemByName("Weightstone") );
-				stock( level, shopkeeper, new TomeOfKnowledge().identify() );
 				break;
 
 			case 16:
-				stock( level, shopkeeper, (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
-				stock( level, shopkeeper, new ScaleArmor().identify() );
+				stock( level, shopkeeper, kmd("Longsword", "BattleAxe") );
 				stock( level, shopkeeper, ItemFactory.itemByName("Weightstone") );
-				stock( level, shopkeeper, new TomeOfKnowledge().identify() );
 				break;
 
 			case 21:
 				switch (Random.Int( 3 )) {
 					case 0:
-						stock( level, shopkeeper, new Glaive().identify() );
+						stock( level, shopkeeper, kmd1("Glaive") );
 						break;
 					case 1:
-						stock( level, shopkeeper, new WarHammer().identify() );
+						stock( level, shopkeeper, kmd1("WarHammer") );
 						break;
 					case 2:
-						stock( level, shopkeeper, new PlateArmor().identify() );
 						break;
 				}
 				stock( level, shopkeeper, ItemFactory.itemByName("Weightstone") );
@@ -113,13 +90,12 @@ public class ShopPainter extends Painter {
 			case 27:
 				switch (Random.Int( 3 )) {
 					case 0:
-						stock( level, shopkeeper, new Claymore().identify() );
+						stock( level, shopkeeper, kmd1("Claymore") );
 						break;
 					case 1:
-						stock( level, shopkeeper, new Halberd().identify() );
+						stock( level, shopkeeper, kmd1("Halberd") );
 						break;
 					case 2:
-						stock( level, shopkeeper, new GothicArmor().identify() );
 						break;
 				}
 				stock( level, shopkeeper, ItemFactory.itemByName(Potion.HEALING) );
@@ -161,5 +137,13 @@ public class ShopPainter extends Painter {
 	// painter does it here
 	private static void stock( Level level, Mob shopkeeper, Item item ) {
 		shopkeeper.collect( Treasury.getLevelTreasury().check( item ) );
+	}
+
+	private static Item kmd1(String kind) {
+		return com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(kind).identify();
+	}
+
+	private static Item kmd(String a, String b) {
+		return kmd1(Random.Int(2) == 0 ? a : b);
 	}
 }

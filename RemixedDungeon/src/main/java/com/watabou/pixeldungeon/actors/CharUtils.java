@@ -77,7 +77,6 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
-import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.traps.Electricity;
@@ -199,7 +198,7 @@ public class CharUtils {
             }
             EquipableItem weapon = victim.getItemFromSlot(slot);
 
-            if (!(weapon instanceof Knuckles) && !weapon.isCursed() && victim.getBelongings().drop(weapon)) {
+            if (!"Knuckles".equals(weapon.getEntityKind()) && !weapon.isCursed() && victim.getBelongings().drop(weapon)) {
                 GLog.w(StringsManager.getVar(R.string.Monk_Disarm), disarmer.getName(), weapon.name());
                 return true;
             }

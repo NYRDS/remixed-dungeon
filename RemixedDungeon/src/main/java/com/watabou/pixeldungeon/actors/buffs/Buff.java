@@ -262,6 +262,10 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
         return buffLevel;
     }
 
+    public float durationFactor() {
+        return 1;
+    }
+
     public int drBonus(Char chr) {
         return 0;
     }

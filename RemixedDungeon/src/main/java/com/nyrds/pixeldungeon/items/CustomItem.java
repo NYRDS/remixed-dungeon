@@ -3,6 +3,7 @@ package com.nyrds.pixeldungeon.items;
 import androidx.annotation.Keep;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
+import com.nyrds.pixeldungeon.items.artifacts.IActingItem;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
@@ -26,7 +27,7 @@ import org.luaj.vm2.LuaValue;
  * Created by mike on 26.05.2018.
  * This file is part of Remixed Pixel Dungeon.
  */
-public class CustomItem extends EquipableItem {
+public class CustomItem extends EquipableItem implements IActingItem {
 
     @Packable
     public String scriptFile = Utils.EMPTY_STRING;
@@ -51,6 +52,27 @@ public class CustomItem extends EquipableItem {
     public CustomItem(String scriptFile) {
         this.scriptFile = scriptFile;
         initItem();
+        applyInitialFlags();
+    }
+
+    // IActingItem: equipped artifacts (CandleOfMindVision) drain via the
+    // script's spend hook each tick
+    @Override
+    public void spend(@NotNull Char hero, float time) {
+        script.runOptionalNoRet("spend", hero, time);
+    }
+
+    // ctor-time desc flag (cursed): applied once - restoreFromBundle's
+    // initItem must not re-curse an uncursed item
+    private void applyInitialFlags() {
+        if (script == null || !script.hasMethod("desc")) {
+            return;
+        }
+        LuaValue desc = script.run("desc").checktable();
+        if (desc.rawget("cursed").optboolean(false)) {
+            setCursed(true);
+            setCursedKnown(true);
+        }
     }
 
     private void initItem() {

@@ -76,24 +76,24 @@ public class ChaosCrystal extends UsableArtifact {
             }
 
             if (item instanceof KindOfBow) {
-                selector.collect(new ChaosBow());
+                selector.collect(com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("ChaosBow"));
                 GLog.p(StringsManager.getVar(R.string.ChaosCrystal_BowFused));
                 return;
             }
 
             if (item instanceof MeleeWeapon) {
                 if (((MeleeWeapon) item).blockSlot() == com.watabou.pixeldungeon.actors.hero.Belongings.Slot.LEFT_HAND) {
-                    selector.collect(new ChaosSword());
+                    selector.collect(com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("ChaosSword"));
                     GLog.p(StringsManager.getVar(R.string.ChaosCrystal_SwordFused));
                 } else {
-                    selector.collect(new ChaosBlade());
+                    selector.collect(com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("ChaosBlade"));
                     GLog.p(StringsManager.getVar(R.string.ChaosCrystal_BladeFused));
                 }
                 return;
             }
 
             if (item instanceof Armor) {
-                selector.collect(new ChaosArmor());
+                selector.collect(com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName("ChaosArmor"));
                 GLog.p(StringsManager.getVar(R.string.ChaosCrystal_ArmorFused));
                 return;
             }

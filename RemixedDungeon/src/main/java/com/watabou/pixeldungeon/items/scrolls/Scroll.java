@@ -26,7 +26,6 @@ import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.items.ItemStatusHandlerKinds;
-import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
@@ -379,7 +378,7 @@ public class Scroll extends Item implements UnknownItem {
 
 	@Override
 	public String bag() {
-		return ScrollHolder.class.getSimpleName();
+		return "ScrollHolder";
 	}
 
 	// --- shared scroll helpers moved here from the per-scroll classes ---

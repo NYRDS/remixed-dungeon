@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.LevelTools;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.levels.objects.Trap;
@@ -10,7 +11,6 @@ import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Graph;
@@ -222,7 +222,7 @@ public class PrisonBossLevel extends BossLevel {
 		while (!passable[keyPos]) {
 			keyPos = anteroom.random(this);
 		}
-		drop( new IronKey(), keyPos, Heap.Type.CHEST);
+		drop( ItemFactory.itemByName("IronKey"), keyPos, Heap.Type.CHEST);
 		
 		dropBones();
 	}

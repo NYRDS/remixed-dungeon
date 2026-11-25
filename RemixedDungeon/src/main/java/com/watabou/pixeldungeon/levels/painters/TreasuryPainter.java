@@ -1,10 +1,10 @@
 
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -43,6 +43,6 @@ public class TreasuryPainter extends Painter {
 		}
 		
 		room.entrance().set( Room.Door.Type.LOCKED );
-		level.addItemToSpawn( new IronKey() );
+		level.addItemToSpawn( ItemFactory.itemByName("IronKey") );
 	}
 }
