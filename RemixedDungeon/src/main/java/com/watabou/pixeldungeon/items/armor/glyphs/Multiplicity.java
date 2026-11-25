@@ -1,13 +1,13 @@
 
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
@@ -28,7 +28,7 @@ public class Multiplicity extends Glyph {
 			if (attacker.level().cellValid(imgCell)) {
 				if(defender instanceof Hero) {
 					Char img = ((Hero) defender).makeClone();
-					WandOfBlink.appear( img, imgCell );
+					CharUtils.appear( img, imgCell );
 					defender.damage( Random.IntRange( 1, defender.ht() / 6 ), this );
 				}
 

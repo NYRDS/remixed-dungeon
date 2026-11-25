@@ -113,7 +113,7 @@ return mob.init{
 				if RPD.Dungeon.level:cellValid(cell) then
 					local shadow = RPD.MobFactory:mobByName("Shadow")
 					RPD.setAi(shadow, "Wandering")
-					RPD.WandOfBlink:appear(shadow, cell)
+					RPD.CharUtils:appear(shadow, cell)
 				end
 			end
 			self:yell(RPD.textById("ShadowLord_Intro"))

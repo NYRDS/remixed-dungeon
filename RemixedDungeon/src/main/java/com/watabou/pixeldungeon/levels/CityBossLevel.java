@@ -16,13 +16,13 @@ import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Bundle;
@@ -351,7 +351,7 @@ public class CityBossLevel extends BossLevel {
 		// With HALL_HEIGHT=16 the board bottom ring ends 3 rows before the wall; place the hero there.
 		int heroCell = cell(left + size / 2, top + size + 1);
 		if (cellValid(heroCell) && passable[heroCell]) {
-			WandOfBlink.appear(Dungeon.hero, heroCell);
+			CharUtils.appear(Dungeon.hero, heroCell);
 		}
 
 		GameScene.updateMap();

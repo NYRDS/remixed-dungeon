@@ -1,7 +1,7 @@
 package com.watabou.pixeldungeon.actors;
 
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 
 /**
  * Created by mike on 27.05.2017.
@@ -20,7 +20,7 @@ public class DelayedMobSpawner extends Actor {
 	@Override
 	protected void act() {
 		if(Actor.findChar(cell) == null) {
-			WandOfBlink.appear(mob, cell);
+			CharUtils.appear(mob, cell);
 		}
 		remove(this);
 	}

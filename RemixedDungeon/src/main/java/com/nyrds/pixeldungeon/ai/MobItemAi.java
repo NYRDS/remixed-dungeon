@@ -16,7 +16,6 @@ import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.utils.GLog;
 import java.util.ArrayList;
@@ -345,7 +344,7 @@ public class MobItemAi {
     private static float wandScore(Mob mob, Wand wand, Context context) {
         // WandOfBlink is a utility wand — deals no damage, only repositions.
         // Score it only in FLEEING (blink away from enemy), never in COMBAT.
-        if (wand instanceof WandOfBlink) {
+        if ("WandOfBlink".equals(wand.getEntityKind())) {
             if (context == Context.FLEEING && wand.curCharges() > 0) {
                 return 0.3f;
             }

@@ -64,7 +64,7 @@ local function spawnSkulls(self, data)
         local pos = table.remove(pedestals, math.random(#pedestals))
 
         local skull = RPD.MobFactory:mobByName("RunicSkull")
-        RPD.WandOfBlink:appear(skull, pos)
+        RPD.CharUtils:appear(skull, pos)
         data.variantByPos[pos] = i
         RPD.Sfx.CellEmitter:get(pos):burst(RPD.Sfx.ShadowParticle.CURSE, 8)
     end

@@ -2,14 +2,18 @@
 package com.watabou.pixeldungeon.items.wands;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Scrambler;
+import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -19,47 +23,74 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
+import com.watabou.pixeldungeon.effects.DeathRay;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
+import com.watabou.pixeldungeon.items.ItemStatusHandlerKinds;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
-import com.watabou.pixeldungeon.items.bags.WandHolster;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-import java.util.ArrayList;
+import com.watabou.noosa.particles.Emitter;
+import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
+import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaValue;
 
-public abstract class Wand extends KindOfWeapon implements UnknownItem {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * Data wands: one java kind-parameterized framework, per-kind data and
+ * behavior in scripts/items/<Kind>.lua built with scripts/lib/wand.lua
+ * (was 15 per-wand java classes; ChaosStaff keeps its java subclass with an
+ * absent kind script falling back to the empty stub). Kind == the legacy
+ * class simple name, so name/info resources and old saves resolve unchanged;
+ * the identification handler keeps the legacy
+ * "class com.watabou...wands.<Kind>" bundle keys verbatim.
+ *
+ * Lua hooks (all optional, self = the script table, item = the wand):
+ *   desc(self) -> { fx, hitChars, hitObjects, initialCharges, identified,
+ *                   image, imageFile, price, disenchants }
+ *   zap(self, item, cell, victim)    -> the zap effect (was onZap)
+ *   destCell(self, item, src, tgt)   -> override cell after the base
+ *                                       Ballistica cast (Blink clamp)
+ *   affectTarget(self, item)         -> SHAMAN mastery gate (default true)
+ *   emitter / emitterInterval        -> idle particle (name string, seconds)
+ *
+ * fx kinds map onto MagicMissile statics ("blue","purple","earth","white",
+ * "fire","wool","poison","foliage","slowness","force","coldLight","ice",
+ * "shadow"); the special flows ("deathray","lightning","blink") stay
+ * java-side, and grid-sweep zaps are @LuaInterface bridges on ItemUtils.
+ */
+public class Wand extends KindOfWeapon implements UnknownItem {
 
     private static final String AC_ZAP = "Wand_ACZap";
 
     private static final float TIME_TO_ZAP = 1f;
     static final float TIME_TO_CHARGE = 40f;
 
-    private int maxCharges = Scrambler.scramble(initialCharges());
-    private int curCharges = Scrambler.scramble(maxCharges());
+    // legacy class package: identification bundle keys keep this exact form
+    private static final String LEGACY_PACKAGE = "com.watabou.pixeldungeon.items.wands";
 
-    @Packable
-    public boolean curChargeKnown = false;
-
-    protected boolean hitChars = true;
-    protected boolean hitObjects = false;
-
-    private final boolean directional = true;
-
-    private static final Class<?>[] wands = {WandOfTeleportation.class,
-            WandOfSlowness.class, WandOfFirebolt.class, WandOfPoison.class,
-            WandOfRegrowth.class, WandOfBlink.class, WandOfLightning.class,
-            WandOfAmok.class, WandOfTelekinesis.class, WandOfFlock.class,
-            WandOfDisintegration.class, WandOfAvalanche.class};
+    private static final String[] wands = {"WandOfTeleportation",
+            "WandOfSlowness", "WandOfFirebolt", "WandOfPoison",
+            "WandOfRegrowth", "WandOfBlink", "WandOfLightning",
+            "WandOfAmok", "WandOfTelekinesis", "WandOfFlock",
+            "WandOfDisintegration", "WandOfAvalanche"};
 
     private static final Integer[] images = {ItemSpriteSheet.WAND_HOLLY,
             ItemSpriteSheet.WAND_YEW, ItemSpriteSheet.WAND_EBONY,
@@ -69,39 +100,112 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
             ItemSpriteSheet.WAND_PURPLEHEART, ItemSpriteSheet.WAND_OAK,
             ItemSpriteSheet.WAND_BIRCH};
 
-    private static ItemStatusHandler<Wand> handler;
+    private static final Set<String> handledKinds = new HashSet<>(Arrays.asList(wands));
+
+    private static ItemStatusHandlerKinds handler;
 
     private String wood;
 
-    @SuppressWarnings("unchecked")
     public static void initWoods() {
-        handler = new ItemStatusHandler<>((Class<? extends Wand>[]) wands, images);
+        handler = new ItemStatusHandlerKinds(LEGACY_PACKAGE, wands, images);
     }
 
     public static void save(Bundle bundle) {
         handler.save(bundle);
     }
 
-    @SuppressWarnings("unchecked")
     public static void restore(Bundle bundle) {
-        handler = new ItemStatusHandler<>((Class<? extends Wand>[]) wands, images, bundle);
+        handler = new ItemStatusHandlerKinds(LEGACY_PACKAGE, wands, images, bundle);
     }
 
+    private int maxCharges = Scrambler.scramble(2);
+    private int curCharges = Scrambler.scramble(2);
+
+    @Packable
+    public boolean curChargeKnown = false;
+
+    @NotNull
+    private final String wandKind;
+
+    // per-instance wrapper around the shared per-kind module (see Food);
+    // falls back to an empty stub for class-served wands (ChaosStaff)
+    private final LuaScript kindScript;
+
+    // per-kind data from the desc table
+    private String fxKind = "blue";
+    private boolean hitChars = true;
+    private boolean hitObjects = false;
+    private boolean alwaysKnown;
+    private boolean disenchants;
+    private float basePrice = 50;
+    private int initialCharges = 2;
+
+    private final boolean directional = true;
+
     public Wand() {
+        this(wands[0]);
+    }
+
+    public Wand(@NotNull String kind) {
+        this(kind, "scripts/lib/emptykind");
+    }
+
+    public Wand(@NotNull String kind, String fallbackScript) {
+        wandKind = kind;
         setDefaultAction(AC_ZAP);
         animation_class = WAND_ATTACK;
+        kindScript = new LuaScript("scripts/items/" + kind, fallbackScript, this);
 
+        applyKind();
+
+        maxCharges = Scrambler.scramble(initialCharges);
+        curCharges = Scrambler.scramble(Scrambler.descramble(maxCharges));
+
+        if (handledKinds.contains(kind)) {
+            initWandSpecifics();
+        }
+    }
+
+    private void applyKind() {
+        // Item's name/info initialize before the kind is known - re-resolve
+        name = getClassParam("Name", StringsManager.getVar(R.string.Item_Name), false);
+        info = getClassParam("Info", StringsManager.getVar(R.string.Item_Info), false);
+
+        if (!kindScript.hasMethod("desc")) {
+            return;
+        }
+        LuaValue desc = kindScript.run("desc").checktable();
+        fxKind         = desc.rawget("fx").optjstring("blue");
+        hitChars       = desc.rawget("hitChars").optboolean(true);
+        hitObjects     = desc.rawget("hitObjects").optboolean(false);
+        initialCharges = desc.rawget("initialCharges").optint(2);
+        alwaysKnown    = desc.rawget("identified").optboolean(false);
+        disenchants    = desc.rawget("disenchants").optboolean(false);
+        basePrice      = (float) desc.rawget("price").optdouble(50);
+
+        int imageOverride = desc.rawget("image").optint(-1);
+        if (imageOverride >= 0) {
+            image = imageOverride;
+        }
+        LuaValue imageFileOverride = desc.rawget("imageFile");
+        if (!imageFileOverride.isnil()) {
+            imageFile = imageFileOverride.tojstring();
+        }
+    }
+
+    private void initWandSpecifics() {
         // handler is null until initWoods()/restore() runs; followers'
         // belongings are bundle-restored before that on web, where the
         // null-deref is a JS error that escapes catch(Exception)
         if (handler != null) {
-            try {
-                image = handler.index(this);
-                wood = StringsManager.getVars(R.array.Wand_Wood_Types)[ItemStatusHandler.indexByImage(image, images)];
-            } catch (Exception e) {
-                // Wand of Magic Missile or Wand of Icebolt
-            }
+            image = handler.index(wandKind);
+            wood = StringsManager.getVars(R.array.Wand_Wood_Types)[ItemStatusHandler.indexByImage(image, images)];
         }
+    }
+
+    @Override
+    public String getEntityKind() {
+        return wandKind;
     }
 
     @Override
@@ -123,6 +227,11 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
                 actions.add(CommonActions.AC_EQUIP);
             }
         }
+
+        if (disenchants && effectiveLevel() > 0) {
+            actions.add(AC_DISENCHANT);
+        }
+
         return actions;
     }
 
@@ -131,6 +240,12 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         if (action.equals(AC_ZAP)) {
             chr.getBelongings().setSelectedItem(this);
             chr.selectCell(new Zapper(this));
+            return;
+        }
+
+        if (action.equals(AC_DISENCHANT)) {
+            chr.getBelongings().setSelectedItem(this);
+            GameScene.selectItem(chr, itemSelector, WndBag.Mode.WAND, StringsManager.getVar(R.string.WandOfMagicMissile_SelectWand));
             return;
         }
 
@@ -146,19 +261,24 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         onZap(cell, Actor.findChar(cell));
     }
 
-    protected abstract void onZap(int cell, Char victim);
+    protected void onZap(int cell, Char victim) {
+        kindScript.runOptionalNoRet("zap", cell, victim);
+    }
 
     public int effectiveLevel() {
         return level() + getOwner().buffLevel(BuffFactory.RING_OF_POWER);
     }
 
     public boolean isKnown() {
-        return handler.isKnown(this);
+        if (alwaysKnown || !handledKinds.contains(wandKind)) {
+            return true;
+        }
+        return handler.isKnown(wandKind);
     }
 
     public void setKnown() {
-        if (!isKnown()) {
-            handler.know(this);
+        if (!isKnown() && handler != null) {
+            handler.know(wandKind);
         }
 
         Badges.validateAllWandsIdentified();
@@ -184,7 +304,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
         String status = status();
         if (!status.equals(Utils.EMPTY_STRING)) {
-            sb.append(" (" + status + ")");
+            sb.append(" (").append(status).append(")");
         }
 
         return sb.toString();
@@ -239,6 +359,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
     @Override
     public Item degrade() {
+
         super.degrade();
 
         maxCharges(Math.max(maxCharges() - 1, 0));
@@ -248,7 +369,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     }
 
     protected int initialCharges() {
-        return 2;
+        return initialCharges;
     }
 
     @LuaInterface
@@ -279,8 +400,47 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     }
 
     protected void fx(int cell, Callback callback) {
-        MagicMissile.blueLight(getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback);
-        Sample.INSTANCE.play(Assets.SND_ZAP);
+        switch (fxKind) {
+            case "deathray":
+                // WandOfDisintegration: the ray draws to the clamped end of the
+                // beam and the zap fires immediately (no missile wait)
+                int rayCell = Ballistica.trace[Math.min(Ballistica.distance, effectiveLevel() + 4) - 1];
+                getOwner().getSprite().getParent().add(new DeathRay(getOwner().getPos(), rayCell));
+                callback.call();
+                return;
+            case "lightning":
+                // WandOfLightning: all arc damage happens inside the fx pass,
+                // then the Lightning visual completes the callback
+                ItemUtils.lightningArc(this, cell, callback);
+                return;
+            case "blink":
+                getOwner().getSprite().setVisible(false);
+                MagicMissile.whiteLight(getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback);
+                Sample.INSTANCE.play(Assets.SND_ZAP);
+                return;
+            default:
+                magicMissileByName(fxKind, getOwner().getSprite().getParent(), getOwner().getPos(), cell, callback);
+                Sample.INSTANCE.play(Assets.SND_ZAP);
+        }
+    }
+
+    private static void magicMissileByName(String kind, Group parent, int from, int to, Callback callback) {
+        switch (kind) {
+            case "purple":     MagicMissile.purpleLight(parent, from, to, callback); return;
+            case "earth":      MagicMissile.earth(parent, from, to, callback);      return;
+            case "white":      MagicMissile.whiteLight(parent, from, to, callback); return;
+            case "fire":       MagicMissile.fire(parent, from, to, callback);       return;
+            case "wool":       MagicMissile.wool(parent, from, to, callback);       return;
+            case "poison":     MagicMissile.poison(parent, from, to, callback);     return;
+            case "foliage":    MagicMissile.foliage(parent, from, to, callback);    return;
+            case "slowness":   MagicMissile.slowness(parent, from, to, callback);   return;
+            case "force":      MagicMissile.force(parent, from, to, callback);      return;
+            case "coldLight":  MagicMissile.coldLight(parent, from, to, callback);  return;
+            case "ice":        MagicMissile.ice(parent, from, to, callback);        return;
+            case "shadow":     MagicMissile.shadow(parent, from, to, callback);     return;
+            case "blue":
+            default:           MagicMissile.blueLight(parent, from, to, callback);  return;
+        }
     }
 
     protected void wandUsed() {
@@ -302,13 +462,23 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         return this;
     }
 
+    // was SimpleWand.createRandomSimpleWand: the eight battle wands
+    // (Crystal.lua random-drop helper)
+    @LuaInterface
+    public static Wand createRandomSimpleWand() {
+        String[] simpleWands = {"WandOfAmok", "WandOfAvalanche", "WandOfDisintegration",
+                "WandOfFirebolt", "WandOfLightning", "WandOfPoison", "WandOfRegrowth",
+                "WandOfSlowness"};
+        return (Wand) ItemFactory.itemByName(Random.element(simpleWands));
+    }
+
     public static boolean allKnown() {
         return handler.known().size() == wands.length;
     }
 
     @Override
     public int price() {
-        return adjustPrice(50);
+        return adjustPrice((int) basePrice);
     }
 
     private static final String MAX_CHARGES = "maxCharges";
@@ -357,10 +527,20 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     }
 
     protected int getDestinationCell(int src, int target) {
+        int cell;
         if (!Dungeon.level.cellValid(target)) {
-            return src;
+            cell = src;
+        } else {
+            cell = Ballistica.cast(src, target, directional, hitChars, hitObjects);
         }
-        return Ballistica.cast(src, target, directional, hitChars, hitObjects);
+
+        if (kindScript.hasMethod("destCell")) {
+            LuaValue ret = kindScript.run("destCell", src, target);
+            if (ret.isnumber()) {
+                return ret.toint();
+            }
+        }
+        return cell;
     }
 
     public int curCharges() {
@@ -380,7 +560,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
     }
 
     public boolean affectTarget() {
-        return true;
+        return kindScript.runOptional("affectTarget", true);
     }
 
     @Override
@@ -420,7 +600,7 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
 
     @Override
     public String bag() {
-        return WandHolster.class.getSimpleName();
+        return "WandHolster";
     }
 
     @Override
@@ -437,4 +617,41 @@ public abstract class Wand extends KindOfWeapon implements UnknownItem {
         spend(time2charge);
     }
 
+    // idle particles (Icebolt: snow, Shadowbolt: purple); the scripts name
+    // the factory, the framework owns the java-side Factory objects
+    public Emitter.Factory emitter() {
+        String name = kindScript.runOptional("emitter", Utils.EMPTY_STRING);
+        if ("SnowParticle".equals(name)) {
+            return SnowParticle.FACTORY;
+        }
+        if ("PurpleParticle".equals(name)) {
+            return PurpleParticle.FACTORY;
+        }
+        return super.emitter();
+    }
+
+    public float emitterInterval() {
+        return kindScript.runOptional("emitterInterval", super.emitterInterval());
+    }
+
+    // --- WandOfMagicMissile disenchant flow, kind-flag gated ---
+
+    public static final String AC_DISENCHANT = "WandOfMagicMissile_ACDisenchant";
+
+    private static final float TIME_TO_DISENCHANT = 2f;
+
+    private final WndBag.Listener itemSelector = (item, selector) -> {
+        if (item != null) {
+            selector.getBelongings().removeItem(this);
+            Sample.INSTANCE.play( Assets.SND_EVOKE );
+            ScrollOfUpgrade.upgrade( selector );
+            ItemUtils.evoke( selector );
+            GLog.w(StringsManager.getVar(R.string.WandOfMagicMissile_Desinchanted), item.name() );
+            item.upgrade();
+            selector.spend( TIME_TO_DISENCHANT );
+            Badges.validateItemLevelAcquired( item );
+        }
+        selector.updateSprite();
+        QuickSlot.refresh(selector);
+    };
 }

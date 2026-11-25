@@ -20,7 +20,7 @@ return scroll.init{
                 break
             end
             local image = reader:makeClone()
-            RPD.WandOfBlink:appear(image, cell)
+            RPD.CharUtils:appear(image, cell)
             nImages = nImages - 1
         end
 

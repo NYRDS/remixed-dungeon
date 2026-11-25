@@ -15,6 +15,7 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
+import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -25,8 +26,49 @@ import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.traps.Electricity;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.noosa.Camera;
+import com.nyrds.platform.audio.Sample;
+import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.actors.Actor;
+import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.Fire;
+import com.watabou.pixeldungeon.actors.blobs.Regrowth;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.CellEmitter;
+import com.watabou.pixeldungeon.effects.DeathRay;
+import com.watabou.pixeldungeon.effects.Lightning;
+import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.effects.particles.SparkParticle;
+import com.watabou.pixeldungeon.effects.particles.FlameParticle;
+import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
+import com.watabou.pixeldungeon.effects.particles.SnowParticle;
+import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.mechanics.Ballistica;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.BArray;
+import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Callback;
+import com.watabou.utils.PathFinder;
+import com.nyrds.platform.util.StringsManager;
+import com.nyrds.pixeldungeon.ml.R;
+import java.util.ArrayList;
+import java.util.HashSet;
 import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
@@ -188,4 +230,361 @@ public class ItemUtils {
         return item;
     }
 
+
+	// ---- zap-effect bridges for the wand data kinds (was WandOf*.java) ----
+	// Grid sweeps and GL-typed visuals can't run from the sandbox: java arrays
+	// (PathFinder/Ballistica maps), java.util collections, and sprite/actor
+	// layer access. Each bridge is an exact port of the old kind's onZap/fx.
+
+	private static void wandSelfKillReport(Wand wand) {
+		// the shared self-kill fail report (Avalanche/Firebolt/Lightning/
+		// MagicMissile/Icebolt): owner==hero && dead -> Dungeon.fail(WAND)
+		if ((wand.getOwner() instanceof Hero) && !wand.getOwner().isAlive()) {
+			Dungeon.fail( Utils.format( ResultDescriptions.getDescription(ResultDescriptions.Reason.WAND), wand.name(), Dungeon.depth ) );
+			GLog.n(StringsManager.getVar(R.string.WandOfAvalanche_Info1));
+		}
+	}
+
+	/**
+	 * WandOfAvalanche.onZap: rockfall around the impact.
+	 */
+	@LuaInterface
+	public static void avalancheZap(Wand wand, int cell) {
+		Sample.INSTANCE.play( Assets.SND_ROCKS );
+
+		int level = wand.effectiveLevel();
+
+		Ballistica.distance = Math.min( Ballistica.distance, 8 + level );
+
+		int size = 1 + level / 3;
+		PathFinder.buildDistanceMap( cell, BArray.not( Dungeon.level.solid, null ), size );
+
+		for (int i=0; i < Dungeon.level.getLength(); i++) {
+			int d = PathFinder.distance[i];
+			if (d < Integer.MAX_VALUE) {
+				Char ch = Actor.findChar( i );
+				if (ch != null) {
+					ch.getSprite().flash();
+					ch.damage( Random.Int( 2, 6 + (size - d) * 2 ), wand );
+					if (ch.isAlive() && Random.Int( 2 + d ) == 0) {
+						Buff.prolong( ch, BuffFactory.STUN, Random.IntRange( 2, 6 ) );
+					}
+				}
+				CellEmitter.get( i ).start( Speck.factory( Speck.ROCK ), 0.07f, 3 + (size - d) );
+				Camera.main.shake( 3, 0.07f * (3 + (size - d)) );
+			}
+		}
+
+		wandSelfKillReport(wand);
+	}
+
+	/**
+	 * WandOfRegrowth.onZap: grass along the beam, Regrowth blob at the target.
+	 */
+	@LuaInterface
+	public static void regrowthZap(Wand wand, int cell) {
+		Level level = Dungeon.level;
+		for (int i = 1; i < Ballistica.distance-1; i++) {
+			int p = Ballistica.trace[i];
+			int c = level.map[p];
+			if (c == Terrain.EMPTY ||
+				c == Terrain.EMBERS ||
+				c == Terrain.EMPTY_DECO) {
+				level.set( p, Terrain.GRASS );
+			}
+		}
+
+		int c = level.map[cell];
+		if (c == Terrain.EMPTY ||
+			c == Terrain.EMBERS ||
+			c == Terrain.EMPTY_DECO ||
+			c == Terrain.GRASS ||
+			c == Terrain.HIGH_GRASS) {
+			GameScene.add( Blob.seed( cell, (wand.effectiveLevel() + 2) * 20, Regrowth.class ) );
+		} else {
+			GLog.i(StringsManager.getVar(R.string.WandOfRegrowth_Info1));
+		}
+	}
+
+	/**
+	 * WandOfDisintegration.onZap: the beam damages chars and burns through
+	 * doors/barricades/high grass.
+	 */
+	@LuaInterface
+	public static void disintegrationZap(Wand wand, int cell) {
+		boolean terrainAffected = false;
+
+		int level = wand.effectiveLevel();
+
+		int maxDistance = level + 4;
+		Ballistica.distance = Math.min( Ballistica.distance, maxDistance );
+
+		ArrayList<Char> chars = new ArrayList<>();
+
+		for (int i=1; i < Ballistica.distance; i++) {
+			int c = Ballistica.trace[i];
+
+			Char ch;
+			if ((ch = Actor.findChar( c )) != null) {
+				chars.add( ch );
+			}
+
+			Level level1 = Dungeon.level;
+			int terr = level1.map[c];
+			if (terr == Terrain.DOOR || terr == Terrain.BARRICADE) {
+				level1.set( c, Terrain.EMBERS );
+				GameScene.updateMapPair( c );
+				terrainAffected = true;
+			} else if (terr == Terrain.HIGH_GRASS) {
+				level1.set( c, Terrain.GRASS );
+				GameScene.updateMap( c );
+				terrainAffected = true;
+			}
+
+			CellEmitter.center( c ).burst( PurpleParticle.BURST, Random.IntRange( 1, 2 ) );
+		}
+
+		if (terrainAffected) {
+			Dungeon.observe();
+		}
+
+		int lvl = level + chars.size();
+		int dmgMin = lvl;
+		int dmgMax = 8 + lvl * lvl / 3;
+		for (Char ch : chars) {
+			ch.damage( Random.NormalIntRange( dmgMin, dmgMax ), wand );
+			ch.getSprite().centerEmitter().burst( PurpleParticle.BURST, Random.IntRange( 1, 2 ) );
+			ch.getSprite().flash();
+		}
+	}
+
+	/**
+	 * WandOfFirebolt.onZap: fire seeds along the beam, ignite + burn the victim.
+	 */
+	@LuaInterface
+	public static void fireboltZap(Wand wand, int cell) {
+		int wandLevel = wand.effectiveLevel();
+		Level level = wand.getOwner().level();
+		for (int i=1; i < Ballistica.distance - 1; i++) {
+			int c = Ballistica.trace[i];
+			if (level.cellValid(c)) {
+				if (level.flammable[c]) {
+					GameScene.add(Blob.seed(c, 1, Fire.class));
+				}
+				Heap heap = level.getHeap(c);
+				if(heap!=null) {
+					heap.burn();
+				}
+			}
+		}
+
+		GameScene.add( Blob.seed( cell, 1, Fire.class ) );
+
+		Char ch = Actor.findChar(cell);
+		if (ch != null) {
+			ch.damage( Random.Int( 1, 8 + wandLevel * wandLevel ), wand );
+			CharUtils.ignite( ch );
+			ch.getSprite().emitter().burst( FlameParticle.FACTORY, 5 );
+			wandSelfKillReport(wand);
+		}
+	}
+
+	/**
+	 * WandOfFlock.onZap: a ring of sheep around the impact.
+	 */
+	@LuaInterface
+	public static void flockZap(Wand wand, int cell) {
+		int spellLevel = wand.effectiveLevel();
+
+		int n = spellLevel + 2;
+
+		if (Actor.findChar( cell ) != null && Ballistica.distance > 2) {
+			cell = Ballistica.trace[Ballistica.distance - 2];
+		}
+		Level level = Dungeon.level;
+		boolean[] passable = BArray.or( level.passable, level.avoid, null );
+		for (Actor actor : Actor.all()) {
+			if (actor instanceof Char) {
+				passable[((Char)actor).getPos()] = false;
+			}
+		}
+
+		PathFinder.buildDistanceMap( cell, passable, n );
+		int dist = 0;
+
+		if (Actor.findChar( cell ) != null) {
+			PathFinder.distance[cell] = Integer.MAX_VALUE;
+			dist = 1;
+		}
+
+		float lifespan = spellLevel + 3;
+		sheepLabel:
+		for (int i=0; i < n; i++) {
+			do {
+				for (int j=0; j < level.getLength(); j++) {
+					if (PathFinder.distance[j] == dist) {
+						// Sheep kind is lua data now (mobsDesc/Sheep.json, batch 17d-5);
+						// the lifetime rides the script via setLifespan
+						Mob sheep = MobFactory.mobByName(MobFactory.SHEEP);
+						sheep.runInScript("setLifespan", lifespan);
+						sheep.setPos(j);
+						level.spawnMob(sheep);
+						level.press(sheep.getPos(), sheep );
+						CellEmitter.get( j ).burst( Speck.factory( Speck.WOOL ), 4 );
+						PathFinder.distance[j] = Integer.MAX_VALUE;
+						continue sheepLabel;
+					}
+				}
+				dist++;
+			} while (dist < n);
+		}
+	}
+
+	/**
+	 * WandOfLightning.fx: arc damage happens in the fx pass, then the
+	 * Lightning visual completes the callback (was WandOfLightning.hit/fx).
+	 */
+	@LuaInterface
+	public static void lightningArc(Wand wand, int cell, Callback callback) {
+		int[] points = new int[20];
+		int nPoints = 0;
+		ArrayList<Char> affected = new ArrayList<>();
+
+		points[nPoints++] = wand.getOwner().getPos();
+
+		Char ch = Actor.findChar( cell );
+		if (ch != null) {
+			int lvl = wand.effectiveLevel();
+			nPoints = lightningHit(wand, ch, Random.Int( 5 + lvl / 2, 10 + lvl ), affected, points, nPoints);
+		} else {
+			points[nPoints++] = cell;
+			CellEmitter.center( cell ).burst( SparkParticle.FACTORY, 3 );
+		}
+		GameScene.addToMobLayer(new Lightning(java.util.Arrays.copyOfRange(points, 0, nPoints), callback));
+
+		wandSelfKillReport(wand);
+	}
+
+	private static int lightningHit(Wand wand, Char ch, int damage, ArrayList<Char> affected, int[] points, int nPoints) {
+		if (damage < 1) {
+			return nPoints;
+		}
+
+		if (ch == Dungeon.hero) {
+			Camera.main.shake( 2, 0.3f );
+		}
+
+		affected.add( ch );
+		ch.damage( Dungeon.level.water[ch.getPos()] && !ch.isFlying() ? damage * 2 : damage, Electricity.INSTANCE  );
+
+		ch.getSprite().centerEmitter().burst( SparkParticle.FACTORY, 3 );
+		ch.getSprite().flash();
+
+		points[nPoints++] = ch.getPos();
+
+		HashSet<Char> ns = new HashSet<>();
+		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
+			Char n = Actor.findChar( ch.getPos() + Level.NEIGHBOURS8[i] );
+			if (n != null && !affected.contains( n )) {
+				ns.add( n );
+			}
+		}
+
+		if (!ns.isEmpty()) {
+			return lightningHit( wand, Random.element( ns ), Random.Int( damage / 2, damage ), affected, points, nPoints );
+		}
+		return nPoints;
+	}
+
+	/**
+	 * WandOfTelekinesis.onZap: the force beam pushes chars, grabs heaps,
+	 * opens chests and discharges traps along its path.
+	 */
+	@LuaInterface
+	public static void telekinesisZap(Wand wand, int cell, Char victim) {
+		boolean mapUpdated = false;
+		int maxDistance = wand.effectiveLevel() + 4;
+		// caveman: the beam trace was computed at aim time, but onZap runs when the
+		// missile lands - a distant victim can step off the trace meanwhile and the
+		// zap whiffs entirely. Re-acquire the aimed victim so it gets hit like with
+		// every other wand (those hold the victim reference instead of the trace).
+		if (victim != null && victim.valid() && victim.getPos() != cell) {
+			Ballistica.cast(wand.getOwner().getPos(), victim.getPos(), true, false, true);
+		}
+		Ballistica.distance = Math.min(Ballistica.distance, maxDistance);
+		Char ch;
+		Heap heap = null;
+		Level level = Dungeon.level;
+		for (int i = 1; i < Ballistica.distance; i++) {
+			int c = Ballistica.trace[i];
+			int before = level.map[c];
+			if ((ch = Actor.findChar(c)) != null) {
+				if (i == Ballistica.distance - 1) {
+					ch.damage(maxDistance - 1 - i, wand);
+				} else {
+					int next = Ballistica.trace[i + 1];
+					if (ch.isMovable() && (level.passable[next] || level.avoid[next]) && Actor.findChar(next) == null) {
+						ch.placeTo(next);
+						ch.getSprite().move(ch.getPos(), next);
+						ch.observe();
+					} else {
+						ch.damage(maxDistance - 1 - i, wand);
+					}
+				}
+			}
+			if (heap == null && (heap = level.getHeap(c)) != null) {
+				switch (heap.type) {
+					case HEAP:
+						if (wand.getOwner() instanceof Hero) {
+							telekinesisTransport(wand, heap);
+						}
+						break;
+					case CHEST:
+					case MIMIC:
+						heap.open(wand.getOwner());
+						break;
+					default:
+				}
+			}
+			level.press(c, new TelekinesisEffect());
+			if (before == Terrain.OPEN_DOOR && Actor.findChar(c) == null) {
+				level.set(c, Terrain.DOOR);
+				GameScene.updateMap(c);
+				GameScene.updateMap(c - level.getWidth());
+			} else if (level.water[c]) {
+				GameScene.ripple(c);
+			}
+			if (!mapUpdated && level.map[c] != before) {
+				mapUpdated = true;
+			}
+			LevelObject levelObject;
+			if((levelObject = level.getTopLevelObject(c) )!=null) {
+				levelObject.push(wand.getOwner());
+			}
+		}
+		if (mapUpdated) {
+			Dungeon.observe();
+		}
+	}
+
+	private static void telekinesisTransport(Wand wand, Heap heap) {
+		Item item = heap.pickUp();
+		Char owner = wand.getOwner();
+		item = item.pick(owner, heap.pos);
+		if (item != null) {
+			owner.collectAnimated(item);
+		}
+	}
+
+	// was WandOfTelekinesis.Effect
+	public static class TelekinesisEffect implements Presser {
+		@Override
+		public boolean affectLevelObjects() {
+			return true;
+		}
+		@Override
+		public boolean dischargesTraps() {
+			return true; // caveman: description promises "discharges traps"
+		}
+	}
 }

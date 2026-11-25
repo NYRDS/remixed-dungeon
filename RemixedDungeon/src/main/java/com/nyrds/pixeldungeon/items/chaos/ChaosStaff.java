@@ -9,8 +9,8 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.items.wands.Wand;
-import com.watabou.pixeldungeon.items.wands.WandOfTeleportation;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -21,6 +21,8 @@ public class ChaosStaff extends Wand {
     public int charge = 0;
 
     public ChaosStaff() {
+        // class-served wand: no kind script (falls back to the empty stub)
+        super("ChaosStaff");
         imageFile = "items/chaosStaff.png";
         image = 0;
     }
@@ -94,7 +96,7 @@ public class ChaosStaff extends Wand {
                         }
                         break;
                     case 3:
-                        WandOfTeleportation.teleport(mob,getOwner());
+                        CharUtils.teleportAway(mob,getOwner());
                         break;
                     case 4:
                         Potion.heal(ch, 1);

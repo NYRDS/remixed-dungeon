@@ -1,4 +1,5 @@
 package com.watabou.pixeldungeon.items.armor;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.nyrds.pixeldungeon.ai.MobAi;
 import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
@@ -13,7 +14,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -43,7 +43,7 @@ class TeleportCellListener implements CellSelector.Listener {
                 }
             }
 
-            WandOfBlink.appear( selector, target );
+            CharUtils.appear( selector, target );
             CellEmitter.get( target ).burst( Speck.factory( Speck.WOOL ), 10 );
             Sample.INSTANCE.play( Assets.SND_PUFF );
             level.press( target, selector );

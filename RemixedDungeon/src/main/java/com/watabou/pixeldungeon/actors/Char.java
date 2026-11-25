@@ -43,6 +43,7 @@ import com.nyrds.util.Scrambler;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -62,7 +63,6 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
@@ -2131,7 +2131,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
             return;
         }
 
-        WandOfBlink.appear(this, newPos);
+        CharUtils.appear(this, newPos);
         level().press(newPos, this);
     }
 

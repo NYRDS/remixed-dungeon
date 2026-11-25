@@ -147,17 +147,25 @@ local Position = "com.nyrds.pixeldungeon.utils.Position"
 local CharsList = luajava.newInstance("com.nyrds.pixeldungeon.utils.CharsList")
 
 
-local wandOfBlink = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfBlink")
-local wandOfTelekinesis = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfTelekinesis")
-local wandOfFirebolt = luajava.newInstance("com.watabou.pixeldungeon.items.wands.WandOfFirebolt")
-
-local Wands = {
-    wandOfBlink = wandOfBlink,
-    wandOfTelekinesis = wandOfTelekinesis,
-    wandOfFirebolt = wandOfFirebolt
-}
-
 local ItemFactory     = luajava.bindClass("com.nyrds.pixeldungeon.items.common.ItemFactory")
+
+-- data wands (java classes deleted): the infinite-use mob helpers come from
+-- the Wand framework via ItemFactory kinds. Construction is lazy - eager
+-- wand scripts-loading wedges the boot-time require (commonClasses loads
+-- before the game exists).
+local Wands = {}
+setmetatable(Wands, {
+    __index = function(t, k)
+        local map = { wandOfBlink = "WandOfBlink",
+                      wandOfTelekinesis = "WandOfTelekinesis",
+                      wandOfFirebolt = "WandOfFirebolt" }
+        local kind = map[k]
+        if kind == nil then return nil end
+        local w = ItemFactory.itemByName(kind)
+        rawset(t, k, w)
+        return w
+    end,
+})
 local MobFactory      = luajava.bindClass("com.nyrds.pixeldungeon.mobs.common.MobFactory")
 local EffectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.effects.EffectsFactory")
 local LevelObjectsFactory  = luajava.bindClass("com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory")
@@ -206,7 +214,6 @@ local Sfx = {
 
 local CharSprite      = luajava.bindClass("com.watabou.pixeldungeon.sprites.CharSprite")
 local Facilitations   = luajava.bindClass("com.watabou.pixeldungeon.Facilitations")
-local WandOfBlink     = luajava.bindClass("com.watabou.pixeldungeon.items.wands.WandOfBlink")
 local Accessory       = luajava.bindClass("com.nyrds.pixeldungeon.items.accessories.Accessory")
 local GameControl     = luajava.bindClass("com.nyrds.pixeldungeon.utils.GameControl")
 local AlchemyPot      = luajava.bindClass("com.watabou.pixeldungeon.levels.features.AlchemyPot")
@@ -234,7 +241,7 @@ local RPD = {
     PathFinder = PathFinder,
     CharSprite = CharSprite,
     Facilitations = Facilitations,
-    WandOfBlink = WandOfBlink,
+    Wand = Wand,
     -- ScrollOfMagicMapping java class removed (data scroll batch); the
     -- discover sparkle lives on the Scroll framework now. Old callers used
     -- RPD.ScrollOfMagicMapping:discover(cell) - RPD.Scroll:discoverStatic(cell)
@@ -413,7 +420,7 @@ local RPD = {
     end,
 
     blinkTo = function(mob, target)
-        wandOfBlink:mobWandUse(mob, target)
+        Wands.wandOfBlink:mobWandUse(mob, target)
     end,
 
     teleportTo = function(levelId, x, y)

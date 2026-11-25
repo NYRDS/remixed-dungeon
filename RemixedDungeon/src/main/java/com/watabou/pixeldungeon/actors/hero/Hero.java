@@ -46,7 +46,6 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.Chasm;
@@ -668,6 +667,7 @@ public class Hero extends Char {
         setEnemy(CharsList.DUMMY);
     }
 
+    @LuaInterface
     public boolean search(boolean intentional) {
 
         boolean smthFound = false;
@@ -1169,7 +1169,7 @@ public class Hero extends Char {
     public void teleportTo(@NotNull Position newPos) {
         if (newPos.levelId.equals(levelId)) {
             newPos.computeCell(level());
-            WandOfBlink.appear(this, newPos.cellId);
+            CharUtils.appear(this, newPos.cellId);
             level().press(newPos.cellId, this);
             observe();
         } else {

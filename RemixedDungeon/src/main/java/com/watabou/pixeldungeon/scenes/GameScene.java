@@ -64,7 +64,6 @@ import com.watabou.pixeldungeon.effects.SystemFloatingText;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
@@ -375,11 +374,11 @@ public class GameScene extends PixelScene {
         //it is a chance for another level change right here if level entrance is at CHASM for example
         switch (appearMode) {
             case RESURRECT:
-                WandOfBlink.appear(hero, level.entrance);
+                CharUtils.appear(hero, level.entrance);
                 new Flare(8, 32).color(0xFFFF66, true).show(hero.getHeroSprite(), 2f);
                 break;
             case RETURN:
-                WandOfBlink.appear(hero, hero.getPos());
+                CharUtils.appear(hero, hero.getPos());
                 break;
             case FALL:
                 Chasm.heroLand(hero);

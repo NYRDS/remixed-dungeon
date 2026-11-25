@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.items.ItemStatusHandlerKinds;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.TerrainFlags;
@@ -305,7 +304,7 @@ public class Scroll extends Item implements UnknownItem {
 			} else {
 				GLog.w(Utils.format(R.string.Mob_Cannot_Be_Pet, mob.getName()));
 			}
-			WandOfBlink.appear(mob, cell);
+			CharUtils.appear(mob, cell);
 		} else {
 			GLog.w(StringsManager.getVar(R.string.No_Valid_Cell));
 		}

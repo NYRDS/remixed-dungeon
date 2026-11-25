@@ -78,7 +78,7 @@ local function summon(self, data)
             end
 
             local servant = RPD.MobFactory:mobByName(kind)
-            RPD.WandOfBlink:appear(servant, pos)
+            RPD.CharUtils:appear(servant, pos)
 
             -- plain Undead kind is born undead (json); raised city mobs
             -- get the flag, no XP and the deathly green tint

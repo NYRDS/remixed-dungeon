@@ -45,6 +45,7 @@ import com.nyrds.pixeldungeon.windows.HBox;
 import com.nyrds.pixeldungeon.windows.VHBox;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
@@ -52,6 +53,7 @@ import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -75,9 +77,6 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
-import com.watabou.pixeldungeon.items.rings.RingOfElements;
-import com.watabou.pixeldungeon.items.rings.RingOfHaggler;
-import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -226,7 +225,7 @@ public class CharUtils {
 	@LuaInterface
 	public static int goldPrice(@NotNull Char buyer, int base) {
 		int price = (int) (base * GameLoop.getDifficultyFactor());
-		if (buyer.hasBuff(RingOfHaggler.Haggling.class)) {
+		if (buyer.hasBuff(BuffFactory.RING_OF_HAGGLING)) {
 			price *= 0.9;
 		}
 		return price;
@@ -301,8 +300,57 @@ public class CharUtils {
      * vanilla control buffs (their old X.duration(ch) statics).
      */
     public static float durationFactor(Char ch) {
-        RingOfElements.Resistance resistance = ch.buff(RingOfElements.Resistance.class);
+        Buff resistance = ch.buff(BuffFactory.RING_OF_ELEMENTS);
         return resistance != null ? resistance.durationFactor() : 1f;
+    }
+
+    // was WandOfBlink.appear - the generic blink-in effect used by teleports,
+    // glyph displacement, GameScene descend/return and mob flee hops
+    @LuaInterface
+    public static void appear(@NotNull Char ch, int pos) {
+
+        Level level = ch.level();
+
+        if (!level.cellValid(ch.getPos())) { //ch not on level yet
+            ch.setPos(pos);
+            if (ch instanceof Mob) {
+                level.spawnMob((Mob) ch);
+            }
+        }
+
+        ch.placeTo(pos);
+        var chSprite = ch.getSprite();
+
+        chSprite.interruptMotion();
+        chSprite.place(pos);
+
+        if (ch.invisible == 0) {
+            chSprite.alpha(0);
+            if (chSprite.hasParent()) {
+                chSprite.getParent().add(new AlphaTweener(chSprite, 1, 0.4f));
+            }
+        }
+
+        chSprite.emitter().start(Speck.factory(Speck.LIGHT), 0.2f, 3);
+        Sample.INSTANCE.play(Assets.SND_TELEPORT);
+    }
+
+    // was WandOfTeleportation.teleport - a random-respawn-cell teleport with
+    // the caster-attributed log line
+    @LuaInterface
+    public static void teleportAway(@NotNull Char ch, @NotNull Char caster) {
+        int pos = ch.level().randomRespawnCell();
+
+        if (!ch.level().cellValid(pos)) {
+            GLog.i(StringsManager.getVar(R.string.WandOfTeleportation_Info2));
+            return;
+        }
+
+        ch.setPos(pos);
+        ch.getSprite().place(ch.getPos());
+        ch.getSprite().setVisible(Dungeon.isCellVisible(pos));
+        GLog.i(Utils.format(R.string.WandOfTeleportation_Info1, caster.getName(),
+                ch.getName_objective()));
     }
 
     /**
@@ -447,7 +495,7 @@ public class CharUtils {
         if (!level.cellValid(pos)) {
             GLog.w(Utils.format(R.string.ScrollOfTeleportation_NoTeleport2, ch.getName_objective()));
         } else {
-            WandOfBlink.appear(ch, pos);
+            CharUtils.appear(ch, pos);
             level.press(pos, ch);
             ch.observe();
             GLog.i(Utils.format(R.string.ScrollOfTeleportation_Teleport2, ch.getName_objective()));
@@ -683,7 +731,7 @@ public class CharUtils {
 
         if (level.cellValid(tgt)) {
             final Char ch = chr;
-            chr.fx(chr.getPos(), () -> WandOfBlink.appear(ch, tgt));
+            chr.fx(chr.getPos(), () -> CharUtils.appear(ch, tgt));
         }
         chr.observe();
     }
@@ -701,7 +749,7 @@ public class CharUtils {
             cell = Ballistica.trace[Ballistica.distance - 2];
         }
 
-        WandOfBlink.appear(chr, cell);
+        CharUtils.appear(chr, cell);
     }
 
     public static void generateNewItem(Char shopkeeper) {
