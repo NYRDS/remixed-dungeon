@@ -256,6 +256,7 @@
     <string name="BlackSkullOfMastery_RemainHumanDesc">Of als je de spreuk _verbreekt_, kun je dit artefact gebruiken zoals bedoeld.</string>
     <string name="BlackSkullOfMastery_Title">U kunt de spreuk breken. Of u kunt de magische formule ervan zodanig manipuleren, dat u de krachten van zowel de spreuk als het artefact zelf kunt consumeren, waardoor u zichzelf verandert in een Lich.</string>
     <string name="BlackSkull_Activated">De Zwarte Schedel is ontwaakt!</string>
+    <string name="BlackSkull_Deactivated">De Zwarte Schedel sluimert opnieuw...</string>
     <string name="BlackSkull_Gender">masculine</string>
     <string name="BlackSkull_Info">Een kleine schedel van obsidiaan. Het was de bron van de krachten van de Necropolis, maar na de nederlaag van de Lich lijkt het al zijn krachten verloren te hebben. Maar wanneer je het in je handen houdt, gaat er een vreemde gedachte door je heen: \&quot;Het Hongert\&quot;.</string>
     <string name="BlackSkull_Info_Awakened">De schedel pulseert met kracht, en je kunt zien hoe het uit zijn lege oogkassen stroomt. En terwijl je het in je handen houdt, hoor je een vreselijke stem: \&quot; Zie de mars van de dood \&quot;.</string>
@@ -751,6 +752,7 @@
     <string name="FriedFish_Taste">Lekker!</string>
     <string name="FrostArrow_Gender">feminine</string>
     <string name="FrostArrow_Info">Je voelt een ijskoude aura uit de pijlpunt komen.</string>
+    <string name="FrostArrow_Name">vorstpijl</string>
     <string name="FrostAuraBuff_Info">Vorst omringt het lichaam, wat alles in de buurt vertraagt.</string>
     <string name="FrostAuraBuff_Name">Vroren Aura</string>
     <string name="FrostBuff_Info">Vastbevroren, waardoor geen enkele actie mogelijk is.</string>
@@ -1788,6 +1790,7 @@
     <string name="Scroll_Runes_14">ALGIZ</string>
     <string name="Scroll_Runes_15">DAGAZ</string>
     <string name="Scroll_Runes_2">LAGUZ</string>
+    <string name="Scroll_Runes_3">YNGVI</string>
     <string name="Scroll_Runes_4">GYFU</string>
     <string name="Scroll_Runes_5">RAIDO</string>
     <string name="Scroll_Runes_7">MANNAZ</string>
@@ -2725,6 +2728,7 @@
     <string name="town_deco_shop_sign_name">Winkelbord</string>
     <string name="town_deco_skullboard_desc">Deze schedel vangt het moment van onverwachte gruwel perfect.</string>
     <string name="town_deco_skullboard_name">trofeerek</string>
+    <string name="town_deco_skulls_desc">Gepolijste schedels van wezens uit de kerker.</string>
     <string name="town_deco_skulls_name">Schedels</string>
     <string name="town_deco_slush_desc">Deze sneeuw begon te smelten, waardoor de omgeving in modder veranderde.</string>
     <string name="town_deco_slush_name">mats</string>
@@ -2970,6 +2974,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

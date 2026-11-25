@@ -433,6 +433,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="City_TileDescDeco">Ở đây thiếu một vài viên gạch.</string>
     <string name="City_TileDescEmptySP">Một tấm thảm dày phủ kín sàn.</string>
     <string name="City_TileDescEntrance">Một lối dốc dẫn lên tầng trên.</string>
+    <string name="City_TileDescStatue">Tượng đài miêu tả một lùn người đứng trong tư thế anh hùng.</string>
     <string name="City_TileWater">Nước có màu đáng nghi</string>
     <string name="ClassArmor_LowHealt">Sức khỏe của bạn quá thấp!</string>
     <string name="ClassArmor_LowMana">Không đủ mana!</string>
@@ -625,6 +626,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="EnslavedSoul_Gender">feminine</string>
     <string name="EnslavedSoul_Name_Objective">linh hồn bị nô lệ</string>
     <string name="Entanglement_Txt">%s vướng víu</string>
+    <string name="EquipableItem_ACEquip">TRANG BỊ</string>
     <string name="EquipableItem_ACUnequip">THÁO TRANG BỊ</string>
     <string name="EquipableItem_Unequip">Bạn không thể tháo bỏ %s bị nguyền rủa!</string>
     <string name="Exhumation_Info">Mở mộ là một hành động đen tối tự nó, nhưng chưa đủ cho ai phục vụ cái Chết chính mình. Người thực hiện Nghi lễ Tối này có cơ hội lớn (và nó sẽ tăng cùng với kỹ năng người thực hiện) để khuất phục một linh hồn đáng thương của một người nằm đây.</string>
@@ -1735,6 +1737,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="SlowBuff_Name">Làm chậm</string>
     <string name="Slow_Name_0">Làm lạnh %s</string>
     <string name="Slow_Name_1">Lạnh giá %s</string>
+    <string name="Slow_Name_2">Làm lạnh %s</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
     <string name="SmashSpell_NeedWeapon">Tôi cần một vũ khí cho đòn đánh này.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
@@ -2163,6 +2166,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="WndHero_Stealth">Sự khéo léo</string>
     <string name="WndImp_Message">Ồ đúng rồi! Bạn là anh hùng của tôi!\nVề phần thưởng, tôi không có tiền mặt ngay bây giờ, nhưng tôi có thứ tốt hơn. Đây là chiếc nhẫn gia truyền của tôi: ông tôi đã lấy nó từ ngón tay của một paladin đã chết.</string>
     <string name="WndImp_Reward">Nhận chiếc nhẫn</string>
+    <string name="WndInfoCell_Nothing">Không có gì ở đây.</string>
     <string name="WndInfoItem_Chest">Rương</string>
     <string name="WndInfoItem_CrystalChest">Rương pha lê</string>
     <string name="WndInfoItem_Inside">Bạn có thể thấy %s bên trong, nhưng để mở rương bạn cần một chìa khóa vàng.</string>
@@ -3203,6 +3207,10 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
