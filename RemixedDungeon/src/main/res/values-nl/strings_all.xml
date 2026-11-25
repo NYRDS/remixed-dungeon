@@ -356,6 +356,7 @@
     <string name="Carcass_SelectItem">Selecteer een voorwerp</string>
     <string name="Carcass_TooFarToDissect">Je moet dichterbij zijn om de karkas te ontleden.</string>
     <string name="Caves_TileDescBookshelf">Wie zou er een boekenkast nodig hebben in een grot?</string>
+    <string name="Caves_TileDescDeco">Een ader van een erts is zichtbaar op de muur. Goud?</string>
     <string name="Caves_TileDescEntrance">De ladder leidt omhoog naar het bovenste deel.</string>
     <string name="Caves_TileDescExit">De ladder leidt naar beneden, naar een diepere verdieping.</string>
     <string name="Caves_TileDescHighGrass">Reuze paddenstoelen blokkeren het zicht.</string>
@@ -808,6 +809,7 @@
     <string name="Gnoll_Name">gnol verkenner</string>
     <string name="Gnoll_Name_Objective">gnol verkenner</string>
     <string name="GodWrath_Info">Heilig vuur van goddelijke oordeel. Het richt zware heilige schade aan op een enkele vijand — geen wezen, noch gewoon noch monstrueus, ontgaat de wraak van de hemel.</string>
+    <string name="GodWrath_Name">Gods Wraak</string>
     <string name="Gold_Info">Een stapel van %d goudmunten.</string>
     <string name="Gold_Info1">Een gouden munt.</string>
     <string name="Gold_Name">goud</string>
@@ -903,6 +905,7 @@
     <string name="HeroClass_NecromancerPerks_3">Necromancers beginnen met een skelet sleutel niveau 7.</string>
     <string name="HeroClass_NecromancerPerks_4">Geneesdrankjes worden vanaf het begin geïdentificeerd.</string>
     <string name="HeroClass_None">gewoon burger</string>
+    <string name="HeroClass_PlagueDoctorPerks_0">Pestmeesters oogsten [yellow:Toxische Kliezen], [yellow:Verrotte Organen], [yellow:Botsplinters] van verslagen vijanden.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Pestmeesters zijn meesters in alchemie en kunnen unieke recepten gebruiken.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Plagedokters lijden aan grote accuraatheidsstraffen zonder hun geliefde Beenzaag in de hand en kunnen geen afstandswapens gebruiken.</string>
     <string name="HeroClass_Priest">priester</string>
@@ -1551,6 +1554,7 @@
     <string name="Potion_Colors_7">ivoor</string>
     <string name="Potion_Colors_8">amber</string>
     <string name="Potion_FoodRefreshed">%s ziet er nu eetbaar uit</string>
+    <string name="Potion_Harmfull">Schadelijke drank!</string>
     <string name="Potion_Info">Deze fles bevat een wervelende %s vloeistof. Wie weet wat er gebeurt als het gedronken of gegooid wordt?</string>
     <string name="Potion_ItemFliesAway">%s vliegt zomaar uit je handen weg.</string>
     <string name="Potion_MoistenUseless">Het lijkt erop dat je dit drankje net hebt verspild.</string>
@@ -2825,6 +2829,10 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 </resources>

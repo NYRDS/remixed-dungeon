@@ -66,6 +66,7 @@
     <string name="Armor_Identify">bạn đã đủ quen thuộc với %1 để nhận diện nó. Nó là %2.</string>
     <string name="Armor_Incompatible">Tương tác của các loại ma thuật khác nhau đã xóa glyph trên bộ giáp này!</string>
     <string name="Armor_Info1">%1$s cung cấp khả năng hấp thụ sát thương tối đa \&quot;%2$d\&quot; điểm mỗi đòn tấn công.</string>
+    <string name="Armor_Info2">\n\nDo sức mạnh không đủ, tốc độ di chuyển và kỹ năng phòng thủ của bạn bị giảm.</string>
     <string name="Armor_Info3">\n\nDo sức mạnh không đủ, mặc chiếc giáp này sẽ giảm tốc độ di chuyển và kỹ năng phòng thủ của bạn.</string>
     <string name="Armor_Info4">\n\nĐiển hình %1 cung cấp khả năng hấp thụ sát thương lên đến %2 điểm mỗi lần tấn công và yêu cầu %3 điểm sức mạnh.</string>
     <string name="Armor_Info6">Nó được khắc chữ.</string>
@@ -1758,6 +1759,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Slow_Name_1">Lạnh giá %s</string>
     <string name="Slow_Name_2">Làm lạnh %s</string>
     <string name="SmashSpell_Info">Nhảy lên và tạo ra một cú đập mạnh khi chạm đất, khiến choáng váng kẻ thù xung quanh và đồng thời gây sát thương vật lý.</string>
+    <string name="SmashSpell_Name">Đập Nát</string>
     <string name="SmashSpell_NeedWeapon">Tôi cần một vũ khí cho đòn đánh này.</string>
     <string name="Snail_Desc">Con ốc sên nhỏ này đã lớn khá nhanh nhờ ăn rác thải, nhưng nó vẫn rất chậm, khiến nó trở thành kẻ địch dễ dàng.</string>
     <string name="Snail_Gender">masculine</string>
@@ -1890,6 +1892,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Swarm_Gender">masculine</string>
     <string name="Swarm_Name">bầy ruồi</string>
     <string name="Swarm_Name_Objective">bầy ruồi</string>
+    <string name="Swing_Name_0">Hoang Dã %s</string>
     <string name="Swing_Name_1">%s hoang dã</string>
     <string name="Swing_Name_2">Hoang dã %s</string>
     <string name="Sword_Gender">masculine</string>
@@ -1955,6 +1958,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="TownsfolkNPC_Name_Objective">người dân thị trấn</string>
     <string name="TownsfolkSilentNPC_Desc">Một trong những người dân địa phương. Dù rõ ràng đây là thường dân, nhưng trang phục đó trông khá đắt tiền.</string>
     <string name="TownsfolkSilentNPC_Gender">masculine</string>
+    <string name="TownsfolkSilentNPC_Message1">Hừ!</string>
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hừm...</string>
     <string name="TownsfolkSilentNPC_Name">người dân thành phố</string>
@@ -2610,6 +2614,10 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 </resources>
