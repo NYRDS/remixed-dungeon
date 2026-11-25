@@ -50,7 +50,7 @@ class TestRunner:
         self.log_file = tempfile.mktemp(prefix="game_test_", suffix=".log")
         print(f"Log file: {self.log_file}")
         # Start the server
-        cmd, workdir = server_command("8080")
+        cmd, workdir = server_command(str(self.port))
         print(f"Running: {' '.join(cmd)}")
         print(f"Working directory: {workdir}")
         # Open log file for writing

@@ -2367,3 +2367,60 @@ flows need a windowed rig and a gate placed at level creation (the town
 receiver). (4) InterlevelScene.Do(RETURN) from inside a blocking
 `pushUiTaskAndWait` eval wedges the game thread (scene switch reentrancy) —
 drive travel assertions around it, not through it.
+
+## Spells batch (2026-11-26): the last 7 java spell kinds → lua
+
+SummonDeathling, WindGust, Ignite, RootSpell, FreezeGlobe, MagicTorch, Healing
+ported to `scripts/spells/<Kind>.lua` (spell.init pattern); java classes +
+SummoningSpell base deleted; SpellFactory now registers nothing — every kind
+resolves through the CustomSpell path. CustomSpellsList gains the affinities
+the java ctor-time registration used to feed: `Elemental` = WindGust/Ignite/
+RootSpell/FreezeGlobe, `Necromancy` += SummonDeathling, `Common` +=
+MagicTorch/Healing. Live users preserved: AirElemental.lua zaps through
+`SpellFactory:getSpellByName("WindGust")`; Necromancer quickslot
+(initHeroes.json) resolves by name; WndHeroSpells affinity lists identical
+to the java pool (verified via /debug/get_available_spells).
+
+New engine surface (CustomSpell): `canCast(self, spell, chr, reallyCast)`
+script hook — return FALSE to veto (SummonDeathling's summon-limit gate);
+anything else falls through to the java base checks (cooldown/SP/possession).
+`descText(self, spell)` — a returned STRING replaces the static Info text
+(SummonDeathling formats its level-scaled summon limit via
+JavaUtils:format at desc time; the ctor-time spellDesc stays static).
+Deliberately NOT named `desc` — spell.lua's inherited desc() returns the
+desc TABLE and takes the java spell object as arg 2, which would blow up on
+every existing spell if the java side called it.
+
+Lua-port gotchas hit live: `RPD.Wound` is NIL — Wound rides the RPD.Sfx
+table like CellEmitter/Speck (17d-3 lesson, second strike). Spell effects
+that aim by ballistica must seed/read at the RAY'S landing cell
+(Ballistica:cast return), not the requested aim. Level.spawnMob(mob, delay,
+fromCell) sets the mob's pos to fromCell and animates the push out —
+headless fixtures spawn ON the caster cell unless the 2-arg form is used.
+WindGust's hit window is `i < min(skillLevel+2, distance-1)` over the java
+0-based trace — with skill 1 nothing adjacent-to-caster is ever hit (java
+parity kept). Endpoint note: /debug/cast_spell swallows game-thread
+exceptions and reports success regardless — drive spell-effect assertions
+through direct `spell:cast(...)` lua_eval probes.
+
+Drive-by fixes: the items batches (4c/4e) left the android source set
+broken — RemixedDungeon.java's Bundle.addAlias lines still referenced the
+deleted guts.weapon.melee.Claymore and items.books.TomeOfKnowledge classes.
+New `Bundle.addKindAlias(kind, alias)` aliases an old stored FQN to a
+factory kind string; resolveByDerivedKind now derives bare names (no dot)
+instead of bailing. The html gate was broken again since the vkplay GC
+commit (RemixedDungeonHtml's RemixedDungeonApp twin lacked the new
+gcPersId/gcToken/hasGcTicket) — stubbed on html. test_blood_transfusion +
+test_level_navigation suites hardcoded server port 8080 — now honor --port.
+Mod mirror: Remixed-Additions revampedCommonClasses.lua bound the 8 deleted
+spell FQNs → replaced with kind strings (its `resistances():add(RPD.Spells.X)`
+call sites gain real string-keyed resistance where class literals were dead
+entries). Flagged, NOT fixed (items-round territory): the artifact SpellBook
+lost its ItemFactory registration in batch 4e — Treasury logs «unknown item:
+SpellBook» and spell books no longer roll as loot.
+
+Verification: all 7 spells effect-verified headless (Light buff, +45 heal =
+floor(ht*0.3) with SP cost, gust push 798→830, Fire blob at the ray landing,
+Roots, Frost+Slow, Deathling pet + limit veto at count>=limit + formatted
+desc). Suites all green: all_spells 38/38, doctor 7/7, blood 6/6, nav PASS,
+alchemy 42/42; mod gate PASS ×7; android + html compile green.

@@ -185,11 +185,14 @@ public class Bundle {
      */
     @Nullable
     private Bundlable resolveByDerivedKind(String className) {
+        String kind;
         int lastDot = className.lastIndexOf('.');
         if (lastDot < 0) {
-            return null;
+            // bare name: an addKindAlias target
+            kind = className;
+        } else {
+            kind = className.substring(lastDot + 1);
         }
-        String kind = className.substring(lastDot + 1);
         int nested = kind.lastIndexOf('$');
         if (nested >= 0) {
             kind = kind.substring(nested + 1);
@@ -514,5 +517,10 @@ public class Bundle {
 
     public static void addAlias(Class<?> cl, String alias) {
         aliases.put(alias, cl.getName());
+    }
+
+    /** alias an old stored class name to a factory kind string (script/data entities) */
+    public static void addKindAlias(String kind, String alias) {
+        aliases.put(alias, kind);
     }
 }

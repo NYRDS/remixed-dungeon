@@ -45,9 +45,9 @@ public class RemixedDungeon extends Game {
 		com.watabou.utils.Bundle.addAlias(
 				com.watabou.pixeldungeon.items.food.Food.class,
 				"com.watabou.pixeldungeon.items.food.Food");
-		// remix 23.2.alpha
-		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.items.guts.weapon.melee.Claymore.class,
+		// remix 23.2.alpha — weapons are data now, alias to the Claymore kind
+		com.watabou.utils.Bundle.addKindAlias(
+				"Claymore",
 				"com.nyrds.pixeldungeon.items.guts.weapon.melee.BroadSword");
 		// remix 24
 		com.watabou.utils.Bundle.addAlias(
@@ -57,9 +57,9 @@ public class RemixedDungeon extends Game {
 		com.watabou.utils.Bundle.addAlias(
 				com.nyrds.pixeldungeon.items.accessories.Nightcap.class,
 				"com.nyrds.pixeldungeon.items.accessories.SleepyHat");
-		// remix 27.2.beta
-		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.items.books.TomeOfKnowledge.class,
+		// remix 27.2.beta — the tome is a script item now, alias to its kind
+		com.watabou.utils.Bundle.addKindAlias(
+				"TomeOfKnowledge",
 				"com.nyrds.pixeldungeon.items.books.SpellBook");
 
 		com.watabou.utils.Bundle.addAlias(

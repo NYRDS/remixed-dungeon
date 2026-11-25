@@ -42,7 +42,7 @@ class TestRunner:
         self.log_file = tempfile.mktemp(prefix="bt_test_", suffix=".log")
         print(f"Log file: {self.log_file}")
 
-        cmd, workdir = server_command("8080")
+        cmd, workdir = server_command(str(self.port))
         log_handle = open(self.log_file, "w")
         self.server_process = subprocess.Popen(
             cmd,

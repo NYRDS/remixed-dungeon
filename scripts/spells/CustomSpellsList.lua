@@ -5,8 +5,9 @@
 ---
 
 local spells = {}
-spells["Necromancy"] = {"RaiseDead","Exhumation", "DarkSacrifice","Possess"}
-spells["Common"] = {"TownPortal","Heal","RaiseDead","Cloak","Calm","Charm"}
+spells["Necromancy"] = {"RaiseDead","Exhumation", "DarkSacrifice","Possess","SummonDeathling"}
+spells["Common"] = {"TownPortal","Heal","RaiseDead","Cloak","Calm","Charm","MagicTorch","Healing"}
+spells["Elemental"] = {"WindGust","Ignite","RootSpell","FreezeGlobe"}
 
 spells["Combat"] = {"DieHard","Dash","BodyArmor","Smash"}
 spells["Rogue"] = {"Cloak","Backstab","KunaiThrow","Haste"}

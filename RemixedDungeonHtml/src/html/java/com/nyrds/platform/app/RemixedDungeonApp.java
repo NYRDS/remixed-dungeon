@@ -13,4 +13,17 @@ public class RemixedDungeonApp {
         // Restarting is not supported in HTML
         PUtil.slog("app", "Restart not supported in HTML");
     }
+
+    // GC auth is a VK Play desktop-launcher thing; html has no launcher ticket
+    public static String gcPersId() {
+        return "";
+    }
+
+    public static String gcToken() {
+        return "";
+    }
+
+    public static boolean hasGcTicket() {
+        return false;
+    }
 }

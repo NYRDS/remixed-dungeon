@@ -25,21 +25,6 @@ public class SpellFactory {
 	static private final Set<String> forbiddenSpells = new HashSet<>();
 
 
-	@SneakyThrows
-	private static void registerSpellClass(Class<? extends Spell> spellClass) {
-		mSpellsList.put(spellClass.getSimpleName(), spellClass);
-
-			Spell spell = spellClass.newInstance();
-			String affinity = spell.getMagicAffinity();
-
-			if(!mSpellsByAffinity.containsKey(affinity)) {
-				mSpellsByAffinity.put(affinity, new ArrayList<>());
-			}
-
-		mSpellsByAffinity.get(affinity).add(spellClass.getSimpleName());
-	}
-
-
 	public static boolean hasSpellForName (String name) {
 		return getAllSpells().contains(name);
 	}
@@ -111,16 +96,6 @@ public class SpellFactory {
 		if(mSpellsList == null) {
 			mSpellsList = new HashMap<>();
 			mSpellsByAffinity = new HashMap<>();
-
-			registerSpellClass(SummonDeathling.class);
-
-			registerSpellClass(WindGust.class);
-			registerSpellClass(Ignite.class);
-			registerSpellClass(RootSpell.class);
-			registerSpellClass(FreezeGlobe.class);
-
-			registerSpellClass(MagicTorch.class);
-			registerSpellClass(Healing.class);
 
 			script.run("loadSpells",null);
 		}

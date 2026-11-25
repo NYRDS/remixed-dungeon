@@ -6,6 +6,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaTable;
+import org.luaj.vm2.LuaValue;
 
 /**
  * Created by mike on 02.06.2018.
@@ -68,6 +69,32 @@ public class CustomSpell extends Spell {
             castCallback(chr);
         }
         return ret;
+    }
+
+    // script veto hook: return false to deny the cast; anything else lets the
+    // java base checks (cooldown, SP, possession) decide
+    @Override
+    public boolean canCast(@NotNull final Char chr, boolean reallyCast) {
+        if (script.hasMethod("canCast")) {
+            LuaValue verdict = script.run("canCast", chr, reallyCast);
+            if (verdict.isboolean() && !verdict.toboolean()) {
+                return false;
+            }
+        }
+        return super.canCast(chr, reallyCast);
+    }
+
+    // descText(self, spell) returning a string replaces the static Info text
+    // (dynamic descriptions, e.g. SummonDeathling's level-scaled summon limit)
+    @Override
+    public String desc() {
+        if (script.hasMethod("descText")) {
+            LuaValue text = script.run("descText");
+            if (text.isstring()) {
+                return text.tojstring();
+            }
+        }
+        return super.desc();
     }
 
     @Override
