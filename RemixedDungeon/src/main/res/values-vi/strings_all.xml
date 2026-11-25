@@ -2335,6 +2335,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="WndTradeItem_BuyAll">Mua tất cả với %d g</string>
     <string name="WndTradeItem_BuyN">Mua %1$d cho %2$dg</string>
     <string name="WndTradeItem_Cancel">Bỏ qua</string>
+    <string name="WndTradeItem_Sell">Bán cho %dg</string>
     <string name="WndTradeItem_SellAll">Bán tất cả cho %dg</string>
     <string name="WndTradeItem_SellN">Bán %1$d cho %2$dg</string>
     <string name="WndTradeItem_Sold">Bạn đã bán %1 của mình với giá %2</string>
@@ -2406,6 +2407,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_armoronhanger_desc">Loại giáp nào đó trên móc treo.</string>
     <string name="town_deco_armorstand_leather_name">Áo giáp da</string>
     <string name="town_deco_armorstand_plate_desc">Theo người buôn, bộ giáp tấm nặng nề này từng thuộc về một chiến binh vĩ đại.</string>
+    <string name="town_deco_armorstand_plate_name">Áo giáp tấm</string>
     <string name="town_deco_armorstand_scale_desc">Những tấm thép mạ vàng của bộ giáp vảy này trông như mới tinh.</string>
     <string name="town_deco_armorstand_scale_name">Giáp vảy</string>
     <string name="town_deco_banner_desc">Một lá cờ thanh lịch vẽ các biểu tượng của quán rượu này.</string>
@@ -2606,5 +2608,8 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_deco_wooden_table_name">Bàn gỗ</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
-<string name="town_table_fortune_name">Bàn</string>
+
+    <string name="town_table_fortune_name">Bàn</string>
+
+
 </resources>

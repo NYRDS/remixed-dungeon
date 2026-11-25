@@ -1293,6 +1293,7 @@
     <string name="Mob_Died">Je hoort iets in de verte sterven</string>
     <string name="Mob_FollowMe">Volg je!</string>
     <string name="Mob_GoingTo">Al onderweg!</string>
+    <string name="Mob_Guarding">Ik bewaak deze plek!</string>
     <string name="Mob_ItemUse">%1$s gebruikt %2$s</string>
     <string name="Mob_PetDied">Je huisdier is gestorven: %s</string>
     <string name="Mob_ReadyForOrder">%s klaar voor je order.</string>
@@ -2159,6 +2160,7 @@
     <string name="WandMaker_Desc">Deze oude maar kerngezonde heer draagt een lichtelijk verwarde uitdrukking. Hij wordt beschermd door een magisch schild.</string>
     <string name="WandMaker_Dust1">Oh, wat een aangename verrassing om een fatsoenlijk mens te ontmoeten in zo\'n plaats! Ik ben hier gekomen voor een zeldzame ingrediënt - _lijkenstof_. Die kan verzameld worden van skeletten en er is er overvloed in de kerker. Als tovenaar kan ik me redelijk verweeren tegen de lokale monsters, maar ik loop me in geen tijd verdwaald, het is heel embarrassant. Zou je me kunnen helpen? Ik betaal je graag met een van mijn beste staven.</string>
     <string name="WandMaker_Dust2">Enig geluk met lijkstof, %s? Botstapels zijn de meest voor de hand liggende plekken om te doorzoeken.</string>
+    <string name="WandMaker_Name">oude toverstafmaker</string>
     <string name="WandMaker_RotberryDesc">De bessen van deze struik smaken naar een zoete, zoete dood.</string>
     <string name="WandMaker_RotberryInfo">Het zaad stoot een brul uit die door het hele kerker weerklinkt!</string>
     <string name="WandMaker_RotberryName">Rotbes</string>
@@ -2821,5 +2823,8 @@
     <string name="town_table_fortune_ball_desc">Kristallen bol, met een mysterieuze nevel binnen.</string>
     <string name="town_table_fortune_ball_name">Kristallen bal</string>
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
-<string name="town_table_fortune_name">Tafel</string>
+
+    <string name="town_table_fortune_name">Tafel</string>
+
+
 </resources>
