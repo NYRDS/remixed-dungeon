@@ -3,6 +3,8 @@ package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.ItemUtils;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
+import org.luaj.vm2.LuaValue;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -30,6 +32,7 @@ import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
@@ -54,6 +57,167 @@ public class Armor extends EquipableItem {
 		imageFile = "items/armor.png";
 
 		this.tier = tier;
+	}
+
+	// --- data-kind surface (was one java class per armor) ---
+	// desc -> { tier, image, imageFile, hasHelmet, hasCollar, coverHair,
+	//   coverFacialHair, drBonus, visualName, price, upgradable, identified,
+	//   noAsh, STR, DR, special, gateClass, gateSub }
+	protected String armorKind;
+	protected boolean kindWeapon;
+	protected LuaScript kindScript;
+	protected int drBonusKind;
+	protected int kindPrice = -1;
+	protected boolean kindUpgradable = true;
+	protected boolean kindIdentified;
+	protected boolean kindNoAsh;
+	protected String gateClass = Utils.EMPTY_STRING;
+	protected String gateSub = Utils.EMPTY_STRING;
+
+	public Armor(@NotNull String kind) {
+		this(kind, "scripts/lib/emptykind");
+	}
+
+	public Armor(@NotNull String kind, String fallbackScript) {
+		this(1);
+		armorKind = kind;
+		kindWeapon = true;
+		kindScript = new LuaScript("scripts/items/" + kind, fallbackScript, this);
+
+		name = getClassParam("Name", StringsManager.getVar(R.string.Item_Name), false);
+		info = getClassParam("Info", StringsManager.getVar(R.string.Item_Info), false);
+
+		if (!kindScript.hasMethod("desc")) {
+			return;
+		}
+		LuaValue desc = kindScript.run("desc").checktable();
+
+		int imageOverride = desc.rawget("image").optint(-1);
+		if (imageOverride >= 0) {
+			image = imageOverride;
+		}
+		LuaValue imageFileOverride = desc.rawget("imageFile");
+		if (!imageFileOverride.isnil()) {
+			imageFile = imageFileOverride.tojstring();
+		}
+		hasHelmet        = desc.rawget("hasHelmet").optboolean(false);
+		hasCollar        = desc.rawget("hasCollar").optboolean(false);
+		coverHair        = desc.rawget("coverHair").optboolean(false);
+		coverFacialHair  = desc.rawget("coverFacialHair").optboolean(false);
+		drBonusKind      = desc.rawget("drBonus").optint(0);
+		kindPrice        = desc.rawget("price").optint(-1);
+		kindUpgradable   = desc.rawget("upgradable").optboolean(true);
+		kindIdentified   = desc.rawget("identified").optboolean(false);
+		kindNoAsh        = desc.rawget("noAsh").optboolean(false);
+		gateClass        = desc.rawget("gateClass").optjstring(Utils.EMPTY_STRING);
+		gateSub          = desc.rawget("gateSub").optjstring(Utils.EMPTY_STRING);
+
+		if (kindIdentified) {
+			identify();
+		}
+	}
+
+	@Override
+	public String getEntityKind() {
+		return kindWeapon ? armorKind : super.getEntityKind();
+	}
+
+	@Override
+	public boolean isUpgradable() {
+		if (kindWeapon) {
+			return kindUpgradable;
+		}
+		return super.isUpgradable();
+	}
+
+	@Override
+	public boolean isIdentified() {
+		if (kindWeapon && kindIdentified) {
+			return true;
+		}
+		return super.isIdentified();
+	}
+
+	@Override
+	public Item burn(int cell) {
+		if (kindWeapon && kindNoAsh) {
+			// ClothArmor: burns away without leaving an ash pile
+			return null;
+		}
+		return super.burn(cell);
+	}
+
+
+	@Override
+	public String getVisualName() {
+		if (kindWeapon) {
+			return kindScript.runOptional("visualName", super.getVisualName());
+		}
+		return super.getVisualName();
+	}
+
+	// equip/unequip hooks (DoctorArmor gas immunity, NecromancerRobe gate)
+	@Override
+	public boolean doEquip(@NotNull Char hero ) {
+		if (kindWeapon) {
+			if (!gateClass.isEmpty() && !gateClass.equals(hero.getHeroClass().name())) {
+				GLog.w(StringsManager.getVar(R.string.NecromancerArmor_NotNecromancer));
+				return false;
+			}
+			if (!gateSub.isEmpty() && !gateSub.equals(hero.getSubClass().name())) {
+				GLog.w(StringsManager.getVar(R.string.NecromancerArmor_NotNecromancer));
+				return false;
+			}
+		}
+		if (super.doEquip(hero)) {
+			if (kindWeapon) {
+				kindScript.runOptionalNoRet("afterEquip", hero);
+			}
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	protected boolean doUnequip(Char hero, boolean collect, boolean single ) {
+		if (kindWeapon) {
+			kindScript.runOptionalNoRet("beforeUnequip", hero);
+		}
+		return super.doUnequip(hero, collect, single);
+	}
+
+	// NecromancerRobe: killed foes grant a skill point (Item.charDied pipeline)
+	@Override
+	public void charDied(@NotNull com.watabou.pixeldungeon.actors.Char chr, @NotNull com.nyrds.pixeldungeon.mechanics.NamedEntityKind cause) {
+		if (kindWeapon && kindScript.hasMethod("charDied")) {
+			kindScript.runOptionalNoRet("charDied", chr, cause);
+			return;
+		}
+		super.charDied(chr, cause);
+	}
+
+	private static final String LUA_DATA = "luaData";
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		if (kindWeapon) {
+			bundle.put(LUA_DATA, kindScript.run("saveData").checkjstring());
+		}
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		if (!kindWeapon) {
+			return;
+		}
+		String luaData = bundle.optString(LUA_DATA, null);
+		if (luaData != null) {
+			kindScript.run("loadData", luaData);
+		} else {
+			kindScript.runOptionalNoRet("loadLegacy", bundle);
+		}
 	}
 	
 	private static final String GLYPH	= "glyph";
@@ -86,6 +250,9 @@ public class Armor extends EquipableItem {
 	}
 
 	public int defenceProc(Char attacker, Char defender, int damage ) {
+		if (kindWeapon && kindScript.hasMethod("defenceProc")) {
+			damage = kindScript.runOptional("defenceProc", damage, attacker, defender, damage);
+		}
 		if (glyph != null) {
 			damage = glyph.defenceProc( this, attacker, defender, damage );
 		}
@@ -174,15 +341,29 @@ public class Armor extends EquipableItem {
 	}
 	
 	public int typicalDR() {
-		return tier * 2;
+		int dr = tier * 2;
+		if (kindWeapon && drBonusKind != 0) {
+			dr += drBonusKind;
+		}
+		return dr;
 	}
 
 	public int effectiveDr() {
-		return tier * 2 + level() * tier + (glyph != null ? tier : 0);
+		int dr = tier * 2 + level() * tier + (glyph != null ? tier : 0);
+		if (kindWeapon && drBonusKind != 0) {
+			dr += drBonusKind;
+		}
+		if (kindWeapon) {
+			dr = kindScript.runOptional("effectiveDr", dr);
+		}
+		return dr;
 	}
 
 	@Override
 	public int price() {
+		if (kindWeapon && kindPrice >= 0) {
+			return kindPrice;
+		}
 		int price = 10 * (1 << (tier - 1));
 		if (glyph != null) {
 			price *= 1.5;

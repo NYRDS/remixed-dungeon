@@ -5,9 +5,6 @@ import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.MasteryItem;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
-import com.nyrds.pixeldungeon.items.common.armor.DoctorArmor;
-import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
-import com.nyrds.pixeldungeon.items.common.armor.PriestArmor;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
@@ -27,12 +24,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
-import com.watabou.pixeldungeon.items.armor.ElfArmor;
-import com.watabou.pixeldungeon.items.armor.GnollArmor;
-import com.watabou.pixeldungeon.items.armor.HuntressArmor;
-import com.watabou.pixeldungeon.items.armor.MageArmor;
-import com.watabou.pixeldungeon.items.armor.RogueArmor;
-import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -53,16 +44,17 @@ import org.json.JSONObject;
 
 public enum HeroClass implements CharModifier, NamedEntityKind {
 
-    NONE(null, ClassArmor.class),
-    WARRIOR(R.string.HeroClass_War, WarriorArmor.class),
-    MAGE(R.string.HeroClass_Mag, MageArmor.class),
-    ROGUE(R.string.HeroClass_Rog, RogueArmor.class),
-    HUNTRESS(R.string.HeroClass_Hun, HuntressArmor.class),
-    ELF(R.string.HeroClass_Elf, ElfArmor.class),
-    NECROMANCER(R.string.HeroClass_Necromancer, NecromancerArmor.class),
-    GNOLL(R.string.HeroClass_Gnoll, GnollArmor.class),
-    PRIEST(R.string.HeroClass_Priest, PriestArmor.class),
-    DOCTOR(R.string.HeroClass_Doctor, DoctorArmor.class);
+    // class-armor kinds (data armors, engine batch 4d)
+    NONE(null, "ClassArmor"),
+    WARRIOR(R.string.HeroClass_War, "WarriorArmor"),
+    MAGE(R.string.HeroClass_Mag, "MageArmor"),
+    ROGUE(R.string.HeroClass_Rog, "RogueArmor"),
+    HUNTRESS(R.string.HeroClass_Hun, "HuntressArmor"),
+    ELF(R.string.HeroClass_Elf, "ElfArmor"),
+    NECROMANCER(R.string.HeroClass_Necromancer, "NecromancerArmor"),
+    GNOLL(R.string.HeroClass_Gnoll, "GnollArmor"),
+    PRIEST(R.string.HeroClass_Priest, "PriestArmor"),
+    DOCTOR(R.string.HeroClass_Doctor, "DoctorArmor");
 
     private static final String FORBIDDEN_ACTIONS = "forbiddenActions";
     private static final String FRIENDLY_MOBS = "friendlyMobs";
@@ -76,7 +68,7 @@ public enum HeroClass implements CharModifier, NamedEntityKind {
     public static final String SPELL = "spell";
     public static final String BONE_SAW = "BoneSaw";
 
-    private final Class<? extends ClassArmor> armorClass;
+    private final String armorKind;
 
     @Getter
     private final Set<String> forbiddenActions = new HashSet<>();
@@ -92,9 +84,9 @@ public enum HeroClass implements CharModifier, NamedEntityKind {
     @Getter
     private String magicAffinity = Utils.EMPTY_STRING;
 
-    HeroClass(Integer titleId, Class<? extends ClassArmor> armorClass) {
+    HeroClass(Integer titleId, String armorKind) {
         this.titleId = titleId;
-        this.armorClass = armorClass;
+        this.armorKind = armorKind;
     }
 
     public boolean allowed() {
@@ -312,7 +304,7 @@ public enum HeroClass implements CharModifier, NamedEntityKind {
 
     @SneakyThrows
     public ClassArmor classArmor() {
-        return armorClass.newInstance();
+        return (ClassArmor) com.nyrds.pixeldungeon.items.common.ItemFactory.itemByName(armorKind);
     }
 
     public String tag() {

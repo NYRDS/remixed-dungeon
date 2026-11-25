@@ -37,6 +37,12 @@ import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
+import com.watabou.pixeldungeon.mechanics.ShadowCaster;
+import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
+import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
+import com.watabou.pixeldungeon.sprites.MissileSprite;
+import com.watabou.pixeldungeon.effects.Flare;
+
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
@@ -586,5 +592,138 @@ public class ItemUtils {
 		public boolean dischargesTraps() {
 			return true; // caveman: description promises "discharges traps"
 		}
+	}
+	// ---- class-armor special bridges (was the per-class armor classes) ----
+	// FoV mob iteration is java-side (java.util collections + sprite effects).
+
+	/**
+	 * Mage/BattleMage/Warlock: ignite and root every visible enemy (1 turn).
+	 */
+	@LuaInterface
+	public static void mageSpecial(@NotNull Char user) {
+		Level level = user.level();
+
+		for (Mob mob : level.getCopyOfMobsArray()) {
+			if (level.fieldOfView[mob.getPos()]) {
+				CharUtils.ignite( mob );
+				Buff.prolong( mob, BuffFactory.ROOTS, 3 );
+			}
+		}
+
+		user.doOperate(Actor.TICK);
+
+		user.getSprite().centerEmitter().start( ElmoParticle.FACTORY, 0.15f, 4 );
+		Sample.INSTANCE.play( Assets.SND_READ );
+	}
+
+	/**
+	 * Huntress/Sniper/Warden: shuriken volley at every visible enemy in
+	 * casting range; each hit lands as a regular attack (1 delay total).
+	 */
+	@LuaInterface
+	public static void huntressVolley(@NotNull Char user) {
+		Level level = user.level();
+
+		Item proto = ItemFactory.itemByName("Shuriken");
+		java.util.Map<Callback, Char> targets = new java.util.HashMap<>();
+
+		for (Mob mob : level.getCopyOfMobsArray()) {
+			if (level.fieldOfView[mob.getPos()] && level.distanceL2(user, mob) <= ShadowCaster.MAX_DISTANCE) {
+				Callback callback = new Callback() {
+					@Override
+					public void call() {
+						user.attack( targets.get( this ) );
+						targets.remove( this );
+						if (targets.isEmpty()) {
+							user.spend( user.attackDelay() );
+						}
+					}
+				};
+
+				((MissileSprite) user.getSprite().getParent().recycle( MissileSprite.class )).
+					reset( user.getPos(), mob.getPos(), proto, callback );
+
+				targets.put( callback, mob );
+			}
+		}
+
+		if (targets.isEmpty()) {
+			GLog.w(StringsManager.getVar(R.string.HuntressArmor_NoEnemies));
+			return;
+		}
+
+		user.getSprite().zap( user.getPos() );
+	}
+
+	/**
+	 * Elf/Scout/Shaman: regrowth seeds on every visible cell occupied by a
+	 * mob + a big seed at the caster's feet (1 turn).
+	 */
+	@LuaInterface
+	public static void elfRegrowth(@NotNull Char user) {
+		Level level = user.level();
+
+		for (Mob mob : level.getCopyOfMobsArray()) {
+			if (level.fieldOfView[mob.getPos()]) {
+				GameScene.add( Blob.seed( mob.getPos(), 100, Regrowth.class ) );
+			}
+		}
+
+		user.doOperate(Actor.TICK);
+		Sample.INSTANCE.play( Assets.SND_READ );
+
+		GameScene.add( Blob.seed( user.getPos(), 100, Regrowth.class ) );
+	}
+
+	/**
+	 * Gnoll/Guardian/Witchdoctor: dominate up to lvl/6 visible petable mobs.
+	 */
+	@LuaInterface
+	public static void gnollDomination(@NotNull Char user) {
+		Level level = user.level();
+
+		int mobsDominated = 0;
+
+		for (Mob mob : level.getCopyOfMobsArray()) {
+			if (level.fieldOfView[mob.getPos()] && level.distanceL2(user, mob) <= ShadowCaster.MAX_DISTANCE) {
+				if(mobsDominated > user.lvl() / 6) {
+					break;
+				}
+				if(mob.canBePet()) {
+					Mob.makePet(mob, user.getId());
+					new Flare(3, 32).show(mob.getSprite(), 2f);
+					mobsDominated++;
+				}
+			}
+		}
+
+		user.spend( Actor.TICK );
+	}
+
+	/**
+	 * Priest: sanctifying blast - full damage to undead, half to demons
+	 * within radius 2 - and a leveled Blessing.
+	 */
+	@LuaInterface
+	public static void priestBlast(@NotNull Char user) {
+		Level level = user.level();
+
+		int damage = 5 + user.lvl();
+
+		for (Mob mob : level.getCopyOfMobsArray()) {
+			if (!user.friendly(mob) && level.distance(mob.getPos(), user.getPos()) <= 2) {
+				int dmg = mob.undead ? damage : (mob.demon ? Math.max(1, damage / 2) : 0);
+				if (dmg > 0) {
+					mob.getSprite().emitter().start(ShaftParticle.GOLD_FACTORY, 0.1f, 5);
+					mob.damage(dmg, user);
+				}
+			}
+		}
+
+		Buff.affect(user, BuffFactory.BLESSED, 20).level(1 + user.lvl() / 5);
+		user.getSprite().emitter().start(ShaftParticle.GOLD_FACTORY, 0.1f, 8);
+
+		user.doOperate(Actor.TICK);
+		Sample.INSTANCE.play(Assets.SND_LEVELUP);
 	}
 }

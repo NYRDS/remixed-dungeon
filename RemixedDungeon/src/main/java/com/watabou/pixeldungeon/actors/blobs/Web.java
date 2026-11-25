@@ -1,7 +1,6 @@
 
 package com.watabou.pixeldungeon.actors.blobs;
 import com.nyrds.LuaInterface;
-import com.nyrds.pixeldungeon.items.common.armor.SpiderArmor;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -33,7 +32,7 @@ public class Web extends Blob {
 
 					rootable = !ch.immunities().contains(getEntityKind());
 
-					if(ch.getItemFromSlot(Belongings.Slot.ARMOR) instanceof SpiderArmor)
+					if("SpiderArmor".equals(ch.getItemFromSlot(Belongings.Slot.ARMOR).getEntityKind()))
 						rootable = false;
 					}
 
