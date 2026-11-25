@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.Game;
 import com.nyrds.platform.game.RemixedDungeon;
@@ -15,7 +16,6 @@ import com.watabou.noosa.Text;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.effects.Flare;
-import com.watabou.pixeldungeon.items.ArmorKit;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
@@ -212,7 +212,7 @@ public class AboutScene extends PixelScene {
 		new Flare( 7, 64 ).color( 0x332211, true ).show( nyrdie, 0 ).angularSpeed = -20;
 
 		if(Utils.isAndroid()) {
-			ItemSprite sprite = new ItemSprite(new ArmorKit());
+			ItemSprite sprite = new ItemSprite(ItemFactory.itemByName("ArmorKit"));
 			sprite.alpha(0.1f);
 			sprite.setX(align(text.getX() + (text.width() - sprite.width()) / 2));
 			sprite.setY(nyrdie.getY() - sprite.height() - 8);

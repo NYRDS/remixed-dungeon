@@ -42,7 +42,6 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
@@ -978,7 +977,7 @@ public class Dungeon {
 
     @LuaInterface
     public static void fail(String desc) {
-        if (hero.getBelongings().getItem(Ankh.class) == null) {
+        if (hero.getBelongings().getItem("Ankh") == null) {
             Rankings.INSTANCE.submit(Rankings.gameOver.LOSE, desc);
         }
     }

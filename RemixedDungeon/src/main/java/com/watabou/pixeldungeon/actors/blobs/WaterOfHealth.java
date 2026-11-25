@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.actors.blobs;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.items.CustomItem;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
@@ -12,7 +13,6 @@ import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
-import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -42,12 +42,13 @@ public class WaterOfHealth extends WellWater {
 	
 	@Override
 	protected Item affectItem( Item item ) {
-		if (item instanceof DewVial && !((DewVial)item).isFull()) {
-			((DewVial)item).fill();
+		if (item instanceof CustomItem && item.getEntityKind().equals("DewVial")
+				&& !((CustomItem) item).itemBooleanHook("isFull", false)) {
+			((CustomItem) item).itemHook("fill");
 			clear();
 			return item;
 		}
-		
+
 		return null;
 	}
 	

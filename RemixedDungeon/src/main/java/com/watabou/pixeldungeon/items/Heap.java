@@ -319,11 +319,13 @@ public class Heap implements Bundlable, NamedEntityKind, HasPositionOnLevel {
         for (Item item : items.toArray(new Item[0])) {
             Item burntItem = item.burn(pos);
 
-            if (!item.equals(burntItem) && !(item instanceof Dewdrop)) {
+            boolean isDewdrop = item.getEntityKind().equals("Dewdrop");
+
+            if (!item.equals(burntItem) && !isDewdrop) {
                 burnt = true;
             }
 
-            if (item instanceof Dewdrop) {
+            if (isDewdrop) {
                 evaporated = true;
             }
 

@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.items.quest;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.audio.Sample;
@@ -11,6 +12,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.levels.CavesBossLevel;
 import com.watabou.pixeldungeon.levels.CavesLevel;
@@ -87,7 +89,7 @@ public class Pickaxe extends Weapon {
 					level.set( pos, Terrain.WALL );
 					GameScene.updateMap( pos );
 
-					DarkGold gold = new DarkGold();
+					Item gold = ItemFactory.itemByName("DarkGold");
 					chr.collectAnimated(gold);
 
 					chr.hunger().satisfy( -Hunger.STARVING / 10 );

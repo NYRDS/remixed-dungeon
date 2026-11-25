@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.gl.Gl;
@@ -14,7 +15,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
@@ -32,7 +32,7 @@ public class HallsLevel extends RegularLevel {
 	
 	@Override
 	public void create() {
-		addItemToSpawn( new Torch() );
+		addItemToSpawn( ItemFactory.itemByName("Torch") );
 		super.create();
 	}
 

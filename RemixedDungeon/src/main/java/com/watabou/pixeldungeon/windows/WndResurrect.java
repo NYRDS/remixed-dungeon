@@ -11,7 +11,7 @@ import com.watabou.noosa.Text;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.items.Ankh;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -26,7 +26,7 @@ public class WndResurrect extends Window {
 	public static WndResurrect instance;
 	public static NamedEntityKind causeOfDeath;
 
-	public WndResurrect( final Ankh ankh, NamedEntityKind causeOfDeath ) {
+	public WndResurrect( final Item ankh, NamedEntityKind causeOfDeath ) {
 		super();
 
 		width = WndHelper.getFullscreenWidth();

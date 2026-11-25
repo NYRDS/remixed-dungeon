@@ -4,6 +4,7 @@ import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.lua.LuaEngine;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
@@ -19,7 +20,6 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
-import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -104,7 +104,7 @@ public class Plant extends LevelObject {
 				Treasury.getLevelTreasury().random(Treasury.Category.SEED).dropAt(ch);
             }
 			if (Random.Int(5) == 0) {
-				new Dewdrop().dropAt(ch);
+				ItemFactory.itemByName("Dewdrop").dropAt(ch);
 			}
 		}
 

@@ -10,7 +10,6 @@ import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -32,7 +31,7 @@ public class Ascend extends CharAction {
 
             if (nextLevel.levelId.equals("0")) {
 
-                if (hero.getBelongings().getItem(Amulet.class) == null) {
+                if (hero.getBelongings().getItem("Amulet") == null) {
                     GameScene.show(new WndMessage(StringsManager.getVar(R.string.Hero_Leave)));
                     hero.readyAndIdle();
                 } else {

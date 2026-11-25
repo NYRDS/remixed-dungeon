@@ -159,11 +159,84 @@ public class CustomItem extends EquipableItem {
             actions.remove(CommonActions.AC_UNEQUIP);
         }
 
+        // optional per-kind removal list (e.g. Amulet drops throw/drop)
+        if (script.hasMethod("removeActions")) {
+            LuaValue remove = script.run("removeActions", hero);
+            LuaEngine.forEach(remove, (key, val) -> actions.remove(val.tojstring()));
+        }
+
         LuaValue ret = script.run("actions", hero);
 
         LuaEngine.forEach(ret, (key,val)->actions.add(val.tojstring()));
 
         return actions;
+    }
+
+    // --- hooks for the framework interlocks of migrated misc kinds ---
+
+    // boolean query into this item's script state (vial isFull, ...); callable
+    // from java death-flow helpers and from other items' scripts alike
+    public boolean itemBooleanHook(String hook, boolean defVal) {
+        return script != null && script.runOptional(hook, defVal);
+    }
+
+    // invoke a stateful hook on this item's script (vial drink/fill/collectDew);
+    // fixed arities - luajava reflection cannot call varargs methods
+    public void itemHook(String hook) {
+        if (script != null) {
+            script.runOptionalNoRet(hook);
+        }
+    }
+
+    public void itemHook(String hook, Object arg) {
+        if (script != null) {
+            script.runOptionalNoRet(hook, arg);
+        }
+    }
+
+    // replaces Item.doPickUp entirely when the kind defines it (Dewdrop:
+    // collected by the vial or drunk, not bagged); onPickUp stays the
+    // post-pickup notification it always was
+    @Override
+    public boolean doPickUp(@NotNull Char hero) {
+        if (script.hasMethod("doPickUp")) {
+            return script.run("doPickUp", hero).toboolean();
+        }
+        script.runOptionalNoRet("onPickUp", hero);
+        return super.doPickUp(hero);
+    }
+
+    // returning true from the hook means fully handled (DarkGold melt on
+    // depth 0); false/nil falls through to the java default
+    @Override
+    public void doDrop(@NotNull Char chr) {
+        if (script.hasMethod("doDrop") && script.run("doDrop", chr).toboolean()) {
+            return;
+        }
+        super.doDrop(chr);
+    }
+
+    @Override
+    public String status() {
+        return script != null ? script.runOptional("status", super.status()) : super.status();
+    }
+
+    // Dewdrop: grass/plant dew never announces (was Dewdrop.announcePickUp)
+    @Override
+    public boolean announcePickUp() {
+        return script != null ? script.runOptional("announcePickUp", super.announcePickUp()) : super.announcePickUp();
+    }
+
+    // DewVial window title carried "name (x/10)" - keep the suffix for kinds
+    // that define a status hook
+    @NotNull
+    @Override
+    public String toString() {
+        String str = super.toString();
+        if (script != null && script.hasMethod("status")) {
+            str = str + " (" + status() + ")";
+        }
+        return str;
     }
 
     public void selectCell(String action,String prompt) {
@@ -186,6 +259,11 @@ public class CustomItem extends EquipableItem {
         String luaData = bundle.optString(LuaEngine.LUA_DATA,null);
         if(luaData!=null) {
             script.run("loadData",luaData);
+        } else {
+            // kind migrated from a java class: no lua state yet - let the
+            // kind read the legacy java fields (vial volume, beacon returnTo)
+            // straight from the bundle
+            script.runOptionalNoRet("loadLegacy", bundle);
         }
     }
 
@@ -394,12 +472,6 @@ public class CustomItem extends EquipableItem {
 
     public void charDied(Char chr, NamedEntityKind cause) {
         script.runOptionalNoRet("charDied", chr, cause);
-    }
-
-    @Override
-    public boolean doPickUp(@NotNull Char hero) {
-        script.runOptionalNoRet("onPickUp", hero);
-        return super.doPickUp(hero);
     }
 
     public void pickedUp(@NotNull Char hero) {

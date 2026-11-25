@@ -7,7 +7,6 @@ import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.PotionBelt;
@@ -80,7 +79,7 @@ public class TownShopLevel extends Level {
 			stock( shopkeeper, ItemFactory.itemByName(Food.OVERPRICED_RATION) );
 			stock( shopkeeper, new Dart(5).identify() );
 			stock( shopkeeper, new CommonArrow(25) );
-			stock( shopkeeper, new Torch().identify() );
+			stock( shopkeeper, ItemFactory.itemByName("Torch").identify() );
 		}
 
 		stock( shopkeeper, new Keyring());

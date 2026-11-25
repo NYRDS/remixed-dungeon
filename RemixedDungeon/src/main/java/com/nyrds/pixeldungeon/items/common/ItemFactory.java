@@ -43,20 +43,8 @@ import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Amulet;
-import com.watabou.pixeldungeon.items.Ankh;
-import com.watabou.pixeldungeon.items.ArmorKit;
-import com.watabou.pixeldungeon.items.Codex;
-import com.watabou.pixeldungeon.items.DewVial;
-import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.LloydsBeacon;
-import com.watabou.pixeldungeon.items.SpiderCharm;
-import com.watabou.pixeldungeon.items.Stylus;
-import com.watabou.pixeldungeon.items.TomeOfMastery;
-import com.watabou.pixeldungeon.items.Torch;
-import com.watabou.pixeldungeon.items.Weightstone;
 import com.watabou.pixeldungeon.items.armor.AssasinArmor;
 import com.watabou.pixeldungeon.items.armor.BattleMageArmor;
 import com.watabou.pixeldungeon.items.armor.BerserkArmor;
@@ -92,9 +80,7 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.quest.CorpseDust;
-import com.watabou.pixeldungeon.items.quest.DarkGold;
 import com.watabou.pixeldungeon.items.quest.DriedRose;
-import com.watabou.pixeldungeon.items.quest.DwarfToken;
 import com.watabou.pixeldungeon.items.quest.Pickaxe;
 import com.watabou.pixeldungeon.items.quest.RatSkull;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
@@ -233,18 +219,7 @@ public class ItemFactory {
 
     private static void initItemsMap() {
 
-        registerItemClass(Amulet.class);
-        registerItemClass(Ankh.class);
-        registerItemClass(ArmorKit.class);
-        registerItemClass(Codex.class);
-        registerItemClass(Dewdrop.class);
-        registerItemClass(DewVial.class);
         registerItemClass(Gold.class);
-        registerItemClass(LloydsBeacon.class);
-        registerItemClass(Stylus.class);
-        registerItemClass(TomeOfMastery.class);
-        registerItemClass(Torch.class);
-        registerItemClass(Weightstone.class);
 
         // the framework classes themselves resolve as kinds (name lookup
         // during Item field init runs before the kind ctor arg lands; bare
@@ -303,7 +278,6 @@ public class ItemFactory {
         registerItemClass(RatSkull.class);
         registerItemClass(ChaosCrystal.class);
         registerItemClass(ChaosBlade.class);
-        registerItemClass(SpiderCharm.class);
         registerItemClass(RingOfDetection.class);
         registerItemClass(RingOfShadows.class);
         registerItemClass(RingOfHerbalism.class);
@@ -393,7 +367,6 @@ public class ItemFactory {
         registerItemClass(SkeletonKey.class);
         registerItemClass(GoldenKey.class);
         registerItemClass(IronKey.class);
-        registerItemClass(DarkGold.class);
         registerItemClass(GothicArmor.class);
         registerItemClass(Claymore.class);
         registerItemClass(Halberd.class);
@@ -444,7 +417,6 @@ public class ItemFactory {
         Bundle.addAlias(FadeleafSeed.class, "com.watabou.pixeldungeon.plants.Fadeleaf$Seed");
         Bundle.addAlias(MoongraceSeed.class, "com.watabou.pixeldungeon.plants.Moongrace$Seed");
 
-        registerItemClass(DwarfToken.class);
         registerItemClass(RatArmor.class);
         registerItemClass(ElvenDagger.class);
         registerItemClass(IceGuardianCoreModule.class);

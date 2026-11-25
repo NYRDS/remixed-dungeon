@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.items.common.MasteryItem;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
 import com.nyrds.pixeldungeon.items.common.armor.DoctorArmor;
 import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
@@ -25,7 +26,6 @@ import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.CharModifier;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
 import com.watabou.pixeldungeon.items.armor.ElfArmor;
 import com.watabou.pixeldungeon.items.armor.GnollArmor;
@@ -108,8 +108,8 @@ public enum HeroClass implements CharModifier, NamedEntityKind {
 
         if (Badges.isUnlocked(masteryBadge()) && hero.getDifficulty() < 3) {
             {
-                var tomeOfMastery = new TomeOfMastery();
-                if (tomeOfMastery.givesMasteryTo(hero)) {
+                var tomeOfMastery = ItemFactory.itemByName("TomeOfMastery");
+                if (MasteryItem.tomeGivesMasteryTo(hero)) {
                     tomeOfMastery.collect(hero);
                 }
             }

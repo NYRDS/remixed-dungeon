@@ -50,7 +50,6 @@ import com.watabou.pixeldungeon.effects.particles.FlowParticle;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.Stylus;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -627,7 +626,7 @@ public abstract class Level implements Bundlable {
 				Dungeon.scrollsOfUpgrade++;
 			}
 			if (Dungeon.asNeeded()) {
-				addItemToSpawn(new Stylus());
+				addItemToSpawn(ItemFactory.itemByName("Stylus"));
 				Dungeon.arcaneStyli++;
 			}
 

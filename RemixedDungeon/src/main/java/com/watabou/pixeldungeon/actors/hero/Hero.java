@@ -41,8 +41,6 @@ import com.watabou.pixeldungeon.actors.mobs.Fraction;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CheckedCell;
 import com.watabou.pixeldungeon.effects.SpellSprite;
-import com.watabou.pixeldungeon.items.Ankh;
-import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.Potion;
@@ -590,7 +588,7 @@ public class Hero extends Char {
 
         clearActions();
 
-        if (!permanentDeath && DewVial.autoDrink(this)) {
+        if (!permanentDeath && CharUtils.autoDrinkDewVial(this)) {
             resurrectAnim();
             return;
         }
@@ -605,7 +603,7 @@ public class Hero extends Char {
 
         super.die(cause);
 
-        if (permanentDeath || !Ankh.resurrect(this, cause)) {
+        if (permanentDeath || !CharUtils.ankhResurrect(this, cause)) {
             Dungeon.deleteGame(false);
             Hero.reallyDie(this, cause);
         }

@@ -10,10 +10,7 @@ import com.nyrds.pixeldungeon.items.guts.weapon.melee.Halberd;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.Ankh;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.Torch;
-import com.watabou.pixeldungeon.items.Weightstone;
 import com.watabou.pixeldungeon.items.armor.LeatherArmor;
 import com.watabou.pixeldungeon.items.armor.MailArmor;
 import com.watabou.pixeldungeon.items.armor.PlateArmor;
@@ -78,21 +75,21 @@ public class ShopPainter extends Painter {
 			case 6:
 				stock( level, shopkeeper, (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
 				stock( level, shopkeeper, new LeatherArmor().identify() );
-				stock( level, shopkeeper, new Weightstone() );
+				stock( level, shopkeeper, ItemFactory.itemByName("Weightstone") );
 				stock( level, shopkeeper, new TomeOfKnowledge().identify() );
 				break;
 
 			case 11:
 				stock( level, shopkeeper, (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
 				stock( level, shopkeeper, new MailArmor().identify() );
-				stock( level, shopkeeper, new Weightstone() );
+				stock( level, shopkeeper, ItemFactory.itemByName("Weightstone") );
 				stock( level, shopkeeper, new TomeOfKnowledge().identify() );
 				break;
 
 			case 16:
 				stock( level, shopkeeper, (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
 				stock( level, shopkeeper, new ScaleArmor().identify() );
-				stock( level, shopkeeper, new Weightstone() );
+				stock( level, shopkeeper, ItemFactory.itemByName("Weightstone") );
 				stock( level, shopkeeper, new TomeOfKnowledge().identify() );
 				break;
 
@@ -108,9 +105,9 @@ public class ShopPainter extends Painter {
 						stock( level, shopkeeper, new PlateArmor().identify() );
 						break;
 				}
-				stock( level, shopkeeper, new Weightstone() );
-				stock( level, shopkeeper, new Torch() );
-				stock( level, shopkeeper, new Torch() );
+				stock( level, shopkeeper, ItemFactory.itemByName("Weightstone") );
+				stock( level, shopkeeper, ItemFactory.itemByName("Torch") );
+				stock( level, shopkeeper, ItemFactory.itemByName("Torch") );
 				break;
 
 			case 27:
@@ -144,7 +141,7 @@ public class ShopPainter extends Painter {
 		stock( level, shopkeeper, ItemFactory.itemByName(Food.OVERPRICED_RATION) );
 		stock( level, shopkeeper, ItemFactory.itemByName(Food.OVERPRICED_RATION) );
 
-		stock( level, shopkeeper, new Ankh() );
+		stock( level, shopkeeper, ItemFactory.itemByName("Ankh") );
 
 
 		level.mobs.add( shopkeeper );

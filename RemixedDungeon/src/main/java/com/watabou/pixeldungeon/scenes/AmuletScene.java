@@ -1,6 +1,7 @@
 
 package com.watabou.pixeldungeon.scenes;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.util.GuiProperties;
@@ -92,6 +93,15 @@ public class AmuletScene extends PixelScene {
 	@Override
 	protected void onBackPressed() {
 		InterlevelScene.Do(InterlevelScene.Mode.CONTINUE);
+	}
+
+	// Amulet data kind entry: save + show (was Amulet.showAmuletScene, called
+	// both from the End action and from pickedUp)
+	@LuaInterface
+	public static void enter(boolean showText) {
+		Dungeon.save(false);
+		AmuletScene.noText = !showText;
+		GameLoop.switchScene(AmuletScene.class);
 	}
 	
 	private float timer = 0;

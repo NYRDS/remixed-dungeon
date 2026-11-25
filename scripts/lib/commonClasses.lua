@@ -121,6 +121,7 @@ local Objects = {
         WndShopOptions = "com.nyrds.pixeldungeon.windows.WndShopOptions",
         WndChooseWay   = "com.watabou.pixeldungeon.windows.WndChooseWay",
         WndBag         = "com.watabou.pixeldungeon.windows.WndBag",
+        WndBalance     = "com.watabou.pixeldungeon.windows.WndBalance",
         WndLibrary     = "com.nyrds.pixeldungeon.windows.WndLibrary",
         WndPortal      = "com.nyrds.pixeldungeon.windows.WndPortal",
         WndPortalReturn = "com.nyrds.pixeldungeon.windows.WndPortalReturn",
@@ -305,6 +306,9 @@ local RPD = {
     Chasm = luajava.bindClass("com.watabou.pixeldungeon.levels.features.Chasm"),
     Mob   = luajava.bindClass("com.watabou.pixeldungeon.actors.mobs.Mob"),
     Heap  = luajava.bindClass("com.watabou.pixeldungeon.items.Heap"),
+    -- classes behind migrated misc item kinds
+    AmuletScene  = luajava.bindClass("com.watabou.pixeldungeon.scenes.AmuletScene"),
+    ClassArmor   = luajava.bindClass("com.watabou.pixeldungeon.items.armor.ClassArmor"),
 
     Ballistica = Ballistica,
     Challenges = Challenges,

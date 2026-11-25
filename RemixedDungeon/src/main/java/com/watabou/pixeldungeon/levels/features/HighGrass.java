@@ -8,7 +8,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.LeafParticle;
-import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.rings.RingOfHerbalism.Herbalism;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -28,7 +27,7 @@ public class HighGrass {
 
 			// Dew
 			if (herbalismLevel >= 0 && Random.Int(6) <= Random.Int(herbalismLevel + 1)) {
-				Treasury.getLevelTreasury().random(Dewdrop.class.getSimpleName()).dropAt(ch);
+				Treasury.getLevelTreasury().random("Dewdrop").dropAt(ch);
 			}
 
 			// Seed

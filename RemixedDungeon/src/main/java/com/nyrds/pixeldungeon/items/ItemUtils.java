@@ -2,13 +2,17 @@ package com.nyrds.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.audio.Sample;
+import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.EquipableItem;
@@ -21,6 +25,8 @@ import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
@@ -67,6 +73,42 @@ public class ItemUtils {
 	@LuaInterface
 	public static boolean isFood(@NotNull Item item) {
 		return item instanceof Food;
+	}
+
+	// was SpiderCharm's Actor.addDelayed(new Pushing(..), -1): luajava cannot
+	// coerce a freshly constructed tweener to the Actor parameter
+	@LuaInterface
+	public static void pushMob(@NotNull Char mob, int from, int to) {
+		Actor.addDelayed(new Pushing(mob, from, to), -1);
+	}
+
+	// was DarkGold's new ItemSprite(this).drop(pos): sprite methods are not
+	// dispatchable from the sandbox (the headless reflection scan of GL-typed
+	// visual classes comes up empty)
+	@LuaInterface
+	public static void dropItemSprite(@NotNull Item item, int pos) {
+		new ItemSprite(item).drop(pos);
+	}
+
+	// was Stylus.inscribeArmor: reroll a random glyph that differs from the
+	// current one, log and inscribe. False when the item is not armor.
+	@LuaInterface
+	public static boolean inscribeRandomGlyph(@NotNull Item candidate) {
+		if (!(candidate instanceof Armor)) {
+			return false;
+		}
+		Armor armor = (Armor) candidate;
+
+		Class<? extends Armor.Glyph> oldGlyphClass = armor.glyph != null ? armor.glyph.getClass() : null;
+		Armor.Glyph glyph = Armor.Glyph.random();
+		while (glyph.getClass() == oldGlyphClass) {
+			glyph = Armor.Glyph.random();
+		}
+
+		GLog.w(StringsManager.getVar(R.string.Stylus_Inscribed), glyph.name(), armor.name() );
+
+		armor.inscribe( glyph );
+		return true;
 	}
 
 	public static void equipCursed(@NotNull Char chr) {

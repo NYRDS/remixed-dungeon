@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.nyrds.pixeldungeon.effects.emitters.WaterSink;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.platform.util.StringsManager;
@@ -11,7 +12,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.QuestBridge;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.utils.Random;
 
 public class SewerLevel extends RegularLevel {
@@ -122,7 +122,7 @@ public class SewerLevel extends RegularLevel {
 	@Override
 	protected void createItems() {
 		if (Dungeon.dewVial && Random.Int(4 - Dungeon.depth) == 0) {
-			addItemToSpawn(new DewVial());
+			addItemToSpawn(ItemFactory.itemByName("DewVial"));
 			Dungeon.dewVial = false;
 		}
 

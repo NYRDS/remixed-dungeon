@@ -10,10 +10,12 @@ import com.nyrds.pixeldungeon.ai.Wandering;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.pixeldungeon.game.ModQuirks;
 import com.nyrds.pixeldungeon.items.Carcass;
+import com.nyrds.pixeldungeon.items.CustomItem;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.levels.cellCondition;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.mechanics.PetInventoryManager;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.mechanics.buffs.CustomBuff;
@@ -66,6 +68,7 @@ import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
+import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
@@ -87,6 +90,7 @@ import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Random;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -947,5 +951,55 @@ public class CharUtils {
             item.quantity(item.quantity()-1);
         }
         return ItemsList.DUMMY;
+    }
+
+    // --- death-flow bridges for items whose state now lives in their kind
+    // scripts (was Ankh.resurrect / DewVial.autoDrink) ---
+
+    // Ankh data kind: consume a valid ankh, non-hero chars revive in place,
+    // heroes get the resurrect dialog (was Ankh.resurrect)
+    public static boolean ankhResurrect(@NotNull Char chr, @NotNull NamedEntityKind cause) {
+        Item ankh = chr.getBelongings().getItem("Ankh");
+
+        if (ankh == null || !ankh.valid()) {
+            return false;
+        }
+
+        chr.getBelongings().removeItem(ankh);
+
+        if (!(chr instanceof Hero)) {
+            chr.resurrect();
+            return true;
+        }
+
+        GameScene.show(new WndResurrect(ankh, cause));
+        return true;
+    }
+
+    // was Dewdrop's forEachBuff dew-bonus accumulation; java.util collections
+    // cannot be iterated from the sandbox on JDK17+
+    @LuaInterface
+    public static int dewBonusSum(@NotNull Char chr) {
+        int[] value = {0};
+        chr.forEachBuff(b -> value[0] += b.dewBonus(chr));
+        return value[0];
+    }
+
+    // DewVial data kind: a full vial saves its owner from death by draining
+    // (was DewVial.autoDrink); the drink itself runs in the kind script
+    public static boolean autoDrinkDewVial(@NotNull Char hero) {
+        Item vialItem = hero.getBelongings().getItem("DewVial");
+        if (vialItem instanceof CustomItem && ((CustomItem) vialItem).itemBooleanHook("isFull", false)) {
+
+            hero.hp(1);//resurrect Hero because simple heal can't
+
+            ((CustomItem) vialItem).itemHook("drink", hero);
+
+            hero.getSprite().emitter().start( ShaftParticle.FACTORY, 0.2f, 3 );
+
+            GLog.w(StringsManager.getVar(R.string.DewVial_AutoDrink));
+            return true;
+        }
+        return false;
     }
 }

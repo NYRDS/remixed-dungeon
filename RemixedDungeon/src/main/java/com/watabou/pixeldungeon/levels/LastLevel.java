@@ -1,12 +1,12 @@
 
 package com.watabou.pixeldungeon.levels;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Random;
@@ -77,7 +77,7 @@ public class LastLevel extends Level {
 
 	@Override
 	protected void createItems() {
-		drop( new Amulet(), pedestal, Heap.Type.HEAP );
+		drop( ItemFactory.itemByName(ItemFactory.AMULET), pedestal, Heap.Type.HEAP );
 	}
 	
 	@Override

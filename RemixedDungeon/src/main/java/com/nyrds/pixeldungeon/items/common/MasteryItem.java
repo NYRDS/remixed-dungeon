@@ -30,6 +30,20 @@ public class MasteryItem extends Item {
 		return false;
 	}
 
+	// the generic tome serves only the classes without their own mastery item
+	// (necromancer: BlackSkullOfMastery, gnoll/doctor/priest: none)
+	public static boolean tomeGivesMasteryTo(Char hero) {
+		switch (hero.getHeroClass()) {
+			case NECROMANCER:
+			case GNOLL:
+			case DOCTOR:
+			case PRIEST:
+				return false;
+			default:
+				return true;
+		}
+	}
+
 	@Override
 	public boolean isUpgradable() {
 		return false;
