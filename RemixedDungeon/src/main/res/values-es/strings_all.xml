@@ -909,6 +909,7 @@ No, no había lugar para ella en la luz, ya no. Ella se apartó de la escasa luz
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">explorador gnoll</string>
     <string name="Gnoll_Name_Objective">explorador gnoll</string>
+    <string name="GodWrath_Info">Fuego sagrado del juicio divino. Inflige un daño sagrado severo a un solo enemigo — ninguna criatura, mundana o monstruosa, escapa a la ira del cielo.</string>
     <string name="GodWrath_Name">Ira de Dios</string>
     <string name="Gold_Collect">Recoge monedas de oro para gastarlas luego en una tienda.</string>
     <string name="Gold_Info">Un montón con %d monedas de oro.</string>
@@ -3133,6 +3134,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

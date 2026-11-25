@@ -604,6 +604,7 @@
     <string name="DeepSnail_Name_Objective">diepe slak</string>
     <string name="DeferedDamageBuff_Info">De pijn is omgezet in vertraagde pijn, wat de schade die op een keer wordt opgelopen vermindert.\nOvergebleven schade om te ontvangen %d</string>
     <string name="DeferedDamage_Killed_Txt">%s heeft je gedood...</string>
+    <string name="DevourBuff_Name">Verslinden</string>
     <string name="DewVial_ACDRINK">DRINK</string>
     <string name="DewVial_AutoDrink">De douwfles is leeggedronken om uw wonden te genezen.</string>
     <string name="DewVial_Collected">Je verzamelde een dauwdruppel in je dauwflesje.</string>
@@ -1658,6 +1659,7 @@
     <string name="RingOfShadows_Info">Vijanden zullen je minder snel opmerken als je deze ring draagt. Aangetaste ringen van schaduwen zullen vijanden waarschuwen die je anders misschien niet hadden opgemerkt.</string>
     <string name="RingOfShadows_Name">Ring van Schaduwen</string>
     <string name="RingOfStoneWalking_ImmuredInStone">Je bent in steen gemetseld. Voor altijd.</string>
+    <string name="RingOfStoneWalking_Name">Ring van Steenbloed</string>
     <string name="RingOfThorns_Info">Hoewel deze ring geen echte doornen biedt, wordt een vijand die je aanvalt zelf gewond door een fractie van de schade die hij toebrengt. Het upgraden van deze ring geeft geen extra bonussen.</string>
     <string name="RingOfThorns_Name">Ring der Doornen</string>
     <string name="Ring_BuffKnown">Dit is een %1$s</string>
@@ -1740,6 +1742,7 @@
     <string name="ScrollHolder_Info">In deze buisvormige houder kun je een willekeurig aantal scrollen plaatsen. Het bespaart ruimte in je rugzak en beschermt scrollen tegen vuur.</string>
     <string name="ScrollHolder_Name">koker voor perkamentrollen</string>
     <string name="ScrollOfChallenge_Info">Wanneer hardop gelezen, zal deze rol een uitdagende brul ontketenen die alle monsters wakker maakt en hen waarschuwt voor de locatie van de lezer.</string>
+    <string name="ScrollOfChallenge_Info1">De perkament straalt een uitdagende brul uit die door de hele kelder weergalmt!</string>
     <string name="ScrollOfChallenge_Name">uitdagingsscrol</string>
     <string name="ScrollOfCurse_Info">Deze rol is speciaal gemaakt om dieven te straffen die dom genoeg zijn om magie te gebruiken die ze niet begrijpen. De magie is totaal nutteloos en zelfs schadelijk voor een gewone avonturier, maar wordt door handelaren goed gewaardeerd.</string>
     <string name="ScrollOfCurse_Name">Vloekscrol</string>
@@ -2639,6 +2642,7 @@
     <string name="town_deco_common_bed_desc">Gewoon bed.</string>
     <string name="town_deco_common_bed_name">Bed</string>
     <string name="town_deco_common_door_desc">Een beleefde avonturier zou geen private eigendom binnendringen, zonder uitnodiging natuurlijk.</string>
+    <string name="town_deco_counter_desc">Houdt een goede afstand tussen jou en de persoon die erachter staat.</string>
     <string name="town_deco_counter_name">Toonbank</string>
     <string name="town_deco_covered_table_desc">Houten tafel met een effen wit tafelkleed.</string>
     <string name="town_deco_covered_table_name">Tafel</string>
@@ -2986,6 +2990,10 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
