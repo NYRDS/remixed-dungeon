@@ -9,7 +9,7 @@ return scroll.init{
         return { price = 50 }
     end,
     doRead = function(self, item, reader)
-        RPD.new(RPD.Sfx.Flare, 5, 32):show(reader:getSprite(), 2)
+        item:showFlare(reader, 5, 32, 0xFF0000, 2)
         RPD.playSound("snd_read")
         RPD.CharUtils:dispelInvisibility(reader)
 

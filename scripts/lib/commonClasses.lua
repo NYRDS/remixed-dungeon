@@ -20,7 +20,6 @@ local Sample           = luajava.bindClass("com.nyrds.platform.audio.Sample")
 local Music            = luajava.bindClass("com.nyrds.platform.audio.MusicManager")
 local StringsManager   = luajava.bindClass("com.nyrds.platform.util.StringsManager")
 local CharUtils        = luajava.bindClass("com.watabou.pixeldungeon.actors.CharUtils")
-local Hero             = luajava.bindClass("com.watabou.pixeldungeon.actors.hero.Hero")
 local ModQuirks        = luajava.bindClass("com.nyrds.pixeldungeon.game.ModQuirks")
 local Util             = luajava.bindClass("com.nyrds.util.Util")
 local ModdingBase      = luajava.bindClass("com.nyrds.util.ModdingBase")
@@ -200,7 +199,7 @@ local Sfx = {
     DeathStroke= luajava.bindClass("com.nyrds.pixeldungeon.effects.DeathStroke"),
     Wound = luajava.bindClass("com.watabou.pixeldungeon.effects.Wound"),
     Splash = luajava.bindClass("com.watabou.pixeldungeon.effects.Splash"),
-    Flare = luajava.bindClass("com.watabou.pixeldungeon.effects.Flare"),
+    Flare = luajava.bindClass("com.watabou.pixeldungeon.effects.Flare"), -- Roar.lua static attach; keep even though scroll reads use Scroll:showFlare
     HighlightCell = luajava.bindClass("com.watabou.pixeldungeon.effects.HighlightCell")
 }
 
@@ -262,7 +261,6 @@ local RPD = {
     CommonActions = CommonActions,
     CharsList = CharsList,
     CharUtils = CharUtils,
-    Hero = Hero,
     MobSpawner = MobSpawner,
     LevelTools = LevelTools,
     SimpleWand = SimpleWand,

@@ -2482,11 +2482,6 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     }
 
     @LuaInterface
-    public boolean isHero() {
-        return this instanceof Hero;
-    }
-
-    @LuaInterface
     public void observe() {
     }
 

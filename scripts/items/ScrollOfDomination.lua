@@ -28,7 +28,7 @@ return scroll.init{
             local pet = candidates[idx + 1]
             if pet:canBePet() then
                 RPD.Mob:makePet(pet, reader:getId())
-                RPD.new(RPD.Sfx.Flare, 3, 32):show(pet:getSprite(), 2)
+                item:showFlare(pet, 3, 32, 0, 2)
                 break
             end
             table.remove(candidates, idx + 1)

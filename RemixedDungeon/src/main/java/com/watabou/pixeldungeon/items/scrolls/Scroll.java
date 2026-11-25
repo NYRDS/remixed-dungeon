@@ -18,6 +18,7 @@ import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.effects.particles.EnergyParticle;
@@ -436,6 +437,17 @@ public class Scroll extends Item implements UnknownItem {
 		item.identify();
 		GLog.i(Utils.format(R.string.ScrollOfIdentify_Info1, item));
 		Badges.validateItemLevelAcquired(item);
+	}
+
+	// the Flare effect for read scripts, minted java-side so the per-kind
+	// lua needs no Flare instance plumbing (was new Flare(..).show(..))
+	@LuaInterface
+	public static void showFlare(@NotNull Char target, int n, int width, int color, float time) {
+		Flare flare = new Flare(n, width);
+		if (color != 0) {
+			flare.color(color, true);
+		}
+		flare.show(target.getSprite(), time);
 	}
 
 	// was ScrollOfUpgrade.upgrade(hero) - upgrade sparkle

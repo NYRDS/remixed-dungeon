@@ -80,3 +80,16 @@ RemixedDungeonHeadless/src/headless/rundir/
 RemixedDungeonHtml/l10ns/
 RemixedDungeonHtml/src/html/java/com/nyrds/pixeldungeon/ml/R.java
 generated/
+
+# Refact AI local tool state (buddy workflows, chats, memory ops)
+.refact/
+
+# agent tool state (matches at any depth)
+.codegraph/
+.zcode/
+# local launch-recipe symlinks
+/assets
+/d_assets
+/rundir/
+/l10ns
+server.pid

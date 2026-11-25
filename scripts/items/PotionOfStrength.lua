@@ -14,7 +14,7 @@ return potion.init{
     end,
     apply = function(self, item, chr)
         item:setKnown()
-        if chr:isHero() then
+        if chr:getEntityKind() == "Hero" then
             chr:STR(chr:STR() + 1)
             chr:showStatus(RPD.CharSprite.POSITIVE, RPD.textById("PotionOfStrength_StaApply"))
             RPD.glogp(RPD.textById("PotionOfStrength_Apply"))

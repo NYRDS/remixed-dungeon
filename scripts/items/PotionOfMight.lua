@@ -13,7 +13,7 @@ return potion.init{
     end,
     apply = function(self, item, chr)
         item:setKnown()
-        if chr:isHero() then
+        if chr:getEntityKind() == "Hero" then
             chr:STR(chr:STR() + 1)
             chr:ht(chr:ht() + 5)
             chr:heal(5, item)
