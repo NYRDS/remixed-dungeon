@@ -709,6 +709,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Ghost_Desc">Ma gần như không thể nhìn thấy. Nó trông như một đốm ánh sáng mờ vô hình với một khuôn mặt buồn bã.</string>
     <string name="Ghost_Name">ma buồn</string>
     <string name="Ghost_Name_Objective">ma</string>
+    <string name="Ghost_Rat1">Chào ngươi, người phiêu lưu... Trước đây ta giống như ngươi - mạnh mẽ và tự tin... Và bây giờ ta đã chết... Nhưng ta không thể rời khỏi nơi này... Chưa cho đến khi ta được trả thù... Hãy giết con _chuột hôi thối_, đã cướp đi cuộc đời ta...</string>
     <string name="Ghost_Rat2">Làm ơn... Giúp tôi... Tiêu diệt quái vật kia...</string>
     <string name="Ghost_Rose1">Chào bạn phiêu lưu gia... Một thời tôi giống như bạn - mạnh mẽ và tự tin... Và bây giờ tôi đã chết... Nhưng tôi không thể rời khỏi nơi này... Cho đến khi tôi tìm được _bông hồng khô_ của tôi... Nó rất quan trọng với tôi... Một vài quái vật đã cướp nó từ thi thể của tôi...</string>
     <string name="Ghost_Rose2">Làm ơn... Giúp tôi... Tìm đóa hồng...</string>
@@ -2495,6 +2496,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_pillar_desc">Ngày xưa, cột này từng đóng vai trò là đỡ đẹp đẽ và trang trí.</string>
     <string name="town_deco_pillar_name">Trụ</string>
     <string name="town_deco_pole_desc">Một cột cao được thiết kế để căng dây.</string>
+    <string name="town_deco_pole_name">Cột</string>
     <string name="town_deco_porch_desc">Hiên làm bằng gỗ.</string>
     <string name="town_deco_poster_desc">Các tờ rơi quảng cáo các buổi chiếu sắp tới tại rạp.</string>
     <string name="town_deco_poster_name">Áp phích</string>
@@ -3207,6 +3209,8 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
 
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
 
 
 

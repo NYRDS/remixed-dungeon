@@ -1124,6 +1124,7 @@
     <string name="LeatherArmor_Desc">Pantser gemaakt van gelooide monsterhuid. Niet zo licht als stoffen pantser, maar biedt betere bescherming.</string>
     <string name="LeatherArmor_Name">leren harnas</string>
     <string name="Leech_Name_0">Vampirisch %s</string>
+    <string name="Leech_Name_1">Vampirisch %s</string>
     <string name="Leech_Name_2">Vampier %s</string>
     <string name="Level_HiddenPlate">Een verborgen drukplaat klikt!</string>
     <string name="Level_TileAlarmTrap">alarmprikkel</string>
@@ -2358,6 +2359,7 @@
     <string name="WndInfoCell_Nothing">Hier is niets.</string>
     <string name="WndInfoItem_Chest">Kist</string>
     <string name="WndInfoItem_CrystalChest">Kristallen kist</string>
+    <string name="WndInfoItem_Inside">Je kunt %s zien, maar om de kist te openen heb je een gouden sleutel nodig.</string>
     <string name="WndInfoItem_LockedChest">Vergrendelde kist</string>
     <string name="WndInfoItem_NeedKey"> Maar om het te openen heb je een gouden sleutel nodig.</string>
     <string name="WndInfoItem_Owner">Deze oude graf kan iets nuttigs bevatten, maar de eigenaar zal zich zeker verzetten tegen het controleren ervan.</string>
@@ -2974,6 +2976,8 @@
 
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
 
 
 
