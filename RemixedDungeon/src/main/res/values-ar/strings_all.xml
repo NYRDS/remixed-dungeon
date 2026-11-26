@@ -1006,6 +1006,7 @@
     <string name="Spells_NotInOwnBody">لا يمكنك تنفيذ %s عندما تنفصل روحك عن جسدك.</string>
     <string name="Spells_SummonLimitReached">%1: تم الوصول لحد الاستدعاء (الحد الأقصى الحالي: %2)!</string>
     <string name="SpiderArmor_Gender">feminine</string>
+    <string name="SpiderCharm_Name">تعويذة العنكبوت</string>
     <string name="SpiderCharm_Use">استخدام</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderElite_Desc">تماماً مثل الجنود، حرس العناكب أقسموا على حماية مملكتهم. يُستخدم سم الحرس النخبوي لتشتيت هدفهم.</string>
@@ -1400,6 +1401,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 
