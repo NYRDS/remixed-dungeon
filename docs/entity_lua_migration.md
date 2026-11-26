@@ -642,8 +642,9 @@ data-def scans (`mobsDesc/*.json`, `scripts/items/*.lua`):
   carve-outs (`Codex`, `SpellBook`, `BlackSkull(OfMastery)`, `Pickaxe`,
   `Carcass` composite kind, `ChaosStaff`), `Gold`, `MasteryItem` (static
   helper behind WndChooseWay), `DummyItem`/`UnknownItem`,
-  `ItemStatusHandler` kinds, plus enchants/glyphs/accessories (not
-  entities).
+  `ItemStatusHandler` kinds, plus accessories (not entities; glyphs and
+  weapon enchants have a conversion design — see the Glyphs & weapon
+  enchantments batch section below).
 - Remaining entity backlog: **blobs** (17 files, deferred by Mike —
   string-key map + ScriptBlob sketch further below) and **10 item-coupled
   buffs** still registered in `BuffFactory` (Viscosity.DeferedDamage,
