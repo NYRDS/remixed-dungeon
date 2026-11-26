@@ -132,6 +132,7 @@
     <string name="Badges_GamesPlayed5">5000 spellen gespeeld</string>
     <string name="Badges_GnollUnlocked">Gnoll ontgrendeld</string>
     <string name="Badges_GoldCollected5">35000 goud verzameld</string>
+    <string name="Badges_GoldColleted1">100 goud verzameld</string>
     <string name="Badges_GoldColleted2">500 goud verzameld</string>
     <string name="Badges_GoldColleted3">2500 goud verzameld</string>
     <string name="Badges_GoldColleted4">7500 goud verzameld</string>
@@ -485,6 +486,7 @@
     <string name="City_TileWater">Verdacht gekleurd water</string>
     <string name="ClassArmor_Desc">Het ding ziet er geweldig uit!</string>
     <string name="ClassArmor_LowHealt">Je gezondheid is te laag!</string>
+    <string name="ClassArmor_LowMana">Onvoldoende mana!</string>
     <string name="ClassArmor_NotEquipped">Je moet dit pantser dragen om zijn speciale kracht te gebruiken!</string>
     <string name="Claymore_Gender">masculine</string>
     <string name="Claymore_Info">Dit massieve zwaard zou in staat moeten zijn om door alles heen te snijden.</string>
@@ -1412,6 +1414,7 @@
     <string name="PetInventory_PetBackpackFull">De rugzak van het huisdier is vol</string>
     <string name="PetInventory_TakeAll">Alles nemen</string>
     <string name="PetInventory_TakeFromPet">Nemen van huisdier</string>
+    <string name="PetInventory_TakeN">Neem %d</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
     <string name="PetInventory_TookItem">%1$s genomen van %2$s</string>
     <string name="PetInventory_ViewManage">Beheren</string>
@@ -1449,6 +1452,7 @@
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Hoest hevig* Hatsjoe!\n De slakken... ze glijden. Ze slijmen. En ze fluisteren geheimen van een vergeten eeuw. Ik heb ze nodig, _tien_ van hen, hun schillen nog intact. Denk je dat slechts _vijftig goudmunten_ genoeg is voor zulke kostbare kennis?\n Bah! Maakt niet uit. De informatie die ze bergen kan de sleutel zijn om deze pest te stoppen. Of... het kan ons leiden tot iets nog vreselijker. Jij beslist.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">De _maanegenade_… een getuigenis van de magie die door deze wereld weeft. Ik heb veel geleerd van hun essentie, maar uw beloning… nou, die is met de utterste zorg bereid. *Reikt de held een schitterende _Manadrank_* Moge de kracht u leiden door de gevaren die u wachten.</string>
+    <string name="PlagueDoctorQuest_2_1_InProgress">Zoek de _moongrace_, waar duisternis de minste glans van het maanlicht ontmoet. _Twee zaden_, hun essentie, zullen verborgene geheimen onthullen.</string>
     <string name="PlagueDoctorQuest_2_1_Prologue">_MaanGenade zaden_… die etherische bloesems, fluisterend met de magie van de maan zelf. Ik heb wekenlang hun vreemde luminescentie bestudeerd. Er zit een kracht in hun essentie, een verborgen energie die de sleutel kan zijn tot… iets. *Tikt bedachtzaam met een botten vinger tegen zijn kin*\nMaar helaas, ze zijn zeldzaam. Alleen te vinden in de diepste grotten waar maanlicht nauwelijks penetreert. Ik heb er twee nodig. Twee zaden om de geheimen van hun kracht te ontgrendelen. En als tegenprestatie kan ik je iets bieden… een proefje van zuivere, krachtige magie. Een _Mana Trank_, vol met de essentie van de MaanGenade. Het zal je moede ziel opvullen en je laten toveren met vernieuwde kracht.</string>
     <string name="PlagueDoctorQuest_2_2_Epilogue">Geweldig! _Het zonnekruid_, zijn gouden essentie pulseert met vitaliteit. Ik heb al veel geleerd van zijn delicate structuur. *Hij overhandigt je een _Drankje der Gezondheid_, de vloeistof glimt met een zwak, gouden licht.* Drink dit als de wereld zwaar op je drukt, en voel hoe de warmte van de zon je geest doet herleven.</string>
     <string name="PlagueDoctorQuest_2_2_InProgress">_Twee zonnegras_ zaden. Hun gouden blaadjes houden een kracht verborgen die ik wil begrijpen. Vind ze, en laat hun essentie openbaar worden!</string>
@@ -2829,6 +2833,10 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

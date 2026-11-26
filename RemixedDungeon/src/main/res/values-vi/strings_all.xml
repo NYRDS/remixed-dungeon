@@ -1240,6 +1240,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="NecromancerNPC_Gender">masculine</string>
     <string name="NecromancerNPC_Intro">À! Thật một cảnh hiếm! Một người bạn đồng hành phiêu lưu không chỉ là một xác chết. Hầu như không thể tin được! Ô... Xin lỗi, đôi khi tôi quá hào hứng. Bạn thấy, tôi là một pháp sư chết chóc. Và dù nghiên cứu xác chết và chính cái chết là nghề nghiệp của tôi, nhưng nhìn thấy những điều giống nhau lặp đi lặp lại cuối cùng cũng cực kỳ mệt mỏi. Mặt khác, đó chính là lý do tôi ở đây. Theo tính toán của tôi, chỉ trong vài tuần nữa, ở đâu đó trong hầm ngục này, sẽ xảy ra một chuyện kỳ diệu. _Necropolis_, một thành phố cổ của người chết sẽ mở cửa. Và... tôi không thể nói thêm, tôi đã lãng phí đủ thời gian. Tôi cần chuẩn bị, _hãy quay lại sau_.</string>
     <string name="NecromancerNPC_Intro2">À! Một bạn đồng hành phiêu lưu không chỉ là một xác chết vô tri. Chẳng thể tin nổi! Ô... xin lỗi, đôi khi tôi hơi quá hứng phấn. Cậu thấy, chính tôi là một pháp sư phục sinh. Dù việc nghiên cứu xác chết và chính cái chết được chúng tôi coi trọng, nhưng sự đơn điệu này sớm muộn cũng khiến ai đó chán nản. Mặt khác đó chính là lý do tôi ở đây. Hôm kia có chuyện lớn xảy ra! _Necropolis_, một thành phố cổ của người chết đã mở cửa cho chúng ta ngắm nhìn. Thực lòng mà nói, chúng ta đang đứng ngay trước cánh cửa ấy. Và... cậu biết sao, hãy lấy chìa khóa và đi trước đi, cậu thích những phiêu lưu, phải không? Còn tôi sẽ theo sau... chỉ cần chuẩn bị chút đã.</string>
+    <string name="NecromancerNPC_Message1">Quá ít thời gian, quá ít thời gian...</string>
     <string name="NecromancerNPC_Message2">Tôi phải sẵn sàng.</string>
     <string name="NecromancerNPC_Message3">Tôi có thể nghe thấy lời kêu gọi của kẻ chết.</string>
     <string name="NecromancerNPC_Message4">Có thứ gì đó đặc biệt bị giấu bên trong Lăng mộ cổ.</string>
@@ -1885,6 +1886,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Sungrass_Desc">Cỏ mặt trời nổi tiếng nhờ nhựa cây có tác dụng chữa lành.</string>
     <string name="Sungrass_Name">cỏ mặt trời</string>
     <string name="SurfaceScene_GameOver">Trò chơi kết thúc</string>
+    <string name="SuspiciousRat_Desc">Chuột không phải là cảnh hiếm gặp trong ngục địa, nhưng việc nó ở sâu đến vậy... Bạn có thể thấy cơ thể con chuột co giật mỗi khi nó di chuyển.</string>
     <string name="SuspiciousRat_Gender">feminine</string>
     <string name="SuspiciousRat_Info1">Con chuột đáng ngờ đang co giật dữ dội.</string>
     <string name="SuspiciousRat_Name">chuột đáng ngờ</string>
@@ -2037,6 +2039,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="WandOfSlowness_Name">Gậy Làm Chậm</string>
     <string name="WandOfTelekinesis_Info">Sóng lực phép thuật từ cây gậy này sẽ tác động lên tất cả các ô trên đường đi, kích hoạt bẫy, giẫm nát cây cối cao, mở cửa đóng và đóng cửa mở. Chúng cũng đẩy lùi quái vật.</string>
     <string name="WandOfTelekinesis_Name">Gậy Thôi Miên</string>
+    <string name="WandOfTeleportation_Info">Một bắn từ cây gậy phép này sẽ dịch chuyển một sinh vật ngẫu ý đến một nơi ngẫu nhiên trên tầng hiện tại.</string>
     <string name="WandOfTeleportation_Info2">không có gì xảy ra</string>
     <string name="WandOfTeleportation_Name">Đũa phép Dịch chuyển</string>
     <string name="Wand_ACZap">ZAP</string>
@@ -2493,6 +2496,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_grandclock_desc">Một cơ chế khá cũ nhưng vẫn hoạt động.</string>
     <string name="town_deco_grandclock_name">Đồng hồ lớn</string>
     <string name="town_deco_grave_desc">Một bia mộ tiêu chuẩn, với khắc chữ đã bị mòn.</string>
+    <string name="town_deco_grave_name">Mộ</string>
     <string name="town_deco_hay_desc">Một đống rơm nhỏ thơm thơm.</string>
     <string name="town_deco_hay_name">Cỏ khô</string>
     <string name="town_deco_identifier_sign_desc">Có vẻ như có một thầy bói bên trong tòa nhà đó.</string>
@@ -2614,6 +2618,10 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
