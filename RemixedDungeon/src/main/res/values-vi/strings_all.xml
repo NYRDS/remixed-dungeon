@@ -440,6 +440,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="City_TileDescEmptySP">Một tấm thảm dày phủ kín sàn.</string>
     <string name="City_TileDescEntrance">Một lối dốc dẫn lên tầng trên.</string>
     <string name="City_TileDescStatue">Tượng đài miêu tả một lùn người đứng trong tư thế anh hùng.</string>
+    <string name="City_TileHighGrass">Cây bụi hoa nở cao</string>
     <string name="City_TileWater">Nước có màu đáng nghi</string>
     <string name="ClassArmor_LowHealt">Sức khỏe của bạn quá thấp!</string>
     <string name="ClassArmor_LowMana">Không đủ mana!</string>
@@ -550,6 +551,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="DeferedDamageBuff_Name">Sát thương hoãn lại (%d)</string>
     <string name="DeferedDamage_Killed_Txt">%s đã giết bạn...</string>
     <string name="DewVial_ACDRINK">UỐNG</string>
+    <string name="DewVial_AutoDrink">Lọ sương đã được dùng hết để chữa lành vết thương của bạn.</string>
     <string name="DewVial_Collected">Bạn đã nhặt một giọt sương vào lọ sương.</string>
     <string name="DewVial_Full">Lọ hơi sương đã đầy!</string>
     <string name="DewVial_Name">lọ sương</string>
@@ -735,6 +737,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Gnoll_Desc">Gnoll là những nhân loại giống linh cẩu. Chúng sống trong cống và ngục tối, thỉnh thoảng lên bề mặt để cướp phá. Trinh sát Gnoll là thành viên bình thường của bầy, không mạnh mẽ như kẻ cục súc và không thông minh như pháp sư.</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll trinh sát</string>
+    <string name="GodWrath_Info">Lửa thiêng của phán quyết thần thánh. Nó gây sát thương thiêng nặng nề cho một kẻ thù đơn lẻ — không sinh vật nào, bình thường hay quái vật, thoát khỏi cơn giận của trời cao.</string>
     <string name="Gold_Collect">Thu thập đồng xu vàng để chi tiêu sau đó tại cửa hàng.</string>
     <string name="Gold_Info1">Một đồng xu vàng.</string>
     <string name="Gold_Name">vàng</string>
@@ -949,6 +952,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="InnKeeperNPC_Gender">masculine</string>
     <string name="InnKeeperNPC_Name">chủ quán</string>
     <string name="InnKeeperNPC_Name_Objective">chủ quán</string>
+    <string name="InnServant_Phrase_1">Ừm, vẫn còn quá nhiều việc phải làm!</string>
     <string name="InnServant_Phrase_2">Gã say rượu này khiến tôi phát điên!</string>
     <string name="InnServant_Phrase_3">Trông sạch sẽ với tôi</string>
     <string name="InnServant_Phrase_4">Ôi trời, hôm nay nhiều khách quá</string>
@@ -1413,6 +1417,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="PotionOfParalyticGas_Info">Khi tiếp xúc với không khí, chất lỏng trong bình này sẽ bốc hơi thành một làn khói vàng gây tê liệt. Bất kỳ ai hít phải đám mây sẽ ngay lập tức bị tê liệt, không thể di chuyển trong một thời gian sau khi khói tan. Vật phẩm này có thể được ném về phía kẻ địch từ xa để chúng chịu tác động của khí độc.</string>
     <string name="PotionOfParalyticGas_Name">Thuốc Độc Khí Tê Liệt</string>
     <string name="PotionOfPurity_Freshness">Bạn cảm thấy một sự tươi mát bất thường trong không khí.</string>
+    <string name="PotionOfPurity_Info">Chất này sẽ nhanh chóng trung hòa tất cả các loại khí độc hại trong khu vực ảnh hưởng. Uống nó sẽ cho bạn một sự miễn dịch tạm thời đối với các loại khí đó.</string>
     <string name="PotionOfPurity_NoSmell">Bạn đã ngừng cảm nhận được mùi hương nào cả!</string>
     <string name="PotionOfStrength_Apply">Sức mạnh mới mẻ tràn ngập cơ thể bạn.</string>
     <string name="PotionOfStrength_Name">Thuốc sức mạnh</string>
@@ -2531,6 +2536,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_pole_desc">Một cột cao được thiết kế để căng dây.</string>
     <string name="town_deco_pole_name">Cột</string>
     <string name="town_deco_porch_desc">Hiên làm bằng gỗ.</string>
+    <string name="town_deco_porch_name">Sân hiên</string>
     <string name="town_deco_poster_desc">Các tờ rơi quảng cáo các buổi chiếu sắp tới tại rạp.</string>
     <string name="town_deco_poster_name">Áp phích</string>
     <string name="town_deco_potions_desc">Một loại thuốc nào đó trên kệ.</string>
@@ -2616,9 +2622,17 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_wooden_stairs_name">Cầu thang</string>
     <string name="town_deco_wooden_table_desc">Đây là một cái bàn gỗ khỏe.</string>
     <string name="town_deco_wooden_table_name">Bàn gỗ</string>
+    <string name="town_table_fortune_ball_name">Quả cầu thủy tinh</string>
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
+
+
 
 
 

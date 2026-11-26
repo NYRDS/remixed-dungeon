@@ -893,6 +893,7 @@ Não, não havia lugar para ela na luz, não mais. Ela se afastou da luz e desce
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll batedor</string>
     <string name="Gnoll_Name_Objective">gnoll batedor</string>
+    <string name="GodWrath_Name">Ira de Deus</string>
     <string name="Gold_Collect">Colete moedas de ouro para gastá-las mais tarde em uma loja.</string>
     <string name="Gold_Info">Uma pilha de %d moedas de ouro.</string>
     <string name="Gold_Info1">Uma moeda de ouro.</string>
@@ -3121,6 +3122,7 @@ remix.31.1\n
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Esta mesa está coberta com uma manta de seda. Você pode ver várias cartas de tarô colocadas em uma ordem peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

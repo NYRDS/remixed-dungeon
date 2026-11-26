@@ -71,6 +71,7 @@
     <string name="ArmorKit_Upgraded">Je hebt de rustingset toegepast om je %s te upgraden</string>
     <string name="Armor_EquipCursed">je %s knelt pijnlijk rond je</string>
     <string name="Armor_Glyph">glyph</string>
+    <string name="Armor_Identify">je bent nu voldoende vertrouwd met je %1 om het te identificeren. Het is %2.</string>
     <string name="Armor_Incompatible">De interactie van verschillende soorten magie heeft het symbool op dit pantser gewist!</string>
     <string name="Armor_Info2">\n\nDoor onvoldoende kracht zijn je bewegingssnelheid en verdedigingsvaardigheid verminderd.</string>
     <string name="Armor_Info3">\n\nOmdat je kracht ontoereikend is, zal het dragen van deze pantser je beweegsnelheid en verdedigingsvaardigheid verminderen.</string>
@@ -90,6 +91,7 @@
     <string name="Attack_Cooldown">Aanvalvertraging</string>
     <string name="Attack_Range">Aanvalsbereik</string>
     <string name="AwarenessBuff_Info">De zintuigen zijn verscherpt, wat meer bewustzijn van de omgeving geeft.</string>
+    <string name="AwarenessBuff_Name">Bewustzijn</string>
     <string name="AzuterronNPC_Desc">Een mysterieuze figuur gehuld in zwarte mist.</string>
     <string name="AzuterronNPC_Gender">masculine</string>
     <string name="AzuterronNPC_Name">Vreemdeling</string>
@@ -586,6 +588,7 @@
     <string name="DarkSacrifice_Resist">Je hebt geen macht over mij!</string>
     <string name="DarkSacrifice_Self">Voor de Plaag!</string>
     <string name="DarkVeilBuff_Info">Een sluier van duisternis omringt de eigenaar en roept telkens een geest op wanneer schade wordt opgelopen.</string>
+    <string name="DarkVeilBuff_Name">Donker sluier</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Deze eenvoudige metalen spikes zijn perfect gewogen om hun prooi nauwkeurig te doorboren.</string>
     <string name="Dart_Name">dart</string>
@@ -1118,6 +1121,7 @@
     <string name="Kusarigama_Info">Dit wapen bestaat uit een zeis aan een metalen ketting met een zwaar ijzeren gewicht aan het andere uiteinde.</string>
     <string name="Kusarigama_Name">kusarigama</string>
     <string name="Kusarigama_Pull">TREKKEN</string>
+    <string name="Larva_Desc">Larve van de Oude God</string>
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">larve van de god</string>
     <string name="LastLevel_TileDescWater">Het lijkt op lava, maar het is koud en waarschijnlijk veilig om aan te raken.</string>
@@ -1616,6 +1620,7 @@
     <string name="RatKing_Info3">Hoe durf je, onbeduidend wezentje, Onze Rattigheid te storen?!</string>
     <string name="RatKing_Name">rattenkoning</string>
     <string name="RatKing_Name_Objective">rattenkoning</string>
+    <string name="RatSkullBuff_Info">De scherpe stank doet alle andere knaagdieren in de buurt vluchten, waardoor ze wegvluchten van de drager van het schedel.</string>
     <string name="RatSkullBuff_Name">Ratverdelger</string>
     <string name="RatSkull_Info">Het zou een mooie jagdtrofee kunnen zijn, maar het ruikt te slecht om het aan de muur te hangen.</string>
     <string name="RatSkull_Info2">Aan de andere kant bewijst het dat de eigenaar in staat is om ratten te doden, zelfs grote en stinkende.</string>
@@ -2251,6 +2256,7 @@
     <string name="WaterElemental_Gender">masculine</string>
     <string name="WaterElemental_Name_Objective">waterelementair</string>
     <string name="WaterOfAwareness_Info">De kracht van kennis straalt vanuit het water van deze bron. Neem een slok om alle geheimen van je uitrusting te onthullen.</string>
+    <string name="WaterOfAwareness_Procced">Terwijl je een slok neemt, voel je de kennis in je geest vloeien. Je weet nu alles over je uitgeruste items. Ook waan je alle items op het niveau en weet al zijn geheimen.</string>
     <string name="WaterOfHealth_Info">De kracht van gezondheid straalt uit het water van deze put. Neem een slok om je wonden te helen en je honger te stillen.</string>
     <string name="WaterOfHealth_Procced">Wanneer je een slok neemt, voel je dat je wonden volledig genezen.</string>
     <string name="WaterOfTransmutation_Info">Kracht van verandering straalt uit van het water van deze put. Gooi een item in de put om het in iets anders te veranderen.</string>
@@ -2493,6 +2499,7 @@
     <string name="WndSaveSlotSelect_Delete_No">Nee</string>
     <string name="WndSaveSlotSelect_Delete_Title">Weet je zeker dat je deze opslagstatus wilt verwijderen?</string>
     <string name="WndSaveSlotSelect_Delete_Yes">Ja, verwijder het!</string>
+    <string name="WndSaveSlotSelect_LoadAutoSave">Automatisch opslaan laden</string>
     <string name="WndSaveSlotSelect_SelectSlot">Selecteer een sleuf</string>
     <string name="WndSaveSlotSelect_dontLike">Hou je niet van advertenties? Doe een donatie, en ze verdwijnen. Voor altijd.</string>
     <string name="WndSelectLanguage_ImproveTranslation">Help alsjebliept de vertalingen van Remixed Dungeon te verbeteren</string>
@@ -2834,6 +2841,13 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
+
 
 
 
