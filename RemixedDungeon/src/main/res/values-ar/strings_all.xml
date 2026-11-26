@@ -1307,6 +1307,7 @@
     <string name="town_deco_armorstand_plate_desc">وفقاً للتاجر، كان هذا الدروع الثقيلة ينتمي يوماً ما إلى محارب عظيم.</string>
     <string name="town_deco_armorstand_scale_name">درع حرشفي</string>
     <string name="town_deco_banner_desc">لافتة أنيقة تصور رموز هذه الحانة.</string>
+    <string name="town_deco_barrel_desc">برميل عادي، ليس في أفضل حالة أيضًا.</string>
     <string name="town_deco_barrel_wine_desc">يستخدم لتخزين مشروب ثمين مثل النبيذ.</string>
     <string name="town_deco_beige_carpet_name">سجادة</string>
     <string name="town_deco_bell_desc">جرس كنيسة تقليدي. يبدو أن أحداً لم يقرعه منذ وقت طويل، وحتى الحبل مفقود.</string>
@@ -1399,6 +1400,7 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
 
 
 

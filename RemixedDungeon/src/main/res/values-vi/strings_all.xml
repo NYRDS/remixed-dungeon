@@ -1035,6 +1035,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Larva_Gender">feminine</string>
     <string name="Larva_Name">ấu trùng của thần</string>
     <string name="Larva_Name_Objective">ấu trùng của thần</string>
+    <string name="LastLevel_TileDescStatue">Cột này được làm từ sọ người thật sự. Tuyệt vời.</string>
     <string name="LastLevel_TileDescWater">Nó trông giống như nham thạch, nhưng lạnh và có lẽ an toàn để chạm.</string>
     <string name="LastLevel_TileGrass">Rêu than</string>
     <string name="LastLevel_TileStatue">Cột trụ</string>
@@ -2634,6 +2635,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
 
 
 
