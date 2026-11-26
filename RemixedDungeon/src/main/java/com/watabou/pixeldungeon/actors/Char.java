@@ -1965,6 +1965,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
     public void busy() {
     }
 
+    @LuaInterface
     public void interrupt() {
     }
 
@@ -2341,6 +2342,7 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         return effectiveSTR();
     }
 
+    @LuaInterface
     public void accumulateSkillPoints(int n) {
     }
 

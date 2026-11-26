@@ -32,15 +32,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
-import com.watabou.pixeldungeon.plants.DreamweedSeed;
-import com.watabou.pixeldungeon.plants.EarthrootSeed;
-import com.watabou.pixeldungeon.plants.FadeleafSeed;
-import com.watabou.pixeldungeon.plants.FirebloomSeed;
-import com.watabou.pixeldungeon.plants.IcecapSeed;
-import com.watabou.pixeldungeon.plants.MoongraceSeed;
-import com.watabou.pixeldungeon.plants.RotberrySeed;
-import com.watabou.pixeldungeon.plants.SorrowmossSeed;
-import com.watabou.pixeldungeon.plants.SungrassSeed;
+import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
@@ -300,30 +292,33 @@ public class ItemFactory {
         registerItemKind(Food.CHRISTMAS_TURKEY, Food::new);
         registerItemKind("WandOfIcebolt", Wand::new);
 
-        registerItemClassByName(RotberrySeed.class, "Rotberry.Seed");
-        registerItemClassByName(EarthrootSeed.class, "Earthroot.Seed");
-        registerItemClassByName(FirebloomSeed.class, "Firebloom.Seed");
-        registerItemClassByName(SungrassSeed.class, "Sungrass.Seed");
-        registerItemClassByName(DreamweedSeed.class, "Dreamweed.Seed");
-        registerItemClassByName(SorrowmossSeed.class, "Sorrowmoss.Seed");
-        registerItemClassByName(IcecapSeed.class, "Icecap.Seed");
-        registerItemClassByName(FadeleafSeed.class, "Fadeleaf.Seed");
-        registerItemClassByName(MoongraceSeed.class, "Moongrace.Seed");
+        // data seeds: one Seed framework + scripts/items/<Kind>.lua each
+        // (dotted kinds load through the dofile/asInstance path - require's
+        // searchpath maps every dot to a separator)
+        registerItemKind("Rotberry.Seed", Seed::new);
+        registerItemKind("Earthroot.Seed", Seed::new);
+        registerItemKind("Firebloom.Seed", Seed::new);
+        registerItemKind("Sungrass.Seed", Seed::new);
+        registerItemKind("Dreamweed.Seed", Seed::new);
+        registerItemKind("Sorrowmoss.Seed", Seed::new);
+        registerItemKind("Icecap.Seed", Seed::new);
+        registerItemKind("Fadeleaf.Seed", Seed::new);
+        registerItemKind("Moongrace.Seed", Seed::new);
 
-        // seeds moved to top-level classes (batch 20): item kinds unchanged,
-        // but untagged saves carry the old inner-class FQNs whose derived kind
+        // seeds moved to data kinds (batch 20/21): item kinds unchanged, but
+        // untagged saves carry the old inner-class FQNs whose derived kind
         // ("Seed") misses the "<Plant>.Seed" registries — route the old FQNs
         // through the alias map
-        Bundle.addAlias(RotberrySeed.class, "com.watabou.pixeldungeon.plants.Rotberry$Seed");
-        Bundle.addAlias(RotberrySeed.class, "com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker$Rotberry$Seed");
-        Bundle.addAlias(EarthrootSeed.class, "com.watabou.pixeldungeon.plants.Earthroot$Seed");
-        Bundle.addAlias(FirebloomSeed.class, "com.watabou.pixeldungeon.plants.Firebloom$Seed");
-        Bundle.addAlias(SungrassSeed.class, "com.watabou.pixeldungeon.plants.Sungrass$Seed");
-        Bundle.addAlias(DreamweedSeed.class, "com.watabou.pixeldungeon.plants.Dreamweed$Seed");
-        Bundle.addAlias(SorrowmossSeed.class, "com.watabou.pixeldungeon.plants.Sorrowmoss$Seed");
-        Bundle.addAlias(IcecapSeed.class, "com.watabou.pixeldungeon.plants.Icecap$Seed");
-        Bundle.addAlias(FadeleafSeed.class, "com.watabou.pixeldungeon.plants.Fadeleaf$Seed");
-        Bundle.addAlias(MoongraceSeed.class, "com.watabou.pixeldungeon.plants.Moongrace$Seed");
+        Bundle.addKindAlias("Rotberry.Seed", "com.watabou.pixeldungeon.plants.Rotberry$Seed");
+        Bundle.addKindAlias("Rotberry.Seed", "com.watabou.pixeldungeon.actors.mobs.npcs.WandMaker$Rotberry$Seed");
+        Bundle.addKindAlias("Earthroot.Seed", "com.watabou.pixeldungeon.plants.Earthroot$Seed");
+        Bundle.addKindAlias("Firebloom.Seed", "com.watabou.pixeldungeon.plants.Firebloom$Seed");
+        Bundle.addKindAlias("Sungrass.Seed", "com.watabou.pixeldungeon.plants.Sungrass$Seed");
+        Bundle.addKindAlias("Dreamweed.Seed", "com.watabou.pixeldungeon.plants.Dreamweed$Seed");
+        Bundle.addKindAlias("Sorrowmoss.Seed", "com.watabou.pixeldungeon.plants.Sorrowmoss$Seed");
+        Bundle.addKindAlias("Icecap.Seed", "com.watabou.pixeldungeon.plants.Icecap$Seed");
+        Bundle.addKindAlias("Fadeleaf.Seed", "com.watabou.pixeldungeon.plants.Fadeleaf$Seed");
+        Bundle.addKindAlias("Moongrace.Seed", "com.watabou.pixeldungeon.plants.Moongrace$Seed");
 
         registerItemKind("RingOfFrost", Ring::new);
         registerItemKind(Food.CANDY, Food::new);

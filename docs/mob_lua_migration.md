@@ -2477,3 +2477,56 @@ UsableArtifact constant) needs charge>0 AND identifyLevel>0; the status
 counter shows only from identifyLevel 1; a cursed crystal marks its OWNER;
 headless cell selection answers via `RPD.GameScene:handleCell(cell)` and
 cancels via `cancelCellSelector()`.
+
+## Seeds batch (2026-11-26): the 9 plant seeds → data kinds on the Seed framework
+
+The last unmigrated item kinds (after items batches 1-5): Dreamweed/
+Earthroot/Fadeleaf/Firebloom/Icecap/Moongrace/Rotberry/Sorrowmoss/Sungrass
+seeds. `Seed.java` is now a kind-parameterized framework on the Food pattern
+(`registerItemKind("<Plant>.Seed", Seed::new)` + `scripts/items/<Kind>.lua`
+per kind built with the new `scripts/lib/seed.lua`); the 9 java *Seed
+classes are deleted. Item kinds unchanged ("Sungrass.Seed" — Treasury/
+alchemy/quest references and modern saves resolve as before); legacy
+"…plants.<Plant>$Seed" and "…npcs.WandMaker$Rotberry$Seed" FQNs route via
+`Bundle.addKindAlias` (the batch-20 addAlias(Class) forms are gone with the
+classes).
+
+Dotted-kind loading trap: require's searchpath maps EVERY dot to a file
+separator, so `require("scripts/items/Sungrass.Seed")` would look for
+Sungrass/Seed.lua. The framework therefore loads kind scripts per-instance
+(`asInstance()` → dofile, which takes the name verbatim); hooks stay
+stateless. A bare-`require` module named like the kind is NOT possible
+until luaj's searchpath changes.
+
+Framework surface: `desc` (data table: plantName/descText string ids via
+maybeId + image + alchemyKind), `onEat(self,item,chr)` after the eat
+plumbing (the old per-seed AC_EAT overrides: buff affects, heals with the
+java Random.Int [a,b) → math.random(a,b-1) conversion, Fadeleaf teleport,
+Moongrace skill points), `onCollect(self,item,bag)` (Rotberry challenge +
+hero-only GLog warn), `inflammable(self,item,cell)` (Rotberry burn identity;
+default burns to nothing). Seed.base keeps AC_PLANT → onThrow → level.plant
+→ couch via LevelObjectsFactory plantKind; GardenPainter constructs via
+ItemFactory.itemByName now.
+
+Engine fix (needed for legacy dotted-kind saves): Bundle.resolveByDerivedKind
+treated the dot in an addKindAlias TARGET ("Sungrass.Seed") as a package
+separator, derived "Seed", missed every registry, and fell into
+Class.forName on the alias string — restore silently returned nil. The
+resolver now tries the exact name against all four system resolvers BEFORE
+the package/$-tail derivation (no behavior change for dot-free FQNs, whose
+exact names never match a registry). Also Item.getEntityKind() during field
+init (name/info getClassParam lookups run before the kind ctor arg lands)
+reverse-looked-up the class registry — for the Seed framework (no
+registerItemClass entry) that logged "Unregistered entry" 3× per instance;
+the framework override answers "Seed" until itemKind lands instead.
+
+Verification: tests/http_api/test_items_seeds.py 7/7 — descriptors ×9
+(name/desc/alchemyKind/image/bag/price/actions), eat effects ×8 (buffs
+observed headless), Rotberry blobs (Toxic+Paralytic via RPD.placeBlob) +
+level-wide challenge warn + burn semantics, plant flow ×9 + the AC_PLANT
+action path, Treasury SEED rolls, legacy FQN restores ×5 + tagged kind,
+save round-trip through the real save path. Alchemy 42/42 (Rotberry.Seed →
+PotionOfStrength brew), priest quest suite through the Moongrace.Seed
+offering stage, mod sweep 7/7, android/desktop/html/headless compiles.
+Known pre-existing (not seeds): the priest suite's ceremony check asserts a
+"Blessed" class-name buff, which lua CustomBuffs never report.

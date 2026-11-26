@@ -1,35 +1,35 @@
 
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.plants.MoongraceSeed;
-import com.watabou.pixeldungeon.plants.SungrassSeed;
+import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.utils.Random;
 
 public class GardenPainter extends Painter {
 
 	public static void paint( Level level, Room room ) {
-		
+
 		fill( level, room, Terrain.WALL );
 		fill( level, room, 1, Terrain.HIGH_GRASS );
 		fill( level, room, 2, Terrain.GRASS );
-		
+
 		room.entrance().set( Room.Door.Type.REGULAR );
-		
+
 		int bushes = Random.Int( 3 ) == 0 ? (Random.Int( 5 ) == 0 ? 2 : 1) : 0;
 		for (int i=0; i < bushes; i++) {
 			int cellToPlant = room.random(level);
-			
+
 			if(level.getTopLevelObject(cellToPlant)==null) {
-				level.plant( new SungrassSeed(), cellToPlant );
+				level.plant( (Seed) ItemFactory.itemByName("Sungrass.Seed"), cellToPlant );
 			}
 
 			cellToPlant = room.random(level);
 			if(level.getTopLevelObject(cellToPlant)==null) {
-				level.plant( new MoongraceSeed(), cellToPlant );
+				level.plant( (Seed) ItemFactory.itemByName("Moongrace.Seed"), cellToPlant );
 			}
 		}
 		

@@ -185,6 +185,14 @@ public class Bundle {
      */
     @Nullable
     private Bundlable resolveByDerivedKind(String className) {
+        // exact name first: addKindAlias targets are real kind strings with a
+        // dot ("Sungrass.Seed") that must not read as a package separator in
+        // the derivation below
+        Bundlable exact = tryResolvers(className);
+        if (exact != null) {
+            return exact;
+        }
+
         String kind;
         int lastDot = className.lastIndexOf('.');
         if (lastDot < 0) {
@@ -197,6 +205,11 @@ public class Bundle {
         if (nested >= 0) {
             kind = kind.substring(nested + 1);
         }
+        return tryResolvers(kind);
+    }
+
+    @Nullable
+    private Bundlable tryResolvers(String kind) {
         for (String system : RESOLVER_PRIORITY) {
             Function<String, Bundlable> resolver = entityResolvers.get(system);
             if (resolver == null) {
