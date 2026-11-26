@@ -2544,6 +2544,100 @@ offering stage, mod sweep 7/7, android/desktop/html/headless compiles.
 Known pre-existing (not seeds): the priest suite's ceremony check asserts a
 "Blessed" class-name buff, which lua CustomBuffs never report.
 
+## Glyphs & weapon enchantments batch design (2026-11-26, planned — not started)
+
+The natural next slice: both are already buffs wearing item hats, with the
+identical shape, so they convert as one batch.
+
+Current state (both mirror each other):
+
+- `Armor.Glyph extends Buff implements Bundlable, NamedEntityKind, Doom`
+  (Armor.java) — 10 kinds, 545 lines; `Weapon.Enchantment extends Buff
+  implements Bundlable, NamedEntityKind` (Weapon.java) — 11 kinds.
+  Per-kind variance is ONE abstract hook: `defenceProc(armor, attacker,
+  defender, damage)` / `proc(weapon, attacker, defender, damage)`; plus
+  `name(...)` (localized, enchant names already resolve via
+  `getClassParams(kind, "Name", 3 gender forms)`) and `glowing()`.
+  Registries are `Class<?>[]` tables with `chances[]` weights rolled by
+  `Glyph.random()` / `Enchantment.random()`.
+- The item holds the instance in a public field (`Armor.glyph`,
+  `Weapon.enchantment`, `@Packable`-serialized → nested Bundlable bundle,
+  legacy CLASS_NAME FQN). desc-json carries the name string, matched via
+  `Util.byNameFromList` against the Class[] table.
+- `Viscosity` is the only one with state: an inner `DeferedDamage` buff
+  (the same one sitting in the BuffFactory 10-list) — converting the glyph
+  moves that buff to `scripts/buffs/DeferedDamage.lua` and shrinks the
+  item-coupled-buff backlog to 8.
+- Per-glyph mechanics all sit on proven lua surfaces: Charm ×2
+  (Affection), Frost+ignite (AntiEntropy), Roots+the batch-20 "Armor"
+  CustomBuff (Entanglement), CharUtils appear / MirrorImage data mob
+  (Displacement/Multiplicity), heal+hunger (Metabolism),
+  `RPD.placeBlob(ToxicGas)` (Stench), pure math (Bounce), damage + a
+  Lightning visual (Potential — needs one `Effects.lightning` bridge),
+  deferred damage (Viscosity). Est. 2-3 tiny `@LuaInterface`/bridge
+  additions total.
+
+Plan (one batch, seeds-shaped):
+
+1. Framework: `Glyph(String kind)` / `Enchantment(String kind)`
+   kind-parameterized ctors; the `Class<?>[]`+`chances[]` tables become a
+   kind registry with weights from each kind's `desc.chance`;
+   `random()` rolls kinds. Java keeps `onHeroDeath` (death-from-glyph
+   badge + fail message) and the hook dispatch.
+2. Kind scripts `scripts/glyphs/<Kind>.lua` / `scripts/enchants/<Kind>.lua`
+   auto-register via the scripts scan (CustomItem/plants precedent);
+   vanilla kind names = today's class simple names ("Bounce"…"Viscosity",
+   "Fire"…"Luck"), so desc-json references need no regeneration.
+3. Armor/Weapon call sites (`inscribe`, upgrade-churn reroll,
+   `ItemUtils.inscribeRandomGlyph`, Stylus/ScrollOfEnchantment flows) go
+   by kind. Bundle: `addKindAlias` for the 21 legacy FQNs — the
+   seeds-batch exact-first `resolveByDerivedKind` fix is load-bearing
+   (glyph names carry no dot, but the alias path is the same one).
+4. Gates: battery — inscribe each kind by string, take a hit, observe the
+   proc (buff/gas/teleport/mirror/roots/heal/deferred), reroll churn on
+   upgrade, legacy FQN restore, glowing/name UI parity, mod sweep
+   (mirror mods may bind glyph/enchant FQNs).
+
+General mechanism: creating a NEW glyph / weapon enchantment after this
+batch (mods included, zero java):
+
+1. Ship `scripts/glyphs/MyGlyph.lua`:
+   ```lua
+   local glyph = require "scripts/lib/glyph"
+   return glyph.init{
+       desc = function()
+           return {
+               name   = "MyGlyph_Name",   -- string id or literal; maybeId'd
+               glowing = { color = 0x8888FF, period = 1 },  -- or omit = white
+               chance = 5,                -- weight in Glyph.random(); 0/absent
+                                          -- = inscribe-by-kind only
+           }
+       end,
+       defenceProc = function(self, armor, attacker, defender, damage)
+           -- ... RPD.affectBuff / placeBlob / heal / teleport ...
+           return damage                  -- the damage actually taken
+       end,
+   }
+   ```
+   Same shape for `scripts/enchants/MyEnchant.lua` with
+   `proc(self, weapon, attacker, defender, damage)` returning
+   true/false ("fired" — vanilla convention gates the durability/charge
+   side effects). The scan auto-registers the kind; state per attached
+   item goes through the item script state, per-hero side buffs through
+   normal CustomBuffs (`scripts/buffs/*.lua`).
+2. Reference it by kind string everywhere: desc-json `"glyph": "MyGlyph"`,
+   `ItemUtils` inscribe flows, `RPD.item(...)`-style bridges. The random
+   pool only includes kinds whose `chance > 0`, so rare/quest-only glyphs
+   are just `chance = 0`.
+3. Strings: `<Kind>_Name` ids (enchant: 3 gender forms, existing
+   convention) resolve through StringsManager as usual — no java, no
+   registry edits, no recompile.
+
+Wave order vs the rest of the backlog: glyphs+enchants can run before or
+after blobs wave 1 (Stench's gas works via today's `placeBlob`); running
+it first shrinks the buffs backlog to 8 and touches none of the blob
+machinery.
+
 ## Blobs batch design (Mike's ruling 2026-11-26: unique mechanics stay java, kinds go lua, addressed by string keys)
 
 Today: `Map<Class<? extends Blob>,Blob>` (level.blobs), FQN-bundled (BLOBS
