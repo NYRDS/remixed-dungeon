@@ -619,32 +619,34 @@ Every Bundlable category that reaches a save, and how it resolves:
 Traps exist twice: terrain triggers (`ITrigger` classes, not bundled) and
 `LevelObject` trap objects (bundled, covered by the factory above).
 
-## Coverage audit (2026-09-10; counts refreshed 2026-09-15 after batches 12-14)
+## Coverage audit (2026-09-10; refreshed 2026-09-15, then 2026-11-26 after items/spells/seeds)
 
 Transitive closure over all `Mob`/`Item` descendants in
 `RemixedDungeon/src/main/java`, checked against factory registrations and
 data-def scans (`mobsDesc/*.json`, `scripts/items/*.lua`):
 
-- Mobs: every concrete descendant is reachable by kind. 93 kinds are
-  data-defined (`mobsDesc/*.json`, the migration target), 45 + 3 manual
-  entries remain java-registered (bosses, NPCs, engine mobs — see the
-  batch-15 survey for their override surfaces). Statue, ArmoredStatue,
-  GoldenStatue, the batch-12 kinds and the batch-15 Yog/IceGuardian kinds
-  have NO java class anymore; their old-save FQNs resolve through the
-  FQN-tail route to CustomMob.
-  `CustomMob`/`MultiKindMob` are base classes; the nested
-  `WandOfFlock$Sheep` is registered manually as `Sheep`.
-- Items: 185 concrete descendants. All registered or lua-defined except
-  `ChaosBlade` (chaos event → inventory) — **was java-side, not lua;
-  registered 2026-09-10**; `Carcass` (dropped on mob death, saved in
-  heaps) is fine once resolution reads `entityKind` — its kind is the
-  composite `Carcass of <Mob>` and `itemByName` already handles the
-  prefix. The rest
-  of the unregistered list are base classes never instantiated directly
-  (`Armor`, `Ring`, `Potion`, `Weapon`, `Key`, `Bag`, `Seed`, …), UI-only
-  (`ItemPlaceholder`), reconstructed-not-bundled (`Backpack` — its
-  contents store flat into the Belongings bundle), the data path itself
-  (`CustomItem`), and dead code (`TitanSword`, zero references).
+- Mobs: every concrete descendant is reachable by kind, and since batches
+  12-17 + the boss tier ALL of them are data-defined — zero java mob
+  classes remain except **ServiceManNPC** (ads machinery, stays per
+  ruling, rides a json profile). Framework bases (`Mob`, `CustomMob`
+  folded into it) and AI-state classes (`Hunting`, `Fleeing`, …) are
+  engine, not entities.
+- Items: every per-item kind is data since batches 1-5 + the spells batch
+  (f643bf706) + the seeds batch (c23a60ed8, `Seed` framework). What
+  remains java is by design: kind FRAMEWORK bases (`Food`, `Potion`,
+  `Scroll`, `Ring`, `Wand`, `Key`, `Bag`, `MeleeWeapon`, `KindOfBow`,
+  `MissileWeapon`, `Arrow`, `Armor`, `ClassArmor`, `Seed`, …), batch-4/5
+  carve-outs (`Codex`, `SpellBook`, `BlackSkull(OfMastery)`, `Pickaxe`,
+  `Carcass` composite kind, `ChaosStaff`), `Gold`, `MasteryItem` (static
+  helper behind WndChooseWay), `DummyItem`/`UnknownItem`,
+  `ItemStatusHandler` kinds, plus enchants/glyphs/accessories (not
+  entities).
+- Remaining entity backlog: **blobs** (17 files, deferred by Mike —
+  string-key map + ScriptBlob sketch further below) and **10 item-coupled
+  buffs** still registered in `BuffFactory` (Viscosity.DeferedDamage,
+  Hunger — ruled stays java, Necrotism, RageBuff, the mechanics/Moongrace
+  buff, + the 5 batch-4e quest/ring auras OneWayLove/OneWayCursedLove/
+  RatterAura/HeartOfDarkness/RatKingAura).
 - No duplicate registrations, no simple-name collisions within mobs or
   items, no kind shared between the mob and item factories. No entities in
   other modules.
@@ -1285,6 +1287,11 @@ Design:
   the ItemFactory registration (first caller of the mechanism, map
   applied at Bundle.java alias lookup). Fixtures: cleartext-save grep for
   the Rotberry entry shape pre/post move, reload, both must restore.
+  (2026-11-26: the seed classes are gone — the alias is now a kind target,
+  `Bundle.addKindAlias("Rotberry.Seed", "…WandMaker$Rotberry$Seed")`, and
+  derived-kind resolution tries the exact kind string BEFORE the
+  package/$-tail derivation, which previously split "Rotberry.Seed" at the
+  dot and silently nil-restored; see the Seeds batch section.)
   ImmortalNPC stays for ServiceManNPC.
 
 Kind strings stay the java simple names (Ghost, WandMaker, Blacksmith, Imp,
@@ -2238,6 +2245,9 @@ Mechanics:
   `"<Plant>.Seed"` unchanged. Old saves carrying the dead inner-class FQNs
   route through 9 new `Bundle.addAlias` lines in ItemFactory (plus the
   pre-existing WandMaker$Rotberry alias retarget).
+  **Superseded 2026-11-26**: the seeds went full-data on the `Seed`
+  framework — see the Seeds batch section at the bottom (the java classes
+  and the addAlias(Class) forms are gone; kind strings unchanged).
 - `Seed.plantClass` Class-ref replaced by `plantKind` string; `couch()` =
   `LevelObjectsFactory.objectByName` + `setKind`. `Level.plant(Seed,pos)`
   untouched (already lua-exposed).
@@ -2530,3 +2540,24 @@ PotionOfStrength brew), priest quest suite through the Moongrace.Seed
 offering stage, mod sweep 7/7, android/desktop/html/headless compiles.
 Known pre-existing (not seeds): the priest suite's ceremony check asserts a
 "Blessed" class-name buff, which lua CustomBuffs never report.
+
+## Blobs batch design sketch (ruling needed, not blocking — 2026-11-26)
+
+Today: `Map<Class<? extends Blob>,Blob>` (level.blobs), FQN-bundled (BLOBS
+node → `Class.forName`), class-typed helpers (`Level
+fillAreaWith/clearAreaFrom/blobAmountAt`, `Blob.seed(Level,cell,amount,Class)`,
+painters `GardenPainter/MagicWellPainter/LaboratoryPainter`, PotionOfPurity
+3-blob cancel). 15 concrete kinds: gases Toxic/Paralytic/Confusion/Miasma +
+Fire/Freezing/LiquidFlame + Web/Darkness/Regrowth/Foliage + wells
+WellWater/WaterOfHealth/WellOfAwareness/WellOfTransmutation + Alchemy.
+Per-kind variance = `evolve()` override (per-covered-cell affect + custom
+spread writes: Web/Regrowth terrain) + `use(BlobEmitter)` particle
+factory/pour + tileDesc + onHeroDeath (`Doom`: Toxic) + cross-blob cancel
+(Toxic↔Paralytic, purity).
+
+Rec (needs a Mike ruling before work): string-key the map (kind →
+instance) like the other migrated systems, a literal vanilla kind→Class
+table (the TRAP_KINDS pattern) for the 15, `ScriptBlob(module)` for script
+kinds; wells + Alchemy + Foliage stay java longest (level-gen coupling +
+brewing). Lua-side placement already exists: `RPD.placeBlob(kind, cell,
+amount)` (used by ColdSpirit Freezing, Spinner Web, Rotberry.Seed).
