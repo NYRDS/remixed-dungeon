@@ -2727,11 +2727,12 @@ planned batches (glyphs+enchants, 8 buffs, small carve-outs, blobs waves
    scans, bundle machinery (`@Packable`, aliases, derived resolution),
    `ItemStatusHandler` unknown-name machinery, journal/heaps storage
    plumbing, AI-state classes (`Hunting`, `Fleeing`, …).
-3. **UI/window-coupled** (TeaVM window machinery is not lua-reachable —
-   established by the headless/window round): `Codex`, `SpellBook`,
+3. **UI/window-coupled** (`Codex`, `SpellBook`,
    `BlackSkull(OfMastery)` WndChooseWay flows, `WndChasmJump`, inventory
-   selection windows behind scroll/upgrade flows. These kinds move only
-   if a lua window bridge is ever built.
+   selection windows behind scroll/upgrade flows). Not cost — blocked on a
+   lua window bridge, which now has a design: the `ScriptedWindow` class +
+   `window.lua` (see the Lua windows design section). With it these kinds
+   move and this layer shrinks to the HUD/scenes (rendering/cost, layer 1).
 4. **Platform-coupled / explicit rulings**: `ServiceManNPC` (ads
    machinery), accessories (cosmetic avatar slots — hats/masks, no
    mechanics, not entities), `Gold` (core currency plumbing), `Door.leave`
@@ -2752,3 +2753,35 @@ Cheap but still-java at the time of writing, queued to move:
 Completion queue: glyphs+enchants → 8 buffs (+Hunger if ruled) →
 Pickaxe/Carcass/ChaosStaff → blobs wave 1 → blobs wave 2. After that
 every entity kind is json/lua and java is exactly layers 1-4 above.
+
+## Lua windows design (2026-11-27 — escape path for the UI/window-coupled layer)
+
+Feasibility: mostly built already. `luajava.newInstance` constructs real
+scene2d windows from lua in production today (`scripts/lib/itemSelector.lua`
+builds WndBag with mode+title; Stylus/ArmorKit/CurseItem consume it
+cross-platform), and `RemixedDungeon.luaCallByGlobalId(callbackId, args…)`
+is a GENERIC lua-callback dispatcher in the platform layer —
+`LuaWndBagListener` is just one consumer of it. Windows run on the game
+thread (same thread as every lua hook), so no threading bridge; headless
+no-ops windows and the CI harness already consumes callbacks directly
+(`_G.ItemSelectionCallbacks`, `GameScene:handleCell`).
+
+What is missing — ONE generic bridge class:
+
+- `ScriptedWindow`: constructed from a lua spec table
+  (`{title, text, options = {...}, icon, rows}`), builds the scene2d
+  widgets in java, dispatches each button/index through
+  `luaCallByGlobalId(index, …)`. One class covers the
+  WndOptions / WndStory / WndChooseWay dialog shape — which is exactly
+  what makes Codex, SpellBook and BlackSkullOfMastery window-coupled
+  (WndChooseWay is icon + text + 2 buttons). Grows optional row types
+  (item grids, input fields) incrementally if mods demand.
+- `scripts/lib/window.lua`: spec builder + callback-id bookkeeping (the
+  `_G.ItemSelectionCallbacks` pattern generalized).
+
+With that bridge the window-coupled kinds become movable: their flows
+re-express as kind-script calls (`showWindow{...}` + a callback hook), the
+java dialog classes delete, and the end-state layer 3 shrinks to the HUD
+and scenes — which stay java as the rendering/cost layer regardless. Scope
+is modal dialogs only, not a free-form UI kit; TeaVM registers the bridge
+class like the LuaWndBagListener precedent.
