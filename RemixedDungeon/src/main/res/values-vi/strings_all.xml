@@ -851,6 +851,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="HeroSubClass_DescBers">Khi bị thương nặng, _Berzerker_ rơi vào trạng thái cuồng nộ dữ dội, tăng đáng kể lượng sát thương gây ra.</string>
     <string name="HeroSubClass_DescFreR">_Kẻ Vượt Rào_ có thể di chuyển gần gấp đôi so với hầu hết quái vật. Khi đang chạy, kẻ vượt rào khó bị đánh trúng hơn nhiều. Nhưng để làm được điều đó, anh ta không được quá tải và phải no bụng.</string>
     <string name="HeroSubClass_DescGlad">Một cú đánh thành công bằng vũ khí cận chiến cho phép _Gladiator_ bắt đầu một combo, trong đó mỗi đòn đánh thành công tiếp theo gây sát thương lớn hơn.</string>
+    <string name="HeroSubClass_DescGuardian">Kiến thức phòng thủ khéo léo cho phép _Guardian_ phản công bằng khiên, khiến hắn thành kẻ thù đáng gờm đối với những kẻ dám tấn công chiếc pháo đài di động này.</string>
     <string name="HeroSubClass_DescNone">Không có tiểu chuyên môn</string>
     <string name="HeroSubClass_DescScout">_Trinh sát_ yêu tinh là bậc thầy tàng hình. Giẫm đạp cỏ cao giúp họ nhận một hiệu ứng tàng hình tạm thời. Ngoài ra họ còn nhanh hơn yêu tinh thường.</string>
     <string name="HeroSubClass_DescShaman">_Shaman_ yêu tinh có thể sử dụng đũa phép như vũ khí cận chiến. Các đòn đánh thành công có khả năng kích hoạt sức mạnh của đũa trên mục tiêu mà không tiêu tốn một lần sạc.</string>
@@ -1373,6 +1374,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="PlagueDoctor_Desc">Cả cơ thể của người gù lưng này bị che giấu dưới một bộ đồ nhảy da. Ngoài ra, từ người ấy tỏa ra mùi thuốc đắng và... tỏi?</string>
     <string name="PlagueDoctor_Gender">masculine</string>
     <string name="PlagueDoctor_Name">y sĩ đen</string>
+    <string name="Plant_ACPlant">TRỒNG</string>
     <string name="Plant_Info">Ném hạt giống này vào nơi bạn muốn trồng %1$s.\n\n%2$s</string>
     <string name="Plant_Seed">hạt giống %s</string>
     <string name="PlateArmor_Name">áo giáp tấm</string>
@@ -2481,6 +2483,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_curtains_desc">Chặn hết ánh sáng không cần thiết và cũng là vật trang trí tuyệt vời.</string>
     <string name="town_deco_curtains_name">Bức rèm</string>
     <string name="town_deco_door_desc">Một cánh cửa gỗ đơn giản.</string>
+    <string name="town_deco_door_name">Cửa</string>
     <string name="town_deco_dungeon_door_desc">lối vào hang động.</string>
     <string name="town_deco_dungeon_door_name">cửa hang</string>
     <string name="town_deco_emptyboard_desc">Giá tiêu chuẩn nhất để trưng bày đồ vật.</string>
@@ -2631,6 +2634,9 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 
