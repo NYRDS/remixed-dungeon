@@ -2564,31 +2564,44 @@ per tick, and per-covered-cell effects resolve chars (O(covered×actors)).
 A lua-owned evolve loop would both run the hot loop in lua and let a mod
 write an O(n²) walker that wedges the tick. Java stays the executor.
 
-The split (Mike's shape):
+The split (Mike's refined ruling 2026-11-26: the line is COST, not
+"uniqueness" — non-O(n²) mechanics are worth moving to lua):
 
-- **Java keeps every unique mechanic**: the diffusion/evolve loop, volume
-  decay, emitter plumbing (`use(BlobEmitter)`), terrain writes (Web stick,
-  Regrowth grow), cross-blob cancel pairs, hero-death handling, and the
-  whole of the mechanics-coupled kinds — wells (x4), Alchemy (brewing),
-  Foliage (light/cover for gardens). These are not scriptable.
+- **Java keeps only the hot machinery**:
+  - the full-level 4-neighbor diffusion pass (base `Blob.evolve`, O(area)
+    per blob per tick) — the executor for the 4 gases
+    Toxic/Paralytic/Confusion/Miasma;
+  - the generic covered-cell walker (volume decay sweep + emitter
+    plumbing + per-covered-cell dispatch + bundling) — the executor for
+    the non-diffusing kinds (Darkness-style: the walk itself is O(area)
+    branch-cheap, the real work is per covered cell);
+  - cross-blob cancel pairs, hero-death (`Doom`) handling, char-at-cell
+    lookup as a bridge.
+- **Lua owns every cheap mechanic** — the per-covered-cell effect bodies
+  of ALL kinds move to `scripts/blobs/<Kind>.lua` as `affect(cell, chr)`
+  (and where relevant a bounded `spread(pos)` hook for the ×4 neighbor
+  writes Fire/Regrowth/Web do — O(covered×4), not quadratic):
+  gas poison/paralysis/confusion-vertigo effects, fire ignite + heap
+  burning (via the existing `Item.burn` bridges), freezing, web
+  sticking, darkness dim, regrowth grass growth, foliage garden
+  heal/light, well effects, the alchemy pot's heap scan. Vanilla kinds
+  become thin lua modules choosing a base executor by kind string +
+  params — same overlay/override story as foods and seeds.
 - **Blob kinds become string keys** like every other entity:
-  `BlobFactory`-style registry kind → blob; the bundle stores `entityKind`
-  (legacy FQN entries route through the standard `addKindAlias` +
-  exact-first derived resolution — the seeds-batch fix is load-bearing
-  here). The 15 vanilla kinds register their existing java classes under
-  their simple names, so vanilla behavior and saves are untouched.
-- **New/scriptable kinds = `ScriptBlob`**: a `scripts/blobs/<Kind>.lua`
-  module that ADDRESSES a java mechanic template by kind string, e.g.
-  `base = "ToxicGas"` inherits that executor's diffusion class, cancel
-  pairs and immunities, then overrides the cheap policy layer in lua:
-  `desc` table (decay/diffusion constants, tileDesc, emitter choice by
-  kind reference, killsHero flag) + per-covered-cell `affect(cell, chr)`
-  hook (the old per-cell `affect` body, not the loop).
+  registry kind → blob; the bundle stores `entityKind` (legacy FQN
+  entries route through the standard `addKindAlias` + exact-first derived
+  resolution — the seeds-batch fix is load-bearing here).
 - **Perf guardrails**: lua hooks fire only for covered cells (volume > 0),
-  never per level cell; the char lookup at a cell stays a java bridge (no
-  lua mob-list scans inside blob hooks); the SLOW SCRIPT watchdog covers
-  wedges. Worst case for a script blob = the vanilla executor's cost.
+  never per level cell; no lua mob-list scans inside blob hooks (the
+  char-at-cell bridge answers the only question hooks need); the SLOW
+  SCRIPT watchdog covers wedges. Worst case for a script blob = the
+  vanilla executor's cost.
 - Level/painter call sites switch to kind strings (`blobPut`, painters,
   PotionOfPurity cancel by kind pair); `RPD.placeBlob(kind, cell, amount)`
   already speaks strings (ColdSpirit Freezing, Spinner Web, Rotberry.Seed
   use it today).
+- Batch order: wave 1 = registry + executors + gases (diffusion in java,
+  effects lua) + the easy field kinds (Darkness/Web/Freezing/Fire/
+  LiquidFlame/Regrowth/Foliage); wave 2 = wells + Alchemy effect bodies
+  (heaviest java coupling — item transmutation swaps, brewing inventory
+  interaction — port last, kinds string-keyed from wave 1).
