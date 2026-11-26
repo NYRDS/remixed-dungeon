@@ -2,9 +2,9 @@
 package com.watabou.pixeldungeon.items.wands;
 import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.UnknownItem;
-import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
@@ -14,6 +14,7 @@ import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.nyrds.util.Scrambler;
 import com.watabou.noosa.Group;
+import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
@@ -25,6 +26,8 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.DeathRay;
 import com.watabou.pixeldungeon.effects.MagicMissile;
+import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
+import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.items.ItemStatusHandlerKinds;
@@ -40,18 +43,14 @@ import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-import com.watabou.noosa.particles.Emitter;
-import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
-import com.watabou.pixeldungeon.effects.particles.SnowParticle;
-import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.luaj.vm2.LuaValue;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.luaj.vm2.LuaValue;
 
 /**
  * Data wands: one java kind-parameterized framework, per-kind data and

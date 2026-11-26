@@ -11,6 +11,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfUpgrade extends InventoryScroll {
+
+	public static final String KIND = "ScrollOfUpgrade";
+
 	public ScrollOfUpgrade() {
 		super(UPGRADE);
 	}

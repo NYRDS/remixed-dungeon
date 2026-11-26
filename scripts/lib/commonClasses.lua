@@ -123,14 +123,19 @@ local Objects = {
         WndBag         = "com.watabou.pixeldungeon.windows.WndBag",
         WndBalance     = "com.watabou.pixeldungeon.windows.WndBalance",
         WndLibrary     = "com.nyrds.pixeldungeon.windows.WndLibrary",
-        WndPortal      = "com.nyrds.pixeldungeon.windows.WndPortal",
-        WndPortalReturn = "com.nyrds.pixeldungeon.windows.WndPortalReturn",
+        WndPortal      = "com.watabou.pixeldungeon.windows.WndPortal",
+        WndPortalReturn = "com.watabou.pixeldungeon.windows.WndPortalReturn",
+        LuaWndBagListener = "com.nyrds.pixeldungeon.windows.LuaWndBagListener",
         Image          = "com.watabou.noosa.Image",
         Banner         = "com.watabou.pixeldungeon.ui.Banner"
     },
 
     Actors = {
         ScriptedActor = "com.nyrds.pixeldungeon.mechanics.actors.ScriptedActor"
+    },
+
+    Actions = {
+        UseSpell = "com.nyrds.pixeldungeon.ml.actions.UseSpell"
     },
 }
 

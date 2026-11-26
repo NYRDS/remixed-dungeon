@@ -700,7 +700,7 @@ public abstract class RegularLevel extends CustomLevel {
 
 		for (Item item : itemsToSpawn) {
 			int cell = randomDropCell();
-			if (item instanceof ScrollOfUpgrade) {
+			if (ScrollOfUpgrade.KIND.equals(item.getEntityKind())) {
 
 				while (!isCellSafeForPrize(cell)) {
 					cell = randomDropCell();

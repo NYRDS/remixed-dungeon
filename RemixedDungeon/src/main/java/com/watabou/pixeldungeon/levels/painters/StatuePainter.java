@@ -1,9 +1,9 @@
 
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import static com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory.STATUE;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;

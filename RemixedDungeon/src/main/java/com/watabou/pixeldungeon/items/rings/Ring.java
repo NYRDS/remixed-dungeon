@@ -18,12 +18,11 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-import org.jetbrains.annotations.NotNull;
-import org.luaj.vm2.LuaValue;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import org.jetbrains.annotations.NotNull;
+import org.luaj.vm2.LuaValue;
 
 /**
  * Data rings: one java kind-parameterized framework, per-kind data and

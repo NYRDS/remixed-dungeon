@@ -109,14 +109,23 @@ public class CustomItem extends EquipableItem implements IActingItem {
 
     @Override
     public boolean isIdentified() {
+        if (script != null && script.hasMethod("isIdentified")) {
+            return script.runOptional("isIdentified", Boolean.FALSE);
+        }
         if (initialIdentified) {
             return true;
         }
         return identified;
     }
 
+    // kinds with a custom identify pipeline (ChaosCrystal's 3-level counter)
+    // bypass the default identified flag + Library side effects
     @Override
     public Item identify() {
+        if (script != null && script.hasMethod("identify")) {
+            script.runOptionalNoRet("identify");
+            return this;
+        }
         identified = true;
         return super.identify();
     }
@@ -202,6 +211,13 @@ public class CustomItem extends EquipableItem implements IActingItem {
         return script != null && script.runOptional(hook, defVal);
     }
 
+    // string query into this item's script state (SpellBook raw spell kind);
+    // a null defVal is NOT usable here - runOptional discards the return when
+    // the default is null, pass "" and treat it as absent
+    public String itemStringHook(String hook, String defVal) {
+        return script != null ? script.runOptional(hook, defVal) : defVal;
+    }
+
     // invoke a stateful hook on this item's script (vial drink/fill/collectDew);
     // fixed arities - luajava reflection cannot call varargs methods
     public void itemHook(String hook) {
@@ -241,6 +257,24 @@ public class CustomItem extends EquipableItem implements IActingItem {
     @Override
     public String status() {
         return script != null ? script.runOptional("status", super.status()) : super.status();
+    }
+
+    // ItemSlot artifact status line ("x/100" charge counters); kinds define
+    // getText/getColor hooks - a nil getText keeps the slot textless
+    @Override
+    public String getText() {
+        if (script != null && script.hasMethod("getText")) {
+            return script.run("getText").optjstring(super.getText());
+        }
+        return super.getText();
+    }
+
+    @Override
+    public int getColor() {
+        if (script != null && script.hasMethod("getColor")) {
+            return script.run("getColor").optint(super.getColor());
+        }
+        return super.getColor();
     }
 
     // Dewdrop: grass/plant dew never announces (was Dewdrop.announcePickUp)
@@ -544,6 +578,9 @@ public class CustomItem extends EquipableItem implements IActingItem {
         public void onSelect(Integer cell, @NotNull Char selector) {
             if(cell!=null) {
                 script.run("cellSelected", action, cell);
+            } else {
+                // cancel path (ChaosCrystal spent its time even when canceled)
+                script.runOptionalNoRet("cellCanceled", action);
             }
         }
 

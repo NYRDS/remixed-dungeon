@@ -2,18 +2,16 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.nyrds.Packable;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
-import com.watabou.pixeldungeon.items.EquipableItem;
-import org.luaj.vm2.LuaValue;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.util.ArrayList;
 import org.jetbrains.annotations.NotNull;
+import org.luaj.vm2.LuaValue;
 
 public class ClassArmor extends Armor {
 

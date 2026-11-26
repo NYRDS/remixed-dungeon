@@ -1,7 +1,6 @@
 
 package com.watabou.pixeldungeon.ui;
 
-import com.watabou.pixeldungeon.items.keys.Key;
 import com.nyrds.pixeldungeon.game.GameLoop;
 import com.nyrds.platform.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
@@ -18,6 +17,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.BloodParticle;
+import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;

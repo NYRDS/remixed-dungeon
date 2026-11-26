@@ -1,10 +1,9 @@
 
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import org.jetbrains.annotations.NotNull;
-
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.utils.Random;
+import org.jetbrains.annotations.NotNull;
 
 public class Dart extends MissileWeapon {
 

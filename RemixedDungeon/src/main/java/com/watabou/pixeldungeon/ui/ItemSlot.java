@@ -7,7 +7,6 @@ import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.PseudoItem;
-import com.watabou.pixeldungeon.items.rings.Artifact;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -178,15 +177,12 @@ public class ItemSlot extends Button {
             bottomRight.text(Utils.EMPTY_STRING);
         }
 
-        if (item instanceof Artifact) {
-            Artifact artifact = (Artifact) item;
-            String text = artifact.getText();
+        String text = item.getText();
 
-            if (text != null) {
-                topLeft.text(artifact.getText());
-                topLeft.hardlight(artifact.getColor());
-                topLeft.setVisible(true);
-            }
+        if (text != null) {
+            topLeft.text(text);
+            topLeft.hardlight(item.getColor());
+            topLeft.setVisible(true);
         }
 
         layout();

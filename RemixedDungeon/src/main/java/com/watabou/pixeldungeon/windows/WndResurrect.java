@@ -1,7 +1,7 @@
 
 package com.watabou.pixeldungeon.windows;
 
-import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.WndHelper;
@@ -39,7 +39,7 @@ public class WndResurrect extends Window {
 			titlebar.icon( new ItemSprite( ankh ) );
 			titlebar.label( ankh.name() );
 		} else {
-			titlebar.icon( new ItemSprite( new BlackSkull()) );
+			titlebar.icon( new ItemSprite( ItemFactory.itemByName("BlackSkull")) );
             titlebar.label( Utils.capitalize(StringsManager.getVar(R.string.Necromancy_Title)) );
 		}
 

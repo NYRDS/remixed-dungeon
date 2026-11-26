@@ -1,9 +1,8 @@
 
 package com.watabou.pixeldungeon.windows;
 
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.common.MasteryItem;
-import com.nyrds.pixeldungeon.items.necropolis.BlackSkull;
-import com.nyrds.pixeldungeon.items.necropolis.BlackSkullOfMastery;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.game.RemixedDungeon;
 import com.nyrds.platform.util.StringsManager;
@@ -108,9 +107,9 @@ public class WndChooseWay extends Window {
 			protected void onClick() {
 				hide();
 				Hero hero = Dungeon.hero;
-				Item a = hero.getBelongings().getItem( BlackSkullOfMastery.class );
+				Item a = hero.getBelongings().getItem("BlackSkullOfMastery");
 				a.removeItemFrom(hero);
-				Item b = new BlackSkull();
+				Item b = ItemFactory.itemByName("BlackSkull");
 				b.doDrop(hero);
 			}
 		};

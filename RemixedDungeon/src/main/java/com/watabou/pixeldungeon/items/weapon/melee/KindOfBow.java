@@ -9,7 +9,6 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndBag;
 import java.util.ArrayList;
-import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import org.jetbrains.annotations.NotNull;
 
 public class KindOfBow extends MeleeWeapon {

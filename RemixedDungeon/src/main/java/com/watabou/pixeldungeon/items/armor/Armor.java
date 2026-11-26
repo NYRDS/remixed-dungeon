@@ -4,7 +4,6 @@ package com.watabou.pixeldungeon.items.armor;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
-import org.luaj.vm2.LuaValue;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -38,6 +37,7 @@ import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaValue;
 
 public class Armor extends EquipableItem {
 

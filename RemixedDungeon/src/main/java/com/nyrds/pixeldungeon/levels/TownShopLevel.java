@@ -1,6 +1,5 @@
 package com.nyrds.pixeldungeon.levels;
 
-import com.watabou.utils.Random;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mobs.common.MobFactory;
@@ -8,10 +7,10 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.food.Food;
-import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.painters.Painter;
+import com.watabou.utils.Random;
 import java.util.Arrays;
 
 public class TownShopLevel extends Level {

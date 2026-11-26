@@ -1,7 +1,8 @@
 package com.nyrds.pixeldungeon.mechanics.spells;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
+import com.nyrds.pixeldungeon.items.ItemUtils;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.ml.actions.UseSpell;
@@ -175,10 +176,10 @@ public class Spell implements NamedEntityKind {
 			return;
 		}
 		EquipableItem artifact = chr.getBelongings().getItemFromSlot(Belongings.Slot.ARTIFACT);
-		if (artifact instanceof SpellBook) {
-			SpellBook book = (SpellBook) artifact;
-			if (getEntityKind().equals(book.spell) && !book.isIdentified()) {
-				book.identify();
+		if (artifact != null && artifact.getEntityKind().equals(ItemFactory.SPELL_BOOK)) {
+			String bookSpell = ItemUtils.spellBookSpell(artifact);
+			if (getEntityKind().equals(bookSpell) && !artifact.isIdentified()) {
+				artifact.identify();
 			}
 		}
 	}
@@ -187,11 +188,11 @@ public class Spell implements NamedEntityKind {
 	public Image castIcon(@NotNull Char caster) {
 		if (caster == Dungeon.hero) {
 			EquipableItem artifact = caster.getBelongings().getItemFromSlot(Belongings.Slot.ARTIFACT);
-			if (artifact instanceof SpellBook) {
-				SpellBook book = (SpellBook) artifact;
-				if (getEntityKind().equals(book.spell) && !book.isIdentified()) {
-					Image bookImage = new Image(TextureCache.get(book.imageFile()));
-					bookImage.frame(TextureCache.getFilm(book.imageFile(), 16, 16).get(book.image()));
+			if (artifact != null && artifact.getEntityKind().equals(ItemFactory.SPELL_BOOK)) {
+				String bookSpell = ItemUtils.spellBookSpell(artifact);
+				if (getEntityKind().equals(bookSpell) && !artifact.isIdentified()) {
+					Image bookImage = new Image(TextureCache.get(artifact.imageFile()));
+					bookImage.frame(TextureCache.getFilm(artifact.imageFile(), 16, 16).get(artifact.image()));
 					return bookImage;
 				}
 			}

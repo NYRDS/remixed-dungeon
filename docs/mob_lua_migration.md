@@ -2424,3 +2424,56 @@ floor(ht*0.3) with SP cost, gust push 798→830, Fire blob at the ray landing,
 Roots, Frost+Slow, Deathling pet + limit veto at count>=limit + formatted
 desc). Suites all green: all_spells 38/38, doctor 7/7, blood 6/6, nav PASS,
 alchemy 42/42; mod gate PASS ×7; android + html compile green.
+
+## Items batch 5 (2026-11-26): the last 5 java item kinds → lua
+
+SpellBook, BlackSkull, BlackSkullOfMastery, ChaosCrystal, ChaosArmor (the
+latter already kind-served since 4d) deleted; ChaosStaff stays a java class
+(save restore falls through to Class.forName, and ItemUtils.chaosFuseResult
+news it directly). SpellBook.lua AUTO-FIXES the batch-4e flagged regression:
+the scripts/items scan re-registers the kind, Treasury.json's UNIQUE entry
+resolves again — spell books roll as loot (40-roll probe in the battery).
+
+New CustomItem engine surface: `identify`/`isIdentified` script dispatch
+(ChaosCrystal's 3-level counter bypasses the identified flag + Library side
+effects; the java quirk of reverting to the unknown name at level 3+ is
+preserved), `getText`/`getColor` hooks (ItemSlot status line — Item.getText/
+getColor promoted from Artifact to Item base, so the slot's
+`instanceof Artifact` became a plain null-check), `itemStringHook` (script
+state string query; runOptional DISCARDS the return when the default is
+null — pass "" and treat it as absent), and a `cellCanceled` hook fired on
+the null-cell selection path (ChaosCrystal spent its time even on cancel —
+java parity). ItemUtils bridges: `spellBookSpell` (raw kind, no roll),
+`spellBookResolveSpell` (spell() parity: "" rolls a random Common spell and
+persists it), `chaosFuseResult` (the fuse type routing — family instanceof
+stays java-side like Treasury.bestWeapon). LuaWndBagListener + UseSpell are
+bound in commonClasses Objects tables.
+
+BlackSkull's charDied flow needed NO new surface (CustomItem.charDied hook
+existed); BlackSkullOfMastery keeps the java WndChooseWay contract —
+MasteryItem is now a static-helper holder (choose/tomeGivesMasteryTo), the
+"remain necromancer" button resolves by kind ("BlackSkullOfMastery" in
+belongings → BlackSkull via ItemFactory). WndResurrect's icon item comes
+from the factory too. Kind-check conversions: Spell.identifySourceBook/
+castIcon, MobItemAi.spellBookScore, WaterOfTransmutation (SpellBook),
+ScrollOfUpgrade/ScrollOfWeaponUpgrade pairs (5 sites — KIND constants added
+to both classes), ItemSlot artifact branch. Drive-by: FactorySpriteGenerator
+(desktop sprite tool) was still importing the 7 class-armor classes deleted
+in 4d — desktop compile had been silently red; now itemByName kinds.
+
+Save-compat: all four kinds resolve from legacy FQN entries via
+resolveByDerivedKind + loadLegacy reading the @Packable fields (spell /
+activated+charge / charge+identifyLevel). Old saves of ChaosStaff restore
+via the untouched class. Verification: tests/http_api/test_items_batch5.py
+5/5 (fresh-item parity, read→self-identify→Light, Treasury loot, charge
+cycle 9→awaken→resurrect-with-undead-pet→noResurrection opt-out, LICH
+choose -2 STR, real CellSelector selection via GameScene:handleCell +
+cancel path, fuse routing ×6 + full callback, 4 legacy FQN restores);
+alchemy 42/42; mod sweep 7/7 (all mod refs are kind strings); android +
+html + desktop + headless compile green.
+
+ChaosCrystal UI traps for future rounds: AC_USE ("SpiderCharm_Use", the
+UsableArtifact constant) needs charge>0 AND identifyLevel>0; the status
+counter shows only from identifyLevel 1; a cursed crystal marks its OWNER;
+headless cell selection answers via `RPD.GameScene:handleCell(cell)` and
+cancels via `cancelCellSelector()`.

@@ -1,9 +1,9 @@
 
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
-import com.watabou.pixeldungeon.actors.CharUtils;
 import com.nyrds.pixeldungeon.ml.R;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.armor.Armor;

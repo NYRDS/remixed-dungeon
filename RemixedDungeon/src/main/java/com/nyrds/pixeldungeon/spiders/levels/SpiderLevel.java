@@ -221,7 +221,7 @@ public class SpiderLevel extends CommonLevel {
 
 		for (Item item : itemsToSpawn) {
 			int cell = randomRespawnCell();
-			if (item instanceof ScrollOfUpgrade) {
+			if (ScrollOfUpgrade.KIND.equals(item.getEntityKind())) {
 
 				while (!isCellSafeForPrize(cell)) {
 					cell = randomRespawnCell();

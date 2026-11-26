@@ -4,7 +4,6 @@ import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -12,23 +11,15 @@ import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
-import org.jetbrains.annotations.NotNull;
 
-public class MasteryItem extends Item {
+/**
+ * Java side of the mastery-window contract: the completion driven by
+ * WndChooseWay (the tomes themselves are script items - TomeOfMastery,
+ * BlackSkullOfMastery).
+ */
+public class MasteryItem {
 
 	public static final float TIME_TO_READ = 10;
-
-	@Override
-	public boolean doPickUp(@NotNull Char hero ) {
-		if(givesMasteryTo(hero)) {
-			Badges.validateMastery(hero.getHeroClass());
-		}
-		return super.doPickUp( hero );
-	}
-
-	public boolean givesMasteryTo(Char hero) {
-		return false;
-	}
 
 	// the generic tome serves only the classes without their own mastery item
 	// (necromancer: BlackSkullOfMastery, gnoll/doctor/priest: none)
@@ -42,16 +33,6 @@ public class MasteryItem extends Item {
 			default:
 				return true;
 		}
-	}
-
-	@Override
-	public boolean isUpgradable() {
-		return false;
-	}
-
-	@Override
-	public boolean isIdentified() {
-		return true;
 	}
 
 	public static void choose(Char hero, Item masteryItem, HeroSubClass way) {

@@ -1,8 +1,8 @@
 
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.items.Treasury;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.utils.ItemsList;
 import com.watabou.pixeldungeon.actors.blobs.Alchemy;
 import com.watabou.pixeldungeon.items.Heap;

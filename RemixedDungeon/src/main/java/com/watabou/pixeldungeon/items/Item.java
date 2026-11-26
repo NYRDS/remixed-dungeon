@@ -567,6 +567,16 @@ public class Item extends Actor implements Bundlable, Presser, NamedEntityKindWi
         return quantity() != 1 ? Integer.toString(quantity()) : Utils.EMPTY_STRING;
     }
 
+    // ItemSlot status line: null = no text; artifacts and script kinds
+    // (CustomItem getText/getColor hooks) supply charge counters
+    public String getText() {
+        return null;
+    }
+
+    public int getColor() {
+        return 0;
+    }
+
     private static final String QUANTITY = "quantity";
     private static final String LEVEL = "level";
 

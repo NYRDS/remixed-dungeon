@@ -2,6 +2,7 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.nyrds.pixeldungeon.items.ItemOwner;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.pixeldungeon.windows.VBox;
 import com.nyrds.platform.util.StringsManager;
@@ -22,7 +23,6 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.util.ArrayList;
 import java.util.List;
-import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
 import org.jetbrains.annotations.NotNull;
 
 public class WndTradeItem extends Window {

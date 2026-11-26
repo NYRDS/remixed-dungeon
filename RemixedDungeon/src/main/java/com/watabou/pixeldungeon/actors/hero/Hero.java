@@ -341,7 +341,7 @@ public class Hero extends Char {
         var itemText = item.name();
 
         if (item.announcePickUp()) {
-            if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade) item).isKnown())
+            if ((ScrollOfUpgrade.KIND.equals(item.getEntityKind()) && item.isIdentified())
                     || (item instanceof Potion && Potion.STRENGTH.equals(item.getEntityKind()) && ((Potion) item).isKnown())) {
                 itemText = Text.color(item.name(), CharSprite.POSITIVE);
             }

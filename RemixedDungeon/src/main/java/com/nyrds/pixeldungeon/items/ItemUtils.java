@@ -1,83 +1,74 @@
 package com.nyrds.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
+import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
+import com.nyrds.pixeldungeon.levels.objects.LevelObject;
+import com.nyrds.pixeldungeon.levels.objects.Presser;
+import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.nyrds.pixeldungeon.mechanics.spells.Spell;
+import com.nyrds.pixeldungeon.mechanics.spells.SpellFactory;
 import com.nyrds.pixeldungeon.ml.R;
+import com.nyrds.pixeldungeon.mobs.common.MobFactory;
 import com.nyrds.pixeldungeon.utils.CharsList;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.audio.Sample;
 import com.nyrds.platform.util.StringsManager;
-import com.watabou.noosa.ColorBlock;
-import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.Actor;
-import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.effects.Pushing;
-import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
-import com.nyrds.pixeldungeon.levels.objects.Presser;
-import com.watabou.pixeldungeon.items.EquipableItem;
-import com.watabou.pixeldungeon.items.Heap;
-import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.Armor;
-import com.watabou.pixeldungeon.items.bags.Bag;
-import com.watabou.pixeldungeon.items.food.Food;
-import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
-import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
-import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
-import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.traps.Electricity;
-import com.watabou.pixeldungeon.sprites.ItemSprite;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
-import com.nyrds.platform.EventCollector;
-import com.nyrds.platform.audio.Sample;
+import com.watabou.noosa.ColorBlock;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
-import com.watabou.pixeldungeon.mechanics.ShadowCaster;
-import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
-import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
-import com.watabou.pixeldungeon.sprites.MissileSprite;
-import com.watabou.pixeldungeon.effects.Flare;
-
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.DeathRay;
+import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Lightning;
+import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.Speck;
-import com.watabou.pixeldungeon.effects.particles.SparkParticle;
+import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
-import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
-import com.watabou.pixeldungeon.effects.particles.SnowParticle;
+import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
+import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
+import com.watabou.pixeldungeon.effects.particles.SparkParticle;
+import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.items.food.Food;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
+import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
+import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
+import com.watabou.pixeldungeon.levels.traps.Electricity;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
-import com.nyrds.pixeldungeon.levels.objects.LevelObject;
-import com.nyrds.pixeldungeon.mobs.common.MobFactory;
+import com.watabou.pixeldungeon.mechanics.ShadowCaster;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.sprites.MissileSprite;
 import com.watabou.pixeldungeon.utils.BArray;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
-import com.nyrds.platform.util.StringsManager;
-import com.nyrds.pixeldungeon.ml.R;
+import com.watabou.utils.Random;
 import java.util.ArrayList;
 import java.util.HashSet;
-import com.watabou.utils.Random;
 import org.jetbrains.annotations.NotNull;
 
 public class ItemUtils {
@@ -750,5 +741,84 @@ public class ItemUtils {
 	@LuaInterface
 	public static void detachArtifactBuff(@NotNull Char target, @NotNull Item source) {
 		Buff.detachAllBySource(target, source);
+	}
+
+	// ---- SpellBook bridges (was artifacts/SpellBook.java, a CustomItem now) ----
+
+	/**
+	 * Raw spell kind stored in a SpellBook; "" = never rolled. No resolve, no
+	 * persistence - for kind-comparison sites (Spell casting reveal, icon).
+	 */
+	@LuaInterface
+	public static String spellBookSpell(@NotNull Item item) {
+		if (!item.getEntityKind().equals(ItemFactory.SPELL_BOOK)) {
+			return Utils.EMPTY_STRING;
+		}
+		return ((CustomItem) item).itemStringHook("getSpellName", Utils.EMPTY_STRING);
+	}
+
+	/**
+	 * SpellBook.spell() equivalent: resolve the stored kind ("" rolls a random
+	 * Common spell) and persist the resolved kind back into the book.
+	 */
+	@LuaInterface
+	public static Spell spellBookResolveSpell(@NotNull Item item) {
+		Spell spell = SpellFactory.getSpellByName(spellBookSpell(item));
+		((CustomItem) item).itemHook("setSpellName", spell.getEntityKind());
+		return spell;
+	}
+
+	// ---- ChaosCrystal fuse routing (was the itemSelector lambda) ----
+
+	/**
+	 * The fused counterpart of item, or null when nothing matches (java
+	 * parity: both items are consumed silently). Consumes nothing itself -
+	 * the caller detaches beforehand.
+	 */
+	@LuaInterface
+	public static Item chaosFuseResult(@NotNull Item item) {
+		if (item instanceof Scroll) {
+			Item newItem = new ScrollOfWeaponUpgrade();
+			GLog.p(StringsManager.getVar(R.string.ChaosCrystal_ScrollFused), newItem.name());
+			return newItem;
+		}
+
+		if (item instanceof KindOfBow) {
+			Item newItem = ItemFactory.itemByName("ChaosBow");
+			GLog.p(StringsManager.getVar(R.string.ChaosCrystal_BowFused));
+			return newItem;
+		}
+
+		if (item instanceof MeleeWeapon) {
+			Item newItem;
+			if (((MeleeWeapon) item).blockSlot() == Belongings.Slot.LEFT_HAND) {
+				newItem = ItemFactory.itemByName("ChaosSword");
+				GLog.p(StringsManager.getVar(R.string.ChaosCrystal_SwordFused));
+			} else {
+				newItem = ItemFactory.itemByName("ChaosBlade");
+				GLog.p(StringsManager.getVar(R.string.ChaosCrystal_BladeFused));
+			}
+			return newItem;
+		}
+
+		if (item instanceof Armor) {
+			Item newItem = ItemFactory.itemByName("ChaosArmor");
+			GLog.p(StringsManager.getVar(R.string.ChaosCrystal_ArmorFused));
+			return newItem;
+		}
+
+		if (item instanceof Wand) {
+			Item newItem = new ChaosStaff();
+			GLog.p(StringsManager.getVar(R.string.ChaosCrystal_StaffFused));
+			return newItem;
+		}
+
+		if (item.getEntityKind().contains("Shield")) {
+			Item newItem = ItemFactory.itemByName(ItemFactory.CHAOS_SHIELD);
+			GLog.p(StringsManager.getVar(R.string.ChaosCrystal_ShieldFused));
+			return newItem;
+		}
+
+		return null;
 	}
 }

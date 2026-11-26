@@ -3,7 +3,6 @@ package com.watabou.pixeldungeon.actors.blobs;
 
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.items.Treasury;
-import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
@@ -27,8 +26,8 @@ public class WaterOfTransmutation extends WellWater {
     protected Item affectItem(Item item) {
         Item transmutedItem = null;
 
-        if (item instanceof SpellBook) {
-            transmutedItem = new SpellBook();
+        if (item.getEntityKind().equals(ItemFactory.SPELL_BOOK)) {
+            transmutedItem = ItemFactory.itemByName(ItemFactory.SPELL_BOOK);
         } else if (item instanceof MeleeWeapon) {
             transmutedItem = changeWeapon((MeleeWeapon) item);
         } else if (item instanceof Scroll) {
@@ -157,11 +156,11 @@ public class WaterOfTransmutation extends WellWater {
     }
 
     private Item changeScroll(Item s) {
-        if (s instanceof ScrollOfUpgrade) {
+        if (ScrollOfUpgrade.KIND.equals(s.getEntityKind())) {
 
             return new ScrollOfWeaponUpgrade();
 
-        } else if (s instanceof ScrollOfWeaponUpgrade) {
+        } else if (ScrollOfWeaponUpgrade.KIND.equals(s.getEntityKind())) {
 
             return new ScrollOfUpgrade();
 

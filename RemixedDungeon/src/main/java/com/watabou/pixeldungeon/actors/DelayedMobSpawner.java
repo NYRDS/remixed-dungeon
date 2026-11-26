@@ -1,6 +1,5 @@
 package com.watabou.pixeldungeon.actors;
 
-import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 
 /**

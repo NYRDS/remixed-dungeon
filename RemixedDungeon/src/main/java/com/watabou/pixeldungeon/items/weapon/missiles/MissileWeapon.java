@@ -1,44 +1,28 @@
 
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
-import com.nyrds.pixeldungeon.items.ItemUtils;
-import com.nyrds.pixeldungeon.mechanics.LuaScript;
-import com.nyrds.pixeldungeon.ml.R;
-import com.nyrds.platform.audio.Sample;
-import com.nyrds.platform.util.StringsManager;
-import com.watabou.noosa.Image;
-import com.watabou.pixeldungeon.Assets;
-import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.actors.hero.Belongings;
-import com.watabou.pixeldungeon.sprites.MissileSprite;
-import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Piercing;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
-import com.watabou.pixeldungeon.scenes.CellSelector;
-import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.ui.QuickSlot;
-import com.watabou.pixeldungeon.utils.GLog;
-import com.watabou.pixeldungeon.utils.Utils;
-import com.watabou.pixeldungeon.windows.WndBag;
-import com.watabou.pixeldungeon.windows.WndOptions;
-import org.jetbrains.annotations.NotNull;
-import org.luaj.vm2.LuaValue;
-
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
-
 import com.watabou.pixeldungeon.items.weapon.Weapon;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Piercing;
+import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
+import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.sprites.MissileSprite;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import java.util.ArrayList;
 import org.jetbrains.annotations.NotNull;
+import org.luaj.vm2.LuaValue;
 
 public class MissileWeapon extends Weapon {
 

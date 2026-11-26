@@ -36,14 +36,6 @@ public class Artifact extends EquipableItem {
 		return null;
 	}
 
-	public String getText() {
-		return null;
-	}
-
-	public int getColor() {
-		return 0;
-	}
-
 	@Override
 	public void equippedCursed() {
         GLog.n(Utils.format(R.string.Ring_Info2, name()));

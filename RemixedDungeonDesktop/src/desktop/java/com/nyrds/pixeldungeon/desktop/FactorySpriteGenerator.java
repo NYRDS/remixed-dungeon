@@ -3,7 +3,6 @@ package com.nyrds.pixeldungeon.desktop;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.nyrds.pixeldungeon.items.common.armor.NecromancerArmor;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.LevelObjectsFactory;
 import com.nyrds.pixeldungeon.mechanics.buffs.BuffFactory;
@@ -29,12 +28,6 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
-import com.watabou.pixeldungeon.items.armor.ElfArmor;
-import com.watabou.pixeldungeon.items.armor.GnollArmor;
-import com.watabou.pixeldungeon.items.armor.HuntressArmor;
-import com.watabou.pixeldungeon.items.armor.MageArmor;
-import com.watabou.pixeldungeon.items.armor.RogueArmor;
-import com.watabou.pixeldungeon.items.armor.WarriorArmor;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
@@ -566,25 +559,25 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                 ClassArmor classArmor = null;
                 switch (heroClass) {
                     case WARRIOR:
-                        classArmor = new WarriorArmor();
+                        classArmor = (ClassArmor) ItemFactory.itemByName("WarriorArmor");
                         break;
                     case MAGE:
-                        classArmor = new MageArmor();
+                        classArmor = (ClassArmor) ItemFactory.itemByName("MageArmor");
                         break;
                     case ROGUE:
-                        classArmor = new RogueArmor();
+                        classArmor = (ClassArmor) ItemFactory.itemByName("RogueArmor");
                         break;
                     case HUNTRESS:
-                        classArmor = new HuntressArmor();
+                        classArmor = (ClassArmor) ItemFactory.itemByName("HuntressArmor");
                         break;
                     case ELF:
-                        classArmor = new ElfArmor();
+                        classArmor = (ClassArmor) ItemFactory.itemByName("ElfArmor");
                         break;
                     case NECROMANCER:
-                        classArmor = new NecromancerArmor();
+                        classArmor = (ClassArmor) ItemFactory.itemByName("NecromancerArmor");
                         break;
                     case GNOLL:
-                        classArmor = new GnollArmor();
+                        classArmor = (ClassArmor) ItemFactory.itemByName("GnollArmor");
                         break;
                 }
 
@@ -774,43 +767,43 @@ public class FactorySpriteGenerator extends RemixedDungeon {
                         switch (heroClass) {
                             case WARRIOR:
                                 if (heroSubClass == HeroSubClass.GLADIATOR || heroSubClass == HeroSubClass.BERSERKER) {
-                                    classArmor = new WarriorArmor();
+                                    classArmor = (ClassArmor) ItemFactory.itemByName("WarriorArmor");
                                     GLog.i("Equipping WarriorArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case MAGE:
                                 if (heroSubClass == HeroSubClass.BATTLEMAGE || heroSubClass == HeroSubClass.WARLOCK) {
-                                    classArmor = new MageArmor();
+                                    classArmor = (ClassArmor) ItemFactory.itemByName("MageArmor");
                                     GLog.i("Equipping MageArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case ROGUE:
                                 if (heroSubClass == HeroSubClass.FREERUNNER || heroSubClass == HeroSubClass.ASSASSIN) {
-                                    classArmor = new RogueArmor();
+                                    classArmor = (ClassArmor) ItemFactory.itemByName("RogueArmor");
                                     GLog.i("Equipping RogueArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case HUNTRESS:
                                 if (heroSubClass == HeroSubClass.SNIPER || heroSubClass == HeroSubClass.WARDEN) {
-                                    classArmor = new HuntressArmor();
+                                    classArmor = (ClassArmor) ItemFactory.itemByName("HuntressArmor");
                                     GLog.i("Equipping HuntressArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case ELF:
                                 if (heroSubClass == HeroSubClass.SCOUT || heroSubClass == HeroSubClass.SHAMAN) {
-                                    classArmor = new ElfArmor();
+                                    classArmor = (ClassArmor) ItemFactory.itemByName("ElfArmor");
                                     GLog.i("Equipping ElfArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case NECROMANCER:
                                 if (heroSubClass == HeroSubClass.LICH) {
-                                    classArmor = new NecromancerArmor();
+                                    classArmor = (ClassArmor) ItemFactory.itemByName("NecromancerArmor");
                                     GLog.i("Equipping NecromancerArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;
                             case GNOLL:
                                 if (heroSubClass == HeroSubClass.GUARDIAN || heroSubClass == HeroSubClass.WITCHDOCTOR) {
-                                    classArmor = new GnollArmor();
+                                    classArmor = (ClassArmor) ItemFactory.itemByName("GnollArmor");
                                     GLog.i("Equipping GnollArmor for %s+%s", heroClass.name(), heroSubClass.name());
                                 }
                                 break;

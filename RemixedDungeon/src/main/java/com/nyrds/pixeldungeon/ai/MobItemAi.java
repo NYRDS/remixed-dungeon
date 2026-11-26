@@ -1,7 +1,8 @@
 package com.nyrds.pixeldungeon.ai;
 
 import com.nyrds.pixeldungeon.game.GameLoop;
-import com.nyrds.pixeldungeon.items.artifacts.SpellBook;
+import com.nyrds.pixeldungeon.items.ItemUtils;
+import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.mechanics.CommonActions;
 import com.nyrds.pixeldungeon.mechanics.spells.Spell;
 import com.nyrds.pixeldungeon.mechanics.spells.SpellHelper;
@@ -168,8 +169,8 @@ public class MobItemAi {
                 if (action.equals(CommonActions.AC_EQUIP) && context == Context.IDLE) {
                     return autoEquipScore(mob, item);
                 }
-                if (action.equals(CommonActions.AC_READ) && item instanceof SpellBook) {
-                    return spellBookScore(mob, (SpellBook) item, context);
+                if (action.equals(CommonActions.AC_READ) && item.getEntityKind().equals(ItemFactory.SPELL_BOOK)) {
+                    return spellBookScore(mob, item, context);
                 }
                 if (action.equals(AC_ZAP) && item instanceof Wand) {
                     return wandScore(mob, (Wand) item, context);
@@ -305,8 +306,8 @@ public class MobItemAi {
 
     // --- SpellBook helper ---
 
-    private static float spellBookScore(Mob mob, SpellBook book, Context context) {
-        Spell spell = book.spell();
+    private static float spellBookScore(Mob mob, Item book, Context context) {
+        Spell spell = ItemUtils.spellBookResolveSpell(book);
         if (!spell.canCast(mob, false)) {
             return 0;
         }
