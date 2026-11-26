@@ -2792,6 +2792,7 @@
     <string name="town_deco_stove_desc">Deze stoof geeft een aangename warmte</string>
     <string name="town_deco_stove_name">Stenen kookplaats</string>
     <string name="town_deco_tile_desc">Deze tegels zijn behoorlijk versleten door de tijd.</string>
+    <string name="town_deco_tile_name">Tegel</string>
     <string name="town_deco_trapdoor_desc">Waar zou dit toch naartoe leiden?</string>
     <string name="town_deco_trapdoor_name">Valdeur</string>
     <string name="town_deco_tree_desc">Een vreemd gevoel ontstaat bij het bekijken van deze levende en zo vredige boom. Tenslotte, niet zo ver weg ligt een kerker vol verschrikkingen en dood.</string>
@@ -2833,6 +2834,7 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
 
 
 
