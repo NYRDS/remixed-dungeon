@@ -1,8 +1,11 @@
-# Mob Java → Lua Migration Procedure
+# Entity Java → Lua Migration Procedure
 
-How to move a mob from a java class to json data + lua script while keeping
-old saves loadable. Long-term goal: every entity is json/lua; only the core
-engine stays java.
+How to move an entity (mob, item, buff, trap, plant, furniture, seed,
+blob, …) from a java class to json data + lua script while keeping old
+saves loadable. Long-term goal: every entity is json/lua; only the core
+engine stays java. (Was "Mob Java → Lua Migration Procedure" — the
+procedure outgrew mobs with the items/spells/traps/plants/furniture/seeds
+batches.)
 
 Strategy (revised 2026-09-10, replaces the shell-class/alias design):
 
@@ -2541,7 +2544,7 @@ offering stage, mod sweep 7/7, android/desktop/html/headless compiles.
 Known pre-existing (not seeds): the priest suite's ceremony check asserts a
 "Blessed" class-name buff, which lua CustomBuffs never report.
 
-## Blobs batch design sketch (ruling needed, not blocking — 2026-11-26)
+## Blobs batch design (Mike's ruling 2026-11-26: unique mechanics stay java, kinds go lua, addressed by string keys)
 
 Today: `Map<Class<? extends Blob>,Blob>` (level.blobs), FQN-bundled (BLOBS
 node → `Class.forName`), class-typed helpers (`Level
@@ -2555,9 +2558,37 @@ spread writes: Web/Regrowth terrain) + `use(BlobEmitter)` particle
 factory/pour + tileDesc + onHeroDeath (`Doom`: Toxic) + cross-blob cancel
 (Toxic↔Paralytic, purity).
 
-Rec (needs a Mike ruling before work): string-key the map (kind →
-instance) like the other migrated systems, a literal vanilla kind→Class
-table (the TRAP_KINDS pattern) for the 15, `ScriptBlob(module)` for script
-kinds; wells + Alchemy + Foliage stay java longest (level-gen coupling +
-brewing). Lua-side placement already exists: `RPD.placeBlob(kind, cell,
-amount)` (used by ColdSpirit Freezing, Spinner Web, Rotberry.Seed).
+Why not lua-authored `evolve()`: blob processing is the hottest periodic
+workload in the game — the diffusion pass walks every level cell per blob
+per tick, and per-covered-cell effects resolve chars (O(covered×actors)).
+A lua-owned evolve loop would both run the hot loop in lua and let a mod
+write an O(n²) walker that wedges the tick. Java stays the executor.
+
+The split (Mike's shape):
+
+- **Java keeps every unique mechanic**: the diffusion/evolve loop, volume
+  decay, emitter plumbing (`use(BlobEmitter)`), terrain writes (Web stick,
+  Regrowth grow), cross-blob cancel pairs, hero-death handling, and the
+  whole of the mechanics-coupled kinds — wells (x4), Alchemy (brewing),
+  Foliage (light/cover for gardens). These are not scriptable.
+- **Blob kinds become string keys** like every other entity:
+  `BlobFactory`-style registry kind → blob; the bundle stores `entityKind`
+  (legacy FQN entries route through the standard `addKindAlias` +
+  exact-first derived resolution — the seeds-batch fix is load-bearing
+  here). The 15 vanilla kinds register their existing java classes under
+  their simple names, so vanilla behavior and saves are untouched.
+- **New/scriptable kinds = `ScriptBlob`**: a `scripts/blobs/<Kind>.lua`
+  module that ADDRESSES a java mechanic template by kind string, e.g.
+  `base = "ToxicGas"` inherits that executor's diffusion class, cancel
+  pairs and immunities, then overrides the cheap policy layer in lua:
+  `desc` table (decay/diffusion constants, tileDesc, emitter choice by
+  kind reference, killsHero flag) + per-covered-cell `affect(cell, chr)`
+  hook (the old per-cell `affect` body, not the loop).
+- **Perf guardrails**: lua hooks fire only for covered cells (volume > 0),
+  never per level cell; the char lookup at a cell stays a java bridge (no
+  lua mob-list scans inside blob hooks); the SLOW SCRIPT watchdog covers
+  wedges. Worst case for a script blob = the vanilla executor's cost.
+- Level/painter call sites switch to kind strings (`blobPut`, painters,
+  PotionOfPurity cancel by kind pair); `RPD.placeBlob(kind, cell, amount)`
+  already speaks strings (ColdSpirit Freezing, Spinner Web, Rotberry.Seed
+  use it today).
