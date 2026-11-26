@@ -647,10 +647,14 @@ data-def scans (`mobsDesc/*.json`, `scripts/items/*.lua`):
   enchantments batch section below).
 - Remaining entity backlog: **blobs** (17 files, deferred by Mike —
   string-key map + ScriptBlob sketch further below) and **10 item-coupled
-  buffs** still registered in `BuffFactory` (Viscosity.DeferedDamage,
-  Hunger — ruled stays java, Necrotism, RageBuff, the mechanics/Moongrace
-  buff, + the 5 batch-4e quest/ring auras OneWayLove/OneWayCursedLove/
-  RatterAura/HeartOfDarkness/RatKingAura).
+  buffs** still registered in `BuffFactory` (Viscosity.DeferedDamage —
+  moves with the glyphs batch, Hunger — O(1)/tick, re-examinable under the
+  cost rule, Necrotism, RageBuff, the mechanics/Moongrace buff, + the 5
+  batch-4e quest/ring auras OneWayLove/OneWayCursedLove/RatterAura/
+  HeartOfDarkness/RatKingAura). Cheap item carve-outs (Pickaxe, Carcass,
+  ChaosStaff) are also portable; the window-coupled ones (Codex, SpellBook,
+  BlackSkull(OfMastery)) stay until a window bridge exists. See the
+  End-state classification section for the full accounting.
 - No duplicate registrations, no simple-name collisions within mobs or
   items, no kind shared between the mob and item factories. No entities in
   other modules.
@@ -2700,3 +2704,51 @@ The split (Mike's refined ruling 2026-11-26: the line is COST, not
   LiquidFlame/Regrowth/Foliage); wave 2 = wells + Alchemy effect bodies
   (heaviest java coupling — item transmutation swaps, brewing inventory
   interaction — port last, kinds string-keyed from wave 1).
+
+## End-state classification (2026-11-27, Mike's principle: only computation-expensive code stays java)
+
+Everything below is the COMPLETE accounting of java that remains once the
+planned batches (glyphs+enchants, 8 buffs, small carve-outs, blobs waves
+1-2) have run. Java holds exactly four kinds of code:
+
+1. **Computation-expensive (the rule)**:
+   - blob diffusion pass (full-level 4-neighbor, the 4 gases' executor)
+     and the covered-cell walker/dispatch;
+   - the tick engine and AI state-machine dispatch (every mob step);
+   - FOV / level generation;
+   - particle emitters and all rendering/effects (BlobEmitter pours,
+     sprite layers, Lightning-class visuals);
+   - the hero act loop.
+2. **FFI / structural — the bridge itself, not a mechanic** (lua cannot
+   replace its own binding layer): kind frameworks (`Food`, `Potion`,
+   `Scroll`, `Ring`, `Wand`, `Key`, `Bag`, `MeleeWeapon`, `KindOfBow`,
+   `MissileWeapon`, `Arrow`, `Armor`, `ClassArmor`, `Seed`, `Glyph`,
+   `Enchantment`, the two blob executors), factories/registries/scripts
+   scans, bundle machinery (`@Packable`, aliases, derived resolution),
+   `ItemStatusHandler` unknown-name machinery, journal/heaps storage
+   plumbing, AI-state classes (`Hunting`, `Fleeing`, …).
+3. **UI/window-coupled** (TeaVM window machinery is not lua-reachable —
+   established by the headless/window round): `Codex`, `SpellBook`,
+   `BlackSkull(OfMastery)` WndChooseWay flows, `WndChasmJump`, inventory
+   selection windows behind scroll/upgrade flows. These kinds move only
+   if a lua window bridge is ever built.
+4. **Platform-coupled / explicit rulings**: `ServiceManNPC` (ads
+   machinery), accessories (cosmetic avatar slots — hats/masks, no
+   mechanics, not entities), `Gold` (core currency plumbing), `Door.leave`
+   heap guard (player tactic — ruled untouchable).
+
+Cheap but still-java at the time of writing, queued to move:
+- the 8 portable item-coupled buffs (Necrotism, RageBuff, the
+  mechanics/Moongrace buff, the 5 quest/ring auras) — all O(1) event
+  hooks;
+- `Hunger` — O(1) per tick, hero-scoped; the earlier stays-java ruling
+  was coupling-based, re-opened by the cost principle (hero-engine
+  flavored: realtime mode, class modifiers — Mike's call);
+- `Pickaxe`, `Carcass`, `ChaosStaff` — O(1) mechanics; fuse routing
+  already lives in ItemUtils;
+- glyph/enchant batch (designed above), then blobs waves 1-2 (designed
+  above).
+
+Completion queue: glyphs+enchants → 8 buffs (+Hunger if ruled) →
+Pickaxe/Carcass/ChaosStaff → blobs wave 1 → blobs wave 2. After that
+every entity kind is json/lua and java is exactly layers 1-4 above.
