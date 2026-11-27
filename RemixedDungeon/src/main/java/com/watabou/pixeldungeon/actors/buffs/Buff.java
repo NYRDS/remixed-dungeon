@@ -187,8 +187,14 @@ public class Buff extends Actor implements NamedEntityKind, CharModifier {
 
     @LuaInterface
     public static Buff prolong(Char target, String buffClass, float duration) {
-        Buff buff = BuffFactory.getBuffByName(buffClass);
-        buff.attachTo(target);
+        // caveman: reuse an existing same-kind buff like the Class overload does -
+        // a fresh getBuffByName instance every call stacked duplicates (Char.add
+        // does not dedup by kind and BuffIndicator draws one icon per instance)
+        Buff buff = target.buff(buffClass);
+        if (buff == null) {
+            buff = BuffFactory.getBuffByName(buffClass);
+            buff.attachTo(target);
+        }
         buff.postpone(duration);
         return buff;
     }
