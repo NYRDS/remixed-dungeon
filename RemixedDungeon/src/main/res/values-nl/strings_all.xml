@@ -230,6 +230,7 @@
     <string name="BishopQuest_1_1_InProgress">Je hebt %1$d van de %2$d onsterfelijken gerustgesteld, mijn kind. Ga zo door.</string>
     <string name="BishopQuest_1_1_Prologue">De doden weigeren te rusten, mijn kind. Botten wandelen door de gevangenisgangen, en rotte dingen kruipen uit de necropolis. Leg tien onddoeten te rusten, en ik zal weten dat je geloof waar is.</string>
     <string name="BishopQuest_2_1_InProgress">Breng me _drie zonnegraszaadjes_, mijn kind. De altaar wacht.</string>
+    <string name="BishopQuest_2_2_Epilogue">Maanschein in een zaadje... hoe gelijk aan genade. De kerk zal vanavond naar zilver ruiken. Neem deze drank voor je toewijding, mijn kind.</string>
     <string name="BishopQuest_2_2_InProgress">Breng me _drie maangraszaden_, mijn kind. De altaar wacht.</string>
     <string name="BishopQuest_3_1_InProgress">Breng me een getemd _zombie_, mijn kind. Behandel het zacht \u2014 het weet niet wat het doet.</string>
     <string name="BishopQuest_3_2_Epilogue">De bisschop strooit heilig water over de verontschuldigde vleermuis, mompelend een zegen. Het fluttert weg, op enigszins waardige wijze. Neem deze rol voor je geduld, mijn kind.</string>
@@ -1000,6 +1001,7 @@
     <string name="HungerBuff_Info2">Je verteert van de honger! Je moet eten!</string>
     <string name="HungerBuff_Name1">Hongerig</string>
     <string name="HungerBuff_Name2">Uitgehongerd</string>
+    <string name="Hunger_Death">Je bent verhongerd...</string>
     <string name="Hunger_Hungry_0">Je hebt honger.</string>
     <string name="Hunger_Hungry_1">Je hebt honger.</string>
     <string name="Hunger_Hungry_2">Je hebt honger.</string>
@@ -1611,6 +1613,7 @@
     <string name="QuickSlot_SelectedItem">Selecteer een item voor de quickslot</string>
     <string name="Quiver_Gender">masculine</string>
     <string name="Quiver_Info">Leren kogelhouder geschikt voor elke hoeveelheid pijlen</string>
+    <string name="Quiver_Name">pijlhouder</string>
     <string name="RabbitEars_Info">Er bestaat een bijgeloof dat konijnen geluk geboren worden en dat iemand die een deel van het dier verkrijgt, vergezeld zal worden door het geluk van het beest. Bij nader inzien klinkt het niet echt als geluk: gedood worden om je oren, waar versieringen van gemaakt zullen worden.</string>
     <string name="RabbitEars_Name">Konijnenoren</string>
     <string name="RaiseDead_Info">Poging om het laatst gedode wezen op te wekken (het ritueel vereist vrij vers materiaal). Bij het gebruik van deze duistere kunst, onthoud: bijna elk wezen kan worden opgewekt, maar niet ieders wil is gemakkelijk te buigen.</string>
@@ -1798,6 +1801,7 @@
     <string name="ScrollOfPsionicBlast_Info">Deze scroll bevat vernietigende energie, die psionisch kan worden gekanaliseerd om massale schade toe te brengen aan alle wezens binnen het gezichtsveld. Een begeleidende lichtflits zal tijdelijk iedereen in het effectgebied verblinden, inclusief de lezer van de scroll.</string>
     <string name="ScrollOfPsionicBlast_Name">Rol van Psionische Schok</string>
     <string name="ScrollOfRecharging_Info">De rauwe magische kracht gebonden in dit perkament zal, bij vrijgave, alle toverstokken van de lezer volledig opladen.</string>
+    <string name="ScrollOfRecharging_Info1a">een golf van energie gaat door je zak, je staf wordt herladen</string>
     <string name="ScrollOfRecharging_Info1b">een golf van energie stroomt door je rugzak en laadt je toverstokken op</string>
     <string name="ScrollOfRecharging_Info2">een energiegolf stroomt door je rugzak, maar er gebeurt niets</string>
     <string name="ScrollOfRecharging_Name">Pergament van Herladen</string>
@@ -2183,6 +2187,7 @@
     <string name="VileEssence_Name">Verachtelijke Essentie</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
     <string name="VkPlayLink_linked">Reclames zijn uitgeschakeld tot %s.</string>
+    <string name="VkPlayLink_noConnection">Kan de verificatie-service niet bereiken. Controleer uw internetverbinding en probeer het opnieuw.</string>
     <string name="VkPlayLink_signIn">Aanmelden via VK ID</string>
     <string name="VkPlayLink_title">VK Play PC-versie</string>
     <string name="WandHolster_Info">Deze slanke houder is gemaakt van leer van een exotisch dier. Het maakt het mogelijk om tot %d toverstaven compact bij je te dragen.</string>
@@ -2651,6 +2656,7 @@
     <string name="town_deco_barrel_name">vat</string>
     <string name="town_deco_barrel_wine_desc">Gebruikt om zo een waardevolle drank als wijn op te slaan.</string>
     <string name="town_deco_barrel_wine_name">Wijnvat</string>
+    <string name="town_deco_beige_carpet_desc">Een elegante beige tapijt dat is geweven uit zachte gnol wol.</string>
     <string name="town_deco_beige_carpet_name">tapijt</string>
     <string name="town_deco_bell_desc">Een typische kerkklok. Het lijkt erop dat niemand hem al lange tijd heeft geluid en zelfs het touw ontbreekt.</string>
     <string name="town_deco_bell_name">Bel</string>
@@ -2863,6 +2869,12 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
 
 
 

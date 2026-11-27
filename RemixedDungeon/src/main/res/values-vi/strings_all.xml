@@ -250,6 +250,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Blacksmith_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="Blacksmith_Name">thợ rèn troll</string>
     <string name="Blacksmith_Txt2">Bạn đang đùa tôi sao? Cái cuốc của tôi đâu rồi?!</string>
+    <string name="Blacksmith_Txt4">Tôi đã nói tôi cần máu dơi trên cái rào. Nhanh lên nào!</string>
     <string name="Blacksmith_Verify1">Hãy chọn 2 vật phẩm khác nhau, không được chọn cùng một vật phẩm hai lần!</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
     <string name="Blacksmith_Verify3">Tôi cần biết tôi đang làm việc với thứ gì, hãy nhận diện chúng trước!</string>
@@ -444,6 +445,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="City_TileDescStatue">Tượng đài miêu tả một lùn người đứng trong tư thế anh hùng.</string>
     <string name="City_TileHighGrass">Cây bụi hoa nở cao</string>
     <string name="City_TileWater">Nước có màu đáng nghi</string>
+    <string name="ClassArmor_Desc">Cái này trông tuyệt vời!</string>
     <string name="ClassArmor_LowHealt">Sức khỏe của bạn quá thấp!</string>
     <string name="ClassArmor_LowMana">Không đủ mana!</string>
     <string name="ClassArmor_NotEquipped">Bạn cần mặc bộ giáp này để sử dụng sức mạnh đặc biệt của nó!</string>
@@ -1205,6 +1207,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="MissileWeapon_Missiles">Vũ khí phóng xạ</string>
     <string name="MissileWeapon_No">Không, tôi đã đổi ý rồi</string>
     <string name="MissileWeapon_Sure">Bạn có thực sự muốn trang bị nó như vũ khí cận chiến không?</string>
+    <string name="MissileWeapon_Yes">Có, tôi biết mình đang làm gì</string>
     <string name="MobAi_status">Con %1$s này đang %2$s</string>
     <string name="Mob_Attacking">Hãy coi %s này như đã chết!</string>
     <string name="Mob_Cannot_Be_Pet">Ý chí của \&quot;%s\&quot; quá mạnh để kiểm soát!</string>
@@ -1720,6 +1723,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="ShadowLord_Desc">Sinh vật này được tạo thành từ sự ác độc thuần khiết và bóng tối không thể thâm nhập. Nhiều người tin rằng chính hắn là Thần Cổ xưa, khi xem xét sức mạnh của hắn. Trong khi những người khác cho rằng hắn chỉ là người gác cửa phòng của Thần Cổ.</string>
     <string name="ShadowLord_Gender">masculine</string>
     <string name="ShadowLord_Name">chúa bóng tối</string>
+    <string name="ShadowLord_Name_Objective">Chúa Bóng Tối</string>
     <string name="Shadow_Desc">Bóng ma lặng lẽ phiêu dạt trong đống đổ nát của nhà tù cổ đại, chỉ thỉnh thoảng mới hiện ra trước mắt nhà mạo hiểm giả, thường là trong chuyến phiêu lưu cuối cùng của họ.</string>
     <string name="Shadow_Gender">feminine</string>
     <string name="Shadow_Name_Objective">bóng ma</string>
@@ -1948,6 +1952,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="TomeOfMastery_Blinded">Bạn không thể đọc khi bị mù.</string>
     <string name="TomeOfMastery_Info">Cuốn sách da cũ này không quá dày, nhưng bạn cảm thấy có thể học được rất nhiều điều từ nó. Hãy nhớ rằng việc đọc bộ sách này có thể mất một chút thời gian.</string>
     <string name="Toolbar_Info1">Bạn không biết đó có gì.</string>
+    <string name="Toolbar_Info2">Chọn một ô để kiểm tra</string>
     <string name="Torch_ACLight">THÁP</string>
     <string name="Torch_Info">Đây là một vật phẩm không thể thiếu trong Các Điện Thần Quỷ, những nơi nổi tiếng với ánh sáng môi trường kém.</string>
     <string name="Torch_Info2">Đây là vật phẩm không thể thiếu trong hầm ngục, vốn nổi tiếng là thiếu ánh sáng.</string>
@@ -2605,6 +2610,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_stones_desc">Chỉ là một đống đá.</string>
     <string name="town_deco_stones_name">Đá</string>
     <string name="town_deco_stool_broken_name">Ghế đẩu bị hỏng</string>
+    <string name="town_deco_stool_sturdy_desc">Một chiếc ghế đẩu thông thường được làm từ loại gỗ chịu đựng được.</string>
     <string name="town_deco_stool_sturdy_name">Ghế đẩu</string>
     <string name="town_deco_stove_desc">Cái lò này mang lại chút ấm áp dễ chịu</string>
     <string name="town_deco_stove_name">Bếp đá</string>
@@ -2646,6 +2652,12 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
+
 
 
 

@@ -190,6 +190,7 @@
     <string name="CagedKobold_Message3">أكره كل شيء في هذا القفص</string>
     <string name="CagedKobold_Name">كوبولد مسجون</string>
     <string name="CagedKobold_Name_Objective">كوبولد مسجون</string>
+    <string name="CagedKobold_Quest_End">أوه، شكراً لك، شكراً جزيلاً! كيف تمكنت من العثور على المفتاح؟ أنت... أنت دمرت السلاح؟! هذا أمر لا يصدق! تعلم، قلت إنني سأساعدك، وأعتقد أنني أعرف أفضل طريقة للقيام بذلك. سأبقى معك لفترة. * تحول الكوبولد المسجون إلى شمعة</string>
     <string name="Calm_Cast">%s يهدأ.</string>
     <string name="Calm_Info">هناك العديد من المخلوقات الغاضبة حولنا، دعونا نساعدهم.</string>
     <string name="CandleOfMindVision_Info">يبدو كشمعة عادية، ليس شيئاً تتوقع العثور عليه في زنزنة خطيرة. الغريب أنه دافئ جداً عند لمسه، رغم أنه لم يُشعل بعد.</string>
@@ -693,6 +694,7 @@
     <string name="MissileWeapon_No">لا، غيّرت رأيي</string>
     <string name="MissileWeapon_Sure">هل تريد حقًا تجهيزه كسلاح قتال قريب؟</string>
     <string name="MissileWeapon_Yes">نعم، أنا أعلم ما أفعله</string>
+    <string name="MobAi_status">هذا %1 هو %2</string>
     <string name="Mob_Died">تسمع صوت شيء مات في البعيد</string>
     <string name="Mob_GoingTo">سائرة بالفعل!</string>
     <string name="Mob_ItemUse">%1$s يستخدم %2$s</string>
@@ -908,6 +910,7 @@
     <string name="ScaleArmor_Name">درع حرشفي</string>
     <string name="ScarecrowNPC_Gender">neuter</string>
     <string name="ScarecrowNPC_Name_Objective">فزاعة</string>
+    <string name="ScarecrowNPC_Quest_Start_Female">أهلاً يا صغيرتي، كيف حالك؟\nلدي شيء مثير لك!\n\nسأكون ممتناً جداً،\nإذا ذهبتِ وجمعتِ بعض الحلوى لي!\n\n</string>
     <string name="ScarecrowNPC_Quest_Start_Male">أهلاً يا بني الصغير، كيف حالك؟\nلديّ شيء مثير لك!\n\nكم سأكون ممتناً،\nلو ذهبت وجمعت بعض الحلوى من أجلي!\n\n</string>
     <string name="Scorpio_Desc">تتجنب هذه المخلوقات الشيطانية الشبيهة بالعنكبوت العملاقة القتال القريب بكل وسيلة، مطلقة أشواكًا مسننة مشلولة من مسافات بعيدة.</string>
     <string name="Scorpio_Gender">masculine</string>
@@ -1407,6 +1410,9 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
 
 
 
