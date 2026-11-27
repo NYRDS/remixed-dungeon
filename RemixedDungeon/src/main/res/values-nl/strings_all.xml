@@ -165,6 +165,7 @@
     <string name="Badges_NightHunter">5 monsters gedood in de nacht</string>
     <string name="Badges_NoMonsterSlain">Niveau voltooid zonder monsters te doden</string>
     <string name="Badges_Piranhas">6 piranha\'s gedood</string>
+    <string name="Badges_PotionsCooked1">3 drankjes gebrouwen</string>
     <string name="Badges_PotionsCooked2">6 drankjes gebrouwen</string>
     <string name="Badges_PotionsCooked3">9 drankjes gebraagd</string>
     <string name="Badges_PotionsCooked4">12 drankjes gebrouwen</string>
@@ -918,6 +919,7 @@
     <string name="HeroClass_Mag">magier</string>
     <string name="HeroClass_MagPerks_1">Magiërs laden hun toverstaven sneller op.</string>
     <string name="HeroClass_MagPerks_2">Wanneer gegeten, herstelt elk stuk voedsel 1 lading voor alle staven in de inventaris.</string>
+    <string name="HeroClass_MagPerks_3">Magiërs kunnen staven als wapen voor nabijgevecht gebruiken.</string>
     <string name="HeroClass_MagPerks_4">Magiërs gebruiken mana om elementaire spreuken te werpen.</string>
     <string name="HeroClass_MagPerks_5">De scrollen van identificatie zijn vanaf het begin geïdentificeerd.</string>
     <string name="HeroClass_Necromancer">necromancer</string>
@@ -1606,6 +1608,7 @@
     <string name="Potion_SureThrow">Weet je zeker dat je het wilt gooien? In de meeste gevallen is het beter om het te drinken.</string>
     <string name="Potion_Yes">Ja, ik weet wat ik doe</string>
     <string name="PriestArmor_ACSpecial">HEILIGEN</string>
+    <string name="PriestArmor_Desc">Deze strijdkleding van het priesterschap kan worden geroepen om te Heiligen: alle ongedohten in de buurt van de drager worden verbrand door heilig licht, terwijl de priester een zegen ontvangt.</string>
     <string name="PriestArmor_NotPriest">Alleen priesters kunnen deze armor gebruiken!</string>
     <string name="Prison_TileDescBookshelf">Dit is waarschijnlijk een overblijfsel van een gevangenisbibliotheek. Zou het branden?</string>
     <string name="Prison_TileDescDeco">Er zijn oude bloedvlekken op de vloer.</string>
@@ -2898,6 +2901,9 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

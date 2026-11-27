@@ -225,6 +225,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Bishop_bye">Tôi sẽ cầu nguyện cho con ơi.</string>
     <string name="Bishop_great_bless">Chúc phúc vĩ đại - %d g</string>
     <string name="Bishop_lesser_bless">Chúc phúc nhỏ - %d g</string>
+    <string name="Bishop_no_money">Bạn không đủ tiền để trả.</string>
     <string name="Bishop_not_interested">Rời đi</string>
     <string name="Bishop_remove_curse">Gỡ lời nguyền - %d g</string>
     <string name="Bishop_text">Ngày đêm con cầu nguyện cho ngươi, đứa trẻ của ta.</string>
@@ -352,6 +353,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Challenges_Names_5">Vào bóng tối</string>
     <string name="Challenges_Names_6">Cổ ngữ bị cấm</string>
     <string name="Challenges_Names_7">Chủ nghĩa hòa bình</string>
+    <string name="Challenges_Names_9">Mất trí nhớ</string>
     <string name="ChampionOfAirBuff_Info">Đặc tính này ban tặng cho sinh vật bản chất của gió, nâng cao sự nhanh nhẹn và khả năng chiến đấu. Võ sĩ Bậc Thầy Khí trở thành đối thủ đáng gờm, có thể tung ra những đòn tấn công nhanh chóng và tàn phá có thể thay đổi nhanh chóng cục diện trận chiến.</string>
     <string name="ChampionOfAirBuff_Name">Vô Địch Của Khí</string>
     <string name="ChampionOfEarthBuff_Name">Nhà vô địch Đất</string>
@@ -618,6 +620,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Dungeon_Tips_6">Xác định thuốc và cuộn giấy càng sớm càng tốt. Đừng để đến lúc bạn thực sự cần chúng mới làm.</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
     <string name="Dungeon_Tips_8">Tấn công bất ngờ có cơ hội trúng đích cao hơn. Ví dụ, bạn có thể phục kích kẻ thù phía sau cánh cửa đóng khi biết nó đang tiến lại.</string>
+    <string name="Dungeon_Tips_9">Đừng để Tengu thoát ra!</string>
     <string name="DwarfToken_Info">Nhiều lùn và một số tác phẩm lớn hơn của họ mang theo những mảnh kim loại nhỏ này với mục đích không rõ. Có thể chúng là trang sức hoặc loại định danh nào đó. Lùn là dân tộc kỳ lạ.</string>
     <string name="DwarfToken_Name">huy hiệu người lùn</string>
     <string name="EarthElemental_Gender">masculine</string>
@@ -2445,6 +2448,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="YogsHeart_Gender">masculine</string>
     <string name="YogsHeart_Name">trái tim của Yog</string>
     <string name="YogsHeart_Name_Objective">trái tim Yog</string>
+    <string name="YogsTeeth_Desc">Cái miệng khổng lồ của Thần Cổ được lấp đầy những chiếc răng sắc như dao cạo. Một biểu hiện rất phù hợp cho khao khát phá hủy và nuốt chửng tất cả sinh vật của ngài.</string>
     <string name="YogsTeeth_Gender">masculine</string>
     <string name="YogsTeeth_Name_Objective">răng của Yog</string>
     <string name="ZombieGnoll_Desc">Cơ thể biến dạng, gãy đổ của gnoll zombie không còn giống người hay linh chó nữa. Còn lại chỉ là một đống thịt thối và xương, đầy lòng thù ghét khao khát giết chóc và nhấn nhá.</string>
@@ -2681,6 +2685,10 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
