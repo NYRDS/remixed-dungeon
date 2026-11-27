@@ -299,6 +299,7 @@
     <string name="ColdSpirit_Gender">masculine</string>
     <string name="Combo_Combo">مجموعة %d ضربة!</string>
     <string name="CommonArrow_Gender">feminine</string>
+    <string name="CommonArrow_Info">سهم خشبي شائع برأس حديدي.</string>
     <string name="CompositeCrossbow_Gender">masculine</string>
     <string name="CompositeCrossbow_Info">يُثبت هذا النصل المعزز أنه أداة أكثر كفاءة من نظيره الخشبي.</string>
     <string name="CompositeCrossbow_Name">قوس نشاب مركب</string>
@@ -480,6 +481,7 @@
     <string name="HeroClass_Elf">الجان</string>
     <string name="HeroClass_ElfPerks_2">يبدأ الجني بعبادة خشبية محسنة وحزمة من الأسهم.</string>
     <string name="HeroClass_ElfPerks_5">الجان أقل مهارة في استخدام أسلحة القتال القريب.</string>
+    <string name="HeroClass_GnollPerks_1">الغنول يبدأ بـ 5 نقاط صحة</string>
     <string name="HeroClass_GnollPerks_2">يبدأ الغنول بدون أي درع ولكن مع فأس حربية فريدة</string>
     <string name="HeroClass_GnollPerks_3">لا يستطيع الغنول القراءة أو الكتابة.</string>
     <string name="HeroClass_GnollPerks_4">الغنول لا يهاجم غنول آخر إلا عند الاستفزاز</string>
@@ -619,6 +621,7 @@
     <string name="Level_TileChasm">هاوية</string>
     <string name="Level_TileDescBarricade">الحاجز الخشبي مثبت بإحكام لكنه جف عبر السنين. هل قد يحترق؟</string>
     <string name="Level_TileDescChasm">لا تستطيع رؤية القاع.</string>
+    <string name="Level_TileDescHighGrass">النباتات الكثيفة تحجب الرؤية.</string>
     <string name="Level_TileDescInactiveTrap">لقد تم تفعيل الفخ من قبل وهو لم يعد خطيراً.</string>
     <string name="Level_TileDescLockedDoor">هذا الباب مغلق، تحتاج إلى مفتاح مطابق لفتحه.</string>
     <string name="Level_TileEmbers">جمرة</string>
@@ -1148,6 +1151,7 @@
     <string name="Wand_Name">عصا %s</string>
     <string name="Wand_Prompt">اختر اتجاهًا للإطلاق</string>
     <string name="Wand_SelfTarget">لا يمكنك استهداف نفسك</string>
+    <string name="Wand_Wood">هذه العصا %s الرفيعة دافئة عند لمسها. من يدري ماذا ستفعل عند استخدامها؟</string>
     <string name="Wand_Wood_Types_11">بتولا</string>
     <string name="Wand_Wood_Types_2">أبنوس</string>
     <string name="Wand_Wood_Types_3">كرز</string>
@@ -1414,6 +1418,10 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
 
 
 

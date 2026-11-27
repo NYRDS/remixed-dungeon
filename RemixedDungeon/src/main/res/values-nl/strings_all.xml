@@ -240,6 +240,7 @@
     <string name="BishopQuest_4_1_Prologue">Je hebt de voetvolk tot rust gelegd — nu zijn hun meesters aan de beurt. _Doodsritters_ bevelen de legers der doden, en hun wil boeit de botten aan hun tocht. Vernietig _twee doodsritters_, mijn kind.</string>
     <string name="BishopQuest_4_2_Epilogue">De kerklokken luidden van zich af toen de laatste voorbijging — een goed teken, mijn kind. Neem deze drank van kracht; de laatste toets zal veel van je vragen.</string>
     <string name="BishopQuest_4_2_InProgress">Je hebt %1$d van de %2$d geketende zielen bevrijd. Laat ze niet langer dienen.</string>
+    <string name="BishopQuest_4_2_Prologue">Er zijn gebonden doden evenals wandelende botten, mijn kind. _Gekluisterde zielen_ — arme zielen in ketens van eeuwige slavernij, die de levenden haten voor de vrijheid die ze verloren. Hun verdriet is een wapen. Bevrijd _vier gekluisterde zielen_ ervan.</string>
     <string name="BishopQuest_5_1_Epilogue">Des Heren werk is voltooid! Vanaf deze dag mag je de weg van een priester bewandelen. Neem deze zegen en deze almoezen, mijn kind — je hebt ze verdiend.</string>
     <string name="Bishop_QuestCompleted">Priesterklasse ontgrendeld</string>
     <string name="Bishop_bye">Ik zal voor je bidden, mijn kind.</string>
@@ -254,6 +255,7 @@
     <string name="BlackCat_Desc">Dit is een zwarte kat</string>
     <string name="BlackCat_Gender">feminine</string>
     <string name="BlackCat_Name">Zwarte kat</string>
+    <string name="BlackCat_Name_Objective">kat</string>
     <string name="BlackCat_Phrases_0">Prrrrrrr</string>
     <string name="BlackCat_Phrases_1">Miauw...</string>
     <string name="BlackCat_Phrases_2">Miauw!</string>
@@ -1739,6 +1741,7 @@
     <string name="Ring_Name">%s ring</string>
     <string name="Roar_Info">De machtige brul zal uw vijanden zeker doordrenen met angst en uw bondgenoten inspireren.</string>
     <string name="Roar_Name">Brul</string>
+    <string name="RogueArmor_ACSpecial">ROOKBOM</string>
     <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
     <string name="RogueArmor_Name">schurkenkleding</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naartoe te springen</string>
@@ -2524,6 +2527,7 @@
     <string name="WndPriest_Instruction2_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
     <string name="WndPriest_Instruction2_m">Welkom mijn zoon, welkom in de heilige kerk van de grote Santa de Heer der Diepten!</string>
     <string name="WndPriest_Instruction_f">Welkom mijn dochter, welkom in de heilige kerk van de grote Santa, de Heer der Diepten! Helaas kan ik je nu niet doorlaten, want het gebouw wordt gerenoveerd. Maar als je hulp zoekt, kan ik genezing en voedsel aanbieden voor slechts %d gouden munten!</string>
+    <string name="WndPriest_Instruction_m">Welkom mijn zoon, welkom in de heilige kerk van de grote Santa, Heerser van de Diepten! Helaas kan ik je nu niet doorlaten, omdat het gebouw in herbouwing is, maar als je hulp zoekt, kan ik genezende diensten en voedsel bieden voor slechts %d gouden munten!</string>
     <string name="WndPriest_Title">Stadsprediker</string>
     <string name="WndRanking_Badges">Insignes</string>
     <string name="WndRanking_Error">Kan extra informatie niet laden</string>
@@ -2901,6 +2905,10 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
