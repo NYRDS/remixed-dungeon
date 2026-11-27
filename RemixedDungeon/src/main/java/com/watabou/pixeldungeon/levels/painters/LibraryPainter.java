@@ -73,7 +73,7 @@ public class LibraryPainter extends Painter {
 				level.drop(new BlankScroll(), pos, Heap.Type.HEAP);
 			} else {
 				if (Random.Int(4) == 0) {
-					level.drop(new Codex(), pos, Heap.Type.HEAP);
+					level.drop(ItemFactory.itemByName("Codex"), pos, Heap.Type.HEAP);
 				}
 			}
 		}

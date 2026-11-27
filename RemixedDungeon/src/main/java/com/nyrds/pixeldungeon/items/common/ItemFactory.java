@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
+import com.watabou.pixeldungeon.items.Codex;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.keys.Key;
@@ -140,6 +141,10 @@ public class ItemFactory {
         registerItemClass(ScrollOfWeaponUpgrade.class);
         registerItemClass(ScrollOfIdentify.class);
         registerItemClass(ScrollOfUpgrade.class);
+        // caveman: LibraryPainter drops Codex; the ctor answers getEntityKind()
+        // so the class->kind map must exist ("Unregistered entry items.Codex",
+        // kind degraded to NoItem otherwise)
+        registerItemClass(Codex.class);
         registerItemKind(Scroll.MAGIC_MAPPING, Scroll::new);
         registerItemKind(Scroll.RECHARGING, Scroll::new);
         registerItemKind(Scroll.REMOVE_CURSE, Scroll::new);
