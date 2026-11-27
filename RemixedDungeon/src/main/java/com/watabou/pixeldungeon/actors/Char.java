@@ -45,7 +45,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Facilitations;
 import com.watabou.pixeldungeon.ResultDescriptions;
-import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.BuffCallback;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -62,7 +61,7 @@ import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
+import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.missiles.Arrow;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -2539,9 +2538,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         if (undead) {
             addImmunity(BuffFactory.PARALYSIS);
             addImmunity(BuffFactory.STUN);
-            addImmunity(ToxicGas.class);
+            addImmunity("ToxicGas");
             addImmunity(BuffFactory.TERROR);
-            addImmunity(Death.class);
+            addImmunity(Weapon.Enchantment.KIND_DEATH);
             addImmunity(BuffFactory.AMOK);
             addImmunity(BuffFactory.BLINDNESS);
             addImmunity(BuffFactory.SLEEP);
@@ -2554,9 +2553,9 @@ public abstract class Char extends Actor implements HasPositionOnLevel, Presser,
         } else {
             removeImmunity(BuffFactory.PARALYSIS);
             removeImmunity(BuffFactory.STUN);
-            removeImmunity(ToxicGas.class);
+            removeImmunity("ToxicGas");
             removeImmunity(BuffFactory.TERROR);
-            removeImmunity(Death.class);
+            removeImmunity(Weapon.Enchantment.KIND_DEATH);
             removeImmunity(BuffFactory.AMOK);
             removeImmunity(BuffFactory.BLINDNESS);
             removeImmunity(BuffFactory.SLEEP);

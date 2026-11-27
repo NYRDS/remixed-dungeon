@@ -2754,6 +2754,124 @@ Completion queue: glyphs+enchants → 8 buffs (+Hunger if ruled) →
 Pickaxe/Carcass/ChaosStaff → blobs wave 1 → blobs wave 2. After that
 every entity kind is json/lua and java is exactly layers 1-4 above.
 
+## Glyphs & enchantments SHIPPED (2026-11-27)
+
+The design above ran as planned: `Glyph`/`Enchantment` are kind-parameterized
+frameworks (`Armor$Glyph(kind)` / `Weapon$Enchantment(kind)`), the 10+11
+java classes are deleted, kind scripts live in `scripts/glyphs/` +
+`scripts/enchants/` (auto-registered by a ModdingMode scan; random-pool
+weights = each script's desc `chance`, absent = inscribe-by-kind only).
+Names ride the framework defaults (`<Kind>_Txt` for glyphs via maybeId,
+the 3-form `<Kind>_Name` getClassParams for enchants, TXT_NAME computed
+lazily since the ctor must not read strings), glowing colors parse from
+desc into cached `Glowing` instances (period default 1f = the
+Glowing(color) semantics). Bundle: nested glyph/enchantment nodes carry
+entityKind + getEntitySystem "glyph"; a new "glyph" resolver (FIRST in
+RESOLVER_PRIORITY, the sets are disjoint) serves both frameworks - legacy
+FQN nodes derive their simple name into the resolver, no aliases needed.
+Vanilla weights verbatim: enchants Fire 10, Poison 10, Death 1, Paralysis
+2, Leech 1, Slow 2, Swing 3, Piercing 3, Instability 3, Horror 2, Luck 2;
+glyphs all 1.
+
+Hooks: `defenceProc(self, glyph, armor, attacker, defender, damage)` /
+`proc(self, enchant, weapon, attacker, defender, damage)` - the parent
+glyph/enchant arrives as arg 2 and doubles as the damage/heal src exactly
+like the java `this` did. Instability rerolls via the bound
+`RPD.Enchantment:random()` kind chain (Boomerang exclusion preserved).
+DeferedDamage moved to `scripts/buffs/DeferedDamage.lua` (the pending
+amount rides the buff level; the glyph script creates it and postpones the
+first tick; hero death goes through the CustomBuff Doom onHeroDeath hook -
+the java buff had no Doom path and composed the fail inline, same
+messages). New bridges: `Lightning.boltBetween(from, to)` (Potential),
+Char death/resist sites took `Weapon.Enchantment.KIND_DEATH` kind
+constants, MissileWeapon boomerang reroll went kind-string, Char gas
+immunity string. ItemUtils.inscribeRandomGlyph compares kinds.
+Verification: tests/http_api/test_glyphs_enchants.py 8/8 (registry
+weights, name/glow parity incl. RU locale in-session comparison, every
+kind's proc via direct defenceProc/proc probes with roll-gated trials +
+ring-3 staging, two real-combat E2Es, legacy FQN nested-bundle restores,
+double save round-trip).
+
+## The 8 item/quest-coupled buffs SHIPPED (2026-11-27)
+
+Necrotism, RageBuff, RatterAura, RatKingAuraBuff, HeartOfDarknessBuff,
+OneWayLoveBuff, OneWayCursedLoveBuff, Moongrace → `scripts/buffs/<Kind>.lua`
+(CustomBuff via the scan; ~10 java classes out incl. the dups). Kind
+strings change from `artifactBuff<Name>` to the plain script kind - kind
+queries updated where they were load-bearing (Rat.lua/Albino.lua ratter
+flee now query "RatterAura"; Charm.lua + CharUtils charmDurationFactor now
+actually SEE the DriedRose buffs - the old plain-name queries silently
+missed the prefixed artifact kinds, flagged as behavior restored). Buff
+factory RAGE/MOONGRACE/RAT_SKULL_RATTER_AURA constants retired.
+NecromancerArmor seeds Necrotism through `affectBuff(user,"Necrotism")` +
+`level(1)` + `loadScriptData(serpent.dump({left=...}))` - the java
+set(duration, i) split into level = iteration (packed) and script-data
+left (acts). Mob.makePet/CharUtils statics serve the aura procs from lua.
+Verification: tests/http_api/test_item_buffs.py 7/7 (attach by kind x6,
+RageBuff double-damage + sourced-sticks + unsourced-permanent-inert
+(java permanent() deactivates the actor - the arrow rage never acted),
+RatKingAura pet-on-hit, HeartOfDarkness pet-spirit-on-defence, Necrotism
+drain + spread, Moongrace skill trickle + move-detach, legacy FQN
+restores incl. the CorpseDust.UndeadRageAuraBuff alias).
+
+## Pickaxe + ChaosStaff SHIPPED; Carcass stays java (2026-11-27)
+
+Pickaxe → `scripts/items/Pickaxe.lua` (CustomItem, the RemixedPickaxe
+mod script as the template): vanilla mining (WALL_DECO→WALL + DarkGold in
+CavesLevel/CavesBossLevel only, TIME_TO_MINE 2), bloodStained in script
+data (Blacksmith.lua getBoolean flow unchanged), BLOODY glow, STR 14,
+not-upgradable. The live quest already gifted the lua RemixedPickaxe, so
+the java class was legacy-save compat; kind "Pickaxe" + addKindAlias from
+the quest FQN.
+
+ChaosStaff → `scripts/items/ChaosStaff.lua` on the Wand framework
+(registerItemKind("ChaosStaff", Wand::new); the class-served wand with
+the Class.forName restore is served by the kind registry now). The chaos
+charge counter rides script data; the Wand framework gained
+ownerTakesDamage/ownerDoesDamage kind hooks + lua-data persistence
+(saveData/loadData node, MeleeWeapon pattern). The zap does
+ChaosCommon:doChaosMark(cell, 10+level*10+charge) then the 10% roll
+(die/makePet/clone-spawn/teleportAway - the java case 4 Potion.heal was
+unreachable: Random.Int(0,4) never returns 4, the branch died with the
+class). ItemUtils.chaosFuseResult news the kind via itemByName.
+
+Carcass STAYS JAVA - the doc's O(1) estimate was wrong about it: it is an
+Actor item (own act()/ttl decay/heap replace), carries a @Packable live
+Char reference, has a dynamic composite entity kind ("Carcass of <Mob>"
+that itemByName prefix-matches), and its reanimate flow drives the pet
+machinery. Migrating it means new engine surface (dynamic kinds +
+item-actor + packed Char ref by id) disproportionate to one quest item.
+Re-open only with a ruling that wants mods to author carcass-like items.
+
+## Blobs wave 1 SHIPPED (2026-11-27); wave 2 (wells + alchemy) still java
+
+10 of 15 kinds are scripts now (ToxicGas, ParalyticGas, ConfusionGas,
+MiasmaGas, Fire, LiquidFlame, Web, Darkness, Regrowth, Foliage) on
+`ScriptBlob` - the kind-parameterized executor. The split follows the
+ruling: java keeps every O(area) walk (4-neighbor diffusion, decay,
+persist, the two fire walkers, the Toxic↔Paralytic cancel pair - all
+verbatim from the deleted classes) and dispatches each tick's covered
+cells to the script as ONE batched `affect(self, blob, cells)` call
+(cells = java int[], 1-based) - a kind hook costs one invocation per tick
+regardless of cloud size. `after(self, blob)` runs once per tick when
+volume > 0 (Foliage journal/shadows); `onHeroDeath` (Doom) serves the
+ToxicGas death report. `BlobEmitters.configure(kind, emitter)` keeps the
+pours in java (rendering layer). Blob kinds are string keys: Level.blobs
+is kind-keyed, blobPut/blobAt/fillAreaWith/clearAreaFrom/blobAmountAt
+take kind strings, BLOBS bundle nodes carry entityKind resolved by a new
+"blob" entity resolver (legacy FQN keys derive their simple name - no
+aliases), RPD.Blobs.<Kind> are strings and Blob.seed speaks kinds
+(ScriptBlob:burn is the shared Fire.burn bridge). Freezing stays a java
+static helper (it was never a Blob subclass). Wave-2 kinds
+(WellWater/WaterOfHealth/WaterOfAwareness/WaterOfTransmutation/Alchemy)
+stay java classes registered as BlobFactory suppliers - their per-entry
+flows + item-swap coupling are their own batch; scripts/blobs/<Kind>.lua
+for them flips the suppliers to ScriptBlob with no further call-site
+work. Verification: ToxicGas staged live through the new engine (gas
+forms, drains hero + golem over ticks), all 4 platform compiles green,
+full battery round + mod sweep green (Remixed-Additions revampedCommon
+Blobs table switched to kind strings like the engine one).
+
 ## Lua windows design (2026-11-27 — escape path for the UI/window-coupled layer)
 
 Feasibility: mostly built already. `luajava.newInstance` constructs real

@@ -14,7 +14,6 @@ import com.watabou.utils.Bundle;
 import java.util.Arrays;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.SneakyThrows;
 
 public class Blob extends Actor implements NamedEntityKind {
 
@@ -35,11 +34,20 @@ public class Blob extends Actor implements NamedEntityKind {
 
 	public BlobEmitter emitter;
 
+	// kind identity for data blobs (ScriptBlob); null on the wave-2 java blobs
+	// (the wells + alchemy pot), whose kinds stay their class simple names
+	protected String blobKind;
+
 	protected Blob() {
 		cur = new int[getLength()];
 		off = new int[getLength()];
 
 		setVolume(0);
+	}
+
+	protected Blob(String kind) {
+		this();
+		this.blobKind = kind;
 	}
 
 	public void reinit() {
@@ -188,18 +196,20 @@ public class Blob extends Actor implements NamedEntityKind {
 		return null;
 	}
 
-	@SneakyThrows
-	public static <T extends Blob> T seed(int cell, int amount, Class<T> type) {
-		return seed(Dungeon.level, cell, amount, type);
+	@LuaInterface
+	public static Blob seed(int cell, int amount, String kind) {
+		return seed(Dungeon.level, cell, amount, kind);
 	}
 
 	@LuaInterface
-	@SneakyThrows
-	public static <T extends Blob> T seed(Level level, int cell, int amount, Class<T> type) {
-		T gas = (T) level.blobs.get(type);
+	public static Blob seed(Level level, int cell, int amount, String kind) {
+		Blob gas = level.blobAt(kind);
 		if (gas == null) {
-			gas = type.newInstance();
-			level.blobPut(type, gas);
+			gas = BlobFactory.byKind(kind);
+			if (gas == null) {
+				throw new com.nyrds.util.ModError("unknown blob kind: " + kind);
+			}
+			level.blobPut(kind, gas);
 		}
 
 		gas.seed(cell, amount);
@@ -213,6 +223,9 @@ public class Blob extends Actor implements NamedEntityKind {
 
 	@Override
 	public String getEntityKind() {
+		if (blobKind != null) {
+			return blobKind;
+		}
         return super.getEntityKind();
     }
 

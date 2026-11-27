@@ -44,10 +44,12 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.levels.DeadEndLevel;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
@@ -137,6 +139,18 @@ public class Dungeon {
         Bundle.registerEntityResolver("item", ItemFactory::tryByName);
         Bundle.registerEntityResolver("buff", BuffFactory::tryByName);
         Bundle.registerEntityResolver("levelObject", LevelObjectsFactory::tryByName);
+        Bundle.registerEntityResolver("blob", com.watabou.pixeldungeon.actors.blobs.BlobFactory::byKind);
+        // armor glyphs + weapon enchantments (kind sets are disjoint - one
+        // system serves both; kinds live in scripts/glyphs + scripts/enchants)
+        Bundle.registerEntityResolver("glyph", kind -> {
+            if (Armor.Glyph.hasKind(kind)) {
+                return new Armor.Glyph(kind);
+            }
+            if (Weapon.Enchantment.hasKind(kind)) {
+                return new Weapon.Enchantment(kind);
+            }
+            return null;
+        });
     }
 
 

@@ -41,6 +41,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.RespawnerActor;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.BlobFactory;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
@@ -80,7 +81,6 @@ import java.util.Map;
 import java.util.Set;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.SneakyThrows;
 import lombok.val;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -490,7 +490,7 @@ public abstract class Level implements Bundlable {
 
 	private Set<ScriptedActor>                    scripts = new HashSet<>();
 	public  Set<Mob>                              mobs    = new HashSet<>();
-	public  Map<Class<? extends Blob>, Blob>      blobs   = new HashMap<>();
+	public  Map<String, Blob>                     blobs   = new HashMap<>();
 	private Map<Integer, Heap>                    heaps   = new HashMap<>();
 	public final Map<Integer,Map<Integer,LevelObject>> objects = new HashMap<>();
 
@@ -789,7 +789,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		for (Blob blob : bundle.getCollection(BLOBS, Blob.class)) {
-			blobPut(blob.getClass(), blob);
+			blobPut(blob.getEntityKind(), blob);
 		}
 
 		for (ScriptedActor actor : bundle.getCollection(SCRIPTS, ScriptedActor.class)) {
@@ -2112,16 +2112,18 @@ public abstract class Level implements Bundlable {
 	}
 
 	@LuaInterface
-	public void fillAreaWith(Class<? extends Blob> blobClass, int cell, int xs, int ys, int amount) {
-		fillAreaWith(blobClass, cellX(cell), cellY(cell), xs, ys, amount);
+	public void fillAreaWith(String blobKind, int cell, int xs, int ys, int amount) {
+		fillAreaWith(blobKind, cellX(cell), cellY(cell), xs, ys, amount);
 	}
 
-	@SneakyThrows
 	@LuaInterface
-	public void fillAreaWith(Class<? extends Blob> blobClass, int x, int y, int xs, int ys, int amount) {
-		Blob blob = blobs.get(blobClass);
+	public void fillAreaWith(String blobKind, int x, int y, int xs, int ys, int amount) {
+		Blob blob = blobAt(blobKind);
 		if (blob == null) {
-			blob = blobClass.newInstance();
+			blob = BlobFactory.byKind(blobKind);
+			if (blob == null) {
+				throw new com.nyrds.util.ModError("unknown blob kind: " + blobKind);
+			}
 
 			GameScene.add(blob);
 		}
@@ -2133,17 +2135,17 @@ public abstract class Level implements Bundlable {
 				}
 			}
 		}
-		blobPut(blobClass, blob);
+		blobPut(blobKind, blob);
 	}
 
 	@LuaInterface
-	public void clearAreaFrom(Class<? extends Blob> blobClass, int cell, int xs, int ys) {
-		clearAreaFrom(blobClass, cellX(cell), cellY(cell), xs, ys);
+	public void clearAreaFrom(String blobKind, int cell, int xs, int ys) {
+		clearAreaFrom(blobKind, cellX(cell), cellY(cell), xs, ys);
 	}
 
 	@LuaInterface
-	public void clearFrom(Class<? extends Blob> blobClass) {
-		Blob blob = blobs.get(blobClass);
+	public void clearFrom(String blobKind) {
+		Blob blob = blobAt(blobKind);
 		if (blob == null) {
 			return;
 		}
@@ -2151,8 +2153,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	@LuaInterface
-	public void clearAreaFrom(Class<? extends Blob> blobClass, int x, int y, int xs, int ys) {
-		Blob blob = blobs.get(blobClass);
+	public void clearAreaFrom(String blobKind, int x, int y, int xs, int ys) {
+		Blob blob = blobAt(blobKind);
 		if (blob == null) {
 			return;
 		}
@@ -2167,8 +2169,8 @@ public abstract class Level implements Bundlable {
 	}
 
 	@LuaInterface
-	public int blobAmountAt(Class<? extends Blob> blobClass, int cell) {
-		Blob blob = blobs.get(blobClass);
+	public int blobAmountAt(String blobKind, int cell) {
+		Blob blob = blobAt(blobKind);
 		if (blob == null) {
 			return 0;
 		}
@@ -2359,8 +2361,13 @@ public abstract class Level implements Bundlable {
 		return false;
 	}
 
-	public void blobPut(Class<? extends Blob> clazz, Blob blob) {
+	public void blobPut(String kind, Blob blob) {
 		Actor.add(blob);
-		blobs.put(clazz, blob);
+		blobs.put(kind, blob);
+	}
+
+	@LuaInterface
+	public Blob blobAt(String kind) {
+		return blobs.get(kind);
 	}
 }

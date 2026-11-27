@@ -14,11 +14,11 @@ return object.init {
     init = function(self, object, level, data)
         local pos = object:getPos()
 
-        if level:blobAmountAt(RPD.Blobs.Alchemy, pos) > 0 then
+        if level:blobAmountAt("Alchemy", pos) > 0 then
             return
         end
 
-        RPD.placeBlob(RPD.Blobs.Alchemy, pos, 1, level)
+        RPD.placeBlob("Alchemy", pos, 1, level)
 
     end,
 
@@ -32,7 +32,7 @@ return object.init {
         -- caveman: item presses (seeds landing in the pot) bump too - transmute
         -- is a no-op below 3 seeds and the heap must STAY in the pot to brew;
         -- only kick heaps for price-carrying pressers above
-        RPD.Blobs.Alchemy:transmute(pos)
+        "Alchemy":transmute(pos)
     end,
 
     textureFile = function(self, object, level)

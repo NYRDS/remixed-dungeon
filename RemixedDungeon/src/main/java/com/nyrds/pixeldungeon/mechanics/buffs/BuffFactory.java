@@ -7,13 +7,7 @@ import com.nyrds.util.ModdingMode;
 import com.nyrds.util.Util;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.DummyBuff;
-import com.watabou.pixeldungeon.actors.buffs.HeartOfDarknessBuff;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
-import com.watabou.pixeldungeon.actors.buffs.OneWayCursedLoveBuff;
-import com.watabou.pixeldungeon.actors.buffs.OneWayLoveBuff;
-import com.watabou.pixeldungeon.actors.buffs.RatKingAuraBuff;
-import com.watabou.pixeldungeon.actors.buffs.RatterAura;
-import com.watabou.pixeldungeon.items.armor.glyphs.Viscosity;
 import com.watabou.pixeldungeon.utils.Utils;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -70,10 +64,6 @@ public class BuffFactory {
     public static final String SLOW = "Slow";
     public static final String ROOTS = "Roots";
     public static final String AMOK = "Amok";
-    public static final String RAGE = new RageBuff().getEntityKind();
-
-    // the Moongrace plant shares this buff's simple name and cannot import it
-    public static final String MOONGRACE = "Moongrace";
 
     public static final String HEALTH = "Health";
     public static final String ARMOR = "Armor";
@@ -90,8 +80,6 @@ public class BuffFactory {
 	public static final String RING_OF_SATIETY = "artifactBuffSatiety";
 	public static final String RING_OF_HERBALISM = "artifactBuffHerbalism";
 
-	public static final String RAT_SKULL_RATTER_AURA = "artifactBuffRatterAura";
-
 
     static {
         initBuffsMap();
@@ -106,21 +94,11 @@ public class BuffFactory {
     }
 
     private static void initBuffsMap() {
-        registerBuffClass(Viscosity.DeferedDamage.class);
         registerBuffClass(Hunger.class);
         //registerBuffClass(Charger.class);
-        registerBuffClass(Necrotism.class);
-        registerBuffClass(HeartOfDarknessBuff.class);
-        registerBuffClass(OneWayCursedLoveBuff.class);
-        registerBuffClass(OneWayLoveBuff.class);
-        registerBuffClass(RatKingAuraBuff.class);
-        registerBuffClass(RatterAura.class);
-        registerBuffClass(RageBuff.class);
-        registerBuffClass(OneWayCursedLoveBuff.class);
-        registerBuffClass(OneWayLoveBuff.class);
-        // registered for the Moongrace plant, which shares the buff's simple name
-        // and cannot import it directly
-        registerBuffClass(Moongrace.class);
+        // item/quest-coupled buffs (Necrotism, RageBuff, the auras, the rose
+        // markers, Moongrace) are scripts/buffs/<Kind>.lua now - the scan
+        // serves their kinds via CustomBuff
         // ring buffs (StoneWalking, FrostAura, and the 12 kind buffs) are served
         // by KindRingBuff via the rings' kind scripts - no class registrations
 

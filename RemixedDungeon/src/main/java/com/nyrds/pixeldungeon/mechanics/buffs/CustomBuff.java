@@ -184,6 +184,12 @@ public class CustomBuff extends Buff implements Doom {
         script.runOptionalNoRet(fn, args);
     }
 
+    // non-varargs sibling: lua must not call varargs java methods (luaj drops
+    // the trailing args) - feeds loadData with a serpent string
+    public void loadScriptData(String serpentStr) {
+        script.runOptionalNoRet("loadData", serpentStr);
+    }
+
     @Override
     public int defenceProc(Char defender, Char enemy, int damage) {
         return script.runOptional("defenceProc", damage, enemy, damage);

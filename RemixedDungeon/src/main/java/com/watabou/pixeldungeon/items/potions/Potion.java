@@ -19,13 +19,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
-import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
-import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
-import com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness;
-import com.watabou.pixeldungeon.actors.blobs.WaterOfHealth;
-import com.watabou.pixeldungeon.actors.blobs.WaterOfTransmutation;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -327,9 +321,9 @@ public class Potion extends Item implements UnknownItem {
 	}
 
 	private boolean isMagicWell(Level level, int cell) {
-		return level.blobAmountAt(WaterOfAwareness.class, cell) > 0
-				|| level.blobAmountAt(WaterOfHealth.class, cell) > 0
-				|| level.blobAmountAt(WaterOfTransmutation.class, cell) > 0;
+		return level.blobAmountAt("WaterOfAwareness", cell) > 0
+				|| level.blobAmountAt("WaterOfHealth", cell) > 0
+				|| level.blobAmountAt("WaterOfTransmutation", cell) > 0;
 	}
 	
 	protected void apply(Char hero ) {
@@ -512,9 +506,9 @@ public class Potion extends Item implements UnknownItem {
 		PathFinder.buildDistanceMap(cell, BArray.not(level.losBlocking, null), (int) (DISTANCE_SWEEP * qualityFactor()));
 		boolean procd = false;
 		Blob[] blobs = {
-				level.blobs.get(ToxicGas.class),
-				level.blobs.get(ParalyticGas.class),
-				level.blobs.get(ConfusionGas.class)
+				level.blobAt("ToxicGas"),
+				level.blobAt("ParalyticGas"),
+				level.blobAt("ConfusionGas")
 		};
 		for (Blob blob : blobs) {
 			if (blob == null) {

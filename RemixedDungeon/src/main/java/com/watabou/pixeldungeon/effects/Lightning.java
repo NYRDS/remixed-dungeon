@@ -10,6 +10,7 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
@@ -50,6 +51,13 @@ public class Lightning extends Group {
 		int width = Dungeon.level.getWidth();
 		GameScene.addToMobLayer(new Lightning(new int[]{cell - width, cell + width}));
 		GameScene.addToMobLayer(new Lightning(new int[]{cell - 1, cell + 1}));
+	}
+
+	// Potential.lua bridge: a bolt arc from the attacker to the defender
+	// (was new Lightning(points) + GameScene.addToMobLayer in the java glyph)
+	@LuaInterface
+	static public void boltBetween(Char from, Char to) {
+		GameScene.addToMobLayer(new Lightning(new int[]{from.getPos(), to.getPos()}));
 	}
 
 	private void init ( int[] cells, Callback callback ) {

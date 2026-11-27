@@ -1,13 +1,14 @@
 
 package com.watabou.pixeldungeon.items.armor;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.ItemUtils;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.Util;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ResultDescriptions;
@@ -17,24 +18,19 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Doom;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.armor.glyphs.Affection;
-import com.watabou.pixeldungeon.items.armor.glyphs.AntiEntropy;
-import com.watabou.pixeldungeon.items.armor.glyphs.Bounce;
-import com.watabou.pixeldungeon.items.armor.glyphs.Displacement;
-import com.watabou.pixeldungeon.items.armor.glyphs.Entanglement;
-import com.watabou.pixeldungeon.items.armor.glyphs.Metabolism;
-import com.watabou.pixeldungeon.items.armor.glyphs.Multiplicity;
-import com.watabou.pixeldungeon.items.armor.glyphs.Potential;
-import com.watabou.pixeldungeon.items.armor.glyphs.Stench;
-import com.watabou.pixeldungeon.items.armor.glyphs.Viscosity;
 import com.watabou.pixeldungeon.sprites.Glowing;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-import lombok.SneakyThrows;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.luaj.vm2.LuaValue;
@@ -404,7 +400,7 @@ public class Armor extends EquipableItem {
 		super.fromJson(itemDesc);
 
 		if(itemDesc.has(GLYPH)) {
-			glyph = Util.byNameFromList(Glyph.glyphs, itemDesc.getString(GLYPH));
+			glyph = Glyph.byKind(itemDesc.getString(GLYPH));
 		}
 	}
 
@@ -418,33 +414,113 @@ public class Armor extends EquipableItem {
 		return Math.max(typicalSTR() - level(),2);
 	}
 
-	public static abstract class Glyph extends Buff implements Bundlable, NamedEntityKind, Doom{
-		
-		private static final Class<?>[] glyphs = new Class<?>[]{ 
-			Bounce.class, Affection.class, AntiEntropy.class, Multiplicity.class, 
-			Potential.class, Metabolism.class, Stench.class, Viscosity.class,
-			Displacement.class, Entanglement.class };
-		
-		private static final float[] chances= new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-			
-		public abstract int defenceProc(Armor armor, Char attacker, Char defender, int damage );
-		
-		public String name() {
-            return name(StringsManager.getVar(R.string.Armor_Glyph));
+	// --- glyph kinds are data (scripts/glyphs/<Kind>.lua, 2026-11-27): one
+	// kind-parameterized framework, hooks per script, weights from desc chance
+	@LuaInterface
+	public static class Glyph extends Buff implements Bundlable, NamedEntityKind, Doom {
+
+		// inscribeable kinds (every script module in scripts/glyphs) and the
+		// random-pool weights (desc chance, 0/absent = inscribe-by-kind only)
+		private static final Set<String> allKinds = new LinkedHashSet<>();
+		private static final Map<String, Float> pool = new LinkedHashMap<>();
+		private static boolean kindsLoaded;
+
+		private final String kind;
+		private final transient LuaScript kindScript;
+		private final Glowing glow;
+
+		public Glyph(@NotNull String kind) {
+			this.kind = kind;
+			kindScript = new LuaScript("scripts/glyphs/" + kind, "scripts/lib/emptykind", this);
+
+			Glowing parsed = null;
+			if (kindScript.hasMethod("desc")) {
+				LuaValue desc = kindScript.run("desc").checktable();
+				LuaValue glowDesc = desc.rawget("glowing");
+				if (!glowDesc.isnil()) {
+					parsed = new Glowing(glowDesc.rawget("color").optint(0xFFFFFF),
+							(float) glowDesc.rawget("period").optdouble(1f));
+				}
+			}
+			glow = parsed;
 		}
-		
-		public String name( String armorName ) {
-			return armorName;
+
+		@Override
+		public String getEntityKind() {
+			return kind;
+		}
+
+		@Override
+		public String getEntitySystem() {
+			return "glyph";
+		}
+
+		private static synchronized void loadKinds() {
+			if (kindsLoaded) {
+				return;
+			}
+			kindsLoaded = true;
+			for (String file : ModdingMode.listResources("scripts/glyphs", (dir, name) -> name.endsWith(".lua"))) {
+				String kind = file.replace(".lua", Utils.EMPTY_STRING);
+				allKinds.add(kind);
+				float chance = (float) readChance("scripts/glyphs/" + kind);
+				if (chance > 0) {
+					pool.put(kind, chance);
+				}
+			}
+		}
+
+		private static double readChance(String path) {
+			LuaScript script = new LuaScript(path, null);
+			if (!script.hasMethod("desc")) {
+				return 0;
+			}
+			LuaValue desc = script.run("desc").checktable();
+			return desc.rawget("chance").optdouble(0);
+		}
+
+		public static boolean hasKind(String kind) {
+			loadKinds();
+			return allKinds.contains(kind);
+		}
+
+		@Nullable
+		public static Glyph byKind(String kind) {
+			if (!hasKind(kind)) {
+				return null;
+			}
+			return new Glyph(kind);
+		}
+
+		public static Glyph random() {
+			loadKinds();
+			float[] chances = new float[pool.size()];
+			int i = 0;
+			for (float v : pool.values()) {
+				chances[i++] = v;
+			}
+			int idx = Random.chances(chances);
+			if (idx < 0) {
+				return null;
+			}
+			return new Glyph(new ArrayList<>(pool.keySet()).get(idx));
+		}
+
+		public int defenceProc(Armor armor, Char attacker, Char defender, int damage) {
+			return kindScript.runOptional("defenceProc", damage, armor, attacker, defender, damage);
+		}
+
+		public String name() {
+			return name(StringsManager.getVar(R.string.Armor_Glyph));
+		}
+
+		public String name(String armorName) {
+			return kindScript.runOptional("name",
+					Utils.format(StringsManager.maybeId(kind + "_Txt"), armorName), armorName);
 		}
 
 		public Glowing glowing() {
-			return Glowing.WHITE;
-		}
-
-		@SuppressWarnings("unchecked")
-		@SneakyThrows
-		public static Glyph random() {
-			return ((Class<Glyph>)glyphs[ Random.chances( chances ) ]).newInstance();
+			return glow != null ? glow : Glowing.WHITE;
 		}
 
 		@Override

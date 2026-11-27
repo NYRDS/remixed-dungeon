@@ -23,8 +23,8 @@ public class Freezing {
 	
 	public static void affect( int cell ) {
 		Level level = Dungeon.level;
-		Blob fire = level.blobs.get( Fire.class );
-		Blob liquidFlame = level.blobs.get( LiquidFlame.class );
+		Blob fire = level.blobAt( "Fire" );
+		Blob liquidFlame = level.blobAt( "LiquidFlame" );
 
 		Char ch = Actor.findChar( cell ); 
 		if (ch != null) {

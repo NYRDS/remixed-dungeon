@@ -5,6 +5,7 @@
 ---
 local RPD     = require "scripts/lib/commonClasses"
 local NecrotismDuration = 3 -- Necrotism.duration constant
+local serpent = require "scripts/lib/serpent"
 local weapon = require "scripts/lib/weapon"
 
 return weapon.init{
@@ -24,7 +25,10 @@ return weapon.init{
         -- Necrotism self-buff, one charge (was NecromancerArmor.doSpecial)
         user:doOperate(RPD.Actor:TICK())
         local necro = RPD.affectBuff(user, "Necrotism")
-        if necro ~= nil then necro:set(NecrotismDuration, 1) end
+        if necro ~= nil then
+            necro:level(1)
+            necro:loadScriptData(serpent.dump({ left = NecrotismDuration + 1 }))
+        end
         user:getSprite():burst(0x6935a5, 3)
         RPD.playSound("snd_read")
     end,

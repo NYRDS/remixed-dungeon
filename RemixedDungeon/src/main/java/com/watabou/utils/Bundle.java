@@ -174,8 +174,10 @@ public class Bundle {
     }
 
     // fixed priority for legacy (untagged) entries; systems with no cross-kind
-    // collisions today, so any deterministic order is correct
-    private static final String[] RESOLVER_PRIORITY = {"mob", "item", "buff", "levelObject"};
+    // collisions today, so any deterministic order is correct. "glyph" first:
+    // glyph/enchantment kinds are nested in item bundles and must never lose a
+    // name collision with an item/mob kind (sets are disjoint today).
+    private static final String[] RESOLVER_PRIORITY = {"glyph", "mob", "item", "buff", "levelObject", "blob"};
 
     /**
      * Legacy bundles carry no entityKind: derive the kind from the stored FQN

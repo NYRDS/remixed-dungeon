@@ -2,9 +2,6 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness;
-import com.watabou.pixeldungeon.actors.blobs.WaterOfHealth;
-import com.watabou.pixeldungeon.actors.blobs.WaterOfTransmutation;
 import com.watabou.pixeldungeon.actors.blobs.WellWater;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
@@ -15,8 +12,8 @@ import lombok.SneakyThrows;
 
 public class MagicWellPainter extends Painter {
 
-	private static final Class<?>[] WATERS = 
-		{WaterOfAwareness.class, WaterOfHealth.class, WaterOfTransmutation.class};
+	private static final String[] WATERS =
+		{"WaterOfAwareness", "WaterOfHealth", "WaterOfTransmutation"};
 
 	@SneakyThrows
 	public static void paint( Level level, Room room ) {
@@ -27,22 +24,21 @@ public class MagicWellPainter extends Painter {
 		Point c = room.center();
 		set( level, c.x, c.y, Terrain.WELL );
 		
-		@SuppressWarnings("unchecked")
-		Class<? extends WellWater> waterClass = 
+		String waterKind =
 			Dungeon.depth >= Dungeon.transmutation ?
-			WaterOfTransmutation.class :		
-			(Class<? extends WellWater>)Random.element( WATERS );
-			
-		if (waterClass == WaterOfTransmutation.class) {
+			"WaterOfTransmutation" :
+			Random.element( WATERS );
+
+		if (waterKind.equals("WaterOfTransmutation")) {
 			Dungeon.transmutation = Integer.MAX_VALUE;
 		}
-		
-		WellWater water = (WellWater)level.blobs.get( waterClass );
+
+		WellWater water = (WellWater)level.blobAt( waterKind );
 		if (water == null) {
-			water = waterClass.newInstance();
+			water = (WellWater) com.watabou.pixeldungeon.actors.blobs.BlobFactory.byKind(waterKind);
 		}
 		water.seed( c.x + level.getWidth() * c.y, 1 );
-		level.blobPut( waterClass, water );
+		level.blobPut( waterKind, water );
 		
 		room.entrance().set( Room.Door.Type.REGULAR );
 	}

@@ -62,8 +62,10 @@ public class RemixedDungeon extends Game {
 				"TomeOfKnowledge",
 				"com.nyrds.pixeldungeon.items.books.SpellBook");
 
-		com.watabou.utils.Bundle.addAlias(
-				com.nyrds.pixeldungeon.mechanics.buffs.RageBuff.class,
+		// the rage aura is a script buff now: alias the old CorpseDust FQN to
+		// its kind string
+		com.watabou.utils.Bundle.addKindAlias(
+				"RageBuff",
 			"com.watabou.pixeldungeon.items.quest.CorpseDust.UndeadRageAuraBuff"
 		);
 

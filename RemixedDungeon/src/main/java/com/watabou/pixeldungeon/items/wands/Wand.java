@@ -481,6 +481,7 @@ public class Wand extends KindOfWeapon implements UnknownItem {
     }
 
     private static final String MAX_CHARGES = "maxCharges";
+    private static final String LUA_DATA = "luaData";
     private static final String CUR_CHARGES = "curCharges";
 
     @Override
@@ -488,6 +489,10 @@ public class Wand extends KindOfWeapon implements UnknownItem {
         super.storeInBundle(bundle);
         bundle.put(MAX_CHARGES, maxCharges());
         bundle.put(CUR_CHARGES, curCharges());
+        // kind-script state (ChaosStaff charge counter), the MeleeWeapon pattern
+        if (kindScript.hasMethod("saveData")) {
+            bundle.put(LUA_DATA, kindScript.run("saveData").checkjstring());
+        }
     }
 
     @Override
@@ -495,6 +500,24 @@ public class Wand extends KindOfWeapon implements UnknownItem {
         super.restoreFromBundle(bundle);
         maxCharges(bundle.getInt(MAX_CHARGES));
         curCharges(bundle.getInt(CUR_CHARGES));
+        String luaData = bundle.optString(LUA_DATA, null);
+        if (luaData != null) {
+            kindScript.run("loadData", luaData);
+        } else {
+            kindScript.runOptionalNoRet("loadLegacy", bundle);
+        }
+    }
+
+    @Override
+    public void ownerTakesDamage(int damage) {
+        kindScript.runOptionalNoRet("ownerTakesDamage", damage);
+        super.ownerTakesDamage(damage);
+    }
+
+    @Override
+    public void ownerDoesDamage(int damage) {
+        kindScript.runOptionalNoRet("ownerDoesDamage", damage);
+        super.ownerDoesDamage(damage);
     }
 
     protected void wandEffect(final int cell, Char selector) {

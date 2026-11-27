@@ -7,7 +7,7 @@ return mob.init{
         -- (inherited from java Rat.canAttack before batch 6)
         local enemy = self:getEnemy()
 
-        if enemy ~= nil and enemy:hasBuff("artifactBuffRatterAura") then
+        if enemy ~= nil and enemy:hasBuff("RatterAura") then
             RPD.setAi(self, "Fleeing")
             if not self:hasBuff("Terror") then
                 RPD.affectBuff(self, "Terror", 10)

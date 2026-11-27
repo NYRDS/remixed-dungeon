@@ -1,7 +1,6 @@
 package com.nyrds.pixeldungeon.items;
 
 import com.nyrds.LuaInterface;
-import com.nyrds.pixeldungeon.items.chaos.ChaosStaff;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.levels.objects.LevelObject;
 import com.nyrds.pixeldungeon.levels.objects.Presser;
@@ -23,8 +22,6 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.CharUtils;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.Fire;
-import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -140,10 +137,14 @@ public class ItemUtils {
 		}
 		Armor armor = (Armor) candidate;
 
-		Class<? extends Armor.Glyph> oldGlyphClass = armor.glyph != null ? armor.glyph.getClass() : null;
+		String oldGlyphKind = armor.glyph != null ? armor.glyph.getEntityKind() : null;
 		Armor.Glyph glyph = Armor.Glyph.random();
-		while (glyph.getClass() == oldGlyphClass) {
+		while (glyph != null && glyph.getEntityKind().equals(oldGlyphKind)) {
 			glyph = Armor.Glyph.random();
+		}
+		if (glyph == null) {
+			// empty random pool (mods only) - keep the java no-glyph semantics
+			return false;
 		}
 
 		GLog.w(StringsManager.getVar(R.string.Stylus_Inscribed), glyph.name(), armor.name() );
@@ -299,7 +300,7 @@ public class ItemUtils {
 			c == Terrain.EMPTY_DECO ||
 			c == Terrain.GRASS ||
 			c == Terrain.HIGH_GRASS) {
-			GameScene.add( Blob.seed( cell, (wand.effectiveLevel() + 2) * 20, Regrowth.class ) );
+			GameScene.add( Blob.seed( cell, (wand.effectiveLevel() + 2) * 20, "Regrowth" ) );
 		} else {
 			GLog.i(StringsManager.getVar(R.string.WandOfRegrowth_Info1));
 		}
@@ -368,7 +369,7 @@ public class ItemUtils {
 			int c = Ballistica.trace[i];
 			if (level.cellValid(c)) {
 				if (level.flammable[c]) {
-					GameScene.add(Blob.seed(c, 1, Fire.class));
+					GameScene.add(Blob.seed(c, 1, "Fire"));
 				}
 				Heap heap = level.getHeap(c);
 				if(heap!=null) {
@@ -377,7 +378,7 @@ public class ItemUtils {
 			}
 		}
 
-		GameScene.add( Blob.seed( cell, 1, Fire.class ) );
+		GameScene.add( Blob.seed( cell, 1, "Fire" ) );
 
 		Char ch = Actor.findChar(cell);
 		if (ch != null) {
@@ -658,14 +659,14 @@ public class ItemUtils {
 
 		for (Mob mob : level.getCopyOfMobsArray()) {
 			if (level.fieldOfView[mob.getPos()]) {
-				GameScene.add( Blob.seed( mob.getPos(), 100, Regrowth.class ) );
+				GameScene.add( Blob.seed( mob.getPos(), 100, "Regrowth" ) );
 			}
 		}
 
 		user.doOperate(Actor.TICK);
 		Sample.INSTANCE.play( Assets.SND_READ );
 
-		GameScene.add( Blob.seed( user.getPos(), 100, Regrowth.class ) );
+		GameScene.add( Blob.seed( user.getPos(), 100, "Regrowth" ) );
 	}
 
 	/**
@@ -808,7 +809,7 @@ public class ItemUtils {
 		}
 
 		if (item instanceof Wand) {
-			Item newItem = new ChaosStaff();
+			Item newItem = ItemFactory.itemByName("ChaosStaff");
 			GLog.p(StringsManager.getVar(R.string.ChaosCrystal_StaffFused));
 			return newItem;
 		}

@@ -1,13 +1,15 @@
 
 package com.watabou.pixeldungeon.items.weapon;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.Packable;
 import com.nyrds.pixeldungeon.items.ItemUtils;
+import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
 import com.nyrds.pixeldungeon.ml.R;
 import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
-import com.nyrds.util.Util;
+import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -15,17 +17,6 @@ import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Death;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Fire;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Horror;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Instability;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Leech;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Luck;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Paralysis;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Piercing;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Poison;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Slow;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -35,12 +26,18 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.luaj.vm2.LuaValue;
 
 @EqualsAndHashCode(callSuper = true)
 public class Weapon extends KindOfWeapon {
@@ -233,25 +230,122 @@ public class Weapon extends KindOfWeapon {
 		super.fromJson(itemDesc);
 
 		if(itemDesc.has(ENCHANTMENT)) {
-			enchantment = Util.byNameFromList(Enchantment.enchants, itemDesc.getString(ENCHANTMENT));
+			enchantment = Enchantment.byKind(itemDesc.getString(ENCHANTMENT));
 		}
 	}
 
-	public static abstract class Enchantment extends Buff implements Bundlable, NamedEntityKind {
-		
-		final String[] TXT_NAME = Utils.getClassParams(getEntityKind(), "Name", new String[]{Utils.EMPTY_STRING, Utils.EMPTY_STRING, Utils.EMPTY_STRING}, true);
-		
-		private static final Class<?>[] enchants = new Class<?>[]{
-			Fire.class, Poison.class, Death.class, Paralysis.class, Leech.class,
-			Slow.class, Swing.class, Piercing.class, Instability.class, Horror.class, Luck.class };
+	// --- enchantment kinds are data (scripts/enchants/<Kind>.lua, 2026-11-27):
+	// one kind-parameterized framework, proc hook per script, weights from desc
+	// chance (vanilla: Fire 10, Poison 10, Death 1, Paralysis 2, Leech 1, Slow 2,
+	// Swing 3, Piercing 3, Instability 3, Horror 2, Luck 2)
+	@LuaInterface
+	public static class Enchantment extends Buff implements Bundlable, NamedEntityKind {
 
-		private static final float[] chances= new float[]{ 10, 10, 1, 2, 1, 2, 3, 3, 3, 2, 2 };
-			
-		public abstract boolean proc( Weapon weapon, Char attacker, Char defender, int damage );
-		
-		public String name( String weaponName, int gender) {
-			try{
-				return Utils.format( TXT_NAME[gender], weaponName );
+		// kind constants for the java-side kind checks (Char/Mob Death
+		// resist/immunity, MissileWeapon boomerang reroll)
+		public static final String KIND_DEATH = "Death";
+		public static final String KIND_PIERCING = "Piercing";
+		public static final String KIND_SWING = "Swing";
+
+		private static final Set<String> allKinds = new LinkedHashSet<>();
+		private static final Map<String, Float> pool = new LinkedHashMap<>();
+		private static boolean kindsLoaded;
+
+		private final String kind;
+		private final transient LuaScript kindScript;
+		private final Glowing glow;
+		// lazy: <Kind>_Name 3 gender forms (the ctor must not read strings -
+		// a field initializer would run before the kind lands)
+		private String[] txtName;
+
+		public Enchantment(@NotNull String kind) {
+			this.kind = kind;
+			kindScript = new LuaScript("scripts/enchants/" + kind, "scripts/lib/emptykind", this);
+
+			Glowing parsed = null;
+			if (kindScript.hasMethod("desc")) {
+				LuaValue desc = kindScript.run("desc").checktable();
+				LuaValue glowDesc = desc.rawget("glowing");
+				if (!glowDesc.isnil()) {
+					parsed = new Glowing(glowDesc.rawget("color").optint(0xFFFFFF),
+							(float) glowDesc.rawget("period").optdouble(1f));
+				}
+			}
+			glow = parsed;
+		}
+
+		@Override
+		public String getEntityKind() {
+			return kind;
+		}
+
+		@Override
+		public String getEntitySystem() {
+			return "glyph";
+		}
+
+		private static synchronized void loadKinds() {
+			if (kindsLoaded) {
+				return;
+			}
+			kindsLoaded = true;
+			for (String file : ModdingMode.listResources("scripts/enchants", (dir, name) -> name.endsWith(".lua"))) {
+				String kind = file.replace(".lua", Utils.EMPTY_STRING);
+				allKinds.add(kind);
+				float chance = (float) readChance("scripts/enchants/" + kind);
+				if (chance > 0) {
+					pool.put(kind, chance);
+				}
+			}
+		}
+
+		private static double readChance(String path) {
+			LuaScript script = new LuaScript(path, null);
+			if (!script.hasMethod("desc")) {
+				return 0;
+			}
+			LuaValue desc = script.run("desc").checktable();
+			return desc.rawget("chance").optdouble(0);
+		}
+
+		public static boolean hasKind(String kind) {
+			loadKinds();
+			return allKinds.contains(kind);
+		}
+
+		@Nullable
+		public static Enchantment byKind(String kind) {
+			if (!hasKind(kind)) {
+				return null;
+			}
+			return new Enchantment(kind);
+		}
+
+		@NotNull
+		public static Enchantment random() {
+			loadKinds();
+			float[] chances = new float[pool.size()];
+			int i = 0;
+			for (float v : pool.values()) {
+				chances[i++] = v;
+			}
+			int idx = Random.chances(chances);
+			if (idx < 0) {
+				idx = 0;
+			}
+			return new Enchantment(new ArrayList<>(pool.keySet()).get(idx));
+		}
+
+		public boolean proc(Weapon weapon, Char attacker, Char defender, int damage) {
+			return kindScript.runOptional("proc", false, weapon, attacker, defender, damage);
+		}
+
+		public String name(String weaponName, int gender) {
+			if (txtName == null) {
+				txtName = Utils.getClassParams(kind, "Name", new String[]{Utils.EMPTY_STRING, Utils.EMPTY_STRING, Utils.EMPTY_STRING}, true);
+			}
+			try {
+				return Utils.format(txtName[gender], weaponName);
 			} catch (Exception e) {
 				EventCollector.logException(e);
 			}
@@ -259,14 +353,7 @@ public class Weapon extends KindOfWeapon {
 		}
 
 		public Glowing glowing() {
-			return Glowing.WHITE;
-		}
-		
-		@SuppressWarnings("unchecked")
-		@SneakyThrows
-		@NotNull
-		public static Enchantment random() {
-			return ((Class<Enchantment>)enchants[ Random.chances( chances ) ]).newInstance();
+			return glow != null ? glow : Glowing.WHITE;
 		}
 	}
 }

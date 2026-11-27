@@ -4,11 +4,6 @@ import com.nyrds.LuaInterface;
 import com.nyrds.platform.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
-import com.watabou.pixeldungeon.actors.blobs.LiquidFlame;
-import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
-import com.watabou.pixeldungeon.actors.blobs.Regrowth;
-import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.PurpleParticle;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -16,13 +11,12 @@ import com.watabou.utils.Random;
 
 public class ChaosCommon {
 	
-	@SuppressWarnings("rawtypes")
-	private static final Class[] blobs = {
-		ConfusionGas.class,
-		LiquidFlame.class,
-		ParalyticGas.class,
-		Regrowth.class,
-		ToxicGas.class,
+	private static final String[] blobs = {
+		"ConfusionGas",
+		"LiquidFlame",
+		"ParalyticGas",
+		"Regrowth",
+		"ToxicGas",
 	};
 	
 	@SuppressWarnings("unchecked")

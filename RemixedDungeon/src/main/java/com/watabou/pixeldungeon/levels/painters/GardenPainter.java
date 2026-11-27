@@ -2,7 +2,6 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
-import com.watabou.pixeldungeon.actors.blobs.Foliage;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -33,9 +32,9 @@ public class GardenPainter extends Painter {
 			}
 		}
 		
-		Foliage light = (Foliage)level.blobs.get( Foliage.class );
+		com.watabou.pixeldungeon.actors.blobs.Blob light = level.blobAt("Foliage");
 		if (light == null) {
-			light = new Foliage();
+			light = com.watabou.pixeldungeon.actors.blobs.BlobFactory.byKind("Foliage");
 		}
 
 		for (int i=room.top + 1; i < room.bottom; i++) {
@@ -43,6 +42,6 @@ public class GardenPainter extends Painter {
 				light.seed( j + level.getWidth() * i, 1 );
 			}
 		}
-		level.blobPut( Foliage.class, light );
+		level.blobPut( "Foliage", light );
 	}
 }

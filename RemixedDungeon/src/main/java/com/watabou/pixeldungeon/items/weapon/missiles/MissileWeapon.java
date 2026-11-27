@@ -11,8 +11,6 @@ import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Piercing;
-import com.watabou.pixeldungeon.items.weapon.enchantments.Swing;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.MissileSprite;
@@ -52,7 +50,7 @@ public class MissileWeapon extends Weapon {
         if (kindWeapon && incendiary && (target == null || !target.valid() || target == thrower)) {
             // IncendiaryDart: seed a fire blob on a flammable landing cell
             if (thrower.level().flammable[cell]) {
-                GameScene.add(com.watabou.pixeldungeon.actors.blobs.Blob.seed( cell, 4, com.watabou.pixeldungeon.actors.blobs.Fire.class ));
+                GameScene.add(com.watabou.pixeldungeon.actors.blobs.Blob.seed( cell, 4, "Fire" ));
             } else {
                 super.onThrow( cell, thrower, target);
             }
@@ -360,7 +358,9 @@ public class MissileWeapon extends Weapon {
 	public Weapon enchant( Enchantment ench ) {
 		if (kindWeapon && rerollForbiddenEnchants) {
 			// Boomerang: no Piercing/Swing
-			while (ench instanceof Piercing || ench instanceof Swing) {
+			while (ench != null
+					&& (Enchantment.KIND_PIERCING.equals(ench.getEntityKind())
+						|| Enchantment.KIND_SWING.equals(ench.getEntityKind()))) {
 				ench = Enchantment.random();
 			}
 		}

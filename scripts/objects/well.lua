@@ -16,17 +16,17 @@ return object.init{
 
         local pos = object:getPos()
 
-        if level:blobAmountAt(RPD.Blobs.WaterOfAwareness, pos) > 0 then
+        if level:blobAmountAt("WaterOfAwareness", pos) > 0 then
             self.data.water = 'WaterOfAwareness'
             return
         end
 
-        if level:blobAmountAt(RPD.Blobs.WaterOfHealth, pos) > 0 then
+        if level:blobAmountAt("WaterOfHealth", pos) > 0 then
             self.data.water = 'WaterOfHealth'
             return
         end
 
-        if level:blobAmountAt(RPD.Blobs.WaterOfTransmutation, pos) > 0 then
+        if level:blobAmountAt("WaterOfTransmutation", pos) > 0 then
             self.data.water = 'WaterOfTransmutation'
             return
         end

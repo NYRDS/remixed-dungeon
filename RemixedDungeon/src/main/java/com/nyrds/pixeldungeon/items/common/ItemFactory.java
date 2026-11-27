@@ -201,11 +201,14 @@ public class ItemFactory {
         registerItemKind("WandOfAvalanche", Wand::new);
         registerItemKind("WandOfMagicMissile", Wand::new);
         // data melee weapons + bows: MeleeWeapon/KindOfBow frameworks +
-        // scripts/items/<Kind>.lua each (Pickaxe stays java - quest weapon
+        // scripts/items/<Kind>.lua each
         // with the mine flow; ShortSword is a reforger kind)
         registerItemClass(MeleeWeapon.class);
         registerItemKind("Dagger", MeleeWeapon::new);
         registerItemKind("Knuckles", MeleeWeapon::new);
+        // the fused chaos wand (was chaos/ChaosStaff.java, class-served with a
+        // Class.forName restore - the kind registry serves old saves now)
+        registerItemKind("ChaosStaff", Wand::new);
         registerItemKind("ShortSword", MeleeWeapon::new);
         registerItemKind("Quarterstaff", MeleeWeapon::new);
         registerItemKind("Spear", MeleeWeapon::new);
@@ -319,6 +322,12 @@ public class ItemFactory {
         Bundle.addKindAlias("Icecap.Seed", "com.watabou.pixeldungeon.plants.Icecap$Seed");
         Bundle.addKindAlias("Fadeleaf.Seed", "com.watabou.pixeldungeon.plants.Fadeleaf$Seed");
         Bundle.addKindAlias("Moongrace.Seed", "com.watabou.pixeldungeon.plants.Moongrace$Seed");
+        // the rage aura is a script buff now: alias the old CorpseDust FQN to
+        // its kind string
+        Bundle.addKindAlias("RageBuff", "com.watabou.pixeldungeon.items.quest.CorpseDust$UndeadRageAuraBuff");
+        // Pickaxe + ChaosStaff: old quest/staff saves restore as kind strings
+        Bundle.addKindAlias("Pickaxe", "com.watabou.pixeldungeon.items.quest.Pickaxe");
+        Bundle.addKindAlias("ChaosStaff", "com.nyrds.pixeldungeon.items.chaos.ChaosStaff");
 
         registerItemKind("RingOfFrost", Ring::new);
         registerItemKind(Food.CANDY, Food::new);
