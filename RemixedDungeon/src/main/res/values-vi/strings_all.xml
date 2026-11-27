@@ -250,6 +250,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Blacksmith_LooksBetter">%s của bạn trông tốt hơn bây giờ</string>
     <string name="Blacksmith_Name">thợ rèn troll</string>
     <string name="Blacksmith_Txt2">Bạn đang đùa tôi sao? Cái cuốc của tôi đâu rồi?!</string>
+    <string name="Blacksmith_Txt3">Kháng kim. 15 mảnh. Thật sự, có khó lắm sao?</string>
     <string name="Blacksmith_Txt4">Tôi đã nói tôi cần máu dơi trên cái rào. Nhanh lên nào!</string>
     <string name="Blacksmith_Verify1">Hãy chọn 2 vật phẩm khác nhau, không được chọn cùng một vật phẩm hai lần!</string>
     <string name="Blacksmith_Verify2">Chọn 2 vật phẩm cùng loại!</string>
@@ -1982,6 +1983,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="TownsfolkMovieNPC_Message">Bạn có biết về dịch vụ đặc biệt mà \&quot;rạp chiếu phim\&quot; cung cấp không? Thật tiếc họ yêu cầu một thứ kỳ lạ gọi là \&quot;Internet\&quot;, tôi chưa bao giờ nghe nói về điều đó.</string>
     <string name="TownsfolkMovieNPC_Name">dân phố</string>
     <string name="TownsfolkMovieNPC_Name_Objective">người dân thành phố</string>
+    <string name="TownsfolkNPC_Desc">Một người địa phương. Dù rõ ràng là một dân thường, nhưng bộ quần áo đó trông khá đắt tiền.</string>
     <string name="TownsfolkNPC_Gender">masculine</string>
     <string name="TownsfolkNPC_Message1">À! Một phiêu lưu gia khác, thật tuyệt vời! Hãy chắc chắn lấy càng nhiều đồ giá trị càng tốt!</string>
     <string name="TownsfolkNPC_Message2">Thành phố đã trở nên giàu có nhờ hang động này, đến mức mọi người trong phố đều có thể đi nghỉ bất cứ khi nào họ muốn! Thực tế đó là lý do tại sao lại ít người ở đây đến vậy.</string>
@@ -2045,6 +2047,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="WandOfFirebolt_Name">Gậy Bắn Lửa</string>
     <string name="WandOfFlock_Info">Một cái vẩy đũa này triệu hồi một đàn cừu ma thuật, tạo ra một chướng ngại vật tạm thời không thể vượt qua.</string>
     <string name="WandOfFlock_Name">Đũa phép Bầy Cừu</string>
+    <string name="WandOfFlock_SheepBaa_0">Be!</string>
     <string name="WandOfFlock_SheepBaa_1">Bêê?</string>
     <string name="WandOfFlock_SheepBaa_2">Bê.</string>
     <string name="WandOfFlock_SheepBaa_4">Be...</string>
@@ -2628,6 +2631,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_trapdoor_name">Cửa sập</string>
     <string name="town_deco_tree_desc">Một cảm giác kỳ lạ dâng lên khi nhìn chiếc cây sống và bình yên này. Dù sao, không xa nơi này là một ngục địa đầy rẫy khủng khiếp và cái chết.</string>
     <string name="town_deco_tree_name">Cây</string>
+    <string name="town_deco_urn_desc">Hũ gốm, có lẽ chứa tro cốt của ai đó.</string>
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_vat_name">chậu</string>
     <string name="town_deco_wall_beam_desc">Dùng làm một điểm tựa vững chắc cho công trình này.</string>
@@ -2660,6 +2664,10 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 

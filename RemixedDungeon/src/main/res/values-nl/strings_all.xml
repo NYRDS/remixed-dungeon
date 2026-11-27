@@ -1439,6 +1439,7 @@
     <string name="PetInventory_TakeFromPet">Nemen van huisdier</string>
     <string name="PetInventory_TakeN">Neem %d</string>
     <string name="PetInventory_Title">Huisdiereninventaris</string>
+    <string name="PetInventory_TooFar">Te ver van huisdier</string>
     <string name="PetInventory_TookItem">%1$s genomen van %2$s</string>
     <string name="PetInventory_ViewManage">Beheren</string>
     <string name="Pickaxe_ACMine">DELVEN</string>
@@ -1789,6 +1790,7 @@
     <string name="ScrollOfCurse_Name">Vloekscrol</string>
     <string name="ScrollOfDomination_Info">Deze rol vouwt de wil van één wezen in je zicht. Het wezen zal voor je vechten tot de dood.</string>
     <string name="ScrollOfDomination_Name">Scroll van Heerschappij</string>
+    <string name="ScrollOfIdentify_Info">Onthult permanent alle geheimen van een enkel item.</string>
     <string name="ScrollOfIdentify_Info1">Het is %s</string>
     <string name="ScrollOfIdentify_InvTitle">Kies een voorwerp om te identificeren</string>
     <string name="ScrollOfIdentify_Name">identificatiescrol</string>
@@ -2193,6 +2195,7 @@
     <string name="VileEssence_Info">Een geconcentreerde essentie van corruptie, geoogst van een verslagen vijand. Deze donkere substantie pulseert met kwaadaardige energie en wordt zeer gewaardeerd in alchemistische processen.</string>
     <string name="VileEssence_Name">Verachtelijke Essentie</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
+    <string name="VkPlayLink_idle"/>
     <string name="VkPlayLink_linked">Reclames zijn uitgeschakeld tot %s.</string>
     <string name="VkPlayLink_noConnection">Kan de verificatie-service niet bereiken. Controleer uw internetverbinding en probeer het opnieuw.</string>
     <string name="VkPlayLink_signIn">Aanmelden via VK ID</string>
@@ -2279,6 +2282,7 @@
     <string name="Warlock_Desc">Toen de interesses van de dwergen van techniek naar de magische kunsten verschoven, namen tovenaars de macht over in de stad. Ze begonnen met elementaire magie, maar schakelden al snel over op necromantie en demonologie.</string>
     <string name="Warlock_Gender">masculine</string>
     <string name="Warlock_Killed">%s\'s schaduwbliksem heeft je gedood...</string>
+    <string name="Warlock_Name">dwerg tovenaar</string>
     <string name="Warlock_Name_Objective">dwerg heksemeester</string>
     <string name="WarriorArmor_ACSpecial">HELDHAFTIGE SPRONG</string>
     <string name="WarriorArmor_Desc">Hoewel dit pantser zwaar lijkt, stelt het een krijger in staat om een heldhaftige sprong naar een doelwit te maken, waarbij hij neerkomt en alle naburige vijanden verdooft.</string>
@@ -2877,6 +2881,10 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
