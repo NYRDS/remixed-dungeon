@@ -9,8 +9,7 @@ import java.util.function.Supplier;
 
 /**
  * Blob kind registry: every scripts/blobs/<Kind>.lua module registers a kind
- * served by ScriptBlob (the scan, like buffs/items); the wave-2 java blobs
- * (the wells + the alchemy pot) stay class-constructed until their batch.
+ * served by ScriptBlob (the scan, like buffs/items).
  * Legacy FQN bundle keys derive their simple name here via
  * Bundle.resolveByDerivedKind's exact-first tryResolvers - no aliases needed.
  */
@@ -42,14 +41,6 @@ public class BlobFactory {
             scriptBlobs.add(kind);
             blobList.put(kind, () -> new ScriptBlob(kind));
         }
-
-        // wave-2 java blobs (heavy item/char coupling; their batch converts
-        // them to scripts)
-        blobList.put("WellWater", WellWater::new);
-        blobList.put("WaterOfHealth", WaterOfHealth::new);
-        blobList.put("WaterOfAwareness", WaterOfAwareness::new);
-        blobList.put("WaterOfTransmutation", WaterOfTransmutation::new);
-        blobList.put("Alchemy", Alchemy::new);
     }
 
     public static boolean hasKind(String kind) {

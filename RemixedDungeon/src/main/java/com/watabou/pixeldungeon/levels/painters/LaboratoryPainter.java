@@ -4,7 +4,8 @@ package com.watabou.pixeldungeon.levels.painters;
 import com.nyrds.pixeldungeon.items.Treasury;
 import com.nyrds.pixeldungeon.items.common.ItemFactory;
 import com.nyrds.pixeldungeon.utils.ItemsList;
-import com.watabou.pixeldungeon.actors.blobs.Alchemy;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.BlobFactory;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
@@ -34,8 +35,8 @@ public class LaboratoryPainter extends Painter {
 			pot = new Point( Random.Int( 2 ) == 0 ? room.left + 1 : room.right - 1, room.top+1 );
 		}
 		set( level, pot, Terrain.ALCHEMY );
-		
-		Alchemy alchemy = new Alchemy();
+
+		Blob alchemy = BlobFactory.byKind("Alchemy");
 		alchemy.seed( pot.x + level.getWidth() * pot.y, 1 );
 		level.blobPut( "Alchemy", alchemy );
 		

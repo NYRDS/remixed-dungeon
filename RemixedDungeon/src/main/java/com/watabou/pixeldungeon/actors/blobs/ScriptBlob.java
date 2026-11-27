@@ -16,6 +16,7 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.BArray;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Bundle;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.NotNull;
 import org.luaj.vm2.LuaValue;
@@ -32,12 +33,16 @@ import org.luaj.vm2.LuaValue;
  * Lua hooks (self = the script table, blob = this):
  *   desc(self) -> { mode, cancelsWith, seedMode, tileDesc }
  *     mode: "diffusion" (gases + regrowth) | "decay" (web) |
- *           "persist" (darkness, foliage) | "fire" | "liquidFlame"
+ *           "persist" (darkness, foliage, alchemy) | "fire" | "liquidFlame" |
+ *           "well" (the magic wells)
  *   affect(self, blob, cells)  -> per-covered-cell mechanics (batched; the
  *                                 cells arrive as a java int[] iterated
  *                                 1-based; blob.cur holds the tick's volumes)
- *   after(self, blob)          -> once per tick when volume > 0 (foliage
- *                                 journal/shadows)
+ *   after(self, blob, cells)   -> once per tick, covered cells passed
+ *                                 (foliage journal/shadows, well journal)
+ *   affect(self, blob)         -> the well bump entry (mode "well"): hero
+ *                                 + heap flows; true consumes the water and
+ *                                 is served by the java affect() below
  *   onHeroDeath(self, blob)    -> Doom (the ToxicGas death report)
  *
  * Emitter pours and all rendering stay java-side (the BlobEmitters switch),
@@ -59,6 +64,11 @@ public class ScriptBlob extends Blob implements Doom {
     public static final String MODE_PERSIST     = "persist";
     public static final String MODE_FIRE        = "fire";
     public static final String MODE_LIQUIDFLAME = "liquidFlame";
+    public static final String MODE_WELL        = "well";
+
+    // the water cell (MODE_WELL only); derived from the first covered cell
+    // on restore, moved by seed()
+    private int pos;
 
     // per-tick scratch for the fire walkers (which cells burn this tick)
     private boolean[] touched;
@@ -133,8 +143,25 @@ public class ScriptBlob extends Blob implements Doom {
         script.run("affect", cells);
     }
 
-    private void dispatchAfter() {
-        script.runOptionalNoRet("after", this);
+    private void dispatchAfter(int[] cells) {
+        script.runOptionalNoRet("after", cells);
+    }
+
+    private int[] coveredCells() {
+        int covered = 0;
+        for (int cell = 0; cell < cur.length; cell++) {
+            if (cur[cell] > 0) {
+                covered++;
+            }
+        }
+        int[] cells = new int[covered];
+        int i = 0;
+        for (int cell = 0; cell < cur.length; cell++) {
+            if (cur[cell] > 0) {
+                cells[i++] = cell;
+            }
+        }
+        return cells;
     }
 
     @Override
@@ -166,7 +193,15 @@ public class ScriptBlob extends Blob implements Doom {
                     }
                 }
                 dispatchAffect();
-                dispatchAfter();
+                dispatchAfter(coveredCells());
+                break;
+            }
+            case MODE_WELL: {
+                // the well water: one cell persisting until the affect()
+                // entry consumes it; the journal rides the script (per-tick,
+                // visibility-gated exactly like the java original)
+                setVolume(off[pos] = cur[pos]);
+                dispatchAfter(new int[]{pos});
                 break;
             }
             case MODE_FIRE: {
@@ -339,8 +374,27 @@ public class ScriptBlob extends Blob implements Doom {
     }
 
     @Override
+    public void restoreFromBundle(Bundle bundle) {
+        super.restoreFromBundle(bundle);
+        if (MODE_WELL.equals(mode)) {
+            for (int cell = 0; cell < cur.length; cell++) {
+                if (cur[cell] > 0) {
+                    pos = cell;
+                    break;
+                }
+            }
+        }
+    }
+
+    @Override
     public void seed(int cell, int amount) {
         checkSeedCell(cell);
+        if (MODE_WELL.equals(mode)) {
+            cur[pos] = 0;
+            pos = cell;
+            setVolume(cur[pos] = amount);
+            return;
+        }
         if (seedMax) {
             // web semantics: seeding raises the cell to amount, never past it
             int diff = amount - cur[cell];
@@ -366,6 +420,24 @@ public class ScriptBlob extends Blob implements Doom {
             return null;
         }
         return StringsManager.maybeId(tileDescId);
+    }
+
+    // the water cell (MODE_WELL)
+    @LuaInterface
+    public int pos() {
+        return pos;
+    }
+
+    // the well bump entry: the script's affect(self, blob) handles the hero
+    // and the heap flows; true consumes the water (was WellWater.affect)
+    @LuaInterface
+    public boolean affect() {
+        Boolean procced = script.runOptional("affect", Boolean.FALSE);
+        if (procced) {
+            setVolume(off[pos] = cur[pos] = 0);
+            return true;
+        }
+        return false;
     }
 
     @Override

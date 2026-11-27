@@ -6,6 +6,8 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
+local alchemy = require "scripts/blobs/Alchemy"
+
 local object = require "scripts/lib/object"
 
 
@@ -32,7 +34,7 @@ return object.init {
         -- caveman: item presses (seeds landing in the pot) bump too - transmute
         -- is a no-op below 3 seeds and the heap must STAY in the pot to brew;
         -- only kick heaps for price-carrying pressers above
-        "Alchemy":transmute(pos)
+        alchemy:affectCell(pos)
     end,
 
     textureFile = function(self, object, level)

@@ -39,6 +39,8 @@ import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.pixeldungeon.effects.particles.SparkParticle;
 import com.watabou.pixeldungeon.items.EquipableItem;
 import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.items.potions.Potion;
+import com.watabou.pixeldungeon.items.rings.Ring;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
@@ -46,6 +48,7 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfWeaponUpgrade;
 import com.watabou.pixeldungeon.items.wands.Wand;
+import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
 import com.watabou.pixeldungeon.items.weapon.melee.KindOfBow;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
@@ -820,6 +823,58 @@ public class ItemUtils {
 			return newItem;
 		}
 
+		return null;
+	}
+
+	// ---- the alchemy pot + the well of transmutation FFI ----
+
+	/**
+	 * The per-item brew weights of the heap (each seed weighs its quantity),
+	 * or null when the heap holds anything but seeds. Structural: the heap
+	 * scan needs instanceof + java.util iteration, both sandbox-blocked -
+	 * the brew decision stays in the Alchemy kind script.
+	 */
+	@LuaInterface
+	public static float[] heapSeedChances(@NotNull Heap heap) {
+		if (heap.items.isEmpty()) {
+			return null;
+		}
+		float[] chances = new float[heap.items.size()];
+		int index = 0;
+		for (Item item : heap.items) {
+			if (!(item instanceof Seed)) {
+				return null;
+			}
+			chances[index++] = item.quantity();
+		}
+		return chances;
+	}
+
+	/**
+	 * The WaterOfTransmutation instanceof ladder as a string (null = not
+	 * transmutable). Structural like heapSeedChances - the reroll mechanics
+	 * live in the kind script.
+	 */
+	@LuaInterface
+	public static String transmutationClass(@NotNull Item item) {
+		if (item instanceof MeleeWeapon) {
+			return "MeleeWeapon";
+		}
+		if (item instanceof Scroll) {
+			return "Scroll";
+		}
+		if (item instanceof Potion) {
+			return "Potion";
+		}
+		if (item instanceof Ring) {
+			return "Ring";
+		}
+		if (item instanceof Wand) {
+			return "Wand";
+		}
+		if (item instanceof Seed) {
+			return "Seed";
+		}
 		return null;
 	}
 }

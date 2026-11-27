@@ -31,22 +31,17 @@ return blob.init{
         end
     end,
 
-    after = function(self, gas)
+    after = function(self, gas, cells)
         local hero = RPD.Dungeon.hero
         if hero:isAlive() and hero:visibleEnemies() == 0 and gas.cur[hero:getPos() + 1] > 0 then
             RPD.CharUtils:refreshShadows(hero)
         end
 
-        local visible = false
-        local cur = gas.cur
-        for pos = 1, #cur do
-            if cur[pos] > 0 and RPD.Dungeon:isCellVisible(pos - 1) then
-                visible = true
-                break
+        for i = 1, cells.length do
+            if RPD.Dungeon:isCellVisible(cells[i]) then
+                RPD.Journal:add(RPD.Journal.Feature.GARDEN:desc())
+                return
             end
-        end
-        if visible then
-            RPD.Journal:add(RPD.Journal.Feature.GARDEN.desc())
         end
     end,
 }

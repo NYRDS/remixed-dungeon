@@ -2,7 +2,8 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.actors.blobs.WellWater;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.BlobFactory;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -20,10 +21,10 @@ public class MagicWellPainter extends Painter {
 
 		fill( level, room, Terrain.WALL );
 		fill( level, room, 1, Terrain.EMPTY );
-		
+
 		Point c = room.center();
 		set( level, c.x, c.y, Terrain.WELL );
-		
+
 		String waterKind =
 			Dungeon.depth >= Dungeon.transmutation ?
 			"WaterOfTransmutation" :
@@ -33,13 +34,13 @@ public class MagicWellPainter extends Painter {
 			Dungeon.transmutation = Integer.MAX_VALUE;
 		}
 
-		WellWater water = (WellWater)level.blobAt( waterKind );
+		Blob water = level.blobAt( waterKind );
 		if (water == null) {
-			water = (WellWater) com.watabou.pixeldungeon.actors.blobs.BlobFactory.byKind(waterKind);
+			water = BlobFactory.byKind(waterKind);
 		}
 		water.seed( c.x + level.getWidth() * c.y, 1 );
 		level.blobPut( waterKind, water );
-		
+
 		room.entrance().set( Room.Door.Type.REGULAR );
 	}
 }
