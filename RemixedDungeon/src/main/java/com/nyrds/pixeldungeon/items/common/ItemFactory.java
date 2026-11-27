@@ -251,6 +251,9 @@ public class ItemFactory {
         registerItemKind("PoisonArrow", Arrow::new);
         registerItemKind("HealthArrow", Arrow::new);
         registerItemKind("AmokArrow", Arrow::new);
+        // caveman: the framework class itself must answer getEntityKind()
+        // during construction (every dart drop hit "Unregistered entry")
+        registerItemClass(Dart.class);
         registerItemKind("Dart", Dart::new);
         registerItemKind("CurareDart", Dart::new);
         registerItemKind("IncendiaryDart", Dart::new);

@@ -2246,6 +2246,24 @@ public class DebugEndpoints {
         }
     }
 
+    // perf sampling: read framesSinceInit twice N seconds apart on the
+    // client side - the delta is the render/loop rate of whatever platform
+    // this is (GameLoop framesSinceInit increments once per loop pass)
+    public static NanoHTTPD.Response handleDebugGetPerf(NanoHTTPD.IHTTPSession session) {
+        try {
+            GameLoop loop = GameLoop.instance();
+            JSONObject json = new JSONObject();
+            json.put("frames", loop != null ? loop.framesSinceInit : -1);
+            json.put("depth", Dungeon.depth);
+            json.put("mobs", Dungeon.level != null ? Dungeon.level.mobs.size() : 0);
+            json.put("nowMs", System.currentTimeMillis());
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.OK, "application/json", json.toString());
+        } catch (Exception e) {
+            return NanoHTTPD.newFixedLengthResponse(NanoHTTPD.Response.Status.INTERNAL_ERROR, "application/json",
+                createErrorResponse("Internal error: " + e.getMessage()).toString());
+        }
+    }
+
     public static NanoHTTPD.Response handleDebugGoToLevel(NanoHTTPD.IHTTPSession session) {
         try {
             String query = session.getQueryParameterString();

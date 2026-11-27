@@ -2750,9 +2750,12 @@ Cheap but still-java at the time of writing, queued to move:
 - glyph/enchant batch (designed above), then blobs waves 1-2 (designed
   above).
 
-Completion queue: glyphs+enchants → 8 buffs (+Hunger if ruled) →
-Pickaxe/Carcass/ChaosStaff → blobs wave 1 → blobs wave 2. After that
-every entity kind is json/lua and java is exactly layers 1-4 above.
+Completion queue: glyphs+enchants ✓ → 8 buffs (+Hunger if ruled - no
+ruling, Hunger stays) ✓ → Pickaxe/Carcass/ChaosStaff ✓ (Carcass ruled
+stays) → blobs wave 1 ✓ → blobs wave 2 ✓. DONE (2026-11-27): every
+entity kind is json/lua and java is exactly layers 1-4 above; the
+remaining moves are the optional layer-3 shrink via the ScriptedWindow
+bridge (below) and Carcass on a future dynamic-kinds ruling.
 
 ## Glyphs & enchantments SHIPPED (2026-11-27)
 
@@ -2843,7 +2846,60 @@ machinery. Migrating it means new engine surface (dynamic kinds +
 item-actor + packed Char ref by id) disproportionate to one quest item.
 Re-open only with a ruling that wants mods to author carcass-like items.
 
-## Blobs wave 1 SHIPPED (2026-11-27); wave 2 (wells + alchemy) still java
+## Blobs wave 2 SHIPPED (2026-11-27) — the completion queue is DONE
+
+The last 5 blob kinds (WellWater, WaterOfHealth, WaterOfAwareness,
+WaterOfTransmutation, Alchemy) are scripts; every entity kind is
+json/lua now. ScriptBlob gained mode `"well"`: the water cell (`pos`) is
+derived from the first covered cell on restore and moved by `seed()`,
+evolve persists the single cell and dispatches `after` per tick (the
+journal rides the script, visibility-gated exactly like the java
+original - Journal dedupes by feature+depth, so a drank-but-visible well
+re-adding its entry is preserved). The well bump entry is the java
+`affect()` (well.lua's `getBlobByName(...):affect()` call shape
+unchanged): it dispatches the script's `affect(self, blob)` hook and
+consumes the water when the hook answers true. `after` now receives the
+covered cells array - Foliage dropped its O(area) per-tick lua scan,
+Alchemy (mode "persist", no affect hook) journals from it. The brew flow
+is the script's `affectCell(cell)`, called DIRECTLY by pot.lua via
+`require "scripts/blobs/Alchemy"` - the flow needs no blob state, and
+this fixes the wave-1 pot.lua regression (`"Alchemy":transmute(pos)` was
+a string-method call; every pot bump threw since wave 1).
+
+FFI (sandbox-blocked instanceof + java.util iteration, the same line as
+the factories): `ItemUtils.heapSeedChances(heap)` returns the per-seed
+brew weights (null on a non-seed heap) and
+`ItemUtils.transmutationClass(item)` returns the transmutation
+instanceof ladder as a string ("MeleeWeapon"/"Scroll"/"Potion"/"Ring"/
+"Wand"/"Seed"/null); the reroll/pair mechanics live in the kind script.
+wellbase.lua (`scripts/lib/wellbase.lua`) holds the shared affect
+plumbing (hero first, then the heap swap shape) - the default hooks are
+COPIED into the kind table because LuaScript.hasMethod reads raw keys.
+
+Behavior flag: a melee weapon whose kind has no transmute pair used to
+dry the well AND toss the item (java cleared before returning null);
+now it keeps the water like every other non-transmutable item - the
+documented regression-fix semantics extended to the edge case.
+
+Verification: tests/http_api/test_blobs_wells.py 11/11 (kind registry,
+WellWater swallow, health well hero heal+uncurse+consume / DewVial fill /
+junk toss with water kept, awareness buff + secret-door reveal,
+sword→mace with level + levelKnown carried, ScrollOfUpgrade↔WeaponUpgrade,
+PotionOfStrength→Might, junk rejected, alchemy brew via the script AND
+via the real pot.lua bump path with Statistics counter, no-brew guards,
+legacy FQN restores x5, save roundtrip incl. reload + drink after
+reload), mod sweep 7/7, 4 platform compiles.
+
+Luaj traps hit (all documented in-script now): statics need COLON calls
+(`Splash.at(...)` = "userdata expected", `Splash:at(...)` works - the
+receiver is dropped; single statics can't take the receiver, hence
+`Potion:heal` and NOT `Potion.heal`); `weapon:upgrade(n)` resolves to
+the boolean overload (+1, not +n) - loop the no-arg upgrade(); java
+arrays index 1-BASED from lua (`flags[terr + 1]`) but java Lists are
+0-BASED (`heap.items:get(index - 1)`); `Heap.pos` is a public FIELD -
+`heap:pos()` tries to call the number.
+
+## Blobs wave 1 SHIPPED (2026-11-27); wave 2 shipped same day
 
 10 of 15 kinds are scripts now (ToxicGas, ParalyticGas, ConfusionGas,
 MiasmaGas, Fire, LiquidFlame, Web, Darkness, Regrowth, Foliage) on
@@ -2862,15 +2918,11 @@ take kind strings, BLOBS bundle nodes carry entityKind resolved by a new
 "blob" entity resolver (legacy FQN keys derive their simple name - no
 aliases), RPD.Blobs.<Kind> are strings and Blob.seed speaks kinds
 (ScriptBlob:burn is the shared Fire.burn bridge). Freezing stays a java
-static helper (it was never a Blob subclass). Wave-2 kinds
-(WellWater/WaterOfHealth/WaterOfAwareness/WaterOfTransmutation/Alchemy)
-stay java classes registered as BlobFactory suppliers - their per-entry
-flows + item-swap coupling are their own batch; scripts/blobs/<Kind>.lua
-for them flips the suppliers to ScriptBlob with no further call-site
-work. Verification: ToxicGas staged live through the new engine (gas
-forms, drains hero + golem over ticks), all 4 platform compiles green,
-full battery round + mod sweep green (Remixed-Additions revampedCommon
-Blobs table switched to kind strings like the engine one).
+static helper (it was never a Blob subclass). Verification: ToxicGas
+staged live through the new engine (gas forms, drains hero + golem over
+ticks), all 4 platform compiles green, full battery round + mod sweep
+green (Remixed-Additions revampedCommon Blobs table switched to kind
+strings like the engine one).
 
 ## Lua windows design (2026-11-27 — escape path for the UI/window-coupled layer)
 

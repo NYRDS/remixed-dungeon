@@ -49,17 +49,13 @@ class TestRunner:
         script_dir = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.dirname(os.path.dirname(script_dir))
         self.log_file = tempfile.mktemp(prefix="game_turn_economy_", suffix=".log")
-        cmd = [
-            "./gradlew",
-            "-p",
-            "RemixedDungeonDesktop",
-            "runDesktopGameWithWebServer",
-            "--args=--webserver=8080 --windowed",
-        ]
+        # the shared launcher (headless jar when RPD_HEADLESS_JAR is set)
+        from headless_server import server_command
+        cmd, workdir = server_command(str(self.port))
         log_handle = open(self.log_file, "w")
         self.server_process = subprocess.Popen(
             cmd,
-            cwd=project_root,
+            cwd=workdir,
             stdout=log_handle,
             stderr=subprocess.STDOUT,
             preexec_fn=os.setsid,
@@ -248,9 +244,10 @@ class TestRunner:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--start-server", action="store_true")
+    parser.add_argument("--port", default="8080")
     args = parser.parse_args()
 
-    runner = TestRunner()
+    runner = TestRunner(port=int(args.port))
     if not args.start_server:
         # assume server already running
         runner.server_process = None

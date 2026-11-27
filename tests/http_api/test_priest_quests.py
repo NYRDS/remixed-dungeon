@@ -308,7 +308,9 @@ def stage5_banish_demons(tester: BishopQuestTester) -> bool:
     print(f"✓ ceremony rewards: gold {gold_before} -> {gold_after}")
 
     hero = tester.client.get_hero_info()
-    buffs = [b.get("__className", "") for b in hero.get("buffs", [])]
+    # Blessed is a data buff since the buffs batch: the kind rides
+    # entityKind on the bundle node (java class names all read CustomBuff)
+    buffs = [b.get("entityKind", "") or b.get("__className", "") for b in hero.get("buffs", [])]
     if not any("Blessed" in b for b in buffs):
         print(f"✗ ceremony Blessed buff missing (buffs: {buffs})")
         return False

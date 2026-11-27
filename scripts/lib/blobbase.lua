@@ -7,10 +7,11 @@
 ---
 --- desc(self) -> { mode, cancelsWith, seedMode, tileDesc }
 ---   mode: "diffusion" (gases, regrowth) | "decay" (web) | "persist"
----         (darkness, foliage) | "fire" | "liquidFlame"
+---         (darkness, foliage, alchemy) | "fire" | "liquidFlame" | "well"
+---         (the magic wells ride scripts/lib/wellbase.lua instead)
 --- affect(self, blob, cells)  -> per-covered-cell mechanics (cells = java
 ---                               int[], iterate 1-based via cells.length)
---- after(self, blob)          -> once per tick when volume > 0
+--- after(self, blob, cells)   -> once per tick, covered cells passed
 --- onHeroDeath(self, blob)    -> Doom death report
 ---
 
