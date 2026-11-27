@@ -292,6 +292,7 @@
     <string name="Codex_Story_18">سلاح مثقب - عند الضرب بنجاح، قد يُلحق الضرر بجميع الأعداء في خط مستقيم خلف الهدف.</string>
     <string name="Codex_Story_22">هذا الكتاب مكتوب بلغة الشياطين</string>
     <string name="Codex_Story_23">هذا الكتاب مكتوب بلغة الأقزام</string>
+    <string name="Codex_Story_24">هذا الكتاب مكتوب بلغة الجان</string>
     <string name="Codex_Story_3">رمز مضاد الإنتروبيا - سيتم إضاءة البطل وإحراقه، وسيتم تجميد العدو.</string>
     <string name="Codex_Story_6">رمز الأيض - سيتم شفاء البطل جزئياً قبل تطبيق ضرر العدو، لكن الجوع سيزداد بشكل كبير. يعمل فقط إذا لم يكن البطل يتضور جوعاً.</string>
     <string name="Codex_Story_9">غليف الإزاحة - كلما تعرض البطل للضرب، هناك فرصة أن يتم نقله إلى بلاطة عشوائية مرئية. لا يعمل هذا الغليف في مستويات الزعماء.</string>
@@ -1139,6 +1140,7 @@
     <string name="WandOfMagicMissile_Info">هذه العصا تطلق صواريخ من الطاقة السحرية النقية، مما يلحق ضرراً متوسطاً بالهدف.</string>
     <string name="WandOfPoison_Info1">لم يحدث شيء</string>
     <string name="WandOfRegrowth_Info">عندما تنتهي حياة ما، تبدأ حياة جديدة بالنمو... الدورة الأبدية لا تنتهي!</string>
+    <string name="WandOfRegrowth_Info1">لم يحدث شيء</string>
     <string name="WandOfRegrowth_Name">عصا التجدد</string>
     <string name="WandOfSlowness_Info">تجعل هذه العصا الكائن المستهدف يتحرك ويهاجم بنصف سرعته المعتادة حتى ينتهي التأثير.</string>
     <string name="WandOfTeleportation_Info2">لم يحدث شيء</string>
@@ -1289,6 +1291,7 @@
     <string name="Worm_Gender">masculine</string>
     <string name="Worm_Name">دودة</string>
     <string name="Worm_Name_Objective">دودة</string>
+    <string name="Wraith_Defense">تهرب</string>
     <string name="Wraith_Desc">الشبح هو الروح الانتقامية لذنب، الذي تم إزعاج قبره أو ضريحه. كونه كيانًا أثيريًا، من الصعب جدًا إصابته بسلاح عادي.</string>
     <string name="Wraith_Gender">masculine</string>
     <string name="WrnExperimental_realtime">تم تفعيل وضع الوقت الفعلي! هذه الآن لعبة روجلايك في الوقت الفعلي، اضغط بسرعة أو مت.\nهل تريد التحقق من المخزون؟\nحظاً سعيداً في القيام بذلك بينما يتحقق سرطان المجاري من أحشائك.</string>
@@ -1392,6 +1395,7 @@
     <string name="town_deco_stone_wall_desc">بشكل ما، هذا الجدار يصدر حرارة ويبدو رطباً قليلاً.</string>
     <string name="town_deco_stone_wall_name">جدار حجري</string>
     <string name="town_deco_stool_broken_desc">هذا الكرسي قد مر بأيام أفضل.</string>
+    <string name="town_deco_stool_sturdy_name">مقعد</string>
     <string name="town_deco_trapdoor_desc">إلى أين قد يؤدي هذا؟</string>
     <string name="town_deco_vat_name">حوض</string>
     <string name="town_deco_wall_brazier_name">مجمرة</string>
@@ -1410,6 +1414,10 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
 
 
 

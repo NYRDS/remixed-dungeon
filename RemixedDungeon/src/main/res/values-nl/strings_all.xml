@@ -870,6 +870,7 @@
     <string name="HealerNPC_Desc">Een oude man, op de een of andere manier lijkt hij op iemand die toverstaven zou maken.</string>
     <string name="HealerNPC_Gender">masculine</string>
     <string name="HealerNPC_Message1">Gratis behandeling voor elke avonturier!</string>
+    <string name="HealerNPC_Message2">Kom terug wanneer je je ziek of hongerig voelt!</string>
     <string name="HealerNPC_Message3">Ik vraag me af waarom de kerk ons verbodt petten te dragen... het is echt koud hier buiten.</string>
     <string name="HealerNPC_Name">stadspriester</string>
     <string name="HealerNPC_Name_Objective">stadspriester</string>
@@ -1984,9 +1985,11 @@
     <string name="SpiderCharm_Info">Deze exotische snuisterij is gehuld in een aura van mysterie. Wie weet wat er gebeurt met degene die hem draagt?</string>
     <string name="SpiderCharm_Name">Spinnenamuleet</string>
     <string name="SpiderCharm_Use">GEBRUIKEN</string>
+    <string name="SpiderEgg_Desc">Dit kwetsbare ei pulseert even, erin zie je iets met veel poten.</string>
     <string name="SpiderEgg_Gender">neuter</string>
     <string name="SpiderEgg_Name">spinnenei</string>
     <string name="SpiderEgg_Name_Objective">spinnenei</string>
+    <string name="SpiderElite_Desc">Net als soldaten hebben spinnewachten gezworen hun koninkrijk te beschermen. Het gift van de elitewacht wordt gebruikt om hun doelwit te desoriënteren.</string>
     <string name="SpiderElite_Gender">masculine</string>
     <string name="SpiderElite_Name">spinnen elitewachter</string>
     <string name="SpiderElite_Name_Objective">elite spinwacht</string>
@@ -2024,6 +2027,7 @@
     <string name="SpiritOfPain_Name">geest van pijn</string>
     <string name="SpiritOfPain_Name_Objective">geest van pijn</string>
     <string name="Sprout_Info">Weak de slapende zaden.\nEr moet echter wat groen op de grond zijn om de toverspreuk te laten slagen.</string>
+    <string name="Sprout_Name">Spruit</string>
     <string name="StartScene_ChooseFromSlot">Kies uit een opslagslot</string>
     <string name="StartScene_ComingSoon">Binnenkort</string>
     <string name="StartScene_ContinueLatest">Ga verder met je laatste spel of kies een opslagplek</string>
@@ -2873,6 +2877,10 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
