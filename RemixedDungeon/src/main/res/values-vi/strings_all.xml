@@ -612,6 +612,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Dungeon_Tips_6">Xác định thuốc và cuộn giấy càng sớm càng tốt. Đừng để đến lúc bạn thực sự cần chúng mới làm.</string>
     <string name="Dungeon_Tips_7">Đói không đau, nhưng đói cực độ thì đau.</string>
     <string name="Dungeon_Tips_8">Tấn công bất ngờ có cơ hội trúng đích cao hơn. Ví dụ, bạn có thể phục kích kẻ thù phía sau cánh cửa đóng khi biết nó đang tiến lại.</string>
+    <string name="DwarfToken_Info">Nhiều lùn và một số tác phẩm lớn hơn của họ mang theo những mảnh kim loại nhỏ này với mục đích không rõ. Có thể chúng là trang sức hoặc loại định danh nào đó. Lùn là dân tộc kỳ lạ.</string>
     <string name="DwarfToken_Name">huy hiệu người lùn</string>
     <string name="EarthElemental_Gender">masculine</string>
     <string name="EarthElemental_Name">nguyên tố đất</string>
@@ -707,6 +708,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="FrozenCarpaccio_Info4">Bạn cảm thấy khỏe hơn!</string>
     <string name="FrozenCarpaccio_Name">carpaccio đông lạnh</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
+    <string name="FullFaceMask_Name">Mặt nạ phòng độc</string>
     <string name="FuryBuff_Info">Đôi mắt đỏ máu vì cơn giận dữ bên trong.</string>
     <string name="FuryBuff_Name">Cuồng Nộ</string>
     <string name="GameScene_Chasm">Bước chân của bạn vang vọng khắp hầm ngục.</string>
@@ -2066,6 +2068,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Wand_Prompt">Chọn hướng để phóng phép</string>
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
     <string name="Wand_Weapon">Bạn có thể sử dụng cây gậy phép này như một vũ khí cận chiến.</string>
+    <string name="Wand_Wood_Types_1">tần bì</string>
     <string name="Wand_Wood_Types_10">sồi</string>
     <string name="Wand_Wood_Types_11">bạch dương</string>
     <string name="Wand_Wood_Types_2">gỗ mun</string>
@@ -2643,6 +2646,9 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 

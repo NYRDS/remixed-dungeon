@@ -593,6 +593,7 @@
     <string name="DarkSacrifice_Self">Voor de Plaag!</string>
     <string name="DarkVeilBuff_Info">Een sluier van duisternis omringt de eigenaar en roept telkens een geest op wanneer schade wordt opgelopen.</string>
     <string name="DarkVeilBuff_Name">Donker sluier</string>
+    <string name="Darkness_Info">Ziet eruit als stukken eeuwige duisternis die in de lucht zweven</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Deze eenvoudige metalen spikes zijn perfect gewogen om hun prooi nauwkeurig te doorboren.</string>
     <string name="Dart_Name">dart</string>
@@ -603,6 +604,7 @@
     <string name="DeathKnight_Gender">masculine</string>
     <string name="DeathKnight_Name">doodridder</string>
     <string name="DeathKnight_Name_Objective">doodridder</string>
+    <string name="Death_Name_0">Grim %s</string>
     <string name="Death_Name_1">Grim %s</string>
     <string name="Death_Name_2">Grimmige %s</string>
     <string name="Deathling_Desc">De Doodsling is de ziel van een gevallen held die ongelukkig genoeg werd opgeroepen door een mede-avonturier die necromancie beoefent.</string>
@@ -1895,6 +1897,7 @@
     <string name="ShieldInfoTemplate">Dit schild blokkeert tot %1$d inkomende schade. Met %2$d %% kans. Het duurt %3$3.1f seconden om te herstellen na een succesvolle blokkering.</string>
     <string name="ShieldStrTemplate">De drager van het schild moet minimaal %1$d krachtspunten hebben om het goed te kunnen gebruiken.</string>
     <string name="ShieldWeaponInfo">Wanneer gebruikt als wapen zal dit schild gemiddeld %1$d schade toebrengen.</string>
+    <string name="Shielded_Defense">geblokkeerd</string>
     <string name="Shielded_Desc">Bruten zijn de grootste, sterkste en taaiste van alle gnolls. Bij ernstige verwonding worden ze razend en richten ze nog meer schade aan. Deze brute draagt een gigantisch schild!</string>
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">schildgedrocht</string>
@@ -2860,6 +2863,9 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 
