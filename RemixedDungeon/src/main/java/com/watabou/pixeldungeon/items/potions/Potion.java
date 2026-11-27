@@ -536,8 +536,10 @@ public class Potion extends Item implements UnknownItem {
 				GLog.p(StringsManager.getVar(R.string.PotionOfPurity_Freshness));
 			}
 		} else {
-			shatter(cell); // the base no-hook shatter path is unreachable here (hook present);
-			               // mirror the old super.shatter behavior instead
+			// caveman: do NOT call shatter() here - the kind script's shatter hook
+			// dispatches back into purityShatter, an infinite lua<->java recursion
+			// (found by the lua auto test, 7.7GB log + OOM). The lines below already
+			// mirror the base no-hook shatter behavior.
 			GLog.i(Utils.format(R.string.Potion_Shatter, color()));
 			Sample.INSTANCE.play(Assets.SND_SHATTER);
 			splash(cell);

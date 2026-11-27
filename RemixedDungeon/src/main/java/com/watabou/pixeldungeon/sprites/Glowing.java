@@ -1,7 +1,9 @@
 package com.watabou.pixeldungeon.sprites;
 
+import com.nyrds.LuaInterface;
 import com.nyrds.util.Util;
 
+@LuaInterface
 public class Glowing {
 
     public static final Glowing WHITE      = new Glowing(0xFFFFFF, 0.6f);

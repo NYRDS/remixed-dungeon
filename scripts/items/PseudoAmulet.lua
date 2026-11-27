@@ -9,7 +9,7 @@ return item.init{
     desc = function()
         return {
             image      = 87, -- ItemSpriteSheet.AMULET (identical sprite on purpose)
-            imageFile  = "items/amulet.png",
+            imageFile  = "items.png",
             name       = "Amulet_Name",
             info       = "Amulet_Info",
             stackable  = false,

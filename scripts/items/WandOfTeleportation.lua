@@ -19,7 +19,7 @@ return wand.init{
         elseif victim ~= nil and not victim:isBoss() and victim:isMovable() then
             RPD.CharUtils:teleportAway(victim, owner)
         else
-            RPD.GLog:i(RPD.textById("WandOfTeleportation_Info2"))
+            RPD.GLog:i(RPD.textById("WandOfTeleportation_Info2"), {})
         end
     end,
 }

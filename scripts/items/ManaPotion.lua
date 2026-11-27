@@ -26,10 +26,10 @@ return item.init{
     execute = function(self, item, hero, action)
         if action == RPD.CommonActions.AC_DRINK then
             item:detach(hero:getBelongings().backpack)
-            RPD.GLog:i(RPD.textById("Drink_Message"))
+            RPD.GLog:i(RPD.textById("Drink_Message"), {})
             hero:setSkillPoints(hero:getSkillPoints() + math.floor(hero:getSkillPointsMax() / 3))
             hero:doOperate(1)
-            RPD.SpellSprite:show(hero, RPD.SpellSprite.FOOD)
+            RPD.Sfx.SpellSprite:show(hero, RPD.Sfx.SpellSprite.FOOD)
             RPD.playSound("snd_drink")
         end
     end,

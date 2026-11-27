@@ -27,6 +27,6 @@ return ring.init{
     onHeroDeath = function(self, item, buff)
         RPD.Badges:validateDeathInStone()
         RPD.Dungeon:fail(RPD.ResultDescriptions:getDescription(RPD.ResultReason.IMMURED, RPD.Dungeon.depth))
-        RPD.GLog:n(RPD.textById("RingOfStoneWalking_ImmuredInStone"))
+        RPD.GLog:n(RPD.textById("RingOfStoneWalking_ImmuredInStone"), {})
     end,
 }

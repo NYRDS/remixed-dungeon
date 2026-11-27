@@ -14,7 +14,7 @@ return wand.init{
         if victim ~= nil then
             RPD.affectBuff(victim, "Slow", RPD.CharUtils:durationFactor(victim) * 10 / 3 + item:effectiveLevel())
         else
-            RPD.GLog:i(RPD.textById("WandOfSlowness_Info1"))
+            RPD.GLog:i(RPD.textById("WandOfSlowness_Info1"), {})
         end
     end,
 }

@@ -49,7 +49,7 @@ end
 function object.defaultDesc()
     return {
         image         = 0,
-        imageFile     = "objects/levelObjects.png",
+        imageFile     = "levelObjects/objects.png",
         name          = "smth",
         info          = "smth",
     }

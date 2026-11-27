@@ -20,23 +20,23 @@ return food.init{
 
         local roll = RPD.Random:Int(5)
         if roll == 0 then
-            RPD.GLog:i(RPD.textById("FrozenCarpaccio_Info1"))
+            RPD.GLog:i(RPD.textById("FrozenCarpaccio_Info1"), {})
             RPD.affectBuff(chr, "Invisibility", 15)
         elseif roll == 1 then
-            RPD.GLog:i(RPD.textById("FrozenCarpaccio_Info2"))
+            RPD.GLog:i(RPD.textById("FrozenCarpaccio_Info2"), {})
             local barkskin = RPD.affectBuff(chr, "Barkskin")
             local lvl = math.floor(chr:ht() / 4) -- java int division
             if barkskin:level() < lvl then
                 barkskin:level(lvl)
             end
         elseif roll == 2 then
-            RPD.GLog:i(RPD.textById("FrozenCarpaccio_Info3"))
+            RPD.GLog:i(RPD.textById("FrozenCarpaccio_Info3"), {})
             RPD.removeBuff(chr, "Poison")
             RPD.removeBuff(chr, "Cripple")
             RPD.removeBuff(chr, "Weakness")
             RPD.removeBuff(chr, "Bleeding")
         elseif roll == 3 then
-            RPD.GLog:i(RPD.textById("FrozenCarpaccio_Info4"))
+            RPD.GLog:i(RPD.textById("FrozenCarpaccio_Info4"), {})
             chr:heal(chr:hp() + math.floor(chr:ht() / 4), item)
         end
     end,

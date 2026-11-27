@@ -19,7 +19,7 @@ return wand.init{
                 RPD.affectBuff(victim, "Amok", 3 + item:effectiveLevel())
             end
         else
-            RPD.GLog:i(RPD.textById("WandOfAmok_Info1"))
+            RPD.GLog:i(RPD.textById("WandOfAmok_Info1"), {})
         end
     end,
 }

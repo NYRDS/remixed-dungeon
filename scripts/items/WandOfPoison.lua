@@ -14,7 +14,7 @@ return wand.init{
         if victim ~= nil then
             RPD.affectBuff(victim, "Poison", RPD.CharUtils:durationFactor(victim) * (5 + item:effectiveLevel()))
         else
-            RPD.GLog:i(RPD.textById("WandOfPoison_Info1"))
+            RPD.GLog:i(RPD.textById("WandOfPoison_Info1"), {})
         end
     end,
 }
