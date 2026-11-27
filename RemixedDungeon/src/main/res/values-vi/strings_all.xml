@@ -943,6 +943,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="IceKey_Info">Chìa khóa này có vẻ như làm từ băng, nhưng nó cứng như thép.</string>
     <string name="IceKey_Name">chìa khóa băng</string>
     <string name="Icecap_Desc">Khi chạm vào Lédvik, nó tiết ra phấn hoa, đóng băng mọi thứ xung quanh.</string>
+    <string name="Icecap_Name">Lédvik</string>
     <string name="Ignite_Info">Đốt ô được chọn. Có thể dùng để đốt cỏ, nhân vật và vật thể.</string>
     <string name="Ignite_Name">Đốt Cháy</string>
     <string name="ImpShopkeeper_Desc">Quỷ nhỏ là những loài quỷ thấp kém. Chúng không nổi bật về sức mạnh hay tài năng phép thuật. Nhưng chúng khá thông minh và hòa đồng, và nhiều quỷ nhỏ thích sống và kinh doanh cùng những người không phải quỷ.</string>
@@ -1133,6 +1134,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="LloidsBeacon_Return">Đèn hiệu của Lloyd đã được đặt thành công tại vị trí hiện tại của bạn, giờ bạn có thể trở lại đây bất cứ lúc nào.</string>
     <string name="LloidsBeacon_Set">\n\nBóia này được đặt ở đâu đó trên tầng %d của Remixed Dungeon.</string>
     <string name="Longsword_Gender">masculine</string>
+    <string name="Longsword_Info">Chiếc thanh kiếm cao vút này gây sát thương nặng nề bằng cách dồn toàn bộ trọng lượng vào mỗi nhát cắt.</string>
     <string name="Longsword_Name">kiếm dài</string>
     <string name="Luck_Name_0">May mắn %s</string>
     <string name="Luck_Name_1">May mắn %s</string>
@@ -1828,6 +1830,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="SpiderArmor_Info">Bộ giáp này được làm từ lớp vỏ chitin cũ của nhện và một số loại vải. Đáng ngạc nhiên nhất là nó dường như vẫn chứa các tuyến nhện hoạt động. Nếu bạn ấn mạnh vào các tấm, chúng sẽ bắn ra mạng nhện. Và đế giày có răng cưa cho phép bạn di chuyển tự do trên loại mạng đó.</string>
     <string name="SpiderArmor_Name">giáp nhện</string>
     <string name="SpiderCharm_Info">Vật trang sức kỳ lạ này bị bao quanh bởi khí huyền bí. Ai biết, điều gì sẽ xảy ra với người đeo nó?</string>
+    <string name="SpiderCharm_Name">Bùa Nhện</string>
     <string name="SpiderCharm_Use">DÙNG</string>
     <string name="SpiderEgg_Desc">Quả trứng mong manh này đang đập nhẹ, bên trong bạn có thể thấy thứ gì đó có nhiều chân.</string>
     <string name="SpiderEgg_Gender">neuter</string>
@@ -2671,6 +2674,9 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 
