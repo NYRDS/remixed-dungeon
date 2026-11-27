@@ -293,6 +293,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="BurningBuff_Name">Đang cháy</string>
     <string name="BurningFist_Desc">Nắm Đấm Lửa của Thần Cổ Xưa</string>
     <string name="BurningFist_Gender">masculine</string>
+    <string name="BurningFist_Name">nắm đấm lửa</string>
     <string name="BurningFist_Name_Objective">cú đấm bùng cháy</string>
     <string name="Burning_Burns">%s bốc cháy!</string>
     <string name="Burning_Death">Bạn đã bị đốt cháy đến chết...</string>
@@ -745,6 +746,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Gnoll_Desc">Gnoll là những nhân loại giống linh cẩu. Chúng sống trong cống và ngục tối, thỉnh thoảng lên bề mặt để cướp phá. Trinh sát Gnoll là thành viên bình thường của bầy, không mạnh mẽ như kẻ cục súc và không thông minh như pháp sư.</string>
     <string name="Gnoll_Gender">masculine</string>
     <string name="Gnoll_Name">gnoll trinh sát</string>
+    <string name="Gnoll_Name_Objective">trinh thám gnoll</string>
     <string name="GodWrath_Info">Lửa thiêng của phán quyết thần thánh. Nó gây sát thương thiêng nặng nề cho một kẻ thù đơn lẻ — không sinh vật nào, bình thường hay quái vật, thoát khỏi cơn giận của trời cao.</string>
     <string name="Gold_Collect">Thu thập đồng xu vàng để chi tiêu sau đó tại cửa hàng.</string>
     <string name="Gold_Info1">Một đồng xu vàng.</string>
@@ -1466,6 +1468,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Potion_Name">%s thuốc</string>
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
+    <string name="Potion_SelectForMoisten">Chọn vật phẩm để bôi</string>
     <string name="Potion_SureDrink">Bạn có chắc chắn muốn uống nó không? Trong hầu hết các trường hợp, bạn nên ném loại thuốc này vào kẻ thù của mình.</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
     <string name="Potion_Yes">Vâng, tôi biết tôi đang làm gì</string>
@@ -1801,6 +1804,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="SociologistNPC_Desc">Nhà xã hội học này đang trên một nhiệm vụ thiêng liêng thu thập ý kiến công chúng</string>
     <string name="SociologistNPC_DownloadError">Xin lỗi, có lỗi xảy ra, vui lòng thử lại sau</string>
     <string name="SociologistNPC_Gender">masculine</string>
+    <string name="SociologistNPC_Hi">Chào bạn!\nBạn có muốn tham gia khảo sát của chúng tôi không? (Cần truy cập Internet)\nÝ kiến của bạn rất quan trọng!</string>
     <string name="SociologistNPC_InternetRequired">Xin lỗi, nhưng nếu không có quyền truy cập Internet, bạn không thể tham gia khảo sát của chúng tôi</string>
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
     <string name="Sorrowmoss_Desc">Sorrowmoss là một loài hoa (không phải rêu) có cánh hoa sắc bén như dao, bôi lắp nọc độc chết người.</string>
@@ -2064,6 +2068,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="WandOfMagicMissile_SelectWand">Chọn một cây đũa phép để nâng cấp</string>
     <string name="WandOfPoison_Info">Vụ nổ độc từ khúc gỗ méo mó này sẽ bao phủ mục tiêu bằng một chất độc chết người. Sinh vật bị nhiễm độc sẽ chịu sát thương định kỳ cho đến khi hiệu ứng kết thúc. Thời gian hiệu ứng tăng theo cấp độ của cây trượng.</string>
     <string name="WandOfPoison_Info1">không có gì xảy ra</string>
+    <string name="WandOfPoison_Name">Gậy phép độc</string>
     <string name="WandOfRegrowth_Info">Khi sự sống kết thúc, sự sống mới luôn bắt đầu phát triển... Chu kỳ vĩnh cửu luôn tồn tại!</string>
     <string name="WandOfRegrowth_Info1">không có gì xảy ra</string>
     <string name="WandOfRegrowth_Name">Gậy hồi sinh</string>
@@ -2518,6 +2523,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_exit_desc">Không ai biết điều gì đang chờ đón bạn nếu bạn bước xuống những bậc thang này.</string>
     <string name="town_deco_exit_name">Lối ra</string>
     <string name="town_deco_fence_desc">Một cái rào gỗ bị bạc phết bởi tuyết.</string>
+    <string name="town_deco_fence_name">Hàng rào</string>
     <string name="town_deco_filmtape_desc">Thú vị những gì mảnh phim này chứa đựng.</string>
     <string name="town_deco_filmtape_name">Cuộn phim</string>
     <string name="town_deco_fireplace_desc">Rất thích hợp để sưởi ấm ở một nơi lạnh như thế này.</string>
@@ -2588,6 +2594,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_rug_name">Thảm</string>
     <string name="town_deco_screen_desc">Tấm vải bí ẩn này được gọi là \&quot;màn hình\&quot; và nó có thể hiển thị những hình ảnh chuyển động</string>
     <string name="town_deco_screen_name">Màn hình</string>
+    <string name="town_deco_scrolls_desc">Kệ sách bụi này chứa đầy các loại cuộn sách và quyển sách.</string>
     <string name="town_deco_scrolls_name">Cuộn</string>
     <string name="town_deco_shelf_full_desc">Nhiều đồ trang trí nhỏ được đặt trên kệ này.</string>
     <string name="town_deco_shelf_full_name">Kệ sách</string>
@@ -2664,6 +2671,13 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
+
+
 
 
 

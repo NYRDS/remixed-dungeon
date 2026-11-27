@@ -722,6 +722,7 @@
     <string name="Exhumation_Name">Exhumatie</string>
     <string name="Exhumation_NoGrave">Hier is geen graf om een Exhumatie uit te voeren.</string>
     <string name="Exhumation_Ok">Ik zal u gehoorzamen.</string>
+    <string name="Exorcism_Name">Exorcisme</string>
     <string name="ExplodingSkull_Desc">Deze zwevende, brandende schedel lijkt extreem kwetsbaar, alsof hij op elk moment in stukken kan bersten.</string>
     <string name="ExplodingSkull_Gender">masculine</string>
     <string name="ExplodingSkull_Name">ontploffende schedel</string>
@@ -832,6 +833,7 @@
     <string name="GoldenKey_Name">Gouden sleutel</string>
     <string name="GoldenStatue_Desc">Het is bijna niet te geloven, maar dit prachtige standbeeld is geen gewone decoratie — het is een kwaadaardig wezen dat wacht op een onoplettende avonturier. Op het eerste gezicht zou je kunnen zweren dat het %s slechts een deel van zijn arm was.</string>
     <string name="GoldenStatue_Gender">feminine</string>
+    <string name="GoldenStatue_Name">gouden standbeeld</string>
     <string name="GoldenSword_Gender">masculine</string>
     <string name="GoldenSword_Name">gouden zwaard</string>
     <string name="Golem_Defense">geblokkeerd</string>
@@ -859,6 +861,7 @@
     <string name="Halberd_Name">Helbaard</string>
     <string name="Halls_TileDescBookshelf">Boeken in oude talen smoren in het boekenkast.</string>
     <string name="Halls_TileDescStatue">De paal is gemaakt van echte menselijke schedels. Geweldig.</string>
+    <string name="Halls_TileDescWater">Het ziet eruit als lava, maar het is koud en waarschijnlijk veilig om aan te raken.</string>
     <string name="Halls_TileGrass">Gloeiend mos</string>
     <string name="Halls_TileHighGrass">Emberpaddenstoel</string>
     <string name="Halls_TileStatue">Pilaar</string>
@@ -1031,6 +1034,7 @@
     <string name="IceGuardianCore_Name_Objective">ijswachter</string>
     <string name="IceGuardian_Desc">IJswachters werden gecreëerd door de oude kobolds om hun grotten te beschermen. Zolang de kern van de Wachter voldoende energie bevat, kan hij zichzelf midden in de strijd herstellen.</string>
     <string name="IceGuardian_Gender">masculine</string>
+    <string name="IceGuardian_Name">ijswachter</string>
     <string name="IceGuardian_Name_Objective">ijsbewaker</string>
     <string name="IceKey_Info">Deze sleutel lijkt van ijs gemaakt te zijn, maar hij is net zo hard als staal.</string>
     <string name="IceKey_Name">ijssleutel</string>
@@ -1379,6 +1383,7 @@
     <string name="NecromancerRobe_PetLimitReached">Necromantie: oproep limiet bereikt (Huidige max: %d)!</string>
     <string name="Necromancer_ACSpecial">NEKROMANTIE</string>
     <string name="Necromancy_BecameALich">Je bent een Lich geworden! Je krachten groeien en je zielcapaciteit is verdubbeld! Maar je hebt %1 krachtspunten verloren.</string>
+    <string name="Necromancy_Death">Je hebt al je levenskracht uitgeput tijdens het beoefenen van necromantie.</string>
     <string name="Necromancy_NotEnoughSouls">Je hebt niet genoeg zielen om een \&quot;%1$s\&quot;-spreuk te gebruiken.</string>
     <string name="Necromancy_ReincarnationTriggered">Je krachten verwerpen de dood zelf! Maar je verloor alle verzamelde zielen en bezittingen.</string>
     <string name="Necromancy_SoulsCountLabel">Zielen</string>
@@ -1754,6 +1759,7 @@
     <string name="RoyalShield_name">Koninklijke Schild</string>
     <string name="RubyBow_Gender">masculine</string>
     <string name="RubyBow_Info">Alleen de grootste bogenschutters kunnen deze robijnboog gebruiken. Bijna elke pijl doorboort de vijand, een groot gat in zijn lichaam achterlatend, maar extreme kracht is nodig om de boogteef te spannen.</string>
+    <string name="RubyBow_Name">robijnboog</string>
     <string name="RubyCrossbow_Gender">masculine</string>
     <string name="RubyCrossbow_Info">Dit dodelijke wapen is werkelijk een meesterwerk van dwergentechniek.</string>
     <string name="RubyCrossbow_Name">Robijnen kruisboog</string>
@@ -2626,6 +2632,7 @@
     <string name="YogsBrain_Gender">masculine</string>
     <string name="YogsBrain_Name">Yog\'s hersenen</string>
     <string name="YogsBrain_Name_Objective">Hersenen van Yog</string>
+    <string name="YogsEye_Desc">Het oog van de Oude God, een alziende blik gevuld met eeuwige haat. Je kunt voelen hoe het door je heen kijkt, recht door je ziel.</string>
     <string name="YogsEye_Gender">masculine</string>
     <string name="YogsEye_Name">oog van Yog</string>
     <string name="YogsEye_Name_Objective">Oog van Yog</string>
@@ -2881,6 +2888,13 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
+
 
 
 
