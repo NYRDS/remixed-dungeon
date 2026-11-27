@@ -393,6 +393,7 @@
     <string name="Eye_Name">العين الشريرة</string>
     <string name="Facilitations_Descriptions_0">عومل المتحورون دائماً بازدراء وخوف، لكن انعدام الجوع سيمنحك مرة أخرى التفوق، هذه المرة في غزو أعماق الزنزانة.</string>
     <string name="Facilitations_Names_0">لا جوع</string>
+    <string name="Facilitations_Names_2">روح الجني</string>
     <string name="Fadeleaf_Name">ورقة البهتان</string>
     <string name="FetidRat_Desc">هذا الجرذ الجرابي أكبر بكثير من الجرذ العادي. تحيط به سحابة كريهة الرائحة.</string>
     <string name="FetidRat_Gender">feminine</string>
@@ -572,6 +573,7 @@
     <string name="Item_PackFull">حقيبتك ممتلئة جدًا لـ %s</string>
     <string name="JarOfSouls_Desc">عينا الجمجمة المضيئة المرسومة على هذا الجرّة القديمة، بالإضافة إلى الطاقة الغريبة التي تنبعث منها، تجعلك تشعر بعدم الارتياح.</string>
     <string name="JarOfSouls_Gender">masculine</string>
+    <string name="JarOfSouls_Name">جرة الأرواح</string>
     <string name="Javelin_Gender">neuter</string>
     <string name="Journal_Alchemy">قدرة الخيمياء</string>
     <string name="Journal_Azuterron">غريب</string>
@@ -586,6 +588,7 @@
     <string name="King_Gender">masculine</string>
     <string name="King_Name_Objective">ملك الأقزام</string>
     <string name="Knuckles_Gender">masculine</string>
+    <string name="KoboldIcemancer_Desc">كان سحرة الجليد من الكوبولدز النخبة في المجتمع. محاربون بارزون، سحرة، والأهم من ذلك، علماء. أتقن أساتذة الجليد القدامى فن التحكم في الجليد، وخلقوا آليات معقدة معززة بتعاويذ خاصة.</string>
     <string name="KoboldIcemancer_Gender">masculine</string>
     <string name="KoboldIcemancer_Killed">قتلتك سهم الجليد لـ %s...</string>
     <string name="Kobold_Gender">masculine</string>
@@ -785,6 +788,7 @@
     <string name="PotionOfExperience_Name">جرعة الخبرة</string>
     <string name="PotionOfFrost_Info">عند تعرضها للهواء المفتوح، ستتبخر هذه المادة الكيميائية إلى سحابة متجمدة، مما يتسبب في تجمد أي كائن يلامسها في مكانه، غير قادر على التحرك أو التصرف.</string>
     <string name="PotionOfHealing_Apply">تشفى جراحك تماماً.</string>
+    <string name="PotionOfInvisibility_Name">جرعة الاختفاء</string>
     <string name="PotionOfLiquidFlame_Name">جرعة اللهب السائل</string>
     <string name="PotionOfMana_Name">إكسير المانا</string>
     <string name="PotionOfMight_Apply">قوة جديدة تدفق عبر جسدك.</string>
@@ -978,6 +982,7 @@
     <string name="ShortSword_ACReforge">إعادة الصياغة</string>
     <string name="ShortSword_Gender">masculine</string>
     <string name="ShortSword_Name">سيف قصير</string>
+    <string name="ShortSword_NotBoomerang">لا يمكنك ترقية البوميرانغ بهذه الطريقة</string>
     <string name="Shuriken_Gender">masculine</string>
     <string name="Shuriken_Name">شوريكين</string>
     <string name="SkeletonKey_Info">هذا المفتاح يبدو جاداً: رأسه على شكل جمجمة. على الأرجح يمكنه فتح باب جاد.</string>
@@ -1401,6 +1406,11 @@
 
 
     <string name="town_table_fortune_ball_name">كرة بلورية</string>
+
+
+
+
+
 
 
 

@@ -689,6 +689,7 @@
     <string name="EarthElemental_Name">aarde-elementaal</string>
     <string name="EarthElemental_Name_Objective">aardelementaal</string>
     <string name="EarthrootBuff_Info">Wortels zijn uit de grond gegroeid die natuurlijke pantser bieden.</string>
+    <string name="EarthrootBuff_Name">Kruidenarmor</string>
     <string name="Earthroot_Desc">Wanneer een wezen een aardewortel aanraakt, vormen de wortels een soort natuurlijk pantser eromheen.</string>
     <string name="Earthroot_Name">Aardewortel</string>
     <string name="ElfArmor_ACSpecial">ROEP VAN DE NATUUR</string>
@@ -833,6 +834,7 @@
     <string name="Golem_Defense">geblokkeerd</string>
     <string name="Golem_Desc">De Dwergen probeerden hun kennis van mechanismen te combineren met hun nieuw gevonden kracht van elementaire binding. Ze gebruikten aardgeesten als de \&quot;ziel\&quot; voor de mechanische lichamen van golems, waarvan werd aangenomen dat ze het meest controleerbaar waren. Ondanks dit kon de kleinste fout in het ritueel een uitbraak veroorzaken.</string>
     <string name="Golem_Gender">masculine</string>
+    <string name="Golem_Name">golem</string>
     <string name="Golem_Name_Objective">golem</string>
     <string name="Goo_Desc">Er is weinig bekend over De Goo. Het is heel goed mogelijk dat het niet eens een schepsel is, maar eerder een samenklontering van stoffen uit de riolen die rudimenten van vrije wil verkreeg. Hoe dan ook, het is duidelijk dat donkere magie hier aan het werk is.</string>
     <string name="Goo_Gender">feminine</string>
@@ -1270,6 +1272,7 @@
     <string name="MeleeWeapon_Info3g">onnauwkeurig</string>
     <string name="MeleeWeapon_Info4a">Het was uitgebalanceerd om het sneller te maken.</string>
     <string name="MeleeWeapon_Info4b">Het was gebalanceerd om het nauwkeuriger te maken.</string>
+    <string name="MeleeWeapon_Info5">Het is betoverd.</string>
     <string name="MeleeWeapon_Info6a">Vanwege je onvoldoende kracht is de nauwkeurigheid en snelheid van je aanval met dit %s verminderd.</string>
     <string name="MeleeWeapon_Info6b">Vanwege uw overdaadige kracht is de schade van uw aanval met deze %s verhoogd.</string>
     <string name="MeleeWeapon_Info7a">Je houdt de %1$s gereed%2$s.</string>
@@ -2265,6 +2268,7 @@
     <string name="WarriorArmor_ACSpecial">HELDHAFTIGE SPRONG</string>
     <string name="WarriorArmor_Desc">Hoewel dit pantser zwaar lijkt, stelt het een krijger in staat om een heldhaftige sprong naar een doelwit te maken, waarbij hij neerkomt en alle naburige vijanden verdooft.</string>
     <string name="WarriorArmor_Name">krijgspak</string>
+    <string name="WarriorArmor_NotWarrior">Alleen krijgers kunnen deze armor dragen!</string>
     <string name="WarriorArmor_Prompt">Kies een richting om te springen</string>
     <string name="WaterElemental_Desc">Water elementalen komen voor bij grote watermassa\'s. Meestal dwalen deze magisch gebonden golven gewoon rond.</string>
     <string name="WaterElemental_Gender">masculine</string>
@@ -2499,6 +2503,7 @@
     <string name="WndRanking_StaStr">Kracht</string>
     <string name="WndRanking_StaTitle">Level %1 %2</string>
     <string name="WndRanking_Stats">Statistieken</string>
+    <string name="WndResurrect_Message">Je bent gestorven, maar je krijgt nog een kans om deze dungeon te verslaan. Neem je hem aan?</string>
     <string name="WndResurrect_No">Nee, ik geef op</string>
     <string name="WndResurrect_Yes">Ja, ik zal vechten!</string>
     <string name="WndSadGhostNecro_No">Nee, laat het spreken</string>
@@ -2855,6 +2860,11 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
 
 
 

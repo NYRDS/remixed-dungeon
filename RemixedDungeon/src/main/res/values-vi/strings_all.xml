@@ -1300,6 +1300,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="PalaceServant_Warlock_3">Sự kiên nhẫn của Nhà vua là có hạn.</string>
     <string name="PalaceServants_Hostile">Hầu cận trong cung điện quay lại tấn công bạn!</string>
     <string name="ParalysisArrow_Gender">feminine</string>
+    <string name="ParalysisArrow_Info">Mũi tên này được bôi curare.</string>
     <string name="ParalysisArrow_Name">mũi tên gây tê liệt</string>
     <string name="ParalysisBuff_Info">Hoàn toàn tê liệt!</string>
     <string name="ParalysisBuff_Name">Bị tê liệt</string>
@@ -1490,6 +1491,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="RatHide_Info">Một mảnh thịt và lông nhỏ, bẩn thỉu. Liệu những thứ này có thể hữu ích cho ai đó không?</string>
     <string name="RatHide_Name">da chuột</string>
     <string name="RatKingCrownBuff_Name">Chuột tính</string>
+    <string name="RatKingCrown_Info">Vàng vương miện của Ngài Chuột, biểu tượng của Quyền Lực vĩnh cửu</string>
     <string name="RatKingCrown_Name">Mũ Vua Chuột</string>
     <string name="RatKing_Desc">Con chuột này hơi lớn hơn chuột túi thông thường và nó đang đội một chiếc vương miện nhỏ trên đầu.</string>
     <string name="RatKing_Died">Vua đã chết. Chúc Vua vạn tuế!</string>
@@ -1789,6 +1791,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="SociologistNPC_Gender">masculine</string>
     <string name="SociologistNPC_InternetRequired">Xin lỗi, nhưng nếu không có quyền truy cập Internet, bạn không thể tham gia khảo sát của chúng tôi</string>
     <string name="SociologistNPC_Name">Nhà xã hội học</string>
+    <string name="Sorrowmoss_Desc">Sorrowmoss là một loài hoa (không phải rêu) có cánh hoa sắc bén như dao, bôi lắp nọc độc chết người.</string>
     <string name="Sorrowmoss_Name">Rêu Buồn</string>
     <string name="SoulShard_Gender">masculine</string>
     <string name="SoulShard_Info">Đây là một mảnh vỡ lấy từ tàn tích của Hũ Linh Hồn. Nó lấp lánh với sức mạnh bí ẩn, có lẽ có ai đó quan tâm đến thứ như thế này.</string>
@@ -2497,6 +2500,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_exit_name">Lối ra</string>
     <string name="town_deco_fence_desc">Một cái rào gỗ bị bạc phết bởi tuyết.</string>
     <string name="town_deco_filmtape_desc">Thú vị những gì mảnh phim này chứa đựng.</string>
+    <string name="town_deco_filmtape_name">Cuộn phim</string>
     <string name="town_deco_fireplace_desc">Rất thích hợp để sưởi ấm ở một nơi lạnh như thế này.</string>
     <string name="town_deco_fireplace_name">Lò sưởi</string>
     <string name="town_deco_firewood_desc">Vật dụng thiết yếu trong những đợt rét khắc nghiệt như thế này.</string>
@@ -2610,6 +2614,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_urn_name">Hũ</string>
     <string name="town_deco_vat_name">chậu</string>
     <string name="town_deco_wall_beam_desc">Dùng làm một điểm tựa vững chắc cho công trình này.</string>
+    <string name="town_deco_wall_brazier_desc">Hơi nước từ than tàn bốc lên lấp đầy căn phòng bằng mùi hương thơm tho.</string>
     <string name="town_deco_wall_brazier_name">Bát lửa</string>
     <string name="town_deco_wall_candles_desc">Những ngọn nến đã tắt, nhưng hương thơm dễ chịu vẫn còn lan tỏa.</string>
     <string name="town_deco_wall_candles_name">Nến</string>
@@ -2638,6 +2643,11 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
 
 
 
