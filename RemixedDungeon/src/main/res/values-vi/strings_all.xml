@@ -217,6 +217,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="BishopQuest_2_2_InProgress">Mang cho ta _ba hạt giống hoa mỹ nhân_, con yêu quý của ta. Bàn thờ đang chờ đợi.</string>
     <string name="BishopQuest_2_2_Prologue">Lễ nhận đồ cần nhang được ban phước bởi mặt trăng, con ơi. Hãy mang cho ta _ba hạt giống hoa mỹ nhân_, thu hái nơi ánh trăng còn vương vấn trong sâu thẳm.</string>
     <string name="BishopQuest_3_1_Epilogue">Lễ chầu biệt cuối cùng được đọc, và xác sống tùy tùng tan thành bụi bình yên. Hắn đã an nghỉ thực sự. Lòng trắc ẩn làm vinh dự cho con — hãy lấy cuộn này, con sẽ cần nó nơi con đi.</string>
+    <string name="BishopQuest_3_1_InProgress">Hãy mang cho ta một _zombie_ đã được thuần dưỡng, con ạ. Hãy đối xử nhẹ nhàng với nó — nó không biết mình đang làm gì.</string>
     <string name="BishopQuest_3_2_InProgress">Mang cho ta một con _dơi_ đã được thuần dưỡng, con ạ. Đừng làm sợ con vật đáng thương ấy.</string>
     <string name="BishopQuest_3_2_Prologue">Ngay cả những sinh vật bóng tối cũng xứng đáng được ban phước, con ơi. Hãy mang cho ta một con _dơi_ đã thuần phục, và ta sẽ thánh hiến nó cho ánh sáng.</string>
     <string name="BishopQuest_4_1_InProgress">Bạn đã tiêu diệt %1$d trong %2$d kỵ sĩ tử thần. Hãy làm gãy ý chí của chúng, và các đạo quân sẽ chao đảo.</string>
@@ -533,6 +534,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="DarkSacrifice_Self">Vì Tai Ương!</string>
     <string name="DarkVeilBuff_Info">Một tấm màn đen bao quanh chủ nhân, triệu hồi một linh hồn mỗi khi nhận sát thương.</string>
     <string name="DarkVeilBuff_Name">Màn tối</string>
+    <string name="Darkness_Info">Trông như những mảnh bóng tối vĩnh cửu trôi lửng trong không khí</string>
     <string name="Dart_Gender">masculine</string>
     <string name="Dart_Info">Những chiếc gai kim loại đơn giản này được cân trọng lượng lý tưởng để đâm xuyên con mồi một cách chính xác.</string>
     <string name="Dart_Name">đĩa</string>
@@ -813,11 +815,13 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Hedgehog_Name">nhím</string>
     <string name="HeroClass_Doctor">Bác Sĩ Dịch Hạch</string>
     <string name="HeroClass_Elf">yêu tinh</string>
+    <string name="HeroClass_ElfPerks_0">Yêu tinh bắt đầu với 15 điểm Sức khỏe và 9 điểm Sức mạnh.</string>
     <string name="HeroClass_ElfPerks_1">Yêu tinh miễn dịch với sự giam cầm.</string>
     <string name="HeroClass_ElfPerks_2">Tiên nữ bắt đầu với một cây cung gỗ được nâng cấp và một lứa tên.</string>
     <string name="HeroClass_ElfPerks_3">Yêu tinh thành thạo cực kỳ với cung và rất linh hoạt.</string>
     <string name="HeroClass_ElfPerks_4">Yêu tinh hồi phục nhiều máu hơn từ sương mai.</string>
     <string name="HeroClass_ElfPerks_5">Yếu tinh kém thành thạo hơn với vũ khí cận chiến.</string>
+    <string name="HeroClass_Gnoll">Gnoll</string>
     <string name="HeroClass_GnollPerks_0">Gnoll bắt đầu với 15 điểm sức mạnh</string>
     <string name="HeroClass_GnollPerks_1">Gnoll bắt đầu với 5 điểm sức khỏe</string>
     <string name="HeroClass_GnollPerks_2">Gnoll bắt đầu không có giáp nào nhưng có một cái rìu tomahawk độc nhất</string>
@@ -1377,6 +1381,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="PlagueDoctorQuest_2_2_Prologue"> Ah, _sungrass_! Một bông hoa mảnh mai, cánh hoa tỏa ra sự ấm áp của mặt trời. Tôi tin rằng tinh chất của nó chứa đựng chìa khóa cho... à, tạm quên chi tiết đi. Đủ để nói rằng, nó rất quan trọng cho nghiên cứu của tôi. _Hai hạt giống sungrass_. Lấy chúng về cho tôi, và tôi sẽ thưởng bạn bằng thứ chắc chắn sẽ hữu ích trong cuộc phiêu lưu của bạn - một _Potion of Health_, tràn đầy sức sống của mặt trời.</string>
     <string name="PlagueDoctorQuest_3_1_Epilogue">*Anh ấy ôm nhẹ con _dơi_ trong đôi tay có găng, xem xét cơ thể nhỏ bé của nó với một sự mê hoặc đáng sợ* Tuyệt vời! Khả năng định vị bằng tiếng vang của con dơi... nó khác biệt với bất cứ thứ gì tôi từng gặp. Một sự chính xác... một sự... khống chế. *Anh ấy quay về phía bạn, khuôn mặt bị che khuất bởi chiếc mặt nạ* Với nỗ lực của bạn, một _Cuộn Sách Nâng Cấp_. Hãy sử dụng nó khôn ngoan, vì nó nắm giữ tiềm năng để... tinh chế bản chất thực sự của bạn. *Anh ấy đưa cho bạn cuộn sách, giọng nói rơi xuống thành thì thầm khàn khàn* Con _dơi_ này, nó là... một cửa sổ vào một thế giới ẩn giấu. Một thế giới... nơi bóng ma khiêu vũ và bí mật thì thầm.</string>
     <string name="PlagueDoctorQuest_3_1_InProgress">Hãy mang cho tôi một con _dơi ma cà rồng_, còn sống và nguyên vẹn! Máu của nó, đôi cánh của nó… chúng chứa những bí mật mà tôi phải khám phá!</string>
+    <string name="PlagueDoctorQuest_3_1_Prologue">*Hai mắt ông lấp lánh với một cường độ kỳ lạ, sốt sắng* Ah, _con dơi hút máu_! Một sinh vật của đêm, nuôi sống bằng sức sống của con mồi. Thú vị… thật sự thú vị. Ta cần một con sống để nghiên cứu sinh lý học đặc biệt của nó. Tất cả là về việc… hiểu… hiểu… *Ông ngập ngừng, lẩm bẩm với mình những thuật ngữ huyền bí*. Vâng! Khả năng định vị bằng sóng âm của _con dơi_, khả năng dẫn đường trong bóng tối hoàn toàn… đó là chìa khóa để mở ra một bí mật.</string>
     <string name="PlagueDoctorQuest_3_2_Prologue">Một _Kỵ Sĩ Cửu U_! *Giọng nói nứt nẻ vì hứng thú, ngón tay xương khô run rẩy khi nắm chặt bình thuốc bủa bọt đầy hỗn hợp mờ tối, chói lòa*. Một sinh vật như vậy… một ngọn đèn hiệu của cái chết! Bắt được một con, còn sống… đó sẽ là… một kỳ quan. Hãy tưởng tượng những bí mật chúng ta có thể khai phá! Sức mạnh chảy trong những mạch xương khô đó! Đúng, một _Kỵ Sĩ Cửu U_! Nó quan trọng cho nghiên cứu của ta! Vì nó sẽ cho phép chúng ta đi sâu hơn… vào những bí ẩn của sự sống… và cái chết bản thân!</string>
     <string name="PlagueDoctorQuest_4_1_Epilogue">Tuyệt vời! Các _Dwarf Warlocks_, bản chất của chúng giờ là của tôi để khám phá! Phép thuật méo mó, đen tối đó... thật hấp dẫn. *Anh ta giơ một lọ thủy tinh lấp lánh chứa chất lỏng đỏ sẫm, sền sệt.* Đây là dành cho bạn: một _Potion of Might_! Hãy uống sức mạnh đó, và bạn sẽ cảm nhận sức mạnh của núi non chảy qua huyết quản! Hãy nhớ rằng kiến thức từ những hy sinh này cuối cùng sẽ phục vụ một mục đích cao cả hơn... có lẽ sẽ cứu tất cả chúng ta khỏi một số phận tồi tệ hơn cái chết.</string>
     <string name="PlagueDoctorQuest_4_1_InProgress">Năm _Chiến thuật gia Lùn_, cơ thể họ vẫn còn dao động với vang vọng yếu ớt của phép thuật đen tối! Mang chúng đến cho ta, và ta sẽ ban thưởng cho ngươi một _Thuốc Mạnh_ sẽ ban cho ngươi sức mạnh của mười người!</string>
@@ -2004,6 +2009,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="TownsfolkSilentNPC_Message2">...</string>
     <string name="TownsfolkSilentNPC_Message3">Hừm...</string>
     <string name="TownsfolkSilentNPC_Name">người dân thành phố</string>
+    <string name="TownsfolkSilentNPC_Name_Objective">người dân thành phố</string>
     <string name="ToxicGas_Info">Một đám mây khí độc màu xanh lá cây đang xoáy ở đây.</string>
     <string name="ToxicGas_Info1">Bạn đã chết vì hít phải khí độc...</string>
     <string name="ToxicGland_Info">Một tuyến độc thu hoạch từ kẻ địch bị đánh bại. Các tuyến này chứa đầy độc tố mạnh và có thể dùng trong các quá trình giả kim.</string>
@@ -2419,6 +2425,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Wraith_Name">oan hồn</string>
     <string name="Wraith_Name_Objective">oan hồn</string>
     <string name="WrnExperimental_hint">Nếu thế giới kỳ lạ và u ám này quá khắc nghiệt với bạn, hãy tắt các tùy chọn này bằng cách:\nMàn hình chính -&gt; Cài đặt -&gt; Cách chơi\nvà bắt đầu một ván mới hoặc tải một ván khác.</string>
+    <string name="WrnExperimental_moveTimeout">Giới hạn thời gian di chuyển: %d mili giây, hãy nghĩ nhanh!</string>
     <string name="WrnExperimental_realtime">Chế độ thời gian thực đã được kích hoạt: đây giờ là một roguelike thời gian thực, nhấn nhanh hoặc chết.\nBạn muốn kiểm tra túi đồ?\nChúc may mắn với việc đó trong khi con cua rạch kiểm tra ruột gan bạn.</string>
     <string name="WrnExperimental_title">Các tùy chọn thực nghiệm đã được bật!</string>
     <string name="Yog_Desc">Yog-Dzewa là một Vị Thần Cổ, một thực thể mạnh mẽ từ vương quốc hỗn loạn. Một thế kỷ trước, những người lùn cổ xưa gần như thắng chiến tranh chống lại đội quân quỷ của nó, nhưng không thể tiêu diệt chính vị thần đó. Thay vào đó, họ giam nó ở những đại sảnh dưới thành phố của họ, tin rằng nó quá yếu để từng trỗi dậy lại.</string>
@@ -2674,6 +2681,14 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
+
+
+
 
 
 
