@@ -1454,6 +1454,7 @@
     <string name="Piranha_Gender">feminine</string>
     <string name="Piranha_Name">reuzepiranha</string>
     <string name="Piranha_Name_Objective">reuzenpiranha</string>
+    <string name="PirateSet_Info">Arr! Heb je de moed om je bij ons aan te sluiten!? Of ben je gewoon een landrat? Ik hoop niet, want dit ding is immers alleen voor piraten, ehm, ik bedoel... Arr!</string>
     <string name="PirateSet_Name">Piraten Set</string>
     <string name="PlagueDoctorMaskHood_Info">Een uitgebeeld ebenen schedel, zijn holle oogkassen gloeiend met de etherische schittering van amethyst-edelstenen. Elke adem die je trekt fluistert door een labyrint van buisjes en filters, draagend de geur van krachtige kruiden en specerijen die de verwesing die aan je kleeft maskeren. Maar het is niet slechts het masker. Een zware kap van midnachts fluweel, verhullend je gezicht en hoofd in schaduwen. De hoed, als een raafsvleugel, stroomt je rug af, de randen getrimd met een franje van botwit kant, een bevroren mooie contrast. Samen scheppen masker en kap een spectraal gezicht, een grim getuigenis van de onophoudelijke strijd tegen de machten van verwesing.</string>
     <string name="PlagueDoctorMaskHood_Name">Pestdoktermasker met kap</string>
@@ -1579,6 +1580,7 @@
     <string name="Potion_Colors_6">anthraciet</string>
     <string name="Potion_Colors_7">ivoor</string>
     <string name="Potion_Colors_8">amber</string>
+    <string name="Potion_Colors_9">bister</string>
     <string name="Potion_FoodRefreshed">%s ziet er nu eetbaar uit</string>
     <string name="Potion_Harmfull">Schadelijke drank!</string>
     <string name="Potion_Info">Deze fles bevat een wervelende %s vloeistof. Wie weet wat er gebeurt als het gedronken of gegooid wordt?</string>
@@ -1824,6 +1826,7 @@
     <string name="ScrollOfTerror_Name">Scroll van Schrik</string>
     <string name="ScrollOfUpgrade_InvTitle">Kies een voorwerp om te upgraden</string>
     <string name="ScrollOfUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
+    <string name="ScrollOfUpgrade_Name">Scroll van Upgrade</string>
     <string name="ScrollOfWeaponUpgrade_Info">Deze rol zal een wapen voor nabijgevecht upgraden, de kwaliteit verbeterend. In tegenstelling tot een gewone Upgrade Scroll, zal deze gespecialiseerde versie nooit een begoocheling op een wapen vernietigen. Integendeel, het kan een onbetoverde wapen een willekeurige begoocheling geven.</string>
     <string name="ScrollOfWeaponUpgrade_InvTitle">Selecteer een wapen om te upgraden</string>
     <string name="ScrollOfWeaponUpgrade_LooksBetter">je %s ziet er nu zeker beter uit</string>
@@ -2387,6 +2390,7 @@
     <string name="WndGame_Save">Opslaan</string>
     <string name="WndGame_Settings">Instellingen</string>
     <string name="WndGame_Start">Nieuw spel starten</string>
+    <string name="WndGame_menu">Hoofdmenu</string>
     <string name="WndHats_BackButton">Terug</string>
     <string name="WndHats_BuyButton">Kopen</string>
     <string name="WndHats_EquipButton">Uitrusten</string>
@@ -2869,6 +2873,10 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 

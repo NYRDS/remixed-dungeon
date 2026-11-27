@@ -1436,6 +1436,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="PotionOfPurity_Info">Chất này sẽ nhanh chóng trung hòa tất cả các loại khí độc hại trong khu vực ảnh hưởng. Uống nó sẽ cho bạn một sự miễn dịch tạm thời đối với các loại khí đó.</string>
     <string name="PotionOfPurity_NoSmell">Bạn đã ngừng cảm nhận được mùi hương nào cả!</string>
     <string name="PotionOfStrength_Apply">Sức mạnh mới mẻ tràn ngập cơ thể bạn.</string>
+    <string name="PotionOfStrength_Info">Dung dịch mạnh này sẽ chảy qua cơ bắp của bạn, tăng vĩnh viễn sức mạnh của bạn thêm một điểm.</string>
     <string name="PotionOfStrength_Name">Thuốc sức mạnh</string>
     <string name="PotionOfStrength_StaApply">+1 sức mạnh</string>
     <string name="PotionOfToxicGas_Name">Chai thuốc Khí Độc</string>
@@ -1736,6 +1737,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Shaman_Killed">Tia sét của %s đã giết bạn...</string>
     <string name="Shaman_Name">thầy pháp gnoll</string>
     <string name="Shaman_Name_Objective">gnoll shaman</string>
+    <string name="Shaman_ZapMiss">*Chửi thề bằng tiếng gnoll*</string>
     <string name="Sheep_Desc">Đây là một con cừu ma thuật. Điều gì làm nó trở nên ma thuật? Bạn không thể giết nó. Nó sẽ đứng yên tại chỗ cho đến khi nó biến mất bằng phép thuật, trong khi vẫn nhai cỏ với ánh mắt trống rỗng.</string>
     <string name="Sheep_Gender">feminine</string>
     <string name="Sheep_Name">cừu</string>
@@ -1951,6 +1953,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="TomeOfMastery_ACRead">ĐỌC</string>
     <string name="TomeOfMastery_Blinded">Bạn không thể đọc khi bị mù.</string>
     <string name="TomeOfMastery_Info">Cuốn sách da cũ này không quá dày, nhưng bạn cảm thấy có thể học được rất nhiều điều từ nó. Hãy nhớ rằng việc đọc bộ sách này có thể mất một chút thời gian.</string>
+    <string name="TomeOfMastery_Name">Cuốn sách thành thạo</string>
     <string name="Toolbar_Info1">Bạn không biết đó có gì.</string>
     <string name="Toolbar_Info2">Chọn một ô để kiểm tra</string>
     <string name="Torch_ACLight">THÁP</string>
@@ -2042,6 +2045,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="WandOfFlock_SheepBaa_1">Bêê?</string>
     <string name="WandOfFlock_SheepBaa_2">Bê.</string>
     <string name="WandOfFlock_SheepBaa_4">Be...</string>
+    <string name="WandOfFlock_SheepBaa_5">Bê...</string>
     <string name="WandOfIcebolt_Info">Cây gậy này phóng ra một tia băng, gây sát thương nhẹ cho mục tiêu. Cũng có khả năng làm chậm hoặc thậm chí đóng băng kẻ địch.</string>
     <string name="WandOfIcebolt_Info1">Bạn đã tự giết mình bằng Đũa phép Băng đạn của chính mình...</string>
     <string name="WandOfIcebolt_Name">Gậy Băng Tiễn</string>
@@ -2652,6 +2656,10 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 
