@@ -1007,6 +1007,7 @@
     <string name="HideInGrassSpell_Name">Verberg-in-Gras</string>
     <string name="HideInGrassSpell_NeedGrassToHide">Zelfs ik kan me niet in het zicht verstoppen.</string>
     <string name="HolyWater_Name">Heilige Water</string>
+    <string name="Horror_Name_0">Ontzettend %s</string>
     <string name="Horror_Name_1">Griezelige %s</string>
     <string name="Horror_Name_2">Griezelige %s</string>
     <string name="HungerBuff_Info1">Je hebt honger!</string>
@@ -2086,6 +2087,7 @@
     <string name="Stench_Txt">%s van stank</string>
     <string name="StoneBloodBuff_Info">Het bloed verandert in steen die samensmelt met de nabije muren en het doorlopen ervan veel makkelijker maakt, maar tegen welke prijs.</string>
     <string name="StoneBloodBuff_Name">Stenen bloed</string>
+    <string name="Str_lose">-1 kracht</string>
     <string name="StrongShield_desc">Dit rechthoekige schild is bekleed met koperen platen en versierd met gekleurde stof. Het is aanzienlijk zwaarder, maar kan veel meer binnenkomende schade blokkeren.</string>
     <string name="StunBuff_Info">Verdoofd!</string>
     <string name="StunBuff_Name">Verdoofd</string>
@@ -2221,6 +2223,7 @@
     <string name="VileEssence_Info">Een geconcentreerde essentie van corruptie, geoogst van een verslagen vijand. Deze donkere substantie pulseert met kwaadaardige energie en wordt zeer gewaardeerd in alchemistische processen.</string>
     <string name="VileEssence_Name">Verachtelijke Essentie</string>
     <string name="Viscosity_Txt">%s van viscositeit</string>
+    <string name="VkPlayLink_desc">Remixed Pixel Dungeon voor PC gekocht op VK Play? Meld je aan met dezelfde VK ID en advertenties in deze mobiele versie worden uitgeschakeld.</string>
     <string name="VkPlayLink_idle"/>
     <string name="VkPlayLink_linked">Reclames zijn uitgeschakeld tot %s.</string>
     <string name="VkPlayLink_noConnection">Kan de verificatie-service niet bereiken. Controleer uw internetverbinding en probeer het opnieuw.</string>
@@ -2915,6 +2918,9 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
 
 
 

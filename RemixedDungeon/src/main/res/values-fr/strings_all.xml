@@ -2402,6 +2402,7 @@ Le %1$s transporte un %2$s. Volé visiblement.</string>
     <string name="VkPlayLink_done">Terminé ! Les publicités sont désactivées jusqu\'au %s.</string>
     <string name="VkPlayLink_idle" />
     <string name="VkPlayLink_linked">Les publicités sont désactivées jusqu\'au %s.</string>
+    <string name="VkPlayLink_notOwned">Le compte VK Play n\'a aucun achat de Remixed Pixel Dungeon.</string>
     <string name="VkPlayLink_row">VK Play PC : désactiver les publicités</string>
     <string name="VkPlayLink_signIn">Se connecter via l\'identifiant VK</string>
     <string name="VkPlayLink_waiting">En attente de la connexion VK ID. Terminez-la dans le navigateur ; cette fenêtre se met à jour automatiquement.</string>
@@ -3148,6 +3149,7 @@ Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
     <string name="town_table_fortune_ball_name">Boule de cristal</string>
     <string name="town_table_fortune_desc">Cette table est couverte d\'une nappe de soie. Vous pouvez voir dessus des cartes de tarot disposées savamment.</string>
     <string name="town_table_fortune_name">Table</string>
+
 
 
 

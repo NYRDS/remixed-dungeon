@@ -2405,6 +2405,7 @@ otro lugar del nivel.</string>
     <string name="VileEssence_Name">Esencia Vil</string>
     <string name="Viscosity_Status">%d diferido</string>
     <string name="Viscosity_Txt">%s de viscosidad</string>
+    <string name="VkPlayLink_desc">¿Compraste Remixed Pixel Dungeon para PC en VK Play? Inicia sesión con el mismo VK ID y los anuncios en esta versión móvil se desactivarán.</string>
     <string name="VkPlayLink_done">¡Hecho! Los anuncios están deshabilitados hasta %s.</string>
     <string name="VkPlayLink_failed">No se puede confirmar la compra. Verifique su conexi\xf3n a internet e int\xe9ntelo de nuevo.</string>
     <string name="VkPlayLink_idle"/>
@@ -3140,6 +3141,7 @@ otro lugar del nivel.</string>
     <string name="town_table_fortune_ball_name">Bola de cristal</string>
     <string name="town_table_fortune_desc">Una mesa cubierta con una manta de seda. Puedes ver varias cartas de tarot puestas con un orden peculiar.</string>
     <string name="town_table_fortune_name">Mesa</string>
+
 
 
 

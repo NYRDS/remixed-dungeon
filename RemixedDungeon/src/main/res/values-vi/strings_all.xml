@@ -994,6 +994,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="InventoryScroll_Warning">Bạn có thực sự muốn hủy việc sử dụng cuộn giấy này không? Nó sẽ bị tiêu hao dù sao.</string>
     <string name="InventoryScroll_Yes">Vâng, tôi chắc chắn</string>
     <string name="InvisibilityBuff_Info">Hoàn toàn vô hình, có thể giúp tránh nguy hiểm hoặc trở thành nguy hiểm.</string>
+    <string name="InvisibilityBuff_Name">Tàng hình</string>
     <string name="IronKey_FromDepth">chìa khóa sắt từ độ sâu %d</string>
     <string name="IronKey_Info">Các rãnh trên chiếc chìa khóa sắt cổ xưa này đã mòn; dây đeo da của nó đã hư hỏng bởi thời gian. Nó có thể mở cánh cửa nào?</string>
     <string name="IronKey_Name">chìa khóa sắt</string>
@@ -1328,6 +1329,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="ParalysisBuff_Name">Bị tê liệt</string>
     <string name="Paralysis_Name_0">%s choáng váng</string>
     <string name="Paralysis_Name_1">Gây choáng %s</string>
+    <string name="Paralysis_Name_2">Choáng %s</string>
     <string name="ParalyticGas_Info">Một đám mây khí gây tê liệt đang xoáy ở đây.</string>
     <string name="Pasty_Info">Đây là một chiếc bánh pasty Cornish truyền thống với nhân thịt bò và khoai tây.</string>
     <string name="Pasty_Name">bánh nướng</string>
@@ -2374,6 +2376,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="WndSettings_Brightness">Độ sáng</string>
     <string name="WndSettings_ClassicFont">Font Classic</string>
     <string name="WndSettings_ExperementalFont">Font mới</string>
+    <string name="WndSettings_FpsLimit">Giới hạn FPS</string>
     <string name="WndSettings_GameplaySettings">Chơi</string>
     <string name="WndSettings_Handedness">Ưu tiên tay</string>
     <string name="WndSettings_Immersive">Chế độ đắm chìm</string>
@@ -2699,6 +2702,9 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 
