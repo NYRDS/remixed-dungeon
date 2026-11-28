@@ -7,6 +7,7 @@
     <string name="Abilities_Default">Hoofdvermogen</string>
     <string name="Abilities_Elemental">Elementaire toverspreuken</string>
     <string name="Abilities_Necromancy">Necromantie</string>
+    <string name="Abilities_Priest">Goddelike Spreuken</string>
     <string name="AboutScene_Code">Code:</string>
     <string name="AboutScene_Email_Us">E-mail ons:</string>
     <string name="AboutScene_Graphics">Grafisch:</string>
@@ -1490,6 +1491,7 @@
     <string name="PlagueDoctorQuest_1_1_Epilogue">Ah, je bent terug! _Vijf dode ratten_, perfect! Hun huiden zullen cruciaal zijn voor mijn onderzoek. En zoals beloofd, voor je dappere inspanning heb ik dit harnas voor je gemaakt van hun eigen vellen. Het is doordrenkt met een vleugje van de pest, maar maak je geen zorgen! Het is gecontroleerd, het beschermt! Ga nu! Bescherm de stad!</string>
     <string name="PlagueDoctorQuest_1_1_InProgress">Breng me _vijf dode ratten_! Elke die je me brengt, brengt ons dichter bij het begrijpen van deze verschrikkelijke plaag.</string>
     <string name="PlagueDoctorQuest_1_2_Epilogue">Ahhhh… prachtig! De _slakken_, hun geheimen langzaam ontvouwend als bloemblaadjes in het maanlicht. Een schat aan informatie! Maar je hebt gelijk, _vijftig goud_ is nauwelijks een passende beloning. *Gikkelt maniakaal*.</string>
+    <string name="PlagueDoctorQuest_1_2_InProgress">_Tien slakken_, tien fluisteringen uit de afgrond! Hun slijm zal worden geanalyseerd, hun essentie onderzocht. De geheimen die ze bergen, liggen voor handen.</string>
     <string name="PlagueDoctorQuest_1_2_Prologue"> *Hoest hevig* Hatsjoe!\n De slakken... ze glijden. Ze slijmen. En ze fluisteren geheimen van een vergeten eeuw. Ik heb ze nodig, _tien_ van hen, hun schillen nog intact. Denk je dat slechts _vijftig goudmunten_ genoeg is voor zulke kostbare kennis?\n Bah! Maakt niet uit. De informatie die ze bergen kan de sleutel zijn om deze pest te stoppen. Of... het kan ons leiden tot iets nog vreselijker. Jij beslist.</string>
     <string name="PlagueDoctorQuest_2_1_Epilogue">De _maanegenade_… een getuigenis van de magie die door deze wereld weeft. Ik heb veel geleerd van hun essentie, maar uw beloning… nou, die is met de utterste zorg bereid. *Reikt de held een schitterende _Manadrank_* Moge de kracht u leiden door de gevaren die u wachten.</string>
     <string name="PlagueDoctorQuest_2_1_InProgress">Zoek de _moongrace_, waar duisternis de minste glans van het maanlicht ontmoet. _Twee zaden_, hun essentie, zullen verborgene geheimen onthullen.</string>
@@ -1705,6 +1707,7 @@
     <string name="RingOfFrost_Name">Ring van de Vorst</string>
     <string name="RingOfHaggler_Info">Dit ring biedt in feite geen magisch effect, maar toont aan handelaren en verkopers dat de eigenaar lid is van het Dievengilde. Meestal geven ze graag een korting in ruil voor een tijdelijke immuniteitsgarantie. Het verbeteren van deze ring levert geen extra bonussen op.</string>
     <string name="RingOfHaggler_Name">Ring van de Handelaar</string>
+    <string name="RingOfHaste_Info">Deze ring versnelt de tijdsstroom van de drager, waardoor alle acties een beetje sneller uitgevoerd kunnen worden.</string>
     <string name="RingOfHaste_Name">Ring van Snelheid</string>
     <string name="RingOfHerbalism_Info">Deze ring vergroot je kans om dauw en zaden te verzamelen van vertrapt gras.</string>
     <string name="RingOfHerbalism_Name">Ring van Kruidkunde</string>
@@ -2071,6 +2074,7 @@
     <string name="StartScene_UnlockDoctor">Om de Plague Doctor te ontgrendelen - voltooi de opdracht van de oude Plague Doctor</string>
     <string name="StartScene_UnlockElf">Om deze klasse te ontgrendelen, versla de Koning-baas met een andere klasse</string>
     <string name="StartScene_UnlockGnoll">Om deze klasse te ontgrendelen moet je de dorpspriester ervan overtuigen de Gnol Brute te genezen</string>
+    <string name="StartScene_UnlockNecromancer">Om deze personageklasse te ontgrendelen, versla de Lich met een willekeurige andere klasse.</string>
     <string name="StartScene_UnlockPriest">Om Priester te ontgrendelen - voltooi de quest van de Bisschop in de Kerk</string>
     <string name="StartScene_Warning">Je huidige spelvoortgang zal gewist worden.</string>
     <string name="StartScene_WinGame">Om \&quot;Uitdagingen\&quot; te ontgrendelen, win het spel met een willekeurige personageklasse.</string>
@@ -2261,6 +2265,7 @@
     <string name="WandOfMagicMissile_ACDisenchant">ONTDOEN</string>
     <string name="WandOfMagicMissile_Desinchanted">je ontgoochelde de Toverstaf van Magische Projectielen en gebruikte de essentie ervan om je %s te verbeteren</string>
     <string name="WandOfMagicMissile_Info">Deze staf lanceert missiles van zuivere magische energie, wat matige schade aan een doelwit toebrengt.</string>
+    <string name="WandOfMagicMissile_Info1">Je doodde jezelf met je eigen Toeverlaat van Magische Raketten...</string>
     <string name="WandOfMagicMissile_Name">Toverstaf van Magische Projectielen</string>
     <string name="WandOfPoison_Info">De giftige uitbarsting van dit krom stuk hout bedekt zijn doelwit met dodelijk gif. Het vergiftigde wezen zal periodieke schade lijden totdat het effect eindigt. De duur van het effect neemt toe met het niveau van de staf.</string>
     <string name="WandOfPoison_Info1">er gebeurde niets</string>
@@ -2645,6 +2650,7 @@
     <string name="Yog_Gender">masculine</string>
     <string name="Yog_Info1">...</string>
     <string name="Yog_Info2">Hoop is een illusie...</string>
+    <string name="Yog_Name">Yog-Dzewa</string>
     <string name="Yog_Name_Objective">Yog-Dzewa</string>
     <string name="YogsBrain_Desc">Brein van Yog-Dzewa. Bron van al het kwaad dat ooit uit de kerker kwam.</string>
     <string name="YogsBrain_Gender">masculine</string>
@@ -2909,6 +2915,12 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
+
+
 
 
 

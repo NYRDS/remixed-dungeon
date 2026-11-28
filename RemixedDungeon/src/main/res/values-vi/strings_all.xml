@@ -334,6 +334,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Carcass_TooFarToDissect">Bạn cần đến gần hơn để giải phẫu xác.</string>
     <string name="Caves_TileDescBookshelf">Ai lại cần kệ sách trong hang động?</string>
     <string name="Caves_TileDescDeco">Một mạch quặng nào đó nhìn thấy được trên tường. Vàng?</string>
+    <string name="Caves_TileDescEntrance">Cái thang dẫn lên tầng trên.</string>
     <string name="Caves_TileDescExit">Cầu thang dẫn xuống tầng sâu hơn.</string>
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
     <string name="Caves_TileGrass">Rêu huỳnh quang</string>
@@ -557,6 +558,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Deathling_Name_Objective">chết con</string>
     <string name="DeepSnail_Desc">Loài thân mềm này thường xuất hiện gần nguồn nước và nhanh hơn nhiều so với ốc sên thường. Tuy nhiên hãy cẩn thận với vết cắn, chúng có thể gây ảnh hưởng khó chịu lên làn da của bạn.</string>
     <string name="DeepSnail_Gender">masculine</string>
+    <string name="DeepSnail_Name">ốc sên hang</string>
     <string name="DeepSnail_Name_Objective">ốc sên sâu</string>
     <string name="DeferedDamageBuff_Info">Cơn đau đã biến thành cơn đau chậm, làm giảm sát thương nhận được một lần.\nSát thương còn lại để nhận %d</string>
     <string name="DeferedDamageBuff_Name">Sát thương hoãn lại (%d)</string>
@@ -1003,6 +1005,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Item_Info">gì đó</string>
     <string name="Item_Info2">điều gì đó</string>
     <string name="Item_Name">vật phẩm</string>
+    <string name="Item_PackFull">Balo của bạn quá đầy để chứa %s</string>
     <string name="JarOfSouls_Desc">Cặp mắt sáng lóa của chiếc sọ được vẽ trên cái hũ cũ này, cũng như năng lượng kỳ lạ mà nó tỏa ra, khiến bạn cảm thấy bất an.</string>
     <string name="JarOfSouls_Gender">masculine</string>
     <string name="JarOfSouls_Name">hũ linh hồn</string>
@@ -1423,6 +1426,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Possess_Info">Nghệ thuật đen tối của kiểm soát tâm trí cho phép người thi phép cong vẹo ý chí của hầu hết các sinh vật.</string>
     <string name="Possess_Name">Ám</string>
     <string name="Possess_Possessed">%s đang chờ lệnh của bạn</string>
+    <string name="Possess_PossessionFailed">Ý chí của %s quá mạnh</string>
     <string name="Potential_Txt">%s của tiềm năng</string>
     <string name="PotionBelt_Info">Chiếc đai da chắc chắn này có thể đựng tất cả bình thuốc của bạn, đồng thời bảo vệ chúng không bị vỡ do giá lạnh.</string>
     <string name="PotionBelt_Name">dây đai thuốc</string>
@@ -2105,6 +2109,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Wand_Prompt">Chọn hướng để phóng phép</string>
     <string name="Wand_SelfTarget">Bạn không thể nhắm vào chính mình</string>
     <string name="Wand_Weapon">Bạn có thể sử dụng cây gậy phép này như một vũ khí cận chiến.</string>
+    <string name="Wand_Wood">Cây gậy %s mỏng này ấm khi chạm. Ai biết nó sẽ làm gì khi được dùng?</string>
     <string name="Wand_Wood_Types_1">tần bì</string>
     <string name="Wand_Wood_Types_10">sồi</string>
     <string name="Wand_Wood_Types_11">bạch dương</string>
@@ -2228,6 +2233,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="WndGame_Ranking">Bảng xếp hạng</string>
     <string name="WndGame_Return">Quay lại trò chơi</string>
     <string name="WndGame_Save">Lưu</string>
+    <string name="WndGame_Settings">Cài đặt</string>
     <string name="WndGame_Start">Bắt đầu trò chơi mới</string>
     <string name="WndGame_menu">Menu chính</string>
     <string name="WndHats_BackButton">Quay lại</string>
@@ -2693,6 +2699,12 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
+
+
 
 
 
