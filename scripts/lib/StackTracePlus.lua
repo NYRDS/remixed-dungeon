@@ -190,13 +190,20 @@ Dumper.new = function(thread)
 			if t.dumping_same_thread and type(level) == "number" then
 				level = level + 1
 			end
-			return debug.getinfo(thread, level, what)
+			local ok, info = pcall(debug.getinfo, thread, level, what)
+			if not ok then return nil end
+			return info
 		end
 		t.getlocal = function(level, loc)
 			if t.dumping_same_thread then
 				level = level + 1
 			end
-			return debug.getlocal(thread, level, loc)
+			-- chunks invoked from a java thread have no lua stack on their
+			-- thread object; debug.getlocal(thread, ...) throws then. Stop
+			-- dumping locals for that level instead of NPEing the whole dump.
+			local ok, name, value = pcall(debug.getlocal, thread, level, loc)
+			if not ok then return nil end
+			return name, value
 		end
 	else
 		t.getinfo = debug.getinfo

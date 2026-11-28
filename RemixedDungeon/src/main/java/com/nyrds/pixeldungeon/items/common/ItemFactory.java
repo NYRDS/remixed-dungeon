@@ -12,11 +12,11 @@ import com.nyrds.platform.util.TrackedRuntimeException;
 import com.nyrds.util.JsonHelper;
 import com.nyrds.util.ModdingMode;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.items.Codex;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.ClassArmor;
-import com.watabou.pixeldungeon.items.Codex;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.keys.Key;
@@ -37,10 +37,13 @@ import com.watabou.pixeldungeon.plants.Seed;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -408,7 +411,11 @@ public class ItemFactory {
 
                 Class<? extends Item> itemClass = mItemsList.get(selectedItemClass);
 
-                if (itemClass != null && itemClass != CustomItem.class) {
+                // framework classes with kind-arg ctors (MeleeWeapon,
+                // KindOfBow, ...) are registered for name lookup only - fall
+                // through to the CustomItem tail instead of throwing
+                if (itemClass != null && itemClass != CustomItem.class
+                        && isInstantiableKind(itemClass)) {
                     return itemClass.newInstance();
                 }
             }
@@ -487,5 +494,36 @@ public class ItemFactory {
         }
 
         return items;
+    }
+
+    /**
+     * Framework classes registered for name lookup only (MeleeWeapon,
+     * KindOfBow, ...) carry kind-arg ctors - they can't be default-instantiated.
+     */
+    private static boolean isInstantiableKind(Class<?> itemClass) {
+        if (Modifier.isAbstract(itemClass.getModifiers())) {
+            return false;
+        }
+        try {
+            itemClass.getDeclaredConstructor();
+            return true;
+        } catch (NoSuchMethodException e) {
+            return false;
+        }
+    }
+
+    @LuaInterface
+    public static List<String> getItemNames() {
+        Set<String> names = new HashSet<>();
+        for (var entry : mItemsList.entrySet()) {
+            // skip framework classes registered for name lookup only -
+            // enumerators want spawnable kinds
+            if (entry.getValue() != CustomItem.class && !isInstantiableKind(entry.getValue())) {
+                continue;
+            }
+            names.add(entry.getKey());
+        }
+        names.addAll(mKindFactories.keySet());
+        return new ArrayList<>(names);
     }
 }

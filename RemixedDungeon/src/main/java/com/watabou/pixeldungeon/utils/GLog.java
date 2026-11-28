@@ -49,6 +49,9 @@ public class GLog {
 
 	private static FileWriter logWriter;
 	private static boolean readonlySd = false;
+	// bytes appended this session: the 1MB size check only ran on (re)open,
+	// so a session-long error storm could grow the file unbounded
+	private static long bytesWrittenThisSession = 0;
 
 	public static boolean enabled = true;
 
@@ -60,7 +63,15 @@ public class GLog {
 			return;
 		}
 
-		if(logWriter==null) {
+		if(logWriter==null || bytesWrittenThisSession > 1024*1024) {
+			if(logWriter!=null) {
+				try {
+					logWriter.close();
+				} catch (IOException e) {
+					// fall through to the reopen below
+				}
+				logWriter = null;
+			}
 			File logFile = FileSystem.getExternalStorageFile(RE_PD_LOG_FILE_LOG);
 
 			if(logFile.length() > 1024*1024) {
@@ -75,6 +86,7 @@ public class GLog {
 
 			try {
 				logWriter = new FileWriter(logFile,true);
+				bytesWrittenThisSession = 0;
 				toFile("log started %s !", GameLoop.version);
 			} catch (Exception e) {
 				readonlySd = true;
@@ -93,6 +105,7 @@ public class GLog {
 		try {
 			logWriter.write(text);
 			logWriter.flush();
+			bytesWrittenThisSession += text.length();
 		} catch (IOException e) {
 			readonlySd = true;
 		}

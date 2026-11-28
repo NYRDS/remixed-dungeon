@@ -135,7 +135,14 @@ public class LuaScript {
         if(!hasMethod(method)) {
             return;
         }
-        run(method);
+        // tick-path variant (buff/act etc.): a script error here must be
+        // logged, not propagated - it would escape into the update loop and
+        // kill the app (desktop uncaught handler exits)
+        try {
+            run(method);
+        } catch (Exception e) {
+            ModError.doReport(Utils.format("Error while running script %s:%s", scriptFile, method), e);
+        }
     }
 
     public boolean hasMethod(String method) {

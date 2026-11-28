@@ -63,6 +63,7 @@ public class SpellFactory {
 	}
 
 	@NotNull
+	@LuaInterface
 	public static ArrayList<String> getAllSpells() {
 		LuaTable luaList = script.run("getSpellsList").checktable();
 

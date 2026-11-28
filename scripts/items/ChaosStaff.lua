@@ -32,10 +32,12 @@ return wand.init{
     end,
 
     ownerTakesDamage = function(self, item, damage)
+        self.data = self.data or {}
         self.data.charge = (self.data.charge or 0) + 1
     end,
 
     zap = function(self, item, cell, victim)
+        self.data = self.data or {}
         local charge = self.data.charge or 0
         RPD.ChaosCommon:doChaosMark(cell, 10 + item:level() * 10 + charge)
         self.data.charge = 0

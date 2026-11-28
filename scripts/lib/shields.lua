@@ -14,6 +14,12 @@ local strForLevel = stats.strForLevel
 local chanceForLevel = stats.chanceForLevel
 local blockForLevel = stats.blockForLevel
 
+-- stats tables are 1-indexed tiers; a source-less or fresh buff can carry
+-- level 0 - clamp instead of arithmetics on nil (crashed the game thread)
+local function tier(shieldLevel)
+    return math.min(math.max(shieldLevel or 1, 1), 4)
+end
+
 function damageMin (str, shieldLevel)
     return math.max(str - 10, 0)
 end
@@ -25,27 +31,27 @@ end
 ---@param shieldLevel number
 ---@param itemLevel number
 shields.blockDamage = function(shieldLevel, itemLevel)
-    return blockForLevel[shieldLevel] * math.pow(1.3, itemLevel)
+    return blockForLevel[tier(shieldLevel)] * math.pow(1.3, itemLevel)
 end
 
 ---@param shieldLevel number
 ---@param str number
 shields.blockChance = function(shieldLevel, str)
-    local weightPenalty = math.max(strForLevel[shieldLevel] - str, 0)
-    return chanceForLevel[shieldLevel] * (1 - weightPenalty * 0.1)
+    local weightPenalty = math.max(strForLevel[tier(shieldLevel)] - str, 0)
+    return chanceForLevel[tier(shieldLevel)] * (1 - weightPenalty * 0.1)
 end
 
 ---@param shieldLevel number
 ---@param str number
 shields.rechargeTime = function(shieldLevel, str)
-    local weightPenalty = math.max(strForLevel[shieldLevel] - str, 0)
+    local weightPenalty = math.max(strForLevel[tier(shieldLevel)] - str, 0)
     return 5 + weightPenalty
 end
 
 ---@param shieldLevel number
 ---@param str number
 shields.waitAfterBlockTime = function(shieldLevel, str)
-    return math.max(str - strForLevel[shieldLevel], 0)
+    return math.max(str - strForLevel[tier(shieldLevel)], 0)
 end
 
 ---@param baseDesc string
@@ -63,7 +69,7 @@ shields.info = function(baseDesc, str, shieldLevel, itemLevel)
             shields.blockChance(shieldLevel, str) * 100,
             shields.rechargeTime(shieldLevel, str))
             .. "\n\n"
-            .. RPD.format(strTemplate, math.max(2, strForLevel[shieldLevel] - itemLevel))
+            .. RPD.format(strTemplate, math.max(2, strForLevel[tier(shieldLevel)] - itemLevel))
 end
 
 shields.infoWeapon = function(baseDesc, str, shieldLevel, itemLevel)
@@ -102,11 +108,11 @@ shields.makeShield = function(shieldLevel, shieldDesc, shieldBuff)
         end,
 
         typicalSTR = function(self, item)
-            return strForLevel[shieldLevel]
+            return strForLevel[tier(shieldLevel)]
         end,
 
         requiredSTR = function(self, item)
-            return math.max(2, strForLevel[shieldLevel] - item:level())
+            return math.max(2, strForLevel[tier(shieldLevel)] - item:level())
         end,
 
         slot = function(self, item, belongings)

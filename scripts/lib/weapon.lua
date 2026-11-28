@@ -21,6 +21,7 @@
 
 local RPD  = require "scripts/lib/commonClasses"
 local item = require "scripts/lib/item"
+local serpent = require "scripts/lib/serpent"
 
 local weapon = {}
 

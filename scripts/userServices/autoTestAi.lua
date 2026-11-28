@@ -6,6 +6,7 @@
 
 local RPD = require "scripts.lib.commonClasses"
 local lru = require "scripts.lib.lru"
+local json = require "scripts.lib.json"
 
 local EXPLORATION_CACHE_SIZE = 10
 local explorationCache = lru.new(EXPLORATION_CACHE_SIZE);
@@ -13,7 +14,7 @@ local explorationCache = lru.new(EXPLORATION_CACHE_SIZE);
 -- Per-level coverage tracking (#5). Keys are kind strings; presence == "exercised".
 -- Cleared on level change by onLeaveLevel, which also dumps the contents.
 local function freshCoverage()
-    return { items = {}, spells = {}, mobs = {}, windows = {}, buffs = {} }
+    return { items = {}, spells = {}, mobs = {}, windows = {}, buffs = {}, blobs = {}, objects = {} }
 end
 local coverage = freshCoverage()
 
@@ -26,6 +27,7 @@ local ai = {}
 
 -- Curated item types to spawn into the hero's backpack so item code paths get exercised
 -- even when the hero doesn't find heaps. Covers consumables, equipment, and utility items.
+-- Only a fallback: the bot prefers the full ItemFactory registry (fullItemPool below).
 local testItemPool = {
     "PotionOfHealing", "PotionOfStrength", "PotionOfMana", "PotionOfInvisibility",
     "PotionOfLevitation", "PotionOfMindVision", "PotionOfFrost", "PotionOfPurity",
@@ -40,6 +42,80 @@ local testItemPool = {
     "WandOfMagicMissile", "WandOfFirebolt", "WandOfLightning", "WandOfBlink",
     "Torch", "Ankh", "DewVial", "LloydsBeacon", "ArmorKit",
 }
+
+-- Baked buff universe (scripts/buffs/*.lua is the source of truth; there is no
+-- registry getter). Buff.affect/prolong take the kind string.
+local testBuffPool = {
+    "Amok", "Anathema", "Anesthesia", "Armor", "Awareness", "Barkskin", "Bleeding",
+    "Blessed", "Blindness", "BodyArmor", "Burning", "CandleOfMindVisionBuff",
+    "ChampionOfAir", "ChampionOfEarth", "ChampionOfFire", "ChampionOfWater",
+    "ChaosShieldLeft", "Charm", "Cloak", "Combo", "Counter", "Cripple",
+    "DeferedDamage", "DieHard", "Encumbrance", "Frost", "Fury", "GasesImmunity",
+    "Health", "HeartOfDarknessBuff", "Invisibility", "Levitation", "Light",
+    "ManaRegeneration", "ManaShield", "MindVision", "Moongrace", "Necrotism",
+    "OneWayCursedLoveBuff", "OneWayLoveBuff", "Ooze", "Paralysis", "Poison",
+    "RageBuff", "RatKingAuraBuff", "RatterAura", "Regeneration", "Roots",
+    "Shadows", "ShieldLeft", "Sleep", "Slow", "SnipersMark", "Speed", "Stun",
+    "Terror", "TestBuff", "Vertigo", "Weakness",
+}
+
+-- Full-universe pools, built once from the java registries. Each build is guarded:
+-- on failure (registry not ready yet, sandbox change) the pool stays nil, the
+-- curated fallback is used, and the build is retried a few times before giving up.
+local fullItemPool = nil
+local fullMobPool = nil
+local fullSpellPool = nil
+local poolAttempts = 0
+
+local function javaListToPool(list, label)
+    -- works for List and Set: both expose iterator()
+    local out = {}
+    local it = list:iterator()
+    while it:hasNext() do
+        out[#out + 1] = tostring(it:next())
+    end
+    RPD.debug("[autoTestAi] pool %s: %d kinds", label, #out)
+    return out
+end
+
+local function ensurePools()
+    if poolAttempts >= 5 then return end
+    poolAttempts = poolAttempts + 1
+
+    pcall(function()
+        fullItemPool = javaListToPool(RPD.ItemFactory:getItemNames(), "items")
+    end)
+    if not fullItemPool then
+        RPD.debug("[autoTestAi] ItemFactory:getItemNames unavailable, using curated item pool")
+    end
+
+    pcall(function()
+        fullMobPool = javaListToPool(RPD.MobFactory:getAllMobNames(), "mobs")
+    end)
+    if not fullMobPool then
+        RPD.debug("[autoTestAi] MobFactory:getAllMobNames unavailable, no mob spawning")
+    end
+
+    pcall(function()
+        fullSpellPool = javaListToPool(RPD.SpellFactory:getAllSpells(), "spells")
+    end)
+    if not fullSpellPool then
+        RPD.debug("[autoTestAi] SpellFactory:getAllSpells unavailable, using getRandomSpell")
+    end
+end
+
+-- Blobs: the RPD.Blobs table maps kind -> kind string; skip the Blob class entry.
+local blobPool = {}
+for k, v in pairs(RPD.Blobs) do
+    if type(v) == "string" then blobPool[#blobPool + 1] = v end
+end
+table.sort(blobPool)
+
+local function pickFrom(pool, fallbackPool)
+    local source = pool or fallbackPool
+    if not source or #source == 0 then return nil end
+    return source[math.random(#source)]
+end
 
 -- #3: runs fn, logs and swallows any error so a single bad decision can't stall the AI.
 local function guarded(label, fn)
@@ -80,6 +156,19 @@ local function scanBuffs(hero)
     end
 end
 
+-- Record the kinds of level objects currently visible near the hero (chests,
+-- barrels, traps, pedestals, ...). Cheap: one nearest-object query per step.
+local function scanObjects(hero, level, heroPos)
+    local ok = pcall(function()
+        local pos = level:getNearestVisibleLevelObject(heroPos)
+        if level:cellValid(pos) then
+            local obj = level:getTopLevelObject(pos)
+            track("objects", kindOf(obj))
+        end
+    end)
+    return ok
+end
+
 local function dumpCoverage(levelLabel)
     local function keys(set)
         local out = {}
@@ -94,6 +183,8 @@ local function dumpCoverage(levelLabel)
     RPD.debug("[autoTestAi]   mobs:    %s", keys(coverage.mobs))
     RPD.debug("[autoTestAi]   windows: %s", keys(coverage.windows))
     RPD.debug("[autoTestAi]   buffs:   %s", keys(coverage.buffs))
+    RPD.debug("[autoTestAi]   blobs:   %s", keys(coverage.blobs))
+    RPD.debug("[autoTestAi]   objects: %s", keys(coverage.objects))
 end
 
 -- Diagnostic (#5): dump the hero's backpack contents. Uses Belongings:iterator() which
@@ -153,7 +244,9 @@ local function maybeSpawnTestItems(hero)
     if belongings:isBackpackFull() then return end
     if countRealItems(belongings) >= 5 then return end
 
-    local itemType = testItemPool[math.random(#testItemPool)]
+    local itemType = pickFrom(fullItemPool, testItemPool)
+    if not itemType then return end
+    track("items", itemType)
     guarded("spawnItem:" .. itemType, function()
         hero:collect(RPD.item(itemType))
     end)
@@ -167,9 +260,83 @@ local function maybeGiveItemsToMobs(hero)
     if not enemy or not enemy:valid() then return end
     if not enemy:isHumanoid() then return end
 
-    local itemType = testItemPool[math.random(#testItemPool)]
+    local itemType = pickFrom(fullItemPool, testItemPool)
+    if not itemType then return end
     guarded("giveItemToMob:" .. itemType, function()
         enemy:collect(RPD.item(itemType))
+    end)
+end
+
+-- Spawn a random mob from the registry on an empty cell next to the hero. Exercises
+-- mob desc/lua/AI for kinds the dungeon never produced. Rate kept low: one spawn
+-- attempt per ~300 hero turns. Skipped on chess boards (handled earlier in step).
+local function maybeSpawnRandomMob(hero, level, heroPos)
+    if not fullMobPool or math.random() > 0.004 then return end
+    if math.random() < 0.5 then return end -- effective ~0.2% per step
+    local cell = level:getEmptyCellNextTo(heroPos)
+    if not level:cellValid(cell) then return end
+
+    local mobKind = pickFrom(fullMobPool)
+    track("mobs", mobKind)
+    guarded("spawnMob:" .. mobKind, function()
+        RPD.spawnMob(mobKind, cell)
+    end)
+end
+
+-- Apply a random buff kind to the hero so buff onAttach/tick scripts run for kinds
+-- natural play never produces (Champions, Auras, ManaShield, ...). scanBuffs picks
+-- the result up for coverage.
+local function maybeApplyRandomBuff(hero)
+    if math.random() > 0.02 then return end
+    local buffKind = pickFrom(testBuffPool)
+    if not buffKind then return end
+    track("buffs", buffKind)
+    guarded("affectBuff:" .. buffKind, function()
+        RPD.affectBuff(hero, buffKind, 30)
+    end)
+end
+
+-- Seed a random blob under the hero's feet (10k-HP god mode makes gas/fire safe)
+-- so blob affect/tick scripts run for kinds natural play never produces.
+local function maybeSeedRandomBlob(level, heroPos)
+    if #blobPool == 0 or math.random() > 0.015 then return end
+    local blobKind = blobPool[math.random(#blobPool)]
+    track("blobs", blobKind)
+    guarded("placeBlob:" .. blobKind, function()
+        RPD.placeBlob(blobKind, heroPos, 30)
+    end)
+end
+
+-- Place a random level object near the hero. Two families, two creation paths:
+--  - CustomObject kinds (script-backed): createCustomObject(kind, cell)
+--  - Deco kinds (data-only defs, no script): createObject with a full desc
+--    (kind=Deco + object_desc + x/y) - createCustomObject would hit the
+--    CustomObject "script" requirement these defs don't carry.
+local testObjectPool = {
+    "Barrel", "barricade", "candle", "chest_1", "chest_2", "chest_3",
+    "ConcreteBlock", "LibraryBook", "pedestal", "pile_of_stones", "pot",
+    "Sign", "statue", "statue_sp",
+}
+local decoObjects = { candle = true, chest_1 = true, chest_2 = true, chest_3 = true }
+
+local function maybePlaceRandomObject(level, heroPos)
+    if math.random() > 0.01 then return end
+    local cell = level:getEmptyCellNextTo(heroPos)
+    if not level:cellValid(cell) then return end
+
+    local objectKind = testObjectPool[math.random(#testObjectPool)]
+    track("objects", objectKind)
+    guarded("placeObject:" .. objectKind, function()
+        local obj
+        if decoObjects[objectKind] then
+            local w = level:getWidth()
+            obj = RPD.LevelObjectsFactory:createObject(RPD.Dungeon.level,
+                json.encode({ kind = "Deco", object_desc = objectKind,
+                              x = cell % w, y = math.floor(cell / w) }))
+        else
+            obj = RPD.LevelObjectsFactory:createCustomObject(RPD.Dungeon.level, objectKind, cell)
+        end
+        if obj then RPD.Dungeon.level:addLevelObject(obj) end
     end)
 end
 
@@ -343,6 +510,8 @@ end
 ai.step = function()
     local hero = RPD.Dungeon.hero
 
+    ensurePools()
+
     -- Windows must be closed before the readiness gate: a modal (e.g. a mob
     -- death-report WndQuest) pauses the world and keeps a stale hero action
     -- from completing, so isReady() would never turn true and the closer
@@ -389,6 +558,16 @@ ai.step = function()
         end
         return
     end
+
+    scanObjects(hero, level, heroPos)
+
+    maybeSpawnRandomMob(hero, level, heroPos)
+
+    maybeApplyRandomBuff(hero)
+
+    maybeSeedRandomBlob(level, heroPos)
+
+    maybePlaceRandomObject(level, heroPos)
 
     if hero:buffLevel('Blindness') > 0 then
         local cell = level:getEmptyCellNextTo(heroPos)
@@ -446,7 +625,7 @@ ai.step = function()
         end
     end
 
-    if hero:getSkillPoints() > 0 and math.random() < 0.01 then
+    if hero:getSkillPoints() > 0 and math.random() < 0.02 then
         guarded("castSpell(idle)", function()
             local spell = RPD.SpellFactory:getRandomSpell()
             track("spells", kindOf(spell))

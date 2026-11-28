@@ -12,8 +12,6 @@ local item = require "scripts/lib/item"
 return item.init{
     desc  = function (self, item)
 
-        RPD.glog("Created item with id:"..tostring(item:getId()))
-
         return {
             image         = 0,
             imageFile     = "items/gnoll_tomahawks.png",

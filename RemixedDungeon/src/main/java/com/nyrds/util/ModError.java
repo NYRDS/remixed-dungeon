@@ -7,10 +7,18 @@ import com.nyrds.platform.game.Game;
 import com.watabou.pixeldungeon.utils.GLog;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.luaj.vm2.LuaError;
 
 public class ModError extends RuntimeException {
+
+    // a per-tick script error repeated every tick would otherwise toast +
+    // log + notify at tick rate (toast flood, GB-size logs, heap death) -
+    // report each distinct key at most once per cooldown window
+    private static final long REPORT_COOLDOWN_MS = 5000;
+    private static final Map<String, Long> lastReportAt = new HashMap<>();
 
     public ModError(String s) {
         super(s);
@@ -56,6 +64,14 @@ public class ModError extends RuntimeException {
         if(errMsg==null) {
             errMsg = "";
         }
+
+        long now = System.currentTimeMillis();
+        Long last = lastReportAt.get(s);
+        if (last != null && now - last < REPORT_COOLDOWN_MS) {
+            return;
+        }
+        lastReportAt.put(s, now);
+
         Game.toast("[%s -> %s]", s, errMsg);
         EventCollector.logException(e,s);
         Notifications.displayNotification(e.getClass().getSimpleName(), s, errMsg);

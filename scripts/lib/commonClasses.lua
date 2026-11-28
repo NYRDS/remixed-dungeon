@@ -169,7 +169,9 @@ setmetatable(Wands, {
                       wandOfFirebolt = "WandOfFirebolt" }
         local kind = map[k]
         if kind == nil then return nil end
-        local w = ItemFactory.itemByName(kind)
+        -- sandbox static dispatch needs the colon form: dot-call shifts args
+        -- and dies "userdata expected, got string"
+        local w = ItemFactory:itemByName(kind)
         rawset(t, k, w)
         return w
     end,

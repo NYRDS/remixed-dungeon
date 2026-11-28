@@ -69,7 +69,9 @@ rotten.onExecute = function(self, item, chr, action)
         return
     end
 
-    RPD.GLog:w(item:message())
+    -- Food.message is a public String FIELD (not a method); the old
+    -- item:message() call resolved the field and tried to call it
+    RPD.glogw(item.message)
     self:molder(item, chr:getPos())
 end
 

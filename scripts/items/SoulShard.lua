@@ -3,6 +3,7 @@
 ---
 local RPD     = require "scripts/lib/commonClasses"
 local item    = require "scripts/lib/item"
+local itemLib = require "scripts/lib/item"
 
 return item.init{
     desc = function()

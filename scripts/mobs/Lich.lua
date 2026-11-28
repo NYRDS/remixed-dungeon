@@ -198,11 +198,17 @@ return mob.init{
 
         -- this hook runs before Char.die's destroy(): the lich is still in
         -- the level list, and remove() would quietly eat its own loot - so
-        -- java's post-super.die wipe is ported with an explicit self skip
+        -- java's post-super.die wipe is ported with an explicit self skip.
+        -- snapshot first: remove() mutates the live level list, and pairs()
+        -- over a list being mutated errors mid-iteration
+        local victims = {}
         for _, m in pairs(RPD.Dungeon.level:getMobs()) do
             if m ~= self and not m:isPet() then
-                m:remove()
+                victims[#victims + 1] = m
             end
+        end
+        for _, m in ipairs(victims) do
+            m:remove()
         end
     end,
 }

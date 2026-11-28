@@ -3,8 +3,10 @@ package com.nyrds.pixeldungeon.ai;
 import com.nyrds.LuaInterface;
 import com.nyrds.pixeldungeon.mechanics.LuaScript;
 import com.nyrds.pixeldungeon.mechanics.NamedEntityKind;
+import com.nyrds.platform.EventCollector;
 import com.nyrds.platform.util.StringsManager;
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.utils.GLog;
 import org.jetbrains.annotations.NotNull;
 
 public class CustomMobAi extends MobAi implements AiState {
@@ -18,14 +20,30 @@ public class CustomMobAi extends MobAi implements AiState {
         script = new LuaScript("scripts/ai/" +scriptFile, this);
     }
 
+    // a broken mob AI must not kill the game: log and skip the turn instead of
+    // letting the error escape into the update loop (fatal on the desktop runner)
+    private void actGuarded(Char me) {
+        try {
+            script.run("act", me);
+        } catch (Exception e) {
+            EventCollector.logException(e, "CustomMobAi:" + scriptFile + ":act");
+            GLog.toFile("mob ai error: script=%s handler=act : %s", scriptFile, e.getMessage());
+        }
+    }
+
     @Override
     public void act(@NotNull Char me) {
-        script.run("act",me);
+        actGuarded(me);
     }
 
     @Override
     public void gotDamage(Char me, NamedEntityKind src, int dmg) {
-        script.run("gotDamage",me, src, dmg);
+        try {
+            script.run("gotDamage", me, src, dmg);
+        } catch (Exception e) {
+            EventCollector.logException(e, "CustomMobAi:" + scriptFile + ":gotDamage");
+            GLog.toFile("mob ai error: script=%s handler=gotDamage : %s", scriptFile, e.getMessage());
+        }
     }
 
 	@Override

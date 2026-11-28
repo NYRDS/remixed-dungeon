@@ -156,6 +156,11 @@ public class LevelObjectsFactory {
         }
     }
 
+    @LuaInterface
+    public static List<String> getObjectNames() {
+        return new ArrayList<>(mObjectsList.keySet());
+    }
+
     /**
      * Gated resolver for save-restore: null unless the object kind is registered.
      */
