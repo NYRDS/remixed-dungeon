@@ -332,6 +332,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Carcass_Necromancy_Failed">Việc hồi sinh thi thể của %s đã thất bại!</string>
     <string name="Carcass_SelectItem">Chọn một vật phẩm</string>
     <string name="Carcass_TooFarToDissect">Bạn cần đến gần hơn để giải phẫu xác.</string>
+    <string name="Caves_TileDescBookshelf">Ai lại cần kệ sách trong hang động?</string>
     <string name="Caves_TileDescDeco">Một mạch quặng nào đó nhìn thấy được trên tường. Vàng?</string>
     <string name="Caves_TileDescExit">Cầu thang dẫn xuống tầng sâu hơn.</string>
     <string name="Caves_TileDescHighGrass">Nấm khổng lồ chắn tầm nhìn.</string>
@@ -1771,6 +1772,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Shielded_Gender">masculine</string>
     <string name="Shielded_Name">côn đồ khiên thủ</string>
     <string name="Shielded_Name_Objective">côn đồ khiên thủ</string>
+    <string name="ShootInEye_Info">Dùng kỹ năng bắn cung phi thường của bạn để bắn trúng mắt kẻ thù, nếu hắn có mắt thì làm ơn.</string>
     <string name="ShootInEye_Name">Bắn Vào Mắt</string>
     <string name="Shopkeeper_Buy">Chọn vật phẩm để mua</string>
     <string name="Shopkeeper_BuyPrompt">Để tôi xem hàng hóa của bạn</string>
@@ -2357,6 +2359,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="WndSaveSlotSelect_Delete_No">Không</string>
     <string name="WndSaveSlotSelect_Delete_Title">Bạn có chắc chắn muốn xóa trạng thái lưu này?</string>
     <string name="WndSaveSlotSelect_LoadAutoSave">Tải tự động lưu</string>
+    <string name="WndSaveSlotSelect_SelectSlot">Chọn ô lưu</string>
     <string name="WndSelectLanguage_ImproveTranslation">Vui lòng giúp cải thiện bản dịch Remixed Dungeon</string>
     <string name="WndSelectLanguage_LinkToTranslationSite">Nhấn vào đây để tham gia đội dịch Remixed Dungeon</string>
     <string name="WndSettingsInGame_GameLog">Nhật ký trò chơi</string>
@@ -2617,6 +2620,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_deco_shelf_full_desc">Nhiều đồ trang trí nhỏ được đặt trên kệ này.</string>
     <string name="town_deco_shelf_full_name">Kệ sách</string>
     <string name="town_deco_shelf_name">Các kệ sách</string>
+    <string name="town_deco_shelving_desc">Một giá đồ to lớn, trên kệ có nhiều loại đồ uống và đồ ăn nhẹ.</string>
     <string name="town_deco_shieldboard_desc">Các loại khiên treo trên bảng. Chưa được bán.</string>
     <string name="town_deco_shieldboard_name">Khiên</string>
     <string name="town_deco_shop_sign_desc">Dường như có một cửa hàng bên trong tòa nhà đó.</string>
@@ -2689,6 +2693,10 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
+
 
 
 

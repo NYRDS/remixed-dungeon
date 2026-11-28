@@ -933,6 +933,7 @@
     <string name="HeroClass_None">gewoon burger</string>
     <string name="HeroClass_PlagueDoctorPerks_0">Pestmeesters oogsten [yellow:Toxische Kliezen], [yellow:Verrotte Organen], [yellow:Botsplinters] van verslagen vijanden.</string>
     <string name="HeroClass_PlagueDoctorPerks_1">Pestmeesters zijn meesters in alchemie en kunnen unieke recepten gebruiken.</string>
+    <string name="HeroClass_PlagueDoctorPerks_2">Begin met een [yellow:Pestmasker] (immuun voor alle Gassen) en een [yellow:botenzaag]. Kritische treffers laten extra onderdelen vallen, en de zaag doet x2 schade aan gearresteerde vijanden.</string>
     <string name="HeroClass_PlagueDoctorPerks_4">Plagedokters lijden aan grote accuraatheidsstraffen zonder hun geliefde Beenzaag in de hand en kunnen geen afstandswapens gebruiken.</string>
     <string name="HeroClass_Priest">priester</string>
     <string name="HeroClass_PriestPerks_0">Priesters beginnen met 12 punten Kracht en een kwartstaf.</string>
@@ -1744,6 +1745,7 @@
     <string name="RogueArmor_ACSpecial">ROOKBOM</string>
     <string name="RogueArmor_Fov">Je kunt alleen naar een leeg vakje in je zichtveld teleporteren</string>
     <string name="RogueArmor_Name">schurkenkleding</string>
+    <string name="RogueArmor_NotRogue">Alleen schurken kunnen dit pantser gebruiken!</string>
     <string name="RogueArmor_Prompt">Kies een locatie om naartoe te springen</string>
     <string name="RootSpell_Info">Bevestigt de geselecteerde karakter met wortels, waardoor hij voor korte tijd niet kan bewegen.</string>
     <string name="RootSpell_Name">Wortel</string>
@@ -2585,6 +2587,7 @@
     <string name="WndSettings_ThirdQuickslot">Derde sneltoets</string>
     <string name="WndSettings_UiScale">Schaal van de interface</string>
     <string name="WndSettings_UiSettings">Interface-instellingen</string>
+    <string name="WndSettings_ZoomDef">Standaard Zoom</string>
     <string name="WndSettings_ZoomIn">+</string>
     <string name="WndSettings_ZoomOut">-</string>
     <string name="WndSettings_moveTimeout">Zettijdlimiet: %s</string>
@@ -2796,6 +2799,7 @@
     <string name="town_deco_mud_name">modder</string>
     <string name="town_deco_painting_desc">Een prachtig stuk kunst.</string>
     <string name="town_deco_painting_name">Schilderij</string>
+    <string name="town_deco_pathway_desc">Een uitgegetrapt pad in de sneeuw.</string>
     <string name="town_deco_pathway_name">pad</string>
     <string name="town_deco_pedestal_desc">Voetstuk met een heilig boek erop.</string>
     <string name="town_deco_pedestal_name">Postament</string>
@@ -2905,6 +2909,10 @@
     <string name="town_table_fortune_desc">Deze tafel is gedekt met een zijden doek. Je kunt allerlei tarotkaarten zien, in een eigenaardige volgorde neergelegd.</string>
 
     <string name="town_table_fortune_name">Tafel</string>
+
+
+
+
 
 
 
