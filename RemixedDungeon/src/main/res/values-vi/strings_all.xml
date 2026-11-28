@@ -723,6 +723,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="FrozenCarpaccio_Info4">Bạn cảm thấy khỏe hơn!</string>
     <string name="FrozenCarpaccio_Name">carpaccio đông lạnh</string>
     <string name="FrozenFish_Info">Cá đông lạnh, trông như thể còn sống, nhưng đã được đông lạnh.</string>
+    <string name="FrozenFish_Name">cá đông lạnh</string>
     <string name="FullFaceMask_Name">Mặt nạ phòng độc</string>
     <string name="FuryBuff_Info">Đôi mắt đỏ máu vì cơn giận dữ bên trong.</string>
     <string name="FuryBuff_Name">Cuồng Nộ</string>
@@ -1491,6 +1492,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="Potion_No">Không, tôi đã thay đổi chủ ý</string>
     <string name="Potion_RuneDissaperaed">Chữ ký biến mất khỏi %s.</string>
     <string name="Potion_SelectForMoisten">Chọn vật phẩm để bôi</string>
+    <string name="Potion_Shatter">Lọ thủy tinh vỡ nát và %s chất lỏng văng ra vô hại</string>
     <string name="Potion_SureDrink">Bạn có chắc chắn muốn uống nó không? Trong hầu hết các trường hợp, bạn nên ném loại thuốc này vào kẻ thù của mình.</string>
     <string name="Potion_SureThrow">Bạn có chắc chắn muốn ném nó đi? Trong hầu hết các trường hợp, việc uống nó là hợp lý hơn.</string>
     <string name="Potion_Yes">Vâng, tôi biết tôi đang làm gì</string>
@@ -1750,6 +1752,7 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="ServiceManNPC_NotReady">Xin lỗi, nhưng bộ phim chưa sẵn sàng, bạn có thể thử lại sau vài phút.</string>
     <string name="ServiceManNotReadyNPC_Message">Xin lỗi, nhưng tòa nhà này chưa sẵn sàng!</string>
     <string name="Sewer_TileDescBookshelf">Kệ sách chật chội những cuốn sách rẻ tiền vô dụng. Liệu nó có thể cháy không?</string>
+    <string name="Sewer_TileDescDeco">Rêu vàng ươm phủ kín sàn.</string>
     <string name="Sewer_TileWater">nước đục</string>
     <string name="Shades_Info">Có người nói hầm ngục quá tối để đeo kính râm. Và bạn nói rằng những người đó chỉ không đủ ngầu mà thôi.</string>
     <string name="Shades_Name">Kính râm</string>
@@ -2712,6 +2715,9 @@ Bạn có thể cảm thấy một phép thuật ác độc tàng hình trong %s
     <string name="town_table_fortune_desc">Chiếc bàn này phủ một tấm vải lụa. Bạn có thể thấy các lá bài tarot được bày theo một trật tự kỳ lạ.</string>
 
     <string name="town_table_fortune_name">Bàn</string>
+
+
+
 
 
 
